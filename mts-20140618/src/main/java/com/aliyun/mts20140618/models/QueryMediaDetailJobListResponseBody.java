@@ -4,26 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaDetailJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobList")
     public QueryMediaDetailJobListResponseBodyJobList jobList;
 
     @NameInMap("NonExistIds")
     public QueryMediaDetailJobListResponseBodyNonExistIds nonExistIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryMediaDetailJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaDetailJobListResponseBody self = new QueryMediaDetailJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMediaDetailJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMediaDetailJobListResponseBody setJobList(QueryMediaDetailJobListResponseBodyJobList jobList) {
@@ -42,364 +34,143 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive extends TeaModel {
-        @NameInMap("Score")
-        public String score;
+    public QueryMediaDetailJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Name")
-        public String name;
+    public static class QueryMediaDetailJobListResponseBodyJobListJobInput extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
 
-        @NameInMap("Target")
-        public String target;
+        @NameInMap("Location")
+        public String location;
 
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive();
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobInput self = new QueryMediaDetailJobListResponseBodyJobListJobInput();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setScore(String score) {
-            this.score = score;
+        public QueryMediaDetailJobListResponseBodyJobListJobInput setBucket(String bucket) {
+            this.bucket = bucket;
             return this;
         }
-        public String getScore() {
-            return this.score;
+        public String getBucket() {
+            return this.bucket;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setName(String name) {
-            this.name = name;
+        public QueryMediaDetailJobListResponseBodyJobListJobInput setLocation(String location) {
+            this.location = location;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getLocation() {
+            return this.location;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setTarget(String target) {
-            this.target = target;
+        public QueryMediaDetailJobListResponseBodyJobListJobInput setObject(String object) {
+            this.object = object;
             return this;
         }
-        public String getTarget() {
-            return this.target;
+        public String getObject() {
+            return this.object;
         }
 
     }
 
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives extends TeaModel {
-        @NameInMap("Sensitive")
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> sensitive;
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
 
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives();
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives setSensitive(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> sensitive) {
-            this.sensitive = sensitive;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setBucket(String bucket) {
+            this.bucket = bucket;
             return this;
         }
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> getSensitive() {
-            return this.sensitive;
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
         }
 
     }
 
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician extends TeaModel {
-        @NameInMap("Score")
-        public String score;
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig extends TeaModel {
+        @NameInMap("DetailType")
+        public String detailType;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("OutputFile")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile outputFile;
 
-        @NameInMap("Target")
-        public String target;
+        @NameInMap("Scenario")
+        public String scenario;
 
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician();
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setScore(String score) {
-            this.score = score;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setDetailType(String detailType) {
+            this.detailType = detailType;
             return this;
         }
-        public String getScore() {
-            return this.score;
+        public String getDetailType() {
+            return this.detailType;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setName(String name) {
-            this.name = name;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setOutputFile(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile outputFile) {
+            this.outputFile = outputFile;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile getOutputFile() {
+            return this.outputFile;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setTarget(String target) {
-            this.target = target;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setScenario(String scenario) {
+            this.scenario = scenario;
             return this;
         }
-        public String getTarget() {
-            return this.target;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians extends TeaModel {
-        @NameInMap("Politician")
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> politician;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians setPolitician(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> politician) {
-            this.politician = politician;
-            return this;
-        }
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> getPolitician() {
-            return this.politician;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("MinScore")
-        public String minScore;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("AvgScore")
-        public String avgScore;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        @NameInMap("EndTarget")
-        public String endTarget;
-
-        @NameInMap("StartTarget")
-        public String startTarget;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setMinScore(String minScore) {
-            this.minScore = minScore;
-            return this;
-        }
-        public String getMinScore() {
-            return this.minScore;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setAvgScore(String avgScore) {
-            this.avgScore = avgScore;
-            return this;
-        }
-        public String getAvgScore() {
-            return this.avgScore;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setEndTarget(String endTarget) {
-            this.endTarget = endTarget;
-            return this;
-        }
-        public String getEndTarget() {
-            return this.endTarget;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setStartTarget(String startTarget) {
-            this.startTarget = startTarget;
-            return this;
-        }
-        public String getStartTarget() {
-            return this.startTarget;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips extends TeaModel {
-        @NameInMap("Clip")
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> clip;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips setClip(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> clip) {
-            this.clip = clip;
-            return this;
-        }
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> getClip() {
-            return this.clip;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Clips")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips clips;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom setClips(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips clips) {
-            this.clips = clips;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips getClips() {
-            return this.clips;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms extends TeaModel {
-        @NameInMap("Custom")
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> custom;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms setCustom(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> custom) {
-            this.custom = custom;
-            return this;
-        }
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> getCustom() {
-            return this.custom;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos extends TeaModel {
-        @NameInMap("FrameTagInfo")
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> frameTagInfo;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos setFrameTagInfo(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> frameTagInfo) {
-            this.frameTagInfo = frameTagInfo;
-            return this;
-        }
-        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> getFrameTagInfo() {
-            return this.frameTagInfo;
+        public String getScenario() {
+            return this.scenario;
         }
 
     }
 
     public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebritiesCelebrity extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Score")
+        public String score;
 
         @NameInMap("Target")
         public String target;
@@ -409,20 +180,20 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebritiesCelebrity setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebritiesCelebrity setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebritiesCelebrity setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebritiesCelebrity setTarget(String target) {
@@ -454,21 +225,361 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
 
     }
 
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip extends TeaModel {
+        @NameInMap("AvgScore")
+        public String avgScore;
+
+        @NameInMap("EndTarget")
+        public String endTarget;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("MinScore")
+        public String minScore;
+
+        @NameInMap("StartTarget")
+        public String startTarget;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setAvgScore(String avgScore) {
+            this.avgScore = avgScore;
+            return this;
+        }
+        public String getAvgScore() {
+            return this.avgScore;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setEndTarget(String endTarget) {
+            this.endTarget = endTarget;
+            return this;
+        }
+        public String getEndTarget() {
+            return this.endTarget;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setMinScore(String minScore) {
+            this.minScore = minScore;
+            return this;
+        }
+        public String getMinScore() {
+            return this.minScore;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setStartTarget(String startTarget) {
+            this.startTarget = startTarget;
+            return this;
+        }
+        public String getStartTarget() {
+            return this.startTarget;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips extends TeaModel {
+        @NameInMap("Clip")
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> clip;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips setClip(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> clip) {
+            this.clip = clip;
+            return this;
+        }
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClipsClip> getClip() {
+            return this.clip;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom extends TeaModel {
+        @NameInMap("Clips")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips clips;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom setClips(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips clips) {
+            this.clips = clips;
+            return this;
+        }
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustomClips getClips() {
+            return this.clips;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms extends TeaModel {
+        @NameInMap("Custom")
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> custom;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms setCustom(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> custom) {
+            this.custom = custom;
+            return this;
+        }
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustomsCustom> getCustom() {
+            return this.custom;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos extends TeaModel {
+        @NameInMap("FrameTagInfo")
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> frameTagInfo;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos setFrameTagInfo(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> frameTagInfo) {
+            this.frameTagInfo = frameTagInfo;
+            return this;
+        }
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfosFrameTagInfo> getFrameTagInfo() {
+            return this.frameTagInfo;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians extends TeaModel {
+        @NameInMap("Politician")
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> politician;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians setPolitician(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> politician) {
+            this.politician = politician;
+            return this;
+        }
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticiansPolitician> getPolitician() {
+            return this.politician;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
+    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives extends TeaModel {
+        @NameInMap("Sensitive")
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> sensitive;
+
+        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives setSensitive(java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public java.util.List<QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitivesSensitive> getSensitive() {
+            return this.sensitive;
+        }
+
+    }
+
     public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
-        @NameInMap("Sensitives")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives sensitives;
-
-        @NameInMap("Politicians")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians politicians;
-
-        @NameInMap("FrameTags")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags frameTags;
-
-        @NameInMap("ImageUrl")
-        public String imageUrl;
+        @NameInMap("Celebrities")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities celebrities;
 
         @NameInMap("Customs")
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms customs;
@@ -476,55 +587,35 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
         @NameInMap("FrameTagInfos")
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTagInfos frameTagInfos;
 
-        @NameInMap("Celebrities")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities celebrities;
+        @NameInMap("FrameTags")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags frameTags;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
 
         @NameInMap("OcrText")
         public String ocrText;
+
+        @NameInMap("Politicians")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians politicians;
+
+        @NameInMap("Sensitives")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives sensitives;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setTime(String time) {
-            this.time = time;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setCelebrities(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities celebrities) {
+            this.celebrities = celebrities;
             return this;
         }
-        public String getTime() {
-            return this.time;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setSensitives(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives sensitives) {
-            this.sensitives = sensitives;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives getSensitives() {
-            return this.sensitives;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setPoliticians(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians politicians) {
-            this.politicians = politicians;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians getPoliticians() {
-            return this.politicians;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setFrameTags(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags frameTags) {
-            this.frameTags = frameTags;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags getFrameTags() {
-            return this.frameTags;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-        public String getImageUrl() {
-            return this.imageUrl;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities getCelebrities() {
+            return this.celebrities;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setCustoms(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCustoms customs) {
@@ -543,12 +634,20 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return this.frameTagInfos;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setCelebrities(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities celebrities) {
-            this.celebrities = celebrities;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setFrameTags(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags frameTags) {
+            this.frameTags = frameTags;
             return this;
         }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultCelebrities getCelebrities() {
-            return this.celebrities;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultFrameTags getFrameTags() {
+            return this.frameTags;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setOcrText(String ocrText) {
@@ -557,6 +656,30 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
         }
         public String getOcrText() {
             return this.ocrText;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setPoliticians(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians politicians) {
+            this.politicians = politicians;
+            return this;
+        }
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultPoliticians getPoliticians() {
+            return this.politicians;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setSensitives(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives sensitives) {
+            this.sensitives = sensitives;
+            return this;
+        }
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResultSensitives getSensitives() {
+            return this.sensitives;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResultsMediaDetailRecgResult setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }
@@ -600,11 +723,11 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("MediaDetailRecgResults")
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResults mediaDetailRecgResults;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Tags")
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultTags tags;
@@ -614,20 +737,20 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult setMediaDetailRecgResults(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResults mediaDetailRecgResults) {
             this.mediaDetailRecgResults = mediaDetailRecgResults;
             return this;
         }
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultMediaDetailRecgResults getMediaDetailRecgResults() {
             return this.mediaDetailRecgResults;
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult setTags(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResultTags tags) {
@@ -640,141 +763,21 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig extends TeaModel {
-        @NameInMap("OutputFile")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile outputFile;
-
-        @NameInMap("Scenario")
-        public String scenario;
-
-        @NameInMap("DetailType")
-        public String detailType;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig self = new QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setOutputFile(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile outputFile) {
-            this.outputFile = outputFile;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfigOutputFile getOutputFile() {
-            return this.outputFile;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setScenario(String scenario) {
-            this.scenario = scenario;
-            return this;
-        }
-        public String getScenario() {
-            return this.scenario;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig setDetailType(String detailType) {
-            this.detailType = detailType;
-            return this;
-        }
-        public String getDetailType() {
-            return this.detailType;
-        }
-
-    }
-
-    public static class QueryMediaDetailJobListResponseBodyJobListJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryMediaDetailJobListResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaDetailJobListResponseBodyJobListJobInput self = new QueryMediaDetailJobListResponseBodyJobListJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryMediaDetailJobListResponseBodyJobListJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
     public static class QueryMediaDetailJobListResponseBodyJobListJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("UserData")
-        public String userData;
+        @NameInMap("Input")
+        public QueryMediaDetailJobListResponseBodyJobListJobInput input;
 
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("MediaDetailConfig")
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig mediaDetailConfig;
 
         @NameInMap("MediaDetailResult")
         public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult mediaDetailResult;
@@ -782,21 +785,26 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("MediaDetailConfig")
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig mediaDetailConfig;
-
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Input")
-        public QueryMediaDetailJobListResponseBodyJobListJobInput input;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("UserData")
+        public String userData;
 
         public static QueryMediaDetailJobListResponseBodyJobListJob build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaDetailJobListResponseBodyJobListJob self = new QueryMediaDetailJobListResponseBodyJobListJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMediaDetailJobListResponseBodyJobListJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJob setCreationTime(String creationTime) {
@@ -807,28 +815,28 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setState(String state) {
-            this.state = state;
+        public QueryMediaDetailJobListResponseBodyJobListJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setUserData(String userData) {
-            this.userData = userData;
+        public QueryMediaDetailJobListResponseBodyJobListJob setInput(QueryMediaDetailJobListResponseBodyJobListJobInput input) {
+            this.input = input;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
+        public QueryMediaDetailJobListResponseBodyJobListJobInput getInput() {
+            return this.input;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setCode(String code) {
-            this.code = code;
+        public QueryMediaDetailJobListResponseBodyJobListJob setMediaDetailConfig(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig mediaDetailConfig) {
+            this.mediaDetailConfig = mediaDetailConfig;
             return this;
         }
-        public String getCode() {
-            return this.code;
+        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig getMediaDetailConfig() {
+            return this.mediaDetailConfig;
         }
 
         public QueryMediaDetailJobListResponseBodyJobListJob setMediaDetailResult(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailResult mediaDetailResult) {
@@ -847,14 +855,6 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return this.message;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setMediaDetailConfig(QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig mediaDetailConfig) {
-            this.mediaDetailConfig = mediaDetailConfig;
-            return this;
-        }
-        public QueryMediaDetailJobListResponseBodyJobListJobMediaDetailConfig getMediaDetailConfig() {
-            return this.mediaDetailConfig;
-        }
-
         public QueryMediaDetailJobListResponseBodyJobListJob setPipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
             return this;
@@ -863,20 +863,20 @@ public class QueryMediaDetailJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setInput(QueryMediaDetailJobListResponseBodyJobListJobInput input) {
-            this.input = input;
+        public QueryMediaDetailJobListResponseBodyJobListJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryMediaDetailJobListResponseBodyJobListJobInput getInput() {
-            return this.input;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryMediaDetailJobListResponseBodyJobListJob setId(String id) {
-            this.id = id;
+        public QueryMediaDetailJobListResponseBodyJobListJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getUserData() {
+            return this.userData;
         }
 
     }

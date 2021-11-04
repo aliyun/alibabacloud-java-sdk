@@ -10,14 +10,11 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @NameInMap("Input")
     public String input;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("JobId")
+    public String jobId;
 
-    @NameInMap("UserData")
-    public String userData;
-
-    @NameInMap("State")
-    public String state;
+    @NameInMap("JobParams")
+    public String jobParams;
 
     @NameInMap("Output")
     public String output;
@@ -25,14 +22,17 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @NameInMap("PipelineId")
     public String pipelineId;
 
-    @NameInMap("JobParams")
-    public String jobParams;
-
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public String result;
+
+    @NameInMap("State")
+    public String state;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static QueryIProductionJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryIProductionJobResponseBody self = new QueryIProductionJobResponseBody();
@@ -55,28 +55,20 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         return this.input;
     }
 
-    public QueryIProductionJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryIProductionJobResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getJobId() {
+        return this.jobId;
     }
 
-    public QueryIProductionJobResponseBody setUserData(String userData) {
-        this.userData = userData;
+    public QueryIProductionJobResponseBody setJobParams(String jobParams) {
+        this.jobParams = jobParams;
         return this;
     }
-    public String getUserData() {
-        return this.userData;
-    }
-
-    public QueryIProductionJobResponseBody setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
+    public String getJobParams() {
+        return this.jobParams;
     }
 
     public QueryIProductionJobResponseBody setOutput(String output) {
@@ -95,20 +87,12 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         return this.pipelineId;
     }
 
-    public QueryIProductionJobResponseBody setJobParams(String jobParams) {
-        this.jobParams = jobParams;
+    public QueryIProductionJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getJobParams() {
-        return this.jobParams;
-    }
-
-    public QueryIProductionJobResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryIProductionJobResponseBody setResult(String result) {
@@ -117,6 +101,22 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public QueryIProductionJobResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
+    public QueryIProductionJobResponseBody setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

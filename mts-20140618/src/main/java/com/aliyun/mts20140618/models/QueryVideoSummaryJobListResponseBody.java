@@ -4,26 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoSummaryJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobList")
     public QueryVideoSummaryJobListResponseBodyJobList jobList;
 
     @NameInMap("NonExistIds")
     public QueryVideoSummaryJobListResponseBodyNonExistIds nonExistIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryVideoSummaryJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryVideoSummaryJobListResponseBody self = new QueryVideoSummaryJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryVideoSummaryJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryVideoSummaryJobListResponseBody setJobList(QueryVideoSummaryJobListResponseBodyJobList jobList) {
@@ -40,6 +32,96 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
     }
     public QueryVideoSummaryJobListResponseBodyNonExistIds getNonExistIds() {
         return this.nonExistIds;
+    }
+
+    public QueryVideoSummaryJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryVideoSummaryJobListResponseBodyJobListJobInput extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryVideoSummaryJobListResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
+            QueryVideoSummaryJobListResponseBodyJobListJobInput self = new QueryVideoSummaryJobListResponseBodyJobListJobInput();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobInput setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+    }
+
+    public static class QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile self = new QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryListVideoSummary extends TeaModel {
@@ -91,65 +173,16 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile self = new QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
     public static class QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult extends TeaModel {
-        @NameInMap("VideoSummaryList")
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList videoSummaryList;
-
         @NameInMap("OutputFile")
         public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile outputFile;
+
+        @NameInMap("VideoSummaryList")
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList videoSummaryList;
 
         public static QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult build(java.util.Map<String, ?> map) throws Exception {
             QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult self = new QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult setVideoSummaryList(QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList videoSummaryList) {
-            this.videoSummaryList = videoSummaryList;
-            return this;
-        }
-        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList getVideoSummaryList() {
-            return this.videoSummaryList;
         }
 
         public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult setOutputFile(QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultOutputFile outputFile) {
@@ -160,52 +193,34 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
             return this.outputFile;
         }
 
-    }
-
-    public static class QueryVideoSummaryJobListResponseBodyJobListJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryVideoSummaryJobListResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
-            QueryVideoSummaryJobListResponseBodyJobListJobInput self = new QueryVideoSummaryJobListResponseBodyJobListJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobInput setObject(String object) {
-            this.object = object;
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult setVideoSummaryList(QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList videoSummaryList) {
+            this.videoSummaryList = videoSummaryList;
             return this;
         }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
+        public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResultVideoSummaryList getVideoSummaryList() {
+            return this.videoSummaryList;
         }
 
     }
 
     public static class QueryVideoSummaryJobListResponseBodyJobListJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Input")
+        public QueryVideoSummaryJobListResponseBodyJobListJobInput input;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("State")
         public String state;
@@ -213,27 +228,20 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("VideoSummaryResult")
         public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult videoSummaryResult;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
-
-        @NameInMap("Input")
-        public QueryVideoSummaryJobListResponseBodyJobListJobInput input;
-
-        @NameInMap("Id")
-        public String id;
 
         public static QueryVideoSummaryJobListResponseBodyJobListJob build(java.util.Map<String, ?> map) throws Exception {
             QueryVideoSummaryJobListResponseBodyJobListJob self = new QueryVideoSummaryJobListResponseBodyJobListJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryVideoSummaryJobListResponseBodyJobListJob setCreationTime(String creationTime) {
@@ -242,6 +250,38 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJob setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJob setInput(QueryVideoSummaryJobListResponseBodyJobListJobInput input) {
+            this.input = input;
+            return this;
+        }
+        public QueryVideoSummaryJobListResponseBodyJobListJobInput getInput() {
+            return this.input;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJob setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryVideoSummaryJobListResponseBodyJobListJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public QueryVideoSummaryJobListResponseBodyJobListJob setState(String state) {
@@ -260,52 +300,12 @@ public class QueryVideoSummaryJobListResponseBody extends TeaModel {
             return this.userData;
         }
 
-        public QueryVideoSummaryJobListResponseBodyJobListJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJob setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public QueryVideoSummaryJobListResponseBodyJobListJob setVideoSummaryResult(QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult videoSummaryResult) {
             this.videoSummaryResult = videoSummaryResult;
             return this;
         }
         public QueryVideoSummaryJobListResponseBodyJobListJobVideoSummaryResult getVideoSummaryResult() {
             return this.videoSummaryResult;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJob setInput(QueryVideoSummaryJobListResponseBodyJobListJobInput input) {
-            this.input = input;
-            return this;
-        }
-        public QueryVideoSummaryJobListResponseBodyJobListJobInput getInput() {
-            return this.input;
-        }
-
-        public QueryVideoSummaryJobListResponseBodyJobListJob setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

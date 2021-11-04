@@ -7,8 +7,8 @@ public class SearchMediaResponseBody extends TeaModel {
     @NameInMap("MediaList")
     public SearchMediaResponseBodyMediaList mediaList;
 
-    @NameInMap("TotalNum")
-    public Long totalNum;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,8 +16,8 @@ public class SearchMediaResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalNum")
+    public Long totalNum;
 
     public static SearchMediaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaResponseBody self = new SearchMediaResponseBody();
@@ -32,12 +32,12 @@ public class SearchMediaResponseBody extends TeaModel {
         return this.mediaList;
     }
 
-    public SearchMediaResponseBody setTotalNum(Long totalNum) {
-        this.totalNum = totalNum;
+    public SearchMediaResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalNum() {
-        return this.totalNum;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public SearchMediaResponseBody setPageSize(Long pageSize) {
@@ -56,31 +56,12 @@ public class SearchMediaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchMediaResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public SearchMediaResponseBody setTotalNum(Long totalNum) {
+        this.totalNum = totalNum;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public static class SearchMediaResponseBodyMediaListMediaTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<String> tag;
-
-        public static SearchMediaResponseBodyMediaListMediaTags build(java.util.Map<String, ?> map) throws Exception {
-            SearchMediaResponseBodyMediaListMediaTags self = new SearchMediaResponseBodyMediaListMediaTags();
-            return TeaModel.build(map, self);
-        }
-
-        public SearchMediaResponseBodyMediaListMediaTags setTag(java.util.List<String> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<String> getTag() {
-            return this.tag;
-        }
-
+    public Long getTotalNum() {
+        return this.totalNum;
     }
 
     public static class SearchMediaResponseBodyMediaListMediaFile extends TeaModel {
@@ -132,93 +113,80 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
 
+    public static class SearchMediaResponseBodyMediaListMediaTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<String> tag;
+
+        public static SearchMediaResponseBodyMediaListMediaTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchMediaResponseBodyMediaListMediaTags self = new SearchMediaResponseBodyMediaListMediaTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMediaResponseBodyMediaListMediaTags setTag(java.util.List<String> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<String> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class SearchMediaResponseBodyMediaListMedia extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("Bitrate")
+        public String bitrate;
 
         @NameInMap("CateId")
         public Long cateId;
 
-        @NameInMap("Height")
-        public String height;
+        @NameInMap("CoverURL")
+        public String coverURL;
 
-        @NameInMap("Tags")
-        public SearchMediaResponseBodyMediaListMediaTags tags;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("MediaId")
-        public String mediaId;
-
-        @NameInMap("File")
-        public SearchMediaResponseBodyMediaListMediaFile file;
-
-        @NameInMap("PublishState")
-        public String publishState;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Size")
-        public String size;
-
-        @NameInMap("CoverURL")
-        public String coverURL;
-
-        @NameInMap("RunIdList")
-        public SearchMediaResponseBodyMediaListMediaRunIdList runIdList;
-
         @NameInMap("Duration")
         public String duration;
 
-        @NameInMap("Fps")
-        public String fps;
-
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("File")
+        public SearchMediaResponseBodyMediaListMediaFile file;
 
         @NameInMap("Format")
         public String format;
 
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("MediaId")
+        public String mediaId;
+
+        @NameInMap("PublishState")
+        public String publishState;
+
+        @NameInMap("RunIdList")
+        public SearchMediaResponseBodyMediaListMediaRunIdList runIdList;
+
+        @NameInMap("Size")
+        public String size;
+
+        @NameInMap("Tags")
+        public SearchMediaResponseBodyMediaListMediaTags tags;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("Width")
+        public String width;
+
         public static SearchMediaResponseBodyMediaListMedia build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaListMedia self = new SearchMediaResponseBodyMediaListMedia();
             return TeaModel.build(map, self);
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setCateId(Long cateId) {
-            this.cateId = cateId;
-            return this;
-        }
-        public Long getCateId() {
-            return this.cateId;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setTags(SearchMediaResponseBodyMediaListMediaTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public SearchMediaResponseBodyMediaListMediaTags getTags() {
-            return this.tags;
         }
 
         public SearchMediaResponseBodyMediaListMedia setBitrate(String bitrate) {
@@ -229,52 +197,12 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public SearchMediaResponseBodyMediaListMedia setMediaId(String mediaId) {
-            this.mediaId = mediaId;
+        public SearchMediaResponseBodyMediaListMedia setCateId(Long cateId) {
+            this.cateId = cateId;
             return this;
         }
-        public String getMediaId() {
-            return this.mediaId;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setFile(SearchMediaResponseBodyMediaListMediaFile file) {
-            this.file = file;
-            return this;
-        }
-        public SearchMediaResponseBodyMediaListMediaFile getFile() {
-            return this.file;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setPublishState(String publishState) {
-            this.publishState = publishState;
-            return this;
-        }
-        public String getPublishState() {
-            return this.publishState;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public SearchMediaResponseBodyMediaListMedia setSize(String size) {
-            this.size = size;
-            return this;
-        }
-        public String getSize() {
-            return this.size;
+        public Long getCateId() {
+            return this.cateId;
         }
 
         public SearchMediaResponseBodyMediaListMedia setCoverURL(String coverURL) {
@@ -285,12 +213,20 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.coverURL;
         }
 
-        public SearchMediaResponseBodyMediaListMedia setRunIdList(SearchMediaResponseBodyMediaListMediaRunIdList runIdList) {
-            this.runIdList = runIdList;
+        public SearchMediaResponseBodyMediaListMedia setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public SearchMediaResponseBodyMediaListMediaRunIdList getRunIdList() {
-            return this.runIdList;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public SearchMediaResponseBodyMediaListMedia setDuration(String duration) {
@@ -301,12 +237,76 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public SearchMediaResponseBodyMediaListMedia setFile(SearchMediaResponseBodyMediaListMediaFile file) {
+            this.file = file;
+            return this;
+        }
+        public SearchMediaResponseBodyMediaListMediaFile getFile() {
+            return this.file;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
         public SearchMediaResponseBodyMediaListMedia setFps(String fps) {
             this.fps = fps;
             return this;
         }
         public String getFps() {
             return this.fps;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setMediaId(String mediaId) {
+            this.mediaId = mediaId;
+            return this;
+        }
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setPublishState(String publishState) {
+            this.publishState = publishState;
+            return this;
+        }
+        public String getPublishState() {
+            return this.publishState;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setRunIdList(SearchMediaResponseBodyMediaListMediaRunIdList runIdList) {
+            this.runIdList = runIdList;
+            return this;
+        }
+        public SearchMediaResponseBodyMediaListMediaRunIdList getRunIdList() {
+            return this.runIdList;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+        public SearchMediaResponseBodyMediaListMedia setTags(SearchMediaResponseBodyMediaListMediaTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public SearchMediaResponseBodyMediaListMediaTags getTags() {
+            return this.tags;
         }
 
         public SearchMediaResponseBodyMediaListMedia setTitle(String title) {
@@ -317,12 +317,12 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.title;
         }
 
-        public SearchMediaResponseBodyMediaListMedia setFormat(String format) {
-            this.format = format;
+        public SearchMediaResponseBodyMediaListMedia setWidth(String width) {
+            this.width = width;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public String getWidth() {
+            return this.width;
         }
 
     }

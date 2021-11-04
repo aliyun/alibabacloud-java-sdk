@@ -32,17 +32,14 @@ public class DescribeMtsUserResourcePackageResponseBody extends TeaModel {
     }
 
     public static class DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("CurrCapacity")
         public String currCapacity;
+
+        @NameInMap("DisplayName")
+        public String displayName;
 
         @NameInMap("InitCapacity")
         public String initCapacity;
@@ -50,25 +47,12 @@ public class DescribeMtsUserResourcePackageResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo self = new DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setCommodityCode(String commodityCode) {
@@ -87,6 +71,14 @@ public class DescribeMtsUserResourcePackageResponseBody extends TeaModel {
             return this.currCapacity;
         }
 
+        public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInitCapacity(String initCapacity) {
             this.initCapacity = initCapacity;
             return this;
@@ -101,6 +93,14 @@ public class DescribeMtsUserResourcePackageResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeMtsUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

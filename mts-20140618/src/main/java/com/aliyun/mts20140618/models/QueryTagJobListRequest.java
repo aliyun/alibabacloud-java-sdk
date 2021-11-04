@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryTagJobListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class QueryTagJobListRequest extends TeaModel {
     @NameInMap("TagJobIds")
     public String tagJobIds;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryTagJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTagJobListRequest self = new QueryTagJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTagJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryTagJobListRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class QueryTagJobListRequest extends TeaModel {
     }
     public String getTagJobIds() {
         return this.tagJobIds;
-    }
-
-    public QueryTagJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

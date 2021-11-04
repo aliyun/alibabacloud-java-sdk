@@ -4,20 +4,8 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitJobsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Input")
     public String input;
-
-    @NameInMap("Outputs")
-    public String outputs;
 
     @NameInMap("OutputBucket")
     public String outputBucket;
@@ -25,39 +13,27 @@ public class SubmitJobsRequest extends TeaModel {
     @NameInMap("OutputLocation")
     public String outputLocation;
 
-    @NameInMap("PipelineId")
-    public String pipelineId;
+    @NameInMap("Outputs")
+    public String outputs;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static SubmitJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitJobsRequest self = new SubmitJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitJobsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SubmitJobsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SubmitJobsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public SubmitJobsRequest setInput(String input) {
@@ -66,14 +42,6 @@ public class SubmitJobsRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
-    }
-
-    public SubmitJobsRequest setOutputs(String outputs) {
-        this.outputs = outputs;
-        return this;
-    }
-    public String getOutputs() {
-        return this.outputs;
     }
 
     public SubmitJobsRequest setOutputBucket(String outputBucket) {
@@ -92,12 +60,12 @@ public class SubmitJobsRequest extends TeaModel {
         return this.outputLocation;
     }
 
-    public SubmitJobsRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
+    public SubmitJobsRequest setOutputs(String outputs) {
+        this.outputs = outputs;
         return this;
     }
-    public String getPipelineId() {
-        return this.pipelineId;
+    public String getOutputs() {
+        return this.outputs;
     }
 
     public SubmitJobsRequest setOwnerAccount(String ownerAccount) {
@@ -106,6 +74,38 @@ public class SubmitJobsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public SubmitJobsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SubmitJobsRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
+    public SubmitJobsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SubmitJobsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,8 +4,11 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitInferenceJobResponseBody extends TeaModel {
-    @NameInMap("TestId")
-    public String testId;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +16,28 @@ public class SubmitInferenceJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("TestId")
+    public String testId;
 
     public static SubmitInferenceJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitInferenceJobResponseBody self = new SubmitInferenceJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInferenceJobResponseBody setTestId(String testId) {
-        this.testId = testId;
+    public SubmitInferenceJobResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTestId() {
-        return this.testId;
+    public String getCode() {
+        return this.code;
+    }
+
+    public SubmitInferenceJobResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public SubmitInferenceJobResponseBody setMessage(String message) {
@@ -48,20 +56,12 @@ public class SubmitInferenceJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SubmitInferenceJobResponseBody setCode(String code) {
-        this.code = code;
+    public SubmitInferenceJobResponseBody setTestId(String testId) {
+        this.testId = testId;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SubmitInferenceJobResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
+    public String getTestId() {
+        return this.testId;
     }
 
 }

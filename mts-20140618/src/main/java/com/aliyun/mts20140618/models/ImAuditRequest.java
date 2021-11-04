@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ImAuditRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
+    @NameInMap("Contents")
+    public String contents;
+
+    @NameInMap("Images")
+    public String images;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +22,36 @@ public class ImAuditRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Images")
-    public String images;
-
-    @NameInMap("Contents")
-    public String contents;
-
     @NameInMap("Scenes")
     public String scenes;
-
-    @NameInMap("BizType")
-    public String bizType;
 
     public static ImAuditRequest build(java.util.Map<String, ?> map) throws Exception {
         ImAuditRequest self = new ImAuditRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImAuditRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public ImAuditRequest setContents(String contents) {
+        this.contents = contents;
+        return this;
+    }
+    public String getContents() {
+        return this.contents;
+    }
+
+    public ImAuditRequest setImages(String images) {
+        this.images = images;
+        return this;
+    }
+    public String getImages() {
+        return this.images;
     }
 
     public ImAuditRequest setOwnerId(Long ownerId) {
@@ -54,36 +78,12 @@ public class ImAuditRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ImAuditRequest setImages(String images) {
-        this.images = images;
-        return this;
-    }
-    public String getImages() {
-        return this.images;
-    }
-
-    public ImAuditRequest setContents(String contents) {
-        this.contents = contents;
-        return this;
-    }
-    public String getContents() {
-        return this.contents;
-    }
-
     public ImAuditRequest setScenes(String scenes) {
         this.scenes = scenes;
         return this;
     }
     public String getScenes() {
         return this.scenes;
-    }
-
-    public ImAuditRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
 }

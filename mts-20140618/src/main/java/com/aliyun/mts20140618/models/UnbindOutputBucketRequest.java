@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UnbindOutputBucketRequest extends TeaModel {
+    @NameInMap("Bucket")
+    public String bucket;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class UnbindOutputBucketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Bucket")
-    public String bucket;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static UnbindOutputBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindOutputBucketRequest self = new UnbindOutputBucketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindOutputBucketRequest setBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public UnbindOutputBucketRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UnbindOutputBucketRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class UnbindOutputBucketRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UnbindOutputBucketRequest setBucket(String bucket) {
-        this.bucket = bucket;
-        return this;
-    }
-    public String getBucket() {
-        return this.bucket;
-    }
-
-    public UnbindOutputBucketRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoGifJobListRequest extends TeaModel {
+    @NameInMap("JobIds")
+    public String jobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryVideoGifJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobIds")
-    public String jobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryVideoGifJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryVideoGifJobListRequest self = new QueryVideoGifJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryVideoGifJobListRequest setJobIds(String jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+    public String getJobIds() {
+        return this.jobIds;
+    }
+
+    public QueryVideoGifJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryVideoGifJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryVideoGifJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryVideoGifJobListRequest setJobIds(String jobIds) {
-        this.jobIds = jobIds;
-        return this;
-    }
-    public String getJobIds() {
-        return this.jobIds;
-    }
-
-    public QueryVideoGifJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

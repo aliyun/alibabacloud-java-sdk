@@ -4,14 +4,14 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaFpDeleteJobRequest extends TeaModel {
+    @NameInMap("FpDBId")
+    public String fpDBId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     @NameInMap("PipelineId")
     public String pipelineId;
@@ -19,18 +19,34 @@ public class SubmitMediaFpDeleteJobRequest extends TeaModel {
     @NameInMap("PrimaryKey")
     public String primaryKey;
 
-    @NameInMap("FpDBId")
-    public String fpDBId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static SubmitMediaFpDeleteJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaFpDeleteJobRequest self = new SubmitMediaFpDeleteJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitMediaFpDeleteJobRequest setFpDBId(String fpDBId) {
+        this.fpDBId = fpDBId;
+        return this;
+    }
+    public String getFpDBId() {
+        return this.fpDBId;
+    }
+
+    public SubmitMediaFpDeleteJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitMediaFpDeleteJobRequest setOwnerId(Long ownerId) {
@@ -39,22 +55,6 @@ public class SubmitMediaFpDeleteJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public SubmitMediaFpDeleteJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SubmitMediaFpDeleteJobRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public SubmitMediaFpDeleteJobRequest setPipelineId(String pipelineId) {
@@ -73,12 +73,20 @@ public class SubmitMediaFpDeleteJobRequest extends TeaModel {
         return this.primaryKey;
     }
 
-    public SubmitMediaFpDeleteJobRequest setFpDBId(String fpDBId) {
-        this.fpDBId = fpDBId;
+    public SubmitMediaFpDeleteJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getFpDBId() {
-        return this.fpDBId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SubmitMediaFpDeleteJobRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public SubmitMediaFpDeleteJobRequest setUserData(String userData) {
@@ -87,14 +95,6 @@ public class SubmitMediaFpDeleteJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitMediaFpDeleteJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

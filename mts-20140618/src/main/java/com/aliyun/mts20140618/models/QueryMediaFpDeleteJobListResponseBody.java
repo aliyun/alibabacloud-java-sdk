@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("MediaFpDeleteJobList")
+    public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobList mediaFpDeleteJobList;
 
     @NameInMap("NonExistIds")
     public QueryMediaFpDeleteJobListResponseBodyNonExistIds nonExistIds;
 
-    @NameInMap("MediaFpDeleteJobList")
-    public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobList mediaFpDeleteJobList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryMediaFpDeleteJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaFpDeleteJobListResponseBody self = new QueryMediaFpDeleteJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMediaFpDeleteJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryMediaFpDeleteJobListResponseBody setNonExistIds(QueryMediaFpDeleteJobListResponseBodyNonExistIds nonExistIds) {
-        this.nonExistIds = nonExistIds;
-        return this;
-    }
-    public QueryMediaFpDeleteJobListResponseBodyNonExistIds getNonExistIds() {
-        return this.nonExistIds;
     }
 
     public QueryMediaFpDeleteJobListResponseBody setMediaFpDeleteJobList(QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobList mediaFpDeleteJobList) {
@@ -42,31 +26,43 @@ public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
         return this.mediaFpDeleteJobList;
     }
 
-    public static class QueryMediaFpDeleteJobListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
+    public QueryMediaFpDeleteJobListResponseBody setNonExistIds(QueryMediaFpDeleteJobListResponseBodyNonExistIds nonExistIds) {
+        this.nonExistIds = nonExistIds;
+        return this;
+    }
+    public QueryMediaFpDeleteJobListResponseBodyNonExistIds getNonExistIds() {
+        return this.nonExistIds;
+    }
 
-        public static QueryMediaFpDeleteJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaFpDeleteJobListResponseBodyNonExistIds self = new QueryMediaFpDeleteJobListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaFpDeleteJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
-        }
-
+    public QueryMediaFpDeleteJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
+
+        @NameInMap("FpDBId")
+        public String fpDBId;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("PrimaryKey")
         public String primaryKey;
@@ -77,24 +73,17 @@ public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
-
-        @NameInMap("FpDBId")
-        public String fpDBId;
-
-        @NameInMap("Id")
-        public String id;
-
         public static QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob self = new QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setCreationTime(String creationTime) {
@@ -111,6 +100,38 @@ public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
         }
         public String getFinishTime() {
             return this.finishTime;
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setFpDBId(String fpDBId) {
+            this.fpDBId = fpDBId;
+            return this;
+        }
+        public String getFpDBId() {
+            return this.fpDBId;
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setPrimaryKey(String primaryKey) {
@@ -137,46 +158,6 @@ public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
             return this.userData;
         }
 
-        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setFpDBId(String fpDBId) {
-            this.fpDBId = fpDBId;
-            return this;
-        }
-        public String getFpDBId() {
-            return this.fpDBId;
-        }
-
-        public QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
     }
 
     public static class QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobList extends TeaModel {
@@ -194,6 +175,25 @@ public class QueryMediaFpDeleteJobListResponseBody extends TeaModel {
         }
         public java.util.List<QueryMediaFpDeleteJobListResponseBodyMediaFpDeleteJobListMediaFpDeleteJob> getMediaFpDeleteJob() {
             return this.mediaFpDeleteJob;
+        }
+
+    }
+
+    public static class QueryMediaFpDeleteJobListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryMediaFpDeleteJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaFpDeleteJobListResponseBodyNonExistIds self = new QueryMediaFpDeleteJobListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaFpDeleteJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
         }
 
     }

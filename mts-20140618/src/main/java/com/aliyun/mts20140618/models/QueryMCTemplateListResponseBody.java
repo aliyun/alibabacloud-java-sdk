@@ -7,11 +7,11 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
     @NameInMap("NonExistTids")
     public QueryMCTemplateListResponseBodyNonExistTids nonExistTids;
 
-    @NameInMap("TemplateList")
-    public QueryMCTemplateListResponseBodyTemplateList templateList;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TemplateList")
+    public QueryMCTemplateListResponseBodyTemplateList templateList;
 
     public static QueryMCTemplateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMCTemplateListResponseBody self = new QueryMCTemplateListResponseBody();
@@ -26,20 +26,20 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
         return this.nonExistTids;
     }
 
-    public QueryMCTemplateListResponseBody setTemplateList(QueryMCTemplateListResponseBodyTemplateList templateList) {
-        this.templateList = templateList;
-        return this;
-    }
-    public QueryMCTemplateListResponseBodyTemplateList getTemplateList() {
-        return this.templateList;
-    }
-
     public QueryMCTemplateListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryMCTemplateListResponseBody setTemplateList(QueryMCTemplateListResponseBodyTemplateList templateList) {
+        this.templateList = templateList;
+        return this;
+    }
+    public QueryMCTemplateListResponseBodyTemplateList getTemplateList() {
+        return this.templateList;
     }
 
     public static class QueryMCTemplateListResponseBodyNonExistTids extends TeaModel {
@@ -62,56 +62,48 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
     }
 
     public static class QueryMCTemplateListResponseBodyTemplateListTemplate extends TeaModel {
-        @NameInMap("Logo")
-        public String logo;
-
         @NameInMap("Abuse")
         public String abuse;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("Terrorism")
-        public String terrorism;
-
-        @NameInMap("Politics")
-        public String politics;
-
-        @NameInMap("Qrcode")
-        public String qrcode;
-
-        @NameInMap("Live")
-        public String live;
-
-        @NameInMap("Spam")
-        public String spam;
-
-        @NameInMap("Contraband")
-        public String contraband;
 
         @NameInMap("Ad")
         public String ad;
 
-        @NameInMap("Porn")
-        public String porn;
+        @NameInMap("Contraband")
+        public String contraband;
+
+        @NameInMap("Live")
+        public String live;
+
+        @NameInMap("Logo")
+        public String logo;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Politics")
+        public String politics;
+
+        @NameInMap("Porn")
+        public String porn;
+
+        @NameInMap("Qrcode")
+        public String qrcode;
+
+        @NameInMap("Spam")
+        public String spam;
+
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("TemplateId")
         public String templateId;
+
+        @NameInMap("Terrorism")
+        public String terrorism;
 
         public static QueryMCTemplateListResponseBodyTemplateListTemplate build(java.util.Map<String, ?> map) throws Exception {
             QueryMCTemplateListResponseBodyTemplateListTemplate self = new QueryMCTemplateListResponseBodyTemplateListTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setLogo(String logo) {
-            this.logo = logo;
-            return this;
-        }
-        public String getLogo() {
-            return this.logo;
         }
 
         public QueryMCTemplateListResponseBodyTemplateListTemplate setAbuse(String abuse) {
@@ -122,52 +114,12 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
             return this.abuse;
         }
 
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setState(String state) {
-            this.state = state;
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setAd(String ad) {
+            this.ad = ad;
             return this;
         }
-        public String getState() {
-            return this.state;
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setTerrorism(String terrorism) {
-            this.terrorism = terrorism;
-            return this;
-        }
-        public String getTerrorism() {
-            return this.terrorism;
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setPolitics(String politics) {
-            this.politics = politics;
-            return this;
-        }
-        public String getPolitics() {
-            return this.politics;
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setQrcode(String qrcode) {
-            this.qrcode = qrcode;
-            return this;
-        }
-        public String getQrcode() {
-            return this.qrcode;
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setLive(String live) {
-            this.live = live;
-            return this;
-        }
-        public String getLive() {
-            return this.live;
-        }
-
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setSpam(String spam) {
-            this.spam = spam;
-            return this;
-        }
-        public String getSpam() {
-            return this.spam;
+        public String getAd() {
+            return this.ad;
         }
 
         public QueryMCTemplateListResponseBodyTemplateListTemplate setContraband(String contraband) {
@@ -178,20 +130,20 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
             return this.contraband;
         }
 
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setAd(String ad) {
-            this.ad = ad;
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setLive(String live) {
+            this.live = live;
             return this;
         }
-        public String getAd() {
-            return this.ad;
+        public String getLive() {
+            return this.live;
         }
 
-        public QueryMCTemplateListResponseBodyTemplateListTemplate setPorn(String porn) {
-            this.porn = porn;
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setLogo(String logo) {
+            this.logo = logo;
             return this;
         }
-        public String getPorn() {
-            return this.porn;
+        public String getLogo() {
+            return this.logo;
         }
 
         public QueryMCTemplateListResponseBodyTemplateListTemplate setName(String name) {
@@ -202,12 +154,60 @@ public class QueryMCTemplateListResponseBody extends TeaModel {
             return this.name;
         }
 
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setPolitics(String politics) {
+            this.politics = politics;
+            return this;
+        }
+        public String getPolitics() {
+            return this.politics;
+        }
+
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setPorn(String porn) {
+            this.porn = porn;
+            return this;
+        }
+        public String getPorn() {
+            return this.porn;
+        }
+
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setQrcode(String qrcode) {
+            this.qrcode = qrcode;
+            return this;
+        }
+        public String getQrcode() {
+            return this.qrcode;
+        }
+
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setSpam(String spam) {
+            this.spam = spam;
+            return this;
+        }
+        public String getSpam() {
+            return this.spam;
+        }
+
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public QueryMCTemplateListResponseBodyTemplateListTemplate setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public QueryMCTemplateListResponseBodyTemplateListTemplate setTerrorism(String terrorism) {
+            this.terrorism = terrorism;
+            return this;
+        }
+        public String getTerrorism() {
+            return this.terrorism;
         }
 
     }

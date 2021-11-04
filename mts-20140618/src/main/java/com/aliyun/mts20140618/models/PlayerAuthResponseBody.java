@@ -4,11 +4,11 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class PlayerAuthResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LogURL")
     public String logURL;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SwitchList")
     public PlayerAuthResponseBodySwitchList switchList;
@@ -18,20 +18,20 @@ public class PlayerAuthResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PlayerAuthResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public PlayerAuthResponseBody setLogURL(String logURL) {
         this.logURL = logURL;
         return this;
     }
     public String getLogURL() {
         return this.logURL;
+    }
+
+    public PlayerAuthResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PlayerAuthResponseBody setSwitchList(PlayerAuthResponseBodySwitchList switchList) {

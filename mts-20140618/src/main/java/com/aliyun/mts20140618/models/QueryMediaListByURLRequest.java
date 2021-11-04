@@ -4,6 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaListByURLRequest extends TeaModel {
+    @NameInMap("FileURLs")
+    public String fileURLs;
+
+    @NameInMap("IncludeMediaInfo")
+    public Boolean includeMediaInfo;
+
+    @NameInMap("IncludePlayList")
+    public Boolean includePlayList;
+
+    @NameInMap("IncludeSnapshotList")
+    public Boolean includeSnapshotList;
+
+    @NameInMap("IncludeSummaryList")
+    public Boolean includeSummaryList;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,27 +31,57 @@ public class QueryMediaListByURLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("FileURLs")
-    public String fileURLs;
-
-    @NameInMap("IncludePlayList")
-    public Boolean includePlayList;
-
-    @NameInMap("IncludeSnapshotList")
-    public Boolean includeSnapshotList;
-
-    @NameInMap("IncludeMediaInfo")
-    public Boolean includeMediaInfo;
-
-    @NameInMap("IncludeSummaryList")
-    public Boolean includeSummaryList;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryMediaListByURLRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaListByURLRequest self = new QueryMediaListByURLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaListByURLRequest setFileURLs(String fileURLs) {
+        this.fileURLs = fileURLs;
+        return this;
+    }
+    public String getFileURLs() {
+        return this.fileURLs;
+    }
+
+    public QueryMediaListByURLRequest setIncludeMediaInfo(Boolean includeMediaInfo) {
+        this.includeMediaInfo = includeMediaInfo;
+        return this;
+    }
+    public Boolean getIncludeMediaInfo() {
+        return this.includeMediaInfo;
+    }
+
+    public QueryMediaListByURLRequest setIncludePlayList(Boolean includePlayList) {
+        this.includePlayList = includePlayList;
+        return this;
+    }
+    public Boolean getIncludePlayList() {
+        return this.includePlayList;
+    }
+
+    public QueryMediaListByURLRequest setIncludeSnapshotList(Boolean includeSnapshotList) {
+        this.includeSnapshotList = includeSnapshotList;
+        return this;
+    }
+    public Boolean getIncludeSnapshotList() {
+        return this.includeSnapshotList;
+    }
+
+    public QueryMediaListByURLRequest setIncludeSummaryList(Boolean includeSummaryList) {
+        this.includeSummaryList = includeSummaryList;
+        return this;
+    }
+    public Boolean getIncludeSummaryList() {
+        return this.includeSummaryList;
+    }
+
+    public QueryMediaListByURLRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryMediaListByURLRequest setOwnerId(Long ownerId) {
@@ -58,54 +106,6 @@ public class QueryMediaListByURLRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryMediaListByURLRequest setFileURLs(String fileURLs) {
-        this.fileURLs = fileURLs;
-        return this;
-    }
-    public String getFileURLs() {
-        return this.fileURLs;
-    }
-
-    public QueryMediaListByURLRequest setIncludePlayList(Boolean includePlayList) {
-        this.includePlayList = includePlayList;
-        return this;
-    }
-    public Boolean getIncludePlayList() {
-        return this.includePlayList;
-    }
-
-    public QueryMediaListByURLRequest setIncludeSnapshotList(Boolean includeSnapshotList) {
-        this.includeSnapshotList = includeSnapshotList;
-        return this;
-    }
-    public Boolean getIncludeSnapshotList() {
-        return this.includeSnapshotList;
-    }
-
-    public QueryMediaListByURLRequest setIncludeMediaInfo(Boolean includeMediaInfo) {
-        this.includeMediaInfo = includeMediaInfo;
-        return this;
-    }
-    public Boolean getIncludeMediaInfo() {
-        return this.includeMediaInfo;
-    }
-
-    public QueryMediaListByURLRequest setIncludeSummaryList(Boolean includeSummaryList) {
-        this.includeSummaryList = includeSummaryList;
-        return this;
-    }
-    public Boolean getIncludeSummaryList() {
-        return this.includeSummaryList;
-    }
-
-    public QueryMediaListByURLRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

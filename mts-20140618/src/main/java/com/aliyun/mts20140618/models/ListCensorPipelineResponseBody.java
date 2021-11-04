@@ -4,48 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListCensorPipelineResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PipelineList")
+    public ListCensorPipelineResponseBodyPipelineList pipelineList;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PipelineList")
-    public ListCensorPipelineResponseBodyPipelineList pipelineList;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListCensorPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCensorPipelineResponseBody self = new ListCensorPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCensorPipelineResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListCensorPipelineResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListCensorPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListCensorPipelineResponseBody setPageNumber(Long pageNumber) {
@@ -56,6 +32,14 @@ public class ListCensorPipelineResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListCensorPipelineResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
     public ListCensorPipelineResponseBody setPipelineList(ListCensorPipelineResponseBodyPipelineList pipelineList) {
         this.pipelineList = pipelineList;
         return this;
@@ -64,24 +48,32 @@ public class ListCensorPipelineResponseBody extends TeaModel {
         return this.pipelineList;
     }
 
-    public static class ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public ListCensorPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public ListCensorPipelineResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig self = new ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig setQueue(String queue) {
@@ -92,11 +84,22 @@ public class ListCensorPipelineResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class ListCensorPipelineResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -104,23 +107,28 @@ public class ListCensorPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static ListCensorPipelineResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             ListCensorPipelineResponseBodyPipelineListPipeline self = new ListCensorPipelineResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public ListCensorPipelineResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public ListCensorPipelineResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public ListCensorPipelineResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListCensorPipelineResponseBodyPipelineListPipeline setNotifyConfig(ListCensorPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -139,20 +147,12 @@ public class ListCensorPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public ListCensorPipelineResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public ListCensorPipelineResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListCensorPipelineResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

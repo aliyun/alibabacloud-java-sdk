@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QuerySmarttagTemplateListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +16,20 @@ public class QuerySmarttagTemplateListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("TemplateId")
     public String templateId;
 
     public static QuerySmarttagTemplateListRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySmarttagTemplateListRequest self = new QuerySmarttagTemplateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySmarttagTemplateListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QuerySmarttagTemplateListRequest setOwnerId(Long ownerId) {
@@ -46,14 +54,6 @@ public class QuerySmarttagTemplateListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QuerySmarttagTemplateListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public QuerySmarttagTemplateListRequest setTemplateId(String templateId) {

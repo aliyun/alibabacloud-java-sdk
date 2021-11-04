@@ -4,8 +4,23 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QuerySnapshotJobListRequest extends TeaModel {
+    @NameInMap("EndOfJobCreatedTimeRange")
+    public String endOfJobCreatedTimeRange;
+
+    @NameInMap("MaximumPageSize")
+    public Long maximumPageSize;
+
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +31,47 @@ public class QuerySnapshotJobListRequest extends TeaModel {
     @NameInMap("SnapshotJobIds")
     public String snapshotJobIds;
 
-    @NameInMap("NextPageToken")
-    public String nextPageToken;
-
-    @NameInMap("MaximumPageSize")
-    public Long maximumPageSize;
+    @NameInMap("StartOfJobCreatedTimeRange")
+    public String startOfJobCreatedTimeRange;
 
     @NameInMap("State")
     public String state;
 
-    @NameInMap("StartOfJobCreatedTimeRange")
-    public String startOfJobCreatedTimeRange;
-
-    @NameInMap("EndOfJobCreatedTimeRange")
-    public String endOfJobCreatedTimeRange;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QuerySnapshotJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySnapshotJobListRequest self = new QuerySnapshotJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySnapshotJobListRequest setEndOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
+        this.endOfJobCreatedTimeRange = endOfJobCreatedTimeRange;
+        return this;
+    }
+    public String getEndOfJobCreatedTimeRange() {
+        return this.endOfJobCreatedTimeRange;
+    }
+
+    public QuerySnapshotJobListRequest setMaximumPageSize(Long maximumPageSize) {
+        this.maximumPageSize = maximumPageSize;
+        return this;
+    }
+    public Long getMaximumPageSize() {
+        return this.maximumPageSize;
+    }
+
+    public QuerySnapshotJobListRequest setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
+
+    public QuerySnapshotJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QuerySnapshotJobListRequest setOwnerId(Long ownerId) {
@@ -48,6 +80,14 @@ public class QuerySnapshotJobListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QuerySnapshotJobListRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public QuerySnapshotJobListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -74,30 +114,6 @@ public class QuerySnapshotJobListRequest extends TeaModel {
         return this.snapshotJobIds;
     }
 
-    public QuerySnapshotJobListRequest setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
-    }
-
-    public QuerySnapshotJobListRequest setMaximumPageSize(Long maximumPageSize) {
-        this.maximumPageSize = maximumPageSize;
-        return this;
-    }
-    public Long getMaximumPageSize() {
-        return this.maximumPageSize;
-    }
-
-    public QuerySnapshotJobListRequest setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
-    }
-
     public QuerySnapshotJobListRequest setStartOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
         this.startOfJobCreatedTimeRange = startOfJobCreatedTimeRange;
         return this;
@@ -106,28 +122,12 @@ public class QuerySnapshotJobListRequest extends TeaModel {
         return this.startOfJobCreatedTimeRange;
     }
 
-    public QuerySnapshotJobListRequest setEndOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
-        this.endOfJobCreatedTimeRange = endOfJobCreatedTimeRange;
+    public QuerySnapshotJobListRequest setState(String state) {
+        this.state = state;
         return this;
     }
-    public String getEndOfJobCreatedTimeRange() {
-        return this.endOfJobCreatedTimeRange;
-    }
-
-    public QuerySnapshotJobListRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public QuerySnapshotJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getState() {
+        return this.state;
     }
 
 }

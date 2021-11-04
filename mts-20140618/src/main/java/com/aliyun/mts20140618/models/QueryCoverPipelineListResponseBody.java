@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryCoverPipelineListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("NonExistIds")
+    public QueryCoverPipelineListResponseBodyNonExistIds nonExistIds;
 
     @NameInMap("PipelineList")
     public QueryCoverPipelineListResponseBodyPipelineList pipelineList;
 
-    @NameInMap("NonExistIds")
-    public QueryCoverPipelineListResponseBodyNonExistIds nonExistIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryCoverPipelineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCoverPipelineListResponseBody self = new QueryCoverPipelineListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCoverPipelineListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryCoverPipelineListResponseBody setPipelineList(QueryCoverPipelineListResponseBodyPipelineList pipelineList) {
-        this.pipelineList = pipelineList;
-        return this;
-    }
-    public QueryCoverPipelineListResponseBodyPipelineList getPipelineList() {
-        return this.pipelineList;
     }
 
     public QueryCoverPipelineListResponseBody setNonExistIds(QueryCoverPipelineListResponseBodyNonExistIds nonExistIds) {
@@ -42,24 +26,51 @@ public class QueryCoverPipelineListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public QueryCoverPipelineListResponseBody setPipelineList(QueryCoverPipelineListResponseBodyPipelineList pipelineList) {
+        this.pipelineList = pipelineList;
+        return this;
+    }
+    public QueryCoverPipelineListResponseBodyPipelineList getPipelineList() {
+        return this.pipelineList;
+    }
 
+    public QueryCoverPipelineListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryCoverPipelineListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryCoverPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryCoverPipelineListResponseBodyNonExistIds self = new QueryCoverPipelineListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCoverPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
+    }
+
+    public static class QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig self = new QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig setQueue(String queue) {
@@ -70,11 +81,22 @@ public class QueryCoverPipelineListResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class QueryCoverPipelineListResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -85,23 +107,28 @@ public class QueryCoverPipelineListResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static QueryCoverPipelineListResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             QueryCoverPipelineListResponseBodyPipelineListPipeline self = new QueryCoverPipelineListResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public QueryCoverPipelineListResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public QueryCoverPipelineListResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryCoverPipelineListResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public QueryCoverPipelineListResponseBodyPipelineListPipeline setNotifyConfig(QueryCoverPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -128,20 +155,12 @@ public class QueryCoverPipelineListResponseBody extends TeaModel {
             return this.role;
         }
 
-        public QueryCoverPipelineListResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public QueryCoverPipelineListResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryCoverPipelineListResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }
@@ -161,25 +180,6 @@ public class QueryCoverPipelineListResponseBody extends TeaModel {
         }
         public java.util.List<QueryCoverPipelineListResponseBodyPipelineListPipeline> getPipeline() {
             return this.pipeline;
-        }
-
-    }
-
-    public static class QueryCoverPipelineListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryCoverPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryCoverPipelineListResponseBodyNonExistIds self = new QueryCoverPipelineListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCoverPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
         }
 
     }

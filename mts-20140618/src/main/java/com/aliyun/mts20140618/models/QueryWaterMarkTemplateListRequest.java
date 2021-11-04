@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryWaterMarkTemplateListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class QueryWaterMarkTemplateListRequest extends TeaModel {
     @NameInMap("WaterMarkTemplateIds")
     public String waterMarkTemplateIds;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryWaterMarkTemplateListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryWaterMarkTemplateListRequest self = new QueryWaterMarkTemplateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryWaterMarkTemplateListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryWaterMarkTemplateListRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class QueryWaterMarkTemplateListRequest extends TeaModel {
     }
     public String getWaterMarkTemplateIds() {
         return this.waterMarkTemplateIds;
-    }
-
-    public QueryWaterMarkTemplateListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

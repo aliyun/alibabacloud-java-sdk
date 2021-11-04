@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeactivateMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaWorkflow")
     public DeactivateMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeactivateMediaWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeactivateMediaWorkflowResponseBody self = new DeactivateMediaWorkflowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeactivateMediaWorkflowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeactivateMediaWorkflowResponseBody setMediaWorkflow(DeactivateMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow) {
@@ -31,6 +23,14 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
         return this.mediaWorkflow;
     }
 
+    public DeactivateMediaWorkflowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeactivateMediaWorkflowResponseBodyMediaWorkflow extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -38,11 +38,11 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("Topology")
         public String topology;
@@ -68,20 +68,20 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             return this.mediaWorkflowId;
         }
 
-        public DeactivateMediaWorkflowResponseBodyMediaWorkflow setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public DeactivateMediaWorkflowResponseBodyMediaWorkflow setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DeactivateMediaWorkflowResponseBodyMediaWorkflow setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public DeactivateMediaWorkflowResponseBodyMediaWorkflow setTopology(String topology) {

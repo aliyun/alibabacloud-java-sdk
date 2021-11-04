@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaInfoJobListRequest extends TeaModel {
+    @NameInMap("MediaInfoJobIds")
+    public String mediaInfoJobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryMediaInfoJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MediaInfoJobIds")
-    public String mediaInfoJobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryMediaInfoJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaInfoJobListRequest self = new QueryMediaInfoJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaInfoJobListRequest setMediaInfoJobIds(String mediaInfoJobIds) {
+        this.mediaInfoJobIds = mediaInfoJobIds;
+        return this;
+    }
+    public String getMediaInfoJobIds() {
+        return this.mediaInfoJobIds;
+    }
+
+    public QueryMediaInfoJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryMediaInfoJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryMediaInfoJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryMediaInfoJobListRequest setMediaInfoJobIds(String mediaInfoJobIds) {
-        this.mediaInfoJobIds = mediaInfoJobIds;
-        return this;
-    }
-    public String getMediaInfoJobIds() {
-        return this.mediaInfoJobIds;
-    }
-
-    public QueryMediaInfoJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

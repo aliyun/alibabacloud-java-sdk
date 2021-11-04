@@ -7,11 +7,11 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
     @NameInMap("AnnotationJobList")
     public QueryAnnotationJobListResponseBodyAnnotationJobList annotationJobList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NonExistIds")
     public QueryAnnotationJobListResponseBodyNonExistIds nonExistIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryAnnotationJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAnnotationJobListResponseBody self = new QueryAnnotationJobListResponseBody();
@@ -26,14 +26,6 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
         return this.annotationJobList;
     }
 
-    public QueryAnnotationJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryAnnotationJobListResponseBody setNonExistIds(QueryAnnotationJobListResponseBodyNonExistIds nonExistIds) {
         this.nonExistIds = nonExistIds;
         return this;
@@ -42,35 +34,27 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
+    public QueryAnnotationJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         public static QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput build(java.util.Map<String, ?> map) throws Exception {
             QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput self = new QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput setBucket(String bucket) {
@@ -81,26 +65,34 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
             return this.bucket;
         }
 
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Score")
+        public String score;
 
         public static QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation build(java.util.Map<String, ?> map) throws Exception {
             QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation self = new QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
         }
 
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation setLabel(String label) {
@@ -109,6 +101,14 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResultAnnotationsAnnotation setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
     }
@@ -163,17 +163,17 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
     }
 
     public static class QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("Input")
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput input;
 
         @NameInMap("Message")
         public String message;
@@ -181,11 +181,11 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Input")
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput input;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("UserData")
+        public String userData;
 
         @NameInMap("VideoAnnotationResult")
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResult videoAnnotationResult;
@@ -193,6 +193,14 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
         public static QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob build(java.util.Map<String, ?> map) throws Exception {
             QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob self = new QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setCreationTime(String creationTime) {
@@ -203,28 +211,20 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setState(String state) {
-            this.state = state;
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
         }
 
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setUserData(String userData) {
-            this.userData = userData;
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setInput(QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput input) {
+            this.input = input;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput getInput() {
+            return this.input;
         }
 
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setMessage(String message) {
@@ -243,20 +243,20 @@ public class QueryAnnotationJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setInput(QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput input) {
-            this.input = input;
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobInput getInput() {
-            return this.input;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setId(String id) {
-            this.id = id;
+        public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getUserData() {
+            return this.userData;
         }
 
         public QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJob setVideoAnnotationResult(QueryAnnotationJobListResponseBodyAnnotationJobListAnnotationJobVideoAnnotationResult videoAnnotationResult) {

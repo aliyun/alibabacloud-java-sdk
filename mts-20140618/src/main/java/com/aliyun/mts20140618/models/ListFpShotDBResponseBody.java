@@ -7,11 +7,11 @@ public class ListFpShotDBResponseBody extends TeaModel {
     @NameInMap("FpShotDBList")
     public ListFpShotDBResponseBodyFpShotDBList fpShotDBList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NonExistIds")
     public ListFpShotDBResponseBodyNonExistIds nonExistIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListFpShotDBResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFpShotDBResponseBody self = new ListFpShotDBResponseBody();
@@ -26,14 +26,6 @@ public class ListFpShotDBResponseBody extends TeaModel {
         return this.fpShotDBList;
     }
 
-    public ListFpShotDBResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListFpShotDBResponseBody setNonExistIds(ListFpShotDBResponseBodyNonExistIds nonExistIds) {
         this.nonExistIds = nonExistIds;
         return this;
@@ -42,33 +34,33 @@ public class ListFpShotDBResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class ListFpShotDBResponseBodyFpShotDBListFpShotDB extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListFpShotDBResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListFpShotDBResponseBodyFpShotDBListFpShotDB extends TeaModel {
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ModelId")
-        public Integer modelId;
 
         @NameInMap("FpDBId")
         public String fpDBId;
 
+        @NameInMap("ModelId")
+        public Integer modelId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Status")
+        public String status;
+
         public static ListFpShotDBResponseBodyFpShotDBListFpShotDB build(java.util.Map<String, ?> map) throws Exception {
             ListFpShotDBResponseBodyFpShotDBListFpShotDB self = new ListFpShotDBResponseBodyFpShotDBListFpShotDB();
             return TeaModel.build(map, self);
-        }
-
-        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListFpShotDBResponseBodyFpShotDBListFpShotDB setDescription(String description) {
@@ -79,12 +71,12 @@ public class ListFpShotDBResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setName(String name) {
-            this.name = name;
+        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setFpDBId(String fpDBId) {
+            this.fpDBId = fpDBId;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getFpDBId() {
+            return this.fpDBId;
         }
 
         public ListFpShotDBResponseBodyFpShotDBListFpShotDB setModelId(Integer modelId) {
@@ -95,12 +87,20 @@ public class ListFpShotDBResponseBody extends TeaModel {
             return this.modelId;
         }
 
-        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setFpDBId(String fpDBId) {
-            this.fpDBId = fpDBId;
+        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getFpDBId() {
-            return this.fpDBId;
+        public String getName() {
+            return this.name;
+        }
+
+        public ListFpShotDBResponseBodyFpShotDBListFpShotDB setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

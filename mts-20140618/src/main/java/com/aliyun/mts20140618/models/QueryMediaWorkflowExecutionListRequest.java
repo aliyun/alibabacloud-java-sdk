@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaWorkflowExecutionListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class QueryMediaWorkflowExecutionListRequest extends TeaModel {
     @NameInMap("RunIds")
     public String runIds;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryMediaWorkflowExecutionListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaWorkflowExecutionListRequest self = new QueryMediaWorkflowExecutionListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaWorkflowExecutionListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryMediaWorkflowExecutionListRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class QueryMediaWorkflowExecutionListRequest extends TeaModel {
     }
     public String getRunIds() {
         return this.runIds;
-    }
-
-    public QueryMediaWorkflowExecutionListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

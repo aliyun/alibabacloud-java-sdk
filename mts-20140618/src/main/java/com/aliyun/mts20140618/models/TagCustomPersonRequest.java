@@ -4,17 +4,8 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class TagCustomPersonRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("CategoryDescription")
+    public String categoryDescription;
 
     @NameInMap("CategoryId")
     public String categoryId;
@@ -22,8 +13,14 @@ public class TagCustomPersonRequest extends TeaModel {
     @NameInMap("CategoryName")
     public String categoryName;
 
-    @NameInMap("CategoryDescription")
-    public String categoryDescription;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PersonDescription")
+    public String personDescription;
 
     @NameInMap("PersonId")
     public String personId;
@@ -31,44 +28,23 @@ public class TagCustomPersonRequest extends TeaModel {
     @NameInMap("PersonName")
     public String personName;
 
-    @NameInMap("PersonDescription")
-    public String personDescription;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static TagCustomPersonRequest build(java.util.Map<String, ?> map) throws Exception {
         TagCustomPersonRequest self = new TagCustomPersonRequest();
         return TeaModel.build(map, self);
     }
 
-    public TagCustomPersonRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public TagCustomPersonRequest setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public TagCustomPersonRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public TagCustomPersonRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public TagCustomPersonRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getCategoryDescription() {
+        return this.categoryDescription;
     }
 
     public TagCustomPersonRequest setCategoryId(String categoryId) {
@@ -87,12 +63,28 @@ public class TagCustomPersonRequest extends TeaModel {
         return this.categoryName;
     }
 
-    public TagCustomPersonRequest setCategoryDescription(String categoryDescription) {
-        this.categoryDescription = categoryDescription;
+    public TagCustomPersonRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getCategoryDescription() {
-        return this.categoryDescription;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public TagCustomPersonRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public TagCustomPersonRequest setPersonDescription(String personDescription) {
+        this.personDescription = personDescription;
+        return this;
+    }
+    public String getPersonDescription() {
+        return this.personDescription;
     }
 
     public TagCustomPersonRequest setPersonId(String personId) {
@@ -111,12 +103,20 @@ public class TagCustomPersonRequest extends TeaModel {
         return this.personName;
     }
 
-    public TagCustomPersonRequest setPersonDescription(String personDescription) {
-        this.personDescription = personDescription;
+    public TagCustomPersonRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getPersonDescription() {
-        return this.personDescription;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public TagCustomPersonRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

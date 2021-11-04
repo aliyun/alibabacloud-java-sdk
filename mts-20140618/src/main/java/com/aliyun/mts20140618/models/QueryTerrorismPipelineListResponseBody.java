@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryTerrorismPipelineListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("NonExistIds")
+    public QueryTerrorismPipelineListResponseBodyNonExistIds nonExistIds;
 
     @NameInMap("PipelineList")
     public QueryTerrorismPipelineListResponseBodyPipelineList pipelineList;
 
-    @NameInMap("NonExistIds")
-    public QueryTerrorismPipelineListResponseBodyNonExistIds nonExistIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryTerrorismPipelineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTerrorismPipelineListResponseBody self = new QueryTerrorismPipelineListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTerrorismPipelineListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryTerrorismPipelineListResponseBody setPipelineList(QueryTerrorismPipelineListResponseBodyPipelineList pipelineList) {
-        this.pipelineList = pipelineList;
-        return this;
-    }
-    public QueryTerrorismPipelineListResponseBodyPipelineList getPipelineList() {
-        return this.pipelineList;
     }
 
     public QueryTerrorismPipelineListResponseBody setNonExistIds(QueryTerrorismPipelineListResponseBodyNonExistIds nonExistIds) {
@@ -42,24 +26,51 @@ public class QueryTerrorismPipelineListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public QueryTerrorismPipelineListResponseBody setPipelineList(QueryTerrorismPipelineListResponseBodyPipelineList pipelineList) {
+        this.pipelineList = pipelineList;
+        return this;
+    }
+    public QueryTerrorismPipelineListResponseBodyPipelineList getPipelineList() {
+        return this.pipelineList;
+    }
 
+    public QueryTerrorismPipelineListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryTerrorismPipelineListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryTerrorismPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryTerrorismPipelineListResponseBodyNonExistIds self = new QueryTerrorismPipelineListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryTerrorismPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
+    }
+
+    public static class QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig self = new QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig setQueue(String queue) {
@@ -70,11 +81,22 @@ public class QueryTerrorismPipelineListResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class QueryTerrorismPipelineListResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -82,23 +104,28 @@ public class QueryTerrorismPipelineListResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static QueryTerrorismPipelineListResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             QueryTerrorismPipelineListResponseBodyPipelineListPipeline self = new QueryTerrorismPipelineListResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setNotifyConfig(QueryTerrorismPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -117,20 +144,12 @@ public class QueryTerrorismPipelineListResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryTerrorismPipelineListResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }
@@ -150,25 +169,6 @@ public class QueryTerrorismPipelineListResponseBody extends TeaModel {
         }
         public java.util.List<QueryTerrorismPipelineListResponseBodyPipelineListPipeline> getPipeline() {
             return this.pipeline;
-        }
-
-    }
-
-    public static class QueryTerrorismPipelineListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryTerrorismPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryTerrorismPipelineListResponseBodyNonExistIds self = new QueryTerrorismPipelineListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryTerrorismPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
         }
 
     }

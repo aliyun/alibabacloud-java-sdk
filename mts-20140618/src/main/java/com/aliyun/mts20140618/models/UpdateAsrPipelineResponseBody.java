@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateAsrPipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Pipeline")
     public UpdateAsrPipelineResponseBodyPipeline pipeline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateAsrPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAsrPipelineResponseBody self = new UpdateAsrPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAsrPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateAsrPipelineResponseBody setPipeline(UpdateAsrPipelineResponseBodyPipeline pipeline) {
@@ -29,6 +21,14 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
     }
     public UpdateAsrPipelineResponseBodyPipeline getPipeline() {
         return this.pipeline;
+    }
+
+    public UpdateAsrPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class UpdateAsrPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
@@ -62,8 +62,11 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
     }
 
     public static class UpdateAsrPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public UpdateAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig;
@@ -71,23 +74,28 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static UpdateAsrPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateAsrPipelineResponseBodyPipeline self = new UpdateAsrPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
         }
 
-        public UpdateAsrPipelineResponseBodyPipeline setState(String state) {
-            this.state = state;
+        public UpdateAsrPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdateAsrPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UpdateAsrPipelineResponseBodyPipeline setNotifyConfig(UpdateAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
@@ -106,20 +114,12 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdateAsrPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
+        public UpdateAsrPipelineResponseBodyPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateAsrPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaDetailJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitMediaDetailJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaDetailJobResponseBody self = new SubmitMediaDetailJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitMediaDetailJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitMediaDetailJobResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class SubmitMediaDetailJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitMediaDetailJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

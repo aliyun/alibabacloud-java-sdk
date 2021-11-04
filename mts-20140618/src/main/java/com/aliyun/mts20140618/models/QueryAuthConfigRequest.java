@@ -4,21 +4,29 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryAuthConfigRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public String ownerId;
-
-    @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ResourceOwnerId")
+    public String resourceOwnerId;
 
     public static QueryAuthConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAuthConfigRequest self = new QueryAuthConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAuthConfigRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryAuthConfigRequest setOwnerId(String ownerId) {
@@ -29,14 +37,6 @@ public class QueryAuthConfigRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryAuthConfigRequest setResourceOwnerId(String resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public String getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
     public QueryAuthConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -45,12 +45,12 @@ public class QueryAuthConfigRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public QueryAuthConfigRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public QueryAuthConfigRequest setResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

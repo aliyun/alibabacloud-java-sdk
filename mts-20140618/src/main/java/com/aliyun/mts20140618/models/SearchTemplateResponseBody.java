@@ -4,11 +4,8 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchTemplateResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("TemplateList")
-    public SearchTemplateResponseBodyTemplateList templateList;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,28 +13,23 @@ public class SearchTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TemplateList")
+    public SearchTemplateResponseBodyTemplateList templateList;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static SearchTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTemplateResponseBody self = new SearchTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SearchTemplateResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public SearchTemplateResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public SearchTemplateResponseBody setTemplateList(SearchTemplateResponseBodyTemplateList templateList) {
-        this.templateList = templateList;
-        return this;
-    }
-    public SearchTemplateResponseBodyTemplateList getTemplateList() {
-        return this.templateList;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public SearchTemplateResponseBody setPageSize(Long pageSize) {
@@ -56,194 +48,50 @@ public class SearchTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchTemplateResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public SearchTemplateResponseBody setTemplateList(SearchTemplateResponseBodyTemplateList templateList) {
+        this.templateList = templateList;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public SearchTemplateResponseBodyTemplateList getTemplateList() {
+        return this.templateList;
     }
 
-    public static class SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd extends TeaModel {
-        @NameInMap("Max")
-        public String max;
-
-        @NameInMap("Min")
-        public String min;
-
-        public static SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd build(java.util.Map<String, ?> map) throws Exception {
-            SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd self = new SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd();
-            return TeaModel.build(map, self);
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd setMax(String max) {
-            this.max = max;
-            return this;
-        }
-        public String getMax() {
-            return this.max;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd setMin(String min) {
-            this.min = min;
-            return this;
-        }
-        public String getMin() {
-            return this.min;
-        }
-
+    public SearchTemplateResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
-    public static class SearchTemplateResponseBodyTemplateListTemplateVideo extends TeaModel {
-        @NameInMap("Bufsize")
-        public String bufsize;
+    public static class SearchTemplateResponseBodyTemplateListTemplateAudio extends TeaModel {
+        @NameInMap("Bitrate")
+        public String bitrate;
 
-        @NameInMap("LongShortMode")
-        public String longShortMode;
-
-        @NameInMap("Degrain")
-        public String degrain;
-
-        @NameInMap("BitrateBnd")
-        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd bitrateBnd;
-
-        @NameInMap("PixFmt")
-        public String pixFmt;
-
-        @NameInMap("Pad")
-        public String pad;
+        @NameInMap("Channels")
+        public String channels;
 
         @NameInMap("Codec")
         public String codec;
 
-        @NameInMap("Height")
-        public String height;
+        @NameInMap("Profile")
+        public String profile;
 
         @NameInMap("Qscale")
         public String qscale;
 
-        @NameInMap("Crop")
-        public String crop;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("Maxrate")
-        public String maxrate;
-
-        @NameInMap("MaxFps")
-        public String maxFps;
-
-        @NameInMap("Profile")
-        public String profile;
-
-        @NameInMap("Crf")
-        public String crf;
-
         @NameInMap("Remove")
         public String remove;
 
-        @NameInMap("Gop")
-        public String gop;
+        @NameInMap("Samplerate")
+        public String samplerate;
 
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Fps")
-        public String fps;
-
-        @NameInMap("Preset")
-        public String preset;
-
-        @NameInMap("ScanMode")
-        public String scanMode;
-
-        public static SearchTemplateResponseBodyTemplateListTemplateVideo build(java.util.Map<String, ?> map) throws Exception {
-            SearchTemplateResponseBodyTemplateListTemplateVideo self = new SearchTemplateResponseBodyTemplateListTemplateVideo();
+        public static SearchTemplateResponseBodyTemplateListTemplateAudio build(java.util.Map<String, ?> map) throws Exception {
+            SearchTemplateResponseBodyTemplateListTemplateAudio self = new SearchTemplateResponseBodyTemplateListTemplateAudio();
             return TeaModel.build(map, self);
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setBufsize(String bufsize) {
-            this.bufsize = bufsize;
-            return this;
-        }
-        public String getBufsize() {
-            return this.bufsize;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setLongShortMode(String longShortMode) {
-            this.longShortMode = longShortMode;
-            return this;
-        }
-        public String getLongShortMode() {
-            return this.longShortMode;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setDegrain(String degrain) {
-            this.degrain = degrain;
-            return this;
-        }
-        public String getDegrain() {
-            return this.degrain;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setBitrateBnd(SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd bitrateBnd) {
-            this.bitrateBnd = bitrateBnd;
-            return this;
-        }
-        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd getBitrateBnd() {
-            return this.bitrateBnd;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setPixFmt(String pixFmt) {
-            this.pixFmt = pixFmt;
-            return this;
-        }
-        public String getPixFmt() {
-            return this.pixFmt;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setPad(String pad) {
-            this.pad = pad;
-            return this;
-        }
-        public String getPad() {
-            return this.pad;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setCodec(String codec) {
-            this.codec = codec;
-            return this;
-        }
-        public String getCodec() {
-            return this.codec;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setQscale(String qscale) {
-            this.qscale = qscale;
-            return this;
-        }
-        public String getQscale() {
-            return this.qscale;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setCrop(String crop) {
-            this.crop = crop;
-            return this;
-        }
-        public String getCrop() {
-            return this.crop;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setBitrate(String bitrate) {
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -251,23 +99,23 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setMaxrate(String maxrate) {
-            this.maxrate = maxrate;
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setChannels(String channels) {
+            this.channels = channels;
             return this;
         }
-        public String getMaxrate() {
-            return this.maxrate;
+        public String getChannels() {
+            return this.channels;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setMaxFps(String maxFps) {
-            this.maxFps = maxFps;
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setCodec(String codec) {
+            this.codec = codec;
             return this;
         }
-        public String getMaxFps() {
-            return this.maxFps;
+        public String getCodec() {
+            return this.codec;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setProfile(String profile) {
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setProfile(String profile) {
             this.profile = profile;
             return this;
         }
@@ -275,15 +123,15 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.profile;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setCrf(String crf) {
-            this.crf = crf;
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setQscale(String qscale) {
+            this.qscale = qscale;
             return this;
         }
-        public String getCrf() {
-            return this.crf;
+        public String getQscale() {
+            return this.qscale;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setRemove(String remove) {
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setRemove(String remove) {
             this.remove = remove;
             return this;
         }
@@ -291,168 +139,51 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.remove;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setGop(String gop) {
-            this.gop = gop;
+        public SearchTemplateResponseBodyTemplateListTemplateAudio setSamplerate(String samplerate) {
+            this.samplerate = samplerate;
             return this;
         }
-        public String getGop() {
-            return this.gop;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setFps(String fps) {
-            this.fps = fps;
-            return this;
-        }
-        public String getFps() {
-            return this.fps;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setPreset(String preset) {
-            this.preset = preset;
-            return this;
-        }
-        public String getPreset() {
-            return this.preset;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateVideo setScanMode(String scanMode) {
-            this.scanMode = scanMode;
-            return this;
-        }
-        public String getScanMode() {
-            return this.scanMode;
+        public String getSamplerate() {
+            return this.samplerate;
         }
 
     }
 
-    public static class SearchTemplateResponseBodyTemplateListTemplateTransConfig extends TeaModel {
-        @NameInMap("IsCheckAudioBitrate")
-        public String isCheckAudioBitrate;
+    public static class SearchTemplateResponseBodyTemplateListTemplateContainer extends TeaModel {
+        @NameInMap("Format")
+        public String format;
 
-        @NameInMap("TransMode")
-        public String transMode;
-
-        @NameInMap("IsCheckReso")
-        public String isCheckReso;
-
-        @NameInMap("IsCheckVideoBitrateFail")
-        public String isCheckVideoBitrateFail;
-
-        @NameInMap("AdjDarMethod")
-        public String adjDarMethod;
-
-        @NameInMap("IsCheckVideoBitrate")
-        public String isCheckVideoBitrate;
-
-        @NameInMap("IsCheckResoFail")
-        public String isCheckResoFail;
-
-        @NameInMap("IsCheckAudioBitrateFail")
-        public String isCheckAudioBitrateFail;
-
-        public static SearchTemplateResponseBodyTemplateListTemplateTransConfig build(java.util.Map<String, ?> map) throws Exception {
-            SearchTemplateResponseBodyTemplateListTemplateTransConfig self = new SearchTemplateResponseBodyTemplateListTemplateTransConfig();
+        public static SearchTemplateResponseBodyTemplateListTemplateContainer build(java.util.Map<String, ?> map) throws Exception {
+            SearchTemplateResponseBodyTemplateListTemplateContainer self = new SearchTemplateResponseBodyTemplateListTemplateContainer();
             return TeaModel.build(map, self);
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckAudioBitrate(String isCheckAudioBitrate) {
-            this.isCheckAudioBitrate = isCheckAudioBitrate;
+        public SearchTemplateResponseBodyTemplateListTemplateContainer setFormat(String format) {
+            this.format = format;
             return this;
         }
-        public String getIsCheckAudioBitrate() {
-            return this.isCheckAudioBitrate;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setTransMode(String transMode) {
-            this.transMode = transMode;
-            return this;
-        }
-        public String getTransMode() {
-            return this.transMode;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckReso(String isCheckReso) {
-            this.isCheckReso = isCheckReso;
-            return this;
-        }
-        public String getIsCheckReso() {
-            return this.isCheckReso;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
-            this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
-            return this;
-        }
-        public String getIsCheckVideoBitrateFail() {
-            return this.isCheckVideoBitrateFail;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setAdjDarMethod(String adjDarMethod) {
-            this.adjDarMethod = adjDarMethod;
-            return this;
-        }
-        public String getAdjDarMethod() {
-            return this.adjDarMethod;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckVideoBitrate(String isCheckVideoBitrate) {
-            this.isCheckVideoBitrate = isCheckVideoBitrate;
-            return this;
-        }
-        public String getIsCheckVideoBitrate() {
-            return this.isCheckVideoBitrate;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckResoFail(String isCheckResoFail) {
-            this.isCheckResoFail = isCheckResoFail;
-            return this;
-        }
-        public String getIsCheckResoFail() {
-            return this.isCheckResoFail;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
-            this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
-            return this;
-        }
-        public String getIsCheckAudioBitrateFail() {
-            return this.isCheckAudioBitrateFail;
+        public String getFormat() {
+            return this.format;
         }
 
     }
 
     public static class SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif extends TeaModel {
-        @NameInMap("FinalDelay")
-        public String finalDelay;
-
         @NameInMap("DitherMode")
         public String ditherMode;
 
-        @NameInMap("Loop")
-        public String loop;
+        @NameInMap("FinalDelay")
+        public String finalDelay;
 
         @NameInMap("IsCustomPalette")
         public String isCustomPalette;
 
+        @NameInMap("Loop")
+        public String loop;
+
         public static SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif build(java.util.Map<String, ?> map) throws Exception {
             SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif self = new SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setFinalDelay(String finalDelay) {
-            this.finalDelay = finalDelay;
-            return this;
-        }
-        public String getFinalDelay() {
-            return this.finalDelay;
         }
 
         public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setDitherMode(String ditherMode) {
@@ -463,12 +194,12 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.ditherMode;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setLoop(String loop) {
-            this.loop = loop;
+        public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setFinalDelay(String finalDelay) {
+            this.finalDelay = finalDelay;
             return this;
         }
-        public String getLoop() {
-            return this.loop;
+        public String getFinalDelay() {
+            return this.finalDelay;
         }
 
         public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setIsCustomPalette(String isCustomPalette) {
@@ -477,6 +208,14 @@ public class SearchTemplateResponseBody extends TeaModel {
         }
         public String getIsCustomPalette() {
             return this.isCustomPalette;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateMuxConfigGif setLoop(String loop) {
+            this.loop = loop;
+            return this;
+        }
+        public String getLoop() {
+            return this.loop;
         }
 
     }
@@ -530,82 +269,202 @@ public class SearchTemplateResponseBody extends TeaModel {
 
     }
 
-    public static class SearchTemplateResponseBodyTemplateListTemplateAudio extends TeaModel {
-        @NameInMap("Profile")
-        public String profile;
+    public static class SearchTemplateResponseBodyTemplateListTemplateTransConfig extends TeaModel {
+        @NameInMap("AdjDarMethod")
+        public String adjDarMethod;
 
-        @NameInMap("Remove")
-        public String remove;
+        @NameInMap("IsCheckAudioBitrate")
+        public String isCheckAudioBitrate;
+
+        @NameInMap("IsCheckAudioBitrateFail")
+        public String isCheckAudioBitrateFail;
+
+        @NameInMap("IsCheckReso")
+        public String isCheckReso;
+
+        @NameInMap("IsCheckResoFail")
+        public String isCheckResoFail;
+
+        @NameInMap("IsCheckVideoBitrate")
+        public String isCheckVideoBitrate;
+
+        @NameInMap("IsCheckVideoBitrateFail")
+        public String isCheckVideoBitrateFail;
+
+        @NameInMap("TransMode")
+        public String transMode;
+
+        public static SearchTemplateResponseBodyTemplateListTemplateTransConfig build(java.util.Map<String, ?> map) throws Exception {
+            SearchTemplateResponseBodyTemplateListTemplateTransConfig self = new SearchTemplateResponseBodyTemplateListTemplateTransConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setAdjDarMethod(String adjDarMethod) {
+            this.adjDarMethod = adjDarMethod;
+            return this;
+        }
+        public String getAdjDarMethod() {
+            return this.adjDarMethod;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckAudioBitrate(String isCheckAudioBitrate) {
+            this.isCheckAudioBitrate = isCheckAudioBitrate;
+            return this;
+        }
+        public String getIsCheckAudioBitrate() {
+            return this.isCheckAudioBitrate;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
+            this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
+            return this;
+        }
+        public String getIsCheckAudioBitrateFail() {
+            return this.isCheckAudioBitrateFail;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckReso(String isCheckReso) {
+            this.isCheckReso = isCheckReso;
+            return this;
+        }
+        public String getIsCheckReso() {
+            return this.isCheckReso;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckResoFail(String isCheckResoFail) {
+            this.isCheckResoFail = isCheckResoFail;
+            return this;
+        }
+        public String getIsCheckResoFail() {
+            return this.isCheckResoFail;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckVideoBitrate(String isCheckVideoBitrate) {
+            this.isCheckVideoBitrate = isCheckVideoBitrate;
+            return this;
+        }
+        public String getIsCheckVideoBitrate() {
+            return this.isCheckVideoBitrate;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setIsCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
+            this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
+            return this;
+        }
+        public String getIsCheckVideoBitrateFail() {
+            return this.isCheckVideoBitrateFail;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig setTransMode(String transMode) {
+            this.transMode = transMode;
+            return this;
+        }
+        public String getTransMode() {
+            return this.transMode;
+        }
+
+    }
+
+    public static class SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd extends TeaModel {
+        @NameInMap("Max")
+        public String max;
+
+        @NameInMap("Min")
+        public String min;
+
+        public static SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd build(java.util.Map<String, ?> map) throws Exception {
+            SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd self = new SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd setMax(String max) {
+            this.max = max;
+            return this;
+        }
+        public String getMax() {
+            return this.max;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd setMin(String min) {
+            this.min = min;
+            return this;
+        }
+        public String getMin() {
+            return this.min;
+        }
+
+    }
+
+    public static class SearchTemplateResponseBodyTemplateListTemplateVideo extends TeaModel {
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("BitrateBnd")
+        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd bitrateBnd;
+
+        @NameInMap("Bufsize")
+        public String bufsize;
 
         @NameInMap("Codec")
         public String codec;
 
-        @NameInMap("Samplerate")
-        public String samplerate;
+        @NameInMap("Crf")
+        public String crf;
+
+        @NameInMap("Crop")
+        public String crop;
+
+        @NameInMap("Degrain")
+        public String degrain;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Gop")
+        public String gop;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("LongShortMode")
+        public String longShortMode;
+
+        @NameInMap("MaxFps")
+        public String maxFps;
+
+        @NameInMap("Maxrate")
+        public String maxrate;
+
+        @NameInMap("Pad")
+        public String pad;
+
+        @NameInMap("PixFmt")
+        public String pixFmt;
+
+        @NameInMap("Preset")
+        public String preset;
+
+        @NameInMap("Profile")
+        public String profile;
 
         @NameInMap("Qscale")
         public String qscale;
 
-        @NameInMap("Channels")
-        public String channels;
+        @NameInMap("Remove")
+        public String remove;
 
-        @NameInMap("Bitrate")
-        public String bitrate;
+        @NameInMap("ScanMode")
+        public String scanMode;
 
-        public static SearchTemplateResponseBodyTemplateListTemplateAudio build(java.util.Map<String, ?> map) throws Exception {
-            SearchTemplateResponseBodyTemplateListTemplateAudio self = new SearchTemplateResponseBodyTemplateListTemplateAudio();
+        @NameInMap("Width")
+        public String width;
+
+        public static SearchTemplateResponseBodyTemplateListTemplateVideo build(java.util.Map<String, ?> map) throws Exception {
+            SearchTemplateResponseBodyTemplateListTemplateVideo self = new SearchTemplateResponseBodyTemplateListTemplateVideo();
             return TeaModel.build(map, self);
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setProfile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-        public String getProfile() {
-            return this.profile;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setRemove(String remove) {
-            this.remove = remove;
-            return this;
-        }
-        public String getRemove() {
-            return this.remove;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setCodec(String codec) {
-            this.codec = codec;
-            return this;
-        }
-        public String getCodec() {
-            return this.codec;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setSamplerate(String samplerate) {
-            this.samplerate = samplerate;
-            return this;
-        }
-        public String getSamplerate() {
-            return this.samplerate;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setQscale(String qscale) {
-            this.qscale = qscale;
-            return this;
-        }
-        public String getQscale() {
-            return this.qscale;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setChannels(String channels) {
-            this.channels = channels;
-            return this;
-        }
-        public String getChannels() {
-            return this.channels;
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateAudio setBitrate(String bitrate) {
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -613,36 +472,177 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-    }
-
-    public static class SearchTemplateResponseBodyTemplateListTemplateContainer extends TeaModel {
-        @NameInMap("Format")
-        public String format;
-
-        public static SearchTemplateResponseBodyTemplateListTemplateContainer build(java.util.Map<String, ?> map) throws Exception {
-            SearchTemplateResponseBodyTemplateListTemplateContainer self = new SearchTemplateResponseBodyTemplateListTemplateContainer();
-            return TeaModel.build(map, self);
-        }
-
-        public SearchTemplateResponseBodyTemplateListTemplateContainer setFormat(String format) {
-            this.format = format;
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setBitrateBnd(SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd bitrateBnd) {
+            this.bitrateBnd = bitrateBnd;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public SearchTemplateResponseBodyTemplateListTemplateVideoBitrateBnd getBitrateBnd() {
+            return this.bitrateBnd;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setBufsize(String bufsize) {
+            this.bufsize = bufsize;
+            return this;
+        }
+        public String getBufsize() {
+            return this.bufsize;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setCodec(String codec) {
+            this.codec = codec;
+            return this;
+        }
+        public String getCodec() {
+            return this.codec;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setCrf(String crf) {
+            this.crf = crf;
+            return this;
+        }
+        public String getCrf() {
+            return this.crf;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setCrop(String crop) {
+            this.crop = crop;
+            return this;
+        }
+        public String getCrop() {
+            return this.crop;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setDegrain(String degrain) {
+            this.degrain = degrain;
+            return this;
+        }
+        public String getDegrain() {
+            return this.degrain;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setGop(String gop) {
+            this.gop = gop;
+            return this;
+        }
+        public String getGop() {
+            return this.gop;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setLongShortMode(String longShortMode) {
+            this.longShortMode = longShortMode;
+            return this;
+        }
+        public String getLongShortMode() {
+            return this.longShortMode;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setMaxFps(String maxFps) {
+            this.maxFps = maxFps;
+            return this;
+        }
+        public String getMaxFps() {
+            return this.maxFps;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setMaxrate(String maxrate) {
+            this.maxrate = maxrate;
+            return this;
+        }
+        public String getMaxrate() {
+            return this.maxrate;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setPad(String pad) {
+            this.pad = pad;
+            return this;
+        }
+        public String getPad() {
+            return this.pad;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setPixFmt(String pixFmt) {
+            this.pixFmt = pixFmt;
+            return this;
+        }
+        public String getPixFmt() {
+            return this.pixFmt;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setPreset(String preset) {
+            this.preset = preset;
+            return this;
+        }
+        public String getPreset() {
+            return this.preset;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setQscale(String qscale) {
+            this.qscale = qscale;
+            return this;
+        }
+        public String getQscale() {
+            return this.qscale;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setRemove(String remove) {
+            this.remove = remove;
+            return this;
+        }
+        public String getRemove() {
+            return this.remove;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setScanMode(String scanMode) {
+            this.scanMode = scanMode;
+            return this;
+        }
+        public String getScanMode() {
+            return this.scanMode;
+        }
+
+        public SearchTemplateResponseBodyTemplateListTemplateVideo setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
         }
 
     }
 
     public static class SearchTemplateResponseBodyTemplateListTemplate extends TeaModel {
-        @NameInMap("Video")
-        public SearchTemplateResponseBodyTemplateListTemplateVideo video;
+        @NameInMap("Audio")
+        public SearchTemplateResponseBodyTemplateListTemplateAudio audio;
 
-        @NameInMap("TransConfig")
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig transConfig;
+        @NameInMap("Container")
+        public SearchTemplateResponseBodyTemplateListTemplateContainer container;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("MuxConfig")
         public SearchTemplateResponseBodyTemplateListTemplateMuxConfig muxConfig;
@@ -650,42 +650,42 @@ public class SearchTemplateResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Audio")
-        public SearchTemplateResponseBodyTemplateListTemplateAudio audio;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("TransConfig")
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig transConfig;
 
-        @NameInMap("Container")
-        public SearchTemplateResponseBodyTemplateListTemplateContainer container;
+        @NameInMap("Video")
+        public SearchTemplateResponseBodyTemplateListTemplateVideo video;
 
         public static SearchTemplateResponseBodyTemplateListTemplate build(java.util.Map<String, ?> map) throws Exception {
             SearchTemplateResponseBodyTemplateListTemplate self = new SearchTemplateResponseBodyTemplateListTemplate();
             return TeaModel.build(map, self);
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setVideo(SearchTemplateResponseBodyTemplateListTemplateVideo video) {
-            this.video = video;
+        public SearchTemplateResponseBodyTemplateListTemplate setAudio(SearchTemplateResponseBodyTemplateListTemplateAudio audio) {
+            this.audio = audio;
             return this;
         }
-        public SearchTemplateResponseBodyTemplateListTemplateVideo getVideo() {
-            return this.video;
+        public SearchTemplateResponseBodyTemplateListTemplateAudio getAudio() {
+            return this.audio;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setTransConfig(SearchTemplateResponseBodyTemplateListTemplateTransConfig transConfig) {
-            this.transConfig = transConfig;
+        public SearchTemplateResponseBodyTemplateListTemplate setContainer(SearchTemplateResponseBodyTemplateListTemplateContainer container) {
+            this.container = container;
             return this;
         }
-        public SearchTemplateResponseBodyTemplateListTemplateTransConfig getTransConfig() {
-            return this.transConfig;
+        public SearchTemplateResponseBodyTemplateListTemplateContainer getContainer() {
+            return this.container;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setState(String state) {
-            this.state = state;
+        public SearchTemplateResponseBodyTemplateListTemplate setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
         }
 
         public SearchTemplateResponseBodyTemplateListTemplate setMuxConfig(SearchTemplateResponseBodyTemplateListTemplateMuxConfig muxConfig) {
@@ -704,28 +704,28 @@ public class SearchTemplateResponseBody extends TeaModel {
             return this.name;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setAudio(SearchTemplateResponseBodyTemplateListTemplateAudio audio) {
-            this.audio = audio;
+        public SearchTemplateResponseBodyTemplateListTemplate setState(String state) {
+            this.state = state;
             return this;
         }
-        public SearchTemplateResponseBodyTemplateListTemplateAudio getAudio() {
-            return this.audio;
+        public String getState() {
+            return this.state;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setId(String id) {
-            this.id = id;
+        public SearchTemplateResponseBodyTemplateListTemplate setTransConfig(SearchTemplateResponseBodyTemplateListTemplateTransConfig transConfig) {
+            this.transConfig = transConfig;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public SearchTemplateResponseBodyTemplateListTemplateTransConfig getTransConfig() {
+            return this.transConfig;
         }
 
-        public SearchTemplateResponseBodyTemplateListTemplate setContainer(SearchTemplateResponseBodyTemplateListTemplateContainer container) {
-            this.container = container;
+        public SearchTemplateResponseBodyTemplateListTemplate setVideo(SearchTemplateResponseBodyTemplateListTemplateVideo video) {
+            this.video = video;
             return this;
         }
-        public SearchTemplateResponseBodyTemplateListTemplateContainer getContainer() {
-            return this.container;
+        public SearchTemplateResponseBodyTemplateListTemplateVideo getVideo() {
+            return this.video;
         }
 
     }

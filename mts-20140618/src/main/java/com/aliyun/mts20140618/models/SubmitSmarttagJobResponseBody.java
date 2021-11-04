@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitSmarttagJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmarttagJobResponseBody self = new SubmitSmarttagJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitSmarttagJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitSmarttagJobResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class SubmitSmarttagJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitSmarttagJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

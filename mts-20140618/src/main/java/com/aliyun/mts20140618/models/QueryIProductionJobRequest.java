@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobRequest extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryIProductionJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryIProductionJobRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryIProductionJobRequest self = new QueryIProductionJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryIProductionJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public QueryIProductionJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryIProductionJobRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryIProductionJobRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryIProductionJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public QueryIProductionJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

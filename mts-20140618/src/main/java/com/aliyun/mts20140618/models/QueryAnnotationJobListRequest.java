@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryAnnotationJobListRequest extends TeaModel {
+    @NameInMap("AnnotationJobIds")
+    public String annotationJobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryAnnotationJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("AnnotationJobIds")
-    public String annotationJobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryAnnotationJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAnnotationJobListRequest self = new QueryAnnotationJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAnnotationJobListRequest setAnnotationJobIds(String annotationJobIds) {
+        this.annotationJobIds = annotationJobIds;
+        return this;
+    }
+    public String getAnnotationJobIds() {
+        return this.annotationJobIds;
+    }
+
+    public QueryAnnotationJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryAnnotationJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryAnnotationJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryAnnotationJobListRequest setAnnotationJobIds(String annotationJobIds) {
-        this.annotationJobIds = annotationJobIds;
-        return this;
-    }
-    public String getAnnotationJobIds() {
-        return this.annotationJobIds;
-    }
-
-    public QueryAnnotationJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

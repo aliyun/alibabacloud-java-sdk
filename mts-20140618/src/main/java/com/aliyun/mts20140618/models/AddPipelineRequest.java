@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddPipelineRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NotifyConfig")
+    public String notifyConfig;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,8 +22,8 @@ public class AddPipelineRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Role")
+    public String role;
 
     @NameInMap("Speed")
     public String speed;
@@ -22,18 +31,33 @@ public class AddPipelineRequest extends TeaModel {
     @NameInMap("SpeedLevel")
     public Long speedLevel;
 
-    @NameInMap("NotifyConfig")
-    public String notifyConfig;
-
-    @NameInMap("Role")
-    public String role;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static AddPipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         AddPipelineRequest self = new AddPipelineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddPipelineRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public AddPipelineRequest setNotifyConfig(String notifyConfig) {
+        this.notifyConfig = notifyConfig;
+        return this;
+    }
+    public String getNotifyConfig() {
+        return this.notifyConfig;
+    }
+
+    public AddPipelineRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AddPipelineRequest setOwnerId(Long ownerId) {
@@ -60,12 +84,12 @@ public class AddPipelineRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddPipelineRequest setName(String name) {
-        this.name = name;
+    public AddPipelineRequest setRole(String role) {
+        this.role = role;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getRole() {
+        return this.role;
     }
 
     public AddPipelineRequest setSpeed(String speed) {
@@ -82,30 +106,6 @@ public class AddPipelineRequest extends TeaModel {
     }
     public Long getSpeedLevel() {
         return this.speedLevel;
-    }
-
-    public AddPipelineRequest setNotifyConfig(String notifyConfig) {
-        this.notifyConfig = notifyConfig;
-        return this;
-    }
-    public String getNotifyConfig() {
-        return this.notifyConfig;
-    }
-
-    public AddPipelineRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
-    }
-
-    public AddPipelineRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

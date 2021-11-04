@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdatePornPipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Pipeline")
     public UpdatePornPipelineResponseBodyPipeline pipeline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdatePornPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdatePornPipelineResponseBody self = new UpdatePornPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdatePornPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdatePornPipelineResponseBody setPipeline(UpdatePornPipelineResponseBodyPipeline pipeline) {
@@ -31,24 +23,24 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
         return this.pipeline;
     }
 
-    public static class UpdatePornPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public UpdatePornPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class UpdatePornPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static UpdatePornPipelineResponseBodyPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdatePornPipelineResponseBodyPipelineNotifyConfig self = new UpdatePornPipelineResponseBodyPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public UpdatePornPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public UpdatePornPipelineResponseBodyPipelineNotifyConfig setQueue(String queue) {
@@ -59,11 +51,22 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public UpdatePornPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class UpdatePornPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public UpdatePornPipelineResponseBodyPipelineNotifyConfig notifyConfig;
@@ -71,23 +74,28 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static UpdatePornPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdatePornPipelineResponseBodyPipeline self = new UpdatePornPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
         }
 
-        public UpdatePornPipelineResponseBodyPipeline setState(String state) {
-            this.state = state;
+        public UpdatePornPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdatePornPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UpdatePornPipelineResponseBodyPipeline setNotifyConfig(UpdatePornPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
@@ -106,20 +114,12 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdatePornPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
+        public UpdatePornPipelineResponseBodyPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdatePornPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

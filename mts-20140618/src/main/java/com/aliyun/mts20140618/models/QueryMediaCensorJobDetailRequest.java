@@ -4,6 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobDetailRequest extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("MaximumPageSize")
+    public Long maximumPageSize;
+
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +25,41 @@ public class QueryMediaCensorJobDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("NextPageToken")
-    public String nextPageToken;
-
-    @NameInMap("MaximumPageSize")
-    public Long maximumPageSize;
-
     public static QueryMediaCensorJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaCensorJobDetailRequest self = new QueryMediaCensorJobDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaCensorJobDetailRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public QueryMediaCensorJobDetailRequest setMaximumPageSize(Long maximumPageSize) {
+        this.maximumPageSize = maximumPageSize;
+        return this;
+    }
+    public Long getMaximumPageSize() {
+        return this.maximumPageSize;
+    }
+
+    public QueryMediaCensorJobDetailRequest setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
+
+    public QueryMediaCensorJobDetailRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryMediaCensorJobDetailRequest setOwnerId(Long ownerId) {
@@ -52,38 +84,6 @@ public class QueryMediaCensorJobDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryMediaCensorJobDetailRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public QueryMediaCensorJobDetailRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public QueryMediaCensorJobDetailRequest setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
-    }
-
-    public QueryMediaCensorJobDetailRequest setMaximumPageSize(Long maximumPageSize) {
-        this.maximumPageSize = maximumPageSize;
-        return this;
-    }
-    public Long getMaximumPageSize() {
-        return this.maximumPageSize;
     }
 
 }

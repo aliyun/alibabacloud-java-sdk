@@ -4,24 +4,32 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitOssFileCopyJobRequest extends TeaModel {
+    @NameInMap("Notify")
+    public String notify;
+
     @NameInMap("Region")
     public String region;
 
     @NameInMap("SourceStorage")
     public SubmitOssFileCopyJobRequestSourceStorage sourceStorage;
 
-    @NameInMap("UserData")
-    public String userData;
-
-    @NameInMap("Notify")
-    public String notify;
-
     @NameInMap("TargetStorage")
     public SubmitOssFileCopyJobRequestTargetStorage targetStorage;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static SubmitOssFileCopyJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitOssFileCopyJobRequest self = new SubmitOssFileCopyJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitOssFileCopyJobRequest setNotify(String notify) {
+        this.notify = notify;
+        return this;
+    }
+    public String getNotify() {
+        return this.notify;
     }
 
     public SubmitOssFileCopyJobRequest setRegion(String region) {
@@ -40,28 +48,20 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
         return this.sourceStorage;
     }
 
-    public SubmitOssFileCopyJobRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
-    public SubmitOssFileCopyJobRequest setNotify(String notify) {
-        this.notify = notify;
-        return this;
-    }
-    public String getNotify() {
-        return this.notify;
-    }
-
     public SubmitOssFileCopyJobRequest setTargetStorage(SubmitOssFileCopyJobRequestTargetStorage targetStorage) {
         this.targetStorage = targetStorage;
         return this;
     }
     public SubmitOssFileCopyJobRequestTargetStorage getTargetStorage() {
         return this.targetStorage;
+    }
+
+    public SubmitOssFileCopyJobRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public static class SubmitOssFileCopyJobRequestSourceStorage extends TeaModel {
@@ -80,14 +80,14 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
         @NameInMap("ObjectRoleName")
         public String objectRoleName;
 
-        @NameInMap("S3Provider")
-        public String s3Provider;
+        @NameInMap("S3AccessKey")
+        public String s3AccessKey;
 
         @NameInMap("S3Endpoint")
         public String s3Endpoint;
 
-        @NameInMap("S3AccessKey")
-        public String s3AccessKey;
+        @NameInMap("S3Provider")
+        public String s3Provider;
 
         @NameInMap("S3SecretKey")
         public String s3SecretKey;
@@ -140,12 +140,12 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
             return this.objectRoleName;
         }
 
-        public SubmitOssFileCopyJobRequestSourceStorage setS3Provider(String s3Provider) {
-            this.s3Provider = s3Provider;
+        public SubmitOssFileCopyJobRequestSourceStorage setS3AccessKey(String s3AccessKey) {
+            this.s3AccessKey = s3AccessKey;
             return this;
         }
-        public String getS3Provider() {
-            return this.s3Provider;
+        public String getS3AccessKey() {
+            return this.s3AccessKey;
         }
 
         public SubmitOssFileCopyJobRequestSourceStorage setS3Endpoint(String s3Endpoint) {
@@ -156,12 +156,12 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
             return this.s3Endpoint;
         }
 
-        public SubmitOssFileCopyJobRequestSourceStorage setS3AccessKey(String s3AccessKey) {
-            this.s3AccessKey = s3AccessKey;
+        public SubmitOssFileCopyJobRequestSourceStorage setS3Provider(String s3Provider) {
+            this.s3Provider = s3Provider;
             return this;
         }
-        public String getS3AccessKey() {
-            return this.s3AccessKey;
+        public String getS3Provider() {
+            return this.s3Provider;
         }
 
         public SubmitOssFileCopyJobRequestSourceStorage setS3SecretKey(String s3SecretKey) {
@@ -195,14 +195,14 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
         @NameInMap("ObjectRoleName")
         public String objectRoleName;
 
-        @NameInMap("S3Provider")
-        public String s3Provider;
+        @NameInMap("S3AccessKey")
+        public String s3AccessKey;
 
         @NameInMap("S3Endpoint")
         public String s3Endpoint;
 
-        @NameInMap("S3AccessKey")
-        public String s3AccessKey;
+        @NameInMap("S3Provider")
+        public String s3Provider;
 
         @NameInMap("S3SecretKey")
         public String s3SecretKey;
@@ -247,12 +247,12 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
             return this.objectRoleName;
         }
 
-        public SubmitOssFileCopyJobRequestTargetStorage setS3Provider(String s3Provider) {
-            this.s3Provider = s3Provider;
+        public SubmitOssFileCopyJobRequestTargetStorage setS3AccessKey(String s3AccessKey) {
+            this.s3AccessKey = s3AccessKey;
             return this;
         }
-        public String getS3Provider() {
-            return this.s3Provider;
+        public String getS3AccessKey() {
+            return this.s3AccessKey;
         }
 
         public SubmitOssFileCopyJobRequestTargetStorage setS3Endpoint(String s3Endpoint) {
@@ -263,12 +263,12 @@ public class SubmitOssFileCopyJobRequest extends TeaModel {
             return this.s3Endpoint;
         }
 
-        public SubmitOssFileCopyJobRequestTargetStorage setS3AccessKey(String s3AccessKey) {
-            this.s3AccessKey = s3AccessKey;
+        public SubmitOssFileCopyJobRequestTargetStorage setS3Provider(String s3Provider) {
+            this.s3Provider = s3Provider;
             return this;
         }
-        public String getS3AccessKey() {
-            return this.s3AccessKey;
+        public String getS3Provider() {
+            return this.s3Provider;
         }
 
         public SubmitOssFileCopyJobRequestTargetStorage setS3SecretKey(String s3SecretKey) {

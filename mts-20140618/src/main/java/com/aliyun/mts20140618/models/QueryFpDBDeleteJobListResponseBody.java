@@ -4,26 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FpDBDeleteJobList")
     public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobList fpDBDeleteJobList;
 
     @NameInMap("NonExistIds")
     public QueryFpDBDeleteJobListResponseBodyNonExistIds nonExistIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryFpDBDeleteJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFpDBDeleteJobListResponseBody self = new QueryFpDBDeleteJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFpDBDeleteJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFpDBDeleteJobListResponseBody setFpDBDeleteJobList(QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobList fpDBDeleteJobList) {
@@ -42,30 +34,26 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
+    public QueryFpDBDeleteJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("FinishTime")
-        public String finishTime;
 
         @NameInMap("DelType")
         public String delType;
 
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
+        @NameInMap("FinishTime")
+        public String finishTime;
 
         @NameInMap("FpDBId")
         public String fpDBId;
@@ -73,9 +61,29 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UserData")
+        public String userData;
+
         public static QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob build(java.util.Map<String, ?> map) throws Exception {
             QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob self = new QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setCreationTime(String creationTime) {
@@ -86,12 +94,12 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setStatus(String status) {
-            this.status = status;
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setDelType(String delType) {
+            this.delType = delType;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getDelType() {
+            return this.delType;
         }
 
         public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setFinishTime(String finishTime) {
@@ -102,28 +110,20 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setDelType(String delType) {
-            this.delType = delType;
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setFpDBId(String fpDBId) {
+            this.fpDBId = fpDBId;
             return this;
         }
-        public String getDelType() {
-            return this.delType;
+        public String getFpDBId() {
+            return this.fpDBId;
         }
 
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setUserData(String userData) {
-            this.userData = userData;
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
+        public String getId() {
+            return this.id;
         }
 
         public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setMessage(String message) {
@@ -142,20 +142,20 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setFpDBId(String fpDBId) {
-            this.fpDBId = fpDBId;
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getFpDBId() {
-            return this.fpDBId;
+        public String getStatus() {
+            return this.status;
         }
 
-        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setId(String id) {
-            this.id = id;
+        public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getUserData() {
+            return this.userData;
         }
 
     }

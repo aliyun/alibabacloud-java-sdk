@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class BindInputBucketRequest extends TeaModel {
+    @NameInMap("Bucket")
+    public String bucket;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +19,28 @@ public class BindInputBucketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Bucket")
-    public String bucket;
-
     @NameInMap("RoleArn")
     public String roleArn;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static BindInputBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         BindInputBucketRequest self = new BindInputBucketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindInputBucketRequest setBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public BindInputBucketRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public BindInputBucketRequest setOwnerId(Long ownerId) {
@@ -51,28 +67,12 @@ public class BindInputBucketRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BindInputBucketRequest setBucket(String bucket) {
-        this.bucket = bucket;
-        return this;
-    }
-    public String getBucket() {
-        return this.bucket;
-    }
-
     public BindInputBucketRequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     public String getRoleArn() {
         return this.roleArn;
-    }
-
-    public BindInputBucketRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

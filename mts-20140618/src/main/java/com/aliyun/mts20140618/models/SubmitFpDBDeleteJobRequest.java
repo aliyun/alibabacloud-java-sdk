@@ -4,8 +4,20 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitFpDBDeleteJobRequest extends TeaModel {
+    @NameInMap("DelType")
+    public String delType;
+
+    @NameInMap("FpDBId")
+    public String fpDBId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +25,36 @@ public class SubmitFpDBDeleteJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PipelineId")
-    public String pipelineId;
-
-    @NameInMap("FpDBId")
-    public String fpDBId;
-
     @NameInMap("UserData")
     public String userData;
-
-    @NameInMap("DelType")
-    public String delType;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static SubmitFpDBDeleteJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitFpDBDeleteJobRequest self = new SubmitFpDBDeleteJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitFpDBDeleteJobRequest setDelType(String delType) {
+        this.delType = delType;
+        return this;
+    }
+    public String getDelType() {
+        return this.delType;
+    }
+
+    public SubmitFpDBDeleteJobRequest setFpDBId(String fpDBId) {
+        this.fpDBId = fpDBId;
+        return this;
+    }
+    public String getFpDBId() {
+        return this.fpDBId;
+    }
+
+    public SubmitFpDBDeleteJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitFpDBDeleteJobRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class SubmitFpDBDeleteJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitFpDBDeleteJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public SubmitFpDBDeleteJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,44 +89,12 @@ public class SubmitFpDBDeleteJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitFpDBDeleteJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public SubmitFpDBDeleteJobRequest setFpDBId(String fpDBId) {
-        this.fpDBId = fpDBId;
-        return this;
-    }
-    public String getFpDBId() {
-        return this.fpDBId;
-    }
-
     public SubmitFpDBDeleteJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitFpDBDeleteJobRequest setDelType(String delType) {
-        this.delType = delType;
-        return this;
-    }
-    public String getDelType() {
-        return this.delType;
-    }
-
-    public SubmitFpDBDeleteJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

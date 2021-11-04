@@ -4,17 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryInferenceServerResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Functions")
+    public java.util.List<QueryInferenceServerResponseBodyFunctions> functions;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Functions")
-    public java.util.List<QueryInferenceServerResponseBodyFunctions> functions;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("TotalSize")
     public Long totalSize;
@@ -22,6 +22,22 @@ public class QueryInferenceServerResponseBody extends TeaModel {
     public static QueryInferenceServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInferenceServerResponseBody self = new QueryInferenceServerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInferenceServerResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryInferenceServerResponseBody setFunctions(java.util.List<QueryInferenceServerResponseBodyFunctions> functions) {
+        this.functions = functions;
+        return this;
+    }
+    public java.util.List<QueryInferenceServerResponseBodyFunctions> getFunctions() {
+        return this.functions;
     }
 
     public QueryInferenceServerResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryInferenceServerResponseBody setFunctions(java.util.List<QueryInferenceServerResponseBodyFunctions> functions) {
-        this.functions = functions;
-        return this;
-    }
-    public java.util.List<QueryInferenceServerResponseBodyFunctions> getFunctions() {
-        return this.functions;
-    }
-
-    public QueryInferenceServerResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryInferenceServerResponseBody setTotalSize(Long totalSize) {
         this.totalSize = totalSize;
         return this;
@@ -65,20 +65,17 @@ public class QueryInferenceServerResponseBody extends TeaModel {
     }
 
     public static class QueryInferenceServerResponseBodyFunctions extends TeaModel {
-        @NameInMap("FunctionName")
-        public String functionName;
-
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("ModelType")
-        public String modelType;
+        @NameInMap("FunctionName")
+        public String functionName;
 
         @NameInMap("ModelPath")
         public String modelPath;
+
+        @NameInMap("ModelType")
+        public String modelType;
 
         @NameInMap("PipelineId")
         public String pipelineId;
@@ -86,17 +83,12 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         @NameInMap("TestId")
         public String testId;
 
+        @NameInMap("UserId")
+        public Long userId;
+
         public static QueryInferenceServerResponseBodyFunctions build(java.util.Map<String, ?> map) throws Exception {
             QueryInferenceServerResponseBodyFunctions self = new QueryInferenceServerResponseBodyFunctions();
             return TeaModel.build(map, self);
-        }
-
-        public QueryInferenceServerResponseBodyFunctions setFunctionName(String functionName) {
-            this.functionName = functionName;
-            return this;
-        }
-        public String getFunctionName() {
-            return this.functionName;
         }
 
         public QueryInferenceServerResponseBodyFunctions setCreateTime(Long createTime) {
@@ -107,20 +99,12 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public QueryInferenceServerResponseBodyFunctions setUserId(Long userId) {
-            this.userId = userId;
+        public QueryInferenceServerResponseBodyFunctions setFunctionName(String functionName) {
+            this.functionName = functionName;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public QueryInferenceServerResponseBodyFunctions setModelType(String modelType) {
-            this.modelType = modelType;
-            return this;
-        }
-        public String getModelType() {
-            return this.modelType;
+        public String getFunctionName() {
+            return this.functionName;
         }
 
         public QueryInferenceServerResponseBodyFunctions setModelPath(String modelPath) {
@@ -129,6 +113,14 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         }
         public String getModelPath() {
             return this.modelPath;
+        }
+
+        public QueryInferenceServerResponseBodyFunctions setModelType(String modelType) {
+            this.modelType = modelType;
+            return this;
+        }
+        public String getModelType() {
+            return this.modelType;
         }
 
         public QueryInferenceServerResponseBodyFunctions setPipelineId(String pipelineId) {
@@ -145,6 +137,14 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         }
         public String getTestId() {
             return this.testId;
+        }
+
+        public QueryInferenceServerResponseBodyFunctions setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }

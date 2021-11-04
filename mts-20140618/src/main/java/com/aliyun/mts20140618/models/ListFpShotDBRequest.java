@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotDBRequest extends TeaModel {
+    @NameInMap("FpDBIds")
+    public String fpDBIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class ListFpShotDBRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("FpDBIds")
-    public String fpDBIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ListFpShotDBRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFpShotDBRequest self = new ListFpShotDBRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFpShotDBRequest setFpDBIds(String fpDBIds) {
+        this.fpDBIds = fpDBIds;
+        return this;
+    }
+    public String getFpDBIds() {
+        return this.fpDBIds;
+    }
+
+    public ListFpShotDBRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ListFpShotDBRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class ListFpShotDBRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ListFpShotDBRequest setFpDBIds(String fpDBIds) {
-        this.fpDBIds = fpDBIds;
-        return this;
-    }
-    public String getFpDBIds() {
-        return this.fpDBIds;
-    }
-
-    public ListFpShotDBRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

@@ -7,11 +7,11 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     @NameInMap("MediaWorkflowExecutionList")
     public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionList mediaWorkflowExecutionList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListMediaWorkflowExecutionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMediaWorkflowExecutionsResponseBody self = new ListMediaWorkflowExecutionsResponseBody();
@@ -26,14 +26,6 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         return this.mediaWorkflowExecutionList;
     }
 
-    public ListMediaWorkflowExecutionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListMediaWorkflowExecutionsResponseBody setNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -42,35 +34,27 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         return this.nextPageToken;
     }
 
+    public ListMediaWorkflowExecutionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
+        @NameInMap("MessageId")
+        public String messageId;
 
         public static ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult build(java.util.Map<String, ?> map) throws Exception {
             ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult self = new ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult setMessageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public String getMessageId() {
-            return this.messageId;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult setErrorCode(String errorCode) {
@@ -81,26 +65,36 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("State")
-        public String state;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("MNSMessageResult")
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult;
 
         @NameInMap("Message")
         public String message;
@@ -108,12 +102,26 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("MNSMessageResult")
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult;
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity build(java.util.Map<String, ?> map) throws Exception {
             ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity self = new ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity();
             return TeaModel.build(map, self);
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setEndTime(String endTime) {
@@ -124,30 +132,6 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setJobId(String jobId) {
             this.jobId = jobId;
             return this;
@@ -156,12 +140,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setCode(String code) {
-            this.code = code;
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setMNSMessageResult(ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult) {
+            this.MNSMessageResult = MNSMessageResult;
             return this;
         }
-        public String getCode() {
-            return this.code;
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult getMNSMessageResult() {
+            return this.MNSMessageResult;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setMessage(String message) {
@@ -180,12 +164,28 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setMNSMessageResult(ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult) {
-            this.MNSMessageResult = MNSMessageResult;
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult getMNSMessageResult() {
-            return this.MNSMessageResult;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -210,34 +210,18 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         public static ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile build(java.util.Map<String, ?> map) throws Exception {
             ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile self = new ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile();
             return TeaModel.build(map, self);
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile setBucket(String bucket) {
@@ -248,26 +232,34 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.bucket;
         }
 
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput extends TeaModel {
-        @NameInMap("UserData")
-        public String userData;
-
         @NameInMap("InputFile")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile inputFile;
+
+        @NameInMap("UserData")
+        public String userData;
 
         public static ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput build(java.util.Map<String, ?> map) throws Exception {
             ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput self = new ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput();
             return TeaModel.build(map, self);
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput setInputFile(ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile inputFile) {
@@ -278,23 +270,22 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.inputFile;
         }
 
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
     }
 
     public static class ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("MediaWorkflowId")
-        public String mediaWorkflowId;
-
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("ActivityList")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityList activityList;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Input")
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput input;
@@ -302,36 +293,21 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
         @NameInMap("MediaId")
         public String mediaId;
 
+        @NameInMap("MediaWorkflowId")
+        public String mediaWorkflowId;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("RunId")
         public String runId;
+
+        @NameInMap("State")
+        public String state;
 
         public static ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution build(java.util.Map<String, ?> map) throws Exception {
             ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution self = new ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution();
             return TeaModel.build(map, self);
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setMediaWorkflowId(String mediaWorkflowId) {
-            this.mediaWorkflowId = mediaWorkflowId;
-            return this;
-        }
-        public String getMediaWorkflowId() {
-            return this.mediaWorkflowId;
-        }
-
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setActivityList(ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityList activityList) {
@@ -342,12 +318,12 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.activityList;
         }
 
-        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setName(String name) {
-            this.name = name;
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setInput(ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput input) {
@@ -366,12 +342,36 @@ public class ListMediaWorkflowExecutionsResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setMediaWorkflowId(String mediaWorkflowId) {
+            this.mediaWorkflowId = mediaWorkflowId;
+            return this;
+        }
+        public String getMediaWorkflowId() {
+            return this.mediaWorkflowId;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setRunId(String runId) {
             this.runId = runId;
             return this;
         }
         public String getRunId() {
             return this.runId;
+        }
+
+        public ListMediaWorkflowExecutionsResponseBodyMediaWorkflowExecutionListMediaWorkflowExecution setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

@@ -7,14 +7,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     @NameInMap("MediaCensorJobList")
     public QueryMediaCensorJobListResponseBodyMediaCensorJobList mediaCensorJobList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     @NameInMap("NonExistIds")
     public QueryMediaCensorJobListResponseBodyNonExistIds nonExistIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryMediaCensorJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaCensorJobListResponseBody self = new QueryMediaCensorJobListResponseBody();
@@ -27,14 +27,6 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
     public QueryMediaCensorJobListResponseBodyMediaCensorJobList getMediaCensorJobList() {
         return this.mediaCensorJobList;
-    }
-
-    public QueryMediaCensorJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMediaCensorJobListResponseBody setNextPageToken(String nextPageToken) {
@@ -53,30 +45,82 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
+    public QueryMediaCensorJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult extends TeaModel {
         @NameInMap("Label")
         public String label;
-
-        @NameInMap("Scene")
-        public String scene;
 
         @NameInMap("Rate")
         public String rate;
 
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult();
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setSuggestion(String suggestion) {
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setRate(String rate) {
+            this.rate = rate;
+            return this;
+        }
+        public String getRate() {
+            return this.rate;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Rate")
+        public String rate;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult();
+            return TeaModel.build(map, self);
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setLabel(String label) {
@@ -87,6 +131,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.label;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setRate(String rate) {
+            this.rate = rate;
+            return this;
+        }
+        public String getRate() {
+            return this.rate;
+        }
+
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setScene(String scene) {
             this.scene = scene;
             return this;
@@ -95,12 +147,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.scene;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setRate(String rate) {
-            this.rate = rate;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public String getRate() {
-            return this.rate;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
     }
@@ -125,14 +177,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         @NameInMap("Results")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResults results;
@@ -142,12 +194,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setObject(String object) {
-            this.object = object;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setBucket(String bucket) {
+            this.bucket = bucket;
             return this;
         }
-        public String getObject() {
-            return this.object;
+        public String getBucket() {
+            return this.bucket;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setLocation(String location) {
@@ -158,12 +210,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.location;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setBucket(String bucket) {
-            this.bucket = bucket;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setObject(String object) {
+            this.object = object;
             return this;
         }
-        public String getBucket() {
-            return this.bucket;
+        public String getObject() {
+            return this.object;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult setResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResults results) {
@@ -195,175 +247,22 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        @NameInMap("Rate")
-        public String rate;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setRate(String rate) {
-            this.rate = rate;
-            return this;
-        }
-        public String getRate() {
-            return this.rate;
-        }
-
-    }
-
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        @NameInMap("Rate")
-        public String rate;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult setRate(String rate) {
-            this.rate = rate;
-            return this;
-        }
-        public String getRate() {
-            return this.rate;
-        }
-
-    }
-
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Rate")
+        public String rate;
 
         @NameInMap("Scene")
         public String scene;
 
-        @NameInMap("Rate")
-        public String rate;
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setLabel(String label) {
@@ -374,14 +273,6 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.label;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setRate(String rate) {
             this.rate = rate;
             return this;
@@ -390,40 +281,40 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.rate;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
     }
 
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile();
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setBucket(String bucket) {
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setBucket(String bucket) {
             this.bucket = bucket;
             return this;
         }
@@ -431,73 +322,163 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.bucket;
         }
 
-    }
-
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig extends TeaModel {
-        @NameInMap("OutputFile")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile outputFile;
-
-        @NameInMap("VideoCensor")
-        public String videoCensor;
-
-        @NameInMap("BizType")
-        public String bizType;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setOutputFile(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile outputFile) {
-            this.outputFile = outputFile;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setLocation(String location) {
+            this.location = location;
             return this;
         }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile getOutputFile() {
-            return this.outputFile;
+        public String getLocation() {
+            return this.location;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setVideoCensor(String videoCensor) {
-            this.videoCensor = videoCensor;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput setObject(String object) {
+            this.object = object;
             return this;
         }
-        public String getVideoCensor() {
-            return this.videoCensor;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
+        public String getObject() {
+            return this.object;
         }
 
     }
 
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult extends TeaModel {
         @NameInMap("Label")
         public String label;
-
-        @NameInMap("Scene")
-        public String scene;
 
         @NameInMap("Rate")
         public String rate;
 
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult();
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setSuggestion(String suggestion) {
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setRate(String rate) {
+            this.rate = rate;
+            return this;
+        }
+        public String getRate() {
+            return this.rate;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Rate")
+        public String rate;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setRate(String rate) {
+            this.rate = rate;
+            return this;
+        }
+        public String getRate() {
+            return this.rate;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults extends TeaModel {
+        @NameInMap("CensorResult")
+        public java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> censorResult;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults setCensorResult(java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> censorResult) {
+            this.censorResult = censorResult;
+            return this;
+        }
+        public java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> getCensorResult() {
+            return this.censorResult;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Rate")
+        public String rate;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult();
+            return TeaModel.build(map, self);
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setLabel(String label) {
@@ -508,6 +489,14 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.label;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setRate(String rate) {
+            this.rate = rate;
+            return this;
+        }
+        public String getRate() {
+            return this.rate;
+        }
+
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setScene(String scene) {
             this.scene = scene;
             return this;
@@ -516,12 +505,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.scene;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setRate(String rate) {
-            this.rate = rate;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public String getRate() {
-            return this.rate;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
     }
@@ -546,26 +535,26 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline extends TeaModel {
-        @NameInMap("Timestamp")
-        public String timestamp;
+        @NameInMap("CensorResults")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults;
 
         @NameInMap("Object")
         public String object;
 
-        @NameInMap("CensorResults")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults;
+        @NameInMap("Timestamp")
+        public String timestamp;
 
         public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline setCensorResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults) {
+            this.censorResults = censorResults;
             return this;
         }
-        public String getTimestamp() {
-            return this.timestamp;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults getCensorResults() {
+            return this.censorResults;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline setObject(String object) {
@@ -576,12 +565,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.object;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline setCensorResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults) {
-            this.censorResults = censorResults;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimeline setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
             return this;
         }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults getCensorResults() {
-            return this.censorResults;
+        public String getTimestamp() {
+            return this.timestamp;
         }
 
     }
@@ -605,106 +594,19 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        @NameInMap("Rate")
-        public String rate;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult setRate(String rate) {
-            this.rate = rate;
-            return this;
-        }
-        public String getRate() {
-            return this.rate;
-        }
-
-    }
-
-    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults extends TeaModel {
-        @NameInMap("CensorResult")
-        public java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> censorResult;
-
-        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults setCensorResult(java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> censorResult) {
-            this.censorResult = censorResult;
-            return this;
-        }
-        public java.util.List<QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult> getCensorResult() {
-            return this.censorResult;
-        }
-
-    }
-
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult extends TeaModel {
-        @NameInMap("VideoTimelines")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines videoTimelines;
+        @NameInMap("CensorResults")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults censorResults;
 
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
-        @NameInMap("CensorResults")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults censorResults;
+        @NameInMap("VideoTimelines")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines videoTimelines;
 
         public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult setVideoTimelines(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines videoTimelines) {
-            this.videoTimelines = videoTimelines;
-            return this;
-        }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines getVideoTimelines() {
-            return this.videoTimelines;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult setNextPageToken(String nextPageToken) {
-            this.nextPageToken = nextPageToken;
-            return this;
-        }
-        public String getNextPageToken() {
-            return this.nextPageToken;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult setCensorResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults censorResults) {
@@ -715,124 +617,158 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.censorResults;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult setNextPageToken(String nextPageToken) {
+            this.nextPageToken = nextPageToken;
+            return this;
+        }
+        public String getNextPageToken() {
+            return this.nextPageToken;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult setVideoTimelines(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines videoTimelines) {
+            this.videoTimelines = videoTimelines;
+            return this;
+        }
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelines getVideoTimelines() {
+            return this.videoTimelines;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+    }
+
+    public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig extends TeaModel {
+        @NameInMap("BizType")
+        public String bizType;
+
+        @NameInMap("OutputFile")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile outputFile;
+
+        @NameInMap("VideoCensor")
+        public String videoCensor;
+
+        public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setOutputFile(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile outputFile) {
+            this.outputFile = outputFile;
+            return this;
+        }
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile getOutputFile() {
+            return this.outputFile;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig setVideoCensor(String videoCensor) {
+            this.videoCensor = videoCensor;
+            return this;
+        }
+        public String getVideoCensor() {
+            return this.videoCensor;
+        }
+
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("FinishTime")
-        public String finishTime;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("CoverImageCensorResults")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults coverImageCensorResults;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("TitleCensorResult")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult titleCensorResult;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("Input")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput input;
-
         @NameInMap("BarrageCensorResult")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult barrageCensorResult;
-
-        @NameInMap("DescCensorResult")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult descCensorResult;
-
-        @NameInMap("VideoCensorConfig")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig videoCensorConfig;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("UserData")
-        public String userData;
 
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("VensorCensorResult")
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult vensorCensorResult;
+        @NameInMap("CoverImageCensorResults")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults coverImageCensorResults;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("DescCensorResult")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult descCensorResult;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
+
+        @NameInMap("Input")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput input;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("TitleCensorResult")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult titleCensorResult;
+
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("VensorCensorResult")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult vensorCensorResult;
+
+        @NameInMap("VideoCensorConfig")
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig videoCensorConfig;
+
         public static QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob self = new QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setFinishTime(String finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public String getFinishTime() {
-            return this.finishTime;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCoverImageCensorResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults coverImageCensorResults) {
-            this.coverImageCensorResults = coverImageCensorResults;
-            return this;
-        }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults getCoverImageCensorResults() {
-            return this.coverImageCensorResults;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setTitleCensorResult(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult titleCensorResult) {
-            this.titleCensorResult = titleCensorResult;
-            return this;
-        }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult getTitleCensorResult() {
-            return this.titleCensorResult;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setInput(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput input) {
-            this.input = input;
-            return this;
-        }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput getInput() {
-            return this.input;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setBarrageCensorResult(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult barrageCensorResult) {
@@ -843,6 +779,30 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.barrageCensorResult;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCoverImageCensorResults(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults coverImageCensorResults) {
+            this.coverImageCensorResults = coverImageCensorResults;
+            return this;
+        }
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults getCoverImageCensorResults() {
+            return this.coverImageCensorResults;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setDescCensorResult(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult descCensorResult) {
             this.descCensorResult = descCensorResult;
             return this;
@@ -851,12 +811,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.descCensorResult;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setVideoCensorConfig(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig videoCensorConfig) {
-            this.videoCensorConfig = videoCensorConfig;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
             return this;
         }
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig getVideoCensorConfig() {
-            return this.videoCensorConfig;
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setInput(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput input) {
+            this.input = input;
+            return this;
+        }
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput getInput() {
+            return this.input;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setJobId(String jobId) {
@@ -867,20 +835,52 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.jobId;
         }
 
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setTitleCensorResult(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult titleCensorResult) {
+            this.titleCensorResult = titleCensorResult;
+            return this;
+        }
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult getTitleCensorResult() {
+            return this.titleCensorResult;
+        }
+
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setUserData(String userData) {
             this.userData = userData;
             return this;
         }
         public String getUserData() {
             return this.userData;
-        }
-
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
         }
 
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setVensorCensorResult(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResult vensorCensorResult) {
@@ -891,12 +891,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
             return this.vensorCensorResult;
         }
 
-        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJob setVideoCensorConfig(QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig videoCensorConfig) {
+            this.videoCensorConfig = videoCensorConfig;
             return this;
         }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig getVideoCensorConfig() {
+            return this.videoCensorConfig;
         }
 
     }

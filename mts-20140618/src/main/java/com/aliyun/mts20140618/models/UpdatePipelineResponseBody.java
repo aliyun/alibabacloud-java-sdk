@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdatePipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Pipeline")
     public UpdatePipelineResponseBodyPipeline pipeline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdatePipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdatePipelineResponseBody self = new UpdatePipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdatePipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdatePipelineResponseBody setPipeline(UpdatePipelineResponseBodyPipeline pipeline) {
@@ -31,15 +23,23 @@ public class UpdatePipelineResponseBody extends TeaModel {
         return this.pipeline;
     }
 
+    public UpdatePipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UpdatePipelineResponseBodyPipelineNotifyConfig extends TeaModel {
+        @NameInMap("MqTag")
+        public String mqTag;
+
         @NameInMap("MqTopic")
         public String mqTopic;
 
         @NameInMap("QueueName")
         public String queueName;
-
-        @NameInMap("MqTag")
-        public String mqTag;
 
         @NameInMap("Topic")
         public String topic;
@@ -47,6 +47,14 @@ public class UpdatePipelineResponseBody extends TeaModel {
         public static UpdatePipelineResponseBodyPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdatePipelineResponseBodyPipelineNotifyConfig self = new UpdatePipelineResponseBodyPipelineNotifyConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePipelineResponseBodyPipelineNotifyConfig setMqTag(String mqTag) {
+            this.mqTag = mqTag;
+            return this;
+        }
+        public String getMqTag() {
+            return this.mqTag;
         }
 
         public UpdatePipelineResponseBodyPipelineNotifyConfig setMqTopic(String mqTopic) {
@@ -65,14 +73,6 @@ public class UpdatePipelineResponseBody extends TeaModel {
             return this.queueName;
         }
 
-        public UpdatePipelineResponseBodyPipelineNotifyConfig setMqTag(String mqTag) {
-            this.mqTag = mqTag;
-            return this;
-        }
-        public String getMqTag() {
-            return this.mqTag;
-        }
-
         public UpdatePipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
             this.topic = topic;
             return this;
@@ -84,30 +84,70 @@ public class UpdatePipelineResponseBody extends TeaModel {
     }
 
     public static class UpdatePipelineResponseBodyPipeline extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NotifyConfig")
+        public UpdatePipelineResponseBodyPipelineNotifyConfig notifyConfig;
+
+        @NameInMap("QuotaAllocate")
+        public Long quotaAllocate;
+
+        @NameInMap("Role")
+        public String role;
+
         @NameInMap("Speed")
         public String speed;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("NotifyConfig")
-        public UpdatePipelineResponseBodyPipelineNotifyConfig notifyConfig;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Role")
-        public String role;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("QuotaAllocate")
-        public Long quotaAllocate;
-
         public static UpdatePipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdatePipelineResponseBodyPipeline self = new UpdatePipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdatePipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdatePipelineResponseBodyPipeline setNotifyConfig(UpdatePipelineResponseBodyPipelineNotifyConfig notifyConfig) {
+            this.notifyConfig = notifyConfig;
+            return this;
+        }
+        public UpdatePipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
+            return this.notifyConfig;
+        }
+
+        public UpdatePipelineResponseBodyPipeline setQuotaAllocate(Long quotaAllocate) {
+            this.quotaAllocate = quotaAllocate;
+            return this;
+        }
+        public Long getQuotaAllocate() {
+            return this.quotaAllocate;
+        }
+
+        public UpdatePipelineResponseBodyPipeline setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
         public UpdatePipelineResponseBodyPipeline setSpeed(String speed) {
@@ -124,46 +164,6 @@ public class UpdatePipelineResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public UpdatePipelineResponseBodyPipeline setNotifyConfig(UpdatePipelineResponseBodyPipelineNotifyConfig notifyConfig) {
-            this.notifyConfig = notifyConfig;
-            return this;
-        }
-        public UpdatePipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
-            return this.notifyConfig;
-        }
-
-        public UpdatePipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdatePipelineResponseBodyPipeline setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
-        public UpdatePipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public UpdatePipelineResponseBodyPipeline setQuotaAllocate(Long quotaAllocate) {
-            this.quotaAllocate = quotaAllocate;
-            return this;
-        }
-        public Long getQuotaAllocate() {
-            return this.quotaAllocate;
         }
 
     }

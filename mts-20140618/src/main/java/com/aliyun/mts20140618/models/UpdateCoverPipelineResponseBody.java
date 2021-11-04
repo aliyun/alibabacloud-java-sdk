@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateCoverPipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Pipeline")
     public UpdateCoverPipelineResponseBodyPipeline pipeline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateCoverPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateCoverPipelineResponseBody self = new UpdateCoverPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCoverPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateCoverPipelineResponseBody setPipeline(UpdateCoverPipelineResponseBodyPipeline pipeline) {
@@ -31,24 +23,24 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
         return this.pipeline;
     }
 
-    public static class UpdateCoverPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public UpdateCoverPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class UpdateCoverPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static UpdateCoverPipelineResponseBodyPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateCoverPipelineResponseBodyPipelineNotifyConfig self = new UpdateCoverPipelineResponseBodyPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public UpdateCoverPipelineResponseBodyPipelineNotifyConfig setQueue(String queue) {
@@ -59,11 +51,22 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class UpdateCoverPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig;
@@ -74,23 +77,28 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static UpdateCoverPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateCoverPipelineResponseBodyPipeline self = new UpdateCoverPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCoverPipelineResponseBodyPipeline setState(String state) {
-            this.state = state;
+        public UpdateCoverPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdateCoverPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UpdateCoverPipelineResponseBodyPipeline setNotifyConfig(UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
@@ -117,20 +125,12 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
             return this.role;
         }
 
-        public UpdateCoverPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
+        public UpdateCoverPipelineResponseBodyPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateCoverPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

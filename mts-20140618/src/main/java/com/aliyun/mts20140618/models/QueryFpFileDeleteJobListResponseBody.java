@@ -4,26 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FpFileDeleteJobList")
     public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobList fpFileDeleteJobList;
 
     @NameInMap("NonExistIds")
     public QueryFpFileDeleteJobListResponseBodyNonExistIds nonExistIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryFpFileDeleteJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFpFileDeleteJobListResponseBody self = new QueryFpFileDeleteJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFpFileDeleteJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFpFileDeleteJobListResponseBody setFpFileDeleteJobList(QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobList fpFileDeleteJobList) {
@@ -42,27 +34,26 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
+    public QueryFpFileDeleteJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("FinishTime")
-        public String finishTime;
-
-        @NameInMap("UserData")
-        public String userData;
-
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
-        @NameInMap("PipelineId")
-        public String pipelineId;
+        @NameInMap("FileIds")
+        public String fileIds;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
 
         @NameInMap("FpDBId")
         public String fpDBId;
@@ -70,44 +61,21 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
-        @NameInMap("FileIds")
-        public String fileIds;
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UserData")
+        public String userData;
 
         public static QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob build(java.util.Map<String, ?> map) throws Exception {
             QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob self = new QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob();
             return TeaModel.build(map, self);
-        }
-
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setFinishTime(String finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public String getFinishTime() {
-            return this.finishTime;
-        }
-
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
         }
 
         public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setCode(String code) {
@@ -118,20 +86,28 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
             return this.code;
         }
 
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setMessage(String message) {
-            this.message = message;
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setFileIds(String fileIds) {
+            this.fileIds = fileIds;
             return this;
         }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public String getFileIds() {
+            return this.fileIds;
+        }
+
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
         }
 
         public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setFpDBId(String fpDBId) {
@@ -150,12 +126,36 @@ public class QueryFpFileDeleteJobListResponseBody extends TeaModel {
             return this.id;
         }
 
-        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setFileIds(String fileIds) {
-            this.fileIds = fileIds;
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setMessage(String message) {
+            this.message = message;
             return this;
         }
-        public String getFileIds() {
-            return this.fileIds;
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
+        }
+
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryFpFileDeleteJobListResponseBodyFpFileDeleteJobListFpFileDeleteJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
     }

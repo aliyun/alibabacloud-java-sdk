@@ -4,6 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmarttagTemplateRequest extends TeaModel {
+    @NameInMap("AnalyseTypes")
+    public String analyseTypes;
+
+    @NameInMap("FaceCategoryIds")
+    public String faceCategoryIds;
+
+    @NameInMap("Industry")
+    public String industry;
+
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,8 +28,8 @@ public class UpdateSmarttagTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Scene")
+    public String scene;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -22,24 +37,49 @@ public class UpdateSmarttagTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
-    @NameInMap("Industry")
-    public String industry;
-
-    @NameInMap("Scene")
-    public String scene;
-
-    @NameInMap("AnalyseTypes")
-    public String analyseTypes;
-
-    @NameInMap("FaceCategoryIds")
-    public String faceCategoryIds;
-
-    @NameInMap("IsDefault")
-    public Boolean isDefault;
-
     public static UpdateSmarttagTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmarttagTemplateRequest self = new UpdateSmarttagTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSmarttagTemplateRequest setAnalyseTypes(String analyseTypes) {
+        this.analyseTypes = analyseTypes;
+        return this;
+    }
+    public String getAnalyseTypes() {
+        return this.analyseTypes;
+    }
+
+    public UpdateSmarttagTemplateRequest setFaceCategoryIds(String faceCategoryIds) {
+        this.faceCategoryIds = faceCategoryIds;
+        return this;
+    }
+    public String getFaceCategoryIds() {
+        return this.faceCategoryIds;
+    }
+
+    public UpdateSmarttagTemplateRequest setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
+    }
+
+    public UpdateSmarttagTemplateRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public UpdateSmarttagTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateSmarttagTemplateRequest setOwnerId(Long ownerId) {
@@ -66,12 +106,12 @@ public class UpdateSmarttagTemplateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdateSmarttagTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpdateSmarttagTemplateRequest setScene(String scene) {
+        this.scene = scene;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getScene() {
+        return this.scene;
     }
 
     public UpdateSmarttagTemplateRequest setTemplateId(String templateId) {
@@ -88,46 +128,6 @@ public class UpdateSmarttagTemplateRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
-    }
-
-    public UpdateSmarttagTemplateRequest setIndustry(String industry) {
-        this.industry = industry;
-        return this;
-    }
-    public String getIndustry() {
-        return this.industry;
-    }
-
-    public UpdateSmarttagTemplateRequest setScene(String scene) {
-        this.scene = scene;
-        return this;
-    }
-    public String getScene() {
-        return this.scene;
-    }
-
-    public UpdateSmarttagTemplateRequest setAnalyseTypes(String analyseTypes) {
-        this.analyseTypes = analyseTypes;
-        return this;
-    }
-    public String getAnalyseTypes() {
-        return this.analyseTypes;
-    }
-
-    public UpdateSmarttagTemplateRequest setFaceCategoryIds(String faceCategoryIds) {
-        this.faceCategoryIds = faceCategoryIds;
-        return this;
-    }
-    public String getFaceCategoryIds() {
-        return this.faceCategoryIds;
-    }
-
-    public UpdateSmarttagTemplateRequest setIsDefault(Boolean isDefault) {
-        this.isDefault = isDefault;
-        return this;
-    }
-    public Boolean getIsDefault() {
-        return this.isDefault;
     }
 
 }

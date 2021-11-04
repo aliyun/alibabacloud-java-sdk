@@ -4,23 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitAnalysisJobRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("AnalysisConfig")
+    public String analysisConfig;
 
     @NameInMap("Input")
     public String input;
 
-    @NameInMap("AnalysisConfig")
-    public String analysisConfig;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("UserData")
-    public String userData;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PipelineId")
     public String pipelineId;
@@ -28,44 +22,18 @@ public class SubmitAnalysisJobRequest extends TeaModel {
     @NameInMap("Priority")
     public String priority;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static SubmitAnalysisJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAnalysisJobRequest self = new SubmitAnalysisJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitAnalysisJobRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SubmitAnalysisJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SubmitAnalysisJobRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public SubmitAnalysisJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
     }
 
     public SubmitAnalysisJobRequest setAnalysisConfig(String analysisConfig) {
@@ -76,12 +44,28 @@ public class SubmitAnalysisJobRequest extends TeaModel {
         return this.analysisConfig;
     }
 
-    public SubmitAnalysisJobRequest setUserData(String userData) {
-        this.userData = userData;
+    public SubmitAnalysisJobRequest setInput(String input) {
+        this.input = input;
         return this;
     }
-    public String getUserData() {
-        return this.userData;
+    public String getInput() {
+        return this.input;
+    }
+
+    public SubmitAnalysisJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public SubmitAnalysisJobRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SubmitAnalysisJobRequest setPipelineId(String pipelineId) {
@@ -100,12 +84,28 @@ public class SubmitAnalysisJobRequest extends TeaModel {
         return this.priority;
     }
 
-    public SubmitAnalysisJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SubmitAnalysisJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SubmitAnalysisJobRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public SubmitAnalysisJobRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

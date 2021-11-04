@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListPornPipelineRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,20 @@ public class ListPornPipelineRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("State")
     public String state;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static ListPornPipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPornPipelineRequest self = new ListPornPipelineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPornPipelineRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ListPornPipelineRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,22 @@ public class ListPornPipelineRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListPornPipelineRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListPornPipelineRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListPornPipelineRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class ListPornPipelineRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListPornPipelineRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListPornPipelineRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListPornPipelineRequest setState(String state) {
         this.state = state;
         return this;
     }
     public String getState() {
         return this.state;
-    }
-
-    public ListPornPipelineRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFacerecogJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("FacerecogJobList")
+    public QueryFacerecogJobListResponseBodyFacerecogJobList facerecogJobList;
 
     @NameInMap("NonExistIds")
     public QueryFacerecogJobListResponseBodyNonExistIds nonExistIds;
 
-    @NameInMap("FacerecogJobList")
-    public QueryFacerecogJobListResponseBodyFacerecogJobList facerecogJobList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryFacerecogJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFacerecogJobListResponseBody self = new QueryFacerecogJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFacerecogJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryFacerecogJobListResponseBody setNonExistIds(QueryFacerecogJobListResponseBodyNonExistIds nonExistIds) {
-        this.nonExistIds = nonExistIds;
-        return this;
-    }
-    public QueryFacerecogJobListResponseBodyNonExistIds getNonExistIds() {
-        return this.nonExistIds;
     }
 
     public QueryFacerecogJobListResponseBody setFacerecogJobList(QueryFacerecogJobListResponseBodyFacerecogJobList facerecogJobList) {
@@ -42,31 +26,69 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
         return this.facerecogJobList;
     }
 
-    public static class QueryFacerecogJobListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
+    public QueryFacerecogJobListResponseBody setNonExistIds(QueryFacerecogJobListResponseBodyNonExistIds nonExistIds) {
+        this.nonExistIds = nonExistIds;
+        return this;
+    }
+    public QueryFacerecogJobListResponseBodyNonExistIds getNonExistIds() {
+        return this.nonExistIds;
+    }
 
-        public static QueryFacerecogJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryFacerecogJobListResponseBodyNonExistIds self = new QueryFacerecogJobListResponseBodyNonExistIds();
+    public QueryFacerecogJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput build(java.util.Map<String, ?> map) throws Exception {
+            QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput self = new QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput();
             return TeaModel.build(map, self);
         }
 
-        public QueryFacerecogJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setBucket(String bucket) {
+            this.bucket = bucket;
             return this;
         }
-        public java.util.List<String> getString() {
-            return this.string;
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
         }
 
     }
 
     public static class QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFacesFace extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Score")
+        public String score;
 
         @NameInMap("Target")
         public String target;
@@ -76,20 +98,20 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFacesFace setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFacesFace setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFacesFace setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFacesFace setTarget(String target) {
@@ -122,23 +144,15 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
     }
 
     public static class QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
         @NameInMap("Faces")
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFaces faces;
+
+        @NameInMap("Time")
+        public String time;
 
         public static QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog build(java.util.Map<String, ?> map) throws Exception {
             QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog self = new QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog();
             return TeaModel.build(map, self);
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
         }
 
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog setFaces(QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFaces faces) {
@@ -147,6 +161,14 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
         }
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecogFaces getFaces() {
             return this.faces;
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResultFacerecogsFacerecog setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }
@@ -189,62 +211,18 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput build(java.util.Map<String, ?> map) throws Exception {
-            QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput self = new QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
     public static class QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("VideoFacerecogResult")
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult videoFacerecogResult;
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("Input")
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput input;
 
         @NameInMap("Message")
         public String message;
@@ -252,15 +230,26 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Input")
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput input;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("VideoFacerecogResult")
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult videoFacerecogResult;
 
         public static QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob build(java.util.Map<String, ?> map) throws Exception {
             QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob self = new QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setCreationTime(String creationTime) {
@@ -271,36 +260,20 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setVideoFacerecogResult(QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult videoFacerecogResult) {
-            this.videoFacerecogResult = videoFacerecogResult;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult getVideoFacerecogResult() {
-            return this.videoFacerecogResult;
+        public String getId() {
+            return this.id;
         }
 
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setState(String state) {
-            this.state = state;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setInput(QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput input) {
+            this.input = input;
             return this;
         }
-        public String getState() {
-            return this.state;
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput getInput() {
+            return this.input;
         }
 
         public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setMessage(String message) {
@@ -319,20 +292,28 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setInput(QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput input) {
-            this.input = input;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobInput getInput() {
-            return this.input;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setId(String id) {
-            this.id = id;
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob setVideoFacerecogResult(QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult videoFacerecogResult) {
+            this.videoFacerecogResult = videoFacerecogResult;
+            return this;
+        }
+        public QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJobVideoFacerecogResult getVideoFacerecogResult() {
+            return this.videoFacerecogResult;
         }
 
     }
@@ -352,6 +333,25 @@ public class QueryFacerecogJobListResponseBody extends TeaModel {
         }
         public java.util.List<QueryFacerecogJobListResponseBodyFacerecogJobListFacerecogJob> getFacerecogJob() {
             return this.facerecogJob;
+        }
+
+    }
+
+    public static class QueryFacerecogJobListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryFacerecogJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryFacerecogJobListResponseBodyNonExistIds self = new QueryFacerecogJobListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFacerecogJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
         }
 
     }

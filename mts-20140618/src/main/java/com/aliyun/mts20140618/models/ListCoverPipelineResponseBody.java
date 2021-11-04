@@ -4,48 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListCoverPipelineResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PipelineList")
+    public ListCoverPipelineResponseBodyPipelineList pipelineList;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PipelineList")
-    public ListCoverPipelineResponseBodyPipelineList pipelineList;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListCoverPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCoverPipelineResponseBody self = new ListCoverPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCoverPipelineResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListCoverPipelineResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListCoverPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListCoverPipelineResponseBody setPageNumber(Long pageNumber) {
@@ -56,6 +32,14 @@ public class ListCoverPipelineResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListCoverPipelineResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
     public ListCoverPipelineResponseBody setPipelineList(ListCoverPipelineResponseBodyPipelineList pipelineList) {
         this.pipelineList = pipelineList;
         return this;
@@ -64,21 +48,34 @@ public class ListCoverPipelineResponseBody extends TeaModel {
         return this.pipelineList;
     }
 
+    public ListCoverPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListCoverPipelineResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListCoverPipelineResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("ExtendConfig")
+        public String extendConfig;
 
-        @NameInMap("quotaNum")
-        public Integer quotaNum;
-
-        @NameInMap("UserId")
-        public Long userId;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public String notifyConfig;
 
-        @NameInMap("ExtendConfig")
-        public String extendConfig;
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("Priority")
         public String priority;
@@ -86,11 +83,14 @@ public class ListCoverPipelineResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("PipelineId")
-        public String pipelineId;
+        @NameInMap("UserId")
+        public Long userId;
+
+        @NameInMap("quotaNum")
+        public Integer quotaNum;
 
         @NameInMap("quotaUsed")
         public Integer quotaUsed;
@@ -100,28 +100,20 @@ public class ListCoverPipelineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListCoverPipelineResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public ListCoverPipelineResponseBodyPipelineListPipeline setExtendConfig(String extendConfig) {
+            this.extendConfig = extendConfig;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getExtendConfig() {
+            return this.extendConfig;
         }
 
-        public ListCoverPipelineResponseBodyPipelineListPipeline setQuotaNum(Integer quotaNum) {
-            this.quotaNum = quotaNum;
+        public ListCoverPipelineResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getQuotaNum() {
-            return this.quotaNum;
-        }
-
-        public ListCoverPipelineResponseBodyPipelineListPipeline setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
+        public String getName() {
+            return this.name;
         }
 
         public ListCoverPipelineResponseBodyPipelineListPipeline setNotifyConfig(String notifyConfig) {
@@ -132,12 +124,12 @@ public class ListCoverPipelineResponseBody extends TeaModel {
             return this.notifyConfig;
         }
 
-        public ListCoverPipelineResponseBodyPipelineListPipeline setExtendConfig(String extendConfig) {
-            this.extendConfig = extendConfig;
+        public ListCoverPipelineResponseBodyPipelineListPipeline setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
             return this;
         }
-        public String getExtendConfig() {
-            return this.extendConfig;
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public ListCoverPipelineResponseBodyPipelineListPipeline setPriority(String priority) {
@@ -156,20 +148,28 @@ public class ListCoverPipelineResponseBody extends TeaModel {
             return this.role;
         }
 
-        public ListCoverPipelineResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public ListCoverPipelineResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getState() {
+            return this.state;
         }
 
-        public ListCoverPipelineResponseBodyPipelineListPipeline setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
+        public ListCoverPipelineResponseBodyPipelineListPipeline setUserId(Long userId) {
+            this.userId = userId;
             return this;
         }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        public ListCoverPipelineResponseBodyPipelineListPipeline setQuotaNum(Integer quotaNum) {
+            this.quotaNum = quotaNum;
+            return this;
+        }
+        public Integer getQuotaNum() {
+            return this.quotaNum;
         }
 
         public ListCoverPipelineResponseBodyPipelineListPipeline setQuotaUsed(Integer quotaUsed) {

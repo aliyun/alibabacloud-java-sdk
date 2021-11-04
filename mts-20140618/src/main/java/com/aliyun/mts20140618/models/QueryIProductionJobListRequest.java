@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobListRequest extends TeaModel {
+    @NameInMap("IProductionJobIds")
+    public String IProductionJobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryIProductionJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("IProductionJobIds")
-    public String IProductionJobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryIProductionJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryIProductionJobListRequest self = new QueryIProductionJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryIProductionJobListRequest setIProductionJobIds(String IProductionJobIds) {
+        this.IProductionJobIds = IProductionJobIds;
+        return this;
+    }
+    public String getIProductionJobIds() {
+        return this.IProductionJobIds;
+    }
+
+    public QueryIProductionJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryIProductionJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryIProductionJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryIProductionJobListRequest setIProductionJobIds(String IProductionJobIds) {
-        this.IProductionJobIds = IProductionJobIds;
-        return this;
-    }
-    public String getIProductionJobIds() {
-        return this.IProductionJobIds;
-    }
-
-    public QueryIProductionJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

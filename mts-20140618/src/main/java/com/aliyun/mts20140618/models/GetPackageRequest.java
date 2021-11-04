@@ -4,48 +4,32 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class GetPackageRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Data")
-    public String data;
+    @NameInMap("OwnerId")
+    public String ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public String resourceOwnerId;
 
     public static GetPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPackageRequest self = new GetPackageRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetPackageRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public GetPackageRequest setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GetPackageRequest setResourceOwnerId(String resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public String getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public GetPackageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public String getData() {
+        return this.data;
     }
 
     public GetPackageRequest setOwnerAccount(String ownerAccount) {
@@ -56,12 +40,28 @@ public class GetPackageRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public GetPackageRequest setData(String data) {
-        this.data = data;
+    public GetPackageRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetPackageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetPackageRequest setResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public String getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

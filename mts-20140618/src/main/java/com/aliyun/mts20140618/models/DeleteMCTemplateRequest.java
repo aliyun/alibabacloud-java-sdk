@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteMCTemplateRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class DeleteMCTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DeleteMCTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMCTemplateRequest self = new DeleteMCTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMCTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteMCTemplateRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class DeleteMCTemplateRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public DeleteMCTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

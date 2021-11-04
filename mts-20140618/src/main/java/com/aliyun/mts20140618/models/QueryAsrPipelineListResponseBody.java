@@ -4,26 +4,26 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryAsrPipelineListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("NonExistIds")
+    public QueryAsrPipelineListResponseBodyNonExistIds nonExistIds;
 
     @NameInMap("PipelineList")
     public QueryAsrPipelineListResponseBodyPipelineList pipelineList;
 
-    @NameInMap("NonExistIds")
-    public QueryAsrPipelineListResponseBodyNonExistIds nonExistIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryAsrPipelineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAsrPipelineListResponseBody self = new QueryAsrPipelineListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryAsrPipelineListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryAsrPipelineListResponseBody setNonExistIds(QueryAsrPipelineListResponseBodyNonExistIds nonExistIds) {
+        this.nonExistIds = nonExistIds;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public QueryAsrPipelineListResponseBodyNonExistIds getNonExistIds() {
+        return this.nonExistIds;
     }
 
     public QueryAsrPipelineListResponseBody setPipelineList(QueryAsrPipelineListResponseBodyPipelineList pipelineList) {
@@ -34,12 +34,31 @@ public class QueryAsrPipelineListResponseBody extends TeaModel {
         return this.pipelineList;
     }
 
-    public QueryAsrPipelineListResponseBody setNonExistIds(QueryAsrPipelineListResponseBodyNonExistIds nonExistIds) {
-        this.nonExistIds = nonExistIds;
+    public QueryAsrPipelineListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public QueryAsrPipelineListResponseBodyNonExistIds getNonExistIds() {
-        return this.nonExistIds;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryAsrPipelineListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryAsrPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryAsrPipelineListResponseBodyNonExistIds self = new QueryAsrPipelineListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAsrPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
     }
 
     public static class QueryAsrPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
@@ -73,8 +92,11 @@ public class QueryAsrPipelineListResponseBody extends TeaModel {
     }
 
     public static class QueryAsrPipelineListResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public QueryAsrPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -82,23 +104,28 @@ public class QueryAsrPipelineListResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static QueryAsrPipelineListResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             QueryAsrPipelineListResponseBodyPipelineListPipeline self = new QueryAsrPipelineListResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public QueryAsrPipelineListResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public QueryAsrPipelineListResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryAsrPipelineListResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public QueryAsrPipelineListResponseBodyPipelineListPipeline setNotifyConfig(QueryAsrPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -117,20 +144,12 @@ public class QueryAsrPipelineListResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public QueryAsrPipelineListResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public QueryAsrPipelineListResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryAsrPipelineListResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }
@@ -150,25 +169,6 @@ public class QueryAsrPipelineListResponseBody extends TeaModel {
         }
         public java.util.List<QueryAsrPipelineListResponseBodyPipelineListPipeline> getPipeline() {
             return this.pipeline;
-        }
-
-    }
-
-    public static class QueryAsrPipelineListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryAsrPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryAsrPipelineListResponseBodyNonExistIds self = new QueryAsrPipelineListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAsrPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
         }
 
     }

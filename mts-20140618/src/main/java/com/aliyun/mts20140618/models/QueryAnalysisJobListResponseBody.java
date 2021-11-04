@@ -4,26 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryAnalysisJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AnalysisJobList")
     public QueryAnalysisJobListResponseBodyAnalysisJobList analysisJobList;
 
     @NameInMap("NonExistAnalysisJobIds")
     public QueryAnalysisJobListResponseBodyNonExistAnalysisJobIds nonExistAnalysisJobIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryAnalysisJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAnalysisJobListResponseBody self = new QueryAnalysisJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryAnalysisJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryAnalysisJobListResponseBody setAnalysisJobList(QueryAnalysisJobListResponseBodyAnalysisJobList analysisJobList) {
@@ -40,6 +32,107 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
     }
     public QueryAnalysisJobListResponseBodyNonExistAnalysisJobIds getNonExistAnalysisJobIds() {
         return this.nonExistAnalysisJobIds;
+    }
+
+    public QueryAnalysisJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop extends TeaModel {
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Left")
+        public String left;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("Top")
+        public String top;
+
+        @NameInMap("Width")
+        public String width;
+
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setLeft(String left) {
+            this.left = left;
+            return this;
+        }
+        public String getLeft() {
+            return this.left;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setTop(String top) {
+            this.top = top;
+            return this;
+        }
+        public String getTop() {
+            return this.top;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl extends TeaModel {
+        @NameInMap("Crop")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop crop;
+
+        @NameInMap("Deinterlace")
+        public String deinterlace;
+
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl setCrop(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop crop) {
+            this.crop = crop;
+            return this;
+        }
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop getCrop() {
+            return this.crop;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl setDeinterlace(String deinterlace) {
+            this.deinterlace = deinterlace;
+            return this;
+        }
+        public String getDeinterlace() {
+            return this.deinterlace;
+        }
+
     }
 
     public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl extends TeaModel {
@@ -72,117 +165,16 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop extends TeaModel {
-        @NameInMap("Top")
-        public String top;
-
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Height")
-        public String height;
-
-        @NameInMap("Left")
-        public String left;
-
-        @NameInMap("Mode")
-        public String mode;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setTop(String top) {
-            this.top = top;
-            return this;
-        }
-        public String getTop() {
-            return this.top;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setLeft(String left) {
-            this.left = left;
-            return this;
-        }
-        public String getLeft() {
-            return this.left;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop setMode(String mode) {
-            this.mode = mode;
-            return this;
-        }
-        public String getMode() {
-            return this.mode;
-        }
-
-    }
-
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl extends TeaModel {
-        @NameInMap("Deinterlace")
-        public String deinterlace;
-
-        @NameInMap("Crop")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop crop;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl setDeinterlace(String deinterlace) {
-            this.deinterlace = deinterlace;
-            return this;
-        }
-        public String getDeinterlace() {
-            return this.deinterlace;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl setCrop(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop crop) {
-            this.crop = crop;
-            return this;
-        }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControlCrop getCrop() {
-            return this.crop;
-        }
-
-    }
-
     public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig extends TeaModel {
-        @NameInMap("QualityControl")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl qualityControl;
-
         @NameInMap("PropertiesControl")
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl propertiesControl;
+
+        @NameInMap("QualityControl")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl qualityControl;
 
         public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig setQualityControl(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl qualityControl) {
-            this.qualityControl = qualityControl;
-            return this;
-        }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl getQualityControl() {
-            return this.qualityControl;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig setPropertiesControl(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigPropertiesControl propertiesControl) {
@@ -193,37 +185,70 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.propertiesControl;
         }
 
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig setQualityControl(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl qualityControl) {
+            this.qualityControl = qualityControl;
+            return this;
+        }
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfigQualityControl getQualityControl() {
+            return this.qualityControl;
+        }
+
+    }
+
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
+        @NameInMap("MessageId")
+        public String messageId;
 
         public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult build(java.util.Map<String, ?> map) throws Exception {
             QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult setMessageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public String getMessageId() {
-            return this.messageId;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult setErrorCode(String errorCode) {
@@ -234,149 +259,49 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-    }
-
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd extends TeaModel {
-        @NameInMap("Max")
-        public String max;
-
-        @NameInMap("Min")
-        public String min;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd setMax(String max) {
-            this.max = max;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getMax() {
-            return this.max;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd setMin(String min) {
-            this.min = min;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult setMessageId(String messageId) {
+            this.messageId = messageId;
             return this;
         }
-        public String getMin() {
-            return this.min;
+        public String getMessageId() {
+            return this.messageId;
         }
 
     }
 
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo extends TeaModel {
-        @NameInMap("Bufsize")
-        public String bufsize;
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio extends TeaModel {
+        @NameInMap("Bitrate")
+        public String bitrate;
 
-        @NameInMap("Degrain")
-        public String degrain;
-
-        @NameInMap("BitrateBnd")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd bitrateBnd;
-
-        @NameInMap("PixFmt")
-        public String pixFmt;
+        @NameInMap("Channels")
+        public String channels;
 
         @NameInMap("Codec")
         public String codec;
 
-        @NameInMap("Height")
-        public String height;
+        @NameInMap("Profile")
+        public String profile;
 
         @NameInMap("Qscale")
         public String qscale;
 
-        @NameInMap("Bitrate")
-        public String bitrate;
+        @NameInMap("Samplerate")
+        public String samplerate;
 
-        @NameInMap("Maxrate")
-        public String maxrate;
-
-        @NameInMap("Profile")
-        public String profile;
-
-        @NameInMap("Crf")
-        public String crf;
-
-        @NameInMap("Gop")
-        public String gop;
-
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Fps")
-        public String fps;
-
-        @NameInMap("Preset")
-        public String preset;
-
-        @NameInMap("ScanMode")
-        public String scanMode;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo();
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio();
             return TeaModel.build(map, self);
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBufsize(String bufsize) {
-            this.bufsize = bufsize;
-            return this;
-        }
-        public String getBufsize() {
-            return this.bufsize;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setDegrain(String degrain) {
-            this.degrain = degrain;
-            return this;
-        }
-        public String getDegrain() {
-            return this.degrain;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBitrateBnd(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd bitrateBnd) {
-            this.bitrateBnd = bitrateBnd;
-            return this;
-        }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd getBitrateBnd() {
-            return this.bitrateBnd;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setPixFmt(String pixFmt) {
-            this.pixFmt = pixFmt;
-            return this;
-        }
-        public String getPixFmt() {
-            return this.pixFmt;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setCodec(String codec) {
-            this.codec = codec;
-            return this;
-        }
-        public String getCodec() {
-            return this.codec;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setQscale(String qscale) {
-            this.qscale = qscale;
-            return this;
-        }
-        public String getQscale() {
-            return this.qscale;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBitrate(String bitrate) {
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -384,15 +309,23 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setMaxrate(String maxrate) {
-            this.maxrate = maxrate;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setChannels(String channels) {
+            this.channels = channels;
             return this;
         }
-        public String getMaxrate() {
-            return this.maxrate;
+        public String getChannels() {
+            return this.channels;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setProfile(String profile) {
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setCodec(String codec) {
+            this.codec = codec;
+            return this;
+        }
+        public String getCodec() {
+            return this.codec;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setProfile(String profile) {
             this.profile = profile;
             return this;
         }
@@ -400,71 +333,39 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.profile;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setCrf(String crf) {
-            this.crf = crf;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setQscale(String qscale) {
+            this.qscale = qscale;
             return this;
         }
-        public String getCrf() {
-            return this.crf;
+        public String getQscale() {
+            return this.qscale;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setGop(String gop) {
-            this.gop = gop;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setSamplerate(String samplerate) {
+            this.samplerate = samplerate;
             return this;
         }
-        public String getGop() {
-            return this.gop;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setFps(String fps) {
-            this.fps = fps;
-            return this;
-        }
-        public String getFps() {
-            return this.fps;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setPreset(String preset) {
-            this.preset = preset;
-            return this;
-        }
-        public String getPreset() {
-            return this.preset;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setScanMode(String scanMode) {
-            this.scanMode = scanMode;
-            return this;
-        }
-        public String getScanMode() {
-            return this.scanMode;
+        public String getSamplerate() {
+            return this.samplerate;
         }
 
     }
 
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig extends TeaModel {
-        @NameInMap("TransMode")
-        public String transMode;
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer extends TeaModel {
+        @NameInMap("Format")
+        public String format;
 
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig();
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer();
             return TeaModel.build(map, self);
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig setTransMode(String transMode) {
-            this.transMode = transMode;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer setFormat(String format) {
+            this.format = format;
             return this;
         }
-        public String getTransMode() {
-            return this.transMode;
+        public String getFormat() {
+            return this.format;
         }
 
     }
@@ -548,71 +449,110 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio extends TeaModel {
-        @NameInMap("Profile")
-        public String profile;
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig extends TeaModel {
+        @NameInMap("TransMode")
+        public String transMode;
+
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig setTransMode(String transMode) {
+            this.transMode = transMode;
+            return this;
+        }
+        public String getTransMode() {
+            return this.transMode;
+        }
+
+    }
+
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd extends TeaModel {
+        @NameInMap("Max")
+        public String max;
+
+        @NameInMap("Min")
+        public String min;
+
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd setMax(String max) {
+            this.max = max;
+            return this;
+        }
+        public String getMax() {
+            return this.max;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd setMin(String min) {
+            this.min = min;
+            return this;
+        }
+        public String getMin() {
+            return this.min;
+        }
+
+    }
+
+    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo extends TeaModel {
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("BitrateBnd")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd bitrateBnd;
+
+        @NameInMap("Bufsize")
+        public String bufsize;
 
         @NameInMap("Codec")
         public String codec;
 
-        @NameInMap("Samplerate")
-        public String samplerate;
+        @NameInMap("Crf")
+        public String crf;
+
+        @NameInMap("Degrain")
+        public String degrain;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Gop")
+        public String gop;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Maxrate")
+        public String maxrate;
+
+        @NameInMap("PixFmt")
+        public String pixFmt;
+
+        @NameInMap("Preset")
+        public String preset;
+
+        @NameInMap("Profile")
+        public String profile;
 
         @NameInMap("Qscale")
         public String qscale;
 
-        @NameInMap("Channels")
-        public String channels;
+        @NameInMap("ScanMode")
+        public String scanMode;
 
-        @NameInMap("Bitrate")
-        public String bitrate;
+        @NameInMap("Width")
+        public String width;
 
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio();
+        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo build(java.util.Map<String, ?> map) throws Exception {
+            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo();
             return TeaModel.build(map, self);
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setProfile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-        public String getProfile() {
-            return this.profile;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setCodec(String codec) {
-            this.codec = codec;
-            return this;
-        }
-        public String getCodec() {
-            return this.codec;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setSamplerate(String samplerate) {
-            this.samplerate = samplerate;
-            return this;
-        }
-        public String getSamplerate() {
-            return this.samplerate;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setQscale(String qscale) {
-            this.qscale = qscale;
-            return this;
-        }
-        public String getQscale() {
-            return this.qscale;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setChannels(String channels) {
-            this.channels = channels;
-            return this;
-        }
-        public String getChannels() {
-            return this.channels;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio setBitrate(String bitrate) {
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -620,36 +560,137 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-    }
-
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer extends TeaModel {
-        @NameInMap("Format")
-        public String format;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer setFormat(String format) {
-            this.format = format;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBitrateBnd(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd bitrateBnd) {
+            this.bitrateBnd = bitrateBnd;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideoBitrateBnd getBitrateBnd() {
+            return this.bitrateBnd;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setBufsize(String bufsize) {
+            this.bufsize = bufsize;
+            return this;
+        }
+        public String getBufsize() {
+            return this.bufsize;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setCodec(String codec) {
+            this.codec = codec;
+            return this;
+        }
+        public String getCodec() {
+            return this.codec;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setCrf(String crf) {
+            this.crf = crf;
+            return this;
+        }
+        public String getCrf() {
+            return this.crf;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setDegrain(String degrain) {
+            this.degrain = degrain;
+            return this;
+        }
+        public String getDegrain() {
+            return this.degrain;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setGop(String gop) {
+            this.gop = gop;
+            return this;
+        }
+        public String getGop() {
+            return this.gop;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setMaxrate(String maxrate) {
+            this.maxrate = maxrate;
+            return this;
+        }
+        public String getMaxrate() {
+            return this.maxrate;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setPixFmt(String pixFmt) {
+            this.pixFmt = pixFmt;
+            return this;
+        }
+        public String getPixFmt() {
+            return this.pixFmt;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setPreset(String preset) {
+            this.preset = preset;
+            return this;
+        }
+        public String getPreset() {
+            return this.preset;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setQscale(String qscale) {
+            this.qscale = qscale;
+            return this;
+        }
+        public String getQscale() {
+            return this.qscale;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setScanMode(String scanMode) {
+            this.scanMode = scanMode;
+            return this;
+        }
+        public String getScanMode() {
+            return this.scanMode;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
         }
 
     }
 
     public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate extends TeaModel {
-        @NameInMap("Video")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo video;
+        @NameInMap("Audio")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio audio;
 
-        @NameInMap("TransConfig")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig transConfig;
+        @NameInMap("Container")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer container;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("MuxConfig")
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateMuxConfig muxConfig;
@@ -657,42 +698,42 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Audio")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio audio;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("TransConfig")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig transConfig;
 
-        @NameInMap("Container")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer container;
+        @NameInMap("Video")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo video;
 
         public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate build(java.util.Map<String, ?> map) throws Exception {
             QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate();
             return TeaModel.build(map, self);
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setVideo(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo video) {
-            this.video = video;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setAudio(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio audio) {
+            this.audio = audio;
             return this;
         }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo getVideo() {
-            return this.video;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio getAudio() {
+            return this.audio;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setTransConfig(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig transConfig) {
-            this.transConfig = transConfig;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setContainer(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer container) {
+            this.container = container;
             return this;
         }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig getTransConfig() {
-            return this.transConfig;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer getContainer() {
+            return this.container;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setState(String state) {
-            this.state = state;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setMuxConfig(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateMuxConfig muxConfig) {
@@ -711,28 +752,28 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.name;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setAudio(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio audio) {
-            this.audio = audio;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateAudio getAudio() {
-            return this.audio;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setId(String id) {
-            this.id = id;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setTransConfig(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig transConfig) {
+            this.transConfig = transConfig;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateTransConfig getTransConfig() {
+            return this.transConfig;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setContainer(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer container) {
-            this.container = container;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplate setVideo(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo video) {
+            this.video = video;
             return this;
         }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateContainer getContainer() {
-            return this.container;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateListTemplateVideo getVideo() {
+            return this.video;
         }
 
     }
@@ -756,68 +797,39 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
     public static class QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob extends TeaModel {
+        @NameInMap("AnalysisConfig")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig analysisConfig;
+
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Percent")
-        public Long percent;
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("InputFile")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile inputFile;
 
-        @NameInMap("AnalysisConfig")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig analysisConfig;
+        @NameInMap("MNSMessageResult")
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult MNSMessageResult;
 
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("Percent")
+        public Long percent;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
+
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("MNSMessageResult")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult MNSMessageResult;
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("TemplateList")
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateList templateList;
@@ -825,45 +837,9 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("InputFile")
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile inputFile;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
-
-        @NameInMap("Id")
-        public String id;
-
         public static QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob build(java.util.Map<String, ?> map) throws Exception {
             QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob self = new QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setPercent(Long percent) {
-            this.percent = percent;
-            return this;
-        }
-        public Long getPercent() {
-            return this.percent;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setAnalysisConfig(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobAnalysisConfig analysisConfig) {
@@ -874,12 +850,68 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.analysisConfig;
         }
 
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setInputFile(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile inputFile) {
+            this.inputFile = inputFile;
+            return this;
+        }
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile getInputFile() {
+            return this.inputFile;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setMNSMessageResult(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult MNSMessageResult) {
+            this.MNSMessageResult = MNSMessageResult;
+            return this;
+        }
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult getMNSMessageResult() {
+            return this.MNSMessageResult;
+        }
+
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setMessage(String message) {
             this.message = message;
             return this;
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setPercent(Long percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Long getPercent() {
+            return this.percent;
+        }
+
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setPriority(String priority) {
@@ -890,12 +922,12 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setMNSMessageResult(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult MNSMessageResult) {
-            this.MNSMessageResult = MNSMessageResult;
+        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobMNSMessageResult getMNSMessageResult() {
-            return this.MNSMessageResult;
+        public String getState() {
+            return this.state;
         }
 
         public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setTemplateList(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobTemplateList templateList) {
@@ -912,38 +944,6 @@ public class QueryAnalysisJobListResponseBody extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setInputFile(QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile inputFile) {
-            this.inputFile = inputFile;
-            return this;
-        }
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJobInputFile getInputFile() {
-            return this.inputFile;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public QueryAnalysisJobListResponseBodyAnalysisJobListAnalysisJob setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

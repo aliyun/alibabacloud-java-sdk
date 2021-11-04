@@ -4,32 +4,14 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddMCTemplateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Porn")
-    public String porn;
-
-    @NameInMap("Terrorism")
-    public String terrorism;
-
-    @NameInMap("Politics")
-    public String politics;
+    @NameInMap("Abuse")
+    public String abuse;
 
     @NameInMap("Ad")
     public String ad;
 
-    @NameInMap("Qrcode")
-    public String qrcode;
+    @NameInMap("Contraband")
+    public String contraband;
 
     @NameInMap("Live")
     public String live;
@@ -37,77 +19,47 @@ public class AddMCTemplateRequest extends TeaModel {
     @NameInMap("Logo")
     public String logo;
 
-    @NameInMap("Abuse")
-    public String abuse;
-
-    @NameInMap("Contraband")
-    public String contraband;
-
-    @NameInMap("spam")
-    public String spam;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Politics")
+    public String politics;
+
+    @NameInMap("Porn")
+    public String porn;
+
+    @NameInMap("Qrcode")
+    public String qrcode;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Terrorism")
+    public String terrorism;
+
+    @NameInMap("spam")
+    public String spam;
 
     public static AddMCTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMCTemplateRequest self = new AddMCTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddMCTemplateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public AddMCTemplateRequest setAbuse(String abuse) {
+        this.abuse = abuse;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddMCTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public AddMCTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public AddMCTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public AddMCTemplateRequest setPorn(String porn) {
-        this.porn = porn;
-        return this;
-    }
-    public String getPorn() {
-        return this.porn;
-    }
-
-    public AddMCTemplateRequest setTerrorism(String terrorism) {
-        this.terrorism = terrorism;
-        return this;
-    }
-    public String getTerrorism() {
-        return this.terrorism;
-    }
-
-    public AddMCTemplateRequest setPolitics(String politics) {
-        this.politics = politics;
-        return this;
-    }
-    public String getPolitics() {
-        return this.politics;
+    public String getAbuse() {
+        return this.abuse;
     }
 
     public AddMCTemplateRequest setAd(String ad) {
@@ -118,12 +70,12 @@ public class AddMCTemplateRequest extends TeaModel {
         return this.ad;
     }
 
-    public AddMCTemplateRequest setQrcode(String qrcode) {
-        this.qrcode = qrcode;
+    public AddMCTemplateRequest setContraband(String contraband) {
+        this.contraband = contraband;
         return this;
     }
-    public String getQrcode() {
-        return this.qrcode;
+    public String getContraband() {
+        return this.contraband;
     }
 
     public AddMCTemplateRequest setLive(String live) {
@@ -142,28 +94,12 @@ public class AddMCTemplateRequest extends TeaModel {
         return this.logo;
     }
 
-    public AddMCTemplateRequest setAbuse(String abuse) {
-        this.abuse = abuse;
+    public AddMCTemplateRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getAbuse() {
-        return this.abuse;
-    }
-
-    public AddMCTemplateRequest setContraband(String contraband) {
-        this.contraband = contraband;
-        return this;
-    }
-    public String getContraband() {
-        return this.contraband;
-    }
-
-    public AddMCTemplateRequest setSpam(String spam) {
-        this.spam = spam;
-        return this;
-    }
-    public String getSpam() {
-        return this.spam;
+    public String getName() {
+        return this.name;
     }
 
     public AddMCTemplateRequest setOwnerAccount(String ownerAccount) {
@@ -172,6 +108,70 @@ public class AddMCTemplateRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public AddMCTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AddMCTemplateRequest setPolitics(String politics) {
+        this.politics = politics;
+        return this;
+    }
+    public String getPolitics() {
+        return this.politics;
+    }
+
+    public AddMCTemplateRequest setPorn(String porn) {
+        this.porn = porn;
+        return this;
+    }
+    public String getPorn() {
+        return this.porn;
+    }
+
+    public AddMCTemplateRequest setQrcode(String qrcode) {
+        this.qrcode = qrcode;
+        return this;
+    }
+    public String getQrcode() {
+        return this.qrcode;
+    }
+
+    public AddMCTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AddMCTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AddMCTemplateRequest setTerrorism(String terrorism) {
+        this.terrorism = terrorism;
+        return this;
+    }
+    public String getTerrorism() {
+        return this.terrorism;
+    }
+
+    public AddMCTemplateRequest setSpam(String spam) {
+        this.spam = spam;
+        return this;
+    }
+    public String getSpam() {
+        return this.spam;
     }
 
 }

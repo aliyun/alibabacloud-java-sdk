@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListCustomPersonsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Categories")
     public ListCustomPersonsResponseBodyCategories categories;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListCustomPersonsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCustomPersonsResponseBody self = new ListCustomPersonsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCustomPersonsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListCustomPersonsResponseBody setCategories(ListCustomPersonsResponseBodyCategories categories) {
@@ -31,24 +23,24 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         return this.categories;
     }
 
-    public static class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace extends TeaModel {
-        @NameInMap("ImageUrl")
-        public String imageUrl;
+    public ListCustomPersonsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace extends TeaModel {
         @NameInMap("FaceId")
         public String faceId;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
 
         public static ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace build(java.util.Map<String, ?> map) throws Exception {
             ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace self = new ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace();
             return TeaModel.build(map, self);
-        }
-
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace setImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-        public String getImageUrl() {
-            return this.imageUrl;
         }
 
         public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace setFaceId(String faceId) {
@@ -57,6 +49,14 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         }
         public String getFaceId() {
             return this.faceId;
+        }
+
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFacesFace setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
         }
 
     }
@@ -81,37 +81,21 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     }
 
     public static class ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson extends TeaModel {
-        @NameInMap("PersonName")
-        public String personName;
+        @NameInMap("Faces")
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces faces;
 
         @NameInMap("PersonDescription")
         public String personDescription;
 
-        @NameInMap("Faces")
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces faces;
-
         @NameInMap("PersonId")
         public String personId;
+
+        @NameInMap("PersonName")
+        public String personName;
 
         public static ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson build(java.util.Map<String, ?> map) throws Exception {
             ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson self = new ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson();
             return TeaModel.build(map, self);
-        }
-
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setPersonName(String personName) {
-            this.personName = personName;
-            return this;
-        }
-        public String getPersonName() {
-            return this.personName;
-        }
-
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setPersonDescription(String personDescription) {
-            this.personDescription = personDescription;
-            return this;
-        }
-        public String getPersonDescription() {
-            return this.personDescription;
         }
 
         public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setFaces(ListCustomPersonsResponseBodyCategoriesCategoryPersonsPersonFaces faces) {
@@ -122,12 +106,28 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             return this.faces;
         }
 
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setPersonDescription(String personDescription) {
+            this.personDescription = personDescription;
+            return this;
+        }
+        public String getPersonDescription() {
+            return this.personDescription;
+        }
+
         public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setPersonId(String personId) {
             this.personId = personId;
             return this;
         }
         public String getPersonId() {
             return this.personId;
+        }
+
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersonsPerson setPersonName(String personName) {
+            this.personName = personName;
+            return this;
+        }
+        public String getPersonName() {
+            return this.personName;
         }
 
     }
@@ -152,8 +152,8 @@ public class ListCustomPersonsResponseBody extends TeaModel {
     }
 
     public static class ListCustomPersonsResponseBodyCategoriesCategory extends TeaModel {
-        @NameInMap("Persons")
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersons persons;
+        @NameInMap("CategoryDescription")
+        public String categoryDescription;
 
         @NameInMap("CategoryId")
         public String categoryId;
@@ -161,20 +161,20 @@ public class ListCustomPersonsResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
-        @NameInMap("CategoryDescription")
-        public String categoryDescription;
+        @NameInMap("Persons")
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersons persons;
 
         public static ListCustomPersonsResponseBodyCategoriesCategory build(java.util.Map<String, ?> map) throws Exception {
             ListCustomPersonsResponseBodyCategoriesCategory self = new ListCustomPersonsResponseBodyCategoriesCategory();
             return TeaModel.build(map, self);
         }
 
-        public ListCustomPersonsResponseBodyCategoriesCategory setPersons(ListCustomPersonsResponseBodyCategoriesCategoryPersons persons) {
-            this.persons = persons;
+        public ListCustomPersonsResponseBodyCategoriesCategory setCategoryDescription(String categoryDescription) {
+            this.categoryDescription = categoryDescription;
             return this;
         }
-        public ListCustomPersonsResponseBodyCategoriesCategoryPersons getPersons() {
-            return this.persons;
+        public String getCategoryDescription() {
+            return this.categoryDescription;
         }
 
         public ListCustomPersonsResponseBodyCategoriesCategory setCategoryId(String categoryId) {
@@ -193,12 +193,12 @@ public class ListCustomPersonsResponseBody extends TeaModel {
             return this.categoryName;
         }
 
-        public ListCustomPersonsResponseBodyCategoriesCategory setCategoryDescription(String categoryDescription) {
-            this.categoryDescription = categoryDescription;
+        public ListCustomPersonsResponseBodyCategoriesCategory setPersons(ListCustomPersonsResponseBodyCategoriesCategoryPersons persons) {
+            this.persons = persons;
             return this;
         }
-        public String getCategoryDescription() {
-            return this.categoryDescription;
+        public ListCustomPersonsResponseBodyCategoriesCategoryPersons getPersons() {
+            return this.persons;
         }
 
     }

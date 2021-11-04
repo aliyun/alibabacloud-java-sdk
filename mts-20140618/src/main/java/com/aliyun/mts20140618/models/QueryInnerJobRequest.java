@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryInnerJobRequest extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class QueryInnerJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     public static QueryInnerJobRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryInnerJobRequest self = new QueryInnerJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInnerJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public QueryInnerJobRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class QueryInnerJobRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryInnerJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
 }

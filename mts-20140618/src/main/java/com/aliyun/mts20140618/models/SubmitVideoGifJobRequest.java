@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoGifJobRequest extends TeaModel {
+    @NameInMap("Input")
+    public String input;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +22,31 @@ public class SubmitVideoGifJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Input")
-    public String input;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
+    @NameInMap("UserData")
+    public String userData;
 
     @NameInMap("VideoGifConfig")
     public String videoGifConfig;
 
-    @NameInMap("UserData")
-    public String userData;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static SubmitVideoGifJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoGifJobRequest self = new SubmitVideoGifJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoGifJobRequest setInput(String input) {
+        this.input = input;
+        return this;
+    }
+    public String getInput() {
+        return this.input;
+    }
+
+    public SubmitVideoGifJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitVideoGifJobRequest setOwnerId(Long ownerId) {
@@ -39,6 +55,14 @@ public class SubmitVideoGifJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitVideoGifJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public SubmitVideoGifJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,30 +81,6 @@ public class SubmitVideoGifJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitVideoGifJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
-    }
-
-    public SubmitVideoGifJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public SubmitVideoGifJobRequest setVideoGifConfig(String videoGifConfig) {
-        this.videoGifConfig = videoGifConfig;
-        return this;
-    }
-    public String getVideoGifConfig() {
-        return this.videoGifConfig;
-    }
-
     public SubmitVideoGifJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
@@ -89,12 +89,12 @@ public class SubmitVideoGifJobRequest extends TeaModel {
         return this.userData;
     }
 
-    public SubmitVideoGifJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SubmitVideoGifJobRequest setVideoGifConfig(String videoGifConfig) {
+        this.videoGifConfig = videoGifConfig;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVideoGifConfig() {
+        return this.videoGifConfig;
     }
 
 }
