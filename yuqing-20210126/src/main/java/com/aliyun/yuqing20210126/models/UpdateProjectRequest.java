@@ -4,6 +4,10 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
+    // 默认更新关键词
+    @NameInMap("isInfo")
+    public Boolean isInfo;
+
     // 舆情项目对象
     @NameInMap("project")
     public Project project;
@@ -31,6 +35,14 @@ public class UpdateProjectRequest extends TeaModel {
     public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectRequest self = new UpdateProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectRequest setIsInfo(Boolean isInfo) {
+        this.isInfo = isInfo;
+        return this;
+    }
+    public Boolean getIsInfo() {
+        return this.isInfo;
     }
 
     public UpdateProjectRequest setProject(Project project) {

@@ -502,6 +502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isInfo)) {
+            body.put("isInfo", request.isInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.project))) {
             body.put("project", request.project);
         }
