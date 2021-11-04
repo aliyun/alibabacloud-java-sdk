@@ -170,19 +170,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDBInstanceWithOptions(request, runtime);
     }
 
-    public CreatePolarxInstanceResponse createPolarxInstanceWithOptions(CreatePolarxInstanceRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreatePolarxInstance", "2020-02-02", "HTTPS", "POST", "AK", "json", req, runtime), new CreatePolarxInstanceResponse());
-    }
-
-    public CreatePolarxInstanceResponse createPolarxInstance(CreatePolarxInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createPolarxInstanceWithOptions(request, runtime);
-    }
-
     public CreatePolarxOrderResponse createPolarxOrderWithOptions(CreatePolarxOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

@@ -13,6 +13,9 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 
+    @NameInMap("DBNodeRole")
+    public String DBNodeRole;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -52,6 +55,14 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     }
     public String getDBNodeIds() {
         return this.DBNodeIds;
+    }
+
+    public DescribeDBNodePerformanceRequest setDBNodeRole(String DBNodeRole) {
+        this.DBNodeRole = DBNodeRole;
+        return this;
+    }
+    public String getDBNodeRole() {
+        return this.DBNodeRole;
     }
 
     public DescribeDBNodePerformanceRequest setEndTime(String endTime) {
