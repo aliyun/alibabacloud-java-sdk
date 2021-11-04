@@ -368,17 +368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.notificationUnicastRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.notificationUnicastRequest), "NotificationUnicastRequest", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.tenantInfo))) {
-            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.tenantInfo), "TenantInfo", "json");
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.notificationUnicastRequestShrink)) {
             body.put("NotificationUnicastRequest", request.notificationUnicastRequestShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantInfoShrink)) {
-            body.put("TenantInfo", request.tenantInfoShrink);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

@@ -8,10 +8,6 @@ public class PushNotificationsRequest extends TeaModel {
     @NameInMap("NotificationUnicastRequest")
     public PushNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
-    // 身份信息。
-    @NameInMap("TenantInfo")
-    public PushNotificationsRequestTenantInfo tenantInfo;
-
     public static PushNotificationsRequest build(java.util.Map<String, ?> map) throws Exception {
         PushNotificationsRequest self = new PushNotificationsRequest();
         return TeaModel.build(map, self);
@@ -23,14 +19,6 @@ public class PushNotificationsRequest extends TeaModel {
     }
     public PushNotificationsRequestNotificationUnicastRequest getNotificationUnicastRequest() {
         return this.notificationUnicastRequest;
-    }
-
-    public PushNotificationsRequest setTenantInfo(PushNotificationsRequestTenantInfo tenantInfo) {
-        this.tenantInfo = tenantInfo;
-        return this;
-    }
-    public PushNotificationsRequestTenantInfo getTenantInfo() {
-        return this.tenantInfo;
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequestSendTarget extends TeaModel {
@@ -153,26 +141,6 @@ public class PushNotificationsRequest extends TeaModel {
         }
         public PushNotificationsRequestNotificationUnicastRequestSendTarget getSendTarget() {
             return this.sendTarget;
-        }
-
-    }
-
-    public static class PushNotificationsRequestTenantInfo extends TeaModel {
-        // 猫精应用id，【开发者平台-技能应用】创建应用后得到的应用id。
-        @NameInMap("GenieAppId")
-        public String genieAppId;
-
-        public static PushNotificationsRequestTenantInfo build(java.util.Map<String, ?> map) throws Exception {
-            PushNotificationsRequestTenantInfo self = new PushNotificationsRequestTenantInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public PushNotificationsRequestTenantInfo setGenieAppId(String genieAppId) {
-            this.genieAppId = genieAppId;
-            return this;
-        }
-        public String getGenieAppId() {
-            return this.genieAppId;
         }
 
     }
