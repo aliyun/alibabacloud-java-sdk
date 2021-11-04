@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaCoverRequest extends TeaModel {
+    @NameInMap("CoverURL")
+    public String coverURL;
+
+    @NameInMap("MediaId")
+    public String mediaId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class UpdateMediaCoverRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MediaId")
-    public String mediaId;
-
-    @NameInMap("CoverURL")
-    public String coverURL;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static UpdateMediaCoverRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMediaCoverRequest self = new UpdateMediaCoverRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMediaCoverRequest setCoverURL(String coverURL) {
+        this.coverURL = coverURL;
+        return this;
+    }
+    public String getCoverURL() {
+        return this.coverURL;
+    }
+
+    public UpdateMediaCoverRequest setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
+    }
+
+    public UpdateMediaCoverRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateMediaCoverRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class UpdateMediaCoverRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdateMediaCoverRequest setMediaId(String mediaId) {
-        this.mediaId = mediaId;
-        return this;
-    }
-    public String getMediaId() {
-        return this.mediaId;
-    }
-
-    public UpdateMediaCoverRequest setCoverURL(String coverURL) {
-        this.coverURL = coverURL;
-        return this;
-    }
-    public String getCoverURL() {
-        return this.coverURL;
-    }
-
-    public UpdateMediaCoverRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

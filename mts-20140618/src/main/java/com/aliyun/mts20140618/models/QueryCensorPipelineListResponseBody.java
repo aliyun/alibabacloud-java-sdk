@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryCensorPipelineListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("NonExistIds")
+    public QueryCensorPipelineListResponseBodyNonExistIds nonExistIds;
 
     @NameInMap("PipelineList")
     public QueryCensorPipelineListResponseBodyPipelineList pipelineList;
 
-    @NameInMap("NonExistIds")
-    public QueryCensorPipelineListResponseBodyNonExistIds nonExistIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryCensorPipelineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCensorPipelineListResponseBody self = new QueryCensorPipelineListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCensorPipelineListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryCensorPipelineListResponseBody setPipelineList(QueryCensorPipelineListResponseBodyPipelineList pipelineList) {
-        this.pipelineList = pipelineList;
-        return this;
-    }
-    public QueryCensorPipelineListResponseBodyPipelineList getPipelineList() {
-        return this.pipelineList;
     }
 
     public QueryCensorPipelineListResponseBody setNonExistIds(QueryCensorPipelineListResponseBodyNonExistIds nonExistIds) {
@@ -42,24 +26,51 @@ public class QueryCensorPipelineListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public QueryCensorPipelineListResponseBody setPipelineList(QueryCensorPipelineListResponseBodyPipelineList pipelineList) {
+        this.pipelineList = pipelineList;
+        return this;
+    }
+    public QueryCensorPipelineListResponseBodyPipelineList getPipelineList() {
+        return this.pipelineList;
+    }
 
+    public QueryCensorPipelineListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class QueryCensorPipelineListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryCensorPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryCensorPipelineListResponseBodyNonExistIds self = new QueryCensorPipelineListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCensorPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
+    }
+
+    public static class QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig self = new QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig setQueue(String queue) {
@@ -70,11 +81,22 @@ public class QueryCensorPipelineListResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class QueryCensorPipelineListResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -82,23 +104,28 @@ public class QueryCensorPipelineListResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static QueryCensorPipelineListResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             QueryCensorPipelineListResponseBodyPipelineListPipeline self = new QueryCensorPipelineListResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public QueryCensorPipelineListResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public QueryCensorPipelineListResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryCensorPipelineListResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public QueryCensorPipelineListResponseBodyPipelineListPipeline setNotifyConfig(QueryCensorPipelineListResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -117,20 +144,12 @@ public class QueryCensorPipelineListResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public QueryCensorPipelineListResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public QueryCensorPipelineListResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryCensorPipelineListResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }
@@ -150,25 +169,6 @@ public class QueryCensorPipelineListResponseBody extends TeaModel {
         }
         public java.util.List<QueryCensorPipelineListResponseBodyPipelineListPipeline> getPipeline() {
             return this.pipeline;
-        }
-
-    }
-
-    public static class QueryCensorPipelineListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryCensorPipelineListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryCensorPipelineListResponseBodyNonExistIds self = new QueryCensorPipelineListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCensorPipelineListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
         }
 
     }

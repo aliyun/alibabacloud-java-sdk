@@ -7,14 +7,14 @@ public class QueryCoverJobListResponseBody extends TeaModel {
     @NameInMap("CoverJobList")
     public QueryCoverJobListResponseBodyCoverJobList coverJobList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     @NameInMap("NonExistIds")
     public QueryCoverJobListResponseBodyNonExistIds nonExistIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryCoverJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCoverJobListResponseBody self = new QueryCoverJobListResponseBody();
@@ -27,14 +27,6 @@ public class QueryCoverJobListResponseBody extends TeaModel {
     }
     public QueryCoverJobListResponseBodyCoverJobList getCoverJobList() {
         return this.coverJobList;
-    }
-
-    public QueryCoverJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryCoverJobListResponseBody setNextPageToken(String nextPageToken) {
@@ -53,12 +45,80 @@ public class QueryCoverJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage extends TeaModel {
-        @NameInMap("Time")
-        public String time;
+    public QueryCoverJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
+            QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile self = new QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+    }
+
+    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig extends TeaModel {
+        @NameInMap("OutputFile")
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile outputFile;
+
+        public static QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig build(java.util.Map<String, ?> map) throws Exception {
+            QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig self = new QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig setOutputFile(QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile outputFile) {
+            this.outputFile = outputFile;
+            return this;
+        }
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile getOutputFile() {
+            return this.outputFile;
+        }
+
+    }
+
+    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage extends TeaModel {
         @NameInMap("Score")
         public String score;
+
+        @NameInMap("Time")
+        public String time;
 
         @NameInMap("Url")
         public String url;
@@ -68,20 +128,20 @@ public class QueryCoverJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
         public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage setScore(String score) {
             this.score = score;
             return this;
         }
         public String getScore() {
             return this.score;
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
         public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageListCoverImage setUrl(String url) {
@@ -114,34 +174,18 @@ public class QueryCoverJobListResponseBody extends TeaModel {
     }
 
     public static class QueryCoverJobListResponseBodyCoverJobListCoverJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         public static QueryCoverJobListResponseBodyCoverJobListCoverJobInput build(java.util.Map<String, ?> map) throws Exception {
             QueryCoverJobListResponseBodyCoverJobListCoverJobInput self = new QueryCoverJobListResponseBodyCoverJobListCoverJobInput();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public QueryCoverJobListResponseBodyCoverJobListCoverJobInput setBucket(String bucket) {
@@ -152,32 +196,7 @@ public class QueryCoverJobListResponseBody extends TeaModel {
             return this.bucket;
         }
 
-    }
-
-    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
-            QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile self = new QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setLocation(String location) {
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -185,50 +204,34 @@ public class QueryCoverJobListResponseBody extends TeaModel {
             return this.location;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile setBucket(String bucket) {
-            this.bucket = bucket;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput setObject(String object) {
+            this.object = object;
             return this;
         }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-    }
-
-    public static class QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig extends TeaModel {
-        @NameInMap("OutputFile")
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile outputFile;
-
-        public static QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig build(java.util.Map<String, ?> map) throws Exception {
-            QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig self = new QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig setOutputFile(QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile outputFile) {
-            this.outputFile = outputFile;
-            return this;
-        }
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfigOutputFile getOutputFile() {
-            return this.outputFile;
+        public String getObject() {
+            return this.object;
         }
 
     }
 
     public static class QueryCoverJobListResponseBodyCoverJobListCoverJob extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("Code")
+        public String code;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("CoverConfig")
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig coverConfig;
 
         @NameInMap("CoverImageList")
         public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageList coverImageList;
 
-        @NameInMap("UserData")
-        public String userData;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Input")
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput input;
 
         @NameInMap("Message")
         public String message;
@@ -236,34 +239,31 @@ public class QueryCoverJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Input")
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput input;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("CoverConfig")
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig coverConfig;
+        @NameInMap("UserData")
+        public String userData;
 
         public static QueryCoverJobListResponseBodyCoverJobListCoverJob build(java.util.Map<String, ?> map) throws Exception {
             QueryCoverJobListResponseBodyCoverJobListCoverJob self = new QueryCoverJobListResponseBodyCoverJobListCoverJob();
             return TeaModel.build(map, self);
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCode(String code) {
+            this.code = code;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getCode() {
+            return this.code;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setState(String state) {
-            this.state = state;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCoverConfig(QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig coverConfig) {
+            this.coverConfig = coverConfig;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig getCoverConfig() {
+            return this.coverConfig;
         }
 
         public QueryCoverJobListResponseBodyCoverJobListCoverJob setCoverImageList(QueryCoverJobListResponseBodyCoverJobListCoverJobCoverImageList coverImageList) {
@@ -274,20 +274,28 @@ public class QueryCoverJobListResponseBody extends TeaModel {
             return this.coverImageList;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setUserData(String userData) {
-            this.userData = userData;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCode(String code) {
-            this.code = code;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getCode() {
-            return this.code;
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setInput(QueryCoverJobListResponseBodyCoverJobListCoverJobInput input) {
+            this.input = input;
+            return this;
+        }
+        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput getInput() {
+            return this.input;
         }
 
         public QueryCoverJobListResponseBodyCoverJobListCoverJob setMessage(String message) {
@@ -306,28 +314,20 @@ public class QueryCoverJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setInput(QueryCoverJobListResponseBodyCoverJobListCoverJobInput input) {
-            this.input = input;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobInput getInput() {
-            return this.input;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setId(String id) {
-            this.id = id;
+        public QueryCoverJobListResponseBodyCoverJobListCoverJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
-        }
-
-        public QueryCoverJobListResponseBodyCoverJobListCoverJob setCoverConfig(QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig coverConfig) {
-            this.coverConfig = coverConfig;
-            return this;
-        }
-        public QueryCoverJobListResponseBodyCoverJobListCoverJobCoverConfig getCoverConfig() {
-            return this.coverConfig;
+        public String getUserData() {
+            return this.userData;
         }
 
     }

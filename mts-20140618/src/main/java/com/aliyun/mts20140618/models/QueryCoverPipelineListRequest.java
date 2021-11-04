@@ -4,8 +4,14 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryCoverPipelineListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineIds")
+    public String pipelineIds;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class QueryCoverPipelineListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PipelineIds")
-    public String pipelineIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryCoverPipelineListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCoverPipelineListRequest self = new QueryCoverPipelineListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCoverPipelineListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryCoverPipelineListRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class QueryCoverPipelineListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryCoverPipelineListRequest setPipelineIds(String pipelineIds) {
+        this.pipelineIds = pipelineIds;
+        return this;
+    }
+    public String getPipelineIds() {
+        return this.pipelineIds;
     }
 
     public QueryCoverPipelineListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class QueryCoverPipelineListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryCoverPipelineListRequest setPipelineIds(String pipelineIds) {
-        this.pipelineIds = pipelineIds;
-        return this;
-    }
-    public String getPipelineIds() {
-        return this.pipelineIds;
-    }
-
-    public QueryCoverPipelineListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

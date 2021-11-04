@@ -4,48 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListAsrPipelineResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PipelineList")
+    public ListAsrPipelineResponseBodyPipelineList pipelineList;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PipelineList")
-    public ListAsrPipelineResponseBodyPipelineList pipelineList;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListAsrPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAsrPipelineResponseBody self = new ListAsrPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAsrPipelineResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAsrPipelineResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListAsrPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAsrPipelineResponseBody setPageNumber(Long pageNumber) {
@@ -56,12 +32,36 @@ public class ListAsrPipelineResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListAsrPipelineResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
     public ListAsrPipelineResponseBody setPipelineList(ListAsrPipelineResponseBodyPipelineList pipelineList) {
         this.pipelineList = pipelineList;
         return this;
     }
     public ListAsrPipelineResponseBodyPipelineList getPipelineList() {
         return this.pipelineList;
+    }
+
+    public ListAsrPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListAsrPipelineResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListAsrPipelineResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
@@ -95,8 +95,11 @@ public class ListAsrPipelineResponseBody extends TeaModel {
     }
 
     public static class ListAsrPipelineResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public ListAsrPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -104,23 +107,28 @@ public class ListAsrPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static ListAsrPipelineResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             ListAsrPipelineResponseBodyPipelineListPipeline self = new ListAsrPipelineResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public ListAsrPipelineResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public ListAsrPipelineResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public ListAsrPipelineResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListAsrPipelineResponseBodyPipelineListPipeline setNotifyConfig(ListAsrPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -139,20 +147,12 @@ public class ListAsrPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public ListAsrPipelineResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public ListAsrPipelineResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListAsrPipelineResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

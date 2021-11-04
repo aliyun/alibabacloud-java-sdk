@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryCensorJobListRequest extends TeaModel {
+    @NameInMap("JobIds")
+    public String jobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryCensorJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobIds")
-    public String jobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryCensorJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCensorJobListRequest self = new QueryCensorJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCensorJobListRequest setJobIds(String jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+    public String getJobIds() {
+        return this.jobIds;
+    }
+
+    public QueryCensorJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryCensorJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryCensorJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryCensorJobListRequest setJobIds(String jobIds) {
-        this.jobIds = jobIds;
-        return this;
-    }
-    public String getJobIds() {
-        return this.jobIds;
-    }
-
-    public QueryCensorJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

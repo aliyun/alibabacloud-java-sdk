@@ -4,8 +4,23 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListJobRequest extends TeaModel {
+    @NameInMap("EndOfJobCreatedTimeRange")
+    public String endOfJobCreatedTimeRange;
+
+    @NameInMap("MaximumPageSize")
+    public Long maximumPageSize;
+
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +28,47 @@ public class ListJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("NextPageToken")
-    public String nextPageToken;
-
-    @NameInMap("MaximumPageSize")
-    public Long maximumPageSize;
+    @NameInMap("StartOfJobCreatedTimeRange")
+    public String startOfJobCreatedTimeRange;
 
     @NameInMap("State")
     public String state;
 
-    @NameInMap("StartOfJobCreatedTimeRange")
-    public String startOfJobCreatedTimeRange;
-
-    @NameInMap("EndOfJobCreatedTimeRange")
-    public String endOfJobCreatedTimeRange;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ListJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobRequest self = new ListJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobRequest setEndOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
+        this.endOfJobCreatedTimeRange = endOfJobCreatedTimeRange;
+        return this;
+    }
+    public String getEndOfJobCreatedTimeRange() {
+        return this.endOfJobCreatedTimeRange;
+    }
+
+    public ListJobRequest setMaximumPageSize(Long maximumPageSize) {
+        this.maximumPageSize = maximumPageSize;
+        return this;
+    }
+    public Long getMaximumPageSize() {
+        return this.maximumPageSize;
+    }
+
+    public ListJobRequest setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
+
+    public ListJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ListJobRequest setOwnerId(Long ownerId) {
@@ -45,6 +77,14 @@ public class ListJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public ListJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,30 +103,6 @@ public class ListJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListJobRequest setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
-    }
-
-    public ListJobRequest setMaximumPageSize(Long maximumPageSize) {
-        this.maximumPageSize = maximumPageSize;
-        return this;
-    }
-    public Long getMaximumPageSize() {
-        return this.maximumPageSize;
-    }
-
-    public ListJobRequest setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
-    }
-
     public ListJobRequest setStartOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
         this.startOfJobCreatedTimeRange = startOfJobCreatedTimeRange;
         return this;
@@ -95,28 +111,12 @@ public class ListJobRequest extends TeaModel {
         return this.startOfJobCreatedTimeRange;
     }
 
-    public ListJobRequest setEndOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
-        this.endOfJobCreatedTimeRange = endOfJobCreatedTimeRange;
+    public ListJobRequest setState(String state) {
+        this.state = state;
         return this;
     }
-    public String getEndOfJobCreatedTimeRange() {
-        return this.endOfJobCreatedTimeRange;
-    }
-
-    public ListJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public ListJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getState() {
+        return this.state;
     }
 
 }

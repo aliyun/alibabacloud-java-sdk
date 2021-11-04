@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryRequest extends TeaModel {
+    @NameInMap("CateName")
+    public String cateName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ParentId")
+    public Long parentId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,18 +22,25 @@ public class AddCategoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CateName")
-    public String cateName;
-
-    @NameInMap("ParentId")
-    public Long parentId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static AddCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCategoryRequest self = new AddCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCategoryRequest setCateName(String cateName) {
+        this.cateName = cateName;
+        return this;
+    }
+    public String getCateName() {
+        return this.cateName;
+    }
+
+    public AddCategoryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AddCategoryRequest setOwnerId(Long ownerId) {
@@ -33,6 +49,14 @@ public class AddCategoryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddCategoryRequest setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
     }
 
     public AddCategoryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,30 +73,6 @@ public class AddCategoryRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AddCategoryRequest setCateName(String cateName) {
-        this.cateName = cateName;
-        return this;
-    }
-    public String getCateName() {
-        return this.cateName;
-    }
-
-    public AddCategoryRequest setParentId(Long parentId) {
-        this.parentId = parentId;
-        return this;
-    }
-    public Long getParentId() {
-        return this.parentId;
-    }
-
-    public AddCategoryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

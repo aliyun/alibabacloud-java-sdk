@@ -4,9 +4,6 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Jobs")
     public QueryIProductionJobListResponseBodyJobs jobs;
 
@@ -16,17 +13,12 @@ public class QueryIProductionJobListResponseBody extends TeaModel {
     @NameInMap("NonExistIds")
     public QueryIProductionJobListResponseBodyNonExistIds nonExistIds;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryIProductionJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryIProductionJobListResponseBody self = new QueryIProductionJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryIProductionJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryIProductionJobListResponseBody setJobs(QueryIProductionJobListResponseBodyJobs jobs) {
@@ -51,6 +43,14 @@ public class QueryIProductionJobListResponseBody extends TeaModel {
     }
     public QueryIProductionJobListResponseBodyNonExistIds getNonExistIds() {
         return this.nonExistIds;
+    }
+
+    public QueryIProductionJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class QueryIProductionJobListResponseBodyJobs extends TeaModel {

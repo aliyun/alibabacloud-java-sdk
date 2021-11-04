@@ -4,48 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListTerrorismPipelineResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PipelineList")
+    public ListTerrorismPipelineResponseBodyPipelineList pipelineList;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PipelineList")
-    public ListTerrorismPipelineResponseBodyPipelineList pipelineList;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListTerrorismPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTerrorismPipelineResponseBody self = new ListTerrorismPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTerrorismPipelineResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTerrorismPipelineResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListTerrorismPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListTerrorismPipelineResponseBody setPageNumber(Long pageNumber) {
@@ -56,6 +32,14 @@ public class ListTerrorismPipelineResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListTerrorismPipelineResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
     public ListTerrorismPipelineResponseBody setPipelineList(ListTerrorismPipelineResponseBodyPipelineList pipelineList) {
         this.pipelineList = pipelineList;
         return this;
@@ -64,24 +48,32 @@ public class ListTerrorismPipelineResponseBody extends TeaModel {
         return this.pipelineList;
     }
 
-    public static class ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public ListTerrorismPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public ListTerrorismPipelineResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig self = new ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig setQueue(String queue) {
@@ -92,11 +84,22 @@ public class ListTerrorismPipelineResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class ListTerrorismPipelineResponseBodyPipelineListPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig;
@@ -104,23 +107,28 @@ public class ListTerrorismPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static ListTerrorismPipelineResponseBodyPipelineListPipeline build(java.util.Map<String, ?> map) throws Exception {
             ListTerrorismPipelineResponseBodyPipelineListPipeline self = new ListTerrorismPipelineResponseBodyPipelineListPipeline();
             return TeaModel.build(map, self);
         }
 
-        public ListTerrorismPipelineResponseBodyPipelineListPipeline setState(String state) {
-            this.state = state;
+        public ListTerrorismPipelineResponseBodyPipelineListPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public ListTerrorismPipelineResponseBodyPipelineListPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListTerrorismPipelineResponseBodyPipelineListPipeline setNotifyConfig(ListTerrorismPipelineResponseBodyPipelineListPipelineNotifyConfig notifyConfig) {
@@ -139,20 +147,12 @@ public class ListTerrorismPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public ListTerrorismPipelineResponseBodyPipelineListPipeline setName(String name) {
-            this.name = name;
+        public ListTerrorismPipelineResponseBodyPipelineListPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListTerrorismPipelineResponseBodyPipelineListPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

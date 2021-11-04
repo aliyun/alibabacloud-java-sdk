@@ -4,8 +4,14 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryCensorPipelineListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineIds")
+    public String pipelineIds;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class QueryCensorPipelineListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PipelineIds")
-    public String pipelineIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryCensorPipelineListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCensorPipelineListRequest self = new QueryCensorPipelineListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCensorPipelineListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryCensorPipelineListRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class QueryCensorPipelineListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryCensorPipelineListRequest setPipelineIds(String pipelineIds) {
+        this.pipelineIds = pipelineIds;
+        return this;
+    }
+    public String getPipelineIds() {
+        return this.pipelineIds;
     }
 
     public QueryCensorPipelineListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class QueryCensorPipelineListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryCensorPipelineListRequest setPipelineIds(String pipelineIds) {
-        this.pipelineIds = pipelineIds;
-        return this;
-    }
-    public String getPipelineIds() {
-        return this.pipelineIds;
-    }
-
-    public QueryCensorPipelineListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

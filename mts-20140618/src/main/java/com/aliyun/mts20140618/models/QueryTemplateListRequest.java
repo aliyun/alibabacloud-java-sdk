@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryTemplateListRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class QueryTemplateListRequest extends TeaModel {
     @NameInMap("TemplateIds")
     public String templateIds;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryTemplateListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTemplateListRequest self = new QueryTemplateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTemplateListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryTemplateListRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class QueryTemplateListRequest extends TeaModel {
     }
     public String getTemplateIds() {
         return this.templateIds;
-    }
-
-    public QueryTemplateListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

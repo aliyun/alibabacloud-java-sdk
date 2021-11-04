@@ -4,11 +4,11 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("MediaWorkflowList")
     public SearchMediaWorkflowResponseBodyMediaWorkflowList mediaWorkflowList;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -16,20 +16,12 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static SearchMediaWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaWorkflowResponseBody self = new SearchMediaWorkflowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchMediaWorkflowResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public SearchMediaWorkflowResponseBody setMediaWorkflowList(SearchMediaWorkflowResponseBodyMediaWorkflowList mediaWorkflowList) {
@@ -38,6 +30,14 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
     }
     public SearchMediaWorkflowResponseBodyMediaWorkflowList getMediaWorkflowList() {
         return this.mediaWorkflowList;
+    }
+
+    public SearchMediaWorkflowResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public SearchMediaWorkflowResponseBody setPageSize(Long pageSize) {
@@ -56,12 +56,12 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchMediaWorkflowResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public SearchMediaWorkflowResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow extends TeaModel {
@@ -71,17 +71,17 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("TriggerMode")
-        public String triggerMode;
-
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("Topology")
         public String topology;
+
+        @NameInMap("TriggerMode")
+        public String triggerMode;
 
         public static SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow self = new SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow();
@@ -104,22 +104,6 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
             return this.mediaWorkflowId;
         }
 
-        public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setTriggerMode(String triggerMode) {
-            this.triggerMode = triggerMode;
-            return this;
-        }
-        public String getTriggerMode() {
-            return this.triggerMode;
-        }
-
         public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setName(String name) {
             this.name = name;
             return this;
@@ -128,12 +112,28 @@ public class SearchMediaWorkflowResponseBody extends TeaModel {
             return this.name;
         }
 
+        public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setTopology(String topology) {
             this.topology = topology;
             return this;
         }
         public String getTopology() {
             return this.topology;
+        }
+
+        public SearchMediaWorkflowResponseBodyMediaWorkflowListMediaWorkflow setTriggerMode(String triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public String getTriggerMode() {
+            return this.triggerMode;
         }
 
     }

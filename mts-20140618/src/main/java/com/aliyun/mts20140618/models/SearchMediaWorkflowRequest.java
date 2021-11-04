@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaWorkflowRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +22,20 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("StateList")
     public String stateList;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static SearchMediaWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaWorkflowRequest self = new SearchMediaWorkflowRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SearchMediaWorkflowRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,22 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SearchMediaWorkflowRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public SearchMediaWorkflowRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public SearchMediaWorkflowRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,36 +78,12 @@ public class SearchMediaWorkflowRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SearchMediaWorkflowRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public SearchMediaWorkflowRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public SearchMediaWorkflowRequest setStateList(String stateList) {
         this.stateList = stateList;
         return this;
     }
     public String getStateList() {
         return this.stateList;
-    }
-
-    public SearchMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

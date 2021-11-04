@@ -32,17 +32,29 @@ public class AddMCTemplateResponseBody extends TeaModel {
     }
 
     public static class AddMCTemplateResponseBodyTemplate extends TeaModel {
-        @NameInMap("Logo")
-        public String logo;
-
         @NameInMap("Abuse")
         public String abuse;
 
-        @NameInMap("Terrorism")
-        public String terrorism;
+        @NameInMap("Ad")
+        public String ad;
+
+        @NameInMap("Contraband")
+        public String contraband;
+
+        @NameInMap("Live")
+        public String live;
+
+        @NameInMap("Logo")
+        public String logo;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Politics")
         public String politics;
+
+        @NameInMap("Porn")
+        public String porn;
 
         @NameInMap("Qrcode")
         public String qrcode;
@@ -50,35 +62,15 @@ public class AddMCTemplateResponseBody extends TeaModel {
         @NameInMap("Spam")
         public String spam;
 
-        @NameInMap("Live")
-        public String live;
-
-        @NameInMap("Contraband")
-        public String contraband;
-
-        @NameInMap("Ad")
-        public String ad;
-
-        @NameInMap("Porn")
-        public String porn;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("TemplateId")
         public String templateId;
+
+        @NameInMap("Terrorism")
+        public String terrorism;
 
         public static AddMCTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             AddMCTemplateResponseBodyTemplate self = new AddMCTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public AddMCTemplateResponseBodyTemplate setLogo(String logo) {
-            this.logo = logo;
-            return this;
-        }
-        public String getLogo() {
-            return this.logo;
         }
 
         public AddMCTemplateResponseBodyTemplate setAbuse(String abuse) {
@@ -89,12 +81,44 @@ public class AddMCTemplateResponseBody extends TeaModel {
             return this.abuse;
         }
 
-        public AddMCTemplateResponseBodyTemplate setTerrorism(String terrorism) {
-            this.terrorism = terrorism;
+        public AddMCTemplateResponseBodyTemplate setAd(String ad) {
+            this.ad = ad;
             return this;
         }
-        public String getTerrorism() {
-            return this.terrorism;
+        public String getAd() {
+            return this.ad;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setContraband(String contraband) {
+            this.contraband = contraband;
+            return this;
+        }
+        public String getContraband() {
+            return this.contraband;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setLive(String live) {
+            this.live = live;
+            return this;
+        }
+        public String getLive() {
+            return this.live;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setLogo(String logo) {
+            this.logo = logo;
+            return this;
+        }
+        public String getLogo() {
+            return this.logo;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public AddMCTemplateResponseBodyTemplate setPolitics(String politics) {
@@ -103,6 +127,14 @@ public class AddMCTemplateResponseBody extends TeaModel {
         }
         public String getPolitics() {
             return this.politics;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setPorn(String porn) {
+            this.porn = porn;
+            return this;
+        }
+        public String getPorn() {
+            return this.porn;
         }
 
         public AddMCTemplateResponseBodyTemplate setQrcode(String qrcode) {
@@ -121,52 +153,20 @@ public class AddMCTemplateResponseBody extends TeaModel {
             return this.spam;
         }
 
-        public AddMCTemplateResponseBodyTemplate setLive(String live) {
-            this.live = live;
-            return this;
-        }
-        public String getLive() {
-            return this.live;
-        }
-
-        public AddMCTemplateResponseBodyTemplate setContraband(String contraband) {
-            this.contraband = contraband;
-            return this;
-        }
-        public String getContraband() {
-            return this.contraband;
-        }
-
-        public AddMCTemplateResponseBodyTemplate setAd(String ad) {
-            this.ad = ad;
-            return this;
-        }
-        public String getAd() {
-            return this.ad;
-        }
-
-        public AddMCTemplateResponseBodyTemplate setPorn(String porn) {
-            this.porn = porn;
-            return this;
-        }
-        public String getPorn() {
-            return this.porn;
-        }
-
-        public AddMCTemplateResponseBodyTemplate setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public AddMCTemplateResponseBodyTemplate setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public AddMCTemplateResponseBodyTemplate setTerrorism(String terrorism) {
+            this.terrorism = terrorism;
+            return this;
+        }
+        public String getTerrorism() {
+            return this.terrorism;
         }
 
     }

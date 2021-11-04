@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryFacerecogJobListRequest extends TeaModel {
+    @NameInMap("FacerecogJobIds")
+    public String facerecogJobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class QueryFacerecogJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("FacerecogJobIds")
-    public String facerecogJobIds;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static QueryFacerecogJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFacerecogJobListRequest self = new QueryFacerecogJobListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryFacerecogJobListRequest setFacerecogJobIds(String facerecogJobIds) {
+        this.facerecogJobIds = facerecogJobIds;
+        return this;
+    }
+    public String getFacerecogJobIds() {
+        return this.facerecogJobIds;
+    }
+
+    public QueryFacerecogJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public QueryFacerecogJobListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class QueryFacerecogJobListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryFacerecogJobListRequest setFacerecogJobIds(String facerecogJobIds) {
-        this.facerecogJobIds = facerecogJobIds;
-        return this;
-    }
-    public String getFacerecogJobIds() {
-        return this.facerecogJobIds;
-    }
-
-    public QueryFacerecogJobListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

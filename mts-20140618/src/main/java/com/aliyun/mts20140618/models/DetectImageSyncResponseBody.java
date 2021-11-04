@@ -4,6 +4,10 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DetectImageSyncResponseBody extends TeaModel {
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -16,13 +20,17 @@ public class DetectImageSyncResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    // 返回信息
-    @NameInMap("Message")
-    public String message;
-
     public static DetectImageSyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectImageSyncResponseBody self = new DetectImageSyncResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DetectImageSyncResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DetectImageSyncResponseBody setRequestId(String requestId) {
@@ -47,14 +55,6 @@ public class DetectImageSyncResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DetectImageSyncResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

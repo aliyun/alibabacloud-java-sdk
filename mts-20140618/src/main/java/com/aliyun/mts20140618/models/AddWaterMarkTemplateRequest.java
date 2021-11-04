@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddWaterMarkTemplateRequest extends TeaModel {
+    @NameInMap("Config")
+    public String config;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +22,33 @@ public class AddWaterMarkTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Config")
-    public String config;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static AddWaterMarkTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddWaterMarkTemplateRequest self = new AddWaterMarkTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddWaterMarkTemplateRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
+    }
+
+    public AddWaterMarkTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public AddWaterMarkTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AddWaterMarkTemplateRequest setOwnerId(Long ownerId) {
@@ -49,30 +73,6 @@ public class AddWaterMarkTemplateRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AddWaterMarkTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public AddWaterMarkTemplateRequest setConfig(String config) {
-        this.config = config;
-        return this;
-    }
-    public String getConfig() {
-        return this.config;
-    }
-
-    public AddWaterMarkTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

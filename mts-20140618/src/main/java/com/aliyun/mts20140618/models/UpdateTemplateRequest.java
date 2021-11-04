@@ -4,6 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    @NameInMap("Audio")
+    public String audio;
+
+    @NameInMap("Container")
+    public String container;
+
+    @NameInMap("MuxConfig")
+    public String muxConfig;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,30 +31,55 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Container")
-    public String container;
+    @NameInMap("TransConfig")
+    public String transConfig;
 
     @NameInMap("Video")
     public String video;
 
-    @NameInMap("Audio")
-    public String audio;
-
-    @NameInMap("MuxConfig")
-    public String muxConfig;
-
-    @NameInMap("TransConfig")
-    public String transConfig;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTemplateRequest setAudio(String audio) {
+        this.audio = audio;
+        return this;
+    }
+    public String getAudio() {
+        return this.audio;
+    }
+
+    public UpdateTemplateRequest setContainer(String container) {
+        this.container = container;
+        return this;
+    }
+    public String getContainer() {
+        return this.container;
+    }
+
+    public UpdateTemplateRequest setMuxConfig(String muxConfig) {
+        this.muxConfig = muxConfig;
+        return this;
+    }
+    public String getMuxConfig() {
+        return this.muxConfig;
+    }
+
+    public UpdateTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateTemplateRequest setOwnerId(Long ownerId) {
@@ -74,46 +114,6 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.templateId;
     }
 
-    public UpdateTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public UpdateTemplateRequest setContainer(String container) {
-        this.container = container;
-        return this;
-    }
-    public String getContainer() {
-        return this.container;
-    }
-
-    public UpdateTemplateRequest setVideo(String video) {
-        this.video = video;
-        return this;
-    }
-    public String getVideo() {
-        return this.video;
-    }
-
-    public UpdateTemplateRequest setAudio(String audio) {
-        this.audio = audio;
-        return this;
-    }
-    public String getAudio() {
-        return this.audio;
-    }
-
-    public UpdateTemplateRequest setMuxConfig(String muxConfig) {
-        this.muxConfig = muxConfig;
-        return this;
-    }
-    public String getMuxConfig() {
-        return this.muxConfig;
-    }
-
     public UpdateTemplateRequest setTransConfig(String transConfig) {
         this.transConfig = transConfig;
         return this;
@@ -122,12 +122,12 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.transConfig;
     }
 
-    public UpdateTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpdateTemplateRequest setVideo(String video) {
+        this.video = video;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVideo() {
+        return this.video;
     }
 
 }

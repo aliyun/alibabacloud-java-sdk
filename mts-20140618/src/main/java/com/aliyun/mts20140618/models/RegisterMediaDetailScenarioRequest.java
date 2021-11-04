@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaDetailScenarioRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +22,36 @@ public class RegisterMediaDetailScenarioRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("Scenario")
     public String scenario;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static RegisterMediaDetailScenarioRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaDetailScenarioRequest self = new RegisterMediaDetailScenarioRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterMediaDetailScenarioRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public RegisterMediaDetailScenarioRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public RegisterMediaDetailScenarioRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RegisterMediaDetailScenarioRequest setOwnerId(Long ownerId) {
@@ -54,36 +78,12 @@ public class RegisterMediaDetailScenarioRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RegisterMediaDetailScenarioRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
     public RegisterMediaDetailScenarioRequest setScenario(String scenario) {
         this.scenario = scenario;
         return this;
     }
     public String getScenario() {
         return this.scenario;
-    }
-
-    public RegisterMediaDetailScenarioRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public RegisterMediaDetailScenarioRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

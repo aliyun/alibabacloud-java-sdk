@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryTagJobListResponseBody extends TeaModel {
-    @NameInMap("TagJobList")
-    public QueryTagJobListResponseBodyTagJobList tagJobList;
+    @NameInMap("NonExistIds")
+    public QueryTagJobListResponseBodyNonExistIds nonExistIds;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NonExistIds")
-    public QueryTagJobListResponseBodyNonExistIds nonExistIds;
+    @NameInMap("TagJobList")
+    public QueryTagJobListResponseBodyTagJobList tagJobList;
 
     public static QueryTagJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTagJobListResponseBody self = new QueryTagJobListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTagJobListResponseBody setTagJobList(QueryTagJobListResponseBodyTagJobList tagJobList) {
-        this.tagJobList = tagJobList;
-        return this;
-    }
-    public QueryTagJobListResponseBodyTagJobList getTagJobList() {
-        return this.tagJobList;
-    }
-
-    public QueryTagJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryTagJobListResponseBody setNonExistIds(QueryTagJobListResponseBodyNonExistIds nonExistIds) {
@@ -42,24 +26,92 @@ public class QueryTagJobListResponseBody extends TeaModel {
         return this.nonExistIds;
     }
 
-    public static class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult extends TeaModel {
-        @NameInMap("Score")
-        public String score;
+    public QueryTagJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public QueryTagJobListResponseBody setTagJobList(QueryTagJobListResponseBodyTagJobList tagJobList) {
+        this.tagJobList = tagJobList;
+        return this;
+    }
+    public QueryTagJobListResponseBodyTagJobList getTagJobList() {
+        return this.tagJobList;
+    }
+
+    public static class QueryTagJobListResponseBodyNonExistIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryTagJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryTagJobListResponseBodyNonExistIds self = new QueryTagJobListResponseBodyNonExistIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryTagJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
+        }
+
+    }
+
+    public static class QueryTagJobListResponseBodyTagJobListTagJobInput extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryTagJobListResponseBodyTagJobListTagJobInput build(java.util.Map<String, ?> map) throws Exception {
+            QueryTagJobListResponseBodyTagJobListTagJobInput self = new QueryTagJobListResponseBodyTagJobListTagJobInput();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobInput setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+    }
+
+    public static class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult extends TeaModel {
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Score")
+        public String score;
 
         public static QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult build(java.util.Map<String, ?> map) throws Exception {
             QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult self = new QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
         }
 
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult setLabel(String label) {
@@ -68,6 +120,14 @@ public class QueryTagJobListResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResultsTagAnResult setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
     }
@@ -92,11 +152,11 @@ public class QueryTagJobListResponseBody extends TeaModel {
     }
 
     public static class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Score")
+        public String score;
 
         @NameInMap("Target")
         public String target;
@@ -106,20 +166,20 @@ public class QueryTagJobListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResultsTagFrResultTagFacesTagFace setTarget(String target) {
@@ -201,18 +261,26 @@ public class QueryTagJobListResponseBody extends TeaModel {
     }
 
     public static class QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult extends TeaModel {
+        @NameInMap("Details")
+        public String details;
+
         @NameInMap("TagAnResults")
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResults tagAnResults;
 
         @NameInMap("TagFrResults")
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagFrResults tagFrResults;
 
-        @NameInMap("Details")
-        public String details;
-
         public static QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult build(java.util.Map<String, ?> map) throws Exception {
             QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult self = new QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult setDetails(String details) {
+            this.details = details;
+            return this;
+        }
+        public String getDetails() {
+            return this.details;
         }
 
         public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult setTagAnResults(QueryTagJobListResponseBodyTagJobListTagJobVideoTagResultTagAnResults tagAnResults) {
@@ -231,72 +299,20 @@ public class QueryTagJobListResponseBody extends TeaModel {
             return this.tagFrResults;
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult setDetails(String details) {
-            this.details = details;
-            return this;
-        }
-        public String getDetails() {
-            return this.details;
-        }
-
-    }
-
-    public static class QueryTagJobListResponseBodyTagJobListTagJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryTagJobListResponseBodyTagJobListTagJobInput build(java.util.Map<String, ?> map) throws Exception {
-            QueryTagJobListResponseBodyTagJobListTagJobInput self = new QueryTagJobListResponseBodyTagJobListTagJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
     }
 
     public static class QueryTagJobListResponseBodyTagJobListTagJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("VideoTagResult")
-        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult videoTagResult;
+        @NameInMap("Id")
+        public String id;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("Input")
+        public QueryTagJobListResponseBodyTagJobListTagJobInput input;
 
         @NameInMap("Message")
         public String message;
@@ -304,15 +320,26 @@ public class QueryTagJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Input")
-        public QueryTagJobListResponseBodyTagJobListTagJobInput input;
+        @NameInMap("State")
+        public String state;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("VideoTagResult")
+        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult videoTagResult;
 
         public static QueryTagJobListResponseBodyTagJobListTagJob build(java.util.Map<String, ?> map) throws Exception {
             QueryTagJobListResponseBodyTagJobListTagJob self = new QueryTagJobListResponseBodyTagJobListTagJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryTagJobListResponseBodyTagJobListTagJob setCreationTime(String creationTime) {
@@ -323,36 +350,20 @@ public class QueryTagJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJob setVideoTagResult(QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult videoTagResult) {
-            this.videoTagResult = videoTagResult;
+        public QueryTagJobListResponseBodyTagJobListTagJob setId(String id) {
+            this.id = id;
             return this;
         }
-        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult getVideoTagResult() {
-            return this.videoTagResult;
+        public String getId() {
+            return this.id;
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJob setState(String state) {
-            this.state = state;
+        public QueryTagJobListResponseBodyTagJobListTagJob setInput(QueryTagJobListResponseBodyTagJobListTagJobInput input) {
+            this.input = input;
             return this;
         }
-        public String getState() {
-            return this.state;
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJob setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public QueryTagJobListResponseBodyTagJobListTagJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
+        public QueryTagJobListResponseBodyTagJobListTagJobInput getInput() {
+            return this.input;
         }
 
         public QueryTagJobListResponseBodyTagJobListTagJob setMessage(String message) {
@@ -371,20 +382,28 @@ public class QueryTagJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJob setInput(QueryTagJobListResponseBodyTagJobListTagJobInput input) {
-            this.input = input;
+        public QueryTagJobListResponseBodyTagJobListTagJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public QueryTagJobListResponseBodyTagJobListTagJobInput getInput() {
-            return this.input;
+        public String getState() {
+            return this.state;
         }
 
-        public QueryTagJobListResponseBodyTagJobListTagJob setId(String id) {
-            this.id = id;
+        public QueryTagJobListResponseBodyTagJobListTagJob setUserData(String userData) {
+            this.userData = userData;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public QueryTagJobListResponseBodyTagJobListTagJob setVideoTagResult(QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult videoTagResult) {
+            this.videoTagResult = videoTagResult;
+            return this;
+        }
+        public QueryTagJobListResponseBodyTagJobListTagJobVideoTagResult getVideoTagResult() {
+            return this.videoTagResult;
         }
 
     }
@@ -404,25 +423,6 @@ public class QueryTagJobListResponseBody extends TeaModel {
         }
         public java.util.List<QueryTagJobListResponseBodyTagJobListTagJob> getTagJob() {
             return this.tagJob;
-        }
-
-    }
-
-    public static class QueryTagJobListResponseBodyNonExistIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryTagJobListResponseBodyNonExistIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryTagJobListResponseBodyNonExistIds self = new QueryTagJobListResponseBodyNonExistIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryTagJobListResponseBodyNonExistIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
         }
 
     }

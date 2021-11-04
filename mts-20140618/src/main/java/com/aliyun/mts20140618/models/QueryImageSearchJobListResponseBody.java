@@ -7,11 +7,11 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
     @NameInMap("ImageSearchJobList")
     public QueryImageSearchJobListResponseBodyImageSearchJobList imageSearchJobList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NonExistIds")
     public QueryImageSearchJobListResponseBodyNonExistIds nonExistIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryImageSearchJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryImageSearchJobListResponseBody self = new QueryImageSearchJobListResponseBody();
@@ -26,6 +26,14 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
         return this.imageSearchJobList;
     }
 
+    public QueryImageSearchJobListResponseBody setNonExistIds(QueryImageSearchJobListResponseBodyNonExistIds nonExistIds) {
+        this.nonExistIds = nonExistIds;
+        return this;
+    }
+    public QueryImageSearchJobListResponseBodyNonExistIds getNonExistIds() {
+        return this.nonExistIds;
+    }
+
     public QueryImageSearchJobListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -34,12 +42,45 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryImageSearchJobListResponseBody setNonExistIds(QueryImageSearchJobListResponseBodyNonExistIds nonExistIds) {
-        this.nonExistIds = nonExistIds;
-        return this;
-    }
-    public QueryImageSearchJobListResponseBodyNonExistIds getNonExistIds() {
-        return this.nonExistIds;
+    public static class QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo build(java.util.Map<String, ?> map) throws Exception {
+            QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo self = new QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobResultImageSearchShotsImageSearchShots extends TeaModel {
@@ -122,34 +163,18 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
     }
 
     public static class QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         public static QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage build(java.util.Map<String, ?> map) throws Exception {
             QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage self = new QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage();
             return TeaModel.build(map, self);
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage setBucket(String bucket) {
@@ -160,32 +185,7 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
             return this.bucket;
         }
 
-    }
-
-    public static class QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo extends TeaModel {
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
-        public static QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo build(java.util.Map<String, ?> map) throws Exception {
-            QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo self = new QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setLocation(String location) {
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -193,22 +193,37 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
             return this.location;
         }
 
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo setBucket(String bucket) {
-            this.bucket = bucket;
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage setObject(String object) {
+            this.object = object;
             return this;
         }
-        public String getBucket() {
-            return this.bucket;
+        public String getObject() {
+            return this.object;
         }
 
     }
 
     public static class QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("InputVideo")
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo inputVideo;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("Result")
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobResult result;
@@ -219,27 +234,20 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
-
         @NameInMap("inputImage")
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage inputImage;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("InputVideo")
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo inputVideo;
 
         public static QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob build(java.util.Map<String, ?> map) throws Exception {
             QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob self = new QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setCreationTime(String creationTime) {
@@ -256,6 +264,38 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
         }
         public String getFinishTime() {
             return this.finishTime;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setInputVideo(QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo inputVideo) {
+            this.inputVideo = inputVideo;
+            return this;
+        }
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo getInputVideo() {
+            return this.inputVideo;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setResult(QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobResult result) {
@@ -282,52 +322,12 @@ public class QueryImageSearchJobListResponseBody extends TeaModel {
             return this.userData;
         }
 
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setInputImage(QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage inputImage) {
             this.inputImage = inputImage;
             return this;
         }
         public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputImage getInputImage() {
             return this.inputImage;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJob setInputVideo(QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo inputVideo) {
-            this.inputVideo = inputVideo;
-            return this;
-        }
-        public QueryImageSearchJobListResponseBodyImageSearchJobListImageSearchJobInputVideo getInputVideo() {
-            return this.inputVideo;
         }
 
     }

@@ -4,18 +4,26 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaInfoJobListResponseBody extends TeaModel {
+    @NameInMap("MediaInfoJobList")
+    public QueryMediaInfoJobListResponseBodyMediaInfoJobList mediaInfoJobList;
+
     @NameInMap("NonExistMediaInfoJobIds")
     public QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds nonExistMediaInfoJobIds;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MediaInfoJobList")
-    public QueryMediaInfoJobListResponseBodyMediaInfoJobList mediaInfoJobList;
-
     public static QueryMediaInfoJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaInfoJobListResponseBody self = new QueryMediaInfoJobListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaInfoJobListResponseBody setMediaInfoJobList(QueryMediaInfoJobListResponseBodyMediaInfoJobList mediaInfoJobList) {
+        this.mediaInfoJobList = mediaInfoJobList;
+        return this;
+    }
+    public QueryMediaInfoJobListResponseBodyMediaInfoJobList getMediaInfoJobList() {
+        return this.mediaInfoJobList;
     }
 
     public QueryMediaInfoJobListResponseBody setNonExistMediaInfoJobIds(QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds nonExistMediaInfoJobIds) {
@@ -34,62 +42,19 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryMediaInfoJobListResponseBody setMediaInfoJobList(QueryMediaInfoJobListResponseBodyMediaInfoJobList mediaInfoJobList) {
-        this.mediaInfoJobList = mediaInfoJobList;
-        return this;
-    }
-    public QueryMediaInfoJobListResponseBodyMediaInfoJobList getMediaInfoJobList() {
-        return this.mediaInfoJobList;
-    }
-
-    public static class QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
-
-        public static QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds self = new QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
-        }
-
-    }
-
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput extends TeaModel {
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput setBucket(String bucket) {
@@ -100,37 +65,37 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.bucket;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
     }
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
+        @NameInMap("MessageId")
+        public String messageId;
 
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult setMessageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public String getMessageId() {
-            return this.messageId;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult setErrorCode(String errorCode) {
@@ -141,241 +106,55 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-    }
-
-    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost extends TeaModel {
-        @NameInMap("PreloadTime")
-        public String preloadTime;
-
-        @NameInMap("AvgBitrate")
-        public String avgBitrate;
-
-        @NameInMap("CostBandwidth")
-        public String costBandwidth;
-
-        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setPreloadTime(String preloadTime) {
-            this.preloadTime = preloadTime;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getPreloadTime() {
-            return this.preloadTime;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setAvgBitrate(String avgBitrate) {
-            this.avgBitrate = avgBitrate;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult setMessageId(String messageId) {
+            this.messageId = messageId;
             return this;
         }
-        public String getAvgBitrate() {
-            return this.avgBitrate;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setCostBandwidth(String costBandwidth) {
-            this.costBandwidth = costBandwidth;
-            return this;
-        }
-        public String getCostBandwidth() {
-            return this.costBandwidth;
+        public String getMessageId() {
+            return this.messageId;
         }
 
     }
 
-    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream extends TeaModel {
-        @NameInMap("Sar")
-        public String sar;
-
-        @NameInMap("Height")
-        public String height;
-
-        @NameInMap("CodecTagString")
-        public String codecTagString;
-
-        @NameInMap("NetworkCost")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost;
-
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Index")
-        public String index;
-
-        @NameInMap("Timebase")
-        public String timebase;
-
-        @NameInMap("AvgFPS")
-        public String avgFPS;
-
-        @NameInMap("PixFmt")
-        public String pixFmt;
-
-        @NameInMap("Lang")
-        public String lang;
-
-        @NameInMap("CodecLongName")
-        public String codecLongName;
-
-        @NameInMap("NumFrames")
-        public String numFrames;
-
-        @NameInMap("Rotate")
-        public String rotate;
-
+    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
-
-        @NameInMap("HasBFrames")
-        public String hasBFrames;
-
-        @NameInMap("Profile")
-        public String profile;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Dar")
-        public String dar;
-
-        @NameInMap("CodecName")
-        public String codecName;
 
         @NameInMap("Duration")
         public String duration;
 
-        @NameInMap("Fps")
-        public String fps;
+        @NameInMap("FormatLongName")
+        public String formatLongName;
 
-        @NameInMap("CodecTag")
-        public String codecTag;
+        @NameInMap("FormatName")
+        public String formatName;
 
-        @NameInMap("CodecTimeBase")
-        public String codecTimeBase;
+        @NameInMap("NumPrograms")
+        public String numPrograms;
 
-        @NameInMap("Level")
-        public String level;
+        @NameInMap("NumStreams")
+        public String numStreams;
 
-        @NameInMap("ColorRange")
-        public String colorRange;
+        @NameInMap("Size")
+        public String size;
 
-        @NameInMap("ColorTransfer")
-        public String colorTransfer;
+        @NameInMap("StartTime")
+        public String startTime;
 
-        @NameInMap("ColorPrimaries")
-        public String colorPrimaries;
-
-        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream();
+        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat();
             return TeaModel.build(map, self);
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setSar(String sar) {
-            this.sar = sar;
-            return this;
-        }
-        public String getSar() {
-            return this.sar;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
-            return this;
-        }
-        public String getCodecTagString() {
-            return this.codecTagString;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setNetworkCost(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost) {
-            this.networkCost = networkCost;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost getNetworkCost() {
-            return this.networkCost;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setTimebase(String timebase) {
-            this.timebase = timebase;
-            return this;
-        }
-        public String getTimebase() {
-            return this.timebase;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setAvgFPS(String avgFPS) {
-            this.avgFPS = avgFPS;
-            return this;
-        }
-        public String getAvgFPS() {
-            return this.avgFPS;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setPixFmt(String pixFmt) {
-            this.pixFmt = pixFmt;
-            return this;
-        }
-        public String getPixFmt() {
-            return this.pixFmt;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setLang(String lang) {
-            this.lang = lang;
-            return this;
-        }
-        public String getLang() {
-            return this.lang;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecLongName(String codecLongName) {
-            this.codecLongName = codecLongName;
-            return this;
-        }
-        public String getCodecLongName() {
-            return this.codecLongName;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setNumFrames(String numFrames) {
-            this.numFrames = numFrames;
-            return this;
-        }
-        public String getNumFrames() {
-            return this.numFrames;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setRotate(String rotate) {
-            this.rotate = rotate;
-            return this;
-        }
-        public String getRotate() {
-            return this.rotate;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setBitrate(String bitrate) {
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -383,47 +162,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setHasBFrames(String hasBFrames) {
-            this.hasBFrames = hasBFrames;
-            return this;
-        }
-        public String getHasBFrames() {
-            return this.hasBFrames;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setProfile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-        public String getProfile() {
-            return this.profile;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDar(String dar) {
-            this.dar = dar;
-            return this;
-        }
-        public String getDar() {
-            return this.dar;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecName(String codecName) {
-            this.codecName = codecName;
-            return this;
-        }
-        public String getCodecName() {
-            return this.codecName;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDuration(String duration) {
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setDuration(String duration) {
             this.duration = duration;
             return this;
         }
@@ -431,207 +170,108 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
-            this.fps = fps;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setFormatLongName(String formatLongName) {
+            this.formatLongName = formatLongName;
             return this;
         }
-        public String getFps() {
-            return this.fps;
+        public String getFormatLongName() {
+            return this.formatLongName;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTag(String codecTag) {
-            this.codecTag = codecTag;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setFormatName(String formatName) {
+            this.formatName = formatName;
             return this;
         }
-        public String getCodecTag() {
-            return this.codecTag;
+        public String getFormatName() {
+            return this.formatName;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTimeBase(String codecTimeBase) {
-            this.codecTimeBase = codecTimeBase;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setNumPrograms(String numPrograms) {
+            this.numPrograms = numPrograms;
             return this;
         }
-        public String getCodecTimeBase() {
-            return this.codecTimeBase;
+        public String getNumPrograms() {
+            return this.numPrograms;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setLevel(String level) {
-            this.level = level;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setNumStreams(String numStreams) {
+            this.numStreams = numStreams;
             return this;
         }
-        public String getLevel() {
-            return this.level;
+        public String getNumStreams() {
+            return this.numStreams;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorRange(String colorRange) {
-            this.colorRange = colorRange;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setSize(String size) {
+            this.size = size;
             return this;
         }
-        public String getColorRange() {
-            return this.colorRange;
+        public String getSize() {
+            return this.size;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorTransfer(String colorTransfer) {
-            this.colorTransfer = colorTransfer;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getColorTransfer() {
-            return this.colorTransfer;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorPrimaries(String colorPrimaries) {
-            this.colorPrimaries = colorPrimaries;
-            return this;
-        }
-        public String getColorPrimaries() {
-            return this.colorPrimaries;
-        }
-
-    }
-
-    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList extends TeaModel {
-        @NameInMap("VideoStream")
-        public java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> videoStream;
-
-        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList setVideoStream(java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> videoStream) {
-            this.videoStream = videoStream;
-            return this;
-        }
-        public java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> getVideoStream() {
-            return this.videoStream;
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream extends TeaModel {
-        @NameInMap("Timebase")
-        public String timebase;
-
-        @NameInMap("Index")
-        public String index;
-
-        @NameInMap("SampleFmt")
-        public String sampleFmt;
+        @NameInMap("Bitrate")
+        public String bitrate;
 
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
-        @NameInMap("Lang")
-        public String lang;
-
-        @NameInMap("Samplerate")
-        public String samplerate;
+        @NameInMap("Channels")
+        public String channels;
 
         @NameInMap("CodecLongName")
         public String codecLongName;
 
-        @NameInMap("Channels")
-        public String channels;
-
-        @NameInMap("NumFrames")
-        public String numFrames;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("CodecTagString")
-        public String codecTagString;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("CodecName")
         public String codecName;
-
-        @NameInMap("Duration")
-        public String duration;
 
         @NameInMap("CodecTag")
         public String codecTag;
 
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("SampleFmt")
+        public String sampleFmt;
+
+        @NameInMap("Samplerate")
+        public String samplerate;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
 
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setTimebase(String timebase) {
-            this.timebase = timebase;
-            return this;
-        }
-        public String getTimebase() {
-            return this.timebase;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setSampleFmt(String sampleFmt) {
-            this.sampleFmt = sampleFmt;
-            return this;
-        }
-        public String getSampleFmt() {
-            return this.sampleFmt;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setChannelLayout(String channelLayout) {
-            this.channelLayout = channelLayout;
-            return this;
-        }
-        public String getChannelLayout() {
-            return this.channelLayout;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setLang(String lang) {
-            this.lang = lang;
-            return this;
-        }
-        public String getLang() {
-            return this.lang;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setSamplerate(String samplerate) {
-            this.samplerate = samplerate;
-            return this;
-        }
-        public String getSamplerate() {
-            return this.samplerate;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecLongName(String codecLongName) {
-            this.codecLongName = codecLongName;
-            return this;
-        }
-        public String getCodecLongName() {
-            return this.codecLongName;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setChannels(String channels) {
-            this.channels = channels;
-            return this;
-        }
-        public String getChannels() {
-            return this.channels;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setNumFrames(String numFrames) {
-            this.numFrames = numFrames;
-            return this;
-        }
-        public String getNumFrames() {
-            return this.numFrames;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setBitrate(String bitrate) {
@@ -642,20 +282,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setChannelLayout(String channelLayout) {
+            this.channelLayout = channelLayout;
             return this;
         }
-        public String getCodecTagString() {
-            return this.codecTagString;
+        public String getChannelLayout() {
+            return this.channelLayout;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setStartTime(String startTime) {
-            this.startTime = startTime;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setChannels(String channels) {
+            this.channels = channels;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getChannels() {
+            return this.channels;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecName(String codecName) {
@@ -666,14 +314,6 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.codecName;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setDuration(String duration) {
-            this.duration = duration;
-            return this;
-        }
-        public String getDuration() {
-            return this.duration;
-        }
-
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecTag(String codecTag) {
             this.codecTag = codecTag;
             return this;
@@ -682,12 +322,84 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.codecTag;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setCodecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
             return this;
         }
         public String getCodecTimeBase() {
             return this.codecTimeBase;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setNumFrames(String numFrames) {
+            this.numFrames = numFrames;
+            return this;
+        }
+        public String getNumFrames() {
+            return this.numFrames;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setSampleFmt(String sampleFmt) {
+            this.sampleFmt = sampleFmt;
+            return this;
+        }
+        public String getSampleFmt() {
+            return this.sampleFmt;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setSamplerate(String samplerate) {
+            this.samplerate = samplerate;
+            return this;
+        }
+        public String getSamplerate() {
+            return this.samplerate;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
         }
 
     }
@@ -712,79 +424,39 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream extends TeaModel {
-        @NameInMap("Timebase")
-        public String timebase;
-
-        @NameInMap("Index")
-        public String index;
-
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("CodecLongName")
+        public String codecLongName;
 
         @NameInMap("CodecName")
         public String codecName;
 
-        @NameInMap("Lang")
-        public String lang;
-
-        @NameInMap("CodecLongName")
-        public String codecLongName;
-
-        @NameInMap("Duration")
-        public String duration;
-
         @NameInMap("CodecTag")
         public String codecTag;
-
-        @NameInMap("CodecTimeBase")
-        public String codecTimeBase;
 
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setTimebase(String timebase) {
-            this.timebase = timebase;
-            return this;
-        }
-        public String getTimebase() {
-            return this.timebase;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecName(String codecName) {
-            this.codecName = codecName;
-            return this;
-        }
-        public String getCodecName() {
-            return this.codecName;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setLang(String lang) {
-            this.lang = lang;
-            return this;
-        }
-        public String getLang() {
-            return this.lang;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecLongName(String codecLongName) {
@@ -795,12 +467,12 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.codecLongName;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setDuration(String duration) {
-            this.duration = duration;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecName(String codecName) {
+            this.codecName = codecName;
             return this;
         }
-        public String getDuration() {
-            return this.duration;
+        public String getCodecName() {
+            return this.codecName;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTag(String codecTag) {
@@ -811,6 +483,14 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.codecTag;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
             return this;
@@ -819,12 +499,44 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.codecTimeBase;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setDuration(String duration) {
+            this.duration = duration;
             return this;
         }
-        public String getCodecTagString() {
-            return this.codecTagString;
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
         }
 
     }
@@ -848,27 +560,384 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
 
-    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams extends TeaModel {
-        @NameInMap("VideoStreamList")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList videoStreamList;
+    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost extends TeaModel {
+        @NameInMap("AvgBitrate")
+        public String avgBitrate;
 
+        @NameInMap("CostBandwidth")
+        public String costBandwidth;
+
+        @NameInMap("PreloadTime")
+        public String preloadTime;
+
+        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setAvgBitrate(String avgBitrate) {
+            this.avgBitrate = avgBitrate;
+            return this;
+        }
+        public String getAvgBitrate() {
+            return this.avgBitrate;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setCostBandwidth(String costBandwidth) {
+            this.costBandwidth = costBandwidth;
+            return this;
+        }
+        public String getCostBandwidth() {
+            return this.costBandwidth;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setPreloadTime(String preloadTime) {
+            this.preloadTime = preloadTime;
+            return this;
+        }
+        public String getPreloadTime() {
+            return this.preloadTime;
+        }
+
+    }
+
+    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream extends TeaModel {
+        @NameInMap("AvgFPS")
+        public String avgFPS;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("ColorPrimaries")
+        public String colorPrimaries;
+
+        @NameInMap("ColorRange")
+        public String colorRange;
+
+        @NameInMap("ColorTransfer")
+        public String colorTransfer;
+
+        @NameInMap("Dar")
+        public String dar;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("HasBFrames")
+        public String hasBFrames;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("NetworkCost")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("PixFmt")
+        public String pixFmt;
+
+        @NameInMap("Profile")
+        public String profile;
+
+        @NameInMap("Rotate")
+        public String rotate;
+
+        @NameInMap("Sar")
+        public String sar;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
+        @NameInMap("Width")
+        public String width;
+
+        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setAvgFPS(String avgFPS) {
+            this.avgFPS = avgFPS;
+            return this;
+        }
+        public String getAvgFPS() {
+            return this.avgFPS;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorPrimaries(String colorPrimaries) {
+            this.colorPrimaries = colorPrimaries;
+            return this;
+        }
+        public String getColorPrimaries() {
+            return this.colorPrimaries;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorRange(String colorRange) {
+            this.colorRange = colorRange;
+            return this;
+        }
+        public String getColorRange() {
+            return this.colorRange;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorTransfer(String colorTransfer) {
+            this.colorTransfer = colorTransfer;
+            return this;
+        }
+        public String getColorTransfer() {
+            return this.colorTransfer;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDar(String dar) {
+            this.dar = dar;
+            return this;
+        }
+        public String getDar() {
+            return this.dar;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setHasBFrames(String hasBFrames) {
+            this.hasBFrames = hasBFrames;
+            return this;
+        }
+        public String getHasBFrames() {
+            return this.hasBFrames;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setNetworkCost(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost) {
+            this.networkCost = networkCost;
+            return this;
+        }
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost getNetworkCost() {
+            return this.networkCost;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setNumFrames(String numFrames) {
+            this.numFrames = numFrames;
+            return this;
+        }
+        public String getNumFrames() {
+            return this.numFrames;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setPixFmt(String pixFmt) {
+            this.pixFmt = pixFmt;
+            return this;
+        }
+        public String getPixFmt() {
+            return this.pixFmt;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setRotate(String rotate) {
+            this.rotate = rotate;
+            return this;
+        }
+        public String getRotate() {
+            return this.rotate;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setSar(String sar) {
+            this.sar = sar;
+            return this;
+        }
+        public String getSar() {
+            return this.sar;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setTimebase(String timebase) {
+            this.timebase = timebase;
+            return this;
+        }
+        public String getTimebase() {
+            return this.timebase;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList extends TeaModel {
+        @NameInMap("VideoStream")
+        public java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> videoStream;
+
+        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList setVideoStream(java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> videoStream) {
+            this.videoStream = videoStream;
+            return this;
+        }
+        public java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream> getVideoStream() {
+            return this.videoStream;
+        }
+
+    }
+
+    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams extends TeaModel {
         @NameInMap("AudioStreamList")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamList audioStreamList;
 
         @NameInMap("SubtitleStreamList")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamList subtitleStreamList;
 
+        @NameInMap("VideoStreamList")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList videoStreamList;
+
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams setVideoStreamList(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList videoStreamList) {
-            this.videoStreamList = videoStreamList;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList getVideoStreamList() {
-            return this.videoStreamList;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams setAudioStreamList(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamList audioStreamList) {
@@ -887,167 +956,47 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.subtitleStreamList;
         }
 
-    }
-
-    public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("NumPrograms")
-        public String numPrograms;
-
-        @NameInMap("Size")
-        public String size;
-
-        @NameInMap("NumStreams")
-        public String numStreams;
-
-        @NameInMap("FormatLongName")
-        public String formatLongName;
-
-        @NameInMap("Duration")
-        public String duration;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("FormatName")
-        public String formatName;
-
-        public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat build(java.util.Map<String, ?> map) throws Exception {
-            QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setStartTime(String startTime) {
-            this.startTime = startTime;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams setVideoStreamList(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList videoStreamList) {
+            this.videoStreamList = videoStreamList;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setNumPrograms(String numPrograms) {
-            this.numPrograms = numPrograms;
-            return this;
-        }
-        public String getNumPrograms() {
-            return this.numPrograms;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setSize(String size) {
-            this.size = size;
-            return this;
-        }
-        public String getSize() {
-            return this.size;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setNumStreams(String numStreams) {
-            this.numStreams = numStreams;
-            return this;
-        }
-        public String getNumStreams() {
-            return this.numStreams;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setFormatLongName(String formatLongName) {
-            this.formatLongName = formatLongName;
-            return this;
-        }
-        public String getFormatLongName() {
-            return this.formatLongName;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setDuration(String duration) {
-            this.duration = duration;
-            return this;
-        }
-        public String getDuration() {
-            return this.duration;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setBitrate(String bitrate) {
-            this.bitrate = bitrate;
-            return this;
-        }
-        public String getBitrate() {
-            return this.bitrate;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat setFormatName(String formatName) {
-            this.formatName = formatName;
-            return this;
-        }
-        public String getFormatName() {
-            return this.formatName;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamList getVideoStreamList() {
+            return this.videoStreamList;
         }
 
     }
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties extends TeaModel {
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Height")
-        public String height;
+        @NameInMap("Bitrate")
+        public String bitrate;
 
         @NameInMap("Duration")
         public String duration;
 
-        @NameInMap("Fps")
-        public String fps;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
         @NameInMap("FileFormat")
         public String fileFormat;
-
-        @NameInMap("Streams")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams streams;
-
-        @NameInMap("Format")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat format;
 
         @NameInMap("FileSize")
         public String fileSize;
 
+        @NameInMap("Format")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat format;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Streams")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams streams;
+
+        @NameInMap("Width")
+        public String width;
+
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setDuration(String duration) {
-            this.duration = duration;
-            return this;
-        }
-        public String getDuration() {
-            return this.duration;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFps(String fps) {
-            this.fps = fps;
-            return this;
-        }
-        public String getFps() {
-            return this.fps;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setBitrate(String bitrate) {
@@ -1058,28 +1007,20 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.bitrate;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFileFormat(String fileFormat) {
             this.fileFormat = fileFormat;
             return this;
         }
         public String getFileFormat() {
             return this.fileFormat;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setStreams(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams streams) {
-            this.streams = streams;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams getStreams() {
-            return this.streams;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFormat(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat format) {
-            this.format = format;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat getFormat() {
-            return this.format;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFileSize(String fileSize) {
@@ -1090,23 +1031,66 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.fileSize;
         }
 
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFormat(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat format) {
+            this.format = format;
+            return this;
+        }
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat getFormat() {
+            return this.format;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setStreams(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams streams) {
+            this.streams = streams;
+            return this;
+        }
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams getStreams() {
+            return this.streams;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties setWidth(String width) {
+            this.width = width;
+            return this;
+        }
+        public String getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob extends TeaModel {
+        @NameInMap("Async")
+        public Boolean async;
+
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Input")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput input;
 
         @NameInMap("JobId")
         public String jobId;
 
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("MNSMessageResult")
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult MNSMessageResult;
 
         @NameInMap("Message")
         public String message;
@@ -1114,21 +1098,34 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("Async")
-        public Boolean async;
-
-        @NameInMap("Input")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput input;
-
-        @NameInMap("MNSMessageResult")
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult MNSMessageResult;
-
         @NameInMap("Properties")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties properties;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("UserData")
+        public String userData;
 
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setAsync(Boolean async) {
+            this.async = async;
+            return this;
+        }
+        public Boolean getAsync() {
+            return this.async;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setCreationTime(String creationTime) {
@@ -1139,12 +1136,12 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setState(String state) {
-            this.state = state;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setInput(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput input) {
+            this.input = input;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput getInput() {
+            return this.input;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setJobId(String jobId) {
@@ -1155,20 +1152,12 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setUserData(String userData) {
-            this.userData = userData;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setMNSMessageResult(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult MNSMessageResult) {
+            this.MNSMessageResult = MNSMessageResult;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult getMNSMessageResult() {
+            return this.MNSMessageResult;
         }
 
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setMessage(String message) {
@@ -1187,36 +1176,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setAsync(Boolean async) {
-            this.async = async;
-            return this;
-        }
-        public Boolean getAsync() {
-            return this.async;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setInput(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput input) {
-            this.input = input;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput getInput() {
-            return this.input;
-        }
-
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setMNSMessageResult(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult MNSMessageResult) {
-            this.MNSMessageResult = MNSMessageResult;
-            return this;
-        }
-        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult getMNSMessageResult() {
-            return this.MNSMessageResult;
-        }
-
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setProperties(QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties properties) {
             this.properties = properties;
             return this;
         }
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties getProperties() {
             return this.properties;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
     }
@@ -1236,6 +1217,25 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
         public java.util.List<QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob> getMediaInfoJob() {
             return this.mediaInfoJob;
+        }
+
+    }
+
+    public static class QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds build(java.util.Map<String, ?> map) throws Exception {
+            QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds self = new QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
         }
 
     }

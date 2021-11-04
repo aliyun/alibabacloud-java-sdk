@@ -4,8 +4,8 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchWaterMarkTemplateResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,8 +13,8 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("WaterMarkTemplateList")
     public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateList waterMarkTemplateList;
@@ -24,12 +24,12 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SearchWaterMarkTemplateResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public SearchWaterMarkTemplateResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public SearchWaterMarkTemplateResponseBody setPageSize(Long pageSize) {
@@ -48,12 +48,12 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchWaterMarkTemplateResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public SearchWaterMarkTemplateResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public SearchWaterMarkTemplateResponseBody setWaterMarkTemplateList(SearchWaterMarkTemplateResponseBodyWaterMarkTemplateList waterMarkTemplateList) {
@@ -68,14 +68,14 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         @NameInMap("Dx")
         public String dx;
 
-        @NameInMap("Width")
-        public String width;
+        @NameInMap("Dy")
+        public String dy;
 
         @NameInMap("Height")
         public String height;
 
-        @NameInMap("Dy")
-        public String dy;
+        @NameInMap("Width")
+        public String width;
 
         public static SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer build(java.util.Map<String, ?> map) throws Exception {
             SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer self = new SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer();
@@ -90,12 +90,12 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             return this.dx;
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer setWidth(String width) {
-            this.width = width;
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer setDy(String dy) {
+            this.dy = dy;
             return this;
         }
-        public String getWidth() {
-            return this.width;
+        public String getDy() {
+            return this.dy;
         }
 
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer setHeight(String height) {
@@ -106,34 +106,26 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             return this.height;
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer setDy(String dy) {
-            this.dy = dy;
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer setWidth(String width) {
+            this.width = width;
             return this;
         }
-        public String getDy() {
-            return this.dy;
+        public String getWidth() {
+            return this.width;
         }
 
     }
 
     public static class SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline extends TeaModel {
-        @NameInMap("Start")
-        public String start;
-
         @NameInMap("Duration")
         public String duration;
+
+        @NameInMap("Start")
+        public String start;
 
         public static SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline build(java.util.Map<String, ?> map) throws Exception {
             SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline self = new SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline();
             return TeaModel.build(map, self);
-        }
-
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline setStart(String start) {
-            this.start = start;
-            return this;
-        }
-        public String getStart() {
-            return this.start;
         }
 
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline setDuration(String duration) {
@@ -144,11 +136,31 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
+        }
+
     }
 
     public static class SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Dx")
+        public String dx;
+
+        @NameInMap("Dy")
+        public String dy;
+
+        @NameInMap("Height")
+        public String height;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("RatioRefer")
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer ratioRefer;
@@ -159,38 +171,58 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        @NameInMap("Dx")
-        public String dx;
-
-        @NameInMap("Width")
-        public String width;
-
-        @NameInMap("Height")
-        public String height;
-
         @NameInMap("Timeline")
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline timeline;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Type")
+        public String type;
 
-        @NameInMap("Dy")
-        public String dy;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Width")
+        public String width;
 
         public static SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate build(java.util.Map<String, ?> map) throws Exception {
             SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate self = new SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate();
             return TeaModel.build(map, self);
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setType(String type) {
-            this.type = type;
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setDx(String dx) {
+            this.dx = dx;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getDx() {
+            return this.dx;
+        }
+
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setDy(String dy) {
+            this.dy = dy;
+            return this;
+        }
+        public String getDy() {
+            return this.dy;
+        }
+
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
+        }
+
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setRatioRefer(SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer ratioRefer) {
@@ -217,30 +249,6 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             return this.state;
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setDx(String dx) {
-            this.dx = dx;
-            return this;
-        }
-        public String getDx() {
-            return this.dx;
-        }
-
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
         public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setTimeline(SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline timeline) {
             this.timeline = timeline;
             return this;
@@ -249,28 +257,20 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             return this.timeline;
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setName(String name) {
-            this.name = name;
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getType() {
+            return this.type;
         }
 
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setDy(String dy) {
-            this.dy = dy;
+        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setWidth(String width) {
+            this.width = width;
             return this;
         }
-        public String getDy() {
-            return this.dy;
-        }
-
-        public SearchWaterMarkTemplateResponseBodyWaterMarkTemplateListWaterMarkTemplate setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getWidth() {
+            return this.width;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateMcuTemplateRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +16,20 @@ public class CreateMcuTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("Template")
     public String template;
 
     public static CreateMcuTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMcuTemplateRequest self = new CreateMcuTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMcuTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateMcuTemplateRequest setOwnerId(Long ownerId) {
@@ -46,14 +54,6 @@ public class CreateMcuTemplateRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateMcuTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public CreateMcuTemplateRequest setTemplate(String template) {

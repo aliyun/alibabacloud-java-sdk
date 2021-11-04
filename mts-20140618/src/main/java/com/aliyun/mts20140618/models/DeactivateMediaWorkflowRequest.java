@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeactivateMediaWorkflowRequest extends TeaModel {
+    @NameInMap("MediaWorkflowId")
+    public String mediaWorkflowId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DeactivateMediaWorkflowRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MediaWorkflowId")
-    public String mediaWorkflowId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DeactivateMediaWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {
         DeactivateMediaWorkflowRequest self = new DeactivateMediaWorkflowRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeactivateMediaWorkflowRequest setMediaWorkflowId(String mediaWorkflowId) {
+        this.mediaWorkflowId = mediaWorkflowId;
+        return this;
+    }
+    public String getMediaWorkflowId() {
+        return this.mediaWorkflowId;
+    }
+
+    public DeactivateMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeactivateMediaWorkflowRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DeactivateMediaWorkflowRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeactivateMediaWorkflowRequest setMediaWorkflowId(String mediaWorkflowId) {
-        this.mediaWorkflowId = mediaWorkflowId;
-        return this;
-    }
-    public String getMediaWorkflowId() {
-        return this.mediaWorkflowId;
-    }
-
-    public DeactivateMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

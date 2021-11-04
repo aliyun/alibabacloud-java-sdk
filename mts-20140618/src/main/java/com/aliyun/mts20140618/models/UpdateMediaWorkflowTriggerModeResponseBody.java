@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaWorkflowTriggerModeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaWorkflow")
     public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow mediaWorkflow;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateMediaWorkflowTriggerModeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMediaWorkflowTriggerModeResponseBody self = new UpdateMediaWorkflowTriggerModeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateMediaWorkflowTriggerModeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateMediaWorkflowTriggerModeResponseBody setMediaWorkflow(UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow mediaWorkflow) {
@@ -31,6 +23,14 @@ public class UpdateMediaWorkflowTriggerModeResponseBody extends TeaModel {
         return this.mediaWorkflow;
     }
 
+    public UpdateMediaWorkflowTriggerModeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -38,17 +38,17 @@ public class UpdateMediaWorkflowTriggerModeResponseBody extends TeaModel {
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("TriggerMode")
-        public String triggerMode;
-
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("Topology")
         public String topology;
+
+        @NameInMap("TriggerMode")
+        public String triggerMode;
 
         public static UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow build(java.util.Map<String, ?> map) throws Exception {
             UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow self = new UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow();
@@ -71,22 +71,6 @@ public class UpdateMediaWorkflowTriggerModeResponseBody extends TeaModel {
             return this.mediaWorkflowId;
         }
 
-        public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setTriggerMode(String triggerMode) {
-            this.triggerMode = triggerMode;
-            return this;
-        }
-        public String getTriggerMode() {
-            return this.triggerMode;
-        }
-
         public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setName(String name) {
             this.name = name;
             return this;
@@ -95,12 +79,28 @@ public class UpdateMediaWorkflowTriggerModeResponseBody extends TeaModel {
             return this.name;
         }
 
+        public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setTopology(String topology) {
             this.topology = topology;
             return this;
         }
         public String getTopology() {
             return this.topology;
+        }
+
+        public UpdateMediaWorkflowTriggerModeResponseBodyMediaWorkflow setTriggerMode(String triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public String getTriggerMode() {
+            return this.triggerMode;
         }
 
     }

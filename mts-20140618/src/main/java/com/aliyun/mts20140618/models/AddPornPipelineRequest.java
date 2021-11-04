@@ -4,20 +4,8 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddPornPipelineRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("Priority")
-    public Integer priority;
 
     @NameInMap("NotifyConfig")
     public String notifyConfig;
@@ -25,33 +13,21 @@ public class AddPornPipelineRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Priority")
+    public Integer priority;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static AddPornPipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         AddPornPipelineRequest self = new AddPornPipelineRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddPornPipelineRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddPornPipelineRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public AddPornPipelineRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public AddPornPipelineRequest setName(String name) {
@@ -60,14 +36,6 @@ public class AddPornPipelineRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public AddPornPipelineRequest setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
     }
 
     public AddPornPipelineRequest setNotifyConfig(String notifyConfig) {
@@ -84,6 +52,38 @@ public class AddPornPipelineRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public AddPornPipelineRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AddPornPipelineRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public AddPornPipelineRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AddPornPipelineRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

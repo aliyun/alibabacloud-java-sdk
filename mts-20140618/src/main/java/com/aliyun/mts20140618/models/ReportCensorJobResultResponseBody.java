@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ReportCensorJobResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ReportCensorJobResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReportCensorJobResultResponseBody self = new ReportCensorJobResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ReportCensorJobResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ReportCensorJobResultResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class ReportCensorJobResultResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public ReportCensorJobResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

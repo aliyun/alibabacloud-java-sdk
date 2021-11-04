@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateTerrorismPipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Pipeline")
     public UpdateTerrorismPipelineResponseBodyPipeline pipeline;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateTerrorismPipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTerrorismPipelineResponseBody self = new UpdateTerrorismPipelineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTerrorismPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateTerrorismPipelineResponseBody setPipeline(UpdateTerrorismPipelineResponseBodyPipeline pipeline) {
@@ -31,24 +23,24 @@ public class UpdateTerrorismPipelineResponseBody extends TeaModel {
         return this.pipeline;
     }
 
-    public static class UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
+    public UpdateTerrorismPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
         @NameInMap("Queue")
         public String queue;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig self = new UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig setQueue(String queue) {
@@ -59,11 +51,22 @@ public class UpdateTerrorismPipelineResponseBody extends TeaModel {
             return this.queue;
         }
 
+        public UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class UpdateTerrorismPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("NotifyConfig")
         public UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig notifyConfig;
@@ -71,23 +74,28 @@ public class UpdateTerrorismPipelineResponseBody extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("State")
+        public String state;
 
         public static UpdateTerrorismPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateTerrorismPipelineResponseBodyPipeline self = new UpdateTerrorismPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
         }
 
-        public UpdateTerrorismPipelineResponseBodyPipeline setState(String state) {
-            this.state = state;
+        public UpdateTerrorismPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getId() {
+            return this.id;
+        }
+
+        public UpdateTerrorismPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UpdateTerrorismPipelineResponseBodyPipeline setNotifyConfig(UpdateTerrorismPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
@@ -106,20 +114,12 @@ public class UpdateTerrorismPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdateTerrorismPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
+        public UpdateTerrorismPipelineResponseBodyPipeline setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateTerrorismPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
+        public String getState() {
+            return this.state;
         }
 
     }

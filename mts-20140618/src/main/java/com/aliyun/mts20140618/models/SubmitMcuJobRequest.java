@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitMcuJobRequest extends TeaModel {
+    @NameInMap("Input")
+    public String input;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,20 +22,11 @@ public class SubmitMcuJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("Input")
-    public String input;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
+    @NameInMap("Template")
+    public String template;
 
     @NameInMap("TemplateId")
     public String templateId;
-
-    @NameInMap("Template")
-    public String template;
 
     @NameInMap("UserData")
     public String userData;
@@ -36,12 +36,36 @@ public class SubmitMcuJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubmitMcuJobRequest setInput(String input) {
+        this.input = input;
+        return this;
+    }
+    public String getInput() {
+        return this.input;
+    }
+
+    public SubmitMcuJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public SubmitMcuJobRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitMcuJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public SubmitMcuJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,28 +84,12 @@ public class SubmitMcuJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitMcuJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SubmitMcuJobRequest setTemplate(String template) {
+        this.template = template;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public SubmitMcuJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
-    }
-
-    public SubmitMcuJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
+    public String getTemplate() {
+        return this.template;
     }
 
     public SubmitMcuJobRequest setTemplateId(String templateId) {
@@ -90,14 +98,6 @@ public class SubmitMcuJobRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public SubmitMcuJobRequest setTemplate(String template) {
-        this.template = template;
-        return this;
-    }
-    public String getTemplate() {
-        return this.template;
     }
 
     public SubmitMcuJobRequest setUserData(String userData) {

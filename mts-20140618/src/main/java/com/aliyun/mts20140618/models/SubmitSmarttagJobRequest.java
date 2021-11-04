@@ -4,8 +4,32 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobRequest extends TeaModel {
+    @NameInMap("Content")
+    public String content;
+
+    @NameInMap("ContentAddr")
+    public String contentAddr;
+
+    @NameInMap("ContentType")
+    public String contentType;
+
+    @NameInMap("Input")
+    public String input;
+
+    @NameInMap("NotifyUrl")
+    public String notifyUrl;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Params")
+    public String params;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,42 +37,66 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
+    @NameInMap("TemplateId")
+    public String templateId;
 
     @NameInMap("Title")
     public String title;
 
-    @NameInMap("Content")
-    public String content;
-
-    @NameInMap("ContentType")
-    public String contentType;
-
-    @NameInMap("ContentAddr")
-    public String contentAddr;
-
-    @NameInMap("Params")
-    public String params;
-
-    @NameInMap("NotifyUrl")
-    public String notifyUrl;
-
     @NameInMap("UserData")
     public String userData;
-
-    @NameInMap("Input")
-    public String input;
-
-    @NameInMap("TemplateId")
-    public String templateId;
 
     public static SubmitSmarttagJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmarttagJobRequest self = new SubmitSmarttagJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitSmarttagJobRequest setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
+    }
+
+    public SubmitSmarttagJobRequest setContentAddr(String contentAddr) {
+        this.contentAddr = contentAddr;
+        return this;
+    }
+    public String getContentAddr() {
+        return this.contentAddr;
+    }
+
+    public SubmitSmarttagJobRequest setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
+    }
+
+    public SubmitSmarttagJobRequest setInput(String input) {
+        this.input = input;
+        return this;
+    }
+    public String getInput() {
+        return this.input;
+    }
+
+    public SubmitSmarttagJobRequest setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
+        return this;
+    }
+    public String getNotifyUrl() {
+        return this.notifyUrl;
+    }
+
+    public SubmitSmarttagJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitSmarttagJobRequest setOwnerId(Long ownerId) {
@@ -57,6 +105,22 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitSmarttagJobRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
+    }
+
+    public SubmitSmarttagJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public SubmitSmarttagJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -75,20 +139,12 @@ public class SubmitSmarttagJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitSmarttagJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SubmitSmarttagJobRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public SubmitSmarttagJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public SubmitSmarttagJobRequest setTitle(String title) {
@@ -99,68 +155,12 @@ public class SubmitSmarttagJobRequest extends TeaModel {
         return this.title;
     }
 
-    public SubmitSmarttagJobRequest setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
-    }
-
-    public SubmitSmarttagJobRequest setContentType(String contentType) {
-        this.contentType = contentType;
-        return this;
-    }
-    public String getContentType() {
-        return this.contentType;
-    }
-
-    public SubmitSmarttagJobRequest setContentAddr(String contentAddr) {
-        this.contentAddr = contentAddr;
-        return this;
-    }
-    public String getContentAddr() {
-        return this.contentAddr;
-    }
-
-    public SubmitSmarttagJobRequest setParams(String params) {
-        this.params = params;
-        return this;
-    }
-    public String getParams() {
-        return this.params;
-    }
-
-    public SubmitSmarttagJobRequest setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-        return this;
-    }
-    public String getNotifyUrl() {
-        return this.notifyUrl;
-    }
-
     public SubmitSmarttagJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitSmarttagJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
-    }
-
-    public SubmitSmarttagJobRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
     }
 
 }

@@ -7,11 +7,11 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NonExistJobIds")
     public QuerySmarttagJobListResponseBodyNonExistJobIds nonExistJobIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SmarttagJobs")
     public QuerySmarttagJobListResponseBodySmarttagJobs smarttagJobs;
@@ -29,20 +29,20 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
         return this.nextPageToken;
     }
 
-    public QuerySmarttagJobListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QuerySmarttagJobListResponseBody setNonExistJobIds(QuerySmarttagJobListResponseBodyNonExistJobIds nonExistJobIds) {
         this.nonExistJobIds = nonExistJobIds;
         return this;
     }
     public QuerySmarttagJobListResponseBodyNonExistJobIds getNonExistJobIds() {
         return this.nonExistJobIds;
+    }
+
+    public QuerySmarttagJobListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QuerySmarttagJobListResponseBody setSmarttagJobs(QuerySmarttagJobListResponseBodySmarttagJobs smarttagJobs) {
@@ -73,14 +73,14 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
     }
 
     public static class QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
+
+        @NameInMap("Input")
+        public String input;
 
         @NameInMap("JobId")
         public String jobId;
@@ -88,23 +88,15 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TemplateId")
         public String templateId;
-
-        @NameInMap("Input")
-        public String input;
 
         public static QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob build(java.util.Map<String, ?> map) throws Exception {
             QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob self = new QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setCreationTime(String creationTime) {
@@ -123,6 +115,14 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
             return this.finishTime;
         }
 
+        public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setInput(String input) {
+            this.input = input;
+            return this;
+        }
+        public String getInput() {
+            return this.input;
+        }
+
         public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setJobId(String jobId) {
             this.jobId = jobId;
             return this;
@@ -139,20 +139,20 @@ public class QuerySmarttagJobListResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
+        public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
         public String getTemplateId() {
             return this.templateId;
-        }
-
-        public QuerySmarttagJobListResponseBodySmarttagJobsSmarttagJob setInput(String input) {
-            this.input = input;
-            return this;
-        }
-        public String getInput() {
-            return this.input;
         }
 
     }

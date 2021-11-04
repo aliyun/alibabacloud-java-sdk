@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UnbindInputBucketRequest extends TeaModel {
+    @NameInMap("Bucket")
+    public String bucket;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +19,28 @@ public class UnbindInputBucketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Bucket")
-    public String bucket;
-
     @NameInMap("RoleArn")
     public String roleArn;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static UnbindInputBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindInputBucketRequest self = new UnbindInputBucketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindInputBucketRequest setBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public UnbindInputBucketRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UnbindInputBucketRequest setOwnerId(Long ownerId) {
@@ -51,28 +67,12 @@ public class UnbindInputBucketRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnbindInputBucketRequest setBucket(String bucket) {
-        this.bucket = bucket;
-        return this;
-    }
-    public String getBucket() {
-        return this.bucket;
-    }
-
     public UnbindInputBucketRequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     public String getRoleArn() {
         return this.roleArn;
-    }
-
-    public UnbindInputBucketRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

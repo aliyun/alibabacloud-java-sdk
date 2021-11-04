@@ -4,21 +4,37 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryVideoQualityJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Job")
+    public QueryVideoQualityJobResponseBodyJob job;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Job")
-    public QueryVideoQualityJobResponseBodyJob job;
-
-    @NameInMap("Code")
-    public String code;
-
     public static QueryVideoQualityJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryVideoQualityJobResponseBody self = new QueryVideoQualityJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryVideoQualityJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryVideoQualityJobResponseBody setJob(QueryVideoQualityJobResponseBodyJob job) {
+        this.job = job;
+        return this;
+    }
+    public QueryVideoQualityJobResponseBodyJob getJob() {
+        return this.job;
     }
 
     public QueryVideoQualityJobResponseBody setMessage(String message) {
@@ -37,34 +53,9 @@ public class QueryVideoQualityJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryVideoQualityJobResponseBody setJob(QueryVideoQualityJobResponseBodyJob job) {
-        this.job = job;
-        return this;
-    }
-    public QueryVideoQualityJobResponseBodyJob getJob() {
-        return this.job;
-    }
-
-    public QueryVideoQualityJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class QueryVideoQualityJobResponseBodyJob extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("VideoQualityResults")
-        public String videoQualityResults;
 
         @NameInMap("Message")
         public String message;
@@ -72,17 +63,18 @@ public class QueryVideoQualityJobResponseBody extends TeaModel {
         @NameInMap("Output")
         public String output;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UserId")
+        public Long userId;
+
+        @NameInMap("VideoQualityResults")
+        public String videoQualityResults;
+
         public static QueryVideoQualityJobResponseBodyJob build(java.util.Map<String, ?> map) throws Exception {
             QueryVideoQualityJobResponseBodyJob self = new QueryVideoQualityJobResponseBodyJob();
             return TeaModel.build(map, self);
-        }
-
-        public QueryVideoQualityJobResponseBodyJob setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public QueryVideoQualityJobResponseBodyJob setJobId(String jobId) {
@@ -91,22 +83,6 @@ public class QueryVideoQualityJobResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
-        }
-
-        public QueryVideoQualityJobResponseBodyJob setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public QueryVideoQualityJobResponseBodyJob setVideoQualityResults(String videoQualityResults) {
-            this.videoQualityResults = videoQualityResults;
-            return this;
-        }
-        public String getVideoQualityResults() {
-            return this.videoQualityResults;
         }
 
         public QueryVideoQualityJobResponseBodyJob setMessage(String message) {
@@ -123,6 +99,30 @@ public class QueryVideoQualityJobResponseBody extends TeaModel {
         }
         public String getOutput() {
             return this.output;
+        }
+
+        public QueryVideoQualityJobResponseBodyJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryVideoQualityJobResponseBodyJob setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        public QueryVideoQualityJobResponseBodyJob setVideoQualityResults(String videoQualityResults) {
+            this.videoQualityResults = videoQualityResults;
+            return this;
+        }
+        public String getVideoQualityResults() {
+            return this.videoQualityResults;
         }
 
     }

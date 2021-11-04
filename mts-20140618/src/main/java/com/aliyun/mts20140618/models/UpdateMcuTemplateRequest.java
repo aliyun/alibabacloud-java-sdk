@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMcuTemplateRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +16,23 @@ public class UpdateMcuTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("Template")
+    public String template;
 
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("Template")
-    public String template;
-
     public static UpdateMcuTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMcuTemplateRequest self = new UpdateMcuTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMcuTemplateRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateMcuTemplateRequest setOwnerId(Long ownerId) {
@@ -51,12 +59,12 @@ public class UpdateMcuTemplateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdateMcuTemplateRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpdateMcuTemplateRequest setTemplate(String template) {
+        this.template = template;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getTemplate() {
+        return this.template;
     }
 
     public UpdateMcuTemplateRequest setTemplateId(String templateId) {
@@ -65,14 +73,6 @@ public class UpdateMcuTemplateRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public UpdateMcuTemplateRequest setTemplate(String template) {
-        this.template = template;
-        return this;
-    }
-    public String getTemplate() {
-        return this.template;
     }
 
 }

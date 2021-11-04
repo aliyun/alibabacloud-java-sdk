@@ -4,34 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListAllMediaBucketResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("MediaBucketList")
+    public ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList;
 
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
-    @NameInMap("MediaBucketList")
-    public ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAllMediaBucketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAllMediaBucketResponseBody self = new ListAllMediaBucketResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAllMediaBucketResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAllMediaBucketResponseBody setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
     }
 
     public ListAllMediaBucketResponseBody setMediaBucketList(ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList) {
@@ -42,24 +26,32 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         return this.mediaBucketList;
     }
 
-    public static class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public ListAllMediaBucketResponseBody setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
 
+    public ListAllMediaBucketResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket extends TeaModel {
         @NameInMap("Bucket")
         public String bucket;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListAllMediaBucketResponseBodyMediaBucketListMediaBucket build(java.util.Map<String, ?> map) throws Exception {
             ListAllMediaBucketResponseBodyMediaBucketListMediaBucket self = new ListAllMediaBucketResponseBodyMediaBucketListMediaBucket();
             return TeaModel.build(map, self);
-        }
-
-        public ListAllMediaBucketResponseBodyMediaBucketListMediaBucket setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListAllMediaBucketResponseBodyMediaBucketListMediaBucket setBucket(String bucket) {
@@ -68,6 +60,14 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public ListAllMediaBucketResponseBodyMediaBucketListMediaBucket setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

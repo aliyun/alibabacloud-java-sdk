@@ -35,23 +35,23 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         @NameInMap("AnalyseTypes")
         public String analyseTypes;
 
+        @NameInMap("FaceCategoryIds")
+        public String faceCategoryIds;
+
         @NameInMap("Industry")
         public String industry;
 
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
-        @NameInMap("TemplateName")
-        public String templateName;
+        @NameInMap("Scene")
+        public String scene;
 
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("FaceCategoryIds")
-        public String faceCategoryIds;
-
-        @NameInMap("Scene")
-        public String scene;
+        @NameInMap("TemplateName")
+        public String templateName;
 
         public static QuerySmarttagTemplateListResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
             QuerySmarttagTemplateListResponseBodyTemplatesTemplate self = new QuerySmarttagTemplateListResponseBodyTemplatesTemplate();
@@ -64,6 +64,14 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         }
         public String getAnalyseTypes() {
             return this.analyseTypes;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setFaceCategoryIds(String faceCategoryIds) {
+            this.faceCategoryIds = faceCategoryIds;
+            return this;
+        }
+        public String getFaceCategoryIds() {
+            return this.faceCategoryIds;
         }
 
         public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setIndustry(String industry) {
@@ -82,12 +90,12 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setTemplateName(String templateName) {
-            this.templateName = templateName;
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setScene(String scene) {
+            this.scene = scene;
             return this;
         }
-        public String getTemplateName() {
-            return this.templateName;
+        public String getScene() {
+            return this.scene;
         }
 
         public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setTemplateId(String templateId) {
@@ -98,20 +106,12 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setFaceCategoryIds(String faceCategoryIds) {
-            this.faceCategoryIds = faceCategoryIds;
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setTemplateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
-        public String getFaceCategoryIds() {
-            return this.faceCategoryIds;
-        }
-
-        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
+        public String getTemplateName() {
+            return this.templateName;
         }
 
     }

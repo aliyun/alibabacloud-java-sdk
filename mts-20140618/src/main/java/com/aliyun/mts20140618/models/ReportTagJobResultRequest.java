@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ReportTagJobResultRequest extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +19,31 @@ public class ReportTagJobResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("Result")
+    public String result;
 
     @NameInMap("Tag")
     public String tag;
 
-    @NameInMap("Result")
-    public String result;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ReportTagJobResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportTagJobResultRequest self = new ReportTagJobResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReportTagJobResultRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public ReportTagJobResultRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReportTagJobResultRequest setOwnerId(Long ownerId) {
@@ -54,22 +70,6 @@ public class ReportTagJobResultRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ReportTagJobResultRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public ReportTagJobResultRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
     public ReportTagJobResultRequest setResult(String result) {
         this.result = result;
         return this;
@@ -78,12 +78,12 @@ public class ReportTagJobResultRequest extends TeaModel {
         return this.result;
     }
 
-    public ReportTagJobResultRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public ReportTagJobResultRequest setTag(String tag) {
+        this.tag = tag;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getTag() {
+        return this.tag;
     }
 
 }

@@ -4,8 +4,26 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitFpCompareJobRequest extends TeaModel {
+    @NameInMap("FpDBId")
+    public String fpDBId;
+
+    @NameInMap("MasterMedia")
+    public String masterMedia;
+
+    @NameInMap("MatchedFrameStorage")
+    public String matchedFrameStorage;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
+
+    @NameInMap("QueryMedia")
+    public String queryMedia;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +31,44 @@ public class SubmitFpCompareJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MasterMedia")
-    public String masterMedia;
-
-    @NameInMap("QueryMedia")
-    public String queryMedia;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
-
-    @NameInMap("FpDBId")
-    public String fpDBId;
-
-    @NameInMap("MatchedFrameStorage")
-    public String matchedFrameStorage;
-
     @NameInMap("UserData")
     public String userData;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static SubmitFpCompareJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitFpCompareJobRequest self = new SubmitFpCompareJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitFpCompareJobRequest setFpDBId(String fpDBId) {
+        this.fpDBId = fpDBId;
+        return this;
+    }
+    public String getFpDBId() {
+        return this.fpDBId;
+    }
+
+    public SubmitFpCompareJobRequest setMasterMedia(String masterMedia) {
+        this.masterMedia = masterMedia;
+        return this;
+    }
+    public String getMasterMedia() {
+        return this.masterMedia;
+    }
+
+    public SubmitFpCompareJobRequest setMatchedFrameStorage(String matchedFrameStorage) {
+        this.matchedFrameStorage = matchedFrameStorage;
+        return this;
+    }
+    public String getMatchedFrameStorage() {
+        return this.matchedFrameStorage;
+    }
+
+    public SubmitFpCompareJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitFpCompareJobRequest setOwnerId(Long ownerId) {
@@ -45,6 +77,22 @@ public class SubmitFpCompareJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitFpCompareJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
+    }
+
+    public SubmitFpCompareJobRequest setQueryMedia(String queryMedia) {
+        this.queryMedia = queryMedia;
+        return this;
+    }
+    public String getQueryMedia() {
+        return this.queryMedia;
     }
 
     public SubmitFpCompareJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,60 +111,12 @@ public class SubmitFpCompareJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitFpCompareJobRequest setMasterMedia(String masterMedia) {
-        this.masterMedia = masterMedia;
-        return this;
-    }
-    public String getMasterMedia() {
-        return this.masterMedia;
-    }
-
-    public SubmitFpCompareJobRequest setQueryMedia(String queryMedia) {
-        this.queryMedia = queryMedia;
-        return this;
-    }
-    public String getQueryMedia() {
-        return this.queryMedia;
-    }
-
-    public SubmitFpCompareJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public SubmitFpCompareJobRequest setFpDBId(String fpDBId) {
-        this.fpDBId = fpDBId;
-        return this;
-    }
-    public String getFpDBId() {
-        return this.fpDBId;
-    }
-
-    public SubmitFpCompareJobRequest setMatchedFrameStorage(String matchedFrameStorage) {
-        this.matchedFrameStorage = matchedFrameStorage;
-        return this;
-    }
-    public String getMatchedFrameStorage() {
-        return this.matchedFrameStorage;
-    }
-
     public SubmitFpCompareJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitFpCompareJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

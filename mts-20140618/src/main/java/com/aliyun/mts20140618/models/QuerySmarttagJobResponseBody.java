@@ -10,11 +10,11 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("UserData")
-    public String userData;
-
     @NameInMap("Results")
     public QuerySmarttagJobResponseBodyResults results;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static QuerySmarttagJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySmarttagJobResponseBody self = new QuerySmarttagJobResponseBody();
@@ -37,14 +37,6 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySmarttagJobResponseBody setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
     public QuerySmarttagJobResponseBody setResults(QuerySmarttagJobResponseBodyResults results) {
         this.results = results;
         return this;
@@ -53,24 +45,24 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         return this.results;
     }
 
-    public static class QuerySmarttagJobResponseBodyResultsResult extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public QuerySmarttagJobResponseBody setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
 
+    public static class QuerySmarttagJobResponseBodyResultsResult extends TeaModel {
         @NameInMap("Data")
         public String data;
+
+        @NameInMap("Type")
+        public String type;
 
         public static QuerySmarttagJobResponseBodyResultsResult build(java.util.Map<String, ?> map) throws Exception {
             QuerySmarttagJobResponseBodyResultsResult self = new QuerySmarttagJobResponseBodyResultsResult();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySmarttagJobResponseBodyResultsResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public QuerySmarttagJobResponseBodyResultsResult setData(String data) {
@@ -79,6 +71,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public QuerySmarttagJobResponseBodyResultsResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

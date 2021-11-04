@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddMediaWorkflowRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +19,31 @@ public class AddMediaWorkflowRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Topology")
     public String topology;
 
     @NameInMap("TriggerMode")
     public String triggerMode;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static AddMediaWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMediaWorkflowRequest self = new AddMediaWorkflowRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddMediaWorkflowRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public AddMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AddMediaWorkflowRequest setOwnerId(Long ownerId) {
@@ -54,14 +70,6 @@ public class AddMediaWorkflowRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddMediaWorkflowRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public AddMediaWorkflowRequest setTopology(String topology) {
         this.topology = topology;
         return this;
@@ -76,14 +84,6 @@ public class AddMediaWorkflowRequest extends TeaModel {
     }
     public String getTriggerMode() {
         return this.triggerMode;
-    }
-
-    public AddMediaWorkflowRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

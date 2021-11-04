@@ -4,11 +4,20 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class LogicalDeleteResourceResponseBody extends TeaModel {
+    @NameInMap("Bid")
+    public String bid;
+
+    @NameInMap("Country")
+    public String country;
+
     @NameInMap("GmtWakeup")
     public String gmtWakeup;
 
     @NameInMap("Hid")
     public Long hid;
+
+    @NameInMap("Interrupt")
+    public Boolean interrupt;
 
     @NameInMap("Invoker")
     public String invoker;
@@ -16,30 +25,37 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("TaskIdentifier")
-    public String taskIdentifier;
-
-    @NameInMap("TaskExtraData")
-    public String taskExtraData;
-
-    @NameInMap("Country")
-    public String country;
-
     @NameInMap("Pk")
     public String pk;
-
-    @NameInMap("Bid")
-    public String bid;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Interrupt")
-    public Boolean interrupt;
+    @NameInMap("TaskExtraData")
+    public String taskExtraData;
+
+    @NameInMap("TaskIdentifier")
+    public String taskIdentifier;
 
     public static LogicalDeleteResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LogicalDeleteResourceResponseBody self = new LogicalDeleteResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public LogicalDeleteResourceResponseBody setBid(String bid) {
+        this.bid = bid;
+        return this;
+    }
+    public String getBid() {
+        return this.bid;
+    }
+
+    public LogicalDeleteResourceResponseBody setCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    public String getCountry() {
+        return this.country;
     }
 
     public LogicalDeleteResourceResponseBody setGmtWakeup(String gmtWakeup) {
@@ -58,6 +74,14 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.hid;
     }
 
+    public LogicalDeleteResourceResponseBody setInterrupt(Boolean interrupt) {
+        this.interrupt = interrupt;
+        return this;
+    }
+    public Boolean getInterrupt() {
+        return this.interrupt;
+    }
+
     public LogicalDeleteResourceResponseBody setInvoker(String invoker) {
         this.invoker = invoker;
         return this;
@@ -74,44 +98,12 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public LogicalDeleteResourceResponseBody setTaskIdentifier(String taskIdentifier) {
-        this.taskIdentifier = taskIdentifier;
-        return this;
-    }
-    public String getTaskIdentifier() {
-        return this.taskIdentifier;
-    }
-
-    public LogicalDeleteResourceResponseBody setTaskExtraData(String taskExtraData) {
-        this.taskExtraData = taskExtraData;
-        return this;
-    }
-    public String getTaskExtraData() {
-        return this.taskExtraData;
-    }
-
-    public LogicalDeleteResourceResponseBody setCountry(String country) {
-        this.country = country;
-        return this;
-    }
-    public String getCountry() {
-        return this.country;
-    }
-
     public LogicalDeleteResourceResponseBody setPk(String pk) {
         this.pk = pk;
         return this;
     }
     public String getPk() {
         return this.pk;
-    }
-
-    public LogicalDeleteResourceResponseBody setBid(String bid) {
-        this.bid = bid;
-        return this;
-    }
-    public String getBid() {
-        return this.bid;
     }
 
     public LogicalDeleteResourceResponseBody setSuccess(Boolean success) {
@@ -122,12 +114,20 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public LogicalDeleteResourceResponseBody setInterrupt(Boolean interrupt) {
-        this.interrupt = interrupt;
+    public LogicalDeleteResourceResponseBody setTaskExtraData(String taskExtraData) {
+        this.taskExtraData = taskExtraData;
         return this;
     }
-    public Boolean getInterrupt() {
-        return this.interrupt;
+    public String getTaskExtraData() {
+        return this.taskExtraData;
+    }
+
+    public LogicalDeleteResourceResponseBody setTaskIdentifier(String taskIdentifier) {
+        this.taskIdentifier = taskIdentifier;
+        return this;
+    }
+    public String getTaskIdentifier() {
+        return this.taskIdentifier;
     }
 
 }

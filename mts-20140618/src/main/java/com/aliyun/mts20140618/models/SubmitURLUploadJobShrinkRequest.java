@@ -4,6 +4,9 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitURLUploadJobShrinkRequest extends TeaModel {
+    @NameInMap("Notify")
+    public String notify;
+
     @NameInMap("Region")
     public String region;
 
@@ -16,12 +19,17 @@ public class SubmitURLUploadJobShrinkRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("Notify")
-    public String notify;
-
     public static SubmitURLUploadJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitURLUploadJobShrinkRequest self = new SubmitURLUploadJobShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitURLUploadJobShrinkRequest setNotify(String notify) {
+        this.notify = notify;
+        return this;
+    }
+    public String getNotify() {
+        return this.notify;
     }
 
     public SubmitURLUploadJobShrinkRequest setRegion(String region) {
@@ -54,14 +62,6 @@ public class SubmitURLUploadJobShrinkRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitURLUploadJobShrinkRequest setNotify(String notify) {
-        this.notify = notify;
-        return this;
-    }
-    public String getNotify() {
-        return this.notify;
     }
 
 }

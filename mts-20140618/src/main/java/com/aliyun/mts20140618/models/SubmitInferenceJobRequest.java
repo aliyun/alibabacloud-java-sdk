@@ -4,26 +4,26 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitInferenceJobRequest extends TeaModel {
-    @NameInMap("ServerName")
-    public String serverName;
+    @NameInMap("Input")
+    public String input;
 
     @NameInMap("ModelType")
     public String modelType;
 
-    @NameInMap("Input")
-    public String input;
+    @NameInMap("ServerName")
+    public String serverName;
 
     public static SubmitInferenceJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitInferenceJobRequest self = new SubmitInferenceJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInferenceJobRequest setServerName(String serverName) {
-        this.serverName = serverName;
+    public SubmitInferenceJobRequest setInput(String input) {
+        this.input = input;
         return this;
     }
-    public String getServerName() {
-        return this.serverName;
+    public String getInput() {
+        return this.input;
     }
 
     public SubmitInferenceJobRequest setModelType(String modelType) {
@@ -34,12 +34,12 @@ public class SubmitInferenceJobRequest extends TeaModel {
         return this.modelType;
     }
 
-    public SubmitInferenceJobRequest setInput(String input) {
-        this.input = input;
+    public SubmitInferenceJobRequest setServerName(String serverName) {
+        this.serverName = serverName;
         return this;
     }
-    public String getInput() {
-        return this.input;
+    public String getServerName() {
+        return this.serverName;
     }
 
 }

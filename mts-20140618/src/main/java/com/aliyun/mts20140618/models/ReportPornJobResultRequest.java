@@ -4,6 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ReportPornJobResultRequest extends TeaModel {
+    @NameInMap("Detail")
+    public String detail;
+
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("Label")
+    public String label;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +25,41 @@ public class ReportPornJobResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("Label")
-    public String label;
-
-    @NameInMap("Detail")
-    public String detail;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ReportPornJobResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportPornJobResultRequest self = new ReportPornJobResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReportPornJobResultRequest setDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    public String getDetail() {
+        return this.detail;
+    }
+
+    public ReportPornJobResultRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public ReportPornJobResultRequest setLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    public String getLabel() {
+        return this.label;
+    }
+
+    public ReportPornJobResultRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReportPornJobResultRequest setOwnerId(Long ownerId) {
@@ -52,38 +84,6 @@ public class ReportPornJobResultRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ReportPornJobResultRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public ReportPornJobResultRequest setLabel(String label) {
-        this.label = label;
-        return this;
-    }
-    public String getLabel() {
-        return this.label;
-    }
-
-    public ReportPornJobResultRequest setDetail(String detail) {
-        this.detail = detail;
-        return this;
-    }
-    public String getDetail() {
-        return this.detail;
-    }
-
-    public ReportPornJobResultRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

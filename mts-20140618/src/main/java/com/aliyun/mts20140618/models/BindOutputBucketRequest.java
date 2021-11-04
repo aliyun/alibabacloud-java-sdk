@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class BindOutputBucketRequest extends TeaModel {
+    @NameInMap("Bucket")
+    public String bucket;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +19,28 @@ public class BindOutputBucketRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Bucket")
-    public String bucket;
-
     @NameInMap("RoleArn")
     public String roleArn;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static BindOutputBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         BindOutputBucketRequest self = new BindOutputBucketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindOutputBucketRequest setBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    public String getBucket() {
+        return this.bucket;
+    }
+
+    public BindOutputBucketRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public BindOutputBucketRequest setOwnerId(Long ownerId) {
@@ -51,28 +67,12 @@ public class BindOutputBucketRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BindOutputBucketRequest setBucket(String bucket) {
-        this.bucket = bucket;
-        return this;
-    }
-    public String getBucket() {
-        return this.bucket;
-    }
-
     public BindOutputBucketRequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     public String getRoleArn() {
         return this.roleArn;
-    }
-
-    public BindOutputBucketRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

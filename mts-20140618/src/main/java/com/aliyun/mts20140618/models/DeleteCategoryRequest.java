@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteCategoryRequest extends TeaModel {
+    @NameInMap("CateId")
+    public Long cateId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DeleteCategoryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CateId")
-    public Long cateId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DeleteCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCategoryRequest self = new DeleteCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCategoryRequest setCateId(Long cateId) {
+        this.cateId = cateId;
+        return this;
+    }
+    public Long getCateId() {
+        return this.cateId;
+    }
+
+    public DeleteCategoryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteCategoryRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DeleteCategoryRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteCategoryRequest setCateId(Long cateId) {
-        this.cateId = cateId;
-        return this;
-    }
-    public Long getCateId() {
-        return this.cateId;
-    }
-
-    public DeleteCategoryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

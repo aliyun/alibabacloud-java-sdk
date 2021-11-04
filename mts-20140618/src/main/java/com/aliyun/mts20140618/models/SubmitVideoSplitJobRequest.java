@@ -4,8 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoSplitJobRequest extends TeaModel {
+    @NameInMap("Input")
+    public String input;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +22,31 @@ public class SubmitVideoSplitJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Input")
-    public String input;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
+    @NameInMap("UserData")
+    public String userData;
 
     @NameInMap("VideoSplitConfig")
     public String videoSplitConfig;
 
-    @NameInMap("UserData")
-    public String userData;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static SubmitVideoSplitJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoSplitJobRequest self = new SubmitVideoSplitJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoSplitJobRequest setInput(String input) {
+        this.input = input;
+        return this;
+    }
+    public String getInput() {
+        return this.input;
+    }
+
+    public SubmitVideoSplitJobRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SubmitVideoSplitJobRequest setOwnerId(Long ownerId) {
@@ -39,6 +55,14 @@ public class SubmitVideoSplitJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SubmitVideoSplitJobRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public SubmitVideoSplitJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,30 +81,6 @@ public class SubmitVideoSplitJobRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SubmitVideoSplitJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
-    }
-
-    public SubmitVideoSplitJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public SubmitVideoSplitJobRequest setVideoSplitConfig(String videoSplitConfig) {
-        this.videoSplitConfig = videoSplitConfig;
-        return this;
-    }
-    public String getVideoSplitConfig() {
-        return this.videoSplitConfig;
-    }
-
     public SubmitVideoSplitJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
@@ -89,12 +89,12 @@ public class SubmitVideoSplitJobRequest extends TeaModel {
         return this.userData;
     }
 
-    public SubmitVideoSplitJobRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SubmitVideoSplitJobRequest setVideoSplitConfig(String videoSplitConfig) {
+        this.videoSplitConfig = videoSplitConfig;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVideoSplitConfig() {
+        return this.videoSplitConfig;
     }
 
 }

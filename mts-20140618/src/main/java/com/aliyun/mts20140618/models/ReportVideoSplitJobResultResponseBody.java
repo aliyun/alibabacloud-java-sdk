@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ReportVideoSplitJobResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ReportVideoSplitJobResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReportVideoSplitJobResultResponseBody self = new ReportVideoSplitJobResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ReportVideoSplitJobResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ReportVideoSplitJobResultResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class ReportVideoSplitJobResultResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public ReportVideoSplitJobResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

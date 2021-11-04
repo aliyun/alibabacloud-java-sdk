@@ -32,37 +32,21 @@ public class ListAllCategoryResponseBody extends TeaModel {
     }
 
     public static class ListAllCategoryResponseBodyCategoryListCategory extends TeaModel {
-        @NameInMap("CateName")
-        public String cateName;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
         @NameInMap("CateId")
         public String cateId;
+
+        @NameInMap("CateName")
+        public String cateName;
 
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("ParentId")
+        public String parentId;
+
         public static ListAllCategoryResponseBodyCategoryListCategory build(java.util.Map<String, ?> map) throws Exception {
             ListAllCategoryResponseBodyCategoryListCategory self = new ListAllCategoryResponseBodyCategoryListCategory();
             return TeaModel.build(map, self);
-        }
-
-        public ListAllCategoryResponseBodyCategoryListCategory setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
-        }
-
-        public ListAllCategoryResponseBodyCategoryListCategory setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
         }
 
         public ListAllCategoryResponseBodyCategoryListCategory setCateId(String cateId) {
@@ -73,12 +57,28 @@ public class ListAllCategoryResponseBody extends TeaModel {
             return this.cateId;
         }
 
+        public ListAllCategoryResponseBodyCategoryListCategory setCateName(String cateName) {
+            this.cateName = cateName;
+            return this;
+        }
+        public String getCateName() {
+            return this.cateName;
+        }
+
         public ListAllCategoryResponseBodyCategoryListCategory setLevel(String level) {
             this.level = level;
             return this;
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public ListAllCategoryResponseBodyCategoryListCategory setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
         }
 
     }

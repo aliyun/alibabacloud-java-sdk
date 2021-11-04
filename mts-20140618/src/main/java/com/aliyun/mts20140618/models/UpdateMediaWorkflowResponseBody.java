@@ -4,23 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaWorkflow")
     public UpdateMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateMediaWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMediaWorkflowResponseBody self = new UpdateMediaWorkflowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateMediaWorkflowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateMediaWorkflowResponseBody setMediaWorkflow(UpdateMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow) {
@@ -31,6 +23,14 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
         return this.mediaWorkflow;
     }
 
+    public UpdateMediaWorkflowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class UpdateMediaWorkflowResponseBodyMediaWorkflow extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
@@ -38,17 +38,17 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("TriggerMode")
-        public String triggerMode;
-
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("Topology")
         public String topology;
+
+        @NameInMap("TriggerMode")
+        public String triggerMode;
 
         public static UpdateMediaWorkflowResponseBodyMediaWorkflow build(java.util.Map<String, ?> map) throws Exception {
             UpdateMediaWorkflowResponseBodyMediaWorkflow self = new UpdateMediaWorkflowResponseBodyMediaWorkflow();
@@ -71,22 +71,6 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             return this.mediaWorkflowId;
         }
 
-        public UpdateMediaWorkflowResponseBodyMediaWorkflow setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public UpdateMediaWorkflowResponseBodyMediaWorkflow setTriggerMode(String triggerMode) {
-            this.triggerMode = triggerMode;
-            return this;
-        }
-        public String getTriggerMode() {
-            return this.triggerMode;
-        }
-
         public UpdateMediaWorkflowResponseBodyMediaWorkflow setName(String name) {
             this.name = name;
             return this;
@@ -95,12 +79,28 @@ public class UpdateMediaWorkflowResponseBody extends TeaModel {
             return this.name;
         }
 
+        public UpdateMediaWorkflowResponseBodyMediaWorkflow setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public UpdateMediaWorkflowResponseBodyMediaWorkflow setTopology(String topology) {
             this.topology = topology;
             return this;
         }
         public String getTopology() {
             return this.topology;
+        }
+
+        public UpdateMediaWorkflowResponseBodyMediaWorkflow setTriggerMode(String triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public String getTriggerMode() {
+            return this.triggerMode;
         }
 
     }
