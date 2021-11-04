@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class PushUserGameProcessRequest extends TeaModel {
+public class PushUserGameProcessShrinkRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
@@ -14,7 +14,7 @@ public class PushUserGameProcessRequest extends TeaModel {
     public String currentStepId;
 
     @NameInMap("ExtInfo")
-    public java.util.Map<String, ?> extInfo;
+    public String extInfoShrink;
 
     @NameInMap("ProcessId")
     public String processId;
@@ -23,14 +23,14 @@ public class PushUserGameProcessRequest extends TeaModel {
     public String thirdPartyUserId;
 
     @NameInMap("body")
-    public java.util.Map<String, ?> body;
+    public String bodyShrink;
 
-    public static PushUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {
-        PushUserGameProcessRequest self = new PushUserGameProcessRequest();
+    public static PushUserGameProcessShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PushUserGameProcessShrinkRequest self = new PushUserGameProcessShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public PushUserGameProcessRequest setAccountType(String accountType) {
+    public PushUserGameProcessShrinkRequest setAccountType(String accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -38,7 +38,7 @@ public class PushUserGameProcessRequest extends TeaModel {
         return this.accountType;
     }
 
-    public PushUserGameProcessRequest setBizId(String bizId) {
+    public PushUserGameProcessShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -46,7 +46,7 @@ public class PushUserGameProcessRequest extends TeaModel {
         return this.bizId;
     }
 
-    public PushUserGameProcessRequest setCurrentStepId(String currentStepId) {
+    public PushUserGameProcessShrinkRequest setCurrentStepId(String currentStepId) {
         this.currentStepId = currentStepId;
         return this;
     }
@@ -54,15 +54,15 @@ public class PushUserGameProcessRequest extends TeaModel {
         return this.currentStepId;
     }
 
-    public PushUserGameProcessRequest setExtInfo(java.util.Map<String, ?> extInfo) {
-        this.extInfo = extInfo;
+    public PushUserGameProcessShrinkRequest setExtInfoShrink(String extInfoShrink) {
+        this.extInfoShrink = extInfoShrink;
         return this;
     }
-    public java.util.Map<String, ?> getExtInfo() {
-        return this.extInfo;
+    public String getExtInfoShrink() {
+        return this.extInfoShrink;
     }
 
-    public PushUserGameProcessRequest setProcessId(String processId) {
+    public PushUserGameProcessShrinkRequest setProcessId(String processId) {
         this.processId = processId;
         return this;
     }
@@ -70,7 +70,7 @@ public class PushUserGameProcessRequest extends TeaModel {
         return this.processId;
     }
 
-    public PushUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
+    public PushUserGameProcessShrinkRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }
@@ -78,12 +78,12 @@ public class PushUserGameProcessRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public PushUserGameProcessRequest setBody(java.util.Map<String, ?> body) {
-        this.body = body;
+    public PushUserGameProcessShrinkRequest setBodyShrink(String bodyShrink) {
+        this.bodyShrink = bodyShrink;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
-        return this.body;
+    public String getBodyShrink() {
+        return this.bodyShrink;
     }
 
 }

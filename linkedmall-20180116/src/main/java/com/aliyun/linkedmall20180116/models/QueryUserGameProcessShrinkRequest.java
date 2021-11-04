@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class QueryUserGameProcessRequest extends TeaModel {
+public class QueryUserGameProcessShrinkRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
@@ -11,7 +11,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("ExtInfo")
-    public java.util.Map<String, ?> extInfo;
+    public String extInfoShrink;
 
     @NameInMap("ProcessId")
     public String processId;
@@ -19,12 +19,12 @@ public class QueryUserGameProcessRequest extends TeaModel {
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    public static QueryUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryUserGameProcessRequest self = new QueryUserGameProcessRequest();
+    public static QueryUserGameProcessShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryUserGameProcessShrinkRequest self = new QueryUserGameProcessShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryUserGameProcessRequest setAccountType(String accountType) {
+    public QueryUserGameProcessShrinkRequest setAccountType(String accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -32,7 +32,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.accountType;
     }
 
-    public QueryUserGameProcessRequest setBizId(String bizId) {
+    public QueryUserGameProcessShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -40,15 +40,15 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryUserGameProcessRequest setExtInfo(java.util.Map<String, ?> extInfo) {
-        this.extInfo = extInfo;
+    public QueryUserGameProcessShrinkRequest setExtInfoShrink(String extInfoShrink) {
+        this.extInfoShrink = extInfoShrink;
         return this;
     }
-    public java.util.Map<String, ?> getExtInfo() {
-        return this.extInfo;
+    public String getExtInfoShrink() {
+        return this.extInfoShrink;
     }
 
-    public QueryUserGameProcessRequest setProcessId(String processId) {
+    public QueryUserGameProcessShrinkRequest setProcessId(String processId) {
         this.processId = processId;
         return this;
     }
@@ -56,7 +56,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.processId;
     }
 
-    public QueryUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
+    public QueryUserGameProcessShrinkRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }

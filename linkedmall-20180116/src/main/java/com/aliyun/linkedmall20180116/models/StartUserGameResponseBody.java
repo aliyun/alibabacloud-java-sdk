@@ -62,8 +62,8 @@ public class StartUserGameResponseBody extends TeaModel {
         public String bizId;
 
         // 进度内容
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("CurrentShowContent")
+        public String currentShowContent;
 
         // 当前步骤ID
         @NameInMap("CurrentStepId")
@@ -79,14 +79,6 @@ public class StartUserGameResponseBody extends TeaModel {
         // 扩展信息
         @NameInMap("ExtInfo")
         public String extInfo;
-
-        // 奖励记录
-        @NameInMap("GameAwardRecords")
-        public String gameAwardRecords;
-
-        // 玩法币记录
-        @NameInMap("GameCoinRecords")
-        public String gameCoinRecords;
 
         @NameInMap("GameId")
         public String gameId;
@@ -130,12 +122,12 @@ public class StartUserGameResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public StartUserGameResponseBodyModel setContent(String content) {
-            this.content = content;
+        public StartUserGameResponseBodyModel setCurrentShowContent(String currentShowContent) {
+            this.currentShowContent = currentShowContent;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public String getCurrentShowContent() {
+            return this.currentShowContent;
         }
 
         public StartUserGameResponseBodyModel setCurrentStepId(String currentStepId) {
@@ -168,22 +160,6 @@ public class StartUserGameResponseBody extends TeaModel {
         }
         public String getExtInfo() {
             return this.extInfo;
-        }
-
-        public StartUserGameResponseBodyModel setGameAwardRecords(String gameAwardRecords) {
-            this.gameAwardRecords = gameAwardRecords;
-            return this;
-        }
-        public String getGameAwardRecords() {
-            return this.gameAwardRecords;
-        }
-
-        public StartUserGameResponseBodyModel setGameCoinRecords(String gameCoinRecords) {
-            this.gameCoinRecords = gameCoinRecords;
-            return this;
-        }
-        public String getGameCoinRecords() {
-            return this.gameCoinRecords;
         }
 
         public StartUserGameResponseBodyModel setGameId(String gameId) {

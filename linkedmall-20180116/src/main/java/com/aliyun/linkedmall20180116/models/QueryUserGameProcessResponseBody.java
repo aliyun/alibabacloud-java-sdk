@@ -58,8 +58,11 @@ public class QueryUserGameProcessResponseBody extends TeaModel {
         @NameInMap("ActivityId")
         public String activityId;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("CurrentShowContent")
+        public String currentShowContent;
 
         @NameInMap("CurrentStepId")
         public String currentStepId;
@@ -73,14 +76,11 @@ public class QueryUserGameProcessResponseBody extends TeaModel {
         @NameInMap("ExtInfo")
         public String extInfo;
 
-        @NameInMap("GameAwardRecords")
-        public String gameAwardRecords;
-
-        @NameInMap("GameCoinRecords")
-        public String gameCoinRecords;
-
         @NameInMap("GameId")
         public String gameId;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         @NameInMap("Name")
         public String name;
@@ -110,12 +110,20 @@ public class QueryUserGameProcessResponseBody extends TeaModel {
             return this.activityId;
         }
 
-        public QueryUserGameProcessResponseBodyModel setContent(String content) {
-            this.content = content;
+        public QueryUserGameProcessResponseBodyModel setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryUserGameProcessResponseBodyModel setCurrentShowContent(String currentShowContent) {
+            this.currentShowContent = currentShowContent;
+            return this;
+        }
+        public String getCurrentShowContent() {
+            return this.currentShowContent;
         }
 
         public QueryUserGameProcessResponseBodyModel setCurrentStepId(String currentStepId) {
@@ -150,28 +158,20 @@ public class QueryUserGameProcessResponseBody extends TeaModel {
             return this.extInfo;
         }
 
-        public QueryUserGameProcessResponseBodyModel setGameAwardRecords(String gameAwardRecords) {
-            this.gameAwardRecords = gameAwardRecords;
-            return this;
-        }
-        public String getGameAwardRecords() {
-            return this.gameAwardRecords;
-        }
-
-        public QueryUserGameProcessResponseBodyModel setGameCoinRecords(String gameCoinRecords) {
-            this.gameCoinRecords = gameCoinRecords;
-            return this;
-        }
-        public String getGameCoinRecords() {
-            return this.gameCoinRecords;
-        }
-
         public QueryUserGameProcessResponseBodyModel setGameId(String gameId) {
             this.gameId = gameId;
             return this;
         }
         public String getGameId() {
             return this.gameId;
+        }
+
+        public QueryUserGameProcessResponseBodyModel setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         public QueryUserGameProcessResponseBodyModel setName(String name) {

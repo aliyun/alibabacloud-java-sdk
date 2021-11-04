@@ -58,8 +58,8 @@ public class PushUserGameProcessResponseBody extends TeaModel {
         @NameInMap("ActivityId")
         public String activityId;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("CurrentShowContent")
+        public String currentShowContent;
 
         @NameInMap("CurrentStepId")
         public String currentStepId;
@@ -72,12 +72,6 @@ public class PushUserGameProcessResponseBody extends TeaModel {
 
         @NameInMap("ExtInfo")
         public String extInfo;
-
-        @NameInMap("GameAwardRecords")
-        public String gameAwardRecords;
-
-        @NameInMap("GameCoinRecords")
-        public String gameCoinRecords;
 
         @NameInMap("GameId")
         public String gameId;
@@ -110,12 +104,12 @@ public class PushUserGameProcessResponseBody extends TeaModel {
             return this.activityId;
         }
 
-        public PushUserGameProcessResponseBodyModel setContent(String content) {
-            this.content = content;
+        public PushUserGameProcessResponseBodyModel setCurrentShowContent(String currentShowContent) {
+            this.currentShowContent = currentShowContent;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public String getCurrentShowContent() {
+            return this.currentShowContent;
         }
 
         public PushUserGameProcessResponseBodyModel setCurrentStepId(String currentStepId) {
@@ -148,22 +142,6 @@ public class PushUserGameProcessResponseBody extends TeaModel {
         }
         public String getExtInfo() {
             return this.extInfo;
-        }
-
-        public PushUserGameProcessResponseBodyModel setGameAwardRecords(String gameAwardRecords) {
-            this.gameAwardRecords = gameAwardRecords;
-            return this;
-        }
-        public String getGameAwardRecords() {
-            return this.gameAwardRecords;
-        }
-
-        public PushUserGameProcessResponseBodyModel setGameCoinRecords(String gameCoinRecords) {
-            this.gameCoinRecords = gameCoinRecords;
-            return this;
-        }
-        public String getGameCoinRecords() {
-            return this.gameCoinRecords;
         }
 
         public PushUserGameProcessResponseBodyModel setGameId(String gameId) {

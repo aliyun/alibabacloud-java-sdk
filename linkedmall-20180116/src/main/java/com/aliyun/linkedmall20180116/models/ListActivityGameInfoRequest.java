@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class ListUserGameProcessRequest extends TeaModel {
+public class ListActivityGameInfoRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
@@ -34,18 +34,21 @@ public class ListUserGameProcessRequest extends TeaModel {
     @NameInMap("Statuses")
     public String statuses;
 
+    @NameInMap("SubType")
+    public String subType;
+
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
     @NameInMap("Type")
     public String type;
 
-    public static ListUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListUserGameProcessRequest self = new ListUserGameProcessRequest();
+    public static ListActivityGameInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListActivityGameInfoRequest self = new ListActivityGameInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListUserGameProcessRequest setAccountType(String accountType) {
+    public ListActivityGameInfoRequest setAccountType(String accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -53,7 +56,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.accountType;
     }
 
-    public ListUserGameProcessRequest setActivityId(String activityId) {
+    public ListActivityGameInfoRequest setActivityId(String activityId) {
         this.activityId = activityId;
         return this;
     }
@@ -61,7 +64,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.activityId;
     }
 
-    public ListUserGameProcessRequest setBizId(String bizId) {
+    public ListActivityGameInfoRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -69,7 +72,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ListUserGameProcessRequest setEndTime(Long endTime) {
+    public ListActivityGameInfoRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -77,7 +80,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListUserGameProcessRequest setGameId(String gameId) {
+    public ListActivityGameInfoRequest setGameId(String gameId) {
         this.gameId = gameId;
         return this;
     }
@@ -85,7 +88,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.gameId;
     }
 
-    public ListUserGameProcessRequest setPageNumber(Integer pageNumber) {
+    public ListActivityGameInfoRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -93,7 +96,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListUserGameProcessRequest setPageSize(Integer pageSize) {
+    public ListActivityGameInfoRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -101,7 +104,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListUserGameProcessRequest setStartTime(Long startTime) {
+    public ListActivityGameInfoRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -109,7 +112,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListUserGameProcessRequest setStatus(String status) {
+    public ListActivityGameInfoRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -117,7 +120,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.status;
     }
 
-    public ListUserGameProcessRequest setStatuses(String statuses) {
+    public ListActivityGameInfoRequest setStatuses(String statuses) {
         this.statuses = statuses;
         return this;
     }
@@ -125,7 +128,15 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.statuses;
     }
 
-    public ListUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
+    public ListActivityGameInfoRequest setSubType(String subType) {
+        this.subType = subType;
+        return this;
+    }
+    public String getSubType() {
+        return this.subType;
+    }
+
+    public ListActivityGameInfoRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }
@@ -133,7 +144,7 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public ListUserGameProcessRequest setType(String type) {
+    public ListActivityGameInfoRequest setType(String type) {
         this.type = type;
         return this;
     }

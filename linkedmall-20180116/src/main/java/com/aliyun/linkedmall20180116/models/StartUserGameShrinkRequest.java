@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class StartUserGameRequest extends TeaModel {
+public class StartUserGameShrinkRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
@@ -17,7 +17,7 @@ public class StartUserGameRequest extends TeaModel {
 
     // 扩展信息
     @NameInMap("ExtInfo")
-    public java.util.Map<String, ?> extInfo;
+    public String extInfoShrink;
 
     // 玩法ID
     @NameInMap("GameId")
@@ -35,12 +35,12 @@ public class StartUserGameRequest extends TeaModel {
     @NameInMap("UserApp")
     public String userApp;
 
-    public static StartUserGameRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartUserGameRequest self = new StartUserGameRequest();
+    public static StartUserGameShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartUserGameShrinkRequest self = new StartUserGameShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartUserGameRequest setAccountType(String accountType) {
+    public StartUserGameShrinkRequest setAccountType(String accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -48,7 +48,7 @@ public class StartUserGameRequest extends TeaModel {
         return this.accountType;
     }
 
-    public StartUserGameRequest setActivityId(String activityId) {
+    public StartUserGameShrinkRequest setActivityId(String activityId) {
         this.activityId = activityId;
         return this;
     }
@@ -56,7 +56,7 @@ public class StartUserGameRequest extends TeaModel {
         return this.activityId;
     }
 
-    public StartUserGameRequest setBizId(String bizId) {
+    public StartUserGameShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -64,15 +64,15 @@ public class StartUserGameRequest extends TeaModel {
         return this.bizId;
     }
 
-    public StartUserGameRequest setExtInfo(java.util.Map<String, ?> extInfo) {
-        this.extInfo = extInfo;
+    public StartUserGameShrinkRequest setExtInfoShrink(String extInfoShrink) {
+        this.extInfoShrink = extInfoShrink;
         return this;
     }
-    public java.util.Map<String, ?> getExtInfo() {
-        return this.extInfo;
+    public String getExtInfoShrink() {
+        return this.extInfoShrink;
     }
 
-    public StartUserGameRequest setGameId(String gameId) {
+    public StartUserGameShrinkRequest setGameId(String gameId) {
         this.gameId = gameId;
         return this;
     }
@@ -80,7 +80,7 @@ public class StartUserGameRequest extends TeaModel {
         return this.gameId;
     }
 
-    public StartUserGameRequest setRouteId(String routeId) {
+    public StartUserGameShrinkRequest setRouteId(String routeId) {
         this.routeId = routeId;
         return this;
     }
@@ -88,7 +88,7 @@ public class StartUserGameRequest extends TeaModel {
         return this.routeId;
     }
 
-    public StartUserGameRequest setThirdPartyUserId(String thirdPartyUserId) {
+    public StartUserGameShrinkRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }
@@ -96,7 +96,7 @@ public class StartUserGameRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public StartUserGameRequest setUserApp(String userApp) {
+    public StartUserGameShrinkRequest setUserApp(String userApp) {
         this.userApp = userApp;
         return this;
     }

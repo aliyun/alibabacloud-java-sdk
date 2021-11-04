@@ -303,6 +303,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createWithholdTradeWithOptions(request, runtime);
     }
 
+    public DeductUserPointResponse deductUserPointWithOptions(DeductUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeductUserPointShrinkRequest request = new DeductUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeductUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new DeductUserPointResponse());
+    }
+
+    public DeductUserPointResponse deductUserPoint(DeductUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deductUserPointWithOptions(request, runtime);
+    }
+
     public DeleteBizItemsResponse deleteBizItemsWithOptions(DeleteBizItemsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -355,13 +374,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeNodeWithOptions(request, runtime);
     }
 
-    public GetActivityGameInfoResponse getActivityGameInfoWithOptions(GetActivityGameInfoRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+    public FreezeUserPointResponse freezeUserPointWithOptions(FreezeUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FreezeUserPointShrinkRequest request = new FreezeUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetActivityGameInfo", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new GetActivityGameInfoResponse());
+        return TeaModel.toModel(this.doRPCRequest("FreezeUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new FreezeUserPointResponse());
+    }
+
+    public FreezeUserPointResponse freezeUserPoint(FreezeUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.freezeUserPointWithOptions(request, runtime);
+    }
+
+    public GetActivityGameInfoResponse getActivityGameInfoWithOptions(GetActivityGameInfoRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetActivityGameInfoShrinkRequest request = new GetActivityGameInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetActivityGameInfo", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GetActivityGameInfoResponse());
     }
 
     public GetActivityGameInfoResponse getActivityGameInfo(GetActivityGameInfoRequest request) throws Exception {
@@ -501,8 +544,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getWithholdSignPageUrlWithOptions(request, runtime);
     }
 
-    public GrantPromotionToUserResponse grantPromotionToUserWithOptions(GrantPromotionToUserRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GiveUserPointResponse giveUserPointWithOptions(GiveUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GiveUserPointShrinkRequest request = new GiveUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GiveUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GiveUserPointResponse());
+    }
+
+    public GiveUserPointResponse giveUserPoint(GiveUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.giveUserPointWithOptions(request, runtime);
+    }
+
+    public GrantPromotionToUserResponse grantPromotionToUserWithOptions(GrantPromotionToUserRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantPromotionToUserShrinkRequest request = new GrantPromotionToUserShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
@@ -512,6 +580,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GrantPromotionToUserResponse grantPromotionToUser(GrantPromotionToUserRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.grantPromotionToUserWithOptions(request, runtime);
+    }
+
+    public GrantUserPointResponse grantUserPointWithOptions(GrantUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantUserPointShrinkRequest request = new GrantUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GrantUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GrantUserPointResponse());
+    }
+
+    public GrantUserPointResponse grantUserPoint(GrantUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.grantUserPointWithOptions(request, runtime);
     }
 
     public InitApplyRefundResponse initApplyRefundWithOptions(InitApplyRefundRequest request, RuntimeOptions runtime) throws Exception {
@@ -525,6 +612,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitApplyRefundResponse initApplyRefund(InitApplyRefundRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.initApplyRefundWithOptions(request, runtime);
+    }
+
+    public ListActivityAtmosphereResponse listActivityAtmosphereWithOptions(ListActivityAtmosphereRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListActivityAtmosphere", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new ListActivityAtmosphereResponse());
+    }
+
+    public ListActivityAtmosphereResponse listActivityAtmosphere(ListActivityAtmosphereRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listActivityAtmosphereWithOptions(request, runtime);
+    }
+
+    public ListActivityGameInfoResponse listActivityGameInfoWithOptions(ListActivityGameInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListActivityGameInfo", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new ListActivityGameInfoResponse());
+    }
+
+    public ListActivityGameInfoResponse listActivityGameInfo(ListActivityGameInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listActivityGameInfoWithOptions(request, runtime);
     }
 
     public ListItemActivitiesResponse listItemActivitiesWithOptions(ListItemActivitiesRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -562,6 +677,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserGameProcessResponse listUserGameProcess(ListUserGameProcessRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listUserGameProcessWithOptions(request, runtime);
+    }
+
+    public ListUserPointRecordsResponse listUserPointRecordsWithOptions(ListUserPointRecordsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListUserPointRecords", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new ListUserPointRecordsResponse());
+    }
+
+    public ListUserPointRecordsResponse listUserPointRecords(ListUserPointRecordsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listUserPointRecordsWithOptions(request, runtime);
     }
 
     public ModifyBasicAndBizItemsResponse modifyBasicAndBizItemsWithOptions(ModifyBasicAndBizItemsRequest request, RuntimeOptions runtime) throws Exception {
@@ -642,8 +771,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.notifyWithholdFundWithOptions(request, runtime);
     }
 
-    public PushUserGameProcessResponse pushUserGameProcessWithOptions(PushUserGameProcessRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public PushUserGameProcessResponse pushUserGameProcessWithOptions(PushUserGameProcessRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PushUserGameProcessShrinkRequest request = new PushUserGameProcessShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.body)) {
+            request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
@@ -1288,18 +1427,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryUpcomingMoviesWithOptions(request, runtime);
     }
 
-    public QueryUserGameProcessResponse queryUserGameProcessWithOptions(QueryUserGameProcessRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+    public QueryUserGameProcessResponse queryUserGameProcessWithOptions(QueryUserGameProcessRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryUserGameProcessShrinkRequest request = new QueryUserGameProcessShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("QueryUserGameProcess", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new QueryUserGameProcessResponse());
+        return TeaModel.toModel(this.doRPCRequest("QueryUserGameProcess", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new QueryUserGameProcessResponse());
     }
 
     public QueryUserGameProcessResponse queryUserGameProcess(QueryUserGameProcessRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryUserGameProcessWithOptions(request, runtime);
+    }
+
+    public QueryUserPointResponse queryUserPointWithOptions(QueryUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryUserPointShrinkRequest request = new QueryUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryUserPoint", "2018-01-16", "HTTPS", "GET", "AK", "json", req, runtime), new QueryUserPointResponse());
+    }
+
+    public QueryUserPointResponse queryUserPoint(QueryUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryUserPointWithOptions(request, runtime);
     }
 
     public QueryWithholdTradeResponse queryWithholdTradeWithOptions(QueryWithholdTradeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1339,6 +1503,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefundPointResponse refundPoint(RefundPointRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.refundPointWithOptions(request, runtime);
+    }
+
+    public RefundUserPointResponse refundUserPointWithOptions(RefundUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RefundUserPointShrinkRequest request = new RefundUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RefundUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new RefundUserPointResponse());
+    }
+
+    public RefundUserPointResponse refundUserPoint(RefundUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.refundUserPointWithOptions(request, runtime);
     }
 
     public RefuseMerchantSyncTaskResponse refuseMerchantSyncTaskWithOptions(RefuseMerchantSyncTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -1484,8 +1667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.settleOrderWithOptions(request, runtime);
     }
 
-    public StartUserGameResponse startUserGameWithOptions(StartUserGameRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public StartUserGameResponse startUserGameWithOptions(StartUserGameRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartUserGameShrinkRequest request = new StartUserGameShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
@@ -1521,6 +1710,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SyncMerchantInfoResponse syncMerchantInfo(SyncMerchantInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.syncMerchantInfoWithOptions(request, runtime);
+    }
+
+    public UnFreezeUserPointResponse unFreezeUserPointWithOptions(UnFreezeUserPointRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UnFreezeUserPointShrinkRequest request = new UnFreezeUserPointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extInfo)) {
+            request.extInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extInfo, "ExtInfo", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UnFreezeUserPoint", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new UnFreezeUserPointResponse());
+    }
+
+    public UnFreezeUserPointResponse unFreezeUserPoint(UnFreezeUserPointRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unFreezeUserPointWithOptions(request, runtime);
     }
 
     public UnsignWithholdAgreementResponse unsignWithholdAgreementWithOptions(UnsignWithholdAgreementRequest request, RuntimeOptions runtime) throws Exception {
