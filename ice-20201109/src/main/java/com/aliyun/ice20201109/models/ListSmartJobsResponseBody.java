@@ -4,6 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartJobsResponseBody extends TeaModel {
+    @NameInMap("MaxResults")
+    public String maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +17,28 @@ public class ListSmartJobsResponseBody extends TeaModel {
     @NameInMap("SmartJobList")
     public java.util.List<ListSmartJobsResponseBodySmartJobList> smartJobList;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public String maxResults;
-
     @NameInMap("TotalCount")
     public String totalCount;
 
     public static ListSmartJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSmartJobsResponseBody self = new ListSmartJobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSmartJobsResponseBody setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListSmartJobsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListSmartJobsResponseBody setRequestId(String requestId) {
@@ -39,22 +55,6 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
     public java.util.List<ListSmartJobsResponseBodySmartJobList> getSmartJobList() {
         return this.smartJobList;
-    }
-
-    public ListSmartJobsResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListSmartJobsResponseBody setMaxResults(String maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public String getMaxResults() {
-        return this.maxResults;
     }
 
     public ListSmartJobsResponseBody setTotalCount(String totalCount) {
@@ -126,109 +126,45 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobList extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("JobType")
-        public String jobType;
-
         @NameInMap("EditingConfig")
         public String editingConfig;
-
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("JobState")
-        public String jobState;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
 
         @NameInMap("InputConfig")
         public ListSmartJobsResponseBodySmartJobListInputConfig inputConfig;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("JobState")
+        public String jobState;
+
+        @NameInMap("JobType")
+        public String jobType;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         @NameInMap("OutputConfig")
         public ListSmartJobsResponseBodySmartJobListOutputConfig outputConfig;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("UserId")
+        public Long userId;
 
         public static ListSmartJobsResponseBodySmartJobList build(java.util.Map<String, ?> map) throws Exception {
             ListSmartJobsResponseBodySmartJobList self = new ListSmartJobsResponseBodySmartJobList();
             return TeaModel.build(map, self);
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setJobType(String jobType) {
-            this.jobType = jobType;
-            return this;
-        }
-        public String getJobType() {
-            return this.jobType;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setEditingConfig(String editingConfig) {
-            this.editingConfig = editingConfig;
-            return this;
-        }
-        public String getEditingConfig() {
-            return this.editingConfig;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public ListSmartJobsResponseBodySmartJobList setJobState(String jobState) {
-            this.jobState = jobState;
-            return this;
-        }
-        public String getJobState() {
-            return this.jobState;
         }
 
         public ListSmartJobsResponseBodySmartJobList setCreateTime(String createTime) {
@@ -239,12 +175,20 @@ public class ListSmartJobsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListSmartJobsResponseBodySmartJobList setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
+        public ListSmartJobsResponseBodySmartJobList setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setEditingConfig(String editingConfig) {
+            this.editingConfig = editingConfig;
+            return this;
+        }
+        public String getEditingConfig() {
+            return this.editingConfig;
         }
 
         public ListSmartJobsResponseBodySmartJobList setInputConfig(ListSmartJobsResponseBodySmartJobListInputConfig inputConfig) {
@@ -255,12 +199,68 @@ public class ListSmartJobsResponseBody extends TeaModel {
             return this.inputConfig;
         }
 
+        public ListSmartJobsResponseBodySmartJobList setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setJobState(String jobState) {
+            this.jobState = jobState;
+            return this;
+        }
+        public String getJobState() {
+            return this.jobState;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
         public ListSmartJobsResponseBodySmartJobList setOutputConfig(ListSmartJobsResponseBodySmartJobListOutputConfig outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
         public ListSmartJobsResponseBodySmartJobListOutputConfig getOutputConfig() {
             return this.outputConfig;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public ListSmartJobsResponseBodySmartJobList setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }

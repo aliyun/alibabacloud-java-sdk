@@ -4,15 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitMattingJobResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("Output")
     public String output;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("State")
     public String state;
@@ -23,14 +23,6 @@ public class SubmitMattingJobResponseBody extends TeaModel {
     public static SubmitMattingJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitMattingJobResponseBody self = new SubmitMattingJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitMattingJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitMattingJobResponseBody setJobId(String jobId) {
@@ -47,6 +39,14 @@ public class SubmitMattingJobResponseBody extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitMattingJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SubmitMattingJobResponseBody setState(String state) {

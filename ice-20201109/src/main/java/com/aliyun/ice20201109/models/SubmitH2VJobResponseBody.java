@@ -4,15 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitH2VJobResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("Output")
     public String output;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("State")
     public String state;
@@ -23,14 +23,6 @@ public class SubmitH2VJobResponseBody extends TeaModel {
     public static SubmitH2VJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitH2VJobResponseBody self = new SubmitH2VJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitH2VJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitH2VJobResponseBody setJobId(String jobId) {
@@ -47,6 +39,14 @@ public class SubmitH2VJobResponseBody extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitH2VJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SubmitH2VJobResponseBody setState(String state) {

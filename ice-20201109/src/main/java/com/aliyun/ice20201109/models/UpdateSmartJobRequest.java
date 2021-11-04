@@ -4,23 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmartJobRequest extends TeaModel {
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("FEExtend")
     public String FEExtend;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     public static UpdateSmartJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmartJobRequest self = new UpdateSmartJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSmartJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
     public UpdateSmartJobRequest setFEExtend(String FEExtend) {
@@ -29,6 +21,14 @@ public class UpdateSmartJobRequest extends TeaModel {
     }
     public String getFEExtend() {
         return this.FEExtend;
+    }
+
+    public UpdateSmartJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

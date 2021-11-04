@@ -4,14 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartJobsRequest extends TeaModel {
-    @NameInMap("Status")
-    public Long status;
+    @NameInMap("JobState")
+    public String jobState;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("JobType")
+    public String jobType;
 
     @NameInMap("MaxResults")
     public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("PageNo")
     public Long pageNo;
@@ -19,34 +22,31 @@ public class ListSmartJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("JobType")
-    public String jobType;
-
     @NameInMap("SortBy")
     public String sortBy;
 
-    @NameInMap("JobState")
-    public String jobState;
+    @NameInMap("Status")
+    public Long status;
 
     public static ListSmartJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSmartJobsRequest self = new ListSmartJobsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSmartJobsRequest setStatus(Long status) {
-        this.status = status;
+    public ListSmartJobsRequest setJobState(String jobState) {
+        this.jobState = jobState;
         return this;
     }
-    public Long getStatus() {
-        return this.status;
+    public String getJobState() {
+        return this.jobState;
     }
 
-    public ListSmartJobsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListSmartJobsRequest setJobType(String jobType) {
+        this.jobType = jobType;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getJobType() {
+        return this.jobType;
     }
 
     public ListSmartJobsRequest setMaxResults(Long maxResults) {
@@ -55,6 +55,14 @@ public class ListSmartJobsRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListSmartJobsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListSmartJobsRequest setPageNo(Long pageNo) {
@@ -73,14 +81,6 @@ public class ListSmartJobsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSmartJobsRequest setJobType(String jobType) {
-        this.jobType = jobType;
-        return this;
-    }
-    public String getJobType() {
-        return this.jobType;
-    }
-
     public ListSmartJobsRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,12 +89,12 @@ public class ListSmartJobsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListSmartJobsRequest setJobState(String jobState) {
-        this.jobState = jobState;
+    public ListSmartJobsRequest setStatus(Long status) {
+        this.status = status;
         return this;
     }
-    public String getJobState() {
-        return this.jobState;
+    public Long getStatus() {
+        return this.status;
     }
 
 }

@@ -4,27 +4,19 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetEventCallbackResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CallbackQueueName")
     public String callbackQueueName;
 
     @NameInMap("EventTypeList")
     public String eventTypeList;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetEventCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEventCallbackResponseBody self = new GetEventCallbackResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetEventCallbackResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetEventCallbackResponseBody setCallbackQueueName(String callbackQueueName) {
@@ -41,6 +33,14 @@ public class GetEventCallbackResponseBody extends TeaModel {
     }
     public String getEventTypeList() {
         return this.eventTypeList;
+    }
+
+    public GetEventCallbackResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,14 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
-    // 模板类型
-    @NameInMap("Type")
-    public String type;
-
-    // 模板状态
-    @NameInMap("Status")
-    public String status;
-
     // 创建来源
     @NameInMap("CreateSource")
     public String createSource;
@@ -24,25 +16,17 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("SortType")
     public String sortType;
 
+    // 模板状态
+    @NameInMap("Status")
+    public String status;
+
+    // 模板类型
+    @NameInMap("Type")
+    public String type;
+
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTemplatesRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public ListTemplatesRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public ListTemplatesRequest setCreateSource(String createSource) {
@@ -67,6 +51,22 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public String getSortType() {
         return this.sortType;
+    }
+
+    public ListTemplatesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListTemplatesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

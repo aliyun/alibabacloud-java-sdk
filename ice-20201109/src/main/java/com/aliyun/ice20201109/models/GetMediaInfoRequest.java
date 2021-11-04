@@ -4,11 +4,11 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaInfoRequest extends TeaModel {
-    @NameInMap("MediaId")
-    public String mediaId;
-
     @NameInMap("InputURL")
     public String inputURL;
+
+    @NameInMap("MediaId")
+    public String mediaId;
 
     @NameInMap("OutputType")
     public String outputType;
@@ -18,20 +18,20 @@ public class GetMediaInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetMediaInfoRequest setMediaId(String mediaId) {
-        this.mediaId = mediaId;
-        return this;
-    }
-    public String getMediaId() {
-        return this.mediaId;
-    }
-
     public GetMediaInfoRequest setInputURL(String inputURL) {
         this.inputURL = inputURL;
         return this;
     }
     public String getInputURL() {
         return this.inputURL;
+    }
+
+    public GetMediaInfoRequest setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
     }
 
     public GetMediaInfoRequest setOutputType(String outputType) {

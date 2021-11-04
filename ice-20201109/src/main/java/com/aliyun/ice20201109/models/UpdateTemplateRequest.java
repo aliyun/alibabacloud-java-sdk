@@ -4,14 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 模板ID
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    // 模板名称
-    @NameInMap("Name")
-    public String name;
-
     // 参见Timeline模板Config文档
     @NameInMap("Config")
     public String config;
@@ -20,37 +12,29 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    // 模板名称
+    @NameInMap("Name")
+    public String name;
+
     // 预览视频媒资id
     @NameInMap("PreviewMedia")
     public String previewMedia;
-
-    // 模板状态
-    @NameInMap("Status")
-    public String status;
 
     // 修改来源，默认OpenAPI
     @NameInMap("Source")
     public String source;
 
+    // 模板状态
+    @NameInMap("Status")
+    public String status;
+
+    // 模板ID
+    @NameInMap("TemplateId")
+    public String templateId;
+
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTemplateRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public UpdateTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public UpdateTemplateRequest setConfig(String config) {
@@ -69,12 +53,28 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.coverUrl;
     }
 
+    public UpdateTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public UpdateTemplateRequest setPreviewMedia(String previewMedia) {
         this.previewMedia = previewMedia;
         return this;
     }
     public String getPreviewMedia() {
         return this.previewMedia;
+    }
+
+    public UpdateTemplateRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public UpdateTemplateRequest setStatus(String status) {
@@ -85,12 +85,12 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.status;
     }
 
-    public UpdateTemplateRequest setSource(String source) {
-        this.source = source;
+    public UpdateTemplateRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public String getSource() {
-        return this.source;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

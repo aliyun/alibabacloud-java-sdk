@@ -4,26 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultStorageLocationRequest extends TeaModel {
-    @NameInMap("StorageType")
-    public String storageType;
-
     @NameInMap("Bucket")
     public String bucket;
 
     @NameInMap("Path")
     public String path;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     public static SetDefaultStorageLocationRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDefaultStorageLocationRequest self = new SetDefaultStorageLocationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDefaultStorageLocationRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
     }
 
     public SetDefaultStorageLocationRequest setBucket(String bucket) {
@@ -40,6 +32,14 @@ public class SetDefaultStorageLocationRequest extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public SetDefaultStorageLocationRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

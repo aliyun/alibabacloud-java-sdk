@@ -4,14 +4,11 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSubtitleProduceJobRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("EditingConfig")
     public String editingConfig;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("OutputConfig")
-    public String outputConfig;
 
     @NameInMap("InputConfig")
     public String inputConfig;
@@ -19,11 +16,14 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
     @NameInMap("IsAsync")
     public Long isAsync;
 
+    @NameInMap("OutputConfig")
+    public String outputConfig;
+
     @NameInMap("Title")
     public String title;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UserData")
     public String userData;
@@ -33,28 +33,20 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubmitSubtitleProduceJobRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public SubmitSubtitleProduceJobRequest setEditingConfig(String editingConfig) {
         this.editingConfig = editingConfig;
         return this;
     }
     public String getEditingConfig() {
         return this.editingConfig;
-    }
-
-    public SubmitSubtitleProduceJobRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public SubmitSubtitleProduceJobRequest setOutputConfig(String outputConfig) {
-        this.outputConfig = outputConfig;
-        return this;
-    }
-    public String getOutputConfig() {
-        return this.outputConfig;
     }
 
     public SubmitSubtitleProduceJobRequest setInputConfig(String inputConfig) {
@@ -73,6 +65,14 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
         return this.isAsync;
     }
 
+    public SubmitSubtitleProduceJobRequest setOutputConfig(String outputConfig) {
+        this.outputConfig = outputConfig;
+        return this;
+    }
+    public String getOutputConfig() {
+        return this.outputConfig;
+    }
+
     public SubmitSubtitleProduceJobRequest setTitle(String title) {
         this.title = title;
         return this;
@@ -81,12 +81,12 @@ public class SubmitSubtitleProduceJobRequest extends TeaModel {
         return this.title;
     }
 
-    public SubmitSubtitleProduceJobRequest setDescription(String description) {
-        this.description = description;
+    public SubmitSubtitleProduceJobRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getType() {
+        return this.type;
     }
 
     public SubmitSubtitleProduceJobRequest setUserData(String userData) {

@@ -4,21 +4,29 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitPPTCutJobRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InputFile")
     public String inputFile;
-
-    @NameInMap("UserData")
-    public String userData;
 
     @NameInMap("Title")
     public String title;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("UserData")
+    public String userData;
 
     public static SubmitPPTCutJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitPPTCutJobRequest self = new SubmitPPTCutJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitPPTCutJobRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public SubmitPPTCutJobRequest setInputFile(String inputFile) {
@@ -29,14 +37,6 @@ public class SubmitPPTCutJobRequest extends TeaModel {
         return this.inputFile;
     }
 
-    public SubmitPPTCutJobRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
     public SubmitPPTCutJobRequest setTitle(String title) {
         this.title = title;
         return this;
@@ -45,12 +45,12 @@ public class SubmitPPTCutJobRequest extends TeaModel {
         return this.title;
     }
 
-    public SubmitPPTCutJobRequest setDescription(String description) {
-        this.description = description;
+    public SubmitPPTCutJobRequest setUserData(String userData) {
+        this.userData = userData;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getUserData() {
+        return this.userData;
     }
 
 }

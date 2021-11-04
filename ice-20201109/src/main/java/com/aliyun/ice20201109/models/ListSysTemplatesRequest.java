@@ -4,13 +4,13 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSysTemplatesRequest extends TeaModel {
-    // 标记当前开始读取的位置，置空表示从头开始
-    @NameInMap("NextToken")
-    public String nextToken;
-
     // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    // 标记当前开始读取的位置，置空表示从头开始
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("Type")
     public String type;
@@ -20,20 +20,20 @@ public class ListSysTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSysTemplatesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListSysTemplatesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListSysTemplatesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListSysTemplatesRequest setType(String type) {

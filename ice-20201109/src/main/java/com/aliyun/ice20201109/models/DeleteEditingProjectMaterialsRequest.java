@@ -4,10 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
-    // 云剪辑工程ID
-    @NameInMap("ProjectId")
-    public String projectId;
-
     // 素材ID
     @NameInMap("MaterialIds")
     public String materialIds;
@@ -16,17 +12,13 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("MaterialType")
     public String materialType;
 
+    // 云剪辑工程ID
+    @NameInMap("ProjectId")
+    public String projectId;
+
     public static DeleteEditingProjectMaterialsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEditingProjectMaterialsRequest self = new DeleteEditingProjectMaterialsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteEditingProjectMaterialsRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public DeleteEditingProjectMaterialsRequest setMaterialIds(String materialIds) {
@@ -43,6 +35,14 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     }
     public String getMaterialType() {
         return this.materialType;
+    }
+
+    public DeleteEditingProjectMaterialsRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

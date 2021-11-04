@@ -4,14 +4,6 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddTemplateRequest extends TeaModel {
-    // 模板名称
-    @NameInMap("Name")
-    public String name;
-
-    // 模板类型，取值范围：Timeline
-    @NameInMap("Type")
-    public String type;
-
     // 参见Timeline模板Config文档
     @NameInMap("Config")
     public String config;
@@ -20,41 +12,33 @@ public class AddTemplateRequest extends TeaModel {
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    // 模板名称
+    @NameInMap("Name")
+    public String name;
+
     // 预览视频媒资id
     @NameInMap("PreviewMedia")
     public String previewMedia;
-
-    // 模板状态
-    @NameInMap("Status")
-    public String status;
-
-    // 模板创建来源，默认OpenAPI
-    @NameInMap("Source")
-    public String source;
 
     // 模板相关素材，模板编辑器使用
     @NameInMap("RelatedMediaids")
     public String relatedMediaids;
 
+    // 模板创建来源，默认OpenAPI
+    @NameInMap("Source")
+    public String source;
+
+    // 模板状态
+    @NameInMap("Status")
+    public String status;
+
+    // 模板类型，取值范围：Timeline
+    @NameInMap("Type")
+    public String type;
+
     public static AddTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTemplateRequest self = new AddTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddTemplateRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public AddTemplateRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public AddTemplateRequest setConfig(String config) {
@@ -73,6 +57,14 @@ public class AddTemplateRequest extends TeaModel {
         return this.coverUrl;
     }
 
+    public AddTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public AddTemplateRequest setPreviewMedia(String previewMedia) {
         this.previewMedia = previewMedia;
         return this;
@@ -81,12 +73,12 @@ public class AddTemplateRequest extends TeaModel {
         return this.previewMedia;
     }
 
-    public AddTemplateRequest setStatus(String status) {
-        this.status = status;
+    public AddTemplateRequest setRelatedMediaids(String relatedMediaids) {
+        this.relatedMediaids = relatedMediaids;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getRelatedMediaids() {
+        return this.relatedMediaids;
     }
 
     public AddTemplateRequest setSource(String source) {
@@ -97,12 +89,20 @@ public class AddTemplateRequest extends TeaModel {
         return this.source;
     }
 
-    public AddTemplateRequest setRelatedMediaids(String relatedMediaids) {
-        this.relatedMediaids = relatedMediaids;
+    public AddTemplateRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getRelatedMediaids() {
-        return this.relatedMediaids;
+    public String getStatus() {
+        return this.status;
+    }
+
+    public AddTemplateRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
