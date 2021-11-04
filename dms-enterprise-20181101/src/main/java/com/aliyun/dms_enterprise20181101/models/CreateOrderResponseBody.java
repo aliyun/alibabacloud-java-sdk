@@ -7,14 +7,14 @@ public class CreateOrderResponseBody extends TeaModel {
     @NameInMap("CreateOrderResult")
     public CreateOrderResponseBodyCreateOrderResult createOrderResult;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,14 +32,6 @@ public class CreateOrderResponseBody extends TeaModel {
         return this.createOrderResult;
     }
 
-    public CreateOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateOrderResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -54,6 +46,14 @@ public class CreateOrderResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public CreateOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateOrderResponseBody setSuccess(Boolean success) {

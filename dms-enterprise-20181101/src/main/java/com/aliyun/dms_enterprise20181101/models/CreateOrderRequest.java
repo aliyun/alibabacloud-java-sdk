@@ -4,8 +4,8 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
 
     @NameInMap("Comment")
     public String comment;
@@ -13,26 +13,26 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("PluginParam")
     public java.util.Map<String, ?> pluginParam;
 
-    @NameInMap("RelatedUserList")
-    public String relatedUserList;
-
     @NameInMap("PluginType")
     public String pluginType;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public String relatedUserList;
+
+    @NameInMap("Tid")
+    public Long tid;
 
     public static CreateOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderRequest self = new CreateOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrderRequest setTid(Long tid) {
-        this.tid = tid;
+    public CreateOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateOrderRequest setComment(String comment) {
@@ -51,14 +51,6 @@ public class CreateOrderRequest extends TeaModel {
         return this.pluginParam;
     }
 
-    public CreateOrderRequest setRelatedUserList(String relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public String getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateOrderRequest setPluginType(String pluginType) {
         this.pluginType = pluginType;
         return this;
@@ -67,12 +59,20 @@ public class CreateOrderRequest extends TeaModel {
         return this.pluginType;
     }
 
-    public CreateOrderRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateOrderRequest setRelatedUserList(String relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public String getRelatedUserList() {
+        return this.relatedUserList;
+    }
+
+    public CreateOrderRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

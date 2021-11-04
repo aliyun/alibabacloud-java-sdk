@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
+    @NameInMap("DbId")
+    public Long dbId;
+
     @NameInMap("OrderId")
     public Long orderId;
 
@@ -13,15 +16,20 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("DbId")
-    public Long dbId;
-
     @NameInMap("Tid")
     public Long tid;
 
     public static ListDataCorrectPreCheckSQLRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataCorrectPreCheckSQLRequest self = new ListDataCorrectPreCheckSQLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataCorrectPreCheckSQLRequest setDbId(Long dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public Long getDbId() {
+        return this.dbId;
     }
 
     public ListDataCorrectPreCheckSQLRequest setOrderId(Long orderId) {
@@ -46,14 +54,6 @@ public class ListDataCorrectPreCheckSQLRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListDataCorrectPreCheckSQLRequest setDbId(Long dbId) {
-        this.dbId = dbId;
-        return this;
-    }
-    public Long getDbId() {
-        return this.dbId;
     }
 
     public ListDataCorrectPreCheckSQLRequest setTid(Long tid) {

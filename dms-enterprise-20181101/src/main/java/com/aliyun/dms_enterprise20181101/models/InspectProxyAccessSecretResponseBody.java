@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class InspectProxyAccessSecretResponseBody extends TeaModel {
+    @NameInMap("AccessSecret")
+    public String accessSecret;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class InspectProxyAccessSecretResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("AccessSecret")
-    public String accessSecret;
-
     public static InspectProxyAccessSecretResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InspectProxyAccessSecretResponseBody self = new InspectProxyAccessSecretResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InspectProxyAccessSecretResponseBody setAccessSecret(String accessSecret) {
+        this.accessSecret = accessSecret;
+        return this;
+    }
+    public String getAccessSecret() {
+        return this.accessSecret;
+    }
+
+    public InspectProxyAccessSecretResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public InspectProxyAccessSecretResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public InspectProxyAccessSecretResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class InspectProxyAccessSecretResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public InspectProxyAccessSecretResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public InspectProxyAccessSecretResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public InspectProxyAccessSecretResponseBody setAccessSecret(String accessSecret) {
-        this.accessSecret = accessSecret;
-        return this;
-    }
-    public String getAccessSecret() {
-        return this.accessSecret;
     }
 
 }

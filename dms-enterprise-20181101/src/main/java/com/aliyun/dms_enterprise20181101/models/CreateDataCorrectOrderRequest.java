@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataCorrectOrderRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Param")
     public CreateDataCorrectOrderRequestParam param;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     public static CreateDataCorrectOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataCorrectOrderRequest self = new CreateDataCorrectOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDataCorrectOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateDataCorrectOrderRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateDataCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateDataCorrectOrderRequest setParam(CreateDataCorrectOrderRequestParam param) {
         this.param = param;
         return this;
@@ -48,12 +48,12 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         return this.param;
     }
 
-    public CreateDataCorrectOrderRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateDataCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
     }
 
     public CreateDataCorrectOrderRequest setTid(Long tid) {
@@ -95,8 +95,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     }
 
     public static class CreateDataCorrectOrderRequestParam extends TeaModel {
+        @NameInMap("AttachmentName")
+        public String attachmentName;
+
         @NameInMap("Classify")
         public String classify;
+
+        @NameInMap("DbItemList")
+        public java.util.List<CreateDataCorrectOrderRequestParamDbItemList> dbItemList;
 
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
@@ -104,27 +110,29 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         @NameInMap("ExecSQL")
         public String execSQL;
 
-        @NameInMap("SqlType")
-        public String sqlType;
-
-        @NameInMap("AttachmentName")
-        public String attachmentName;
+        @NameInMap("RollbackAttachmentName")
+        public String rollbackAttachmentName;
 
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
 
-        @NameInMap("RollbackAttachmentName")
-        public String rollbackAttachmentName;
-
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
 
-        @NameInMap("DbItemList")
-        public java.util.List<CreateDataCorrectOrderRequestParamDbItemList> dbItemList;
+        @NameInMap("SqlType")
+        public String sqlType;
 
         public static CreateDataCorrectOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateDataCorrectOrderRequestParam self = new CreateDataCorrectOrderRequestParam();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDataCorrectOrderRequestParam setAttachmentName(String attachmentName) {
+            this.attachmentName = attachmentName;
+            return this;
+        }
+        public String getAttachmentName() {
+            return this.attachmentName;
         }
 
         public CreateDataCorrectOrderRequestParam setClassify(String classify) {
@@ -133,6 +141,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         }
         public String getClassify() {
             return this.classify;
+        }
+
+        public CreateDataCorrectOrderRequestParam setDbItemList(java.util.List<CreateDataCorrectOrderRequestParamDbItemList> dbItemList) {
+            this.dbItemList = dbItemList;
+            return this;
+        }
+        public java.util.List<CreateDataCorrectOrderRequestParamDbItemList> getDbItemList() {
+            return this.dbItemList;
         }
 
         public CreateDataCorrectOrderRequestParam setEstimateAffectRows(Long estimateAffectRows) {
@@ -151,20 +167,12 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
             return this.execSQL;
         }
 
-        public CreateDataCorrectOrderRequestParam setSqlType(String sqlType) {
-            this.sqlType = sqlType;
+        public CreateDataCorrectOrderRequestParam setRollbackAttachmentName(String rollbackAttachmentName) {
+            this.rollbackAttachmentName = rollbackAttachmentName;
             return this;
         }
-        public String getSqlType() {
-            return this.sqlType;
-        }
-
-        public CreateDataCorrectOrderRequestParam setAttachmentName(String attachmentName) {
-            this.attachmentName = attachmentName;
-            return this;
-        }
-        public String getAttachmentName() {
-            return this.attachmentName;
+        public String getRollbackAttachmentName() {
+            return this.rollbackAttachmentName;
         }
 
         public CreateDataCorrectOrderRequestParam setRollbackSQL(String rollbackSQL) {
@@ -175,14 +183,6 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
             return this.rollbackSQL;
         }
 
-        public CreateDataCorrectOrderRequestParam setRollbackAttachmentName(String rollbackAttachmentName) {
-            this.rollbackAttachmentName = rollbackAttachmentName;
-            return this;
-        }
-        public String getRollbackAttachmentName() {
-            return this.rollbackAttachmentName;
-        }
-
         public CreateDataCorrectOrderRequestParam setRollbackSqlType(String rollbackSqlType) {
             this.rollbackSqlType = rollbackSqlType;
             return this;
@@ -191,12 +191,12 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
             return this.rollbackSqlType;
         }
 
-        public CreateDataCorrectOrderRequestParam setDbItemList(java.util.List<CreateDataCorrectOrderRequestParamDbItemList> dbItemList) {
-            this.dbItemList = dbItemList;
+        public CreateDataCorrectOrderRequestParam setSqlType(String sqlType) {
+            this.sqlType = sqlType;
             return this;
         }
-        public java.util.List<CreateDataCorrectOrderRequestParamDbItemList> getDbItemList() {
-            return this.dbItemList;
+        public String getSqlType() {
+            return this.sqlType;
         }
 
     }

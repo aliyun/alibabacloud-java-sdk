@@ -4,11 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchDatabaseRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("DbType")
+    public String dbType;
 
-    @NameInMap("SearchKey")
-    public String searchKey;
+    @NameInMap("EnvType")
+    public String envType;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,8 +16,8 @@ public class SearchDatabaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("EnvType")
-    public String envType;
+    @NameInMap("SearchKey")
+    public String searchKey;
 
     @NameInMap("SearchRange")
     public String searchRange;
@@ -25,28 +25,28 @@ public class SearchDatabaseRequest extends TeaModel {
     @NameInMap("SearchTarget")
     public String searchTarget;
 
-    @NameInMap("DbType")
-    public String dbType;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static SearchDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchDatabaseRequest self = new SearchDatabaseRequest();
         return TeaModel.build(map, self);
     }
 
-    public SearchDatabaseRequest setTid(Long tid) {
-        this.tid = tid;
+    public SearchDatabaseRequest setDbType(String dbType) {
+        this.dbType = dbType;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getDbType() {
+        return this.dbType;
     }
 
-    public SearchDatabaseRequest setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
+    public SearchDatabaseRequest setEnvType(String envType) {
+        this.envType = envType;
         return this;
     }
-    public String getSearchKey() {
-        return this.searchKey;
+    public String getEnvType() {
+        return this.envType;
     }
 
     public SearchDatabaseRequest setPageNumber(Integer pageNumber) {
@@ -65,12 +65,12 @@ public class SearchDatabaseRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchDatabaseRequest setEnvType(String envType) {
-        this.envType = envType;
+    public SearchDatabaseRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
         return this;
     }
-    public String getEnvType() {
-        return this.envType;
+    public String getSearchKey() {
+        return this.searchKey;
     }
 
     public SearchDatabaseRequest setSearchRange(String searchRange) {
@@ -89,12 +89,12 @@ public class SearchDatabaseRequest extends TeaModel {
         return this.searchTarget;
     }
 
-    public SearchDatabaseRequest setDbType(String dbType) {
-        this.dbType = dbType;
+    public SearchDatabaseRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getDbType() {
-        return this.dbType;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

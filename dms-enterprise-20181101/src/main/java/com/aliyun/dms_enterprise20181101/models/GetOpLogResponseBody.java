@@ -4,43 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetOpLogResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("OpLogDetails")
-    public GetOpLogResponseBodyOpLogDetails opLogDetails;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("OpLogDetails")
+    public GetOpLogResponseBodyOpLogDetails opLogDetails;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static GetOpLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOpLogResponseBody self = new GetOpLogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetOpLogResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public GetOpLogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetOpLogResponseBody setErrorCode(String errorCode) {
@@ -51,6 +35,14 @@ public class GetOpLogResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public GetOpLogResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public GetOpLogResponseBody setOpLogDetails(GetOpLogResponseBodyOpLogDetails opLogDetails) {
         this.opLogDetails = opLogDetails;
         return this;
@@ -59,12 +51,12 @@ public class GetOpLogResponseBody extends TeaModel {
         return this.opLogDetails;
     }
 
-    public GetOpLogResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetOpLogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetOpLogResponseBody setSuccess(Boolean success) {
@@ -75,39 +67,39 @@ public class GetOpLogResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
-        @NameInMap("Module")
-        public String module;
+    public GetOpLogResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class GetOpLogResponseBodyOpLogDetailsOpLogDetail extends TeaModel {
         @NameInMap("Database")
         public String database;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Module")
+        public String module;
 
         @NameInMap("OpContent")
         public String opContent;
 
-        @NameInMap("UserNick")
-        public String userNick;
+        @NameInMap("OpTime")
+        public String opTime;
 
         @NameInMap("OrderId")
         public Long orderId;
 
-        @NameInMap("OpTime")
-        public String opTime;
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserNick")
+        public String userNick;
 
         public static GetOpLogResponseBodyOpLogDetailsOpLogDetail build(java.util.Map<String, ?> map) throws Exception {
             GetOpLogResponseBodyOpLogDetailsOpLogDetail self = new GetOpLogResponseBodyOpLogDetailsOpLogDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setModule(String module) {
-            this.module = module;
-            return this;
-        }
-        public String getModule() {
-            return this.module;
         }
 
         public GetOpLogResponseBodyOpLogDetailsOpLogDetail setDatabase(String database) {
@@ -118,12 +110,12 @@ public class GetOpLogResponseBody extends TeaModel {
             return this.database;
         }
 
-        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserId(String userId) {
-            this.userId = userId;
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setModule(String module) {
+            this.module = module;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getModule() {
+            return this.module;
         }
 
         public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOpContent(String opContent) {
@@ -134,12 +126,12 @@ public class GetOpLogResponseBody extends TeaModel {
             return this.opContent;
         }
 
-        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserNick(String userNick) {
-            this.userNick = userNick;
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOpTime(String opTime) {
+            this.opTime = opTime;
             return this;
         }
-        public String getUserNick() {
-            return this.userNick;
+        public String getOpTime() {
+            return this.opTime;
         }
 
         public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOrderId(Long orderId) {
@@ -150,12 +142,20 @@ public class GetOpLogResponseBody extends TeaModel {
             return this.orderId;
         }
 
-        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOpTime(String opTime) {
-            this.opTime = opTime;
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOpTime() {
-            return this.opTime;
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserNick(String userNick) {
+            this.userNick = userNick;
+            return this;
+        }
+        public String getUserNick() {
+            return this.userNick;
         }
 
     }

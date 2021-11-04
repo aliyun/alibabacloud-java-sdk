@@ -4,11 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
-    @NameInMap("OrderId")
-    public Long orderId;
-
     @NameInMap("CompareType")
     public String compareType;
+
+    @NameInMap("OrderId")
+    public Long orderId;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -24,20 +24,20 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetStructSyncJobAnalyzeResultRequest setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
     public GetStructSyncJobAnalyzeResultRequest setCompareType(String compareType) {
         this.compareType = compareType;
         return this;
     }
     public String getCompareType() {
         return this.compareType;
+    }
+
+    public GetStructSyncJobAnalyzeResultRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public GetStructSyncJobAnalyzeResultRequest setPageNumber(Long pageNumber) {

@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("SensitiveColumnsDetailList")
-    public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SensitiveColumnsDetailList")
+    public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     public static ListSensitiveColumnsDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSensitiveColumnsDetailResponseBody self = new ListSensitiveColumnsDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSensitiveColumnsDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListSensitiveColumnsDetailResponseBody setSensitiveColumnsDetailList(ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList) {
-        this.sensitiveColumnsDetailList = sensitiveColumnsDetailList;
-        return this;
-    }
-    public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList getSensitiveColumnsDetailList() {
-        return this.sensitiveColumnsDetailList;
     }
 
     public ListSensitiveColumnsDetailResponseBody setErrorCode(String errorCode) {
@@ -56,6 +40,22 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListSensitiveColumnsDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListSensitiveColumnsDetailResponseBody setSensitiveColumnsDetailList(ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList sensitiveColumnsDetailList) {
+        this.sensitiveColumnsDetailList = sensitiveColumnsDetailList;
+        return this;
+    }
+    public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailList getSensitiveColumnsDetailList() {
+        return this.sensitiveColumnsDetailList;
+    }
+
     public ListSensitiveColumnsDetailResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,23 +65,23 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail extends TeaModel {
-        @NameInMap("DbId")
-        public Long dbId;
+        @NameInMap("ColumnDescription")
+        public String columnDescription;
 
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("ColumnDescription")
-        public String columnDescription;
+        @NameInMap("ColumnType")
+        public String columnType;
 
-        @NameInMap("TableName")
-        public String tableName;
+        @NameInMap("DbId")
+        public Long dbId;
 
         @NameInMap("DbType")
         public String dbType;
 
-        @NameInMap("ColumnType")
-        public String columnType;
+        @NameInMap("EnvType")
+        public String envType;
 
         @NameInMap("Logic")
         public Boolean logic;
@@ -92,28 +92,12 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         @NameInMap("SearchName")
         public String searchName;
 
-        @NameInMap("EnvType")
-        public String envType;
+        @NameInMap("TableName")
+        public String tableName;
 
         public static ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail build(java.util.Map<String, ?> map) throws Exception {
             ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail self = new ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail();
             return TeaModel.build(map, self);
-        }
-
-        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setDbId(Long dbId) {
-            this.dbId = dbId;
-            return this;
-        }
-        public Long getDbId() {
-            return this.dbId;
-        }
-
-        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
         }
 
         public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setColumnDescription(String columnDescription) {
@@ -124,12 +108,28 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             return this.columnDescription;
         }
 
-        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setTableName(String tableName) {
-            this.tableName = tableName;
+        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setColumnName(String columnName) {
+            this.columnName = columnName;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setColumnType(String columnType) {
+            this.columnType = columnType;
+            return this;
+        }
+        public String getColumnType() {
+            return this.columnType;
+        }
+
+        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setDbId(Long dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public Long getDbId() {
+            return this.dbId;
         }
 
         public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setDbType(String dbType) {
@@ -140,12 +140,12 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             return this.dbType;
         }
 
-        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setColumnType(String columnType) {
-            this.columnType = columnType;
+        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setEnvType(String envType) {
+            this.envType = envType;
             return this;
         }
-        public String getColumnType() {
-            return this.columnType;
+        public String getEnvType() {
+            return this.envType;
         }
 
         public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setLogic(Boolean logic) {
@@ -172,12 +172,12 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
             return this.searchName;
         }
 
-        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setEnvType(String envType) {
-            this.envType = envType;
+        public ListSensitiveColumnsDetailResponseBodySensitiveColumnsDetailListSensitiveColumnsDetail setTableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
-        public String getEnvType() {
-            return this.envType;
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

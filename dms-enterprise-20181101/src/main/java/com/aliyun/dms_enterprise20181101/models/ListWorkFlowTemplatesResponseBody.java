@@ -4,14 +4,14 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListWorkFlowTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     public static ListWorkFlowTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWorkFlowTemplatesResponseBody self = new ListWorkFlowTemplatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListWorkFlowTemplatesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListWorkFlowTemplatesResponseBody setErrorCode(String errorCode) {
@@ -46,6 +38,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ListWorkFlowTemplatesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListWorkFlowTemplatesResponseBody setSuccess(Boolean success) {
@@ -68,23 +68,23 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("NodeType")
-        public String nodeType;
+        @NameInMap("CreateUserId")
+        public Long createUserId;
+
+        @NameInMap("NodeId")
+        public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
+        @NameInMap("NodeType")
+        public String nodeType;
+
         @NameInMap("Position")
         public Integer position;
 
-        @NameInMap("CreateUserId")
-        public Long createUserId;
-
         @NameInMap("TemplateId")
         public Long templateId;
-
-        @NameInMap("NodeId")
-        public Long nodeId;
 
         public static ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode build(java.util.Map<String, ?> map) throws Exception {
             ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode self = new ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode();
@@ -99,12 +99,20 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setNodeType(String nodeType) {
-            this.nodeType = nodeType;
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setCreateUserId(Long createUserId) {
+            this.createUserId = createUserId;
             return this;
         }
-        public String getNodeType() {
-            return this.nodeType;
+        public Long getCreateUserId() {
+            return this.createUserId;
+        }
+
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
         }
 
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setNodeName(String nodeName) {
@@ -115,6 +123,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.nodeName;
         }
 
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setPosition(Integer position) {
             this.position = position;
             return this;
@@ -123,28 +139,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.position;
         }
 
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setCreateUserId(Long createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public Long getCreateUserId() {
-            return this.createUserId;
-        }
-
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setTemplateId(Long templateId) {
             this.templateId = templateId;
             return this;
         }
         public Long getTemplateId() {
             return this.templateId;
-        }
-
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodesWorkflowNode setNodeId(Long nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public Long getNodeId() {
-            return this.nodeId;
         }
 
     }
@@ -169,46 +169,30 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate extends TeaModel {
-        @NameInMap("IsSystem")
-        public Integer isSystem;
-
-        @NameInMap("WorkflowNodes")
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes workflowNodes;
-
         @NameInMap("Comment")
         public String comment;
-
-        @NameInMap("Enabled")
-        public String enabled;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        @NameInMap("TemplateId")
-        public Long templateId;
 
         @NameInMap("CreateUserId")
         public Long createUserId;
 
+        @NameInMap("Enabled")
+        public String enabled;
+
+        @NameInMap("IsSystem")
+        public Integer isSystem;
+
+        @NameInMap("TemplateId")
+        public Long templateId;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("WorkflowNodes")
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes workflowNodes;
+
         public static ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate build(java.util.Map<String, ?> map) throws Exception {
             ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate self = new ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setIsSystem(Integer isSystem) {
-            this.isSystem = isSystem;
-            return this;
-        }
-        public Integer getIsSystem() {
-            return this.isSystem;
-        }
-
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setWorkflowNodes(ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes workflowNodes) {
-            this.workflowNodes = workflowNodes;
-            return this;
-        }
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes getWorkflowNodes() {
-            return this.workflowNodes;
         }
 
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setComment(String comment) {
@@ -219,6 +203,14 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.comment;
         }
 
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setCreateUserId(Long createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public Long getCreateUserId() {
+            return this.createUserId;
+        }
+
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setEnabled(String enabled) {
             this.enabled = enabled;
             return this;
@@ -227,12 +219,12 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.enabled;
         }
 
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setTemplateName(String templateName) {
-            this.templateName = templateName;
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setIsSystem(Integer isSystem) {
+            this.isSystem = isSystem;
             return this;
         }
-        public String getTemplateName() {
-            return this.templateName;
+        public Integer getIsSystem() {
+            return this.isSystem;
         }
 
         public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setTemplateId(Long templateId) {
@@ -243,12 +235,20 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setCreateUserId(Long createUserId) {
-            this.createUserId = createUserId;
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setTemplateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
-        public Long getCreateUserId() {
-            return this.createUserId;
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplate setWorkflowNodes(ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes workflowNodes) {
+            this.workflowNodes = workflowNodes;
+            return this;
+        }
+        public ListWorkFlowTemplatesResponseBodyWorkFlowTemplatesWorkFlowTemplateWorkflowNodes getWorkflowNodes() {
+            return this.workflowNodes;
         }
 
     }

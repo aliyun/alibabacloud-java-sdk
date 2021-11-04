@@ -4,26 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CloseOrderRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("CloseReason")
+    public String closeReason;
 
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("CloseReason")
-    public String closeReason;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static CloseOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CloseOrderRequest self = new CloseOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public CloseOrderRequest setTid(Long tid) {
-        this.tid = tid;
+    public CloseOrderRequest setCloseReason(String closeReason) {
+        this.closeReason = closeReason;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getCloseReason() {
+        return this.closeReason;
     }
 
     public CloseOrderRequest setOrderId(Long orderId) {
@@ -34,12 +34,12 @@ public class CloseOrderRequest extends TeaModel {
         return this.orderId;
     }
 
-    public CloseOrderRequest setCloseReason(String closeReason) {
-        this.closeReason = closeReason;
+    public CloseOrderRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getCloseReason() {
-        return this.closeReason;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

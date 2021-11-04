@@ -4,14 +4,14 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,14 +19,6 @@ public class DeleteUserResponseBody extends TeaModel {
     public static DeleteUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserResponseBody self = new DeleteUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteUserResponseBody setErrorCode(String errorCode) {
@@ -43,6 +35,14 @@ public class DeleteUserResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public DeleteUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteUserResponseBody setSuccess(Boolean success) {

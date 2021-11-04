@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
+    @NameInMap("DBTaskSQLJobDetailList")
+    public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,21 +20,36 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("DBTaskSQLJobDetailList")
-    public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
-
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static ListDBTaskSQLJobDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDBTaskSQLJobDetailResponseBody self = new ListDBTaskSQLJobDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDBTaskSQLJobDetailResponseBody setDBTaskSQLJobDetailList(java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList) {
+        this.DBTaskSQLJobDetailList = DBTaskSQLJobDetailList;
+        return this;
+    }
+    public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> getDBTaskSQLJobDetailList() {
+        return this.DBTaskSQLJobDetailList;
+    }
+
+    public ListDBTaskSQLJobDetailResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDBTaskSQLJobDetailResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDBTaskSQLJobDetailResponseBody setRequestId(String requestId) {
@@ -44,30 +68,6 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDBTaskSQLJobDetailResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDBTaskSQLJobDetailResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDBTaskSQLJobDetailResponseBody setDBTaskSQLJobDetailList(java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> DBTaskSQLJobDetailList) {
-        this.DBTaskSQLJobDetailList = DBTaskSQLJobDetailList;
-        return this;
-    }
-    public java.util.List<ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList> getDBTaskSQLJobDetailList() {
-        return this.DBTaskSQLJobDetailList;
-    }
-
     public ListDBTaskSQLJobDetailResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -77,20 +77,20 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
-        @NameInMap("JobDetailId")
-        public Long jobDetailId;
-
         @NameInMap("CurrentSql")
         public String currentSql;
+
+        @NameInMap("DbId")
+        public Long dbId;
 
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
+        @NameInMap("JobDetailId")
+        public Long jobDetailId;
+
         @NameInMap("JobId")
         public Long jobId;
-
-        @NameInMap("DbId")
-        public Long dbId;
 
         @NameInMap("Logic")
         public Boolean logic;
@@ -109,20 +109,20 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setJobDetailId(Long jobDetailId) {
-            this.jobDetailId = jobDetailId;
-            return this;
-        }
-        public Long getJobDetailId() {
-            return this.jobDetailId;
-        }
-
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setCurrentSql(String currentSql) {
             this.currentSql = currentSql;
             return this;
         }
         public String getCurrentSql() {
             return this.currentSql;
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setDbId(Long dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public Long getDbId() {
+            return this.dbId;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setExecuteCount(Long executeCount) {
@@ -133,20 +133,20 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
             return this.executeCount;
         }
 
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setJobDetailId(Long jobDetailId) {
+            this.jobDetailId = jobDetailId;
+            return this;
+        }
+        public Long getJobDetailId() {
+            return this.jobDetailId;
+        }
+
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setJobId(Long jobId) {
             this.jobId = jobId;
             return this;
         }
         public Long getJobId() {
             return this.jobId;
-        }
-
-        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setDbId(Long dbId) {
-            this.dbId = dbId;
-            return this;
-        }
-        public Long getDbId() {
-            return this.dbId;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setLogic(Boolean logic) {

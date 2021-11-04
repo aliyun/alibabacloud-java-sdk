@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProxyAccessResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("ProxyAccessId")
+    public Long proxyAccessId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class CreateProxyAccessResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ProxyAccessId")
-    public Long proxyAccessId;
-
     public static CreateProxyAccessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProxyAccessResponseBody self = new CreateProxyAccessResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProxyAccessResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateProxyAccessResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateProxyAccessResponseBody setProxyAccessId(Long proxyAccessId) {
+        this.proxyAccessId = proxyAccessId;
+        return this;
+    }
+    public Long getProxyAccessId() {
+        return this.proxyAccessId;
     }
 
     public CreateProxyAccessResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class CreateProxyAccessResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateProxyAccessResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateProxyAccessResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateProxyAccessResponseBody setProxyAccessId(Long proxyAccessId) {
-        this.proxyAccessId = proxyAccessId;
-        return this;
-    }
-    public Long getProxyAccessId() {
-        return this.proxyAccessId;
     }
 
 }

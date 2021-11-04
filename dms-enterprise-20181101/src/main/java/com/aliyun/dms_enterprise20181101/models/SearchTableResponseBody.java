@@ -4,51 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SearchTableResponseBody extends TeaModel {
-    @NameInMap("SearchTableList")
-    public SearchTableResponseBodySearchTableList searchTableList;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SearchTableList")
+    public SearchTableResponseBodySearchTableList searchTableList;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static SearchTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTableResponseBody self = new SearchTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchTableResponseBody setSearchTableList(SearchTableResponseBodySearchTableList searchTableList) {
-        this.searchTableList = searchTableList;
-        return this;
-    }
-    public SearchTableResponseBodySearchTableList getSearchTableList() {
-        return this.searchTableList;
-    }
-
-    public SearchTableResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public SearchTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SearchTableResponseBody setErrorCode(String errorCode) {
@@ -67,12 +43,36 @@ public class SearchTableResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public SearchTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SearchTableResponseBody setSearchTableList(SearchTableResponseBodySearchTableList searchTableList) {
+        this.searchTableList = searchTableList;
+        return this;
+    }
+    public SearchTableResponseBodySearchTableList getSearchTableList() {
+        return this.searchTableList;
+    }
+
     public SearchTableResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public SearchTableResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class SearchTableResponseBodySearchTableListSearchTableOwnerIdList extends TeaModel {
@@ -114,26 +114,17 @@ public class SearchTableResponseBody extends TeaModel {
     }
 
     public static class SearchTableResponseBodySearchTableListSearchTable extends TeaModel {
-        @NameInMap("DatabaseId")
-        public String databaseId;
-
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("DBSearchName")
         public String DBSearchName;
 
-        @NameInMap("Logic")
-        public Boolean logic;
-
-        @NameInMap("EnvType")
-        public String envType;
+        @NameInMap("DatabaseId")
+        public String databaseId;
 
         @NameInMap("DbName")
         public String dbName;
 
-        @NameInMap("OwnerIdList")
-        public SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList;
+        @NameInMap("DbType")
+        public String dbType;
 
         @NameInMap("Description")
         public String description;
@@ -141,43 +132,36 @@ public class SearchTableResponseBody extends TeaModel {
         @NameInMap("Encoding")
         public String encoding;
 
-        @NameInMap("DbType")
-        public String dbType;
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EnvType")
+        public String envType;
+
+        @NameInMap("Logic")
+        public Boolean logic;
+
+        @NameInMap("OwnerIdList")
+        public SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList;
 
         @NameInMap("OwnerNameList")
         public SearchTableResponseBodySearchTableListSearchTableOwnerNameList ownerNameList;
 
-        @NameInMap("TableSchemaName")
-        public String tableSchemaName;
-
         @NameInMap("TableGuid")
         public String tableGuid;
-
-        @NameInMap("Engine")
-        public String engine;
 
         @NameInMap("TableId")
         public String tableId;
 
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("TableSchemaName")
+        public String tableSchemaName;
+
         public static SearchTableResponseBodySearchTableListSearchTable build(java.util.Map<String, ?> map) throws Exception {
             SearchTableResponseBodySearchTableListSearchTable self = new SearchTableResponseBodySearchTableListSearchTable();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTableResponseBodySearchTableListSearchTable setDatabaseId(String databaseId) {
-            this.databaseId = databaseId;
-            return this;
-        }
-        public String getDatabaseId() {
-            return this.databaseId;
-        }
-
-        public SearchTableResponseBodySearchTableListSearchTable setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public SearchTableResponseBodySearchTableListSearchTable setDBSearchName(String DBSearchName) {
@@ -188,20 +172,12 @@ public class SearchTableResponseBody extends TeaModel {
             return this.DBSearchName;
         }
 
-        public SearchTableResponseBodySearchTableListSearchTable setLogic(Boolean logic) {
-            this.logic = logic;
+        public SearchTableResponseBodySearchTableListSearchTable setDatabaseId(String databaseId) {
+            this.databaseId = databaseId;
             return this;
         }
-        public Boolean getLogic() {
-            return this.logic;
-        }
-
-        public SearchTableResponseBodySearchTableListSearchTable setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
+        public String getDatabaseId() {
+            return this.databaseId;
         }
 
         public SearchTableResponseBodySearchTableListSearchTable setDbName(String dbName) {
@@ -212,12 +188,12 @@ public class SearchTableResponseBody extends TeaModel {
             return this.dbName;
         }
 
-        public SearchTableResponseBodySearchTableListSearchTable setOwnerIdList(SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList) {
-            this.ownerIdList = ownerIdList;
+        public SearchTableResponseBodySearchTableListSearchTable setDbType(String dbType) {
+            this.dbType = dbType;
             return this;
         }
-        public SearchTableResponseBodySearchTableListSearchTableOwnerIdList getOwnerIdList() {
-            return this.ownerIdList;
+        public String getDbType() {
+            return this.dbType;
         }
 
         public SearchTableResponseBodySearchTableListSearchTable setDescription(String description) {
@@ -236,12 +212,36 @@ public class SearchTableResponseBody extends TeaModel {
             return this.encoding;
         }
 
-        public SearchTableResponseBodySearchTableListSearchTable setDbType(String dbType) {
-            this.dbType = dbType;
+        public SearchTableResponseBodySearchTableListSearchTable setEngine(String engine) {
+            this.engine = engine;
             return this;
         }
-        public String getDbType() {
-            return this.dbType;
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public SearchTableResponseBodySearchTableListSearchTable setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        public SearchTableResponseBodySearchTableListSearchTable setLogic(Boolean logic) {
+            this.logic = logic;
+            return this;
+        }
+        public Boolean getLogic() {
+            return this.logic;
+        }
+
+        public SearchTableResponseBodySearchTableListSearchTable setOwnerIdList(SearchTableResponseBodySearchTableListSearchTableOwnerIdList ownerIdList) {
+            this.ownerIdList = ownerIdList;
+            return this;
+        }
+        public SearchTableResponseBodySearchTableListSearchTableOwnerIdList getOwnerIdList() {
+            return this.ownerIdList;
         }
 
         public SearchTableResponseBodySearchTableListSearchTable setOwnerNameList(SearchTableResponseBodySearchTableListSearchTableOwnerNameList ownerNameList) {
@@ -252,14 +252,6 @@ public class SearchTableResponseBody extends TeaModel {
             return this.ownerNameList;
         }
 
-        public SearchTableResponseBodySearchTableListSearchTable setTableSchemaName(String tableSchemaName) {
-            this.tableSchemaName = tableSchemaName;
-            return this;
-        }
-        public String getTableSchemaName() {
-            return this.tableSchemaName;
-        }
-
         public SearchTableResponseBodySearchTableListSearchTable setTableGuid(String tableGuid) {
             this.tableGuid = tableGuid;
             return this;
@@ -268,20 +260,28 @@ public class SearchTableResponseBody extends TeaModel {
             return this.tableGuid;
         }
 
-        public SearchTableResponseBodySearchTableListSearchTable setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
         public SearchTableResponseBodySearchTableListSearchTable setTableId(String tableId) {
             this.tableId = tableId;
             return this;
         }
         public String getTableId() {
             return this.tableId;
+        }
+
+        public SearchTableResponseBodySearchTableListSearchTable setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public SearchTableResponseBodySearchTableListSearchTable setTableSchemaName(String tableSchemaName) {
+            this.tableSchemaName = tableSchemaName;
+            return this;
+        }
+        public String getTableSchemaName() {
+            return this.tableSchemaName;
         }
 
     }

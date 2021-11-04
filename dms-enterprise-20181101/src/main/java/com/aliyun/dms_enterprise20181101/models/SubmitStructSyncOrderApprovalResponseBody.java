@@ -4,6 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +17,28 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("WorkflowInstanceId")
     public Long workflowInstanceId;
 
     public static SubmitStructSyncOrderApprovalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitStructSyncOrderApprovalResponseBody self = new SubmitStructSyncOrderApprovalResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitStructSyncOrderApprovalResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public SubmitStructSyncOrderApprovalResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public SubmitStructSyncOrderApprovalResponseBody setRequestId(String requestId) {
@@ -39,22 +55,6 @@ public class SubmitStructSyncOrderApprovalResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public SubmitStructSyncOrderApprovalResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public SubmitStructSyncOrderApprovalResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public SubmitStructSyncOrderApprovalResponseBody setWorkflowInstanceId(Long workflowInstanceId) {

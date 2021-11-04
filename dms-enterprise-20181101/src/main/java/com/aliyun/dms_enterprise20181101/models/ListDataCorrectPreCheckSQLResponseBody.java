@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("PreCheckSQLList")
+    public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("PreCheckSQLList")
-    public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList;
-
     public static ListDataCorrectPreCheckSQLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataCorrectPreCheckSQLResponseBody self = new ListDataCorrectPreCheckSQLResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataCorrectPreCheckSQLResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDataCorrectPreCheckSQLResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListDataCorrectPreCheckSQLResponseBody setPreCheckSQLList(java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList) {
+        this.preCheckSQLList = preCheckSQLList;
+        return this;
+    }
+    public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> getPreCheckSQLList() {
+        return this.preCheckSQLList;
     }
 
     public ListDataCorrectPreCheckSQLResponseBody setRequestId(String requestId) {
@@ -41,36 +65,12 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDataCorrectPreCheckSQLResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDataCorrectPreCheckSQLResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDataCorrectPreCheckSQLResponseBody setPreCheckSQLList(java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> preCheckSQLList) {
-        this.preCheckSQLList = preCheckSQLList;
-        return this;
-    }
-    public java.util.List<ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList> getPreCheckSQLList() {
-        return this.preCheckSQLList;
-    }
-
     public static class ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList extends TeaModel {
-        @NameInMap("CheckSQL")
-        public String checkSQL;
-
         @NameInMap("AffectRows")
         public Long affectRows;
+
+        @NameInMap("CheckSQL")
+        public String checkSQL;
 
         @NameInMap("DbId")
         public Long dbId;
@@ -89,20 +89,20 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList setCheckSQL(String checkSQL) {
-            this.checkSQL = checkSQL;
-            return this;
-        }
-        public String getCheckSQL() {
-            return this.checkSQL;
-        }
-
         public ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList setAffectRows(Long affectRows) {
             this.affectRows = affectRows;
             return this;
         }
         public Long getAffectRows() {
             return this.affectRows;
+        }
+
+        public ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList setCheckSQL(String checkSQL) {
+            this.checkSQL = checkSQL;
+            return this;
+        }
+        public String getCheckSQL() {
+            return this.checkSQL;
         }
 
         public ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList setDbId(Long dbId) {

@@ -4,14 +4,14 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SyncDatabaseMetaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,14 +19,6 @@ public class SyncDatabaseMetaResponseBody extends TeaModel {
     public static SyncDatabaseMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SyncDatabaseMetaResponseBody self = new SyncDatabaseMetaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SyncDatabaseMetaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SyncDatabaseMetaResponseBody setErrorCode(String errorCode) {
@@ -43,6 +35,14 @@ public class SyncDatabaseMetaResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public SyncDatabaseMetaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SyncDatabaseMetaResponseBody setSuccess(Boolean success) {

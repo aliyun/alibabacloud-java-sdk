@@ -4,20 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseUserPermssionsRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
-    @NameInMap("PermType")
-    public String permType;
-
     @NameInMap("DbId")
     public String dbId;
 
     @NameInMap("Logic")
     public Boolean logic;
-
-    @NameInMap("UserName")
-    public String userName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,25 +16,18 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PermType")
+    public String permType;
+
+    @NameInMap("Tid")
+    public Long tid;
+
+    @NameInMap("UserName")
+    public String userName;
+
     public static ListDatabaseUserPermssionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatabaseUserPermssionsRequest self = new ListDatabaseUserPermssionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDatabaseUserPermssionsRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
-    }
-
-    public ListDatabaseUserPermssionsRequest setPermType(String permType) {
-        this.permType = permType;
-        return this;
-    }
-    public String getPermType() {
-        return this.permType;
     }
 
     public ListDatabaseUserPermssionsRequest setDbId(String dbId) {
@@ -62,14 +46,6 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
         return this.logic;
     }
 
-    public ListDatabaseUserPermssionsRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
     public ListDatabaseUserPermssionsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -84,6 +60,30 @@ public class ListDatabaseUserPermssionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatabaseUserPermssionsRequest setPermType(String permType) {
+        this.permType = permType;
+        return this;
+    }
+    public String getPermType() {
+        return this.permType;
+    }
+
+    public ListDatabaseUserPermssionsRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
+    }
+
+    public ListDatabaseUserPermssionsRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

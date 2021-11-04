@@ -4,30 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetProxyResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ProxyId")
-    public Long proxyId;
-
     @NameInMap("CreatorId")
     public Long creatorId;
 
     @NameInMap("CreatorName")
     public String creatorName;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("HttpsPort")
+    public Integer httpsPort;
+
     @NameInMap("InstanceId")
     public Long instanceId;
+
+    @NameInMap("MysqlPort")
+    public Integer mysqlPort;
 
     @NameInMap("PrivateEnable")
     public Boolean privateEnable;
@@ -35,61 +31,25 @@ public class GetProxyResponseBody extends TeaModel {
     @NameInMap("PrivateHost")
     public String privateHost;
 
+    @NameInMap("ProxyId")
+    public Long proxyId;
+
     @NameInMap("PublicEnable")
     public Boolean publicEnable;
 
     @NameInMap("PublicHost")
     public String publicHost;
 
-    @NameInMap("MysqlPort")
-    public Integer mysqlPort;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("HttpsPort")
-    public Integer httpsPort;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProxyResponseBody self = new GetProxyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetProxyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetProxyResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetProxyResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetProxyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetProxyResponseBody setProxyId(Long proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public Long getProxyId() {
-        return this.proxyId;
     }
 
     public GetProxyResponseBody setCreatorId(Long creatorId) {
@@ -108,12 +68,44 @@ public class GetProxyResponseBody extends TeaModel {
         return this.creatorName;
     }
 
+    public GetProxyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetProxyResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetProxyResponseBody setHttpsPort(Integer httpsPort) {
+        this.httpsPort = httpsPort;
+        return this;
+    }
+    public Integer getHttpsPort() {
+        return this.httpsPort;
+    }
+
     public GetProxyResponseBody setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public Long getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetProxyResponseBody setMysqlPort(Integer mysqlPort) {
+        this.mysqlPort = mysqlPort;
+        return this;
+    }
+    public Integer getMysqlPort() {
+        return this.mysqlPort;
     }
 
     public GetProxyResponseBody setPrivateEnable(Boolean privateEnable) {
@@ -132,6 +124,14 @@ public class GetProxyResponseBody extends TeaModel {
         return this.privateHost;
     }
 
+    public GetProxyResponseBody setProxyId(Long proxyId) {
+        this.proxyId = proxyId;
+        return this;
+    }
+    public Long getProxyId() {
+        return this.proxyId;
+    }
+
     public GetProxyResponseBody setPublicEnable(Boolean publicEnable) {
         this.publicEnable = publicEnable;
         return this;
@@ -148,20 +148,20 @@ public class GetProxyResponseBody extends TeaModel {
         return this.publicHost;
     }
 
-    public GetProxyResponseBody setMysqlPort(Integer mysqlPort) {
-        this.mysqlPort = mysqlPort;
+    public GetProxyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getMysqlPort() {
-        return this.mysqlPort;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetProxyResponseBody setHttpsPort(Integer httpsPort) {
-        this.httpsPort = httpsPort;
+    public GetProxyResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Integer getHttpsPort() {
-        return this.httpsPort;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

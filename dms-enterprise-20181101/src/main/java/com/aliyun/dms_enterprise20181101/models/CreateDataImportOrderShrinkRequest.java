@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataImportOrderShrinkRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public String relatedUserListShrink;
 
     @NameInMap("Param")
     public String paramShrink;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public String relatedUserListShrink;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateDataImportOrderShrinkRequest extends TeaModel {
     public static CreateDataImportOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataImportOrderShrinkRequest self = new CreateDataImportOrderShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDataImportOrderShrinkRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateDataImportOrderShrinkRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateDataImportOrderShrinkRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateDataImportOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
-        this.relatedUserListShrink = relatedUserListShrink;
-        return this;
-    }
-    public String getRelatedUserListShrink() {
-        return this.relatedUserListShrink;
-    }
-
     public CreateDataImportOrderShrinkRequest setParamShrink(String paramShrink) {
         this.paramShrink = paramShrink;
         return this;
@@ -48,12 +48,12 @@ public class CreateDataImportOrderShrinkRequest extends TeaModel {
         return this.paramShrink;
     }
 
-    public CreateDataImportOrderShrinkRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateDataImportOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
+        this.relatedUserListShrink = relatedUserListShrink;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public String getRelatedUserListShrink() {
+        return this.relatedUserListShrink;
     }
 
     public CreateDataImportOrderShrinkRequest setTid(Long tid) {

@@ -4,32 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("OptimizeDetail")
     public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail optimizeDetail;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetSQLReviewOptimizeDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSQLReviewOptimizeDetailResponseBody self = new GetSQLReviewOptimizeDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSQLReviewOptimizeDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetSQLReviewOptimizeDetailResponseBody setErrorCode(String errorCode) {
@@ -48,14 +40,6 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetSQLReviewOptimizeDetailResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public GetSQLReviewOptimizeDetailResponseBody setOptimizeDetail(GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail optimizeDetail) {
         this.optimizeDetail = optimizeDetail;
         return this;
@@ -64,12 +48,28 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         return this.optimizeDetail;
     }
 
-    public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts extends TeaModel {
-        @NameInMap("OpType")
-        public String opType;
+    public GetSQLReviewOptimizeDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public GetSQLReviewOptimizeDetailResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts extends TeaModel {
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("OpType")
+        public String opType;
 
         @NameInMap("TableName")
         public String tableName;
@@ -79,20 +79,20 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts setOpType(String opType) {
-            this.opType = opType;
-            return this;
-        }
-        public String getOpType() {
-            return this.opType;
-        }
-
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts setContent(String content) {
             this.content = content;
             return this;
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts setOpType(String opType) {
+            this.opType = opType;
+            return this;
+        }
+        public String getOpType() {
+            return this.opType;
         }
 
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts setTableName(String tableName) {
@@ -106,43 +106,27 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     }
 
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults extends TeaModel {
-        @NameInMap("RuleName")
-        public String ruleName;
+        @NameInMap("Comments")
+        public String comments;
 
         @NameInMap("Feedback")
         public String feedback;
 
-        @NameInMap("Comments")
-        public String comments;
-
         @NameInMap("Messages")
         public java.util.List<String> messages;
 
-        @NameInMap("Scripts")
-        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> scripts;
+        @NameInMap("RuleName")
+        public String ruleName;
 
         @NameInMap("RuleType")
         public String ruleType;
 
+        @NameInMap("Scripts")
+        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> scripts;
+
         public static GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults build(java.util.Map<String, ?> map) throws Exception {
             GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults self = new GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults();
             return TeaModel.build(map, self);
-        }
-
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setFeedback(String feedback) {
-            this.feedback = feedback;
-            return this;
-        }
-        public String getFeedback() {
-            return this.feedback;
         }
 
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setComments(String comments) {
@@ -153,6 +137,14 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.comments;
         }
 
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setFeedback(String feedback) {
+            this.feedback = feedback;
+            return this;
+        }
+        public String getFeedback() {
+            return this.feedback;
+        }
+
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setMessages(java.util.List<String> messages) {
             this.messages = messages;
             return this;
@@ -161,12 +153,12 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.messages;
         }
 
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setScripts(java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> scripts) {
-            this.scripts = scripts;
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setRuleName(String ruleName) {
+            this.ruleName = ruleName;
             return this;
         }
-        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> getScripts() {
-            return this.scripts;
+        public String getRuleName() {
+            return this.ruleName;
         }
 
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setRuleType(String ruleType) {
@@ -177,17 +169,25 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.ruleType;
         }
 
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults setScripts(java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> scripts) {
+            this.scripts = scripts;
+            return this;
+        }
+        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts> getScripts() {
+            return this.scripts;
+        }
+
     }
 
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("Results")
-        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> results;
-
         @NameInMap("OccurError")
         public Boolean occurError;
+
+        @NameInMap("Results")
+        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> results;
 
         public static GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult build(java.util.Map<String, ?> map) throws Exception {
             GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult self = new GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult();
@@ -202,14 +202,6 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult setResults(java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> results) {
-            this.results = results;
-            return this;
-        }
-        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> getResults() {
-            return this.results;
-        }
-
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult setOccurError(Boolean occurError) {
             this.occurError = occurError;
             return this;
@@ -218,43 +210,35 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.occurError;
         }
 
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult setResults(java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> results) {
+            this.results = results;
+            return this;
+        }
+        public java.util.List<GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults> getResults() {
+            return this.results;
+        }
+
     }
 
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail extends TeaModel {
-        @NameInMap("QueryKey")
-        public String queryKey;
+        @NameInMap("DbId")
+        public Integer dbId;
 
         @NameInMap("InstanceId")
         public Integer instanceId;
 
-        @NameInMap("DbId")
-        public Integer dbId;
+        @NameInMap("QualityResult")
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult qualityResult;
+
+        @NameInMap("QueryKey")
+        public String queryKey;
 
         @NameInMap("SqlType")
         public String sqlType;
 
-        @NameInMap("QualityResult")
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult qualityResult;
-
         public static GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail build(java.util.Map<String, ?> map) throws Exception {
             GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail self = new GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setQueryKey(String queryKey) {
-            this.queryKey = queryKey;
-            return this;
-        }
-        public String getQueryKey() {
-            return this.queryKey;
-        }
-
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setInstanceId(Integer instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Integer getInstanceId() {
-            return this.instanceId;
         }
 
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setDbId(Integer dbId) {
@@ -265,12 +249,12 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             return this.dbId;
         }
 
-        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setSqlType(String sqlType) {
-            this.sqlType = sqlType;
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setInstanceId(Integer instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getSqlType() {
-            return this.sqlType;
+        public Integer getInstanceId() {
+            return this.instanceId;
         }
 
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setQualityResult(GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult qualityResult) {
@@ -279,6 +263,22 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         }
         public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult getQualityResult() {
             return this.qualityResult;
+        }
+
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setQueryKey(String queryKey) {
+            this.queryKey = queryKey;
+            return this;
+        }
+        public String getQueryKey() {
+            return this.queryKey;
+        }
+
+        public GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail setSqlType(String sqlType) {
+            this.sqlType = sqlType;
+            return this;
+        }
+        public String getSqlType() {
+            return this.sqlType;
         }
 
     }

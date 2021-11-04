@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateLogicDatabaseResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("LogicDbId")
+    public Long logicDbId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("LogicDbId")
-    public Long logicDbId;
-
     public static CreateLogicDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLogicDatabaseResponseBody self = new CreateLogicDatabaseResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLogicDatabaseResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateLogicDatabaseResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateLogicDatabaseResponseBody setLogicDbId(Long logicDbId) {
+        this.logicDbId = logicDbId;
+        return this;
+    }
+    public Long getLogicDbId() {
+        return this.logicDbId;
     }
 
     public CreateLogicDatabaseResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class CreateLogicDatabaseResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateLogicDatabaseResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateLogicDatabaseResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateLogicDatabaseResponseBody setLogicDbId(Long logicDbId) {
-        this.logicDbId = logicDbId;
-        return this;
-    }
-    public Long getLogicDbId() {
-        return this.logicDbId;
     }
 
 }

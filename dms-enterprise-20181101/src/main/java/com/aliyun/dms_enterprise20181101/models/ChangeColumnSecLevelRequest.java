@@ -4,8 +4,8 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ChangeColumnSecLevelRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("ColumnName")
+    public String columnName;
 
     @NameInMap("DbId")
     public Long dbId;
@@ -13,30 +13,30 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
     @NameInMap("IsLogic")
     public Boolean isLogic;
 
+    // 新的敏感等级
+    @NameInMap("NewLevel")
+    public String newLevel;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
     @NameInMap("TableName")
     public String tableName;
 
-    @NameInMap("ColumnName")
-    public String columnName;
-
-    // 新的敏感等级
-    @NameInMap("NewLevel")
-    public String newLevel;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static ChangeColumnSecLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeColumnSecLevelRequest self = new ChangeColumnSecLevelRequest();
         return TeaModel.build(map, self);
     }
 
-    public ChangeColumnSecLevelRequest setTid(Long tid) {
-        this.tid = tid;
+    public ChangeColumnSecLevelRequest setColumnName(String columnName) {
+        this.columnName = columnName;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getColumnName() {
+        return this.columnName;
     }
 
     public ChangeColumnSecLevelRequest setDbId(Long dbId) {
@@ -55,6 +55,14 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
         return this.isLogic;
     }
 
+    public ChangeColumnSecLevelRequest setNewLevel(String newLevel) {
+        this.newLevel = newLevel;
+        return this;
+    }
+    public String getNewLevel() {
+        return this.newLevel;
+    }
+
     public ChangeColumnSecLevelRequest setSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -71,20 +79,12 @@ public class ChangeColumnSecLevelRequest extends TeaModel {
         return this.tableName;
     }
 
-    public ChangeColumnSecLevelRequest setColumnName(String columnName) {
-        this.columnName = columnName;
+    public ChangeColumnSecLevelRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getColumnName() {
-        return this.columnName;
-    }
-
-    public ChangeColumnSecLevelRequest setNewLevel(String newLevel) {
-        this.newLevel = newLevel;
-        return this;
-    }
-    public String getNewLevel() {
-        return this.newLevel;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

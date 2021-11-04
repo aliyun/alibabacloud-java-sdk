@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
+    @NameInMap("DataCronClearTaskDetailList")
+    public java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> dataCronClearTaskDetailList;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,21 +20,36 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("DataCronClearTaskDetailList")
-    public java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> dataCronClearTaskDetailList;
-
     @NameInMap("TotalCount")
     public Long totalCount;
 
     public static GetDataCronClearTaskDetailListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDataCronClearTaskDetailListResponseBody self = new GetDataCronClearTaskDetailListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDataCronClearTaskDetailListResponseBody setDataCronClearTaskDetailList(java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> dataCronClearTaskDetailList) {
+        this.dataCronClearTaskDetailList = dataCronClearTaskDetailList;
+        return this;
+    }
+    public java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> getDataCronClearTaskDetailList() {
+        return this.dataCronClearTaskDetailList;
+    }
+
+    public GetDataCronClearTaskDetailListResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetDataCronClearTaskDetailListResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetDataCronClearTaskDetailListResponseBody setRequestId(String requestId) {
@@ -44,30 +68,6 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetDataCronClearTaskDetailListResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetDataCronClearTaskDetailListResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetDataCronClearTaskDetailListResponseBody setDataCronClearTaskDetailList(java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> dataCronClearTaskDetailList) {
-        this.dataCronClearTaskDetailList = dataCronClearTaskDetailList;
-        return this;
-    }
-    public java.util.List<GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList> getDataCronClearTaskDetailList() {
-        return this.dataCronClearTaskDetailList;
-    }
-
     public GetDataCronClearTaskDetailListResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -77,37 +77,21 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
     }
 
     public static class GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList extends TeaModel {
-        @NameInMap("DBTaskGroupId")
-        public Long DBTaskGroupId;
-
-        @NameInMap("jobStatus")
-        public String jobStatus;
-
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DBTaskGroupId")
+        public Long DBTaskGroupId;
+
+        @NameInMap("jobStatus")
+        public String jobStatus;
+
         public static GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList build(java.util.Map<String, ?> map) throws Exception {
             GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList self = new GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList();
             return TeaModel.build(map, self);
-        }
-
-        public GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList setDBTaskGroupId(Long DBTaskGroupId) {
-            this.DBTaskGroupId = DBTaskGroupId;
-            return this;
-        }
-        public Long getDBTaskGroupId() {
-            return this.DBTaskGroupId;
-        }
-
-        public GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList setJobStatus(String jobStatus) {
-            this.jobStatus = jobStatus;
-            return this;
-        }
-        public String getJobStatus() {
-            return this.jobStatus;
         }
 
         public GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList setActualAffectRows(Long actualAffectRows) {
@@ -124,6 +108,22 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList setDBTaskGroupId(Long DBTaskGroupId) {
+            this.DBTaskGroupId = DBTaskGroupId;
+            return this;
+        }
+        public Long getDBTaskGroupId() {
+            return this.DBTaskGroupId;
+        }
+
+        public GetDataCronClearTaskDetailListResponseBodyDataCronClearTaskDetailList setJobStatus(String jobStatus) {
+            this.jobStatus = jobStatus;
+            return this;
+        }
+        public String getJobStatus() {
+            return this.jobStatus;
         }
 
     }

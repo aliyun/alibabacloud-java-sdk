@@ -7,14 +7,14 @@ public class CreateProxyRequest extends TeaModel {
     @NameInMap("InstanceId")
     public Long instanceId;
 
-    @NameInMap("Username")
-    public String username;
-
     @NameInMap("Password")
     public String password;
 
     @NameInMap("Tid")
     public Long tid;
+
+    @NameInMap("Username")
+    public String username;
 
     public static CreateProxyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProxyRequest self = new CreateProxyRequest();
@@ -27,14 +27,6 @@ public class CreateProxyRequest extends TeaModel {
     }
     public Long getInstanceId() {
         return this.instanceId;
-    }
-
-    public CreateProxyRequest setUsername(String username) {
-        this.username = username;
-        return this;
-    }
-    public String getUsername() {
-        return this.username;
     }
 
     public CreateProxyRequest setPassword(String password) {
@@ -51,6 +43,14 @@ public class CreateProxyRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public CreateProxyRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
 }

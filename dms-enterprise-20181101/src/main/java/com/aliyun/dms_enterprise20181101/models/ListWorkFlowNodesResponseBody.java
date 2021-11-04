@@ -4,32 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListWorkFlowNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("WorkflowNodes")
-    public ListWorkFlowNodesResponseBodyWorkflowNodes workflowNodes;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("WorkflowNodes")
+    public ListWorkFlowNodesResponseBodyWorkflowNodes workflowNodes;
+
     public static ListWorkFlowNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWorkFlowNodesResponseBody self = new ListWorkFlowNodesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListWorkFlowNodesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListWorkFlowNodesResponseBody setErrorCode(String errorCode) {
@@ -48,12 +40,12 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListWorkFlowNodesResponseBody setWorkflowNodes(ListWorkFlowNodesResponseBodyWorkflowNodes workflowNodes) {
-        this.workflowNodes = workflowNodes;
+    public ListWorkFlowNodesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListWorkFlowNodesResponseBodyWorkflowNodes getWorkflowNodes() {
-        return this.workflowNodes;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListWorkFlowNodesResponseBody setSuccess(Boolean success) {
@@ -64,19 +56,35 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListWorkFlowNodesResponseBody setWorkflowNodes(ListWorkFlowNodesResponseBodyWorkflowNodes workflowNodes) {
+        this.workflowNodes = workflowNodes;
+        return this;
+    }
+    public ListWorkFlowNodesResponseBodyWorkflowNodes getWorkflowNodes() {
+        return this.workflowNodes;
+    }
+
     public static class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser extends TeaModel {
+        @NameInMap("NickName")
+        public String nickName;
+
         @NameInMap("RealName")
         public String realName;
 
         @NameInMap("UserId")
         public Long userId;
 
-        @NameInMap("NickName")
-        public String nickName;
-
         public static ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser build(java.util.Map<String, ?> map) throws Exception {
             ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser self = new ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser();
             return TeaModel.build(map, self);
+        }
+
+        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser setRealName(String realName) {
@@ -93,14 +101,6 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
         }
         public Long getUserId() {
             return this.userId;
-        }
-
-        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser setNickName(String nickName) {
-            this.nickName = nickName;
-            return this;
-        }
-        public String getNickName() {
-            return this.nickName;
         }
 
     }
@@ -125,62 +125,30 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
     }
 
     public static class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode extends TeaModel {
-        @NameInMap("Comment")
-        public String comment;
-
-        @NameInMap("CreateUserNickName")
-        public String createUserNickName;
-
-        @NameInMap("NodeType")
-        public String nodeType;
-
-        @NameInMap("NodeName")
-        public String nodeName;
-
         @NameInMap("AuditUsers")
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers auditUsers;
+
+        @NameInMap("Comment")
+        public String comment;
 
         @NameInMap("CreateUserId")
         public Long createUserId;
 
+        @NameInMap("CreateUserNickName")
+        public String createUserNickName;
+
         @NameInMap("NodeId")
         public Long nodeId;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("NodeType")
+        public String nodeType;
 
         public static ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode build(java.util.Map<String, ?> map) throws Exception {
             ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode self = new ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode();
             return TeaModel.build(map, self);
-        }
-
-        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
-        }
-
-        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setCreateUserNickName(String createUserNickName) {
-            this.createUserNickName = createUserNickName;
-            return this;
-        }
-        public String getCreateUserNickName() {
-            return this.createUserNickName;
-        }
-
-        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
-        }
-
-        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
         }
 
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setAuditUsers(ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsers auditUsers) {
@@ -191,6 +159,14 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             return this.auditUsers;
         }
 
+        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setCreateUserId(Long createUserId) {
             this.createUserId = createUserId;
             return this;
@@ -199,12 +175,36 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
             return this.createUserId;
         }
 
+        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setCreateUserNickName(String createUserNickName) {
+            this.createUserNickName = createUserNickName;
+            return this;
+        }
+        public String getCreateUserNickName() {
+            return this.createUserNickName;
+        }
+
         public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setNodeId(Long nodeId) {
             this.nodeId = nodeId;
             return this;
         }
         public Long getNodeId() {
             return this.nodeId;
+        }
+
+        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNode setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
     }

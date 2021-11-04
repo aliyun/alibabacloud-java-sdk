@@ -4,6 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class RegisterUserRequest extends TeaModel {
+    @NameInMap("Mobile")
+    public String mobile;
+
+    @NameInMap("RoleNames")
+    public String roleNames;
+
     @NameInMap("Tid")
     public Long tid;
 
@@ -13,15 +19,25 @@ public class RegisterUserRequest extends TeaModel {
     @NameInMap("UserNick")
     public String userNick;
 
-    @NameInMap("RoleNames")
-    public String roleNames;
-
-    @NameInMap("Mobile")
-    public String mobile;
-
     public static RegisterUserRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterUserRequest self = new RegisterUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterUserRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    public RegisterUserRequest setRoleNames(String roleNames) {
+        this.roleNames = roleNames;
+        return this;
+    }
+    public String getRoleNames() {
+        return this.roleNames;
     }
 
     public RegisterUserRequest setTid(Long tid) {
@@ -46,22 +62,6 @@ public class RegisterUserRequest extends TeaModel {
     }
     public String getUserNick() {
         return this.userNick;
-    }
-
-    public RegisterUserRequest setRoleNames(String roleNames) {
-        this.roleNames = roleNames;
-        return this;
-    }
-    public String getRoleNames() {
-        return this.roleNames;
-    }
-
-    public RegisterUserRequest setMobile(String mobile) {
-        this.mobile = mobile;
-        return this;
-    }
-    public String getMobile() {
-        return this.mobile;
     }
 
 }

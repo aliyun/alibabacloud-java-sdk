@@ -7,11 +7,11 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
-
     @NameInMap("Param")
     public CreateSQLReviewOrderRequestParam param;
+
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -29,20 +29,20 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateSQLReviewOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateSQLReviewOrderRequest setParam(CreateSQLReviewOrderRequestParam param) {
         this.param = param;
         return this;
     }
     public CreateSQLReviewOrderRequestParam getParam() {
         return this.param;
+    }
+
+    public CreateSQLReviewOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
+        return this;
+    }
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
     }
 
     public CreateSQLReviewOrderRequest setTid(Long tid) {
@@ -54,26 +54,26 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
     }
 
     public static class CreateSQLReviewOrderRequestParam extends TeaModel {
-        @NameInMap("ProjectName")
-        public String projectName;
+        @NameInMap("AttachmentKeyList")
+        public java.util.List<String> attachmentKeyList;
 
         @NameInMap("DbId")
         public Long dbId;
 
-        @NameInMap("AttachmentKeyList")
-        public java.util.List<String> attachmentKeyList;
+        @NameInMap("ProjectName")
+        public String projectName;
 
         public static CreateSQLReviewOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateSQLReviewOrderRequestParam self = new CreateSQLReviewOrderRequestParam();
             return TeaModel.build(map, self);
         }
 
-        public CreateSQLReviewOrderRequestParam setProjectName(String projectName) {
-            this.projectName = projectName;
+        public CreateSQLReviewOrderRequestParam setAttachmentKeyList(java.util.List<String> attachmentKeyList) {
+            this.attachmentKeyList = attachmentKeyList;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
+        public java.util.List<String> getAttachmentKeyList() {
+            return this.attachmentKeyList;
         }
 
         public CreateSQLReviewOrderRequestParam setDbId(Long dbId) {
@@ -84,12 +84,12 @@ public class CreateSQLReviewOrderRequest extends TeaModel {
             return this.dbId;
         }
 
-        public CreateSQLReviewOrderRequestParam setAttachmentKeyList(java.util.List<String> attachmentKeyList) {
-            this.attachmentKeyList = attachmentKeyList;
+        public CreateSQLReviewOrderRequestParam setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public java.util.List<String> getAttachmentKeyList() {
-            return this.attachmentKeyList;
+        public String getProjectName() {
+            return this.projectName;
         }
 
     }

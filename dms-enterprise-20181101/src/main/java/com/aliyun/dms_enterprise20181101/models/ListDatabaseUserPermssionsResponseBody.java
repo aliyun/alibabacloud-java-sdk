@@ -4,43 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("UserPermissions")
-    public ListDatabaseUserPermssionsResponseBodyUserPermissions userPermissions;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("UserPermissions")
+    public ListDatabaseUserPermssionsResponseBodyUserPermissions userPermissions;
+
     public static ListDatabaseUserPermssionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDatabaseUserPermssionsResponseBody self = new ListDatabaseUserPermssionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDatabaseUserPermssionsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListDatabaseUserPermssionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDatabaseUserPermssionsResponseBody setErrorCode(String errorCode) {
@@ -59,12 +43,12 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListDatabaseUserPermssionsResponseBody setUserPermissions(ListDatabaseUserPermssionsResponseBodyUserPermissions userPermissions) {
-        this.userPermissions = userPermissions;
+    public ListDatabaseUserPermssionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListDatabaseUserPermssionsResponseBodyUserPermissions getUserPermissions() {
-        return this.userPermissions;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListDatabaseUserPermssionsResponseBody setSuccess(Boolean success) {
@@ -75,28 +59,68 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListDatabaseUserPermssionsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListDatabaseUserPermssionsResponseBody setUserPermissions(ListDatabaseUserPermssionsResponseBodyUserPermissions userPermissions) {
+        this.userPermissions = userPermissions;
+        return this;
+    }
+    public ListDatabaseUserPermssionsResponseBodyUserPermissions getUserPermissions() {
+        return this.userPermissions;
+    }
+
     public static class ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
+        @NameInMap("CreateDate")
+        public String createDate;
+
+        @NameInMap("ExpireDate")
+        public String expireDate;
+
+        @NameInMap("ExtraData")
+        public String extraData;
+
         @NameInMap("OriginFrom")
         public String originFrom;
 
         @NameInMap("PermType")
         public String permType;
 
-        @NameInMap("ExpireDate")
-        public String expireDate;
-
-        @NameInMap("CreateDate")
-        public String createDate;
-
         @NameInMap("UserAccessId")
         public String userAccessId;
-
-        @NameInMap("ExtraData")
-        public String extraData;
 
         public static ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail build(java.util.Map<String, ?> map) throws Exception {
             ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail self = new ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail();
             return TeaModel.build(map, self);
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setExpireDate(String expireDate) {
+            this.expireDate = expireDate;
+            return this;
+        }
+        public String getExpireDate() {
+            return this.expireDate;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setExtraData(String extraData) {
+            this.extraData = extraData;
+            return this;
+        }
+        public String getExtraData() {
+            return this.extraData;
         }
 
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setOriginFrom(String originFrom) {
@@ -115,36 +139,12 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             return this.permType;
         }
 
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setExpireDate(String expireDate) {
-            this.expireDate = expireDate;
-            return this;
-        }
-        public String getExpireDate() {
-            return this.expireDate;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setUserAccessId(String userAccessId) {
             this.userAccessId = userAccessId;
             return this;
         }
         public String getUserAccessId() {
             return this.userAccessId;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail setExtraData(String extraData) {
-            this.extraData = extraData;
-            return this;
-        }
-        public String getExtraData() {
-            return this.extraData;
         }
 
     }
@@ -169,35 +169,14 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
     }
 
     public static class ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission extends TeaModel {
-        @NameInMap("DbId")
-        public String dbId;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("SchemaName")
-        public String schemaName;
-
-        @NameInMap("Logic")
-        public Boolean logic;
-
-        @NameInMap("UserNickName")
-        public String userNickName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("PermDetails")
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
-
-        @NameInMap("EnvType")
-        public String envType;
+        @NameInMap("Alias")
+        public String alias;
 
         @NameInMap("ColumnName")
         public String columnName;
+
+        @NameInMap("DbId")
+        public String dbId;
 
         @NameInMap("DbType")
         public String dbType;
@@ -205,90 +184,47 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         @NameInMap("DsType")
         public String dsType;
 
-        @NameInMap("TableId")
-        public String tableId;
+        @NameInMap("EnvType")
+        public String envType;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Logic")
+        public Boolean logic;
+
+        @NameInMap("PermDetails")
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
 
         @NameInMap("SearchName")
         public String searchName;
 
-        @NameInMap("Alias")
-        public String alias;
+        @NameInMap("TableId")
+        public String tableId;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserNickName")
+        public String userNickName;
 
         public static ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission build(java.util.Map<String, ?> map) throws Exception {
             ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission self = new ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission();
             return TeaModel.build(map, self);
         }
 
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setDbId(String dbId) {
-            this.dbId = dbId;
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setAlias(String alias) {
+            this.alias = alias;
             return this;
         }
-        public String getDbId() {
-            return this.dbId;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setSchemaName(String schemaName) {
-            this.schemaName = schemaName;
-            return this;
-        }
-        public String getSchemaName() {
-            return this.schemaName;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setLogic(Boolean logic) {
-            this.logic = logic;
-            return this;
-        }
-        public Boolean getLogic() {
-            return this.logic;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setUserNickName(String userNickName) {
-            this.userNickName = userNickName;
-            return this;
-        }
-        public String getUserNickName() {
-            return this.userNickName;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setPermDetails(ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails) {
-            this.permDetails = permDetails;
-            return this;
-        }
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails getPermDetails() {
-            return this.permDetails;
-        }
-
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
+        public String getAlias() {
+            return this.alias;
         }
 
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setColumnName(String columnName) {
@@ -297,6 +233,14 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
         }
         public String getColumnName() {
             return this.columnName;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setDbId(String dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public String getDbId() {
+            return this.dbId;
         }
 
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setDbType(String dbType) {
@@ -315,12 +259,44 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             return this.dsType;
         }
 
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setTableId(String tableId) {
-            this.tableId = tableId;
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setEnvType(String envType) {
+            this.envType = envType;
             return this;
         }
-        public String getTableId() {
-            return this.tableId;
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setLogic(Boolean logic) {
+            this.logic = logic;
+            return this;
+        }
+        public Boolean getLogic() {
+            return this.logic;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setPermDetails(ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails permDetails) {
+            this.permDetails = permDetails;
+            return this;
+        }
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermissionPermDetails getPermDetails() {
+            return this.permDetails;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
         }
 
         public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setSearchName(String searchName) {
@@ -331,12 +307,36 @@ public class ListDatabaseUserPermssionsResponseBody extends TeaModel {
             return this.searchName;
         }
 
-        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setAlias(String alias) {
-            this.alias = alias;
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setTableId(String tableId) {
+            this.tableId = tableId;
             return this;
         }
-        public String getAlias() {
-            return this.alias;
+        public String getTableId() {
+            return this.tableId;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListDatabaseUserPermssionsResponseBodyUserPermissionsUserPermission setUserNickName(String userNickName) {
+            this.userNickName = userNickName;
+            return this;
+        }
+        public String getUserNickName() {
+            return this.userNickName;
         }
 
     }

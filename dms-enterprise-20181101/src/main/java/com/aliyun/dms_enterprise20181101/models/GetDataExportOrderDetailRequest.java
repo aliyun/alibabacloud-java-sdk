@@ -4,23 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataExportOrderDetailRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("OrderId")
     public Long orderId;
+
+    @NameInMap("Tid")
+    public Long tid;
 
     public static GetDataExportOrderDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataExportOrderDetailRequest self = new GetDataExportOrderDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetDataExportOrderDetailRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public GetDataExportOrderDetailRequest setOrderId(Long orderId) {
@@ -29,6 +21,14 @@ public class GetDataExportOrderDetailRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetDataExportOrderDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

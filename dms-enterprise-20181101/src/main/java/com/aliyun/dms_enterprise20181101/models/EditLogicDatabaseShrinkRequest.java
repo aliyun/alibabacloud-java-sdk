@@ -7,11 +7,11 @@ public class EditLogicDatabaseShrinkRequest extends TeaModel {
     @NameInMap("Alias")
     public String alias;
 
-    @NameInMap("LogicDbId")
-    public Long logicDbId;
-
     @NameInMap("DatabaseIds")
     public String databaseIdsShrink;
+
+    @NameInMap("LogicDbId")
+    public Long logicDbId;
 
     @NameInMap("Tid")
     public Long tid;
@@ -29,20 +29,20 @@ public class EditLogicDatabaseShrinkRequest extends TeaModel {
         return this.alias;
     }
 
-    public EditLogicDatabaseShrinkRequest setLogicDbId(Long logicDbId) {
-        this.logicDbId = logicDbId;
-        return this;
-    }
-    public Long getLogicDbId() {
-        return this.logicDbId;
-    }
-
     public EditLogicDatabaseShrinkRequest setDatabaseIdsShrink(String databaseIdsShrink) {
         this.databaseIdsShrink = databaseIdsShrink;
         return this;
     }
     public String getDatabaseIdsShrink() {
         return this.databaseIdsShrink;
+    }
+
+    public EditLogicDatabaseShrinkRequest setLogicDbId(Long logicDbId) {
+        this.logicDbId = logicDbId;
+        return this;
+    }
+    public Long getLogicDbId() {
+        return this.logicDbId;
     }
 
     public EditLogicDatabaseShrinkRequest setTid(Long tid) {

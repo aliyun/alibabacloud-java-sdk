@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListIndexesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
@@ -16,20 +13,15 @@ public class ListIndexesResponseBody extends TeaModel {
     @NameInMap("IndexList")
     public ListIndexesResponseBodyIndexList indexList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     public static ListIndexesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIndexesResponseBody self = new ListIndexesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIndexesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListIndexesResponseBody setErrorCode(String errorCode) {
@@ -56,6 +48,14 @@ public class ListIndexesResponseBody extends TeaModel {
         return this.indexList;
     }
 
+    public ListIndexesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListIndexesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,6 +65,12 @@ public class ListIndexesResponseBody extends TeaModel {
     }
 
     public static class ListIndexesResponseBodyIndexListIndex extends TeaModel {
+        @NameInMap("IndexComment")
+        public String indexComment;
+
+        @NameInMap("IndexId")
+        public String indexId;
+
         @NameInMap("IndexName")
         public String indexName;
 
@@ -74,15 +80,25 @@ public class ListIndexesResponseBody extends TeaModel {
         @NameInMap("TableId")
         public String tableId;
 
-        @NameInMap("IndexId")
-        public String indexId;
-
-        @NameInMap("IndexComment")
-        public String indexComment;
-
         public static ListIndexesResponseBodyIndexListIndex build(java.util.Map<String, ?> map) throws Exception {
             ListIndexesResponseBodyIndexListIndex self = new ListIndexesResponseBodyIndexListIndex();
             return TeaModel.build(map, self);
+        }
+
+        public ListIndexesResponseBodyIndexListIndex setIndexComment(String indexComment) {
+            this.indexComment = indexComment;
+            return this;
+        }
+        public String getIndexComment() {
+            return this.indexComment;
+        }
+
+        public ListIndexesResponseBodyIndexListIndex setIndexId(String indexId) {
+            this.indexId = indexId;
+            return this;
+        }
+        public String getIndexId() {
+            return this.indexId;
         }
 
         public ListIndexesResponseBodyIndexListIndex setIndexName(String indexName) {
@@ -107,22 +123,6 @@ public class ListIndexesResponseBody extends TeaModel {
         }
         public String getTableId() {
             return this.tableId;
-        }
-
-        public ListIndexesResponseBodyIndexListIndex setIndexId(String indexId) {
-            this.indexId = indexId;
-            return this;
-        }
-        public String getIndexId() {
-            return this.indexId;
-        }
-
-        public ListIndexesResponseBodyIndexListIndex setIndexComment(String indexComment) {
-            this.indexComment = indexComment;
-            return this;
-        }
-        public String getIndexComment() {
-            return this.indexComment;
         }
 
     }

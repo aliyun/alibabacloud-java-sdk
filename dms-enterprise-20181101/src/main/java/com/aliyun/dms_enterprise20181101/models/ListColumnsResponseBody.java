@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListColumnsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ColumnList")
+    public ListColumnsResponseBodyColumnList columnList;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("ColumnList")
-    public ListColumnsResponseBodyColumnList columnList;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class ListColumnsResponseBody extends TeaModel {
     public static ListColumnsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListColumnsResponseBody self = new ListColumnsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListColumnsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListColumnsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public ListColumnsResponseBody setColumnList(ListColumnsResponseBodyColumnList columnList) {
@@ -48,12 +32,28 @@ public class ListColumnsResponseBody extends TeaModel {
         return this.columnList;
     }
 
+    public ListColumnsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public ListColumnsResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ListColumnsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListColumnsResponseBody setSuccess(Boolean success) {
@@ -65,29 +65,20 @@ public class ListColumnsResponseBody extends TeaModel {
     }
 
     public static class ListColumnsResponseBodyColumnListColumn extends TeaModel {
-        @NameInMap("ColumnType")
-        public String columnType;
-
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
         @NameInMap("ColumnId")
         public String columnId;
 
-        @NameInMap("DefaultValue")
-        public String defaultValue;
-
-        @NameInMap("Sensitive")
-        public Boolean sensitive;
-
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("SecurityLevel")
-        public String securityLevel;
+        @NameInMap("ColumnType")
+        public String columnType;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("DataLength")
+        public Long dataLength;
 
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
@@ -95,26 +86,27 @@ public class ListColumnsResponseBody extends TeaModel {
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("FunctionType")
         public String functionType;
 
         @NameInMap("Nullable")
         public Boolean nullable;
 
-        @NameInMap("DataLength")
-        public Long dataLength;
+        @NameInMap("SecurityLevel")
+        public String securityLevel;
+
+        @NameInMap("Sensitive")
+        public Boolean sensitive;
 
         public static ListColumnsResponseBodyColumnListColumn build(java.util.Map<String, ?> map) throws Exception {
             ListColumnsResponseBodyColumnListColumn self = new ListColumnsResponseBodyColumnListColumn();
             return TeaModel.build(map, self);
-        }
-
-        public ListColumnsResponseBodyColumnListColumn setColumnType(String columnType) {
-            this.columnType = columnType;
-            return this;
-        }
-        public String getColumnType() {
-            return this.columnType;
         }
 
         public ListColumnsResponseBodyColumnListColumn setAutoIncrement(Boolean autoIncrement) {
@@ -133,22 +125,6 @@ public class ListColumnsResponseBody extends TeaModel {
             return this.columnId;
         }
 
-        public ListColumnsResponseBodyColumnListColumn setDefaultValue(String defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
-        }
-        public String getDefaultValue() {
-            return this.defaultValue;
-        }
-
-        public ListColumnsResponseBodyColumnListColumn setSensitive(Boolean sensitive) {
-            this.sensitive = sensitive;
-            return this;
-        }
-        public Boolean getSensitive() {
-            return this.sensitive;
-        }
-
         public ListColumnsResponseBodyColumnListColumn setColumnName(String columnName) {
             this.columnName = columnName;
             return this;
@@ -157,20 +133,20 @@ public class ListColumnsResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListColumnsResponseBodyColumnListColumn setSecurityLevel(String securityLevel) {
-            this.securityLevel = securityLevel;
+        public ListColumnsResponseBodyColumnListColumn setColumnType(String columnType) {
+            this.columnType = columnType;
             return this;
         }
-        public String getSecurityLevel() {
-            return this.securityLevel;
+        public String getColumnType() {
+            return this.columnType;
         }
 
-        public ListColumnsResponseBodyColumnListColumn setDescription(String description) {
-            this.description = description;
+        public ListColumnsResponseBodyColumnListColumn setDataLength(Long dataLength) {
+            this.dataLength = dataLength;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public Long getDataLength() {
+            return this.dataLength;
         }
 
         public ListColumnsResponseBodyColumnListColumn setDataPrecision(Integer dataPrecision) {
@@ -189,6 +165,22 @@ public class ListColumnsResponseBody extends TeaModel {
             return this.dataScale;
         }
 
+        public ListColumnsResponseBodyColumnListColumn setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public ListColumnsResponseBodyColumnListColumn setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListColumnsResponseBodyColumnListColumn setFunctionType(String functionType) {
             this.functionType = functionType;
             return this;
@@ -205,12 +197,20 @@ public class ListColumnsResponseBody extends TeaModel {
             return this.nullable;
         }
 
-        public ListColumnsResponseBodyColumnListColumn setDataLength(Long dataLength) {
-            this.dataLength = dataLength;
+        public ListColumnsResponseBodyColumnListColumn setSecurityLevel(String securityLevel) {
+            this.securityLevel = securityLevel;
             return this;
         }
-        public Long getDataLength() {
-            return this.dataLength;
+        public String getSecurityLevel() {
+            return this.securityLevel;
+        }
+
+        public ListColumnsResponseBodyColumnListColumn setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
         }
 
     }

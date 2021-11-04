@@ -7,11 +7,11 @@ public class EditLogicDatabaseRequest extends TeaModel {
     @NameInMap("Alias")
     public String alias;
 
-    @NameInMap("LogicDbId")
-    public Long logicDbId;
-
     @NameInMap("DatabaseIds")
     public java.util.List<Long> databaseIds;
+
+    @NameInMap("LogicDbId")
+    public Long logicDbId;
 
     @NameInMap("Tid")
     public Long tid;
@@ -29,20 +29,20 @@ public class EditLogicDatabaseRequest extends TeaModel {
         return this.alias;
     }
 
-    public EditLogicDatabaseRequest setLogicDbId(Long logicDbId) {
-        this.logicDbId = logicDbId;
-        return this;
-    }
-    public Long getLogicDbId() {
-        return this.logicDbId;
-    }
-
     public EditLogicDatabaseRequest setDatabaseIds(java.util.List<Long> databaseIds) {
         this.databaseIds = databaseIds;
         return this;
     }
     public java.util.List<Long> getDatabaseIds() {
         return this.databaseIds;
+    }
+
+    public EditLogicDatabaseRequest setLogicDbId(Long logicDbId) {
+        this.logicDbId = logicDbId;
+        return this;
+    }
+    public Long getLogicDbId() {
+        return this.logicDbId;
     }
 
     public EditLogicDatabaseRequest setTid(Long tid) {

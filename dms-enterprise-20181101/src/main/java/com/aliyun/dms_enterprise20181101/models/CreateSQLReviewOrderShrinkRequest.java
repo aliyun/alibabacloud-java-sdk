@@ -7,11 +7,11 @@ public class CreateSQLReviewOrderShrinkRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("RelatedUserList")
-    public String relatedUserListShrink;
-
     @NameInMap("Param")
     public String paramShrink;
+
+    @NameInMap("RelatedUserList")
+    public String relatedUserListShrink;
 
     @NameInMap("Tid")
     public Long tid;
@@ -29,20 +29,20 @@ public class CreateSQLReviewOrderShrinkRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateSQLReviewOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
-        this.relatedUserListShrink = relatedUserListShrink;
-        return this;
-    }
-    public String getRelatedUserListShrink() {
-        return this.relatedUserListShrink;
-    }
-
     public CreateSQLReviewOrderShrinkRequest setParamShrink(String paramShrink) {
         this.paramShrink = paramShrink;
         return this;
     }
     public String getParamShrink() {
         return this.paramShrink;
+    }
+
+    public CreateSQLReviewOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
+        this.relatedUserListShrink = relatedUserListShrink;
+        return this;
+    }
+    public String getRelatedUserListShrink() {
+        return this.relatedUserListShrink;
     }
 
     public CreateSQLReviewOrderShrinkRequest setTid(Long tid) {

@@ -4,32 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("Host")
     public String host;
 
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("SchemaName")
+    public String schemaName;
+
     @NameInMap("Sid")
     public String sid;
 
-    @NameInMap("SchemaName")
-    public String schemaName;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static GetDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDatabaseRequest self = new GetDatabaseRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetDatabaseRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public GetDatabaseRequest setHost(String host) {
@@ -48,6 +40,14 @@ public class GetDatabaseRequest extends TeaModel {
         return this.port;
     }
 
+    public GetDatabaseRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
+    }
+
     public GetDatabaseRequest setSid(String sid) {
         this.sid = sid;
         return this;
@@ -56,12 +56,12 @@ public class GetDatabaseRequest extends TeaModel {
         return this.sid;
     }
 
-    public GetDatabaseRequest setSchemaName(String schemaName) {
-        this.schemaName = schemaName;
+    public GetDatabaseRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getSchemaName() {
-        return this.schemaName;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

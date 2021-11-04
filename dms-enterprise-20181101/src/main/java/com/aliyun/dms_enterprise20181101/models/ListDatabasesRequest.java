@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,17 +13,12 @@ public class ListDatabasesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static ListDatabasesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatabasesRequest self = new ListDatabasesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDatabasesRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public ListDatabasesRequest setInstanceId(String instanceId) {
@@ -51,6 +43,14 @@ public class ListDatabasesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDatabasesRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

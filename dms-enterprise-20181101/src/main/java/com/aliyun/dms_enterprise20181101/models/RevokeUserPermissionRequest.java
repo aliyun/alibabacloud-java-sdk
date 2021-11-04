@@ -4,11 +4,8 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class RevokeUserPermissionRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("DbId")
+    public String dbId;
 
     @NameInMap("DsType")
     public String dsType;
@@ -16,11 +13,11 @@ public class RevokeUserPermissionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public Long instanceId;
 
-    @NameInMap("DbId")
-    public String dbId;
-
     @NameInMap("Logic")
     public Boolean logic;
+
+    @NameInMap("PermTypes")
+    public String permTypes;
 
     @NameInMap("TableId")
     public String tableId;
@@ -28,31 +25,26 @@ public class RevokeUserPermissionRequest extends TeaModel {
     @NameInMap("TableName")
     public String tableName;
 
-    @NameInMap("PermTypes")
-    public String permTypes;
+    @NameInMap("Tid")
+    public Long tid;
 
     @NameInMap("UserAccessId")
     public String userAccessId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static RevokeUserPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         RevokeUserPermissionRequest self = new RevokeUserPermissionRequest();
         return TeaModel.build(map, self);
     }
 
-    public RevokeUserPermissionRequest setTid(Long tid) {
-        this.tid = tid;
+    public RevokeUserPermissionRequest setDbId(String dbId) {
+        this.dbId = dbId;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
-    }
-
-    public RevokeUserPermissionRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getDbId() {
+        return this.dbId;
     }
 
     public RevokeUserPermissionRequest setDsType(String dsType) {
@@ -71,20 +63,20 @@ public class RevokeUserPermissionRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public RevokeUserPermissionRequest setDbId(String dbId) {
-        this.dbId = dbId;
-        return this;
-    }
-    public String getDbId() {
-        return this.dbId;
-    }
-
     public RevokeUserPermissionRequest setLogic(Boolean logic) {
         this.logic = logic;
         return this;
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public RevokeUserPermissionRequest setPermTypes(String permTypes) {
+        this.permTypes = permTypes;
+        return this;
+    }
+    public String getPermTypes() {
+        return this.permTypes;
     }
 
     public RevokeUserPermissionRequest setTableId(String tableId) {
@@ -103,12 +95,12 @@ public class RevokeUserPermissionRequest extends TeaModel {
         return this.tableName;
     }
 
-    public RevokeUserPermissionRequest setPermTypes(String permTypes) {
-        this.permTypes = permTypes;
+    public RevokeUserPermissionRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getPermTypes() {
-        return this.permTypes;
+    public Long getTid() {
+        return this.tid;
     }
 
     public RevokeUserPermissionRequest setUserAccessId(String userAccessId) {
@@ -117,6 +109,14 @@ public class RevokeUserPermissionRequest extends TeaModel {
     }
     public String getUserAccessId() {
         return this.userAccessId;
+    }
+
+    public RevokeUserPermissionRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
