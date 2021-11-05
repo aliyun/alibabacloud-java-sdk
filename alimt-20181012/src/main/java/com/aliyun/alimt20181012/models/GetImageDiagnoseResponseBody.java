@@ -7,14 +7,14 @@ public class GetImageDiagnoseResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetImageDiagnoseResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetImageDiagnoseResponseBodyData data;
 
     public static GetImageDiagnoseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageDiagnoseResponseBody self = new GetImageDiagnoseResponseBody();
@@ -27,6 +27,14 @@ public class GetImageDiagnoseResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetImageDiagnoseResponseBody setData(GetImageDiagnoseResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetImageDiagnoseResponseBodyData getData() {
+        return this.data;
     }
 
     public GetImageDiagnoseResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetImageDiagnoseResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetImageDiagnoseResponseBody setData(GetImageDiagnoseResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetImageDiagnoseResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetImageDiagnoseResponseBodyData extends TeaModel {

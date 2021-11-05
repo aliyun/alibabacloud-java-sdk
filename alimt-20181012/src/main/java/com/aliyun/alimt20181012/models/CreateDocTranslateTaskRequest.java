@@ -4,11 +4,11 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateDocTranslateTaskRequest extends TeaModel {
-    @NameInMap("SourceLanguage")
-    public String sourceLanguage;
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
 
-    @NameInMap("TargetLanguage")
-    public String targetLanguage;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("FileUrl")
     public String fileUrl;
@@ -16,31 +16,31 @@ public class CreateDocTranslateTaskRequest extends TeaModel {
     @NameInMap("Scene")
     public String scene;
 
-    @NameInMap("CallbackUrl")
-    public String callbackUrl;
+    @NameInMap("SourceLanguage")
+    public String sourceLanguage;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("TargetLanguage")
+    public String targetLanguage;
 
     public static CreateDocTranslateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocTranslateTaskRequest self = new CreateDocTranslateTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDocTranslateTaskRequest setSourceLanguage(String sourceLanguage) {
-        this.sourceLanguage = sourceLanguage;
+    public CreateDocTranslateTaskRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
         return this;
     }
-    public String getSourceLanguage() {
-        return this.sourceLanguage;
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
-    public CreateDocTranslateTaskRequest setTargetLanguage(String targetLanguage) {
-        this.targetLanguage = targetLanguage;
+    public CreateDocTranslateTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTargetLanguage() {
-        return this.targetLanguage;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDocTranslateTaskRequest setFileUrl(String fileUrl) {
@@ -59,20 +59,20 @@ public class CreateDocTranslateTaskRequest extends TeaModel {
         return this.scene;
     }
 
-    public CreateDocTranslateTaskRequest setCallbackUrl(String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public CreateDocTranslateTaskRequest setSourceLanguage(String sourceLanguage) {
+        this.sourceLanguage = sourceLanguage;
         return this;
     }
-    public String getCallbackUrl() {
-        return this.callbackUrl;
+    public String getSourceLanguage() {
+        return this.sourceLanguage;
     }
 
-    public CreateDocTranslateTaskRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateDocTranslateTaskRequest setTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getTargetLanguage() {
+        return this.targetLanguage;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateCertificateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public TranslateCertificateResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TranslateCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TranslateCertificateResponseBody self = new TranslateCertificateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TranslateCertificateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TranslateCertificateResponseBody setData(TranslateCertificateResponseBodyData data) {
@@ -31,12 +23,20 @@ public class TranslateCertificateResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class TranslateCertificateResponseBodyDataTranslatedValues extends TeaModel {
-        @NameInMap("KeyTranslation")
-        public String keyTranslation;
+    public TranslateCertificateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class TranslateCertificateResponseBodyDataTranslatedValues extends TeaModel {
         @NameInMap("Key")
         public String key;
+
+        @NameInMap("KeyTranslation")
+        public String keyTranslation;
 
         @NameInMap("Value")
         public String value;
@@ -49,20 +49,20 @@ public class TranslateCertificateResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public TranslateCertificateResponseBodyDataTranslatedValues setKeyTranslation(String keyTranslation) {
-            this.keyTranslation = keyTranslation;
-            return this;
-        }
-        public String getKeyTranslation() {
-            return this.keyTranslation;
-        }
-
         public TranslateCertificateResponseBodyDataTranslatedValues setKey(String key) {
             this.key = key;
             return this;
         }
         public String getKey() {
             return this.key;
+        }
+
+        public TranslateCertificateResponseBodyDataTranslatedValues setKeyTranslation(String keyTranslation) {
+            this.keyTranslation = keyTranslation;
+            return this;
+        }
+        public String getKeyTranslation() {
+            return this.keyTranslation;
         }
 
         public TranslateCertificateResponseBodyDataTranslatedValues setValue(String value) {

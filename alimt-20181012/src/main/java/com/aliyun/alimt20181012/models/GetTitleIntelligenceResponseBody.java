@@ -7,14 +7,14 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetTitleIntelligenceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetTitleIntelligenceResponseBodyData data;
 
     public static GetTitleIntelligenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTitleIntelligenceResponseBody self = new GetTitleIntelligenceResponseBody();
@@ -27,6 +27,14 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetTitleIntelligenceResponseBody setData(GetTitleIntelligenceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTitleIntelligenceResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTitleIntelligenceResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetTitleIntelligenceResponseBody setData(GetTitleIntelligenceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTitleIntelligenceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetTitleIntelligenceResponseBodyData extends TeaModel {

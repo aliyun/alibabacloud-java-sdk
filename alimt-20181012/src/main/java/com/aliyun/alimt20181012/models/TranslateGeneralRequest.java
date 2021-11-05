@@ -7,17 +7,17 @@ public class TranslateGeneralRequest extends TeaModel {
     @NameInMap("FormatType")
     public String formatType;
 
+    @NameInMap("Scene")
+    public String scene;
+
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
-
-    @NameInMap("TargetLanguage")
-    public String targetLanguage;
 
     @NameInMap("SourceText")
     public String sourceText;
 
-    @NameInMap("Scene")
-    public String scene;
+    @NameInMap("TargetLanguage")
+    public String targetLanguage;
 
     public static TranslateGeneralRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateGeneralRequest self = new TranslateGeneralRequest();
@@ -32,20 +32,20 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.formatType;
     }
 
+    public TranslateGeneralRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
+    }
+
     public TranslateGeneralRequest setSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
     }
     public String getSourceLanguage() {
         return this.sourceLanguage;
-    }
-
-    public TranslateGeneralRequest setTargetLanguage(String targetLanguage) {
-        this.targetLanguage = targetLanguage;
-        return this;
-    }
-    public String getTargetLanguage() {
-        return this.targetLanguage;
     }
 
     public TranslateGeneralRequest setSourceText(String sourceText) {
@@ -56,12 +56,12 @@ public class TranslateGeneralRequest extends TeaModel {
         return this.sourceText;
     }
 
-    public TranslateGeneralRequest setScene(String scene) {
-        this.scene = scene;
+    public TranslateGeneralRequest setTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
         return this;
     }
-    public String getScene() {
-        return this.scene;
+    public String getTargetLanguage() {
+        return this.targetLanguage;
     }
 
 }

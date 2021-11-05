@@ -7,8 +7,8 @@ public class TranslateRequest extends TeaModel {
     @NameInMap("FormatType")
     public String formatType;
 
-    @NameInMap("TargetLanguage")
-    public String targetLanguage;
+    @NameInMap("Scene")
+    public String scene;
 
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
@@ -16,8 +16,8 @@ public class TranslateRequest extends TeaModel {
     @NameInMap("SourceText")
     public String sourceText;
 
-    @NameInMap("Scene")
-    public String scene;
+    @NameInMap("TargetLanguage")
+    public String targetLanguage;
 
     public static TranslateRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateRequest self = new TranslateRequest();
@@ -32,12 +32,12 @@ public class TranslateRequest extends TeaModel {
         return this.formatType;
     }
 
-    public TranslateRequest setTargetLanguage(String targetLanguage) {
-        this.targetLanguage = targetLanguage;
+    public TranslateRequest setScene(String scene) {
+        this.scene = scene;
         return this;
     }
-    public String getTargetLanguage() {
-        return this.targetLanguage;
+    public String getScene() {
+        return this.scene;
     }
 
     public TranslateRequest setSourceLanguage(String sourceLanguage) {
@@ -56,12 +56,12 @@ public class TranslateRequest extends TeaModel {
         return this.sourceText;
     }
 
-    public TranslateRequest setScene(String scene) {
-        this.scene = scene;
+    public TranslateRequest setTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
         return this;
     }
-    public String getScene() {
-        return this.scene;
+    public String getTargetLanguage() {
+        return this.targetLanguage;
     }
 
 }

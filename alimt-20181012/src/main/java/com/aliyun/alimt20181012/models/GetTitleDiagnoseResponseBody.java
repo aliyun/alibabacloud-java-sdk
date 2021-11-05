@@ -7,14 +7,14 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetTitleDiagnoseResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetTitleDiagnoseResponseBodyData data;
 
     public static GetTitleDiagnoseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTitleDiagnoseResponseBody self = new GetTitleDiagnoseResponseBody();
@@ -27,6 +27,14 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetTitleDiagnoseResponseBody setData(GetTitleDiagnoseResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTitleDiagnoseResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTitleDiagnoseResponseBody setMessage(String message) {
@@ -45,41 +53,33 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTitleDiagnoseResponseBody setData(GetTitleDiagnoseResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTitleDiagnoseResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetTitleDiagnoseResponseBodyData extends TeaModel {
-        @NameInMap("DuplicateWords")
-        public String duplicateWords;
+        @NameInMap("AllUppercaseWords")
+        public String allUppercaseWords;
 
         @NameInMap("ContainCoreClasses")
         public String containCoreClasses;
 
-        @NameInMap("WordCount")
-        public String wordCount;
+        @NameInMap("DisableWords")
+        public String disableWords;
+
+        @NameInMap("DuplicateWords")
+        public String duplicateWords;
 
         @NameInMap("LanguageQualityScore")
         public String languageQualityScore;
 
-        @NameInMap("AllUppercaseWords")
-        public String allUppercaseWords;
+        @NameInMap("NoFirstUppercaseList")
+        public String noFirstUppercaseList;
 
         @NameInMap("OverLengthLimit")
         public String overLengthLimit;
 
-        @NameInMap("DisableWords")
-        public String disableWords;
-
-        @NameInMap("NoFirstUppercaseList")
-        public String noFirstUppercaseList;
-
         @NameInMap("TotalScore")
         public String totalScore;
+
+        @NameInMap("WordCount")
+        public String wordCount;
 
         @NameInMap("WordSpelledCorrectError")
         public String wordSpelledCorrectError;
@@ -87,38 +87,6 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
         public static GetTitleDiagnoseResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTitleDiagnoseResponseBodyData self = new GetTitleDiagnoseResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetTitleDiagnoseResponseBodyData setDuplicateWords(String duplicateWords) {
-            this.duplicateWords = duplicateWords;
-            return this;
-        }
-        public String getDuplicateWords() {
-            return this.duplicateWords;
-        }
-
-        public GetTitleDiagnoseResponseBodyData setContainCoreClasses(String containCoreClasses) {
-            this.containCoreClasses = containCoreClasses;
-            return this;
-        }
-        public String getContainCoreClasses() {
-            return this.containCoreClasses;
-        }
-
-        public GetTitleDiagnoseResponseBodyData setWordCount(String wordCount) {
-            this.wordCount = wordCount;
-            return this;
-        }
-        public String getWordCount() {
-            return this.wordCount;
-        }
-
-        public GetTitleDiagnoseResponseBodyData setLanguageQualityScore(String languageQualityScore) {
-            this.languageQualityScore = languageQualityScore;
-            return this;
-        }
-        public String getLanguageQualityScore() {
-            return this.languageQualityScore;
         }
 
         public GetTitleDiagnoseResponseBodyData setAllUppercaseWords(String allUppercaseWords) {
@@ -129,12 +97,12 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
             return this.allUppercaseWords;
         }
 
-        public GetTitleDiagnoseResponseBodyData setOverLengthLimit(String overLengthLimit) {
-            this.overLengthLimit = overLengthLimit;
+        public GetTitleDiagnoseResponseBodyData setContainCoreClasses(String containCoreClasses) {
+            this.containCoreClasses = containCoreClasses;
             return this;
         }
-        public String getOverLengthLimit() {
-            return this.overLengthLimit;
+        public String getContainCoreClasses() {
+            return this.containCoreClasses;
         }
 
         public GetTitleDiagnoseResponseBodyData setDisableWords(String disableWords) {
@@ -145,6 +113,22 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
             return this.disableWords;
         }
 
+        public GetTitleDiagnoseResponseBodyData setDuplicateWords(String duplicateWords) {
+            this.duplicateWords = duplicateWords;
+            return this;
+        }
+        public String getDuplicateWords() {
+            return this.duplicateWords;
+        }
+
+        public GetTitleDiagnoseResponseBodyData setLanguageQualityScore(String languageQualityScore) {
+            this.languageQualityScore = languageQualityScore;
+            return this;
+        }
+        public String getLanguageQualityScore() {
+            return this.languageQualityScore;
+        }
+
         public GetTitleDiagnoseResponseBodyData setNoFirstUppercaseList(String noFirstUppercaseList) {
             this.noFirstUppercaseList = noFirstUppercaseList;
             return this;
@@ -153,12 +137,28 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
             return this.noFirstUppercaseList;
         }
 
+        public GetTitleDiagnoseResponseBodyData setOverLengthLimit(String overLengthLimit) {
+            this.overLengthLimit = overLengthLimit;
+            return this;
+        }
+        public String getOverLengthLimit() {
+            return this.overLengthLimit;
+        }
+
         public GetTitleDiagnoseResponseBodyData setTotalScore(String totalScore) {
             this.totalScore = totalScore;
             return this;
         }
         public String getTotalScore() {
             return this.totalScore;
+        }
+
+        public GetTitleDiagnoseResponseBodyData setWordCount(String wordCount) {
+            this.wordCount = wordCount;
+            return this;
+        }
+        public String getWordCount() {
+            return this.wordCount;
         }
 
         public GetTitleDiagnoseResponseBodyData setWordSpelledCorrectError(String wordSpelledCorrectError) {

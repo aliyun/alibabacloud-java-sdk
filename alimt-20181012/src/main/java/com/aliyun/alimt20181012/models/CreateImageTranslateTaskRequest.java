@@ -4,8 +4,11 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class CreateImageTranslateTaskRequest extends TeaModel {
-    @NameInMap("UrlList")
-    public String urlList;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Extra")
+    public String extra;
 
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
@@ -13,23 +16,28 @@ public class CreateImageTranslateTaskRequest extends TeaModel {
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
-    @NameInMap("Extra")
-    public String extra;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("UrlList")
+    public String urlList;
 
     public static CreateImageTranslateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageTranslateTaskRequest self = new CreateImageTranslateTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateImageTranslateTaskRequest setUrlList(String urlList) {
-        this.urlList = urlList;
+    public CreateImageTranslateTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getUrlList() {
-        return this.urlList;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateImageTranslateTaskRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public CreateImageTranslateTaskRequest setSourceLanguage(String sourceLanguage) {
@@ -48,20 +56,12 @@ public class CreateImageTranslateTaskRequest extends TeaModel {
         return this.targetLanguage;
     }
 
-    public CreateImageTranslateTaskRequest setExtra(String extra) {
-        this.extra = extra;
+    public CreateImageTranslateTaskRequest setUrlList(String urlList) {
+        this.urlList = urlList;
         return this;
     }
-    public String getExtra() {
-        return this.extra;
-    }
-
-    public CreateImageTranslateTaskRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getUrlList() {
+        return this.urlList;
     }
 
 }

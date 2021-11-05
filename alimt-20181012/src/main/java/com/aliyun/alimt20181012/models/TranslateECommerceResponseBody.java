@@ -7,14 +7,14 @@ public class TranslateECommerceResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public TranslateECommerceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public TranslateECommerceResponseBodyData data;
 
     public static TranslateECommerceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TranslateECommerceResponseBody self = new TranslateECommerceResponseBody();
@@ -27,6 +27,14 @@ public class TranslateECommerceResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public TranslateECommerceResponseBody setData(TranslateECommerceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TranslateECommerceResponseBodyData getData() {
+        return this.data;
     }
 
     public TranslateECommerceResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class TranslateECommerceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public TranslateECommerceResponseBody setData(TranslateECommerceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public TranslateECommerceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class TranslateECommerceResponseBodyData extends TeaModel {
