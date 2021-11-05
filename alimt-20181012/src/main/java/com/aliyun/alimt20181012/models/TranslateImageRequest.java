@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateImageRequest extends TeaModel {
+    @NameInMap("Ext")
+    public String ext;
+
     @NameInMap("Field")
     public String field;
 
@@ -22,6 +25,14 @@ public class TranslateImageRequest extends TeaModel {
     public static TranslateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateImageRequest self = new TranslateImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TranslateImageRequest setExt(String ext) {
+        this.ext = ext;
+        return this;
+    }
+    public String getExt() {
+        return this.ext;
     }
 
     public TranslateImageRequest setField(String field) {
