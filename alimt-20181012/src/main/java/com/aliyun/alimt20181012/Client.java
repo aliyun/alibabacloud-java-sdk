@@ -115,15 +115,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
         if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
             new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
@@ -375,15 +382,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
         if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
             new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
@@ -462,5 +476,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TranslateGeneralResponse translateGeneral(TranslateGeneralRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateGeneralWithOptions(request, runtime);
+    }
+
+    public TranslateImageResponse translateImageWithOptions(TranslateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("TranslateImage", "2018-10-12", "HTTPS", "POST", "AK", "json", req, runtime), new TranslateImageResponse());
+    }
+
+    public TranslateImageResponse translateImage(TranslateImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.translateImageWithOptions(request, runtime);
     }
 }

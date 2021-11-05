@@ -4,8 +4,8 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetImageTranslateRequest extends TeaModel {
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("Extra")
+    public String extra;
 
     @NameInMap("SourceLanguage")
     public String sourceLanguage;
@@ -13,20 +13,20 @@ public class GetImageTranslateRequest extends TeaModel {
     @NameInMap("TargetLanguage")
     public String targetLanguage;
 
-    @NameInMap("Extra")
-    public String extra;
+    @NameInMap("Url")
+    public String url;
 
     public static GetImageTranslateRequest build(java.util.Map<String, ?> map) throws Exception {
         GetImageTranslateRequest self = new GetImageTranslateRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetImageTranslateRequest setUrl(String url) {
-        this.url = url;
+    public GetImageTranslateRequest setExtra(String extra) {
+        this.extra = extra;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public String getExtra() {
+        return this.extra;
     }
 
     public GetImageTranslateRequest setSourceLanguage(String sourceLanguage) {
@@ -45,12 +45,12 @@ public class GetImageTranslateRequest extends TeaModel {
         return this.targetLanguage;
     }
 
-    public GetImageTranslateRequest setExtra(String extra) {
-        this.extra = extra;
+    public GetImageTranslateRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public String getExtra() {
-        return this.extra;
+    public String getUrl() {
+        return this.url;
     }
 
 }

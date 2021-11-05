@@ -7,14 +7,14 @@ public class TranslateResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public TranslateResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public TranslateResponseBodyData data;
 
     public static TranslateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TranslateResponseBody self = new TranslateResponseBody();
@@ -27,6 +27,14 @@ public class TranslateResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public TranslateResponseBody setData(TranslateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TranslateResponseBodyData getData() {
+        return this.data;
     }
 
     public TranslateResponseBody setMessage(String message) {
@@ -45,35 +53,19 @@ public class TranslateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public TranslateResponseBody setData(TranslateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public TranslateResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetImageTranslateResponseBodyData extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("Orc")
         public String orc;
 
         @NameInMap("PictureEditor")
         public String pictureEditor;
 
+        @NameInMap("Url")
+        public String url;
+
         public static GetImageTranslateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetImageTranslateResponseBodyData self = new GetImageTranslateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetImageTranslateResponseBodyData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public GetImageTranslateResponseBodyData setOrc(String orc) {
@@ -90,6 +82,14 @@ public class TranslateResponseBody extends TeaModel {
         }
         public String getPictureEditor() {
             return this.pictureEditor;
+        }
+
+        public GetImageTranslateResponseBodyData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

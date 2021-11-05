@@ -4,14 +4,14 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTranslateReportRequest extends TeaModel {
+    @NameInMap("ApiName")
+    public String apiName;
+
     @NameInMap("BeginTime")
     public String beginTime;
 
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("ApiName")
-    public String apiName;
 
     @NameInMap("Group")
     public String group;
@@ -19,6 +19,14 @@ public class GetTranslateReportRequest extends TeaModel {
     public static GetTranslateReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTranslateReportRequest self = new GetTranslateReportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetTranslateReportRequest setApiName(String apiName) {
+        this.apiName = apiName;
+        return this;
+    }
+    public String getApiName() {
+        return this.apiName;
     }
 
     public GetTranslateReportRequest setBeginTime(String beginTime) {
@@ -35,14 +43,6 @@ public class GetTranslateReportRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public GetTranslateReportRequest setApiName(String apiName) {
-        this.apiName = apiName;
-        return this;
-    }
-    public String getApiName() {
-        return this.apiName;
     }
 
     public GetTranslateReportRequest setGroup(String group) {

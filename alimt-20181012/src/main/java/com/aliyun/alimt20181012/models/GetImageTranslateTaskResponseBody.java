@@ -7,14 +7,14 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetImageTranslateTaskResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetImageTranslateTaskResponseBodyData data;
 
     public static GetImageTranslateTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageTranslateTaskResponseBody self = new GetImageTranslateTaskResponseBody();
@@ -27,6 +27,14 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetImageTranslateTaskResponseBody setData(GetImageTranslateTaskResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetImageTranslateTaskResponseBodyData getData() {
+        return this.data;
     }
 
     public GetImageTranslateTaskResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetImageTranslateTaskResponseBody setData(GetImageTranslateTaskResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetImageTranslateTaskResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetImageTranslateTaskResponseBodyData extends TeaModel {

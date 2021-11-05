@@ -8,17 +8,17 @@ public class TranslateCertificateAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageUrlObject;
 
-    @NameInMap("SourceLanguage")
-    public String sourceLanguage;
-
-    @NameInMap("TargetLanguage")
-    public String targetLanguage;
-
     @NameInMap("CertificateType")
     public String certificateType;
 
     @NameInMap("ResultType")
     public String resultType;
+
+    @NameInMap("SourceLanguage")
+    public String sourceLanguage;
+
+    @NameInMap("TargetLanguage")
+    public String targetLanguage;
 
     public static TranslateCertificateAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TranslateCertificateAdvanceRequest self = new TranslateCertificateAdvanceRequest();
@@ -31,22 +31,6 @@ public class TranslateCertificateAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageUrlObject() {
         return this.imageUrlObject;
-    }
-
-    public TranslateCertificateAdvanceRequest setSourceLanguage(String sourceLanguage) {
-        this.sourceLanguage = sourceLanguage;
-        return this;
-    }
-    public String getSourceLanguage() {
-        return this.sourceLanguage;
-    }
-
-    public TranslateCertificateAdvanceRequest setTargetLanguage(String targetLanguage) {
-        this.targetLanguage = targetLanguage;
-        return this;
-    }
-    public String getTargetLanguage() {
-        return this.targetLanguage;
     }
 
     public TranslateCertificateAdvanceRequest setCertificateType(String certificateType) {
@@ -63,6 +47,22 @@ public class TranslateCertificateAdvanceRequest extends TeaModel {
     }
     public String getResultType() {
         return this.resultType;
+    }
+
+    public TranslateCertificateAdvanceRequest setSourceLanguage(String sourceLanguage) {
+        this.sourceLanguage = sourceLanguage;
+        return this;
+    }
+    public String getSourceLanguage() {
+        return this.sourceLanguage;
+    }
+
+    public TranslateCertificateAdvanceRequest setTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
+        return this;
+    }
+    public String getTargetLanguage() {
+        return this.targetLanguage;
     }
 
 }

@@ -7,14 +7,14 @@ public class GetTitleGenerateResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetTitleGenerateResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetTitleGenerateResponseBodyData data;
 
     public static GetTitleGenerateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTitleGenerateResponseBody self = new GetTitleGenerateResponseBody();
@@ -27,6 +27,14 @@ public class GetTitleGenerateResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetTitleGenerateResponseBody setData(GetTitleGenerateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTitleGenerateResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTitleGenerateResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetTitleGenerateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetTitleGenerateResponseBody setData(GetTitleGenerateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTitleGenerateResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetTitleGenerateResponseBodyData extends TeaModel {

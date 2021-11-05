@@ -7,14 +7,14 @@ public class TranslateGeneralResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public TranslateGeneralResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public TranslateGeneralResponseBodyData data;
 
     public static TranslateGeneralResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TranslateGeneralResponseBody self = new TranslateGeneralResponseBody();
@@ -27,6 +27,14 @@ public class TranslateGeneralResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public TranslateGeneralResponseBody setData(TranslateGeneralResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TranslateGeneralResponseBodyData getData() {
+        return this.data;
     }
 
     public TranslateGeneralResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class TranslateGeneralResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public TranslateGeneralResponseBody setData(TranslateGeneralResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public TranslateGeneralResponseBodyData getData() {
-        return this.data;
     }
 
     public static class TranslateGeneralResponseBodyData extends TeaModel {

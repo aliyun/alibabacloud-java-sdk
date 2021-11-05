@@ -4,40 +4,24 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleIntelligenceRequest extends TeaModel {
-    @NameInMap("Platform")
-    public String platform;
-
-    @NameInMap("Extra")
-    public String extra;
-
     @NameInMap("CatLevelThreeId")
     public Long catLevelThreeId;
 
     @NameInMap("CatLevelTwoId")
     public Long catLevelTwoId;
 
+    @NameInMap("Extra")
+    public String extra;
+
     @NameInMap("Keywords")
     public String keywords;
+
+    @NameInMap("Platform")
+    public String platform;
 
     public static GetTitleIntelligenceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTitleIntelligenceRequest self = new GetTitleIntelligenceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetTitleIntelligenceRequest setPlatform(String platform) {
-        this.platform = platform;
-        return this;
-    }
-    public String getPlatform() {
-        return this.platform;
-    }
-
-    public GetTitleIntelligenceRequest setExtra(String extra) {
-        this.extra = extra;
-        return this;
-    }
-    public String getExtra() {
-        return this.extra;
     }
 
     public GetTitleIntelligenceRequest setCatLevelThreeId(Long catLevelThreeId) {
@@ -56,12 +40,28 @@ public class GetTitleIntelligenceRequest extends TeaModel {
         return this.catLevelTwoId;
     }
 
+    public GetTitleIntelligenceRequest setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
+    }
+
     public GetTitleIntelligenceRequest setKeywords(String keywords) {
         this.keywords = keywords;
         return this;
     }
     public String getKeywords() {
         return this.keywords;
+    }
+
+    public GetTitleIntelligenceRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
 }

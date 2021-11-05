@@ -7,14 +7,14 @@ public class GetImageTranslateResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public GetImageTranslateResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetImageTranslateResponseBodyData data;
 
     public static GetImageTranslateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageTranslateResponseBody self = new GetImageTranslateResponseBody();
@@ -27,6 +27,14 @@ public class GetImageTranslateResponseBody extends TeaModel {
     }
     public Integer getCode() {
         return this.code;
+    }
+
+    public GetImageTranslateResponseBody setData(GetImageTranslateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetImageTranslateResponseBodyData getData() {
+        return this.data;
     }
 
     public GetImageTranslateResponseBody setMessage(String message) {
@@ -45,35 +53,19 @@ public class GetImageTranslateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetImageTranslateResponseBody setData(GetImageTranslateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetImageTranslateResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetImageTranslateResponseBodyData extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("Orc")
         public String orc;
 
         @NameInMap("PictureEditor")
         public String pictureEditor;
 
+        @NameInMap("Url")
+        public String url;
+
         public static GetImageTranslateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetImageTranslateResponseBodyData self = new GetImageTranslateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetImageTranslateResponseBodyData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public GetImageTranslateResponseBodyData setOrc(String orc) {
@@ -90,6 +82,14 @@ public class GetImageTranslateResponseBody extends TeaModel {
         }
         public String getPictureEditor() {
             return this.pictureEditor;
+        }
+
+        public GetImageTranslateResponseBodyData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
