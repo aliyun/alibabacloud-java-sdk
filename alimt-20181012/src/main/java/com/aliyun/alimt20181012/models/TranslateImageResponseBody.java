@@ -57,6 +57,12 @@ public class TranslateImageResponseBody extends TeaModel {
         @NameInMap("FinalImageUrl")
         public String finalImageUrl;
 
+        @NameInMap("InPaintingUrl")
+        public String inPaintingUrl;
+
+        @NameInMap("TemplateJson")
+        public String templateJson;
+
         public static TranslateImageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TranslateImageResponseBodyData self = new TranslateImageResponseBodyData();
             return TeaModel.build(map, self);
@@ -68,6 +74,22 @@ public class TranslateImageResponseBody extends TeaModel {
         }
         public String getFinalImageUrl() {
             return this.finalImageUrl;
+        }
+
+        public TranslateImageResponseBodyData setInPaintingUrl(String inPaintingUrl) {
+            this.inPaintingUrl = inPaintingUrl;
+            return this;
+        }
+        public String getInPaintingUrl() {
+            return this.inPaintingUrl;
+        }
+
+        public TranslateImageResponseBodyData setTemplateJson(String templateJson) {
+            this.templateJson = templateJson;
+            return this;
+        }
+        public String getTemplateJson() {
+            return this.templateJson;
         }
 
     }
