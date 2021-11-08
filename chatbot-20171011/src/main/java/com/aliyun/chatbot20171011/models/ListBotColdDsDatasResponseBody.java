@@ -7,11 +7,11 @@ public class ListBotColdDsDatasResponseBody extends TeaModel {
     @NameInMap("CostTime")
     public String costTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListBotColdDsDatasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBotColdDsDatasResponseBody self = new ListBotColdDsDatasResponseBody();
@@ -26,20 +26,20 @@ public class ListBotColdDsDatasResponseBody extends TeaModel {
         return this.costTime;
     }
 
-    public ListBotColdDsDatasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListBotColdDsDatasResponseBody setDatas(java.util.List<java.util.Map<String, ?>> datas) {
         this.datas = datas;
         return this;
     }
     public java.util.List<java.util.Map<String, ?>> getDatas() {
         return this.datas;
+    }
+
+    public ListBotColdDsDatasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

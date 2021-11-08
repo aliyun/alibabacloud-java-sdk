@@ -4,21 +4,29 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class FeedbackRequest extends TeaModel {
+    @NameInMap("Feedback")
+    public String feedback;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("SessionId")
-    public String sessionId;
 
     @NameInMap("MessageId")
     public String messageId;
 
-    @NameInMap("Feedback")
-    public String feedback;
+    @NameInMap("SessionId")
+    public String sessionId;
 
     public static FeedbackRequest build(java.util.Map<String, ?> map) throws Exception {
         FeedbackRequest self = new FeedbackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FeedbackRequest setFeedback(String feedback) {
+        this.feedback = feedback;
+        return this;
+    }
+    public String getFeedback() {
+        return this.feedback;
     }
 
     public FeedbackRequest setInstanceId(String instanceId) {
@@ -29,14 +37,6 @@ public class FeedbackRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public FeedbackRequest setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-        return this;
-    }
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
     public FeedbackRequest setMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -45,12 +45,12 @@ public class FeedbackRequest extends TeaModel {
         return this.messageId;
     }
 
-    public FeedbackRequest setFeedback(String feedback) {
-        this.feedback = feedback;
+    public FeedbackRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
-    public String getFeedback() {
-        return this.feedback;
+    public String getSessionId() {
+        return this.sessionId;
     }
 
 }

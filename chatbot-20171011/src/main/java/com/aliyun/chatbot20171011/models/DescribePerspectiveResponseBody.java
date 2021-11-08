@@ -4,14 +4,26 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class DescribePerspectiveResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public Integer status;
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("CreateUserName")
+    public String createUserName;
+
+    @NameInMap("ModifyTime")
+    public String modifyTime;
+
+    @NameInMap("ModifyUserName")
+    public String modifyUserName;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PerspectiveCode")
     public String perspectiveCode;
 
-    @NameInMap("ModifyTime")
-    public String modifyTime;
+    @NameInMap("PerspectiveId")
+    public String perspectiveId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,32 +31,52 @@ public class DescribePerspectiveResponseBody extends TeaModel {
     @NameInMap("SelfDefine")
     public Boolean selfDefine;
 
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("ModifyUserName")
-    public String modifyUserName;
-
-    @NameInMap("PerspectiveId")
-    public String perspectiveId;
-
-    @NameInMap("CreateUserName")
-    public String createUserName;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Status")
+    public Integer status;
 
     public static DescribePerspectiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePerspectiveResponseBody self = new DescribePerspectiveResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePerspectiveResponseBody setStatus(Integer status) {
-        this.status = status;
+    public DescribePerspectiveResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public Integer getStatus() {
-        return this.status;
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribePerspectiveResponseBody setCreateUserName(String createUserName) {
+        this.createUserName = createUserName;
+        return this;
+    }
+    public String getCreateUserName() {
+        return this.createUserName;
+    }
+
+    public DescribePerspectiveResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
+    }
+
+    public DescribePerspectiveResponseBody setModifyUserName(String modifyUserName) {
+        this.modifyUserName = modifyUserName;
+        return this;
+    }
+    public String getModifyUserName() {
+        return this.modifyUserName;
+    }
+
+    public DescribePerspectiveResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribePerspectiveResponseBody setPerspectiveCode(String perspectiveCode) {
@@ -55,12 +87,12 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         return this.perspectiveCode;
     }
 
-    public DescribePerspectiveResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
+    public DescribePerspectiveResponseBody setPerspectiveId(String perspectiveId) {
+        this.perspectiveId = perspectiveId;
         return this;
     }
-    public String getModifyTime() {
-        return this.modifyTime;
+    public String getPerspectiveId() {
+        return this.perspectiveId;
     }
 
     public DescribePerspectiveResponseBody setRequestId(String requestId) {
@@ -79,44 +111,12 @@ public class DescribePerspectiveResponseBody extends TeaModel {
         return this.selfDefine;
     }
 
-    public DescribePerspectiveResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public DescribePerspectiveResponseBody setStatus(Integer status) {
+        this.status = status;
         return this;
     }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribePerspectiveResponseBody setModifyUserName(String modifyUserName) {
-        this.modifyUserName = modifyUserName;
-        return this;
-    }
-    public String getModifyUserName() {
-        return this.modifyUserName;
-    }
-
-    public DescribePerspectiveResponseBody setPerspectiveId(String perspectiveId) {
-        this.perspectiveId = perspectiveId;
-        return this;
-    }
-    public String getPerspectiveId() {
-        return this.perspectiveId;
-    }
-
-    public DescribePerspectiveResponseBody setCreateUserName(String createUserName) {
-        this.createUserName = createUserName;
-        return this;
-    }
-    public String getCreateUserName() {
-        return this.createUserName;
-    }
-
-    public DescribePerspectiveResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

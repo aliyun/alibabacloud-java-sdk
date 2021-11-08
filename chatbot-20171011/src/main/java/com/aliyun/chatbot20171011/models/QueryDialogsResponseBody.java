@@ -4,56 +4,24 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class QueryDialogsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Dialogs")
+    public java.util.List<QueryDialogsResponseBodyDialogs> dialogs;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Dialogs")
-    public java.util.List<QueryDialogsResponseBodyDialogs> dialogs;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static QueryDialogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDialogsResponseBody self = new QueryDialogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDialogsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public QueryDialogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDialogsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryDialogsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public QueryDialogsResponseBody setDialogs(java.util.List<QueryDialogsResponseBodyDialogs> dialogs) {
@@ -64,30 +32,47 @@ public class QueryDialogsResponseBody extends TeaModel {
         return this.dialogs;
     }
 
+    public QueryDialogsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public QueryDialogsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryDialogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDialogsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class QueryDialogsResponseBodyDialogs extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("DialogName")
-        public String dialogName;
-
-        @NameInMap("ModifyUserId")
-        public String modifyUserId;
-
-        @NameInMap("IsOnline")
-        public Boolean isOnline;
-
-        @NameInMap("CreateUserName")
-        public String createUserName;
-
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        @NameInMap("ModifyUserName")
-        public String modifyUserName;
+        @NameInMap("CreateUserName")
+        public String createUserName;
 
         @NameInMap("Description")
         public String description;
@@ -95,55 +80,30 @@ public class QueryDialogsResponseBody extends TeaModel {
         @NameInMap("DialogId")
         public Long dialogId;
 
+        @NameInMap("DialogName")
+        public String dialogName;
+
+        @NameInMap("IsOnline")
+        public Boolean isOnline;
+
         @NameInMap("IsSampleDialog")
         public Boolean isSampleDialog;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("ModifyUserId")
+        public String modifyUserId;
+
+        @NameInMap("ModifyUserName")
+        public String modifyUserName;
+
+        @NameInMap("Status")
+        public Integer status;
+
         public static QueryDialogsResponseBodyDialogs build(java.util.Map<String, ?> map) throws Exception {
             QueryDialogsResponseBodyDialogs self = new QueryDialogsResponseBodyDialogs();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDialogsResponseBodyDialogs setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryDialogsResponseBodyDialogs setDialogName(String dialogName) {
-            this.dialogName = dialogName;
-            return this;
-        }
-        public String getDialogName() {
-            return this.dialogName;
-        }
-
-        public QueryDialogsResponseBodyDialogs setModifyUserId(String modifyUserId) {
-            this.modifyUserId = modifyUserId;
-            return this;
-        }
-        public String getModifyUserId() {
-            return this.modifyUserId;
-        }
-
-        public QueryDialogsResponseBodyDialogs setIsOnline(Boolean isOnline) {
-            this.isOnline = isOnline;
-            return this;
-        }
-        public Boolean getIsOnline() {
-            return this.isOnline;
-        }
-
-        public QueryDialogsResponseBodyDialogs setCreateUserName(String createUserName) {
-            this.createUserName = createUserName;
-            return this;
-        }
-        public String getCreateUserName() {
-            return this.createUserName;
         }
 
         public QueryDialogsResponseBodyDialogs setCreateTime(String createTime) {
@@ -162,12 +122,12 @@ public class QueryDialogsResponseBody extends TeaModel {
             return this.createUserId;
         }
 
-        public QueryDialogsResponseBodyDialogs setModifyUserName(String modifyUserName) {
-            this.modifyUserName = modifyUserName;
+        public QueryDialogsResponseBodyDialogs setCreateUserName(String createUserName) {
+            this.createUserName = createUserName;
             return this;
         }
-        public String getModifyUserName() {
-            return this.modifyUserName;
+        public String getCreateUserName() {
+            return this.createUserName;
         }
 
         public QueryDialogsResponseBodyDialogs setDescription(String description) {
@@ -186,6 +146,22 @@ public class QueryDialogsResponseBody extends TeaModel {
             return this.dialogId;
         }
 
+        public QueryDialogsResponseBodyDialogs setDialogName(String dialogName) {
+            this.dialogName = dialogName;
+            return this;
+        }
+        public String getDialogName() {
+            return this.dialogName;
+        }
+
+        public QueryDialogsResponseBodyDialogs setIsOnline(Boolean isOnline) {
+            this.isOnline = isOnline;
+            return this;
+        }
+        public Boolean getIsOnline() {
+            return this.isOnline;
+        }
+
         public QueryDialogsResponseBodyDialogs setIsSampleDialog(Boolean isSampleDialog) {
             this.isSampleDialog = isSampleDialog;
             return this;
@@ -200,6 +176,30 @@ public class QueryDialogsResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public QueryDialogsResponseBodyDialogs setModifyUserId(String modifyUserId) {
+            this.modifyUserId = modifyUserId;
+            return this;
+        }
+        public String getModifyUserId() {
+            return this.modifyUserId;
+        }
+
+        public QueryDialogsResponseBodyDialogs setModifyUserName(String modifyUserName) {
+            this.modifyUserName = modifyUserName;
+            return this;
+        }
+        public String getModifyUserName() {
+            return this.modifyUserName;
+        }
+
+        public QueryDialogsResponseBodyDialogs setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

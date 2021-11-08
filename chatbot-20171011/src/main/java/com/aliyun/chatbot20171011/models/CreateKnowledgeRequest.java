@@ -20,47 +20,6 @@ public class CreateKnowledgeRequest extends TeaModel {
         return this.knowledge;
     }
 
-    public static class CreateKnowledgeRequestKnowledgeSolutions extends TeaModel {
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("PlainText")
-        public String plainText;
-
-        @NameInMap("PerspectiveIds")
-        public java.util.List<String> perspectiveIds;
-
-        public static CreateKnowledgeRequestKnowledgeSolutions build(java.util.Map<String, ?> map) throws Exception {
-            CreateKnowledgeRequestKnowledgeSolutions self = new CreateKnowledgeRequestKnowledgeSolutions();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateKnowledgeRequestKnowledgeSolutions setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public CreateKnowledgeRequestKnowledgeSolutions setPlainText(String plainText) {
-            this.plainText = plainText;
-            return this;
-        }
-        public String getPlainText() {
-            return this.plainText;
-        }
-
-        public CreateKnowledgeRequestKnowledgeSolutions setPerspectiveIds(java.util.List<String> perspectiveIds) {
-            this.perspectiveIds = perspectiveIds;
-            return this;
-        }
-        public java.util.List<String> getPerspectiveIds() {
-            return this.perspectiveIds;
-        }
-
-    }
-
     public static class CreateKnowledgeRequestKnowledgeOutlines extends TeaModel {
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
@@ -110,9 +69,53 @@ public class CreateKnowledgeRequest extends TeaModel {
 
     }
 
+    public static class CreateKnowledgeRequestKnowledgeSolutions extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("PerspectiveIds")
+        public java.util.List<String> perspectiveIds;
+
+        @NameInMap("PlainText")
+        public String plainText;
+
+        public static CreateKnowledgeRequestKnowledgeSolutions build(java.util.Map<String, ?> map) throws Exception {
+            CreateKnowledgeRequestKnowledgeSolutions self = new CreateKnowledgeRequestKnowledgeSolutions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateKnowledgeRequestKnowledgeSolutions setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateKnowledgeRequestKnowledgeSolutions setPerspectiveIds(java.util.List<String> perspectiveIds) {
+            this.perspectiveIds = perspectiveIds;
+            return this;
+        }
+        public java.util.List<String> getPerspectiveIds() {
+            return this.perspectiveIds;
+        }
+
+        public CreateKnowledgeRequestKnowledgeSolutions setPlainText(String plainText) {
+            this.plainText = plainText;
+            return this;
+        }
+        public String getPlainText() {
+            return this.plainText;
+        }
+
+    }
+
     public static class CreateKnowledgeRequestKnowledge extends TeaModel {
         @NameInMap("CategoryId")
         public Long categoryId;
+
+        @NameInMap("EndDate")
+        public String endDate;
 
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
@@ -120,20 +123,17 @@ public class CreateKnowledgeRequest extends TeaModel {
         @NameInMap("KnowledgeType")
         public Integer knowledgeType;
 
-        @NameInMap("Solutions")
-        public java.util.List<CreateKnowledgeRequestKnowledgeSolutions> solutions;
-
-        @NameInMap("StartDate")
-        public String startDate;
-
-        @NameInMap("EndDate")
-        public String endDate;
-
         @NameInMap("Outlines")
         public java.util.List<CreateKnowledgeRequestKnowledgeOutlines> outlines;
 
         @NameInMap("SimQuestions")
         public java.util.List<CreateKnowledgeRequestKnowledgeSimQuestions> simQuestions;
+
+        @NameInMap("Solutions")
+        public java.util.List<CreateKnowledgeRequestKnowledgeSolutions> solutions;
+
+        @NameInMap("StartDate")
+        public String startDate;
 
         public static CreateKnowledgeRequestKnowledge build(java.util.Map<String, ?> map) throws Exception {
             CreateKnowledgeRequestKnowledge self = new CreateKnowledgeRequestKnowledge();
@@ -146,6 +146,14 @@ public class CreateKnowledgeRequest extends TeaModel {
         }
         public Long getCategoryId() {
             return this.categoryId;
+        }
+
+        public CreateKnowledgeRequestKnowledge setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
         }
 
         public CreateKnowledgeRequestKnowledge setKnowledgeTitle(String knowledgeTitle) {
@@ -164,30 +172,6 @@ public class CreateKnowledgeRequest extends TeaModel {
             return this.knowledgeType;
         }
 
-        public CreateKnowledgeRequestKnowledge setSolutions(java.util.List<CreateKnowledgeRequestKnowledgeSolutions> solutions) {
-            this.solutions = solutions;
-            return this;
-        }
-        public java.util.List<CreateKnowledgeRequestKnowledgeSolutions> getSolutions() {
-            return this.solutions;
-        }
-
-        public CreateKnowledgeRequestKnowledge setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
-        }
-
-        public CreateKnowledgeRequestKnowledge setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
-        }
-
         public CreateKnowledgeRequestKnowledge setOutlines(java.util.List<CreateKnowledgeRequestKnowledgeOutlines> outlines) {
             this.outlines = outlines;
             return this;
@@ -202,6 +186,22 @@ public class CreateKnowledgeRequest extends TeaModel {
         }
         public java.util.List<CreateKnowledgeRequestKnowledgeSimQuestions> getSimQuestions() {
             return this.simQuestions;
+        }
+
+        public CreateKnowledgeRequestKnowledge setSolutions(java.util.List<CreateKnowledgeRequestKnowledgeSolutions> solutions) {
+            this.solutions = solutions;
+            return this;
+        }
+        public java.util.List<CreateKnowledgeRequestKnowledgeSolutions> getSolutions() {
+            return this.solutions;
+        }
+
+        public CreateKnowledgeRequestKnowledge setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
         }
 
     }

@@ -13,11 +13,11 @@ public class CreateEntityShrinkRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
-    @NameInMap("Regex")
-    public String regex;
-
     @NameInMap("Members")
     public String membersShrink;
+
+    @NameInMap("Regex")
+    public String regex;
 
     public static CreateEntityShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityShrinkRequest self = new CreateEntityShrinkRequest();
@@ -48,20 +48,20 @@ public class CreateEntityShrinkRequest extends TeaModel {
         return this.entityType;
     }
 
-    public CreateEntityShrinkRequest setRegex(String regex) {
-        this.regex = regex;
-        return this;
-    }
-    public String getRegex() {
-        return this.regex;
-    }
-
     public CreateEntityShrinkRequest setMembersShrink(String membersShrink) {
         this.membersShrink = membersShrink;
         return this;
     }
     public String getMembersShrink() {
         return this.membersShrink;
+    }
+
+    public CreateEntityShrinkRequest setRegex(String regex) {
+        this.regex = regex;
+        return this;
+    }
+    public String getRegex() {
+        return this.regex;
     }
 
 }

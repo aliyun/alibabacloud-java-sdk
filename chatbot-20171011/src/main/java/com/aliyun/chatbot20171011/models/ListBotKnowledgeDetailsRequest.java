@@ -4,29 +4,21 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ListBotKnowledgeDetailsRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("RobotInstanceId")
-    public String robotInstanceId;
 
     @NameInMap("Limit")
     public String limit;
 
+    @NameInMap("RobotInstanceId")
+    public String robotInstanceId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListBotKnowledgeDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBotKnowledgeDetailsRequest self = new ListBotKnowledgeDetailsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBotKnowledgeDetailsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListBotKnowledgeDetailsRequest setEndTime(String endTime) {
@@ -37,6 +29,14 @@ public class ListBotKnowledgeDetailsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public ListBotKnowledgeDetailsRequest setLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    public String getLimit() {
+        return this.limit;
+    }
+
     public ListBotKnowledgeDetailsRequest setRobotInstanceId(String robotInstanceId) {
         this.robotInstanceId = robotInstanceId;
         return this;
@@ -45,12 +45,12 @@ public class ListBotKnowledgeDetailsRequest extends TeaModel {
         return this.robotInstanceId;
     }
 
-    public ListBotKnowledgeDetailsRequest setLimit(String limit) {
-        this.limit = limit;
+    public ListBotKnowledgeDetailsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getLimit() {
-        return this.limit;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

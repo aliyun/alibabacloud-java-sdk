@@ -12,10 +12,6 @@ public class PaasSlotConfigDTO extends TeaModel {
     @NameInMap("IsNecessary")
     public Boolean isNecessary;
 
-    // Value
-    @NameInMap("Value")
-    public String value;
-
     // LifeSpan
     @NameInMap("LifeSpan")
     public Integer lifeSpan;
@@ -27,6 +23,10 @@ public class PaasSlotConfigDTO extends TeaModel {
     // Question
     @NameInMap("Question")
     public java.util.List<String> question;
+
+    // Value
+    @NameInMap("Value")
+    public String value;
 
     public static PaasSlotConfigDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasSlotConfigDTO self = new PaasSlotConfigDTO();
@@ -47,14 +47,6 @@ public class PaasSlotConfigDTO extends TeaModel {
     }
     public Boolean getIsNecessary() {
         return this.isNecessary;
-    }
-
-    public PaasSlotConfigDTO setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
     }
 
     public PaasSlotConfigDTO setLifeSpan(Integer lifeSpan) {
@@ -79,6 +71,14 @@ public class PaasSlotConfigDTO extends TeaModel {
     }
     public java.util.List<String> getQuestion() {
         return this.question;
+    }
+
+    public PaasSlotConfigDTO setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

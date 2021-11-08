@@ -4,26 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ListBotReceptionDetailDatasRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("RobotInstanceId")
     public String robotInstanceId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListBotReceptionDetailDatasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBotReceptionDetailDatasRequest self = new ListBotReceptionDetailDatasRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBotReceptionDetailDatasRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListBotReceptionDetailDatasRequest setEndTime(String endTime) {
@@ -40,6 +32,14 @@ public class ListBotReceptionDetailDatasRequest extends TeaModel {
     }
     public String getRobotInstanceId() {
         return this.robotInstanceId;
+    }
+
+    public ListBotReceptionDetailDatasRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

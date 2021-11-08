@@ -7,11 +7,17 @@ public class ChatRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SessionId")
-    public String sessionId;
+    @NameInMap("IntentName")
+    public String intentName;
 
     @NameInMap("KnowledgeId")
     public String knowledgeId;
+
+    @NameInMap("Perspective")
+    public java.util.List<String> perspective;
+
+    @NameInMap("Recommend")
+    public Boolean recommend;
 
     @NameInMap("SenderId")
     public String senderId;
@@ -19,26 +25,17 @@ public class ChatRequest extends TeaModel {
     @NameInMap("SenderNick")
     public String senderNick;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     @NameInMap("Tag")
     public String tag;
 
     @NameInMap("Utterance")
     public String utterance;
 
-    @NameInMap("Recommend")
-    public Boolean recommend;
-
-    @NameInMap("RecommendNum")
-    public Integer recommendNum;
-
-    @NameInMap("IntentName")
-    public String intentName;
-
     @NameInMap("VendorParam")
     public String vendorParam;
-
-    @NameInMap("Perspective")
-    public java.util.List<String> perspective;
 
     public static ChatRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatRequest self = new ChatRequest();
@@ -53,12 +50,12 @@ public class ChatRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ChatRequest setSessionId(String sessionId) {
-        this.sessionId = sessionId;
+    public ChatRequest setIntentName(String intentName) {
+        this.intentName = intentName;
         return this;
     }
-    public String getSessionId() {
-        return this.sessionId;
+    public String getIntentName() {
+        return this.intentName;
     }
 
     public ChatRequest setKnowledgeId(String knowledgeId) {
@@ -67,6 +64,22 @@ public class ChatRequest extends TeaModel {
     }
     public String getKnowledgeId() {
         return this.knowledgeId;
+    }
+
+    public ChatRequest setPerspective(java.util.List<String> perspective) {
+        this.perspective = perspective;
+        return this;
+    }
+    public java.util.List<String> getPerspective() {
+        return this.perspective;
+    }
+
+    public ChatRequest setRecommend(Boolean recommend) {
+        this.recommend = recommend;
+        return this;
+    }
+    public Boolean getRecommend() {
+        return this.recommend;
     }
 
     public ChatRequest setSenderId(String senderId) {
@@ -85,6 +98,14 @@ public class ChatRequest extends TeaModel {
         return this.senderNick;
     }
 
+    public ChatRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
     public ChatRequest setTag(String tag) {
         this.tag = tag;
         return this;
@@ -101,44 +122,12 @@ public class ChatRequest extends TeaModel {
         return this.utterance;
     }
 
-    public ChatRequest setRecommend(Boolean recommend) {
-        this.recommend = recommend;
-        return this;
-    }
-    public Boolean getRecommend() {
-        return this.recommend;
-    }
-
-    public ChatRequest setRecommendNum(Integer recommendNum) {
-        this.recommendNum = recommendNum;
-        return this;
-    }
-    public Integer getRecommendNum() {
-        return this.recommendNum;
-    }
-
-    public ChatRequest setIntentName(String intentName) {
-        this.intentName = intentName;
-        return this;
-    }
-    public String getIntentName() {
-        return this.intentName;
-    }
-
     public ChatRequest setVendorParam(String vendorParam) {
         this.vendorParam = vendorParam;
         return this;
     }
     public String getVendorParam() {
         return this.vendorParam;
-    }
-
-    public ChatRequest setPerspective(java.util.List<String> perspective) {
-        this.perspective = perspective;
-        return this;
-    }
-    public java.util.List<String> getPerspective() {
-        return this.perspective;
     }
 
 }

@@ -7,11 +7,11 @@ public class ListBotHotKnowledgesResponseBody extends TeaModel {
     @NameInMap("CostTime")
     public String costTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Datas")
     public java.util.List<java.util.Map<String, ?>> datas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListBotHotKnowledgesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBotHotKnowledgesResponseBody self = new ListBotHotKnowledgesResponseBody();
@@ -26,20 +26,20 @@ public class ListBotHotKnowledgesResponseBody extends TeaModel {
         return this.costTime;
     }
 
-    public ListBotHotKnowledgesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListBotHotKnowledgesResponseBody setDatas(java.util.List<java.util.Map<String, ?>> datas) {
         this.datas = datas;
         return this;
     }
     public java.util.List<java.util.Map<String, ?>> getDatas() {
         return this.datas;
+    }
+
+    public ListBotHotKnowledgesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

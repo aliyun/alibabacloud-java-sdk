@@ -7,14 +7,14 @@ public class GetConversationListResponseBody extends TeaModel {
     @NameInMap("Messages")
     public java.util.List<java.util.Map<String, ?>> messages;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCounts")
     public Long totalCounts;
@@ -32,12 +32,12 @@ public class GetConversationListResponseBody extends TeaModel {
         return this.messages;
     }
 
-    public GetConversationListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetConversationListResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public GetConversationListResponseBody setPageSize(Long pageSize) {
@@ -48,12 +48,12 @@ public class GetConversationListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public GetConversationListResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public GetConversationListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetConversationListResponseBody setTotalCounts(Long totalCounts) {

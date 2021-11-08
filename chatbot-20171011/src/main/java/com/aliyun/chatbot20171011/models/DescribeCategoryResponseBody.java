@@ -7,14 +7,14 @@ public class DescribeCategoryResponseBody extends TeaModel {
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCategoryResponseBody self = new DescribeCategoryResponseBody();
@@ -29,12 +29,12 @@ public class DescribeCategoryResponseBody extends TeaModel {
         return this.categoryId;
     }
 
-    public DescribeCategoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCategoryResponseBody setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getName() {
+        return this.name;
     }
 
     public DescribeCategoryResponseBody setParentCategoryId(Long parentCategoryId) {
@@ -45,12 +45,12 @@ public class DescribeCategoryResponseBody extends TeaModel {
         return this.parentCategoryId;
     }
 
-    public DescribeCategoryResponseBody setName(String name) {
-        this.name = name;
+    public DescribeCategoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

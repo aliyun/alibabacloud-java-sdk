@@ -4,11 +4,14 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class QueryKnowledgesRequest extends TeaModel {
-    @NameInMap("KnowledgeTitle")
-    public String knowledgeTitle;
+    @NameInMap("CategoryId")
+    public Long categoryId;
 
     @NameInMap("CoreWordName")
     public String coreWordName;
+
+    @NameInMap("KnowledgeTitle")
+    public String knowledgeTitle;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,20 +19,17 @@ public class QueryKnowledgesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CategoryId")
-    public Long categoryId;
-
     public static QueryKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryKnowledgesRequest self = new QueryKnowledgesRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryKnowledgesRequest setKnowledgeTitle(String knowledgeTitle) {
-        this.knowledgeTitle = knowledgeTitle;
+    public QueryKnowledgesRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
-    public String getKnowledgeTitle() {
-        return this.knowledgeTitle;
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     public QueryKnowledgesRequest setCoreWordName(String coreWordName) {
@@ -38,6 +38,14 @@ public class QueryKnowledgesRequest extends TeaModel {
     }
     public String getCoreWordName() {
         return this.coreWordName;
+    }
+
+    public QueryKnowledgesRequest setKnowledgeTitle(String knowledgeTitle) {
+        this.knowledgeTitle = knowledgeTitle;
+        return this;
+    }
+    public String getKnowledgeTitle() {
+        return this.knowledgeTitle;
     }
 
     public QueryKnowledgesRequest setPageNumber(Integer pageNumber) {
@@ -54,14 +62,6 @@ public class QueryKnowledgesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public QueryKnowledgesRequest setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Long getCategoryId() {
-        return this.categoryId;
     }
 
 }

@@ -8,9 +8,13 @@ public class SlotrecordMtopDTO extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    // Question
-    @NameInMap("Question")
-    public java.util.List<String> question;
+    // IsArray
+    @NameInMap("IsArray")
+    public Boolean isArray;
+
+    // IsNecessary
+    @NameInMap("IsNecessary")
+    public Boolean isNecessary;
 
     // LifeSpan
     @NameInMap("LifeSpan")
@@ -20,21 +24,17 @@ public class SlotrecordMtopDTO extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // IsArray
-    @NameInMap("IsArray")
-    public Boolean isArray;
-
-    // Value
-    @NameInMap("Value")
-    public String value;
-
-    // IsNecessary
-    @NameInMap("IsNecessary")
-    public Boolean isNecessary;
+    // Question
+    @NameInMap("Question")
+    public java.util.List<String> question;
 
     // Tags
     @NameInMap("Tags")
     public java.util.List<TagMtopDTO> tags;
+
+    // Value
+    @NameInMap("Value")
+    public String value;
 
     public static SlotrecordMtopDTO build(java.util.Map<String, ?> map) throws Exception {
         SlotrecordMtopDTO self = new SlotrecordMtopDTO();
@@ -49,12 +49,20 @@ public class SlotrecordMtopDTO extends TeaModel {
         return this.id;
     }
 
-    public SlotrecordMtopDTO setQuestion(java.util.List<String> question) {
-        this.question = question;
+    public SlotrecordMtopDTO setIsArray(Boolean isArray) {
+        this.isArray = isArray;
         return this;
     }
-    public java.util.List<String> getQuestion() {
-        return this.question;
+    public Boolean getIsArray() {
+        return this.isArray;
+    }
+
+    public SlotrecordMtopDTO setIsNecessary(Boolean isNecessary) {
+        this.isNecessary = isNecessary;
+        return this;
+    }
+    public Boolean getIsNecessary() {
+        return this.isNecessary;
     }
 
     public SlotrecordMtopDTO setLifeSpan(Integer lifeSpan) {
@@ -73,28 +81,12 @@ public class SlotrecordMtopDTO extends TeaModel {
         return this.name;
     }
 
-    public SlotrecordMtopDTO setIsArray(Boolean isArray) {
-        this.isArray = isArray;
+    public SlotrecordMtopDTO setQuestion(java.util.List<String> question) {
+        this.question = question;
         return this;
     }
-    public Boolean getIsArray() {
-        return this.isArray;
-    }
-
-    public SlotrecordMtopDTO setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
-    public SlotrecordMtopDTO setIsNecessary(Boolean isNecessary) {
-        this.isNecessary = isNecessary;
-        return this;
-    }
-    public Boolean getIsNecessary() {
-        return this.isNecessary;
+    public java.util.List<String> getQuestion() {
+        return this.question;
     }
 
     public SlotrecordMtopDTO setTags(java.util.List<TagMtopDTO> tags) {
@@ -103,6 +95,14 @@ public class SlotrecordMtopDTO extends TeaModel {
     }
     public java.util.List<TagMtopDTO> getTags() {
         return this.tags;
+    }
+
+    public SlotrecordMtopDTO setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

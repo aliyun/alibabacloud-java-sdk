@@ -4,13 +4,13 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class UsersayMtopDTO extends TeaModel {
-    // Id
-    @NameInMap("Id")
-    public String id;
-
     // Data
     @NameInMap("Data")
     public java.util.List<SectionMtopDTO> data;
+
+    // Id
+    @NameInMap("Id")
+    public String id;
 
     // Strict
     @NameInMap("Strict")
@@ -21,20 +21,20 @@ public class UsersayMtopDTO extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UsersayMtopDTO setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
     public UsersayMtopDTO setData(java.util.List<SectionMtopDTO> data) {
         this.data = data;
         return this;
     }
     public java.util.List<SectionMtopDTO> getData() {
         return this.data;
+    }
+
+    public UsersayMtopDTO setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public UsersayMtopDTO setStrict(Boolean strict) {

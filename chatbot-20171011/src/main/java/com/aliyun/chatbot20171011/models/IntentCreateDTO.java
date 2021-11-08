@@ -12,16 +12,16 @@ public class IntentCreateDTO extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // UserSay
-    @NameInMap("UserSay")
-    public java.util.List<UsersayMtopDTO> userSay;
-
     // RuleCheck
     @NameInMap("RuleCheck")
     public java.util.List<RuleMtopDTO> ruleCheck;
 
     @NameInMap("Slot")
     public java.util.List<SlotrecordMtopDTO> slot;
+
+    // UserSay
+    @NameInMap("UserSay")
+    public java.util.List<UsersayMtopDTO> userSay;
 
     public static IntentCreateDTO build(java.util.Map<String, ?> map) throws Exception {
         IntentCreateDTO self = new IntentCreateDTO();
@@ -44,14 +44,6 @@ public class IntentCreateDTO extends TeaModel {
         return this.name;
     }
 
-    public IntentCreateDTO setUserSay(java.util.List<UsersayMtopDTO> userSay) {
-        this.userSay = userSay;
-        return this;
-    }
-    public java.util.List<UsersayMtopDTO> getUserSay() {
-        return this.userSay;
-    }
-
     public IntentCreateDTO setRuleCheck(java.util.List<RuleMtopDTO> ruleCheck) {
         this.ruleCheck = ruleCheck;
         return this;
@@ -66,6 +58,14 @@ public class IntentCreateDTO extends TeaModel {
     }
     public java.util.List<SlotrecordMtopDTO> getSlot() {
         return this.slot;
+    }
+
+    public IntentCreateDTO setUserSay(java.util.List<UsersayMtopDTO> userSay) {
+        this.userSay = userSay;
+        return this;
+    }
+    public java.util.List<UsersayMtopDTO> getUserSay() {
+        return this.userSay;
     }
 
 }

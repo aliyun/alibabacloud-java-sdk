@@ -4,37 +4,37 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasSlotPluginFieldDataDTO extends TeaModel {
-    // IntentName
-    @NameInMap("IntentName")
-    public String intentName;
+    // ContentSlot
+    @NameInMap("ContentSlot")
+    public java.util.List<PaasSlotConfigDTO> contentSlot;
 
     // IntentId
     @NameInMap("IntentId")
     public String intentId;
 
-    // Name
-    @NameInMap("Name")
-    public String name;
+    // IntentName
+    @NameInMap("IntentName")
+    public String intentName;
 
     // IsSysIntent
     @NameInMap("IsSysIntent")
     public Boolean isSysIntent;
 
-    // ContentSlot
-    @NameInMap("ContentSlot")
-    public java.util.List<PaasSlotConfigDTO> contentSlot;
+    // Name
+    @NameInMap("Name")
+    public String name;
 
     public static PaasSlotPluginFieldDataDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasSlotPluginFieldDataDTO self = new PaasSlotPluginFieldDataDTO();
         return TeaModel.build(map, self);
     }
 
-    public PaasSlotPluginFieldDataDTO setIntentName(String intentName) {
-        this.intentName = intentName;
+    public PaasSlotPluginFieldDataDTO setContentSlot(java.util.List<PaasSlotConfigDTO> contentSlot) {
+        this.contentSlot = contentSlot;
         return this;
     }
-    public String getIntentName() {
-        return this.intentName;
+    public java.util.List<PaasSlotConfigDTO> getContentSlot() {
+        return this.contentSlot;
     }
 
     public PaasSlotPluginFieldDataDTO setIntentId(String intentId) {
@@ -45,12 +45,12 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         return this.intentId;
     }
 
-    public PaasSlotPluginFieldDataDTO setName(String name) {
-        this.name = name;
+    public PaasSlotPluginFieldDataDTO setIntentName(String intentName) {
+        this.intentName = intentName;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getIntentName() {
+        return this.intentName;
     }
 
     public PaasSlotPluginFieldDataDTO setIsSysIntent(Boolean isSysIntent) {
@@ -61,12 +61,12 @@ public class PaasSlotPluginFieldDataDTO extends TeaModel {
         return this.isSysIntent;
     }
 
-    public PaasSlotPluginFieldDataDTO setContentSlot(java.util.List<PaasSlotConfigDTO> contentSlot) {
-        this.contentSlot = contentSlot;
+    public PaasSlotPluginFieldDataDTO setName(String name) {
+        this.name = name;
         return this;
     }
-    public java.util.List<PaasSlotConfigDTO> getContentSlot() {
-        return this.contentSlot;
+    public String getName() {
+        return this.name;
     }
 
 }

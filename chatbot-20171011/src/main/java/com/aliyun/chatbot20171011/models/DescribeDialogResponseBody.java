@@ -4,35 +4,32 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class DescribeDialogResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public Integer status;
-
-    @NameInMap("ModifyTime")
-    public String modifyTime;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    @NameInMap("CreateUserName")
+    public String createUserName;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("DialogId")
     public Long dialogId;
 
-    @NameInMap("CreateUserName")
-    public String createUserName;
+    @NameInMap("DialogName")
+    public String dialogName;
 
     @NameInMap("IsOnline")
     public Boolean isOnline;
 
-    @NameInMap("DialogName")
-    public String dialogName;
+    @NameInMap("IsSampleDialog")
+    public Boolean isSampleDialog;
+
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     @NameInMap("ModifyUserId")
     public String modifyUserId;
@@ -40,44 +37,15 @@ public class DescribeDialogResponseBody extends TeaModel {
     @NameInMap("ModifyUserName")
     public String modifyUserName;
 
-    @NameInMap("IsSampleDialog")
-    public Boolean isSampleDialog;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static DescribeDialogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDialogResponseBody self = new DescribeDialogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDialogResponseBody setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public DescribeDialogResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
-        return this;
-    }
-    public String getModifyTime() {
-        return this.modifyTime;
-    }
-
-    public DescribeDialogResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeDialogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDialogResponseBody setCreateTime(String createTime) {
@@ -96,6 +64,22 @@ public class DescribeDialogResponseBody extends TeaModel {
         return this.createUserId;
     }
 
+    public DescribeDialogResponseBody setCreateUserName(String createUserName) {
+        this.createUserName = createUserName;
+        return this;
+    }
+    public String getCreateUserName() {
+        return this.createUserName;
+    }
+
+    public DescribeDialogResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public DescribeDialogResponseBody setDialogId(Long dialogId) {
         this.dialogId = dialogId;
         return this;
@@ -104,12 +88,12 @@ public class DescribeDialogResponseBody extends TeaModel {
         return this.dialogId;
     }
 
-    public DescribeDialogResponseBody setCreateUserName(String createUserName) {
-        this.createUserName = createUserName;
+    public DescribeDialogResponseBody setDialogName(String dialogName) {
+        this.dialogName = dialogName;
         return this;
     }
-    public String getCreateUserName() {
-        return this.createUserName;
+    public String getDialogName() {
+        return this.dialogName;
     }
 
     public DescribeDialogResponseBody setIsOnline(Boolean isOnline) {
@@ -120,12 +104,20 @@ public class DescribeDialogResponseBody extends TeaModel {
         return this.isOnline;
     }
 
-    public DescribeDialogResponseBody setDialogName(String dialogName) {
-        this.dialogName = dialogName;
+    public DescribeDialogResponseBody setIsSampleDialog(Boolean isSampleDialog) {
+        this.isSampleDialog = isSampleDialog;
         return this;
     }
-    public String getDialogName() {
-        return this.dialogName;
+    public Boolean getIsSampleDialog() {
+        return this.isSampleDialog;
+    }
+
+    public DescribeDialogResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public DescribeDialogResponseBody setModifyUserId(String modifyUserId) {
@@ -144,12 +136,20 @@ public class DescribeDialogResponseBody extends TeaModel {
         return this.modifyUserName;
     }
 
-    public DescribeDialogResponseBody setIsSampleDialog(Boolean isSampleDialog) {
-        this.isSampleDialog = isSampleDialog;
+    public DescribeDialogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getIsSampleDialog() {
-        return this.isSampleDialog;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDialogResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

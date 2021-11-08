@@ -4,26 +4,26 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class CreateDialogRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("DialogName")
     public String dialogName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static CreateDialogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDialogRequest self = new CreateDialogRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDialogRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateDialogRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateDialogRequest setDialogName(String dialogName) {
@@ -34,12 +34,12 @@ public class CreateDialogRequest extends TeaModel {
         return this.dialogName;
     }
 
-    public CreateDialogRequest setDescription(String description) {
-        this.description = description;
+    public CreateDialogRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

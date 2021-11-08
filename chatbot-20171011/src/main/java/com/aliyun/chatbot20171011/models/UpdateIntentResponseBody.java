@@ -4,23 +4,15 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IntentId")
     public Long intentId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateIntentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateIntentResponseBody self = new UpdateIntentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateIntentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateIntentResponseBody setIntentId(Long intentId) {
@@ -29,6 +21,14 @@ public class UpdateIntentResponseBody extends TeaModel {
     }
     public Long getIntentId() {
         return this.intentId;
+    }
+
+    public UpdateIntentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

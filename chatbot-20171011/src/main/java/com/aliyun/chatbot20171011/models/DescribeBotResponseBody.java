@@ -4,20 +4,8 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class DescribeBotResponseBody extends TeaModel {
-    @NameInMap("LanguageCode")
-    public String languageCode;
-
-    @NameInMap("TimeZone")
-    public String timeZone;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Introduction")
-    public String introduction;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Avatar")
+    public String avatar;
 
     @NameInMap("Categories")
     public java.util.List<DescribeBotResponseBodyCategories> categories;
@@ -25,8 +13,14 @@ public class DescribeBotResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("Avatar")
-    public String avatar;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Introduction")
+    public String introduction;
+
+    @NameInMap("LanguageCode")
+    public String languageCode;
 
     @NameInMap("Logo")
     public String logo;
@@ -34,49 +28,23 @@ public class DescribeBotResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TimeZone")
+    public String timeZone;
+
     public static DescribeBotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBotResponseBody self = new DescribeBotResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBotResponseBody setLanguageCode(String languageCode) {
-        this.languageCode = languageCode;
+    public DescribeBotResponseBody setAvatar(String avatar) {
+        this.avatar = avatar;
         return this;
     }
-    public String getLanguageCode() {
-        return this.languageCode;
-    }
-
-    public DescribeBotResponseBody setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
-        return this;
-    }
-    public String getTimeZone() {
-        return this.timeZone;
-    }
-
-    public DescribeBotResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeBotResponseBody setIntroduction(String introduction) {
-        this.introduction = introduction;
-        return this;
-    }
-    public String getIntroduction() {
-        return this.introduction;
-    }
-
-    public DescribeBotResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getAvatar() {
+        return this.avatar;
     }
 
     public DescribeBotResponseBody setCategories(java.util.List<DescribeBotResponseBodyCategories> categories) {
@@ -95,12 +63,28 @@ public class DescribeBotResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public DescribeBotResponseBody setAvatar(String avatar) {
-        this.avatar = avatar;
+    public DescribeBotResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getAvatar() {
-        return this.avatar;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeBotResponseBody setIntroduction(String introduction) {
+        this.introduction = introduction;
+        return this;
+    }
+    public String getIntroduction() {
+        return this.introduction;
+    }
+
+    public DescribeBotResponseBody setLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    public String getLanguageCode() {
+        return this.languageCode;
     }
 
     public DescribeBotResponseBody setLogo(String logo) {
@@ -117,6 +101,22 @@ public class DescribeBotResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeBotResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBotResponseBody setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    public String getTimeZone() {
+        return this.timeZone;
     }
 
     public static class DescribeBotResponseBodyCategories extends TeaModel {
