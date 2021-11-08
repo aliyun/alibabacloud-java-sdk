@@ -7,17 +7,17 @@ public class AssociateRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Utterance")
-    public String utterance;
-
-    @NameInMap("SessionId")
-    public String sessionId;
+    @NameInMap("Perspective")
+    public java.util.List<String> perspective;
 
     @NameInMap("RecommendNum")
     public Integer recommendNum;
 
-    @NameInMap("Perspective")
-    public java.util.List<String> perspective;
+    @NameInMap("SessionId")
+    public String sessionId;
+
+    @NameInMap("Utterance")
+    public String utterance;
 
     public static AssociateRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateRequest self = new AssociateRequest();
@@ -32,20 +32,12 @@ public class AssociateRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AssociateRequest setUtterance(String utterance) {
-        this.utterance = utterance;
+    public AssociateRequest setPerspective(java.util.List<String> perspective) {
+        this.perspective = perspective;
         return this;
     }
-    public String getUtterance() {
-        return this.utterance;
-    }
-
-    public AssociateRequest setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-        return this;
-    }
-    public String getSessionId() {
-        return this.sessionId;
+    public java.util.List<String> getPerspective() {
+        return this.perspective;
     }
 
     public AssociateRequest setRecommendNum(Integer recommendNum) {
@@ -56,12 +48,20 @@ public class AssociateRequest extends TeaModel {
         return this.recommendNum;
     }
 
-    public AssociateRequest setPerspective(java.util.List<String> perspective) {
-        this.perspective = perspective;
+    public AssociateRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
-    public java.util.List<String> getPerspective() {
-        return this.perspective;
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public AssociateRequest setUtterance(String utterance) {
+        this.utterance = utterance;
+        return this;
+    }
+    public String getUtterance() {
+        return this.utterance;
     }
 
 }

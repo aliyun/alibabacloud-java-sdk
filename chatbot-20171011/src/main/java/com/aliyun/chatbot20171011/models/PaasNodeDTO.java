@@ -16,6 +16,10 @@ public class PaasNodeDTO extends TeaModel {
     @NameInMap("Label")
     public String label;
 
+    // PluginData
+    @NameInMap("PluginData")
+    public PaasPluginDataDTO pluginData;
+
     // Xx
     @NameInMap("Xx")
     public Double xx;
@@ -23,10 +27,6 @@ public class PaasNodeDTO extends TeaModel {
     // Yy
     @NameInMap("Yy")
     public Double yy;
-
-    // PluginData
-    @NameInMap("PluginData")
-    public PaasPluginDataDTO pluginData;
 
     public static PaasNodeDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasNodeDTO self = new PaasNodeDTO();
@@ -57,6 +57,14 @@ public class PaasNodeDTO extends TeaModel {
         return this.label;
     }
 
+    public PaasNodeDTO setPluginData(PaasPluginDataDTO pluginData) {
+        this.pluginData = pluginData;
+        return this;
+    }
+    public PaasPluginDataDTO getPluginData() {
+        return this.pluginData;
+    }
+
     public PaasNodeDTO setXx(Double xx) {
         this.xx = xx;
         return this;
@@ -71,14 +79,6 @@ public class PaasNodeDTO extends TeaModel {
     }
     public Double getYy() {
         return this.yy;
-    }
-
-    public PaasNodeDTO setPluginData(PaasPluginDataDTO pluginData) {
-        this.pluginData = pluginData;
-        return this;
-    }
-    public PaasPluginDataDTO getPluginData() {
-        return this.pluginData;
     }
 
 }

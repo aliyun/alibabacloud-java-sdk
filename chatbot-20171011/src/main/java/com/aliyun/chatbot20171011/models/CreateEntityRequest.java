@@ -13,11 +13,11 @@ public class CreateEntityRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
-    @NameInMap("Regex")
-    public String regex;
-
     @NameInMap("Members")
     public java.util.List<CreateEntityRequestMembers> members;
+
+    @NameInMap("Regex")
+    public String regex;
 
     public static CreateEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityRequest self = new CreateEntityRequest();
@@ -48,20 +48,20 @@ public class CreateEntityRequest extends TeaModel {
         return this.entityType;
     }
 
-    public CreateEntityRequest setRegex(String regex) {
-        this.regex = regex;
-        return this;
-    }
-    public String getRegex() {
-        return this.regex;
-    }
-
     public CreateEntityRequest setMembers(java.util.List<CreateEntityRequestMembers> members) {
         this.members = members;
         return this;
     }
     public java.util.List<CreateEntityRequestMembers> getMembers() {
         return this.members;
+    }
+
+    public CreateEntityRequest setRegex(String regex) {
+        this.regex = regex;
+        return this;
+    }
+    public String getRegex() {
+        return this.regex;
     }
 
     public static class CreateEntityRequestMembers extends TeaModel {

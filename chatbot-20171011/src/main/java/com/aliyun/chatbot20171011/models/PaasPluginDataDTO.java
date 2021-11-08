@@ -7,14 +7,14 @@ public class PaasPluginDataDTO extends TeaModel {
     @NameInMap("Entry")
     public PaasEntryDTO entry;
 
-    @NameInMap("Slot")
-    public PaasSlotDTO slot;
+    @NameInMap("Function")
+    public PaasFunctionDTO function;
 
     @NameInMap("Response")
     public PaasResponseDTO response;
 
-    @NameInMap("Function")
-    public PaasFunctionDTO function;
+    @NameInMap("Slot")
+    public PaasSlotDTO slot;
 
     public static PaasPluginDataDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasPluginDataDTO self = new PaasPluginDataDTO();
@@ -29,12 +29,12 @@ public class PaasPluginDataDTO extends TeaModel {
         return this.entry;
     }
 
-    public PaasPluginDataDTO setSlot(PaasSlotDTO slot) {
-        this.slot = slot;
+    public PaasPluginDataDTO setFunction(PaasFunctionDTO function) {
+        this.function = function;
         return this;
     }
-    public PaasSlotDTO getSlot() {
-        return this.slot;
+    public PaasFunctionDTO getFunction() {
+        return this.function;
     }
 
     public PaasPluginDataDTO setResponse(PaasResponseDTO response) {
@@ -45,12 +45,12 @@ public class PaasPluginDataDTO extends TeaModel {
         return this.response;
     }
 
-    public PaasPluginDataDTO setFunction(PaasFunctionDTO function) {
-        this.function = function;
+    public PaasPluginDataDTO setSlot(PaasSlotDTO slot) {
+        this.slot = slot;
         return this;
     }
-    public PaasFunctionDTO getFunction() {
-        return this.function;
+    public PaasSlotDTO getSlot() {
+        return this.slot;
     }
 
 }

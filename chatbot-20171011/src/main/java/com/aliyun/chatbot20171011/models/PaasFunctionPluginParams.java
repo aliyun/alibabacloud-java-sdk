@@ -4,6 +4,14 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasFunctionPluginParams extends TeaModel {
+    // Body
+    @NameInMap("Body")
+    public String body;
+
+    // Header
+    @NameInMap("Header")
+    public java.util.Map<String, String> header;
+
     // Method
     @NameInMap("Method")
     public String method;
@@ -12,14 +20,6 @@ public class PaasFunctionPluginParams extends TeaModel {
     @NameInMap("Query")
     public java.util.Map<String, String> query;
 
-    // Header
-    @NameInMap("Header")
-    public java.util.Map<String, String> header;
-
-    // Body
-    @NameInMap("Body")
-    public String body;
-
     // Url
     @NameInMap("Url")
     public String url;
@@ -27,6 +27,22 @@ public class PaasFunctionPluginParams extends TeaModel {
     public static PaasFunctionPluginParams build(java.util.Map<String, ?> map) throws Exception {
         PaasFunctionPluginParams self = new PaasFunctionPluginParams();
         return TeaModel.build(map, self);
+    }
+
+    public PaasFunctionPluginParams setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
+    }
+
+    public PaasFunctionPluginParams setHeader(java.util.Map<String, String> header) {
+        this.header = header;
+        return this;
+    }
+    public java.util.Map<String, String> getHeader() {
+        return this.header;
     }
 
     public PaasFunctionPluginParams setMethod(String method) {
@@ -43,22 +59,6 @@ public class PaasFunctionPluginParams extends TeaModel {
     }
     public java.util.Map<String, String> getQuery() {
         return this.query;
-    }
-
-    public PaasFunctionPluginParams setHeader(java.util.Map<String, String> header) {
-        this.header = header;
-        return this;
-    }
-    public java.util.Map<String, String> getHeader() {
-        return this.header;
-    }
-
-    public PaasFunctionPluginParams setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public PaasFunctionPluginParams setUrl(String url) {

@@ -4,24 +4,32 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
+    @NameInMap("MessageId")
+    public String messageId;
+
     @NameInMap("Messages")
     public java.util.List<ChatResponseBodyMessages> messages;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Tag")
-    public String tag;
-
     @NameInMap("SessionId")
     public String sessionId;
 
-    @NameInMap("MessageId")
-    public String messageId;
+    @NameInMap("Tag")
+    public String tag;
 
     public static ChatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ChatResponseBody self = new ChatResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ChatResponseBody setMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    public String getMessageId() {
+        return this.messageId;
     }
 
     public ChatResponseBody setMessages(java.util.List<ChatResponseBodyMessages> messages) {
@@ -40,14 +48,6 @@ public class ChatResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ChatResponseBody setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
     public ChatResponseBody setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -56,12 +56,12 @@ public class ChatResponseBody extends TeaModel {
         return this.sessionId;
     }
 
-    public ChatResponseBody setMessageId(String messageId) {
-        this.messageId = messageId;
+    public ChatResponseBody setTag(String tag) {
+        this.tag = tag;
         return this;
     }
-    public String getMessageId() {
-        return this.messageId;
+    public String getTag() {
+        return this.tag;
     }
 
     public static class ChatResponseBodyMessagesKnowledgeRelatedKnowledges extends TeaModel {
@@ -95,81 +95,39 @@ public class ChatResponseBody extends TeaModel {
     }
 
     public static class ChatResponseBodyMessagesKnowledge extends TeaModel {
-        @NameInMap("HitStatement")
-        public String hitStatement;
-
-        @NameInMap("Summary")
-        public String summary;
-
-        @NameInMap("RelatedKnowledges")
-        public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
+        @NameInMap("AnswerSource")
+        public String answerSource;
 
         @NameInMap("Category")
         public String category;
 
-        @NameInMap("Title")
-        public String title;
-
         @NameInMap("Content")
         public String content;
 
-        @NameInMap("AnswerSource")
-        public String answerSource;
+        @NameInMap("ContentType")
+        public String contentType;
+
+        @NameInMap("HitStatement")
+        public String hitStatement;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("RelatedKnowledges")
+        public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges;
+
+        @NameInMap("Score")
+        public Double score;
+
+        @NameInMap("Summary")
+        public String summary;
+
+        @NameInMap("Title")
+        public String title;
+
         public static ChatResponseBodyMessagesKnowledge build(java.util.Map<String, ?> map) throws Exception {
             ChatResponseBodyMessagesKnowledge self = new ChatResponseBodyMessagesKnowledge();
             return TeaModel.build(map, self);
-        }
-
-        public ChatResponseBodyMessagesKnowledge setHitStatement(String hitStatement) {
-            this.hitStatement = hitStatement;
-            return this;
-        }
-        public String getHitStatement() {
-            return this.hitStatement;
-        }
-
-        public ChatResponseBodyMessagesKnowledge setSummary(String summary) {
-            this.summary = summary;
-            return this;
-        }
-        public String getSummary() {
-            return this.summary;
-        }
-
-        public ChatResponseBodyMessagesKnowledge setRelatedKnowledges(java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges) {
-            this.relatedKnowledges = relatedKnowledges;
-            return this;
-        }
-        public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> getRelatedKnowledges() {
-            return this.relatedKnowledges;
-        }
-
-        public ChatResponseBodyMessagesKnowledge setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public ChatResponseBodyMessagesKnowledge setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public ChatResponseBodyMessagesKnowledge setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
         public ChatResponseBodyMessagesKnowledge setAnswerSource(String answerSource) {
@@ -180,6 +138,38 @@ public class ChatResponseBody extends TeaModel {
             return this.answerSource;
         }
 
+        public ChatResponseBodyMessagesKnowledge setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setHitStatement(String hitStatement) {
+            this.hitStatement = hitStatement;
+            return this;
+        }
+        public String getHitStatement() {
+            return this.hitStatement;
+        }
+
         public ChatResponseBodyMessagesKnowledge setId(String id) {
             this.id = id;
             return this;
@@ -188,48 +178,141 @@ public class ChatResponseBody extends TeaModel {
             return this.id;
         }
 
+        public ChatResponseBodyMessagesKnowledge setRelatedKnowledges(java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> relatedKnowledges) {
+            this.relatedKnowledges = relatedKnowledges;
+            return this;
+        }
+        public java.util.List<ChatResponseBodyMessagesKnowledgeRelatedKnowledges> getRelatedKnowledges() {
+            return this.relatedKnowledges;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public ChatResponseBodyMessagesKnowledge setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class ChatResponseBodyMessagesRecommends extends TeaModel {
+        @NameInMap("AnswerSource")
+        public String answerSource;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("KnowledgeId")
+        public String knowledgeId;
+
+        @NameInMap("Score")
+        public Double score;
+
+        @NameInMap("Summary")
+        public String summary;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static ChatResponseBodyMessagesRecommends build(java.util.Map<String, ?> map) throws Exception {
+            ChatResponseBodyMessagesRecommends self = new ChatResponseBodyMessagesRecommends();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatResponseBodyMessagesRecommends setAnswerSource(String answerSource) {
+            this.answerSource = answerSource;
+            return this;
+        }
+        public String getAnswerSource() {
+            return this.answerSource;
+        }
+
+        public ChatResponseBodyMessagesRecommends setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ChatResponseBodyMessagesRecommends setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ChatResponseBodyMessagesRecommends setKnowledgeId(String knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public String getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ChatResponseBodyMessagesRecommends setScore(Double score) {
+            this.score = score;
+            return this;
+        }
+        public Double getScore() {
+            return this.score;
+        }
+
+        public ChatResponseBodyMessagesRecommends setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public ChatResponseBodyMessagesRecommends setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
     }
 
     public static class ChatResponseBodyMessagesTextSlots extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Origin")
-        public String origin;
+        @NameInMap("IsHit")
+        public Boolean isHit;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("IsHit")
-        public Boolean isHit;
+        @NameInMap("Origin")
+        public String origin;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ChatResponseBodyMessagesTextSlots build(java.util.Map<String, ?> map) throws Exception {
             ChatResponseBodyMessagesTextSlots self = new ChatResponseBodyMessagesTextSlots();
             return TeaModel.build(map, self);
-        }
-
-        public ChatResponseBodyMessagesTextSlots setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public ChatResponseBodyMessagesTextSlots setOrigin(String origin) {
-            this.origin = origin;
-            return this;
-        }
-        public String getOrigin() {
-            return this.origin;
-        }
-
-        public ChatResponseBodyMessagesTextSlots setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ChatResponseBodyMessagesTextSlots setIsHit(Boolean isHit) {
@@ -240,23 +323,56 @@ public class ChatResponseBody extends TeaModel {
             return this.isHit;
         }
 
+        public ChatResponseBodyMessagesTextSlots setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ChatResponseBodyMessagesTextSlots setOrigin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+        public String getOrigin() {
+            return this.origin;
+        }
+
+        public ChatResponseBodyMessagesTextSlots setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ChatResponseBodyMessagesText extends TeaModel {
-        @NameInMap("HitStatement")
-        public String hitStatement;
-
-        @NameInMap("DialogName")
-        public String dialogName;
+        @NameInMap("AnswerSource")
+        public String answerSource;
 
         @NameInMap("ArticleTitle")
         public String articleTitle;
 
-        @NameInMap("AnswerSource")
-        public String answerSource;
+        @NameInMap("Content")
+        public String content;
 
-        @NameInMap("Slots")
-        public java.util.List<ChatResponseBodyMessagesTextSlots> slots;
+        @NameInMap("ContentType")
+        public String contentType;
+
+        @NameInMap("DialogName")
+        public String dialogName;
+
+        @NameInMap("Ext")
+        public java.util.Map<String, ?> ext;
+
+        @NameInMap("ExternalFlags")
+        public java.util.Map<String, ?> externalFlags;
+
+        @NameInMap("HitStatement")
+        public String hitStatement;
 
         @NameInMap("IntentName")
         public String intentName;
@@ -264,51 +380,24 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("MetaData")
         public String metaData;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("ExternalFlags")
-        public java.util.Map<String, ?> externalFlags;
+        @NameInMap("Score")
+        public Double score;
 
-        @NameInMap("Ext")
-        public java.util.Map<String, ?> ext;
+        @NameInMap("Slots")
+        public java.util.List<ChatResponseBodyMessagesTextSlots> slots;
 
         @NameInMap("UserDefinedChatTitle")
         public String userDefinedChatTitle;
 
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("NodeId")
-        public String nodeId;
-
         public static ChatResponseBodyMessagesText build(java.util.Map<String, ?> map) throws Exception {
             ChatResponseBodyMessagesText self = new ChatResponseBodyMessagesText();
             return TeaModel.build(map, self);
-        }
-
-        public ChatResponseBodyMessagesText setHitStatement(String hitStatement) {
-            this.hitStatement = hitStatement;
-            return this;
-        }
-        public String getHitStatement() {
-            return this.hitStatement;
-        }
-
-        public ChatResponseBodyMessagesText setDialogName(String dialogName) {
-            this.dialogName = dialogName;
-            return this;
-        }
-        public String getDialogName() {
-            return this.dialogName;
-        }
-
-        public ChatResponseBodyMessagesText setArticleTitle(String articleTitle) {
-            this.articleTitle = articleTitle;
-            return this;
-        }
-        public String getArticleTitle() {
-            return this.articleTitle;
         }
 
         public ChatResponseBodyMessagesText setAnswerSource(String answerSource) {
@@ -319,12 +408,60 @@ public class ChatResponseBody extends TeaModel {
             return this.answerSource;
         }
 
-        public ChatResponseBodyMessagesText setSlots(java.util.List<ChatResponseBodyMessagesTextSlots> slots) {
-            this.slots = slots;
+        public ChatResponseBodyMessagesText setArticleTitle(String articleTitle) {
+            this.articleTitle = articleTitle;
             return this;
         }
-        public java.util.List<ChatResponseBodyMessagesTextSlots> getSlots() {
-            return this.slots;
+        public String getArticleTitle() {
+            return this.articleTitle;
+        }
+
+        public ChatResponseBodyMessagesText setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ChatResponseBodyMessagesText setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public ChatResponseBodyMessagesText setDialogName(String dialogName) {
+            this.dialogName = dialogName;
+            return this;
+        }
+        public String getDialogName() {
+            return this.dialogName;
+        }
+
+        public ChatResponseBodyMessagesText setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
+        }
+
+        public ChatResponseBodyMessagesText setExternalFlags(java.util.Map<String, ?> externalFlags) {
+            this.externalFlags = externalFlags;
+            return this;
+        }
+        public java.util.Map<String, ?> getExternalFlags() {
+            return this.externalFlags;
+        }
+
+        public ChatResponseBodyMessagesText setHitStatement(String hitStatement) {
+            this.hitStatement = hitStatement;
+            return this;
+        }
+        public String getHitStatement() {
+            return this.hitStatement;
         }
 
         public ChatResponseBodyMessagesText setIntentName(String intentName) {
@@ -343,6 +480,14 @@ public class ChatResponseBody extends TeaModel {
             return this.metaData;
         }
 
+        public ChatResponseBodyMessagesText setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
         public ChatResponseBodyMessagesText setNodeName(String nodeName) {
             this.nodeName = nodeName;
             return this;
@@ -351,20 +496,20 @@ public class ChatResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public ChatResponseBodyMessagesText setExternalFlags(java.util.Map<String, ?> externalFlags) {
-            this.externalFlags = externalFlags;
+        public ChatResponseBodyMessagesText setScore(Double score) {
+            this.score = score;
             return this;
         }
-        public java.util.Map<String, ?> getExternalFlags() {
-            return this.externalFlags;
+        public Double getScore() {
+            return this.score;
         }
 
-        public ChatResponseBodyMessagesText setExt(java.util.Map<String, ?> ext) {
-            this.ext = ext;
+        public ChatResponseBodyMessagesText setSlots(java.util.List<ChatResponseBodyMessagesTextSlots> slots) {
+            this.slots = slots;
             return this;
         }
-        public java.util.Map<String, ?> getExt() {
-            return this.ext;
+        public java.util.List<ChatResponseBodyMessagesTextSlots> getSlots() {
+            return this.slots;
         }
 
         public ChatResponseBodyMessagesText setUserDefinedChatTitle(String userDefinedChatTitle) {
@@ -375,81 +520,33 @@ public class ChatResponseBody extends TeaModel {
             return this.userDefinedChatTitle;
         }
 
-        public ChatResponseBodyMessagesText setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public ChatResponseBodyMessagesText setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
-        }
-
     }
 
-    public static class ChatResponseBodyMessagesRecommends extends TeaModel {
-        @NameInMap("Summary")
-        public String summary;
-
-        @NameInMap("KnowledgeId")
-        public String knowledgeId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Title")
-        public String title;
-
+    public static class ChatResponseBodyMessages extends TeaModel {
         @NameInMap("AnswerSource")
         public String answerSource;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("AnswerType")
+        public String answerType;
 
-        public static ChatResponseBodyMessagesRecommends build(java.util.Map<String, ?> map) throws Exception {
-            ChatResponseBodyMessagesRecommends self = new ChatResponseBodyMessagesRecommends();
+        @NameInMap("Knowledge")
+        public ChatResponseBodyMessagesKnowledge knowledge;
+
+        @NameInMap("Recommends")
+        public java.util.List<ChatResponseBodyMessagesRecommends> recommends;
+
+        @NameInMap("Text")
+        public ChatResponseBodyMessagesText text;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ChatResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
+            ChatResponseBodyMessages self = new ChatResponseBodyMessages();
             return TeaModel.build(map, self);
         }
 
-        public ChatResponseBodyMessagesRecommends setSummary(String summary) {
-            this.summary = summary;
-            return this;
-        }
-        public String getSummary() {
-            return this.summary;
-        }
-
-        public ChatResponseBodyMessagesRecommends setKnowledgeId(String knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public String getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public ChatResponseBodyMessagesRecommends setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public ChatResponseBodyMessagesRecommends setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public ChatResponseBodyMessagesRecommends setAnswerSource(String answerSource) {
+        public ChatResponseBodyMessages setAnswerSource(String answerSource) {
             this.answerSource = answerSource;
             return this;
         }
@@ -457,40 +554,12 @@ public class ChatResponseBody extends TeaModel {
             return this.answerSource;
         }
 
-        public ChatResponseBodyMessagesRecommends setContent(String content) {
-            this.content = content;
+        public ChatResponseBodyMessages setAnswerType(String answerType) {
+            this.answerType = answerType;
             return this;
         }
-        public String getContent() {
-            return this.content;
-        }
-
-    }
-
-    public static class ChatResponseBodyMessages extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Knowledge")
-        public ChatResponseBodyMessagesKnowledge knowledge;
-
-        @NameInMap("Text")
-        public ChatResponseBodyMessagesText text;
-
-        @NameInMap("Recommends")
-        public java.util.List<ChatResponseBodyMessagesRecommends> recommends;
-
-        public static ChatResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
-            ChatResponseBodyMessages self = new ChatResponseBodyMessages();
-            return TeaModel.build(map, self);
-        }
-
-        public ChatResponseBodyMessages setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public String getAnswerType() {
+            return this.answerType;
         }
 
         public ChatResponseBodyMessages setKnowledge(ChatResponseBodyMessagesKnowledge knowledge) {
@@ -501,6 +570,14 @@ public class ChatResponseBody extends TeaModel {
             return this.knowledge;
         }
 
+        public ChatResponseBodyMessages setRecommends(java.util.List<ChatResponseBodyMessagesRecommends> recommends) {
+            this.recommends = recommends;
+            return this;
+        }
+        public java.util.List<ChatResponseBodyMessagesRecommends> getRecommends() {
+            return this.recommends;
+        }
+
         public ChatResponseBodyMessages setText(ChatResponseBodyMessagesText text) {
             this.text = text;
             return this;
@@ -509,12 +586,12 @@ public class ChatResponseBody extends TeaModel {
             return this.text;
         }
 
-        public ChatResponseBodyMessages setRecommends(java.util.List<ChatResponseBodyMessagesRecommends> recommends) {
-            this.recommends = recommends;
+        public ChatResponseBodyMessages setType(String type) {
+            this.type = type;
             return this;
         }
-        public java.util.List<ChatResponseBodyMessagesRecommends> getRecommends() {
-            return this.recommends;
+        public String getType() {
+            return this.type;
         }
 
     }

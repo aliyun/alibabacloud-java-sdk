@@ -4,11 +4,11 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class QueryEntitiesRequest extends TeaModel {
-    @NameInMap("EntityName")
-    public String entityName;
-
     @NameInMap("DialogId")
     public Long dialogId;
+
+    @NameInMap("EntityName")
+    public String entityName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -21,20 +21,20 @@ public class QueryEntitiesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryEntitiesRequest setEntityName(String entityName) {
-        this.entityName = entityName;
-        return this;
-    }
-    public String getEntityName() {
-        return this.entityName;
-    }
-
     public QueryEntitiesRequest setDialogId(Long dialogId) {
         this.dialogId = dialogId;
         return this;
     }
     public Long getDialogId() {
         return this.dialogId;
+    }
+
+    public QueryEntitiesRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
     }
 
     public QueryEntitiesRequest setPageNumber(Integer pageNumber) {

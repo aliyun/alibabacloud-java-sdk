@@ -7,11 +7,11 @@ public class RemoveEntityMemberShrinkRequest extends TeaModel {
     @NameInMap("EntityId")
     public Long entityId;
 
-    @NameInMap("RemoveType")
-    public String removeType;
-
     @NameInMap("Member")
     public String memberShrink;
+
+    @NameInMap("RemoveType")
+    public String removeType;
 
     public static RemoveEntityMemberShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveEntityMemberShrinkRequest self = new RemoveEntityMemberShrinkRequest();
@@ -26,20 +26,20 @@ public class RemoveEntityMemberShrinkRequest extends TeaModel {
         return this.entityId;
     }
 
-    public RemoveEntityMemberShrinkRequest setRemoveType(String removeType) {
-        this.removeType = removeType;
-        return this;
-    }
-    public String getRemoveType() {
-        return this.removeType;
-    }
-
     public RemoveEntityMemberShrinkRequest setMemberShrink(String memberShrink) {
         this.memberShrink = memberShrink;
         return this;
     }
     public String getMemberShrink() {
         return this.memberShrink;
+    }
+
+    public RemoveEntityMemberShrinkRequest setRemoveType(String removeType) {
+        this.removeType = removeType;
+        return this;
+    }
+    public String getRemoveType() {
+        return this.removeType;
     }
 
 }

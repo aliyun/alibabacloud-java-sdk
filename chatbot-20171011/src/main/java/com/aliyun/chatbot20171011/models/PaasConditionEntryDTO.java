@@ -4,17 +4,17 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasConditionEntryDTO extends TeaModel {
-    // id
-    @NameInMap("id")
+    // Id
+    @NameInMap("Id")
     public String id;
-
-    // Term
-    @NameInMap("Term")
-    public String term;
 
     // Name
     @NameInMap("Name")
     public String name;
+
+    // Term
+    @NameInMap("Term")
+    public String term;
 
     // Type
     @NameInMap("Type")
@@ -37,20 +37,20 @@ public class PaasConditionEntryDTO extends TeaModel {
         return this.id;
     }
 
-    public PaasConditionEntryDTO setTerm(String term) {
-        this.term = term;
-        return this;
-    }
-    public String getTerm() {
-        return this.term;
-    }
-
     public PaasConditionEntryDTO setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public PaasConditionEntryDTO setTerm(String term) {
+        this.term = term;
+        return this;
+    }
+    public String getTerm() {
+        return this.term;
     }
 
     public PaasConditionEntryDTO setType(String type) {

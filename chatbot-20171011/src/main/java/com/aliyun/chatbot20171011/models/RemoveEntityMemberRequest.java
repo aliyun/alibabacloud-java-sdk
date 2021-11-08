@@ -7,11 +7,11 @@ public class RemoveEntityMemberRequest extends TeaModel {
     @NameInMap("EntityId")
     public Long entityId;
 
-    @NameInMap("RemoveType")
-    public String removeType;
-
     @NameInMap("Member")
     public RemoveEntityMemberRequestMember member;
+
+    @NameInMap("RemoveType")
+    public String removeType;
 
     public static RemoveEntityMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveEntityMemberRequest self = new RemoveEntityMemberRequest();
@@ -26,20 +26,20 @@ public class RemoveEntityMemberRequest extends TeaModel {
         return this.entityId;
     }
 
-    public RemoveEntityMemberRequest setRemoveType(String removeType) {
-        this.removeType = removeType;
-        return this;
-    }
-    public String getRemoveType() {
-        return this.removeType;
-    }
-
     public RemoveEntityMemberRequest setMember(RemoveEntityMemberRequestMember member) {
         this.member = member;
         return this;
     }
     public RemoveEntityMemberRequestMember getMember() {
         return this.member;
+    }
+
+    public RemoveEntityMemberRequest setRemoveType(String removeType) {
+        this.removeType = removeType;
+        return this;
+    }
+    public String getRemoveType() {
+        return this.removeType;
     }
 
     public static class RemoveEntityMemberRequestMember extends TeaModel {

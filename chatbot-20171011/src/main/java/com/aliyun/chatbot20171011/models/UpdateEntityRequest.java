@@ -13,11 +13,11 @@ public class UpdateEntityRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
-    @NameInMap("Regex")
-    public String regex;
-
     @NameInMap("Members")
     public java.util.List<UpdateEntityRequestMembers> members;
+
+    @NameInMap("Regex")
+    public String regex;
 
     public static UpdateEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEntityRequest self = new UpdateEntityRequest();
@@ -48,20 +48,20 @@ public class UpdateEntityRequest extends TeaModel {
         return this.entityType;
     }
 
-    public UpdateEntityRequest setRegex(String regex) {
-        this.regex = regex;
-        return this;
-    }
-    public String getRegex() {
-        return this.regex;
-    }
-
     public UpdateEntityRequest setMembers(java.util.List<UpdateEntityRequestMembers> members) {
         this.members = members;
         return this;
     }
     public java.util.List<UpdateEntityRequestMembers> getMembers() {
         return this.members;
+    }
+
+    public UpdateEntityRequest setRegex(String regex) {
+        this.regex = regex;
+        return this;
+    }
+    public String getRegex() {
+        return this.regex;
     }
 
     public static class UpdateEntityRequestMembers extends TeaModel {

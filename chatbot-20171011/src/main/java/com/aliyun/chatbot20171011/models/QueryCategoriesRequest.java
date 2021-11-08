@@ -4,18 +4,26 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class QueryCategoriesRequest extends TeaModel {
+    @NameInMap("KnowledgeType")
+    public Long knowledgeType;
+
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;
 
     @NameInMap("ShowChildrens")
     public Boolean showChildrens;
 
-    @NameInMap("KnowledgeType")
-    public Long knowledgeType;
-
     public static QueryCategoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCategoriesRequest self = new QueryCategoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCategoriesRequest setKnowledgeType(Long knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public Long getKnowledgeType() {
+        return this.knowledgeType;
     }
 
     public QueryCategoriesRequest setParentCategoryId(Long parentCategoryId) {
@@ -32,14 +40,6 @@ public class QueryCategoriesRequest extends TeaModel {
     }
     public Boolean getShowChildrens() {
         return this.showChildrens;
-    }
-
-    public QueryCategoriesRequest setKnowledgeType(Long knowledgeType) {
-        this.knowledgeType = knowledgeType;
-        return this;
-    }
-    public Long getKnowledgeType() {
-        return this.knowledgeType;
     }
 
 }

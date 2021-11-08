@@ -4,6 +4,10 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class RuleMtopDTO extends TeaModel {
+    // Error
+    @NameInMap("Error")
+    public java.util.List<String> error;
+
     // Strict
     @NameInMap("Strict")
     public Boolean strict;
@@ -16,13 +20,17 @@ public class RuleMtopDTO extends TeaModel {
     @NameInMap("Warning")
     public java.util.List<String> warning;
 
-    // Error
-    @NameInMap("Error")
-    public java.util.List<String> error;
-
     public static RuleMtopDTO build(java.util.Map<String, ?> map) throws Exception {
         RuleMtopDTO self = new RuleMtopDTO();
         return TeaModel.build(map, self);
+    }
+
+    public RuleMtopDTO setError(java.util.List<String> error) {
+        this.error = error;
+        return this;
+    }
+    public java.util.List<String> getError() {
+        return this.error;
     }
 
     public RuleMtopDTO setStrict(Boolean strict) {
@@ -47,14 +55,6 @@ public class RuleMtopDTO extends TeaModel {
     }
     public java.util.List<String> getWarning() {
         return this.warning;
-    }
-
-    public RuleMtopDTO setError(java.util.List<String> error) {
-        this.error = error;
-        return this;
-    }
-    public java.util.List<String> getError() {
-        return this.error;
     }
 
 }

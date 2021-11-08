@@ -4,41 +4,33 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasResponseNodeContentDTO extends TeaModel {
-    // Type
-    @NameInMap("Type")
-    public String type;
-
-    // Text
-    @NameInMap("Text")
-    public String text;
+    // ButtonList
+    @NameInMap("ButtonList")
+    public PaasButtonListDTO buttonList;
 
     // Image
     @NameInMap("Image")
     public String image;
 
-    // ButtonList
-    @NameInMap("ButtonList")
-    public PaasButtonListDTO buttonList;
+    // Text
+    @NameInMap("Text")
+    public String text;
+
+    // Type
+    @NameInMap("Type")
+    public String type;
 
     public static PaasResponseNodeContentDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasResponseNodeContentDTO self = new PaasResponseNodeContentDTO();
         return TeaModel.build(map, self);
     }
 
-    public PaasResponseNodeContentDTO setType(String type) {
-        this.type = type;
+    public PaasResponseNodeContentDTO setButtonList(PaasButtonListDTO buttonList) {
+        this.buttonList = buttonList;
         return this;
     }
-    public String getType() {
-        return this.type;
-    }
-
-    public PaasResponseNodeContentDTO setText(String text) {
-        this.text = text;
-        return this;
-    }
-    public String getText() {
-        return this.text;
+    public PaasButtonListDTO getButtonList() {
+        return this.buttonList;
     }
 
     public PaasResponseNodeContentDTO setImage(String image) {
@@ -49,12 +41,20 @@ public class PaasResponseNodeContentDTO extends TeaModel {
         return this.image;
     }
 
-    public PaasResponseNodeContentDTO setButtonList(PaasButtonListDTO buttonList) {
-        this.buttonList = buttonList;
+    public PaasResponseNodeContentDTO setText(String text) {
+        this.text = text;
         return this;
     }
-    public PaasButtonListDTO getButtonList() {
-        return this.buttonList;
+    public String getText() {
+        return this.text;
+    }
+
+    public PaasResponseNodeContentDTO setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

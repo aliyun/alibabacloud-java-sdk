@@ -4,11 +4,14 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class DescribeCoreWordResponseBody extends TeaModel {
+    @NameInMap("CoreWordCode")
+    public String coreWordCode;
+
     @NameInMap("CoreWordName")
     public String coreWordName;
 
-    @NameInMap("Synonyms")
-    public java.util.List<String> synonyms;
+    @NameInMap("CreateTime")
+    public String createTime;
 
     @NameInMap("ModifyTime")
     public String modifyTime;
@@ -16,15 +19,20 @@ public class DescribeCoreWordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("CoreWordCode")
-    public String coreWordCode;
+    @NameInMap("Synonyms")
+    public java.util.List<String> synonyms;
 
     public static DescribeCoreWordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCoreWordResponseBody self = new DescribeCoreWordResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCoreWordResponseBody setCoreWordCode(String coreWordCode) {
+        this.coreWordCode = coreWordCode;
+        return this;
+    }
+    public String getCoreWordCode() {
+        return this.coreWordCode;
     }
 
     public DescribeCoreWordResponseBody setCoreWordName(String coreWordName) {
@@ -35,12 +43,12 @@ public class DescribeCoreWordResponseBody extends TeaModel {
         return this.coreWordName;
     }
 
-    public DescribeCoreWordResponseBody setSynonyms(java.util.List<String> synonyms) {
-        this.synonyms = synonyms;
+    public DescribeCoreWordResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public java.util.List<String> getSynonyms() {
-        return this.synonyms;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public DescribeCoreWordResponseBody setModifyTime(String modifyTime) {
@@ -59,20 +67,12 @@ public class DescribeCoreWordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCoreWordResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public DescribeCoreWordResponseBody setSynonyms(java.util.List<String> synonyms) {
+        this.synonyms = synonyms;
         return this;
     }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeCoreWordResponseBody setCoreWordCode(String coreWordCode) {
-        this.coreWordCode = coreWordCode;
-        return this;
-    }
-    public String getCoreWordCode() {
-        return this.coreWordCode;
+    public java.util.List<String> getSynonyms() {
+        return this.synonyms;
     }
 
 }

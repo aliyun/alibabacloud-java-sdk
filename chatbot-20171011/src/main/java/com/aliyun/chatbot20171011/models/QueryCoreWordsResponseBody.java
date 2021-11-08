@@ -4,32 +4,24 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class QueryCoreWordsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("CoreWords")
     public java.util.List<QueryCoreWordsResponseBodyCoreWords> coreWords;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static QueryCoreWordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCoreWordsResponseBody self = new QueryCoreWordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCoreWordsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public QueryCoreWordsResponseBody setCoreWords(java.util.List<QueryCoreWordsResponseBodyCoreWords> coreWords) {
@@ -40,12 +32,12 @@ public class QueryCoreWordsResponseBody extends TeaModel {
         return this.coreWords;
     }
 
-    public QueryCoreWordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryCoreWordsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryCoreWordsResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +48,20 @@ public class QueryCoreWordsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryCoreWordsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public QueryCoreWordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryCoreWordsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class QueryCoreWordsResponseBodyCoreWords extends TeaModel {
@@ -71,14 +71,14 @@ public class QueryCoreWordsResponseBody extends TeaModel {
         @NameInMap("CoreWordName")
         public String coreWordName;
 
-        @NameInMap("Synonyms")
-        public java.util.List<String> synonyms;
-
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        @NameInMap("Synonyms")
+        public java.util.List<String> synonyms;
 
         public static QueryCoreWordsResponseBodyCoreWords build(java.util.Map<String, ?> map) throws Exception {
             QueryCoreWordsResponseBodyCoreWords self = new QueryCoreWordsResponseBodyCoreWords();
@@ -101,14 +101,6 @@ public class QueryCoreWordsResponseBody extends TeaModel {
             return this.coreWordName;
         }
 
-        public QueryCoreWordsResponseBodyCoreWords setSynonyms(java.util.List<String> synonyms) {
-            this.synonyms = synonyms;
-            return this;
-        }
-        public java.util.List<String> getSynonyms() {
-            return this.synonyms;
-        }
-
         public QueryCoreWordsResponseBodyCoreWords setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -123,6 +115,14 @@ public class QueryCoreWordsResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public QueryCoreWordsResponseBodyCoreWords setSynonyms(java.util.List<String> synonyms) {
+            this.synonyms = synonyms;
+            return this;
+        }
+        public java.util.List<String> getSynonyms() {
+            return this.synonyms;
         }
 
     }

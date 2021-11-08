@@ -4,17 +4,17 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasFunctionPluginFieldDataDTO extends TeaModel {
-    // Function
-    @NameInMap("Function")
-    public String function;
-
     // AliyunFunction
     @NameInMap("AliyunFunction")
     public String aliyunFunction;
 
-    // Type
-    @NameInMap("Type")
-    public String type;
+    // AliyunService
+    @NameInMap("AliyunService")
+    public String aliyunService;
+
+    // Code
+    @NameInMap("Code")
+    public String code;
 
     // Description
     @NameInMap("Description")
@@ -24,37 +24,29 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
     @NameInMap("EndPoint")
     public String endPoint;
 
-    // Code
-    @NameInMap("Code")
-    public String code;
+    // Function
+    @NameInMap("Function")
+    public String function;
 
     // Name
     @NameInMap("Name")
     public String name;
 
-    // AliyunService
-    @NameInMap("AliyunService")
-    public String aliyunService;
+    // Params
+    @NameInMap("Params")
+    public java.util.Map<String, ?> params;
 
     // Switch
     @NameInMap("Switch")
     public java.util.List<PaasSwitchCaseDTO> _switch;
 
-    // Params
-    @NameInMap("Params")
-    public java.util.Map<String, ?> params;
+    // Type
+    @NameInMap("Type")
+    public String type;
 
     public static PaasFunctionPluginFieldDataDTO build(java.util.Map<String, ?> map) throws Exception {
         PaasFunctionPluginFieldDataDTO self = new PaasFunctionPluginFieldDataDTO();
         return TeaModel.build(map, self);
-    }
-
-    public PaasFunctionPluginFieldDataDTO setFunction(String function) {
-        this.function = function;
-        return this;
-    }
-    public String getFunction() {
-        return this.function;
     }
 
     public PaasFunctionPluginFieldDataDTO setAliyunFunction(String aliyunFunction) {
@@ -65,12 +57,20 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         return this.aliyunFunction;
     }
 
-    public PaasFunctionPluginFieldDataDTO setType(String type) {
-        this.type = type;
+    public PaasFunctionPluginFieldDataDTO setAliyunService(String aliyunService) {
+        this.aliyunService = aliyunService;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getAliyunService() {
+        return this.aliyunService;
+    }
+
+    public PaasFunctionPluginFieldDataDTO setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public PaasFunctionPluginFieldDataDTO setDescription(String description) {
@@ -89,12 +89,12 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         return this.endPoint;
     }
 
-    public PaasFunctionPluginFieldDataDTO setCode(String code) {
-        this.code = code;
+    public PaasFunctionPluginFieldDataDTO setFunction(String function) {
+        this.function = function;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getFunction() {
+        return this.function;
     }
 
     public PaasFunctionPluginFieldDataDTO setName(String name) {
@@ -105,12 +105,12 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         return this.name;
     }
 
-    public PaasFunctionPluginFieldDataDTO setAliyunService(String aliyunService) {
-        this.aliyunService = aliyunService;
+    public PaasFunctionPluginFieldDataDTO setParams(java.util.Map<String, ?> params) {
+        this.params = params;
         return this;
     }
-    public String getAliyunService() {
-        return this.aliyunService;
+    public java.util.Map<String, ?> getParams() {
+        return this.params;
     }
 
     public PaasFunctionPluginFieldDataDTO set_switch(java.util.List<PaasSwitchCaseDTO> _switch) {
@@ -121,12 +121,12 @@ public class PaasFunctionPluginFieldDataDTO extends TeaModel {
         return this._switch;
     }
 
-    public PaasFunctionPluginFieldDataDTO setParams(java.util.Map<String, ?> params) {
-        this.params = params;
+    public PaasFunctionPluginFieldDataDTO setType(String type) {
+        this.type = type;
         return this;
     }
-    public java.util.Map<String, ?> getParams() {
-        return this.params;
+    public String getType() {
+        return this.type;
     }
 
 }

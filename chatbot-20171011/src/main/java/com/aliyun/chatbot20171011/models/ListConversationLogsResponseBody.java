@@ -4,11 +4,11 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ListConversationLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ChatLogs")
     public java.util.List<java.util.Map<String, ?>> chatLogs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Rounds")
     public Long rounds;
@@ -18,20 +18,20 @@ public class ListConversationLogsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListConversationLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListConversationLogsResponseBody setChatLogs(java.util.List<java.util.Map<String, ?>> chatLogs) {
         this.chatLogs = chatLogs;
         return this;
     }
     public java.util.List<java.util.Map<String, ?>> getChatLogs() {
         return this.chatLogs;
+    }
+
+    public ListConversationLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListConversationLogsResponseBody setRounds(Long rounds) {

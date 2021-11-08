@@ -20,9 +20,108 @@ public class UpdateKnowledgeRequest extends TeaModel {
         return this.knowledge;
     }
 
+    public static class UpdateKnowledgeRequestKnowledgeOutlines extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        @NameInMap("OutlineId")
+        public Long outlineId;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static UpdateKnowledgeRequestKnowledgeOutlines build(java.util.Map<String, ?> map) throws Exception {
+            UpdateKnowledgeRequestKnowledgeOutlines self = new UpdateKnowledgeRequestKnowledgeOutlines();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateKnowledgeRequestKnowledgeOutlines setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeOutlines setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeOutlines setOutlineId(Long outlineId) {
+            this.outlineId = outlineId;
+            return this;
+        }
+        public Long getOutlineId() {
+            return this.outlineId;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeOutlines setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class UpdateKnowledgeRequestKnowledgeSimQuestions extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("SimQuestionId")
+        public Long simQuestionId;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static UpdateKnowledgeRequestKnowledgeSimQuestions build(java.util.Map<String, ?> map) throws Exception {
+            UpdateKnowledgeRequestKnowledgeSimQuestions self = new UpdateKnowledgeRequestKnowledgeSimQuestions();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateKnowledgeRequestKnowledgeSimQuestions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeSimQuestions setSimQuestionId(Long simQuestionId) {
+            this.simQuestionId = simQuestionId;
+            return this;
+        }
+        public Long getSimQuestionId() {
+            return this.simQuestionId;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeSimQuestions setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
     public static class UpdateKnowledgeRequestKnowledgeSolutions extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("PerspectiveIds")
+        public java.util.List<String> perspectiveIds;
 
         @NameInMap("PlainText")
         public String plainText;
@@ -30,15 +129,17 @@ public class UpdateKnowledgeRequest extends TeaModel {
         @NameInMap("SolutionId")
         public Long solutionId;
 
-        @NameInMap("PerspectiveIds")
-        public java.util.List<String> perspectiveIds;
-
-        @NameInMap("Action")
-        public String action;
-
         public static UpdateKnowledgeRequestKnowledgeSolutions build(java.util.Map<String, ?> map) throws Exception {
             UpdateKnowledgeRequestKnowledgeSolutions self = new UpdateKnowledgeRequestKnowledgeSolutions();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateKnowledgeRequestKnowledgeSolutions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
         public UpdateKnowledgeRequestKnowledgeSolutions setContent(String content) {
@@ -47,6 +148,14 @@ public class UpdateKnowledgeRequest extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public UpdateKnowledgeRequestKnowledgeSolutions setPerspectiveIds(java.util.List<String> perspectiveIds) {
+            this.perspectiveIds = perspectiveIds;
+            return this;
+        }
+        public java.util.List<String> getPerspectiveIds() {
+            return this.perspectiveIds;
         }
 
         public UpdateKnowledgeRequestKnowledgeSolutions setPlainText(String plainText) {
@@ -65,120 +174,17 @@ public class UpdateKnowledgeRequest extends TeaModel {
             return this.solutionId;
         }
 
-        public UpdateKnowledgeRequestKnowledgeSolutions setPerspectiveIds(java.util.List<String> perspectiveIds) {
-            this.perspectiveIds = perspectiveIds;
-            return this;
-        }
-        public java.util.List<String> getPerspectiveIds() {
-            return this.perspectiveIds;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeSolutions setAction(String action) {
-            this.action = action;
-            return this;
-        }
-        public String getAction() {
-            return this.action;
-        }
-
-    }
-
-    public static class UpdateKnowledgeRequestKnowledgeOutlines extends TeaModel {
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("OutlineId")
-        public Long outlineId;
-
-        @NameInMap("Action")
-        public String action;
-
-        public static UpdateKnowledgeRequestKnowledgeOutlines build(java.util.Map<String, ?> map) throws Exception {
-            UpdateKnowledgeRequestKnowledgeOutlines self = new UpdateKnowledgeRequestKnowledgeOutlines();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateKnowledgeRequestKnowledgeOutlines setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeOutlines setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeOutlines setOutlineId(Long outlineId) {
-            this.outlineId = outlineId;
-            return this;
-        }
-        public Long getOutlineId() {
-            return this.outlineId;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeOutlines setAction(String action) {
-            this.action = action;
-            return this;
-        }
-        public String getAction() {
-            return this.action;
-        }
-
-    }
-
-    public static class UpdateKnowledgeRequestKnowledgeSimQuestions extends TeaModel {
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("SimQuestionId")
-        public Long simQuestionId;
-
-        @NameInMap("Action")
-        public String action;
-
-        public static UpdateKnowledgeRequestKnowledgeSimQuestions build(java.util.Map<String, ?> map) throws Exception {
-            UpdateKnowledgeRequestKnowledgeSimQuestions self = new UpdateKnowledgeRequestKnowledgeSimQuestions();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateKnowledgeRequestKnowledgeSimQuestions setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeSimQuestions setSimQuestionId(Long simQuestionId) {
-            this.simQuestionId = simQuestionId;
-            return this;
-        }
-        public Long getSimQuestionId() {
-            return this.simQuestionId;
-        }
-
-        public UpdateKnowledgeRequestKnowledgeSimQuestions setAction(String action) {
-            this.action = action;
-            return this;
-        }
-        public String getAction() {
-            return this.action;
-        }
-
     }
 
     public static class UpdateKnowledgeRequestKnowledge extends TeaModel {
         @NameInMap("CategoryId")
         public Long categoryId;
+
+        @NameInMap("EndDate")
+        public String endDate;
+
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
 
         @NameInMap("KnowledgeTitle")
         public String knowledgeTitle;
@@ -186,23 +192,17 @@ public class UpdateKnowledgeRequest extends TeaModel {
         @NameInMap("KnowledgeType")
         public Integer knowledgeType;
 
-        @NameInMap("Solutions")
-        public java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> solutions;
-
-        @NameInMap("StartDate")
-        public String startDate;
-
-        @NameInMap("EndDate")
-        public String endDate;
-
         @NameInMap("Outlines")
         public java.util.List<UpdateKnowledgeRequestKnowledgeOutlines> outlines;
 
         @NameInMap("SimQuestions")
         public java.util.List<UpdateKnowledgeRequestKnowledgeSimQuestions> simQuestions;
 
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
+        @NameInMap("Solutions")
+        public java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> solutions;
+
+        @NameInMap("StartDate")
+        public String startDate;
 
         public static UpdateKnowledgeRequestKnowledge build(java.util.Map<String, ?> map) throws Exception {
             UpdateKnowledgeRequestKnowledge self = new UpdateKnowledgeRequestKnowledge();
@@ -215,6 +215,22 @@ public class UpdateKnowledgeRequest extends TeaModel {
         }
         public Long getCategoryId() {
             return this.categoryId;
+        }
+
+        public UpdateKnowledgeRequestKnowledge setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public UpdateKnowledgeRequestKnowledge setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
         }
 
         public UpdateKnowledgeRequestKnowledge setKnowledgeTitle(String knowledgeTitle) {
@@ -233,30 +249,6 @@ public class UpdateKnowledgeRequest extends TeaModel {
             return this.knowledgeType;
         }
 
-        public UpdateKnowledgeRequestKnowledge setSolutions(java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> solutions) {
-            this.solutions = solutions;
-            return this;
-        }
-        public java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> getSolutions() {
-            return this.solutions;
-        }
-
-        public UpdateKnowledgeRequestKnowledge setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
-        }
-
-        public UpdateKnowledgeRequestKnowledge setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
-        }
-
         public UpdateKnowledgeRequestKnowledge setOutlines(java.util.List<UpdateKnowledgeRequestKnowledgeOutlines> outlines) {
             this.outlines = outlines;
             return this;
@@ -273,12 +265,20 @@ public class UpdateKnowledgeRequest extends TeaModel {
             return this.simQuestions;
         }
 
-        public UpdateKnowledgeRequestKnowledge setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
+        public UpdateKnowledgeRequestKnowledge setSolutions(java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> solutions) {
+            this.solutions = solutions;
             return this;
         }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
+        public java.util.List<UpdateKnowledgeRequestKnowledgeSolutions> getSolutions() {
+            return this.solutions;
+        }
+
+        public UpdateKnowledgeRequestKnowledge setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
         }
 
     }
