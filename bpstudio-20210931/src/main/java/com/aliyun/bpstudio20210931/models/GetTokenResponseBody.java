@@ -4,21 +4,37 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetTokenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public GetTokenResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetTokenResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTokenResponseBody self = new GetTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTokenResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetTokenResponseBody setData(GetTokenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTokenResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTokenResponseBody setMessage(String message) {
@@ -37,46 +53,26 @@ public class GetTokenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTokenResponseBody setData(GetTokenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTokenResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTokenResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class GetTokenResponseBodyData extends TeaModel {
-        // oss访问token
-        @NameInMap("SecurityToken")
-        public String securityToken;
-
-        // oss的endpoint
-        @NameInMap("Endpoint")
-        public String endpoint;
+        // oss访问access key id
+        @NameInMap("AccessKeyId")
+        public String accessKeyId;
 
         // oss访问access key secret id
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
-        // 暂时不用
-        @NameInMap("ObjectName")
-        public String objectName;
-
-        // oss访问access key id
-        @NameInMap("AccessKeyId")
-        public String accessKeyId;
-
         // oss文件保存bucket位置
         @NameInMap("Bucket")
         public String bucket;
+
+        // oss的endpoint
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        // oss访问token
+        @NameInMap("SecurityToken")
+        public String securityToken;
 
         // oss快照保存bucket位置
         @NameInMap("SnapshotBucket")
@@ -87,20 +83,12 @@ public class GetTokenResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTokenResponseBodyData setSecurityToken(String securityToken) {
-            this.securityToken = securityToken;
+        public GetTokenResponseBodyData setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
             return this;
         }
-        public String getSecurityToken() {
-            return this.securityToken;
-        }
-
-        public GetTokenResponseBodyData setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
+        public String getAccessKeyId() {
+            return this.accessKeyId;
         }
 
         public GetTokenResponseBodyData setAccessKeySecret(String accessKeySecret) {
@@ -111,28 +99,28 @@ public class GetTokenResponseBody extends TeaModel {
             return this.accessKeySecret;
         }
 
-        public GetTokenResponseBodyData setObjectName(String objectName) {
-            this.objectName = objectName;
-            return this;
-        }
-        public String getObjectName() {
-            return this.objectName;
-        }
-
-        public GetTokenResponseBodyData setAccessKeyId(String accessKeyId) {
-            this.accessKeyId = accessKeyId;
-            return this;
-        }
-        public String getAccessKeyId() {
-            return this.accessKeyId;
-        }
-
         public GetTokenResponseBodyData setBucket(String bucket) {
             this.bucket = bucket;
             return this;
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public GetTokenResponseBodyData setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public GetTokenResponseBodyData setSecurityToken(String securityToken) {
+            this.securityToken = securityToken;
+            return this;
+        }
+        public String getSecurityToken() {
+            return this.securityToken;
         }
 
         public GetTokenResponseBodyData setSnapshotBucket(String snapshotBucket) {

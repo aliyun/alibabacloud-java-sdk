@@ -4,21 +4,37 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public GetTemplateResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetTemplateResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTemplateResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetTemplateResponseBody setData(GetTemplateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTemplateResponseBodyData getData() {
+        return this.data;
     }
 
     public GetTemplateResponseBody setMessage(String message) {
@@ -37,23 +53,10 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTemplateResponseBody setData(GetTemplateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTemplateResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTemplateResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public static class GetTemplateResponseBodyData extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("Description")
         public String description;
 
@@ -63,21 +66,26 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("TopoURL")
-        public String topoURL;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("TopoURL")
+        public String topoURL;
 
         public static GetTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateResponseBodyData self = new GetTemplateResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetTemplateResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetTemplateResponseBodyData setDescription(String description) {
@@ -104,12 +112,12 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetTemplateResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
+        public GetTemplateResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getTopoURL() {
-            return this.topoURL;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetTemplateResponseBodyData setTemplateId(String templateId) {
@@ -120,20 +128,12 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetTemplateResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public GetTemplateResponseBodyData setTopoURL(String topoURL) {
+            this.topoURL = topoURL;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetTemplateResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getTopoURL() {
+            return this.topoURL;
         }
 
     }

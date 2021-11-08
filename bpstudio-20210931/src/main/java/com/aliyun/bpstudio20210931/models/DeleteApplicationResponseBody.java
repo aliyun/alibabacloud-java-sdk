@@ -4,18 +4,26 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class DeleteApplicationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static DeleteApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteApplicationResponseBody self = new DeleteApplicationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteApplicationResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteApplicationResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DeleteApplicationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteApplicationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }
