@@ -4,22 +4,38 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    // 应用ID
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // 应用ID
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     public static CreateApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationResponseBody self = new CreateApplicationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public CreateApplicationResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public CreateApplicationResponseBody setMessage(String message) {
@@ -36,22 +52,6 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateApplicationResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public CreateApplicationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
 }

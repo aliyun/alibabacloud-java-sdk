@@ -4,8 +4,11 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<ListTemplateResponseBodyData> data;
 
     @NameInMap("Message")
     public String message;
@@ -16,23 +19,28 @@ public class ListTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<ListTemplateResponseBodyData> data;
-
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplateResponseBody self = new ListTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListTemplateResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListTemplateResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListTemplateResponseBody setData(java.util.List<ListTemplateResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListTemplateResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListTemplateResponseBody setMessage(String message) {
@@ -59,26 +67,30 @@ public class ListTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplateResponseBody setData(java.util.List<ListTemplateResponseBodyData> data) {
-        this.data = data;
+    public ListTemplateResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public java.util.List<ListTemplateResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public ListTemplateResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListTemplateResponseBodyData extends TeaModel {
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
+
         // 模板的图片链接
         @NameInMap("ImageURL")
         public String imageURL;
+
+        // 模板的名称
+        @NameInMap("Name")
+        public String name;
+
+        // 资源组ID
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         // 模板的标签的ID
         @NameInMap("TagId")
@@ -88,29 +100,25 @@ public class ListTemplateResponseBody extends TeaModel {
         @NameInMap("TagName")
         public String tagName;
 
-        // 模板的名称
-        @NameInMap("Name")
-        public String name;
+        // 模板的ID
+        @NameInMap("TemplateId")
+        public String templateId;
 
         // 模板的拓扑图
         @NameInMap("TopoURL")
         public String topoURL;
 
-        // 模板的ID
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // 资源组ID
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
         public static ListTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTemplateResponseBodyData self = new ListTemplateResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListTemplateResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListTemplateResponseBodyData setImageURL(String imageURL) {
@@ -119,6 +127,22 @@ public class ListTemplateResponseBody extends TeaModel {
         }
         public String getImageURL() {
             return this.imageURL;
+        }
+
+        public ListTemplateResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListTemplateResponseBodyData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListTemplateResponseBodyData setTagId(Integer tagId) {
@@ -137,22 +161,6 @@ public class ListTemplateResponseBody extends TeaModel {
             return this.tagName;
         }
 
-        public ListTemplateResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListTemplateResponseBodyData setTopoURL(String topoURL) {
-            this.topoURL = topoURL;
-            return this;
-        }
-        public String getTopoURL() {
-            return this.topoURL;
-        }
-
         public ListTemplateResponseBodyData setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
@@ -161,20 +169,12 @@ public class ListTemplateResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public ListTemplateResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListTemplateResponseBodyData setTopoURL(String topoURL) {
+            this.topoURL = topoURL;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListTemplateResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getTopoURL() {
+            return this.topoURL;
         }
 
     }
