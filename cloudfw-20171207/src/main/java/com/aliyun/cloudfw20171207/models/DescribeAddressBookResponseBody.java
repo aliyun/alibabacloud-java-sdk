@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressBookResponseBody extends TeaModel {
+    @NameInMap("Acls")
+    public java.util.List<DescribeAddressBookResponseBodyAcls> acls;
+
     @NameInMap("PageNo")
     public String pageNo;
 
@@ -16,12 +19,17 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public String totalCount;
 
-    @NameInMap("Acls")
-    public java.util.List<DescribeAddressBookResponseBodyAcls> acls;
-
     public static DescribeAddressBookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAddressBookResponseBody self = new DescribeAddressBookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAddressBookResponseBody setAcls(java.util.List<DescribeAddressBookResponseBodyAcls> acls) {
+        this.acls = acls;
+        return this;
+    }
+    public java.util.List<DescribeAddressBookResponseBodyAcls> getAcls() {
+        return this.acls;
     }
 
     public DescribeAddressBookResponseBody setPageNo(String pageNo) {
@@ -56,32 +64,16 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeAddressBookResponseBody setAcls(java.util.List<DescribeAddressBookResponseBodyAcls> acls) {
-        this.acls = acls;
-        return this;
-    }
-    public java.util.List<DescribeAddressBookResponseBodyAcls> getAcls() {
-        return this.acls;
-    }
-
     public static class DescribeAddressBookResponseBodyAclsTagList extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static DescribeAddressBookResponseBodyAclsTagList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAddressBookResponseBodyAclsTagList self = new DescribeAddressBookResponseBodyAclsTagList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAddressBookResponseBodyAclsTagList setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public DescribeAddressBookResponseBodyAclsTagList setTagKey(String tagKey) {
@@ -92,14 +84,22 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        public DescribeAddressBookResponseBodyAclsTagList setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class DescribeAddressBookResponseBodyAcls extends TeaModel {
+        @NameInMap("AddressList")
+        public java.util.List<String> addressList;
+
         @NameInMap("AddressListCount")
         public Integer addressListCount;
-
-        @NameInMap("GroupUuid")
-        public String groupUuid;
 
         @NameInMap("AutoAddTagEcs")
         public Integer autoAddTagEcs;
@@ -107,30 +107,38 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Global")
+        public Integer global;
+
         @NameInMap("GroupName")
         public String groupName;
-
-        @NameInMap("ReferenceCount")
-        public Integer referenceCount;
 
         @NameInMap("GroupType")
         public String groupType;
 
-        @NameInMap("TagRelation")
-        public String tagRelation;
+        @NameInMap("GroupUuid")
+        public String groupUuid;
 
-        @NameInMap("Global")
-        public Integer global;
+        @NameInMap("ReferenceCount")
+        public Integer referenceCount;
 
         @NameInMap("TagList")
         public java.util.List<DescribeAddressBookResponseBodyAclsTagList> tagList;
 
-        @NameInMap("AddressList")
-        public java.util.List<String> addressList;
+        @NameInMap("TagRelation")
+        public String tagRelation;
 
         public static DescribeAddressBookResponseBodyAcls build(java.util.Map<String, ?> map) throws Exception {
             DescribeAddressBookResponseBodyAcls self = new DescribeAddressBookResponseBodyAcls();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAddressBookResponseBodyAcls setAddressList(java.util.List<String> addressList) {
+            this.addressList = addressList;
+            return this;
+        }
+        public java.util.List<String> getAddressList() {
+            return this.addressList;
         }
 
         public DescribeAddressBookResponseBodyAcls setAddressListCount(Integer addressListCount) {
@@ -139,14 +147,6 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
         public Integer getAddressListCount() {
             return this.addressListCount;
-        }
-
-        public DescribeAddressBookResponseBodyAcls setGroupUuid(String groupUuid) {
-            this.groupUuid = groupUuid;
-            return this;
-        }
-        public String getGroupUuid() {
-            return this.groupUuid;
         }
 
         public DescribeAddressBookResponseBodyAcls setAutoAddTagEcs(Integer autoAddTagEcs) {
@@ -165,20 +165,20 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeAddressBookResponseBodyAcls setGlobal(Integer global) {
+            this.global = global;
+            return this;
+        }
+        public Integer getGlobal() {
+            return this.global;
+        }
+
         public DescribeAddressBookResponseBodyAcls setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
         public String getGroupName() {
             return this.groupName;
-        }
-
-        public DescribeAddressBookResponseBodyAcls setReferenceCount(Integer referenceCount) {
-            this.referenceCount = referenceCount;
-            return this;
-        }
-        public Integer getReferenceCount() {
-            return this.referenceCount;
         }
 
         public DescribeAddressBookResponseBodyAcls setGroupType(String groupType) {
@@ -189,20 +189,20 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             return this.groupType;
         }
 
-        public DescribeAddressBookResponseBodyAcls setTagRelation(String tagRelation) {
-            this.tagRelation = tagRelation;
+        public DescribeAddressBookResponseBodyAcls setGroupUuid(String groupUuid) {
+            this.groupUuid = groupUuid;
             return this;
         }
-        public String getTagRelation() {
-            return this.tagRelation;
+        public String getGroupUuid() {
+            return this.groupUuid;
         }
 
-        public DescribeAddressBookResponseBodyAcls setGlobal(Integer global) {
-            this.global = global;
+        public DescribeAddressBookResponseBodyAcls setReferenceCount(Integer referenceCount) {
+            this.referenceCount = referenceCount;
             return this;
         }
-        public Integer getGlobal() {
-            return this.global;
+        public Integer getReferenceCount() {
+            return this.referenceCount;
         }
 
         public DescribeAddressBookResponseBodyAcls setTagList(java.util.List<DescribeAddressBookResponseBodyAclsTagList> tagList) {
@@ -213,12 +213,12 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             return this.tagList;
         }
 
-        public DescribeAddressBookResponseBodyAcls setAddressList(java.util.List<String> addressList) {
-            this.addressList = addressList;
+        public DescribeAddressBookResponseBodyAcls setTagRelation(String tagRelation) {
+            this.tagRelation = tagRelation;
             return this;
         }
-        public java.util.List<String> getAddressList() {
-            return this.addressList;
+        public String getTagRelation() {
+            return this.tagRelation;
         }
 
     }

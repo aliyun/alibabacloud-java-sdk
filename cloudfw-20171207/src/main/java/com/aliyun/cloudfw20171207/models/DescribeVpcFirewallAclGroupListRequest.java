@@ -4,14 +4,14 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("CurrentPage")
+    public String currentPage;
 
     @NameInMap("FirewallConfigureStatus")
     public String firewallConfigureStatus;
 
-    @NameInMap("CurrentPage")
-    public String currentPage;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -21,12 +21,12 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcFirewallAclGroupListRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeVpcFirewallAclGroupListRequest setCurrentPage(String currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeVpcFirewallAclGroupListRequest setFirewallConfigureStatus(String firewallConfigureStatus) {
@@ -37,12 +37,12 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
         return this.firewallConfigureStatus;
     }
 
-    public DescribeVpcFirewallAclGroupListRequest setCurrentPage(String currentPage) {
-        this.currentPage = currentPage;
+    public DescribeVpcFirewallAclGroupListRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getCurrentPage() {
-        return this.currentPage;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeVpcFirewallAclGroupListRequest setPageSize(String pageSize) {

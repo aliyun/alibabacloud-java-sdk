@@ -4,52 +4,58 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("AclAction")
+    public String aclAction;
 
-    @NameInMap("VpcFirewallId")
-    public String vpcFirewallId;
+    @NameInMap("AclUuid")
+    public String aclUuid;
 
     @NameInMap("CurrentPage")
     public String currentPage;
 
-    @NameInMap("PageSize")
-    public String pageSize;
-
-    @NameInMap("Source")
-    public String source;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Destination")
     public String destination;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("MemberUid")
+    public String memberUid;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     @NameInMap("Proto")
     public String proto;
 
-    @NameInMap("AclAction")
-    public String aclAction;
+    @NameInMap("Source")
+    public String source;
+
+    @NameInMap("VpcFirewallId")
+    public String vpcFirewallId;
 
     public static DescribeVpcFirewallControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallControlPolicyRequest self = new DescribeVpcFirewallControlPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcFirewallControlPolicyRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeVpcFirewallControlPolicyRequest setAclAction(String aclAction) {
+        this.aclAction = aclAction;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getAclAction() {
+        return this.aclAction;
     }
 
-    public DescribeVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {
-        this.vpcFirewallId = vpcFirewallId;
+    public DescribeVpcFirewallControlPolicyRequest setAclUuid(String aclUuid) {
+        this.aclUuid = aclUuid;
         return this;
     }
-    public String getVpcFirewallId() {
-        return this.vpcFirewallId;
+    public String getAclUuid() {
+        return this.aclUuid;
     }
 
     public DescribeVpcFirewallControlPolicyRequest setCurrentPage(String currentPage) {
@@ -60,20 +66,12 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeVpcFirewallControlPolicyRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
+    public DescribeVpcFirewallControlPolicyRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeVpcFirewallControlPolicyRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeVpcFirewallControlPolicyRequest setDestination(String destination) {
@@ -84,12 +82,28 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
         return this.destination;
     }
 
-    public DescribeVpcFirewallControlPolicyRequest setDescription(String description) {
-        this.description = description;
+    public DescribeVpcFirewallControlPolicyRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeVpcFirewallControlPolicyRequest setMemberUid(String memberUid) {
+        this.memberUid = memberUid;
+        return this;
+    }
+    public String getMemberUid() {
+        return this.memberUid;
+    }
+
+    public DescribeVpcFirewallControlPolicyRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeVpcFirewallControlPolicyRequest setProto(String proto) {
@@ -100,12 +114,20 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
         return this.proto;
     }
 
-    public DescribeVpcFirewallControlPolicyRequest setAclAction(String aclAction) {
-        this.aclAction = aclAction;
+    public DescribeVpcFirewallControlPolicyRequest setSource(String source) {
+        this.source = source;
         return this;
     }
-    public String getAclAction() {
-        return this.aclAction;
+    public String getSource() {
+        return this.source;
+    }
+
+    public DescribeVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {
+        this.vpcFirewallId = vpcFirewallId;
+        return this;
+    }
+    public String getVpcFirewallId() {
+        return this.vpcFirewallId;
     }
 
 }

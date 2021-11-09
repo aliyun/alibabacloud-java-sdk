@@ -4,37 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyPriorUsedRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Direction")
     public String direction;
 
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DescribePolicyPriorUsedRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePolicyPriorUsedRequest self = new DescribePolicyPriorUsedRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePolicyPriorUsedRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribePolicyPriorUsedRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribePolicyPriorUsedRequest setDirection(String direction) {
@@ -51,6 +35,22 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
     }
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    public DescribePolicyPriorUsedRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribePolicyPriorUsedRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

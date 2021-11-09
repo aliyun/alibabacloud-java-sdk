@@ -7,11 +7,11 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
     @NameInMap("End")
     public Integer end;
 
-    @NameInMap("Start")
-    public Integer start;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Start")
+    public Integer start;
 
     public static DescribeVpcFirewallPolicyPriorUsedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallPolicyPriorUsedResponseBody self = new DescribeVpcFirewallPolicyPriorUsedResponseBody();
@@ -26,20 +26,20 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         return this.end;
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponseBody setStart(Integer start) {
-        this.start = start;
-        return this;
-    }
-    public Integer getStart() {
-        return this.start;
-    }
-
     public DescribeVpcFirewallPolicyPriorUsedResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeVpcFirewallPolicyPriorUsedResponseBody setStart(Integer start) {
+        this.start = start;
+        return this;
+    }
+    public Integer getStart() {
+        return this.start;
     }
 
 }

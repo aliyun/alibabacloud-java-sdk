@@ -7,14 +7,14 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("VpcFirewallId")
-    public String vpcFirewallId;
-
     @NameInMap("NewOrder")
     public String newOrder;
 
     @NameInMap("OldOrder")
     public String oldOrder;
+
+    @NameInMap("VpcFirewallId")
+    public String vpcFirewallId;
 
     public static ModifyVpcFirewallControlPolicyPositionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpcFirewallControlPolicyPositionRequest self = new ModifyVpcFirewallControlPolicyPositionRequest();
@@ -27,14 +27,6 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public ModifyVpcFirewallControlPolicyPositionRequest setVpcFirewallId(String vpcFirewallId) {
-        this.vpcFirewallId = vpcFirewallId;
-        return this;
-    }
-    public String getVpcFirewallId() {
-        return this.vpcFirewallId;
     }
 
     public ModifyVpcFirewallControlPolicyPositionRequest setNewOrder(String newOrder) {
@@ -51,6 +43,14 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     }
     public String getOldOrder() {
         return this.oldOrder;
+    }
+
+    public ModifyVpcFirewallControlPolicyPositionRequest setVpcFirewallId(String vpcFirewallId) {
+        this.vpcFirewallId = vpcFirewallId;
+        return this;
+    }
+    public String getVpcFirewallId() {
+        return this.vpcFirewallId;
     }
 
 }

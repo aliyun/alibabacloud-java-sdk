@@ -4,26 +4,26 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Members")
+    public java.util.List<DescribeInstanceMembersResponseBodyMembers> members;
 
     @NameInMap("PageInfo")
     public DescribeInstanceMembersResponseBodyPageInfo pageInfo;
 
-    @NameInMap("Members")
-    public java.util.List<DescribeInstanceMembersResponseBodyMembers> members;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMembersResponseBody self = new DescribeInstanceMembersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceMembersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceMembersResponseBody setMembers(java.util.List<DescribeInstanceMembersResponseBodyMembers> members) {
+        this.members = members;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeInstanceMembersResponseBodyMembers> getMembers() {
+        return this.members;
     }
 
     public DescribeInstanceMembersResponseBody setPageInfo(DescribeInstanceMembersResponseBodyPageInfo pageInfo) {
@@ -34,12 +34,86 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         return this.pageInfo;
     }
 
-    public DescribeInstanceMembersResponseBody setMembers(java.util.List<DescribeInstanceMembersResponseBodyMembers> members) {
-        this.members = members;
+    public DescribeInstanceMembersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeInstanceMembersResponseBodyMembers> getMembers() {
-        return this.members;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
+        @NameInMap("CreateTime")
+        public Integer createTime;
+
+        @NameInMap("MemberDesc")
+        public String memberDesc;
+
+        @NameInMap("MemberDisplayName")
+        public String memberDisplayName;
+
+        @NameInMap("MemberStatus")
+        public String memberStatus;
+
+        @NameInMap("MemberUid")
+        public Long memberUid;
+
+        @NameInMap("ModifyTime")
+        public Integer modifyTime;
+
+        public static DescribeInstanceMembersResponseBodyMembers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMembersResponseBodyMembers self = new DescribeInstanceMembersResponseBodyMembers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setCreateTime(Integer createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Integer getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setMemberDesc(String memberDesc) {
+            this.memberDesc = memberDesc;
+            return this;
+        }
+        public String getMemberDesc() {
+            return this.memberDesc;
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setMemberDisplayName(String memberDisplayName) {
+            this.memberDisplayName = memberDisplayName;
+            return this;
+        }
+        public String getMemberDisplayName() {
+            return this.memberDisplayName;
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setMemberStatus(String memberStatus) {
+            this.memberStatus = memberStatus;
+            return this;
+        }
+        public String getMemberStatus() {
+            return this.memberStatus;
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setMemberUid(Long memberUid) {
+            this.memberUid = memberUid;
+            return this;
+        }
+        public Long getMemberUid() {
+            return this.memberUid;
+        }
+
+        public DescribeInstanceMembersResponseBodyMembers setModifyTime(Integer modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Integer getModifyTime() {
+            return this.modifyTime;
+        }
+
     }
 
     public static class DescribeInstanceMembersResponseBodyPageInfo extends TeaModel {
@@ -79,80 +153,6 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-    }
-
-    public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
-        @NameInMap("MemberDesc")
-        public String memberDesc;
-
-        @NameInMap("MemberDisplayName")
-        public String memberDisplayName;
-
-        @NameInMap("CreateTime")
-        public Integer createTime;
-
-        @NameInMap("MemberUid")
-        public Long memberUid;
-
-        @NameInMap("MemberStatus")
-        public String memberStatus;
-
-        @NameInMap("ModifyTime")
-        public Integer modifyTime;
-
-        public static DescribeInstanceMembersResponseBodyMembers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceMembersResponseBodyMembers self = new DescribeInstanceMembersResponseBodyMembers();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setMemberDesc(String memberDesc) {
-            this.memberDesc = memberDesc;
-            return this;
-        }
-        public String getMemberDesc() {
-            return this.memberDesc;
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setMemberDisplayName(String memberDisplayName) {
-            this.memberDisplayName = memberDisplayName;
-            return this;
-        }
-        public String getMemberDisplayName() {
-            return this.memberDisplayName;
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setCreateTime(Integer createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Integer getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setMemberUid(Long memberUid) {
-            this.memberUid = memberUid;
-            return this;
-        }
-        public Long getMemberUid() {
-            return this.memberUid;
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setMemberStatus(String memberStatus) {
-            this.memberStatus = memberStatus;
-            return this;
-        }
-        public String getMemberStatus() {
-            return this.memberStatus;
-        }
-
-        public DescribeInstanceMembersResponseBodyMembers setModifyTime(Integer modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public Integer getModifyTime() {
-            return this.modifyTime;
         }
 
     }
