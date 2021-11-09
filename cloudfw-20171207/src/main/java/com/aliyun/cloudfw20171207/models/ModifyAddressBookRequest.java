@@ -4,14 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyAddressBookRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AddressList")
     public String addressList;
+
+    @NameInMap("AutoAddTagEcs")
+    public String autoAddTagEcs;
 
     @NameInMap("Description")
     public String description;
@@ -22,34 +19,21 @@ public class ModifyAddressBookRequest extends TeaModel {
     @NameInMap("GroupUuid")
     public String groupUuid;
 
-    @NameInMap("AutoAddTagEcs")
-    public String autoAddTagEcs;
+    @NameInMap("Lang")
+    public String lang;
 
-    @NameInMap("TagRelation")
-    public String tagRelation;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("TagList")
     public java.util.List<ModifyAddressBookRequestTagList> tagList;
 
+    @NameInMap("TagRelation")
+    public String tagRelation;
+
     public static ModifyAddressBookRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAddressBookRequest self = new ModifyAddressBookRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyAddressBookRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyAddressBookRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyAddressBookRequest setAddressList(String addressList) {
@@ -58,6 +42,14 @@ public class ModifyAddressBookRequest extends TeaModel {
     }
     public String getAddressList() {
         return this.addressList;
+    }
+
+    public ModifyAddressBookRequest setAutoAddTagEcs(String autoAddTagEcs) {
+        this.autoAddTagEcs = autoAddTagEcs;
+        return this;
+    }
+    public String getAutoAddTagEcs() {
+        return this.autoAddTagEcs;
     }
 
     public ModifyAddressBookRequest setDescription(String description) {
@@ -84,20 +76,20 @@ public class ModifyAddressBookRequest extends TeaModel {
         return this.groupUuid;
     }
 
-    public ModifyAddressBookRequest setAutoAddTagEcs(String autoAddTagEcs) {
-        this.autoAddTagEcs = autoAddTagEcs;
+    public ModifyAddressBookRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getAutoAddTagEcs() {
-        return this.autoAddTagEcs;
+    public String getLang() {
+        return this.lang;
     }
 
-    public ModifyAddressBookRequest setTagRelation(String tagRelation) {
-        this.tagRelation = tagRelation;
+    public ModifyAddressBookRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getTagRelation() {
-        return this.tagRelation;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyAddressBookRequest setTagList(java.util.List<ModifyAddressBookRequestTagList> tagList) {
@@ -108,24 +100,24 @@ public class ModifyAddressBookRequest extends TeaModel {
         return this.tagList;
     }
 
-    public static class ModifyAddressBookRequestTagList extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
+    public ModifyAddressBookRequest setTagRelation(String tagRelation) {
+        this.tagRelation = tagRelation;
+        return this;
+    }
+    public String getTagRelation() {
+        return this.tagRelation;
+    }
 
+    public static class ModifyAddressBookRequestTagList extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ModifyAddressBookRequestTagList build(java.util.Map<String, ?> map) throws Exception {
             ModifyAddressBookRequestTagList self = new ModifyAddressBookRequestTagList();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyAddressBookRequestTagList setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ModifyAddressBookRequestTagList setTagKey(String tagKey) {
@@ -134,6 +126,14 @@ public class ModifyAddressBookRequest extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ModifyAddressBookRequestTagList setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

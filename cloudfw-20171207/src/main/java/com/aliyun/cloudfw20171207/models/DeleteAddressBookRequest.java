@@ -4,26 +4,26 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteAddressBookRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("GroupUuid")
+    public String groupUuid;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("GroupUuid")
-    public String groupUuid;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DeleteAddressBookRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAddressBookRequest self = new DeleteAddressBookRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAddressBookRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DeleteAddressBookRequest setGroupUuid(String groupUuid) {
+        this.groupUuid = groupUuid;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getGroupUuid() {
+        return this.groupUuid;
     }
 
     public DeleteAddressBookRequest setLang(String lang) {
@@ -34,12 +34,12 @@ public class DeleteAddressBookRequest extends TeaModel {
         return this.lang;
     }
 
-    public DeleteAddressBookRequest setGroupUuid(String groupUuid) {
-        this.groupUuid = groupUuid;
+    public DeleteAddressBookRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getGroupUuid() {
-        return this.groupUuid;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

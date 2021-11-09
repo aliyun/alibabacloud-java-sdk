@@ -4,11 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpcFirewallControlPolicyRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AclUuid")
     public String aclUuid;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
@@ -18,20 +18,20 @@ public class DeleteVpcFirewallControlPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteVpcFirewallControlPolicyRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public DeleteVpcFirewallControlPolicyRequest setAclUuid(String aclUuid) {
         this.aclUuid = aclUuid;
         return this;
     }
     public String getAclUuid() {
         return this.aclUuid;
+    }
+
+    public DeleteVpcFirewallControlPolicyRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DeleteVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {

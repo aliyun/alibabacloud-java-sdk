@@ -4,14 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyControlPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AclAction")
     public String aclAction;
+
+    @NameInMap("AclUuid")
+    public String aclUuid;
 
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -22,6 +19,12 @@ public class ModifyControlPolicyRequest extends TeaModel {
     @NameInMap("DestPort")
     public String destPort;
 
+    @NameInMap("DestPortGroup")
+    public String destPortGroup;
+
+    @NameInMap("DestPortType")
+    public String destPortType;
+
     @NameInMap("Destination")
     public String destination;
 
@@ -31,46 +34,27 @@ public class ModifyControlPolicyRequest extends TeaModel {
     @NameInMap("Direction")
     public String direction;
 
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("Proto")
     public String proto;
-
-    @NameInMap("Source")
-    public String source;
-
-    @NameInMap("AclUuid")
-    public String aclUuid;
-
-    @NameInMap("SourceType")
-    public String sourceType;
-
-    @NameInMap("DestPortType")
-    public String destPortType;
-
-    @NameInMap("DestPortGroup")
-    public String destPortGroup;
 
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("Source")
+    public String source;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     public static ModifyControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyControlPolicyRequest self = new ModifyControlPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyControlPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyControlPolicyRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyControlPolicyRequest setAclAction(String aclAction) {
@@ -79,6 +63,14 @@ public class ModifyControlPolicyRequest extends TeaModel {
     }
     public String getAclAction() {
         return this.aclAction;
+    }
+
+    public ModifyControlPolicyRequest setAclUuid(String aclUuid) {
+        this.aclUuid = aclUuid;
+        return this;
+    }
+    public String getAclUuid() {
+        return this.aclUuid;
     }
 
     public ModifyControlPolicyRequest setApplicationName(String applicationName) {
@@ -105,6 +97,22 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.destPort;
     }
 
+    public ModifyControlPolicyRequest setDestPortGroup(String destPortGroup) {
+        this.destPortGroup = destPortGroup;
+        return this;
+    }
+    public String getDestPortGroup() {
+        return this.destPortGroup;
+    }
+
+    public ModifyControlPolicyRequest setDestPortType(String destPortType) {
+        this.destPortType = destPortType;
+        return this;
+    }
+    public String getDestPortType() {
+        return this.destPortType;
+    }
+
     public ModifyControlPolicyRequest setDestination(String destination) {
         this.destination = destination;
         return this;
@@ -129,12 +137,28 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.direction;
     }
 
+    public ModifyControlPolicyRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
     public ModifyControlPolicyRequest setProto(String proto) {
         this.proto = proto;
         return this;
     }
     public String getProto() {
         return this.proto;
+    }
+
+    public ModifyControlPolicyRequest setRelease(String release) {
+        this.release = release;
+        return this;
+    }
+    public String getRelease() {
+        return this.release;
     }
 
     public ModifyControlPolicyRequest setSource(String source) {
@@ -145,12 +169,12 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.source;
     }
 
-    public ModifyControlPolicyRequest setAclUuid(String aclUuid) {
-        this.aclUuid = aclUuid;
+    public ModifyControlPolicyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getAclUuid() {
-        return this.aclUuid;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyControlPolicyRequest setSourceType(String sourceType) {
@@ -159,30 +183,6 @@ public class ModifyControlPolicyRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
-    }
-
-    public ModifyControlPolicyRequest setDestPortType(String destPortType) {
-        this.destPortType = destPortType;
-        return this;
-    }
-    public String getDestPortType() {
-        return this.destPortType;
-    }
-
-    public ModifyControlPolicyRequest setDestPortGroup(String destPortGroup) {
-        this.destPortGroup = destPortGroup;
-        return this;
-    }
-    public String getDestPortGroup() {
-        return this.destPortGroup;
-    }
-
-    public ModifyControlPolicyRequest setRelease(String release) {
-        this.release = release;
-        return this;
-    }
-    public String getRelease() {
-        return this.release;
     }
 
 }

@@ -4,37 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DeleteControlPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AclUuid")
     public String aclUuid;
 
     @NameInMap("Direction")
     public String direction;
 
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DeleteControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteControlPolicyRequest self = new DeleteControlPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteControlPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DeleteControlPolicyRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DeleteControlPolicyRequest setAclUuid(String aclUuid) {
@@ -51,6 +35,22 @@ public class DeleteControlPolicyRequest extends TeaModel {
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public DeleteControlPolicyRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DeleteControlPolicyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

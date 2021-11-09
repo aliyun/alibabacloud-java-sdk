@@ -4,11 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("AclAction")
     public String aclAction;
+
+    @NameInMap("AclUuid")
+    public String aclUuid;
 
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -19,14 +19,20 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DestPort")
     public String destPort;
 
+    @NameInMap("DestPortGroup")
+    public String destPortGroup;
+
+    @NameInMap("DestPortType")
+    public String destPortType;
+
     @NameInMap("Destination")
     public String destination;
 
     @NameInMap("DestinationType")
     public String destinationType;
 
-    @NameInMap("VpcFirewallId")
-    public String vpcFirewallId;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Proto")
     public String proto;
@@ -34,29 +40,15 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
-    @NameInMap("AclUuid")
-    public String aclUuid;
-
     @NameInMap("SourceType")
     public String sourceType;
 
-    @NameInMap("DestPortType")
-    public String destPortType;
-
-    @NameInMap("DestPortGroup")
-    public String destPortGroup;
+    @NameInMap("VpcFirewallId")
+    public String vpcFirewallId;
 
     public static ModifyVpcFirewallControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpcFirewallControlPolicyRequest self = new ModifyVpcFirewallControlPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyVpcFirewallControlPolicyRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyVpcFirewallControlPolicyRequest setAclAction(String aclAction) {
@@ -65,6 +57,14 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getAclAction() {
         return this.aclAction;
+    }
+
+    public ModifyVpcFirewallControlPolicyRequest setAclUuid(String aclUuid) {
+        this.aclUuid = aclUuid;
+        return this;
+    }
+    public String getAclUuid() {
+        return this.aclUuid;
     }
 
     public ModifyVpcFirewallControlPolicyRequest setApplicationName(String applicationName) {
@@ -91,6 +91,22 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.destPort;
     }
 
+    public ModifyVpcFirewallControlPolicyRequest setDestPortGroup(String destPortGroup) {
+        this.destPortGroup = destPortGroup;
+        return this;
+    }
+    public String getDestPortGroup() {
+        return this.destPortGroup;
+    }
+
+    public ModifyVpcFirewallControlPolicyRequest setDestPortType(String destPortType) {
+        this.destPortType = destPortType;
+        return this;
+    }
+    public String getDestPortType() {
+        return this.destPortType;
+    }
+
     public ModifyVpcFirewallControlPolicyRequest setDestination(String destination) {
         this.destination = destination;
         return this;
@@ -107,12 +123,12 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.destinationType;
     }
 
-    public ModifyVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {
-        this.vpcFirewallId = vpcFirewallId;
+    public ModifyVpcFirewallControlPolicyRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getVpcFirewallId() {
-        return this.vpcFirewallId;
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyVpcFirewallControlPolicyRequest setProto(String proto) {
@@ -131,14 +147,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.source;
     }
 
-    public ModifyVpcFirewallControlPolicyRequest setAclUuid(String aclUuid) {
-        this.aclUuid = aclUuid;
-        return this;
-    }
-    public String getAclUuid() {
-        return this.aclUuid;
-    }
-
     public ModifyVpcFirewallControlPolicyRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -147,20 +155,12 @@ public class ModifyVpcFirewallControlPolicyRequest extends TeaModel {
         return this.sourceType;
     }
 
-    public ModifyVpcFirewallControlPolicyRequest setDestPortType(String destPortType) {
-        this.destPortType = destPortType;
+    public ModifyVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {
+        this.vpcFirewallId = vpcFirewallId;
         return this;
     }
-    public String getDestPortType() {
-        return this.destPortType;
-    }
-
-    public ModifyVpcFirewallControlPolicyRequest setDestPortGroup(String destPortGroup) {
-        this.destPortGroup = destPortGroup;
-        return this;
-    }
-    public String getDestPortGroup() {
-        return this.destPortGroup;
+    public String getVpcFirewallId() {
+        return this.vpcFirewallId;
     }
 
 }

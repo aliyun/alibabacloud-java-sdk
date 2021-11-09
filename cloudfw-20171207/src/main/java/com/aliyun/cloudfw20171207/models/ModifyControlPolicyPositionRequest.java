@@ -4,14 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyControlPolicyPositionRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Direction")
+    public String direction;
 
     @NameInMap("Lang")
     public String lang;
-
-    @NameInMap("Direction")
-    public String direction;
 
     @NameInMap("NewOrder")
     public String newOrder;
@@ -19,25 +16,12 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     @NameInMap("OldOrder")
     public String oldOrder;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static ModifyControlPolicyPositionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyControlPolicyPositionRequest self = new ModifyControlPolicyPositionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyControlPolicyPositionRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyControlPolicyPositionRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyControlPolicyPositionRequest setDirection(String direction) {
@@ -46,6 +30,14 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public ModifyControlPolicyPositionRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyControlPolicyPositionRequest setNewOrder(String newOrder) {
@@ -62,6 +54,14 @@ public class ModifyControlPolicyPositionRequest extends TeaModel {
     }
     public String getOldOrder() {
         return this.oldOrder;
+    }
+
+    public ModifyControlPolicyPositionRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

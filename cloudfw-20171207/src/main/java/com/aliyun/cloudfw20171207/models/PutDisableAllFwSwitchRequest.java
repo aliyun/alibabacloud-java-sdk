@@ -4,26 +4,26 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class PutDisableAllFwSwitchRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static PutDisableAllFwSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         PutDisableAllFwSwitchRequest self = new PutDisableAllFwSwitchRequest();
         return TeaModel.build(map, self);
     }
 
-    public PutDisableAllFwSwitchRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public PutDisableAllFwSwitchRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public PutDisableAllFwSwitchRequest setLang(String lang) {
@@ -34,12 +34,12 @@ public class PutDisableAllFwSwitchRequest extends TeaModel {
         return this.lang;
     }
 
-    public PutDisableAllFwSwitchRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public PutDisableAllFwSwitchRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }
