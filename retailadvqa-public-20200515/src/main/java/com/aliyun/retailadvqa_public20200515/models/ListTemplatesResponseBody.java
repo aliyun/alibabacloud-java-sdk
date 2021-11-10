@@ -8,13 +8,16 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListTemplatesResponseBodyData data;
 
+    // 错误码
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     // 错误信息描述
     @NameInMap("ErrorDesc")
     public String errorDesc;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 接口调用是否成功
     @NameInMap("Success")
@@ -23,9 +26,6 @@ public class ListTemplatesResponseBody extends TeaModel {
     // traceId
     @NameInMap("TraceId")
     public String traceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static ListTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesResponseBody self = new ListTemplatesResponseBody();
@@ -40,6 +40,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListTemplatesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public ListTemplatesResponseBody setErrorDesc(String errorDesc) {
         this.errorDesc = errorDesc;
         return this;
@@ -48,12 +56,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.errorDesc;
     }
 
-    public ListTemplatesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public ListTemplatesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListTemplatesResponseBody setSuccess(Boolean success) {
@@ -72,46 +80,38 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public ListTemplatesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static class ListTemplatesResponseBodyDataContent extends TeaModel {
         // 主键
         @NameInMap("Id")
         public String id;
 
-        // 模板类型
-        @NameInMap("TemplateType")
-        public Long templateType;
-
-        // 模板状态
-        @NameInMap("TemplateStatus")
-        public Long templateStatus;
-
-        // 模板code
-        @NameInMap("SmsTemplateCode")
-        public String smsTemplateCode;
-
-        // 模板名称
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        // 模板内容
-        @NameInMap("TemplateContent")
-        public String templateContent;
+        // 平台名称
+        @NameInMap("PlatformName")
+        public String platformName;
 
         // 模板前缀
         @NameInMap("SmsContentSuffix")
         public String smsContentSuffix;
 
-        // 平台名称
-        @NameInMap("PlatformName")
-        public String platformName;
+        // 模板code
+        @NameInMap("SmsTemplateCode")
+        public String smsTemplateCode;
+
+        // 模板内容
+        @NameInMap("TemplateContent")
+        public String templateContent;
+
+        // 模板名称
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        // 模板状态
+        @NameInMap("TemplateStatus")
+        public Long templateStatus;
+
+        // 模板类型
+        @NameInMap("TemplateType")
+        public Long templateType;
 
         // 平台ID
         @NameInMap("WorkspaceId")
@@ -130,44 +130,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListTemplatesResponseBodyDataContent setTemplateType(Long templateType) {
-            this.templateType = templateType;
+        public ListTemplatesResponseBodyDataContent setPlatformName(String platformName) {
+            this.platformName = platformName;
             return this;
         }
-        public Long getTemplateType() {
-            return this.templateType;
-        }
-
-        public ListTemplatesResponseBodyDataContent setTemplateStatus(Long templateStatus) {
-            this.templateStatus = templateStatus;
-            return this;
-        }
-        public Long getTemplateStatus() {
-            return this.templateStatus;
-        }
-
-        public ListTemplatesResponseBodyDataContent setSmsTemplateCode(String smsTemplateCode) {
-            this.smsTemplateCode = smsTemplateCode;
-            return this;
-        }
-        public String getSmsTemplateCode() {
-            return this.smsTemplateCode;
-        }
-
-        public ListTemplatesResponseBodyDataContent setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public ListTemplatesResponseBodyDataContent setTemplateContent(String templateContent) {
-            this.templateContent = templateContent;
-            return this;
-        }
-        public String getTemplateContent() {
-            return this.templateContent;
+        public String getPlatformName() {
+            return this.platformName;
         }
 
         public ListTemplatesResponseBodyDataContent setSmsContentSuffix(String smsContentSuffix) {
@@ -178,12 +146,44 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.smsContentSuffix;
         }
 
-        public ListTemplatesResponseBodyDataContent setPlatformName(String platformName) {
-            this.platformName = platformName;
+        public ListTemplatesResponseBodyDataContent setSmsTemplateCode(String smsTemplateCode) {
+            this.smsTemplateCode = smsTemplateCode;
             return this;
         }
-        public String getPlatformName() {
-            return this.platformName;
+        public String getSmsTemplateCode() {
+            return this.smsTemplateCode;
+        }
+
+        public ListTemplatesResponseBodyDataContent setTemplateContent(String templateContent) {
+            this.templateContent = templateContent;
+            return this;
+        }
+        public String getTemplateContent() {
+            return this.templateContent;
+        }
+
+        public ListTemplatesResponseBodyDataContent setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public ListTemplatesResponseBodyDataContent setTemplateStatus(Long templateStatus) {
+            this.templateStatus = templateStatus;
+            return this;
+        }
+        public Long getTemplateStatus() {
+            return this.templateStatus;
+        }
+
+        public ListTemplatesResponseBodyDataContent setTemplateType(Long templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public Long getTemplateType() {
+            return this.templateType;
         }
 
         public ListTemplatesResponseBodyDataContent setWorkspaceId(String workspaceId) {
@@ -200,17 +200,17 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Content")
         public java.util.List<ListTemplatesResponseBodyDataContent> content;
 
-        // 总条数
-        @NameInMap("TotalNum")
-        public Long totalNum;
+        // 页码
+        @NameInMap("PageNum")
+        public Long pageNum;
 
         // 页大小
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // 页码
-        @NameInMap("PageNum")
-        public Long pageNum;
+        // 总条数
+        @NameInMap("TotalNum")
+        public Long totalNum;
 
         public static ListTemplatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyData self = new ListTemplatesResponseBodyData();
@@ -225,12 +225,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.content;
         }
 
-        public ListTemplatesResponseBodyData setTotalNum(Long totalNum) {
-            this.totalNum = totalNum;
+        public ListTemplatesResponseBodyData setPageNum(Long pageNum) {
+            this.pageNum = pageNum;
             return this;
         }
-        public Long getTotalNum() {
-            return this.totalNum;
+        public Long getPageNum() {
+            return this.pageNum;
         }
 
         public ListTemplatesResponseBodyData setPageSize(Long pageSize) {
@@ -241,12 +241,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListTemplatesResponseBodyData setPageNum(Long pageNum) {
-            this.pageNum = pageNum;
+        public ListTemplatesResponseBodyData setTotalNum(Long totalNum) {
+            this.totalNum = totalNum;
             return this;
         }
-        public Long getPageNum() {
-            return this.pageNum;
+        public Long getTotalNum() {
+            return this.totalNum;
         }
 
     }

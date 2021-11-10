@@ -4,18 +4,26 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateExportTaskRequest extends TeaModel {
+    @NameInMap("AccessId")
+    public String accessId;
+
     @NameInMap("AudienceId")
     public String audienceId;
 
     @NameInMap("TenantId")
     public String tenantId;
 
-    @NameInMap("AccessId")
-    public String accessId;
-
     public static CreateExportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExportTaskRequest self = new CreateExportTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateExportTaskRequest setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public CreateExportTaskRequest setAudienceId(String audienceId) {
@@ -32,14 +40,6 @@ public class CreateExportTaskRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
-    }
-
-    public CreateExportTaskRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
 }

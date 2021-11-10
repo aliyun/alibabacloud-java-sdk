@@ -13,11 +13,11 @@ public class GetMediaResourcePackageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Template")
     public String template;
@@ -51,20 +51,20 @@ public class GetMediaResourcePackageRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetMediaResourcePackageRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
     public GetMediaResourcePackageRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public GetMediaResourcePackageRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public GetMediaResourcePackageRequest setTemplate(String template) {

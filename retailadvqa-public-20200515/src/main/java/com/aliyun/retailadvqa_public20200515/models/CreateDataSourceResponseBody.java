@@ -4,54 +4,30 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateDataSourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public CreateDataSourceResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
     @NameInMap("ExStack")
     public String exStack;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("TraceId")
+    public String traceId;
+
     public static CreateDataSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDataSourceResponseBody self = new CreateDataSourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataSourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateDataSourceResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public CreateDataSourceResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public CreateDataSourceResponseBody setData(CreateDataSourceResponseBodyData data) {
@@ -70,6 +46,14 @@ public class CreateDataSourceResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public CreateDataSourceResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
     public CreateDataSourceResponseBody setExStack(String exStack) {
         this.exStack = exStack;
         return this;
@@ -78,12 +62,28 @@ public class CreateDataSourceResponseBody extends TeaModel {
         return this.exStack;
     }
 
+    public CreateDataSourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public CreateDataSourceResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public CreateDataSourceResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class CreateDataSourceResponseBodyData extends TeaModel {

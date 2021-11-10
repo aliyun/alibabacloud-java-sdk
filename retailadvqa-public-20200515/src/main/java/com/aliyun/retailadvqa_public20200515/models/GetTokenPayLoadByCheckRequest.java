@@ -7,20 +7,20 @@ public class GetTokenPayLoadByCheckRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
-    @NameInMap("TenantId")
-    public String tenantId;
+    @NameInMap("SignDriver")
+    public String signDriver;
+
+    @NameInMap("SignNonce")
+    public String signNonce;
 
     @NameInMap("SignPk")
     public String signPk;
 
-    @NameInMap("SignDriver")
-    public String signDriver;
-
     @NameInMap("SignToken")
     public String signToken;
 
-    @NameInMap("SignNonce")
-    public String signNonce;
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static GetTokenPayLoadByCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTokenPayLoadByCheckRequest self = new GetTokenPayLoadByCheckRequest();
@@ -35,12 +35,20 @@ public class GetTokenPayLoadByCheckRequest extends TeaModel {
         return this.accessId;
     }
 
-    public GetTokenPayLoadByCheckRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
+    public GetTokenPayLoadByCheckRequest setSignDriver(String signDriver) {
+        this.signDriver = signDriver;
         return this;
     }
-    public String getTenantId() {
-        return this.tenantId;
+    public String getSignDriver() {
+        return this.signDriver;
+    }
+
+    public GetTokenPayLoadByCheckRequest setSignNonce(String signNonce) {
+        this.signNonce = signNonce;
+        return this;
+    }
+    public String getSignNonce() {
+        return this.signNonce;
     }
 
     public GetTokenPayLoadByCheckRequest setSignPk(String signPk) {
@@ -51,14 +59,6 @@ public class GetTokenPayLoadByCheckRequest extends TeaModel {
         return this.signPk;
     }
 
-    public GetTokenPayLoadByCheckRequest setSignDriver(String signDriver) {
-        this.signDriver = signDriver;
-        return this;
-    }
-    public String getSignDriver() {
-        return this.signDriver;
-    }
-
     public GetTokenPayLoadByCheckRequest setSignToken(String signToken) {
         this.signToken = signToken;
         return this;
@@ -67,12 +67,12 @@ public class GetTokenPayLoadByCheckRequest extends TeaModel {
         return this.signToken;
     }
 
-    public GetTokenPayLoadByCheckRequest setSignNonce(String signNonce) {
-        this.signNonce = signNonce;
+    public GetTokenPayLoadByCheckRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public String getSignNonce() {
-        return this.signNonce;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

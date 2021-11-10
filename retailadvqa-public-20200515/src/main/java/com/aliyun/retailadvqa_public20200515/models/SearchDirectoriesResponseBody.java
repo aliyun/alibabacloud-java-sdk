@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchDirectoriesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public SearchDirectoriesResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static SearchDirectoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchDirectoriesResponseBody self = new SearchDirectoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchDirectoriesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SearchDirectoriesResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public SearchDirectoriesResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public SearchDirectoriesResponseBody setData(SearchDirectoriesResponseBodyData data) {
@@ -67,6 +43,22 @@ public class SearchDirectoriesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public SearchDirectoriesResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public SearchDirectoriesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SearchDirectoriesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,51 +67,32 @@ public class SearchDirectoriesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public SearchDirectoriesResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
     public static class SearchDirectoriesResponseBodyDataContent extends TeaModel {
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("DbName")
-        public String dbName;
+        @NameInMap("AiplSubType")
+        public String aiplSubType;
 
         @NameInMap("CreateUserName")
         public String createUserName;
 
-        @NameInMap("Type")
-        public Integer type;
+        @NameInMap("DbName")
+        public String dbName;
 
-        @NameInMap("ModifyUser")
-        public String modifyUser;
-
-        @NameInMap("ModifyUserName")
-        public String modifyUserName;
+        @NameInMap("DbType")
+        public String dbType;
 
         @NameInMap("DefaultCube")
         public String defaultCube;
 
-        @NameInMap("Subtype")
-        public String subtype;
-
-        @NameInMap("AiplSubType")
-        public String aiplSubType;
-
-        @NameInMap("TypeSource")
-        public Integer typeSource;
-
-        @NameInMap("FactTable")
-        public String factTable;
-
-        @NameInMap("WorkspaceId")
-        public String workspaceId;
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("DsId")
         public String dsId;
@@ -127,118 +100,57 @@ public class SearchDirectoriesResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("DbType")
-        public String dbType;
-
-        @NameInMap("Permission")
-        public String permission;
+        @NameInMap("FactTable")
+        public String factTable;
 
         @NameInMap("FuseCube")
         public Boolean fuseCube;
 
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
 
-        @NameInMap("ParentId")
-        public String parentId;
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("IsMark")
         public Integer isMark;
 
-        @NameInMap("Desc")
-        public String desc;
+        @NameInMap("ModifyUser")
+        public String modifyUser;
+
+        @NameInMap("ModifyUserName")
+        public String modifyUserName;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ParentId")
+        public String parentId;
+
+        @NameInMap("Permission")
+        public String permission;
+
+        @NameInMap("Subtype")
+        public String subtype;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("TypeSource")
+        public Integer typeSource;
+
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
 
         public static SearchDirectoriesResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             SearchDirectoriesResponseBodyDataContent self = new SearchDirectoriesResponseBodyDataContent();
             return TeaModel.build(map, self);
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setDbName(String dbName) {
-            this.dbName = dbName;
-            return this;
-        }
-        public String getDbName() {
-            return this.dbName;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setCreateUserName(String createUserName) {
-            this.createUserName = createUserName;
-            return this;
-        }
-        public String getCreateUserName() {
-            return this.createUserName;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setModifyUser(String modifyUser) {
-            this.modifyUser = modifyUser;
-            return this;
-        }
-        public String getModifyUser() {
-            return this.modifyUser;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setModifyUserName(String modifyUserName) {
-            this.modifyUserName = modifyUserName;
-            return this;
-        }
-        public String getModifyUserName() {
-            return this.modifyUserName;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setDefaultCube(String defaultCube) {
-            this.defaultCube = defaultCube;
-            return this;
-        }
-        public String getDefaultCube() {
-            return this.defaultCube;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setSubtype(String subtype) {
-            this.subtype = subtype;
-            return this;
-        }
-        public String getSubtype() {
-            return this.subtype;
         }
 
         public SearchDirectoriesResponseBodyDataContent setAiplSubType(String aiplSubType) {
@@ -249,28 +161,44 @@ public class SearchDirectoriesResponseBody extends TeaModel {
             return this.aiplSubType;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setTypeSource(Integer typeSource) {
-            this.typeSource = typeSource;
+        public SearchDirectoriesResponseBodyDataContent setCreateUserName(String createUserName) {
+            this.createUserName = createUserName;
             return this;
         }
-        public Integer getTypeSource() {
-            return this.typeSource;
+        public String getCreateUserName() {
+            return this.createUserName;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setFactTable(String factTable) {
-            this.factTable = factTable;
+        public SearchDirectoriesResponseBodyDataContent setDbName(String dbName) {
+            this.dbName = dbName;
             return this;
         }
-        public String getFactTable() {
-            return this.factTable;
+        public String getDbName() {
+            return this.dbName;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setWorkspaceId(String workspaceId) {
-            this.workspaceId = workspaceId;
+        public SearchDirectoriesResponseBodyDataContent setDbType(String dbType) {
+            this.dbType = dbType;
             return this;
         }
-        public String getWorkspaceId() {
-            return this.workspaceId;
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setDefaultCube(String defaultCube) {
+            this.defaultCube = defaultCube;
+            return this;
+        }
+        public String getDefaultCube() {
+            return this.defaultCube;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
         }
 
         public SearchDirectoriesResponseBodyDataContent setDsId(String dsId) {
@@ -289,20 +217,12 @@ public class SearchDirectoriesResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setDbType(String dbType) {
-            this.dbType = dbType;
+        public SearchDirectoriesResponseBodyDataContent setFactTable(String factTable) {
+            this.factTable = factTable;
             return this;
         }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public SearchDirectoriesResponseBodyDataContent setPermission(String permission) {
-            this.permission = permission;
-            return this;
-        }
-        public String getPermission() {
-            return this.permission;
+        public String getFactTable() {
+            return this.factTable;
         }
 
         public SearchDirectoriesResponseBodyDataContent setFuseCube(Boolean fuseCube) {
@@ -313,20 +233,28 @@ public class SearchDirectoriesResponseBody extends TeaModel {
             return this.fuseCube;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setVersion(String version) {
-            this.version = version;
+        public SearchDirectoriesResponseBodyDataContent setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getVersion() {
-            return this.version;
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setParentId(String parentId) {
-            this.parentId = parentId;
+        public SearchDirectoriesResponseBodyDataContent setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
             return this;
         }
-        public String getParentId() {
-            return this.parentId;
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public SearchDirectoriesResponseBodyDataContent setIsMark(Integer isMark) {
@@ -337,17 +265,92 @@ public class SearchDirectoriesResponseBody extends TeaModel {
             return this.isMark;
         }
 
-        public SearchDirectoriesResponseBodyDataContent setDesc(String desc) {
-            this.desc = desc;
+        public SearchDirectoriesResponseBodyDataContent setModifyUser(String modifyUser) {
+            this.modifyUser = modifyUser;
             return this;
         }
-        public String getDesc() {
-            return this.desc;
+        public String getModifyUser() {
+            return this.modifyUser;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setModifyUserName(String modifyUserName) {
+            this.modifyUserName = modifyUserName;
+            return this;
+        }
+        public String getModifyUserName() {
+            return this.modifyUserName;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setPermission(String permission) {
+            this.permission = permission;
+            return this;
+        }
+        public String getPermission() {
+            return this.permission;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setSubtype(String subtype) {
+            this.subtype = subtype;
+            return this;
+        }
+        public String getSubtype() {
+            return this.subtype;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setTypeSource(Integer typeSource) {
+            this.typeSource = typeSource;
+            return this;
+        }
+        public Integer getTypeSource() {
+            return this.typeSource;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public SearchDirectoriesResponseBodyDataContent setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }
 
     public static class SearchDirectoriesResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<SearchDirectoriesResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public String pageNum;
 
@@ -357,12 +360,17 @@ public class SearchDirectoriesResponseBody extends TeaModel {
         @NameInMap("TotalNum")
         public String totalNum;
 
-        @NameInMap("Content")
-        public java.util.List<SearchDirectoriesResponseBodyDataContent> content;
-
         public static SearchDirectoriesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SearchDirectoriesResponseBodyData self = new SearchDirectoriesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public SearchDirectoriesResponseBodyData setContent(java.util.List<SearchDirectoriesResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<SearchDirectoriesResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public SearchDirectoriesResponseBodyData setPageNum(String pageNum) {
@@ -387,14 +395,6 @@ public class SearchDirectoriesResponseBody extends TeaModel {
         }
         public String getTotalNum() {
             return this.totalNum;
-        }
-
-        public SearchDirectoriesResponseBodyData setContent(java.util.List<SearchDirectoriesResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<SearchDirectoriesResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

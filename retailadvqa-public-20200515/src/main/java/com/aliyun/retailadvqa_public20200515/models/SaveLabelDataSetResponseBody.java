@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SaveLabelDataSetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public SaveLabelDataSetResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static SaveLabelDataSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveLabelDataSetResponseBody self = new SaveLabelDataSetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SaveLabelDataSetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SaveLabelDataSetResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public SaveLabelDataSetResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public SaveLabelDataSetResponseBody setData(SaveLabelDataSetResponseBodyData data) {
@@ -67,12 +43,36 @@ public class SaveLabelDataSetResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public SaveLabelDataSetResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public SaveLabelDataSetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SaveLabelDataSetResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public SaveLabelDataSetResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class SaveLabelDataSetResponseBodyData extends TeaModel {

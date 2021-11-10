@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public String data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static UpdateDatasetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetResponseBody self = new UpdateDatasetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDatasetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public UpdateDatasetResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public UpdateDatasetResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public UpdateDatasetResponseBody setData(String data) {
@@ -67,12 +43,36 @@ public class UpdateDatasetResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public UpdateDatasetResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public UpdateDatasetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public UpdateDatasetResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateDatasetResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }

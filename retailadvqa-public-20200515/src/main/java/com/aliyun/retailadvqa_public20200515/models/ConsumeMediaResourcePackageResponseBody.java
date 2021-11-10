@@ -4,14 +4,14 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ConsumeMediaResourcePackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ConsumeMediaResourcePackageResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -19,14 +19,6 @@ public class ConsumeMediaResourcePackageResponseBody extends TeaModel {
     public static ConsumeMediaResourcePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConsumeMediaResourcePackageResponseBody self = new ConsumeMediaResourcePackageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ConsumeMediaResourcePackageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ConsumeMediaResourcePackageResponseBody setData(ConsumeMediaResourcePackageResponseBodyData data) {
@@ -43,6 +35,14 @@ public class ConsumeMediaResourcePackageResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public ConsumeMediaResourcePackageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ConsumeMediaResourcePackageResponseBody setSuccess(String success) {

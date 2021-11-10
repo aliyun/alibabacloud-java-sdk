@@ -4,11 +4,11 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListMenuRequest extends TeaModel {
-    @NameInMap("RoleSign")
-    public String roleSign;
-
     @NameInMap("AccessId")
     public String accessId;
+
+    @NameInMap("RoleSign")
+    public String roleSign;
 
     @NameInMap("TenantId")
     public String tenantId;
@@ -21,20 +21,20 @@ public class ListMenuRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListMenuRequest setRoleSign(String roleSign) {
-        this.roleSign = roleSign;
-        return this;
-    }
-    public String getRoleSign() {
-        return this.roleSign;
-    }
-
     public ListMenuRequest setAccessId(String accessId) {
         this.accessId = accessId;
         return this;
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public ListMenuRequest setRoleSign(String roleSign) {
+        this.roleSign = roleSign;
+        return this;
+    }
+    public String getRoleSign() {
+        return this.roleSign;
     }
 
     public ListMenuRequest setTenantId(String tenantId) {

@@ -16,6 +16,13 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     @NameInMap("ErrorDesc")
     public String errorDesc;
 
+    // exStack
+    @NameInMap("ExStack")
+    public String exStack;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 接口调用是否成功
     @NameInMap("Success")
     public Boolean success;
@@ -23,13 +30,6 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     // traceId
     @NameInMap("TraceId")
     public String traceId;
-
-    // exStack
-    @NameInMap("ExStack")
-    public String exStack;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static DeleteTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteTemplatesResponseBody self = new DeleteTemplatesResponseBody();
@@ -60,22 +60,6 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         return this.errorDesc;
     }
 
-    public DeleteTemplatesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteTemplatesResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
     public DeleteTemplatesResponseBody setExStack(String exStack) {
         this.exStack = exStack;
         return this;
@@ -90,6 +74,22 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteTemplatesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteTemplatesResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }

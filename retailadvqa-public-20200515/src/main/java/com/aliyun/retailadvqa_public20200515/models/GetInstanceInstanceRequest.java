@@ -4,18 +4,26 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceInstanceRequest extends TeaModel {
+    @NameInMap("AccessId")
+    public String accessId;
+
     @NameInMap("AccountId")
     public String accountId;
 
     @NameInMap("AccountName")
     public String accountName;
 
-    @NameInMap("AccessId")
-    public String accessId;
-
     public static GetInstanceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceInstanceRequest self = new GetInstanceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceInstanceRequest setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public GetInstanceInstanceRequest setAccountId(String accountId) {
@@ -32,14 +40,6 @@ public class GetInstanceInstanceRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
-    }
-
-    public GetInstanceInstanceRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
 }

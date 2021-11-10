@@ -4,17 +4,20 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SaveLabelDataSetRequest extends TeaModel {
-    @NameInMap("DsId")
-    public String dsId;
-
-    @NameInMap("CubeName")
-    public String cubeName;
+    @NameInMap("AccessId")
+    public String accessId;
 
     @NameInMap("CubeId")
     public String cubeId;
 
-    @NameInMap("AccessId")
-    public String accessId;
+    @NameInMap("CubeName")
+    public String cubeName;
+
+    @NameInMap("DatasetLabelList")
+    public java.util.List<SaveLabelDataSetRequestDatasetLabelList> datasetLabelList;
+
+    @NameInMap("DsId")
+    public String dsId;
 
     @NameInMap("TableName")
     public String tableName;
@@ -22,28 +25,17 @@ public class SaveLabelDataSetRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    @NameInMap("DatasetLabelList")
-    public java.util.List<SaveLabelDataSetRequestDatasetLabelList> datasetLabelList;
-
     public static SaveLabelDataSetRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveLabelDataSetRequest self = new SaveLabelDataSetRequest();
         return TeaModel.build(map, self);
     }
 
-    public SaveLabelDataSetRequest setDsId(String dsId) {
-        this.dsId = dsId;
+    public SaveLabelDataSetRequest setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public String getDsId() {
-        return this.dsId;
-    }
-
-    public SaveLabelDataSetRequest setCubeName(String cubeName) {
-        this.cubeName = cubeName;
-        return this;
-    }
-    public String getCubeName() {
-        return this.cubeName;
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public SaveLabelDataSetRequest setCubeId(String cubeId) {
@@ -54,12 +46,28 @@ public class SaveLabelDataSetRequest extends TeaModel {
         return this.cubeId;
     }
 
-    public SaveLabelDataSetRequest setAccessId(String accessId) {
-        this.accessId = accessId;
+    public SaveLabelDataSetRequest setCubeName(String cubeName) {
+        this.cubeName = cubeName;
         return this;
     }
-    public String getAccessId() {
-        return this.accessId;
+    public String getCubeName() {
+        return this.cubeName;
+    }
+
+    public SaveLabelDataSetRequest setDatasetLabelList(java.util.List<SaveLabelDataSetRequestDatasetLabelList> datasetLabelList) {
+        this.datasetLabelList = datasetLabelList;
+        return this;
+    }
+    public java.util.List<SaveLabelDataSetRequestDatasetLabelList> getDatasetLabelList() {
+        return this.datasetLabelList;
+    }
+
+    public SaveLabelDataSetRequest setDsId(String dsId) {
+        this.dsId = dsId;
+        return this;
+    }
+    public String getDsId() {
+        return this.dsId;
     }
 
     public SaveLabelDataSetRequest setTableName(String tableName) {
@@ -78,23 +86,12 @@ public class SaveLabelDataSetRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public SaveLabelDataSetRequest setDatasetLabelList(java.util.List<SaveLabelDataSetRequestDatasetLabelList> datasetLabelList) {
-        this.datasetLabelList = datasetLabelList;
-        return this;
-    }
-    public java.util.List<SaveLabelDataSetRequestDatasetLabelList> getDatasetLabelList() {
-        return this.datasetLabelList;
-    }
-
     public static class SaveLabelDataSetRequestDatasetLabelList extends TeaModel {
-        @NameInMap("ColumnName")
-        public String columnName;
-
         @NameInMap("ColumnComment")
         public String columnComment;
 
-        @NameInMap("Remark")
-        public String remark;
+        @NameInMap("ColumnName")
+        public String columnName;
 
         @NameInMap("ColumnType")
         public String columnType;
@@ -102,20 +99,15 @@ public class SaveLabelDataSetRequest extends TeaModel {
         @NameInMap("MappingType")
         public String mappingType;
 
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("UniqueIdentification")
         public String uniqueIdentification;
 
         public static SaveLabelDataSetRequestDatasetLabelList build(java.util.Map<String, ?> map) throws Exception {
             SaveLabelDataSetRequestDatasetLabelList self = new SaveLabelDataSetRequestDatasetLabelList();
             return TeaModel.build(map, self);
-        }
-
-        public SaveLabelDataSetRequestDatasetLabelList setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
         }
 
         public SaveLabelDataSetRequestDatasetLabelList setColumnComment(String columnComment) {
@@ -126,12 +118,12 @@ public class SaveLabelDataSetRequest extends TeaModel {
             return this.columnComment;
         }
 
-        public SaveLabelDataSetRequestDatasetLabelList setRemark(String remark) {
-            this.remark = remark;
+        public SaveLabelDataSetRequestDatasetLabelList setColumnName(String columnName) {
+            this.columnName = columnName;
             return this;
         }
-        public String getRemark() {
-            return this.remark;
+        public String getColumnName() {
+            return this.columnName;
         }
 
         public SaveLabelDataSetRequestDatasetLabelList setColumnType(String columnType) {
@@ -148,6 +140,14 @@ public class SaveLabelDataSetRequest extends TeaModel {
         }
         public String getMappingType() {
             return this.mappingType;
+        }
+
+        public SaveLabelDataSetRequestDatasetLabelList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public SaveLabelDataSetRequestDatasetLabelList setUniqueIdentification(String uniqueIdentification) {

@@ -4,14 +4,6 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateResponseBody extends TeaModel {
-    // 错误信息
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    // traceId
-    @NameInMap("TraceId")
-    public String traceId;
-
     // 修改记录条数
     @NameInMap("Data")
     public String data;
@@ -20,31 +12,23 @@ public class UpdateTemplateResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
+    // 错误信息
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    // traceId
+    @NameInMap("TraceId")
+    public String traceId;
+
     public static UpdateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateResponseBody self = new UpdateTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTemplateResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public UpdateTemplateResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public UpdateTemplateResponseBody setData(String data) {
@@ -63,12 +47,12 @@ public class UpdateTemplateResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public UpdateTemplateResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateTemplateResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorDesc() {
+        return this.errorDesc;
     }
 
     public UpdateTemplateResponseBody setRequestId(String requestId) {
@@ -77,6 +61,22 @@ public class UpdateTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateTemplateResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }

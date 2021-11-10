@@ -4,59 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateDefaultEventSourceResponseBody extends TeaModel {
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
+    @NameInMap("Data")
+    public CreateDefaultEventSourceResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("Data")
-    public CreateDefaultEventSourceResponseBodyData data;
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
+
     public static CreateDefaultEventSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDefaultEventSourceResponseBody self = new CreateDefaultEventSourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDefaultEventSourceResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public CreateDefaultEventSourceResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    public CreateDefaultEventSourceResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateDefaultEventSourceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public CreateDefaultEventSourceResponseBody setData(CreateDefaultEventSourceResponseBodyData data) {
@@ -67,6 +35,22 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreateDefaultEventSourceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateDefaultEventSourceResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
     public CreateDefaultEventSourceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -75,7 +59,32 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateDefaultEventSourceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateDefaultEventSourceResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
     public static class CreateDefaultEventSourceResponseBodyData extends TeaModel {
+        @NameInMap("CreateId")
+        public String createId;
+
+        @NameInMap("ErrDescription")
+        public String errDescription;
+
+        @NameInMap("EventSourceCode")
+        public String eventSourceCode;
+
         @NameInMap("EventSourceId")
         public String eventSourceId;
 
@@ -85,17 +94,14 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
         @NameInMap("EventSourceType")
         public String eventSourceType;
 
-        @NameInMap("EventSourceCode")
-        public String eventSourceCode;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("CreateId")
-        public String createId;
+        @NameInMap("IsUse")
+        public Integer isUse;
 
         @NameInMap("ModifyId")
         public String modifyId;
@@ -106,15 +112,33 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
-        @NameInMap("ErrDescription")
-        public String errDescription;
-
-        @NameInMap("IsUse")
-        public Integer isUse;
-
         public static CreateDefaultEventSourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDefaultEventSourceResponseBodyData self = new CreateDefaultEventSourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDefaultEventSourceResponseBodyData setCreateId(String createId) {
+            this.createId = createId;
+            return this;
+        }
+        public String getCreateId() {
+            return this.createId;
+        }
+
+        public CreateDefaultEventSourceResponseBodyData setErrDescription(String errDescription) {
+            this.errDescription = errDescription;
+            return this;
+        }
+        public String getErrDescription() {
+            return this.errDescription;
+        }
+
+        public CreateDefaultEventSourceResponseBodyData setEventSourceCode(String eventSourceCode) {
+            this.eventSourceCode = eventSourceCode;
+            return this;
+        }
+        public String getEventSourceCode() {
+            return this.eventSourceCode;
         }
 
         public CreateDefaultEventSourceResponseBodyData setEventSourceId(String eventSourceId) {
@@ -141,12 +165,12 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
             return this.eventSourceType;
         }
 
-        public CreateDefaultEventSourceResponseBodyData setEventSourceCode(String eventSourceCode) {
-            this.eventSourceCode = eventSourceCode;
+        public CreateDefaultEventSourceResponseBodyData setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getEventSourceCode() {
-            return this.eventSourceCode;
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public CreateDefaultEventSourceResponseBodyData setGmtModified(String gmtModified) {
@@ -157,20 +181,12 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public CreateDefaultEventSourceResponseBodyData setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public CreateDefaultEventSourceResponseBodyData setIsUse(Integer isUse) {
+            this.isUse = isUse;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public CreateDefaultEventSourceResponseBodyData setCreateId(String createId) {
-            this.createId = createId;
-            return this;
-        }
-        public String getCreateId() {
-            return this.createId;
+        public Integer getIsUse() {
+            return this.isUse;
         }
 
         public CreateDefaultEventSourceResponseBodyData setModifyId(String modifyId) {
@@ -195,22 +211,6 @@ public class CreateDefaultEventSourceResponseBody extends TeaModel {
         }
         public String getWorkspaceId() {
             return this.workspaceId;
-        }
-
-        public CreateDefaultEventSourceResponseBodyData setErrDescription(String errDescription) {
-            this.errDescription = errDescription;
-            return this;
-        }
-        public String getErrDescription() {
-            return this.errDescription;
-        }
-
-        public CreateDefaultEventSourceResponseBodyData setIsUse(Integer isUse) {
-            this.isUse = isUse;
-            return this;
-        }
-        public Integer getIsUse() {
-            return this.isUse;
         }
 
     }

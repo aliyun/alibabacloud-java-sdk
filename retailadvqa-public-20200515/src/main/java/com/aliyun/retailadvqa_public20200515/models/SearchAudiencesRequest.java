@@ -4,14 +4,8 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchAudiencesRequest extends TeaModel {
-    @NameInMap("WorkspaceId")
-    public String workspaceId;
-
     @NameInMap("AccessId")
     public String accessId;
-
-    @NameInMap("ParentId")
-    public String parentId;
 
     @NameInMap("Name")
     public String name;
@@ -22,17 +16,15 @@ public class SearchAudiencesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ParentId")
+    public String parentId;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static SearchAudiencesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAudiencesRequest self = new SearchAudiencesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchAudiencesRequest setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public String getWorkspaceId() {
-        return this.workspaceId;
     }
 
     public SearchAudiencesRequest setAccessId(String accessId) {
@@ -41,14 +33,6 @@ public class SearchAudiencesRequest extends TeaModel {
     }
     public String getAccessId() {
         return this.accessId;
-    }
-
-    public SearchAudiencesRequest setParentId(String parentId) {
-        this.parentId = parentId;
-        return this;
-    }
-    public String getParentId() {
-        return this.parentId;
     }
 
     public SearchAudiencesRequest setName(String name) {
@@ -73,6 +57,22 @@ public class SearchAudiencesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchAudiencesRequest setParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public String getParentId() {
+        return this.parentId;
+    }
+
+    public SearchAudiencesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

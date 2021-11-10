@@ -16,6 +16,13 @@ public class ParamListResponseBody extends TeaModel {
     @NameInMap("ErrorDesc")
     public String errorDesc;
 
+    // exStack
+    @NameInMap("ExStack")
+    public String exStack;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 接口调用状态
     @NameInMap("Success")
     public Boolean success;
@@ -23,13 +30,6 @@ public class ParamListResponseBody extends TeaModel {
     // traceId
     @NameInMap("TraceId")
     public String traceId;
-
-    // exStack
-    @NameInMap("ExStack")
-    public String exStack;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static ParamListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ParamListResponseBody self = new ParamListResponseBody();
@@ -60,22 +60,6 @@ public class ParamListResponseBody extends TeaModel {
         return this.errorDesc;
     }
 
-    public ParamListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public ParamListResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
     public ParamListResponseBody setExStack(String exStack) {
         this.exStack = exStack;
         return this;
@@ -92,11 +76,23 @@ public class ParamListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ParamListResponseBodyData extends TeaModel {
-        // 平台类型
-        @NameInMap("PlatformType")
-        public Long platformType;
+    public ParamListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public ParamListResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static class ParamListResponseBodyData extends TeaModel {
         // 平台ID
         @NameInMap("PlatformId")
         public String platformId;
@@ -105,17 +101,13 @@ public class ParamListResponseBody extends TeaModel {
         @NameInMap("PlatformName")
         public String platformName;
 
+        // 平台类型
+        @NameInMap("PlatformType")
+        public Long platformType;
+
         public static ParamListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ParamListResponseBodyData self = new ParamListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ParamListResponseBodyData setPlatformType(Long platformType) {
-            this.platformType = platformType;
-            return this;
-        }
-        public Long getPlatformType() {
-            return this.platformType;
         }
 
         public ParamListResponseBodyData setPlatformId(String platformId) {
@@ -132,6 +124,14 @@ public class ParamListResponseBody extends TeaModel {
         }
         public String getPlatformName() {
             return this.platformName;
+        }
+
+        public ParamListResponseBodyData setPlatformType(Long platformType) {
+            this.platformType = platformType;
+            return this;
+        }
+        public Long getPlatformType() {
+            return this.platformType;
         }
 
     }

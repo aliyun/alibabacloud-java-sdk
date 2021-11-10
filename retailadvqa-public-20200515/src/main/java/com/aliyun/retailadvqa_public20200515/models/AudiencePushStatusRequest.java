@@ -4,18 +4,26 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class AudiencePushStatusRequest extends TeaModel {
+    @NameInMap("AccessId")
+    public String accessId;
+
     @NameInMap("AudienceId")
     public String audienceId;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    @NameInMap("AccessId")
-    public String accessId;
-
     public static AudiencePushStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         AudiencePushStatusRequest self = new AudiencePushStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AudiencePushStatusRequest setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public AudiencePushStatusRequest setAudienceId(String audienceId) {
@@ -32,14 +40,6 @@ public class AudiencePushStatusRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public AudiencePushStatusRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
 }

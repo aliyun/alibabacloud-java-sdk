@@ -7,14 +7,14 @@ public class CreateDefaultEventSourceRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
+    @NameInMap("EventSourceModelStr")
+    public String eventSourceModelStr;
+
     @NameInMap("TenantId")
     public String tenantId;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
-
-    @NameInMap("EventSourceModelStr")
-    public String eventSourceModelStr;
 
     public static CreateDefaultEventSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDefaultEventSourceRequest self = new CreateDefaultEventSourceRequest();
@@ -27,6 +27,14 @@ public class CreateDefaultEventSourceRequest extends TeaModel {
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public CreateDefaultEventSourceRequest setEventSourceModelStr(String eventSourceModelStr) {
+        this.eventSourceModelStr = eventSourceModelStr;
+        return this;
+    }
+    public String getEventSourceModelStr() {
+        return this.eventSourceModelStr;
     }
 
     public CreateDefaultEventSourceRequest setTenantId(String tenantId) {
@@ -43,14 +51,6 @@ public class CreateDefaultEventSourceRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public CreateDefaultEventSourceRequest setEventSourceModelStr(String eventSourceModelStr) {
-        this.eventSourceModelStr = eventSourceModelStr;
-        return this;
-    }
-    public String getEventSourceModelStr() {
-        return this.eventSourceModelStr;
     }
 
 }

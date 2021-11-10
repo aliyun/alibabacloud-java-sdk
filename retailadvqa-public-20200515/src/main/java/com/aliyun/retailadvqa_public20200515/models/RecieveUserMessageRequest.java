@@ -4,26 +4,18 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class RecieveUserMessageRequest extends TeaModel {
-    @NameInMap("OrganizationId")
-    public String organizationId;
-
     @NameInMap("AccessId")
     public String accessId;
 
     @NameInMap("CustomerMessageModelListStr")
     public String customerMessageModelListStr;
 
+    @NameInMap("OrganizationId")
+    public String organizationId;
+
     public static RecieveUserMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         RecieveUserMessageRequest self = new RecieveUserMessageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecieveUserMessageRequest setOrganizationId(String organizationId) {
-        this.organizationId = organizationId;
-        return this;
-    }
-    public String getOrganizationId() {
-        return this.organizationId;
     }
 
     public RecieveUserMessageRequest setAccessId(String accessId) {
@@ -40,6 +32,14 @@ public class RecieveUserMessageRequest extends TeaModel {
     }
     public String getCustomerMessageModelListStr() {
         return this.customerMessageModelListStr;
+    }
+
+    public RecieveUserMessageRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetShrinkRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public String tenantId;
-
     @NameInMap("AccessId")
     public String accessId;
 
     @NameInMap("DataSet")
     public String dataSetShrink;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("DataSetName")
     public String dataSetName;
+
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -25,14 +25,6 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     public static CreateDatasetShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetShrinkRequest self = new CreateDatasetShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDatasetShrinkRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
     }
 
     public CreateDatasetShrinkRequest setAccessId(String accessId) {
@@ -51,20 +43,28 @@ public class CreateDatasetShrinkRequest extends TeaModel {
         return this.dataSetShrink;
     }
 
-    public CreateDatasetShrinkRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public CreateDatasetShrinkRequest setDataSetName(String dataSetName) {
         this.dataSetName = dataSetName;
         return this;
     }
     public String getDataSetName() {
         return this.dataSetName;
+    }
+
+    public CreateDatasetShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public CreateDatasetShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public CreateDatasetShrinkRequest setWorkspaceId(String workspaceId) {

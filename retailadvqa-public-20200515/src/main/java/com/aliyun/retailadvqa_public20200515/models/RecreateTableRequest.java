@@ -7,17 +7,17 @@ public class RecreateTableRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
-    @NameInMap("TenantId")
-    public String tenantId;
-
-    @NameInMap("TableSchema")
-    public java.util.Map<String, ?> tableSchema;
-
     @NameInMap("OssPath")
     public String ossPath;
 
     @NameInMap("TableName")
     public String tableName;
+
+    @NameInMap("TableSchema")
+    public java.util.Map<String, ?> tableSchema;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static RecreateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         RecreateTableRequest self = new RecreateTableRequest();
@@ -30,22 +30,6 @@ public class RecreateTableRequest extends TeaModel {
     }
     public String getAccessId() {
         return this.accessId;
-    }
-
-    public RecreateTableRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
-    }
-
-    public RecreateTableRequest setTableSchema(java.util.Map<String, ?> tableSchema) {
-        this.tableSchema = tableSchema;
-        return this;
-    }
-    public java.util.Map<String, ?> getTableSchema() {
-        return this.tableSchema;
     }
 
     public RecreateTableRequest setOssPath(String ossPath) {
@@ -62,6 +46,22 @@ public class RecreateTableRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public RecreateTableRequest setTableSchema(java.util.Map<String, ?> tableSchema) {
+        this.tableSchema = tableSchema;
+        return this;
+    }
+    public java.util.Map<String, ?> getTableSchema() {
+        return this.tableSchema;
+    }
+
+    public RecreateTableRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

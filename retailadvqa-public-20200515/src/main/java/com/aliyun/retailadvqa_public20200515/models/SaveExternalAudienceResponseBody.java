@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SaveExternalAudienceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public SaveExternalAudienceResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static SaveExternalAudienceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveExternalAudienceResponseBody self = new SaveExternalAudienceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SaveExternalAudienceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SaveExternalAudienceResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public SaveExternalAudienceResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public SaveExternalAudienceResponseBody setData(SaveExternalAudienceResponseBodyData data) {
@@ -67,12 +43,36 @@ public class SaveExternalAudienceResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public SaveExternalAudienceResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public SaveExternalAudienceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SaveExternalAudienceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public SaveExternalAudienceResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class SaveExternalAudienceResponseBodyData extends TeaModel {

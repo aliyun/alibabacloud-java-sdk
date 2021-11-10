@@ -4,13 +4,13 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListDigitalTemplatesRequest extends TeaModel {
-    // 页码
-    @NameInMap("PageNum")
-    public Long pageNum;
+    // oem code
+    @NameInMap("AccessId")
+    public String accessId;
 
-    // 页大小
-    @NameInMap("PageSize")
-    public Long pageSize;
+    // 排列字段名称
+    @NameInMap("ColumnName")
+    public String columnName;
 
     // 模糊查询值
     @NameInMap("Keyword")
@@ -20,17 +20,17 @@ public class ListDigitalTemplatesRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
-    // 排列字段名称
-    @NameInMap("ColumnName")
-    public String columnName;
+    // 页码
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    // 页大小
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     // 短信签名
     @NameInMap("SmsSign")
     public String smsSign;
-
-    // oem code
-    @NameInMap("AccessId")
-    public String accessId;
 
     // 组织ID
     @NameInMap("TenantId")
@@ -45,20 +45,20 @@ public class ListDigitalTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDigitalTemplatesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public ListDigitalTemplatesRequest setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
+    public String getAccessId() {
+        return this.accessId;
     }
 
-    public ListDigitalTemplatesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public ListDigitalTemplatesRequest setColumnName(String columnName) {
+        this.columnName = columnName;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getColumnName() {
+        return this.columnName;
     }
 
     public ListDigitalTemplatesRequest setKeyword(String keyword) {
@@ -77,12 +77,20 @@ public class ListDigitalTemplatesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListDigitalTemplatesRequest setColumnName(String columnName) {
-        this.columnName = columnName;
+    public ListDigitalTemplatesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getColumnName() {
-        return this.columnName;
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListDigitalTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListDigitalTemplatesRequest setSmsSign(String smsSign) {
@@ -91,14 +99,6 @@ public class ListDigitalTemplatesRequest extends TeaModel {
     }
     public String getSmsSign() {
         return this.smsSign;
-    }
-
-    public ListDigitalTemplatesRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
     public ListDigitalTemplatesRequest setTenantId(String tenantId) {

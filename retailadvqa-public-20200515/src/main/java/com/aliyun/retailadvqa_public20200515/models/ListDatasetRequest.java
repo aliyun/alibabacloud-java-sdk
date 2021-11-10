@@ -4,11 +4,11 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public String tenantId;
-
     @NameInMap("AccessId")
     public String accessId;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     @NameInMap("Type")
     public String type;
@@ -21,20 +21,20 @@ public class ListDatasetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
-    }
-
     public ListDatasetRequest setAccessId(String accessId) {
         this.accessId = accessId;
         return this;
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public ListDatasetRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public ListDatasetRequest setType(String type) {

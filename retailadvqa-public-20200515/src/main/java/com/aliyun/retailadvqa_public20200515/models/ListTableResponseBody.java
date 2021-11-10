@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public java.util.List<ListTableResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTableResponseBody self = new ListTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTableResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public ListTableResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public ListTableResponseBody setData(java.util.List<ListTableResponseBodyData> data) {
@@ -67,6 +43,22 @@ public class ListTableResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListTableResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public ListTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListTableResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,12 +67,20 @@ public class ListTableResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListTableResponseBodyDataColumns extends TeaModel {
-        @NameInMap("Comment")
-        public String comment;
+    public ListTableResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
 
+    public static class ListTableResponseBodyDataColumns extends TeaModel {
         @NameInMap("ColumnType")
         public String columnType;
+
+        @NameInMap("Comment")
+        public String comment;
 
         @NameInMap("Name")
         public String name;
@@ -90,20 +90,20 @@ public class ListTableResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListTableResponseBodyDataColumns setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
-        }
-
         public ListTableResponseBodyDataColumns setColumnType(String columnType) {
             this.columnType = columnType;
             return this;
         }
         public String getColumnType() {
             return this.columnType;
+        }
+
+        public ListTableResponseBodyDataColumns setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public ListTableResponseBodyDataColumns setName(String name) {
@@ -117,23 +117,15 @@ public class ListTableResponseBody extends TeaModel {
     }
 
     public static class ListTableResponseBodyData extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("Columns")
         public java.util.List<ListTableResponseBodyDataColumns> columns;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static ListTableResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTableResponseBodyData self = new ListTableResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListTableResponseBodyData setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public ListTableResponseBodyData setColumns(java.util.List<ListTableResponseBodyDataColumns> columns) {
@@ -142,6 +134,14 @@ public class ListTableResponseBody extends TeaModel {
         }
         public java.util.List<ListTableResponseBodyDataColumns> getColumns() {
             return this.columns;
+        }
+
+        public ListTableResponseBodyData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }
