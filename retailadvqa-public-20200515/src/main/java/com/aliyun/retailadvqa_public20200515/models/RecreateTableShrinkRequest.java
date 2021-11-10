@@ -7,17 +7,17 @@ public class RecreateTableShrinkRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
-    @NameInMap("TenantId")
-    public String tenantId;
-
-    @NameInMap("TableSchema")
-    public String tableSchemaShrink;
-
     @NameInMap("OssPath")
     public String ossPath;
 
     @NameInMap("TableName")
     public String tableName;
+
+    @NameInMap("TableSchema")
+    public String tableSchemaShrink;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static RecreateTableShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RecreateTableShrinkRequest self = new RecreateTableShrinkRequest();
@@ -30,22 +30,6 @@ public class RecreateTableShrinkRequest extends TeaModel {
     }
     public String getAccessId() {
         return this.accessId;
-    }
-
-    public RecreateTableShrinkRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
-    }
-
-    public RecreateTableShrinkRequest setTableSchemaShrink(String tableSchemaShrink) {
-        this.tableSchemaShrink = tableSchemaShrink;
-        return this;
-    }
-    public String getTableSchemaShrink() {
-        return this.tableSchemaShrink;
     }
 
     public RecreateTableShrinkRequest setOssPath(String ossPath) {
@@ -62,6 +46,22 @@ public class RecreateTableShrinkRequest extends TeaModel {
     }
     public String getTableName() {
         return this.tableName;
+    }
+
+    public RecreateTableShrinkRequest setTableSchemaShrink(String tableSchemaShrink) {
+        this.tableSchemaShrink = tableSchemaShrink;
+        return this;
+    }
+    public String getTableSchemaShrink() {
+        return this.tableSchemaShrink;
+    }
+
+    public RecreateTableShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

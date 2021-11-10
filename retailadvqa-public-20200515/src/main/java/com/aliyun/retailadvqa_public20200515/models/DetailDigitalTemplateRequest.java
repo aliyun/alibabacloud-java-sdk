@@ -4,13 +4,13 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class DetailDigitalTemplateRequest extends TeaModel {
-    // 主键
-    @NameInMap("Id")
-    public String id;
-
     // oem code
     @NameInMap("AccessId")
     public String accessId;
+
+    // 主键
+    @NameInMap("Id")
+    public String id;
 
     // 组织ID
     @NameInMap("TenantId")
@@ -25,20 +25,20 @@ public class DetailDigitalTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetailDigitalTemplateRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
     public DetailDigitalTemplateRequest setAccessId(String accessId) {
         this.accessId = accessId;
         return this;
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public DetailDigitalTemplateRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public DetailDigitalTemplateRequest setTenantId(String tenantId) {

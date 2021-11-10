@@ -4,14 +4,14 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetInstanceInstanceResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -19,14 +19,6 @@ public class GetInstanceInstanceResponseBody extends TeaModel {
     public static GetInstanceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceInstanceResponseBody self = new GetInstanceInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetInstanceInstanceResponseBody setData(GetInstanceInstanceResponseBodyData data) {
@@ -43,6 +35,14 @@ public class GetInstanceInstanceResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public GetInstanceInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetInstanceInstanceResponseBody setSuccess(String success) {

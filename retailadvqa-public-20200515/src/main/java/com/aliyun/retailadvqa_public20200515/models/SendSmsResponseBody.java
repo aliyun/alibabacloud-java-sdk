@@ -15,6 +15,9 @@ public class SendSmsResponseBody extends TeaModel {
     @NameInMap("ErrorDesc")
     public String errorDesc;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 接口是否调用成功
     @NameInMap("Success")
     public Boolean success;
@@ -22,9 +25,6 @@ public class SendSmsResponseBody extends TeaModel {
     // traceId
     @NameInMap("TraceId")
     public String traceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static SendSmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendSmsResponseBody self = new SendSmsResponseBody();
@@ -55,6 +55,14 @@ public class SendSmsResponseBody extends TeaModel {
         return this.errorDesc;
     }
 
+    public SendSmsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SendSmsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -69,14 +77,6 @@ public class SendSmsResponseBody extends TeaModel {
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public SendSmsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

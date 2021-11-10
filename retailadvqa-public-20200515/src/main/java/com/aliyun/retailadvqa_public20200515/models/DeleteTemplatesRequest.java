@@ -4,17 +4,17 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplatesRequest extends TeaModel {
-    // 主键
-    @NameInMap("Id")
-    public String id;
+    // oem code
+    @NameInMap("AccessId")
+    public String accessId;
 
     // 来源
     @NameInMap("Comefrom")
     public String comefrom;
 
-    // oem code
-    @NameInMap("AccessId")
-    public String accessId;
+    // 主键
+    @NameInMap("Id")
+    public String id;
 
     // 组织ID
     @NameInMap("TenantId")
@@ -29,12 +29,12 @@ public class DeleteTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteTemplatesRequest setId(String id) {
-        this.id = id;
+    public DeleteTemplatesRequest setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public DeleteTemplatesRequest setComefrom(String comefrom) {
@@ -45,12 +45,12 @@ public class DeleteTemplatesRequest extends TeaModel {
         return this.comefrom;
     }
 
-    public DeleteTemplatesRequest setAccessId(String accessId) {
-        this.accessId = accessId;
+    public DeleteTemplatesRequest setId(String id) {
+        this.id = id;
         return this;
     }
-    public String getAccessId() {
-        return this.accessId;
+    public String getId() {
+        return this.id;
     }
 
     public DeleteTemplatesRequest setTenantId(String tenantId) {

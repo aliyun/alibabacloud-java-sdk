@@ -4,23 +4,23 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public String tenantId;
-
     @NameInMap("AccessId")
     public String accessId;
-
-    @NameInMap("Type")
-    public String type;
 
     @NameInMap("DataSet")
     public String dataSet;
 
+    @NameInMap("DataSetId")
+    public String dataSetId;
+
     @NameInMap("DataSetName")
     public String dataSetName;
 
-    @NameInMap("DataSetId")
-    public String dataSetId;
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -28,14 +28,6 @@ public class UpdateDatasetRequest extends TeaModel {
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDatasetRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
     }
 
     public UpdateDatasetRequest setAccessId(String accessId) {
@@ -46,20 +38,20 @@ public class UpdateDatasetRequest extends TeaModel {
         return this.accessId;
     }
 
-    public UpdateDatasetRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public UpdateDatasetRequest setDataSet(String dataSet) {
         this.dataSet = dataSet;
         return this;
     }
     public String getDataSet() {
         return this.dataSet;
+    }
+
+    public UpdateDatasetRequest setDataSetId(String dataSetId) {
+        this.dataSetId = dataSetId;
+        return this;
+    }
+    public String getDataSetId() {
+        return this.dataSetId;
     }
 
     public UpdateDatasetRequest setDataSetName(String dataSetName) {
@@ -70,12 +62,20 @@ public class UpdateDatasetRequest extends TeaModel {
         return this.dataSetName;
     }
 
-    public UpdateDatasetRequest setDataSetId(String dataSetId) {
-        this.dataSetId = dataSetId;
+    public UpdateDatasetRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public String getDataSetId() {
-        return this.dataSetId;
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public UpdateDatasetRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public UpdateDatasetRequest setWorkspaceId(String workspaceId) {

@@ -4,13 +4,13 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CheckSmsReceiptExportStatusRequest extends TeaModel {
-    // 短信任务Id
-    @NameInMap("MarketTaskId")
-    public String marketTaskId;
-
     // 租户Id
     @NameInMap("AccessId")
     public String accessId;
+
+    // 短信任务Id
+    @NameInMap("MarketTaskId")
+    public String marketTaskId;
 
     // 空间Id
     @NameInMap("WorkspaceId")
@@ -21,20 +21,20 @@ public class CheckSmsReceiptExportStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckSmsReceiptExportStatusRequest setMarketTaskId(String marketTaskId) {
-        this.marketTaskId = marketTaskId;
-        return this;
-    }
-    public String getMarketTaskId() {
-        return this.marketTaskId;
-    }
-
     public CheckSmsReceiptExportStatusRequest setAccessId(String accessId) {
         this.accessId = accessId;
         return this;
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public CheckSmsReceiptExportStatusRequest setMarketTaskId(String marketTaskId) {
+        this.marketTaskId = marketTaskId;
+        return this;
+    }
+    public String getMarketTaskId() {
+        return this.marketTaskId;
     }
 
     public CheckSmsReceiptExportStatusRequest setWorkspaceId(String workspaceId) {

@@ -4,29 +4,9 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SendSmsRequest extends TeaModel {
-    // 短信任务名称
-    @NameInMap("TaskName")
-    public String taskName;
-
-    // 外部流水拓展字段
-    @NameInMap("OutId")
-    public String outId;
-
-    // 签名名称
-    @NameInMap("SignName")
-    public String signName;
-
-    // 短信模板ID
-    @NameInMap("SmsTemplateId")
-    public String smsTemplateId;
-
-    // 发送手机号
-    @NameInMap("PhoneNumbers")
-    public String phoneNumbers;
-
-    // 平台ID
-    @NameInMap("PlatformId")
-    public String platformId;
+    // oem code
+    @NameInMap("AccessId")
+    public String accessId;
 
     // 发送渠道
     @NameInMap("ChannelType")
@@ -36,13 +16,33 @@ public class SendSmsRequest extends TeaModel {
     @NameInMap("IsVariable")
     public Long isVariable;
 
+    // 外部流水拓展字段
+    @NameInMap("OutId")
+    public String outId;
+
+    // 发送手机号
+    @NameInMap("PhoneNumbers")
+    public String phoneNumbers;
+
+    // 平台ID
+    @NameInMap("PlatformId")
+    public String platformId;
+
+    // 签名名称
+    @NameInMap("SignName")
+    public String signName;
+
+    // 短信模板ID
+    @NameInMap("SmsTemplateId")
+    public String smsTemplateId;
+
+    // 短信任务名称
+    @NameInMap("TaskName")
+    public String taskName;
+
     // 短信模板变量对应的实际值
     @NameInMap("TemplateParam")
     public String templateParam;
-
-    // oem code
-    @NameInMap("AccessId")
-    public String accessId;
 
     // 组织ID
     @NameInMap("TenantId")
@@ -57,52 +57,12 @@ public class SendSmsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SendSmsRequest setTaskName(String taskName) {
-        this.taskName = taskName;
+    public SendSmsRequest setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    public SendSmsRequest setOutId(String outId) {
-        this.outId = outId;
-        return this;
-    }
-    public String getOutId() {
-        return this.outId;
-    }
-
-    public SendSmsRequest setSignName(String signName) {
-        this.signName = signName;
-        return this;
-    }
-    public String getSignName() {
-        return this.signName;
-    }
-
-    public SendSmsRequest setSmsTemplateId(String smsTemplateId) {
-        this.smsTemplateId = smsTemplateId;
-        return this;
-    }
-    public String getSmsTemplateId() {
-        return this.smsTemplateId;
-    }
-
-    public SendSmsRequest setPhoneNumbers(String phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
-        return this;
-    }
-    public String getPhoneNumbers() {
-        return this.phoneNumbers;
-    }
-
-    public SendSmsRequest setPlatformId(String platformId) {
-        this.platformId = platformId;
-        return this;
-    }
-    public String getPlatformId() {
-        return this.platformId;
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public SendSmsRequest setChannelType(Long channelType) {
@@ -121,20 +81,60 @@ public class SendSmsRequest extends TeaModel {
         return this.isVariable;
     }
 
+    public SendSmsRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
+    }
+
+    public SendSmsRequest setPhoneNumbers(String phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    public String getPhoneNumbers() {
+        return this.phoneNumbers;
+    }
+
+    public SendSmsRequest setPlatformId(String platformId) {
+        this.platformId = platformId;
+        return this;
+    }
+    public String getPlatformId() {
+        return this.platformId;
+    }
+
+    public SendSmsRequest setSignName(String signName) {
+        this.signName = signName;
+        return this;
+    }
+    public String getSignName() {
+        return this.signName;
+    }
+
+    public SendSmsRequest setSmsTemplateId(String smsTemplateId) {
+        this.smsTemplateId = smsTemplateId;
+        return this;
+    }
+    public String getSmsTemplateId() {
+        return this.smsTemplateId;
+    }
+
+    public SendSmsRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
     public SendSmsRequest setTemplateParam(String templateParam) {
         this.templateParam = templateParam;
         return this;
     }
     public String getTemplateParam() {
         return this.templateParam;
-    }
-
-    public SendSmsRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
     public SendSmsRequest setTenantId(String tenantId) {

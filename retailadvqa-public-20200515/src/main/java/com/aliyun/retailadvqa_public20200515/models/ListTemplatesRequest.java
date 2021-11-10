@@ -4,17 +4,21 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    // oemcode
+    @NameInMap("AccessId")
+    public String accessId;
+
+    // 排序字段名称
+    @NameInMap("ColumnName")
+    public String columnName;
+
     // 模板来源
     @NameInMap("Comefrom")
     public String comefrom;
 
-    // 页码
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    // 页大小
-    @NameInMap("PageSize")
-    public Long pageSize;
+    // 是否为变量模板
+    @NameInMap("IsVariable")
+    public Long isVariable;
 
     // 模糊查询值
     @NameInMap("Keyword")
@@ -24,25 +28,21 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
-    // 排序字段名称
-    @NameInMap("ColumnName")
-    public String columnName;
+    // 页码
+    @NameInMap("PageNum")
+    public Long pageNum;
 
-    // 模板类型
-    @NameInMap("TemplateType")
-    public Long templateType;
+    // 页大小
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     // 平台id
     @NameInMap("PlatformId")
     public String platformId;
 
-    // 是否为变量模板
-    @NameInMap("IsVariable")
-    public Long isVariable;
-
-    // oemcode
-    @NameInMap("AccessId")
-    public String accessId;
+    // 模板类型
+    @NameInMap("TemplateType")
+    public Long templateType;
 
     // 组织ID
     @NameInMap("TenantId")
@@ -57,6 +57,22 @@ public class ListTemplatesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTemplatesRequest setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
+    }
+
+    public ListTemplatesRequest setColumnName(String columnName) {
+        this.columnName = columnName;
+        return this;
+    }
+    public String getColumnName() {
+        return this.columnName;
+    }
+
     public ListTemplatesRequest setComefrom(String comefrom) {
         this.comefrom = comefrom;
         return this;
@@ -65,20 +81,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.comefrom;
     }
 
-    public ListTemplatesRequest setPageNum(Long pageNum) {
-        this.pageNum = pageNum;
+    public ListTemplatesRequest setIsVariable(Long isVariable) {
+        this.isVariable = isVariable;
         return this;
     }
-    public Long getPageNum() {
-        return this.pageNum;
-    }
-
-    public ListTemplatesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
+    public Long getIsVariable() {
+        return this.isVariable;
     }
 
     public ListTemplatesRequest setKeyword(String keyword) {
@@ -97,20 +105,20 @@ public class ListTemplatesRequest extends TeaModel {
         return this.order;
     }
 
-    public ListTemplatesRequest setColumnName(String columnName) {
-        this.columnName = columnName;
+    public ListTemplatesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getColumnName() {
-        return this.columnName;
+    public Long getPageNum() {
+        return this.pageNum;
     }
 
-    public ListTemplatesRequest setTemplateType(Long templateType) {
-        this.templateType = templateType;
+    public ListTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getTemplateType() {
-        return this.templateType;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListTemplatesRequest setPlatformId(String platformId) {
@@ -121,20 +129,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.platformId;
     }
 
-    public ListTemplatesRequest setIsVariable(Long isVariable) {
-        this.isVariable = isVariable;
+    public ListTemplatesRequest setTemplateType(Long templateType) {
+        this.templateType = templateType;
         return this;
     }
-    public Long getIsVariable() {
-        return this.isVariable;
-    }
-
-    public ListTemplatesRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
+    public Long getTemplateType() {
+        return this.templateType;
     }
 
     public ListTemplatesRequest setTenantId(String tenantId) {

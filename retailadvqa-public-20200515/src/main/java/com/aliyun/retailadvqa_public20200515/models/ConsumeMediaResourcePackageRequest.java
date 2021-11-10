@@ -4,6 +4,9 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ConsumeMediaResourcePackageRequest extends TeaModel {
+    @NameInMap("ConsumeInfos")
+    public String consumeInfos;
+
     @NameInMap("ConsumeTime")
     public Long consumeTime;
 
@@ -13,12 +16,17 @@ public class ConsumeMediaResourcePackageRequest extends TeaModel {
     @NameInMap("ProductId")
     public String productId;
 
-    @NameInMap("ConsumeInfos")
-    public String consumeInfos;
-
     public static ConsumeMediaResourcePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         ConsumeMediaResourcePackageRequest self = new ConsumeMediaResourcePackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConsumeMediaResourcePackageRequest setConsumeInfos(String consumeInfos) {
+        this.consumeInfos = consumeInfos;
+        return this;
+    }
+    public String getConsumeInfos() {
+        return this.consumeInfos;
     }
 
     public ConsumeMediaResourcePackageRequest setConsumeTime(Long consumeTime) {
@@ -43,14 +51,6 @@ public class ConsumeMediaResourcePackageRequest extends TeaModel {
     }
     public String getProductId() {
         return this.productId;
-    }
-
-    public ConsumeMediaResourcePackageRequest setConsumeInfos(String consumeInfos) {
-        this.consumeInfos = consumeInfos;
-        return this;
-    }
-    public String getConsumeInfos() {
-        return this.consumeInfos;
     }
 
 }

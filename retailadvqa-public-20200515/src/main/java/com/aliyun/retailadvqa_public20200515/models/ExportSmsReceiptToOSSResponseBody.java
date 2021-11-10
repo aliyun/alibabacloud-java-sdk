@@ -4,6 +4,12 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ExportSmsReceiptToOSSResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +17,28 @@ public class ExportSmsReceiptToOSSResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
     @NameInMap("TraceId")
     public String traceId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     public static ExportSmsReceiptToOSSResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportSmsReceiptToOSSResponseBody self = new ExportSmsReceiptToOSSResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExportSmsReceiptToOSSResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ExportSmsReceiptToOSSResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
     }
 
     public ExportSmsReceiptToOSSResponseBody setRequestId(String requestId) {
@@ -41,28 +57,12 @@ public class ExportSmsReceiptToOSSResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ExportSmsReceiptToOSSResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
     public ExportSmsReceiptToOSSResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public ExportSmsReceiptToOSSResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

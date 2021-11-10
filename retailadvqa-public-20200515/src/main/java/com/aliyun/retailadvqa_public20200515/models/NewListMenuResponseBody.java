@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class NewListMenuResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public java.util.List<NewListMenuResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static NewListMenuResponseBody build(java.util.Map<String, ?> map) throws Exception {
         NewListMenuResponseBody self = new NewListMenuResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public NewListMenuResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public NewListMenuResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public NewListMenuResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public NewListMenuResponseBody setData(java.util.List<NewListMenuResponseBodyData> data) {
@@ -67,6 +43,22 @@ public class NewListMenuResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public NewListMenuResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public NewListMenuResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public NewListMenuResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,12 +67,20 @@ public class NewListMenuResponseBody extends TeaModel {
         return this.success;
     }
 
+    public NewListMenuResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
     public static class NewListMenuResponseBodyData extends TeaModel {
+        @NameInMap("Children")
+        public java.util.Map<String, ?> children;
+
         @NameInMap("Key")
         public String key;
-
-        @NameInMap("Url")
-        public String url;
 
         @NameInMap("Name")
         public String name;
@@ -94,12 +94,20 @@ public class NewListMenuResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
-        @NameInMap("Children")
-        public java.util.Map<String, ?> children;
+        @NameInMap("Url")
+        public String url;
 
         public static NewListMenuResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             NewListMenuResponseBodyData self = new NewListMenuResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public NewListMenuResponseBodyData setChildren(java.util.Map<String, ?> children) {
+            this.children = children;
+            return this;
+        }
+        public java.util.Map<String, ?> getChildren() {
+            return this.children;
         }
 
         public NewListMenuResponseBodyData setKey(String key) {
@@ -108,14 +116,6 @@ public class NewListMenuResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
-        }
-
-        public NewListMenuResponseBodyData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public NewListMenuResponseBodyData setName(String name) {
@@ -150,12 +150,12 @@ public class NewListMenuResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public NewListMenuResponseBodyData setChildren(java.util.Map<String, ?> children) {
-            this.children = children;
+        public NewListMenuResponseBodyData setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public java.util.Map<String, ?> getChildren() {
-            return this.children;
+        public String getUrl() {
+            return this.url;
         }
 
     }

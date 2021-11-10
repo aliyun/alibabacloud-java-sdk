@@ -4,18 +4,26 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchAudienceRequest extends TeaModel {
+    @NameInMap("AccessId")
+    public String accessId;
+
     @NameInMap("AudienceId")
     public String audienceId;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    @NameInMap("AccessId")
-    public String accessId;
-
     public static SearchAudienceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAudienceRequest self = new SearchAudienceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchAudienceRequest setAccessId(String accessId) {
+        this.accessId = accessId;
+        return this;
+    }
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public SearchAudienceRequest setAudienceId(String audienceId) {
@@ -32,14 +40,6 @@ public class SearchAudienceRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public SearchAudienceRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
 }

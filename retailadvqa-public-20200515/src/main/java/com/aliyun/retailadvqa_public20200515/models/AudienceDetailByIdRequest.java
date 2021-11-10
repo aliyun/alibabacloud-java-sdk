@@ -4,26 +4,18 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class AudienceDetailByIdRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public String tenantId;
-
     @NameInMap("AccessId")
     public String accessId;
 
     @NameInMap("AudienceId")
     public String audienceId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static AudienceDetailByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         AudienceDetailByIdRequest self = new AudienceDetailByIdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AudienceDetailByIdRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
     }
 
     public AudienceDetailByIdRequest setAccessId(String accessId) {
@@ -40,6 +32,14 @@ public class AudienceDetailByIdRequest extends TeaModel {
     }
     public String getAudienceId() {
         return this.audienceId;
+    }
+
+    public AudienceDetailByIdRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

@@ -4,14 +4,11 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchDirectoriesRequest extends TeaModel {
-    @NameInMap("ParentDirectoryId")
-    public String parentDirectoryId;
+    @NameInMap("AccessId")
+    public String accessId;
 
     @NameInMap("DirectoryName")
     public String directoryName;
-
-    @NameInMap("Type")
-    public Integer type;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -19,23 +16,26 @@ public class SearchDirectoriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ParentDirectoryId")
+    public String parentDirectoryId;
+
+    @NameInMap("Type")
+    public Integer type;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
-
-    @NameInMap("AccessId")
-    public String accessId;
 
     public static SearchDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchDirectoriesRequest self = new SearchDirectoriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public SearchDirectoriesRequest setParentDirectoryId(String parentDirectoryId) {
-        this.parentDirectoryId = parentDirectoryId;
+    public SearchDirectoriesRequest setAccessId(String accessId) {
+        this.accessId = accessId;
         return this;
     }
-    public String getParentDirectoryId() {
-        return this.parentDirectoryId;
+    public String getAccessId() {
+        return this.accessId;
     }
 
     public SearchDirectoriesRequest setDirectoryName(String directoryName) {
@@ -44,14 +44,6 @@ public class SearchDirectoriesRequest extends TeaModel {
     }
     public String getDirectoryName() {
         return this.directoryName;
-    }
-
-    public SearchDirectoriesRequest setType(Integer type) {
-        this.type = type;
-        return this;
-    }
-    public Integer getType() {
-        return this.type;
     }
 
     public SearchDirectoriesRequest setPageNum(Integer pageNum) {
@@ -70,20 +62,28 @@ public class SearchDirectoriesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public SearchDirectoriesRequest setParentDirectoryId(String parentDirectoryId) {
+        this.parentDirectoryId = parentDirectoryId;
+        return this;
+    }
+    public String getParentDirectoryId() {
+        return this.parentDirectoryId;
+    }
+
+    public SearchDirectoriesRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
+    }
+
     public SearchDirectoriesRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public SearchDirectoriesRequest setAccessId(String accessId) {
-        this.accessId = accessId;
-        return this;
-    }
-    public String getAccessId() {
-        return this.accessId;
     }
 
 }

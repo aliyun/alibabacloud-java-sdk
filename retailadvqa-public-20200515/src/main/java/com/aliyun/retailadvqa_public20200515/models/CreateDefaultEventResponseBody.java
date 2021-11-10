@@ -4,68 +4,28 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateDefaultEventResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
+    @NameInMap("Data")
+    public CreateDefaultEventResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public CreateDefaultEventResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static CreateDefaultEventResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDefaultEventResponseBody self = new CreateDefaultEventResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDefaultEventResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateDefaultEventResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public CreateDefaultEventResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    public CreateDefaultEventResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateDefaultEventResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public CreateDefaultEventResponseBody setData(CreateDefaultEventResponseBodyData data) {
@@ -76,38 +36,62 @@ public class CreateDefaultEventResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreateDefaultEventResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateDefaultEventResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public CreateDefaultEventResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDefaultEventResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateDefaultEventResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
     public static class CreateDefaultEventResponseBodyDataEventAttributeList extends TeaModel {
-        @NameInMap("EventId")
-        public String eventId;
+        @NameInMap("EventAttributeCode")
+        public String eventAttributeCode;
 
         @NameInMap("EventAttributeName")
         public String eventAttributeName;
 
-        @NameInMap("EventAttributeCode")
-        public String eventAttributeCode;
-
         @NameInMap("EventAttributeTypeCode")
         public Long eventAttributeTypeCode;
+
+        @NameInMap("EventId")
+        public String eventId;
 
         public static CreateDefaultEventResponseBodyDataEventAttributeList build(java.util.Map<String, ?> map) throws Exception {
             CreateDefaultEventResponseBodyDataEventAttributeList self = new CreateDefaultEventResponseBodyDataEventAttributeList();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDefaultEventResponseBodyDataEventAttributeList setEventId(String eventId) {
-            this.eventId = eventId;
-            return this;
-        }
-        public String getEventId() {
-            return this.eventId;
-        }
-
-        public CreateDefaultEventResponseBodyDataEventAttributeList setEventAttributeName(String eventAttributeName) {
-            this.eventAttributeName = eventAttributeName;
-            return this;
-        }
-        public String getEventAttributeName() {
-            return this.eventAttributeName;
         }
 
         public CreateDefaultEventResponseBodyDataEventAttributeList setEventAttributeCode(String eventAttributeCode) {
@@ -118,6 +102,14 @@ public class CreateDefaultEventResponseBody extends TeaModel {
             return this.eventAttributeCode;
         }
 
+        public CreateDefaultEventResponseBodyDataEventAttributeList setEventAttributeName(String eventAttributeName) {
+            this.eventAttributeName = eventAttributeName;
+            return this;
+        }
+        public String getEventAttributeName() {
+            return this.eventAttributeName;
+        }
+
         public CreateDefaultEventResponseBodyDataEventAttributeList setEventAttributeTypeCode(Long eventAttributeTypeCode) {
             this.eventAttributeTypeCode = eventAttributeTypeCode;
             return this;
@@ -126,17 +118,31 @@ public class CreateDefaultEventResponseBody extends TeaModel {
             return this.eventAttributeTypeCode;
         }
 
+        public CreateDefaultEventResponseBodyDataEventAttributeList setEventId(String eventId) {
+            this.eventId = eventId;
+            return this;
+        }
+        public String getEventId() {
+            return this.eventId;
+        }
+
     }
 
     public static class CreateDefaultEventResponseBodyData extends TeaModel {
+        @NameInMap("CreateId")
+        public String createId;
+
+        @NameInMap("EventAttributeList")
+        public java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> eventAttributeList;
+
+        @NameInMap("EventCode")
+        public String eventCode;
+
         @NameInMap("EventId")
         public String eventId;
 
         @NameInMap("EventName")
         public String eventName;
-
-        @NameInMap("EventCode")
-        public String eventCode;
 
         @NameInMap("EventSourceId")
         public String eventSourceId;
@@ -153,9 +159,6 @@ public class CreateDefaultEventResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("CreateId")
-        public String createId;
-
         @NameInMap("ModifiedId")
         public String modifiedId;
 
@@ -165,12 +168,33 @@ public class CreateDefaultEventResponseBody extends TeaModel {
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
-        @NameInMap("EventAttributeList")
-        public java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> eventAttributeList;
-
         public static CreateDefaultEventResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDefaultEventResponseBodyData self = new CreateDefaultEventResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDefaultEventResponseBodyData setCreateId(String createId) {
+            this.createId = createId;
+            return this;
+        }
+        public String getCreateId() {
+            return this.createId;
+        }
+
+        public CreateDefaultEventResponseBodyData setEventAttributeList(java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> eventAttributeList) {
+            this.eventAttributeList = eventAttributeList;
+            return this;
+        }
+        public java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> getEventAttributeList() {
+            return this.eventAttributeList;
+        }
+
+        public CreateDefaultEventResponseBodyData setEventCode(String eventCode) {
+            this.eventCode = eventCode;
+            return this;
+        }
+        public String getEventCode() {
+            return this.eventCode;
         }
 
         public CreateDefaultEventResponseBodyData setEventId(String eventId) {
@@ -187,14 +211,6 @@ public class CreateDefaultEventResponseBody extends TeaModel {
         }
         public String getEventName() {
             return this.eventName;
-        }
-
-        public CreateDefaultEventResponseBodyData setEventCode(String eventCode) {
-            this.eventCode = eventCode;
-            return this;
-        }
-        public String getEventCode() {
-            return this.eventCode;
         }
 
         public CreateDefaultEventResponseBodyData setEventSourceId(String eventSourceId) {
@@ -237,14 +253,6 @@ public class CreateDefaultEventResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public CreateDefaultEventResponseBodyData setCreateId(String createId) {
-            this.createId = createId;
-            return this;
-        }
-        public String getCreateId() {
-            return this.createId;
-        }
-
         public CreateDefaultEventResponseBodyData setModifiedId(String modifiedId) {
             this.modifiedId = modifiedId;
             return this;
@@ -267,14 +275,6 @@ public class CreateDefaultEventResponseBody extends TeaModel {
         }
         public String getWorkspaceId() {
             return this.workspaceId;
-        }
-
-        public CreateDefaultEventResponseBodyData setEventAttributeList(java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> eventAttributeList) {
-            this.eventAttributeList = eventAttributeList;
-            return this;
-        }
-        public java.util.List<CreateDefaultEventResponseBodyDataEventAttributeList> getEventAttributeList() {
-            return this.eventAttributeList;
         }
 
     }

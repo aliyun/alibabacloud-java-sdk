@@ -4,6 +4,15 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class GetAudienceMarketingInfoResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetAudienceMarketingInfoResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,21 +20,36 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
     @NameInMap("TraceId")
     public String traceId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetAudienceMarketingInfoResponseBodyData data;
 
     public static GetAudienceMarketingInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAudienceMarketingInfoResponseBody self = new GetAudienceMarketingInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAudienceMarketingInfoResponseBody setData(GetAudienceMarketingInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAudienceMarketingInfoResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetAudienceMarketingInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetAudienceMarketingInfoResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
     }
 
     public GetAudienceMarketingInfoResponseBody setRequestId(String requestId) {
@@ -44,36 +68,12 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetAudienceMarketingInfoResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
     public GetAudienceMarketingInfoResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
     public String getTraceId() {
         return this.traceId;
-    }
-
-    public GetAudienceMarketingInfoResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetAudienceMarketingInfoResponseBody setData(GetAudienceMarketingInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAudienceMarketingInfoResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingJobs extends TeaModel {
@@ -118,8 +118,20 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
     }
 
     public static class GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("JobId")
         public String jobId;
+
+        @NameInMap("MarketType")
+        public String marketType;
+
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TaskId")
         public String taskId;
@@ -127,21 +139,17 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         @NameInMap("TaskName")
         public String taskName;
 
-        @NameInMap("MarketType")
-        public String marketType;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ModifyTime")
-        public String modifyTime;
-
         public static GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks build(java.util.Map<String, ?> map) throws Exception {
             GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks self = new GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks();
             return TeaModel.build(map, self);
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setJobId(String jobId) {
@@ -150,6 +158,30 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setMarketType(String marketType) {
+            this.marketType = marketType;
+            return this;
+        }
+        public String getMarketType() {
+            return this.marketType;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setTaskId(String taskId) {
@@ -168,38 +200,6 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
             return this.taskName;
         }
 
-        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setMarketType(String marketType) {
-            this.marketType = marketType;
-            return this;
-        }
-        public String getMarketType() {
-            return this.marketType;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
-        }
-
     }
 
     public static class GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel extends TeaModel {
@@ -209,11 +209,11 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         @NameInMap("HasMarketingTask")
         public Boolean hasMarketingTask;
 
-        @NameInMap("MarketingMainAudienceId")
-        public String marketingMainAudienceId;
-
         @NameInMap("MarketingJobs")
         public java.util.List<GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingJobs> marketingJobs;
+
+        @NameInMap("MarketingMainAudienceId")
+        public String marketingMainAudienceId;
 
         @NameInMap("MarketingTasks")
         public java.util.List<GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks> marketingTasks;
@@ -239,20 +239,20 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
             return this.hasMarketingTask;
         }
 
-        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel setMarketingMainAudienceId(String marketingMainAudienceId) {
-            this.marketingMainAudienceId = marketingMainAudienceId;
-            return this;
-        }
-        public String getMarketingMainAudienceId() {
-            return this.marketingMainAudienceId;
-        }
-
         public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel setMarketingJobs(java.util.List<GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingJobs> marketingJobs) {
             this.marketingJobs = marketingJobs;
             return this;
         }
         public java.util.List<GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingJobs> getMarketingJobs() {
             return this.marketingJobs;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel setMarketingMainAudienceId(String marketingMainAudienceId) {
+            this.marketingMainAudienceId = marketingMainAudienceId;
+            return this;
+        }
+        public String getMarketingMainAudienceId() {
+            return this.marketingMainAudienceId;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel setMarketingTasks(java.util.List<GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks> marketingTasks) {
@@ -266,11 +266,11 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
     }
 
     public static class GetAudienceMarketingInfoResponseBodyDataContent extends TeaModel {
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("DefaultMappingType")
+        public String defaultMappingType;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -278,20 +278,20 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("LatestDataModifyTime")
-        public String latestDataModifyTime;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("LatestDataModifyStatus")
         public String latestDataModifyStatus;
 
+        @NameInMap("LatestDataModifyTime")
+        public String latestDataModifyTime;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("NumberOfAudiences")
         public Long numberOfAudiences;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("DefaultMappingType")
-        public String defaultMappingType;
 
         @NameInMap("SmsMarketingModel")
         public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel smsMarketingModel;
@@ -301,20 +301,20 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetAudienceMarketingInfoResponseBodyDataContent setId(String id) {
-            this.id = id;
+        public GetAudienceMarketingInfoResponseBodyDataContent setDefaultMappingType(String defaultMappingType) {
+            this.defaultMappingType = defaultMappingType;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getDefaultMappingType() {
+            return this.defaultMappingType;
         }
 
-        public GetAudienceMarketingInfoResponseBodyDataContent setName(String name) {
-            this.name = name;
+        public GetAudienceMarketingInfoResponseBodyDataContent setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContent setGmtCreate(String gmtCreate) {
@@ -333,12 +333,12 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public GetAudienceMarketingInfoResponseBodyDataContent setLatestDataModifyTime(String latestDataModifyTime) {
-            this.latestDataModifyTime = latestDataModifyTime;
+        public GetAudienceMarketingInfoResponseBodyDataContent setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getLatestDataModifyTime() {
-            return this.latestDataModifyTime;
+        public String getId() {
+            return this.id;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContent setLatestDataModifyStatus(String latestDataModifyStatus) {
@@ -349,28 +349,28 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
             return this.latestDataModifyStatus;
         }
 
+        public GetAudienceMarketingInfoResponseBodyDataContent setLatestDataModifyTime(String latestDataModifyTime) {
+            this.latestDataModifyTime = latestDataModifyTime;
+            return this;
+        }
+        public String getLatestDataModifyTime() {
+            return this.latestDataModifyTime;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContent setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetAudienceMarketingInfoResponseBodyDataContent setNumberOfAudiences(Long numberOfAudiences) {
             this.numberOfAudiences = numberOfAudiences;
             return this;
         }
         public Long getNumberOfAudiences() {
             return this.numberOfAudiences;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyDataContent setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyDataContent setDefaultMappingType(String defaultMappingType) {
-            this.defaultMappingType = defaultMappingType;
-            return this;
-        }
-        public String getDefaultMappingType() {
-            return this.defaultMappingType;
         }
 
         public GetAudienceMarketingInfoResponseBodyDataContent setSmsMarketingModel(GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModel smsMarketingModel) {
@@ -384,6 +384,9 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
     }
 
     public static class GetAudienceMarketingInfoResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> content;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -393,12 +396,17 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         @NameInMap("TotalNum")
         public Long totalNum;
 
-        @NameInMap("Content")
-        public java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> content;
-
         public static GetAudienceMarketingInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAudienceMarketingInfoResponseBodyData self = new GetAudienceMarketingInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAudienceMarketingInfoResponseBodyData setContent(java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> getContent() {
+            return this.content;
         }
 
         public GetAudienceMarketingInfoResponseBodyData setPageNum(Long pageNum) {
@@ -423,14 +431,6 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         }
         public Long getTotalNum() {
             return this.totalNum;
-        }
-
-        public GetAudienceMarketingInfoResponseBodyData setContent(java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.List<GetAudienceMarketingInfoResponseBodyDataContent> getContent() {
-            return this.content;
         }
 
     }

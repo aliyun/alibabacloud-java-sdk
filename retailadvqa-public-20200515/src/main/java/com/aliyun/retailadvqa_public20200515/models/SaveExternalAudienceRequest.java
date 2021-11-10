@@ -7,14 +7,14 @@ public class SaveExternalAudienceRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
-    @NameInMap("DataSourceId")
-    public String dataSourceId;
-
     @NameInMap("AudienceId")
     public String audienceId;
 
     @NameInMap("AudienceName")
     public String audienceName;
+
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
 
     @NameInMap("MappingType")
     public String mappingType;
@@ -38,14 +38,6 @@ public class SaveExternalAudienceRequest extends TeaModel {
         return this.accessId;
     }
 
-    public SaveExternalAudienceRequest setDataSourceId(String dataSourceId) {
-        this.dataSourceId = dataSourceId;
-        return this;
-    }
-    public String getDataSourceId() {
-        return this.dataSourceId;
-    }
-
     public SaveExternalAudienceRequest setAudienceId(String audienceId) {
         this.audienceId = audienceId;
         return this;
@@ -60,6 +52,14 @@ public class SaveExternalAudienceRequest extends TeaModel {
     }
     public String getAudienceName() {
         return this.audienceName;
+    }
+
+    public SaveExternalAudienceRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
     }
 
     public SaveExternalAudienceRequest setMappingType(String mappingType) {

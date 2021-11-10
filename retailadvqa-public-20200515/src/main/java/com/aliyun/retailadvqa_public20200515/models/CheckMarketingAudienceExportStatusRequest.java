@@ -4,13 +4,13 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CheckMarketingAudienceExportStatusRequest extends TeaModel {
-    // 受众Id
-    @NameInMap("AudienceId")
-    public String audienceId;
-
     // 租户Id
     @NameInMap("AccessId")
     public String accessId;
+
+    // 受众Id
+    @NameInMap("AudienceId")
+    public String audienceId;
 
     // 空间Id
     @NameInMap("WorkspaceId")
@@ -21,20 +21,20 @@ public class CheckMarketingAudienceExportStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckMarketingAudienceExportStatusRequest setAudienceId(String audienceId) {
-        this.audienceId = audienceId;
-        return this;
-    }
-    public String getAudienceId() {
-        return this.audienceId;
-    }
-
     public CheckMarketingAudienceExportStatusRequest setAccessId(String accessId) {
         this.accessId = accessId;
         return this;
     }
     public String getAccessId() {
         return this.accessId;
+    }
+
+    public CheckMarketingAudienceExportStatusRequest setAudienceId(String audienceId) {
+        this.audienceId = audienceId;
+        return this;
+    }
+    public String getAudienceId() {
+        return this.audienceId;
     }
 
     public CheckMarketingAudienceExportStatusRequest setWorkspaceId(String workspaceId) {

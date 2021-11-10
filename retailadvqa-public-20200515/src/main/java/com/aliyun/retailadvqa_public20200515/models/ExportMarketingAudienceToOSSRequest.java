@@ -8,13 +8,13 @@ public class ExportMarketingAudienceToOSSRequest extends TeaModel {
     @NameInMap("AccessId")
     public String accessId;
 
-    // 空间Id
-    @NameInMap("WorkspaceId")
-    public String workspaceId;
-
     // 受众Id
     @NameInMap("AudienceId")
     public String audienceId;
+
+    // 空间Id
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ExportMarketingAudienceToOSSRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportMarketingAudienceToOSSRequest self = new ExportMarketingAudienceToOSSRequest();
@@ -29,20 +29,20 @@ public class ExportMarketingAudienceToOSSRequest extends TeaModel {
         return this.accessId;
     }
 
-    public ExportMarketingAudienceToOSSRequest setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
     public ExportMarketingAudienceToOSSRequest setAudienceId(String audienceId) {
         this.audienceId = audienceId;
         return this;
     }
     public String getAudienceId() {
         return this.audienceId;
+    }
+
+    public ExportMarketingAudienceToOSSRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

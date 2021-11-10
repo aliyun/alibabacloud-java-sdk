@@ -4,51 +4,27 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class ListAccountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorDesc")
-    public String errorDesc;
-
-    @NameInMap("TraceId")
-    public String traceId;
-
     @NameInMap("Data")
     public java.util.List<ListAccountResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorDesc")
+    public String errorDesc;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAccountResponseBody self = new ListAccountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAccountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAccountResponseBody setErrorDesc(String errorDesc) {
-        this.errorDesc = errorDesc;
-        return this;
-    }
-    public String getErrorDesc() {
-        return this.errorDesc;
-    }
-
-    public ListAccountResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public ListAccountResponseBody setData(java.util.List<ListAccountResponseBodyData> data) {
@@ -67,6 +43,22 @@ public class ListAccountResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListAccountResponseBody setErrorDesc(String errorDesc) {
+        this.errorDesc = errorDesc;
+        return this;
+    }
+    public String getErrorDesc() {
+        return this.errorDesc;
+    }
+
+    public ListAccountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListAccountResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,18 +67,26 @@ public class ListAccountResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListAccountResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
+    }
+
     public static class ListAccountResponseBodyData extends TeaModel {
         @NameInMap("Aud")
         public String aud;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("NickName")
         public String nickName;
 
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListAccountResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAccountResponseBodyData self = new ListAccountResponseBodyData();
@@ -99,14 +99,6 @@ public class ListAccountResponseBody extends TeaModel {
         }
         public String getAud() {
             return this.aud;
-        }
-
-        public ListAccountResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public ListAccountResponseBodyData setNickName(String nickName) {
@@ -123,6 +115,14 @@ public class ListAccountResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public ListAccountResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

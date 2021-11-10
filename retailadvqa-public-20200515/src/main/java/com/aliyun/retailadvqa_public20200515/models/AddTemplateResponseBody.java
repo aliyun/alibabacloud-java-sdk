@@ -16,6 +16,13 @@ public class AddTemplateResponseBody extends TeaModel {
     @NameInMap("ErrorDesc")
     public String errorDesc;
 
+    // exStack
+    @NameInMap("ExStack")
+    public String exStack;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 接口调用状态
     @NameInMap("Success")
     public Boolean success;
@@ -23,13 +30,6 @@ public class AddTemplateResponseBody extends TeaModel {
     // traceId
     @NameInMap("TraceId")
     public String traceId;
-
-    // exStack
-    @NameInMap("ExStack")
-    public String exStack;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static AddTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddTemplateResponseBody self = new AddTemplateResponseBody();
@@ -60,22 +60,6 @@ public class AddTemplateResponseBody extends TeaModel {
         return this.errorDesc;
     }
 
-    public AddTemplateResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public AddTemplateResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
     public AddTemplateResponseBody setExStack(String exStack) {
         this.exStack = exStack;
         return this;
@@ -90,6 +74,22 @@ public class AddTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public AddTemplateResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }

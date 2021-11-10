@@ -4,14 +4,14 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaResourcePackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryMediaResourcePackageResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -19,14 +19,6 @@ public class QueryMediaResourcePackageResponseBody extends TeaModel {
     public static QueryMediaResourcePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaResourcePackageResponseBody self = new QueryMediaResourcePackageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMediaResourcePackageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMediaResourcePackageResponseBody setData(QueryMediaResourcePackageResponseBodyData data) {
@@ -45,6 +37,14 @@ public class QueryMediaResourcePackageResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public QueryMediaResourcePackageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryMediaResourcePackageResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -54,62 +54,30 @@ public class QueryMediaResourcePackageResponseBody extends TeaModel {
     }
 
     public static class QueryMediaResourcePackageResponseBodyData extends TeaModel {
+        @NameInMap("BagsInfo")
+        public String bagsInfo;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
-
-        @NameInMap("SlrGrantedFlag")
-        public Boolean slrGrantedFlag;
 
         @NameInMap("EffectiveInstanceFlag")
         public Boolean effectiveInstanceFlag;
 
+        @NameInMap("PageCount")
+        public Integer pageCount;
+
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("BagsInfo")
-        public String bagsInfo;
+        @NameInMap("SlrGrantedFlag")
+        public Boolean slrGrantedFlag;
 
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("PageCount")
-        public Integer pageCount;
-
         public static QueryMediaResourcePackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaResourcePackageResponseBodyData self = new QueryMediaResourcePackageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMediaResourcePackageResponseBodyData setCurrentPage(Integer currentPage) {
-            this.currentPage = currentPage;
-            return this;
-        }
-        public Integer getCurrentPage() {
-            return this.currentPage;
-        }
-
-        public QueryMediaResourcePackageResponseBodyData setSlrGrantedFlag(Boolean slrGrantedFlag) {
-            this.slrGrantedFlag = slrGrantedFlag;
-            return this;
-        }
-        public Boolean getSlrGrantedFlag() {
-            return this.slrGrantedFlag;
-        }
-
-        public QueryMediaResourcePackageResponseBodyData setEffectiveInstanceFlag(Boolean effectiveInstanceFlag) {
-            this.effectiveInstanceFlag = effectiveInstanceFlag;
-            return this;
-        }
-        public Boolean getEffectiveInstanceFlag() {
-            return this.effectiveInstanceFlag;
-        }
-
-        public QueryMediaResourcePackageResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
         }
 
         public QueryMediaResourcePackageResponseBodyData setBagsInfo(String bagsInfo) {
@@ -120,12 +88,20 @@ public class QueryMediaResourcePackageResponseBody extends TeaModel {
             return this.bagsInfo;
         }
 
-        public QueryMediaResourcePackageResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public QueryMediaResourcePackageResponseBodyData setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        public QueryMediaResourcePackageResponseBodyData setEffectiveInstanceFlag(Boolean effectiveInstanceFlag) {
+            this.effectiveInstanceFlag = effectiveInstanceFlag;
+            return this;
+        }
+        public Boolean getEffectiveInstanceFlag() {
+            return this.effectiveInstanceFlag;
         }
 
         public QueryMediaResourcePackageResponseBodyData setPageCount(Integer pageCount) {
@@ -134,6 +110,30 @@ public class QueryMediaResourcePackageResponseBody extends TeaModel {
         }
         public Integer getPageCount() {
             return this.pageCount;
+        }
+
+        public QueryMediaResourcePackageResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryMediaResourcePackageResponseBodyData setSlrGrantedFlag(Boolean slrGrantedFlag) {
+            this.slrGrantedFlag = slrGrantedFlag;
+            return this;
+        }
+        public Boolean getSlrGrantedFlag() {
+            return this.slrGrantedFlag;
+        }
+
+        public QueryMediaResourcePackageResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

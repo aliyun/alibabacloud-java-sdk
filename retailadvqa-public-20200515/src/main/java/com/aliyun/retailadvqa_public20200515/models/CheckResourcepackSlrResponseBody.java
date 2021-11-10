@@ -4,14 +4,14 @@ package com.aliyun.retailadvqa_public20200515.models;
 import com.aliyun.tea.*;
 
 public class CheckResourcepackSlrResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -19,14 +19,6 @@ public class CheckResourcepackSlrResponseBody extends TeaModel {
     public static CheckResourcepackSlrResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckResourcepackSlrResponseBody self = new CheckResourcepackSlrResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckResourcepackSlrResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckResourcepackSlrResponseBody setData(String data) {
@@ -43,6 +35,14 @@ public class CheckResourcepackSlrResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public CheckResourcepackSlrResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CheckResourcepackSlrResponseBody setSuccess(String success) {
