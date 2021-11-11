@@ -32,21 +32,29 @@ public class ListAckClustersResponseBody extends TeaModel {
     }
 
     public static class ListAckClustersResponseBodyResult extends TeaModel {
+        @NameInMap("clusterId")
+        public String clusterId;
+
         @NameInMap("clusterType")
         public String clusterType;
-
-        @NameInMap("vpcId")
-        public String vpcId;
 
         @NameInMap("name")
         public String name;
 
-        @NameInMap("clusterId")
-        public String clusterId;
+        @NameInMap("vpcId")
+        public String vpcId;
 
         public static ListAckClustersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAckClustersResponseBodyResult self = new ListAckClustersResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListAckClustersResponseBodyResult setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public ListAckClustersResponseBodyResult setClusterType(String clusterType) {
@@ -57,14 +65,6 @@ public class ListAckClustersResponseBody extends TeaModel {
             return this.clusterType;
         }
 
-        public ListAckClustersResponseBodyResult setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
         public ListAckClustersResponseBodyResult setName(String name) {
             this.name = name;
             return this;
@@ -73,12 +73,12 @@ public class ListAckClustersResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListAckClustersResponseBodyResult setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public ListAckClustersResponseBodyResult setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

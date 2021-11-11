@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListLogstashResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListLogstashResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListLogstashResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListLogstashResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListLogstashResponseBody setHeaders(ListLogstashResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListLogstashResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListLogstashResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListLogstashResponseBody setResult(java.util.List<ListLogstashResponseBodyResult> result) {
@@ -62,23 +62,15 @@ public class ListLogstashResponseBody extends TeaModel {
     }
 
     public static class ListLogstashResponseBodyResultTags extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ListLogstashResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
             ListLogstashResponseBodyResultTags self = new ListLogstashResponseBodyResultTags();
             return TeaModel.build(map, self);
-        }
-
-        public ListLogstashResponseBodyResultTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListLogstashResponseBodyResultTags setTagKey(String tagKey) {
@@ -89,12 +81,69 @@ public class ListLogstashResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        public ListLogstashResponseBodyResultTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        @NameInMap("vsArea")
+        public String vsArea;
+
+        @NameInMap("vswitchId")
+        public String vswitchId;
+
+        public static ListLogstashResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListLogstashResponseBodyResultNetworkConfig self = new ListLogstashResponseBodyResultNetworkConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListLogstashResponseBodyResultNetworkConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListLogstashResponseBodyResultNetworkConfig setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListLogstashResponseBodyResultNetworkConfig setVsArea(String vsArea) {
+            this.vsArea = vsArea;
+            return this;
+        }
+        public String getVsArea() {
+            return this.vsArea;
+        }
+
+        public ListLogstashResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
     }
 
     public static class ListLogstashResponseBodyResultNodeSpec extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("disk")
         public Integer disk;
 
@@ -104,17 +153,12 @@ public class ListLogstashResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListLogstashResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
             ListLogstashResponseBodyResultNodeSpec self = new ListLogstashResponseBodyResultNodeSpec();
             return TeaModel.build(map, self);
-        }
-
-        public ListLogstashResponseBodyResultNodeSpec setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListLogstashResponseBodyResultNodeSpec setDisk(Integer disk) {
@@ -141,72 +185,40 @@ public class ListLogstashResponseBody extends TeaModel {
             return this.diskType;
         }
 
-    }
-
-    public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
-        @NameInMap("vpcId")
-        public String vpcId;
-
-        @NameInMap("vsArea")
-        public String vsArea;
-
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("vswitchId")
-        public String vswitchId;
-
-        public static ListLogstashResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
-            ListLogstashResponseBodyResultNetworkConfig self = new ListLogstashResponseBodyResultNetworkConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ListLogstashResponseBodyResultNetworkConfig setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public ListLogstashResponseBodyResultNodeSpec setSpec(String spec) {
+            this.spec = spec;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public ListLogstashResponseBodyResultNetworkConfig setVsArea(String vsArea) {
-            this.vsArea = vsArea;
-            return this;
-        }
-        public String getVsArea() {
-            return this.vsArea;
-        }
-
-        public ListLogstashResponseBodyResultNetworkConfig setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListLogstashResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
+        public String getSpec() {
+            return this.spec;
         }
 
     }
 
     public static class ListLogstashResponseBodyResult extends TeaModel {
-        @NameInMap("paymentType")
-        public String paymentType;
+        @NameInMap("Tags")
+        public java.util.List<ListLogstashResponseBodyResultTags> tags;
 
-        @NameInMap("nodeAmount")
-        public Integer nodeAmount;
+        @NameInMap("createdAt")
+        public String createdAt;
 
         @NameInMap("description")
         public String description;
 
-        @NameInMap("createdAt")
-        public String createdAt;
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("networkConfig")
+        public ListLogstashResponseBodyResultNetworkConfig networkConfig;
+
+        @NameInMap("nodeAmount")
+        public Integer nodeAmount;
+
+        @NameInMap("nodeSpec")
+        public ListLogstashResponseBodyResultNodeSpec nodeSpec;
+
+        @NameInMap("paymentType")
+        public String paymentType;
 
         @NameInMap("status")
         public String status;
@@ -214,40 +226,28 @@ public class ListLogstashResponseBody extends TeaModel {
         @NameInMap("updatedAt")
         public String updatedAt;
 
-        @NameInMap("instanceId")
-        public String instanceId;
-
         @NameInMap("version")
         public String version;
-
-        @NameInMap("Tags")
-        public java.util.List<ListLogstashResponseBodyResultTags> tags;
-
-        @NameInMap("nodeSpec")
-        public ListLogstashResponseBodyResultNodeSpec nodeSpec;
-
-        @NameInMap("networkConfig")
-        public ListLogstashResponseBodyResultNetworkConfig networkConfig;
 
         public static ListLogstashResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListLogstashResponseBodyResult self = new ListLogstashResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListLogstashResponseBodyResult setPaymentType(String paymentType) {
-            this.paymentType = paymentType;
+        public ListLogstashResponseBodyResult setTags(java.util.List<ListLogstashResponseBodyResultTags> tags) {
+            this.tags = tags;
             return this;
         }
-        public String getPaymentType() {
-            return this.paymentType;
+        public java.util.List<ListLogstashResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
-        public ListLogstashResponseBodyResult setNodeAmount(Integer nodeAmount) {
-            this.nodeAmount = nodeAmount;
+        public ListLogstashResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
-        public Integer getNodeAmount() {
-            return this.nodeAmount;
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public ListLogstashResponseBodyResult setDescription(String description) {
@@ -258,12 +258,44 @@ public class ListLogstashResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListLogstashResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
+        public ListLogstashResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getCreatedAt() {
-            return this.createdAt;
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListLogstashResponseBodyResult setNetworkConfig(ListLogstashResponseBodyResultNetworkConfig networkConfig) {
+            this.networkConfig = networkConfig;
+            return this;
+        }
+        public ListLogstashResponseBodyResultNetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public ListLogstashResponseBodyResult setNodeAmount(Integer nodeAmount) {
+            this.nodeAmount = nodeAmount;
+            return this;
+        }
+        public Integer getNodeAmount() {
+            return this.nodeAmount;
+        }
+
+        public ListLogstashResponseBodyResult setNodeSpec(ListLogstashResponseBodyResultNodeSpec nodeSpec) {
+            this.nodeSpec = nodeSpec;
+            return this;
+        }
+        public ListLogstashResponseBodyResultNodeSpec getNodeSpec() {
+            return this.nodeSpec;
+        }
+
+        public ListLogstashResponseBodyResult setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
         public ListLogstashResponseBodyResult setStatus(String status) {
@@ -282,44 +314,12 @@ public class ListLogstashResponseBody extends TeaModel {
             return this.updatedAt;
         }
 
-        public ListLogstashResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public ListLogstashResponseBodyResult setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public ListLogstashResponseBodyResult setTags(java.util.List<ListLogstashResponseBodyResultTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListLogstashResponseBodyResultTags> getTags() {
-            return this.tags;
-        }
-
-        public ListLogstashResponseBodyResult setNodeSpec(ListLogstashResponseBodyResultNodeSpec nodeSpec) {
-            this.nodeSpec = nodeSpec;
-            return this;
-        }
-        public ListLogstashResponseBodyResultNodeSpec getNodeSpec() {
-            return this.nodeSpec;
-        }
-
-        public ListLogstashResponseBodyResult setNetworkConfig(ListLogstashResponseBodyResultNetworkConfig networkConfig) {
-            this.networkConfig = networkConfig;
-            return this;
-        }
-        public ListLogstashResponseBodyResultNetworkConfig getNetworkConfig() {
-            return this.networkConfig;
         }
 
     }

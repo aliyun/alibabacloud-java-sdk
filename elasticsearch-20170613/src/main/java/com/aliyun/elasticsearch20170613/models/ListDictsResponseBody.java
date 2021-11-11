@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDictsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListDictsResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListDictsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListDictsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDictsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListDictsResponseBody setHeaders(ListDictsResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListDictsResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListDictsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListDictsResponseBody setResult(java.util.List<ListDictsResponseBodyResult> result) {
@@ -62,11 +62,14 @@ public class ListDictsResponseBody extends TeaModel {
     }
 
     public static class ListDictsResponseBodyResult extends TeaModel {
+        @NameInMap("downloadUrl")
+        public String downloadUrl;
+
         @NameInMap("fileSize")
         public Long fileSize;
 
-        @NameInMap("downloadUrl")
-        public String downloadUrl;
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("sourceType")
         public String sourceType;
@@ -74,12 +77,17 @@ public class ListDictsResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        @NameInMap("name")
-        public String name;
-
         public static ListDictsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListDictsResponseBodyResult self = new ListDictsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListDictsResponseBodyResult setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         public ListDictsResponseBodyResult setFileSize(Long fileSize) {
@@ -90,12 +98,12 @@ public class ListDictsResponseBody extends TeaModel {
             return this.fileSize;
         }
 
-        public ListDictsResponseBodyResult setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
+        public ListDictsResponseBodyResult setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
+        public String getName() {
+            return this.name;
         }
 
         public ListDictsResponseBodyResult setSourceType(String sourceType) {
@@ -112,14 +120,6 @@ public class ListDictsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public ListDictsResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TransferNodeRequest extends TeaModel {
-    @NameInMap("nodeType")
-    public String nodeType;
-
     @NameInMap("clientToken")
     public String clientToken;
+
+    @NameInMap("nodeType")
+    public String nodeType;
 
     public static TransferNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferNodeRequest self = new TransferNodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TransferNodeRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
-        return this;
-    }
-    public String getNodeType() {
-        return this.nodeType;
     }
 
     public TransferNodeRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class TransferNodeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public TransferNodeRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
 }

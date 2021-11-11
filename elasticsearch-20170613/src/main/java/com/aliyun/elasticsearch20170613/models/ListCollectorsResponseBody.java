@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListCollectorsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListCollectorsResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListCollectorsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListCollectorsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListCollectorsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListCollectorsResponseBody setHeaders(ListCollectorsResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListCollectorsResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListCollectorsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListCollectorsResponseBody setResult(java.util.List<ListCollectorsResponseBodyResult> result) {
@@ -122,32 +122,11 @@ public class ListCollectorsResponseBody extends TeaModel {
     }
 
     public static class ListCollectorsResponseBodyResultExtendConfigs extends TeaModel {
-        @NameInMap("successPodsCount")
-        public String successPodsCount;
-
-        @NameInMap("protocol")
-        public String protocol;
-
-        @NameInMap("userName")
-        public String userName;
-
-        @NameInMap("totalPodsCount")
-        public String totalPodsCount;
-
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("kibanaHost")
-        public String kibanaHost;
-
-        @NameInMap("enableMonitoring")
-        public Boolean enableMonitoring;
-
         @NameInMap("configType")
         public String configType;
 
-        @NameInMap("instanceType")
-        public String instanceType;
+        @NameInMap("enableMonitoring")
+        public Boolean enableMonitoring;
 
         @NameInMap("groupId")
         public String groupId;
@@ -155,74 +134,39 @@ public class ListCollectorsResponseBody extends TeaModel {
         @NameInMap("host")
         public String host;
 
+        @NameInMap("hosts")
+        public java.util.List<String> hosts;
+
         @NameInMap("instanceId")
         public String instanceId;
+
+        @NameInMap("instanceType")
+        public String instanceType;
+
+        @NameInMap("kibanaHost")
+        public String kibanaHost;
 
         @NameInMap("machines")
         public java.util.List<ListCollectorsResponseBodyResultExtendConfigsMachines> machines;
 
-        @NameInMap("hosts")
-        public java.util.List<String> hosts;
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("successPodsCount")
+        public String successPodsCount;
+
+        @NameInMap("totalPodsCount")
+        public String totalPodsCount;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("userName")
+        public String userName;
 
         public static ListCollectorsResponseBodyResultExtendConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListCollectorsResponseBodyResultExtendConfigs self = new ListCollectorsResponseBodyResultExtendConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setSuccessPodsCount(String successPodsCount) {
-            this.successPodsCount = successPodsCount;
-            return this;
-        }
-        public String getSuccessPodsCount() {
-            return this.successPodsCount;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setTotalPodsCount(String totalPodsCount) {
-            this.totalPodsCount = totalPodsCount;
-            return this;
-        }
-        public String getTotalPodsCount() {
-            return this.totalPodsCount;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setKibanaHost(String kibanaHost) {
-            this.kibanaHost = kibanaHost;
-            return this;
-        }
-        public String getKibanaHost() {
-            return this.kibanaHost;
-        }
-
-        public ListCollectorsResponseBodyResultExtendConfigs setEnableMonitoring(Boolean enableMonitoring) {
-            this.enableMonitoring = enableMonitoring;
-            return this;
-        }
-        public Boolean getEnableMonitoring() {
-            return this.enableMonitoring;
         }
 
         public ListCollectorsResponseBodyResultExtendConfigs setConfigType(String configType) {
@@ -233,12 +177,12 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.configType;
         }
 
-        public ListCollectorsResponseBodyResultExtendConfigs setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public ListCollectorsResponseBodyResultExtendConfigs setEnableMonitoring(Boolean enableMonitoring) {
+            this.enableMonitoring = enableMonitoring;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public Boolean getEnableMonitoring() {
+            return this.enableMonitoring;
         }
 
         public ListCollectorsResponseBodyResultExtendConfigs setGroupId(String groupId) {
@@ -257,12 +201,36 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.host;
         }
 
+        public ListCollectorsResponseBodyResultExtendConfigs setHosts(java.util.List<String> hosts) {
+            this.hosts = hosts;
+            return this;
+        }
+        public java.util.List<String> getHosts() {
+            return this.hosts;
+        }
+
         public ListCollectorsResponseBodyResultExtendConfigs setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setKibanaHost(String kibanaHost) {
+            this.kibanaHost = kibanaHost;
+            return this;
+        }
+        public String getKibanaHost() {
+            return this.kibanaHost;
         }
 
         public ListCollectorsResponseBodyResultExtendConfigs setMachines(java.util.List<ListCollectorsResponseBodyResultExtendConfigsMachines> machines) {
@@ -273,31 +241,75 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.machines;
         }
 
-        public ListCollectorsResponseBodyResultExtendConfigs setHosts(java.util.List<String> hosts) {
-            this.hosts = hosts;
+        public ListCollectorsResponseBodyResultExtendConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public java.util.List<String> getHosts() {
-            return this.hosts;
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setSuccessPodsCount(String successPodsCount) {
+            this.successPodsCount = successPodsCount;
+            return this;
+        }
+        public String getSuccessPodsCount() {
+            return this.successPodsCount;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setTotalPodsCount(String totalPodsCount) {
+            this.totalPodsCount = totalPodsCount;
+            return this;
+        }
+        public String getTotalPodsCount() {
+            return this.totalPodsCount;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListCollectorsResponseBodyResultExtendConfigs setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }
 
     public static class ListCollectorsResponseBodyResult extends TeaModel {
-        @NameInMap("resId")
-        public String resId;
+        @NameInMap("collectorPaths")
+        public java.util.List<String> collectorPaths;
 
-        @NameInMap("gmtUpdateTime")
-        public String gmtUpdateTime;
+        @NameInMap("configs")
+        public java.util.List<ListCollectorsResponseBodyResultConfigs> configs;
 
         @NameInMap("dryRun")
         public Boolean dryRun;
 
+        @NameInMap("extendConfigs")
+        public java.util.List<ListCollectorsResponseBodyResultExtendConfigs> extendConfigs;
+
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
+
+        @NameInMap("gmtUpdateTime")
+        public String gmtUpdateTime;
+
+        @NameInMap("name")
+        public String name;
+
         @NameInMap("ownerId")
         public String ownerId;
 
-        @NameInMap("vpcId")
-        public String vpcId;
+        @NameInMap("resId")
+        public String resId;
 
         @NameInMap("resType")
         public String resType;
@@ -305,43 +317,31 @@ public class ListCollectorsResponseBody extends TeaModel {
         @NameInMap("resVersion")
         public String resVersion;
 
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
-
         @NameInMap("status")
         public String status;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("configs")
-        public java.util.List<ListCollectorsResponseBodyResultConfigs> configs;
-
-        @NameInMap("extendConfigs")
-        public java.util.List<ListCollectorsResponseBodyResultExtendConfigs> extendConfigs;
-
-        @NameInMap("collectorPaths")
-        public java.util.List<String> collectorPaths;
+        @NameInMap("vpcId")
+        public String vpcId;
 
         public static ListCollectorsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListCollectorsResponseBodyResult self = new ListCollectorsResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListCollectorsResponseBodyResult setResId(String resId) {
-            this.resId = resId;
+        public ListCollectorsResponseBodyResult setCollectorPaths(java.util.List<String> collectorPaths) {
+            this.collectorPaths = collectorPaths;
             return this;
         }
-        public String getResId() {
-            return this.resId;
+        public java.util.List<String> getCollectorPaths() {
+            return this.collectorPaths;
         }
 
-        public ListCollectorsResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
-            this.gmtUpdateTime = gmtUpdateTime;
+        public ListCollectorsResponseBodyResult setConfigs(java.util.List<ListCollectorsResponseBodyResultConfigs> configs) {
+            this.configs = configs;
             return this;
         }
-        public String getGmtUpdateTime() {
-            return this.gmtUpdateTime;
+        public java.util.List<ListCollectorsResponseBodyResultConfigs> getConfigs() {
+            return this.configs;
         }
 
         public ListCollectorsResponseBodyResult setDryRun(Boolean dryRun) {
@@ -352,6 +352,38 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.dryRun;
         }
 
+        public ListCollectorsResponseBodyResult setExtendConfigs(java.util.List<ListCollectorsResponseBodyResultExtendConfigs> extendConfigs) {
+            this.extendConfigs = extendConfigs;
+            return this;
+        }
+        public java.util.List<ListCollectorsResponseBodyResultExtendConfigs> getExtendConfigs() {
+            return this.extendConfigs;
+        }
+
+        public ListCollectorsResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+        public String getGmtCreatedTime() {
+            return this.gmtCreatedTime;
+        }
+
+        public ListCollectorsResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
+            this.gmtUpdateTime = gmtUpdateTime;
+            return this;
+        }
+        public String getGmtUpdateTime() {
+            return this.gmtUpdateTime;
+        }
+
+        public ListCollectorsResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListCollectorsResponseBodyResult setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
@@ -360,12 +392,12 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public ListCollectorsResponseBodyResult setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public ListCollectorsResponseBodyResult setResId(String resId) {
+            this.resId = resId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getResId() {
+            return this.resId;
         }
 
         public ListCollectorsResponseBodyResult setResType(String resType) {
@@ -384,14 +416,6 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.resVersion;
         }
 
-        public ListCollectorsResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
-            this.gmtCreatedTime = gmtCreatedTime;
-            return this;
-        }
-        public String getGmtCreatedTime() {
-            return this.gmtCreatedTime;
-        }
-
         public ListCollectorsResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
@@ -400,36 +424,12 @@ public class ListCollectorsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListCollectorsResponseBodyResult setName(String name) {
-            this.name = name;
+        public ListCollectorsResponseBodyResult setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListCollectorsResponseBodyResult setConfigs(java.util.List<ListCollectorsResponseBodyResultConfigs> configs) {
-            this.configs = configs;
-            return this;
-        }
-        public java.util.List<ListCollectorsResponseBodyResultConfigs> getConfigs() {
-            return this.configs;
-        }
-
-        public ListCollectorsResponseBodyResult setExtendConfigs(java.util.List<ListCollectorsResponseBodyResultExtendConfigs> extendConfigs) {
-            this.extendConfigs = extendConfigs;
-            return this;
-        }
-        public java.util.List<ListCollectorsResponseBodyResultExtendConfigs> getExtendConfigs() {
-            return this.extendConfigs;
-        }
-
-        public ListCollectorsResponseBodyResult setCollectorPaths(java.util.List<String> collectorPaths) {
-            this.collectorPaths = collectorPaths;
-            return this;
-        }
-        public java.util.List<String> getCollectorPaths() {
-            return this.collectorPaths;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

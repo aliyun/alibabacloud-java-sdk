@@ -35,11 +35,11 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
         @NameInMap("fileSize")
         public Long fileSize;
 
-        @NameInMap("sourceType")
-        public String sourceType;
-
         @NameInMap("name")
         public String name;
+
+        @NameInMap("sourceType")
+        public String sourceType;
 
         @NameInMap("type")
         public String type;
@@ -57,20 +57,20 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
             return this.fileSize;
         }
 
-        public UpdateAliwsDictResponseBodyResult setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
         public UpdateAliwsDictResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateAliwsDictResponseBodyResult setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public UpdateAliwsDictResponseBodyResult setType(String type) {

@@ -32,9 +32,6 @@ public class ListPipelineIdsResponseBody extends TeaModel {
     }
 
     public static class ListPipelineIdsResponseBodyResult extends TeaModel {
-        @NameInMap("pipelineId")
-        public String pipelineId;
-
         @NameInMap("available")
         public Boolean available;
 
@@ -44,17 +41,12 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         @NameInMap("message")
         public String message;
 
+        @NameInMap("pipelineId")
+        public String pipelineId;
+
         public static ListPipelineIdsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListPipelineIdsResponseBodyResult self = new ListPipelineIdsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListPipelineIdsResponseBodyResult setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
         }
 
         public ListPipelineIdsResponseBodyResult setAvailable(Boolean available) {
@@ -79,6 +71,14 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public ListPipelineIdsResponseBodyResult setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
     }

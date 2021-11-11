@@ -32,23 +32,15 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     }
 
     public static class ListConnectedClustersResponseBodyResultResult extends TeaModel {
-        @NameInMap("networkType")
-        public String networkType;
-
         @NameInMap("instances")
         public String instances;
+
+        @NameInMap("networkType")
+        public String networkType;
 
         public static ListConnectedClustersResponseBodyResultResult build(java.util.Map<String, ?> map) throws Exception {
             ListConnectedClustersResponseBodyResultResult self = new ListConnectedClustersResponseBodyResultResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListConnectedClustersResponseBodyResultResult setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
         }
 
         public ListConnectedClustersResponseBodyResultResult setInstances(String instances) {
@@ -57,6 +49,14 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         }
         public String getInstances() {
             return this.instances;
+        }
+
+        public ListConnectedClustersResponseBodyResultResult setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
     }

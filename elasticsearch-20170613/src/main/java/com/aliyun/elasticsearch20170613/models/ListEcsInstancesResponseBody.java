@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListEcsInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListEcsInstancesResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListEcsInstancesResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListEcsInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListEcsInstancesResponseBody setHeaders(ListEcsInstancesResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListEcsInstancesResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListEcsInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListEcsInstancesResponseBody setResult(java.util.List<ListEcsInstancesResponseBodyResult> result) {
@@ -57,36 +57,6 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         }
         public Integer getXTotalCount() {
             return this.xTotalCount;
-        }
-
-    }
-
-    public static class ListEcsInstancesResponseBodyResultIpAddress extends TeaModel {
-        @NameInMap("ipType")
-        public String ipType;
-
-        @NameInMap("host")
-        public String host;
-
-        public static ListEcsInstancesResponseBodyResultIpAddress build(java.util.Map<String, ?> map) throws Exception {
-            ListEcsInstancesResponseBodyResultIpAddress self = new ListEcsInstancesResponseBodyResultIpAddress();
-            return TeaModel.build(map, self);
-        }
-
-        public ListEcsInstancesResponseBodyResultIpAddress setIpType(String ipType) {
-            this.ipType = ipType;
-            return this;
-        }
-        public String getIpType() {
-            return this.ipType;
-        }
-
-        public ListEcsInstancesResponseBodyResultIpAddress setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
         }
 
     }
@@ -152,39 +122,47 @@ public class ListEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListEcsInstancesResponseBodyResultCollectorsExtendConfigs extends TeaModel {
+        @NameInMap("configType")
+        public String configType;
+
         @NameInMap("enableMonitoring")
         public Boolean enableMonitoring;
 
         @NameInMap("groupId")
         public String groupId;
 
-        @NameInMap("configType")
-        public String configType;
-
-        @NameInMap("instanceType")
-        public String instanceType;
-
-        @NameInMap("protocol")
-        public String protocol;
-
-        @NameInMap("userName")
-        public String userName;
-
-        @NameInMap("type")
-        public String type;
+        @NameInMap("hosts")
+        public java.util.List<String> hosts;
 
         @NameInMap("instanceId")
         public String instanceId;
 
+        @NameInMap("instanceType")
+        public String instanceType;
+
         @NameInMap("machines")
         public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigsMachines> machines;
 
-        @NameInMap("hosts")
-        public java.util.List<String> hosts;
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("userName")
+        public String userName;
 
         public static ListEcsInstancesResponseBodyResultCollectorsExtendConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListEcsInstancesResponseBodyResultCollectorsExtendConfigs self = new ListEcsInstancesResponseBodyResultCollectorsExtendConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setConfigType(String configType) {
+            this.configType = configType;
+            return this;
+        }
+        public String getConfigType() {
+            return this.configType;
         }
 
         public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setEnableMonitoring(Boolean enableMonitoring) {
@@ -203,44 +181,12 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setConfigType(String configType) {
-            this.configType = configType;
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setHosts(java.util.List<String> hosts) {
+            this.hosts = hosts;
             return this;
         }
-        public String getConfigType() {
-            return this.configType;
-        }
-
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public java.util.List<String> getHosts() {
+            return this.hosts;
         }
 
         public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setInstanceId(String instanceId) {
@@ -251,6 +197,14 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setMachines(java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigsMachines> machines) {
             this.machines = machines;
             return this;
@@ -259,31 +213,59 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.machines;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setHosts(java.util.List<String> hosts) {
-            this.hosts = hosts;
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public java.util.List<String> getHosts() {
-            return this.hosts;
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectorsExtendConfigs setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }
 
     public static class ListEcsInstancesResponseBodyResultCollectors extends TeaModel {
-        @NameInMap("resId")
-        public String resId;
+        @NameInMap("collectorPaths")
+        public java.util.List<String> collectorPaths;
 
-        @NameInMap("gmtUpdateTime")
-        public String gmtUpdateTime;
+        @NameInMap("configs")
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> configs;
 
         @NameInMap("dryRun")
         public Boolean dryRun;
 
+        @NameInMap("extendConfigs")
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> extendConfigs;
+
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
+
+        @NameInMap("gmtUpdateTime")
+        public String gmtUpdateTime;
+
+        @NameInMap("name")
+        public String name;
+
         @NameInMap("ownerId")
         public String ownerId;
 
-        @NameInMap("vpcId")
-        public String vpcId;
+        @NameInMap("resId")
+        public String resId;
 
         @NameInMap("resType")
         public String resType;
@@ -291,43 +273,31 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         @NameInMap("resVersion")
         public String resVersion;
 
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
-
         @NameInMap("status")
         public String status;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("configs")
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> configs;
-
-        @NameInMap("extendConfigs")
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> extendConfigs;
-
-        @NameInMap("collectorPaths")
-        public java.util.List<String> collectorPaths;
+        @NameInMap("vpcId")
+        public String vpcId;
 
         public static ListEcsInstancesResponseBodyResultCollectors build(java.util.Map<String, ?> map) throws Exception {
             ListEcsInstancesResponseBodyResultCollectors self = new ListEcsInstancesResponseBodyResultCollectors();
             return TeaModel.build(map, self);
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setResId(String resId) {
-            this.resId = resId;
+        public ListEcsInstancesResponseBodyResultCollectors setCollectorPaths(java.util.List<String> collectorPaths) {
+            this.collectorPaths = collectorPaths;
             return this;
         }
-        public String getResId() {
-            return this.resId;
+        public java.util.List<String> getCollectorPaths() {
+            return this.collectorPaths;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setGmtUpdateTime(String gmtUpdateTime) {
-            this.gmtUpdateTime = gmtUpdateTime;
+        public ListEcsInstancesResponseBodyResultCollectors setConfigs(java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> configs) {
+            this.configs = configs;
             return this;
         }
-        public String getGmtUpdateTime() {
-            return this.gmtUpdateTime;
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> getConfigs() {
+            return this.configs;
         }
 
         public ListEcsInstancesResponseBodyResultCollectors setDryRun(Boolean dryRun) {
@@ -338,6 +308,38 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.dryRun;
         }
 
+        public ListEcsInstancesResponseBodyResultCollectors setExtendConfigs(java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> extendConfigs) {
+            this.extendConfigs = extendConfigs;
+            return this;
+        }
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> getExtendConfigs() {
+            return this.extendConfigs;
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectors setGmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+        public String getGmtCreatedTime() {
+            return this.gmtCreatedTime;
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectors setGmtUpdateTime(String gmtUpdateTime) {
+            this.gmtUpdateTime = gmtUpdateTime;
+            return this;
+        }
+        public String getGmtUpdateTime() {
+            return this.gmtUpdateTime;
+        }
+
+        public ListEcsInstancesResponseBodyResultCollectors setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListEcsInstancesResponseBodyResultCollectors setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
@@ -346,12 +348,12 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public ListEcsInstancesResponseBodyResultCollectors setResId(String resId) {
+            this.resId = resId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getResId() {
+            return this.resId;
         }
 
         public ListEcsInstancesResponseBodyResultCollectors setResType(String resType) {
@@ -370,14 +372,6 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.resVersion;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setGmtCreatedTime(String gmtCreatedTime) {
-            this.gmtCreatedTime = gmtCreatedTime;
-            return this;
-        }
-        public String getGmtCreatedTime() {
-            return this.gmtCreatedTime;
-        }
-
         public ListEcsInstancesResponseBodyResultCollectors setStatus(String status) {
             this.status = status;
             return this;
@@ -386,36 +380,42 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setName(String name) {
-            this.name = name;
+        public ListEcsInstancesResponseBodyResultCollectors setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setConfigs(java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> configs) {
-            this.configs = configs;
-            return this;
-        }
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> getConfigs() {
-            return this.configs;
+    }
+
+    public static class ListEcsInstancesResponseBodyResultIpAddress extends TeaModel {
+        @NameInMap("host")
+        public String host;
+
+        @NameInMap("ipType")
+        public String ipType;
+
+        public static ListEcsInstancesResponseBodyResultIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            ListEcsInstancesResponseBodyResultIpAddress self = new ListEcsInstancesResponseBodyResultIpAddress();
+            return TeaModel.build(map, self);
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setExtendConfigs(java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> extendConfigs) {
-            this.extendConfigs = extendConfigs;
+        public ListEcsInstancesResponseBodyResultIpAddress setHost(String host) {
+            this.host = host;
             return this;
         }
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> getExtendConfigs() {
-            return this.extendConfigs;
+        public String getHost() {
+            return this.host;
         }
 
-        public ListEcsInstancesResponseBodyResultCollectors setCollectorPaths(java.util.List<String> collectorPaths) {
-            this.collectorPaths = collectorPaths;
+        public ListEcsInstancesResponseBodyResultIpAddress setIpType(String ipType) {
+            this.ipType = ipType;
             return this;
         }
-        public java.util.List<String> getCollectorPaths() {
-            return this.collectorPaths;
+        public String getIpType() {
+            return this.ipType;
         }
 
     }
@@ -424,14 +424,17 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         @NameInMap("cloudAssistantStatus")
         public String cloudAssistantStatus;
 
-        @NameInMap("ecsInstanceName")
-        public String ecsInstanceName;
+        @NameInMap("collectors")
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectors> collectors;
 
         @NameInMap("ecsInstanceId")
         public String ecsInstanceId;
 
-        @NameInMap("tags")
-        public String tags;
+        @NameInMap("ecsInstanceName")
+        public String ecsInstanceName;
+
+        @NameInMap("ipAddress")
+        public java.util.List<ListEcsInstancesResponseBodyResultIpAddress> ipAddress;
 
         @NameInMap("osType")
         public String osType;
@@ -439,11 +442,8 @@ public class ListEcsInstancesResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
-        @NameInMap("ipAddress")
-        public java.util.List<ListEcsInstancesResponseBodyResultIpAddress> ipAddress;
-
-        @NameInMap("collectors")
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectors> collectors;
+        @NameInMap("tags")
+        public String tags;
 
         public static ListEcsInstancesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListEcsInstancesResponseBodyResult self = new ListEcsInstancesResponseBodyResult();
@@ -458,12 +458,12 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.cloudAssistantStatus;
         }
 
-        public ListEcsInstancesResponseBodyResult setEcsInstanceName(String ecsInstanceName) {
-            this.ecsInstanceName = ecsInstanceName;
+        public ListEcsInstancesResponseBodyResult setCollectors(java.util.List<ListEcsInstancesResponseBodyResultCollectors> collectors) {
+            this.collectors = collectors;
             return this;
         }
-        public String getEcsInstanceName() {
-            return this.ecsInstanceName;
+        public java.util.List<ListEcsInstancesResponseBodyResultCollectors> getCollectors() {
+            return this.collectors;
         }
 
         public ListEcsInstancesResponseBodyResult setEcsInstanceId(String ecsInstanceId) {
@@ -474,12 +474,20 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.ecsInstanceId;
         }
 
-        public ListEcsInstancesResponseBodyResult setTags(String tags) {
-            this.tags = tags;
+        public ListEcsInstancesResponseBodyResult setEcsInstanceName(String ecsInstanceName) {
+            this.ecsInstanceName = ecsInstanceName;
             return this;
         }
-        public String getTags() {
-            return this.tags;
+        public String getEcsInstanceName() {
+            return this.ecsInstanceName;
+        }
+
+        public ListEcsInstancesResponseBodyResult setIpAddress(java.util.List<ListEcsInstancesResponseBodyResultIpAddress> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<ListEcsInstancesResponseBodyResultIpAddress> getIpAddress() {
+            return this.ipAddress;
         }
 
         public ListEcsInstancesResponseBodyResult setOsType(String osType) {
@@ -498,20 +506,12 @@ public class ListEcsInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListEcsInstancesResponseBodyResult setIpAddress(java.util.List<ListEcsInstancesResponseBodyResultIpAddress> ipAddress) {
-            this.ipAddress = ipAddress;
+        public ListEcsInstancesResponseBodyResult setTags(String tags) {
+            this.tags = tags;
             return this;
         }
-        public java.util.List<ListEcsInstancesResponseBodyResultIpAddress> getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public ListEcsInstancesResponseBodyResult setCollectors(java.util.List<ListEcsInstancesResponseBodyResultCollectors> collectors) {
-            this.collectors = collectors;
-            return this;
-        }
-        public java.util.List<ListEcsInstancesResponseBodyResultCollectors> getCollectors() {
-            return this.collectors;
+        public String getTags() {
+            return this.tags;
         }
 
     }

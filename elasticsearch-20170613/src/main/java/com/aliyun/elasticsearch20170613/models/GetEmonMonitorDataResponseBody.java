@@ -13,11 +13,11 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Result")
     public java.util.List<GetEmonMonitorDataResponseBodyResult> result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetEmonMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEmonMonitorDataResponseBody self = new GetEmonMonitorDataResponseBody();
@@ -48,14 +48,6 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetEmonMonitorDataResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public GetEmonMonitorDataResponseBody setResult(java.util.List<GetEmonMonitorDataResponseBodyResult> result) {
         this.result = result;
         return this;
@@ -64,52 +56,36 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         return this.result;
     }
 
+    public GetEmonMonitorDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetEmonMonitorDataResponseBodyResult extends TeaModel {
+        @NameInMap("dps")
+        public java.util.Map<String, ?> dps;
+
         @NameInMap("integrity")
         public Float integrity;
-
-        @NameInMap("summary")
-        public Float summary;
 
         @NameInMap("messageWatermark")
         public Long messageWatermark;
 
-        @NameInMap("dps")
-        public java.util.Map<String, ?> dps;
+        @NameInMap("metric")
+        public String metric;
+
+        @NameInMap("summary")
+        public Float summary;
 
         @NameInMap("tags")
         public java.util.Map<String, ?> tags;
 
-        @NameInMap("metric")
-        public String metric;
-
         public static GetEmonMonitorDataResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetEmonMonitorDataResponseBodyResult self = new GetEmonMonitorDataResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetEmonMonitorDataResponseBodyResult setIntegrity(Float integrity) {
-            this.integrity = integrity;
-            return this;
-        }
-        public Float getIntegrity() {
-            return this.integrity;
-        }
-
-        public GetEmonMonitorDataResponseBodyResult setSummary(Float summary) {
-            this.summary = summary;
-            return this;
-        }
-        public Float getSummary() {
-            return this.summary;
-        }
-
-        public GetEmonMonitorDataResponseBodyResult setMessageWatermark(Long messageWatermark) {
-            this.messageWatermark = messageWatermark;
-            return this;
-        }
-        public Long getMessageWatermark() {
-            return this.messageWatermark;
         }
 
         public GetEmonMonitorDataResponseBodyResult setDps(java.util.Map<String, ?> dps) {
@@ -120,12 +96,20 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             return this.dps;
         }
 
-        public GetEmonMonitorDataResponseBodyResult setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
+        public GetEmonMonitorDataResponseBodyResult setIntegrity(Float integrity) {
+            this.integrity = integrity;
             return this;
         }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
+        public Float getIntegrity() {
+            return this.integrity;
+        }
+
+        public GetEmonMonitorDataResponseBodyResult setMessageWatermark(Long messageWatermark) {
+            this.messageWatermark = messageWatermark;
+            return this;
+        }
+        public Long getMessageWatermark() {
+            return this.messageWatermark;
         }
 
         public GetEmonMonitorDataResponseBodyResult setMetric(String metric) {
@@ -134,6 +118,22 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         }
         public String getMetric() {
             return this.metric;
+        }
+
+        public GetEmonMonitorDataResponseBodyResult setSummary(Float summary) {
+            this.summary = summary;
+            return this;
+        }
+        public Float getSummary() {
+            return this.summary;
+        }
+
+        public GetEmonMonitorDataResponseBodyResult setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
     }

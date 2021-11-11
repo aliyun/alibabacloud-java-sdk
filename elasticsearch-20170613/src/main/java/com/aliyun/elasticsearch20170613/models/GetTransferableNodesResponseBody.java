@@ -32,23 +32,15 @@ public class GetTransferableNodesResponseBody extends TeaModel {
     }
 
     public static class GetTransferableNodesResponseBodyResult extends TeaModel {
-        @NameInMap("port")
-        public Integer port;
-
         @NameInMap("host")
         public String host;
+
+        @NameInMap("port")
+        public Integer port;
 
         public static GetTransferableNodesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetTransferableNodesResponseBodyResult self = new GetTransferableNodesResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetTransferableNodesResponseBodyResult setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
         public GetTransferableNodesResponseBodyResult setHost(String host) {
@@ -57,6 +49,14 @@ public class GetTransferableNodesResponseBody extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public GetTransferableNodesResponseBodyResult setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
     }

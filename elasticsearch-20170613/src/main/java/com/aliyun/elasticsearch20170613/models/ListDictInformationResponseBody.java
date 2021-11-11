@@ -32,26 +32,18 @@ public class ListDictInformationResponseBody extends TeaModel {
     }
 
     public static class ListDictInformationResponseBodyResultOssObject extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
         @NameInMap("bucketName")
         public String bucketName;
 
         @NameInMap("etag")
         public String etag;
 
+        @NameInMap("key")
+        public String key;
+
         public static ListDictInformationResponseBodyResultOssObject build(java.util.Map<String, ?> map) throws Exception {
             ListDictInformationResponseBodyResultOssObject self = new ListDictInformationResponseBodyResultOssObject();
             return TeaModel.build(map, self);
-        }
-
-        public ListDictInformationResponseBodyResultOssObject setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public ListDictInformationResponseBodyResultOssObject setBucketName(String bucketName) {
@@ -70,29 +62,29 @@ public class ListDictInformationResponseBody extends TeaModel {
             return this.etag;
         }
 
+        public ListDictInformationResponseBodyResultOssObject setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
     }
 
     public static class ListDictInformationResponseBodyResult extends TeaModel {
-        @NameInMap("type")
-        public String type;
-
         @NameInMap("fileSize")
         public Long fileSize;
 
         @NameInMap("ossObject")
         public ListDictInformationResponseBodyResultOssObject ossObject;
 
+        @NameInMap("type")
+        public String type;
+
         public static ListDictInformationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListDictInformationResponseBodyResult self = new ListDictInformationResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListDictInformationResponseBodyResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListDictInformationResponseBodyResult setFileSize(Long fileSize) {
@@ -109,6 +101,14 @@ public class ListDictInformationResponseBody extends TeaModel {
         }
         public ListDictInformationResponseBodyResultOssObject getOssObject() {
             return this.ossObject;
+        }
+
+        public ListDictInformationResponseBodyResult setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

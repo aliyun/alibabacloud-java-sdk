@@ -4,21 +4,29 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TriggerNetworkRequest extends TeaModel {
+    @NameInMap("actionType")
+    public String actionType;
+
     @NameInMap("clientToken")
     public String clientToken;
-
-    @NameInMap("nodeType")
-    public String nodeType;
 
     @NameInMap("networkType")
     public String networkType;
 
-    @NameInMap("actionType")
-    public String actionType;
+    @NameInMap("nodeType")
+    public String nodeType;
 
     public static TriggerNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerNetworkRequest self = new TriggerNetworkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerNetworkRequest setActionType(String actionType) {
+        this.actionType = actionType;
+        return this;
+    }
+    public String getActionType() {
+        return this.actionType;
     }
 
     public TriggerNetworkRequest setClientToken(String clientToken) {
@@ -29,14 +37,6 @@ public class TriggerNetworkRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public TriggerNetworkRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
-        return this;
-    }
-    public String getNodeType() {
-        return this.nodeType;
-    }
-
     public TriggerNetworkRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -45,12 +45,12 @@ public class TriggerNetworkRequest extends TeaModel {
         return this.networkType;
     }
 
-    public TriggerNetworkRequest setActionType(String actionType) {
-        this.actionType = actionType;
+    public TriggerNetworkRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
         return this;
     }
-    public String getActionType() {
-        return this.actionType;
+    public String getNodeType() {
+        return this.nodeType;
     }
 
 }

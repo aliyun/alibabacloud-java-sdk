@@ -35,11 +35,11 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
         @NameInMap("fileSize")
         public Long fileSize;
 
-        @NameInMap("sourceType")
-        public String sourceType;
-
         @NameInMap("name")
         public String name;
+
+        @NameInMap("sourceType")
+        public String sourceType;
 
         @NameInMap("type")
         public String type;
@@ -57,20 +57,20 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
             return this.fileSize;
         }
 
-        public UpdateSynonymsDictsResponseBodyResult setSourceType(String sourceType) {
-            this.sourceType = sourceType;
-            return this;
-        }
-        public String getSourceType() {
-            return this.sourceType;
-        }
-
         public UpdateSynonymsDictsResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateSynonymsDictsResponseBodyResult setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public UpdateSynonymsDictsResponseBodyResult setType(String type) {

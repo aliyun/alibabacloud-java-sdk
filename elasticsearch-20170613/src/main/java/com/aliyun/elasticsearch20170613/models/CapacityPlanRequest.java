@@ -60,14 +60,14 @@ public class CapacityPlanRequest extends TeaModel {
         @NameInMap("size")
         public Long size;
 
+        @NameInMap("totalCount")
+        public Integer totalCount;
+
         @NameInMap("type")
         public String type;
 
         @NameInMap("unit")
         public String unit;
-
-        @NameInMap("totalCount")
-        public Integer totalCount;
 
         public static CapacityPlanRequestDataInfo build(java.util.Map<String, ?> map) throws Exception {
             CapacityPlanRequestDataInfo self = new CapacityPlanRequestDataInfo();
@@ -90,6 +90,14 @@ public class CapacityPlanRequest extends TeaModel {
             return this.size;
         }
 
+        public CapacityPlanRequestDataInfo setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public CapacityPlanRequestDataInfo setType(String type) {
             this.type = type;
             return this;
@@ -106,22 +114,23 @@ public class CapacityPlanRequest extends TeaModel {
             return this.unit;
         }
 
-        public CapacityPlanRequestDataInfo setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
     }
 
     public static class CapacityPlanRequestMetric extends TeaModel {
+        @NameInMap("averageQps")
+        public Integer averageQps;
+
         @NameInMap("code")
         public String code;
 
         @NameInMap("concurrent")
         public Long concurrent;
+
+        @NameInMap("peakQps")
+        public Integer peakQps;
+
+        @NameInMap("responseTime")
+        public Integer responseTime;
 
         @NameInMap("throughput")
         public Long throughput;
@@ -129,18 +138,17 @@ public class CapacityPlanRequest extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        @NameInMap("peakQps")
-        public Integer peakQps;
-
-        @NameInMap("averageQps")
-        public Integer averageQps;
-
-        @NameInMap("responseTime")
-        public Integer responseTime;
-
         public static CapacityPlanRequestMetric build(java.util.Map<String, ?> map) throws Exception {
             CapacityPlanRequestMetric self = new CapacityPlanRequestMetric();
             return TeaModel.build(map, self);
+        }
+
+        public CapacityPlanRequestMetric setAverageQps(Integer averageQps) {
+            this.averageQps = averageQps;
+            return this;
+        }
+        public Integer getAverageQps() {
+            return this.averageQps;
         }
 
         public CapacityPlanRequestMetric setCode(String code) {
@@ -159,6 +167,22 @@ public class CapacityPlanRequest extends TeaModel {
             return this.concurrent;
         }
 
+        public CapacityPlanRequestMetric setPeakQps(Integer peakQps) {
+            this.peakQps = peakQps;
+            return this;
+        }
+        public Integer getPeakQps() {
+            return this.peakQps;
+        }
+
+        public CapacityPlanRequestMetric setResponseTime(Integer responseTime) {
+            this.responseTime = responseTime;
+            return this;
+        }
+        public Integer getResponseTime() {
+            return this.responseTime;
+        }
+
         public CapacityPlanRequestMetric setThroughput(Long throughput) {
             this.throughput = throughput;
             return this;
@@ -173,30 +197,6 @@ public class CapacityPlanRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public CapacityPlanRequestMetric setPeakQps(Integer peakQps) {
-            this.peakQps = peakQps;
-            return this;
-        }
-        public Integer getPeakQps() {
-            return this.peakQps;
-        }
-
-        public CapacityPlanRequestMetric setAverageQps(Integer averageQps) {
-            this.averageQps = averageQps;
-            return this;
-        }
-        public Integer getAverageQps() {
-            return this.averageQps;
-        }
-
-        public CapacityPlanRequestMetric setResponseTime(Integer responseTime) {
-            this.responseTime = responseTime;
-            return this;
-        }
-        public Integer getResponseTime() {
-            return this.responseTime;
         }
 
     }

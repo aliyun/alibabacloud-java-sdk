@@ -32,23 +32,15 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
     }
 
     public static class ListAlternativeSnapshotReposResponseBodyResult extends TeaModel {
-        @NameInMap("repoPath")
-        public String repoPath;
-
         @NameInMap("instanceId")
         public String instanceId;
+
+        @NameInMap("repoPath")
+        public String repoPath;
 
         public static ListAlternativeSnapshotReposResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAlternativeSnapshotReposResponseBodyResult self = new ListAlternativeSnapshotReposResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlternativeSnapshotReposResponseBodyResult setRepoPath(String repoPath) {
-            this.repoPath = repoPath;
-            return this;
-        }
-        public String getRepoPath() {
-            return this.repoPath;
         }
 
         public ListAlternativeSnapshotReposResponseBodyResult setInstanceId(String instanceId) {
@@ -57,6 +49,14 @@ public class ListAlternativeSnapshotReposResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListAlternativeSnapshotReposResponseBodyResult setRepoPath(String repoPath) {
+            this.repoPath = repoPath;
+            return this;
+        }
+        public String getRepoPath() {
+            return this.repoPath;
         }
 
     }

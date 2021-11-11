@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DiagnoseInstanceRequest extends TeaModel {
-    @NameInMap("lang")
-    public String lang;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("lang")
+    public String lang;
 
     public static DiagnoseInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DiagnoseInstanceRequest self = new DiagnoseInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DiagnoseInstanceRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DiagnoseInstanceRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class DiagnoseInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DiagnoseInstanceRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

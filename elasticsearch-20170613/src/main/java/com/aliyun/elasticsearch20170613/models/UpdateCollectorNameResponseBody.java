@@ -92,32 +92,11 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     }
 
     public static class UpdateCollectorNameResponseBodyResultExtendConfigs extends TeaModel {
-        @NameInMap("successPodsCount")
-        public String successPodsCount;
-
-        @NameInMap("protocol")
-        public String protocol;
-
-        @NameInMap("userName")
-        public String userName;
-
-        @NameInMap("totalPodsCount")
-        public String totalPodsCount;
-
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("kibanaHost")
-        public String kibanaHost;
-
-        @NameInMap("enableMonitoring")
-        public Boolean enableMonitoring;
-
         @NameInMap("configType")
         public String configType;
 
-        @NameInMap("instanceType")
-        public String instanceType;
+        @NameInMap("enableMonitoring")
+        public Boolean enableMonitoring;
 
         @NameInMap("groupId")
         public String groupId;
@@ -125,74 +104,39 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         @NameInMap("host")
         public String host;
 
+        @NameInMap("hosts")
+        public java.util.List<String> hosts;
+
         @NameInMap("instanceId")
         public String instanceId;
+
+        @NameInMap("instanceType")
+        public String instanceType;
+
+        @NameInMap("kibanaHost")
+        public String kibanaHost;
 
         @NameInMap("machines")
         public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigsMachines> machines;
 
-        @NameInMap("hosts")
-        public java.util.List<String> hosts;
+        @NameInMap("protocol")
+        public String protocol;
+
+        @NameInMap("successPodsCount")
+        public String successPodsCount;
+
+        @NameInMap("totalPodsCount")
+        public String totalPodsCount;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("userName")
+        public String userName;
 
         public static UpdateCollectorNameResponseBodyResultExtendConfigs build(java.util.Map<String, ?> map) throws Exception {
             UpdateCollectorNameResponseBodyResultExtendConfigs self = new UpdateCollectorNameResponseBodyResultExtendConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setSuccessPodsCount(String successPodsCount) {
-            this.successPodsCount = successPodsCount;
-            return this;
-        }
-        public String getSuccessPodsCount() {
-            return this.successPodsCount;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setTotalPodsCount(String totalPodsCount) {
-            this.totalPodsCount = totalPodsCount;
-            return this;
-        }
-        public String getTotalPodsCount() {
-            return this.totalPodsCount;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setKibanaHost(String kibanaHost) {
-            this.kibanaHost = kibanaHost;
-            return this;
-        }
-        public String getKibanaHost() {
-            return this.kibanaHost;
-        }
-
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setEnableMonitoring(Boolean enableMonitoring) {
-            this.enableMonitoring = enableMonitoring;
-            return this;
-        }
-        public Boolean getEnableMonitoring() {
-            return this.enableMonitoring;
         }
 
         public UpdateCollectorNameResponseBodyResultExtendConfigs setConfigType(String configType) {
@@ -203,12 +147,12 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.configType;
         }
 
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setEnableMonitoring(Boolean enableMonitoring) {
+            this.enableMonitoring = enableMonitoring;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public Boolean getEnableMonitoring() {
+            return this.enableMonitoring;
         }
 
         public UpdateCollectorNameResponseBodyResultExtendConfigs setGroupId(String groupId) {
@@ -227,12 +171,36 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.host;
         }
 
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setHosts(java.util.List<String> hosts) {
+            this.hosts = hosts;
+            return this;
+        }
+        public java.util.List<String> getHosts() {
+            return this.hosts;
+        }
+
         public UpdateCollectorNameResponseBodyResultExtendConfigs setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setKibanaHost(String kibanaHost) {
+            this.kibanaHost = kibanaHost;
+            return this;
+        }
+        public String getKibanaHost() {
+            return this.kibanaHost;
         }
 
         public UpdateCollectorNameResponseBodyResultExtendConfigs setMachines(java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigsMachines> machines) {
@@ -243,31 +211,75 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.machines;
         }
 
-        public UpdateCollectorNameResponseBodyResultExtendConfigs setHosts(java.util.List<String> hosts) {
-            this.hosts = hosts;
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setProtocol(String protocol) {
+            this.protocol = protocol;
             return this;
         }
-        public java.util.List<String> getHosts() {
-            return this.hosts;
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setSuccessPodsCount(String successPodsCount) {
+            this.successPodsCount = successPodsCount;
+            return this;
+        }
+        public String getSuccessPodsCount() {
+            return this.successPodsCount;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setTotalPodsCount(String totalPodsCount) {
+            this.totalPodsCount = totalPodsCount;
+            return this;
+        }
+        public String getTotalPodsCount() {
+            return this.totalPodsCount;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateCollectorNameResponseBodyResultExtendConfigs setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }
 
     public static class UpdateCollectorNameResponseBodyResult extends TeaModel {
-        @NameInMap("resId")
-        public String resId;
+        @NameInMap("collectorPaths")
+        public java.util.List<String> collectorPaths;
 
-        @NameInMap("gmtUpdateTime")
-        public String gmtUpdateTime;
+        @NameInMap("configs")
+        public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs;
 
         @NameInMap("dryRun")
         public Boolean dryRun;
 
+        @NameInMap("extendConfigs")
+        public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs;
+
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
+
+        @NameInMap("gmtUpdateTime")
+        public String gmtUpdateTime;
+
+        @NameInMap("name")
+        public String name;
+
         @NameInMap("ownerId")
         public String ownerId;
 
-        @NameInMap("vpcId")
-        public String vpcId;
+        @NameInMap("resId")
+        public String resId;
 
         @NameInMap("resType")
         public String resType;
@@ -275,43 +287,31 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         @NameInMap("resVersion")
         public String resVersion;
 
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
-
         @NameInMap("status")
         public String status;
 
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("configs")
-        public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs;
-
-        @NameInMap("extendConfigs")
-        public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs;
-
-        @NameInMap("collectorPaths")
-        public java.util.List<String> collectorPaths;
+        @NameInMap("vpcId")
+        public String vpcId;
 
         public static UpdateCollectorNameResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateCollectorNameResponseBodyResult self = new UpdateCollectorNameResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCollectorNameResponseBodyResult setResId(String resId) {
-            this.resId = resId;
+        public UpdateCollectorNameResponseBodyResult setCollectorPaths(java.util.List<String> collectorPaths) {
+            this.collectorPaths = collectorPaths;
             return this;
         }
-        public String getResId() {
-            return this.resId;
+        public java.util.List<String> getCollectorPaths() {
+            return this.collectorPaths;
         }
 
-        public UpdateCollectorNameResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
-            this.gmtUpdateTime = gmtUpdateTime;
+        public UpdateCollectorNameResponseBodyResult setConfigs(java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs) {
+            this.configs = configs;
             return this;
         }
-        public String getGmtUpdateTime() {
-            return this.gmtUpdateTime;
+        public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> getConfigs() {
+            return this.configs;
         }
 
         public UpdateCollectorNameResponseBodyResult setDryRun(Boolean dryRun) {
@@ -322,6 +322,38 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.dryRun;
         }
 
+        public UpdateCollectorNameResponseBodyResult setExtendConfigs(java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs) {
+            this.extendConfigs = extendConfigs;
+            return this;
+        }
+        public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> getExtendConfigs() {
+            return this.extendConfigs;
+        }
+
+        public UpdateCollectorNameResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+        public String getGmtCreatedTime() {
+            return this.gmtCreatedTime;
+        }
+
+        public UpdateCollectorNameResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
+            this.gmtUpdateTime = gmtUpdateTime;
+            return this;
+        }
+        public String getGmtUpdateTime() {
+            return this.gmtUpdateTime;
+        }
+
+        public UpdateCollectorNameResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public UpdateCollectorNameResponseBodyResult setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
@@ -330,12 +362,12 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public UpdateCollectorNameResponseBodyResult setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public UpdateCollectorNameResponseBodyResult setResId(String resId) {
+            this.resId = resId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getResId() {
+            return this.resId;
         }
 
         public UpdateCollectorNameResponseBodyResult setResType(String resType) {
@@ -354,14 +386,6 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.resVersion;
         }
 
-        public UpdateCollectorNameResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
-            this.gmtCreatedTime = gmtCreatedTime;
-            return this;
-        }
-        public String getGmtCreatedTime() {
-            return this.gmtCreatedTime;
-        }
-
         public UpdateCollectorNameResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
@@ -370,36 +394,12 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
             return this.status;
         }
 
-        public UpdateCollectorNameResponseBodyResult setName(String name) {
-            this.name = name;
+        public UpdateCollectorNameResponseBodyResult setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateCollectorNameResponseBodyResult setConfigs(java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs) {
-            this.configs = configs;
-            return this;
-        }
-        public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> getConfigs() {
-            return this.configs;
-        }
-
-        public UpdateCollectorNameResponseBodyResult setExtendConfigs(java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs) {
-            this.extendConfigs = extendConfigs;
-            return this;
-        }
-        public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> getExtendConfigs() {
-            return this.extendConfigs;
-        }
-
-        public UpdateCollectorNameResponseBodyResult setCollectorPaths(java.util.List<String> collectorPaths) {
-            this.collectorPaths = collectorPaths;
-            return this;
-        }
-        public java.util.List<String> getCollectorPaths() {
-            return this.collectorPaths;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

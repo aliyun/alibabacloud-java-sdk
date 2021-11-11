@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListKibanaPluginsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListKibanaPluginsResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListKibanaPluginsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListKibanaPluginsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListKibanaPluginsResponseBody setHeaders(ListKibanaPluginsResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListKibanaPluginsResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListKibanaPluginsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListKibanaPluginsResponseBody setResult(java.util.List<ListKibanaPluginsResponseBodyResult> result) {
@@ -65,17 +65,17 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("source")
+        public String source;
+
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("source")
-        public String source;
-
-        @NameInMap("name")
-        public String name;
 
         public static ListKibanaPluginsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListKibanaPluginsResponseBodyResult self = new ListKibanaPluginsResponseBodyResult();
@@ -88,6 +88,22 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListKibanaPluginsResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListKibanaPluginsResponseBodyResult setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public ListKibanaPluginsResponseBodyResult setSpecificationUrl(String specificationUrl) {
@@ -104,22 +120,6 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ListKibanaPluginsResponseBodyResult setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListKibanaPluginsResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

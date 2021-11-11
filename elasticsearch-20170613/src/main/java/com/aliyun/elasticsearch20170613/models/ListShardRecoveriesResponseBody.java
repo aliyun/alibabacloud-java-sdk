@@ -32,6 +32,18 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     }
 
     public static class ListShardRecoveriesResponseBodyResult extends TeaModel {
+        @NameInMap("bytesPercent")
+        public String bytesPercent;
+
+        @NameInMap("bytesTotal")
+        public Long bytesTotal;
+
+        @NameInMap("filesPercent")
+        public String filesPercent;
+
+        @NameInMap("filesTotal")
+        public Long filesTotal;
+
         @NameInMap("index")
         public String index;
 
@@ -41,20 +53,8 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         @NameInMap("sourceNode")
         public String sourceNode;
 
-        @NameInMap("filesTotal")
-        public Long filesTotal;
-
-        @NameInMap("bytesPercent")
-        public String bytesPercent;
-
-        @NameInMap("translogOps")
-        public Long translogOps;
-
-        @NameInMap("translogOpsPercent")
-        public String translogOpsPercent;
-
-        @NameInMap("bytesTotal")
-        public Long bytesTotal;
+        @NameInMap("stage")
+        public String stage;
 
         @NameInMap("targetHost")
         public String targetHost;
@@ -62,15 +62,47 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         @NameInMap("targetNode")
         public String targetNode;
 
-        @NameInMap("filesPercent")
-        public String filesPercent;
+        @NameInMap("translogOps")
+        public Long translogOps;
 
-        @NameInMap("stage")
-        public String stage;
+        @NameInMap("translogOpsPercent")
+        public String translogOpsPercent;
 
         public static ListShardRecoveriesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListShardRecoveriesResponseBodyResult self = new ListShardRecoveriesResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListShardRecoveriesResponseBodyResult setBytesPercent(String bytesPercent) {
+            this.bytesPercent = bytesPercent;
+            return this;
+        }
+        public String getBytesPercent() {
+            return this.bytesPercent;
+        }
+
+        public ListShardRecoveriesResponseBodyResult setBytesTotal(Long bytesTotal) {
+            this.bytesTotal = bytesTotal;
+            return this;
+        }
+        public Long getBytesTotal() {
+            return this.bytesTotal;
+        }
+
+        public ListShardRecoveriesResponseBodyResult setFilesPercent(String filesPercent) {
+            this.filesPercent = filesPercent;
+            return this;
+        }
+        public String getFilesPercent() {
+            return this.filesPercent;
+        }
+
+        public ListShardRecoveriesResponseBodyResult setFilesTotal(Long filesTotal) {
+            this.filesTotal = filesTotal;
+            return this;
+        }
+        public Long getFilesTotal() {
+            return this.filesTotal;
         }
 
         public ListShardRecoveriesResponseBodyResult setIndex(String index) {
@@ -97,44 +129,12 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             return this.sourceNode;
         }
 
-        public ListShardRecoveriesResponseBodyResult setFilesTotal(Long filesTotal) {
-            this.filesTotal = filesTotal;
+        public ListShardRecoveriesResponseBodyResult setStage(String stage) {
+            this.stage = stage;
             return this;
         }
-        public Long getFilesTotal() {
-            return this.filesTotal;
-        }
-
-        public ListShardRecoveriesResponseBodyResult setBytesPercent(String bytesPercent) {
-            this.bytesPercent = bytesPercent;
-            return this;
-        }
-        public String getBytesPercent() {
-            return this.bytesPercent;
-        }
-
-        public ListShardRecoveriesResponseBodyResult setTranslogOps(Long translogOps) {
-            this.translogOps = translogOps;
-            return this;
-        }
-        public Long getTranslogOps() {
-            return this.translogOps;
-        }
-
-        public ListShardRecoveriesResponseBodyResult setTranslogOpsPercent(String translogOpsPercent) {
-            this.translogOpsPercent = translogOpsPercent;
-            return this;
-        }
-        public String getTranslogOpsPercent() {
-            return this.translogOpsPercent;
-        }
-
-        public ListShardRecoveriesResponseBodyResult setBytesTotal(Long bytesTotal) {
-            this.bytesTotal = bytesTotal;
-            return this;
-        }
-        public Long getBytesTotal() {
-            return this.bytesTotal;
+        public String getStage() {
+            return this.stage;
         }
 
         public ListShardRecoveriesResponseBodyResult setTargetHost(String targetHost) {
@@ -153,20 +153,20 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
             return this.targetNode;
         }
 
-        public ListShardRecoveriesResponseBodyResult setFilesPercent(String filesPercent) {
-            this.filesPercent = filesPercent;
+        public ListShardRecoveriesResponseBodyResult setTranslogOps(Long translogOps) {
+            this.translogOps = translogOps;
             return this;
         }
-        public String getFilesPercent() {
-            return this.filesPercent;
+        public Long getTranslogOps() {
+            return this.translogOps;
         }
 
-        public ListShardRecoveriesResponseBodyResult setStage(String stage) {
-            this.stage = stage;
+        public ListShardRecoveriesResponseBodyResult setTranslogOpsPercent(String translogOpsPercent) {
+            this.translogOpsPercent = translogOpsPercent;
             return this;
         }
-        public String getStage() {
-            return this.stage;
+        public String getTranslogOpsPercent() {
+            return this.translogOpsPercent;
         }
 
     }
