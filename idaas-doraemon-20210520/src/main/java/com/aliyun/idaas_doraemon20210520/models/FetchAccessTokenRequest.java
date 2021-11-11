@@ -4,6 +4,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class FetchAccessTokenRequest extends TeaModel {
+    @NameInMap("ApplicationExternalId")
+    public String applicationExternalId;
+
     @NameInMap("MobileExtendParamsJson")
     public String mobileExtendParamsJson;
 
@@ -13,15 +16,20 @@ public class FetchAccessTokenRequest extends TeaModel {
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
-    @NameInMap("ApplicationExternalId")
-    public String applicationExternalId;
-
     @NameInMap("XClientIp")
     public String XClientIp;
 
     public static FetchAccessTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         FetchAccessTokenRequest self = new FetchAccessTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FetchAccessTokenRequest setApplicationExternalId(String applicationExternalId) {
+        this.applicationExternalId = applicationExternalId;
+        return this;
+    }
+    public String getApplicationExternalId() {
+        return this.applicationExternalId;
     }
 
     public FetchAccessTokenRequest setMobileExtendParamsJson(String mobileExtendParamsJson) {
@@ -46,14 +54,6 @@ public class FetchAccessTokenRequest extends TeaModel {
     }
     public String getServerExtendParamsJson() {
         return this.serverExtendParamsJson;
-    }
-
-    public FetchAccessTokenRequest setApplicationExternalId(String applicationExternalId) {
-        this.applicationExternalId = applicationExternalId;
-        return this;
-    }
-    public String getApplicationExternalId() {
-        return this.applicationExternalId;
     }
 
     public FetchAccessTokenRequest setXClientIp(String XClientIp) {

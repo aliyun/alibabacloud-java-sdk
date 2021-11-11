@@ -8,13 +8,13 @@ public class GetAuthenticatorRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 用户ID
-    @NameInMap("UserId")
-    public String userId;
-
     // 认证器uuid
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
+
+    // 用户ID
+    @NameInMap("UserId")
+    public String userId;
 
     public static GetAuthenticatorRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthenticatorRequest self = new GetAuthenticatorRequest();
@@ -29,20 +29,20 @@ public class GetAuthenticatorRequest extends TeaModel {
         return this.applicationExternalId;
     }
 
-    public GetAuthenticatorRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public GetAuthenticatorRequest setAuthenticatorUuid(String authenticatorUuid) {
         this.authenticatorUuid = authenticatorUuid;
         return this;
     }
     public String getAuthenticatorUuid() {
         return this.authenticatorUuid;
+    }
+
+    public GetAuthenticatorRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

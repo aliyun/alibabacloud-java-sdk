@@ -8,10 +8,6 @@ public class UpdateAuthenticatorAttributeRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
-
     // 认证器名字
     @NameInMap("AuthenticatorName")
     public String authenticatorName;
@@ -19,6 +15,10 @@ public class UpdateAuthenticatorAttributeRequest extends TeaModel {
     // 认证器uuid
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
+
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
 
     public static UpdateAuthenticatorAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAuthenticatorAttributeRequest self = new UpdateAuthenticatorAttributeRequest();
@@ -31,14 +31,6 @@ public class UpdateAuthenticatorAttributeRequest extends TeaModel {
     }
     public String getApplicationExternalId() {
         return this.applicationExternalId;
-    }
-
-    public UpdateAuthenticatorAttributeRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public UpdateAuthenticatorAttributeRequest setAuthenticatorName(String authenticatorName) {
@@ -55,6 +47,14 @@ public class UpdateAuthenticatorAttributeRequest extends TeaModel {
     }
     public String getAuthenticatorUuid() {
         return this.authenticatorUuid;
+    }
+
+    public UpdateAuthenticatorAttributeRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

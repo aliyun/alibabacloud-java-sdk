@@ -4,11 +4,11 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListPwnedPasswordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PwnedPasswordInfos")
     public java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> pwnedPasswordInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 返回列表长度
     @NameInMap("TotalCount")
@@ -19,20 +19,20 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPwnedPasswordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListPwnedPasswordsResponseBody setPwnedPasswordInfos(java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> pwnedPasswordInfos) {
         this.pwnedPasswordInfos = pwnedPasswordInfos;
         return this;
     }
     public java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> getPwnedPasswordInfos() {
         return this.pwnedPasswordInfos;
+    }
+
+    public ListPwnedPasswordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListPwnedPasswordsResponseBody setTotalCount(Long totalCount) {

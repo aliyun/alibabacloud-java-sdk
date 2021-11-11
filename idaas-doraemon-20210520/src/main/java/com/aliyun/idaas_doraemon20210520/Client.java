@@ -34,17 +34,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ListUsersResponse listUsersWithOptions(ListUsersRequest request, RuntimeOptions runtime) throws Exception {
+    public CreateAuthenticatorRegistrationResponse createAuthenticatorRegistrationWithOptions(CreateAuthenticatorRegistrationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListUsers", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListUsersResponse());
+        return TeaModel.toModel(this.doRPCRequest("CreateAuthenticatorRegistration", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateAuthenticatorRegistrationResponse());
     }
 
-    public ListUsersResponse listUsers(ListUsersRequest request) throws Exception {
+    public CreateAuthenticatorRegistrationResponse createAuthenticatorRegistration(CreateAuthenticatorRegistrationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.listUsersWithOptions(request, runtime);
+        return this.createAuthenticatorRegistrationWithOptions(request, runtime);
+    }
+
+    public CreateUserAuthenticateOptionsResponse createUserAuthenticateOptionsWithOptions(CreateUserAuthenticateOptionsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateUserAuthenticateOptions", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateUserAuthenticateOptionsResponse());
+    }
+
+    public CreateUserAuthenticateOptionsResponse createUserAuthenticateOptions(CreateUserAuthenticateOptionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createUserAuthenticateOptionsWithOptions(request, runtime);
+    }
+
+    public DeregisterAuthenticatorResponse deregisterAuthenticatorWithOptions(DeregisterAuthenticatorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeregisterAuthenticator", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new DeregisterAuthenticatorResponse());
+    }
+
+    public DeregisterAuthenticatorResponse deregisterAuthenticator(DeregisterAuthenticatorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deregisterAuthenticatorWithOptions(request, runtime);
+    }
+
+    public FetchAccessTokenResponse fetchAccessTokenWithOptions(FetchAccessTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FetchAccessToken", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new FetchAccessTokenResponse());
+    }
+
+    public FetchAccessTokenResponse fetchAccessToken(FetchAccessTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.fetchAccessTokenWithOptions(request, runtime);
     }
 
     public GetAuthenticatorResponse getAuthenticatorWithOptions(GetAuthenticatorRequest request, RuntimeOptions runtime) throws Exception {
@@ -60,69 +99,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAuthenticatorWithOptions(request, runtime);
     }
 
-    public ListPwnedPasswordsResponse listPwnedPasswordsWithOptions(ListPwnedPasswordsRequest request, RuntimeOptions runtime) throws Exception {
+    public ListAuthenticationLogsResponse listAuthenticationLogsWithOptions(ListAuthenticationLogsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListPwnedPasswords", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListPwnedPasswordsResponse());
+        return TeaModel.toModel(this.doRPCRequest("ListAuthenticationLogs", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListAuthenticationLogsResponse());
     }
 
-    public ListPwnedPasswordsResponse listPwnedPasswords(ListPwnedPasswordsRequest request) throws Exception {
+    public ListAuthenticationLogsResponse listAuthenticationLogs(ListAuthenticationLogsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.listPwnedPasswordsWithOptions(request, runtime);
-    }
-
-    public RegisterAuthenticatorResponse registerAuthenticatorWithOptions(RegisterAuthenticatorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("RegisterAuthenticator", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new RegisterAuthenticatorResponse());
-    }
-
-    public RegisterAuthenticatorResponse registerAuthenticator(RegisterAuthenticatorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.registerAuthenticatorWithOptions(request, runtime);
-    }
-
-    public VerifyUserAuthenticationResponse verifyUserAuthenticationWithOptions(VerifyUserAuthenticationRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("VerifyUserAuthentication", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyUserAuthenticationResponse());
-    }
-
-    public VerifyUserAuthenticationResponse verifyUserAuthentication(VerifyUserAuthenticationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.verifyUserAuthenticationWithOptions(request, runtime);
-    }
-
-    public UpdateAuthenticatorAttributeResponse updateAuthenticatorAttributeWithOptions(UpdateAuthenticatorAttributeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateAuthenticatorAttribute", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateAuthenticatorAttributeResponse());
-    }
-
-    public UpdateAuthenticatorAttributeResponse updateAuthenticatorAttribute(UpdateAuthenticatorAttributeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateAuthenticatorAttributeWithOptions(request, runtime);
-    }
-
-    public DeregisterAuthenticatorResponse deregisterAuthenticatorWithOptions(DeregisterAuthenticatorRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeregisterAuthenticator", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new DeregisterAuthenticatorResponse());
-    }
-
-    public DeregisterAuthenticatorResponse deregisterAuthenticator(DeregisterAuthenticatorRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deregisterAuthenticatorWithOptions(request, runtime);
+        return this.listAuthenticationLogsWithOptions(request, runtime);
     }
 
     public ListAuthenticatorOpsLogsResponse listAuthenticatorOpsLogsWithOptions(ListAuthenticatorOpsLogsRequest request, RuntimeOptions runtime) throws Exception {
@@ -151,43 +138,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAuthenticatorsWithOptions(request, runtime);
     }
 
-    public ListAuthenticationLogsResponse listAuthenticationLogsWithOptions(ListAuthenticationLogsRequest request, RuntimeOptions runtime) throws Exception {
+    public ListPwnedPasswordsResponse listPwnedPasswordsWithOptions(ListPwnedPasswordsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListAuthenticationLogs", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListAuthenticationLogsResponse());
+        return TeaModel.toModel(this.doRPCRequest("ListPwnedPasswords", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListPwnedPasswordsResponse());
     }
 
-    public ListAuthenticationLogsResponse listAuthenticationLogs(ListAuthenticationLogsRequest request) throws Exception {
+    public ListPwnedPasswordsResponse listPwnedPasswords(ListPwnedPasswordsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.listAuthenticationLogsWithOptions(request, runtime);
+        return this.listPwnedPasswordsWithOptions(request, runtime);
     }
 
-    public CreateUserAuthenticateOptionsResponse createUserAuthenticateOptionsWithOptions(CreateUserAuthenticateOptionsRequest request, RuntimeOptions runtime) throws Exception {
+    public ListUsersResponse listUsersWithOptions(ListUsersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateUserAuthenticateOptions", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateUserAuthenticateOptionsResponse());
+        return TeaModel.toModel(this.doRPCRequest("ListUsers", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListUsersResponse());
     }
 
-    public CreateUserAuthenticateOptionsResponse createUserAuthenticateOptions(CreateUserAuthenticateOptionsRequest request) throws Exception {
+    public ListUsersResponse listUsers(ListUsersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.createUserAuthenticateOptionsWithOptions(request, runtime);
+        return this.listUsersWithOptions(request, runtime);
     }
 
-    public FetchAccessTokenResponse fetchAccessTokenWithOptions(FetchAccessTokenRequest request, RuntimeOptions runtime) throws Exception {
+    public RegisterAuthenticatorResponse registerAuthenticatorWithOptions(RegisterAuthenticatorRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("FetchAccessToken", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new FetchAccessTokenResponse());
+        return TeaModel.toModel(this.doRPCRequest("RegisterAuthenticator", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new RegisterAuthenticatorResponse());
     }
 
-    public FetchAccessTokenResponse fetchAccessToken(FetchAccessTokenRequest request) throws Exception {
+    public RegisterAuthenticatorResponse registerAuthenticator(RegisterAuthenticatorRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.fetchAccessTokenWithOptions(request, runtime);
+        return this.registerAuthenticatorWithOptions(request, runtime);
     }
 
     public ServiceInvokeResponse serviceInvokeWithOptions(ServiceInvokeRequest request, RuntimeOptions runtime) throws Exception {
@@ -203,16 +190,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.serviceInvokeWithOptions(request, runtime);
     }
 
-    public CreateAuthenticatorRegistrationResponse createAuthenticatorRegistrationWithOptions(CreateAuthenticatorRegistrationRequest request, RuntimeOptions runtime) throws Exception {
+    public UpdateAuthenticatorAttributeResponse updateAuthenticatorAttributeWithOptions(UpdateAuthenticatorAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateAuthenticatorRegistration", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateAuthenticatorRegistrationResponse());
+        return TeaModel.toModel(this.doRPCRequest("UpdateAuthenticatorAttribute", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateAuthenticatorAttributeResponse());
     }
 
-    public CreateAuthenticatorRegistrationResponse createAuthenticatorRegistration(CreateAuthenticatorRegistrationRequest request) throws Exception {
+    public UpdateAuthenticatorAttributeResponse updateAuthenticatorAttribute(UpdateAuthenticatorAttributeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.createAuthenticatorRegistrationWithOptions(request, runtime);
+        return this.updateAuthenticatorAttributeWithOptions(request, runtime);
+    }
+
+    public VerifyUserAuthenticationResponse verifyUserAuthenticationWithOptions(VerifyUserAuthenticationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("VerifyUserAuthentication", "2021-05-20", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyUserAuthenticationResponse());
+    }
+
+    public VerifyUserAuthenticationResponse verifyUserAuthentication(VerifyUserAuthenticationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.verifyUserAuthenticationWithOptions(request, runtime);
     }
 }

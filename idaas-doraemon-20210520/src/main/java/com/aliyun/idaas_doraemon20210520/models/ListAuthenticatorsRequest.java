@@ -8,10 +8,6 @@ public class ListAuthenticatorsRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
-
     // 认证器类型
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
@@ -24,6 +20,10 @@ public class ListAuthenticatorsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
+
     public static ListAuthenticatorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticatorsRequest self = new ListAuthenticatorsRequest();
         return TeaModel.build(map, self);
@@ -35,14 +35,6 @@ public class ListAuthenticatorsRequest extends TeaModel {
     }
     public String getApplicationExternalId() {
         return this.applicationExternalId;
-    }
-
-    public ListAuthenticatorsRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListAuthenticatorsRequest setAuthenticatorType(String authenticatorType) {
@@ -67,6 +59,14 @@ public class ListAuthenticatorsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAuthenticatorsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
