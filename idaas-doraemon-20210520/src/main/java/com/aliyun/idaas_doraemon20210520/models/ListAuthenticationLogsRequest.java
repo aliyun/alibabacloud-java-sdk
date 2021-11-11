@@ -7,32 +7,32 @@ public class ListAuthenticationLogsRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("AuthenticatorType")
+    public String authenticatorType;
 
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
 
-    @NameInMap("AuthenticatorType")
-    public String authenticatorType;
-
     @NameInMap("CredentialId")
     public String credentialId;
-
-    @NameInMap("LogTag")
-    public String logTag;
 
     @NameInMap("FromTime")
     public Long fromTime;
 
-    @NameInMap("ToTime")
-    public Long toTime;
+    @NameInMap("LogTag")
+    public String logTag;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("ToTime")
+    public Long toTime;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ListAuthenticationLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticationLogsRequest self = new ListAuthenticationLogsRequest();
@@ -47,12 +47,12 @@ public class ListAuthenticationLogsRequest extends TeaModel {
         return this.applicationExternalId;
     }
 
-    public ListAuthenticationLogsRequest setUserId(String userId) {
-        this.userId = userId;
+    public ListAuthenticationLogsRequest setAuthenticatorType(String authenticatorType) {
+        this.authenticatorType = authenticatorType;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public String getAuthenticatorType() {
+        return this.authenticatorType;
     }
 
     public ListAuthenticationLogsRequest setAuthenticatorUuid(String authenticatorUuid) {
@@ -63,28 +63,12 @@ public class ListAuthenticationLogsRequest extends TeaModel {
         return this.authenticatorUuid;
     }
 
-    public ListAuthenticationLogsRequest setAuthenticatorType(String authenticatorType) {
-        this.authenticatorType = authenticatorType;
-        return this;
-    }
-    public String getAuthenticatorType() {
-        return this.authenticatorType;
-    }
-
     public ListAuthenticationLogsRequest setCredentialId(String credentialId) {
         this.credentialId = credentialId;
         return this;
     }
     public String getCredentialId() {
         return this.credentialId;
-    }
-
-    public ListAuthenticationLogsRequest setLogTag(String logTag) {
-        this.logTag = logTag;
-        return this;
-    }
-    public String getLogTag() {
-        return this.logTag;
     }
 
     public ListAuthenticationLogsRequest setFromTime(Long fromTime) {
@@ -95,12 +79,12 @@ public class ListAuthenticationLogsRequest extends TeaModel {
         return this.fromTime;
     }
 
-    public ListAuthenticationLogsRequest setToTime(Long toTime) {
-        this.toTime = toTime;
+    public ListAuthenticationLogsRequest setLogTag(String logTag) {
+        this.logTag = logTag;
         return this;
     }
-    public Long getToTime() {
-        return this.toTime;
+    public String getLogTag() {
+        return this.logTag;
     }
 
     public ListAuthenticationLogsRequest setPageNumber(Long pageNumber) {
@@ -117,6 +101,22 @@ public class ListAuthenticationLogsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAuthenticationLogsRequest setToTime(Long toTime) {
+        this.toTime = toTime;
+        return this;
+    }
+    public Long getToTime() {
+        return this.toTime;
+    }
+
+    public ListAuthenticationLogsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

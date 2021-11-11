@@ -12,18 +12,6 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
-
-    // 用户姓名
-    @NameInMap("UserName")
-    public String userName;
-
-    // 用户展示名
-    @NameInMap("UserDisplayName")
-    public String userDisplayName;
-
     // 客户端SDK生成认证上下文
     @NameInMap("ClientExtendParamsJson")
     public String clientExtendParamsJson;
@@ -32,13 +20,25 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
     @NameInMap("ClientExtendParamsJsonSign")
     public String clientExtendParamsJsonSign;
 
+    // 注册上下文
+    @NameInMap("RegistrationContext")
+    public String registrationContext;
+
     // 服务端配置项，决定认证要求属性
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
-    // 注册上下文
-    @NameInMap("RegistrationContext")
-    public String registrationContext;
+    // 用户展示名
+    @NameInMap("UserDisplayName")
+    public String userDisplayName;
+
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
+
+    // 用户姓名
+    @NameInMap("UserName")
+    public String userName;
 
     public static CreateAuthenticatorRegistrationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthenticatorRegistrationRequest self = new CreateAuthenticatorRegistrationRequest();
@@ -61,30 +61,6 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
         return this.authenticatorType;
     }
 
-    public CreateAuthenticatorRegistrationRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public CreateAuthenticatorRegistrationRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public CreateAuthenticatorRegistrationRequest setUserDisplayName(String userDisplayName) {
-        this.userDisplayName = userDisplayName;
-        return this;
-    }
-    public String getUserDisplayName() {
-        return this.userDisplayName;
-    }
-
     public CreateAuthenticatorRegistrationRequest setClientExtendParamsJson(String clientExtendParamsJson) {
         this.clientExtendParamsJson = clientExtendParamsJson;
         return this;
@@ -101,6 +77,14 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
         return this.clientExtendParamsJsonSign;
     }
 
+    public CreateAuthenticatorRegistrationRequest setRegistrationContext(String registrationContext) {
+        this.registrationContext = registrationContext;
+        return this;
+    }
+    public String getRegistrationContext() {
+        return this.registrationContext;
+    }
+
     public CreateAuthenticatorRegistrationRequest setServerExtendParamsJson(String serverExtendParamsJson) {
         this.serverExtendParamsJson = serverExtendParamsJson;
         return this;
@@ -109,12 +93,28 @@ public class CreateAuthenticatorRegistrationRequest extends TeaModel {
         return this.serverExtendParamsJson;
     }
 
-    public CreateAuthenticatorRegistrationRequest setRegistrationContext(String registrationContext) {
-        this.registrationContext = registrationContext;
+    public CreateAuthenticatorRegistrationRequest setUserDisplayName(String userDisplayName) {
+        this.userDisplayName = userDisplayName;
         return this;
     }
-    public String getRegistrationContext() {
-        return this.registrationContext;
+    public String getUserDisplayName() {
+        return this.userDisplayName;
+    }
+
+    public CreateAuthenticatorRegistrationRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public CreateAuthenticatorRegistrationRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

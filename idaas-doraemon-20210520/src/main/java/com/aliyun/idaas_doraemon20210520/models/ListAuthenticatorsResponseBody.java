@@ -4,59 +4,27 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Authenticator")
+    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator;
 
     // 读取到的位置
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 查询结果数据总数
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     // 每页记录数量
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Authenticator")
-    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 查询结果数据总数
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListAuthenticatorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticatorsResponseBody self = new ListAuthenticatorsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAuthenticatorsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAuthenticatorsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListAuthenticatorsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAuthenticatorsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public ListAuthenticatorsResponseBody setAuthenticator(java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator) {
@@ -67,10 +35,46 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
         return this.authenticator;
     }
 
+    public ListAuthenticatorsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAuthenticatorsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAuthenticatorsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListAuthenticatorsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListAuthenticatorsResponseBodyAuthenticator extends TeaModel {
         // 应用ID
         @NameInMap("ApplicationExternalId")
         public String applicationExternalId;
+
+        // 身份认证对应的认证器名称
+        @NameInMap("AuthenticatorName")
+        public String authenticatorName;
 
         // 认证器uuid
         @NameInMap("AuthenticatorUuid")
@@ -80,21 +84,17 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
         @NameInMap("CredentialId")
         public String credentialId;
 
-        // 认证器类型
-        @NameInMap("Type")
-        public String type;
-
-        // 身份认证对应的认证器名称
-        @NameInMap("AuthenticatorName")
-        public String authenticatorName;
+        // 最后验证时间，如果新注册则为注册时间
+        @NameInMap("LastVerifyTime")
+        public Long lastVerifyTime;
 
         // 创建时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 最后验证时间，如果新注册则为注册时间
-        @NameInMap("LastVerifyTime")
-        public Long lastVerifyTime;
+        // 认证器类型
+        @NameInMap("Type")
+        public String type;
 
         public static ListAuthenticatorsResponseBodyAuthenticator build(java.util.Map<String, ?> map) throws Exception {
             ListAuthenticatorsResponseBodyAuthenticator self = new ListAuthenticatorsResponseBodyAuthenticator();
@@ -107,6 +107,14 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
         }
         public String getApplicationExternalId() {
             return this.applicationExternalId;
+        }
+
+        public ListAuthenticatorsResponseBodyAuthenticator setAuthenticatorName(String authenticatorName) {
+            this.authenticatorName = authenticatorName;
+            return this;
+        }
+        public String getAuthenticatorName() {
+            return this.authenticatorName;
         }
 
         public ListAuthenticatorsResponseBodyAuthenticator setAuthenticatorUuid(String authenticatorUuid) {
@@ -125,20 +133,12 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
             return this.credentialId;
         }
 
-        public ListAuthenticatorsResponseBodyAuthenticator setType(String type) {
-            this.type = type;
+        public ListAuthenticatorsResponseBodyAuthenticator setLastVerifyTime(Long lastVerifyTime) {
+            this.lastVerifyTime = lastVerifyTime;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListAuthenticatorsResponseBodyAuthenticator setAuthenticatorName(String authenticatorName) {
-            this.authenticatorName = authenticatorName;
-            return this;
-        }
-        public String getAuthenticatorName() {
-            return this.authenticatorName;
+        public Long getLastVerifyTime() {
+            return this.lastVerifyTime;
         }
 
         public ListAuthenticatorsResponseBodyAuthenticator setRegisterTime(Long registerTime) {
@@ -149,12 +149,12 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
             return this.registerTime;
         }
 
-        public ListAuthenticatorsResponseBodyAuthenticator setLastVerifyTime(Long lastVerifyTime) {
-            this.lastVerifyTime = lastVerifyTime;
+        public ListAuthenticatorsResponseBodyAuthenticator setType(String type) {
+            this.type = type;
             return this;
         }
-        public Long getLastVerifyTime() {
-            return this.lastVerifyTime;
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthenticatorRegistrationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 防重放挑战码
     @NameInMap("ChallengeBase64")
     public String challengeBase64;
@@ -15,17 +12,12 @@ public class CreateAuthenticatorRegistrationResponseBody extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateAuthenticatorRegistrationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthenticatorRegistrationResponseBody self = new CreateAuthenticatorRegistrationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAuthenticatorRegistrationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateAuthenticatorRegistrationResponseBody setChallengeBase64(String challengeBase64) {
@@ -42,6 +34,14 @@ public class CreateAuthenticatorRegistrationResponseBody extends TeaModel {
     }
     public String getOptions() {
         return this.options;
+    }
+
+    public CreateAuthenticatorRegistrationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

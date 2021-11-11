@@ -4,15 +4,8 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AuthenticationLogContent")
     public java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> authenticationLogContent;
-
-    // 返回列表长度
-    @NameInMap("TotalCount")
-    public Long totalCount;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -20,17 +13,16 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 返回列表长度
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static ListAuthenticatorOpsLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticatorOpsLogsResponseBody self = new ListAuthenticatorOpsLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAuthenticatorOpsLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAuthenticatorOpsLogsResponseBody setAuthenticationLogContent(java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> authenticationLogContent) {
@@ -39,14 +31,6 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
     }
     public java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> getAuthenticationLogContent() {
         return this.authenticationLogContent;
-    }
-
-    public ListAuthenticatorOpsLogsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public ListAuthenticatorOpsLogsResponseBody setPageNumber(Long pageNumber) {
@@ -65,54 +49,46 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public static class ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent extends TeaModel {
-        @NameInMap("TenantId")
-        public String tenantId;
+    public ListAuthenticatorOpsLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public ListAuthenticatorOpsLogsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent extends TeaModel {
         @NameInMap("AliUid")
         public String aliUid;
-
-        @NameInMap("ApplicationUuid")
-        public String applicationUuid;
 
         @NameInMap("ApplicationExternalId")
         public String applicationExternalId;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("AuthenticatorUuid")
-        public String authenticatorUuid;
+        @NameInMap("ApplicationUuid")
+        public String applicationUuid;
 
         @NameInMap("AuthenticatorName")
         public String authenticatorName;
 
-        @NameInMap("CredentialId")
-        public String credentialId;
-
         @NameInMap("AuthenticatorType")
         public String authenticatorType;
 
-        @NameInMap("OperationAction")
-        public String operationAction;
+        @NameInMap("AuthenticatorUuid")
+        public String authenticatorUuid;
 
         @NameInMap("ChallengeBase64")
         public String challengeBase64;
 
-        @NameInMap("OperationTime")
-        public Long operationTime;
-
-        @NameInMap("UserAgent")
-        public String userAgent;
-
-        @NameInMap("UserSourceIp")
-        public String userSourceIp;
-
-        @NameInMap("RawContext")
-        public String rawContext;
-
-        @NameInMap("OperationResult")
-        public Boolean operationResult;
+        @NameInMap("CredentialId")
+        public String credentialId;
 
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -123,17 +99,33 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
         @NameInMap("LogParams")
         public String logParams;
 
+        @NameInMap("OperationAction")
+        public String operationAction;
+
+        @NameInMap("OperationResult")
+        public Boolean operationResult;
+
+        @NameInMap("OperationTime")
+        public Long operationTime;
+
+        @NameInMap("RawContext")
+        public String rawContext;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        @NameInMap("UserAgent")
+        public String userAgent;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserSourceIp")
+        public String userSourceIp;
+
         public static ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent build(java.util.Map<String, ?> map) throws Exception {
             ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent self = new ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent();
             return TeaModel.build(map, self);
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public String getTenantId() {
-            return this.tenantId;
         }
 
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setAliUid(String aliUid) {
@@ -144,14 +136,6 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
             return this.aliUid;
         }
 
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setApplicationUuid(String applicationUuid) {
-            this.applicationUuid = applicationUuid;
-            return this;
-        }
-        public String getApplicationUuid() {
-            return this.applicationUuid;
-        }
-
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setApplicationExternalId(String applicationExternalId) {
             this.applicationExternalId = applicationExternalId;
             return this;
@@ -160,20 +144,12 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
             return this.applicationExternalId;
         }
 
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserId(String userId) {
-            this.userId = userId;
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setApplicationUuid(String applicationUuid) {
+            this.applicationUuid = applicationUuid;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setAuthenticatorUuid(String authenticatorUuid) {
-            this.authenticatorUuid = authenticatorUuid;
-            return this;
-        }
-        public String getAuthenticatorUuid() {
-            return this.authenticatorUuid;
+        public String getApplicationUuid() {
+            return this.applicationUuid;
         }
 
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setAuthenticatorName(String authenticatorName) {
@@ -184,14 +160,6 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
             return this.authenticatorName;
         }
 
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setCredentialId(String credentialId) {
-            this.credentialId = credentialId;
-            return this;
-        }
-        public String getCredentialId() {
-            return this.credentialId;
-        }
-
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setAuthenticatorType(String authenticatorType) {
             this.authenticatorType = authenticatorType;
             return this;
@@ -200,12 +168,12 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
             return this.authenticatorType;
         }
 
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationAction(String operationAction) {
-            this.operationAction = operationAction;
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setAuthenticatorUuid(String authenticatorUuid) {
+            this.authenticatorUuid = authenticatorUuid;
             return this;
         }
-        public String getOperationAction() {
-            return this.operationAction;
+        public String getAuthenticatorUuid() {
+            return this.authenticatorUuid;
         }
 
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setChallengeBase64(String challengeBase64) {
@@ -216,44 +184,12 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
             return this.challengeBase64;
         }
 
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationTime(Long operationTime) {
-            this.operationTime = operationTime;
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setCredentialId(String credentialId) {
+            this.credentialId = credentialId;
             return this;
         }
-        public Long getOperationTime() {
-            return this.operationTime;
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserAgent(String userAgent) {
-            this.userAgent = userAgent;
-            return this;
-        }
-        public String getUserAgent() {
-            return this.userAgent;
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserSourceIp(String userSourceIp) {
-            this.userSourceIp = userSourceIp;
-            return this;
-        }
-        public String getUserSourceIp() {
-            return this.userSourceIp;
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setRawContext(String rawContext) {
-            this.rawContext = rawContext;
-            return this;
-        }
-        public String getRawContext() {
-            return this.rawContext;
-        }
-
-        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationResult(Boolean operationResult) {
-            this.operationResult = operationResult;
-            return this;
-        }
-        public Boolean getOperationResult() {
-            return this.operationResult;
+        public String getCredentialId() {
+            return this.credentialId;
         }
 
         public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setErrorCode(String errorCode) {
@@ -278,6 +214,70 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
         }
         public String getLogParams() {
             return this.logParams;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationAction(String operationAction) {
+            this.operationAction = operationAction;
+            return this;
+        }
+        public String getOperationAction() {
+            return this.operationAction;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationResult(Boolean operationResult) {
+            this.operationResult = operationResult;
+            return this;
+        }
+        public Boolean getOperationResult() {
+            return this.operationResult;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setOperationTime(Long operationTime) {
+            this.operationTime = operationTime;
+            return this;
+        }
+        public Long getOperationTime() {
+            return this.operationTime;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setRawContext(String rawContext) {
+            this.rawContext = rawContext;
+            return this;
+        }
+        public String getRawContext() {
+            return this.rawContext;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserAgent(String userAgent) {
+            this.userAgent = userAgent;
+            return this;
+        }
+        public String getUserAgent() {
+            return this.userAgent;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent setUserSourceIp(String userSourceIp) {
+            this.userSourceIp = userSourceIp;
+            return this;
+        }
+        public String getUserSourceIp() {
+            return this.userSourceIp;
         }
 
     }

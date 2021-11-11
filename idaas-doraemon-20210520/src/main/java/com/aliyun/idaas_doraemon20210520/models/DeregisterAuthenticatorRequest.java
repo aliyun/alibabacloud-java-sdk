@@ -8,13 +8,13 @@ public class DeregisterAuthenticatorRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
 
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
-
     // 认证器uuid
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
+
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
 
     public static DeregisterAuthenticatorRequest build(java.util.Map<String, ?> map) throws Exception {
         DeregisterAuthenticatorRequest self = new DeregisterAuthenticatorRequest();
@@ -29,20 +29,20 @@ public class DeregisterAuthenticatorRequest extends TeaModel {
         return this.applicationExternalId;
     }
 
-    public DeregisterAuthenticatorRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public DeregisterAuthenticatorRequest setAuthenticatorUuid(String authenticatorUuid) {
         this.authenticatorUuid = authenticatorUuid;
         return this;
     }
     public String getAuthenticatorUuid() {
         return this.authenticatorUuid;
+    }
+
+    public DeregisterAuthenticatorRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
