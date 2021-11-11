@@ -32,84 +32,36 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointsResponseBodyResult extends TeaModel {
-        @NameInMap("endpointBusinessStatus")
-        public String endpointBusinessStatus;
-
-        @NameInMap("serviceId")
-        public String serviceId;
-
-        @NameInMap("endpointName")
-        public String endpointName;
-
-        @NameInMap("endpointId")
-        public String endpointId;
-
-        @NameInMap("serviceName")
-        public String serviceName;
+        @NameInMap("connectionStatus")
+        public String connectionStatus;
 
         @NameInMap("createTime")
         public String createTime;
 
-        @NameInMap("connectionStatus")
-        public String connectionStatus;
+        @NameInMap("endpointBusinessStatus")
+        public String endpointBusinessStatus;
 
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
+        @NameInMap("endpointId")
+        public String endpointId;
+
+        @NameInMap("endpointName")
+        public String endpointName;
+
         @NameInMap("endpointStatus")
         public String endpointStatus;
+
+        @NameInMap("serviceId")
+        public String serviceId;
+
+        @NameInMap("serviceName")
+        public String serviceName;
 
         public static ListVpcEndpointsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointsResponseBodyResult self = new ListVpcEndpointsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListVpcEndpointsResponseBodyResult setEndpointBusinessStatus(String endpointBusinessStatus) {
-            this.endpointBusinessStatus = endpointBusinessStatus;
-            return this;
-        }
-        public String getEndpointBusinessStatus() {
-            return this.endpointBusinessStatus;
-        }
-
-        public ListVpcEndpointsResponseBodyResult setServiceId(String serviceId) {
-            this.serviceId = serviceId;
-            return this;
-        }
-        public String getServiceId() {
-            return this.serviceId;
-        }
-
-        public ListVpcEndpointsResponseBodyResult setEndpointName(String endpointName) {
-            this.endpointName = endpointName;
-            return this;
-        }
-        public String getEndpointName() {
-            return this.endpointName;
-        }
-
-        public ListVpcEndpointsResponseBodyResult setEndpointId(String endpointId) {
-            this.endpointId = endpointId;
-            return this;
-        }
-        public String getEndpointId() {
-            return this.endpointId;
-        }
-
-        public ListVpcEndpointsResponseBodyResult setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public ListVpcEndpointsResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public ListVpcEndpointsResponseBodyResult setConnectionStatus(String connectionStatus) {
@@ -120,6 +72,22 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             return this.connectionStatus;
         }
 
+        public ListVpcEndpointsResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListVpcEndpointsResponseBodyResult setEndpointBusinessStatus(String endpointBusinessStatus) {
+            this.endpointBusinessStatus = endpointBusinessStatus;
+            return this;
+        }
+        public String getEndpointBusinessStatus() {
+            return this.endpointBusinessStatus;
+        }
+
         public ListVpcEndpointsResponseBodyResult setEndpointDomain(String endpointDomain) {
             this.endpointDomain = endpointDomain;
             return this;
@@ -128,12 +96,44 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             return this.endpointDomain;
         }
 
+        public ListVpcEndpointsResponseBodyResult setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        public ListVpcEndpointsResponseBodyResult setEndpointName(String endpointName) {
+            this.endpointName = endpointName;
+            return this;
+        }
+        public String getEndpointName() {
+            return this.endpointName;
+        }
+
         public ListVpcEndpointsResponseBodyResult setEndpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
         public String getEndpointStatus() {
             return this.endpointStatus;
+        }
+
+        public ListVpcEndpointsResponseBodyResult setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListVpcEndpointsResponseBodyResult setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }

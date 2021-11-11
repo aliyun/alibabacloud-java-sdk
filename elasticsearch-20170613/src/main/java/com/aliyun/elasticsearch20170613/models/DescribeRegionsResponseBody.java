@@ -32,24 +32,48 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyResult extends TeaModel {
+        @NameInMap("consoleEndpoint")
+        public String consoleEndpoint;
+
+        @NameInMap("localName")
+        public String localName;
+
+        @NameInMap("regionEndpoint")
+        public String regionEndpoint;
+
         @NameInMap("regionId")
         public String regionId;
 
         @NameInMap("status")
         public String status;
 
-        @NameInMap("regionEndpoint")
-        public String regionEndpoint;
-
-        @NameInMap("localName")
-        public String localName;
-
-        @NameInMap("consoleEndpoint")
-        public String consoleEndpoint;
-
         public static DescribeRegionsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyResult self = new DescribeRegionsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyResult setConsoleEndpoint(String consoleEndpoint) {
+            this.consoleEndpoint = consoleEndpoint;
+            return this;
+        }
+        public String getConsoleEndpoint() {
+            return this.consoleEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyResult setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyResult setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
         }
 
         public DescribeRegionsResponseBodyResult setRegionId(String regionId) {
@@ -66,30 +90,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeRegionsResponseBodyResult setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
-        }
-
-        public DescribeRegionsResponseBodyResult setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        public DescribeRegionsResponseBodyResult setConsoleEndpoint(String consoleEndpoint) {
-            this.consoleEndpoint = consoleEndpoint;
-            return this;
-        }
-        public String getConsoleEndpoint() {
-            return this.consoleEndpoint;
         }
 
     }

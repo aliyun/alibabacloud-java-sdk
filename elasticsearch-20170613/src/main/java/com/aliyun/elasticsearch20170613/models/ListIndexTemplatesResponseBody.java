@@ -32,34 +32,18 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListIndexTemplatesResponseBodyResultTemplate extends TeaModel {
-        @NameInMap("settings")
-        public String settings;
+        @NameInMap("aliases")
+        public String aliases;
 
         @NameInMap("mappings")
         public String mappings;
 
-        @NameInMap("aliases")
-        public String aliases;
+        @NameInMap("settings")
+        public String settings;
 
         public static ListIndexTemplatesResponseBodyResultTemplate build(java.util.Map<String, ?> map) throws Exception {
             ListIndexTemplatesResponseBodyResultTemplate self = new ListIndexTemplatesResponseBodyResultTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public ListIndexTemplatesResponseBodyResultTemplate setSettings(String settings) {
-            this.settings = settings;
-            return this;
-        }
-        public String getSettings() {
-            return this.settings;
-        }
-
-        public ListIndexTemplatesResponseBodyResultTemplate setMappings(String mappings) {
-            this.mappings = mappings;
-            return this;
-        }
-        public String getMappings() {
-            return this.mappings;
         }
 
         public ListIndexTemplatesResponseBodyResultTemplate setAliases(String aliases) {
@@ -70,23 +54,39 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             return this.aliases;
         }
 
+        public ListIndexTemplatesResponseBodyResultTemplate setMappings(String mappings) {
+            this.mappings = mappings;
+            return this;
+        }
+        public String getMappings() {
+            return this.mappings;
+        }
+
+        public ListIndexTemplatesResponseBodyResultTemplate setSettings(String settings) {
+            this.settings = settings;
+            return this;
+        }
+        public String getSettings() {
+            return this.settings;
+        }
+
     }
 
     public static class ListIndexTemplatesResponseBodyResult extends TeaModel {
         @NameInMap("dataStream")
         public Boolean dataStream;
 
-        @NameInMap("indexTemplate")
-        public String indexTemplate;
-
         @NameInMap("ilmPolicy")
         public String ilmPolicy;
 
-        @NameInMap("priority")
-        public Integer priority;
-
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
+
+        @NameInMap("indexTemplate")
+        public String indexTemplate;
+
+        @NameInMap("priority")
+        public Integer priority;
 
         @NameInMap("template")
         public ListIndexTemplatesResponseBodyResultTemplate template;
@@ -104,14 +104,6 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             return this.dataStream;
         }
 
-        public ListIndexTemplatesResponseBodyResult setIndexTemplate(String indexTemplate) {
-            this.indexTemplate = indexTemplate;
-            return this;
-        }
-        public String getIndexTemplate() {
-            return this.indexTemplate;
-        }
-
         public ListIndexTemplatesResponseBodyResult setIlmPolicy(String ilmPolicy) {
             this.ilmPolicy = ilmPolicy;
             return this;
@@ -120,20 +112,28 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             return this.ilmPolicy;
         }
 
-        public ListIndexTemplatesResponseBodyResult setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
         public ListIndexTemplatesResponseBodyResult setIndexPatterns(java.util.List<String> indexPatterns) {
             this.indexPatterns = indexPatterns;
             return this;
         }
         public java.util.List<String> getIndexPatterns() {
             return this.indexPatterns;
+        }
+
+        public ListIndexTemplatesResponseBodyResult setIndexTemplate(String indexTemplate) {
+            this.indexTemplate = indexTemplate;
+            return this;
+        }
+        public String getIndexTemplate() {
+            return this.indexTemplate;
+        }
+
+        public ListIndexTemplatesResponseBodyResult setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public ListIndexTemplatesResponseBodyResult setTemplate(ListIndexTemplatesResponseBodyResultTemplate template) {

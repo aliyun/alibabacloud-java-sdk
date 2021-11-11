@@ -7,14 +7,14 @@ public class ListInstanceIndicesRequest extends TeaModel {
     @NameInMap("all")
     public Boolean all;
 
-    @NameInMap("name")
-    public String name;
-
     @NameInMap("isManaged")
     public Boolean isManaged;
 
     @NameInMap("isOpenstore")
     public Boolean isOpenstore;
+
+    @NameInMap("name")
+    public String name;
 
     @NameInMap("page")
     public Integer page;
@@ -35,14 +35,6 @@ public class ListInstanceIndicesRequest extends TeaModel {
         return this.all;
     }
 
-    public ListInstanceIndicesRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public ListInstanceIndicesRequest setIsManaged(Boolean isManaged) {
         this.isManaged = isManaged;
         return this;
@@ -57,6 +49,14 @@ public class ListInstanceIndicesRequest extends TeaModel {
     }
     public Boolean getIsOpenstore() {
         return this.isOpenstore;
+    }
+
+    public ListInstanceIndicesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListInstanceIndicesRequest setPage(Integer page) {

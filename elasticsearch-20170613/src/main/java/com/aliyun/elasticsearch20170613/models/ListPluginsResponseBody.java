@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPluginsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListPluginsResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListPluginsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListPluginsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPluginsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListPluginsResponseBody setHeaders(ListPluginsResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListPluginsResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListPluginsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListPluginsResponseBody setResult(java.util.List<ListPluginsResponseBodyResult> result) {
@@ -65,17 +65,17 @@ public class ListPluginsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("source")
+        public String source;
+
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("source")
-        public String source;
-
-        @NameInMap("name")
-        public String name;
 
         public static ListPluginsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListPluginsResponseBodyResult self = new ListPluginsResponseBodyResult();
@@ -88,6 +88,22 @@ public class ListPluginsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListPluginsResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListPluginsResponseBodyResult setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public ListPluginsResponseBodyResult setSpecificationUrl(String specificationUrl) {
@@ -104,22 +120,6 @@ public class ListPluginsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ListPluginsResponseBodyResult setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListPluginsResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

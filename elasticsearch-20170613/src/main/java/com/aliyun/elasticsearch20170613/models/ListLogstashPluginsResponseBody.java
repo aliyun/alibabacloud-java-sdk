@@ -35,17 +35,17 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("source")
+        public String source;
+
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("source")
-        public String source;
-
-        @NameInMap("name")
-        public String name;
 
         public static ListLogstashPluginsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListLogstashPluginsResponseBodyResult self = new ListLogstashPluginsResponseBodyResult();
@@ -58,6 +58,22 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListLogstashPluginsResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListLogstashPluginsResponseBodyResult setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public ListLogstashPluginsResponseBodyResult setSpecificationUrl(String specificationUrl) {
@@ -74,22 +90,6 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ListLogstashPluginsResponseBodyResult setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListLogstashPluginsResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

@@ -32,32 +32,24 @@ public class ListLogstashLogResponseBody extends TeaModel {
     }
 
     public static class ListLogstashLogResponseBodyResult extends TeaModel {
-        @NameInMap("level")
-        public String level;
-
         @NameInMap("content")
         public String content;
-
-        @NameInMap("timestamp")
-        public Long timestamp;
-
-        @NameInMap("instanceId")
-        public String instanceId;
 
         @NameInMap("host")
         public String host;
 
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("timestamp")
+        public Long timestamp;
+
         public static ListLogstashLogResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListLogstashLogResponseBodyResult self = new ListLogstashLogResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListLogstashLogResponseBodyResult setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
         }
 
         public ListLogstashLogResponseBodyResult setContent(String content) {
@@ -68,12 +60,12 @@ public class ListLogstashLogResponseBody extends TeaModel {
             return this.content;
         }
 
-        public ListLogstashLogResponseBodyResult setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
+        public ListLogstashLogResponseBodyResult setHost(String host) {
+            this.host = host;
             return this;
         }
-        public Long getTimestamp() {
-            return this.timestamp;
+        public String getHost() {
+            return this.host;
         }
 
         public ListLogstashLogResponseBodyResult setInstanceId(String instanceId) {
@@ -84,12 +76,20 @@ public class ListLogstashLogResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListLogstashLogResponseBodyResult setHost(String host) {
-            this.host = host;
+        public ListLogstashLogResponseBodyResult setLevel(String level) {
+            this.level = level;
             return this;
         }
-        public String getHost() {
-            return this.host;
+        public String getLevel() {
+            return this.level;
+        }
+
+        public ListLogstashLogResponseBodyResult setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

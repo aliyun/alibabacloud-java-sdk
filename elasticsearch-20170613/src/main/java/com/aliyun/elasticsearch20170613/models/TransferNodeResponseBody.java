@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TransferNodeResponseBody extends TeaModel {
-    @NameInMap("Result")
-    public Boolean result;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Result")
+    public Boolean result;
 
     public static TransferNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransferNodeResponseBody self = new TransferNodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TransferNodeResponseBody setResult(Boolean result) {
-        this.result = result;
-        return this;
-    }
-    public Boolean getResult() {
-        return this.result;
     }
 
     public TransferNodeResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class TransferNodeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public TransferNodeResponseBody setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
 }

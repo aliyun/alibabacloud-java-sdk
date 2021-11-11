@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListPipelineResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListPipelineResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListPipelineResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPipelineResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListPipelineResponseBody setHeaders(ListPipelineResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListPipelineResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListPipelineResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListPipelineResponseBody setResult(java.util.List<ListPipelineResponseBodyResult> result) {
@@ -62,14 +62,14 @@ public class ListPipelineResponseBody extends TeaModel {
     }
 
     public static class ListPipelineResponseBodyResult extends TeaModel {
-        @NameInMap("pipelineId")
-        public String pipelineId;
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
 
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
+        @NameInMap("pipelineId")
+        public String pipelineId;
 
         @NameInMap("pipelineStatus")
         public String pipelineStatus;
@@ -79,12 +79,12 @@ public class ListPipelineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListPipelineResponseBodyResult setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
+        public ListPipelineResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
             return this;
         }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public String getGmtCreatedTime() {
+            return this.gmtCreatedTime;
         }
 
         public ListPipelineResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
@@ -95,12 +95,12 @@ public class ListPipelineResponseBody extends TeaModel {
             return this.gmtUpdateTime;
         }
 
-        public ListPipelineResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
-            this.gmtCreatedTime = gmtCreatedTime;
+        public ListPipelineResponseBodyResult setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
             return this;
         }
-        public String getGmtCreatedTime() {
-            return this.gmtCreatedTime;
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public ListPipelineResponseBodyResult setPipelineStatus(String pipelineStatus) {

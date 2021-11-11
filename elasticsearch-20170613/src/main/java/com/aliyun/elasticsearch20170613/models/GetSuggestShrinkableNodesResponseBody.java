@@ -32,23 +32,15 @@ public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
     }
 
     public static class GetSuggestShrinkableNodesResponseBodyResult extends TeaModel {
-        @NameInMap("port")
-        public Integer port;
-
         @NameInMap("host")
         public String host;
+
+        @NameInMap("port")
+        public Integer port;
 
         public static GetSuggestShrinkableNodesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetSuggestShrinkableNodesResponseBodyResult self = new GetSuggestShrinkableNodesResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetSuggestShrinkableNodesResponseBodyResult setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
         public GetSuggestShrinkableNodesResponseBodyResult setHost(String host) {
@@ -57,6 +49,14 @@ public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
         }
         public String getHost() {
             return this.host;
+        }
+
+        public GetSuggestShrinkableNodesResponseBodyResult setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
     }

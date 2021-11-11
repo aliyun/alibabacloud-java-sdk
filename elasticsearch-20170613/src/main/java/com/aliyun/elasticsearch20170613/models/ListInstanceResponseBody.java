@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListInstanceResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListInstanceResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListInstanceResponseBody setHeaders(ListInstanceResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListInstanceResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListInstanceResponseBody setResult(java.util.List<ListInstanceResponseBodyResult> result) {
@@ -61,40 +61,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
     }
 
-    public static class ListInstanceResponseBodyResultTags extends TeaModel {
-        @NameInMap("tagKey")
-        public String tagKey;
-
-        @NameInMap("tagValue")
-        public String tagValue;
-
-        public static ListInstanceResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
-            ListInstanceResponseBodyResultTags self = new ListInstanceResponseBodyResultTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListInstanceResponseBodyResultTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-    }
-
     public static class ListInstanceResponseBodyResultClientNodeConfiguration extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("amount")
         public Integer amount;
 
@@ -104,17 +71,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListInstanceResponseBodyResultClientNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultClientNodeConfiguration self = new ListInstanceResponseBodyResultClientNodeConfiguration();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultClientNodeConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListInstanceResponseBodyResultClientNodeConfiguration setAmount(Integer amount) {
@@ -141,12 +103,17 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public ListInstanceResponseBodyResultClientNodeConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultElasticDataNodeConfiguration extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("amount")
         public Integer amount;
 
@@ -159,17 +126,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListInstanceResponseBodyResultElasticDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultElasticDataNodeConfiguration self = new ListInstanceResponseBodyResultElasticDataNodeConfiguration();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultElasticDataNodeConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListInstanceResponseBodyResultElasticDataNodeConfiguration setAmount(Integer amount) {
@@ -204,12 +166,17 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public ListInstanceResponseBodyResultElasticDataNodeConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("amount")
         public Integer amount;
 
@@ -219,17 +186,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListInstanceResponseBodyResultKibanaConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultKibanaConfiguration self = new ListInstanceResponseBodyResultKibanaConfiguration();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultKibanaConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListInstanceResponseBodyResultKibanaConfiguration setAmount(Integer amount) {
@@ -256,12 +218,17 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public ListInstanceResponseBodyResultKibanaConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultMasterConfiguration extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("amount")
         public Integer amount;
 
@@ -271,17 +238,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListInstanceResponseBodyResultMasterConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultMasterConfiguration self = new ListInstanceResponseBodyResultMasterConfiguration();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultMasterConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListInstanceResponseBodyResultMasterConfiguration setAmount(Integer amount) {
@@ -308,17 +270,25 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public ListInstanceResponseBodyResultMasterConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResultNetworkConfig extends TeaModel {
+        @NameInMap("type")
+        public String type;
+
         @NameInMap("vpcId")
         public String vpcId;
 
         @NameInMap("vsArea")
         public String vsArea;
-
-        @NameInMap("type")
-        public String type;
 
         @NameInMap("vswitchId")
         public String vswitchId;
@@ -326,6 +296,14 @@ public class ListInstanceResponseBody extends TeaModel {
         public static ListInstanceResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultNetworkConfig self = new ListInstanceResponseBodyResultNetworkConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstanceResponseBodyResultNetworkConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListInstanceResponseBodyResultNetworkConfig setVpcId(String vpcId) {
@@ -344,14 +322,6 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.vsArea;
         }
 
-        public ListInstanceResponseBodyResultNetworkConfig setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
         public ListInstanceResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
             return this;
@@ -363,9 +333,6 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyResultNodeSpec extends TeaModel {
-        @NameInMap("spec")
-        public String spec;
-
         @NameInMap("disk")
         public Integer disk;
 
@@ -375,17 +342,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
+        @NameInMap("spec")
+        public String spec;
+
         public static ListInstanceResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResultNodeSpec self = new ListInstanceResponseBodyResultNodeSpec();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceResponseBodyResultNodeSpec setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
         }
 
         public ListInstanceResponseBodyResultNodeSpec setDisk(Integer disk) {
@@ -412,62 +374,76 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.diskType;
         }
 
+        public ListInstanceResponseBodyResultNodeSpec setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+    }
+
+    public static class ListInstanceResponseBodyResultTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static ListInstanceResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceResponseBodyResultTags self = new ListInstanceResponseBodyResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceResponseBodyResultTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListInstanceResponseBodyResultTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class ListInstanceResponseBodyResult extends TeaModel {
         @NameInMap("advancedDedicateMaster")
         public Boolean advancedDedicateMaster;
 
-        @NameInMap("nodeAmount")
-        public Integer nodeAmount;
+        @NameInMap("clientNodeConfiguration")
+        public ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
 
         @NameInMap("createdAt")
         public String createdAt;
 
-        @NameInMap("status")
-        public String status;
-
         @NameInMap("dedicateMaster")
         public Boolean dedicateMaster;
-
-        @NameInMap("serviceVpc")
-        public Boolean serviceVpc;
-
-        @NameInMap("paymentType")
-        public String paymentType;
-
-        @NameInMap("resourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("postpaidServiceStatus")
-        public String postpaidServiceStatus;
 
         @NameInMap("description")
         public String description;
 
+        @NameInMap("elasticDataNodeConfiguration")
+        public ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
+
         @NameInMap("esVersion")
         public String esVersion;
-
-        @NameInMap("isNewDeployment")
-        public String isNewDeployment;
-
-        @NameInMap("updatedAt")
-        public String updatedAt;
-
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        @NameInMap("tags")
-        public java.util.List<ListInstanceResponseBodyResultTags> tags;
 
         @NameInMap("extendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
-        @NameInMap("clientNodeConfiguration")
-        public ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
+        @NameInMap("instanceId")
+        public String instanceId;
 
-        @NameInMap("elasticDataNodeConfiguration")
-        public ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
+        @NameInMap("isNewDeployment")
+        public String isNewDeployment;
 
         @NameInMap("kibanaConfiguration")
         public ListInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
@@ -478,8 +454,32 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("networkConfig")
         public ListInstanceResponseBodyResultNetworkConfig networkConfig;
 
+        @NameInMap("nodeAmount")
+        public Integer nodeAmount;
+
         @NameInMap("nodeSpec")
         public ListInstanceResponseBodyResultNodeSpec nodeSpec;
+
+        @NameInMap("paymentType")
+        public String paymentType;
+
+        @NameInMap("postpaidServiceStatus")
+        public String postpaidServiceStatus;
+
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("serviceVpc")
+        public Boolean serviceVpc;
+
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("tags")
+        public java.util.List<ListInstanceResponseBodyResultTags> tags;
+
+        @NameInMap("updatedAt")
+        public String updatedAt;
 
         public static ListInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyResult self = new ListInstanceResponseBodyResult();
@@ -494,12 +494,12 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.advancedDedicateMaster;
         }
 
-        public ListInstanceResponseBodyResult setNodeAmount(Integer nodeAmount) {
-            this.nodeAmount = nodeAmount;
+        public ListInstanceResponseBodyResult setClientNodeConfiguration(ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration) {
+            this.clientNodeConfiguration = clientNodeConfiguration;
             return this;
         }
-        public Integer getNodeAmount() {
-            return this.nodeAmount;
+        public ListInstanceResponseBodyResultClientNodeConfiguration getClientNodeConfiguration() {
+            return this.clientNodeConfiguration;
         }
 
         public ListInstanceResponseBodyResult setCreatedAt(String createdAt) {
@@ -510,52 +510,12 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListInstanceResponseBodyResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public ListInstanceResponseBodyResult setDedicateMaster(Boolean dedicateMaster) {
             this.dedicateMaster = dedicateMaster;
             return this;
         }
         public Boolean getDedicateMaster() {
             return this.dedicateMaster;
-        }
-
-        public ListInstanceResponseBodyResult setServiceVpc(Boolean serviceVpc) {
-            this.serviceVpc = serviceVpc;
-            return this;
-        }
-        public Boolean getServiceVpc() {
-            return this.serviceVpc;
-        }
-
-        public ListInstanceResponseBodyResult setPaymentType(String paymentType) {
-            this.paymentType = paymentType;
-            return this;
-        }
-        public String getPaymentType() {
-            return this.paymentType;
-        }
-
-        public ListInstanceResponseBodyResult setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public ListInstanceResponseBodyResult setPostpaidServiceStatus(String postpaidServiceStatus) {
-            this.postpaidServiceStatus = postpaidServiceStatus;
-            return this;
-        }
-        public String getPostpaidServiceStatus() {
-            return this.postpaidServiceStatus;
         }
 
         public ListInstanceResponseBodyResult setDescription(String description) {
@@ -566,44 +526,20 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListInstanceResponseBodyResult setElasticDataNodeConfiguration(ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration) {
+            this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
+            return this;
+        }
+        public ListInstanceResponseBodyResultElasticDataNodeConfiguration getElasticDataNodeConfiguration() {
+            return this.elasticDataNodeConfiguration;
+        }
+
         public ListInstanceResponseBodyResult setEsVersion(String esVersion) {
             this.esVersion = esVersion;
             return this;
         }
         public String getEsVersion() {
             return this.esVersion;
-        }
-
-        public ListInstanceResponseBodyResult setIsNewDeployment(String isNewDeployment) {
-            this.isNewDeployment = isNewDeployment;
-            return this;
-        }
-        public String getIsNewDeployment() {
-            return this.isNewDeployment;
-        }
-
-        public ListInstanceResponseBodyResult setUpdatedAt(String updatedAt) {
-            this.updatedAt = updatedAt;
-            return this;
-        }
-        public String getUpdatedAt() {
-            return this.updatedAt;
-        }
-
-        public ListInstanceResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListInstanceResponseBodyResult setTags(java.util.List<ListInstanceResponseBodyResultTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListInstanceResponseBodyResultTags> getTags() {
-            return this.tags;
         }
 
         public ListInstanceResponseBodyResult setExtendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
@@ -614,20 +550,20 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.extendConfigs;
         }
 
-        public ListInstanceResponseBodyResult setClientNodeConfiguration(ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration) {
-            this.clientNodeConfiguration = clientNodeConfiguration;
+        public ListInstanceResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public ListInstanceResponseBodyResultClientNodeConfiguration getClientNodeConfiguration() {
-            return this.clientNodeConfiguration;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
-        public ListInstanceResponseBodyResult setElasticDataNodeConfiguration(ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration) {
-            this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
+        public ListInstanceResponseBodyResult setIsNewDeployment(String isNewDeployment) {
+            this.isNewDeployment = isNewDeployment;
             return this;
         }
-        public ListInstanceResponseBodyResultElasticDataNodeConfiguration getElasticDataNodeConfiguration() {
-            return this.elasticDataNodeConfiguration;
+        public String getIsNewDeployment() {
+            return this.isNewDeployment;
         }
 
         public ListInstanceResponseBodyResult setKibanaConfiguration(ListInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration) {
@@ -654,12 +590,76 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.networkConfig;
         }
 
+        public ListInstanceResponseBodyResult setNodeAmount(Integer nodeAmount) {
+            this.nodeAmount = nodeAmount;
+            return this;
+        }
+        public Integer getNodeAmount() {
+            return this.nodeAmount;
+        }
+
         public ListInstanceResponseBodyResult setNodeSpec(ListInstanceResponseBodyResultNodeSpec nodeSpec) {
             this.nodeSpec = nodeSpec;
             return this;
         }
         public ListInstanceResponseBodyResultNodeSpec getNodeSpec() {
             return this.nodeSpec;
+        }
+
+        public ListInstanceResponseBodyResult setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
+        }
+
+        public ListInstanceResponseBodyResult setPostpaidServiceStatus(String postpaidServiceStatus) {
+            this.postpaidServiceStatus = postpaidServiceStatus;
+            return this;
+        }
+        public String getPostpaidServiceStatus() {
+            return this.postpaidServiceStatus;
+        }
+
+        public ListInstanceResponseBodyResult setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListInstanceResponseBodyResult setServiceVpc(Boolean serviceVpc) {
+            this.serviceVpc = serviceVpc;
+            return this;
+        }
+        public Boolean getServiceVpc() {
+            return this.serviceVpc;
+        }
+
+        public ListInstanceResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListInstanceResponseBodyResult setTags(java.util.List<ListInstanceResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListInstanceResponseBodyResultTags> getTags() {
+            return this.tags;
+        }
+
+        public ListInstanceResponseBodyResult setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
         }
 
     }

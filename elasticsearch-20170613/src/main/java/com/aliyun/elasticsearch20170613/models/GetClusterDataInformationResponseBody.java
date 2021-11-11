@@ -32,6 +32,12 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     }
 
     public static class GetClusterDataInformationResponseBodyResultMetaInfo extends TeaModel {
+        @NameInMap("fields")
+        public java.util.List<String> fields;
+
+        @NameInMap("indices")
+        public java.util.List<String> indices;
+
         @NameInMap("mapping")
         public String mapping;
 
@@ -41,15 +47,25 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         @NameInMap("typeName")
         public java.util.List<String> typeName;
 
-        @NameInMap("fields")
-        public java.util.List<String> fields;
-
-        @NameInMap("indices")
-        public java.util.List<String> indices;
-
         public static GetClusterDataInformationResponseBodyResultMetaInfo build(java.util.Map<String, ?> map) throws Exception {
             GetClusterDataInformationResponseBodyResultMetaInfo self = new GetClusterDataInformationResponseBodyResultMetaInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetClusterDataInformationResponseBodyResultMetaInfo setFields(java.util.List<String> fields) {
+            this.fields = fields;
+            return this;
+        }
+        public java.util.List<String> getFields() {
+            return this.fields;
+        }
+
+        public GetClusterDataInformationResponseBodyResultMetaInfo setIndices(java.util.List<String> indices) {
+            this.indices = indices;
+            return this;
+        }
+        public java.util.List<String> getIndices() {
+            return this.indices;
         }
 
         public GetClusterDataInformationResponseBodyResultMetaInfo setMapping(String mapping) {
@@ -74,22 +90,6 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         }
         public java.util.List<String> getTypeName() {
             return this.typeName;
-        }
-
-        public GetClusterDataInformationResponseBodyResultMetaInfo setFields(java.util.List<String> fields) {
-            this.fields = fields;
-            return this;
-        }
-        public java.util.List<String> getFields() {
-            return this.fields;
-        }
-
-        public GetClusterDataInformationResponseBodyResultMetaInfo setIndices(java.util.List<String> indices) {
-            this.indices = indices;
-            return this;
-        }
-        public java.util.List<String> getIndices() {
-            return this.indices;
         }
 
     }

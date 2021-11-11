@@ -7,11 +7,11 @@ public class UpdateWhiteIpsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    @NameInMap("modifyMode")
-    public String modifyMode;
-
     @NameInMap("esIPWhitelist")
     public java.util.List<String> esIPWhitelist;
+
+    @NameInMap("modifyMode")
+    public String modifyMode;
 
     @NameInMap("whiteIpGroup")
     public UpdateWhiteIpsRequestWhiteIpGroup whiteIpGroup;
@@ -29,20 +29,20 @@ public class UpdateWhiteIpsRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateWhiteIpsRequest setModifyMode(String modifyMode) {
-        this.modifyMode = modifyMode;
-        return this;
-    }
-    public String getModifyMode() {
-        return this.modifyMode;
-    }
-
     public UpdateWhiteIpsRequest setEsIPWhitelist(java.util.List<String> esIPWhitelist) {
         this.esIPWhitelist = esIPWhitelist;
         return this;
     }
     public java.util.List<String> getEsIPWhitelist() {
         return this.esIPWhitelist;
+    }
+
+    public UpdateWhiteIpsRequest setModifyMode(String modifyMode) {
+        this.modifyMode = modifyMode;
+        return this;
+    }
+    public String getModifyMode() {
+        return this.modifyMode;
     }
 
     public UpdateWhiteIpsRequest setWhiteIpGroup(UpdateWhiteIpsRequestWhiteIpGroup whiteIpGroup) {

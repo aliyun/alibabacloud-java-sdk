@@ -32,52 +32,36 @@ public class ListAllNodeResponseBody extends TeaModel {
     }
 
     public static class ListAllNodeResponseBodyResult extends TeaModel {
-        @NameInMap("heapPercent")
-        public String heapPercent;
-
-        @NameInMap("zoneId")
-        public String zoneId;
-
         @NameInMap("cpuPercent")
         public String cpuPercent;
-
-        @NameInMap("host")
-        public String host;
-
-        @NameInMap("nodeType")
-        public String nodeType;
 
         @NameInMap("diskUsedPercent")
         public String diskUsedPercent;
 
-        @NameInMap("port")
-        public Integer port;
+        @NameInMap("health")
+        public String health;
+
+        @NameInMap("heapPercent")
+        public String heapPercent;
+
+        @NameInMap("host")
+        public String host;
 
         @NameInMap("loadOneM")
         public String loadOneM;
 
-        @NameInMap("health")
-        public String health;
+        @NameInMap("nodeType")
+        public String nodeType;
+
+        @NameInMap("port")
+        public Integer port;
+
+        @NameInMap("zoneId")
+        public String zoneId;
 
         public static ListAllNodeResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAllNodeResponseBodyResult self = new ListAllNodeResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListAllNodeResponseBodyResult setHeapPercent(String heapPercent) {
-            this.heapPercent = heapPercent;
-            return this;
-        }
-        public String getHeapPercent() {
-            return this.heapPercent;
-        }
-
-        public ListAllNodeResponseBodyResult setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public ListAllNodeResponseBodyResult setCpuPercent(String cpuPercent) {
@@ -88,22 +72,6 @@ public class ListAllNodeResponseBody extends TeaModel {
             return this.cpuPercent;
         }
 
-        public ListAllNodeResponseBodyResult setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-        public ListAllNodeResponseBodyResult setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
-        }
-
         public ListAllNodeResponseBodyResult setDiskUsedPercent(String diskUsedPercent) {
             this.diskUsedPercent = diskUsedPercent;
             return this;
@@ -112,12 +80,28 @@ public class ListAllNodeResponseBody extends TeaModel {
             return this.diskUsedPercent;
         }
 
-        public ListAllNodeResponseBodyResult setPort(Integer port) {
-            this.port = port;
+        public ListAllNodeResponseBodyResult setHealth(String health) {
+            this.health = health;
             return this;
         }
-        public Integer getPort() {
-            return this.port;
+        public String getHealth() {
+            return this.health;
+        }
+
+        public ListAllNodeResponseBodyResult setHeapPercent(String heapPercent) {
+            this.heapPercent = heapPercent;
+            return this;
+        }
+        public String getHeapPercent() {
+            return this.heapPercent;
+        }
+
+        public ListAllNodeResponseBodyResult setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
         }
 
         public ListAllNodeResponseBodyResult setLoadOneM(String loadOneM) {
@@ -128,12 +112,28 @@ public class ListAllNodeResponseBody extends TeaModel {
             return this.loadOneM;
         }
 
-        public ListAllNodeResponseBodyResult setHealth(String health) {
-            this.health = health;
+        public ListAllNodeResponseBodyResult setNodeType(String nodeType) {
+            this.nodeType = nodeType;
             return this;
         }
-        public String getHealth() {
-            return this.health;
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        public ListAllNodeResponseBodyResult setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public ListAllNodeResponseBodyResult setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

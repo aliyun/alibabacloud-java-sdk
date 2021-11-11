@@ -4,14 +4,14 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    @NameInMap("Headers")
+    public ListTagResourcesResponseBodyHeaders headers;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Headers")
-    public ListTagResourcesResponseBodyHeaders headers;
 
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -19,6 +19,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesResponseBody setHeaders(ListTagResourcesResponseBodyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ListTagResourcesResponseBodyHeaders getHeaders() {
+        return this.headers;
     }
 
     public ListTagResourcesResponseBody setPageSize(Integer pageSize) {
@@ -35,14 +43,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListTagResourcesResponseBody setHeaders(ListTagResourcesResponseBodyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    public ListTagResourcesResponseBodyHeaders getHeaders() {
-        return this.headers;
     }
 
     public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
@@ -73,37 +73,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
 
-        @NameInMap("ResourceId")
-        public String resourceId;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ListTagResourcesResponseBodyTagResourcesTagResource build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResourcesTagResource self = new ListTagResourcesResponseBodyTagResourcesTagResource();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
         public ListTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
@@ -114,12 +98,28 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public ListTagResourcesResponseBodyTagResourcesTagResource setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

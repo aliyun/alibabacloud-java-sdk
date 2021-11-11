@@ -32,23 +32,15 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSettingsResponseBodyResult extends TeaModel {
-        @NameInMap("updateTime")
-        public Long updateTime;
-
         @NameInMap("scene")
         public String scene;
+
+        @NameInMap("updateTime")
+        public Long updateTime;
 
         public static DescribeDiagnosisSettingsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiagnosisSettingsResponseBodyResult self = new DescribeDiagnosisSettingsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDiagnosisSettingsResponseBodyResult setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
         public DescribeDiagnosisSettingsResponseBodyResult setScene(String scene) {
@@ -57,6 +49,14 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
         public String getScene() {
             return this.scene;
+        }
+
+        public DescribeDiagnosisSettingsResponseBodyResult setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

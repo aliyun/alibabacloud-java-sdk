@@ -32,29 +32,21 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
     }
 
     public static class ListAvailableEsInstanceIdsResponseBodyResult extends TeaModel {
-        @NameInMap("endpoint")
-        public String endpoint;
-
         @NameInMap("description")
         public String description;
 
-        @NameInMap("kibanaEndpoint")
-        public String kibanaEndpoint;
+        @NameInMap("endpoint")
+        public String endpoint;
 
         @NameInMap("esInstanceId")
         public String esInstanceId;
 
+        @NameInMap("kibanaEndpoint")
+        public String kibanaEndpoint;
+
         public static ListAvailableEsInstanceIdsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAvailableEsInstanceIdsResponseBodyResult self = new ListAvailableEsInstanceIdsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListAvailableEsInstanceIdsResponseBodyResult setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
         }
 
         public ListAvailableEsInstanceIdsResponseBodyResult setDescription(String description) {
@@ -65,12 +57,12 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAvailableEsInstanceIdsResponseBodyResult setKibanaEndpoint(String kibanaEndpoint) {
-            this.kibanaEndpoint = kibanaEndpoint;
+        public ListAvailableEsInstanceIdsResponseBodyResult setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
             return this;
         }
-        public String getKibanaEndpoint() {
-            return this.kibanaEndpoint;
+        public String getEndpoint() {
+            return this.endpoint;
         }
 
         public ListAvailableEsInstanceIdsResponseBodyResult setEsInstanceId(String esInstanceId) {
@@ -79,6 +71,14 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         }
         public String getEsInstanceId() {
             return this.esInstanceId;
+        }
+
+        public ListAvailableEsInstanceIdsResponseBodyResult setKibanaEndpoint(String kibanaEndpoint) {
+            this.kibanaEndpoint = kibanaEndpoint;
+            return this;
+        }
+        public String getKibanaEndpoint() {
+            return this.kibanaEndpoint;
         }
 
     }

@@ -32,29 +32,29 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
     }
 
     public static class ListSnapshotReposByInstanceIdResponseBodyResult extends TeaModel {
-        @NameInMap("snapWarehouse")
-        public String snapWarehouse;
+        @NameInMap("instanceId")
+        public String instanceId;
 
         @NameInMap("repoPath")
         public String repoPath;
 
+        @NameInMap("snapWarehouse")
+        public String snapWarehouse;
+
         @NameInMap("status")
         public String status;
-
-        @NameInMap("instanceId")
-        public String instanceId;
 
         public static ListSnapshotReposByInstanceIdResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListSnapshotReposByInstanceIdResponseBodyResult self = new ListSnapshotReposByInstanceIdResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListSnapshotReposByInstanceIdResponseBodyResult setSnapWarehouse(String snapWarehouse) {
-            this.snapWarehouse = snapWarehouse;
+        public ListSnapshotReposByInstanceIdResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getSnapWarehouse() {
-            return this.snapWarehouse;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListSnapshotReposByInstanceIdResponseBodyResult setRepoPath(String repoPath) {
@@ -65,20 +65,20 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
             return this.repoPath;
         }
 
+        public ListSnapshotReposByInstanceIdResponseBodyResult setSnapWarehouse(String snapWarehouse) {
+            this.snapWarehouse = snapWarehouse;
+            return this;
+        }
+        public String getSnapWarehouse() {
+            return this.snapWarehouse;
+        }
+
         public ListSnapshotReposByInstanceIdResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public ListSnapshotReposByInstanceIdResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
     }
