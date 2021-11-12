@@ -1166,17 +1166,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstallCaptchaWithOptions(request, runtime);
     }
 
-    public DescribeInstallCodesResponse describeInstallCodesWithOptions(DescribeInstallCodesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
+    public DescribeInstallCodesResponse describeInstallCodesWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeInstallCodes", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeInstallCodesResponse());
     }
 
-    public DescribeInstallCodesResponse describeInstallCodes(DescribeInstallCodesRequest request) throws Exception {
+    public DescribeInstallCodesResponse describeInstallCodes() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeInstallCodesWithOptions(request, runtime);
+        return this.describeInstallCodesWithOptions(runtime);
     }
 
     public DescribeInstanceAntiBruteForceRulesResponse describeInstanceAntiBruteForceRulesWithOptions(DescribeInstanceAntiBruteForceRulesRequest request, RuntimeOptions runtime) throws Exception {
@@ -2078,6 +2075,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportRecordWithOptions(request, runtime);
     }
 
+    public ExportVulResponse exportVulWithOptions(ExportVulRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ExportVul", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new ExportVulResponse());
+    }
+
+    public ExportVulResponse exportVul(ExportVulRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.exportVulWithOptions(request, runtime);
+    }
+
     public FixCheckWarningsResponse fixCheckWarningsWithOptions(FixCheckWarningsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2726,6 +2736,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryDiscoverDatabaseResponse queryDiscoverDatabase(QueryDiscoverDatabaseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryDiscoverDatabaseWithOptions(request, runtime);
+    }
+
+    public QueryGroupIdByGroupNameResponse queryGroupIdByGroupNameWithOptions(QueryGroupIdByGroupNameRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryGroupIdByGroupName", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new QueryGroupIdByGroupNameResponse());
+    }
+
+    public QueryGroupIdByGroupNameResponse queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryGroupIdByGroupNameWithOptions(request, runtime);
     }
 
     public QueryPreCheckDatabaseResponse queryPreCheckDatabaseWithOptions(QueryPreCheckDatabaseRequest request, RuntimeOptions runtime) throws Exception {
