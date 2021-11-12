@@ -8,6 +8,10 @@ public class RegisterAuthenticatorResponseBody extends TeaModel {
     @NameInMap("AuthenticatorUuid")
     public String authenticatorUuid;
 
+    // 仅IFAA认证器注册返回
+    @NameInMap("EtasResponseSting")
+    public String etasResponseSting;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -22,6 +26,14 @@ public class RegisterAuthenticatorResponseBody extends TeaModel {
     }
     public String getAuthenticatorUuid() {
         return this.authenticatorUuid;
+    }
+
+    public RegisterAuthenticatorResponseBody setEtasResponseSting(String etasResponseSting) {
+        this.etasResponseSting = etasResponseSting;
+        return this;
+    }
+    public String getEtasResponseSting() {
+        return this.etasResponseSting;
     }
 
     public RegisterAuthenticatorResponseBody setRequestId(String requestId) {

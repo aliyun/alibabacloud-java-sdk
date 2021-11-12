@@ -8,6 +8,12 @@ public class VerifyUserAuthenticationResponseBody extends TeaModel {
     @NameInMap("AuthenticateResultInfo")
     public VerifyUserAuthenticationResponseBodyAuthenticateResultInfo authenticateResultInfo;
 
+    @NameInMap("EtasSDKString")
+    public String etasSDKString;
+
+    @NameInMap("IdToken")
+    public String idToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -26,6 +32,22 @@ public class VerifyUserAuthenticationResponseBody extends TeaModel {
     }
     public VerifyUserAuthenticationResponseBodyAuthenticateResultInfo getAuthenticateResultInfo() {
         return this.authenticateResultInfo;
+    }
+
+    public VerifyUserAuthenticationResponseBody setEtasSDKString(String etasSDKString) {
+        this.etasSDKString = etasSDKString;
+        return this;
+    }
+    public String getEtasSDKString() {
+        return this.etasSDKString;
+    }
+
+    public VerifyUserAuthenticationResponseBody setIdToken(String idToken) {
+        this.idToken = idToken;
+        return this;
+    }
+    public String getIdToken() {
+        return this.idToken;
     }
 
     public VerifyUserAuthenticationResponseBody setRequestId(String requestId) {
