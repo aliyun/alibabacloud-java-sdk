@@ -4,10 +4,6 @@ package com.aliyun.pai_dsw20210226.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 实例列表
     @NameInMap("Instances")
     public java.util.List<Instance> instances;
@@ -20,6 +16,10 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 符合条件的实例数
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -27,14 +27,6 @@ public class ListInstancesResponseBody extends TeaModel {
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInstancesResponseBody setInstances(java.util.List<Instance> instances) {
@@ -59,6 +51,14 @@ public class ListInstancesResponseBody extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListInstancesResponseBody setTotalCount(Long totalCount) {

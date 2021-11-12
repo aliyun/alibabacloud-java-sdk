@@ -4,10 +4,6 @@ package com.aliyun.pai_dsw20210226.models;
 import com.aliyun.tea.*;
 
 public class EcsSpec extends TeaModel {
-    // 实例类型
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     // cpu数量
     @NameInMap("Cpu")
     public Long cpu;
@@ -15,6 +11,14 @@ public class EcsSpec extends TeaModel {
     // gpu卡数
     @NameInMap("Gpu")
     public Long gpu;
+
+    // GPU卡类型
+    @NameInMap("GpuType")
+    public String gpuType;
+
+    // 实例类型
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     // 内存(GiB)
     @NameInMap("MemoryInGiB")
@@ -28,21 +32,9 @@ public class EcsSpec extends TeaModel {
     @NameInMap("SystemDiskSizeInGiB")
     public Long systemDiskSizeInGiB;
 
-    // GPU卡类型
-    @NameInMap("GpuType")
-    public String gpuType;
-
     public static EcsSpec build(java.util.Map<String, ?> map) throws Exception {
         EcsSpec self = new EcsSpec();
         return TeaModel.build(map, self);
-    }
-
-    public EcsSpec setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
     public EcsSpec setCpu(Long cpu) {
@@ -59,6 +51,22 @@ public class EcsSpec extends TeaModel {
     }
     public Long getGpu() {
         return this.gpu;
+    }
+
+    public EcsSpec setGpuType(String gpuType) {
+        this.gpuType = gpuType;
+        return this;
+    }
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    public EcsSpec setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public EcsSpec setMemoryInGiB(Long memoryInGiB) {
@@ -83,14 +91,6 @@ public class EcsSpec extends TeaModel {
     }
     public Long getSystemDiskSizeInGiB() {
         return this.systemDiskSizeInGiB;
-    }
-
-    public EcsSpec setGpuType(String gpuType) {
-        this.gpuType = gpuType;
-        return this;
-    }
-    public String getGpuType() {
-        return this.gpuType;
     }
 
 }

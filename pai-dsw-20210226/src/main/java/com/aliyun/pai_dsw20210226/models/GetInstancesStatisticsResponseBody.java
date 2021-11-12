@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstancesStatisticsResponseBody extends TeaModel {
     // Id of the request
-    @NameInMap("RequestID")
-    public String requestID;
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 统计数据
     @NameInMap("Statistics")
@@ -17,12 +17,12 @@ public class GetInstancesStatisticsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetInstancesStatisticsResponseBody setRequestID(String requestID) {
-        this.requestID = requestID;
+    public GetInstancesStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getRequestID() {
-        return this.requestID;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetInstancesStatisticsResponseBody setStatistics(java.util.Map<String, ?> statistics) {
