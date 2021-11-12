@@ -4,10 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class StartListenerRequest extends TeaModel {
-    // 监听id
-    @NameInMap("ListenerId")
-    public String listenerId;
-
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,17 +12,13 @@ public class StartListenerRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 监听id
+    @NameInMap("ListenerId")
+    public String listenerId;
+
     public static StartListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         StartListenerRequest self = new StartListenerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartListenerRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
     }
 
     public StartListenerRequest setClientToken(String clientToken) {
@@ -43,6 +35,14 @@ public class StartListenerRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public StartListenerRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
     }
 
 }

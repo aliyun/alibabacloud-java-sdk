@@ -4,6 +4,10 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class RemoveEntriesFromAclRequest extends TeaModel {
+    // 访问控制策略Id
+    @NameInMap("AclId")
+    public String aclId;
+
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -12,10 +16,6 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 访问控制策略Id
-    @NameInMap("AclId")
-    public String aclId;
-
     // 条目列表
     @NameInMap("Entries")
     public java.util.List<String> entries;
@@ -23,6 +23,14 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     public static RemoveEntriesFromAclRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveEntriesFromAclRequest self = new RemoveEntriesFromAclRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveEntriesFromAclRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
     }
 
     public RemoveEntriesFromAclRequest setClientToken(String clientToken) {
@@ -39,14 +47,6 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
-    }
-
-    public RemoveEntriesFromAclRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
     }
 
     public RemoveEntriesFromAclRequest setEntries(java.util.List<String> entries) {

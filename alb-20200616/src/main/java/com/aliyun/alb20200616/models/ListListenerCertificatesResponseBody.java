@@ -4,6 +4,10 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
+    // 监听SSL证书列表
+    @NameInMap("Certificates")
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
+
     // 本次查询返回记录数量
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -20,13 +24,17 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    // 监听SSL证书列表
-    @NameInMap("Certificates")
-    public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
-
     public static ListListenerCertificatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListListenerCertificatesResponseBody self = new ListListenerCertificatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListListenerCertificatesResponseBody setCertificates(java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> getCertificates() {
+        return this.certificates;
     }
 
     public ListListenerCertificatesResponseBody setMaxResults(Integer maxResults) {
@@ -61,18 +69,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListListenerCertificatesResponseBody setCertificates(java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates) {
-        this.certificates = certificates;
-        return this;
-    }
-    public java.util.List<ListListenerCertificatesResponseBodyCertificates> getCertificates() {
-        return this.certificates;
-    }
-
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         // 证书Id
         @NameInMap("CertificateId")
         public String certificateId;
+
+        // 证书类型
+        @NameInMap("CertificateType")
+        public String certificateType;
 
         // 是否为默认证书
         @NameInMap("IsDefault")
@@ -81,10 +85,6 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         // 证书状态
         @NameInMap("Status")
         public String status;
-
-        // 证书类型
-        @NameInMap("CertificateType")
-        public String certificateType;
 
         public static ListListenerCertificatesResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
             ListListenerCertificatesResponseBodyCertificates self = new ListListenerCertificatesResponseBodyCertificates();
@@ -97,6 +97,14 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
         public String getCertificateId() {
             return this.certificateId;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setCertificateType(String certificateType) {
+            this.certificateType = certificateType;
+            return this;
+        }
+        public String getCertificateType() {
+            return this.certificateType;
         }
 
         public ListListenerCertificatesResponseBodyCertificates setIsDefault(Boolean isDefault) {
@@ -113,14 +121,6 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public ListListenerCertificatesResponseBodyCertificates setCertificateType(String certificateType) {
-            this.certificateType = certificateType;
-            return this;
-        }
-        public String getCertificateType() {
-            return this.certificateType;
         }
 
     }

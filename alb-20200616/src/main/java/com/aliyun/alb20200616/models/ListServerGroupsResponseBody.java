@@ -70,6 +70,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig extends TeaModel {
+        // 状态码
+        @NameInMap("HealthCheckCodes")
+        public java.util.List<String> healthCheckCodes;
+
         // 端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
@@ -81,10 +85,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         // 域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
-
-        // 状态码
-        @NameInMap("HealthCheckCodes")
-        public java.util.List<String> healthCheckCodes;
 
         // 版本
         @NameInMap("HealthCheckHttpVersion")
@@ -123,6 +123,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+            this.healthCheckCodes = healthCheckCodes;
+            return this;
+        }
+        public java.util.List<String> getHealthCheckCodes() {
+            return this.healthCheckCodes;
+        }
+
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
             return this;
@@ -145,14 +153,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getHealthCheckHost() {
             return this.healthCheckHost;
-        }
-
-        public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-            this.healthCheckCodes = healthCheckCodes;
-            return this;
-        }
-        public java.util.List<String> getHealthCheckCodes() {
-            return this.healthCheckCodes;
         }
 
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig setHealthCheckHttpVersion(String healthCheckHttpVersion) {
@@ -326,6 +326,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("Scheduler")
         public String scheduler;
 
+        // 服务器组内服务器数量
+        @NameInMap("ServerCount")
+        public Integer serverCount;
+
         // 服务器组Id
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -346,13 +350,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("StickySessionConfig")
         public ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig;
 
-        // 服务器组所在VpcId
-        @NameInMap("VpcId")
-        public String vpcId;
-
         // 标签列表
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
+
+        // 服务器组所在VpcId
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListServerGroupsResponseBodyServerGroups build(java.util.Map<String, ?> map) throws Exception {
             ListServerGroupsResponseBodyServerGroups self = new ListServerGroupsResponseBodyServerGroups();
@@ -389,6 +393,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getScheduler() {
             return this.scheduler;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setServerCount(Integer serverCount) {
+            this.serverCount = serverCount;
+            return this;
+        }
+        public Integer getServerCount() {
+            return this.serverCount;
         }
 
         public ListServerGroupsResponseBodyServerGroups setServerGroupId(String serverGroupId) {
@@ -431,20 +443,20 @@ public class ListServerGroupsResponseBody extends TeaModel {
             return this.stickySessionConfig;
         }
 
-        public ListServerGroupsResponseBodyServerGroups setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
         public ListServerGroupsResponseBodyServerGroups setTags(java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags) {
             this.tags = tags;
             return this;
         }
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

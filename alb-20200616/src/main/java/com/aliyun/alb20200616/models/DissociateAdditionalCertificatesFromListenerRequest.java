@@ -4,10 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DissociateAdditionalCertificatesFromListenerRequest extends TeaModel {
-    // 监听Id
-    @NameInMap("ListenerId")
-    public String listenerId;
-
     // 证书列表
     @NameInMap("Certificates")
     public java.util.List<DissociateAdditionalCertificatesFromListenerRequestCertificates> certificates;
@@ -20,17 +16,13 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 监听Id
+    @NameInMap("ListenerId")
+    public String listenerId;
+
     public static DissociateAdditionalCertificatesFromListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         DissociateAdditionalCertificatesFromListenerRequest self = new DissociateAdditionalCertificatesFromListenerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DissociateAdditionalCertificatesFromListenerRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
     }
 
     public DissociateAdditionalCertificatesFromListenerRequest setCertificates(java.util.List<DissociateAdditionalCertificatesFromListenerRequestCertificates> certificates) {
@@ -55,6 +47,14 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DissociateAdditionalCertificatesFromListenerRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
     }
 
     public static class DissociateAdditionalCertificatesFromListenerRequestCertificates extends TeaModel {

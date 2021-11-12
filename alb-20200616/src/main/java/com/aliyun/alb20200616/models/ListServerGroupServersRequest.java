@@ -4,13 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersRequest extends TeaModel {
-    // 分页查询标识
-    @NameInMap("NextToken")
-    public String nextToken;
-
     // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    // 分页查询标识
+    @NameInMap("NextToken")
+    public String nextToken;
 
     // 服务器组id
     @NameInMap("ServerGroupId")
@@ -27,20 +27,20 @@ public class ListServerGroupServersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServerGroupServersRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListServerGroupServersRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListServerGroupServersRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListServerGroupServersRequest setServerGroupId(String serverGroupId) {

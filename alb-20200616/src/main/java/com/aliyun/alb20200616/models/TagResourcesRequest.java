@@ -4,13 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    // 资源类型
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     // 资源实例Id
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
+
+    // 资源类型
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     // 标签列表
     @NameInMap("Tag")
@@ -21,20 +21,20 @@ public class TagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public TagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {

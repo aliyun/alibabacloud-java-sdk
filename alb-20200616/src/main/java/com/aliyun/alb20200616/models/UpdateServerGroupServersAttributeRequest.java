@@ -4,14 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateServerGroupServersAttributeRequest extends TeaModel {
-    // 后端服务器Id
-    @NameInMap("ServerGroupId")
-    public String serverGroupId;
-
-    // 后端服务器
-    @NameInMap("Servers")
-    public java.util.List<UpdateServerGroupServersAttributeRequestServers> servers;
-
     // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,25 +12,17 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 后端服务器Id
+    @NameInMap("ServerGroupId")
+    public String serverGroupId;
+
+    // 后端服务器
+    @NameInMap("Servers")
+    public java.util.List<UpdateServerGroupServersAttributeRequestServers> servers;
+
     public static UpdateServerGroupServersAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServerGroupServersAttributeRequest self = new UpdateServerGroupServersAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateServerGroupServersAttributeRequest setServerGroupId(String serverGroupId) {
-        this.serverGroupId = serverGroupId;
-        return this;
-    }
-    public String getServerGroupId() {
-        return this.serverGroupId;
-    }
-
-    public UpdateServerGroupServersAttributeRequest setServers(java.util.List<UpdateServerGroupServersAttributeRequestServers> servers) {
-        this.servers = servers;
-        return this;
-    }
-    public java.util.List<UpdateServerGroupServersAttributeRequestServers> getServers() {
-        return this.servers;
     }
 
     public UpdateServerGroupServersAttributeRequest setClientToken(String clientToken) {
@@ -55,6 +39,22 @@ public class UpdateServerGroupServersAttributeRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateServerGroupServersAttributeRequest setServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    public String getServerGroupId() {
+        return this.serverGroupId;
+    }
+
+    public UpdateServerGroupServersAttributeRequest setServers(java.util.List<UpdateServerGroupServersAttributeRequestServers> servers) {
+        this.servers = servers;
+        return this;
+    }
+    public java.util.List<UpdateServerGroupServersAttributeRequestServers> getServers() {
+        return this.servers;
     }
 
     public static class UpdateServerGroupServersAttributeRequestServers extends TeaModel {

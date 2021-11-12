@@ -4,21 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
-    // 用来标记当前开始读取的位置，置空表示从头开始。
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    // 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    // 可用区ID
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    // 实例状态
-    @NameInMap("LoadBalancerStatus")
-    public String loadBalancerStatus;
+    // 负载均衡的地址类型
+    @NameInMap("AddressType")
+    public String addressType;
 
     // 实例业务状态
     @NameInMap("LoadBalancerBussinessStatus")
@@ -32,17 +20,17 @@ public class ListLoadBalancersRequest extends TeaModel {
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
 
-    // vpcId列表
-    @NameInMap("VpcIds")
-    public java.util.List<String> vpcIds;
+    // 实例状态
+    @NameInMap("LoadBalancerStatus")
+    public String loadBalancerStatus;
 
-    // tag列表
-    @NameInMap("Tag")
-    public java.util.List<ListLoadBalancersRequestTag> tag;
+    // 本次读取的最大数据记录数量，此参数为可选参数，取值1-100，用户传入为空时，默认为20。
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
-    // 负载均衡的地址类型
-    @NameInMap("AddressType")
-    public String addressType;
+    // 用来标记当前开始读取的位置，置空表示从头开始。
+    @NameInMap("NextToken")
+    public String nextToken;
 
     // 付费类型
     @NameInMap("PayType")
@@ -52,41 +40,29 @@ public class ListLoadBalancersRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    // tag列表
+    @NameInMap("Tag")
+    public java.util.List<ListLoadBalancersRequestTag> tag;
+
+    // vpcId列表
+    @NameInMap("VpcIds")
+    public java.util.List<String> vpcIds;
+
+    // 可用区ID
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static ListLoadBalancersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLoadBalancersRequest self = new ListLoadBalancersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListLoadBalancersRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListLoadBalancersRequest setAddressType(String addressType) {
+        this.addressType = addressType;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListLoadBalancersRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListLoadBalancersRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public ListLoadBalancersRequest setLoadBalancerStatus(String loadBalancerStatus) {
-        this.loadBalancerStatus = loadBalancerStatus;
-        return this;
-    }
-    public String getLoadBalancerStatus() {
-        return this.loadBalancerStatus;
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public ListLoadBalancersRequest setLoadBalancerBussinessStatus(String loadBalancerBussinessStatus) {
@@ -113,28 +89,28 @@ public class ListLoadBalancersRequest extends TeaModel {
         return this.loadBalancerNames;
     }
 
-    public ListLoadBalancersRequest setVpcIds(java.util.List<String> vpcIds) {
-        this.vpcIds = vpcIds;
+    public ListLoadBalancersRequest setLoadBalancerStatus(String loadBalancerStatus) {
+        this.loadBalancerStatus = loadBalancerStatus;
         return this;
     }
-    public java.util.List<String> getVpcIds() {
-        return this.vpcIds;
+    public String getLoadBalancerStatus() {
+        return this.loadBalancerStatus;
     }
 
-    public ListLoadBalancersRequest setTag(java.util.List<ListLoadBalancersRequestTag> tag) {
-        this.tag = tag;
+    public ListLoadBalancersRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public java.util.List<ListLoadBalancersRequestTag> getTag() {
-        return this.tag;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
-    public ListLoadBalancersRequest setAddressType(String addressType) {
-        this.addressType = addressType;
+    public ListLoadBalancersRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getAddressType() {
-        return this.addressType;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListLoadBalancersRequest setPayType(String payType) {
@@ -151,6 +127,30 @@ public class ListLoadBalancersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListLoadBalancersRequest setTag(java.util.List<ListLoadBalancersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListLoadBalancersRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public ListLoadBalancersRequest setVpcIds(java.util.List<String> vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    public java.util.List<String> getVpcIds() {
+        return this.vpcIds;
+    }
+
+    public ListLoadBalancersRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class ListLoadBalancersRequestTag extends TeaModel {

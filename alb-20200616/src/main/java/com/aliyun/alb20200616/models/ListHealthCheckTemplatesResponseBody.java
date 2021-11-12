@@ -70,6 +70,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates extends TeaModel {
+        // 状态码
+        @NameInMap("HealthCheckCodes")
+        public java.util.List<String> healthCheckCodes;
+
         // 端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
@@ -77,10 +81,6 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         // 域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
-
-        // 状态码
-        @NameInMap("HealthCheckCodes")
-        public java.util.List<String> healthCheckCodes;
 
         // 版本
         @NameInMap("HealthCheckHttpVersion")
@@ -127,6 +127,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListHealthCheckTemplatesResponseBodyHealthCheckTemplates setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+            this.healthCheckCodes = healthCheckCodes;
+            return this;
+        }
+        public java.util.List<String> getHealthCheckCodes() {
+            return this.healthCheckCodes;
+        }
+
         public ListHealthCheckTemplatesResponseBodyHealthCheckTemplates setHealthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
             return this;
@@ -141,14 +149,6 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
         public String getHealthCheckHost() {
             return this.healthCheckHost;
-        }
-
-        public ListHealthCheckTemplatesResponseBodyHealthCheckTemplates setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-            this.healthCheckCodes = healthCheckCodes;
-            return this;
-        }
-        public java.util.List<String> getHealthCheckCodes() {
-            return this.healthCheckCodes;
         }
 
         public ListHealthCheckTemplatesResponseBodyHealthCheckTemplates setHealthCheckHttpVersion(String healthCheckHttpVersion) {

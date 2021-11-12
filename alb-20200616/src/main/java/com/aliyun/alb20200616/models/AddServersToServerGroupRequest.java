@@ -4,14 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AddServersToServerGroupRequest extends TeaModel {
-    // 后端服务器Id
-    @NameInMap("ServerGroupId")
-    public String serverGroupId;
-
-    // 后端服务器
-    @NameInMap("Servers")
-    public java.util.List<AddServersToServerGroupRequestServers> servers;
-
     // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,25 +12,17 @@ public class AddServersToServerGroupRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 后端服务器Id
+    @NameInMap("ServerGroupId")
+    public String serverGroupId;
+
+    // 后端服务器
+    @NameInMap("Servers")
+    public java.util.List<AddServersToServerGroupRequestServers> servers;
+
     public static AddServersToServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddServersToServerGroupRequest self = new AddServersToServerGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddServersToServerGroupRequest setServerGroupId(String serverGroupId) {
-        this.serverGroupId = serverGroupId;
-        return this;
-    }
-    public String getServerGroupId() {
-        return this.serverGroupId;
-    }
-
-    public AddServersToServerGroupRequest setServers(java.util.List<AddServersToServerGroupRequestServers> servers) {
-        this.servers = servers;
-        return this;
-    }
-    public java.util.List<AddServersToServerGroupRequestServers> getServers() {
-        return this.servers;
     }
 
     public AddServersToServerGroupRequest setClientToken(String clientToken) {
@@ -55,6 +39,22 @@ public class AddServersToServerGroupRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public AddServersToServerGroupRequest setServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    public String getServerGroupId() {
+        return this.serverGroupId;
+    }
+
+    public AddServersToServerGroupRequest setServers(java.util.List<AddServersToServerGroupRequestServers> servers) {
+        this.servers = servers;
+        return this;
+    }
+    public java.util.List<AddServersToServerGroupRequestServers> getServers() {
+        return this.servers;
     }
 
     public static class AddServersToServerGroupRequestServers extends TeaModel {

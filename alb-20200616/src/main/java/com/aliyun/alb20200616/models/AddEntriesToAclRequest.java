@@ -4,13 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AddEntriesToAclRequest extends TeaModel {
-    // AclId
-    @NameInMap("AclId")
-    public String aclId;
-
     // 条目信息列表
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
+
+    // AclId
+    @NameInMap("AclId")
+    public String aclId;
 
     // 幂等Token
     @NameInMap("ClientToken")
@@ -25,20 +25,20 @@ public class AddEntriesToAclRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddEntriesToAclRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
-    }
-
     public AddEntriesToAclRequest setAclEntries(java.util.List<AddEntriesToAclRequestAclEntries> aclEntries) {
         this.aclEntries = aclEntries;
         return this;
     }
     public java.util.List<AddEntriesToAclRequestAclEntries> getAclEntries() {
         return this.aclEntries;
+    }
+
+    public AddEntriesToAclRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
     }
 
     public AddEntriesToAclRequest setClientToken(String clientToken) {

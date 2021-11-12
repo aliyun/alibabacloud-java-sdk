@@ -4,21 +4,21 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
-    // 分页查询标识
-    @NameInMap("NextToken")
-    public String nextToken;
-
     // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 资源类型
-    @NameInMap("ResourceType")
-    public String resourceType;
+    // 分页查询标识
+    @NameInMap("NextToken")
+    public String nextToken;
 
     // 资源实例Id
     @NameInMap("ResourceId")
     public String resourceId;
+
+    // 资源类型
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     // 具体的标签Key
     @NameInMap("TagKey")
@@ -29,14 +29,6 @@ public class ListTagValuesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListTagValuesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListTagValuesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,12 +37,12 @@ public class ListTagValuesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListTagValuesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public ListTagValuesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTagValuesRequest setResourceId(String resourceId) {
@@ -59,6 +51,14 @@ public class ListTagValuesRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListTagValuesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListTagValuesRequest setTagKey(String tagKey) {

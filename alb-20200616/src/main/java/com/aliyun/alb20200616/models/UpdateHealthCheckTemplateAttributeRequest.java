@@ -8,9 +8,13 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 名称
-    @NameInMap("HealthCheckTemplateName")
-    public String healthCheckTemplateName;
+    // dryRun
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    // 状态码
+    @NameInMap("HealthCheckCodes")
+    public java.util.List<String> healthCheckCodes;
 
     // 端口号
     @NameInMap("HealthCheckConnectPort")
@@ -20,33 +24,37 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckHost")
     public String healthCheckHost;
 
-    // 状态码
-    @NameInMap("HealthCheckCodes")
-    public java.util.List<String> healthCheckCodes;
+    // 版本
+    @NameInMap("HealthCheckHttpVersion")
+    public String healthCheckHttpVersion;
 
     // 时间间隔
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
-    // 超时时间
-    @NameInMap("HealthCheckTimeout")
-    public Integer healthCheckTimeout;
+    // 方法
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
 
     // uri
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
 
-    // 方法
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
     // 协议
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
-    // 版本
-    @NameInMap("HealthCheckHttpVersion")
-    public String healthCheckHttpVersion;
+    // 健康检查模板ID
+    @NameInMap("HealthCheckTemplateId")
+    public String healthCheckTemplateId;
+
+    // 名称
+    @NameInMap("HealthCheckTemplateName")
+    public String healthCheckTemplateName;
+
+    // 超时时间
+    @NameInMap("HealthCheckTimeout")
+    public Integer healthCheckTimeout;
 
     // 健康阈值
     @NameInMap("HealthyThreshold")
@@ -55,14 +63,6 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     // 不健康阈值
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
-
-    // dryRun
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    // 健康检查模板ID
-    @NameInMap("HealthCheckTemplateId")
-    public String healthCheckTemplateId;
 
     public static UpdateHealthCheckTemplateAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHealthCheckTemplateAttributeRequest self = new UpdateHealthCheckTemplateAttributeRequest();
@@ -77,12 +77,20 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTemplateName(String healthCheckTemplateName) {
-        this.healthCheckTemplateName = healthCheckTemplateName;
+    public UpdateHealthCheckTemplateAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public String getHealthCheckTemplateName() {
-        return this.healthCheckTemplateName;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+        this.healthCheckCodes = healthCheckCodes;
+        return this;
+    }
+    public java.util.List<String> getHealthCheckCodes() {
+        return this.healthCheckCodes;
     }
 
     public UpdateHealthCheckTemplateAttributeRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
@@ -101,12 +109,12 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
         return this.healthCheckHost;
     }
 
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-        this.healthCheckCodes = healthCheckCodes;
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckHttpVersion(String healthCheckHttpVersion) {
+        this.healthCheckHttpVersion = healthCheckHttpVersion;
         return this;
     }
-    public java.util.List<String> getHealthCheckCodes() {
-        return this.healthCheckCodes;
+    public String getHealthCheckHttpVersion() {
+        return this.healthCheckHttpVersion;
     }
 
     public UpdateHealthCheckTemplateAttributeRequest setHealthCheckInterval(Integer healthCheckInterval) {
@@ -117,12 +125,12 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
         return this.healthCheckInterval;
     }
 
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
-        this.healthCheckTimeout = healthCheckTimeout;
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
         return this;
     }
-    public Integer getHealthCheckTimeout() {
-        return this.healthCheckTimeout;
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
     }
 
     public UpdateHealthCheckTemplateAttributeRequest setHealthCheckPath(String healthCheckPath) {
@@ -133,14 +141,6 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
         return this.healthCheckPath;
     }
 
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
-    }
-
     public UpdateHealthCheckTemplateAttributeRequest setHealthCheckProtocol(String healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -149,12 +149,28 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
         return this.healthCheckProtocol;
     }
 
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckHttpVersion(String healthCheckHttpVersion) {
-        this.healthCheckHttpVersion = healthCheckHttpVersion;
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTemplateId(String healthCheckTemplateId) {
+        this.healthCheckTemplateId = healthCheckTemplateId;
         return this;
     }
-    public String getHealthCheckHttpVersion() {
-        return this.healthCheckHttpVersion;
+    public String getHealthCheckTemplateId() {
+        return this.healthCheckTemplateId;
+    }
+
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTemplateName(String healthCheckTemplateName) {
+        this.healthCheckTemplateName = healthCheckTemplateName;
+        return this;
+    }
+    public String getHealthCheckTemplateName() {
+        return this.healthCheckTemplateName;
+    }
+
+    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
+        this.healthCheckTimeout = healthCheckTimeout;
+        return this;
+    }
+    public Integer getHealthCheckTimeout() {
+        return this.healthCheckTimeout;
     }
 
     public UpdateHealthCheckTemplateAttributeRequest setHealthyThreshold(Integer healthyThreshold) {
@@ -171,22 +187,6 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     }
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
-    }
-
-    public UpdateHealthCheckTemplateAttributeRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
-    }
-
-    public UpdateHealthCheckTemplateAttributeRequest setHealthCheckTemplateId(String healthCheckTemplateId) {
-        this.healthCheckTemplateId = healthCheckTemplateId;
-        return this;
-    }
-    public String getHealthCheckTemplateId() {
-        return this.healthCheckTemplateId;
     }
 
 }

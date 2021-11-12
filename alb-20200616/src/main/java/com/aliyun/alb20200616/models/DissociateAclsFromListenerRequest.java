@@ -8,17 +8,17 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
-    // 监听Id
-    @NameInMap("ListenerId")
-    public String listenerId;
+    // 幂等标识
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     // 预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 幂等标识
-    @NameInMap("ClientToken")
-    public String clientToken;
+    // 监听Id
+    @NameInMap("ListenerId")
+    public String listenerId;
 
     public static DissociateAclsFromListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         DissociateAclsFromListenerRequest self = new DissociateAclsFromListenerRequest();
@@ -33,12 +33,12 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
         return this.aclIds;
     }
 
-    public DissociateAclsFromListenerRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
+    public DissociateAclsFromListenerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getListenerId() {
-        return this.listenerId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DissociateAclsFromListenerRequest setDryRun(Boolean dryRun) {
@@ -49,12 +49,12 @@ public class DissociateAclsFromListenerRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public DissociateAclsFromListenerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DissociateAclsFromListenerRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getListenerId() {
+        return this.listenerId;
     }
 
 }

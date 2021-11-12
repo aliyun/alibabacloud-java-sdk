@@ -4,14 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateServerGroupAttributeRequest extends TeaModel {
-    // Acl名称
-    @NameInMap("ServerGroupName")
-    public String serverGroupName;
-
-    // 调度策略
-    @NameInMap("Scheduler")
-    public String scheduler;
-
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,33 +16,25 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckConfig")
     public UpdateServerGroupAttributeRequestHealthCheckConfig healthCheckConfig;
 
-    // 会话保持配置
-    @NameInMap("StickySessionConfig")
-    public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
+    // 调度策略
+    @NameInMap("Scheduler")
+    public String scheduler;
 
     // 服务器组Id
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
+    // Acl名称
+    @NameInMap("ServerGroupName")
+    public String serverGroupName;
+
+    // 会话保持配置
+    @NameInMap("StickySessionConfig")
+    public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
+
     public static UpdateServerGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServerGroupAttributeRequest self = new UpdateServerGroupAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateServerGroupAttributeRequest setServerGroupName(String serverGroupName) {
-        this.serverGroupName = serverGroupName;
-        return this;
-    }
-    public String getServerGroupName() {
-        return this.serverGroupName;
-    }
-
-    public UpdateServerGroupAttributeRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
-        return this;
-    }
-    public String getScheduler() {
-        return this.scheduler;
     }
 
     public UpdateServerGroupAttributeRequest setClientToken(String clientToken) {
@@ -77,12 +61,12 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         return this.healthCheckConfig;
     }
 
-    public UpdateServerGroupAttributeRequest setStickySessionConfig(UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig) {
-        this.stickySessionConfig = stickySessionConfig;
+    public UpdateServerGroupAttributeRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
         return this;
     }
-    public UpdateServerGroupAttributeRequestStickySessionConfig getStickySessionConfig() {
-        return this.stickySessionConfig;
+    public String getScheduler() {
+        return this.scheduler;
     }
 
     public UpdateServerGroupAttributeRequest setServerGroupId(String serverGroupId) {
@@ -93,7 +77,27 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         return this.serverGroupId;
     }
 
+    public UpdateServerGroupAttributeRequest setServerGroupName(String serverGroupName) {
+        this.serverGroupName = serverGroupName;
+        return this;
+    }
+    public String getServerGroupName() {
+        return this.serverGroupName;
+    }
+
+    public UpdateServerGroupAttributeRequest setStickySessionConfig(UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig) {
+        this.stickySessionConfig = stickySessionConfig;
+        return this;
+    }
+    public UpdateServerGroupAttributeRequestStickySessionConfig getStickySessionConfig() {
+        return this.stickySessionConfig;
+    }
+
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
+        // 健康检查正常的状态码
+        @NameInMap("HealthCheckCodes")
+        public java.util.List<String> healthCheckCodes;
+
         // 健康检查端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
@@ -105,10 +109,6 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         // 健康检查域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
-
-        // 健康检查正常的状态码
-        @NameInMap("HealthCheckCodes")
-        public java.util.List<String> healthCheckCodes;
 
         // 健康检查HTTP协议版本
         @NameInMap("HealthCheckHttpVersion")
@@ -147,6 +147,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+            this.healthCheckCodes = healthCheckCodes;
+            return this;
+        }
+        public java.util.List<String> getHealthCheckCodes() {
+            return this.healthCheckCodes;
+        }
+
         public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
             return this;
@@ -169,14 +177,6 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         }
         public String getHealthCheckHost() {
             return this.healthCheckHost;
-        }
-
-        public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-            this.healthCheckCodes = healthCheckCodes;
-            return this;
-        }
-        public java.util.List<String> getHealthCheckCodes() {
-            return this.healthCheckCodes;
         }
 
         public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckHttpVersion(String healthCheckHttpVersion) {

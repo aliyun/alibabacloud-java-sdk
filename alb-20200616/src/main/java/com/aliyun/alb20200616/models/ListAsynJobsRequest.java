@@ -4,18 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAsynJobsRequest extends TeaModel {
-    // 任务ID列表
-    @NameInMap("JobIds")
-    public java.util.List<String> jobIds;
-
-    // 资源类型类型
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    // 资源实例ID列表
-    @NameInMap("ResourceIds")
-    public java.util.List<String> resourceIds;
-
     // 操作接口名
     @NameInMap("ApiName")
     public String apiName;
@@ -28,41 +16,29 @@ public class ListAsynJobsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    // 下一个查询开始Token
-    @NameInMap("NextToken")
-    public String nextToken;
+    // 任务ID列表
+    @NameInMap("JobIds")
+    public java.util.List<String> jobIds;
 
     // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    // 下一个查询开始Token
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    // 资源实例ID列表
+    @NameInMap("ResourceIds")
+    public java.util.List<String> resourceIds;
+
+    // 资源类型类型
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static ListAsynJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAsynJobsRequest self = new ListAsynJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAsynJobsRequest setJobIds(java.util.List<String> jobIds) {
-        this.jobIds = jobIds;
-        return this;
-    }
-    public java.util.List<String> getJobIds() {
-        return this.jobIds;
-    }
-
-    public ListAsynJobsRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public ListAsynJobsRequest setResourceIds(java.util.List<String> resourceIds) {
-        this.resourceIds = resourceIds;
-        return this;
-    }
-    public java.util.List<String> getResourceIds() {
-        return this.resourceIds;
     }
 
     public ListAsynJobsRequest setApiName(String apiName) {
@@ -89,12 +65,12 @@ public class ListAsynJobsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListAsynJobsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListAsynJobsRequest setJobIds(java.util.List<String> jobIds) {
+        this.jobIds = jobIds;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public java.util.List<String> getJobIds() {
+        return this.jobIds;
     }
 
     public ListAsynJobsRequest setMaxResults(Long maxResults) {
@@ -103,6 +79,30 @@ public class ListAsynJobsRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListAsynJobsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListAsynJobsRequest setResourceIds(java.util.List<String> resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
+    }
+
+    public ListAsynJobsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

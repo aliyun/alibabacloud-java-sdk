@@ -12,13 +12,13 @@ public class UpdateLoadBalancerEditionRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 实例Id
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
     // 实例版本
     @NameInMap("LoadBalancerEdition")
     public String loadBalancerEdition;
+
+    // 实例Id
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     public static UpdateLoadBalancerEditionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLoadBalancerEditionRequest self = new UpdateLoadBalancerEditionRequest();
@@ -41,20 +41,20 @@ public class UpdateLoadBalancerEditionRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpdateLoadBalancerEditionRequest setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
-    }
-
     public UpdateLoadBalancerEditionRequest setLoadBalancerEdition(String loadBalancerEdition) {
         this.loadBalancerEdition = loadBalancerEdition;
         return this;
     }
     public String getLoadBalancerEdition() {
         return this.loadBalancerEdition;
+    }
+
+    public UpdateLoadBalancerEditionRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
 }
