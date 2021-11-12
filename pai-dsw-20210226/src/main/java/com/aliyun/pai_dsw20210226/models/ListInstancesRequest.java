@@ -4,6 +4,10 @@ package com.aliyun.pai_dsw20210226.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    // 是否在工作空间内查询
+    @NameInMap("InWorkspace")
+    public Boolean inWorkspace;
+
     // 实例名称关键字
     @NameInMap("InstanceNameContains")
     public String instanceNameContains;
@@ -20,17 +24,29 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    // 升序降序
-    @NameInMap("SortOrder")
-    public String sortOrder;
-
     // 排序字段
     @NameInMap("SortBy")
     public String sortBy;
 
+    // 升序降序
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
+    // 工作空间Id
+    @NameInMap("WorkspaceIdEquals")
+    public String workspaceIdEquals;
+
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setInWorkspace(Boolean inWorkspace) {
+        this.inWorkspace = inWorkspace;
+        return this;
+    }
+    public Boolean getInWorkspace() {
+        return this.inWorkspace;
     }
 
     public ListInstancesRequest setInstanceNameContains(String instanceNameContains) {
@@ -65,6 +81,14 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListInstancesRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
     public ListInstancesRequest setSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -73,12 +97,12 @@ public class ListInstancesRequest extends TeaModel {
         return this.sortOrder;
     }
 
-    public ListInstancesRequest setSortBy(String sortBy) {
-        this.sortBy = sortBy;
+    public ListInstancesRequest setWorkspaceIdEquals(String workspaceIdEquals) {
+        this.workspaceIdEquals = workspaceIdEquals;
         return this;
     }
-    public String getSortBy() {
-        return this.sortBy;
+    public String getWorkspaceIdEquals() {
+        return this.workspaceIdEquals;
     }
 
 }

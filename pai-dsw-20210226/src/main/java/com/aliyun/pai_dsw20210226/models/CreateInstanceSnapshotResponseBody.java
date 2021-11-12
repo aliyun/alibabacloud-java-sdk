@@ -4,10 +4,6 @@ package com.aliyun.pai_dsw20210226.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceSnapshotResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
@@ -16,17 +12,13 @@ public class CreateInstanceSnapshotResponseBody extends TeaModel {
     @NameInMap("InstanceSnapshotId")
     public String instanceSnapshotId;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateInstanceSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceSnapshotResponseBody self = new CreateInstanceSnapshotResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceSnapshotResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateInstanceSnapshotResponseBody setInstanceId(String instanceId) {
@@ -43,6 +35,14 @@ public class CreateInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getInstanceSnapshotId() {
         return this.instanceSnapshotId;
+    }
+
+    public CreateInstanceSnapshotResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -8,13 +8,13 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("AcceleratorTypeEquals")
     public String acceleratorTypeEquals;
 
-    // 镜像类型
-    @NameInMap("ImageTypeEquals")
-    public String imageTypeEquals;
-
     // 容器名称关键字
     @NameInMap("ImageNameContains")
     public String imageNameContains;
+
+    // 镜像类型
+    @NameInMap("ImageTypeEquals")
+    public String imageTypeEquals;
 
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
@@ -29,20 +29,20 @@ public class ListImagesRequest extends TeaModel {
         return this.acceleratorTypeEquals;
     }
 
-    public ListImagesRequest setImageTypeEquals(String imageTypeEquals) {
-        this.imageTypeEquals = imageTypeEquals;
-        return this;
-    }
-    public String getImageTypeEquals() {
-        return this.imageTypeEquals;
-    }
-
     public ListImagesRequest setImageNameContains(String imageNameContains) {
         this.imageNameContains = imageNameContains;
         return this;
     }
     public String getImageNameContains() {
         return this.imageNameContains;
+    }
+
+    public ListImagesRequest setImageTypeEquals(String imageTypeEquals) {
+        this.imageTypeEquals = imageTypeEquals;
+        return this;
+    }
+    public String getImageTypeEquals() {
+        return this.imageTypeEquals;
     }
 
 }

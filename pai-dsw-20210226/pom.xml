@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pai_dsw20210226</artifactId>
-  <version>0.0.8</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
   <name>pai_dsw20210226</name>
   <description>Alibaba Cloud pai-dsw (20210226) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
