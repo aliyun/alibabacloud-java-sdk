@@ -8,9 +8,13 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 名称
-    @NameInMap("HealthCheckTemplateName")
-    public String healthCheckTemplateName;
+    // dryRun
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    // 状态码
+    @NameInMap("HealthCheckCodes")
+    public java.util.List<String> healthCheckCodes;
 
     // 端口号
     @NameInMap("HealthCheckConnectPort")
@@ -20,33 +24,33 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     @NameInMap("HealthCheckHost")
     public String healthCheckHost;
 
-    // 状态码
-    @NameInMap("HealthCheckCodes")
-    public java.util.List<String> healthCheckCodes;
+    // 版本
+    @NameInMap("HealthCheckHttpVersion")
+    public String healthCheckHttpVersion;
 
     // 时间间隔
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
-    // 超时时间
-    @NameInMap("HealthCheckTimeout")
-    public Integer healthCheckTimeout;
+    // 方法
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
 
     // uri
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
 
-    // 方法
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
     // 协议
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
-    // 版本
-    @NameInMap("HealthCheckHttpVersion")
-    public String healthCheckHttpVersion;
+    // 名称
+    @NameInMap("HealthCheckTemplateName")
+    public String healthCheckTemplateName;
+
+    // 超时时间
+    @NameInMap("HealthCheckTimeout")
+    public Integer healthCheckTimeout;
 
     // 健康阈值
     @NameInMap("HealthyThreshold")
@@ -55,10 +59,6 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     // 不健康阈值
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
-
-    // dryRun
-    @NameInMap("DryRun")
-    public Boolean dryRun;
 
     public static CreateHealthCheckTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHealthCheckTemplateRequest self = new CreateHealthCheckTemplateRequest();
@@ -73,12 +73,20 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateHealthCheckTemplateRequest setHealthCheckTemplateName(String healthCheckTemplateName) {
-        this.healthCheckTemplateName = healthCheckTemplateName;
+    public CreateHealthCheckTemplateRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
-    public String getHealthCheckTemplateName() {
-        return this.healthCheckTemplateName;
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateHealthCheckTemplateRequest setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+        this.healthCheckCodes = healthCheckCodes;
+        return this;
+    }
+    public java.util.List<String> getHealthCheckCodes() {
+        return this.healthCheckCodes;
     }
 
     public CreateHealthCheckTemplateRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
@@ -97,12 +105,12 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
         return this.healthCheckHost;
     }
 
-    public CreateHealthCheckTemplateRequest setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-        this.healthCheckCodes = healthCheckCodes;
+    public CreateHealthCheckTemplateRequest setHealthCheckHttpVersion(String healthCheckHttpVersion) {
+        this.healthCheckHttpVersion = healthCheckHttpVersion;
         return this;
     }
-    public java.util.List<String> getHealthCheckCodes() {
-        return this.healthCheckCodes;
+    public String getHealthCheckHttpVersion() {
+        return this.healthCheckHttpVersion;
     }
 
     public CreateHealthCheckTemplateRequest setHealthCheckInterval(Integer healthCheckInterval) {
@@ -113,12 +121,12 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
         return this.healthCheckInterval;
     }
 
-    public CreateHealthCheckTemplateRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
-        this.healthCheckTimeout = healthCheckTimeout;
+    public CreateHealthCheckTemplateRequest setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
         return this;
     }
-    public Integer getHealthCheckTimeout() {
-        return this.healthCheckTimeout;
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
     }
 
     public CreateHealthCheckTemplateRequest setHealthCheckPath(String healthCheckPath) {
@@ -129,14 +137,6 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
         return this.healthCheckPath;
     }
 
-    public CreateHealthCheckTemplateRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
-    }
-
     public CreateHealthCheckTemplateRequest setHealthCheckProtocol(String healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -145,12 +145,20 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
         return this.healthCheckProtocol;
     }
 
-    public CreateHealthCheckTemplateRequest setHealthCheckHttpVersion(String healthCheckHttpVersion) {
-        this.healthCheckHttpVersion = healthCheckHttpVersion;
+    public CreateHealthCheckTemplateRequest setHealthCheckTemplateName(String healthCheckTemplateName) {
+        this.healthCheckTemplateName = healthCheckTemplateName;
         return this;
     }
-    public String getHealthCheckHttpVersion() {
-        return this.healthCheckHttpVersion;
+    public String getHealthCheckTemplateName() {
+        return this.healthCheckTemplateName;
+    }
+
+    public CreateHealthCheckTemplateRequest setHealthCheckTimeout(Integer healthCheckTimeout) {
+        this.healthCheckTimeout = healthCheckTimeout;
+        return this;
+    }
+    public Integer getHealthCheckTimeout() {
+        return this.healthCheckTimeout;
     }
 
     public CreateHealthCheckTemplateRequest setHealthyThreshold(Integer healthyThreshold) {
@@ -167,14 +175,6 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     }
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
-    }
-
-    public CreateHealthCheckTemplateRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
 }

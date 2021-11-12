@@ -4,10 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
-    // 监听标识
-    @NameInMap("ListenerId")
-    public String listenerId;
-
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -15,6 +11,10 @@ public class CreateRuleRequest extends TeaModel {
     //  是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    // 监听标识
+    @NameInMap("ListenerId")
+    public String listenerId;
 
     // 转发规则优先级
     @NameInMap("Priority")
@@ -37,14 +37,6 @@ public class CreateRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateRuleRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
-    }
-
     public CreateRuleRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -59,6 +51,14 @@ public class CreateRuleRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateRuleRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
     }
 
     public CreateRuleRequest setPriority(Integer priority) {

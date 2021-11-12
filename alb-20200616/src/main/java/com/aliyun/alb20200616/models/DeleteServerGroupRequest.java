@@ -8,13 +8,13 @@ public class DeleteServerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    // 服务器组id
-    @NameInMap("ServerGroupId")
-    public String serverGroupId;
-
     // 是否DryRun
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    // 服务器组id
+    @NameInMap("ServerGroupId")
+    public String serverGroupId;
 
     public static DeleteServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServerGroupRequest self = new DeleteServerGroupRequest();
@@ -29,20 +29,20 @@ public class DeleteServerGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeleteServerGroupRequest setServerGroupId(String serverGroupId) {
-        this.serverGroupId = serverGroupId;
-        return this;
-    }
-    public String getServerGroupId() {
-        return this.serverGroupId;
-    }
-
     public DeleteServerGroupRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteServerGroupRequest setServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    public String getServerGroupId() {
+        return this.serverGroupId;
     }
 
 }

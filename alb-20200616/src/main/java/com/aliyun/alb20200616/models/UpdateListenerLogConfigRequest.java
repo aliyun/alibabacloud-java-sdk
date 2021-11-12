@@ -4,9 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateListenerLogConfigRequest extends TeaModel {
-    // 监听标识
-    @NameInMap("ListenerId")
-    public String listenerId;
+    // 是否开启携带自定义Header
+    @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
+    public Boolean accessLogRecordCustomizedHeadersEnabled;
+
+    // 访问日志xtrace字段相关的配置
+    @NameInMap("AccessLogTracingConfig")
+    public UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig;
 
     // 幂等标识
     @NameInMap("ClientToken")
@@ -16,25 +20,29 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 是否开启携带自定义Header
-    @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
-    public Boolean accessLogRecordCustomizedHeadersEnabled;
-
-    // 访问日志xtrace字段相关的配置
-    @NameInMap("AccessLogTracingConfig")
-    public UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig;
+    // 监听标识
+    @NameInMap("ListenerId")
+    public String listenerId;
 
     public static UpdateListenerLogConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateListenerLogConfigRequest self = new UpdateListenerLogConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateListenerLogConfigRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
+    public UpdateListenerLogConfigRequest setAccessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
+        this.accessLogRecordCustomizedHeadersEnabled = accessLogRecordCustomizedHeadersEnabled;
         return this;
     }
-    public String getListenerId() {
-        return this.listenerId;
+    public Boolean getAccessLogRecordCustomizedHeadersEnabled() {
+        return this.accessLogRecordCustomizedHeadersEnabled;
+    }
+
+    public UpdateListenerLogConfigRequest setAccessLogTracingConfig(UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig) {
+        this.accessLogTracingConfig = accessLogTracingConfig;
+        return this;
+    }
+    public UpdateListenerLogConfigRequestAccessLogTracingConfig getAccessLogTracingConfig() {
+        return this.accessLogTracingConfig;
     }
 
     public UpdateListenerLogConfigRequest setClientToken(String clientToken) {
@@ -53,20 +61,12 @@ public class UpdateListenerLogConfigRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpdateListenerLogConfigRequest setAccessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
-        this.accessLogRecordCustomizedHeadersEnabled = accessLogRecordCustomizedHeadersEnabled;
+    public UpdateListenerLogConfigRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
         return this;
     }
-    public Boolean getAccessLogRecordCustomizedHeadersEnabled() {
-        return this.accessLogRecordCustomizedHeadersEnabled;
-    }
-
-    public UpdateListenerLogConfigRequest setAccessLogTracingConfig(UpdateListenerLogConfigRequestAccessLogTracingConfig accessLogTracingConfig) {
-        this.accessLogTracingConfig = accessLogTracingConfig;
-        return this;
-    }
-    public UpdateListenerLogConfigRequestAccessLogTracingConfig getAccessLogTracingConfig() {
-        return this.accessLogTracingConfig;
+    public String getListenerId() {
+        return this.listenerId;
     }
 
     public static class UpdateListenerLogConfigRequestAccessLogTracingConfig extends TeaModel {

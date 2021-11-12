@@ -3,8 +3,8 @@ package com.aliyun.alb20200616.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateRulesAttributeResponseBody extends TeaModel {
-    // 异步任务Id
+public class AttachCommonBandwidthPackageToLoadBalancerResponseBody extends TeaModel {
+    // 异步任务id
     @NameInMap("JobId")
     public String jobId;
 
@@ -12,12 +12,12 @@ public class UpdateRulesAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdateRulesAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateRulesAttributeResponseBody self = new UpdateRulesAttributeResponseBody();
+    public static AttachCommonBandwidthPackageToLoadBalancerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AttachCommonBandwidthPackageToLoadBalancerResponseBody self = new AttachCommonBandwidthPackageToLoadBalancerResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRulesAttributeResponseBody setJobId(String jobId) {
+    public AttachCommonBandwidthPackageToLoadBalancerResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -25,7 +25,7 @@ public class UpdateRulesAttributeResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public UpdateRulesAttributeResponseBody setRequestId(String requestId) {
+    public AttachCommonBandwidthPackageToLoadBalancerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

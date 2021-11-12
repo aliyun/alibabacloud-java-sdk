@@ -4,14 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class RemoveServersFromServerGroupRequest extends TeaModel {
-    // 后端服务器Id
-    @NameInMap("ServerGroupId")
-    public String serverGroupId;
-
-    // 后端服务器
-    @NameInMap("Servers")
-    public java.util.List<RemoveServersFromServerGroupRequestServers> servers;
-
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,25 +12,17 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 后端服务器Id
+    @NameInMap("ServerGroupId")
+    public String serverGroupId;
+
+    // 后端服务器
+    @NameInMap("Servers")
+    public java.util.List<RemoveServersFromServerGroupRequestServers> servers;
+
     public static RemoveServersFromServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveServersFromServerGroupRequest self = new RemoveServersFromServerGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveServersFromServerGroupRequest setServerGroupId(String serverGroupId) {
-        this.serverGroupId = serverGroupId;
-        return this;
-    }
-    public String getServerGroupId() {
-        return this.serverGroupId;
-    }
-
-    public RemoveServersFromServerGroupRequest setServers(java.util.List<RemoveServersFromServerGroupRequestServers> servers) {
-        this.servers = servers;
-        return this;
-    }
-    public java.util.List<RemoveServersFromServerGroupRequestServers> getServers() {
-        return this.servers;
     }
 
     public RemoveServersFromServerGroupRequest setClientToken(String clientToken) {
@@ -55,6 +39,22 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public RemoveServersFromServerGroupRequest setServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    public String getServerGroupId() {
+        return this.serverGroupId;
+    }
+
+    public RemoveServersFromServerGroupRequest setServers(java.util.List<RemoveServersFromServerGroupRequestServers> servers) {
+        this.servers = servers;
+        return this;
+    }
+    public java.util.List<RemoveServersFromServerGroupRequestServers> getServers() {
+        return this.servers;
     }
 
     public static class RemoveServersFromServerGroupRequestServers extends TeaModel {

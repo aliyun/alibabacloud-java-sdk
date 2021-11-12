@@ -4,17 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ReplaceServersInServerGroupRequest extends TeaModel {
-    // 后端服务器Id
-    @NameInMap("ServerGroupId")
-    public String serverGroupId;
-
     // 待添加后端服务器
     @NameInMap("AddedServers")
     public java.util.List<ReplaceServersInServerGroupRequestAddedServers> addedServers;
-
-    // 待删除后端服务器
-    @NameInMap("RemovedServers")
-    public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers;
 
     // 幂等Token
     @NameInMap("ClientToken")
@@ -24,17 +16,17 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 待删除后端服务器
+    @NameInMap("RemovedServers")
+    public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers;
+
+    // 后端服务器Id
+    @NameInMap("ServerGroupId")
+    public String serverGroupId;
+
     public static ReplaceServersInServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplaceServersInServerGroupRequest self = new ReplaceServersInServerGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReplaceServersInServerGroupRequest setServerGroupId(String serverGroupId) {
-        this.serverGroupId = serverGroupId;
-        return this;
-    }
-    public String getServerGroupId() {
-        return this.serverGroupId;
     }
 
     public ReplaceServersInServerGroupRequest setAddedServers(java.util.List<ReplaceServersInServerGroupRequestAddedServers> addedServers) {
@@ -43,14 +35,6 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     }
     public java.util.List<ReplaceServersInServerGroupRequestAddedServers> getAddedServers() {
         return this.addedServers;
-    }
-
-    public ReplaceServersInServerGroupRequest setRemovedServers(java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers) {
-        this.removedServers = removedServers;
-        return this;
-    }
-    public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> getRemovedServers() {
-        return this.removedServers;
     }
 
     public ReplaceServersInServerGroupRequest setClientToken(String clientToken) {
@@ -67,6 +51,22 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ReplaceServersInServerGroupRequest setRemovedServers(java.util.List<ReplaceServersInServerGroupRequestRemovedServers> removedServers) {
+        this.removedServers = removedServers;
+        return this;
+    }
+    public java.util.List<ReplaceServersInServerGroupRequestRemovedServers> getRemovedServers() {
+        return this.removedServers;
+    }
+
+    public ReplaceServersInServerGroupRequest setServerGroupId(String serverGroupId) {
+        this.serverGroupId = serverGroupId;
+        return this;
+    }
+    public String getServerGroupId() {
+        return this.serverGroupId;
     }
 
     public static class ReplaceServersInServerGroupRequestAddedServers extends TeaModel {
@@ -150,6 +150,10 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
     }
 
     public static class ReplaceServersInServerGroupRequestRemovedServers extends TeaModel {
+        // 端口
+        @NameInMap("Port")
+        public Integer port;
+
         // 后端服务器id
         @NameInMap("ServerId")
         public String serverId;
@@ -162,13 +166,17 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         @NameInMap("ServerType")
         public String serverType;
 
-        // 端口
-        @NameInMap("Port")
-        public Integer port;
-
         public static ReplaceServersInServerGroupRequestRemovedServers build(java.util.Map<String, ?> map) throws Exception {
             ReplaceServersInServerGroupRequestRemovedServers self = new ReplaceServersInServerGroupRequestRemovedServers();
             return TeaModel.build(map, self);
+        }
+
+        public ReplaceServersInServerGroupRequestRemovedServers setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
         public ReplaceServersInServerGroupRequestRemovedServers setServerId(String serverId) {
@@ -193,14 +201,6 @@ public class ReplaceServersInServerGroupRequest extends TeaModel {
         }
         public String getServerType() {
             return this.serverType;
-        }
-
-        public ReplaceServersInServerGroupRequestRemovedServers setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
     }

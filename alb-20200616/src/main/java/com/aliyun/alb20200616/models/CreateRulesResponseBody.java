@@ -46,25 +46,17 @@ public class CreateRulesResponseBody extends TeaModel {
     }
 
     public static class CreateRulesResponseBodyRuleIds extends TeaModel {
-        // 转发规则标识
-        @NameInMap("RuleId")
-        public String ruleId;
-
         // 转发规则优先级
         @NameInMap("Priority")
         public Integer priority;
 
+        // 转发规则标识
+        @NameInMap("RuleId")
+        public String ruleId;
+
         public static CreateRulesResponseBodyRuleIds build(java.util.Map<String, ?> map) throws Exception {
             CreateRulesResponseBodyRuleIds self = new CreateRulesResponseBodyRuleIds();
             return TeaModel.build(map, self);
-        }
-
-        public CreateRulesResponseBodyRuleIds setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
         }
 
         public CreateRulesResponseBodyRuleIds setPriority(Integer priority) {
@@ -73,6 +65,14 @@ public class CreateRulesResponseBody extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public CreateRulesResponseBodyRuleIds setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
     }

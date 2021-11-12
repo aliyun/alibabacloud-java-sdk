@@ -4,21 +4,17 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateServerGroupRequest extends TeaModel {
-    // 服务器组名称
-    @NameInMap("ServerGroupName")
-    public String serverGroupName;
+    // 幂等标识
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    // 服务器组类型
-    @NameInMap("ServerGroupType")
-    public String serverGroupType;
+    //  是否只预检此次请求
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
-    // VpcId
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    // 调度策略
-    @NameInMap("Scheduler")
-    public String scheduler;
+    // 健康检查配置
+    @NameInMap("HealthCheckConfig")
+    public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
     // 后端协议类型
     @NameInMap("Protocol")
@@ -28,89 +24,29 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    // 健康检查配置
-    @NameInMap("HealthCheckConfig")
-    public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
+    // 调度策略
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    // 服务器组名称
+    @NameInMap("ServerGroupName")
+    public String serverGroupName;
+
+    // 服务器组类型
+    @NameInMap("ServerGroupType")
+    public String serverGroupType;
 
     // 会话保持配置
     @NameInMap("StickySessionConfig")
     public CreateServerGroupRequestStickySessionConfig stickySessionConfig;
 
-    // 幂等标识
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    //  是否只预检此次请求
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    // VpcId
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateServerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServerGroupRequest self = new CreateServerGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServerGroupRequest setServerGroupName(String serverGroupName) {
-        this.serverGroupName = serverGroupName;
-        return this;
-    }
-    public String getServerGroupName() {
-        return this.serverGroupName;
-    }
-
-    public CreateServerGroupRequest setServerGroupType(String serverGroupType) {
-        this.serverGroupType = serverGroupType;
-        return this;
-    }
-    public String getServerGroupType() {
-        return this.serverGroupType;
-    }
-
-    public CreateServerGroupRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateServerGroupRequest setScheduler(String scheduler) {
-        this.scheduler = scheduler;
-        return this;
-    }
-    public String getScheduler() {
-        return this.scheduler;
-    }
-
-    public CreateServerGroupRequest setProtocol(String protocol) {
-        this.protocol = protocol;
-        return this;
-    }
-    public String getProtocol() {
-        return this.protocol;
-    }
-
-    public CreateServerGroupRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CreateServerGroupRequest setHealthCheckConfig(CreateServerGroupRequestHealthCheckConfig healthCheckConfig) {
-        this.healthCheckConfig = healthCheckConfig;
-        return this;
-    }
-    public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
-        return this.healthCheckConfig;
-    }
-
-    public CreateServerGroupRequest setStickySessionConfig(CreateServerGroupRequestStickySessionConfig stickySessionConfig) {
-        this.stickySessionConfig = stickySessionConfig;
-        return this;
-    }
-    public CreateServerGroupRequestStickySessionConfig getStickySessionConfig() {
-        return this.stickySessionConfig;
     }
 
     public CreateServerGroupRequest setClientToken(String clientToken) {
@@ -129,7 +65,75 @@ public class CreateServerGroupRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public CreateServerGroupRequest setHealthCheckConfig(CreateServerGroupRequestHealthCheckConfig healthCheckConfig) {
+        this.healthCheckConfig = healthCheckConfig;
+        return this;
+    }
+    public CreateServerGroupRequestHealthCheckConfig getHealthCheckConfig() {
+        return this.healthCheckConfig;
+    }
+
+    public CreateServerGroupRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
+    }
+
+    public CreateServerGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateServerGroupRequest setScheduler(String scheduler) {
+        this.scheduler = scheduler;
+        return this;
+    }
+    public String getScheduler() {
+        return this.scheduler;
+    }
+
+    public CreateServerGroupRequest setServerGroupName(String serverGroupName) {
+        this.serverGroupName = serverGroupName;
+        return this;
+    }
+    public String getServerGroupName() {
+        return this.serverGroupName;
+    }
+
+    public CreateServerGroupRequest setServerGroupType(String serverGroupType) {
+        this.serverGroupType = serverGroupType;
+        return this;
+    }
+    public String getServerGroupType() {
+        return this.serverGroupType;
+    }
+
+    public CreateServerGroupRequest setStickySessionConfig(CreateServerGroupRequestStickySessionConfig stickySessionConfig) {
+        this.stickySessionConfig = stickySessionConfig;
+        return this;
+    }
+    public CreateServerGroupRequestStickySessionConfig getStickySessionConfig() {
+        return this.stickySessionConfig;
+    }
+
+    public CreateServerGroupRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
+        // 健康检查正常的状态码
+        @NameInMap("HealthCheckCodes")
+        public java.util.List<String> healthCheckCodes;
+
         // 健康检查端口
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
@@ -141,10 +145,6 @@ public class CreateServerGroupRequest extends TeaModel {
         // 健康检查域名
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
-
-        // 健康检查正常的状态码
-        @NameInMap("HealthCheckCodes")
-        public java.util.List<String> healthCheckCodes;
 
         // 健康检查HTTP协议版本
         @NameInMap("HealthCheckHttpVersion")
@@ -183,6 +183,14 @@ public class CreateServerGroupRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateServerGroupRequestHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+            this.healthCheckCodes = healthCheckCodes;
+            return this;
+        }
+        public java.util.List<String> getHealthCheckCodes() {
+            return this.healthCheckCodes;
+        }
+
         public CreateServerGroupRequestHealthCheckConfig setHealthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
             return this;
@@ -205,14 +213,6 @@ public class CreateServerGroupRequest extends TeaModel {
         }
         public String getHealthCheckHost() {
             return this.healthCheckHost;
-        }
-
-        public CreateServerGroupRequestHealthCheckConfig setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-            this.healthCheckCodes = healthCheckCodes;
-            return this;
-        }
-        public java.util.List<String> getHealthCheckCodes() {
-            return this.healthCheckCodes;
         }
 
         public CreateServerGroupRequestHealthCheckConfig setHealthCheckHttpVersion(String healthCheckHttpVersion) {

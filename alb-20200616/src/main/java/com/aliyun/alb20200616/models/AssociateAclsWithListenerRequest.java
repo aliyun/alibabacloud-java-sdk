@@ -8,21 +8,21 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
-    // 监听Id
-    @NameInMap("ListenerId")
-    public String listenerId;
-
     // 绑定类型
     @NameInMap("AclType")
     public String aclType;
+
+    // 幂等标识
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     // 预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    // 幂等标识
-    @NameInMap("ClientToken")
-    public String clientToken;
+    // 监听Id
+    @NameInMap("ListenerId")
+    public String listenerId;
 
     public static AssociateAclsWithListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateAclsWithListenerRequest self = new AssociateAclsWithListenerRequest();
@@ -37,20 +37,20 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
         return this.aclIds;
     }
 
-    public AssociateAclsWithListenerRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
-    }
-
     public AssociateAclsWithListenerRequest setAclType(String aclType) {
         this.aclType = aclType;
         return this;
     }
     public String getAclType() {
         return this.aclType;
+    }
+
+    public AssociateAclsWithListenerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AssociateAclsWithListenerRequest setDryRun(Boolean dryRun) {
@@ -61,12 +61,12 @@ public class AssociateAclsWithListenerRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public AssociateAclsWithListenerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public AssociateAclsWithListenerRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getListenerId() {
+        return this.listenerId;
     }
 
 }

@@ -8,13 +8,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("AclConfig")
     public GetListenerAttributeResponseBodyAclConfig aclConfig;
 
-    // 监听默认服务器证书列表，N当前取值范围为1
-    @NameInMap("Certificates")
-    public java.util.List<GetListenerAttributeResponseBodyCertificates> certificates;
-
     // 是否开启双向认证
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
+
+    // 监听默认服务器证书列表，N当前取值范围为1
+    @NameInMap("Certificates")
+    public java.util.List<GetListenerAttributeResponseBodyCertificates> certificates;
 
     // 默认动作
     @NameInMap("DefaultActions")
@@ -93,20 +93,20 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.aclConfig;
     }
 
-    public GetListenerAttributeResponseBody setCertificates(java.util.List<GetListenerAttributeResponseBodyCertificates> certificates) {
-        this.certificates = certificates;
-        return this;
-    }
-    public java.util.List<GetListenerAttributeResponseBodyCertificates> getCertificates() {
-        return this.certificates;
-    }
-
     public GetListenerAttributeResponseBody setCaEnabled(Boolean caEnabled) {
         this.caEnabled = caEnabled;
         return this;
     }
     public Boolean getCaEnabled() {
         return this.caEnabled;
+    }
+
+    public GetListenerAttributeResponseBody setCertificates(java.util.List<GetListenerAttributeResponseBodyCertificates> certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    public java.util.List<GetListenerAttributeResponseBodyCertificates> getCertificates() {
+        return this.certificates;
     }
 
     public GetListenerAttributeResponseBody setDefaultActions(java.util.List<GetListenerAttributeResponseBodyDefaultActions> defaultActions) {

@@ -4,10 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesRequest extends TeaModel {
-    // 监听标识
-    @NameInMap("ListenerId")
-    public String listenerId;
-
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,6 +12,10 @@ public class CreateRulesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 监听标识
+    @NameInMap("ListenerId")
+    public String listenerId;
+
     // 转发规则列表
     @NameInMap("Rules")
     public java.util.List<CreateRulesRequestRules> rules;
@@ -23,14 +23,6 @@ public class CreateRulesRequest extends TeaModel {
     public static CreateRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRulesRequest self = new CreateRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRulesRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
     }
 
     public CreateRulesRequest setClientToken(String clientToken) {
@@ -47,6 +39,14 @@ public class CreateRulesRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateRulesRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
     }
 
     public CreateRulesRequest setRules(java.util.List<CreateRulesRequestRules> rules) {
@@ -734,6 +734,10 @@ public class CreateRulesRequest extends TeaModel {
     }
 
     public static class CreateRulesRequestRules extends TeaModel {
+        // 转发规则方向
+        @NameInMap("Direction")
+        public String direction;
+
         // 转发规则优先级
         @NameInMap("Priority")
         public Integer priority;
@@ -753,6 +757,14 @@ public class CreateRulesRequest extends TeaModel {
         public static CreateRulesRequestRules build(java.util.Map<String, ?> map) throws Exception {
             CreateRulesRequestRules self = new CreateRulesRequestRules();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRulesRequestRules setDirection(String direction) {
+            this.direction = direction;
+            return this;
+        }
+        public String getDirection() {
+            return this.direction;
         }
 
         public CreateRulesRequestRules setPriority(Integer priority) {

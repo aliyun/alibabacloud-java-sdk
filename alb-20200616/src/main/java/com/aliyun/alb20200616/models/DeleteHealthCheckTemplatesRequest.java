@@ -4,10 +4,6 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DeleteHealthCheckTemplatesRequest extends TeaModel {
-    // 健康检查模板Id列表
-    @NameInMap("HealthCheckTemplateIds")
-    public java.util.List<String> healthCheckTemplateIds;
-
     // 幂等token
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,17 +12,13 @@ public class DeleteHealthCheckTemplatesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    // 健康检查模板Id列表
+    @NameInMap("HealthCheckTemplateIds")
+    public java.util.List<String> healthCheckTemplateIds;
+
     public static DeleteHealthCheckTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHealthCheckTemplatesRequest self = new DeleteHealthCheckTemplatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteHealthCheckTemplatesRequest setHealthCheckTemplateIds(java.util.List<String> healthCheckTemplateIds) {
-        this.healthCheckTemplateIds = healthCheckTemplateIds;
-        return this;
-    }
-    public java.util.List<String> getHealthCheckTemplateIds() {
-        return this.healthCheckTemplateIds;
     }
 
     public DeleteHealthCheckTemplatesRequest setClientToken(String clientToken) {
@@ -43,6 +35,14 @@ public class DeleteHealthCheckTemplatesRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteHealthCheckTemplatesRequest setHealthCheckTemplateIds(java.util.List<String> healthCheckTemplateIds) {
+        this.healthCheckTemplateIds = healthCheckTemplateIds;
+        return this;
+    }
+    public java.util.List<String> getHealthCheckTemplateIds() {
+        return this.healthCheckTemplateIds;
     }
 
 }

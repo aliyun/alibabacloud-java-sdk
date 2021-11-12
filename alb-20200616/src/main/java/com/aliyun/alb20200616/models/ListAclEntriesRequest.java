@@ -4,29 +4,29 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclEntriesRequest extends TeaModel {
-    // 分页查询标识
-    @NameInMap("NextToken")
-    public String nextToken;
+    // 访问控制策略Id
+    @NameInMap("AclId")
+    public String aclId;
 
     // 查询数量
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 访问控制策略Id
-    @NameInMap("AclId")
-    public String aclId;
+    // 分页查询标识
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListAclEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAclEntriesRequest self = new ListAclEntriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAclEntriesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListAclEntriesRequest setAclId(String aclId) {
+        this.aclId = aclId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getAclId() {
+        return this.aclId;
     }
 
     public ListAclEntriesRequest setMaxResults(Integer maxResults) {
@@ -37,12 +37,12 @@ public class ListAclEntriesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListAclEntriesRequest setAclId(String aclId) {
-        this.aclId = aclId;
+    public ListAclEntriesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getAclId() {
-        return this.aclId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

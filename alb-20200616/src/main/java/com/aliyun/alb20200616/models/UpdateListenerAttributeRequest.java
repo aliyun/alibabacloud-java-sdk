@@ -4,29 +4,29 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class UpdateListenerAttributeRequest extends TeaModel {
-    // 监听标识
-    @NameInMap("ListenerId")
-    public String listenerId;
+    // 监听默认CA证书列表，N当前取值范围为1
+    @NameInMap("CaCertificates")
+    public java.util.List<UpdateListenerAttributeRequestCaCertificates> caCertificates;
+
+    // 是否开启双向认证
+    @NameInMap("CaEnabled")
+    public Boolean caEnabled;
+
+    // 监听默认服务器证书列表，N当前取值范围为1
+    @NameInMap("Certificates")
+    public java.util.List<UpdateListenerAttributeRequestCertificates> certificates;
 
     // 幂等标识
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 监听默认动作
+    @NameInMap("DefaultActions")
+    public java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions;
+
     //  是否只预检此次请求
     @NameInMap("DryRun")
     public Boolean dryRun;
-
-    // 监听描述
-    @NameInMap("ListenerDescription")
-    public String listenerDescription;
-
-    // 请求超时时间
-    @NameInMap("RequestTimeout")
-    public Integer requestTimeout;
-
-    // 连接空闲超时时间
-    @NameInMap("IdleTimeout")
-    public Integer idleTimeout;
 
     // 是否开启Gzip压缩
     @NameInMap("GzipEnabled")
@@ -36,6 +36,26 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     @NameInMap("Http2Enabled")
     public Boolean http2Enabled;
 
+    // 连接空闲超时时间
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
+    // 监听描述
+    @NameInMap("ListenerDescription")
+    public String listenerDescription;
+
+    // 监听标识
+    @NameInMap("ListenerId")
+    public String listenerId;
+
+    // HTTPS启用QUIC时相关属性
+    @NameInMap("QuicConfig")
+    public UpdateListenerAttributeRequestQuicConfig quicConfig;
+
+    // 请求超时时间
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
+
     // 安全策略
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
@@ -44,29 +64,33 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedForConfig")
     public UpdateListenerAttributeRequestXForwardedForConfig XForwardedForConfig;
 
-    // HTTPS启用QUIC时相关属性
-    @NameInMap("QuicConfig")
-    public UpdateListenerAttributeRequestQuicConfig quicConfig;
-
-    // 监听默认服务器证书列表，N当前取值范围为1
-    @NameInMap("Certificates")
-    public java.util.List<UpdateListenerAttributeRequestCertificates> certificates;
-
-    // 监听默认动作
-    @NameInMap("DefaultActions")
-    public java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions;
-
     public static UpdateListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateListenerAttributeRequest self = new UpdateListenerAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateListenerAttributeRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
+    public UpdateListenerAttributeRequest setCaCertificates(java.util.List<UpdateListenerAttributeRequestCaCertificates> caCertificates) {
+        this.caCertificates = caCertificates;
         return this;
     }
-    public String getListenerId() {
-        return this.listenerId;
+    public java.util.List<UpdateListenerAttributeRequestCaCertificates> getCaCertificates() {
+        return this.caCertificates;
+    }
+
+    public UpdateListenerAttributeRequest setCaEnabled(Boolean caEnabled) {
+        this.caEnabled = caEnabled;
+        return this;
+    }
+    public Boolean getCaEnabled() {
+        return this.caEnabled;
+    }
+
+    public UpdateListenerAttributeRequest setCertificates(java.util.List<UpdateListenerAttributeRequestCertificates> certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    public java.util.List<UpdateListenerAttributeRequestCertificates> getCertificates() {
+        return this.certificates;
     }
 
     public UpdateListenerAttributeRequest setClientToken(String clientToken) {
@@ -77,36 +101,20 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateListenerAttributeRequest setDefaultActions(java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions) {
+        this.defaultActions = defaultActions;
+        return this;
+    }
+    public java.util.List<UpdateListenerAttributeRequestDefaultActions> getDefaultActions() {
+        return this.defaultActions;
+    }
+
     public UpdateListenerAttributeRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     public Boolean getDryRun() {
         return this.dryRun;
-    }
-
-    public UpdateListenerAttributeRequest setListenerDescription(String listenerDescription) {
-        this.listenerDescription = listenerDescription;
-        return this;
-    }
-    public String getListenerDescription() {
-        return this.listenerDescription;
-    }
-
-    public UpdateListenerAttributeRequest setRequestTimeout(Integer requestTimeout) {
-        this.requestTimeout = requestTimeout;
-        return this;
-    }
-    public Integer getRequestTimeout() {
-        return this.requestTimeout;
-    }
-
-    public UpdateListenerAttributeRequest setIdleTimeout(Integer idleTimeout) {
-        this.idleTimeout = idleTimeout;
-        return this;
-    }
-    public Integer getIdleTimeout() {
-        return this.idleTimeout;
     }
 
     public UpdateListenerAttributeRequest setGzipEnabled(Boolean gzipEnabled) {
@@ -125,6 +133,46 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.http2Enabled;
     }
 
+    public UpdateListenerAttributeRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    public UpdateListenerAttributeRequest setListenerDescription(String listenerDescription) {
+        this.listenerDescription = listenerDescription;
+        return this;
+    }
+    public String getListenerDescription() {
+        return this.listenerDescription;
+    }
+
+    public UpdateListenerAttributeRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
+    }
+
+    public UpdateListenerAttributeRequest setQuicConfig(UpdateListenerAttributeRequestQuicConfig quicConfig) {
+        this.quicConfig = quicConfig;
+        return this;
+    }
+    public UpdateListenerAttributeRequestQuicConfig getQuicConfig() {
+        return this.quicConfig;
+    }
+
+    public UpdateListenerAttributeRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
     public UpdateListenerAttributeRequest setSecurityPolicyId(String securityPolicyId) {
         this.securityPolicyId = securityPolicyId;
         return this;
@@ -141,28 +189,136 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.XForwardedForConfig;
     }
 
-    public UpdateListenerAttributeRequest setQuicConfig(UpdateListenerAttributeRequestQuicConfig quicConfig) {
-        this.quicConfig = quicConfig;
-        return this;
-    }
-    public UpdateListenerAttributeRequestQuicConfig getQuicConfig() {
-        return this.quicConfig;
+    public static class UpdateListenerAttributeRequestCaCertificates extends TeaModel {
+        public static UpdateListenerAttributeRequestCaCertificates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestCaCertificates self = new UpdateListenerAttributeRequestCaCertificates();
+            return TeaModel.build(map, self);
+        }
+
     }
 
-    public UpdateListenerAttributeRequest setCertificates(java.util.List<UpdateListenerAttributeRequestCertificates> certificates) {
-        this.certificates = certificates;
-        return this;
-    }
-    public java.util.List<UpdateListenerAttributeRequestCertificates> getCertificates() {
-        return this.certificates;
+    public static class UpdateListenerAttributeRequestCertificates extends TeaModel {
+        // 正式标识
+        @NameInMap("CertificateId")
+        public String certificateId;
+
+        public static UpdateListenerAttributeRequestCertificates build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestCertificates self = new UpdateListenerAttributeRequestCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestCertificates setCertificateId(String certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public String getCertificateId() {
+            return this.certificateId;
+        }
+
     }
 
-    public UpdateListenerAttributeRequest setDefaultActions(java.util.List<UpdateListenerAttributeRequestDefaultActions> defaultActions) {
-        this.defaultActions = defaultActions;
-        return this;
+    public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
+        // 服务器组ID
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
+        public static UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples self = new UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
+        }
+
     }
-    public java.util.List<UpdateListenerAttributeRequestDefaultActions> getDefaultActions() {
-        return this.defaultActions;
+
+    public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig extends TeaModel {
+        // 服务器组列表
+        @NameInMap("ServerGroupTuples")
+        public java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
+
+        public static UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig self = new UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig setServerGroupTuples(java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples) {
+            this.serverGroupTuples = serverGroupTuples;
+            return this;
+        }
+        public java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> getServerGroupTuples() {
+            return this.serverGroupTuples;
+        }
+
+    }
+
+    public static class UpdateListenerAttributeRequestDefaultActions extends TeaModel {
+        // 转发组
+        @NameInMap("ForwardGroupConfig")
+        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig forwardGroupConfig;
+
+        // 动作类型
+        @NameInMap("Type")
+        public String type;
+
+        public static UpdateListenerAttributeRequestDefaultActions build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestDefaultActions self = new UpdateListenerAttributeRequestDefaultActions();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestDefaultActions setForwardGroupConfig(UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig forwardGroupConfig) {
+            this.forwardGroupConfig = forwardGroupConfig;
+            return this;
+        }
+        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig getForwardGroupConfig() {
+            return this.forwardGroupConfig;
+        }
+
+        public UpdateListenerAttributeRequestDefaultActions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class UpdateListenerAttributeRequestQuicConfig extends TeaModel {
+        // 需要关联的QUIC监听ID，HTTPS监听时有效，QuicUpgradeEnabled为true时必选
+        @NameInMap("QuicListenerId")
+        public String quicListenerId;
+
+        // 是否开启quic升级，HTTPS监听时有效
+        @NameInMap("QuicUpgradeEnabled")
+        public Boolean quicUpgradeEnabled;
+
+        public static UpdateListenerAttributeRequestQuicConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerAttributeRequestQuicConfig self = new UpdateListenerAttributeRequestQuicConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestQuicConfig setQuicListenerId(String quicListenerId) {
+            this.quicListenerId = quicListenerId;
+            return this;
+        }
+        public String getQuicListenerId() {
+            return this.quicListenerId;
+        }
+
+        public UpdateListenerAttributeRequestQuicConfig setQuicUpgradeEnabled(Boolean quicUpgradeEnabled) {
+            this.quicUpgradeEnabled = quicUpgradeEnabled;
+            return this;
+        }
+        public Boolean getQuicUpgradeEnabled() {
+            return this.quicUpgradeEnabled;
+        }
+
     }
 
     public static class UpdateListenerAttributeRequestXForwardedForConfig extends TeaModel {
@@ -325,130 +481,6 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         }
         public Boolean getXForwardedForSLBPortEnabled() {
             return this.XForwardedForSLBPortEnabled;
-        }
-
-    }
-
-    public static class UpdateListenerAttributeRequestQuicConfig extends TeaModel {
-        // 需要关联的QUIC监听ID，HTTPS监听时有效，QuicUpgradeEnabled为true时必选
-        @NameInMap("QuicListenerId")
-        public String quicListenerId;
-
-        // 是否开启quic升级，HTTPS监听时有效
-        @NameInMap("QuicUpgradeEnabled")
-        public Boolean quicUpgradeEnabled;
-
-        public static UpdateListenerAttributeRequestQuicConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestQuicConfig self = new UpdateListenerAttributeRequestQuicConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestQuicConfig setQuicListenerId(String quicListenerId) {
-            this.quicListenerId = quicListenerId;
-            return this;
-        }
-        public String getQuicListenerId() {
-            return this.quicListenerId;
-        }
-
-        public UpdateListenerAttributeRequestQuicConfig setQuicUpgradeEnabled(Boolean quicUpgradeEnabled) {
-            this.quicUpgradeEnabled = quicUpgradeEnabled;
-            return this;
-        }
-        public Boolean getQuicUpgradeEnabled() {
-            return this.quicUpgradeEnabled;
-        }
-
-    }
-
-    public static class UpdateListenerAttributeRequestCertificates extends TeaModel {
-        // 正式标识
-        @NameInMap("CertificateId")
-        public String certificateId;
-
-        public static UpdateListenerAttributeRequestCertificates build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestCertificates self = new UpdateListenerAttributeRequestCertificates();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestCertificates setCertificateId(String certificateId) {
-            this.certificateId = certificateId;
-            return this;
-        }
-        public String getCertificateId() {
-            return this.certificateId;
-        }
-
-    }
-
-    public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
-        // 服务器组ID
-        @NameInMap("ServerGroupId")
-        public String serverGroupId;
-
-        public static UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples self = new UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples setServerGroupId(String serverGroupId) {
-            this.serverGroupId = serverGroupId;
-            return this;
-        }
-        public String getServerGroupId() {
-            return this.serverGroupId;
-        }
-
-    }
-
-    public static class UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig extends TeaModel {
-        // 服务器组列表
-        @NameInMap("ServerGroupTuples")
-        public java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
-
-        public static UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig self = new UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig setServerGroupTuples(java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples) {
-            this.serverGroupTuples = serverGroupTuples;
-            return this;
-        }
-        public java.util.List<UpdateListenerAttributeRequestDefaultActionsForwardGroupConfigServerGroupTuples> getServerGroupTuples() {
-            return this.serverGroupTuples;
-        }
-
-    }
-
-    public static class UpdateListenerAttributeRequestDefaultActions extends TeaModel {
-        // 转发组
-        @NameInMap("ForwardGroupConfig")
-        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig forwardGroupConfig;
-
-        // 动作类型
-        @NameInMap("Type")
-        public String type;
-
-        public static UpdateListenerAttributeRequestDefaultActions build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestDefaultActions self = new UpdateListenerAttributeRequestDefaultActions();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestDefaultActions setForwardGroupConfig(UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig forwardGroupConfig) {
-            this.forwardGroupConfig = forwardGroupConfig;
-            return this;
-        }
-        public UpdateListenerAttributeRequestDefaultActionsForwardGroupConfig getForwardGroupConfig() {
-            return this.forwardGroupConfig;
-        }
-
-        public UpdateListenerAttributeRequestDefaultActions setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
     }

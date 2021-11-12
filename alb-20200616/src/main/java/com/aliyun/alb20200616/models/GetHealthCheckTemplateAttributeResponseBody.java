@@ -4,6 +4,10 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
+    // 状态码
+    @NameInMap("HealthCheckCodes")
+    public java.util.List<String> healthCheckCodes;
+
     // 端口
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
@@ -12,17 +16,9 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     @NameInMap("HealthCheckHost")
     public String healthCheckHost;
 
-    // 状态码
-    @NameInMap("HealthCheckCodes")
-    public java.util.List<String> healthCheckCodes;
-
     // 版本
     @NameInMap("HealthCheckHttpVersion")
     public String healthCheckHttpVersion;
-
-    // 健康检查模板Id
-    @NameInMap("HealthCheckTemplateId")
-    public String healthCheckTemplateId;
 
     // 间隔时间
     @NameInMap("HealthCheckInterval")
@@ -39,6 +35,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     // 协议
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
+
+    // 健康检查模板Id
+    @NameInMap("HealthCheckTemplateId")
+    public String healthCheckTemplateId;
 
     // 名称
     @NameInMap("HealthCheckTemplateName")
@@ -65,6 +65,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetHealthCheckTemplateAttributeResponseBody setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
+        this.healthCheckCodes = healthCheckCodes;
+        return this;
+    }
+    public java.util.List<String> getHealthCheckCodes() {
+        return this.healthCheckCodes;
+    }
+
     public GetHealthCheckTemplateAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
         this.healthCheckConnectPort = healthCheckConnectPort;
         return this;
@@ -81,28 +89,12 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         return this.healthCheckHost;
     }
 
-    public GetHealthCheckTemplateAttributeResponseBody setHealthCheckCodes(java.util.List<String> healthCheckCodes) {
-        this.healthCheckCodes = healthCheckCodes;
-        return this;
-    }
-    public java.util.List<String> getHealthCheckCodes() {
-        return this.healthCheckCodes;
-    }
-
     public GetHealthCheckTemplateAttributeResponseBody setHealthCheckHttpVersion(String healthCheckHttpVersion) {
         this.healthCheckHttpVersion = healthCheckHttpVersion;
         return this;
     }
     public String getHealthCheckHttpVersion() {
         return this.healthCheckHttpVersion;
-    }
-
-    public GetHealthCheckTemplateAttributeResponseBody setHealthCheckTemplateId(String healthCheckTemplateId) {
-        this.healthCheckTemplateId = healthCheckTemplateId;
-        return this;
-    }
-    public String getHealthCheckTemplateId() {
-        return this.healthCheckTemplateId;
     }
 
     public GetHealthCheckTemplateAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
@@ -135,6 +127,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     }
     public String getHealthCheckProtocol() {
         return this.healthCheckProtocol;
+    }
+
+    public GetHealthCheckTemplateAttributeResponseBody setHealthCheckTemplateId(String healthCheckTemplateId) {
+        this.healthCheckTemplateId = healthCheckTemplateId;
+        return this;
+    }
+    public String getHealthCheckTemplateId() {
+        return this.healthCheckTemplateId;
     }
 
     public GetHealthCheckTemplateAttributeResponseBody setHealthCheckTemplateName(String healthCheckTemplateName) {

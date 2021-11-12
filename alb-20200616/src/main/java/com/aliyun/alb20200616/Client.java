@@ -96,6 +96,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.associateAdditionalCertificatesWithListenerWithOptions(request, runtime);
     }
 
+    public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancerWithOptions(AttachCommonBandwidthPackageToLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AttachCommonBandwidthPackageToLoadBalancer", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
+    }
+
+    public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.attachCommonBandwidthPackageToLoadBalancerWithOptions(request, runtime);
+    }
+
     public CreateAclResponse createAclWithOptions(CreateAclRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -325,6 +338,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeZonesResponse describeZones() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeZonesWithOptions(runtime);
+    }
+
+    public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancerWithOptions(DetachCommonBandwidthPackageFromLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DetachCommonBandwidthPackageFromLoadBalancer", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
+    }
+
+    public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancer(DetachCommonBandwidthPackageFromLoadBalancerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.detachCommonBandwidthPackageFromLoadBalancerWithOptions(request, runtime);
     }
 
     public DisableDeletionProtectionResponse disableDeletionProtectionWithOptions(DisableDeletionProtectionRequest request, RuntimeOptions runtime) throws Exception {
@@ -587,19 +613,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSecurityPolicyRelationsWithOptions(request, runtime);
     }
 
-    public ListServerGroupsResponse listServerGroupsWithOptions(ListServerGroupsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListServerGroups", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime), new ListServerGroupsResponse());
-    }
-
-    public ListServerGroupsResponse listServerGroups(ListServerGroupsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listServerGroupsWithOptions(request, runtime);
-    }
-
     public ListServerGroupServersResponse listServerGroupServersWithOptions(ListServerGroupServersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -611,6 +624,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListServerGroupServersResponse listServerGroupServers(ListServerGroupServersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listServerGroupServersWithOptions(request, runtime);
+    }
+
+    public ListServerGroupsResponse listServerGroupsWithOptions(ListServerGroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListServerGroups", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime), new ListServerGroupsResponse());
+    }
+
+    public ListServerGroupsResponse listServerGroups(ListServerGroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listServerGroupsWithOptions(request, runtime);
     }
 
     public ListSystemSecurityPoliciesResponse listSystemSecurityPoliciesWithOptions(RuntimeOptions runtime) throws Exception {
@@ -842,6 +868,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateLoadBalancerEditionResponse updateLoadBalancerEdition(UpdateLoadBalancerEditionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateLoadBalancerEditionWithOptions(request, runtime);
+    }
+
+    public UpdateLoadBalancerZonesResponse updateLoadBalancerZonesWithOptions(UpdateLoadBalancerZonesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateLoadBalancerZones", "2020-06-16", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateLoadBalancerZonesResponse());
+    }
+
+    public UpdateLoadBalancerZonesResponse updateLoadBalancerZones(UpdateLoadBalancerZonesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateLoadBalancerZonesWithOptions(request, runtime);
     }
 
     public UpdateRuleAttributeResponse updateRuleAttributeWithOptions(UpdateRuleAttributeRequest request, RuntimeOptions runtime) throws Exception {

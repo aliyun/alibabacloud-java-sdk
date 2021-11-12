@@ -12,17 +12,17 @@ public class ListAclsRequest extends TeaModel {
     @NameInMap("AclNames")
     public java.util.List<String> aclNames;
 
-    // 资源组ID
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    // 查询数量
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     // 分页查询标识
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 查询数量
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    // 资源组ID
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ListAclsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAclsRequest self = new ListAclsRequest();
@@ -45,12 +45,12 @@ public class ListAclsRequest extends TeaModel {
         return this.aclNames;
     }
 
-    public ListAclsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public ListAclsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListAclsRequest setNextToken(String nextToken) {
@@ -61,12 +61,12 @@ public class ListAclsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListAclsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListAclsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
