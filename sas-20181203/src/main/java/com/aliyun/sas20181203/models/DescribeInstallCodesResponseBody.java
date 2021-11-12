@@ -50,12 +50,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Vendor")
-        public Integer vendor;
-
         @NameInMap("VendorName")
         public String vendorName;
 
@@ -110,22 +104,6 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
-        }
-
-        public DescribeInstallCodesResponseBodyInstallCodes setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public DescribeInstallCodesResponseBodyInstallCodes setVendor(Integer vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public Integer getVendor() {
-            return this.vendor;
         }
 
         public DescribeInstallCodesResponseBodyInstallCodes setVendorName(String vendorName) {

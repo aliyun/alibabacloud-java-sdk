@@ -252,6 +252,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("AliasName")
         public String aliasName;
 
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("Ip")
         public String ip;
 
@@ -301,6 +304,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJson setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJson setIp(String ip) {
@@ -430,6 +441,9 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         @NameInMap("PrimaryId")
         public Long primaryId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("Related")
         public String related;
@@ -578,6 +592,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeVulListResponseBodyVulRecords setRelated(String related) {
