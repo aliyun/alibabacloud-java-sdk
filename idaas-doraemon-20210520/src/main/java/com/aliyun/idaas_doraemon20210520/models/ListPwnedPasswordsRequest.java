@@ -4,7 +4,6 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListPwnedPasswordsRequest extends TeaModel {
-    // 泄露密码SHA1值前6位
     @NameInMap("PrefixHexPasswordSha1Hash")
     public String prefixHexPasswordSha1Hash;
 
