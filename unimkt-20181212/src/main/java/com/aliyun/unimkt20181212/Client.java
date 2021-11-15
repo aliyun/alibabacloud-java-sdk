@@ -382,6 +382,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.endUnionTaskWithOptions(request, runtime);
     }
 
+    public GetMainPartListResponse getMainPartListWithOptions(GetMainPartListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetMainPartList", "2018-12-12", "HTTPS", "POST", "AK", "json", req, runtime), new GetMainPartListResponse());
+    }
+
+    public GetMainPartListResponse getMainPartList(GetMainPartListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getMainPartListWithOptions(request, runtime);
+    }
+
     public GetUnionTaskStatusResponse getUnionTaskStatusWithOptions(GetUnionTaskStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
