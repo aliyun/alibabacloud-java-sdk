@@ -8,17 +8,11 @@ public class DetectVehicleICongestionRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("OriginRequestId")
-    public String originRequestId;
-
     @NameInMap("PreRegionIntersectFeatures")
     public java.util.List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> preRegionIntersectFeatures;
 
     @NameInMap("RoadRegions")
     public java.util.List<DetectVehicleICongestionRequestRoadRegions> roadRegions;
-
-    @NameInMap("StreamArn")
-    public String streamArn;
 
     public static DetectVehicleICongestionRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleICongestionRequest self = new DetectVehicleICongestionRequest();
@@ -31,14 +25,6 @@ public class DetectVehicleICongestionRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
-    }
-
-    public DetectVehicleICongestionRequest setOriginRequestId(String originRequestId) {
-        this.originRequestId = originRequestId;
-        return this;
-    }
-    public String getOriginRequestId() {
-        return this.originRequestId;
     }
 
     public DetectVehicleICongestionRequest setPreRegionIntersectFeatures(java.util.List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> preRegionIntersectFeatures) {
@@ -55,14 +41,6 @@ public class DetectVehicleICongestionRequest extends TeaModel {
     }
     public java.util.List<DetectVehicleICongestionRequestRoadRegions> getRoadRegions() {
         return this.roadRegions;
-    }
-
-    public DetectVehicleICongestionRequest setStreamArn(String streamArn) {
-        this.streamArn = streamArn;
-        return this;
-    }
-    public String getStreamArn() {
-        return this.streamArn;
     }
 
     public static class DetectVehicleICongestionRequestPreRegionIntersectFeatures extends TeaModel {

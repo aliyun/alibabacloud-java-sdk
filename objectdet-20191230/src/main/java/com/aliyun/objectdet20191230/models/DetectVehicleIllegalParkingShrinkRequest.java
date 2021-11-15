@@ -8,14 +8,8 @@ public class DetectVehicleIllegalParkingShrinkRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("OriginRequestId")
-    public String originRequestId;
-
     @NameInMap("RoadRegions")
     public String roadRegionsShrink;
-
-    @NameInMap("StreamArn")
-    public String streamArn;
 
     public static DetectVehicleIllegalParkingShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleIllegalParkingShrinkRequest self = new DetectVehicleIllegalParkingShrinkRequest();
@@ -30,28 +24,12 @@ public class DetectVehicleIllegalParkingShrinkRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public DetectVehicleIllegalParkingShrinkRequest setOriginRequestId(String originRequestId) {
-        this.originRequestId = originRequestId;
-        return this;
-    }
-    public String getOriginRequestId() {
-        return this.originRequestId;
-    }
-
     public DetectVehicleIllegalParkingShrinkRequest setRoadRegionsShrink(String roadRegionsShrink) {
         this.roadRegionsShrink = roadRegionsShrink;
         return this;
     }
     public String getRoadRegionsShrink() {
         return this.roadRegionsShrink;
-    }
-
-    public DetectVehicleIllegalParkingShrinkRequest setStreamArn(String streamArn) {
-        this.streamArn = streamArn;
-        return this;
-    }
-    public String getStreamArn() {
-        return this.streamArn;
     }
 
 }
