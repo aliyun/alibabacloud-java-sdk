@@ -8,17 +8,11 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("OriginRequestId")
-    public String originRequestId;
-
     @NameInMap("PreRegionIntersectFeatures")
     public String preRegionIntersectFeaturesShrink;
 
     @NameInMap("RoadRegions")
     public String roadRegionsShrink;
-
-    @NameInMap("StreamArn")
-    public String streamArn;
 
     public static DetectVehicleICongestionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleICongestionShrinkRequest self = new DetectVehicleICongestionShrinkRequest();
@@ -31,14 +25,6 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
-    }
-
-    public DetectVehicleICongestionShrinkRequest setOriginRequestId(String originRequestId) {
-        this.originRequestId = originRequestId;
-        return this;
-    }
-    public String getOriginRequestId() {
-        return this.originRequestId;
     }
 
     public DetectVehicleICongestionShrinkRequest setPreRegionIntersectFeaturesShrink(String preRegionIntersectFeaturesShrink) {
@@ -55,14 +41,6 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
     }
     public String getRoadRegionsShrink() {
         return this.roadRegionsShrink;
-    }
-
-    public DetectVehicleICongestionShrinkRequest setStreamArn(String streamArn) {
-        this.streamArn = streamArn;
-        return this;
-    }
-    public String getStreamArn() {
-        return this.streamArn;
     }
 
 }

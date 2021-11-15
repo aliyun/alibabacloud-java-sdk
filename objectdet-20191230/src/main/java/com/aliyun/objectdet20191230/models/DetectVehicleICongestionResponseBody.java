@@ -88,6 +88,9 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<DetectVehicleICongestionResponseBodyDataElementsBoxes> boxes;
 
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Score")
         public Float score;
 
@@ -105,6 +108,14 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
         }
         public java.util.List<DetectVehicleICongestionResponseBodyDataElementsBoxes> getBoxes() {
             return this.boxes;
+        }
+
+        public DetectVehicleICongestionResponseBodyDataElements setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DetectVehicleICongestionResponseBodyDataElements setScore(Float score) {

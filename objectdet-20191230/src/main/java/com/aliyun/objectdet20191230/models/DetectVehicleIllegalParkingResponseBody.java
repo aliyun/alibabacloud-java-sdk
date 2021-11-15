@@ -88,6 +88,9 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<DetectVehicleIllegalParkingResponseBodyDataElementsBoxes> boxes;
 
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Score")
         public Float score;
 
@@ -105,6 +108,14 @@ public class DetectVehicleIllegalParkingResponseBody extends TeaModel {
         }
         public java.util.List<DetectVehicleIllegalParkingResponseBodyDataElementsBoxes> getBoxes() {
             return this.boxes;
+        }
+
+        public DetectVehicleIllegalParkingResponseBodyDataElements setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DetectVehicleIllegalParkingResponseBodyDataElements setScore(Float score) {
