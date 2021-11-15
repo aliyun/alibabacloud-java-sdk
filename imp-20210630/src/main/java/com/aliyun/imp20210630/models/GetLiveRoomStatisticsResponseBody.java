@@ -38,6 +38,10 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
+        // 点赞数。
+        @NameInMap("LikeCount")
+        public Long likeCount;
+
         // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
@@ -45,6 +49,10 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
         // 互动消息数。
         @NameInMap("MessageCount")
         public Long messageCount;
+
+        // 在线用户数。
+        @NameInMap("OnlineCount")
+        public Long onlineCount;
 
         // 访问用户人次。
         @NameInMap("Pv")
@@ -79,6 +87,14 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public GetLiveRoomStatisticsResponseBodyResult setLikeCount(Long likeCount) {
+            this.likeCount = likeCount;
+            return this;
+        }
+        public Long getLikeCount() {
+            return this.likeCount;
+        }
+
         public GetLiveRoomStatisticsResponseBodyResult setLiveId(String liveId) {
             this.liveId = liveId;
             return this;
@@ -93,6 +109,14 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
         }
         public Long getMessageCount() {
             return this.messageCount;
+        }
+
+        public GetLiveRoomStatisticsResponseBodyResult setOnlineCount(Long onlineCount) {
+            this.onlineCount = onlineCount;
+            return this;
+        }
+        public Long getOnlineCount() {
+            return this.onlineCount;
         }
 
         public GetLiveRoomStatisticsResponseBodyResult setPv(Long pv) {
