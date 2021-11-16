@@ -39,6 +39,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        // 模板素材参数
+        @NameInMap("ClipsParam")
+        public String clipsParam;
+
         // 云剪辑工程封面
         @NameInMap("CoverURL")
         public String coverURL;
@@ -78,6 +82,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        // 模板Id
+        @NameInMap("TemplateId")
+        public String templateId;
+
         // 云剪辑工程模板类型
         @NameInMap("TemplateType")
         public String templateType;
@@ -109,6 +117,14 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
         public String getBusinessStatus() {
             return this.businessStatus;
+        }
+
+        public GetEditingProjectResponseBodyProject setClipsParam(String clipsParam) {
+            this.clipsParam = clipsParam;
+            return this;
+        }
+        public String getClipsParam() {
+            return this.clipsParam;
         }
 
         public GetEditingProjectResponseBodyProject setCoverURL(String coverURL) {
@@ -189,6 +205,14 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetEditingProjectResponseBodyProject setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public GetEditingProjectResponseBodyProject setTemplateType(String templateType) {

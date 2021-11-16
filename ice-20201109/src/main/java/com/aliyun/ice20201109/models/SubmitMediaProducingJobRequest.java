@@ -10,6 +10,9 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("ClipsParam")
     public String clipsParam;
 
+    @NameInMap("EditingProduceConfig")
+    public String editingProduceConfig;
+
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 
@@ -53,6 +56,14 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     }
     public String getClipsParam() {
         return this.clipsParam;
+    }
+
+    public SubmitMediaProducingJobRequest setEditingProduceConfig(String editingProduceConfig) {
+        this.editingProduceConfig = editingProduceConfig;
+        return this;
+    }
+    public String getEditingProduceConfig() {
+        return this.editingProduceConfig;
     }
 
     public SubmitMediaProducingJobRequest setOutputMediaConfig(String outputMediaConfig) {

@@ -7,6 +7,10 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    // 模板对应的素材参数
+    @NameInMap("ClipsParam")
+    public String clipsParam;
+
     // 云剪辑工程封面
     @NameInMap("CoverURL")
     public String coverURL;
@@ -18,6 +22,10 @@ public class UpdateEditingProjectRequest extends TeaModel {
     // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
+
+    // 模板Id
+    @NameInMap("TemplateId")
+    public String templateId;
 
     // 云剪辑工程时间线，Json格式
     @NameInMap("Timeline")
@@ -38,6 +46,14 @@ public class UpdateEditingProjectRequest extends TeaModel {
     }
     public String getBusinessStatus() {
         return this.businessStatus;
+    }
+
+    public UpdateEditingProjectRequest setClipsParam(String clipsParam) {
+        this.clipsParam = clipsParam;
+        return this;
+    }
+    public String getClipsParam() {
+        return this.clipsParam;
     }
 
     public UpdateEditingProjectRequest setCoverURL(String coverURL) {
@@ -62,6 +78,14 @@ public class UpdateEditingProjectRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public UpdateEditingProjectRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public UpdateEditingProjectRequest setTimeline(String timeline) {
