@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceStatusStatisticRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("BizDate")
+    public String bizDate;
 
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
-    @NameInMap("BizDate")
-    public String bizDate;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static GetInstanceStatusStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceStatusStatisticRequest self = new GetInstanceStatusStatisticRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceStatusStatisticRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public GetInstanceStatusStatisticRequest setBizDate(String bizDate) {
+        this.bizDate = bizDate;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getBizDate() {
+        return this.bizDate;
     }
 
     public GetInstanceStatusStatisticRequest setProjectEnv(String projectEnv) {
@@ -34,12 +34,12 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
         return this.projectEnv;
     }
 
-    public GetInstanceStatusStatisticRequest setBizDate(String bizDate) {
-        this.bizDate = bizDate;
+    public GetInstanceStatusStatisticRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getBizDate() {
-        return this.bizDate;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

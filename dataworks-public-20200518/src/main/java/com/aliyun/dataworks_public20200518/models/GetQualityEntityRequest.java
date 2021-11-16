@@ -4,37 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityEntityRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    @NameInMap("TableName")
-    public String tableName;
-
     @NameInMap("EnvType")
     public String envType;
 
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    @NameInMap("TableName")
+    public String tableName;
+
     public static GetQualityEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityEntityRequest self = new GetQualityEntityRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetQualityEntityRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public GetQualityEntityRequest setTableName(String tableName) {
-        this.tableName = tableName;
-        return this;
-    }
-    public String getTableName() {
-        return this.tableName;
     }
 
     public GetQualityEntityRequest setEnvType(String envType) {
@@ -51,6 +35,22 @@ public class GetQualityEntityRequest extends TeaModel {
     }
     public String getMatchExpression() {
         return this.matchExpression;
+    }
+
+    public GetQualityEntityRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public GetQualityEntityRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

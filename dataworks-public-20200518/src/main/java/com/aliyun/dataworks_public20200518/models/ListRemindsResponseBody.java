@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListRemindsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListRemindsResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListRemindsResponseBodyData data;
 
     public static ListRemindsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRemindsResponseBody self = new ListRemindsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRemindsResponseBody setData(ListRemindsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRemindsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListRemindsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListRemindsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListRemindsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class ListRemindsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRemindsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListRemindsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListRemindsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,26 +75,21 @@ public class ListRemindsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListRemindsResponseBody setData(ListRemindsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListRemindsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListRemindsResponseBodyDataReminds extends TeaModel {
-        @NameInMap("Founder")
-        public String founder;
+        @NameInMap("AlertMethods")
+        public java.util.List<String> alertMethods;
 
-        @NameInMap("RemindId")
-        public Long remindId;
+        @NameInMap("AlertTargets")
+        public java.util.List<String> alertTargets;
 
         @NameInMap("AlertUnit")
         public String alertUnit;
 
-        @NameInMap("RemindType")
-        public String remindType;
+        @NameInMap("BaselineIds")
+        public java.util.List<Long> baselineIds;
+
+        @NameInMap("BizProcessIds")
+        public java.util.List<Long> bizProcessIds;
 
         @NameInMap("DndEnd")
         public String dndEnd;
@@ -94,52 +97,49 @@ public class ListRemindsResponseBody extends TeaModel {
         @NameInMap("DndStart")
         public String dndStart;
 
+        @NameInMap("Founder")
+        public String founder;
+
+        @NameInMap("NodeIds")
+        public java.util.List<Long> nodeIds;
+
+        @NameInMap("ProjectIds")
+        public java.util.List<Long> projectIds;
+
+        @NameInMap("RemindId")
+        public Long remindId;
+
+        @NameInMap("RemindName")
+        public String remindName;
+
+        @NameInMap("RemindType")
+        public String remindType;
+
         @NameInMap("RemindUnit")
         public String remindUnit;
 
         @NameInMap("Useflag")
         public Boolean useflag;
 
-        @NameInMap("RemindName")
-        public String remindName;
-
-        @NameInMap("AlertTargets")
-        public java.util.List<String> alertTargets;
-
-        @NameInMap("NodeIds")
-        public java.util.List<Long> nodeIds;
-
-        @NameInMap("BizProcessIds")
-        public java.util.List<Long> bizProcessIds;
-
-        @NameInMap("ProjectIds")
-        public java.util.List<Long> projectIds;
-
-        @NameInMap("BaselineIds")
-        public java.util.List<Long> baselineIds;
-
-        @NameInMap("AlertMethods")
-        public java.util.List<String> alertMethods;
-
         public static ListRemindsResponseBodyDataReminds build(java.util.Map<String, ?> map) throws Exception {
             ListRemindsResponseBodyDataReminds self = new ListRemindsResponseBodyDataReminds();
             return TeaModel.build(map, self);
         }
 
-        public ListRemindsResponseBodyDataReminds setFounder(String founder) {
-            this.founder = founder;
+        public ListRemindsResponseBodyDataReminds setAlertMethods(java.util.List<String> alertMethods) {
+            this.alertMethods = alertMethods;
             return this;
         }
-        public String getFounder() {
-            return this.founder;
+        public java.util.List<String> getAlertMethods() {
+            return this.alertMethods;
         }
 
-        public ListRemindsResponseBodyDataReminds setRemindId(Long remindId) {
-            this.remindId = remindId;
+        public ListRemindsResponseBodyDataReminds setAlertTargets(java.util.List<String> alertTargets) {
+            this.alertTargets = alertTargets;
             return this;
         }
-        public Long getRemindId() {
-            return this.remindId;
+        public java.util.List<String> getAlertTargets() {
+            return this.alertTargets;
         }
 
         public ListRemindsResponseBodyDataReminds setAlertUnit(String alertUnit) {
@@ -150,12 +150,20 @@ public class ListRemindsResponseBody extends TeaModel {
             return this.alertUnit;
         }
 
-        public ListRemindsResponseBodyDataReminds setRemindType(String remindType) {
-            this.remindType = remindType;
+        public ListRemindsResponseBodyDataReminds setBaselineIds(java.util.List<Long> baselineIds) {
+            this.baselineIds = baselineIds;
             return this;
         }
-        public String getRemindType() {
-            return this.remindType;
+        public java.util.List<Long> getBaselineIds() {
+            return this.baselineIds;
+        }
+
+        public ListRemindsResponseBodyDataReminds setBizProcessIds(java.util.List<Long> bizProcessIds) {
+            this.bizProcessIds = bizProcessIds;
+            return this;
+        }
+        public java.util.List<Long> getBizProcessIds() {
+            return this.bizProcessIds;
         }
 
         public ListRemindsResponseBodyDataReminds setDndEnd(String dndEnd) {
@@ -174,6 +182,54 @@ public class ListRemindsResponseBody extends TeaModel {
             return this.dndStart;
         }
 
+        public ListRemindsResponseBodyDataReminds setFounder(String founder) {
+            this.founder = founder;
+            return this;
+        }
+        public String getFounder() {
+            return this.founder;
+        }
+
+        public ListRemindsResponseBodyDataReminds setNodeIds(java.util.List<Long> nodeIds) {
+            this.nodeIds = nodeIds;
+            return this;
+        }
+        public java.util.List<Long> getNodeIds() {
+            return this.nodeIds;
+        }
+
+        public ListRemindsResponseBodyDataReminds setProjectIds(java.util.List<Long> projectIds) {
+            this.projectIds = projectIds;
+            return this;
+        }
+        public java.util.List<Long> getProjectIds() {
+            return this.projectIds;
+        }
+
+        public ListRemindsResponseBodyDataReminds setRemindId(Long remindId) {
+            this.remindId = remindId;
+            return this;
+        }
+        public Long getRemindId() {
+            return this.remindId;
+        }
+
+        public ListRemindsResponseBodyDataReminds setRemindName(String remindName) {
+            this.remindName = remindName;
+            return this;
+        }
+        public String getRemindName() {
+            return this.remindName;
+        }
+
+        public ListRemindsResponseBodyDataReminds setRemindType(String remindType) {
+            this.remindType = remindType;
+            return this;
+        }
+        public String getRemindType() {
+            return this.remindType;
+        }
+
         public ListRemindsResponseBodyDataReminds setRemindUnit(String remindUnit) {
             this.remindUnit = remindUnit;
             return this;
@@ -190,62 +246,6 @@ public class ListRemindsResponseBody extends TeaModel {
             return this.useflag;
         }
 
-        public ListRemindsResponseBodyDataReminds setRemindName(String remindName) {
-            this.remindName = remindName;
-            return this;
-        }
-        public String getRemindName() {
-            return this.remindName;
-        }
-
-        public ListRemindsResponseBodyDataReminds setAlertTargets(java.util.List<String> alertTargets) {
-            this.alertTargets = alertTargets;
-            return this;
-        }
-        public java.util.List<String> getAlertTargets() {
-            return this.alertTargets;
-        }
-
-        public ListRemindsResponseBodyDataReminds setNodeIds(java.util.List<Long> nodeIds) {
-            this.nodeIds = nodeIds;
-            return this;
-        }
-        public java.util.List<Long> getNodeIds() {
-            return this.nodeIds;
-        }
-
-        public ListRemindsResponseBodyDataReminds setBizProcessIds(java.util.List<Long> bizProcessIds) {
-            this.bizProcessIds = bizProcessIds;
-            return this;
-        }
-        public java.util.List<Long> getBizProcessIds() {
-            return this.bizProcessIds;
-        }
-
-        public ListRemindsResponseBodyDataReminds setProjectIds(java.util.List<Long> projectIds) {
-            this.projectIds = projectIds;
-            return this;
-        }
-        public java.util.List<Long> getProjectIds() {
-            return this.projectIds;
-        }
-
-        public ListRemindsResponseBodyDataReminds setBaselineIds(java.util.List<Long> baselineIds) {
-            this.baselineIds = baselineIds;
-            return this;
-        }
-        public java.util.List<Long> getBaselineIds() {
-            return this.baselineIds;
-        }
-
-        public ListRemindsResponseBodyDataReminds setAlertMethods(java.util.List<String> alertMethods) {
-            this.alertMethods = alertMethods;
-            return this;
-        }
-        public java.util.List<String> getAlertMethods() {
-            return this.alertMethods;
-        }
-
     }
 
     public static class ListRemindsResponseBodyData extends TeaModel {
@@ -255,11 +255,11 @@ public class ListRemindsResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Reminds")
         public java.util.List<ListRemindsResponseBodyDataReminds> reminds;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListRemindsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRemindsResponseBodyData self = new ListRemindsResponseBodyData();
@@ -282,20 +282,20 @@ public class ListRemindsResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListRemindsResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListRemindsResponseBodyData setReminds(java.util.List<ListRemindsResponseBodyDataReminds> reminds) {
             this.reminds = reminds;
             return this;
         }
         public java.util.List<ListRemindsResponseBodyDataReminds> getReminds() {
             return this.reminds;
+        }
+
+        public ListRemindsResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

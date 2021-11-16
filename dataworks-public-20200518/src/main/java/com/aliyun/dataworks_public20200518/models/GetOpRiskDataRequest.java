@@ -4,17 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetOpRiskDataRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
+    @NameInMap("Date")
+    public String date;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Date")
-    public String date;
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RiskType")
     public String riskType;
@@ -24,20 +24,12 @@ public class GetOpRiskDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetOpRiskDataRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public GetOpRiskDataRequest setDate(String date) {
+        this.date = date;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public GetOpRiskDataRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
+    public String getDate() {
+        return this.date;
     }
 
     public GetOpRiskDataRequest setName(String name) {
@@ -48,12 +40,20 @@ public class GetOpRiskDataRequest extends TeaModel {
         return this.name;
     }
 
-    public GetOpRiskDataRequest setDate(String date) {
-        this.date = date;
+    public GetOpRiskDataRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public String getDate() {
-        return this.date;
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public GetOpRiskDataRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetOpRiskDataRequest setRiskType(String riskType) {

@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDISyncTaskRequest extends TeaModel {
+    @NameInMap("FileId")
+    public Long fileId;
+
     @NameInMap("ProjectId")
     public Long projectId;
-
-    @NameInMap("TaskType")
-    public String taskType;
 
     @NameInMap("TaskContent")
     public String taskContent;
@@ -16,12 +16,20 @@ public class UpdateDISyncTaskRequest extends TeaModel {
     @NameInMap("TaskParam")
     public String taskParam;
 
-    @NameInMap("FileId")
-    public Long fileId;
+    @NameInMap("TaskType")
+    public String taskType;
 
     public static UpdateDISyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDISyncTaskRequest self = new UpdateDISyncTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDISyncTaskRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
     }
 
     public UpdateDISyncTaskRequest setProjectId(Long projectId) {
@@ -30,14 +38,6 @@ public class UpdateDISyncTaskRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
-    }
-
-    public UpdateDISyncTaskRequest setTaskType(String taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public String getTaskType() {
-        return this.taskType;
     }
 
     public UpdateDISyncTaskRequest setTaskContent(String taskContent) {
@@ -56,12 +56,12 @@ public class UpdateDISyncTaskRequest extends TeaModel {
         return this.taskParam;
     }
 
-    public UpdateDISyncTaskRequest setFileId(Long fileId) {
-        this.fileId = fileId;
+    public UpdateDISyncTaskRequest setTaskType(String taskType) {
+        this.taskType = taskType;
         return this;
     }
-    public Long getFileId() {
-        return this.fileId;
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityFollowerRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("FollowerId")
     public Long followerId;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     public static DeleteQualityFollowerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityFollowerRequest self = new DeleteQualityFollowerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteQualityFollowerRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
     public DeleteQualityFollowerRequest setFollowerId(Long followerId) {
@@ -29,6 +21,14 @@ public class DeleteQualityFollowerRequest extends TeaModel {
     }
     public Long getFollowerId() {
         return this.followerId;
+    }
+
+    public DeleteQualityFollowerRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

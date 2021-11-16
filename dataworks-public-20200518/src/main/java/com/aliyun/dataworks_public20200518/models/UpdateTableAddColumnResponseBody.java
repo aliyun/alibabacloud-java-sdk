@@ -32,29 +32,29 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
     }
 
     public static class UpdateTableAddColumnResponseBodyTaskInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TaskId")
         public String taskId;
-
-        @NameInMap("Content")
-        public String content;
 
         public static UpdateTableAddColumnResponseBodyTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateTableAddColumnResponseBodyTaskInfo self = new UpdateTableAddColumnResponseBodyTaskInfo();
             return TeaModel.build(map, self);
         }
 
-        public UpdateTableAddColumnResponseBodyTaskInfo setStatus(String status) {
-            this.status = status;
+        public UpdateTableAddColumnResponseBodyTaskInfo setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getContent() {
+            return this.content;
         }
 
         public UpdateTableAddColumnResponseBodyTaskInfo setNextTaskId(String nextTaskId) {
@@ -65,20 +65,20 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
             return this.nextTaskId;
         }
 
+        public UpdateTableAddColumnResponseBodyTaskInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public UpdateTableAddColumnResponseBodyTaskInfo setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
         public String getTaskId() {
             return this.taskId;
-        }
-
-        public UpdateTableAddColumnResponseBodyTaskInfo setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
     }

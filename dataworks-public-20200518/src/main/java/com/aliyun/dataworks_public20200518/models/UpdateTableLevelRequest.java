@@ -4,8 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableLevelRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("LevelId")
+    public Long levelId;
 
     @NameInMap("LevelType")
     public Integer levelType;
@@ -13,23 +16,28 @@ public class UpdateTableLevelRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("LevelId")
-    public Long levelId;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static UpdateTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableLevelRequest self = new UpdateTableLevelRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTableLevelRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public UpdateTableLevelRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateTableLevelRequest setLevelId(Long levelId) {
+        this.levelId = levelId;
+        return this;
+    }
+    public Long getLevelId() {
+        return this.levelId;
     }
 
     public UpdateTableLevelRequest setLevelType(Integer levelType) {
@@ -48,20 +56,12 @@ public class UpdateTableLevelRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateTableLevelRequest setDescription(String description) {
-        this.description = description;
+    public UpdateTableLevelRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public UpdateTableLevelRequest setLevelId(Long levelId) {
-        this.levelId = levelId;
-        return this;
-    }
-    public Long getLevelId() {
-        return this.levelId;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

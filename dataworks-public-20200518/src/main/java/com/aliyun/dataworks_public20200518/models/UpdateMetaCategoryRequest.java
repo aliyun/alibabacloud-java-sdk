@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaCategoryRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("CategoryId")
+    public Long categoryId;
 
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("CategoryId")
-    public Long categoryId;
+    @NameInMap("Name")
+    public String name;
 
     public static UpdateMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMetaCategoryRequest self = new UpdateMetaCategoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMetaCategoryRequest setName(String name) {
-        this.name = name;
+    public UpdateMetaCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     public UpdateMetaCategoryRequest setComment(String comment) {
@@ -34,12 +34,12 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return this.comment;
     }
 
-    public UpdateMetaCategoryRequest setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
+    public UpdateMetaCategoryRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Long getCategoryId() {
-        return this.categoryId;
+    public String getName() {
+        return this.name;
     }
 
 }

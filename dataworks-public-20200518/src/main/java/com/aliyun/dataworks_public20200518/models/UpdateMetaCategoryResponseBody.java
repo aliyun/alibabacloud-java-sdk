@@ -4,20 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaCategoryResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class UpdateMetaCategoryResponseBody extends TeaModel {
     public static UpdateMetaCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMetaCategoryResponseBody self = new UpdateMetaCategoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public UpdateMetaCategoryResponseBody setData(Boolean data) {
@@ -43,12 +35,12 @@ public class UpdateMetaCategoryResponseBody extends TeaModel {
         return this.data;
     }
 
-    public UpdateMetaCategoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateMetaCategoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateMetaCategoryResponseBody setErrorMessage(String errorMessage) {
@@ -59,12 +51,20 @@ public class UpdateMetaCategoryResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public UpdateMetaCategoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpdateMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public UpdateMetaCategoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateMetaCategoryResponseBody setSuccess(Boolean success) {

@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApplicationsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListDataServiceApplicationsResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public ListDataServiceApplicationsResponseBodyData data;
 
     public static ListDataServiceApplicationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceApplicationsResponseBody self = new ListDataServiceApplicationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataServiceApplicationsResponseBody setData(ListDataServiceApplicationsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDataServiceApplicationsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDataServiceApplicationsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDataServiceApplicationsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDataServiceApplicationsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,14 +67,6 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataServiceApplicationsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListDataServiceApplicationsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -59,28 +75,12 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDataServiceApplicationsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDataServiceApplicationsResponseBody setData(ListDataServiceApplicationsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDataServiceApplicationsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDataServiceApplicationsResponseBodyDataApplications extends TeaModel {
-        @NameInMap("ApplicationName")
-        public String applicationName;
-
         @NameInMap("ApplicationId")
         public Long applicationId;
+
+        @NameInMap("ApplicationName")
+        public String applicationName;
 
         @NameInMap("ProjectId")
         public Long projectId;
@@ -90,20 +90,20 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataServiceApplicationsResponseBodyDataApplications setApplicationName(String applicationName) {
-            this.applicationName = applicationName;
-            return this;
-        }
-        public String getApplicationName() {
-            return this.applicationName;
-        }
-
         public ListDataServiceApplicationsResponseBodyDataApplications setApplicationId(Long applicationId) {
             this.applicationId = applicationId;
             return this;
         }
         public Long getApplicationId() {
             return this.applicationId;
+        }
+
+        public ListDataServiceApplicationsResponseBodyDataApplications setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
         }
 
         public ListDataServiceApplicationsResponseBodyDataApplications setProjectId(Long projectId) {
@@ -117,6 +117,9 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApplicationsResponseBodyData extends TeaModel {
+        @NameInMap("Applications")
+        public java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> applications;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -126,12 +129,17 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Applications")
-        public java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> applications;
-
         public static ListDataServiceApplicationsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApplicationsResponseBodyData self = new ListDataServiceApplicationsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApplicationsResponseBodyData setApplications(java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> applications) {
+            this.applications = applications;
+            return this;
+        }
+        public java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> getApplications() {
+            return this.applications;
         }
 
         public ListDataServiceApplicationsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -156,14 +164,6 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListDataServiceApplicationsResponseBodyData setApplications(java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> applications) {
-            this.applications = applications;
-            return this;
-        }
-        public java.util.List<ListDataServiceApplicationsResponseBodyDataApplications> getApplications() {
-            return this.applications;
         }
 
     }

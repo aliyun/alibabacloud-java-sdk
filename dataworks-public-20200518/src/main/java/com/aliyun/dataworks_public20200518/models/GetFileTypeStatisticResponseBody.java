@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetFileTypeStatisticResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ProgramTypeAndCounts")
     public java.util.List<GetFileTypeStatisticResponseBodyProgramTypeAndCounts> programTypeAndCounts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetFileTypeStatisticResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFileTypeStatisticResponseBody self = new GetFileTypeStatisticResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetFileTypeStatisticResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetFileTypeStatisticResponseBody setProgramTypeAndCounts(java.util.List<GetFileTypeStatisticResponseBodyProgramTypeAndCounts> programTypeAndCounts) {
@@ -29,6 +21,14 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
     }
     public java.util.List<GetFileTypeStatisticResponseBodyProgramTypeAndCounts> getProgramTypeAndCounts() {
         return this.programTypeAndCounts;
+    }
+
+    public GetFileTypeStatisticResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetFileTypeStatisticResponseBodyProgramTypeAndCounts extends TeaModel {

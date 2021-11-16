@@ -16,9 +16,6 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("TargetNodeProjectName")
-    public String targetNodeProjectName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -27,6 +24,9 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
 
     @NameInMap("TargetNodeProjectId")
     public Long targetNodeProjectId;
+
+    @NameInMap("TargetNodeProjectName")
+    public String targetNodeProjectName;
 
     public static CreateQualityRelativeNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityRelativeNodeRequest self = new CreateQualityRelativeNodeRequest();
@@ -65,14 +65,6 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
         return this.projectId;
     }
 
-    public CreateQualityRelativeNodeRequest setTargetNodeProjectName(String targetNodeProjectName) {
-        this.targetNodeProjectName = targetNodeProjectName;
-        return this;
-    }
-    public String getTargetNodeProjectName() {
-        return this.targetNodeProjectName;
-    }
-
     public CreateQualityRelativeNodeRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -95,6 +87,14 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     }
     public Long getTargetNodeProjectId() {
         return this.targetNodeProjectId;
+    }
+
+    public CreateQualityRelativeNodeRequest setTargetNodeProjectName(String targetNodeProjectName) {
+        this.targetNodeProjectName = targetNodeProjectName;
+        return this;
+    }
+    public String getTargetNodeProjectName() {
+        return this.targetNodeProjectName;
     }
 
 }

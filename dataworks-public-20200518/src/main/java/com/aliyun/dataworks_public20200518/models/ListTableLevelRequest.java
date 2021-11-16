@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListTableLevelRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("LevelType")
     public Integer levelType;
 
@@ -16,17 +13,12 @@ public class ListTableLevelRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static ListTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTableLevelRequest self = new ListTableLevelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTableLevelRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public ListTableLevelRequest setLevelType(Integer levelType) {
@@ -51,6 +43,14 @@ public class ListTableLevelRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTableLevelRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

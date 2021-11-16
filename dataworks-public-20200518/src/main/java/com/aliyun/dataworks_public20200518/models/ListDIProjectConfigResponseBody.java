@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDIProjectConfigResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public ListDIProjectConfigResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListDIProjectConfigResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListDIProjectConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDIProjectConfigResponseBody self = new ListDIProjectConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDIProjectConfigResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ListDIProjectConfigResponseBody setData(ListDIProjectConfigResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public ListDIProjectConfigResponseBodyData getData() {
+        return this.data;
     }
 
     public ListDIProjectConfigResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ListDIProjectConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDIProjectConfigResponseBody setData(ListDIProjectConfigResponseBodyData data) {
-        this.data = data;
+    public ListDIProjectConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ListDIProjectConfigResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ListDIProjectConfigResponseBodyData extends TeaModel {

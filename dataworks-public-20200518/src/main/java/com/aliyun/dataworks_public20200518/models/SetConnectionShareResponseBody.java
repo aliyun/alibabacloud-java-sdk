@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SetConnectionShareResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public SetConnectionShareResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public SetConnectionShareResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static SetConnectionShareResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetConnectionShareResponseBody self = new SetConnectionShareResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SetConnectionShareResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public SetConnectionShareResponseBody setData(SetConnectionShareResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public SetConnectionShareResponseBodyData getData() {
+        return this.data;
     }
 
     public SetConnectionShareResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class SetConnectionShareResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SetConnectionShareResponseBody setData(SetConnectionShareResponseBodyData data) {
-        this.data = data;
+    public SetConnectionShareResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SetConnectionShareResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class SetConnectionShareResponseBodyData extends TeaModel {

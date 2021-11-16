@@ -4,27 +4,43 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableLevelResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("UpdateResult")
     public Boolean updateResult;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static UpdateTableLevelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableLevelResponseBody self = new UpdateTableLevelResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTableLevelResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public UpdateTableLevelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public UpdateTableLevelResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,12 +59,12 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateTableLevelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public UpdateTableLevelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public UpdateTableLevelResponseBody setUpdateResult(Boolean updateResult) {
@@ -57,22 +73,6 @@ public class UpdateTableLevelResponseBody extends TeaModel {
     }
     public Boolean getUpdateResult() {
         return this.updateResult;
-    }
-
-    public UpdateTableLevelResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateTableLevelResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

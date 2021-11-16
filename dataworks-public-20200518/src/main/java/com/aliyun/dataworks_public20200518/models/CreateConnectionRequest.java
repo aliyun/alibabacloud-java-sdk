@@ -4,54 +4,30 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateConnectionRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("ConnectionType")
     public String connectionType;
-
-    @NameInMap("SubType")
-    public String subType;
-
-    @NameInMap("EnvType")
-    public Integer envType;
 
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("EnvType")
+    public Integer envType;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("SubType")
+    public String subType;
+
     public static CreateConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConnectionRequest self = new CreateConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConnectionRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public CreateConnectionRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateConnectionRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateConnectionRequest setConnectionType(String connectionType) {
@@ -62,12 +38,20 @@ public class CreateConnectionRequest extends TeaModel {
         return this.connectionType;
     }
 
-    public CreateConnectionRequest setSubType(String subType) {
-        this.subType = subType;
+    public CreateConnectionRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getSubType() {
-        return this.subType;
+    public String getContent() {
+        return this.content;
+    }
+
+    public CreateConnectionRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateConnectionRequest setEnvType(Integer envType) {
@@ -78,12 +62,28 @@ public class CreateConnectionRequest extends TeaModel {
         return this.envType;
     }
 
-    public CreateConnectionRequest setContent(String content) {
-        this.content = content;
+    public CreateConnectionRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContent() {
-        return this.content;
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateConnectionRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateConnectionRequest setSubType(String subType) {
+        this.subType = subType;
+        return this;
+    }
+    public String getSubType() {
+        return this.subType;
     }
 
 }

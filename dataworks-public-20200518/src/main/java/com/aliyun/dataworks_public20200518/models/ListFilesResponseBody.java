@@ -4,67 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFilesResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public ListFilesResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListFilesResponseBodyData data;
 
     public static ListFilesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFilesResponseBody self = new ListFilesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFilesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListFilesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListFilesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListFilesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListFilesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListFilesResponseBody setData(ListFilesResponseBodyData data) {
@@ -75,39 +35,76 @@ public class ListFilesResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListFilesResponseBodyDataFiles extends TeaModel {
-        @NameInMap("CommitStatus")
-        public Integer commitStatus;
+    public ListFilesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
 
+    public ListFilesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListFilesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListFilesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListFilesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class ListFilesResponseBodyDataFiles extends TeaModel {
         @NameInMap("AutoParsing")
         public Boolean autoParsing;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("FileType")
-        public Integer fileType;
-
-        @NameInMap("CurrentVersion")
-        public Integer currentVersion;
 
         @NameInMap("BizId")
         public Long bizId;
 
-        @NameInMap("LastEditUser")
-        public String lastEditUser;
+        @NameInMap("BusinessId")
+        public Long businessId;
 
-        @NameInMap("FileName")
-        public String fileName;
+        @NameInMap("CommitStatus")
+        public Integer commitStatus;
 
         @NameInMap("ConnectionName")
         public String connectionName;
 
-        @NameInMap("UseType")
-        public String useType;
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("CreateUser")
+        public String createUser;
+
+        @NameInMap("CurrentVersion")
+        public Integer currentVersion;
+
+        @NameInMap("FileDescription")
+        public String fileDescription;
 
         @NameInMap("FileFolderId")
         public String fileFolderId;
@@ -115,41 +112,36 @@ public class ListFilesResponseBody extends TeaModel {
         @NameInMap("FileId")
         public Long fileId;
 
-        @NameInMap("ParentId")
-        public Long parentId;
+        @NameInMap("FileName")
+        public String fileName;
 
-        @NameInMap("CreateUser")
-        public String createUser;
+        @NameInMap("FileType")
+        public Integer fileType;
 
         @NameInMap("IsMaxCompute")
         public Boolean isMaxCompute;
 
-        @NameInMap("BusinessId")
-        public Long businessId;
-
-        @NameInMap("FileDescription")
-        public String fileDescription;
-
         @NameInMap("LastEditTime")
         public Long lastEditTime;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("LastEditUser")
+        public String lastEditUser;
 
         @NameInMap("NodeId")
         public Long nodeId;
 
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
+        @NameInMap("UseType")
+        public String useType;
+
         public static ListFilesResponseBodyDataFiles build(java.util.Map<String, ?> map) throws Exception {
             ListFilesResponseBodyDataFiles self = new ListFilesResponseBodyDataFiles();
             return TeaModel.build(map, self);
-        }
-
-        public ListFilesResponseBodyDataFiles setCommitStatus(Integer commitStatus) {
-            this.commitStatus = commitStatus;
-            return this;
-        }
-        public Integer getCommitStatus() {
-            return this.commitStatus;
         }
 
         public ListFilesResponseBodyDataFiles setAutoParsing(Boolean autoParsing) {
@@ -160,38 +152,6 @@ public class ListFilesResponseBody extends TeaModel {
             return this.autoParsing;
         }
 
-        public ListFilesResponseBodyDataFiles setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public ListFilesResponseBodyDataFiles setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListFilesResponseBodyDataFiles setFileType(Integer fileType) {
-            this.fileType = fileType;
-            return this;
-        }
-        public Integer getFileType() {
-            return this.fileType;
-        }
-
-        public ListFilesResponseBodyDataFiles setCurrentVersion(Integer currentVersion) {
-            this.currentVersion = currentVersion;
-            return this;
-        }
-        public Integer getCurrentVersion() {
-            return this.currentVersion;
-        }
-
         public ListFilesResponseBodyDataFiles setBizId(Long bizId) {
             this.bizId = bizId;
             return this;
@@ -200,20 +160,20 @@ public class ListFilesResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public ListFilesResponseBodyDataFiles setLastEditUser(String lastEditUser) {
-            this.lastEditUser = lastEditUser;
+        public ListFilesResponseBodyDataFiles setBusinessId(Long businessId) {
+            this.businessId = businessId;
             return this;
         }
-        public String getLastEditUser() {
-            return this.lastEditUser;
+        public Long getBusinessId() {
+            return this.businessId;
         }
 
-        public ListFilesResponseBodyDataFiles setFileName(String fileName) {
-            this.fileName = fileName;
+        public ListFilesResponseBodyDataFiles setCommitStatus(Integer commitStatus) {
+            this.commitStatus = commitStatus;
             return this;
         }
-        public String getFileName() {
-            return this.fileName;
+        public Integer getCommitStatus() {
+            return this.commitStatus;
         }
 
         public ListFilesResponseBodyDataFiles setConnectionName(String connectionName) {
@@ -224,12 +184,44 @@ public class ListFilesResponseBody extends TeaModel {
             return this.connectionName;
         }
 
-        public ListFilesResponseBodyDataFiles setUseType(String useType) {
-            this.useType = useType;
+        public ListFilesResponseBodyDataFiles setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getUseType() {
-            return this.useType;
+        public String getContent() {
+            return this.content;
+        }
+
+        public ListFilesResponseBodyDataFiles setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListFilesResponseBodyDataFiles setCreateUser(String createUser) {
+            this.createUser = createUser;
+            return this;
+        }
+        public String getCreateUser() {
+            return this.createUser;
+        }
+
+        public ListFilesResponseBodyDataFiles setCurrentVersion(Integer currentVersion) {
+            this.currentVersion = currentVersion;
+            return this;
+        }
+        public Integer getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        public ListFilesResponseBodyDataFiles setFileDescription(String fileDescription) {
+            this.fileDescription = fileDescription;
+            return this;
+        }
+        public String getFileDescription() {
+            return this.fileDescription;
         }
 
         public ListFilesResponseBodyDataFiles setFileFolderId(String fileFolderId) {
@@ -248,20 +240,20 @@ public class ListFilesResponseBody extends TeaModel {
             return this.fileId;
         }
 
-        public ListFilesResponseBodyDataFiles setParentId(Long parentId) {
-            this.parentId = parentId;
+        public ListFilesResponseBodyDataFiles setFileName(String fileName) {
+            this.fileName = fileName;
             return this;
         }
-        public Long getParentId() {
-            return this.parentId;
+        public String getFileName() {
+            return this.fileName;
         }
 
-        public ListFilesResponseBodyDataFiles setCreateUser(String createUser) {
-            this.createUser = createUser;
+        public ListFilesResponseBodyDataFiles setFileType(Integer fileType) {
+            this.fileType = fileType;
             return this;
         }
-        public String getCreateUser() {
-            return this.createUser;
+        public Integer getFileType() {
+            return this.fileType;
         }
 
         public ListFilesResponseBodyDataFiles setIsMaxCompute(Boolean isMaxCompute) {
@@ -272,22 +264,6 @@ public class ListFilesResponseBody extends TeaModel {
             return this.isMaxCompute;
         }
 
-        public ListFilesResponseBodyDataFiles setBusinessId(Long businessId) {
-            this.businessId = businessId;
-            return this;
-        }
-        public Long getBusinessId() {
-            return this.businessId;
-        }
-
-        public ListFilesResponseBodyDataFiles setFileDescription(String fileDescription) {
-            this.fileDescription = fileDescription;
-            return this;
-        }
-        public String getFileDescription() {
-            return this.fileDescription;
-        }
-
         public ListFilesResponseBodyDataFiles setLastEditTime(Long lastEditTime) {
             this.lastEditTime = lastEditTime;
             return this;
@@ -296,12 +272,12 @@ public class ListFilesResponseBody extends TeaModel {
             return this.lastEditTime;
         }
 
-        public ListFilesResponseBodyDataFiles setContent(String content) {
-            this.content = content;
+        public ListFilesResponseBodyDataFiles setLastEditUser(String lastEditUser) {
+            this.lastEditUser = lastEditUser;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public String getLastEditUser() {
+            return this.lastEditUser;
         }
 
         public ListFilesResponseBodyDataFiles setNodeId(Long nodeId) {
@@ -312,9 +288,36 @@ public class ListFilesResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        public ListFilesResponseBodyDataFiles setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListFilesResponseBodyDataFiles setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
+        public ListFilesResponseBodyDataFiles setUseType(String useType) {
+            this.useType = useType;
+            return this;
+        }
+        public String getUseType() {
+            return this.useType;
+        }
+
     }
 
     public static class ListFilesResponseBodyData extends TeaModel {
+        @NameInMap("Files")
+        public java.util.List<ListFilesResponseBodyDataFiles> files;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -324,12 +327,17 @@ public class ListFilesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Files")
-        public java.util.List<ListFilesResponseBodyDataFiles> files;
-
         public static ListFilesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListFilesResponseBodyData self = new ListFilesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListFilesResponseBodyData setFiles(java.util.List<ListFilesResponseBodyDataFiles> files) {
+            this.files = files;
+            return this;
+        }
+        public java.util.List<ListFilesResponseBodyDataFiles> getFiles() {
+            return this.files;
         }
 
         public ListFilesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -354,14 +362,6 @@ public class ListFilesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListFilesResponseBodyData setFiles(java.util.List<ListFilesResponseBodyDataFiles> files) {
-            this.files = files;
-            return this;
-        }
-        public java.util.List<ListFilesResponseBodyDataFiles> getFiles() {
-            return this.files;
         }
 
     }

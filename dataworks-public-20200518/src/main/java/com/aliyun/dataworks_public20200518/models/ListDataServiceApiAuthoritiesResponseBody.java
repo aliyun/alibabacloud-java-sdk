@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListDataServiceApiAuthoritiesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public ListDataServiceApiAuthoritiesResponseBodyData data;
 
     public static ListDataServiceApiAuthoritiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceApiAuthoritiesResponseBody self = new ListDataServiceApiAuthoritiesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataServiceApiAuthoritiesResponseBody setData(ListDataServiceApiAuthoritiesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDataServiceApiAuthoritiesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDataServiceApiAuthoritiesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDataServiceApiAuthoritiesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDataServiceApiAuthoritiesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,14 +67,6 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataServiceApiAuthoritiesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListDataServiceApiAuthoritiesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -59,31 +75,15 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDataServiceApiAuthoritiesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDataServiceApiAuthoritiesResponseBody setData(ListDataServiceApiAuthoritiesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDataServiceApiAuthoritiesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("CreatorId")
         public String creatorId;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("ProjectId")
         public Long projectId;
@@ -93,12 +93,12 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setEndTime(String endTime) {
-            this.endTime = endTime;
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setCreatorId(String creatorId) {
@@ -109,12 +109,12 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setEndTime(String endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords setProjectId(Long projectId) {
@@ -128,50 +128,42 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList extends TeaModel {
-        @NameInMap("ApiStatus")
-        public Integer apiStatus;
-
         @NameInMap("ApiId")
         public Long apiId;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
-
-        @NameInMap("CreatorId")
-        public String creatorId;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
 
         @NameInMap("ApiName")
         public String apiName;
 
-        @NameInMap("TenantId")
-        public Long tenantId;
-
         @NameInMap("ApiPath")
         public String apiPath;
+
+        @NameInMap("ApiStatus")
+        public Integer apiStatus;
 
         @NameInMap("AuthorizationRecords")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords> authorizationRecords;
 
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("CreatorId")
+        public String creatorId;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("TenantId")
+        public Long tenantId;
+
         public static ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList self = new ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList();
             return TeaModel.build(map, self);
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setApiStatus(Integer apiStatus) {
-            this.apiStatus = apiStatus;
-            return this;
-        }
-        public Integer getApiStatus() {
-            return this.apiStatus;
         }
 
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setApiId(Long apiId) {
@@ -182,60 +174,12 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             return this.apiId;
         }
 
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setCreatorId(String creatorId) {
-            this.creatorId = creatorId;
-            return this;
-        }
-        public String getCreatorId() {
-            return this.creatorId;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setApiName(String apiName) {
             this.apiName = apiName;
             return this;
         }
         public String getApiName() {
             return this.apiName;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public Long getTenantId() {
-            return this.tenantId;
         }
 
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setApiPath(String apiPath) {
@@ -246,6 +190,14 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             return this.apiPath;
         }
 
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setApiStatus(Integer apiStatus) {
+            this.apiStatus = apiStatus;
+            return this;
+        }
+        public Integer getApiStatus() {
+            return this.apiStatus;
+        }
+
         public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setAuthorizationRecords(java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords> authorizationRecords) {
             this.authorizationRecords = authorizationRecords;
             return this;
@@ -254,9 +206,60 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             return this.authorizationRecords;
         }
 
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
+        }
+
     }
 
     public static class ListDataServiceApiAuthoritiesResponseBodyData extends TeaModel {
+        @NameInMap("ApiAuthorizationList")
+        public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -266,12 +269,17 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("ApiAuthorizationList")
-        public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList;
-
         public static ListDataServiceApiAuthoritiesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApiAuthoritiesResponseBodyData self = new ListDataServiceApiAuthoritiesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApiAuthoritiesResponseBodyData setApiAuthorizationList(java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList) {
+            this.apiAuthorizationList = apiAuthorizationList;
+            return this;
+        }
+        public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> getApiAuthorizationList() {
+            return this.apiAuthorizationList;
         }
 
         public ListDataServiceApiAuthoritiesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -296,14 +304,6 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListDataServiceApiAuthoritiesResponseBodyData setApiAuthorizationList(java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList) {
-            this.apiAuthorizationList = apiAuthorizationList;
-            return this;
-        }
-        public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> getApiAuthorizationList() {
-            return this.apiAuthorizationList;
         }
 
     }

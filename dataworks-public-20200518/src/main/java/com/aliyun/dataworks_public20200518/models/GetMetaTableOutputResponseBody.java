@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableOutputResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaTableOutputResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaTableOutputResponseBodyData data;
-
     public static GetMetaTableOutputResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableOutputResponseBody self = new GetMetaTableOutputResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaTableOutputResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaTableOutputResponseBody setData(GetMetaTableOutputResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaTableOutputResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTableOutputResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaTableOutputResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaTableOutputResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaTableOutputResponseBody setRequestId(String requestId) {
@@ -59,43 +75,27 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaTableOutputResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaTableOutputResponseBody setData(GetMetaTableOutputResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaTableOutputResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaTableOutputResponseBodyDataDataEntityList extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("TaskInstanceId")
-        public Long taskInstanceId;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("ProjectId")
         public Long projectId;
 
-        @NameInMap("WaitTime")
-        public String waitTime;
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("TableGuid")
         public String tableGuid;
 
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("TaskInstanceId")
+        public Long taskInstanceId;
+
+        @NameInMap("WaitTime")
+        public String waitTime;
 
         public static GetMetaTableOutputResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableOutputResponseBodyDataDataEntityList self = new GetMetaTableOutputResponseBodyDataDataEntityList();
@@ -110,22 +110,6 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public GetMetaTableOutputResponseBodyDataDataEntityList setTaskInstanceId(Long taskInstanceId) {
-            this.taskInstanceId = taskInstanceId;
-            return this;
-        }
-        public Long getTaskInstanceId() {
-            return this.taskInstanceId;
-        }
-
-        public GetMetaTableOutputResponseBodyDataDataEntityList setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
         public GetMetaTableOutputResponseBodyDataDataEntityList setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
@@ -134,12 +118,12 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public GetMetaTableOutputResponseBodyDataDataEntityList setWaitTime(String waitTime) {
-            this.waitTime = waitTime;
+        public GetMetaTableOutputResponseBodyDataDataEntityList setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getWaitTime() {
-            return this.waitTime;
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public GetMetaTableOutputResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
@@ -158,9 +142,28 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        public GetMetaTableOutputResponseBodyDataDataEntityList setTaskInstanceId(Long taskInstanceId) {
+            this.taskInstanceId = taskInstanceId;
+            return this;
+        }
+        public Long getTaskInstanceId() {
+            return this.taskInstanceId;
+        }
+
+        public GetMetaTableOutputResponseBodyDataDataEntityList setWaitTime(String waitTime) {
+            this.waitTime = waitTime;
+            return this;
+        }
+        public String getWaitTime() {
+            return this.waitTime;
+        }
+
     }
 
     public static class GetMetaTableOutputResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -170,12 +173,17 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;
-
         public static GetMetaTableOutputResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableOutputResponseBodyData self = new GetMetaTableOutputResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaTableOutputResponseBodyData setDataEntityList(java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public GetMetaTableOutputResponseBodyData setPageNumber(Integer pageNumber) {
@@ -200,14 +208,6 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetMetaTableOutputResponseBodyData setDataEntityList(java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
-            return this;
-        }
-        public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
         }
 
     }

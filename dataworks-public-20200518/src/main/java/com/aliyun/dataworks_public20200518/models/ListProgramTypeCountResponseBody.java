@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProgramTypeCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ProgramTypeAndCounts")
     public java.util.List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> programTypeAndCounts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListProgramTypeCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProgramTypeCountResponseBody self = new ListProgramTypeCountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListProgramTypeCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListProgramTypeCountResponseBody setProgramTypeAndCounts(java.util.List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> programTypeAndCounts) {
@@ -29,6 +21,14 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     }
     public java.util.List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> getProgramTypeAndCounts() {
         return this.programTypeAndCounts;
+    }
+
+    public ListProgramTypeCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListProgramTypeCountResponseBodyProgramTypeAndCounts extends TeaModel {

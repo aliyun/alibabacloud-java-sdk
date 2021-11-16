@@ -32,29 +32,29 @@ public class DeleteTableResponseBody extends TeaModel {
     }
 
     public static class DeleteTableResponseBodyTaskInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TaskId")
         public String taskId;
-
-        @NameInMap("Content")
-        public String content;
 
         public static DeleteTableResponseBodyTaskInfo build(java.util.Map<String, ?> map) throws Exception {
             DeleteTableResponseBodyTaskInfo self = new DeleteTableResponseBodyTaskInfo();
             return TeaModel.build(map, self);
         }
 
-        public DeleteTableResponseBodyTaskInfo setStatus(String status) {
-            this.status = status;
+        public DeleteTableResponseBodyTaskInfo setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getContent() {
+            return this.content;
         }
 
         public DeleteTableResponseBodyTaskInfo setNextTaskId(String nextTaskId) {
@@ -65,20 +65,20 @@ public class DeleteTableResponseBody extends TeaModel {
             return this.nextTaskId;
         }
 
+        public DeleteTableResponseBodyTaskInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DeleteTableResponseBodyTaskInfo setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
         public String getTaskId() {
             return this.taskId;
-        }
-
-        public DeleteTableResponseBodyTaskInfo setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
+    @NameInMap("MetricInfo")
+    public GetDISyncTaskMetricInfoResponseBodyMetricInfo metricInfo;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,12 +15,17 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("MetricInfo")
-    public GetDISyncTaskMetricInfoResponseBodyMetricInfo metricInfo;
-
     public static GetDISyncTaskMetricInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDISyncTaskMetricInfoResponseBody self = new GetDISyncTaskMetricInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDISyncTaskMetricInfoResponseBody setMetricInfo(GetDISyncTaskMetricInfoResponseBodyMetricInfo metricInfo) {
+        this.metricInfo = metricInfo;
+        return this;
+    }
+    public GetDISyncTaskMetricInfoResponseBodyMetricInfo getMetricInfo() {
+        return this.metricInfo;
     }
 
     public GetDISyncTaskMetricInfoResponseBody setRequestId(String requestId) {
@@ -36,15 +44,22 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetDISyncTaskMetricInfoResponseBody setMetricInfo(GetDISyncTaskMetricInfoResponseBodyMetricInfo metricInfo) {
-        this.metricInfo = metricInfo;
-        return this;
-    }
-    public GetDISyncTaskMetricInfoResponseBodyMetricInfo getMetricInfo() {
-        return this.metricInfo;
-    }
-
     public static class GetDISyncTaskMetricInfoResponseBodyMetricInfo extends TeaModel {
+        @NameInMap("DeleteReaderRecords")
+        public Long deleteReaderRecords;
+
+        @NameInMap("DeleteWriterRecords")
+        public Long deleteWriterRecords;
+
+        @NameInMap("InsertReaderRecords")
+        public Long insertReaderRecords;
+
+        @NameInMap("InsertWriterRecords")
+        public Long insertWriterRecords;
+
+        @NameInMap("LastTaskDelay")
+        public Long lastTaskDelay;
+
         @NameInMap("Message")
         public String message;
 
@@ -54,30 +69,55 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
         @NameInMap("SumWriterRecords")
         public Long sumWriterRecords;
 
-        @NameInMap("LastTaskDelay")
-        public Long lastTaskDelay;
-
-        @NameInMap("InsertReaderRecords")
-        public Long insertReaderRecords;
-
         @NameInMap("UpdateReaderRecords")
         public Long updateReaderRecords;
-
-        @NameInMap("DeleteReaderRecords")
-        public Long deleteReaderRecords;
-
-        @NameInMap("InsertWriterRecords")
-        public Long insertWriterRecords;
 
         @NameInMap("UpdateWriterRecords")
         public Long updateWriterRecords;
 
-        @NameInMap("DeleteWriterRecords")
-        public Long deleteWriterRecords;
-
         public static GetDISyncTaskMetricInfoResponseBodyMetricInfo build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncTaskMetricInfoResponseBodyMetricInfo self = new GetDISyncTaskMetricInfoResponseBodyMetricInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setDeleteReaderRecords(Long deleteReaderRecords) {
+            this.deleteReaderRecords = deleteReaderRecords;
+            return this;
+        }
+        public Long getDeleteReaderRecords() {
+            return this.deleteReaderRecords;
+        }
+
+        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setDeleteWriterRecords(Long deleteWriterRecords) {
+            this.deleteWriterRecords = deleteWriterRecords;
+            return this;
+        }
+        public Long getDeleteWriterRecords() {
+            return this.deleteWriterRecords;
+        }
+
+        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setInsertReaderRecords(Long insertReaderRecords) {
+            this.insertReaderRecords = insertReaderRecords;
+            return this;
+        }
+        public Long getInsertReaderRecords() {
+            return this.insertReaderRecords;
+        }
+
+        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setInsertWriterRecords(Long insertWriterRecords) {
+            this.insertWriterRecords = insertWriterRecords;
+            return this;
+        }
+        public Long getInsertWriterRecords() {
+            return this.insertWriterRecords;
+        }
+
+        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setLastTaskDelay(Long lastTaskDelay) {
+            this.lastTaskDelay = lastTaskDelay;
+            return this;
+        }
+        public Long getLastTaskDelay() {
+            return this.lastTaskDelay;
         }
 
         public GetDISyncTaskMetricInfoResponseBodyMetricInfo setMessage(String message) {
@@ -104,22 +144,6 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
             return this.sumWriterRecords;
         }
 
-        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setLastTaskDelay(Long lastTaskDelay) {
-            this.lastTaskDelay = lastTaskDelay;
-            return this;
-        }
-        public Long getLastTaskDelay() {
-            return this.lastTaskDelay;
-        }
-
-        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setInsertReaderRecords(Long insertReaderRecords) {
-            this.insertReaderRecords = insertReaderRecords;
-            return this;
-        }
-        public Long getInsertReaderRecords() {
-            return this.insertReaderRecords;
-        }
-
         public GetDISyncTaskMetricInfoResponseBodyMetricInfo setUpdateReaderRecords(Long updateReaderRecords) {
             this.updateReaderRecords = updateReaderRecords;
             return this;
@@ -128,36 +152,12 @@ public class GetDISyncTaskMetricInfoResponseBody extends TeaModel {
             return this.updateReaderRecords;
         }
 
-        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setDeleteReaderRecords(Long deleteReaderRecords) {
-            this.deleteReaderRecords = deleteReaderRecords;
-            return this;
-        }
-        public Long getDeleteReaderRecords() {
-            return this.deleteReaderRecords;
-        }
-
-        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setInsertWriterRecords(Long insertWriterRecords) {
-            this.insertWriterRecords = insertWriterRecords;
-            return this;
-        }
-        public Long getInsertWriterRecords() {
-            return this.insertWriterRecords;
-        }
-
         public GetDISyncTaskMetricInfoResponseBodyMetricInfo setUpdateWriterRecords(Long updateWriterRecords) {
             this.updateWriterRecords = updateWriterRecords;
             return this;
         }
         public Long getUpdateWriterRecords() {
             return this.updateWriterRecords;
-        }
-
-        public GetDISyncTaskMetricInfoResponseBodyMetricInfo setDeleteWriterRecords(Long deleteWriterRecords) {
-            this.deleteWriterRecords = deleteWriterRecords;
-            return this;
-        }
-        public Long getDeleteWriterRecords() {
-            return this.deleteWriterRecords;
         }
 
     }

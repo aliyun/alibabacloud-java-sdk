@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TerminateDISyncInstanceRequest extends TeaModel {
+    @NameInMap("FileId")
+    public Long fileId;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("TaskType")
     public String taskType;
 
-    @NameInMap("FileId")
-    public Long fileId;
-
     public static TerminateDISyncInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TerminateDISyncInstanceRequest self = new TerminateDISyncInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TerminateDISyncInstanceRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
     }
 
     public TerminateDISyncInstanceRequest setProjectId(Long projectId) {
@@ -32,14 +40,6 @@ public class TerminateDISyncInstanceRequest extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
-    }
-
-    public TerminateDISyncInstanceRequest setFileId(Long fileId) {
-        this.fileId = fileId;
-        return this;
-    }
-    public Long getFileId() {
-        return this.fileId;
     }
 
 }

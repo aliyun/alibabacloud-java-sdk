@@ -4,11 +4,8 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListRemindsRequest extends TeaModel {
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("AlertTarget")
+    public String alertTarget;
 
     @NameInMap("Founder")
     public String founder;
@@ -16,11 +13,14 @@ public class ListRemindsRequest extends TeaModel {
     @NameInMap("NodeId")
     public Long nodeId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RemindTypes")
     public String remindTypes;
-
-    @NameInMap("AlertTarget")
-    public String alertTarget;
 
     @NameInMap("SearchText")
     public String searchText;
@@ -30,20 +30,12 @@ public class ListRemindsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRemindsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListRemindsRequest setAlertTarget(String alertTarget) {
+        this.alertTarget = alertTarget;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListRemindsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getAlertTarget() {
+        return this.alertTarget;
     }
 
     public ListRemindsRequest setFounder(String founder) {
@@ -62,20 +54,28 @@ public class ListRemindsRequest extends TeaModel {
         return this.nodeId;
     }
 
+    public ListRemindsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListRemindsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public ListRemindsRequest setRemindTypes(String remindTypes) {
         this.remindTypes = remindTypes;
         return this;
     }
     public String getRemindTypes() {
         return this.remindTypes;
-    }
-
-    public ListRemindsRequest setAlertTarget(String alertTarget) {
-        this.alertTarget = alertTarget;
-        return this;
-    }
-    public String getAlertTarget() {
-        return this.alertTarget;
     }
 
     public ListRemindsRequest setSearchText(String searchText) {

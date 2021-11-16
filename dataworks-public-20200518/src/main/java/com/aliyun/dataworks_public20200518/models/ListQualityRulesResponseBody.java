@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListQualityRulesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListQualityRulesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public ListQualityRulesResponseBodyData data;
 
     public static ListQualityRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQualityRulesResponseBody self = new ListQualityRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListQualityRulesResponseBody setData(ListQualityRulesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListQualityRulesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListQualityRulesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListQualityRulesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListQualityRulesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,14 +67,6 @@ public class ListQualityRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListQualityRulesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListQualityRulesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -59,85 +75,18 @@ public class ListQualityRulesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListQualityRulesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListQualityRulesResponseBody setData(ListQualityRulesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListQualityRulesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListQualityRulesResponseBodyDataRules extends TeaModel {
         @NameInMap("BlockType")
         public Integer blockType;
 
-        @NameInMap("OnDutyAccountName")
-        public String onDutyAccountName;
-
-        @NameInMap("Property")
-        public String property;
-
-        @NameInMap("WarningThreshold")
-        public String warningThreshold;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("OnDuty")
-        public String onDuty;
+        @NameInMap("CheckerId")
+        public Integer checkerId;
 
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("RuleCheckerRelationId")
-        public Integer ruleCheckerRelationId;
-
-        @NameInMap("FixCheck")
-        public Boolean fixCheck;
-
-        @NameInMap("MethodId")
-        public Integer methodId;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        @NameInMap("Trend")
-        public String trend;
-
-        @NameInMap("HistoryWarningThreshold")
-        public String historyWarningThreshold;
-
-        @NameInMap("RuleType")
-        public Integer ruleType;
-
-        @NameInMap("MatchExpression")
-        public String matchExpression;
-
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        @NameInMap("PropertyKey")
-        public String propertyKey;
-
         @NameInMap("CriticalThreshold")
         public String criticalThreshold;
-
-        @NameInMap("HistoryCriticalThreshold")
-        public String historyCriticalThreshold;
-
-        @NameInMap("MethodName")
-        public String methodName;
-
-        @NameInMap("CheckerId")
-        public Integer checkerId;
 
         @NameInMap("EntityId")
         public Integer entityId;
@@ -145,11 +94,66 @@ public class ListQualityRulesResponseBody extends TeaModel {
         @NameInMap("ExpectValue")
         public String expectValue;
 
-        @NameInMap("TemplateId")
-        public Integer templateId;
+        @NameInMap("FixCheck")
+        public Boolean fixCheck;
+
+        @NameInMap("HistoryCriticalThreshold")
+        public String historyCriticalThreshold;
+
+        @NameInMap("HistoryWarningThreshold")
+        public String historyWarningThreshold;
 
         @NameInMap("Id")
         public Integer id;
+
+        @NameInMap("MatchExpression")
+        public String matchExpression;
+
+        @NameInMap("MethodId")
+        public Integer methodId;
+
+        @NameInMap("MethodName")
+        public String methodName;
+
+        @NameInMap("OnDuty")
+        public String onDuty;
+
+        @NameInMap("OnDutyAccountName")
+        public String onDutyAccountName;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("Property")
+        public String property;
+
+        @NameInMap("PropertyKey")
+        public String propertyKey;
+
+        @NameInMap("RuleCheckerRelationId")
+        public Integer ruleCheckerRelationId;
+
+        // 规则名称
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("RuleType")
+        public Integer ruleType;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("TemplateId")
+        public Integer templateId;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("Trend")
+        public String trend;
+
+        @NameInMap("WarningThreshold")
+        public String warningThreshold;
 
         public static ListQualityRulesResponseBodyDataRules build(java.util.Map<String, ?> map) throws Exception {
             ListQualityRulesResponseBodyDataRules self = new ListQualityRulesResponseBodyDataRules();
@@ -164,44 +168,12 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.blockType;
         }
 
-        public ListQualityRulesResponseBodyDataRules setOnDutyAccountName(String onDutyAccountName) {
-            this.onDutyAccountName = onDutyAccountName;
+        public ListQualityRulesResponseBodyDataRules setCheckerId(Integer checkerId) {
+            this.checkerId = checkerId;
             return this;
         }
-        public String getOnDutyAccountName() {
-            return this.onDutyAccountName;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setProperty(String property) {
-            this.property = property;
-            return this;
-        }
-        public String getProperty() {
-            return this.property;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setWarningThreshold(String warningThreshold) {
-            this.warningThreshold = warningThreshold;
-            return this;
-        }
-        public String getWarningThreshold() {
-            return this.warningThreshold;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setOnDuty(String onDuty) {
-            this.onDuty = onDuty;
-            return this;
-        }
-        public String getOnDuty() {
-            return this.onDuty;
+        public Integer getCheckerId() {
+            return this.checkerId;
         }
 
         public ListQualityRulesResponseBodyDataRules setComment(String comment) {
@@ -212,116 +184,12 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public ListQualityRulesResponseBodyDataRules setRuleCheckerRelationId(Integer ruleCheckerRelationId) {
-            this.ruleCheckerRelationId = ruleCheckerRelationId;
-            return this;
-        }
-        public Integer getRuleCheckerRelationId() {
-            return this.ruleCheckerRelationId;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setFixCheck(Boolean fixCheck) {
-            this.fixCheck = fixCheck;
-            return this;
-        }
-        public Boolean getFixCheck() {
-            return this.fixCheck;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setMethodId(Integer methodId) {
-            this.methodId = methodId;
-            return this;
-        }
-        public Integer getMethodId() {
-            return this.methodId;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setTrend(String trend) {
-            this.trend = trend;
-            return this;
-        }
-        public String getTrend() {
-            return this.trend;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setHistoryWarningThreshold(String historyWarningThreshold) {
-            this.historyWarningThreshold = historyWarningThreshold;
-            return this;
-        }
-        public String getHistoryWarningThreshold() {
-            return this.historyWarningThreshold;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setRuleType(Integer ruleType) {
-            this.ruleType = ruleType;
-            return this;
-        }
-        public Integer getRuleType() {
-            return this.ruleType;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setMatchExpression(String matchExpression) {
-            this.matchExpression = matchExpression;
-            return this;
-        }
-        public String getMatchExpression() {
-            return this.matchExpression;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setPropertyKey(String propertyKey) {
-            this.propertyKey = propertyKey;
-            return this;
-        }
-        public String getPropertyKey() {
-            return this.propertyKey;
-        }
-
         public ListQualityRulesResponseBodyDataRules setCriticalThreshold(String criticalThreshold) {
             this.criticalThreshold = criticalThreshold;
             return this;
         }
         public String getCriticalThreshold() {
             return this.criticalThreshold;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setHistoryCriticalThreshold(String historyCriticalThreshold) {
-            this.historyCriticalThreshold = historyCriticalThreshold;
-            return this;
-        }
-        public String getHistoryCriticalThreshold() {
-            return this.historyCriticalThreshold;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setMethodName(String methodName) {
-            this.methodName = methodName;
-            return this;
-        }
-        public String getMethodName() {
-            return this.methodName;
-        }
-
-        public ListQualityRulesResponseBodyDataRules setCheckerId(Integer checkerId) {
-            this.checkerId = checkerId;
-            return this;
-        }
-        public Integer getCheckerId() {
-            return this.checkerId;
         }
 
         public ListQualityRulesResponseBodyDataRules setEntityId(Integer entityId) {
@@ -340,12 +208,28 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.expectValue;
         }
 
-        public ListQualityRulesResponseBodyDataRules setTemplateId(Integer templateId) {
-            this.templateId = templateId;
+        public ListQualityRulesResponseBodyDataRules setFixCheck(Boolean fixCheck) {
+            this.fixCheck = fixCheck;
             return this;
         }
-        public Integer getTemplateId() {
-            return this.templateId;
+        public Boolean getFixCheck() {
+            return this.fixCheck;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setHistoryCriticalThreshold(String historyCriticalThreshold) {
+            this.historyCriticalThreshold = historyCriticalThreshold;
+            return this;
+        }
+        public String getHistoryCriticalThreshold() {
+            return this.historyCriticalThreshold;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setHistoryWarningThreshold(String historyWarningThreshold) {
+            this.historyWarningThreshold = historyWarningThreshold;
+            return this;
+        }
+        public String getHistoryWarningThreshold() {
+            return this.historyWarningThreshold;
         }
 
         public ListQualityRulesResponseBodyDataRules setId(Integer id) {
@@ -354,6 +238,134 @@ public class ListQualityRulesResponseBody extends TeaModel {
         }
         public Integer getId() {
             return this.id;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setMatchExpression(String matchExpression) {
+            this.matchExpression = matchExpression;
+            return this;
+        }
+        public String getMatchExpression() {
+            return this.matchExpression;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setMethodId(Integer methodId) {
+            this.methodId = methodId;
+            return this;
+        }
+        public Integer getMethodId() {
+            return this.methodId;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setMethodName(String methodName) {
+            this.methodName = methodName;
+            return this;
+        }
+        public String getMethodName() {
+            return this.methodName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setOnDuty(String onDuty) {
+            this.onDuty = onDuty;
+            return this;
+        }
+        public String getOnDuty() {
+            return this.onDuty;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setOnDutyAccountName(String onDutyAccountName) {
+            this.onDutyAccountName = onDutyAccountName;
+            return this;
+        }
+        public String getOnDutyAccountName() {
+            return this.onDutyAccountName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setPropertyKey(String propertyKey) {
+            this.propertyKey = propertyKey;
+            return this;
+        }
+        public String getPropertyKey() {
+            return this.propertyKey;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setRuleCheckerRelationId(Integer ruleCheckerRelationId) {
+            this.ruleCheckerRelationId = ruleCheckerRelationId;
+            return this;
+        }
+        public Integer getRuleCheckerRelationId() {
+            return this.ruleCheckerRelationId;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setRuleType(Integer ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public Integer getRuleType() {
+            return this.ruleType;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setTemplateId(Integer templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public Integer getTemplateId() {
+            return this.templateId;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setTrend(String trend) {
+            this.trend = trend;
+            return this;
+        }
+        public String getTrend() {
+            return this.trend;
+        }
+
+        public ListQualityRulesResponseBodyDataRules setWarningThreshold(String warningThreshold) {
+            this.warningThreshold = warningThreshold;
+            return this;
+        }
+        public String getWarningThreshold() {
+            return this.warningThreshold;
         }
 
     }
@@ -365,11 +377,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Rules")
         public java.util.List<ListQualityRulesResponseBodyDataRules> rules;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static ListQualityRulesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListQualityRulesResponseBodyData self = new ListQualityRulesResponseBodyData();
@@ -392,20 +404,20 @@ public class ListQualityRulesResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListQualityRulesResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListQualityRulesResponseBodyData setRules(java.util.List<ListQualityRulesResponseBodyDataRules> rules) {
             this.rules = rules;
             return this;
         }
         public java.util.List<ListQualityRulesResponseBodyDataRules> getRules() {
             return this.rules;
+        }
+
+        public ListQualityRulesResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

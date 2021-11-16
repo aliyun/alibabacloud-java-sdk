@@ -4,40 +4,24 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceGroupRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public Long tenantId;
-
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("ApiGatewayGroupId")
     public String apiGatewayGroupId;
-
-    @NameInMap("GroupName")
-    public String groupName;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("GroupName")
+    public String groupName;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("TenantId")
+    public Long tenantId;
+
     public static CreateDataServiceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceGroupRequest self = new CreateDataServiceGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataServiceGroupRequest setTenantId(Long tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public Long getTenantId() {
-        return this.tenantId;
-    }
-
-    public CreateDataServiceGroupRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public CreateDataServiceGroupRequest setApiGatewayGroupId(String apiGatewayGroupId) {
@@ -48,6 +32,14 @@ public class CreateDataServiceGroupRequest extends TeaModel {
         return this.apiGatewayGroupId;
     }
 
+    public CreateDataServiceGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public CreateDataServiceGroupRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -56,12 +48,20 @@ public class CreateDataServiceGroupRequest extends TeaModel {
         return this.groupName;
     }
 
-    public CreateDataServiceGroupRequest setDescription(String description) {
-        this.description = description;
+    public CreateDataServiceGroupRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateDataServiceGroupRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
     }
 
 }

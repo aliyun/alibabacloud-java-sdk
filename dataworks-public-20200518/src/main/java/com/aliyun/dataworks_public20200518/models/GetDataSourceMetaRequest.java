@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceMetaRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("DatasourceName")
     public String datasourceName;
+
+    @NameInMap("EnvType")
+    public String envType;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -16,20 +16,12 @@ public class GetDataSourceMetaRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("EnvType")
-    public String envType;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static GetDataSourceMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataSourceMetaRequest self = new GetDataSourceMetaRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetDataSourceMetaRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public GetDataSourceMetaRequest setDatasourceName(String datasourceName) {
@@ -38,6 +30,14 @@ public class GetDataSourceMetaRequest extends TeaModel {
     }
     public String getDatasourceName() {
         return this.datasourceName;
+    }
+
+    public GetDataSourceMetaRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
     }
 
     public GetDataSourceMetaRequest setPageNumber(Long pageNumber) {
@@ -56,12 +56,12 @@ public class GetDataSourceMetaRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetDataSourceMetaRequest setEnvType(String envType) {
-        this.envType = envType;
+    public GetDataSourceMetaRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getEnvType() {
-        return this.envType;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFileTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NodeTypeInfoList")
     public ListFileTypeResponseBodyNodeTypeInfoList nodeTypeInfoList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListFileTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFileTypeResponseBody self = new ListFileTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFileTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListFileTypeResponseBody setNodeTypeInfoList(ListFileTypeResponseBodyNodeTypeInfoList nodeTypeInfoList) {
@@ -31,24 +23,24 @@ public class ListFileTypeResponseBody extends TeaModel {
         return this.nodeTypeInfoList;
     }
 
-    public static class ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo extends TeaModel {
-        @NameInMap("NodeTypeName")
-        public String nodeTypeName;
+    public ListFileTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo extends TeaModel {
         @NameInMap("NodeType")
         public Integer nodeType;
+
+        @NameInMap("NodeTypeName")
+        public String nodeTypeName;
 
         public static ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo build(java.util.Map<String, ?> map) throws Exception {
             ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo self = new ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo setNodeTypeName(String nodeTypeName) {
-            this.nodeTypeName = nodeTypeName;
-            return this;
-        }
-        public String getNodeTypeName() {
-            return this.nodeTypeName;
         }
 
         public ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo setNodeType(Integer nodeType) {
@@ -59,9 +51,20 @@ public class ListFileTypeResponseBody extends TeaModel {
             return this.nodeType;
         }
 
+        public ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo setNodeTypeName(String nodeTypeName) {
+            this.nodeTypeName = nodeTypeName;
+            return this;
+        }
+        public String getNodeTypeName() {
+            return this.nodeTypeName;
+        }
+
     }
 
     public static class ListFileTypeResponseBodyNodeTypeInfoList extends TeaModel {
+        @NameInMap("NodeTypeInfo")
+        public java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> nodeTypeInfo;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -71,12 +74,17 @@ public class ListFileTypeResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("NodeTypeInfo")
-        public java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> nodeTypeInfo;
-
         public static ListFileTypeResponseBodyNodeTypeInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListFileTypeResponseBodyNodeTypeInfoList self = new ListFileTypeResponseBodyNodeTypeInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public ListFileTypeResponseBodyNodeTypeInfoList setNodeTypeInfo(java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> nodeTypeInfo) {
+            this.nodeTypeInfo = nodeTypeInfo;
+            return this;
+        }
+        public java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> getNodeTypeInfo() {
+            return this.nodeTypeInfo;
         }
 
         public ListFileTypeResponseBodyNodeTypeInfoList setPageNumber(Integer pageNumber) {
@@ -101,14 +109,6 @@ public class ListFileTypeResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListFileTypeResponseBodyNodeTypeInfoList setNodeTypeInfo(java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> nodeTypeInfo) {
-            this.nodeTypeInfo = nodeTypeInfo;
-            return this;
-        }
-        public java.util.List<ListFileTypeResponseBodyNodeTypeInfoListNodeTypeInfo> getNodeTypeInfo() {
-            return this.nodeTypeInfo;
         }
 
     }

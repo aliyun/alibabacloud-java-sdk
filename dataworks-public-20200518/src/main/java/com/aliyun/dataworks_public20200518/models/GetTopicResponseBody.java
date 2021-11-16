@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetTopicResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetTopicResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetTopicResponseBodyData data;
 
     public static GetTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTopicResponseBody self = new GetTopicResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTopicResponseBody setData(GetTopicResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTopicResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetTopicResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetTopicResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetTopicResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTopicResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetTopicResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetTopicResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,50 +75,33 @@ public class GetTopicResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetTopicResponseBody setData(GetTopicResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTopicResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetTopicResponseBodyData extends TeaModel {
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("AddTime")
+        public Long addTime;
 
-        @NameInMap("TopicName")
-        public String topicName;
+        @NameInMap("AlertTime")
+        public Long alertTime;
 
-        @NameInMap("BaselineStatus")
-        public String baselineStatus;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
-
-        @NameInMap("NextAlertTime")
-        public Long nextAlertTime;
-
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        @NameInMap("FixTime")
-        public Long fixTime;
-
-        @NameInMap("BaselineInGroupId")
-        public Integer baselineInGroupId;
+        @NameInMap("Assigner")
+        public String assigner;
 
         @NameInMap("BaselineBuffer")
         public Long baselineBuffer;
 
-        @NameInMap("TopicType")
-        public String topicType;
+        @NameInMap("BaselineId")
+        public Long baselineId;
 
-        @NameInMap("TopicStatus")
-        public String topicStatus;
+        @NameInMap("BaselineInGroupId")
+        public Integer baselineInGroupId;
 
-        @NameInMap("HappenTime")
-        public Long happenTime;
+        @NameInMap("BaselineName")
+        public String baselineName;
+
+        @NameInMap("BaselineStatus")
+        public String baselineStatus;
+
+        @NameInMap("Buffer")
+        public Long buffer;
 
         @NameInMap("DealTime")
         public Long dealTime;
@@ -118,100 +109,69 @@ public class GetTopicResponseBody extends TeaModel {
         @NameInMap("DealUser")
         public String dealUser;
 
-        @NameInMap("BaselineName")
-        public String baselineName;
+        @NameInMap("FixTime")
+        public Long fixTime;
 
-        @NameInMap("BaselineId")
-        public Long baselineId;
+        @NameInMap("HappenTime")
+        public Long happenTime;
+
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        @NameInMap("NextAlertTime")
+        public Long nextAlertTime;
+
+        @NameInMap("NodeId")
+        public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("AlertTime")
-        public Long alertTime;
+        @NameInMap("Owner")
+        public String owner;
 
-        @NameInMap("Buffer")
-        public Long buffer;
-
-        @NameInMap("Assigner")
-        public String assigner;
+        @NameInMap("ProjectId")
+        public Long projectId;
 
         @NameInMap("TopicId")
         public Long topicId;
 
-        @NameInMap("AddTime")
-        public Long addTime;
+        @NameInMap("TopicName")
+        public String topicName;
 
-        @NameInMap("NodeId")
-        public Long nodeId;
+        @NameInMap("TopicStatus")
+        public String topicStatus;
+
+        @NameInMap("TopicType")
+        public String topicType;
 
         public static GetTopicResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTopicResponseBodyData self = new GetTopicResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetTopicResponseBodyData setOwner(String owner) {
-            this.owner = owner;
+        public GetTopicResponseBodyData setAddTime(Long addTime) {
+            this.addTime = addTime;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public Long getAddTime() {
+            return this.addTime;
         }
 
-        public GetTopicResponseBodyData setTopicName(String topicName) {
-            this.topicName = topicName;
+        public GetTopicResponseBodyData setAlertTime(Long alertTime) {
+            this.alertTime = alertTime;
             return this;
         }
-        public String getTopicName() {
-            return this.topicName;
+        public Long getAlertTime() {
+            return this.alertTime;
         }
 
-        public GetTopicResponseBodyData setBaselineStatus(String baselineStatus) {
-            this.baselineStatus = baselineStatus;
+        public GetTopicResponseBodyData setAssigner(String assigner) {
+            this.assigner = assigner;
             return this;
         }
-        public String getBaselineStatus() {
-            return this.baselineStatus;
-        }
-
-        public GetTopicResponseBodyData setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
-        }
-
-        public GetTopicResponseBodyData setNextAlertTime(Long nextAlertTime) {
-            this.nextAlertTime = nextAlertTime;
-            return this;
-        }
-        public Long getNextAlertTime() {
-            return this.nextAlertTime;
-        }
-
-        public GetTopicResponseBodyData setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
-        }
-
-        public GetTopicResponseBodyData setFixTime(Long fixTime) {
-            this.fixTime = fixTime;
-            return this;
-        }
-        public Long getFixTime() {
-            return this.fixTime;
-        }
-
-        public GetTopicResponseBodyData setBaselineInGroupId(Integer baselineInGroupId) {
-            this.baselineInGroupId = baselineInGroupId;
-            return this;
-        }
-        public Integer getBaselineInGroupId() {
-            return this.baselineInGroupId;
+        public String getAssigner() {
+            return this.assigner;
         }
 
         public GetTopicResponseBodyData setBaselineBuffer(Long baselineBuffer) {
@@ -222,28 +182,44 @@ public class GetTopicResponseBody extends TeaModel {
             return this.baselineBuffer;
         }
 
-        public GetTopicResponseBodyData setTopicType(String topicType) {
-            this.topicType = topicType;
+        public GetTopicResponseBodyData setBaselineId(Long baselineId) {
+            this.baselineId = baselineId;
             return this;
         }
-        public String getTopicType() {
-            return this.topicType;
+        public Long getBaselineId() {
+            return this.baselineId;
         }
 
-        public GetTopicResponseBodyData setTopicStatus(String topicStatus) {
-            this.topicStatus = topicStatus;
+        public GetTopicResponseBodyData setBaselineInGroupId(Integer baselineInGroupId) {
+            this.baselineInGroupId = baselineInGroupId;
             return this;
         }
-        public String getTopicStatus() {
-            return this.topicStatus;
+        public Integer getBaselineInGroupId() {
+            return this.baselineInGroupId;
         }
 
-        public GetTopicResponseBodyData setHappenTime(Long happenTime) {
-            this.happenTime = happenTime;
+        public GetTopicResponseBodyData setBaselineName(String baselineName) {
+            this.baselineName = baselineName;
             return this;
         }
-        public Long getHappenTime() {
-            return this.happenTime;
+        public String getBaselineName() {
+            return this.baselineName;
+        }
+
+        public GetTopicResponseBodyData setBaselineStatus(String baselineStatus) {
+            this.baselineStatus = baselineStatus;
+            return this;
+        }
+        public String getBaselineStatus() {
+            return this.baselineStatus;
+        }
+
+        public GetTopicResponseBodyData setBuffer(Long buffer) {
+            this.buffer = buffer;
+            return this;
+        }
+        public Long getBuffer() {
+            return this.buffer;
         }
 
         public GetTopicResponseBodyData setDealTime(Long dealTime) {
@@ -262,20 +238,44 @@ public class GetTopicResponseBody extends TeaModel {
             return this.dealUser;
         }
 
-        public GetTopicResponseBodyData setBaselineName(String baselineName) {
-            this.baselineName = baselineName;
+        public GetTopicResponseBodyData setFixTime(Long fixTime) {
+            this.fixTime = fixTime;
             return this;
         }
-        public String getBaselineName() {
-            return this.baselineName;
+        public Long getFixTime() {
+            return this.fixTime;
         }
 
-        public GetTopicResponseBodyData setBaselineId(Long baselineId) {
-            this.baselineId = baselineId;
+        public GetTopicResponseBodyData setHappenTime(Long happenTime) {
+            this.happenTime = happenTime;
             return this;
         }
-        public Long getBaselineId() {
-            return this.baselineId;
+        public Long getHappenTime() {
+            return this.happenTime;
+        }
+
+        public GetTopicResponseBodyData setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetTopicResponseBodyData setNextAlertTime(Long nextAlertTime) {
+            this.nextAlertTime = nextAlertTime;
+            return this;
+        }
+        public Long getNextAlertTime() {
+            return this.nextAlertTime;
+        }
+
+        public GetTopicResponseBodyData setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
         }
 
         public GetTopicResponseBodyData setNodeName(String nodeName) {
@@ -286,28 +286,20 @@ public class GetTopicResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public GetTopicResponseBodyData setAlertTime(Long alertTime) {
-            this.alertTime = alertTime;
+        public GetTopicResponseBodyData setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public Long getAlertTime() {
-            return this.alertTime;
+        public String getOwner() {
+            return this.owner;
         }
 
-        public GetTopicResponseBodyData setBuffer(Long buffer) {
-            this.buffer = buffer;
+        public GetTopicResponseBodyData setProjectId(Long projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Long getBuffer() {
-            return this.buffer;
-        }
-
-        public GetTopicResponseBodyData setAssigner(String assigner) {
-            this.assigner = assigner;
-            return this;
-        }
-        public String getAssigner() {
-            return this.assigner;
+        public Long getProjectId() {
+            return this.projectId;
         }
 
         public GetTopicResponseBodyData setTopicId(Long topicId) {
@@ -318,20 +310,28 @@ public class GetTopicResponseBody extends TeaModel {
             return this.topicId;
         }
 
-        public GetTopicResponseBodyData setAddTime(Long addTime) {
-            this.addTime = addTime;
+        public GetTopicResponseBodyData setTopicName(String topicName) {
+            this.topicName = topicName;
             return this;
         }
-        public Long getAddTime() {
-            return this.addTime;
+        public String getTopicName() {
+            return this.topicName;
         }
 
-        public GetTopicResponseBodyData setNodeId(Long nodeId) {
-            this.nodeId = nodeId;
+        public GetTopicResponseBodyData setTopicStatus(String topicStatus) {
+            this.topicStatus = topicStatus;
             return this;
         }
-        public Long getNodeId() {
-            return this.nodeId;
+        public String getTopicStatus() {
+            return this.topicStatus;
+        }
+
+        public GetTopicResponseBodyData setTopicType(String topicType) {
+            this.topicType = topicType;
+            return this;
+        }
+        public String getTopicType() {
+            return this.topicType;
         }
 
     }

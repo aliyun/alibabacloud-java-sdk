@@ -4,37 +4,29 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateQualityFollowerRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    @NameInMap("FollowerId")
-    public Long followerId;
+    @NameInMap("AlarmMode")
+    public Integer alarmMode;
 
     @NameInMap("Follower")
     public String follower;
 
-    @NameInMap("AlarmMode")
-    public Integer alarmMode;
+    @NameInMap("FollowerId")
+    public Long followerId;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     public static UpdateQualityFollowerRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateQualityFollowerRequest self = new UpdateQualityFollowerRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateQualityFollowerRequest setProjectName(String projectName) {
-        this.projectName = projectName;
+    public UpdateQualityFollowerRequest setAlarmMode(Integer alarmMode) {
+        this.alarmMode = alarmMode;
         return this;
     }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public UpdateQualityFollowerRequest setFollowerId(Long followerId) {
-        this.followerId = followerId;
-        return this;
-    }
-    public Long getFollowerId() {
-        return this.followerId;
+    public Integer getAlarmMode() {
+        return this.alarmMode;
     }
 
     public UpdateQualityFollowerRequest setFollower(String follower) {
@@ -45,12 +37,20 @@ public class UpdateQualityFollowerRequest extends TeaModel {
         return this.follower;
     }
 
-    public UpdateQualityFollowerRequest setAlarmMode(Integer alarmMode) {
-        this.alarmMode = alarmMode;
+    public UpdateQualityFollowerRequest setFollowerId(Long followerId) {
+        this.followerId = followerId;
         return this;
     }
-    public Integer getAlarmMode() {
-        return this.alarmMode;
+    public Long getFollowerId() {
+        return this.followerId;
+    }
+
+    public UpdateQualityFollowerRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

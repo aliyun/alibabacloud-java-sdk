@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaTableColumnResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaTableColumnResponseBodyData data;
-
     public static GetMetaTableColumnResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableColumnResponseBody self = new GetMetaTableColumnResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaTableColumnResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaTableColumnResponseBody setData(GetMetaTableColumnResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaTableColumnResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTableColumnResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaTableColumnResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaTableColumnResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaTableColumnResponseBody setRequestId(String requestId) {
@@ -59,37 +75,27 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaTableColumnResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaTableColumnResponseBody setData(GetMetaTableColumnResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaTableColumnResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaTableColumnResponseBodyDataColumnList extends TeaModel {
+        @NameInMap("Caption")
+        public String caption;
+
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("IsPartitionColumn")
-        public Boolean isPartitionColumn;
+        @NameInMap("ColumnType")
+        public String columnType;
 
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("ColumnType")
-        public String columnType;
+        @NameInMap("IsForeignKey")
+        public Boolean isForeignKey;
+
+        @NameInMap("IsPartitionColumn")
+        public Boolean isPartitionColumn;
 
         @NameInMap("IsPrimaryKey")
         public Boolean isPrimaryKey;
@@ -97,15 +103,17 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         @NameInMap("Position")
         public Integer position;
 
-        @NameInMap("Caption")
-        public String caption;
-
-        @NameInMap("IsForeignKey")
-        public Boolean isForeignKey;
-
         public static GetMetaTableColumnResponseBodyDataColumnList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableColumnResponseBodyDataColumnList self = new GetMetaTableColumnResponseBodyDataColumnList();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaTableColumnResponseBodyDataColumnList setCaption(String caption) {
+            this.caption = caption;
+            return this;
+        }
+        public String getCaption() {
+            return this.caption;
         }
 
         public GetMetaTableColumnResponseBodyDataColumnList setColumnGuid(String columnGuid) {
@@ -124,12 +132,12 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public GetMetaTableColumnResponseBodyDataColumnList setIsPartitionColumn(Boolean isPartitionColumn) {
-            this.isPartitionColumn = isPartitionColumn;
+        public GetMetaTableColumnResponseBodyDataColumnList setColumnType(String columnType) {
+            this.columnType = columnType;
             return this;
         }
-        public Boolean getIsPartitionColumn() {
-            return this.isPartitionColumn;
+        public String getColumnType() {
+            return this.columnType;
         }
 
         public GetMetaTableColumnResponseBodyDataColumnList setComment(String comment) {
@@ -140,12 +148,20 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public GetMetaTableColumnResponseBodyDataColumnList setColumnType(String columnType) {
-            this.columnType = columnType;
+        public GetMetaTableColumnResponseBodyDataColumnList setIsForeignKey(Boolean isForeignKey) {
+            this.isForeignKey = isForeignKey;
             return this;
         }
-        public String getColumnType() {
-            return this.columnType;
+        public Boolean getIsForeignKey() {
+            return this.isForeignKey;
+        }
+
+        public GetMetaTableColumnResponseBodyDataColumnList setIsPartitionColumn(Boolean isPartitionColumn) {
+            this.isPartitionColumn = isPartitionColumn;
+            return this;
+        }
+        public Boolean getIsPartitionColumn() {
+            return this.isPartitionColumn;
         }
 
         public GetMetaTableColumnResponseBodyDataColumnList setIsPrimaryKey(Boolean isPrimaryKey) {
@@ -164,25 +180,12 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             return this.position;
         }
 
-        public GetMetaTableColumnResponseBodyDataColumnList setCaption(String caption) {
-            this.caption = caption;
-            return this;
-        }
-        public String getCaption() {
-            return this.caption;
-        }
-
-        public GetMetaTableColumnResponseBodyDataColumnList setIsForeignKey(Boolean isForeignKey) {
-            this.isForeignKey = isForeignKey;
-            return this;
-        }
-        public Boolean getIsForeignKey() {
-            return this.isForeignKey;
-        }
-
     }
 
     public static class GetMetaTableColumnResponseBodyData extends TeaModel {
+        @NameInMap("ColumnList")
+        public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -192,12 +195,17 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("ColumnList")
-        public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList;
-
         public static GetMetaTableColumnResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableColumnResponseBodyData self = new GetMetaTableColumnResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaTableColumnResponseBodyData setColumnList(java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList) {
+            this.columnList = columnList;
+            return this;
+        }
+        public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> getColumnList() {
+            return this.columnList;
         }
 
         public GetMetaTableColumnResponseBodyData setPageNum(Integer pageNum) {
@@ -222,14 +230,6 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetMetaTableColumnResponseBodyData setColumnList(java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList) {
-            this.columnList = columnList;
-            return this;
-        }
-        public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> getColumnList() {
-            return this.columnList;
         }
 
     }

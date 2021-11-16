@@ -7,14 +7,17 @@ public class UpdateQualityRuleRequest extends TeaModel {
     @NameInMap("BlockType")
     public Integer blockType;
 
-    @NameInMap("EntityId")
-    public Long entityId;
+    @NameInMap("Checker")
+    public Integer checker;
 
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("Checker")
-    public Integer checker;
+    @NameInMap("CriticalThreshold")
+    public String criticalThreshold;
+
+    @NameInMap("EntityId")
+    public Long entityId;
 
     @NameInMap("ExpectValue")
     public String expectValue;
@@ -22,14 +25,14 @@ public class UpdateQualityRuleRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
-    @NameInMap("Trend")
-    public String trend;
-
     @NameInMap("MethodName")
     public String methodName;
 
     @NameInMap("Operator")
     public String operator;
+
+    @NameInMap("PredictType")
+    public Integer predictType;
 
     @NameInMap("ProjectName")
     public String projectName;
@@ -40,26 +43,23 @@ public class UpdateQualityRuleRequest extends TeaModel {
     @NameInMap("PropertyType")
     public String propertyType;
 
+    @NameInMap("RuleName")
+    public String ruleName;
+
     @NameInMap("RuleType")
     public Integer ruleType;
-
-    @NameInMap("WhereCondition")
-    public String whereCondition;
-
-    @NameInMap("CriticalThreshold")
-    public String criticalThreshold;
-
-    @NameInMap("WarningThreshold")
-    public String warningThreshold;
 
     @NameInMap("TemplateId")
     public Integer templateId;
 
-    @NameInMap("RuleName")
-    public String ruleName;
+    @NameInMap("Trend")
+    public String trend;
 
-    @NameInMap("PredictType")
-    public Integer predictType;
+    @NameInMap("WarningThreshold")
+    public String warningThreshold;
+
+    @NameInMap("WhereCondition")
+    public String whereCondition;
 
     public static UpdateQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateQualityRuleRequest self = new UpdateQualityRuleRequest();
@@ -74,12 +74,12 @@ public class UpdateQualityRuleRequest extends TeaModel {
         return this.blockType;
     }
 
-    public UpdateQualityRuleRequest setEntityId(Long entityId) {
-        this.entityId = entityId;
+    public UpdateQualityRuleRequest setChecker(Integer checker) {
+        this.checker = checker;
         return this;
     }
-    public Long getEntityId() {
-        return this.entityId;
+    public Integer getChecker() {
+        return this.checker;
     }
 
     public UpdateQualityRuleRequest setComment(String comment) {
@@ -90,12 +90,20 @@ public class UpdateQualityRuleRequest extends TeaModel {
         return this.comment;
     }
 
-    public UpdateQualityRuleRequest setChecker(Integer checker) {
-        this.checker = checker;
+    public UpdateQualityRuleRequest setCriticalThreshold(String criticalThreshold) {
+        this.criticalThreshold = criticalThreshold;
         return this;
     }
-    public Integer getChecker() {
-        return this.checker;
+    public String getCriticalThreshold() {
+        return this.criticalThreshold;
+    }
+
+    public UpdateQualityRuleRequest setEntityId(Long entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public Long getEntityId() {
+        return this.entityId;
     }
 
     public UpdateQualityRuleRequest setExpectValue(String expectValue) {
@@ -114,14 +122,6 @@ public class UpdateQualityRuleRequest extends TeaModel {
         return this.id;
     }
 
-    public UpdateQualityRuleRequest setTrend(String trend) {
-        this.trend = trend;
-        return this;
-    }
-    public String getTrend() {
-        return this.trend;
-    }
-
     public UpdateQualityRuleRequest setMethodName(String methodName) {
         this.methodName = methodName;
         return this;
@@ -136,6 +136,14 @@ public class UpdateQualityRuleRequest extends TeaModel {
     }
     public String getOperator() {
         return this.operator;
+    }
+
+    public UpdateQualityRuleRequest setPredictType(Integer predictType) {
+        this.predictType = predictType;
+        return this;
+    }
+    public Integer getPredictType() {
+        return this.predictType;
     }
 
     public UpdateQualityRuleRequest setProjectName(String projectName) {
@@ -162,36 +170,20 @@ public class UpdateQualityRuleRequest extends TeaModel {
         return this.propertyType;
     }
 
+    public UpdateQualityRuleRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
     public UpdateQualityRuleRequest setRuleType(Integer ruleType) {
         this.ruleType = ruleType;
         return this;
     }
     public Integer getRuleType() {
         return this.ruleType;
-    }
-
-    public UpdateQualityRuleRequest setWhereCondition(String whereCondition) {
-        this.whereCondition = whereCondition;
-        return this;
-    }
-    public String getWhereCondition() {
-        return this.whereCondition;
-    }
-
-    public UpdateQualityRuleRequest setCriticalThreshold(String criticalThreshold) {
-        this.criticalThreshold = criticalThreshold;
-        return this;
-    }
-    public String getCriticalThreshold() {
-        return this.criticalThreshold;
-    }
-
-    public UpdateQualityRuleRequest setWarningThreshold(String warningThreshold) {
-        this.warningThreshold = warningThreshold;
-        return this;
-    }
-    public String getWarningThreshold() {
-        return this.warningThreshold;
     }
 
     public UpdateQualityRuleRequest setTemplateId(Integer templateId) {
@@ -202,20 +194,28 @@ public class UpdateQualityRuleRequest extends TeaModel {
         return this.templateId;
     }
 
-    public UpdateQualityRuleRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
+    public UpdateQualityRuleRequest setTrend(String trend) {
+        this.trend = trend;
         return this;
     }
-    public String getRuleName() {
-        return this.ruleName;
+    public String getTrend() {
+        return this.trend;
     }
 
-    public UpdateQualityRuleRequest setPredictType(Integer predictType) {
-        this.predictType = predictType;
+    public UpdateQualityRuleRequest setWarningThreshold(String warningThreshold) {
+        this.warningThreshold = warningThreshold;
         return this;
     }
-    public Integer getPredictType() {
-        return this.predictType;
+    public String getWarningThreshold() {
+        return this.warningThreshold;
+    }
+
+    public UpdateQualityRuleRequest setWhereCondition(String whereCondition) {
+        this.whereCondition = whereCondition;
+        return this;
+    }
+    public String getWhereCondition() {
+        return this.whereCondition;
     }
 
 }

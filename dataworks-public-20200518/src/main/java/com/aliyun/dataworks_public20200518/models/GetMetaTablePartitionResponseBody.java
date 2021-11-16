@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTablePartitionResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaTablePartitionResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaTablePartitionResponseBodyData data;
-
     public static GetMetaTablePartitionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTablePartitionResponseBody self = new GetMetaTablePartitionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaTablePartitionResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaTablePartitionResponseBody setData(GetMetaTablePartitionResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaTablePartitionResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTablePartitionResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaTablePartitionResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaTablePartitionResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaTablePartitionResponseBody setRequestId(String requestId) {
@@ -59,46 +75,18 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaTablePartitionResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaTablePartitionResponseBody setData(GetMetaTablePartitionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaTablePartitionResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaTablePartitionResponseBodyDataDataEntityList extends TeaModel {
-        @NameInMap("PartitionPath")
-        public String partitionPath;
-
-        @NameInMap("DataSize")
-        public Long dataSize;
-
-        @NameInMap("PartitionName")
-        public String partitionName;
-
         @NameInMap("Comment")
         public String comment;
-
-        @NameInMap("ModifiedTime")
-        public Long modifiedTime;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("RecordCount")
-        public Long recordCount;
+        @NameInMap("DataSize")
+        public Long dataSize;
 
-        @NameInMap("PartitionType")
-        public String partitionType;
+        @NameInMap("ModifiedTime")
+        public Long modifiedTime;
 
         @NameInMap("PartitionGuid")
         public String partitionGuid;
@@ -106,36 +94,24 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         @NameInMap("PartitionLocation")
         public String partitionLocation;
 
+        @NameInMap("PartitionName")
+        public String partitionName;
+
+        @NameInMap("PartitionPath")
+        public String partitionPath;
+
+        @NameInMap("PartitionType")
+        public String partitionType;
+
+        @NameInMap("RecordCount")
+        public Long recordCount;
+
         @NameInMap("TableGuid")
         public String tableGuid;
 
         public static GetMetaTablePartitionResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTablePartitionResponseBodyDataDataEntityList self = new GetMetaTablePartitionResponseBodyDataDataEntityList();
             return TeaModel.build(map, self);
-        }
-
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionPath(String partitionPath) {
-            this.partitionPath = partitionPath;
-            return this;
-        }
-        public String getPartitionPath() {
-            return this.partitionPath;
-        }
-
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setDataSize(Long dataSize) {
-            this.dataSize = dataSize;
-            return this;
-        }
-        public Long getDataSize() {
-            return this.dataSize;
-        }
-
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionName(String partitionName) {
-            this.partitionName = partitionName;
-            return this;
-        }
-        public String getPartitionName() {
-            return this.partitionName;
         }
 
         public GetMetaTablePartitionResponseBodyDataDataEntityList setComment(String comment) {
@@ -146,14 +122,6 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setModifiedTime(Long modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public Long getModifiedTime() {
-            return this.modifiedTime;
-        }
-
         public GetMetaTablePartitionResponseBodyDataDataEntityList setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -162,20 +130,20 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setRecordCount(Long recordCount) {
-            this.recordCount = recordCount;
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setDataSize(Long dataSize) {
+            this.dataSize = dataSize;
             return this;
         }
-        public Long getRecordCount() {
-            return this.recordCount;
+        public Long getDataSize() {
+            return this.dataSize;
         }
 
-        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionType(String partitionType) {
-            this.partitionType = partitionType;
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setModifiedTime(Long modifiedTime) {
+            this.modifiedTime = modifiedTime;
             return this;
         }
-        public String getPartitionType() {
-            return this.partitionType;
+        public Long getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionGuid(String partitionGuid) {
@@ -194,6 +162,38 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             return this.partitionLocation;
         }
 
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionName(String partitionName) {
+            this.partitionName = partitionName;
+            return this;
+        }
+        public String getPartitionName() {
+            return this.partitionName;
+        }
+
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionPath(String partitionPath) {
+            this.partitionPath = partitionPath;
+            return this;
+        }
+        public String getPartitionPath() {
+            return this.partitionPath;
+        }
+
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setPartitionType(String partitionType) {
+            this.partitionType = partitionType;
+            return this;
+        }
+        public String getPartitionType() {
+            return this.partitionType;
+        }
+
+        public GetMetaTablePartitionResponseBodyDataDataEntityList setRecordCount(Long recordCount) {
+            this.recordCount = recordCount;
+            return this;
+        }
+        public Long getRecordCount() {
+            return this.recordCount;
+        }
+
         public GetMetaTablePartitionResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
             this.tableGuid = tableGuid;
             return this;
@@ -205,6 +205,9 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
     }
 
     public static class GetMetaTablePartitionResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> dataEntityList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -214,12 +217,17 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> dataEntityList;
-
         public static GetMetaTablePartitionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTablePartitionResponseBodyData self = new GetMetaTablePartitionResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaTablePartitionResponseBodyData setDataEntityList(java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public GetMetaTablePartitionResponseBodyData setPageNumber(Integer pageNumber) {
@@ -244,14 +252,6 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetMetaTablePartitionResponseBodyData setDataEntityList(java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
-            return this;
-        }
-        public java.util.List<GetMetaTablePartitionResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
         }
 
     }

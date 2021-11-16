@@ -4,67 +4,27 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListBusinessResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public ListBusinessResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListBusinessResponseBodyData data;
 
     public static ListBusinessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBusinessResponseBody self = new ListBusinessResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListBusinessResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListBusinessResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListBusinessResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListBusinessResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListBusinessResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListBusinessResponseBody setData(ListBusinessResponseBodyData data) {
@@ -75,21 +35,61 @@ public class ListBusinessResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListBusinessResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListBusinessResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListBusinessResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListBusinessResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListBusinessResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class ListBusinessResponseBodyDataBusiness extends TeaModel {
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
-
         @NameInMap("BusinessId")
         public Long businessId;
 
         @NameInMap("BusinessName")
         public String businessName;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
 
         @NameInMap("UseType")
         public String useType;
@@ -97,30 +97,6 @@ public class ListBusinessResponseBody extends TeaModel {
         public static ListBusinessResponseBodyDataBusiness build(java.util.Map<String, ?> map) throws Exception {
             ListBusinessResponseBodyDataBusiness self = new ListBusinessResponseBodyDataBusiness();
             return TeaModel.build(map, self);
-        }
-
-        public ListBusinessResponseBodyDataBusiness setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public ListBusinessResponseBodyDataBusiness setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListBusinessResponseBodyDataBusiness setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
         }
 
         public ListBusinessResponseBodyDataBusiness setBusinessId(Long businessId) {
@@ -139,6 +115,30 @@ public class ListBusinessResponseBody extends TeaModel {
             return this.businessName;
         }
 
+        public ListBusinessResponseBodyDataBusiness setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListBusinessResponseBodyDataBusiness setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListBusinessResponseBodyDataBusiness setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
         public ListBusinessResponseBodyDataBusiness setUseType(String useType) {
             this.useType = useType;
             return this;
@@ -150,6 +150,9 @@ public class ListBusinessResponseBody extends TeaModel {
     }
 
     public static class ListBusinessResponseBodyData extends TeaModel {
+        @NameInMap("Business")
+        public java.util.List<ListBusinessResponseBodyDataBusiness> business;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -159,12 +162,17 @@ public class ListBusinessResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Business")
-        public java.util.List<ListBusinessResponseBodyDataBusiness> business;
-
         public static ListBusinessResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListBusinessResponseBodyData self = new ListBusinessResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListBusinessResponseBodyData setBusiness(java.util.List<ListBusinessResponseBodyDataBusiness> business) {
+            this.business = business;
+            return this;
+        }
+        public java.util.List<ListBusinessResponseBodyDataBusiness> getBusiness() {
+            return this.business;
         }
 
         public ListBusinessResponseBodyData setPageNumber(Integer pageNumber) {
@@ -189,14 +197,6 @@ public class ListBusinessResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListBusinessResponseBodyData setBusiness(java.util.List<ListBusinessResponseBodyDataBusiness> business) {
-            this.business = business;
-            return this;
-        }
-        public java.util.List<ListBusinessResponseBodyDataBusiness> getBusiness() {
-            return this.business;
         }
 
     }

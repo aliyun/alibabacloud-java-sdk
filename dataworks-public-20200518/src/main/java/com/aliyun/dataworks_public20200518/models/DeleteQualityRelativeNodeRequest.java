@@ -16,9 +16,6 @@ public class DeleteQualityRelativeNodeRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("TargetNodeProjectName")
-    public String targetNodeProjectName;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -27,6 +24,9 @@ public class DeleteQualityRelativeNodeRequest extends TeaModel {
 
     @NameInMap("TargetNodeProjectId")
     public Long targetNodeProjectId;
+
+    @NameInMap("TargetNodeProjectName")
+    public String targetNodeProjectName;
 
     public static DeleteQualityRelativeNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityRelativeNodeRequest self = new DeleteQualityRelativeNodeRequest();
@@ -65,14 +65,6 @@ public class DeleteQualityRelativeNodeRequest extends TeaModel {
         return this.projectId;
     }
 
-    public DeleteQualityRelativeNodeRequest setTargetNodeProjectName(String targetNodeProjectName) {
-        this.targetNodeProjectName = targetNodeProjectName;
-        return this;
-    }
-    public String getTargetNodeProjectName() {
-        return this.targetNodeProjectName;
-    }
-
     public DeleteQualityRelativeNodeRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -95,6 +87,14 @@ public class DeleteQualityRelativeNodeRequest extends TeaModel {
     }
     public Long getTargetNodeProjectId() {
         return this.targetNodeProjectId;
+    }
+
+    public DeleteQualityRelativeNodeRequest setTargetNodeProjectName(String targetNodeProjectName) {
+        this.targetNodeProjectName = targetNodeProjectName;
+        return this;
+    }
+    public String getTargetNodeProjectName() {
+        return this.targetNodeProjectName;
     }
 
 }

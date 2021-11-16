@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityFollowerResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<GetQualityFollowerResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public java.util.List<GetQualityFollowerResponseBodyData> data;
 
     public static GetQualityFollowerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityFollowerResponseBody self = new GetQualityFollowerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityFollowerResponseBody setData(java.util.List<GetQualityFollowerResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetQualityFollowerResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public GetQualityFollowerResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetQualityFollowerResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetQualityFollowerResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,14 +67,6 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetQualityFollowerResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public GetQualityFollowerResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -59,63 +75,31 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetQualityFollowerResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetQualityFollowerResponseBody setData(java.util.List<GetQualityFollowerResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetQualityFollowerResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetQualityFollowerResponseBodyData extends TeaModel {
-        @NameInMap("FollowerAccountName")
-        public String followerAccountName;
-
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("AlarmMode")
         public Integer alarmMode;
 
         @NameInMap("EntityId")
         public String entityId;
 
-        @NameInMap("ProjectName")
-        public String projectName;
+        @NameInMap("Follower")
+        public String follower;
+
+        @NameInMap("FollowerAccountName")
+        public String followerAccountName;
 
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("Follower")
-        public String follower;
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static GetQualityFollowerResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityFollowerResponseBodyData self = new GetQualityFollowerResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetQualityFollowerResponseBodyData setFollowerAccountName(String followerAccountName) {
-            this.followerAccountName = followerAccountName;
-            return this;
-        }
-        public String getFollowerAccountName() {
-            return this.followerAccountName;
-        }
-
-        public GetQualityFollowerResponseBodyData setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public GetQualityFollowerResponseBodyData setAlarmMode(Integer alarmMode) {
@@ -134,12 +118,20 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             return this.entityId;
         }
 
-        public GetQualityFollowerResponseBodyData setProjectName(String projectName) {
-            this.projectName = projectName;
+        public GetQualityFollowerResponseBodyData setFollower(String follower) {
+            this.follower = follower;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
+        public String getFollower() {
+            return this.follower;
+        }
+
+        public GetQualityFollowerResponseBodyData setFollowerAccountName(String followerAccountName) {
+            this.followerAccountName = followerAccountName;
+            return this;
+        }
+        public String getFollowerAccountName() {
+            return this.followerAccountName;
         }
 
         public GetQualityFollowerResponseBodyData setId(Long id) {
@@ -150,12 +142,20 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             return this.id;
         }
 
-        public GetQualityFollowerResponseBodyData setFollower(String follower) {
-            this.follower = follower;
+        public GetQualityFollowerResponseBodyData setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public String getFollower() {
-            return this.follower;
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public GetQualityFollowerResponseBodyData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

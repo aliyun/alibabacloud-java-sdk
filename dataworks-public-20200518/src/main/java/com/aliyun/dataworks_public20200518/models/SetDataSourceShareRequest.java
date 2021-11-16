@@ -4,14 +4,14 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SetDataSourceShareRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     @NameInMap("EnvType")
     public String envType;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     @NameInMap("ProjectPermissions")
     public String projectPermissions;
@@ -22,14 +22,6 @@ public class SetDataSourceShareRequest extends TeaModel {
     public static SetDataSourceShareRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDataSourceShareRequest self = new SetDataSourceShareRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDataSourceShareRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public SetDataSourceShareRequest setDatasourceName(String datasourceName) {
@@ -46,6 +38,14 @@ public class SetDataSourceShareRequest extends TeaModel {
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public SetDataSourceShareRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public SetDataSourceShareRequest setProjectPermissions(String projectPermissions) {

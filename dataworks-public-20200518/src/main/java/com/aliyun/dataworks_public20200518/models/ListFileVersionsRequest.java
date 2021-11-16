@@ -7,17 +7,17 @@ public class ListFileVersionsRequest extends TeaModel {
     @NameInMap("FileId")
     public Long fileId;
 
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
 
     public static ListFileVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFileVersionsRequest self = new ListFileVersionsRequest();
@@ -30,22 +30,6 @@ public class ListFileVersionsRequest extends TeaModel {
     }
     public Long getFileId() {
         return this.fileId;
-    }
-
-    public ListFileVersionsRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public ListFileVersionsRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
-        return this;
-    }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
     }
 
     public ListFileVersionsRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +46,22 @@ public class ListFileVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFileVersionsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListFileVersionsRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
 }

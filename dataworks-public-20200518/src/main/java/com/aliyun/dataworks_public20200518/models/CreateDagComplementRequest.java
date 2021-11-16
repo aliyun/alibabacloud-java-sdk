@@ -4,90 +4,42 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDagComplementRequest extends TeaModel {
-    @NameInMap("ProjectEnv")
-    public String projectEnv;
-
-    @NameInMap("StartBizDate")
-    public String startBizDate;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("RootNodeId")
-    public Long rootNodeId;
-
-    @NameInMap("IncludeNodeIds")
-    public String includeNodeIds;
-
-    @NameInMap("ExcludeNodeIds")
-    public String excludeNodeIds;
-
     @NameInMap("BizBeginTime")
     public String bizBeginTime;
 
     @NameInMap("BizEndTime")
     public String bizEndTime;
 
-    @NameInMap("Parallelism")
-    public Boolean parallelism;
-
     @NameInMap("EndBizDate")
     public String endBizDate;
+
+    @NameInMap("ExcludeNodeIds")
+    public String excludeNodeIds;
+
+    @NameInMap("IncludeNodeIds")
+    public String includeNodeIds;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    @NameInMap("Parallelism")
+    public Boolean parallelism;
+
+    @NameInMap("ProjectEnv")
+    public String projectEnv;
+
+    @NameInMap("RootNodeId")
+    public Long rootNodeId;
+
+    @NameInMap("StartBizDate")
+    public String startBizDate;
+
     public static CreateDagComplementRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDagComplementRequest self = new CreateDagComplementRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDagComplementRequest setProjectEnv(String projectEnv) {
-        this.projectEnv = projectEnv;
-        return this;
-    }
-    public String getProjectEnv() {
-        return this.projectEnv;
-    }
-
-    public CreateDagComplementRequest setStartBizDate(String startBizDate) {
-        this.startBizDate = startBizDate;
-        return this;
-    }
-    public String getStartBizDate() {
-        return this.startBizDate;
-    }
-
-    public CreateDagComplementRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateDagComplementRequest setRootNodeId(Long rootNodeId) {
-        this.rootNodeId = rootNodeId;
-        return this;
-    }
-    public Long getRootNodeId() {
-        return this.rootNodeId;
-    }
-
-    public CreateDagComplementRequest setIncludeNodeIds(String includeNodeIds) {
-        this.includeNodeIds = includeNodeIds;
-        return this;
-    }
-    public String getIncludeNodeIds() {
-        return this.includeNodeIds;
-    }
-
-    public CreateDagComplementRequest setExcludeNodeIds(String excludeNodeIds) {
-        this.excludeNodeIds = excludeNodeIds;
-        return this;
-    }
-    public String getExcludeNodeIds() {
-        return this.excludeNodeIds;
     }
 
     public CreateDagComplementRequest setBizBeginTime(String bizBeginTime) {
@@ -106,14 +58,6 @@ public class CreateDagComplementRequest extends TeaModel {
         return this.bizEndTime;
     }
 
-    public CreateDagComplementRequest setParallelism(Boolean parallelism) {
-        this.parallelism = parallelism;
-        return this;
-    }
-    public Boolean getParallelism() {
-        return this.parallelism;
-    }
-
     public CreateDagComplementRequest setEndBizDate(String endBizDate) {
         this.endBizDate = endBizDate;
         return this;
@@ -122,12 +66,68 @@ public class CreateDagComplementRequest extends TeaModel {
         return this.endBizDate;
     }
 
+    public CreateDagComplementRequest setExcludeNodeIds(String excludeNodeIds) {
+        this.excludeNodeIds = excludeNodeIds;
+        return this;
+    }
+    public String getExcludeNodeIds() {
+        return this.excludeNodeIds;
+    }
+
+    public CreateDagComplementRequest setIncludeNodeIds(String includeNodeIds) {
+        this.includeNodeIds = includeNodeIds;
+        return this;
+    }
+    public String getIncludeNodeIds() {
+        return this.includeNodeIds;
+    }
+
+    public CreateDagComplementRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public CreateDagComplementRequest setNodeParams(String nodeParams) {
         this.nodeParams = nodeParams;
         return this;
     }
     public String getNodeParams() {
         return this.nodeParams;
+    }
+
+    public CreateDagComplementRequest setParallelism(Boolean parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Boolean getParallelism() {
+        return this.parallelism;
+    }
+
+    public CreateDagComplementRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
+    public CreateDagComplementRequest setRootNodeId(Long rootNodeId) {
+        this.rootNodeId = rootNodeId;
+        return this;
+    }
+    public Long getRootNodeId() {
+        return this.rootNodeId;
+    }
+
+    public CreateDagComplementRequest setStartBizDate(String startBizDate) {
+        this.startBizDate = startBizDate;
+        return this;
+    }
+    public String getStartBizDate() {
+        return this.startBizDate;
     }
 
 }

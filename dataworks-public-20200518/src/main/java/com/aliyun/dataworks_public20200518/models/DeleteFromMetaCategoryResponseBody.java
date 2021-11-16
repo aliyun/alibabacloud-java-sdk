@@ -4,20 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteFromMetaCategoryResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class DeleteFromMetaCategoryResponseBody extends TeaModel {
     public static DeleteFromMetaCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFromMetaCategoryResponseBody self = new DeleteFromMetaCategoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteFromMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public DeleteFromMetaCategoryResponseBody setData(Boolean data) {
@@ -43,12 +35,12 @@ public class DeleteFromMetaCategoryResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteFromMetaCategoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteFromMetaCategoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteFromMetaCategoryResponseBody setErrorMessage(String errorMessage) {
@@ -59,12 +51,20 @@ public class DeleteFromMetaCategoryResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public DeleteFromMetaCategoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteFromMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DeleteFromMetaCategoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteFromMetaCategoryResponseBody setSuccess(Boolean success) {

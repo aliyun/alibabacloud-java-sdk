@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckEngineMetaTableRequest extends TeaModel {
-    @NameInMap("TableGuid")
-    public String tableGuid;
-
     @NameInMap("DataSourceType")
     public String dataSourceType;
+
+    @NameInMap("TableGuid")
+    public String tableGuid;
 
     public static CheckEngineMetaTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckEngineMetaTableRequest self = new CheckEngineMetaTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CheckEngineMetaTableRequest setTableGuid(String tableGuid) {
-        this.tableGuid = tableGuid;
-        return this;
-    }
-    public String getTableGuid() {
-        return this.tableGuid;
     }
 
     public CheckEngineMetaTableRequest setDataSourceType(String dataSourceType) {
@@ -29,6 +21,14 @@ public class CheckEngineMetaTableRequest extends TeaModel {
     }
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    public CheckEngineMetaTableRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
     }
 
 }

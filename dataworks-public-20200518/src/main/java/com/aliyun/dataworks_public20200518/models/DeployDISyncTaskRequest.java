@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeployDISyncTaskRequest extends TeaModel {
+    @NameInMap("FileId")
+    public Long fileId;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("TaskType")
     public String taskType;
 
-    @NameInMap("FileId")
-    public Long fileId;
-
     public static DeployDISyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployDISyncTaskRequest self = new DeployDISyncTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeployDISyncTaskRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
     }
 
     public DeployDISyncTaskRequest setProjectId(Long projectId) {
@@ -32,14 +40,6 @@ public class DeployDISyncTaskRequest extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
-    }
-
-    public DeployDISyncTaskRequest setFileId(Long fileId) {
-        this.fileId = fileId;
-        return this;
-    }
-    public Long getFileId() {
-        return this.fileId;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListQualityRulesRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("EntityId")
     public Long entityId;
 
@@ -16,17 +13,12 @@ public class ListQualityRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectName")
+    public String projectName;
+
     public static ListQualityRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQualityRulesRequest self = new ListQualityRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListQualityRulesRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
     public ListQualityRulesRequest setEntityId(Long entityId) {
@@ -51,6 +43,14 @@ public class ListQualityRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListQualityRulesRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class AbolishDataServiceApiResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class AbolishDataServiceApiResponseBody extends TeaModel {
     public static AbolishDataServiceApiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbolishDataServiceApiResponseBody self = new AbolishDataServiceApiResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AbolishDataServiceApiResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public AbolishDataServiceApiResponseBody setData(Boolean data) {
@@ -43,6 +35,14 @@ public class AbolishDataServiceApiResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AbolishDataServiceApiResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public AbolishDataServiceApiResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,20 +51,20 @@ public class AbolishDataServiceApiResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public AbolishDataServiceApiResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public AbolishDataServiceApiResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AbolishDataServiceApiResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public AbolishDataServiceApiResponseBody setSuccess(Boolean success) {

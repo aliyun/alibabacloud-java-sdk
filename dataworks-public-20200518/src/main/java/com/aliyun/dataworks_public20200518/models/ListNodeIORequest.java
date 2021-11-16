@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodeIORequest extends TeaModel {
+    @NameInMap("IoType")
+    public String ioType;
+
     @NameInMap("NodeId")
     public Long nodeId;
 
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
-    @NameInMap("IoType")
-    public String ioType;
-
     public static ListNodeIORequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodeIORequest self = new ListNodeIORequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListNodeIORequest setIoType(String ioType) {
+        this.ioType = ioType;
+        return this;
+    }
+    public String getIoType() {
+        return this.ioType;
     }
 
     public ListNodeIORequest setNodeId(Long nodeId) {
@@ -32,14 +40,6 @@ public class ListNodeIORequest extends TeaModel {
     }
     public String getProjectEnv() {
         return this.projectEnv;
-    }
-
-    public ListNodeIORequest setIoType(String ioType) {
-        this.ioType = ioType;
-        return this;
-    }
-    public String getIoType() {
-        return this.ioType;
     }
 
 }

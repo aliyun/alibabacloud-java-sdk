@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceFoldersRequest extends TeaModel {
+    @NameInMap("FolderNameKeyword")
+    public String folderNameKeyword;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,15 +22,25 @@ public class ListDataServiceFoldersRequest extends TeaModel {
     @NameInMap("TenantId")
     public Long tenantId;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("FolderNameKeyword")
-    public String folderNameKeyword;
-
     public static ListDataServiceFoldersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceFoldersRequest self = new ListDataServiceFoldersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataServiceFoldersRequest setFolderNameKeyword(String folderNameKeyword) {
+        this.folderNameKeyword = folderNameKeyword;
+        return this;
+    }
+    public String getFolderNameKeyword() {
+        return this.folderNameKeyword;
+    }
+
+    public ListDataServiceFoldersRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListDataServiceFoldersRequest setPageNumber(Integer pageNumber) {
@@ -57,22 +73,6 @@ public class ListDataServiceFoldersRequest extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
-    }
-
-    public ListDataServiceFoldersRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public ListDataServiceFoldersRequest setFolderNameKeyword(String folderNameKeyword) {
-        this.folderNameKeyword = folderNameKeyword;
-        return this;
-    }
-    public String getFolderNameKeyword() {
-        return this.folderNameKeyword;
     }
 
 }

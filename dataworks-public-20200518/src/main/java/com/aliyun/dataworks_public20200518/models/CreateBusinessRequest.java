@@ -4,12 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateBusinessRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
-
     @NameInMap("BusinessName")
     public String businessName;
 
@@ -19,28 +13,18 @@ public class CreateBusinessRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
+
     @NameInMap("UseType")
     public String useType;
 
     public static CreateBusinessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBusinessRequest self = new CreateBusinessRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateBusinessRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public CreateBusinessRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
-        return this;
-    }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
     }
 
     public CreateBusinessRequest setBusinessName(String businessName) {
@@ -65,6 +49,22 @@ public class CreateBusinessRequest extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public CreateBusinessRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateBusinessRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
     public CreateBusinessRequest setUseType(String useType) {

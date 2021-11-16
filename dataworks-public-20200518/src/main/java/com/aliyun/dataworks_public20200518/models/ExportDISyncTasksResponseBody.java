@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ExportDISyncTasksResponseBody extends TeaModel {
-    @NameInMap("success")
-    public Boolean success;
+    @NameInMap("data")
+    public ExportDISyncTasksResponseBodyData data;
 
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public ExportDISyncTasksResponseBodyData data;
+    @NameInMap("success")
+    public Boolean success;
 
     public static ExportDISyncTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportDISyncTasksResponseBody self = new ExportDISyncTasksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExportDISyncTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ExportDISyncTasksResponseBody setData(ExportDISyncTasksResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public ExportDISyncTasksResponseBodyData getData() {
+        return this.data;
     }
 
     public ExportDISyncTasksResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ExportDISyncTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ExportDISyncTasksResponseBody setData(ExportDISyncTasksResponseBodyData data) {
-        this.data = data;
+    public ExportDISyncTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ExportDISyncTasksResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ExportDISyncTasksResponseBodyData extends TeaModel {

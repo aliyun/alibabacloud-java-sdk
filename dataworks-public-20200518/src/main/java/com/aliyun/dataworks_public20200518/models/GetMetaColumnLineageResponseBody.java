@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaColumnLineageResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaColumnLineageResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaColumnLineageResponseBodyData data;
-
     public static GetMetaColumnLineageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaColumnLineageResponseBody self = new GetMetaColumnLineageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaColumnLineageResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaColumnLineageResponseBody setData(GetMetaColumnLineageResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaColumnLineageResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaColumnLineageResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaColumnLineageResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaColumnLineageResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaColumnLineageResponseBody setRequestId(String requestId) {
@@ -59,41 +75,33 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaColumnLineageResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaColumnLineageResponseBody setData(GetMetaColumnLineageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaColumnLineageResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaColumnLineageResponseBodyDataDataEntityList extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("DatabaseName")
         public String databaseName;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("TableName")
+        public String tableName;
 
         public static GetMetaColumnLineageResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaColumnLineageResponseBodyDataDataEntityList self = new GetMetaColumnLineageResponseBodyDataDataEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaColumnLineageResponseBodyDataDataEntityList setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public GetMetaColumnLineageResponseBodyDataDataEntityList setColumnGuid(String columnGuid) {
@@ -112,14 +120,6 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public GetMetaColumnLineageResponseBodyDataDataEntityList setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
         public GetMetaColumnLineageResponseBodyDataDataEntityList setDatabaseName(String databaseName) {
             this.databaseName = databaseName;
             return this;
@@ -128,17 +128,20 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             return this.databaseName;
         }
 
-        public GetMetaColumnLineageResponseBodyDataDataEntityList setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public GetMetaColumnLineageResponseBodyDataDataEntityList setTableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public String getTableName() {
+            return this.tableName;
         }
 
     }
 
     public static class GetMetaColumnLineageResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -148,12 +151,17 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList;
-
         public static GetMetaColumnLineageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaColumnLineageResponseBodyData self = new GetMetaColumnLineageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaColumnLineageResponseBodyData setDataEntityList(java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public GetMetaColumnLineageResponseBodyData setPageNum(Integer pageNum) {
@@ -178,14 +186,6 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetMetaColumnLineageResponseBodyData setDataEntityList(java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
-            return this;
-        }
-        public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
         }
 
     }

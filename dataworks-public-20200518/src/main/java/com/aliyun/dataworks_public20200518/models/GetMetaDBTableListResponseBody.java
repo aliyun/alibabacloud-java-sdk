@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaDBTableListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetMetaDBTableListResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetMetaDBTableListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaDBTableListResponseBody self = new GetMetaDBTableListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetMetaDBTableListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetMetaDBTableListResponseBody setData(GetMetaDBTableListResponseBodyData data) {
@@ -31,27 +23,35 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetMetaDBTableListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetMetaDBTableListResponseBodyDataTableEntityList extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
+        @NameInMap("DatabaseName")
+        public String databaseName;
 
         @NameInMap("TableGuid")
         public String tableGuid;
 
-        @NameInMap("DatabaseName")
-        public String databaseName;
+        @NameInMap("TableName")
+        public String tableName;
 
         public static GetMetaDBTableListResponseBodyDataTableEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaDBTableListResponseBodyDataTableEntityList self = new GetMetaDBTableListResponseBodyDataTableEntityList();
             return TeaModel.build(map, self);
         }
 
-        public GetMetaDBTableListResponseBodyDataTableEntityList setTableName(String tableName) {
-            this.tableName = tableName;
+        public GetMetaDBTableListResponseBodyDataTableEntityList setDatabaseName(String databaseName) {
+            this.databaseName = databaseName;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
+        public String getDatabaseName() {
+            return this.databaseName;
         }
 
         public GetMetaDBTableListResponseBodyDataTableEntityList setTableGuid(String tableGuid) {
@@ -62,12 +62,12 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             return this.tableGuid;
         }
 
-        public GetMetaDBTableListResponseBodyDataTableEntityList setDatabaseName(String databaseName) {
-            this.databaseName = databaseName;
+        public GetMetaDBTableListResponseBodyDataTableEntityList setTableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
-        public String getDatabaseName() {
-            return this.databaseName;
+        public String getTableName() {
+            return this.tableName;
         }
 
     }
@@ -79,11 +79,11 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("TableEntityList")
         public java.util.List<GetMetaDBTableListResponseBodyDataTableEntityList> tableEntityList;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetMetaDBTableListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaDBTableListResponseBodyData self = new GetMetaDBTableListResponseBodyData();
@@ -106,20 +106,20 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public GetMetaDBTableListResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
         public GetMetaDBTableListResponseBodyData setTableEntityList(java.util.List<GetMetaDBTableListResponseBodyDataTableEntityList> tableEntityList) {
             this.tableEntityList = tableEntityList;
             return this;
         }
         public java.util.List<GetMetaDBTableListResponseBodyDataTableEntityList> getTableEntityList() {
             return this.tableEntityList;
+        }
+
+        public GetMetaDBTableListResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

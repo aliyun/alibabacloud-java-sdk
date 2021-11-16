@@ -4,24 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateImportMigrationRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("PackageType")
-    public String packageType;
-
-    @NameInMap("PackageFile")
-    public String packageFile;
-
-    @NameInMap("ResourceGroupMap")
-    public String resourceGroupMap;
-
-    @NameInMap("WorkspaceMap")
-    public String workspaceMap;
-
     @NameInMap("CalculateEngineMap")
     public String calculateEngineMap;
 
@@ -31,57 +13,27 @@ public class CreateImportMigrationRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("PackageFile")
+    public String packageFile;
+
+    @NameInMap("PackageType")
+    public String packageType;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ResourceGroupMap")
+    public String resourceGroupMap;
+
+    @NameInMap("WorkspaceMap")
+    public String workspaceMap;
+
     public static CreateImportMigrationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImportMigrationRequest self = new CreateImportMigrationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateImportMigrationRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public CreateImportMigrationRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateImportMigrationRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
-    }
-
-    public CreateImportMigrationRequest setPackageFile(String packageFile) {
-        this.packageFile = packageFile;
-        return this;
-    }
-    public String getPackageFile() {
-        return this.packageFile;
-    }
-
-    public CreateImportMigrationRequest setResourceGroupMap(String resourceGroupMap) {
-        this.resourceGroupMap = resourceGroupMap;
-        return this;
-    }
-    public String getResourceGroupMap() {
-        return this.resourceGroupMap;
-    }
-
-    public CreateImportMigrationRequest setWorkspaceMap(String workspaceMap) {
-        this.workspaceMap = workspaceMap;
-        return this;
-    }
-    public String getWorkspaceMap() {
-        return this.workspaceMap;
     }
 
     public CreateImportMigrationRequest setCalculateEngineMap(String calculateEngineMap) {
@@ -106,6 +58,54 @@ public class CreateImportMigrationRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateImportMigrationRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateImportMigrationRequest setPackageFile(String packageFile) {
+        this.packageFile = packageFile;
+        return this;
+    }
+    public String getPackageFile() {
+        return this.packageFile;
+    }
+
+    public CreateImportMigrationRequest setPackageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    public String getPackageType() {
+        return this.packageType;
+    }
+
+    public CreateImportMigrationRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateImportMigrationRequest setResourceGroupMap(String resourceGroupMap) {
+        this.resourceGroupMap = resourceGroupMap;
+        return this;
+    }
+    public String getResourceGroupMap() {
+        return this.resourceGroupMap;
+    }
+
+    public CreateImportMigrationRequest setWorkspaceMap(String workspaceMap) {
+        this.workspaceMap = workspaceMap;
+        return this;
+    }
+    public String getWorkspaceMap() {
+        return this.workspaceMap;
     }
 
 }

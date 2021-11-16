@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetNodeTypeListInfoRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("Keyword")
+    public String keyword;
 
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
+    @NameInMap("Locale")
+    public String locale;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,31 +16,31 @@ public class GetNodeTypeListInfoRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
-    @NameInMap("Locale")
-    public String locale;
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
 
     public static GetNodeTypeListInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNodeTypeListInfoRequest self = new GetNodeTypeListInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetNodeTypeListInfoRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public GetNodeTypeListInfoRequest setKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getKeyword() {
+        return this.keyword;
     }
 
-    public GetNodeTypeListInfoRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
+    public GetNodeTypeListInfoRequest setLocale(String locale) {
+        this.locale = locale;
         return this;
     }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
+    public String getLocale() {
+        return this.locale;
     }
 
     public GetNodeTypeListInfoRequest setPageNumber(Integer pageNumber) {
@@ -59,20 +59,20 @@ public class GetNodeTypeListInfoRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetNodeTypeListInfoRequest setKeyword(String keyword) {
-        this.keyword = keyword;
+    public GetNodeTypeListInfoRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getKeyword() {
-        return this.keyword;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
-    public GetNodeTypeListInfoRequest setLocale(String locale) {
-        this.locale = locale;
+    public GetNodeTypeListInfoRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
         return this;
     }
-    public String getLocale() {
-        return this.locale;
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
 }

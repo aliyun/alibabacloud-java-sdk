@@ -4,20 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityRuleResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
     public static DeleteQualityRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityRuleResponseBody self = new DeleteQualityRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteQualityRuleResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public DeleteQualityRuleResponseBody setData(Boolean data) {
@@ -43,6 +35,14 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DeleteQualityRuleResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public DeleteQualityRuleResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,20 +51,20 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public DeleteQualityRuleResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public DeleteQualityRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteQualityRuleResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public DeleteQualityRuleResponseBody setSuccess(Boolean success) {

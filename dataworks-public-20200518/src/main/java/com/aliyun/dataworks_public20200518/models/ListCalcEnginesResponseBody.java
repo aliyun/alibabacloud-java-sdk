@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListCalcEnginesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListCalcEnginesResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,12 +16,17 @@ public class ListCalcEnginesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public ListCalcEnginesResponseBodyData data;
-
     public static ListCalcEnginesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCalcEnginesResponseBody self = new ListCalcEnginesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListCalcEnginesResponseBody setData(ListCalcEnginesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListCalcEnginesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListCalcEnginesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -45,32 +53,21 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListCalcEnginesResponseBody setData(ListCalcEnginesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListCalcEnginesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListCalcEnginesResponseBodyDataCalcEngines extends TeaModel {
+        @NameInMap("BindingProjectId")
+        public Integer bindingProjectId;
+
         @NameInMap("BindingProjectName")
         public String bindingProjectName;
 
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
-        @NameInMap("EngineId")
-        public Integer engineId;
+        @NameInMap("CalcEngineType")
+        public String calcEngineType;
 
         @NameInMap("DwRegion")
         public String dwRegion;
 
-        @NameInMap("TaskAuthType")
-        public String taskAuthType;
-
-        @NameInMap("CalcEngineType")
-        public String calcEngineType;
+        @NameInMap("EngineId")
+        public Integer engineId;
 
         @NameInMap("EngineInfo")
         public java.util.Map<String, ?> engineInfo;
@@ -78,17 +75,20 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         @NameInMap("EnvType")
         public String envType;
 
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("BindingProjectId")
-        public Integer bindingProjectId;
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("TaskAuthType")
+        public String taskAuthType;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -96,6 +96,14 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         public static ListCalcEnginesResponseBodyDataCalcEngines build(java.util.Map<String, ?> map) throws Exception {
             ListCalcEnginesResponseBodyDataCalcEngines self = new ListCalcEnginesResponseBodyDataCalcEngines();
             return TeaModel.build(map, self);
+        }
+
+        public ListCalcEnginesResponseBodyDataCalcEngines setBindingProjectId(Integer bindingProjectId) {
+            this.bindingProjectId = bindingProjectId;
+            return this;
+        }
+        public Integer getBindingProjectId() {
+            return this.bindingProjectId;
         }
 
         public ListCalcEnginesResponseBodyDataCalcEngines setBindingProjectName(String bindingProjectName) {
@@ -106,20 +114,12 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             return this.bindingProjectName;
         }
 
-        public ListCalcEnginesResponseBodyDataCalcEngines setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
+        public ListCalcEnginesResponseBodyDataCalcEngines setCalcEngineType(String calcEngineType) {
+            this.calcEngineType = calcEngineType;
             return this;
         }
-        public Boolean getIsDefault() {
-            return this.isDefault;
-        }
-
-        public ListCalcEnginesResponseBodyDataCalcEngines setEngineId(Integer engineId) {
-            this.engineId = engineId;
-            return this;
-        }
-        public Integer getEngineId() {
-            return this.engineId;
+        public String getCalcEngineType() {
+            return this.calcEngineType;
         }
 
         public ListCalcEnginesResponseBodyDataCalcEngines setDwRegion(String dwRegion) {
@@ -130,20 +130,12 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             return this.dwRegion;
         }
 
-        public ListCalcEnginesResponseBodyDataCalcEngines setTaskAuthType(String taskAuthType) {
-            this.taskAuthType = taskAuthType;
+        public ListCalcEnginesResponseBodyDataCalcEngines setEngineId(Integer engineId) {
+            this.engineId = engineId;
             return this;
         }
-        public String getTaskAuthType() {
-            return this.taskAuthType;
-        }
-
-        public ListCalcEnginesResponseBodyDataCalcEngines setCalcEngineType(String calcEngineType) {
-            this.calcEngineType = calcEngineType;
-            return this;
-        }
-        public String getCalcEngineType() {
-            return this.calcEngineType;
+        public Integer getEngineId() {
+            return this.engineId;
         }
 
         public ListCalcEnginesResponseBodyDataCalcEngines setEngineInfo(java.util.Map<String, ?> engineInfo) {
@@ -162,14 +154,6 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             return this.envType;
         }
 
-        public ListCalcEnginesResponseBodyDataCalcEngines setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public ListCalcEnginesResponseBodyDataCalcEngines setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -178,12 +162,12 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListCalcEnginesResponseBodyDataCalcEngines setBindingProjectId(Integer bindingProjectId) {
-            this.bindingProjectId = bindingProjectId;
+        public ListCalcEnginesResponseBodyDataCalcEngines setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
             return this;
         }
-        public Integer getBindingProjectId() {
-            return this.bindingProjectId;
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
         public ListCalcEnginesResponseBodyDataCalcEngines setName(String name) {
@@ -192,6 +176,22 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListCalcEnginesResponseBodyDataCalcEngines setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListCalcEnginesResponseBodyDataCalcEngines setTaskAuthType(String taskAuthType) {
+            this.taskAuthType = taskAuthType;
+            return this;
+        }
+        public String getTaskAuthType() {
+            return this.taskAuthType;
         }
 
         public ListCalcEnginesResponseBodyDataCalcEngines setTenantId(Long tenantId) {
@@ -205,6 +205,9 @@ public class ListCalcEnginesResponseBody extends TeaModel {
     }
 
     public static class ListCalcEnginesResponseBodyData extends TeaModel {
+        @NameInMap("CalcEngines")
+        public java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> calcEngines;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -214,12 +217,17 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("CalcEngines")
-        public java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> calcEngines;
-
         public static ListCalcEnginesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCalcEnginesResponseBodyData self = new ListCalcEnginesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListCalcEnginesResponseBodyData setCalcEngines(java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> calcEngines) {
+            this.calcEngines = calcEngines;
+            return this;
+        }
+        public java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> getCalcEngines() {
+            return this.calcEngines;
         }
 
         public ListCalcEnginesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -244,14 +252,6 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListCalcEnginesResponseBodyData setCalcEngines(java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> calcEngines) {
-            this.calcEngines = calcEngines;
-            return this;
-        }
-        public java.util.List<ListCalcEnginesResponseBodyDataCalcEngines> getCalcEngines() {
-            return this.calcEngines;
         }
 
     }

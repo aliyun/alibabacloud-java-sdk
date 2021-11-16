@@ -7,17 +7,17 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     @NameInMap("FirstLevelThemeId")
     public Long firstLevelThemeId;
 
-    @NameInMap("SecondLevelThemeId")
-    public Long secondLevelThemeId;
-
     @NameInMap("LevelId")
     public Long levelId;
 
-    @NameInMap("TableGuid")
-    public String tableGuid;
-
     @NameInMap("LevelType")
     public Integer levelType;
+
+    @NameInMap("SecondLevelThemeId")
+    public Long secondLevelThemeId;
+
+    @NameInMap("TableGuid")
+    public String tableGuid;
 
     public static UpdateTableModelInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableModelInfoRequest self = new UpdateTableModelInfoRequest();
@@ -32,14 +32,6 @@ public class UpdateTableModelInfoRequest extends TeaModel {
         return this.firstLevelThemeId;
     }
 
-    public UpdateTableModelInfoRequest setSecondLevelThemeId(Long secondLevelThemeId) {
-        this.secondLevelThemeId = secondLevelThemeId;
-        return this;
-    }
-    public Long getSecondLevelThemeId() {
-        return this.secondLevelThemeId;
-    }
-
     public UpdateTableModelInfoRequest setLevelId(Long levelId) {
         this.levelId = levelId;
         return this;
@@ -48,20 +40,28 @@ public class UpdateTableModelInfoRequest extends TeaModel {
         return this.levelId;
     }
 
-    public UpdateTableModelInfoRequest setTableGuid(String tableGuid) {
-        this.tableGuid = tableGuid;
-        return this;
-    }
-    public String getTableGuid() {
-        return this.tableGuid;
-    }
-
     public UpdateTableModelInfoRequest setLevelType(Integer levelType) {
         this.levelType = levelType;
         return this;
     }
     public Integer getLevelType() {
         return this.levelType;
+    }
+
+    public UpdateTableModelInfoRequest setSecondLevelThemeId(Long secondLevelThemeId) {
+        this.secondLevelThemeId = secondLevelThemeId;
+        return this;
+    }
+    public Long getSecondLevelThemeId() {
+        return this.secondLevelThemeId;
+    }
+
+    public UpdateTableModelInfoRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
+    @NameInMap("FolderPath")
+    public String folderPath;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
-    @NameInMap("FolderPath")
-    public String folderPath;
-
     public static CreateFolderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFolderRequest self = new CreateFolderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFolderRequest setFolderPath(String folderPath) {
+        this.folderPath = folderPath;
+        return this;
+    }
+    public String getFolderPath() {
+        return this.folderPath;
     }
 
     public CreateFolderRequest setProjectId(Long projectId) {
@@ -32,14 +40,6 @@ public class CreateFolderRequest extends TeaModel {
     }
     public String getProjectIdentifier() {
         return this.projectIdentifier;
-    }
-
-    public CreateFolderRequest setFolderPath(String folderPath) {
-        this.folderPath = folderPath;
-        return this;
-    }
-    public String getFolderPath() {
-        return this.folderPath;
     }
 
 }

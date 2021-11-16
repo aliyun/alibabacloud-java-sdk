@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDISyncTasksResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TaskList")
     public ListDISyncTasksResponseBodyTaskList taskList;
@@ -18,20 +18,20 @@ public class ListDISyncTasksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDISyncTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListDISyncTasksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDISyncTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ListDISyncTasksResponseBody setTaskList(ListDISyncTasksResponseBodyTaskList taskList) {
@@ -43,40 +43,32 @@ public class ListDISyncTasksResponseBody extends TeaModel {
     }
 
     public static class ListDISyncTasksResponseBodyTaskListRealTimeSolutionList extends TeaModel {
-        @NameInMap("ProcessName")
-        public String processName;
-
-        @NameInMap("TaskType")
-        public String taskType;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("ProcessId")
         public Long processId;
 
+        @NameInMap("ProcessName")
+        public String processName;
+
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("TaskType")
+        public String taskType;
 
         public static ListDISyncTasksResponseBodyTaskListRealTimeSolutionList build(java.util.Map<String, ?> map) throws Exception {
             ListDISyncTasksResponseBodyTaskListRealTimeSolutionList self = new ListDISyncTasksResponseBodyTaskListRealTimeSolutionList();
             return TeaModel.build(map, self);
         }
 
-        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setProcessName(String processName) {
-            this.processName = processName;
+        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getProcessName() {
-            return this.processName;
-        }
-
-        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setProcessId(Long processId) {
@@ -87,6 +79,14 @@ public class ListDISyncTasksResponseBody extends TeaModel {
             return this.processId;
         }
 
+        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setProcessName(String processName) {
+            this.processName = processName;
+            return this;
+        }
+        public String getProcessName() {
+            return this.processName;
+        }
+
         public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
@@ -95,12 +95,12 @@ public class ListDISyncTasksResponseBody extends TeaModel {
             return this.taskStatus;
         }
 
-        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public ListDISyncTasksResponseBodyTaskListRealTimeSolutionList setTaskType(String taskType) {
+            this.taskType = taskType;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }
@@ -112,11 +112,11 @@ public class ListDISyncTasksResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("RealTimeSolutionList")
         public java.util.List<ListDISyncTasksResponseBodyTaskListRealTimeSolutionList> realTimeSolutionList;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListDISyncTasksResponseBodyTaskList build(java.util.Map<String, ?> map) throws Exception {
             ListDISyncTasksResponseBodyTaskList self = new ListDISyncTasksResponseBodyTaskList();
@@ -139,20 +139,20 @@ public class ListDISyncTasksResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListDISyncTasksResponseBodyTaskList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListDISyncTasksResponseBodyTaskList setRealTimeSolutionList(java.util.List<ListDISyncTasksResponseBodyTaskListRealTimeSolutionList> realTimeSolutionList) {
             this.realTimeSolutionList = realTimeSolutionList;
             return this;
         }
         public java.util.List<ListDISyncTasksResponseBodyTaskListRealTimeSolutionList> getRealTimeSolutionList() {
             return this.realTimeSolutionList;
+        }
+
+        public ListDISyncTasksResponseBodyTaskList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

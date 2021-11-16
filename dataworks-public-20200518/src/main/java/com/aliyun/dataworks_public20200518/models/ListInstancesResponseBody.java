@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListInstancesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListInstancesResponseBodyData data;
 
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesResponseBody setData(ListInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListInstancesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListInstancesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListInstancesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListInstancesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstancesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListInstancesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListInstancesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,187 +75,91 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListInstancesResponseBody setData(ListInstancesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListInstancesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CycTime")
-        public Long cycTime;
+        @NameInMap("BaselineId")
+        public Long baselineId;
 
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
-        @NameInMap("FinishTime")
-        public Long finishTime;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("DagId")
-        public Long dagId;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("TaskType")
-        public String taskType;
-
-        @NameInMap("ParamValues")
-        public String paramValues;
-
-        @NameInMap("Connection")
-        public String connection;
-
-        @NameInMap("BaselineId")
-        public Long baselineId;
-
-        @NameInMap("DqcType")
-        public Integer dqcType;
-
-        @NameInMap("DagType")
-        public String dagType;
-
-        @NameInMap("BusinessId")
-        public Long businessId;
-
-        @NameInMap("TaskRerunTime")
-        public Integer taskRerunTime;
-
-        @NameInMap("ModifyTime")
-        public Long modifyTime;
-
-        @NameInMap("Repeatability")
-        public Boolean repeatability;
-
-        @NameInMap("RepeatInterval")
-        public Long repeatInterval;
-
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
-
-        @NameInMap("RelatedFlowId")
-        public Long relatedFlowId;
-
-        @NameInMap("Bizdate")
-        public Long bizdate;
-
-        @NameInMap("NodeName")
-        public String nodeName;
 
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
+        @NameInMap("Bizdate")
+        public Long bizdate;
+
+        @NameInMap("BusinessId")
+        public Long businessId;
+
+        @NameInMap("Connection")
+        public String connection;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("CycTime")
+        public Long cycTime;
+
+        @NameInMap("DagId")
+        public Long dagId;
+
+        @NameInMap("DagType")
+        public String dagType;
+
         @NameInMap("DqcDescription")
         public String dqcDescription;
+
+        @NameInMap("DqcType")
+        public Integer dqcType;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("FinishTime")
+        public Long finishTime;
+
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         @NameInMap("NodeId")
         public Long nodeId;
 
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("ParamValues")
+        public String paramValues;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("RelatedFlowId")
+        public Long relatedFlowId;
+
+        @NameInMap("RepeatInterval")
+        public Long repeatInterval;
+
+        @NameInMap("Repeatability")
+        public Boolean repeatability;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskRerunTime")
+        public Integer taskRerunTime;
+
+        @NameInMap("TaskType")
+        public String taskType;
+
         public static ListInstancesResponseBodyDataInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyDataInstances self = new ListInstancesResponseBodyDataInstances();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstancesResponseBodyDataInstances setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListInstancesResponseBodyDataInstances setCycTime(Long cycTime) {
-            this.cycTime = cycTime;
-            return this;
-        }
-        public Long getCycTime() {
-            return this.cycTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setBeginRunningTime(Long beginRunningTime) {
-            this.beginRunningTime = beginRunningTime;
-            return this;
-        }
-        public Long getBeginRunningTime() {
-            return this.beginRunningTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setFinishTime(Long finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public Long getFinishTime() {
-            return this.finishTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public ListInstancesResponseBodyDataInstances setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setDagId(Long dagId) {
-            this.dagId = dagId;
-            return this;
-        }
-        public Long getDagId() {
-            return this.dagId;
-        }
-
-        public ListInstancesResponseBodyDataInstances setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public ListInstancesResponseBodyDataInstances setTaskType(String taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public String getTaskType() {
-            return this.taskType;
-        }
-
-        public ListInstancesResponseBodyDataInstances setParamValues(String paramValues) {
-            this.paramValues = paramValues;
-            return this;
-        }
-        public String getParamValues() {
-            return this.paramValues;
-        }
-
-        public ListInstancesResponseBodyDataInstances setConnection(String connection) {
-            this.connection = connection;
-            return this;
-        }
-        public String getConnection() {
-            return this.connection;
         }
 
         public ListInstancesResponseBodyDataInstances setBaselineId(Long baselineId) {
@@ -258,68 +170,12 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.baselineId;
         }
 
-        public ListInstancesResponseBodyDataInstances setDqcType(Integer dqcType) {
-            this.dqcType = dqcType;
+        public ListInstancesResponseBodyDataInstances setBeginRunningTime(Long beginRunningTime) {
+            this.beginRunningTime = beginRunningTime;
             return this;
         }
-        public Integer getDqcType() {
-            return this.dqcType;
-        }
-
-        public ListInstancesResponseBodyDataInstances setDagType(String dagType) {
-            this.dagType = dagType;
-            return this;
-        }
-        public String getDagType() {
-            return this.dagType;
-        }
-
-        public ListInstancesResponseBodyDataInstances setBusinessId(Long businessId) {
-            this.businessId = businessId;
-            return this;
-        }
-        public Long getBusinessId() {
-            return this.businessId;
-        }
-
-        public ListInstancesResponseBodyDataInstances setTaskRerunTime(Integer taskRerunTime) {
-            this.taskRerunTime = taskRerunTime;
-            return this;
-        }
-        public Integer getTaskRerunTime() {
-            return this.taskRerunTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setModifyTime(Long modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public Long getModifyTime() {
-            return this.modifyTime;
-        }
-
-        public ListInstancesResponseBodyDataInstances setRepeatability(Boolean repeatability) {
-            this.repeatability = repeatability;
-            return this;
-        }
-        public Boolean getRepeatability() {
-            return this.repeatability;
-        }
-
-        public ListInstancesResponseBodyDataInstances setRepeatInterval(Long repeatInterval) {
-            this.repeatInterval = repeatInterval;
-            return this;
-        }
-        public Long getRepeatInterval() {
-            return this.repeatInterval;
-        }
-
-        public ListInstancesResponseBodyDataInstances setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
+        public Long getBeginRunningTime() {
+            return this.beginRunningTime;
         }
 
         public ListInstancesResponseBodyDataInstances setBeginWaitResTime(Long beginWaitResTime) {
@@ -330,12 +186,12 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.beginWaitResTime;
         }
 
-        public ListInstancesResponseBodyDataInstances setRelatedFlowId(Long relatedFlowId) {
-            this.relatedFlowId = relatedFlowId;
+        public ListInstancesResponseBodyDataInstances setBeginWaitTimeTime(Long beginWaitTimeTime) {
+            this.beginWaitTimeTime = beginWaitTimeTime;
             return this;
         }
-        public Long getRelatedFlowId() {
-            return this.relatedFlowId;
+        public Long getBeginWaitTimeTime() {
+            return this.beginWaitTimeTime;
         }
 
         public ListInstancesResponseBodyDataInstances setBizdate(Long bizdate) {
@@ -346,20 +202,52 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.bizdate;
         }
 
-        public ListInstancesResponseBodyDataInstances setNodeName(String nodeName) {
-            this.nodeName = nodeName;
+        public ListInstancesResponseBodyDataInstances setBusinessId(Long businessId) {
+            this.businessId = businessId;
             return this;
         }
-        public String getNodeName() {
-            return this.nodeName;
+        public Long getBusinessId() {
+            return this.businessId;
         }
 
-        public ListInstancesResponseBodyDataInstances setBeginWaitTimeTime(Long beginWaitTimeTime) {
-            this.beginWaitTimeTime = beginWaitTimeTime;
+        public ListInstancesResponseBodyDataInstances setConnection(String connection) {
+            this.connection = connection;
             return this;
         }
-        public Long getBeginWaitTimeTime() {
-            return this.beginWaitTimeTime;
+        public String getConnection() {
+            return this.connection;
+        }
+
+        public ListInstancesResponseBodyDataInstances setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListInstancesResponseBodyDataInstances setCycTime(Long cycTime) {
+            this.cycTime = cycTime;
+            return this;
+        }
+        public Long getCycTime() {
+            return this.cycTime;
+        }
+
+        public ListInstancesResponseBodyDataInstances setDagId(Long dagId) {
+            this.dagId = dagId;
+            return this;
+        }
+        public Long getDagId() {
+            return this.dagId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setDagType(String dagType) {
+            this.dagType = dagType;
+            return this;
+        }
+        public String getDagType() {
+            return this.dagType;
         }
 
         public ListInstancesResponseBodyDataInstances setDqcDescription(String dqcDescription) {
@@ -370,6 +258,46 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.dqcDescription;
         }
 
+        public ListInstancesResponseBodyDataInstances setDqcType(Integer dqcType) {
+            this.dqcType = dqcType;
+            return this;
+        }
+        public Integer getDqcType() {
+            return this.dqcType;
+        }
+
+        public ListInstancesResponseBodyDataInstances setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public ListInstancesResponseBodyDataInstances setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public Long getFinishTime() {
+            return this.finishTime;
+        }
+
+        public ListInstancesResponseBodyDataInstances setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
+        }
+
         public ListInstancesResponseBodyDataInstances setNodeId(Long nodeId) {
             this.nodeId = nodeId;
             return this;
@@ -378,9 +306,84 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        public ListInstancesResponseBodyDataInstances setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public ListInstancesResponseBodyDataInstances setParamValues(String paramValues) {
+            this.paramValues = paramValues;
+            return this;
+        }
+        public String getParamValues() {
+            return this.paramValues;
+        }
+
+        public ListInstancesResponseBodyDataInstances setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public ListInstancesResponseBodyDataInstances setRelatedFlowId(Long relatedFlowId) {
+            this.relatedFlowId = relatedFlowId;
+            return this;
+        }
+        public Long getRelatedFlowId() {
+            return this.relatedFlowId;
+        }
+
+        public ListInstancesResponseBodyDataInstances setRepeatInterval(Long repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
+        public Long getRepeatInterval() {
+            return this.repeatInterval;
+        }
+
+        public ListInstancesResponseBodyDataInstances setRepeatability(Boolean repeatability) {
+            this.repeatability = repeatability;
+            return this;
+        }
+        public Boolean getRepeatability() {
+            return this.repeatability;
+        }
+
+        public ListInstancesResponseBodyDataInstances setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListInstancesResponseBodyDataInstances setTaskRerunTime(Integer taskRerunTime) {
+            this.taskRerunTime = taskRerunTime;
+            return this;
+        }
+        public Integer getTaskRerunTime() {
+            return this.taskRerunTime;
+        }
+
+        public ListInstancesResponseBodyDataInstances setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
+        }
+
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
+        @NameInMap("Instances")
+        public java.util.List<ListInstancesResponseBodyDataInstances> instances;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -390,12 +393,17 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Instances")
-        public java.util.List<ListInstancesResponseBodyDataInstances> instances;
-
         public static ListInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyData self = new ListInstancesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyData setInstances(java.util.List<ListInstancesResponseBodyDataInstances> instances) {
+            this.instances = instances;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyDataInstances> getInstances() {
+            return this.instances;
         }
 
         public ListInstancesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -420,14 +428,6 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListInstancesResponseBodyData setInstances(java.util.List<ListInstancesResponseBodyDataInstances> instances) {
-            this.instances = instances;
-            return this;
-        }
-        public java.util.List<ListInstancesResponseBodyDataInstances> getInstances() {
-            return this.instances;
         }
 
     }

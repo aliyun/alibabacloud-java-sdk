@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetBaselineConfigResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetBaselineConfigResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetBaselineConfigResponseBodyData data;
 
     public static GetBaselineConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBaselineConfigResponseBody self = new GetBaselineConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetBaselineConfigResponseBody setData(GetBaselineConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetBaselineConfigResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetBaselineConfigResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetBaselineConfigResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetBaselineConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetBaselineConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetBaselineConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetBaselineConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,15 +75,25 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetBaselineConfigResponseBody setData(GetBaselineConfigResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetBaselineConfigResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetBaselineConfigResponseBodyData extends TeaModel {
+        @NameInMap("BaselineId")
+        public Long baselineId;
+
+        @NameInMap("BaselineName")
+        public String baselineName;
+
+        @NameInMap("BaselineType")
+        public String baselineType;
+
+        @NameInMap("ExpHour")
+        public Integer expHour;
+
+        @NameInMap("ExpMinu")
+        public Integer expMinu;
+
+        @NameInMap("HourExpDetail")
+        public String hourExpDetail;
+
         @NameInMap("HourSlaDetail")
         public String hourSlaDetail;
 
@@ -85,42 +103,72 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
-        @NameInMap("ProjectId")
-        public Long projectId;
-
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("SlaMinu")
-        public Integer slaMinu;
+        @NameInMap("ProjectId")
+        public Long projectId;
 
         @NameInMap("SlaHour")
         public Integer slaHour;
 
-        @NameInMap("BaselineId")
-        public Long baselineId;
-
-        @NameInMap("BaselineName")
-        public String baselineName;
-
-        @NameInMap("HourExpDetail")
-        public String hourExpDetail;
+        @NameInMap("SlaMinu")
+        public Integer slaMinu;
 
         @NameInMap("UseFlag")
         public Boolean useFlag;
 
-        @NameInMap("ExpHour")
-        public Integer expHour;
-
-        @NameInMap("BaselineType")
-        public String baselineType;
-
-        @NameInMap("ExpMinu")
-        public Integer expMinu;
-
         public static GetBaselineConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineConfigResponseBodyData self = new GetBaselineConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetBaselineConfigResponseBodyData setBaselineId(Long baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+        public Long getBaselineId() {
+            return this.baselineId;
+        }
+
+        public GetBaselineConfigResponseBodyData setBaselineName(String baselineName) {
+            this.baselineName = baselineName;
+            return this;
+        }
+        public String getBaselineName() {
+            return this.baselineName;
+        }
+
+        public GetBaselineConfigResponseBodyData setBaselineType(String baselineType) {
+            this.baselineType = baselineType;
+            return this;
+        }
+        public String getBaselineType() {
+            return this.baselineType;
+        }
+
+        public GetBaselineConfigResponseBodyData setExpHour(Integer expHour) {
+            this.expHour = expHour;
+            return this;
+        }
+        public Integer getExpHour() {
+            return this.expHour;
+        }
+
+        public GetBaselineConfigResponseBodyData setExpMinu(Integer expMinu) {
+            this.expMinu = expMinu;
+            return this;
+        }
+        public Integer getExpMinu() {
+            return this.expMinu;
+        }
+
+        public GetBaselineConfigResponseBodyData setHourExpDetail(String hourExpDetail) {
+            this.hourExpDetail = hourExpDetail;
+            return this;
+        }
+        public String getHourExpDetail() {
+            return this.hourExpDetail;
         }
 
         public GetBaselineConfigResponseBodyData setHourSlaDetail(String hourSlaDetail) {
@@ -147,14 +195,6 @@ public class GetBaselineConfigResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public GetBaselineConfigResponseBodyData setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
-        }
-
         public GetBaselineConfigResponseBodyData setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -163,12 +203,12 @@ public class GetBaselineConfigResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public GetBaselineConfigResponseBodyData setSlaMinu(Integer slaMinu) {
-            this.slaMinu = slaMinu;
+        public GetBaselineConfigResponseBodyData setProjectId(Long projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Integer getSlaMinu() {
-            return this.slaMinu;
+        public Long getProjectId() {
+            return this.projectId;
         }
 
         public GetBaselineConfigResponseBodyData setSlaHour(Integer slaHour) {
@@ -179,28 +219,12 @@ public class GetBaselineConfigResponseBody extends TeaModel {
             return this.slaHour;
         }
 
-        public GetBaselineConfigResponseBodyData setBaselineId(Long baselineId) {
-            this.baselineId = baselineId;
+        public GetBaselineConfigResponseBodyData setSlaMinu(Integer slaMinu) {
+            this.slaMinu = slaMinu;
             return this;
         }
-        public Long getBaselineId() {
-            return this.baselineId;
-        }
-
-        public GetBaselineConfigResponseBodyData setBaselineName(String baselineName) {
-            this.baselineName = baselineName;
-            return this;
-        }
-        public String getBaselineName() {
-            return this.baselineName;
-        }
-
-        public GetBaselineConfigResponseBodyData setHourExpDetail(String hourExpDetail) {
-            this.hourExpDetail = hourExpDetail;
-            return this;
-        }
-        public String getHourExpDetail() {
-            return this.hourExpDetail;
+        public Integer getSlaMinu() {
+            return this.slaMinu;
         }
 
         public GetBaselineConfigResponseBodyData setUseFlag(Boolean useFlag) {
@@ -209,30 +233,6 @@ public class GetBaselineConfigResponseBody extends TeaModel {
         }
         public Boolean getUseFlag() {
             return this.useFlag;
-        }
-
-        public GetBaselineConfigResponseBodyData setExpHour(Integer expHour) {
-            this.expHour = expHour;
-            return this;
-        }
-        public Integer getExpHour() {
-            return this.expHour;
-        }
-
-        public GetBaselineConfigResponseBodyData setBaselineType(String baselineType) {
-            this.baselineType = baselineType;
-            return this;
-        }
-        public String getBaselineType() {
-            return this.baselineType;
-        }
-
-        public GetBaselineConfigResponseBodyData setExpMinu(Integer expMinu) {
-            this.expMinu = expMinu;
-            return this;
-        }
-        public Integer getExpMinu() {
-            return this.expMinu;
         }
 
     }

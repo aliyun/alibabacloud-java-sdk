@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateUdfFileRequest extends TeaModel {
+    @NameInMap("ClassName")
+    public String className;
+
+    @NameInMap("CmdDescription")
+    public String cmdDescription;
+
+    @NameInMap("Example")
+    public String example;
+
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
-
-    @NameInMap("ProjectId")
-    public Long projectId;
 
     @NameInMap("FileName")
     public String fileName;
@@ -16,33 +22,51 @@ public class CreateUdfFileRequest extends TeaModel {
     @NameInMap("FunctionType")
     public String functionType;
 
-    @NameInMap("ClassName")
-    public String className;
-
-    @NameInMap("Resources")
-    public String resources;
-
-    @NameInMap("UdfDescription")
-    public String udfDescription;
-
-    @NameInMap("CmdDescription")
-    public String cmdDescription;
-
     @NameInMap("ParameterDescription")
     public String parameterDescription;
 
-    @NameInMap("ReturnValue")
-    public String returnValue;
-
-    @NameInMap("Example")
-    public String example;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
+    @NameInMap("Resources")
+    public String resources;
+
+    @NameInMap("ReturnValue")
+    public String returnValue;
+
+    @NameInMap("UdfDescription")
+    public String udfDescription;
+
     public static CreateUdfFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUdfFileRequest self = new CreateUdfFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUdfFileRequest setClassName(String className) {
+        this.className = className;
+        return this;
+    }
+    public String getClassName() {
+        return this.className;
+    }
+
+    public CreateUdfFileRequest setCmdDescription(String cmdDescription) {
+        this.cmdDescription = cmdDescription;
+        return this;
+    }
+    public String getCmdDescription() {
+        return this.cmdDescription;
+    }
+
+    public CreateUdfFileRequest setExample(String example) {
+        this.example = example;
+        return this;
+    }
+    public String getExample() {
+        return this.example;
     }
 
     public CreateUdfFileRequest setFileFolderPath(String fileFolderPath) {
@@ -51,14 +75,6 @@ public class CreateUdfFileRequest extends TeaModel {
     }
     public String getFileFolderPath() {
         return this.fileFolderPath;
-    }
-
-    public CreateUdfFileRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public CreateUdfFileRequest setFileName(String fileName) {
@@ -77,12 +93,28 @@ public class CreateUdfFileRequest extends TeaModel {
         return this.functionType;
     }
 
-    public CreateUdfFileRequest setClassName(String className) {
-        this.className = className;
+    public CreateUdfFileRequest setParameterDescription(String parameterDescription) {
+        this.parameterDescription = parameterDescription;
         return this;
     }
-    public String getClassName() {
-        return this.className;
+    public String getParameterDescription() {
+        return this.parameterDescription;
+    }
+
+    public CreateUdfFileRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateUdfFileRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
     public CreateUdfFileRequest setResources(String resources) {
@@ -93,30 +125,6 @@ public class CreateUdfFileRequest extends TeaModel {
         return this.resources;
     }
 
-    public CreateUdfFileRequest setUdfDescription(String udfDescription) {
-        this.udfDescription = udfDescription;
-        return this;
-    }
-    public String getUdfDescription() {
-        return this.udfDescription;
-    }
-
-    public CreateUdfFileRequest setCmdDescription(String cmdDescription) {
-        this.cmdDescription = cmdDescription;
-        return this;
-    }
-    public String getCmdDescription() {
-        return this.cmdDescription;
-    }
-
-    public CreateUdfFileRequest setParameterDescription(String parameterDescription) {
-        this.parameterDescription = parameterDescription;
-        return this;
-    }
-    public String getParameterDescription() {
-        return this.parameterDescription;
-    }
-
     public CreateUdfFileRequest setReturnValue(String returnValue) {
         this.returnValue = returnValue;
         return this;
@@ -125,20 +133,12 @@ public class CreateUdfFileRequest extends TeaModel {
         return this.returnValue;
     }
 
-    public CreateUdfFileRequest setExample(String example) {
-        this.example = example;
+    public CreateUdfFileRequest setUdfDescription(String udfDescription) {
+        this.udfDescription = udfDescription;
         return this;
     }
-    public String getExample() {
-        return this.example;
-    }
-
-    public CreateUdfFileRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
-        return this;
-    }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
+    public String getUdfDescription() {
+        return this.udfDescription;
     }
 
 }
