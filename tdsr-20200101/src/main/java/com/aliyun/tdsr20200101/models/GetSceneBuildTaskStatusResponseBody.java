@@ -16,10 +16,6 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // 任务ID
-    @NameInMap("Id")
-    public String id;
-
     // 错误消息
     @NameInMap("Message")
     public String message;
@@ -32,17 +28,13 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
-    // 未开始  init 处理中 失败     failure   processing  完成     succeed 取消     canceled
+    // 未开始  init 处理中 失败     failed   processing  完成     succeed 取消     canceled
     @NameInMap("Status")
     public String status;
 
     // 是否请求成功
     @NameInMap("Success")
     public Boolean success;
-
-    // 墙线预测: wall_line  切图: cut_image  重建: build  直角优化：right_angle_optimization 其他：other
-    @NameInMap("Type")
-    public String type;
 
     public static GetSceneBuildTaskStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSceneBuildTaskStatusResponseBody self = new GetSceneBuildTaskStatusResponseBody();
@@ -71,14 +63,6 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
     }
     public String getErrorMsg() {
         return this.errorMsg;
-    }
-
-    public GetSceneBuildTaskStatusResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public GetSceneBuildTaskStatusResponseBody setMessage(String message) {
@@ -119,14 +103,6 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetSceneBuildTaskStatusResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

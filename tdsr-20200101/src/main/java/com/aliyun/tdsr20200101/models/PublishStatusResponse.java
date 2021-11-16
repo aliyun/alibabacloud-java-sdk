@@ -3,21 +3,21 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class GetJobResponse extends TeaModel {
+public class PublishStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetJobResponseBody body;
+    public PublishStatusResponseBody body;
 
-    public static GetJobResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetJobResponse self = new GetJobResponse();
+    public static PublishStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        PublishStatusResponse self = new PublishStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetJobResponse setHeaders(java.util.Map<String, String> headers) {
+    public PublishStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetJobResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetJobResponse setBody(GetJobResponseBody body) {
+    public PublishStatusResponse setBody(PublishStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetJobResponseBody getBody() {
+    public PublishStatusResponseBody getBody() {
         return this.body;
     }
 

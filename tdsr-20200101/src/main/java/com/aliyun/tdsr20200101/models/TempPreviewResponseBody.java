@@ -8,10 +8,6 @@ public class TempPreviewResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // 任务ID
-    @NameInMap("Key")
-    public String key;
-
     // 错误消息
     @NameInMap("Message")
     public String message;
@@ -23,6 +19,10 @@ public class TempPreviewResponseBody extends TeaModel {
     // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
+
+    // 场景ID
+    @NameInMap("SceneId")
+    public String sceneId;
 
     // 是否请求成功
     @NameInMap("Success")
@@ -39,14 +39,6 @@ public class TempPreviewResponseBody extends TeaModel {
     }
     public Long getCode() {
         return this.code;
-    }
-
-    public TempPreviewResponseBody setKey(String key) {
-        this.key = key;
-        return this;
-    }
-    public String getKey() {
-        return this.key;
     }
 
     public TempPreviewResponseBody setMessage(String message) {
@@ -71,6 +63,14 @@ public class TempPreviewResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public TempPreviewResponseBody setSceneId(String sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public String getSceneId() {
+        return this.sceneId;
     }
 
     public TempPreviewResponseBody setSuccess(Boolean success) {
