@@ -4,25 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationConfigRequest extends TeaModel {
-    // 集成配置id
-    @NameInMap("integrationConfigId")
-    public Long integrationConfigId;
-
     // 幂等id
     @NameInMap("clientToken")
     public String clientToken;
 
+    // 集成配置id
+    @NameInMap("integrationConfigId")
+    public Long integrationConfigId;
+
     public static GetIntegrationConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetIntegrationConfigRequest self = new GetIntegrationConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetIntegrationConfigRequest setIntegrationConfigId(Long integrationConfigId) {
-        this.integrationConfigId = integrationConfigId;
-        return this;
-    }
-    public Long getIntegrationConfigId() {
-        return this.integrationConfigId;
     }
 
     public GetIntegrationConfigRequest setClientToken(String clientToken) {
@@ -31,6 +23,14 @@ public class GetIntegrationConfigRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GetIntegrationConfigRequest setIntegrationConfigId(Long integrationConfigId) {
+        this.integrationConfigId = integrationConfigId;
+        return this;
+    }
+    public Long getIntegrationConfigId() {
+        return this.integrationConfigId;
     }
 
 }

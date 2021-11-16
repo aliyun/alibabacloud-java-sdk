@@ -4,24 +4,16 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemMeasureResponseBody extends TeaModel {
+    @NameInMap("data")
+    public CreateProblemMeasureResponseBodyData data;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public CreateProblemMeasureResponseBodyData data;
-
     public static CreateProblemMeasureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProblemMeasureResponseBody self = new CreateProblemMeasureResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateProblemMeasureResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateProblemMeasureResponseBody setData(CreateProblemMeasureResponseBodyData data) {
@@ -30,6 +22,14 @@ public class CreateProblemMeasureResponseBody extends TeaModel {
     }
     public CreateProblemMeasureResponseBodyData getData() {
         return this.data;
+    }
+
+    public CreateProblemMeasureResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateProblemMeasureResponseBodyData extends TeaModel {

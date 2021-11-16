@@ -4,24 +4,16 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIntegrationConfigResponseBody extends TeaModel {
+    @NameInMap("data")
+    public GetIntegrationConfigResponseBodyData data;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public GetIntegrationConfigResponseBodyData data;
-
     public static GetIntegrationConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetIntegrationConfigResponseBody self = new GetIntegrationConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetIntegrationConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetIntegrationConfigResponseBody setData(GetIntegrationConfigResponseBodyData data) {
@@ -32,10 +24,26 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetIntegrationConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetIntegrationConfigResponseBodyData extends TeaModel {
+        // 集成秘钥
+        @NameInMap("accessKey")
+        public String accessKey;
+
         // 集成配置id、
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
+
+        // 是否接收报警
+        @NameInMap("isReceivedEvent")
+        public Boolean isReceivedEvent;
 
         // 监控源id
         @NameInMap("monitorSourceId")
@@ -49,14 +57,6 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
 
-        // 集成秘钥
-        @NameInMap("accessKey")
-        public String accessKey;
-
-        // 是否接收报警
-        @NameInMap("isReceivedEvent")
-        public Boolean isReceivedEvent;
-
         // 集成配置状态，DISABLE 禁用，INTEGRATED 已集成，UNINTEGRATED未集成
         @NameInMap("status")
         public String status;
@@ -66,12 +66,28 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetIntegrationConfigResponseBodyData setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+            return this;
+        }
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
         public GetIntegrationConfigResponseBodyData setIntegrationConfigId(Long integrationConfigId) {
             this.integrationConfigId = integrationConfigId;
             return this;
         }
         public Long getIntegrationConfigId() {
             return this.integrationConfigId;
+        }
+
+        public GetIntegrationConfigResponseBodyData setIsReceivedEvent(Boolean isReceivedEvent) {
+            this.isReceivedEvent = isReceivedEvent;
+            return this;
+        }
+        public Boolean getIsReceivedEvent() {
+            return this.isReceivedEvent;
         }
 
         public GetIntegrationConfigResponseBodyData setMonitorSourceId(Long monitorSourceId) {
@@ -96,22 +112,6 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
         }
         public String getMonitorSourceShortName() {
             return this.monitorSourceShortName;
-        }
-
-        public GetIntegrationConfigResponseBodyData setAccessKey(String accessKey) {
-            this.accessKey = accessKey;
-            return this;
-        }
-        public String getAccessKey() {
-            return this.accessKey;
-        }
-
-        public GetIntegrationConfigResponseBodyData setIsReceivedEvent(Boolean isReceivedEvent) {
-            this.isReceivedEvent = isReceivedEvent;
-            return this;
-        }
-        public Boolean getIsReceivedEvent() {
-            return this.isReceivedEvent;
         }
 
         public GetIntegrationConfigResponseBodyData setStatus(String status) {

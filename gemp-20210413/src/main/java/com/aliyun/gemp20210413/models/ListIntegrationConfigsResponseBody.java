@@ -4,23 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigsResponseBody extends TeaModel {
-    @NameInMap("requestId")
-    public String requestId;
-
     @NameInMap("data")
     public java.util.List<ListIntegrationConfigsResponseBodyData> data;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     public static ListIntegrationConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIntegrationConfigsResponseBody self = new ListIntegrationConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIntegrationConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListIntegrationConfigsResponseBody setData(java.util.List<ListIntegrationConfigsResponseBodyData> data) {
@@ -31,10 +23,22 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListIntegrationConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListIntegrationConfigsResponseBodyData extends TeaModel {
         // 集成配置id
         @NameInMap("integrationConfigId")
         public Long integrationConfigId;
+
+        // 是否已接受报警
+        @NameInMap("isReceivedEvent")
+        public Boolean isReceivedEvent;
 
         // 监控源id
         @NameInMap("monitorSourceId")
@@ -47,10 +51,6 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         // 监控源简称
         @NameInMap("monitorSourceShortName")
         public String monitorSourceShortName;
-
-        // 是否已接受报警
-        @NameInMap("isReceivedEvent")
-        public Boolean isReceivedEvent;
 
         // 集成配置状态
         @NameInMap("status")
@@ -67,6 +67,14 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         }
         public Long getIntegrationConfigId() {
             return this.integrationConfigId;
+        }
+
+        public ListIntegrationConfigsResponseBodyData setIsReceivedEvent(Boolean isReceivedEvent) {
+            this.isReceivedEvent = isReceivedEvent;
+            return this;
+        }
+        public Boolean getIsReceivedEvent() {
+            return this.isReceivedEvent;
         }
 
         public ListIntegrationConfigsResponseBodyData setMonitorSourceId(Long monitorSourceId) {
@@ -91,14 +99,6 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         }
         public String getMonitorSourceShortName() {
             return this.monitorSourceShortName;
-        }
-
-        public ListIntegrationConfigsResponseBodyData setIsReceivedEvent(Boolean isReceivedEvent) {
-            this.isReceivedEvent = isReceivedEvent;
-            return this;
-        }
-        public Boolean getIsReceivedEvent() {
-            return this.isReceivedEvent;
         }
 
         public ListIntegrationConfigsResponseBodyData setStatus(String status) {

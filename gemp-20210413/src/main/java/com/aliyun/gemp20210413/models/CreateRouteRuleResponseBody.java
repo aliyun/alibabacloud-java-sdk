@@ -4,25 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteRuleResponseBody extends TeaModel {
-    // 请求
-    @NameInMap("requestId")
-    public String requestId;
-
     // 结果
     @NameInMap("data")
     public CreateRouteRuleResponseBodyData data;
 
+    // 请求
+    @NameInMap("requestId")
+    public String requestId;
+
     public static CreateRouteRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteRuleResponseBody self = new CreateRouteRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRouteRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateRouteRuleResponseBody setData(CreateRouteRuleResponseBodyData data) {
@@ -31,6 +23,14 @@ public class CreateRouteRuleResponseBody extends TeaModel {
     }
     public CreateRouteRuleResponseBodyData getData() {
         return this.data;
+    }
+
+    public CreateRouteRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateRouteRuleResponseBodyData extends TeaModel {

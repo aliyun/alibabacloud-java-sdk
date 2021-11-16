@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIntegrationConfigTimelinesRequest extends TeaModel {
+    // 幂等参数
+    @NameInMap("clientToken")
+    public String clientToken;
+
     // 集成配置id
     @NameInMap("integrationConfigId")
     public Long integrationConfigId;
@@ -16,13 +20,17 @@ public class ListIntegrationConfigTimelinesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 幂等参数
-    @NameInMap("clientToken")
-    public String clientToken;
-
     public static ListIntegrationConfigTimelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIntegrationConfigTimelinesRequest self = new ListIntegrationConfigTimelinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListIntegrationConfigTimelinesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ListIntegrationConfigTimelinesRequest setIntegrationConfigId(Long integrationConfigId) {
@@ -47,14 +55,6 @@ public class ListIntegrationConfigTimelinesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListIntegrationConfigTimelinesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

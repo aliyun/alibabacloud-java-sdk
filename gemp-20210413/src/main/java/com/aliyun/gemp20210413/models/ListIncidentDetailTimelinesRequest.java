@@ -4,13 +4,13 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentDetailTimelinesRequest extends TeaModel {
-    // 事件ID
-    @NameInMap("incidentId")
-    public Long incidentId;
-
     // 幂等校验
     @NameInMap("clientToken")
     public String clientToken;
+
+    // 事件ID
+    @NameInMap("incidentId")
+    public Long incidentId;
 
     // 页
     @NameInMap("pageNumber")
@@ -25,20 +25,20 @@ public class ListIncidentDetailTimelinesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListIncidentDetailTimelinesRequest setIncidentId(Long incidentId) {
-        this.incidentId = incidentId;
-        return this;
-    }
-    public Long getIncidentId() {
-        return this.incidentId;
-    }
-
     public ListIncidentDetailTimelinesRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListIncidentDetailTimelinesRequest setIncidentId(Long incidentId) {
+        this.incidentId = incidentId;
+        return this;
+    }
+    public Long getIncidentId() {
+        return this.incidentId;
     }
 
     public ListIncidentDetailTimelinesRequest setPageNumber(Long pageNumber) {

@@ -4,24 +4,16 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentSubtotalsResponseBody extends TeaModel {
+    @NameInMap("data")
+    public java.util.List<ListIncidentSubtotalsResponseBodyData> data;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public java.util.List<ListIncidentSubtotalsResponseBodyData> data;
-
     public static ListIncidentSubtotalsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIncidentSubtotalsResponseBody self = new ListIncidentSubtotalsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIncidentSubtotalsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListIncidentSubtotalsResponseBody setData(java.util.List<ListIncidentSubtotalsResponseBodyData> data) {
@@ -32,14 +24,22 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListIncidentSubtotalsResponseBodyData extends TeaModel {
-        // 描述
-        @NameInMap("description")
-        public String description;
+    public ListIncidentSubtotalsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListIncidentSubtotalsResponseBodyData extends TeaModel {
         // 创建时间
         @NameInMap("createTime")
         public String createTime;
+
+        // 操作人Id
+        @NameInMap("createUserId")
+        public Long createUserId;
 
         // 操作人
         @NameInMap("createUserName")
@@ -49,17 +49,13 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         @NameInMap("createUserPhone")
         public String createUserPhone;
 
+        // 描述
+        @NameInMap("description")
+        public String description;
+
         public static ListIncidentSubtotalsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIncidentSubtotalsResponseBodyData self = new ListIncidentSubtotalsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListIncidentSubtotalsResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListIncidentSubtotalsResponseBodyData setCreateTime(String createTime) {
@@ -68,6 +64,14 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListIncidentSubtotalsResponseBodyData setCreateUserId(Long createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public Long getCreateUserId() {
+            return this.createUserId;
         }
 
         public ListIncidentSubtotalsResponseBodyData setCreateUserName(String createUserName) {
@@ -84,6 +88,14 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         }
         public String getCreateUserPhone() {
             return this.createUserPhone;
+        }
+
+        public ListIncidentSubtotalsResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }

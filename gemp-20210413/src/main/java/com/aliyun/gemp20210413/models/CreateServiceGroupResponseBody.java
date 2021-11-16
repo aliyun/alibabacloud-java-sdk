@@ -4,25 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceGroupResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 服务组ID
     @NameInMap("data")
     public CreateServiceGroupResponseBodyData data;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
     public static CreateServiceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceGroupResponseBody self = new CreateServiceGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServiceGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateServiceGroupResponseBody setData(CreateServiceGroupResponseBodyData data) {
@@ -31,6 +23,14 @@ public class CreateServiceGroupResponseBody extends TeaModel {
     }
     public CreateServiceGroupResponseBodyData getData() {
         return this.data;
+    }
+
+    public CreateServiceGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateServiceGroupResponseBodyData extends TeaModel {

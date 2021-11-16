@@ -4,9 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
-    // 服务名称
-    @NameInMap("serviceName")
-    public String serviceName;
+    // 幂等号
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 当前页
     @NameInMap("pageNumber")
@@ -16,21 +16,21 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 幂等号
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 服务名称
+    @NameInMap("serviceName")
+    public String serviceName;
 
     public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesRequest self = new ListServicesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListServicesRequest setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+    public ListServicesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getServiceName() {
-        return this.serviceName;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ListServicesRequest setPageNumber(Long pageNumber) {
@@ -49,12 +49,12 @@ public class ListServicesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListServicesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ListServicesRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getServiceName() {
+        return this.serviceName;
     }
 
 }

@@ -4,24 +4,16 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
+    @NameInMap("data")
+    public GenerateProblemPictureUploadSignResponseBodyData data;
+
     // requestId
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public GenerateProblemPictureUploadSignResponseBodyData data;
-
     public static GenerateProblemPictureUploadSignResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateProblemPictureUploadSignResponseBody self = new GenerateProblemPictureUploadSignResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateProblemPictureUploadSignResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateProblemPictureUploadSignResponseBody setData(GenerateProblemPictureUploadSignResponseBodyData data) {
@@ -32,7 +24,19 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GenerateProblemPictureUploadSignResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GenerateProblemPictureUploadSignResponseBodyData extends TeaModel {
+        // ossaccessKeyId
+        @NameInMap("accessKeyId")
+        public String accessKeyId;
+
         // oss bucket name
         @NameInMap("bucketName")
         public String bucketName;
@@ -53,13 +57,17 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
         @NameInMap("url")
         public String url;
 
-        // ossaccessKeyId
-        @NameInMap("accessKeyId")
-        public String accessKeyId;
-
         public static GenerateProblemPictureUploadSignResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GenerateProblemPictureUploadSignResponseBodyData self = new GenerateProblemPictureUploadSignResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GenerateProblemPictureUploadSignResponseBodyData setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+            return this;
+        }
+        public String getAccessKeyId() {
+            return this.accessKeyId;
         }
 
         public GenerateProblemPictureUploadSignResponseBodyData setBucketName(String bucketName) {
@@ -100,14 +108,6 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
-        }
-
-        public GenerateProblemPictureUploadSignResponseBodyData setAccessKeyId(String accessKeyId) {
-            this.accessKeyId = accessKeyId;
-            return this;
-        }
-        public String getAccessKeyId() {
-            return this.accessKeyId;
         }
 
     }

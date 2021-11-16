@@ -4,6 +4,22 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateProblemRequest extends TeaModel {
+    // 舆情反馈
+    @NameInMap("feedback")
+    public String feedback;
+
+    // 故障等级
+    @NameInMap("level")
+    public String level;
+
+    // 主要处理人
+    @NameInMap("mainHandlerId")
+    public Long mainHandlerId;
+
+    // 初步原因
+    @NameInMap("preliminaryReason")
+    public String preliminaryReason;
+
     // 故障ID
     @NameInMap("problemId")
     public Long problemId;
@@ -12,29 +28,13 @@ public class UpdateProblemRequest extends TeaModel {
     @NameInMap("problemName")
     public String problemName;
 
-    // 故障等级
-    @NameInMap("level")
-    public String level;
-
-    // 所属服务
-    @NameInMap("relatedServiceId")
-    public Long relatedServiceId;
-
     // 进展摘要
     @NameInMap("progressSummary")
     public String progressSummary;
 
-    // 初步原因
-    @NameInMap("preliminaryReason")
-    public String preliminaryReason;
-
-    // 主要处理人
-    @NameInMap("mainHandlerId")
-    public Long mainHandlerId;
-
-    // 舆情反馈
-    @NameInMap("feedback")
-    public String feedback;
+    // 所属服务
+    @NameInMap("relatedServiceId")
+    public Long relatedServiceId;
 
     // 应急协同组
     @NameInMap("serviceGroupIds")
@@ -43,6 +43,38 @@ public class UpdateProblemRequest extends TeaModel {
     public static UpdateProblemRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProblemRequest self = new UpdateProblemRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProblemRequest setFeedback(String feedback) {
+        this.feedback = feedback;
+        return this;
+    }
+    public String getFeedback() {
+        return this.feedback;
+    }
+
+    public UpdateProblemRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public UpdateProblemRequest setMainHandlerId(Long mainHandlerId) {
+        this.mainHandlerId = mainHandlerId;
+        return this;
+    }
+    public Long getMainHandlerId() {
+        return this.mainHandlerId;
+    }
+
+    public UpdateProblemRequest setPreliminaryReason(String preliminaryReason) {
+        this.preliminaryReason = preliminaryReason;
+        return this;
+    }
+    public String getPreliminaryReason() {
+        return this.preliminaryReason;
     }
 
     public UpdateProblemRequest setProblemId(Long problemId) {
@@ -61,22 +93,6 @@ public class UpdateProblemRequest extends TeaModel {
         return this.problemName;
     }
 
-    public UpdateProblemRequest setLevel(String level) {
-        this.level = level;
-        return this;
-    }
-    public String getLevel() {
-        return this.level;
-    }
-
-    public UpdateProblemRequest setRelatedServiceId(Long relatedServiceId) {
-        this.relatedServiceId = relatedServiceId;
-        return this;
-    }
-    public Long getRelatedServiceId() {
-        return this.relatedServiceId;
-    }
-
     public UpdateProblemRequest setProgressSummary(String progressSummary) {
         this.progressSummary = progressSummary;
         return this;
@@ -85,28 +101,12 @@ public class UpdateProblemRequest extends TeaModel {
         return this.progressSummary;
     }
 
-    public UpdateProblemRequest setPreliminaryReason(String preliminaryReason) {
-        this.preliminaryReason = preliminaryReason;
+    public UpdateProblemRequest setRelatedServiceId(Long relatedServiceId) {
+        this.relatedServiceId = relatedServiceId;
         return this;
     }
-    public String getPreliminaryReason() {
-        return this.preliminaryReason;
-    }
-
-    public UpdateProblemRequest setMainHandlerId(Long mainHandlerId) {
-        this.mainHandlerId = mainHandlerId;
-        return this;
-    }
-    public Long getMainHandlerId() {
-        return this.mainHandlerId;
-    }
-
-    public UpdateProblemRequest setFeedback(String feedback) {
-        this.feedback = feedback;
-        return this;
-    }
-    public String getFeedback() {
-        return this.feedback;
+    public Long getRelatedServiceId() {
+        return this.relatedServiceId;
     }
 
     public UpdateProblemRequest setServiceGroupIds(java.util.List<Long> serviceGroupIds) {

@@ -34,33 +34,25 @@ public class GetTenantApplicationResponseBody extends TeaModel {
     }
 
     public static class GetTenantApplicationResponseBodyData extends TeaModel {
-        // 企业id
-        @NameInMap("corporationId")
-        public String corporationId;
-
         // 业务id
         @NameInMap("bizId")
         public String bizId;
-
-        // 进度
-        @NameInMap("progress")
-        public String progress;
 
         // 云钉协同渠道
         @NameInMap("channel")
         public String channel;
 
+        // 企业id
+        @NameInMap("corporationId")
+        public String corporationId;
+
+        // 进度
+        @NameInMap("progress")
+        public String progress;
+
         public static GetTenantApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTenantApplicationResponseBodyData self = new GetTenantApplicationResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetTenantApplicationResponseBodyData setCorporationId(String corporationId) {
-            this.corporationId = corporationId;
-            return this;
-        }
-        public String getCorporationId() {
-            return this.corporationId;
         }
 
         public GetTenantApplicationResponseBodyData setBizId(String bizId) {
@@ -71,20 +63,28 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public GetTenantApplicationResponseBodyData setProgress(String progress) {
-            this.progress = progress;
-            return this;
-        }
-        public String getProgress() {
-            return this.progress;
-        }
-
         public GetTenantApplicationResponseBodyData setChannel(String channel) {
             this.channel = channel;
             return this;
         }
         public String getChannel() {
             return this.channel;
+        }
+
+        public GetTenantApplicationResponseBodyData setCorporationId(String corporationId) {
+            this.corporationId = corporationId;
+            return this;
+        }
+        public String getCorporationId() {
+            return this.corporationId;
+        }
+
+        public GetTenantApplicationResponseBodyData setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
         }
 
     }

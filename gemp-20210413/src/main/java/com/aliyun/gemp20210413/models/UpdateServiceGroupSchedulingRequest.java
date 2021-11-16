@@ -4,13 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceGroupSchedulingRequest extends TeaModel {
-    // 服务组ID
-    @NameInMap("serviceGroupId")
-    public Long serviceGroupId;
-
-    // 排班方式 FAST 快速排班 FINE 精细排班
-    @NameInMap("schedulingWay")
-    public String schedulingWay;
+    // 幂等号
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 快速排班
     @NameInMap("fastScheduling")
@@ -20,29 +16,25 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     @NameInMap("fineScheduling")
     public UpdateServiceGroupSchedulingRequestFineScheduling fineScheduling;
 
-    // 幂等号
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 排班方式 FAST 快速排班 FINE 精细排班
+    @NameInMap("schedulingWay")
+    public String schedulingWay;
+
+    // 服务组ID
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     public static UpdateServiceGroupSchedulingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceGroupSchedulingRequest self = new UpdateServiceGroupSchedulingRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateServiceGroupSchedulingRequest setServiceGroupId(Long serviceGroupId) {
-        this.serviceGroupId = serviceGroupId;
+    public UpdateServiceGroupSchedulingRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getServiceGroupId() {
-        return this.serviceGroupId;
-    }
-
-    public UpdateServiceGroupSchedulingRequest setSchedulingWay(String schedulingWay) {
-        this.schedulingWay = schedulingWay;
-        return this;
-    }
-    public String getSchedulingWay() {
-        return this.schedulingWay;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateServiceGroupSchedulingRequest setFastScheduling(UpdateServiceGroupSchedulingRequestFastScheduling fastScheduling) {
@@ -61,34 +53,34 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         return this.fineScheduling;
     }
 
-    public UpdateServiceGroupSchedulingRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public UpdateServiceGroupSchedulingRequest setSchedulingWay(String schedulingWay) {
+        this.schedulingWay = schedulingWay;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSchedulingWay() {
+        return this.schedulingWay;
+    }
+
+    public UpdateServiceGroupSchedulingRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public static class UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers extends TeaModel {
-        // 轮班用户ID
-        @NameInMap("schedulingUserId")
-        public Long schedulingUserId;
-
         // 排班顺序
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
+        // 轮班用户ID
+        @NameInMap("schedulingUserId")
+        public Long schedulingUserId;
+
         public static UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers self = new UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingUserId(Long schedulingUserId) {
-            this.schedulingUserId = schedulingUserId;
-            return this;
-        }
-        public Long getSchedulingUserId() {
-            return this.schedulingUserId;
         }
 
         public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingOrder(Integer schedulingOrder) {
@@ -99,40 +91,40 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingOrder;
         }
 
+        public UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingUserId(Long schedulingUserId) {
+            this.schedulingUserId = schedulingUserId;
+            return this;
+        }
+        public Long getSchedulingUserId() {
+            return this.schedulingUserId;
+        }
+
     }
 
     public static class UpdateServiceGroupSchedulingRequestFastScheduling extends TeaModel {
-        // 每人排班时长
-        @NameInMap("singleDuration")
-        public Integer singleDuration;
-
         // 值班方案 dutyPlan FAST_CHOICE 快速选择   CUSTOM  自定义
         @NameInMap("dutyPlan")
         public String dutyPlan;
-
-        // 每人排班时长单位 HOUR 小时 DAY 天
-        @NameInMap("singleDurationUnit")
-        public String singleDurationUnit;
-
-        // 快速轮班用户
-        @NameInMap("schedulingUsers")
-        public java.util.List<UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers;
 
         // 快速排班ID
         @NameInMap("id")
         public Long id;
 
+        // 快速轮班用户
+        @NameInMap("schedulingUsers")
+        public java.util.List<UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers;
+
+        // 每人排班时长
+        @NameInMap("singleDuration")
+        public Integer singleDuration;
+
+        // 每人排班时长单位 HOUR 小时 DAY 天
+        @NameInMap("singleDurationUnit")
+        public String singleDurationUnit;
+
         public static UpdateServiceGroupSchedulingRequestFastScheduling build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSchedulingRequestFastScheduling self = new UpdateServiceGroupSchedulingRequestFastScheduling();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateServiceGroupSchedulingRequestFastScheduling setSingleDuration(Integer singleDuration) {
-            this.singleDuration = singleDuration;
-            return this;
-        }
-        public Integer getSingleDuration() {
-            return this.singleDuration;
         }
 
         public UpdateServiceGroupSchedulingRequestFastScheduling setDutyPlan(String dutyPlan) {
@@ -143,12 +135,12 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.dutyPlan;
         }
 
-        public UpdateServiceGroupSchedulingRequestFastScheduling setSingleDurationUnit(String singleDurationUnit) {
-            this.singleDurationUnit = singleDurationUnit;
+        public UpdateServiceGroupSchedulingRequestFastScheduling setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getSingleDurationUnit() {
-            return this.singleDurationUnit;
+        public Long getId() {
+            return this.id;
         }
 
         public UpdateServiceGroupSchedulingRequestFastScheduling setSchedulingUsers(java.util.List<UpdateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers) {
@@ -159,20 +151,28 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingUsers;
         }
 
-        public UpdateServiceGroupSchedulingRequestFastScheduling setId(Long id) {
-            this.id = id;
+        public UpdateServiceGroupSchedulingRequestFastScheduling setSingleDuration(Integer singleDuration) {
+            this.singleDuration = singleDuration;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Integer getSingleDuration() {
+            return this.singleDuration;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFastScheduling setSingleDurationUnit(String singleDurationUnit) {
+            this.singleDurationUnit = singleDurationUnit;
+            return this;
+        }
+        public String getSingleDurationUnit() {
+            return this.singleDurationUnit;
         }
 
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts extends TeaModel {
-        // 排班开始时间
-        @NameInMap("schedulingStartTime")
-        public String schedulingStartTime;
+        // 轮训次序
+        @NameInMap("cycleOrder")
+        public Integer cycleOrder;
 
         // 排班结束时间
         @NameInMap("schedulingEndTime")
@@ -182,6 +182,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
+        // 排班开始时间
+        @NameInMap("schedulingStartTime")
+        public String schedulingStartTime;
+
+        // 排班用户ID
+        @NameInMap("schedulingUserId")
+        public Long schedulingUserId;
+
         // 班次名称
         @NameInMap("shiftName")
         public String shiftName;
@@ -190,25 +198,17 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("skipOneDay")
         public Boolean skipOneDay;
 
-        // 排班用户ID
-        @NameInMap("schedulingUserId")
-        public Long schedulingUserId;
-
-        // 轮训次序
-        @NameInMap("cycleOrder")
-        public Integer cycleOrder;
-
         public static UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts self = new UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts();
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingStartTime(String schedulingStartTime) {
-            this.schedulingStartTime = schedulingStartTime;
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setCycleOrder(Integer cycleOrder) {
+            this.cycleOrder = cycleOrder;
             return this;
         }
-        public String getSchedulingStartTime() {
-            return this.schedulingStartTime;
+        public Integer getCycleOrder() {
+            return this.cycleOrder;
         }
 
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingEndTime(String schedulingEndTime) {
@@ -227,6 +227,22 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingOrder;
         }
 
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingStartTime(String schedulingStartTime) {
+            this.schedulingStartTime = schedulingStartTime;
+            return this;
+        }
+        public String getSchedulingStartTime() {
+            return this.schedulingStartTime;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingUserId(Long schedulingUserId) {
+            this.schedulingUserId = schedulingUserId;
+            return this;
+        }
+        public Long getSchedulingUserId() {
+            return this.schedulingUserId;
+        }
+
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setShiftName(String shiftName) {
             this.shiftName = shiftName;
             return this;
@@ -243,29 +259,9 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.skipOneDay;
         }
 
-        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingUserId(Long schedulingUserId) {
-            this.schedulingUserId = schedulingUserId;
-            return this;
-        }
-        public Long getSchedulingUserId() {
-            return this.schedulingUserId;
-        }
-
-        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setCycleOrder(Integer cycleOrder) {
-            this.cycleOrder = cycleOrder;
-            return this;
-        }
-        public Integer getCycleOrder() {
-            return this.cycleOrder;
-        }
-
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts extends TeaModel {
-        // 排班开始时间
-        @NameInMap("schedulingStartTime")
-        public String schedulingStartTime;
-
         // 排班结束时间
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
@@ -273,6 +269,10 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         // 排班顺序
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
+
+        // 排班开始时间
+        @NameInMap("schedulingStartTime")
+        public String schedulingStartTime;
 
         // 排班用户ID
         @NameInMap("schedulingUserId")
@@ -291,14 +291,6 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingStartTime(String schedulingStartTime) {
-            this.schedulingStartTime = schedulingStartTime;
-            return this;
-        }
-        public String getSchedulingStartTime() {
-            return this.schedulingStartTime;
-        }
-
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingEndTime(String schedulingEndTime) {
             this.schedulingEndTime = schedulingEndTime;
             return this;
@@ -313,6 +305,14 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         }
         public Integer getSchedulingOrder() {
             return this.schedulingOrder;
+        }
+
+        public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingStartTime(String schedulingStartTime) {
+            this.schedulingStartTime = schedulingStartTime;
+            return this;
+        }
+        public String getSchedulingStartTime() {
+            return this.schedulingStartTime;
         }
 
         public UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingUserId(Long schedulingUserId) {
@@ -342,6 +342,10 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
     }
 
     public static class UpdateServiceGroupSchedulingRequestFineScheduling extends TeaModel {
+        // 精细排班ID
+        @NameInMap("id")
+        public Long id;
+
         // 循环周期
         @NameInMap("period")
         public Integer period;
@@ -349,10 +353,6 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         // 循环周期单位 HOUR 小时 DAY 天
         @NameInMap("periodUnit")
         public String periodUnit;
-
-        // 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
-        @NameInMap("shiftType")
-        public String shiftType;
 
         // 精细排班班次人员信息
         @NameInMap("schedulingFineShifts")
@@ -362,13 +362,21 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingTemplateFineShifts")
         public java.util.List<UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts> schedulingTemplateFineShifts;
 
-        // 精细排班ID
-        @NameInMap("id")
-        public Long id;
+        // 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
+        @NameInMap("shiftType")
+        public String shiftType;
 
         public static UpdateServiceGroupSchedulingRequestFineScheduling build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceGroupSchedulingRequestFineScheduling self = new UpdateServiceGroupSchedulingRequestFineScheduling();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceGroupSchedulingRequestFineScheduling setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public UpdateServiceGroupSchedulingRequestFineScheduling setPeriod(Integer period) {
@@ -387,14 +395,6 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.periodUnit;
         }
 
-        public UpdateServiceGroupSchedulingRequestFineScheduling setShiftType(String shiftType) {
-            this.shiftType = shiftType;
-            return this;
-        }
-        public String getShiftType() {
-            return this.shiftType;
-        }
-
         public UpdateServiceGroupSchedulingRequestFineScheduling setSchedulingFineShifts(java.util.List<UpdateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts> schedulingFineShifts) {
             this.schedulingFineShifts = schedulingFineShifts;
             return this;
@@ -411,12 +411,12 @@ public class UpdateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingTemplateFineShifts;
         }
 
-        public UpdateServiceGroupSchedulingRequestFineScheduling setId(Long id) {
-            this.id = id;
+        public UpdateServiceGroupSchedulingRequestFineScheduling setShiftType(String shiftType) {
+            this.shiftType = shiftType;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getShiftType() {
+            return this.shiftType;
         }
 
     }

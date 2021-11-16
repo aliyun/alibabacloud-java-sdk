@@ -8,13 +8,13 @@ public class GenerateProblemPictureUploadSignRequest extends TeaModel {
     @NameInMap("fileName")
     public String fileName;
 
-    // 文件类型
-    @NameInMap("fileType")
-    public String fileType;
-
     // 文件大小KB
     @NameInMap("fileSize")
     public Long fileSize;
+
+    // 文件类型
+    @NameInMap("fileType")
+    public String fileType;
 
     // 故障id
     @NameInMap("problemId")
@@ -33,20 +33,20 @@ public class GenerateProblemPictureUploadSignRequest extends TeaModel {
         return this.fileName;
     }
 
-    public GenerateProblemPictureUploadSignRequest setFileType(String fileType) {
-        this.fileType = fileType;
-        return this;
-    }
-    public String getFileType() {
-        return this.fileType;
-    }
-
     public GenerateProblemPictureUploadSignRequest setFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }
     public Long getFileSize() {
         return this.fileSize;
+    }
+
+    public GenerateProblemPictureUploadSignRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
     }
 
     public GenerateProblemPictureUploadSignRequest setProblemId(Long problemId) {
