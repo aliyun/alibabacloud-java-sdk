@@ -8,7 +8,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // 合成媒资Id
+    // 合成ICE媒资Id
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -19,6 +19,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
+
+    // vod媒资id
+    @NameInMap("VodMediaId")
+    public String vodMediaId;
 
     public static SubmitMediaProducingJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaProducingJobResponseBody self = new SubmitMediaProducingJobResponseBody();
@@ -55,6 +59,14 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SubmitMediaProducingJobResponseBody setVodMediaId(String vodMediaId) {
+        this.vodMediaId = vodMediaId;
+        return this;
+    }
+    public String getVodMediaId() {
+        return this.vodMediaId;
     }
 
 }
