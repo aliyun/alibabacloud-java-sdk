@@ -8,6 +8,10 @@ public class ListSourceEventsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    // 结束时间
+    @NameInMap("endTime")
+    public String endTime;
+
     // 报警或者事件ID
     @NameInMap("instanceId")
     public Long instanceId;
@@ -28,6 +32,10 @@ public class ListSourceEventsRequest extends TeaModel {
     @NameInMap("startRowKey")
     public String startRowKey;
 
+    // 开始时间
+    @NameInMap("startTime")
+    public String startTime;
+
     // stopRowKey 用来查询上一页的数据
     @NameInMap("stopRowKey")
     public String stopRowKey;
@@ -43,6 +51,14 @@ public class ListSourceEventsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListSourceEventsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListSourceEventsRequest setInstanceId(Long instanceId) {
@@ -83,6 +99,14 @@ public class ListSourceEventsRequest extends TeaModel {
     }
     public String getStartRowKey() {
         return this.startRowKey;
+    }
+
+    public ListSourceEventsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListSourceEventsRequest setStopRowKey(String stopRowKey) {
