@@ -3,17 +3,17 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class TempPreviewStatusRequest extends TeaModel {
-    // 任务ID
+public class PublishStatusRequest extends TeaModel {
+    // 场景ID
     @NameInMap("SceneId")
     public String sceneId;
 
-    public static TempPreviewStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        TempPreviewStatusRequest self = new TempPreviewStatusRequest();
+    public static PublishStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        PublishStatusRequest self = new PublishStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public TempPreviewStatusRequest setSceneId(String sceneId) {
+    public PublishStatusRequest setSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
     }

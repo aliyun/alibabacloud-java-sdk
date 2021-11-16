@@ -294,19 +294,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getHotspotTagWithOptions(request, runtime);
     }
 
-    public GetJobResponse getJobWithOptions(GetJobRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetJob", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetJobResponse());
-    }
-
-    public GetJobResponse getJob(GetJobRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getJobWithOptions(request, runtime);
-    }
-
     public GetLayoutDataResponse getLayoutDataWithOptions(GetLayoutDataRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -591,6 +578,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PublishSceneResponse publishScene(PublishSceneRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.publishSceneWithOptions(request, runtime);
+    }
+
+    public PublishStatusResponse publishStatusWithOptions(PublishStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PublishStatus", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new PublishStatusResponse());
+    }
+
+    public PublishStatusResponse publishStatus(PublishStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publishStatusWithOptions(request, runtime);
     }
 
     public RecoveryOriginImageResponse recoveryOriginImageWithOptions(RecoveryOriginImageRequest request, RuntimeOptions runtime) throws Exception {
