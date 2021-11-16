@@ -3,19 +3,30 @@ package com.aliyun.elasticsearch20170613.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApmResponseBody extends TeaModel {
+public class ListApmResponseBody extends TeaModel {
+    @NameInMap("Headers")
+    public ListApmResponseBodyHeaders headers;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
-    public DescribeApmResponseBodyResult result;
+    public java.util.List<ListApmResponseBodyResult> result;
 
-    public static DescribeApmResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApmResponseBody self = new DescribeApmResponseBody();
+    public static ListApmResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListApmResponseBody self = new ListApmResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApmResponseBody setRequestId(String requestId) {
+    public ListApmResponseBody setHeaders(ListApmResponseBodyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ListApmResponseBodyHeaders getHeaders() {
+        return this.headers;
+    }
+
+    public ListApmResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -23,18 +34,34 @@ public class DescribeApmResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeApmResponseBody setResult(DescribeApmResponseBodyResult result) {
+    public ListApmResponseBody setResult(java.util.List<ListApmResponseBodyResult> result) {
         this.result = result;
         return this;
     }
-    public DescribeApmResponseBodyResult getResult() {
+    public java.util.List<ListApmResponseBodyResult> getResult() {
         return this.result;
     }
 
-    public static class DescribeApmResponseBodyResult extends TeaModel {
-        @NameInMap("apmServerDomain")
-        public String apmServerDomain;
+    public static class ListApmResponseBodyHeaders extends TeaModel {
+        @NameInMap("X-Total-Count")
+        public Long xTotalCount;
 
+        public static ListApmResponseBodyHeaders build(java.util.Map<String, ?> map) throws Exception {
+            ListApmResponseBodyHeaders self = new ListApmResponseBodyHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApmResponseBodyHeaders setXTotalCount(Long xTotalCount) {
+            this.xTotalCount = xTotalCount;
+            return this;
+        }
+        public Long getXTotalCount() {
+            return this.xTotalCount;
+        }
+
+    }
+
+    public static class ListApmResponseBodyResult extends TeaModel {
         @NameInMap("createdAt")
         public String createdAt;
 
@@ -43,9 +70,6 @@ public class DescribeApmResponseBody extends TeaModel {
 
         @NameInMap("description")
         public String description;
-
-        @NameInMap("endTime")
-        public Long endTime;
 
         @NameInMap("instanceId")
         public String instanceId;
@@ -59,9 +83,6 @@ public class DescribeApmResponseBody extends TeaModel {
         @NameInMap("outputESUserName")
         public String outputESUserName;
 
-        @NameInMap("outputEsDescription")
-        public String outputEsDescription;
-
         @NameInMap("ownerId")
         public String ownerId;
 
@@ -72,7 +93,7 @@ public class DescribeApmResponseBody extends TeaModel {
         public String region;
 
         @NameInMap("replica")
-        public Integer replica;
+        public Long replica;
 
         @NameInMap("resourceSpec")
         public String resourceSpec;
@@ -92,20 +113,12 @@ public class DescribeApmResponseBody extends TeaModel {
         @NameInMap("vswitchId")
         public String vswitchId;
 
-        public static DescribeApmResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApmResponseBodyResult self = new DescribeApmResponseBodyResult();
+        public static ListApmResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            ListApmResponseBodyResult self = new ListApmResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApmResponseBodyResult setApmServerDomain(String apmServerDomain) {
-            this.apmServerDomain = apmServerDomain;
-            return this;
-        }
-        public String getApmServerDomain() {
-            return this.apmServerDomain;
-        }
-
-        public DescribeApmResponseBodyResult setCreatedAt(String createdAt) {
+        public ListApmResponseBodyResult setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
@@ -113,7 +126,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public DescribeApmResponseBodyResult setDeployedReplica(Long deployedReplica) {
+        public ListApmResponseBodyResult setDeployedReplica(Long deployedReplica) {
             this.deployedReplica = deployedReplica;
             return this;
         }
@@ -121,7 +134,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.deployedReplica;
         }
 
-        public DescribeApmResponseBodyResult setDescription(String description) {
+        public ListApmResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -129,15 +142,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeApmResponseBodyResult setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeApmResponseBodyResult setInstanceId(String instanceId) {
+        public ListApmResponseBodyResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -145,7 +150,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeApmResponseBodyResult setNodeAmount(Long nodeAmount) {
+        public ListApmResponseBodyResult setNodeAmount(Long nodeAmount) {
             this.nodeAmount = nodeAmount;
             return this;
         }
@@ -153,7 +158,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.nodeAmount;
         }
 
-        public DescribeApmResponseBodyResult setOutputES(String outputES) {
+        public ListApmResponseBodyResult setOutputES(String outputES) {
             this.outputES = outputES;
             return this;
         }
@@ -161,7 +166,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.outputES;
         }
 
-        public DescribeApmResponseBodyResult setOutputESUserName(String outputESUserName) {
+        public ListApmResponseBodyResult setOutputESUserName(String outputESUserName) {
             this.outputESUserName = outputESUserName;
             return this;
         }
@@ -169,15 +174,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.outputESUserName;
         }
 
-        public DescribeApmResponseBodyResult setOutputEsDescription(String outputEsDescription) {
-            this.outputEsDescription = outputEsDescription;
-            return this;
-        }
-        public String getOutputEsDescription() {
-            return this.outputEsDescription;
-        }
-
-        public DescribeApmResponseBodyResult setOwnerId(String ownerId) {
+        public ListApmResponseBodyResult setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
@@ -185,7 +182,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public DescribeApmResponseBodyResult setPaymentType(String paymentType) {
+        public ListApmResponseBodyResult setPaymentType(String paymentType) {
             this.paymentType = paymentType;
             return this;
         }
@@ -193,7 +190,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.paymentType;
         }
 
-        public DescribeApmResponseBodyResult setRegion(String region) {
+        public ListApmResponseBodyResult setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -201,15 +198,15 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribeApmResponseBodyResult setReplica(Integer replica) {
+        public ListApmResponseBodyResult setReplica(Long replica) {
             this.replica = replica;
             return this;
         }
-        public Integer getReplica() {
+        public Long getReplica() {
             return this.replica;
         }
 
-        public DescribeApmResponseBodyResult setResourceSpec(String resourceSpec) {
+        public ListApmResponseBodyResult setResourceSpec(String resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
@@ -217,7 +214,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.resourceSpec;
         }
 
-        public DescribeApmResponseBodyResult setStatus(String status) {
+        public ListApmResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -225,7 +222,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeApmResponseBodyResult setVersion(String version) {
+        public ListApmResponseBodyResult setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -233,7 +230,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.version;
         }
 
-        public DescribeApmResponseBodyResult setVpcId(String vpcId) {
+        public ListApmResponseBodyResult setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -241,7 +238,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeApmResponseBodyResult setVsArea(String vsArea) {
+        public ListApmResponseBodyResult setVsArea(String vsArea) {
             this.vsArea = vsArea;
             return this;
         }
@@ -249,7 +246,7 @@ public class DescribeApmResponseBody extends TeaModel {
             return this.vsArea;
         }
 
-        public DescribeApmResponseBodyResult setVswitchId(String vswitchId) {
+        public ListApmResponseBodyResult setVswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
             return this;
         }

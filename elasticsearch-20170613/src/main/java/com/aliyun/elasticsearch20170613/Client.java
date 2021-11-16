@@ -1478,6 +1478,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("ListAlternativeSnapshotRepos", "2017-06-13", "HTTPS", "GET", "AK", "/openapi/instances/" + InstanceId + "/alternative-snapshot-repos", "json", req, runtime), new ListAlternativeSnapshotReposResponse());
     }
 
+    public ListApmResponse listApm(ListApmRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApmWithOptions(request, headers, runtime);
+    }
+
+    public ListApmResponse listApmWithOptions(ListApmRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("ListApm", "2017-06-13", "HTTPS", "GET", "AK", "/openapi/apm", "json", req, runtime), new ListApmResponse());
+    }
+
     public ListAvailableEsInstanceIdsResponse listAvailableEsInstanceIds(String InstanceId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3208,30 +3244,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApmResponse updateApmWithOptions(String instanceId, UpdateApmRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         instanceId = com.aliyun.openapiutil.Client.getEncodeParam(instanceId);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputES)) {
-            query.put("outputES", request.outputES);
+            body.put("outputES", request.outputES);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputESPassword)) {
-            query.put("outputESPassword", request.outputESPassword);
+            body.put("outputESPassword", request.outputESPassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputESUserName)) {
-            query.put("outputESUserName", request.outputESUserName);
+            body.put("outputESUserName", request.outputESUserName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.token)) {
-            query.put("token", request.token);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.yml)) {
-            query.put("yml", request.yml);
+            body.put("token", request.token);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         return TeaModel.toModel(this.doROARequest("UpdateApm", "2017-06-13", "HTTPS", "PUT", "AK", "/openapi/apm/" + instanceId + "", "json", req, runtime), new UpdateApmResponse());
     }
