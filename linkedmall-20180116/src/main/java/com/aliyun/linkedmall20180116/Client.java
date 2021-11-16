@@ -1000,6 +1000,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryBizItemsWithActivityWithOptions(request, runtime);
     }
 
+    public QueryBudgetTicketItemListByBizIdResponse queryBudgetTicketItemListByBizIdWithOptions(QueryBudgetTicketItemListByBizIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryBudgetTicketItemListByBizId", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new QueryBudgetTicketItemListByBizIdResponse());
+    }
+
+    public QueryBudgetTicketItemListByBizIdResponse queryBudgetTicketItemListByBizId(QueryBudgetTicketItemListByBizIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryBudgetTicketItemListByBizIdWithOptions(request, runtime);
+    }
+
     public QueryGuideItemGroupResponse queryGuideItemGroupWithOptions(QueryGuideItemGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
