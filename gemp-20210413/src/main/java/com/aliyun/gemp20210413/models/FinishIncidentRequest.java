@@ -4,9 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class FinishIncidentRequest extends TeaModel {
-    // 事件ID数组
-    @NameInMap("incidentIds")
-    public java.util.List<Long> incidentIds;
+    // 幂等校验Id
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 完结原因
     @NameInMap("incidentFinishReason")
@@ -24,21 +24,21 @@ public class FinishIncidentRequest extends TeaModel {
     @NameInMap("incidentFinishSolutionDescription")
     public String incidentFinishSolutionDescription;
 
-    // 幂等校验Id
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 事件ID数组
+    @NameInMap("incidentIds")
+    public java.util.List<Long> incidentIds;
 
     public static FinishIncidentRequest build(java.util.Map<String, ?> map) throws Exception {
         FinishIncidentRequest self = new FinishIncidentRequest();
         return TeaModel.build(map, self);
     }
 
-    public FinishIncidentRequest setIncidentIds(java.util.List<Long> incidentIds) {
-        this.incidentIds = incidentIds;
+    public FinishIncidentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public java.util.List<Long> getIncidentIds() {
-        return this.incidentIds;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public FinishIncidentRequest setIncidentFinishReason(Integer incidentFinishReason) {
@@ -73,12 +73,12 @@ public class FinishIncidentRequest extends TeaModel {
         return this.incidentFinishSolutionDescription;
     }
 
-    public FinishIncidentRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public FinishIncidentRequest setIncidentIds(java.util.List<Long> incidentIds) {
+        this.incidentIds = incidentIds;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public java.util.List<Long> getIncidentIds() {
+        return this.incidentIds;
     }
 
 }

@@ -4,13 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceGroupSchedulingRequest extends TeaModel {
-    // 服务组ID
-    @NameInMap("serviceGroupId")
-    public Long serviceGroupId;
-
-    // 排班方式 FAST 快速排班 FINE  精细排班
-    @NameInMap("schedulingWay")
-    public String schedulingWay;
+    // 幂等号
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 快速排班
     @NameInMap("fastScheduling")
@@ -20,29 +16,25 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
     @NameInMap("fineScheduling")
     public CreateServiceGroupSchedulingRequestFineScheduling fineScheduling;
 
-    // 幂等号
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 排班方式 FAST 快速排班 FINE  精细排班
+    @NameInMap("schedulingWay")
+    public String schedulingWay;
+
+    // 服务组ID
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
 
     public static CreateServiceGroupSchedulingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceGroupSchedulingRequest self = new CreateServiceGroupSchedulingRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceGroupSchedulingRequest setServiceGroupId(Long serviceGroupId) {
-        this.serviceGroupId = serviceGroupId;
+    public CreateServiceGroupSchedulingRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getServiceGroupId() {
-        return this.serviceGroupId;
-    }
-
-    public CreateServiceGroupSchedulingRequest setSchedulingWay(String schedulingWay) {
-        this.schedulingWay = schedulingWay;
-        return this;
-    }
-    public String getSchedulingWay() {
-        return this.schedulingWay;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateServiceGroupSchedulingRequest setFastScheduling(CreateServiceGroupSchedulingRequestFastScheduling fastScheduling) {
@@ -61,34 +53,34 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         return this.fineScheduling;
     }
 
-    public CreateServiceGroupSchedulingRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateServiceGroupSchedulingRequest setSchedulingWay(String schedulingWay) {
+        this.schedulingWay = schedulingWay;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSchedulingWay() {
+        return this.schedulingWay;
+    }
+
+    public CreateServiceGroupSchedulingRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
     public static class CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers extends TeaModel {
-        // 轮班用户ID
-        @NameInMap("schedulingUserId")
-        public Long schedulingUserId;
-
         // 排班顺序
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
 
+        // 轮班用户ID
+        @NameInMap("schedulingUserId")
+        public Long schedulingUserId;
+
         public static CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers self = new CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers();
             return TeaModel.build(map, self);
-        }
-
-        public CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingUserId(Long schedulingUserId) {
-            this.schedulingUserId = schedulingUserId;
-            return this;
-        }
-        public Long getSchedulingUserId() {
-            return this.schedulingUserId;
         }
 
         public CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingOrder(Long schedulingOrder) {
@@ -99,36 +91,36 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingOrder;
         }
 
+        public CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers setSchedulingUserId(Long schedulingUserId) {
+            this.schedulingUserId = schedulingUserId;
+            return this;
+        }
+        public Long getSchedulingUserId() {
+            return this.schedulingUserId;
+        }
+
     }
 
     public static class CreateServiceGroupSchedulingRequestFastScheduling extends TeaModel {
-        // 每人排班时长
-        @NameInMap("singleDuration")
-        public Integer singleDuration;
-
         // 值班方案 dutyPlan FAST_CHOICE 快速选择   CUSTOM  自定义
         @NameInMap("dutyPlan")
         public String dutyPlan;
-
-        // 每人排班时常单位 HOUR 小时 DAY  天
-        @NameInMap("singleDurationUnit")
-        public String singleDurationUnit;
 
         // 快速轮班用户
         @NameInMap("schedulingUsers")
         public java.util.List<CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers;
 
+        // 每人排班时长
+        @NameInMap("singleDuration")
+        public Integer singleDuration;
+
+        // 每人排班时常单位 HOUR 小时 DAY  天
+        @NameInMap("singleDurationUnit")
+        public String singleDurationUnit;
+
         public static CreateServiceGroupSchedulingRequestFastScheduling build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceGroupSchedulingRequestFastScheduling self = new CreateServiceGroupSchedulingRequestFastScheduling();
             return TeaModel.build(map, self);
-        }
-
-        public CreateServiceGroupSchedulingRequestFastScheduling setSingleDuration(Integer singleDuration) {
-            this.singleDuration = singleDuration;
-            return this;
-        }
-        public Integer getSingleDuration() {
-            return this.singleDuration;
         }
 
         public CreateServiceGroupSchedulingRequestFastScheduling setDutyPlan(String dutyPlan) {
@@ -139,14 +131,6 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.dutyPlan;
         }
 
-        public CreateServiceGroupSchedulingRequestFastScheduling setSingleDurationUnit(String singleDurationUnit) {
-            this.singleDurationUnit = singleDurationUnit;
-            return this;
-        }
-        public String getSingleDurationUnit() {
-            return this.singleDurationUnit;
-        }
-
         public CreateServiceGroupSchedulingRequestFastScheduling setSchedulingUsers(java.util.List<CreateServiceGroupSchedulingRequestFastSchedulingSchedulingUsers> schedulingUsers) {
             this.schedulingUsers = schedulingUsers;
             return this;
@@ -155,12 +139,28 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingUsers;
         }
 
+        public CreateServiceGroupSchedulingRequestFastScheduling setSingleDuration(Integer singleDuration) {
+            this.singleDuration = singleDuration;
+            return this;
+        }
+        public Integer getSingleDuration() {
+            return this.singleDuration;
+        }
+
+        public CreateServiceGroupSchedulingRequestFastScheduling setSingleDurationUnit(String singleDurationUnit) {
+            this.singleDurationUnit = singleDurationUnit;
+            return this;
+        }
+        public String getSingleDurationUnit() {
+            return this.singleDurationUnit;
+        }
+
     }
 
     public static class CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts extends TeaModel {
-        // 排班开始时间
-        @NameInMap("schedulingStartTime")
-        public String schedulingStartTime;
+        // 循环次序
+        @NameInMap("cycleOrder")
+        public Integer cycleOrder;
 
         // 排班结束时间
         @NameInMap("schedulingEndTime")
@@ -170,33 +170,33 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("schedulingOrder")
         public Integer schedulingOrder;
 
-        // 是否跨天
-        @NameInMap("skipOneDay")
-        public Boolean skipOneDay;
+        // 排班开始时间
+        @NameInMap("schedulingStartTime")
+        public String schedulingStartTime;
 
-        // 循环次序
-        @NameInMap("cycleOrder")
-        public Integer cycleOrder;
+        // 排班用户ID
+        @NameInMap("schedulingUserId")
+        public Long schedulingUserId;
 
         // 班次名称
         @NameInMap("shiftName")
         public String shiftName;
 
-        // 排班用户ID
-        @NameInMap("schedulingUserId")
-        public Long schedulingUserId;
+        // 是否跨天
+        @NameInMap("skipOneDay")
+        public Boolean skipOneDay;
 
         public static CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts self = new CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts();
             return TeaModel.build(map, self);
         }
 
-        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingStartTime(String schedulingStartTime) {
-            this.schedulingStartTime = schedulingStartTime;
+        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setCycleOrder(Integer cycleOrder) {
+            this.cycleOrder = cycleOrder;
             return this;
         }
-        public String getSchedulingStartTime() {
-            return this.schedulingStartTime;
+        public Integer getCycleOrder() {
+            return this.cycleOrder;
         }
 
         public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingEndTime(String schedulingEndTime) {
@@ -215,28 +215,12 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingOrder;
         }
 
-        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSkipOneDay(Boolean skipOneDay) {
-            this.skipOneDay = skipOneDay;
+        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingStartTime(String schedulingStartTime) {
+            this.schedulingStartTime = schedulingStartTime;
             return this;
         }
-        public Boolean getSkipOneDay() {
-            return this.skipOneDay;
-        }
-
-        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setCycleOrder(Integer cycleOrder) {
-            this.cycleOrder = cycleOrder;
-            return this;
-        }
-        public Integer getCycleOrder() {
-            return this.cycleOrder;
-        }
-
-        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setShiftName(String shiftName) {
-            this.shiftName = shiftName;
-            return this;
-        }
-        public String getShiftName() {
-            return this.shiftName;
+        public String getSchedulingStartTime() {
+            return this.schedulingStartTime;
         }
 
         public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSchedulingUserId(Long schedulingUserId) {
@@ -247,13 +231,25 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.schedulingUserId;
         }
 
+        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setShiftName(String shiftName) {
+            this.shiftName = shiftName;
+            return this;
+        }
+        public String getShiftName() {
+            return this.shiftName;
+        }
+
+        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts setSkipOneDay(Boolean skipOneDay) {
+            this.skipOneDay = skipOneDay;
+            return this;
+        }
+        public Boolean getSkipOneDay() {
+            return this.skipOneDay;
+        }
+
     }
 
     public static class CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts extends TeaModel {
-        // 排班开始时间
-        @NameInMap("schedulingStartTime")
-        public String schedulingStartTime;
-
         // 排班结束时间
         @NameInMap("schedulingEndTime")
         public String schedulingEndTime;
@@ -261,6 +257,10 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         // 排班顺序
         @NameInMap("schedulingOrder")
         public Long schedulingOrder;
+
+        // 排班开始时间
+        @NameInMap("schedulingStartTime")
+        public String schedulingStartTime;
 
         // 用户ID
         @NameInMap("schedulingUserId")
@@ -279,14 +279,6 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingStartTime(String schedulingStartTime) {
-            this.schedulingStartTime = schedulingStartTime;
-            return this;
-        }
-        public String getSchedulingStartTime() {
-            return this.schedulingStartTime;
-        }
-
         public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingEndTime(String schedulingEndTime) {
             this.schedulingEndTime = schedulingEndTime;
             return this;
@@ -301,6 +293,14 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         }
         public Long getSchedulingOrder() {
             return this.schedulingOrder;
+        }
+
+        public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingStartTime(String schedulingStartTime) {
+            this.schedulingStartTime = schedulingStartTime;
+            return this;
+        }
+        public String getSchedulingStartTime() {
+            return this.schedulingStartTime;
         }
 
         public CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts setSchedulingUserId(Long schedulingUserId) {
@@ -338,10 +338,6 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         @NameInMap("periodUnit")
         public String periodUnit;
 
-        // 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
-        @NameInMap("shiftType")
-        public String shiftType;
-
         // 精细排班信息表
         @NameInMap("schedulingFineShifts")
         public java.util.List<CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts> schedulingFineShifts;
@@ -349,6 +345,10 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         // 精细排班模版
         @NameInMap("schedulingTemplateFineShifts")
         public java.util.List<CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts> schedulingTemplateFineShifts;
+
+        // 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
+        @NameInMap("shiftType")
+        public String shiftType;
 
         public static CreateServiceGroupSchedulingRequestFineScheduling build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceGroupSchedulingRequestFineScheduling self = new CreateServiceGroupSchedulingRequestFineScheduling();
@@ -371,14 +371,6 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
             return this.periodUnit;
         }
 
-        public CreateServiceGroupSchedulingRequestFineScheduling setShiftType(String shiftType) {
-            this.shiftType = shiftType;
-            return this;
-        }
-        public String getShiftType() {
-            return this.shiftType;
-        }
-
         public CreateServiceGroupSchedulingRequestFineScheduling setSchedulingFineShifts(java.util.List<CreateServiceGroupSchedulingRequestFineSchedulingSchedulingFineShifts> schedulingFineShifts) {
             this.schedulingFineShifts = schedulingFineShifts;
             return this;
@@ -393,6 +385,14 @@ public class CreateServiceGroupSchedulingRequest extends TeaModel {
         }
         public java.util.List<CreateServiceGroupSchedulingRequestFineSchedulingSchedulingTemplateFineShifts> getSchedulingTemplateFineShifts() {
             return this.schedulingTemplateFineShifts;
+        }
+
+        public CreateServiceGroupSchedulingRequestFineScheduling setShiftType(String shiftType) {
+            this.shiftType = shiftType;
+            return this;
+        }
+        public String getShiftType() {
+            return this.shiftType;
         }
 
     }

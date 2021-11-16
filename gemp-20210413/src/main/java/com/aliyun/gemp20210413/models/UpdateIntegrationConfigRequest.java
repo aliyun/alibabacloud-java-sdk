@@ -4,9 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegrationConfigRequest extends TeaModel {
-    @NameInMap("integrationConfigId")
-    public Long integrationConfigId;
-
     // 集成秘钥
     @NameInMap("accessKey")
     public String accessKey;
@@ -15,17 +12,12 @@ public class UpdateIntegrationConfigRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("integrationConfigId")
+    public Long integrationConfigId;
+
     public static UpdateIntegrationConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIntegrationConfigRequest self = new UpdateIntegrationConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateIntegrationConfigRequest setIntegrationConfigId(Long integrationConfigId) {
-        this.integrationConfigId = integrationConfigId;
-        return this;
-    }
-    public Long getIntegrationConfigId() {
-        return this.integrationConfigId;
     }
 
     public UpdateIntegrationConfigRequest setAccessKey(String accessKey) {
@@ -42,6 +34,14 @@ public class UpdateIntegrationConfigRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateIntegrationConfigRequest setIntegrationConfigId(Long integrationConfigId) {
+        this.integrationConfigId = integrationConfigId;
+        return this;
+    }
+    public Long getIntegrationConfigId() {
+        return this.integrationConfigId;
     }
 
 }

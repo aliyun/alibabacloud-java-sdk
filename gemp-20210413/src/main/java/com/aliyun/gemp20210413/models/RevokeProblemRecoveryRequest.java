@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RevokeProblemRecoveryRequest extends TeaModel {
+    // 幂等校验Id
+    @NameInMap("clientToken")
+    public String clientToken;
+
     // 故障ID
     @NameInMap("problemId")
     public Long problemId;
@@ -12,13 +16,17 @@ public class RevokeProblemRecoveryRequest extends TeaModel {
     @NameInMap("problemNotifyType")
     public String problemNotifyType;
 
-    // 幂等校验Id
-    @NameInMap("clientToken")
-    public String clientToken;
-
     public static RevokeProblemRecoveryRequest build(java.util.Map<String, ?> map) throws Exception {
         RevokeProblemRecoveryRequest self = new RevokeProblemRecoveryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RevokeProblemRecoveryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public RevokeProblemRecoveryRequest setProblemId(Long problemId) {
@@ -35,14 +43,6 @@ public class RevokeProblemRecoveryRequest extends TeaModel {
     }
     public String getProblemNotifyType() {
         return this.problemNotifyType;
-    }
-
-    public RevokeProblemRecoveryRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

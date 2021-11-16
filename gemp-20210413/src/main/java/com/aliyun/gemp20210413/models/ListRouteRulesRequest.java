@@ -4,13 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListRouteRulesRequest extends TeaModel {
-    // 规则名称
-    @NameInMap("ruleName")
-    public byte[] ruleName;
-
-    // 服务名称
-    @NameInMap("serviceName")
-    public byte[] serviceName;
+    // 幂等号
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 第几页
     @NameInMap("pageNumber")
@@ -20,29 +16,25 @@ public class ListRouteRulesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 幂等号
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 规则名称
+    @NameInMap("ruleName")
+    public byte[] ruleName;
+
+    // 服务名称
+    @NameInMap("serviceName")
+    public byte[] serviceName;
 
     public static ListRouteRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRouteRulesRequest self = new ListRouteRulesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListRouteRulesRequest setRuleName(byte[] ruleName) {
-        this.ruleName = ruleName;
+    public ListRouteRulesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public byte[] getRuleName() {
-        return this.ruleName;
-    }
-
-    public ListRouteRulesRequest setServiceName(byte[] serviceName) {
-        this.serviceName = serviceName;
-        return this;
-    }
-    public byte[] getServiceName() {
-        return this.serviceName;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ListRouteRulesRequest setPageNumber(Integer pageNumber) {
@@ -61,12 +53,20 @@ public class ListRouteRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRouteRulesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ListRouteRulesRequest setRuleName(byte[] ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public byte[] getRuleName() {
+        return this.ruleName;
+    }
+
+    public ListRouteRulesRequest setServiceName(byte[] serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public byte[] getServiceName() {
+        return this.serviceName;
     }
 
 }

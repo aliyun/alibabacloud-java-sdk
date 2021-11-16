@@ -4,29 +4,29 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteProblemTimelineRequest extends TeaModel {
-    // ID
-    @NameInMap("problemTimelineId")
-    public Long problemTimelineId;
+    // clientToken
+    @NameInMap("clientToken")
+    public String clientToken;
 
     // 故障id
     @NameInMap("problemId")
     public Long problemId;
 
-    // clientToken
-    @NameInMap("clientToken")
-    public String clientToken;
+    // ID
+    @NameInMap("problemTimelineId")
+    public Long problemTimelineId;
 
     public static DeleteProblemTimelineRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProblemTimelineRequest self = new DeleteProblemTimelineRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProblemTimelineRequest setProblemTimelineId(Long problemTimelineId) {
-        this.problemTimelineId = problemTimelineId;
+    public DeleteProblemTimelineRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getProblemTimelineId() {
-        return this.problemTimelineId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteProblemTimelineRequest setProblemId(Long problemId) {
@@ -37,12 +37,12 @@ public class DeleteProblemTimelineRequest extends TeaModel {
         return this.problemId;
     }
 
-    public DeleteProblemTimelineRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DeleteProblemTimelineRequest setProblemTimelineId(Long problemTimelineId) {
+        this.problemTimelineId = problemTimelineId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Long getProblemTimelineId() {
+        return this.problemTimelineId;
     }
 
 }

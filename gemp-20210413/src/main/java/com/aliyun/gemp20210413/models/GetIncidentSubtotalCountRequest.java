@@ -4,25 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class GetIncidentSubtotalCountRequest extends TeaModel {
-    // 事件id列表
-    @NameInMap("incidentIds")
-    public java.util.List<Long> incidentIds;
-
     // 幂等标识
     @NameInMap("clientToken")
     public String clientToken;
 
+    // 事件id列表
+    @NameInMap("incidentIds")
+    public java.util.List<Long> incidentIds;
+
     public static GetIncidentSubtotalCountRequest build(java.util.Map<String, ?> map) throws Exception {
         GetIncidentSubtotalCountRequest self = new GetIncidentSubtotalCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetIncidentSubtotalCountRequest setIncidentIds(java.util.List<Long> incidentIds) {
-        this.incidentIds = incidentIds;
-        return this;
-    }
-    public java.util.List<Long> getIncidentIds() {
-        return this.incidentIds;
     }
 
     public GetIncidentSubtotalCountRequest setClientToken(String clientToken) {
@@ -31,6 +23,14 @@ public class GetIncidentSubtotalCountRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GetIncidentSubtotalCountRequest setIncidentIds(java.util.List<Long> incidentIds) {
+        this.incidentIds = incidentIds;
+        return this;
+    }
+    public java.util.List<Long> getIncidentIds() {
+        return this.incidentIds;
     }
 
 }

@@ -4,17 +4,9 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListEscalationPlansResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // data
     @NameInMap("data")
     public java.util.List<ListEscalationPlansResponseBodyData> data;
-
-    // 总条数
-    @NameInMap("totalCount")
-    public Long totalCount;
 
     // 分页参数
     @NameInMap("pageNumber")
@@ -24,17 +16,17 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
+    // 总条数
+    @NameInMap("totalCount")
+    public Long totalCount;
+
     public static ListEscalationPlansResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEscalationPlansResponseBody self = new ListEscalationPlansResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListEscalationPlansResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListEscalationPlansResponseBody setData(java.util.List<ListEscalationPlansResponseBodyData> data) {
@@ -43,14 +35,6 @@ public class ListEscalationPlansResponseBody extends TeaModel {
     }
     public java.util.List<ListEscalationPlansResponseBodyData> getData() {
         return this.data;
-    }
-
-    public ListEscalationPlansResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public ListEscalationPlansResponseBody setPageNumber(Long pageNumber) {
@@ -69,7 +53,27 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public ListEscalationPlansResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListEscalationPlansResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects extends TeaModel {
+        // 范围对象类型
+        @NameInMap("scope")
+        public String scope;
+
         // 范围对象id（服务id）
         @NameInMap("scopeObjectId")
         public Long scopeObjectId;
@@ -78,13 +82,17 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         @NameInMap("scopeObjectName")
         public String scopeObjectName;
 
-        // 范围对象类型
-        @NameInMap("scope")
-        public String scope;
-
         public static ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects build(java.util.Map<String, ?> map) throws Exception {
             ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects self = new ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects();
             return TeaModel.build(map, self);
+        }
+
+        public ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
         }
 
         public ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects setScopeObjectId(Long scopeObjectId) {
@@ -103,14 +111,6 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             return this.scopeObjectName;
         }
 
-        public ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects setScope(String scope) {
-            this.scope = scope;
-            return this;
-        }
-        public String getScope() {
-            return this.scope;
-        }
-
     }
 
     public static class ListEscalationPlansResponseBodyData extends TeaModel {
@@ -126,13 +126,13 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         @NameInMap("escalationPlanScopeObjects")
         public java.util.List<ListEscalationPlansResponseBodyDataEscalationPlanScopeObjects> escalationPlanScopeObjects;
 
-        // 启用ENABLE 禁用DISABLE
-        @NameInMap("status")
-        public String status;
-
         // 修改时间
         @NameInMap("modifyTime")
         public String modifyTime;
+
+        // 启用ENABLE 禁用DISABLE
+        @NameInMap("status")
+        public String status;
 
         public static ListEscalationPlansResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListEscalationPlansResponseBodyData self = new ListEscalationPlansResponseBodyData();
@@ -163,20 +163,20 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             return this.escalationPlanScopeObjects;
         }
 
-        public ListEscalationPlansResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public ListEscalationPlansResponseBodyData setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public ListEscalationPlansResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class DeleteProblemMeasureRequest extends TeaModel {
+    // 幂等校验token
+    @NameInMap("clientToken")
+    public String clientToken;
+
     // 故障改成措施id
     @NameInMap("measureId")
     public Long measureId;
@@ -12,13 +16,17 @@ public class DeleteProblemMeasureRequest extends TeaModel {
     @NameInMap("problemId")
     public String problemId;
 
-    // 幂等校验token
-    @NameInMap("clientToken")
-    public String clientToken;
-
     public static DeleteProblemMeasureRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProblemMeasureRequest self = new DeleteProblemMeasureRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteProblemMeasureRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteProblemMeasureRequest setMeasureId(Long measureId) {
@@ -35,14 +43,6 @@ public class DeleteProblemMeasureRequest extends TeaModel {
     }
     public String getProblemId() {
         return this.problemId;
-    }
-
-    public DeleteProblemMeasureRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

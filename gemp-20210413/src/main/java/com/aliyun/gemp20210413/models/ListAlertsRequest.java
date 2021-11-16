@@ -8,13 +8,13 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("alertLevel")
     public String alertLevel;
 
-    // 服务id
-    @NameInMap("relatedServiceId")
-    public Long relatedServiceId;
-
     // 报警名称
     @NameInMap("alertName")
     public String alertName;
+
+    // 报警来源
+    @NameInMap("alertSourceName")
+    public String alertSourceName;
 
     // 当前页
     @NameInMap("pageNumber")
@@ -24,9 +24,9 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
-    // 报警来源
-    @NameInMap("alertSourceName")
-    public String alertSourceName;
+    // 服务id
+    @NameInMap("relatedServiceId")
+    public Long relatedServiceId;
 
     public static ListAlertsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertsRequest self = new ListAlertsRequest();
@@ -41,20 +41,20 @@ public class ListAlertsRequest extends TeaModel {
         return this.alertLevel;
     }
 
-    public ListAlertsRequest setRelatedServiceId(Long relatedServiceId) {
-        this.relatedServiceId = relatedServiceId;
-        return this;
-    }
-    public Long getRelatedServiceId() {
-        return this.relatedServiceId;
-    }
-
     public ListAlertsRequest setAlertName(String alertName) {
         this.alertName = alertName;
         return this;
     }
     public String getAlertName() {
         return this.alertName;
+    }
+
+    public ListAlertsRequest setAlertSourceName(String alertSourceName) {
+        this.alertSourceName = alertSourceName;
+        return this;
+    }
+    public String getAlertSourceName() {
+        return this.alertSourceName;
     }
 
     public ListAlertsRequest setPageNumber(Long pageNumber) {
@@ -73,12 +73,12 @@ public class ListAlertsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAlertsRequest setAlertSourceName(String alertSourceName) {
-        this.alertSourceName = alertSourceName;
+    public ListAlertsRequest setRelatedServiceId(Long relatedServiceId) {
+        this.relatedServiceId = relatedServiceId;
         return this;
     }
-    public String getAlertSourceName() {
-        return this.alertSourceName;
+    public Long getRelatedServiceId() {
+        return this.relatedServiceId;
     }
 
 }

@@ -4,6 +4,10 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemTimelinesRequest extends TeaModel {
+    // clientToken
+    @NameInMap("clientToken")
+    public String clientToken;
+
     // 故障id
     @NameInMap("problemId")
     public Long problemId;
@@ -12,13 +16,17 @@ public class CreateProblemTimelinesRequest extends TeaModel {
     @NameInMap("timelineNodes")
     public String timelineNodes;
 
-    // clientToken
-    @NameInMap("clientToken")
-    public String clientToken;
-
     public static CreateProblemTimelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProblemTimelinesRequest self = new CreateProblemTimelinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProblemTimelinesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateProblemTimelinesRequest setProblemId(Long problemId) {
@@ -35,14 +43,6 @@ public class CreateProblemTimelinesRequest extends TeaModel {
     }
     public String getTimelineNodes() {
         return this.timelineNodes;
-    }
-
-    public CreateProblemTimelinesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

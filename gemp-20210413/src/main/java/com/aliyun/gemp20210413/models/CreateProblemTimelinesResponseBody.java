@@ -4,23 +4,15 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class CreateProblemTimelinesResponseBody extends TeaModel {
-    @NameInMap("requestId")
-    public String requestId;
-
     @NameInMap("data")
     public CreateProblemTimelinesResponseBodyData data;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     public static CreateProblemTimelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProblemTimelinesResponseBody self = new CreateProblemTimelinesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateProblemTimelinesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateProblemTimelinesResponseBody setData(CreateProblemTimelinesResponseBodyData data) {
@@ -29,6 +21,14 @@ public class CreateProblemTimelinesResponseBody extends TeaModel {
     }
     public CreateProblemTimelinesResponseBodyData getData() {
         return this.data;
+    }
+
+    public CreateProblemTimelinesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateProblemTimelinesResponseBodyData extends TeaModel {

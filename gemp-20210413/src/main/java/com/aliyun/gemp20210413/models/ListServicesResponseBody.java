@@ -4,10 +4,6 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     @NameInMap("data")
     public java.util.List<ListServicesResponseBodyData> data;
 
@@ -19,6 +15,10 @@ public class ListServicesResponseBody extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
     // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
@@ -26,14 +26,6 @@ public class ListServicesResponseBody extends TeaModel {
     public static ListServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServicesResponseBody self = new ListServicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListServicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListServicesResponseBody setData(java.util.List<ListServicesResponseBodyData> data) {
@@ -60,6 +52,14 @@ public class ListServicesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public ListServicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListServicesResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -69,6 +69,10 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyData extends TeaModel {
+        // 服务描述
+        @NameInMap("serviceDescription")
+        public String serviceDescription;
+
         // 服务ID
         @NameInMap("serviceId")
         public Long serviceId;
@@ -77,10 +81,6 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("serviceName")
         public String serviceName;
 
-        // 服务描述
-        @NameInMap("serviceDescription")
-        public String serviceDescription;
-
         // 修改时间
         @NameInMap("updateTime")
         public String updateTime;
@@ -88,6 +88,14 @@ public class ListServicesResponseBody extends TeaModel {
         public static ListServicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyData self = new ListServicesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyData setServiceDescription(String serviceDescription) {
+            this.serviceDescription = serviceDescription;
+            return this;
+        }
+        public String getServiceDescription() {
+            return this.serviceDescription;
         }
 
         public ListServicesResponseBodyData setServiceId(Long serviceId) {
@@ -104,14 +112,6 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
-        }
-
-        public ListServicesResponseBodyData setServiceDescription(String serviceDescription) {
-            this.serviceDescription = serviceDescription;
-            return this;
-        }
-        public String getServiceDescription() {
-            return this.serviceDescription;
         }
 
         public ListServicesResponseBodyData setUpdateTime(String updateTime) {

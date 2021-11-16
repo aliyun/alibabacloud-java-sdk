@@ -32,18 +32,26 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
     }
 
     public static class ListMonitorSourcesResponseBodyData extends TeaModel {
+        @NameInMap("fieldKeys")
+        public java.util.List<String> fieldKeys;
+
         @NameInMap("monitorSourceId")
         public Long monitorSourceId;
 
         @NameInMap("monitorSourceName")
         public String monitorSourceName;
 
-        @NameInMap("fieldKeys")
-        public java.util.List<String> fieldKeys;
-
         public static ListMonitorSourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMonitorSourcesResponseBodyData self = new ListMonitorSourcesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMonitorSourcesResponseBodyData setFieldKeys(java.util.List<String> fieldKeys) {
+            this.fieldKeys = fieldKeys;
+            return this;
+        }
+        public java.util.List<String> getFieldKeys() {
+            return this.fieldKeys;
         }
 
         public ListMonitorSourcesResponseBodyData setMonitorSourceId(Long monitorSourceId) {
@@ -60,14 +68,6 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
         }
         public String getMonitorSourceName() {
             return this.monitorSourceName;
-        }
-
-        public ListMonitorSourcesResponseBodyData setFieldKeys(java.util.List<String> fieldKeys) {
-            this.fieldKeys = fieldKeys;
-            return this;
-        }
-        public java.util.List<String> getFieldKeys() {
-            return this.fieldKeys;
         }
 
     }

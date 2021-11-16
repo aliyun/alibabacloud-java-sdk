@@ -4,24 +4,16 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
+    @NameInMap("data")
+    public RefreshIntegrationConfigKeyResponseBodyData data;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("data")
-    public RefreshIntegrationConfigKeyResponseBodyData data;
-
     public static RefreshIntegrationConfigKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshIntegrationConfigKeyResponseBody self = new RefreshIntegrationConfigKeyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RefreshIntegrationConfigKeyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RefreshIntegrationConfigKeyResponseBody setData(RefreshIntegrationConfigKeyResponseBodyData data) {
@@ -30,6 +22,14 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
     }
     public RefreshIntegrationConfigKeyResponseBodyData getData() {
         return this.data;
+    }
+
+    public RefreshIntegrationConfigKeyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RefreshIntegrationConfigKeyResponseBodyData extends TeaModel {

@@ -22,25 +22,17 @@ public class GetIncidentSubtotalCountResponseBody extends TeaModel {
     }
 
     public static class GetIncidentSubtotalCountResponseBodyData extends TeaModel {
-        // map
-        @NameInMap("subtotalCount")
-        public java.util.Map<String, ?> subtotalCount;
-
         // id of the request
         @NameInMap("requestId")
         public String requestId;
 
+        // map
+        @NameInMap("subtotalCount")
+        public java.util.Map<String, ?> subtotalCount;
+
         public static GetIncidentSubtotalCountResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetIncidentSubtotalCountResponseBodyData self = new GetIncidentSubtotalCountResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetIncidentSubtotalCountResponseBodyData setSubtotalCount(java.util.Map<String, ?> subtotalCount) {
-            this.subtotalCount = subtotalCount;
-            return this;
-        }
-        public java.util.Map<String, ?> getSubtotalCount() {
-            return this.subtotalCount;
         }
 
         public GetIncidentSubtotalCountResponseBodyData setRequestId(String requestId) {
@@ -49,6 +41,14 @@ public class GetIncidentSubtotalCountResponseBody extends TeaModel {
         }
         public String getRequestId() {
             return this.requestId;
+        }
+
+        public GetIncidentSubtotalCountResponseBodyData setSubtotalCount(java.util.Map<String, ?> subtotalCount) {
+            this.subtotalCount = subtotalCount;
+            return this;
+        }
+        public java.util.Map<String, ?> getSubtotalCount() {
+            return this.subtotalCount;
         }
 
     }

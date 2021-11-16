@@ -4,25 +4,17 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class RespondIncidentRequest extends TeaModel {
-    // 事件ID数组
-    @NameInMap("incidentIds")
-    public java.util.List<Long> incidentIds;
-
     // 幂等校验Id
     @NameInMap("clientToken")
     public String clientToken;
 
+    // 事件ID数组
+    @NameInMap("incidentIds")
+    public java.util.List<Long> incidentIds;
+
     public static RespondIncidentRequest build(java.util.Map<String, ?> map) throws Exception {
         RespondIncidentRequest self = new RespondIncidentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RespondIncidentRequest setIncidentIds(java.util.List<Long> incidentIds) {
-        this.incidentIds = incidentIds;
-        return this;
-    }
-    public java.util.List<Long> getIncidentIds() {
-        return this.incidentIds;
     }
 
     public RespondIncidentRequest setClientToken(String clientToken) {
@@ -31,6 +23,14 @@ public class RespondIncidentRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RespondIncidentRequest setIncidentIds(java.util.List<Long> incidentIds) {
+        this.incidentIds = incidentIds;
+        return this;
+    }
+    public java.util.List<Long> getIncidentIds() {
+        return this.incidentIds;
     }
 
 }

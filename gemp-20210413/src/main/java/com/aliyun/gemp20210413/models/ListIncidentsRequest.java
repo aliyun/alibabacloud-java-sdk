@@ -4,25 +4,25 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListIncidentsRequest extends TeaModel {
-    // 事件级别 P1 P2 P3 P4
-    @NameInMap("incidentLevel")
-    public String incidentLevel;
+    // 幂等校验id
+    @NameInMap("clientToken")
+    public String clientToken;
 
-    // 页
-    @NameInMap("pageNumber")
-    public Integer pageNumber;
+    // 创建结束时间
+    @NameInMap("createEndTime")
+    public String createEndTime;
 
-    // 行
-    @NameInMap("pageSize")
-    public Integer pageSize;
+    // 创建开始时间
+    @NameInMap("createStartTime")
+    public String createStartTime;
 
     // 影响等级 高：HIGH 低 LOW
     @NameInMap("effect")
     public String effect;
 
-    // 关联服务ID
-    @NameInMap("relationServiceId")
-    public Long relationServiceId;
+    // 事件级别 P1 P2 P3 P4
+    @NameInMap("incidentLevel")
+    public String incidentLevel;
 
     // 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
     @NameInMap("incidentStatus")
@@ -32,37 +32,45 @@ public class ListIncidentsRequest extends TeaModel {
     @NameInMap("me")
     public Integer me;
 
-    // 幂等校验id
-    @NameInMap("clientToken")
-    public String clientToken;
+    // 页
+    @NameInMap("pageNumber")
+    public Integer pageNumber;
+
+    // 行
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    // 关联服务ID
+    @NameInMap("relationServiceId")
+    public Long relationServiceId;
 
     public static ListIncidentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIncidentsRequest self = new ListIncidentsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListIncidentsRequest setIncidentLevel(String incidentLevel) {
-        this.incidentLevel = incidentLevel;
+    public ListIncidentsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getIncidentLevel() {
-        return this.incidentLevel;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public ListIncidentsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListIncidentsRequest setCreateEndTime(String createEndTime) {
+        this.createEndTime = createEndTime;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getCreateEndTime() {
+        return this.createEndTime;
     }
 
-    public ListIncidentsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListIncidentsRequest setCreateStartTime(String createStartTime) {
+        this.createStartTime = createStartTime;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCreateStartTime() {
+        return this.createStartTime;
     }
 
     public ListIncidentsRequest setEffect(String effect) {
@@ -73,12 +81,12 @@ public class ListIncidentsRequest extends TeaModel {
         return this.effect;
     }
 
-    public ListIncidentsRequest setRelationServiceId(Long relationServiceId) {
-        this.relationServiceId = relationServiceId;
+    public ListIncidentsRequest setIncidentLevel(String incidentLevel) {
+        this.incidentLevel = incidentLevel;
         return this;
     }
-    public Long getRelationServiceId() {
-        return this.relationServiceId;
+    public String getIncidentLevel() {
+        return this.incidentLevel;
     }
 
     public ListIncidentsRequest setIncidentStatus(String incidentStatus) {
@@ -97,12 +105,28 @@ public class ListIncidentsRequest extends TeaModel {
         return this.me;
     }
 
-    public ListIncidentsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ListIncidentsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListIncidentsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListIncidentsRequest setRelationServiceId(Long relationServiceId) {
+        this.relationServiceId = relationServiceId;
+        return this;
+    }
+    public Long getRelationServiceId() {
+        return this.relationServiceId;
     }
 
 }
