@@ -10,6 +10,10 @@ public class UploadStreamByURLRequest extends TeaModel {
     @NameInMap("FileExtension")
     public String fileExtension;
 
+    // 视频流HDR类型
+    @NameInMap("HDRType")
+    public String HDRType;
+
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -38,6 +42,14 @@ public class UploadStreamByURLRequest extends TeaModel {
     }
     public String getFileExtension() {
         return this.fileExtension;
+    }
+
+    public UploadStreamByURLRequest setHDRType(String HDRType) {
+        this.HDRType = HDRType;
+        return this;
+    }
+    public String getHDRType() {
+        return this.HDRType;
     }
 
     public UploadStreamByURLRequest setMediaId(String mediaId) {

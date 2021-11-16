@@ -246,6 +246,10 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @NameInMap("Fps")
         public String fps;
 
+        // 视频流HDR类型
+        @NameInMap("HDRType")
+        public String HDRType;
+
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
@@ -368,6 +372,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
         public String getFps() {
             return this.fps;
+        }
+
+        public GetMezzanineInfoResponseBodyMezzanineVideoStreamList setHDRType(String HDRType) {
+            this.HDRType = HDRType;
+            return this;
+        }
+        public String getHDRType() {
+            return this.HDRType;
         }
 
         public GetMezzanineInfoResponseBodyMezzanineVideoStreamList setHasBFrames(String hasBFrames) {
