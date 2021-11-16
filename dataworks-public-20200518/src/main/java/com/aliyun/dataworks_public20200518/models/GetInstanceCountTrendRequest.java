@@ -4,26 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceCountTrendRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("BeginDate")
     public String beginDate;
 
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static GetInstanceCountTrendRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceCountTrendRequest self = new GetInstanceCountTrendRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceCountTrendRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public GetInstanceCountTrendRequest setBeginDate(String beginDate) {
@@ -40,6 +32,14 @@ public class GetInstanceCountTrendRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public GetInstanceCountTrendRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

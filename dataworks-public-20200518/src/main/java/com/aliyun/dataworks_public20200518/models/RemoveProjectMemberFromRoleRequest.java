@@ -7,11 +7,11 @@ public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("RoleCode")
     public String roleCode;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static RemoveProjectMemberFromRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveProjectMemberFromRoleRequest self = new RemoveProjectMemberFromRoleRequest();
@@ -26,20 +26,20 @@ public class RemoveProjectMemberFromRoleRequest extends TeaModel {
         return this.projectId;
     }
 
-    public RemoveProjectMemberFromRoleRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public RemoveProjectMemberFromRoleRequest setRoleCode(String roleCode) {
         this.roleCode = roleCode;
         return this;
     }
     public String getRoleCode() {
         return this.roleCode;
+    }
+
+    public RemoveProjectMemberFromRoleRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

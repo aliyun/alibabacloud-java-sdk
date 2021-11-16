@@ -4,14 +4,14 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SetConnectionShareRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     @NameInMap("EnvType")
     public String envType;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     @NameInMap("ProjectPermissions")
     public String projectPermissions;
@@ -22,14 +22,6 @@ public class SetConnectionShareRequest extends TeaModel {
     public static SetConnectionShareRequest build(java.util.Map<String, ?> map) throws Exception {
         SetConnectionShareRequest self = new SetConnectionShareRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetConnectionShareRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public SetConnectionShareRequest setDatasourceName(String datasourceName) {
@@ -46,6 +38,14 @@ public class SetConnectionShareRequest extends TeaModel {
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public SetConnectionShareRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public SetConnectionShareRequest setProjectPermissions(String projectPermissions) {

@@ -4,11 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateViewRequest extends TeaModel {
-    @NameInMap("ViewName")
-    public String viewName;
+    @NameInMap("AppGuid")
+    public String appGuid;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Comment")
+    public String comment;
 
     @NameInMap("SelectColumn")
     public String selectColumn;
+
+    @NameInMap("SelectSQL")
+    public String selectSQL;
 
     @NameInMap("SelectTableName")
     public String selectTableName;
@@ -16,32 +25,39 @@ public class CreateViewRequest extends TeaModel {
     @NameInMap("SelectWhere")
     public String selectWhere;
 
-    @NameInMap("SelectSQL")
-    public String selectSQL;
-
-    @NameInMap("AppGuid")
-    public String appGuid;
-
-    @NameInMap("Comment")
-    public String comment;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("ViewColumn")
     public java.util.List<CreateViewRequestViewColumn> viewColumn;
+
+    @NameInMap("ViewName")
+    public String viewName;
 
     public static CreateViewRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateViewRequest self = new CreateViewRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateViewRequest setViewName(String viewName) {
-        this.viewName = viewName;
+    public CreateViewRequest setAppGuid(String appGuid) {
+        this.appGuid = appGuid;
         return this;
     }
-    public String getViewName() {
-        return this.viewName;
+    public String getAppGuid() {
+        return this.appGuid;
+    }
+
+    public CreateViewRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateViewRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
     }
 
     public CreateViewRequest setSelectColumn(String selectColumn) {
@@ -50,6 +66,14 @@ public class CreateViewRequest extends TeaModel {
     }
     public String getSelectColumn() {
         return this.selectColumn;
+    }
+
+    public CreateViewRequest setSelectSQL(String selectSQL) {
+        this.selectSQL = selectSQL;
+        return this;
+    }
+    public String getSelectSQL() {
+        return this.selectSQL;
     }
 
     public CreateViewRequest setSelectTableName(String selectTableName) {
@@ -68,44 +92,20 @@ public class CreateViewRequest extends TeaModel {
         return this.selectWhere;
     }
 
-    public CreateViewRequest setSelectSQL(String selectSQL) {
-        this.selectSQL = selectSQL;
-        return this;
-    }
-    public String getSelectSQL() {
-        return this.selectSQL;
-    }
-
-    public CreateViewRequest setAppGuid(String appGuid) {
-        this.appGuid = appGuid;
-        return this;
-    }
-    public String getAppGuid() {
-        return this.appGuid;
-    }
-
-    public CreateViewRequest setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
-    }
-
-    public CreateViewRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public CreateViewRequest setViewColumn(java.util.List<CreateViewRequestViewColumn> viewColumn) {
         this.viewColumn = viewColumn;
         return this;
     }
     public java.util.List<CreateViewRequestViewColumn> getViewColumn() {
         return this.viewColumn;
+    }
+
+    public CreateViewRequest setViewName(String viewName) {
+        this.viewName = viewName;
+        return this;
+    }
+    public String getViewName() {
+        return this.viewName;
     }
 
     public static class CreateViewRequestViewColumn extends TeaModel {

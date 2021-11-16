@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetTopicInfluenceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetTopicInfluenceResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetTopicInfluenceResponseBodyData data;
 
     public static GetTopicInfluenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTopicInfluenceResponseBody self = new GetTopicInfluenceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTopicInfluenceResponseBody setData(GetTopicInfluenceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTopicInfluenceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetTopicInfluenceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetTopicInfluenceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetTopicInfluenceResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTopicInfluenceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetTopicInfluenceResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetTopicInfluenceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,26 +75,12 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetTopicInfluenceResponseBody setData(GetTopicInfluenceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTopicInfluenceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetTopicInfluenceResponseBodyDataInfluences extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("BaselineId")
+        public Long baselineId;
 
         @NameInMap("BaselineName")
         public String baselineName;
-
-        @NameInMap("BaselineId")
-        public Long baselineId;
 
         @NameInMap("Bizdate")
         public Long bizdate;
@@ -94,42 +88,24 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         @NameInMap("Buffer")
         public Long buffer;
 
-        @NameInMap("ProjectId")
-        public Long projectId;
+        @NameInMap("InGroupId")
+        public Integer inGroupId;
+
+        @NameInMap("Owner")
+        public String owner;
 
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("InGroupId")
-        public Integer inGroupId;
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetTopicInfluenceResponseBodyDataInfluences build(java.util.Map<String, ?> map) throws Exception {
             GetTopicInfluenceResponseBodyDataInfluences self = new GetTopicInfluenceResponseBodyDataInfluences();
             return TeaModel.build(map, self);
-        }
-
-        public GetTopicInfluenceResponseBodyDataInfluences setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetTopicInfluenceResponseBodyDataInfluences setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public GetTopicInfluenceResponseBodyDataInfluences setBaselineName(String baselineName) {
-            this.baselineName = baselineName;
-            return this;
-        }
-        public String getBaselineName() {
-            return this.baselineName;
         }
 
         public GetTopicInfluenceResponseBodyDataInfluences setBaselineId(Long baselineId) {
@@ -138,6 +114,14 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
         public Long getBaselineId() {
             return this.baselineId;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setBaselineName(String baselineName) {
+            this.baselineName = baselineName;
+            return this;
+        }
+        public String getBaselineName() {
+            return this.baselineName;
         }
 
         public GetTopicInfluenceResponseBodyDataInfluences setBizdate(Long bizdate) {
@@ -156,12 +140,20 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             return this.buffer;
         }
 
-        public GetTopicInfluenceResponseBodyDataInfluences setProjectId(Long projectId) {
-            this.projectId = projectId;
+        public GetTopicInfluenceResponseBodyDataInfluences setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
             return this;
         }
-        public Long getProjectId() {
-            return this.projectId;
+        public Integer getInGroupId() {
+            return this.inGroupId;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
         public GetTopicInfluenceResponseBodyDataInfluences setPriority(Integer priority) {
@@ -172,34 +164,34 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public GetTopicInfluenceResponseBodyDataInfluences setInGroupId(Integer inGroupId) {
-            this.inGroupId = inGroupId;
+        public GetTopicInfluenceResponseBodyDataInfluences setProjectId(Long projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Integer getInGroupId() {
-            return this.inGroupId;
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class GetTopicInfluenceResponseBodyData extends TeaModel {
-        @NameInMap("TopicId")
-        public Long topicId;
-
         @NameInMap("Influences")
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;
+
+        @NameInMap("TopicId")
+        public Long topicId;
 
         public static GetTopicInfluenceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTopicInfluenceResponseBodyData self = new GetTopicInfluenceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetTopicInfluenceResponseBodyData setTopicId(Long topicId) {
-            this.topicId = topicId;
-            return this;
-        }
-        public Long getTopicId() {
-            return this.topicId;
         }
 
         public GetTopicInfluenceResponseBodyData setInfluences(java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences) {
@@ -208,6 +200,14 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> getInfluences() {
             return this.influences;
+        }
+
+        public GetTopicInfluenceResponseBodyData setTopicId(Long topicId) {
+            this.topicId = topicId;
+            return this;
+        }
+        public Long getTopicId() {
+            return this.topicId;
         }
 
     }

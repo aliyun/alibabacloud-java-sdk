@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionMetaResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public GetConnectionMetaResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetConnectionMetaResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetConnectionMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionMetaResponseBody self = new GetConnectionMetaResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionMetaResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetConnectionMetaResponseBody setData(GetConnectionMetaResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public GetConnectionMetaResponseBodyData getData() {
+        return this.data;
     }
 
     public GetConnectionMetaResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class GetConnectionMetaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetConnectionMetaResponseBody setData(GetConnectionMetaResponseBodyData data) {
-        this.data = data;
+    public GetConnectionMetaResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetConnectionMetaResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetConnectionMetaResponseBodyData extends TeaModel {

@@ -4,27 +4,43 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableThemeResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("UpdateResult")
     public Boolean updateResult;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static UpdateTableThemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableThemeResponseBody self = new UpdateTableThemeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTableThemeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public UpdateTableThemeResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public UpdateTableThemeResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,12 +59,12 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateTableThemeResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public UpdateTableThemeResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public UpdateTableThemeResponseBody setUpdateResult(Boolean updateResult) {
@@ -57,22 +73,6 @@ public class UpdateTableThemeResponseBody extends TeaModel {
     }
     public Boolean getUpdateResult() {
         return this.updateResult;
-    }
-
-    public UpdateTableThemeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateTableThemeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

@@ -4,14 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SearchNodesByOutputResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,20 +22,9 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static SearchNodesByOutputResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchNodesByOutputResponseBody self = new SearchNodesByOutputResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchNodesByOutputResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public SearchNodesByOutputResponseBody setData(java.util.Map<String, ?> data) {
@@ -43,12 +35,28 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         return this.data;
     }
 
+    public SearchNodesByOutputResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public SearchNodesByOutputResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public SearchNodesByOutputResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public SearchNodesByOutputResponseBody setRequestId(String requestId) {
@@ -65,14 +73,6 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public SearchNodesByOutputResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

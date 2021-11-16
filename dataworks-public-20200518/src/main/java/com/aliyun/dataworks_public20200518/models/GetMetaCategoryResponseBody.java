@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaCategoryResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaCategoryResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaCategoryResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaCategoryResponseBodyData data;
-
     public static GetMetaCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaCategoryResponseBody self = new GetMetaCategoryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaCategoryResponseBody setData(GetMetaCategoryResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaCategoryResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaCategoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaCategoryResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaCategoryResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaCategoryResponseBody setRequestId(String requestId) {
@@ -59,85 +75,37 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaCategoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaCategoryResponseBody setData(GetMetaCategoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaCategoryResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaCategoryResponseBodyDataDataEntityList extends TeaModel {
-        @NameInMap("Depth")
-        public Integer depth;
+        @NameInMap("CategoryId")
+        public Long categoryId;
 
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("ModifiedTime")
-        public Long modifiedTime;
-
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("CategoryId")
-        public Long categoryId;
+        @NameInMap("Depth")
+        public Integer depth;
 
         @NameInMap("LastOperatorId")
         public String lastOperatorId;
 
+        @NameInMap("ModifiedTime")
+        public Long modifiedTime;
+
         @NameInMap("Name")
         public String name;
-
-        @NameInMap("ParentCategoryId")
-        public Long parentCategoryId;
 
         @NameInMap("OwnerId")
         public String ownerId;
 
+        @NameInMap("ParentCategoryId")
+        public Long parentCategoryId;
+
         public static GetMetaCategoryResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaCategoryResponseBodyDataDataEntityList self = new GetMetaCategoryResponseBodyDataDataEntityList();
             return TeaModel.build(map, self);
-        }
-
-        public GetMetaCategoryResponseBodyDataDataEntityList setDepth(Integer depth) {
-            this.depth = depth;
-            return this;
-        }
-        public Integer getDepth() {
-            return this.depth;
-        }
-
-        public GetMetaCategoryResponseBodyDataDataEntityList setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
-        }
-
-        public GetMetaCategoryResponseBodyDataDataEntityList setModifiedTime(Long modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public Long getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public GetMetaCategoryResponseBodyDataDataEntityList setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         public GetMetaCategoryResponseBodyDataDataEntityList setCategoryId(Long categoryId) {
@@ -148,12 +116,44 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             return this.categoryId;
         }
 
+        public GetMetaCategoryResponseBodyDataDataEntityList setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public GetMetaCategoryResponseBodyDataDataEntityList setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetMetaCategoryResponseBodyDataDataEntityList setDepth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+        public Integer getDepth() {
+            return this.depth;
+        }
+
         public GetMetaCategoryResponseBodyDataDataEntityList setLastOperatorId(String lastOperatorId) {
             this.lastOperatorId = lastOperatorId;
             return this;
         }
         public String getLastOperatorId() {
             return this.lastOperatorId;
+        }
+
+        public GetMetaCategoryResponseBodyDataDataEntityList setModifiedTime(Long modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public Long getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetMetaCategoryResponseBodyDataDataEntityList setName(String name) {
@@ -164,14 +164,6 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetMetaCategoryResponseBodyDataDataEntityList setParentCategoryId(Long parentCategoryId) {
-            this.parentCategoryId = parentCategoryId;
-            return this;
-        }
-        public Long getParentCategoryId() {
-            return this.parentCategoryId;
-        }
-
         public GetMetaCategoryResponseBodyDataDataEntityList setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
@@ -180,9 +172,20 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             return this.ownerId;
         }
 
+        public GetMetaCategoryResponseBodyDataDataEntityList setParentCategoryId(Long parentCategoryId) {
+            this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+        public Long getParentCategoryId() {
+            return this.parentCategoryId;
+        }
+
     }
 
     public static class GetMetaCategoryResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -192,12 +195,17 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList;
-
         public static GetMetaCategoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaCategoryResponseBodyData self = new GetMetaCategoryResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaCategoryResponseBodyData setDataEntityList(java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public GetMetaCategoryResponseBodyData setPageNum(Integer pageNum) {
@@ -222,14 +230,6 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetMetaCategoryResponseBodyData setDataEntityList(java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
-            return this;
-        }
-        public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
         }
 
     }

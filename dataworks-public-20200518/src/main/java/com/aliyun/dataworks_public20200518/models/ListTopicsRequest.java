@@ -10,17 +10,11 @@ public class ListTopicsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("TopicTypes")
-    public String topicTypes;
-
-    @NameInMap("TopicStatuses")
-    public String topicStatuses;
+    @NameInMap("InstanceId")
+    public Long instanceId;
 
     @NameInMap("NodeId")
     public Long nodeId;
-
-    @NameInMap("InstanceId")
-    public Long instanceId;
 
     @NameInMap("Owner")
     public String owner;
@@ -30,6 +24,12 @@ public class ListTopicsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("TopicStatuses")
+    public String topicStatuses;
+
+    @NameInMap("TopicTypes")
+    public String topicTypes;
 
     public static ListTopicsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTopicsRequest self = new ListTopicsRequest();
@@ -52,20 +52,12 @@ public class ListTopicsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListTopicsRequest setTopicTypes(String topicTypes) {
-        this.topicTypes = topicTypes;
+    public ListTopicsRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getTopicTypes() {
-        return this.topicTypes;
-    }
-
-    public ListTopicsRequest setTopicStatuses(String topicStatuses) {
-        this.topicStatuses = topicStatuses;
-        return this;
-    }
-    public String getTopicStatuses() {
-        return this.topicStatuses;
+    public Long getInstanceId() {
+        return this.instanceId;
     }
 
     public ListTopicsRequest setNodeId(Long nodeId) {
@@ -74,14 +66,6 @@ public class ListTopicsRequest extends TeaModel {
     }
     public Long getNodeId() {
         return this.nodeId;
-    }
-
-    public ListTopicsRequest setInstanceId(Long instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public Long getInstanceId() {
-        return this.instanceId;
     }
 
     public ListTopicsRequest setOwner(String owner) {
@@ -106,6 +90,22 @@ public class ListTopicsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTopicsRequest setTopicStatuses(String topicStatuses) {
+        this.topicStatuses = topicStatuses;
+        return this;
+    }
+    public String getTopicStatuses() {
+        return this.topicStatuses;
+    }
+
+    public ListTopicsRequest setTopicTypes(String topicTypes) {
+        this.topicTypes = topicTypes;
+        return this;
+    }
+    public String getTopicTypes() {
+        return this.topicTypes;
     }
 
 }

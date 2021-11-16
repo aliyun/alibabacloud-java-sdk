@@ -7,14 +7,14 @@ public class GetFileVersionRequest extends TeaModel {
     @NameInMap("FileId")
     public Long fileId;
 
+    @NameInMap("FileVersion")
+    public Integer fileVersion;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
-
-    @NameInMap("FileVersion")
-    public Integer fileVersion;
 
     public static GetFileVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileVersionRequest self = new GetFileVersionRequest();
@@ -27,6 +27,14 @@ public class GetFileVersionRequest extends TeaModel {
     }
     public Long getFileId() {
         return this.fileId;
+    }
+
+    public GetFileVersionRequest setFileVersion(Integer fileVersion) {
+        this.fileVersion = fileVersion;
+        return this;
+    }
+    public Integer getFileVersion() {
+        return this.fileVersion;
     }
 
     public GetFileVersionRequest setProjectId(Long projectId) {
@@ -43,14 +51,6 @@ public class GetFileVersionRequest extends TeaModel {
     }
     public String getProjectIdentifier() {
         return this.projectIdentifier;
-    }
-
-    public GetFileVersionRequest setFileVersion(Integer fileVersion) {
-        this.fileVersion = fileVersion;
-        return this;
-    }
-    public Integer getFileVersion() {
-        return this.fileVersion;
     }
 
 }

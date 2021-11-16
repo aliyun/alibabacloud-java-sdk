@@ -35,8 +35,8 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
         @NameInMap("FailureCount")
         public Integer failureCount;
 
-        @NameInMap("WaitTimeCount")
-        public Integer waitTimeCount;
+        @NameInMap("NotRunCount")
+        public Integer notRunCount;
 
         @NameInMap("RunningCount")
         public Integer runningCount;
@@ -47,11 +47,11 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("NotRunCount")
-        public Integer notRunCount;
-
         @NameInMap("WaitResCount")
         public Integer waitResCount;
+
+        @NameInMap("WaitTimeCount")
+        public Integer waitTimeCount;
 
         public static GetInstanceStatusCountResponseBodyStatusCount build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceStatusCountResponseBodyStatusCount self = new GetInstanceStatusCountResponseBodyStatusCount();
@@ -66,12 +66,12 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             return this.failureCount;
         }
 
-        public GetInstanceStatusCountResponseBodyStatusCount setWaitTimeCount(Integer waitTimeCount) {
-            this.waitTimeCount = waitTimeCount;
+        public GetInstanceStatusCountResponseBodyStatusCount setNotRunCount(Integer notRunCount) {
+            this.notRunCount = notRunCount;
             return this;
         }
-        public Integer getWaitTimeCount() {
-            return this.waitTimeCount;
+        public Integer getNotRunCount() {
+            return this.notRunCount;
         }
 
         public GetInstanceStatusCountResponseBodyStatusCount setRunningCount(Integer runningCount) {
@@ -98,20 +98,20 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public GetInstanceStatusCountResponseBodyStatusCount setNotRunCount(Integer notRunCount) {
-            this.notRunCount = notRunCount;
-            return this;
-        }
-        public Integer getNotRunCount() {
-            return this.notRunCount;
-        }
-
         public GetInstanceStatusCountResponseBodyStatusCount setWaitResCount(Integer waitResCount) {
             this.waitResCount = waitResCount;
             return this;
         }
         public Integer getWaitResCount() {
             return this.waitResCount;
+        }
+
+        public GetInstanceStatusCountResponseBodyStatusCount setWaitTimeCount(Integer waitTimeCount) {
+            this.waitTimeCount = waitTimeCount;
+            return this;
+        }
+        public Integer getWaitTimeCount() {
+            return this.waitTimeCount;
         }
 
     }

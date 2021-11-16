@@ -4,17 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableThemeResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class CreateTableThemeResponseBody extends TeaModel {
     public static CreateTableThemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTableThemeResponseBody self = new CreateTableThemeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTableThemeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateTableThemeResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateTableThemeResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -41,22 +57,6 @@ public class CreateTableThemeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateTableThemeResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateTableThemeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public CreateTableThemeResponseBody setSuccess(Boolean success) {

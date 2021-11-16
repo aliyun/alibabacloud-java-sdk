@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RunSmokeTestRequest extends TeaModel {
-    @NameInMap("ProjectEnv")
-    public String projectEnv;
-
     @NameInMap("Bizdate")
     public String bizdate;
 
@@ -19,17 +16,12 @@ public class RunSmokeTestRequest extends TeaModel {
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    @NameInMap("ProjectEnv")
+    public String projectEnv;
+
     public static RunSmokeTestRequest build(java.util.Map<String, ?> map) throws Exception {
         RunSmokeTestRequest self = new RunSmokeTestRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RunSmokeTestRequest setProjectEnv(String projectEnv) {
-        this.projectEnv = projectEnv;
-        return this;
-    }
-    public String getProjectEnv() {
-        return this.projectEnv;
     }
 
     public RunSmokeTestRequest setBizdate(String bizdate) {
@@ -62,6 +54,14 @@ public class RunSmokeTestRequest extends TeaModel {
     }
     public String getNodeParams() {
         return this.nodeParams;
+    }
+
+    public RunSmokeTestRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
     }
 
 }

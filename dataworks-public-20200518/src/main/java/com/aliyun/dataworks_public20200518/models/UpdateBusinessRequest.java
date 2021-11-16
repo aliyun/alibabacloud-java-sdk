@@ -4,11 +4,8 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateBusinessRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
+    @NameInMap("BusinessId")
+    public Long businessId;
 
     @NameInMap("BusinessName")
     public String businessName;
@@ -19,28 +16,23 @@ public class UpdateBusinessRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
-    @NameInMap("BusinessId")
-    public Long businessId;
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
 
     public static UpdateBusinessRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBusinessRequest self = new UpdateBusinessRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateBusinessRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public UpdateBusinessRequest setBusinessId(Long businessId) {
+        this.businessId = businessId;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public UpdateBusinessRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
-        return this;
-    }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
+    public Long getBusinessId() {
+        return this.businessId;
     }
 
     public UpdateBusinessRequest setBusinessName(String businessName) {
@@ -67,12 +59,20 @@ public class UpdateBusinessRequest extends TeaModel {
         return this.owner;
     }
 
-    public UpdateBusinessRequest setBusinessId(Long businessId) {
-        this.businessId = businessId;
+    public UpdateBusinessRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public Long getBusinessId() {
-        return this.businessId;
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public UpdateBusinessRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
 }

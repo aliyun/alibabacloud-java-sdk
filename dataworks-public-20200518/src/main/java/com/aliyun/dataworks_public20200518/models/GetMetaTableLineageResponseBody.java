@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableLineageResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaTableLineageResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaTableLineageResponseBodyData data;
-
     public static GetMetaTableLineageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableLineageResponseBody self = new GetMetaTableLineageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaTableLineageResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaTableLineageResponseBody setData(GetMetaTableLineageResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaTableLineageResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTableLineageResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaTableLineageResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaTableLineageResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaTableLineageResponseBody setRequestId(String requestId) {
@@ -59,40 +75,16 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaTableLineageResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaTableLineageResponseBody setData(GetMetaTableLineageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaTableLineageResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaTableLineageResponseBodyDataDataEntityList extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("TableGuid")
         public String tableGuid;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static GetMetaTableLineageResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableLineageResponseBodyDataDataEntityList self = new GetMetaTableLineageResponseBodyDataDataEntityList();
             return TeaModel.build(map, self);
-        }
-
-        public GetMetaTableLineageResponseBodyDataDataEntityList setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public GetMetaTableLineageResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
@@ -103,29 +95,37 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             return this.tableGuid;
         }
 
+        public GetMetaTableLineageResponseBodyDataDataEntityList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
     }
 
     public static class GetMetaTableLineageResponseBodyData extends TeaModel {
-        @NameInMap("NextPrimaryKey")
-        public String nextPrimaryKey;
+        @NameInMap("DataEntityList")
+        public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList;
 
         @NameInMap("HasNext")
         public Boolean hasNext;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList;
+        @NameInMap("NextPrimaryKey")
+        public String nextPrimaryKey;
 
         public static GetMetaTableLineageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableLineageResponseBodyData self = new GetMetaTableLineageResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetMetaTableLineageResponseBodyData setNextPrimaryKey(String nextPrimaryKey) {
-            this.nextPrimaryKey = nextPrimaryKey;
+        public GetMetaTableLineageResponseBodyData setDataEntityList(java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
             return this;
         }
-        public String getNextPrimaryKey() {
-            return this.nextPrimaryKey;
+        public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public GetMetaTableLineageResponseBodyData setHasNext(Boolean hasNext) {
@@ -136,12 +136,12 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             return this.hasNext;
         }
 
-        public GetMetaTableLineageResponseBodyData setDataEntityList(java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
+        public GetMetaTableLineageResponseBodyData setNextPrimaryKey(String nextPrimaryKey) {
+            this.nextPrimaryKey = nextPrimaryKey;
             return this;
         }
-        public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
+        public String getNextPrimaryKey() {
+            return this.nextPrimaryKey;
         }
 
     }

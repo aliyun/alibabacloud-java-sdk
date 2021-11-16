@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ApplyOrderDetail")
     public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail applyOrderDetail;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetPermissionApplyOrderDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPermissionApplyOrderDetailResponseBody self = new GetPermissionApplyOrderDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetPermissionApplyOrderDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetPermissionApplyOrderDetailResponseBody setApplyOrderDetail(GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail applyOrderDetail) {
@@ -29,6 +21,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     }
     public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail getApplyOrderDetail() {
         return this.applyOrderDetail;
+    }
+
+    public GetPermissionApplyOrderDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList extends TeaModel {
@@ -50,76 +50,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList extends TeaModel {
-        @NameInMap("GranteeType")
-        public Integer granteeType;
-
-        @NameInMap("GranteeTypeSub")
-        public Integer granteeTypeSub;
-
-        @NameInMap("GranteeName")
-        public String granteeName;
-
-        @NameInMap("GranteeId")
-        public String granteeId;
-
-        public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList build(java.util.Map<String, ?> map) throws Exception {
-            GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeType(Integer granteeType) {
-            this.granteeType = granteeType;
-            return this;
-        }
-        public Integer getGranteeType() {
-            return this.granteeType;
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeTypeSub(Integer granteeTypeSub) {
-            this.granteeTypeSub = granteeTypeSub;
-            return this;
-        }
-        public Integer getGranteeTypeSub() {
-            return this.granteeTypeSub;
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeName(String granteeName) {
-            this.granteeName = granteeName;
-            return this;
-        }
-        public String getGranteeName() {
-            return this.granteeName;
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeId(String granteeId) {
-            this.granteeId = granteeId;
-            return this;
-        }
-        public String getGranteeId() {
-            return this.granteeId;
-        }
-
-    }
-
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList extends TeaModel {
-        @NameInMap("ColumnName")
-        public String columnName;
-
         @NameInMap("ColumnComment")
         public String columnComment;
+
+        @NameInMap("ColumnName")
+        public String columnName;
 
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList();
             return TeaModel.build(map, self);
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
         }
 
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setColumnComment(String columnComment) {
@@ -130,26 +70,26 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.columnComment;
         }
 
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
     }
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList extends TeaModel {
-        @NameInMap("ObjectName")
-        public String objectName;
-
         @NameInMap("ColumnMetaList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList> columnMetaList;
+
+        @NameInMap("ObjectName")
+        public String objectName;
 
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList();
             return TeaModel.build(map, self);
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList setObjectName(String objectName) {
-            this.objectName = objectName;
-            return this;
-        }
-        public String getObjectName() {
-            return this.objectName;
         }
 
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList setColumnMetaList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList> columnMetaList) {
@@ -160,17 +100,25 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.columnMetaList;
         }
 
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList setObjectName(String objectName) {
+            this.objectName = objectName;
+            return this;
+        }
+        public String getObjectName() {
+            return this.objectName;
+        }
+
     }
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta extends TeaModel {
         @NameInMap("MaxComputeProjectName")
         public String maxComputeProjectName;
 
-        @NameInMap("WorkspaceId")
-        public Integer workspaceId;
-
         @NameInMap("ObjectMetaList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> objectMetaList;
+
+        @NameInMap("WorkspaceId")
+        public Integer workspaceId;
 
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta();
@@ -185,20 +133,20 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.maxComputeProjectName;
         }
 
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta setWorkspaceId(Integer workspaceId) {
-            this.workspaceId = workspaceId;
-            return this;
-        }
-        public Integer getWorkspaceId() {
-            return this.workspaceId;
-        }
-
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta setObjectMetaList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> objectMetaList) {
             this.objectMetaList = objectMetaList;
             return this;
         }
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> getObjectMetaList() {
             return this.objectMetaList;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta setWorkspaceId(Integer workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public Integer getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }
@@ -255,6 +203,58 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList extends TeaModel {
+        @NameInMap("GranteeId")
+        public String granteeId;
+
+        @NameInMap("GranteeName")
+        public String granteeName;
+
+        @NameInMap("GranteeType")
+        public Integer granteeType;
+
+        @NameInMap("GranteeTypeSub")
+        public Integer granteeTypeSub;
+
+        public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList build(java.util.Map<String, ?> map) throws Exception {
+            GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeId(String granteeId) {
+            this.granteeId = granteeId;
+            return this;
+        }
+        public String getGranteeId() {
+            return this.granteeId;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeName(String granteeName) {
+            this.granteeName = granteeName;
+            return this;
+        }
+        public String getGranteeName() {
+            return this.granteeName;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeType(Integer granteeType) {
+            this.granteeType = granteeType;
+            return this;
+        }
+        public Integer getGranteeType() {
+            return this.granteeType;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList setGranteeTypeSub(Integer granteeTypeSub) {
+            this.granteeTypeSub = granteeTypeSub;
+            return this;
+        }
+        public Integer getGranteeTypeSub() {
+            return this.granteeTypeSub;
+        }
+
+    }
+
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail extends TeaModel {
         @NameInMap("ApplyBaseId")
         public String applyBaseId;
@@ -262,20 +262,20 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("ApplyTimestamp")
         public Long applyTimestamp;
 
+        @NameInMap("ApproveAccountList")
+        public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> approveAccountList;
+
+        @NameInMap("ApproveContent")
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent;
+
         @NameInMap("FlowId")
         public String flowId;
 
         @NameInMap("FlowStatus")
         public Integer flowStatus;
 
-        @NameInMap("ApproveAccountList")
-        public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> approveAccountList;
-
         @NameInMap("GranteeObjectList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> granteeObjectList;
-
-        @NameInMap("ApproveContent")
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent;
 
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail();
@@ -298,6 +298,22 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.applyTimestamp;
         }
 
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setApproveAccountList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> approveAccountList) {
+            this.approveAccountList = approveAccountList;
+            return this;
+        }
+        public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> getApproveAccountList() {
+            return this.approveAccountList;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setApproveContent(GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent) {
+            this.approveContent = approveContent;
+            return this;
+        }
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent getApproveContent() {
+            return this.approveContent;
+        }
+
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setFlowId(String flowId) {
             this.flowId = flowId;
             return this;
@@ -314,28 +330,12 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return this.flowStatus;
         }
 
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setApproveAccountList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> approveAccountList) {
-            this.approveAccountList = approveAccountList;
-            return this;
-        }
-        public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> getApproveAccountList() {
-            return this.approveAccountList;
-        }
-
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setGranteeObjectList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> granteeObjectList) {
             this.granteeObjectList = granteeObjectList;
             return this;
         }
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> getGranteeObjectList() {
             return this.granteeObjectList;
-        }
-
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setApproveContent(GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent) {
-            this.approveContent = approveContent;
-            return this;
-        }
-        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent getApproveContent() {
-            return this.approveContent;
         }
 
     }

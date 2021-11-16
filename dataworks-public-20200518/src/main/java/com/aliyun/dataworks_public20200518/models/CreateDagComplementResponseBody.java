@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDagComplementResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<Long> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public java.util.List<Long> data;
 
     public static CreateDagComplementResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDagComplementResponseBody self = new CreateDagComplementResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDagComplementResponseBody setData(java.util.List<Long> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<Long> getData() {
+        return this.data;
+    }
+
+    public CreateDagComplementResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateDagComplementResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateDagComplementResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,36 +67,12 @@ public class CreateDagComplementResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDagComplementResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public CreateDagComplementResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateDagComplementResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateDagComplementResponseBody setData(java.util.List<Long> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<Long> getData() {
-        return this.data;
     }
 
 }

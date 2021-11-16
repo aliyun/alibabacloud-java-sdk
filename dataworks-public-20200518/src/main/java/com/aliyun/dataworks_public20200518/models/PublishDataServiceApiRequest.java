@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class PublishDataServiceApiRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public Long tenantId;
+    @NameInMap("ApiId")
+    public Long apiId;
 
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("ApiId")
-    public Long apiId;
+    @NameInMap("TenantId")
+    public Long tenantId;
 
     public static PublishDataServiceApiRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishDataServiceApiRequest self = new PublishDataServiceApiRequest();
         return TeaModel.build(map, self);
     }
 
-    public PublishDataServiceApiRequest setTenantId(Long tenantId) {
-        this.tenantId = tenantId;
+    public PublishDataServiceApiRequest setApiId(Long apiId) {
+        this.apiId = apiId;
         return this;
     }
-    public Long getTenantId() {
-        return this.tenantId;
+    public Long getApiId() {
+        return this.apiId;
     }
 
     public PublishDataServiceApiRequest setProjectId(Long projectId) {
@@ -34,12 +34,12 @@ public class PublishDataServiceApiRequest extends TeaModel {
         return this.projectId;
     }
 
-    public PublishDataServiceApiRequest setApiId(Long apiId) {
-        this.apiId = apiId;
+    public PublishDataServiceApiRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public Long getApiId() {
-        return this.apiId;
+    public Long getTenantId() {
+        return this.tenantId;
     }
 
 }

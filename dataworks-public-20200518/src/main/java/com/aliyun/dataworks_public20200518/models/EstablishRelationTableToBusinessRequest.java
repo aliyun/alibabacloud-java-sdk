@@ -4,24 +4,40 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class EstablishRelationTableToBusinessRequest extends TeaModel {
+    @NameInMap("BusinessId")
+    public String businessId;
+
+    @NameInMap("FolderId")
+    public String folderId;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
-    @NameInMap("BusinessId")
-    public String businessId;
-
     @NameInMap("TableGuid")
     public String tableGuid;
-
-    @NameInMap("FolderId")
-    public String folderId;
 
     public static EstablishRelationTableToBusinessRequest build(java.util.Map<String, ?> map) throws Exception {
         EstablishRelationTableToBusinessRequest self = new EstablishRelationTableToBusinessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EstablishRelationTableToBusinessRequest setBusinessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public String getBusinessId() {
+        return this.businessId;
+    }
+
+    public EstablishRelationTableToBusinessRequest setFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    public String getFolderId() {
+        return this.folderId;
     }
 
     public EstablishRelationTableToBusinessRequest setProjectId(Long projectId) {
@@ -40,28 +56,12 @@ public class EstablishRelationTableToBusinessRequest extends TeaModel {
         return this.projectIdentifier;
     }
 
-    public EstablishRelationTableToBusinessRequest setBusinessId(String businessId) {
-        this.businessId = businessId;
-        return this;
-    }
-    public String getBusinessId() {
-        return this.businessId;
-    }
-
     public EstablishRelationTableToBusinessRequest setTableGuid(String tableGuid) {
         this.tableGuid = tableGuid;
         return this;
     }
     public String getTableGuid() {
         return this.tableGuid;
-    }
-
-    public EstablishRelationTableToBusinessRequest setFolderId(String folderId) {
-        this.folderId = folderId;
-        return this;
-    }
-    public String getFolderId() {
-        return this.folderId;
     }
 
 }

@@ -7,11 +7,11 @@ public class ExportDISyncTasksRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("TaskType")
-    public String taskType;
-
     @NameInMap("TaskParam")
     public String taskParam;
+
+    @NameInMap("TaskType")
+    public String taskType;
 
     public static ExportDISyncTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportDISyncTasksRequest self = new ExportDISyncTasksRequest();
@@ -26,20 +26,20 @@ public class ExportDISyncTasksRequest extends TeaModel {
         return this.projectId;
     }
 
-    public ExportDISyncTasksRequest setTaskType(String taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public String getTaskType() {
-        return this.taskType;
-    }
-
     public ExportDISyncTasksRequest setTaskParam(String taskParam) {
         this.taskParam = taskParam;
         return this;
     }
     public String getTaskParam() {
         return this.taskParam;
+    }
+
+    public ExportDISyncTasksRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

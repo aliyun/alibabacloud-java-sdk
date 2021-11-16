@@ -4,46 +4,30 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ExportConnectionsRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("DataSourceType")
     public String dataSourceType;
-
-    @NameInMap("SubType")
-    public String subType;
 
     @NameInMap("EnvType")
     public Integer envType;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("SubType")
+    public String subType;
+
     public static ExportConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportConnectionsRequest self = new ExportConnectionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ExportConnectionsRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
-    }
-
-    public ExportConnectionsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ExportConnectionsRequest setDataSourceType(String dataSourceType) {
@@ -54,20 +38,28 @@ public class ExportConnectionsRequest extends TeaModel {
         return this.dataSourceType;
     }
 
-    public ExportConnectionsRequest setSubType(String subType) {
-        this.subType = subType;
-        return this;
-    }
-    public String getSubType() {
-        return this.subType;
-    }
-
     public ExportConnectionsRequest setEnvType(Integer envType) {
         this.envType = envType;
         return this;
     }
     public Integer getEnvType() {
         return this.envType;
+    }
+
+    public ExportConnectionsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ExportConnectionsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ExportConnectionsRequest setPageSize(Integer pageSize) {
@@ -78,12 +70,20 @@ public class ExportConnectionsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ExportConnectionsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ExportConnectionsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ExportConnectionsRequest setSubType(String subType) {
+        this.subType = subType;
+        return this;
+    }
+    public String getSubType() {
+        return this.subType;
     }
 
 }

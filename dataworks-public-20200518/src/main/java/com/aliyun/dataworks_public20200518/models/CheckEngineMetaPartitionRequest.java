@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckEngineMetaPartitionRequest extends TeaModel {
-    @NameInMap("TableGuid")
-    public String tableGuid;
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     @NameInMap("Partition")
     public String partition;
 
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
+    @NameInMap("TableGuid")
+    public String tableGuid;
 
     public static CheckEngineMetaPartitionRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckEngineMetaPartitionRequest self = new CheckEngineMetaPartitionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckEngineMetaPartitionRequest setTableGuid(String tableGuid) {
-        this.tableGuid = tableGuid;
+    public CheckEngineMetaPartitionRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
         return this;
     }
-    public String getTableGuid() {
-        return this.tableGuid;
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     public CheckEngineMetaPartitionRequest setPartition(String partition) {
@@ -34,12 +34,12 @@ public class CheckEngineMetaPartitionRequest extends TeaModel {
         return this.partition;
     }
 
-    public CheckEngineMetaPartitionRequest setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
+    public CheckEngineMetaPartitionRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
         return this;
     }
-    public String getDataSourceType() {
-        return this.dataSourceType;
+    public String getTableGuid() {
+        return this.tableGuid;
     }
 
 }

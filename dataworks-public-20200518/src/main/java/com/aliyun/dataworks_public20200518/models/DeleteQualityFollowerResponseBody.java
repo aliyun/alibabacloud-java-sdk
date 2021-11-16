@@ -4,20 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityFollowerResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,14 +25,6 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
     public static DeleteQualityFollowerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityFollowerResponseBody self = new DeleteQualityFollowerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteQualityFollowerResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public DeleteQualityFollowerResponseBody setData(Boolean data) {
@@ -43,6 +35,14 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DeleteQualityFollowerResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public DeleteQualityFollowerResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,20 +51,20 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public DeleteQualityFollowerResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public DeleteQualityFollowerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteQualityFollowerResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public DeleteQualityFollowerResponseBody setSuccess(Boolean success) {

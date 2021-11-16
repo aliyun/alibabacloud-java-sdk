@@ -7,14 +7,17 @@ public class ListFilesRequest extends TeaModel {
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
 
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("FileTypes")
+    public String fileTypes;
 
     @NameInMap("Keyword")
     public String keyword;
 
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
+    @NameInMap("NodeId")
+    public Long nodeId;
+
+    @NameInMap("Owner")
+    public String owner;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,17 +25,14 @@ public class ListFilesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
+
     @NameInMap("UseType")
     public String useType;
-
-    @NameInMap("FileTypes")
-    public String fileTypes;
-
-    @NameInMap("Owner")
-    public String owner;
-
-    @NameInMap("NodeId")
-    public Long nodeId;
 
     public static ListFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFilesRequest self = new ListFilesRequest();
@@ -47,12 +47,12 @@ public class ListFilesRequest extends TeaModel {
         return this.fileFolderPath;
     }
 
-    public ListFilesRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public ListFilesRequest setFileTypes(String fileTypes) {
+        this.fileTypes = fileTypes;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getFileTypes() {
+        return this.fileTypes;
     }
 
     public ListFilesRequest setKeyword(String keyword) {
@@ -63,12 +63,20 @@ public class ListFilesRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListFilesRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
+    public ListFilesRequest setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
+    public Long getNodeId() {
+        return this.nodeId;
+    }
+
+    public ListFilesRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public ListFilesRequest setPageNumber(Integer pageNumber) {
@@ -87,36 +95,28 @@ public class ListFilesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListFilesRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListFilesRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
     public ListFilesRequest setUseType(String useType) {
         this.useType = useType;
         return this;
     }
     public String getUseType() {
         return this.useType;
-    }
-
-    public ListFilesRequest setFileTypes(String fileTypes) {
-        this.fileTypes = fileTypes;
-        return this;
-    }
-    public String getFileTypes() {
-        return this.fileTypes;
-    }
-
-    public ListFilesRequest setOwner(String owner) {
-        this.owner = owner;
-        return this;
-    }
-    public String getOwner() {
-        return this.owner;
-    }
-
-    public ListFilesRequest setNodeId(Long nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public Long getNodeId() {
-        return this.nodeId;
     }
 
 }

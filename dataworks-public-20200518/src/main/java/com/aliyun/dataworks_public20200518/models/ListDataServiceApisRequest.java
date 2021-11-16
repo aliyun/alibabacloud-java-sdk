@@ -4,6 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApisRequest extends TeaModel {
+    @NameInMap("ApiNameKeyword")
+    public String apiNameKeyword;
+
+    @NameInMap("ApiPathKeyword")
+    public String apiPathKeyword;
+
+    @NameInMap("CreatorId")
+    public String creatorId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,18 +25,33 @@ public class ListDataServiceApisRequest extends TeaModel {
     @NameInMap("TenantId")
     public Long tenantId;
 
-    @NameInMap("ApiNameKeyword")
-    public String apiNameKeyword;
-
-    @NameInMap("ApiPathKeyword")
-    public String apiPathKeyword;
-
-    @NameInMap("CreatorId")
-    public String creatorId;
-
     public static ListDataServiceApisRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceApisRequest self = new ListDataServiceApisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataServiceApisRequest setApiNameKeyword(String apiNameKeyword) {
+        this.apiNameKeyword = apiNameKeyword;
+        return this;
+    }
+    public String getApiNameKeyword() {
+        return this.apiNameKeyword;
+    }
+
+    public ListDataServiceApisRequest setApiPathKeyword(String apiPathKeyword) {
+        this.apiPathKeyword = apiPathKeyword;
+        return this;
+    }
+    public String getApiPathKeyword() {
+        return this.apiPathKeyword;
+    }
+
+    public ListDataServiceApisRequest setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+        return this;
+    }
+    public String getCreatorId() {
+        return this.creatorId;
     }
 
     public ListDataServiceApisRequest setPageNumber(Integer pageNumber) {
@@ -60,30 +84,6 @@ public class ListDataServiceApisRequest extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
-    }
-
-    public ListDataServiceApisRequest setApiNameKeyword(String apiNameKeyword) {
-        this.apiNameKeyword = apiNameKeyword;
-        return this;
-    }
-    public String getApiNameKeyword() {
-        return this.apiNameKeyword;
-    }
-
-    public ListDataServiceApisRequest setApiPathKeyword(String apiPathKeyword) {
-        this.apiPathKeyword = apiPathKeyword;
-        return this;
-    }
-    public String getApiPathKeyword() {
-        return this.apiPathKeyword;
-    }
-
-    public ListDataServiceApisRequest setCreatorId(String creatorId) {
-        this.creatorId = creatorId;
-        return this;
-    }
-    public String getCreatorId() {
-        return this.creatorId;
     }
 
 }

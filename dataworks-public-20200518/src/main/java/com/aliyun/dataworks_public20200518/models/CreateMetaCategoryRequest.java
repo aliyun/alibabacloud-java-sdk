@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateMetaCategoryRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Comment")
     public String comment;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("ParentId")
     public Long parentId;
@@ -18,20 +18,20 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMetaCategoryRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public CreateMetaCategoryRequest setComment(String comment) {
         this.comment = comment;
         return this;
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public CreateMetaCategoryRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateMetaCategoryRequest setParentId(Long parentId) {

@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceApisResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListDataServiceApisResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public ListDataServiceApisResponseBodyData data;
 
     public static ListDataServiceApisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceApisResponseBody self = new ListDataServiceApisResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataServiceApisResponseBody setData(ListDataServiceApisResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDataServiceApisResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListDataServiceApisResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDataServiceApisResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDataServiceApisResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,14 +67,6 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataServiceApisResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListDataServiceApisResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -59,28 +75,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDataServiceApisResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDataServiceApisResponseBody setData(ListDataServiceApisResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListDataServiceApisResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes extends TeaModel {
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("ErrorCode")
         public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("ErrorSolution")
         public String errorSolution;
@@ -90,20 +90,20 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
         public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
         public String getErrorCode() {
             return this.errorCode;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes setErrorSolution(String errorSolution) {
@@ -120,29 +120,29 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterPosition")
-        public Integer parameterPosition;
-
-        @NameInMap("ParameterDescription")
-        public String parameterDescription;
-
         @NameInMap("DefaultValue")
         public String defaultValue;
-
-        @NameInMap("ParameterOperator")
-        public Integer parameterOperator;
-
-        @NameInMap("ParameterDataType")
-        public Integer parameterDataType;
 
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
+
+        @NameInMap("ParameterDataType")
+        public Integer parameterDataType;
+
+        @NameInMap("ParameterDescription")
+        public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ParameterOperator")
+        public Integer parameterOperator;
+
+        @NameInMap("ParameterPosition")
+        public Integer parameterPosition;
 
         public static ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters self = new ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters();
@@ -157,52 +157,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterName(String parameterName) {
-            this.parameterName = parameterName;
-            return this;
-        }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterPosition(Integer parameterPosition) {
-            this.parameterPosition = parameterPosition;
-            return this;
-        }
-        public Integer getParameterPosition() {
-            return this.parameterPosition;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterDescription(String parameterDescription) {
-            this.parameterDescription = parameterDescription;
-            return this;
-        }
-        public String getParameterDescription() {
-            return this.parameterDescription;
-        }
-
         public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setDefaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
         public String getDefaultValue() {
             return this.defaultValue;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterOperator(Integer parameterOperator) {
-            this.parameterOperator = parameterOperator;
-            return this;
-        }
-        public Integer getParameterOperator() {
-            return this.parameterOperator;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterDataType(Integer parameterDataType) {
-            this.parameterDataType = parameterDataType;
-            return this;
-        }
-        public Integer getParameterDataType() {
-            return this.parameterDataType;
         }
 
         public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setExampleValue(String exampleValue) {
@@ -221,26 +181,51 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.isRequiredParameter;
         }
 
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterDataType(Integer parameterDataType) {
+            this.parameterDataType = parameterDataType;
+            return this;
+        }
+        public Integer getParameterDataType() {
+            return this.parameterDataType;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterDescription(String parameterDescription) {
+            this.parameterDescription = parameterDescription;
+            return this;
+        }
+        public String getParameterDescription() {
+            return this.parameterDescription;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterOperator(Integer parameterOperator) {
+            this.parameterOperator = parameterOperator;
+            return this;
+        }
+        public Integer getParameterOperator() {
+            return this.parameterOperator;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters setParameterPosition(Integer parameterPosition) {
+            this.parameterPosition = parameterPosition;
+            return this;
+        }
+        public Integer getParameterPosition() {
+            return this.parameterPosition;
+        }
+
     }
 
     public static class ListDataServiceApisResponseBodyDataApisRegistrationDetails extends TeaModel {
-        @NameInMap("ServiceHost")
-        public String serviceHost;
-
-        @NameInMap("ServiceContentType")
-        public Integer serviceContentType;
-
-        @NameInMap("ServicePath")
-        public String servicePath;
-
-        @NameInMap("SuccessfulResultSample")
-        public String successfulResultSample;
-
         @NameInMap("FailedResultSample")
         public String failedResultSample;
-
-        @NameInMap("ServiceRequestBodyDescription")
-        public String serviceRequestBodyDescription;
 
         @NameInMap("RegistrationErrorCodes")
         public java.util.List<ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes> registrationErrorCodes;
@@ -248,41 +233,24 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("RegistrationRequestParameters")
         public java.util.List<ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters> registrationRequestParameters;
 
+        @NameInMap("ServiceContentType")
+        public Integer serviceContentType;
+
+        @NameInMap("ServiceHost")
+        public String serviceHost;
+
+        @NameInMap("ServicePath")
+        public String servicePath;
+
+        @NameInMap("ServiceRequestBodyDescription")
+        public String serviceRequestBodyDescription;
+
+        @NameInMap("SuccessfulResultSample")
+        public String successfulResultSample;
+
         public static ListDataServiceApisResponseBodyDataApisRegistrationDetails build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisRegistrationDetails self = new ListDataServiceApisResponseBodyDataApisRegistrationDetails();
             return TeaModel.build(map, self);
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceHost(String serviceHost) {
-            this.serviceHost = serviceHost;
-            return this;
-        }
-        public String getServiceHost() {
-            return this.serviceHost;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceContentType(Integer serviceContentType) {
-            this.serviceContentType = serviceContentType;
-            return this;
-        }
-        public Integer getServiceContentType() {
-            return this.serviceContentType;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServicePath(String servicePath) {
-            this.servicePath = servicePath;
-            return this;
-        }
-        public String getServicePath() {
-            return this.servicePath;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setSuccessfulResultSample(String successfulResultSample) {
-            this.successfulResultSample = successfulResultSample;
-            return this;
-        }
-        public String getSuccessfulResultSample() {
-            return this.successfulResultSample;
         }
 
         public ListDataServiceApisResponseBodyDataApisRegistrationDetails setFailedResultSample(String failedResultSample) {
@@ -291,14 +259,6 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         }
         public String getFailedResultSample() {
             return this.failedResultSample;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceRequestBodyDescription(String serviceRequestBodyDescription) {
-            this.serviceRequestBodyDescription = serviceRequestBodyDescription;
-            return this;
-        }
-        public String getServiceRequestBodyDescription() {
-            return this.serviceRequestBodyDescription;
         }
 
         public ListDataServiceApisResponseBodyDataApisRegistrationDetails setRegistrationErrorCodes(java.util.List<ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes> registrationErrorCodes) {
@@ -317,35 +277,105 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.registrationRequestParameters;
         }
 
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceContentType(Integer serviceContentType) {
+            this.serviceContentType = serviceContentType;
+            return this;
+        }
+        public Integer getServiceContentType() {
+            return this.serviceContentType;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceHost(String serviceHost) {
+            this.serviceHost = serviceHost;
+            return this;
+        }
+        public String getServiceHost() {
+            return this.serviceHost;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServicePath(String servicePath) {
+            this.servicePath = servicePath;
+            return this;
+        }
+        public String getServicePath() {
+            return this.servicePath;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setServiceRequestBodyDescription(String serviceRequestBodyDescription) {
+            this.serviceRequestBodyDescription = serviceRequestBodyDescription;
+            return this;
+        }
+        public String getServiceRequestBodyDescription() {
+            return this.serviceRequestBodyDescription;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisRegistrationDetails setSuccessfulResultSample(String successfulResultSample) {
+            this.successfulResultSample = successfulResultSample;
+            return this;
+        }
+        public String getSuccessfulResultSample() {
+            return this.successfulResultSample;
+        }
+
+    }
+
+    public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection extends TeaModel {
+        @NameInMap("ConnectionId")
+        public Long connectionId;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection build(java.util.Map<String, ?> map) throws Exception {
+            ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection self = new ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection setConnectionId(Long connectionId) {
+            this.connectionId = connectionId;
+            return this;
+        }
+        public Long getConnectionId() {
+            return this.connectionId;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
     }
 
     public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters extends TeaModel {
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterPosition")
-        public Integer parameterPosition;
-
-        @NameInMap("ParameterDescription")
-        public String parameterDescription;
-
         @NameInMap("DefaultValue")
         public String defaultValue;
-
-        @NameInMap("ParameterOperator")
-        public Integer parameterOperator;
-
-        @NameInMap("ParameterDataType")
-        public Integer parameterDataType;
 
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
+
+        @NameInMap("ParameterDataType")
+        public Integer parameterDataType;
+
+        @NameInMap("ParameterDescription")
+        public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ParameterOperator")
+        public Integer parameterOperator;
+
+        @NameInMap("ParameterPosition")
+        public Integer parameterPosition;
 
         public static ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters self = new ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters();
@@ -360,52 +390,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterName(String parameterName) {
-            this.parameterName = parameterName;
-            return this;
-        }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterPosition(Integer parameterPosition) {
-            this.parameterPosition = parameterPosition;
-            return this;
-        }
-        public Integer getParameterPosition() {
-            return this.parameterPosition;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterDescription(String parameterDescription) {
-            this.parameterDescription = parameterDescription;
-            return this;
-        }
-        public String getParameterDescription() {
-            return this.parameterDescription;
-        }
-
         public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setDefaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
         public String getDefaultValue() {
             return this.defaultValue;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterOperator(Integer parameterOperator) {
-            this.parameterOperator = parameterOperator;
-            return this;
-        }
-        public Integer getParameterOperator() {
-            return this.parameterOperator;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterDataType(Integer parameterDataType) {
-            this.parameterDataType = parameterDataType;
-            return this;
-        }
-        public Integer getParameterDataType() {
-            return this.parameterDataType;
         }
 
         public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setExampleValue(String exampleValue) {
@@ -424,35 +414,67 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.isRequiredParameter;
         }
 
-    }
-
-    public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
-        public String parameterDescription;
-
-        @NameInMap("ColumnName")
-        public String columnName;
-
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterDataType")
-        public Integer parameterDataType;
-
-        @NameInMap("ExampleValue")
-        public String exampleValue;
-
-        public static ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters self = new ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters();
-            return TeaModel.build(map, self);
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterDataType(Integer parameterDataType) {
+            this.parameterDataType = parameterDataType;
+            return this;
+        }
+        public Integer getParameterDataType() {
+            return this.parameterDataType;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setParameterDescription(String parameterDescription) {
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterDescription(String parameterDescription) {
             this.parameterDescription = parameterDescription;
             return this;
         }
         public String getParameterDescription() {
             return this.parameterDescription;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterOperator(Integer parameterOperator) {
+            this.parameterOperator = parameterOperator;
+            return this;
+        }
+        public Integer getParameterOperator() {
+            return this.parameterOperator;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters setParameterPosition(Integer parameterPosition) {
+            this.parameterPosition = parameterPosition;
+            return this;
+        }
+        public Integer getParameterPosition() {
+            return this.parameterPosition;
+        }
+
+    }
+
+    public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters extends TeaModel {
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("ExampleValue")
+        public String exampleValue;
+
+        @NameInMap("ParameterDataType")
+        public Integer parameterDataType;
+
+        @NameInMap("ParameterDescription")
+        public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        public static ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters self = new ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters();
+            return TeaModel.build(map, self);
         }
 
         public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setColumnName(String columnName) {
@@ -463,12 +485,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setParameterName(String parameterName) {
-            this.parameterName = parameterName;
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setExampleValue(String exampleValue) {
+            this.exampleValue = exampleValue;
             return this;
         }
-        public String getParameterName() {
-            return this.parameterName;
+        public String getExampleValue() {
+            return this.exampleValue;
         }
 
         public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setParameterDataType(Integer parameterDataType) {
@@ -479,52 +501,33 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.parameterDataType;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setExampleValue(String exampleValue) {
-            this.exampleValue = exampleValue;
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setParameterDescription(String parameterDescription) {
+            this.parameterDescription = parameterDescription;
             return this;
         }
-        public String getExampleValue() {
-            return this.exampleValue;
+        public String getParameterDescription() {
+            return this.parameterDescription;
         }
 
-    }
-
-    public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("ConnectionId")
-        public Long connectionId;
-
-        public static ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection build(java.util.Map<String, ?> map) throws Exception {
-            ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection self = new ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection setTableName(String tableName) {
-            this.tableName = tableName;
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection setConnectionId(Long connectionId) {
-            this.connectionId = connectionId;
-            return this;
-        }
-        public Long getConnectionId() {
-            return this.connectionId;
+        public String getParameterName() {
+            return this.parameterName;
         }
 
     }
 
     public static class ListDataServiceApisResponseBodyDataApisScriptDetails extends TeaModel {
+        @NameInMap("IsPagedResponse")
+        public Boolean isPagedResponse;
+
         @NameInMap("Script")
         public String script;
 
-        @NameInMap("IsPagedResponse")
-        public Boolean isPagedResponse;
+        @NameInMap("ScriptConnection")
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection scriptConnection;
 
         @NameInMap("ScriptRequestParameters")
         public java.util.List<ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters> scriptRequestParameters;
@@ -532,12 +535,17 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("ScriptResponseParameters")
         public java.util.List<ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters> scriptResponseParameters;
 
-        @NameInMap("ScriptConnection")
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection scriptConnection;
-
         public static ListDataServiceApisResponseBodyDataApisScriptDetails build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisScriptDetails self = new ListDataServiceApisResponseBodyDataApisScriptDetails();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApisResponseBodyDataApisScriptDetails setIsPagedResponse(Boolean isPagedResponse) {
+            this.isPagedResponse = isPagedResponse;
+            return this;
+        }
+        public Boolean getIsPagedResponse() {
+            return this.isPagedResponse;
         }
 
         public ListDataServiceApisResponseBodyDataApisScriptDetails setScript(String script) {
@@ -548,12 +556,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.script;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetails setIsPagedResponse(Boolean isPagedResponse) {
-            this.isPagedResponse = isPagedResponse;
+        public ListDataServiceApisResponseBodyDataApisScriptDetails setScriptConnection(ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection scriptConnection) {
+            this.scriptConnection = scriptConnection;
             return this;
         }
-        public Boolean getIsPagedResponse() {
-            return this.isPagedResponse;
+        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection getScriptConnection() {
+            return this.scriptConnection;
         }
 
         public ListDataServiceApisResponseBodyDataApisScriptDetails setScriptRequestParameters(java.util.List<ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters> scriptRequestParameters) {
@@ -572,12 +580,34 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.scriptResponseParameters;
         }
 
-        public ListDataServiceApisResponseBodyDataApisScriptDetails setScriptConnection(ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection scriptConnection) {
-            this.scriptConnection = scriptConnection;
+    }
+
+    public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection extends TeaModel {
+        @NameInMap("ConnectionId")
+        public Long connectionId;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection build(java.util.Map<String, ?> map) throws Exception {
+            ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection self = new ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection setConnectionId(Long connectionId) {
+            this.connectionId = connectionId;
             return this;
         }
-        public ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection getScriptConnection() {
-            return this.scriptConnection;
+        public Long getConnectionId() {
+            return this.connectionId;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }
@@ -586,29 +616,29 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("ColumnName")
         public String columnName;
 
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterPosition")
-        public Integer parameterPosition;
-
-        @NameInMap("ParameterDescription")
-        public String parameterDescription;
-
         @NameInMap("DefaultValue")
         public String defaultValue;
-
-        @NameInMap("ParameterOperator")
-        public Integer parameterOperator;
-
-        @NameInMap("ParameterDataType")
-        public Integer parameterDataType;
 
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
+
+        @NameInMap("ParameterDataType")
+        public Integer parameterDataType;
+
+        @NameInMap("ParameterDescription")
+        public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        @NameInMap("ParameterOperator")
+        public Integer parameterOperator;
+
+        @NameInMap("ParameterPosition")
+        public Integer parameterPosition;
 
         public static ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters self = new ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters();
@@ -623,52 +653,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterName(String parameterName) {
-            this.parameterName = parameterName;
-            return this;
-        }
-        public String getParameterName() {
-            return this.parameterName;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterPosition(Integer parameterPosition) {
-            this.parameterPosition = parameterPosition;
-            return this;
-        }
-        public Integer getParameterPosition() {
-            return this.parameterPosition;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterDescription(String parameterDescription) {
-            this.parameterDescription = parameterDescription;
-            return this;
-        }
-        public String getParameterDescription() {
-            return this.parameterDescription;
-        }
-
         public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setDefaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
         public String getDefaultValue() {
             return this.defaultValue;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterOperator(Integer parameterOperator) {
-            this.parameterOperator = parameterOperator;
-            return this;
-        }
-        public Integer getParameterOperator() {
-            return this.parameterOperator;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterDataType(Integer parameterDataType) {
-            this.parameterDataType = parameterDataType;
-            return this;
-        }
-        public Integer getParameterDataType() {
-            return this.parameterDataType;
         }
 
         public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setExampleValue(String exampleValue) {
@@ -687,35 +677,67 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.isRequiredParameter;
         }
 
-    }
-
-    public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
-        public String parameterDescription;
-
-        @NameInMap("ColumnName")
-        public String columnName;
-
-        @NameInMap("ParameterName")
-        public String parameterName;
-
-        @NameInMap("ParameterDataType")
-        public Integer parameterDataType;
-
-        @NameInMap("ExampleValue")
-        public String exampleValue;
-
-        public static ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters self = new ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters();
-            return TeaModel.build(map, self);
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterDataType(Integer parameterDataType) {
+            this.parameterDataType = parameterDataType;
+            return this;
+        }
+        public Integer getParameterDataType() {
+            return this.parameterDataType;
         }
 
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setParameterDescription(String parameterDescription) {
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterDescription(String parameterDescription) {
             this.parameterDescription = parameterDescription;
             return this;
         }
         public String getParameterDescription() {
             return this.parameterDescription;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public String getParameterName() {
+            return this.parameterName;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterOperator(Integer parameterOperator) {
+            this.parameterOperator = parameterOperator;
+            return this;
+        }
+        public Integer getParameterOperator() {
+            return this.parameterOperator;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters setParameterPosition(Integer parameterPosition) {
+            this.parameterPosition = parameterPosition;
+            return this;
+        }
+        public Integer getParameterPosition() {
+            return this.parameterPosition;
+        }
+
+    }
+
+    public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters extends TeaModel {
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("ExampleValue")
+        public String exampleValue;
+
+        @NameInMap("ParameterDataType")
+        public Integer parameterDataType;
+
+        @NameInMap("ParameterDescription")
+        public String parameterDescription;
+
+        @NameInMap("ParameterName")
+        public String parameterName;
+
+        public static ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters self = new ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters();
+            return TeaModel.build(map, self);
         }
 
         public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setColumnName(String columnName) {
@@ -726,12 +748,12 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.columnName;
         }
 
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setParameterName(String parameterName) {
-            this.parameterName = parameterName;
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setExampleValue(String exampleValue) {
+            this.exampleValue = exampleValue;
             return this;
         }
-        public String getParameterName() {
-            return this.parameterName;
+        public String getExampleValue() {
+            return this.exampleValue;
         }
 
         public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setParameterDataType(Integer parameterDataType) {
@@ -742,42 +764,20 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.parameterDataType;
         }
 
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setExampleValue(String exampleValue) {
-            this.exampleValue = exampleValue;
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setParameterDescription(String parameterDescription) {
+            this.parameterDescription = parameterDescription;
             return this;
         }
-        public String getExampleValue() {
-            return this.exampleValue;
+        public String getParameterDescription() {
+            return this.parameterDescription;
         }
 
-    }
-
-    public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("ConnectionId")
-        public Long connectionId;
-
-        public static ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection build(java.util.Map<String, ?> map) throws Exception {
-            ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection self = new ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection setTableName(String tableName) {
-            this.tableName = tableName;
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters setParameterName(String parameterName) {
+            this.parameterName = parameterName;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection setConnectionId(Long connectionId) {
-            this.connectionId = connectionId;
-            return this;
-        }
-        public Long getConnectionId() {
-            return this.connectionId;
+        public String getParameterName() {
+            return this.parameterName;
         }
 
     }
@@ -786,14 +786,14 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("IsPagedResponse")
         public Boolean isPagedResponse;
 
+        @NameInMap("WizardConnection")
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection wizardConnection;
+
         @NameInMap("WizardRequestParameters")
         public java.util.List<ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters> wizardRequestParameters;
 
         @NameInMap("WizardResponseParameters")
         public java.util.List<ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters> wizardResponseParameters;
-
-        @NameInMap("WizardConnection")
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection wizardConnection;
 
         public static ListDataServiceApisResponseBodyDataApisWizardDetails build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApisWizardDetails self = new ListDataServiceApisResponseBodyDataApisWizardDetails();
@@ -806,6 +806,14 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         }
         public Boolean getIsPagedResponse() {
             return this.isPagedResponse;
+        }
+
+        public ListDataServiceApisResponseBodyDataApisWizardDetails setWizardConnection(ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection wizardConnection) {
+            this.wizardConnection = wizardConnection;
+            return this;
+        }
+        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection getWizardConnection() {
+            return this.wizardConnection;
         }
 
         public ListDataServiceApisResponseBodyDataApisWizardDetails setWizardRequestParameters(java.util.List<ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters> wizardRequestParameters) {
@@ -824,49 +832,26 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.wizardResponseParameters;
         }
 
-        public ListDataServiceApisResponseBodyDataApisWizardDetails setWizardConnection(ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection wizardConnection) {
-            this.wizardConnection = wizardConnection;
-            return this;
-        }
-        public ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection getWizardConnection() {
-            return this.wizardConnection;
-        }
-
     }
 
     public static class ListDataServiceApisResponseBodyDataApis extends TeaModel {
-        @NameInMap("Timeout")
-        public Integer timeout;
-
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("ApiId")
         public Long apiId;
 
         @NameInMap("ApiMode")
         public Integer apiMode;
 
-        @NameInMap("ProjectId")
-        public Long projectId;
+        @NameInMap("ApiName")
+        public String apiName;
 
-        @NameInMap("ResponseContentType")
-        public Integer responseContentType;
+        @NameInMap("ApiPath")
+        public String apiPath;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("CreatorId")
         public String creatorId;
-
-        @NameInMap("VisibleRange")
-        public Integer visibleRange;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("OperatorId")
-        public String operatorId;
-
-        @NameInMap("GroupId")
-        public String groupId;
 
         @NameInMap("Description")
         public String description;
@@ -874,20 +859,17 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public Long folderId;
 
-        @NameInMap("RequestMethod")
-        public Integer requestMethod;
+        @NameInMap("GroupId")
+        public String groupId;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
-        @NameInMap("ApiName")
-        public String apiName;
+        @NameInMap("OperatorId")
+        public String operatorId;
 
-        @NameInMap("TenantId")
-        public Long tenantId;
-
-        @NameInMap("ApiPath")
-        public String apiPath;
+        @NameInMap("ProjectId")
+        public Long projectId;
 
         @NameInMap("Protocols")
         public java.util.List<Integer> protocols;
@@ -895,8 +877,26 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("RegistrationDetails")
         public ListDataServiceApisResponseBodyDataApisRegistrationDetails registrationDetails;
 
+        @NameInMap("RequestMethod")
+        public Integer requestMethod;
+
+        @NameInMap("ResponseContentType")
+        public Integer responseContentType;
+
         @NameInMap("ScriptDetails")
         public ListDataServiceApisResponseBodyDataApisScriptDetails scriptDetails;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("TenantId")
+        public Long tenantId;
+
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        @NameInMap("VisibleRange")
+        public Integer visibleRange;
 
         @NameInMap("WizardDetails")
         public ListDataServiceApisResponseBodyDataApisWizardDetails wizardDetails;
@@ -904,22 +904,6 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         public static ListDataServiceApisResponseBodyDataApis build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyDataApis self = new ListDataServiceApisResponseBodyDataApis();
             return TeaModel.build(map, self);
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setTimeout(Integer timeout) {
-            this.timeout = timeout;
-            return this;
-        }
-        public Integer getTimeout() {
-            return this.timeout;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
         }
 
         public ListDataServiceApisResponseBodyDataApis setApiId(Long apiId) {
@@ -938,20 +922,28 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.apiMode;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setProjectId(Long projectId) {
-            this.projectId = projectId;
+        public ListDataServiceApisResponseBodyDataApis setApiName(String apiName) {
+            this.apiName = apiName;
             return this;
         }
-        public Long getProjectId() {
-            return this.projectId;
+        public String getApiName() {
+            return this.apiName;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setResponseContentType(Integer responseContentType) {
-            this.responseContentType = responseContentType;
+        public ListDataServiceApisResponseBodyDataApis setApiPath(String apiPath) {
+            this.apiPath = apiPath;
             return this;
         }
-        public Integer getResponseContentType() {
-            return this.responseContentType;
+        public String getApiPath() {
+            return this.apiPath;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public ListDataServiceApisResponseBodyDataApis setCreatorId(String creatorId) {
@@ -960,38 +952,6 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         }
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setVisibleRange(Integer visibleRange) {
-            this.visibleRange = visibleRange;
-            return this;
-        }
-        public Integer getVisibleRange() {
-            return this.visibleRange;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setOperatorId(String operatorId) {
-            this.operatorId = operatorId;
-            return this;
-        }
-        public String getOperatorId() {
-            return this.operatorId;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public ListDataServiceApisResponseBodyDataApis setDescription(String description) {
@@ -1010,44 +970,36 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setRequestMethod(Integer requestMethod) {
-            this.requestMethod = requestMethod;
+        public ListDataServiceApisResponseBodyDataApis setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public Integer getRequestMethod() {
-            return this.requestMethod;
+        public String getGroupId() {
+            return this.groupId;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public ListDataServiceApisResponseBodyDataApis setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setApiName(String apiName) {
-            this.apiName = apiName;
+        public ListDataServiceApisResponseBodyDataApis setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
             return this;
         }
-        public String getApiName() {
-            return this.apiName;
+        public String getOperatorId() {
+            return this.operatorId;
         }
 
-        public ListDataServiceApisResponseBodyDataApis setTenantId(Long tenantId) {
-            this.tenantId = tenantId;
+        public ListDataServiceApisResponseBodyDataApis setProjectId(Long projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        public ListDataServiceApisResponseBodyDataApis setApiPath(String apiPath) {
-            this.apiPath = apiPath;
-            return this;
-        }
-        public String getApiPath() {
-            return this.apiPath;
+        public Long getProjectId() {
+            return this.projectId;
         }
 
         public ListDataServiceApisResponseBodyDataApis setProtocols(java.util.List<Integer> protocols) {
@@ -1066,12 +1018,60 @@ public class ListDataServiceApisResponseBody extends TeaModel {
             return this.registrationDetails;
         }
 
+        public ListDataServiceApisResponseBodyDataApis setRequestMethod(Integer requestMethod) {
+            this.requestMethod = requestMethod;
+            return this;
+        }
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setResponseContentType(Integer responseContentType) {
+            this.responseContentType = responseContentType;
+            return this;
+        }
+        public Integer getResponseContentType() {
+            return this.responseContentType;
+        }
+
         public ListDataServiceApisResponseBodyDataApis setScriptDetails(ListDataServiceApisResponseBodyDataApisScriptDetails scriptDetails) {
             this.scriptDetails = scriptDetails;
             return this;
         }
         public ListDataServiceApisResponseBodyDataApisScriptDetails getScriptDetails() {
             return this.scriptDetails;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+        public ListDataServiceApisResponseBodyDataApis setVisibleRange(Integer visibleRange) {
+            this.visibleRange = visibleRange;
+            return this;
+        }
+        public Integer getVisibleRange() {
+            return this.visibleRange;
         }
 
         public ListDataServiceApisResponseBodyDataApis setWizardDetails(ListDataServiceApisResponseBodyDataApisWizardDetails wizardDetails) {
@@ -1085,6 +1085,9 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceApisResponseBodyData extends TeaModel {
+        @NameInMap("Apis")
+        public java.util.List<ListDataServiceApisResponseBodyDataApis> apis;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -1094,12 +1097,17 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Apis")
-        public java.util.List<ListDataServiceApisResponseBodyDataApis> apis;
-
         public static ListDataServiceApisResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceApisResponseBodyData self = new ListDataServiceApisResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceApisResponseBodyData setApis(java.util.List<ListDataServiceApisResponseBodyDataApis> apis) {
+            this.apis = apis;
+            return this;
+        }
+        public java.util.List<ListDataServiceApisResponseBodyDataApis> getApis() {
+            return this.apis;
         }
 
         public ListDataServiceApisResponseBodyData setPageNumber(Integer pageNumber) {
@@ -1124,14 +1132,6 @@ public class ListDataServiceApisResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListDataServiceApisResponseBodyData setApis(java.util.List<ListDataServiceApisResponseBodyDataApis> apis) {
-            this.apis = apis;
-            return this;
-        }
-        public java.util.List<ListDataServiceApisResponseBodyDataApis> getApis() {
-            return this.apis;
         }
 
     }

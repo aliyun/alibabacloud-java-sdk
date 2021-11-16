@@ -4,34 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public GenerateDISyncTaskConfigForUpdatingResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GenerateDISyncTaskConfigForUpdatingResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GenerateDISyncTaskConfigForUpdatingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateDISyncTaskConfigForUpdatingResponseBody self = new GenerateDISyncTaskConfigForUpdatingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateDISyncTaskConfigForUpdatingResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GenerateDISyncTaskConfigForUpdatingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateDISyncTaskConfigForUpdatingResponseBody setData(GenerateDISyncTaskConfigForUpdatingResponseBodyData data) {
@@ -42,27 +26,43 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GenerateDISyncTaskConfigForUpdatingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GenerateDISyncTaskConfigForUpdatingResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GenerateDISyncTaskConfigForUpdatingResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("ProcessId")
         public Long processId;
 
-        @NameInMap("Message")
-        public String message;
+        @NameInMap("Status")
+        public String status;
 
         public static GenerateDISyncTaskConfigForUpdatingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GenerateDISyncTaskConfigForUpdatingResponseBodyData self = new GenerateDISyncTaskConfigForUpdatingResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GenerateDISyncTaskConfigForUpdatingResponseBodyData setStatus(String status) {
-            this.status = status;
+        public GenerateDISyncTaskConfigForUpdatingResponseBodyData setMessage(String message) {
+            this.message = message;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getMessage() {
+            return this.message;
         }
 
         public GenerateDISyncTaskConfigForUpdatingResponseBodyData setProcessId(Long processId) {
@@ -73,12 +73,12 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             return this.processId;
         }
 
-        public GenerateDISyncTaskConfigForUpdatingResponseBodyData setMessage(String message) {
-            this.message = message;
+        public GenerateDISyncTaskConfigForUpdatingResponseBodyData setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getMessage() {
-            return this.message;
+        public String getStatus() {
+            return this.status;
         }
 
     }

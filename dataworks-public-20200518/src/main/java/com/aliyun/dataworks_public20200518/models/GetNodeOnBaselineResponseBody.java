@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetNodeOnBaselineResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<GetNodeOnBaselineResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public java.util.List<GetNodeOnBaselineResponseBodyData> data;
 
     public static GetNodeOnBaselineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNodeOnBaselineResponseBody self = new GetNodeOnBaselineResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetNodeOnBaselineResponseBody setData(java.util.List<GetNodeOnBaselineResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetNodeOnBaselineResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public GetNodeOnBaselineResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetNodeOnBaselineResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetNodeOnBaselineResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetNodeOnBaselineResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetNodeOnBaselineResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetNodeOnBaselineResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -67,23 +75,15 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetNodeOnBaselineResponseBody setData(java.util.List<GetNodeOnBaselineResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetNodeOnBaselineResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetNodeOnBaselineResponseBodyData extends TeaModel {
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("NodeId")
+        public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("NodeId")
-        public Long nodeId;
+        @NameInMap("Owner")
+        public String owner;
 
         @NameInMap("ProjectId")
         public Long projectId;
@@ -93,12 +93,12 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetNodeOnBaselineResponseBodyData setOwner(String owner) {
-            this.owner = owner;
+        public GetNodeOnBaselineResponseBodyData setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public Long getNodeId() {
+            return this.nodeId;
         }
 
         public GetNodeOnBaselineResponseBodyData setNodeName(String nodeName) {
@@ -109,12 +109,12 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public GetNodeOnBaselineResponseBodyData setNodeId(Long nodeId) {
-            this.nodeId = nodeId;
+        public GetNodeOnBaselineResponseBodyData setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public Long getNodeId() {
-            return this.nodeId;
+        public String getOwner() {
+            return this.owner;
         }
 
         public GetNodeOnBaselineResponseBodyData setProjectId(Long projectId) {

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<ListResourceGroupsResponseBodyData> data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,12 +16,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public java.util.List<ListResourceGroupsResponseBodyData> data;
-
     public static ListResourceGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsResponseBody self = new ListResourceGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourceGroupsResponseBody setData(java.util.List<ListResourceGroupsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListResourceGroupsResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListResourceGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -45,44 +53,36 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListResourceGroupsResponseBody setData(java.util.List<ListResourceGroupsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListResourceGroupsResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListResourceGroupsResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
+        @NameInMap("BizExtKey")
+        public String bizExtKey;
 
         @NameInMap("Cluster")
         public String cluster;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("EnableKp")
         public Boolean enableKp;
 
-        @NameInMap("ResourceGroupType")
-        public String resourceGroupType;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Identifier")
         public String identifier;
 
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
         @NameInMap("Mode")
         public String mode;
 
-        @NameInMap("BizExtKey")
-        public String bizExtKey;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ResourceGroupType")
+        public String resourceGroupType;
 
         @NameInMap("Sequence")
         public Integer sequence;
@@ -90,42 +90,26 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         @NameInMap("Specs")
         public java.util.Map<String, ?> specs;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("TenantId")
         public Long tenantId;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static ListResourceGroupsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListResourceGroupsResponseBodyData self = new ListResourceGroupsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListResourceGroupsResponseBodyData setStatus(Integer status) {
-            this.status = status;
+        public ListResourceGroupsResponseBodyData setBizExtKey(String bizExtKey) {
+            this.bizExtKey = bizExtKey;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListResourceGroupsResponseBodyData setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListResourceGroupsResponseBodyData setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
+        public String getBizExtKey() {
+            return this.bizExtKey;
         }
 
         public ListResourceGroupsResponseBodyData setCluster(String cluster) {
@@ -136,6 +120,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.cluster;
         }
 
+        public ListResourceGroupsResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public ListResourceGroupsResponseBodyData setEnableKp(Boolean enableKp) {
             this.enableKp = enableKp;
             return this;
@@ -144,20 +136,12 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.enableKp;
         }
 
-        public ListResourceGroupsResponseBodyData setResourceGroupType(String resourceGroupType) {
-            this.resourceGroupType = resourceGroupType;
+        public ListResourceGroupsResponseBodyData setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getResourceGroupType() {
-            return this.resourceGroupType;
-        }
-
-        public ListResourceGroupsResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public Long getId() {
+            return this.id;
         }
 
         public ListResourceGroupsResponseBodyData setIdentifier(String identifier) {
@@ -168,6 +152,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.identifier;
         }
 
+        public ListResourceGroupsResponseBodyData setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
         public ListResourceGroupsResponseBodyData setMode(String mode) {
             this.mode = mode;
             return this;
@@ -176,12 +168,20 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.mode;
         }
 
-        public ListResourceGroupsResponseBodyData setBizExtKey(String bizExtKey) {
-            this.bizExtKey = bizExtKey;
+        public ListResourceGroupsResponseBodyData setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getBizExtKey() {
-            return this.bizExtKey;
+        public String getName() {
+            return this.name;
+        }
+
+        public ListResourceGroupsResponseBodyData setResourceGroupType(String resourceGroupType) {
+            this.resourceGroupType = resourceGroupType;
+            return this;
+        }
+        public String getResourceGroupType() {
+            return this.resourceGroupType;
         }
 
         public ListResourceGroupsResponseBodyData setSequence(Integer sequence) {
@@ -200,20 +200,12 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.specs;
         }
 
-        public ListResourceGroupsResponseBodyData setName(String name) {
-            this.name = name;
+        public ListResourceGroupsResponseBodyData setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListResourceGroupsResponseBodyData setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
+        public Integer getStatus() {
+            return this.status;
         }
 
         public ListResourceGroupsResponseBodyData setTenantId(Long tenantId) {
@@ -222,6 +214,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
         public Long getTenantId() {
             return this.tenantId;
+        }
+
+        public ListResourceGroupsResponseBodyData setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

@@ -4,27 +4,59 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListQualityResultsByRuleRequest extends TeaModel {
+    @NameInMap("EndDate")
+    public String endDate;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
     @NameInMap("RuleId")
     public Integer ruleId;
 
     @NameInMap("StartDate")
     public String startDate;
 
-    @NameInMap("EndDate")
-    public String endDate;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ProjectName")
-    public String projectName;
-
     public static ListQualityResultsByRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQualityResultsByRuleRequest self = new ListQualityResultsByRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListQualityResultsByRuleRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
+    }
+
+    public ListQualityResultsByRuleRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListQualityResultsByRuleRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListQualityResultsByRuleRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public ListQualityResultsByRuleRequest setRuleId(Integer ruleId) {
@@ -41,38 +73,6 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public ListQualityResultsByRuleRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
-    }
-
-    public ListQualityResultsByRuleRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListQualityResultsByRuleRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListQualityResultsByRuleRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
 }

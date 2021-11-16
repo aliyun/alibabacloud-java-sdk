@@ -4,33 +4,49 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
+    @NameInMap("ApplyObject")
+    public java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject;
+
+    @NameInMap("ApplyReason")
+    public String applyReason;
+
     @NameInMap("ApplyUserIds")
     public String applyUserIds;
 
     @NameInMap("Deadline")
     public Long deadline;
 
-    @NameInMap("ApplyReason")
-    public String applyReason;
+    @NameInMap("EngineType")
+    public String engineType;
 
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
 
-    @NameInMap("WorkspaceId")
-    public Integer workspaceId;
-
     @NameInMap("OrderType")
     public Integer orderType;
 
-    @NameInMap("EngineType")
-    public String engineType;
-
-    @NameInMap("ApplyObject")
-    public java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject;
+    @NameInMap("WorkspaceId")
+    public Integer workspaceId;
 
     public static CreatePermissionApplyOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePermissionApplyOrderRequest self = new CreatePermissionApplyOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePermissionApplyOrderRequest setApplyObject(java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject) {
+        this.applyObject = applyObject;
+        return this;
+    }
+    public java.util.List<CreatePermissionApplyOrderRequestApplyObject> getApplyObject() {
+        return this.applyObject;
+    }
+
+    public CreatePermissionApplyOrderRequest setApplyReason(String applyReason) {
+        this.applyReason = applyReason;
+        return this;
+    }
+    public String getApplyReason() {
+        return this.applyReason;
     }
 
     public CreatePermissionApplyOrderRequest setApplyUserIds(String applyUserIds) {
@@ -49,12 +65,12 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         return this.deadline;
     }
 
-    public CreatePermissionApplyOrderRequest setApplyReason(String applyReason) {
-        this.applyReason = applyReason;
+    public CreatePermissionApplyOrderRequest setEngineType(String engineType) {
+        this.engineType = engineType;
         return this;
     }
-    public String getApplyReason() {
-        return this.applyReason;
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public CreatePermissionApplyOrderRequest setMaxComputeProjectName(String maxComputeProjectName) {
@@ -65,14 +81,6 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         return this.maxComputeProjectName;
     }
 
-    public CreatePermissionApplyOrderRequest setWorkspaceId(Integer workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public Integer getWorkspaceId() {
-        return this.workspaceId;
-    }
-
     public CreatePermissionApplyOrderRequest setOrderType(Integer orderType) {
         this.orderType = orderType;
         return this;
@@ -81,20 +89,12 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         return this.orderType;
     }
 
-    public CreatePermissionApplyOrderRequest setEngineType(String engineType) {
-        this.engineType = engineType;
+    public CreatePermissionApplyOrderRequest setWorkspaceId(Integer workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
-    public String getEngineType() {
-        return this.engineType;
-    }
-
-    public CreatePermissionApplyOrderRequest setApplyObject(java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject) {
-        this.applyObject = applyObject;
-        return this;
-    }
-    public java.util.List<CreatePermissionApplyOrderRequestApplyObject> getApplyObject() {
-        return this.applyObject;
+    public Integer getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public static class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList extends TeaModel {

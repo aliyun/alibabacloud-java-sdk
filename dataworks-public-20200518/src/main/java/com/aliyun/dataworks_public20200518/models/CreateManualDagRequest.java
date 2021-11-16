@@ -4,33 +4,81 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateManualDagRequest extends TeaModel {
+    @NameInMap("BizDate")
+    public String bizDate;
+
+    @NameInMap("DagParameters")
+    public String dagParameters;
+
+    @NameInMap("ExcludeNodeIds")
+    public String excludeNodeIds;
+
+    @NameInMap("FlowName")
+    public String flowName;
+
+    @NameInMap("IncludeNodeIds")
+    public String includeNodeIds;
+
+    @NameInMap("NodeParameters")
+    public String nodeParameters;
+
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     @NameInMap("ProjectName")
     public String projectName;
 
-    @NameInMap("FlowName")
-    public String flowName;
-
-    @NameInMap("BizDate")
-    public String bizDate;
-
-    @NameInMap("NodeParameters")
-    public String nodeParameters;
-
-    @NameInMap("DagParameters")
-    public String dagParameters;
-
-    @NameInMap("IncludeNodeIds")
-    public String includeNodeIds;
-
-    @NameInMap("ExcludeNodeIds")
-    public String excludeNodeIds;
-
     public static CreateManualDagRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateManualDagRequest self = new CreateManualDagRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateManualDagRequest setBizDate(String bizDate) {
+        this.bizDate = bizDate;
+        return this;
+    }
+    public String getBizDate() {
+        return this.bizDate;
+    }
+
+    public CreateManualDagRequest setDagParameters(String dagParameters) {
+        this.dagParameters = dagParameters;
+        return this;
+    }
+    public String getDagParameters() {
+        return this.dagParameters;
+    }
+
+    public CreateManualDagRequest setExcludeNodeIds(String excludeNodeIds) {
+        this.excludeNodeIds = excludeNodeIds;
+        return this;
+    }
+    public String getExcludeNodeIds() {
+        return this.excludeNodeIds;
+    }
+
+    public CreateManualDagRequest setFlowName(String flowName) {
+        this.flowName = flowName;
+        return this;
+    }
+    public String getFlowName() {
+        return this.flowName;
+    }
+
+    public CreateManualDagRequest setIncludeNodeIds(String includeNodeIds) {
+        this.includeNodeIds = includeNodeIds;
+        return this;
+    }
+    public String getIncludeNodeIds() {
+        return this.includeNodeIds;
+    }
+
+    public CreateManualDagRequest setNodeParameters(String nodeParameters) {
+        this.nodeParameters = nodeParameters;
+        return this;
+    }
+    public String getNodeParameters() {
+        return this.nodeParameters;
     }
 
     public CreateManualDagRequest setProjectEnv(String projectEnv) {
@@ -47,54 +95,6 @@ public class CreateManualDagRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public CreateManualDagRequest setFlowName(String flowName) {
-        this.flowName = flowName;
-        return this;
-    }
-    public String getFlowName() {
-        return this.flowName;
-    }
-
-    public CreateManualDagRequest setBizDate(String bizDate) {
-        this.bizDate = bizDate;
-        return this;
-    }
-    public String getBizDate() {
-        return this.bizDate;
-    }
-
-    public CreateManualDagRequest setNodeParameters(String nodeParameters) {
-        this.nodeParameters = nodeParameters;
-        return this;
-    }
-    public String getNodeParameters() {
-        return this.nodeParameters;
-    }
-
-    public CreateManualDagRequest setDagParameters(String dagParameters) {
-        this.dagParameters = dagParameters;
-        return this;
-    }
-    public String getDagParameters() {
-        return this.dagParameters;
-    }
-
-    public CreateManualDagRequest setIncludeNodeIds(String includeNodeIds) {
-        this.includeNodeIds = includeNodeIds;
-        return this;
-    }
-    public String getIncludeNodeIds() {
-        return this.includeNodeIds;
-    }
-
-    public CreateManualDagRequest setExcludeNodeIds(String excludeNodeIds) {
-        this.excludeNodeIds = excludeNodeIds;
-        return this;
-    }
-    public String getExcludeNodeIds() {
-        return this.excludeNodeIds;
     }
 
 }

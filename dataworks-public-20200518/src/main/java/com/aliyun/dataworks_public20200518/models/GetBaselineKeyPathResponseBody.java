@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetBaselineKeyPathResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<GetBaselineKeyPathResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<GetBaselineKeyPathResponseBodyData> data;
 
     public static GetBaselineKeyPathResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBaselineKeyPathResponseBody self = new GetBaselineKeyPathResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetBaselineKeyPathResponseBody setData(java.util.List<GetBaselineKeyPathResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetBaselineKeyPathResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public GetBaselineKeyPathResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetBaselineKeyPathResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetBaselineKeyPathResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetBaselineKeyPathResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetBaselineKeyPathResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetBaselineKeyPathResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,74 +75,58 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetBaselineKeyPathResponseBody setData(java.util.List<GetBaselineKeyPathResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetBaselineKeyPathResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetBaselineKeyPathResponseBodyDataRuns extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AbsTime")
         public Long absTime;
-
-        @NameInMap("BeginRunningTime")
-        public Long beginRunningTime;
-
-        @NameInMap("CycTime")
-        public Long cycTime;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("FinishTime")
-        public Long finishTime;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
 
         @NameInMap("BeginCast")
         public Long beginCast;
 
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        @NameInMap("EndCast")
-        public Long endCast;
+        @NameInMap("BeginRunningTime")
+        public Long beginRunningTime;
 
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
-        @NameInMap("InGroupId")
-        public Integer inGroupId;
-
-        @NameInMap("NodeName")
-        public String nodeName;
+        @NameInMap("BeginWaitTimeTime")
+        public Long beginWaitTimeTime;
 
         @NameInMap("Bizdate")
         public Long bizdate;
 
-        @NameInMap("BeginWaitTimeTime")
-        public Long beginWaitTimeTime;
+        @NameInMap("CycTime")
+        public Long cycTime;
+
+        @NameInMap("EndCast")
+        public Long endCast;
+
+        @NameInMap("FinishTime")
+        public Long finishTime;
+
+        @NameInMap("InGroupId")
+        public Integer inGroupId;
+
+        @NameInMap("InstanceId")
+        public Long instanceId;
 
         @NameInMap("NodeId")
         public Long nodeId;
 
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("Status")
+        public String status;
+
         public static GetBaselineKeyPathResponseBodyDataRuns build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineKeyPathResponseBodyDataRuns self = new GetBaselineKeyPathResponseBodyDataRuns();
             return TeaModel.build(map, self);
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetBaselineKeyPathResponseBodyDataRuns setAbsTime(Long absTime) {
@@ -145,46 +137,6 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.absTime;
         }
 
-        public GetBaselineKeyPathResponseBodyDataRuns setBeginRunningTime(Long beginRunningTime) {
-            this.beginRunningTime = beginRunningTime;
-            return this;
-        }
-        public Long getBeginRunningTime() {
-            return this.beginRunningTime;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setCycTime(Long cycTime) {
-            this.cycTime = cycTime;
-            return this;
-        }
-        public Long getCycTime() {
-            return this.cycTime;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setFinishTime(Long finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public Long getFinishTime() {
-            return this.finishTime;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
-        }
-
         public GetBaselineKeyPathResponseBodyDataRuns setBeginCast(Long beginCast) {
             this.beginCast = beginCast;
             return this;
@@ -193,20 +145,12 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.beginCast;
         }
 
-        public GetBaselineKeyPathResponseBodyDataRuns setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
+        public GetBaselineKeyPathResponseBodyDataRuns setBeginRunningTime(Long beginRunningTime) {
+            this.beginRunningTime = beginRunningTime;
             return this;
         }
-        public Long getInstanceId() {
-            return this.instanceId;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setEndCast(Long endCast) {
-            this.endCast = endCast;
-            return this;
-        }
-        public Long getEndCast() {
-            return this.endCast;
+        public Long getBeginRunningTime() {
+            return this.beginRunningTime;
         }
 
         public GetBaselineKeyPathResponseBodyDataRuns setBeginWaitResTime(Long beginWaitResTime) {
@@ -217,20 +161,12 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.beginWaitResTime;
         }
 
-        public GetBaselineKeyPathResponseBodyDataRuns setInGroupId(Integer inGroupId) {
-            this.inGroupId = inGroupId;
+        public GetBaselineKeyPathResponseBodyDataRuns setBeginWaitTimeTime(Long beginWaitTimeTime) {
+            this.beginWaitTimeTime = beginWaitTimeTime;
             return this;
         }
-        public Integer getInGroupId() {
-            return this.inGroupId;
-        }
-
-        public GetBaselineKeyPathResponseBodyDataRuns setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
+        public Long getBeginWaitTimeTime() {
+            return this.beginWaitTimeTime;
         }
 
         public GetBaselineKeyPathResponseBodyDataRuns setBizdate(Long bizdate) {
@@ -241,12 +177,44 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.bizdate;
         }
 
-        public GetBaselineKeyPathResponseBodyDataRuns setBeginWaitTimeTime(Long beginWaitTimeTime) {
-            this.beginWaitTimeTime = beginWaitTimeTime;
+        public GetBaselineKeyPathResponseBodyDataRuns setCycTime(Long cycTime) {
+            this.cycTime = cycTime;
             return this;
         }
-        public Long getBeginWaitTimeTime() {
-            return this.beginWaitTimeTime;
+        public Long getCycTime() {
+            return this.cycTime;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setEndCast(Long endCast) {
+            this.endCast = endCast;
+            return this;
+        }
+        public Long getEndCast() {
+            return this.endCast;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public Long getFinishTime() {
+            return this.finishTime;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
+            return this;
+        }
+        public Integer getInGroupId() {
+            return this.inGroupId;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
         }
 
         public GetBaselineKeyPathResponseBodyDataRuns setNodeId(Long nodeId) {
@@ -257,11 +225,43 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        public GetBaselineKeyPathResponseBodyDataRuns setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetBaselineKeyPathResponseBodyDataRuns setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class GetBaselineKeyPathResponseBodyDataTopics extends TeaModel {
-        @NameInMap("TopicName")
-        public Long topicName;
+        @NameInMap("AddTime")
+        public Long addTime;
 
         @NameInMap("InstanceId")
         public Long instanceId;
@@ -269,20 +269,20 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         @NameInMap("TopicId")
         public Long topicId;
 
-        @NameInMap("AddTime")
-        public Long addTime;
+        @NameInMap("TopicName")
+        public Long topicName;
 
         public static GetBaselineKeyPathResponseBodyDataTopics build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineKeyPathResponseBodyDataTopics self = new GetBaselineKeyPathResponseBodyDataTopics();
             return TeaModel.build(map, self);
         }
 
-        public GetBaselineKeyPathResponseBodyDataTopics setTopicName(Long topicName) {
-            this.topicName = topicName;
+        public GetBaselineKeyPathResponseBodyDataTopics setAddTime(Long addTime) {
+            this.addTime = addTime;
             return this;
         }
-        public Long getTopicName() {
-            return this.topicName;
+        public Long getAddTime() {
+            return this.addTime;
         }
 
         public GetBaselineKeyPathResponseBodyDataTopics setInstanceId(Long instanceId) {
@@ -301,40 +301,40 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.topicId;
         }
 
-        public GetBaselineKeyPathResponseBodyDataTopics setAddTime(Long addTime) {
-            this.addTime = addTime;
+        public GetBaselineKeyPathResponseBodyDataTopics setTopicName(Long topicName) {
+            this.topicName = topicName;
             return this;
         }
-        public Long getAddTime() {
-            return this.addTime;
+        public Long getTopicName() {
+            return this.topicName;
         }
 
     }
 
     public static class GetBaselineKeyPathResponseBodyData extends TeaModel {
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("NodeName")
-        public String nodeName;
-
         @NameInMap("Bizdate")
         public Long bizdate;
 
-        @NameInMap("ProjectId")
-        public Long projectId;
+        @NameInMap("InGroupId")
+        public Integer inGroupId;
 
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        @NameInMap("PrgType")
-        public Integer prgType;
-
         @NameInMap("NodeId")
         public Long nodeId;
 
-        @NameInMap("InGroupId")
-        public Integer inGroupId;
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("PrgType")
+        public Integer prgType;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
 
         @NameInMap("Runs")
         public java.util.List<GetBaselineKeyPathResponseBodyDataRuns> runs;
@@ -347,22 +347,6 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetBaselineKeyPathResponseBodyData setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public GetBaselineKeyPathResponseBodyData setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
         public GetBaselineKeyPathResponseBodyData setBizdate(Long bizdate) {
             this.bizdate = bizdate;
             return this;
@@ -371,12 +355,12 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.bizdate;
         }
 
-        public GetBaselineKeyPathResponseBodyData setProjectId(Long projectId) {
-            this.projectId = projectId;
+        public GetBaselineKeyPathResponseBodyData setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
             return this;
         }
-        public Long getProjectId() {
-            return this.projectId;
+        public Integer getInGroupId() {
+            return this.inGroupId;
         }
 
         public GetBaselineKeyPathResponseBodyData setInstanceId(Long instanceId) {
@@ -387,14 +371,6 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetBaselineKeyPathResponseBodyData setPrgType(Integer prgType) {
-            this.prgType = prgType;
-            return this;
-        }
-        public Integer getPrgType() {
-            return this.prgType;
-        }
-
         public GetBaselineKeyPathResponseBodyData setNodeId(Long nodeId) {
             this.nodeId = nodeId;
             return this;
@@ -403,12 +379,36 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             return this.nodeId;
         }
 
-        public GetBaselineKeyPathResponseBodyData setInGroupId(Integer inGroupId) {
-            this.inGroupId = inGroupId;
+        public GetBaselineKeyPathResponseBodyData setNodeName(String nodeName) {
+            this.nodeName = nodeName;
             return this;
         }
-        public Integer getInGroupId() {
-            return this.inGroupId;
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public GetBaselineKeyPathResponseBodyData setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetBaselineKeyPathResponseBodyData setPrgType(Integer prgType) {
+            this.prgType = prgType;
+            return this;
+        }
+        public Integer getPrgType() {
+            return this.prgType;
+        }
+
+        public GetBaselineKeyPathResponseBodyData setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
         }
 
         public GetBaselineKeyPathResponseBodyData setRuns(java.util.List<GetBaselineKeyPathResponseBodyDataRuns> runs) {

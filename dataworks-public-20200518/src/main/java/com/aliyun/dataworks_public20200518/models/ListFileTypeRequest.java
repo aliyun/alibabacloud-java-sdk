@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFileTypeRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("Keyword")
+    public String keyword;
 
-    @NameInMap("ProjectIdentifier")
-    public String projectIdentifier;
+    @NameInMap("Locale")
+    public String locale;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,31 +16,31 @@ public class ListFileTypeRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
-    @NameInMap("Locale")
-    public String locale;
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
 
     public static ListFileTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFileTypeRequest self = new ListFileTypeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFileTypeRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public ListFileTypeRequest setKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getKeyword() {
+        return this.keyword;
     }
 
-    public ListFileTypeRequest setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
+    public ListFileTypeRequest setLocale(String locale) {
+        this.locale = locale;
         return this;
     }
-    public String getProjectIdentifier() {
-        return this.projectIdentifier;
+    public String getLocale() {
+        return this.locale;
     }
 
     public ListFileTypeRequest setPageNumber(Integer pageNumber) {
@@ -59,20 +59,20 @@ public class ListFileTypeRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListFileTypeRequest setKeyword(String keyword) {
-        this.keyword = keyword;
+    public ListFileTypeRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getKeyword() {
-        return this.keyword;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
-    public ListFileTypeRequest setLocale(String locale) {
-        this.locale = locale;
+    public ListFileTypeRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
         return this;
     }
-    public String getLocale() {
-        return this.locale;
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
 }

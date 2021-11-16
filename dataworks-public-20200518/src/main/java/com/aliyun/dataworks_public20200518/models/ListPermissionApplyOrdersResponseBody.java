@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ApplyOrders")
     public ListPermissionApplyOrdersResponseBodyApplyOrders applyOrders;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListPermissionApplyOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPermissionApplyOrdersResponseBody self = new ListPermissionApplyOrdersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPermissionApplyOrdersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListPermissionApplyOrdersResponseBody setApplyOrders(ListPermissionApplyOrdersResponseBodyApplyOrders applyOrders) {
@@ -31,24 +23,24 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         return this.applyOrders;
     }
 
-    public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList extends TeaModel {
-        @NameInMap("ObjectName")
-        public String objectName;
+    public ListPermissionApplyOrdersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList extends TeaModel {
         @NameInMap("Actions")
         public java.util.List<String> actions;
+
+        @NameInMap("ObjectName")
+        public String objectName;
 
         public static ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList build(java.util.Map<String, ?> map) throws Exception {
             ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList self = new ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList();
             return TeaModel.build(map, self);
-        }
-
-        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList setObjectName(String objectName) {
-            this.objectName = objectName;
-            return this;
-        }
-        public String getObjectName() {
-            return this.objectName;
         }
 
         public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList setActions(java.util.List<String> actions) {
@@ -59,26 +51,26 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             return this.actions;
         }
 
+        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList setObjectName(String objectName) {
+            this.objectName = objectName;
+            return this;
+        }
+        public String getObjectName() {
+            return this.objectName;
+        }
+
     }
 
     public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta extends TeaModel {
-        @NameInMap("WorkspaceName")
-        public String workspaceName;
-
         @NameInMap("ObjectMetaList")
         public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> objectMetaList;
+
+        @NameInMap("WorkspaceName")
+        public String workspaceName;
 
         public static ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta build(java.util.Map<String, ?> map) throws Exception {
             ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta self = new ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta();
             return TeaModel.build(map, self);
-        }
-
-        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta setWorkspaceName(String workspaceName) {
-            this.workspaceName = workspaceName;
-            return this;
-        }
-        public String getWorkspaceName() {
-            return this.workspaceName;
         }
 
         public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta setObjectMetaList(java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> objectMetaList) {
@@ -87,6 +79,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
         public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> getObjectMetaList() {
             return this.objectMetaList;
+        }
+
+        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta setWorkspaceName(String workspaceName) {
+            this.workspaceName = workspaceName;
+            return this;
+        }
+        public String getWorkspaceName() {
+            return this.workspaceName;
         }
 
     }
@@ -139,14 +139,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         @NameInMap("ApplyTimestamp")
         public Long applyTimestamp;
 
+        @NameInMap("ApproveContent")
+        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent approveContent;
+
         @NameInMap("FlowId")
         public String flowId;
 
         @NameInMap("FlowStatus")
         public Integer flowStatus;
-
-        @NameInMap("ApproveContent")
-        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent approveContent;
 
         public static ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder build(java.util.Map<String, ?> map) throws Exception {
             ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder self = new ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder();
@@ -169,6 +169,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             return this.applyTimestamp;
         }
 
+        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder setApproveContent(ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent approveContent) {
+            this.approveContent = approveContent;
+            return this;
+        }
+        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent getApproveContent() {
+            return this.approveContent;
+        }
+
         public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder setFlowId(String flowId) {
             this.flowId = flowId;
             return this;
@@ -185,40 +193,32 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             return this.flowStatus;
         }
 
-        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder setApproveContent(ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent approveContent) {
-            this.approveContent = approveContent;
-            return this;
-        }
-        public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent getApproveContent() {
-            return this.approveContent;
-        }
-
     }
 
     public static class ListPermissionApplyOrdersResponseBodyApplyOrders extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
+        @NameInMap("ApplyOrder")
+        public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> applyOrder;
 
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         @NameInMap("TotalCount")
         public Integer totalCount;
-
-        @NameInMap("ApplyOrder")
-        public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> applyOrder;
 
         public static ListPermissionApplyOrdersResponseBodyApplyOrders build(java.util.Map<String, ?> map) throws Exception {
             ListPermissionApplyOrdersResponseBodyApplyOrders self = new ListPermissionApplyOrdersResponseBodyApplyOrders();
             return TeaModel.build(map, self);
         }
 
-        public ListPermissionApplyOrdersResponseBodyApplyOrders setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public ListPermissionApplyOrdersResponseBodyApplyOrders setApplyOrder(java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> applyOrder) {
+            this.applyOrder = applyOrder;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> getApplyOrder() {
+            return this.applyOrder;
         }
 
         public ListPermissionApplyOrdersResponseBodyApplyOrders setPageNumber(Integer pageNumber) {
@@ -229,20 +229,20 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             return this.pageNumber;
         }
 
+        public ListPermissionApplyOrdersResponseBodyApplyOrders setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
         public ListPermissionApplyOrdersResponseBodyApplyOrders setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListPermissionApplyOrdersResponseBodyApplyOrders setApplyOrder(java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> applyOrder) {
-            this.applyOrder = applyOrder;
-            return this;
-        }
-        public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> getApplyOrder() {
-            return this.applyOrder;
         }
 
     }

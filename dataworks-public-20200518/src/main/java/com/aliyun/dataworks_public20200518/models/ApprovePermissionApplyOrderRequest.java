@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ApprovePermissionApplyOrderRequest extends TeaModel {
-    @NameInMap("FlowId")
-    public String flowId;
+    @NameInMap("ApproveAction")
+    public Integer approveAction;
 
     @NameInMap("ApproveComment")
     public String approveComment;
 
-    @NameInMap("ApproveAction")
-    public Integer approveAction;
+    @NameInMap("FlowId")
+    public String flowId;
 
     public static ApprovePermissionApplyOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         ApprovePermissionApplyOrderRequest self = new ApprovePermissionApplyOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public ApprovePermissionApplyOrderRequest setFlowId(String flowId) {
-        this.flowId = flowId;
+    public ApprovePermissionApplyOrderRequest setApproveAction(Integer approveAction) {
+        this.approveAction = approveAction;
         return this;
     }
-    public String getFlowId() {
-        return this.flowId;
+    public Integer getApproveAction() {
+        return this.approveAction;
     }
 
     public ApprovePermissionApplyOrderRequest setApproveComment(String approveComment) {
@@ -34,12 +34,12 @@ public class ApprovePermissionApplyOrderRequest extends TeaModel {
         return this.approveComment;
     }
 
-    public ApprovePermissionApplyOrderRequest setApproveAction(Integer approveAction) {
-        this.approveAction = approveAction;
+    public ApprovePermissionApplyOrderRequest setFlowId(String flowId) {
+        this.flowId = flowId;
         return this;
     }
-    public Integer getApproveAction() {
-        return this.approveAction;
+    public String getFlowId() {
+        return this.flowId;
     }
 
 }

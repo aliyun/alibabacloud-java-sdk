@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodeIOResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<ListNodeIOResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<ListNodeIOResponseBodyData> data;
 
     public static ListNodeIOResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodeIOResponseBody self = new ListNodeIOResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNodeIOResponseBody setData(java.util.List<ListNodeIOResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListNodeIOResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListNodeIOResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListNodeIOResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListNodeIOResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class ListNodeIOResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListNodeIOResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListNodeIOResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListNodeIOResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,35 +75,19 @@ public class ListNodeIOResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListNodeIOResponseBody setData(java.util.List<ListNodeIOResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListNodeIOResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListNodeIOResponseBodyData extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("Data")
         public String data;
 
         @NameInMap("NodeId")
         public Long nodeId;
 
+        @NameInMap("TableName")
+        public String tableName;
+
         public static ListNodeIOResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNodeIOResponseBodyData self = new ListNodeIOResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListNodeIOResponseBodyData setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public ListNodeIOResponseBodyData setData(String data) {
@@ -112,6 +104,14 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
         public Long getNodeId() {
             return this.nodeId;
+        }
+
+        public ListNodeIOResponseBodyData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

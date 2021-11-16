@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateBusinessResponseBody extends TeaModel {
+    @NameInMap("BusinessId")
+    public Long businessId;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("BusinessId")
-    public Long businessId;
 
     public static CreateBusinessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBusinessResponseBody self = new CreateBusinessResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBusinessResponseBody setBusinessId(Long businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public Long getBusinessId() {
+        return this.businessId;
+    }
+
+    public CreateBusinessResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateBusinessResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateBusinessResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,36 +67,12 @@ public class CreateBusinessResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateBusinessResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public CreateBusinessResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateBusinessResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateBusinessResponseBody setBusinessId(Long businessId) {
-        this.businessId = businessId;
-        return this;
-    }
-    public Long getBusinessId() {
-        return this.businessId;
     }
 
 }

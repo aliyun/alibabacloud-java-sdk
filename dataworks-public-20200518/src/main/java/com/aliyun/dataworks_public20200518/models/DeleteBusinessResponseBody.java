@@ -4,17 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteBusinessResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,12 +24,12 @@ public class DeleteBusinessResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteBusinessResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public DeleteBusinessResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteBusinessResponseBody setErrorMessage(String errorMessage) {
@@ -40,20 +40,20 @@ public class DeleteBusinessResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public DeleteBusinessResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
     public DeleteBusinessResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteBusinessResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public DeleteBusinessResponseBody setSuccess(Boolean success) {

@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceAmountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceCounts")
     public java.util.List<ListInstanceAmountResponseBodyInstanceCounts> instanceCounts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListInstanceAmountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceAmountResponseBody self = new ListInstanceAmountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceAmountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInstanceAmountResponseBody setInstanceCounts(java.util.List<ListInstanceAmountResponseBodyInstanceCounts> instanceCounts) {
@@ -31,24 +23,24 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         return this.instanceCounts;
     }
 
-    public static class ListInstanceAmountResponseBodyInstanceCounts extends TeaModel {
-        @NameInMap("Date")
-        public Long date;
+    public ListInstanceAmountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListInstanceAmountResponseBodyInstanceCounts extends TeaModel {
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("Date")
+        public Long date;
 
         public static ListInstanceAmountResponseBodyInstanceCounts build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceAmountResponseBodyInstanceCounts self = new ListInstanceAmountResponseBodyInstanceCounts();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceAmountResponseBodyInstanceCounts setDate(Long date) {
-            this.date = date;
-            return this;
-        }
-        public Long getDate() {
-            return this.date;
         }
 
         public ListInstanceAmountResponseBodyInstanceCounts setCount(Integer count) {
@@ -57,6 +49,14 @@ public class ListInstanceAmountResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public ListInstanceAmountResponseBodyInstanceCounts setDate(Long date) {
+            this.date = date;
+            return this;
+        }
+        public Long getDate() {
+            return this.date;
         }
 
     }

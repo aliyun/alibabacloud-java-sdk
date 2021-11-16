@@ -4,34 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDISyncTaskResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public GetDISyncTaskResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetDISyncTaskResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetDISyncTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDISyncTaskResponseBody self = new GetDISyncTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDISyncTaskResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetDISyncTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDISyncTaskResponseBody setData(GetDISyncTaskResponseBodyData data) {
@@ -42,18 +26,37 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetDISyncTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetDISyncTaskResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetDISyncTaskResponseBodyDataSolutionDetail extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("CreatorName")
         public String creatorName;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ProcessContent")
+        public String processContent;
+
+        @NameInMap("ProcessExtra")
+        public String processExtra;
 
         @NameInMap("ProjectId")
         public Long projectId;
@@ -61,48 +64,21 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
-        @NameInMap("ProcessContent")
-        public String processContent;
+        @NameInMap("StartTime")
+        public String startTime;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ProcessExtra")
-        public String processExtra;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("SubmitTime")
         public String submitTime;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Type")
+        public String type;
 
         public static GetDISyncTaskResponseBodyDataSolutionDetail build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncTaskResponseBodyDataSolutionDetail self = new GetDISyncTaskResponseBodyDataSolutionDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetDISyncTaskResponseBodyDataSolutionDetail setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetDISyncTaskResponseBodyDataSolutionDetail setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetDISyncTaskResponseBodyDataSolutionDetail setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public GetDISyncTaskResponseBodyDataSolutionDetail setCreatorName(String creatorName) {
@@ -111,6 +87,38 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
         public String getCreatorName() {
             return this.creatorName;
+        }
+
+        public GetDISyncTaskResponseBodyDataSolutionDetail setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetDISyncTaskResponseBodyDataSolutionDetail setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetDISyncTaskResponseBodyDataSolutionDetail setProcessContent(String processContent) {
+            this.processContent = processContent;
+            return this;
+        }
+        public String getProcessContent() {
+            return this.processContent;
+        }
+
+        public GetDISyncTaskResponseBodyDataSolutionDetail setProcessExtra(String processExtra) {
+            this.processExtra = processExtra;
+            return this;
+        }
+        public String getProcessExtra() {
+            return this.processExtra;
         }
 
         public GetDISyncTaskResponseBodyDataSolutionDetail setProjectId(Long projectId) {
@@ -129,28 +137,20 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public GetDISyncTaskResponseBodyDataSolutionDetail setProcessContent(String processContent) {
-            this.processContent = processContent;
+        public GetDISyncTaskResponseBodyDataSolutionDetail setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getProcessContent() {
-            return this.processContent;
+        public String getStartTime() {
+            return this.startTime;
         }
 
-        public GetDISyncTaskResponseBodyDataSolutionDetail setName(String name) {
-            this.name = name;
+        public GetDISyncTaskResponseBodyDataSolutionDetail setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetDISyncTaskResponseBodyDataSolutionDetail setProcessExtra(String processExtra) {
-            this.processExtra = processExtra;
-            return this;
-        }
-        public String getProcessExtra() {
-            return this.processExtra;
+        public String getStatus() {
+            return this.status;
         }
 
         public GetDISyncTaskResponseBodyDataSolutionDetail setSubmitTime(String submitTime) {
@@ -161,12 +161,12 @@ public class GetDISyncTaskResponseBody extends TeaModel {
             return this.submitTime;
         }
 
-        public GetDISyncTaskResponseBodyDataSolutionDetail setId(Long id) {
-            this.id = id;
+        public GetDISyncTaskResponseBodyDataSolutionDetail setType(String type) {
+            this.type = type;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -175,14 +175,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Message")
         public String message;
 
         @NameInMap("SolutionDetail")
         public GetDISyncTaskResponseBodyDataSolutionDetail solutionDetail;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetDISyncTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncTaskResponseBodyData self = new GetDISyncTaskResponseBodyData();
@@ -195,14 +195,6 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
-        }
-
-        public GetDISyncTaskResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetDISyncTaskResponseBodyData setMessage(String message) {
@@ -219,6 +211,14 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
         public GetDISyncTaskResponseBodyDataSolutionDetail getSolutionDetail() {
             return this.solutionDetail;
+        }
+
+        public GetDISyncTaskResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

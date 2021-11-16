@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDagTestRequest extends TeaModel {
-    @NameInMap("ProjectEnv")
-    public String projectEnv;
-
     @NameInMap("Bizdate")
     public String bizdate;
 
@@ -19,17 +16,12 @@ public class CreateDagTestRequest extends TeaModel {
     @NameInMap("NodeParams")
     public String nodeParams;
 
+    @NameInMap("ProjectEnv")
+    public String projectEnv;
+
     public static CreateDagTestRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDagTestRequest self = new CreateDagTestRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDagTestRequest setProjectEnv(String projectEnv) {
-        this.projectEnv = projectEnv;
-        return this;
-    }
-    public String getProjectEnv() {
-        return this.projectEnv;
     }
 
     public CreateDagTestRequest setBizdate(String bizdate) {
@@ -62,6 +54,14 @@ public class CreateDagTestRequest extends TeaModel {
     }
     public String getNodeParams() {
         return this.nodeParams;
+    }
+
+    public CreateDagTestRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static ListProjectMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectMembersRequest self = new ListProjectMembersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListProjectMembersRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public ListProjectMembersRequest setPageNumber(Integer pageNumber) {
@@ -40,6 +32,14 @@ public class ListProjectMembersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListProjectMembersRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

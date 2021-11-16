@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class StartMigrationRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("MigrationId")
     public Long migrationId;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static StartMigrationRequest build(java.util.Map<String, ?> map) throws Exception {
         StartMigrationRequest self = new StartMigrationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartMigrationRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public StartMigrationRequest setMigrationId(Long migrationId) {
@@ -29,6 +21,14 @@ public class StartMigrationRequest extends TeaModel {
     }
     public Long getMigrationId() {
         return this.migrationId;
+    }
+
+    public StartMigrationRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableLevelRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("LevelType")
     public Integer levelType;
@@ -13,20 +13,20 @@ public class CreateTableLevelRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static CreateTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTableLevelRequest self = new CreateTableLevelRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTableLevelRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public CreateTableLevelRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Long getProjectId() {
-        return this.projectId;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateTableLevelRequest setLevelType(Integer levelType) {
@@ -45,12 +45,12 @@ public class CreateTableLevelRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateTableLevelRequest setDescription(String description) {
-        this.description = description;
+    public CreateTableLevelRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

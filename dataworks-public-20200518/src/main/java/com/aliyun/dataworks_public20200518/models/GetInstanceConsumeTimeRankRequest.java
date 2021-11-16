@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceConsumeTimeRankRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("Bizdate")
     public String bizdate;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     public static GetInstanceConsumeTimeRankRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceConsumeTimeRankRequest self = new GetInstanceConsumeTimeRankRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceConsumeTimeRankRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public GetInstanceConsumeTimeRankRequest setBizdate(String bizdate) {
@@ -29,6 +21,14 @@ public class GetInstanceConsumeTimeRankRequest extends TeaModel {
     }
     public String getBizdate() {
         return this.bizdate;
+    }
+
+    public GetInstanceConsumeTimeRankRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaDBResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DatabaseInfo")
     public ListMetaDBResponseBodyDatabaseInfo databaseInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListMetaDBResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMetaDBResponseBody self = new ListMetaDBResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListMetaDBResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListMetaDBResponseBody setDatabaseInfo(ListMetaDBResponseBodyDatabaseInfo databaseInfo) {
@@ -31,15 +23,20 @@ public class ListMetaDBResponseBody extends TeaModel {
         return this.databaseInfo;
     }
 
-    public static class ListMetaDBResponseBodyDatabaseInfoDbList extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public ListMetaDBResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListMetaDBResponseBodyDatabaseInfoDbList extends TeaModel {
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
-        @NameInMap("UUID")
-        public String UUID;
+        @NameInMap("Location")
+        public String location;
 
         @NameInMap("ModifiedTimeStamp")
         public Long modifiedTimeStamp;
@@ -50,20 +47,15 @@ public class ListMetaDBResponseBody extends TeaModel {
         @NameInMap("OwnerId")
         public String ownerId;
 
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UUID")
+        public String UUID;
 
         public static ListMetaDBResponseBodyDatabaseInfoDbList build(java.util.Map<String, ?> map) throws Exception {
             ListMetaDBResponseBodyDatabaseInfoDbList self = new ListMetaDBResponseBodyDatabaseInfoDbList();
             return TeaModel.build(map, self);
-        }
-
-        public ListMetaDBResponseBodyDatabaseInfoDbList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListMetaDBResponseBodyDatabaseInfoDbList setCreateTimeStamp(Long createTimeStamp) {
@@ -74,12 +66,12 @@ public class ListMetaDBResponseBody extends TeaModel {
             return this.createTimeStamp;
         }
 
-        public ListMetaDBResponseBodyDatabaseInfoDbList setUUID(String UUID) {
-            this.UUID = UUID;
+        public ListMetaDBResponseBodyDatabaseInfoDbList setLocation(String location) {
+            this.location = location;
             return this;
         }
-        public String getUUID() {
-            return this.UUID;
+        public String getLocation() {
+            return this.location;
         }
 
         public ListMetaDBResponseBodyDatabaseInfoDbList setModifiedTimeStamp(Long modifiedTimeStamp) {
@@ -106,34 +98,34 @@ public class ListMetaDBResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public ListMetaDBResponseBodyDatabaseInfoDbList setLocation(String location) {
-            this.location = location;
+        public ListMetaDBResponseBodyDatabaseInfoDbList setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getLocation() {
-            return this.location;
+        public String getType() {
+            return this.type;
+        }
+
+        public ListMetaDBResponseBodyDatabaseInfoDbList setUUID(String UUID) {
+            this.UUID = UUID;
+            return this;
+        }
+        public String getUUID() {
+            return this.UUID;
         }
 
     }
 
     public static class ListMetaDBResponseBodyDatabaseInfo extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("DbList")
         public java.util.List<ListMetaDBResponseBodyDatabaseInfoDbList> dbList;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static ListMetaDBResponseBodyDatabaseInfo build(java.util.Map<String, ?> map) throws Exception {
             ListMetaDBResponseBodyDatabaseInfo self = new ListMetaDBResponseBodyDatabaseInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListMetaDBResponseBodyDatabaseInfo setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public ListMetaDBResponseBodyDatabaseInfo setDbList(java.util.List<ListMetaDBResponseBodyDatabaseInfoDbList> dbList) {
@@ -142,6 +134,14 @@ public class ListMetaDBResponseBody extends TeaModel {
         }
         public java.util.List<ListMetaDBResponseBodyDatabaseInfoDbList> getDbList() {
             return this.dbList;
+        }
+
+        public ListMetaDBResponseBodyDatabaseInfo setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

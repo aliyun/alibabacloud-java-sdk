@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityEntityResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<GetQualityEntityResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<GetQualityEntityResponseBodyData> data;
 
     public static GetQualityEntityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityEntityResponseBody self = new GetQualityEntityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityEntityResponseBody setData(java.util.List<GetQualityEntityResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetQualityEntityResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public GetQualityEntityResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetQualityEntityResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetQualityEntityResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class GetQualityEntityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetQualityEntityResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetQualityEntityResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetQualityEntityResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,122 +75,58 @@ public class GetQualityEntityResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetQualityEntityResponseBody setData(java.util.List<GetQualityEntityResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetQualityEntityResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetQualityEntityResponseBodyData extends TeaModel {
-        @NameInMap("RelativeNode")
-        public String relativeNode;
-
-        @NameInMap("OnDutyAccountName")
-        public String onDutyAccountName;
-
-        @NameInMap("Task")
-        public Integer task;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("Followers")
-        public String followers;
-
-        @NameInMap("OnDuty")
-        public String onDuty;
-
-        @NameInMap("MatchExpression")
-        public String matchExpression;
-
         @NameInMap("CreateTime")
         public Long createTime;
-
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        @NameInMap("HasRelativeNode")
-        public Boolean hasRelativeNode;
-
-        @NameInMap("EnvType")
-        public String envType;
 
         @NameInMap("EntityLevel")
         public Integer entityLevel;
 
-        @NameInMap("ModifyUser")
-        public String modifyUser;
+        @NameInMap("EnvType")
+        public String envType;
 
-        @NameInMap("Sql")
-        public Integer sql;
+        @NameInMap("Followers")
+        public String followers;
+
+        @NameInMap("HasRelativeNode")
+        public Boolean hasRelativeNode;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("MatchExpression")
+        public String matchExpression;
+
         @NameInMap("ModifyTime")
         public Long modifyTime;
+
+        @NameInMap("ModifyUser")
+        public String modifyUser;
+
+        @NameInMap("OnDuty")
+        public String onDuty;
+
+        @NameInMap("OnDutyAccountName")
+        public String onDutyAccountName;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("RelativeNode")
+        public String relativeNode;
+
+        @NameInMap("Sql")
+        public Integer sql;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("Task")
+        public Integer task;
 
         public static GetQualityEntityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityEntityResponseBodyData self = new GetQualityEntityResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetQualityEntityResponseBodyData setRelativeNode(String relativeNode) {
-            this.relativeNode = relativeNode;
-            return this;
-        }
-        public String getRelativeNode() {
-            return this.relativeNode;
-        }
-
-        public GetQualityEntityResponseBodyData setOnDutyAccountName(String onDutyAccountName) {
-            this.onDutyAccountName = onDutyAccountName;
-            return this;
-        }
-        public String getOnDutyAccountName() {
-            return this.onDutyAccountName;
-        }
-
-        public GetQualityEntityResponseBodyData setTask(Integer task) {
-            this.task = task;
-            return this;
-        }
-        public Integer getTask() {
-            return this.task;
-        }
-
-        public GetQualityEntityResponseBodyData setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public GetQualityEntityResponseBodyData setFollowers(String followers) {
-            this.followers = followers;
-            return this;
-        }
-        public String getFollowers() {
-            return this.followers;
-        }
-
-        public GetQualityEntityResponseBodyData setOnDuty(String onDuty) {
-            this.onDuty = onDuty;
-            return this;
-        }
-        public String getOnDuty() {
-            return this.onDuty;
-        }
-
-        public GetQualityEntityResponseBodyData setMatchExpression(String matchExpression) {
-            this.matchExpression = matchExpression;
-            return this;
-        }
-        public String getMatchExpression() {
-            return this.matchExpression;
         }
 
         public GetQualityEntityResponseBodyData setCreateTime(Long createTime) {
@@ -193,20 +137,12 @@ public class GetQualityEntityResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetQualityEntityResponseBodyData setProjectName(String projectName) {
-            this.projectName = projectName;
+        public GetQualityEntityResponseBodyData setEntityLevel(Integer entityLevel) {
+            this.entityLevel = entityLevel;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-        public GetQualityEntityResponseBodyData setHasRelativeNode(Boolean hasRelativeNode) {
-            this.hasRelativeNode = hasRelativeNode;
-            return this;
-        }
-        public Boolean getHasRelativeNode() {
-            return this.hasRelativeNode;
+        public Integer getEntityLevel() {
+            return this.entityLevel;
         }
 
         public GetQualityEntityResponseBodyData setEnvType(String envType) {
@@ -217,28 +153,20 @@ public class GetQualityEntityResponseBody extends TeaModel {
             return this.envType;
         }
 
-        public GetQualityEntityResponseBodyData setEntityLevel(Integer entityLevel) {
-            this.entityLevel = entityLevel;
+        public GetQualityEntityResponseBodyData setFollowers(String followers) {
+            this.followers = followers;
             return this;
         }
-        public Integer getEntityLevel() {
-            return this.entityLevel;
+        public String getFollowers() {
+            return this.followers;
         }
 
-        public GetQualityEntityResponseBodyData setModifyUser(String modifyUser) {
-            this.modifyUser = modifyUser;
+        public GetQualityEntityResponseBodyData setHasRelativeNode(Boolean hasRelativeNode) {
+            this.hasRelativeNode = hasRelativeNode;
             return this;
         }
-        public String getModifyUser() {
-            return this.modifyUser;
-        }
-
-        public GetQualityEntityResponseBodyData setSql(Integer sql) {
-            this.sql = sql;
-            return this;
-        }
-        public Integer getSql() {
-            return this.sql;
+        public Boolean getHasRelativeNode() {
+            return this.hasRelativeNode;
         }
 
         public GetQualityEntityResponseBodyData setId(Long id) {
@@ -249,12 +177,84 @@ public class GetQualityEntityResponseBody extends TeaModel {
             return this.id;
         }
 
+        public GetQualityEntityResponseBodyData setMatchExpression(String matchExpression) {
+            this.matchExpression = matchExpression;
+            return this;
+        }
+        public String getMatchExpression() {
+            return this.matchExpression;
+        }
+
         public GetQualityEntityResponseBodyData setModifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public Long getModifyTime() {
             return this.modifyTime;
+        }
+
+        public GetQualityEntityResponseBodyData setModifyUser(String modifyUser) {
+            this.modifyUser = modifyUser;
+            return this;
+        }
+        public String getModifyUser() {
+            return this.modifyUser;
+        }
+
+        public GetQualityEntityResponseBodyData setOnDuty(String onDuty) {
+            this.onDuty = onDuty;
+            return this;
+        }
+        public String getOnDuty() {
+            return this.onDuty;
+        }
+
+        public GetQualityEntityResponseBodyData setOnDutyAccountName(String onDutyAccountName) {
+            this.onDutyAccountName = onDutyAccountName;
+            return this;
+        }
+        public String getOnDutyAccountName() {
+            return this.onDutyAccountName;
+        }
+
+        public GetQualityEntityResponseBodyData setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public GetQualityEntityResponseBodyData setRelativeNode(String relativeNode) {
+            this.relativeNode = relativeNode;
+            return this;
+        }
+        public String getRelativeNode() {
+            return this.relativeNode;
+        }
+
+        public GetQualityEntityResponseBodyData setSql(Integer sql) {
+            this.sql = sql;
+            return this;
+        }
+        public Integer getSql() {
+            return this.sql;
+        }
+
+        public GetQualityEntityResponseBodyData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public GetQualityEntityResponseBodyData setTask(Integer task) {
+            this.task = task;
+            return this;
+        }
+        public Integer getTask() {
+            return this.task;
         }
 
     }

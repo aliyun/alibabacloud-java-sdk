@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SearchMetaTablesResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public SearchMetaTablesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class SearchMetaTablesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public SearchMetaTablesResponseBodyData data;
-
     public static SearchMetaTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchMetaTablesResponseBody self = new SearchMetaTablesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SearchMetaTablesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public SearchMetaTablesResponseBody setData(SearchMetaTablesResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public SearchMetaTablesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public SearchMetaTablesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public SearchMetaTablesResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class SearchMetaTablesResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public SearchMetaTablesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public SearchMetaTablesResponseBody setRequestId(String requestId) {
@@ -59,25 +75,9 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SearchMetaTablesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public SearchMetaTablesResponseBody setData(SearchMetaTablesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public SearchMetaTablesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class SearchMetaTablesResponseBodyDataDataEntityList extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
+        @NameInMap("ClusterId")
+        public String clusterId;
 
         @NameInMap("DatabaseName")
         public String databaseName;
@@ -85,23 +85,23 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public Integer entityType;
 
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
-
-        @NameInMap("TableGuid")
-        public String tableGuid;
+        @NameInMap("EnvType")
+        public Integer envType;
 
         @NameInMap("OwnerId")
         public String ownerId;
 
-        @NameInMap("ClusterId")
-        public String clusterId;
+        @NameInMap("ProjectId")
+        public Long projectId;
 
-        @NameInMap("EnvType")
-        public Integer envType;
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("TableGuid")
+        public String tableGuid;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -111,12 +111,12 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchMetaTablesResponseBodyDataDataEntityList setTableName(String tableName) {
-            this.tableName = tableName;
+        public SearchMetaTablesResponseBodyDataDataEntityList setClusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public SearchMetaTablesResponseBodyDataDataEntityList setDatabaseName(String databaseName) {
@@ -135,28 +135,12 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             return this.entityType;
         }
 
-        public SearchMetaTablesResponseBodyDataDataEntityList setProjectName(String projectName) {
-            this.projectName = projectName;
+        public SearchMetaTablesResponseBodyDataDataEntityList setEnvType(Integer envType) {
+            this.envType = envType;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-        public SearchMetaTablesResponseBodyDataDataEntityList setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
-        }
-
-        public SearchMetaTablesResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
-            this.tableGuid = tableGuid;
-            return this;
-        }
-        public String getTableGuid() {
-            return this.tableGuid;
+        public Integer getEnvType() {
+            return this.envType;
         }
 
         public SearchMetaTablesResponseBodyDataDataEntityList setOwnerId(String ownerId) {
@@ -167,20 +151,36 @@ public class SearchMetaTablesResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public SearchMetaTablesResponseBodyDataDataEntityList setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public SearchMetaTablesResponseBodyDataDataEntityList setProjectId(Long projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public Long getProjectId() {
+            return this.projectId;
         }
 
-        public SearchMetaTablesResponseBodyDataDataEntityList setEnvType(Integer envType) {
-            this.envType = envType;
+        public SearchMetaTablesResponseBodyDataDataEntityList setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public Integer getEnvType() {
-            return this.envType;
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
+            this.tableGuid = tableGuid;
+            return this;
+        }
+        public String getTableGuid() {
+            return this.tableGuid;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
         public SearchMetaTablesResponseBodyDataDataEntityList setTenantId(Long tenantId) {
@@ -194,6 +194,9 @@ public class SearchMetaTablesResponseBody extends TeaModel {
     }
 
     public static class SearchMetaTablesResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -203,12 +206,17 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DataEntityList")
-        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList;
-
         public static SearchMetaTablesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SearchMetaTablesResponseBodyData self = new SearchMetaTablesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public SearchMetaTablesResponseBodyData setDataEntityList(java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
         }
 
         public SearchMetaTablesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -233,14 +241,6 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public SearchMetaTablesResponseBodyData setDataEntityList(java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList) {
-            this.dataEntityList = dataEntityList;
-            return this;
-        }
-        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> getDataEntityList() {
-            return this.dataEntityList;
         }
 
     }

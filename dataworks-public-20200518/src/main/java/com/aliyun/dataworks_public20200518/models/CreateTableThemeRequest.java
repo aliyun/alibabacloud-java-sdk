@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableThemeRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("Level")
     public Integer level;
 
@@ -16,17 +13,12 @@ public class CreateTableThemeRequest extends TeaModel {
     @NameInMap("ParentId")
     public Long parentId;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static CreateTableThemeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTableThemeRequest self = new CreateTableThemeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTableThemeRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public CreateTableThemeRequest setLevel(Integer level) {
@@ -51,6 +43,14 @@ public class CreateTableThemeRequest extends TeaModel {
     }
     public Long getParentId() {
         return this.parentId;
+    }
+
+    public CreateTableThemeRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

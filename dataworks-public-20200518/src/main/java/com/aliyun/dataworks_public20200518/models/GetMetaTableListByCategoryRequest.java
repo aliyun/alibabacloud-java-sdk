@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableListByCategoryRequest extends TeaModel {
+    @NameInMap("CategoryId")
+    public Long categoryId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CategoryId")
-    public Long categoryId;
-
     public static GetMetaTableListByCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableListByCategoryRequest self = new GetMetaTableListByCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetaTableListByCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     public GetMetaTableListByCategoryRequest setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class GetMetaTableListByCategoryRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public GetMetaTableListByCategoryRequest setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Long getCategoryId() {
-        return this.categoryId;
     }
 
 }

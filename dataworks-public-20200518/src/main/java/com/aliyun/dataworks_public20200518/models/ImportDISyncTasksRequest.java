@@ -7,14 +7,14 @@ public class ImportDISyncTasksRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("TaskParam")
+    public String taskParam;
+
     @NameInMap("TaskType")
     public String taskType;
 
     @NameInMap("body")
     public String body;
-
-    @NameInMap("TaskParam")
-    public String taskParam;
 
     public static ImportDISyncTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportDISyncTasksRequest self = new ImportDISyncTasksRequest();
@@ -27,6 +27,14 @@ public class ImportDISyncTasksRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public ImportDISyncTasksRequest setTaskParam(String taskParam) {
+        this.taskParam = taskParam;
+        return this;
+    }
+    public String getTaskParam() {
+        return this.taskParam;
     }
 
     public ImportDISyncTasksRequest setTaskType(String taskType) {
@@ -43,14 +51,6 @@ public class ImportDISyncTasksRequest extends TeaModel {
     }
     public String getBody() {
         return this.body;
-    }
-
-    public ImportDISyncTasksRequest setTaskParam(String taskParam) {
-        this.taskParam = taskParam;
-        return this;
-    }
-    public String getTaskParam() {
-        return this.taskParam;
     }
 
 }

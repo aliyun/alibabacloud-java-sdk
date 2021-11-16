@@ -4,14 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateQualityRelativeNodeResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Data")
     public Boolean data;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,20 +22,9 @@ public class CreateQualityRelativeNodeResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static CreateQualityRelativeNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityRelativeNodeResponseBody self = new CreateQualityRelativeNodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateQualityRelativeNodeResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public CreateQualityRelativeNodeResponseBody setData(Boolean data) {
@@ -43,12 +35,28 @@ public class CreateQualityRelativeNodeResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreateQualityRelativeNodeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public CreateQualityRelativeNodeResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public CreateQualityRelativeNodeResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CreateQualityRelativeNodeResponseBody setRequestId(String requestId) {
@@ -65,14 +73,6 @@ public class CreateQualityRelativeNodeResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateQualityRelativeNodeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

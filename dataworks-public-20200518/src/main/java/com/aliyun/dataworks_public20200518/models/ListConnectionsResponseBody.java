@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListConnectionsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,12 +16,17 @@ public class ListConnectionsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public ListConnectionsResponseBodyData data;
-
     public static ListConnectionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConnectionsResponseBody self = new ListConnectionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListConnectionsResponseBody setData(ListConnectionsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListConnectionsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListConnectionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -45,65 +53,57 @@ public class ListConnectionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListConnectionsResponseBody setData(ListConnectionsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListConnectionsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListConnectionsResponseBodyDataConnections extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("ConnectionType")
-        public String connectionType;
-
-        @NameInMap("ProjectId")
-        public Integer projectId;
-
-        @NameInMap("SubType")
-        public String subType;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("EnvType")
-        public Integer envType;
+        @NameInMap("BindingCalcEngineId")
+        public Integer bindingCalcEngineId;
 
         @NameInMap("ConnectStatus")
         public Integer connectStatus;
 
-        @NameInMap("Sequence")
-        public Integer sequence;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("DefaultEngine")
-        public Boolean defaultEngine;
-
-        @NameInMap("Shared")
-        public Boolean shared;
-
-        @NameInMap("Operator")
-        public String operator;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("ConnectionType")
+        public String connectionType;
 
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("DefaultEngine")
+        public Boolean defaultEngine;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EnvType")
+        public Integer envType;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("Id")
         public Integer id;
 
-        @NameInMap("BindingCalcEngineId")
-        public Integer bindingCalcEngineId;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("ProjectId")
+        public Integer projectId;
+
+        @NameInMap("Sequence")
+        public Integer sequence;
+
+        @NameInMap("Shared")
+        public Boolean shared;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SubType")
+        public String subType;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -113,52 +113,12 @@ public class ListConnectionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListConnectionsResponseBodyDataConnections setStatus(Integer status) {
-            this.status = status;
+        public ListConnectionsResponseBodyDataConnections setBindingCalcEngineId(Integer bindingCalcEngineId) {
+            this.bindingCalcEngineId = bindingCalcEngineId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setConnectionType(String connectionType) {
-            this.connectionType = connectionType;
-            return this;
-        }
-        public String getConnectionType() {
-            return this.connectionType;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setProjectId(Integer projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Integer getProjectId() {
-            return this.projectId;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setSubType(String subType) {
-            this.subType = subType;
-            return this;
-        }
-        public String getSubType() {
-            return this.subType;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setEnvType(Integer envType) {
-            this.envType = envType;
-            return this;
-        }
-        public Integer getEnvType() {
-            return this.envType;
+        public Integer getBindingCalcEngineId() {
+            return this.bindingCalcEngineId;
         }
 
         public ListConnectionsResponseBodyDataConnections setConnectStatus(Integer connectStatus) {
@@ -169,60 +129,12 @@ public class ListConnectionsResponseBody extends TeaModel {
             return this.connectStatus;
         }
 
-        public ListConnectionsResponseBodyDataConnections setSequence(Integer sequence) {
-            this.sequence = sequence;
+        public ListConnectionsResponseBodyDataConnections setConnectionType(String connectionType) {
+            this.connectionType = connectionType;
             return this;
         }
-        public Integer getSequence() {
-            return this.sequence;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setDefaultEngine(Boolean defaultEngine) {
-            this.defaultEngine = defaultEngine;
-            return this;
-        }
-        public Boolean getDefaultEngine() {
-            return this.defaultEngine;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setShared(Boolean shared) {
-            this.shared = shared;
-            return this;
-        }
-        public Boolean getShared() {
-            return this.shared;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setOperator(String operator) {
-            this.operator = operator;
-            return this;
-        }
-        public String getOperator() {
-            return this.operator;
-        }
-
-        public ListConnectionsResponseBodyDataConnections setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
         public ListConnectionsResponseBodyDataConnections setContent(String content) {
@@ -233,6 +145,46 @@ public class ListConnectionsResponseBody extends TeaModel {
             return this.content;
         }
 
+        public ListConnectionsResponseBodyDataConnections setDefaultEngine(Boolean defaultEngine) {
+            this.defaultEngine = defaultEngine;
+            return this;
+        }
+        public Boolean getDefaultEngine() {
+            return this.defaultEngine;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setEnvType(Integer envType) {
+            this.envType = envType;
+            return this;
+        }
+        public Integer getEnvType() {
+            return this.envType;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public ListConnectionsResponseBodyDataConnections setId(Integer id) {
             this.id = id;
             return this;
@@ -241,12 +193,60 @@ public class ListConnectionsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListConnectionsResponseBodyDataConnections setBindingCalcEngineId(Integer bindingCalcEngineId) {
-            this.bindingCalcEngineId = bindingCalcEngineId;
+        public ListConnectionsResponseBodyDataConnections setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getBindingCalcEngineId() {
-            return this.bindingCalcEngineId;
+        public String getName() {
+            return this.name;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setProjectId(Integer projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Integer getProjectId() {
+            return this.projectId;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setSequence(Integer sequence) {
+            this.sequence = sequence;
+            return this;
+        }
+        public Integer getSequence() {
+            return this.sequence;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setShared(Boolean shared) {
+            this.shared = shared;
+            return this;
+        }
+        public Boolean getShared() {
+            return this.shared;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListConnectionsResponseBodyDataConnections setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
         }
 
         public ListConnectionsResponseBodyDataConnections setTenantId(Long tenantId) {
@@ -260,6 +260,9 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyData extends TeaModel {
+        @NameInMap("Connections")
+        public java.util.List<ListConnectionsResponseBodyDataConnections> connections;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -269,12 +272,17 @@ public class ListConnectionsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Connections")
-        public java.util.List<ListConnectionsResponseBodyDataConnections> connections;
-
         public static ListConnectionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListConnectionsResponseBodyData self = new ListConnectionsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListConnectionsResponseBodyData setConnections(java.util.List<ListConnectionsResponseBodyDataConnections> connections) {
+            this.connections = connections;
+            return this;
+        }
+        public java.util.List<ListConnectionsResponseBodyDataConnections> getConnections() {
+            return this.connections;
         }
 
         public ListConnectionsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -299,14 +307,6 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListConnectionsResponseBodyData setConnections(java.util.List<ListConnectionsResponseBodyDataConnections> connections) {
-            this.connections = connections;
-            return this;
-        }
-        public java.util.List<ListConnectionsResponseBodyDataConnections> getConnections() {
-            return this.connections;
         }
 
     }

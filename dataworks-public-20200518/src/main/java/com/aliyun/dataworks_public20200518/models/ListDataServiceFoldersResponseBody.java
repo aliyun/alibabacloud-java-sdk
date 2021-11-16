@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDataServiceFoldersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FolderPagingResult")
     public ListDataServiceFoldersResponseBodyFolderPagingResult folderPagingResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDataServiceFoldersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataServiceFoldersResponseBody self = new ListDataServiceFoldersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDataServiceFoldersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDataServiceFoldersResponseBody setFolderPagingResult(ListDataServiceFoldersResponseBodyFolderPagingResult folderPagingResult) {
@@ -31,15 +23,17 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         return this.folderPagingResult;
     }
 
+    public ListDataServiceFoldersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListDataServiceFoldersResponseBodyFolderPagingResultFolders extends TeaModel {
-        @NameInMap("ParentId")
-        public Long parentId;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("FolderId")
         public Long folderId;
@@ -47,11 +41,17 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         @NameInMap("FolderName")
         public String folderName;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
         @NameInMap("ProjectId")
         public Long projectId;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -61,28 +61,12 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setParentId(Long parentId) {
-            this.parentId = parentId;
+        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
-        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setFolderId(Long folderId) {
@@ -101,20 +85,36 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             return this.folderName;
         }
 
+        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
         public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
-        }
-
-        public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
         }
 
         public ListDataServiceFoldersResponseBodyFolderPagingResultFolders setTenantId(Long tenantId) {
@@ -128,6 +128,9 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
     }
 
     public static class ListDataServiceFoldersResponseBodyFolderPagingResult extends TeaModel {
+        @NameInMap("Folders")
+        public java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> folders;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -137,12 +140,17 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Folders")
-        public java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> folders;
-
         public static ListDataServiceFoldersResponseBodyFolderPagingResult build(java.util.Map<String, ?> map) throws Exception {
             ListDataServiceFoldersResponseBodyFolderPagingResult self = new ListDataServiceFoldersResponseBodyFolderPagingResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataServiceFoldersResponseBodyFolderPagingResult setFolders(java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> folders) {
+            this.folders = folders;
+            return this;
+        }
+        public java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> getFolders() {
+            return this.folders;
         }
 
         public ListDataServiceFoldersResponseBodyFolderPagingResult setPageNumber(Integer pageNumber) {
@@ -167,14 +175,6 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListDataServiceFoldersResponseBodyFolderPagingResult setFolders(java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> folders) {
-            this.folders = folders;
-            return this;
-        }
-        public java.util.List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> getFolders() {
-            return this.folders;
         }
 
     }

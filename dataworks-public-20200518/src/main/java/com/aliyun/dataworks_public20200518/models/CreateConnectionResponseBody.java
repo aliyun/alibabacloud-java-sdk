@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateConnectionResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
-
     @NameInMap("Data")
     public Long data;
+
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class CreateConnectionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateConnectionResponseBody setHttpStatusCode(String httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public String getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public CreateConnectionResponseBody setData(Long data) {
         this.data = data;
         return this;
     }
     public Long getData() {
         return this.data;
+    }
+
+    public CreateConnectionResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CreateConnectionResponseBody setRequestId(String requestId) {

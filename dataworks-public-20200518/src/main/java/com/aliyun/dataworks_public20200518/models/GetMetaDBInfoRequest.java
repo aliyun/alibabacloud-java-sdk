@@ -10,11 +10,11 @@ public class GetMetaDBInfoRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("DatabaseName")
-    public String databaseName;
-
     @NameInMap("DataSourceType")
     public String dataSourceType;
+
+    @NameInMap("DatabaseName")
+    public String databaseName;
 
     public static GetMetaDBInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaDBInfoRequest self = new GetMetaDBInfoRequest();
@@ -37,20 +37,20 @@ public class GetMetaDBInfoRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public GetMetaDBInfoRequest setDatabaseName(String databaseName) {
-        this.databaseName = databaseName;
-        return this;
-    }
-    public String getDatabaseName() {
-        return this.databaseName;
-    }
-
     public GetMetaDBInfoRequest setDataSourceType(String dataSourceType) {
         this.dataSourceType = dataSourceType;
         return this;
     }
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    public GetMetaDBInfoRequest setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    public String getDatabaseName() {
+        return this.databaseName;
     }
 
 }

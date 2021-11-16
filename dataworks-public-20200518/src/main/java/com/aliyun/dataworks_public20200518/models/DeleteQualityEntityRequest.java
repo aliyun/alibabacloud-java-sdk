@@ -7,11 +7,11 @@ public class DeleteQualityEntityRequest extends TeaModel {
     @NameInMap("EntityId")
     public Long entityId;
 
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("EnvType")
     public String envType;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     public static DeleteQualityEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityEntityRequest self = new DeleteQualityEntityRequest();
@@ -26,20 +26,20 @@ public class DeleteQualityEntityRequest extends TeaModel {
         return this.entityId;
     }
 
-    public DeleteQualityEntityRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public DeleteQualityEntityRequest setEnvType(String envType) {
         this.envType = envType;
         return this;
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public DeleteQualityEntityRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

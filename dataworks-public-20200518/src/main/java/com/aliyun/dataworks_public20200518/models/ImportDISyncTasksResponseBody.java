@@ -4,11 +4,11 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ImportDISyncTasksResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("TaskInfo")
     public ImportDISyncTasksResponseBodyTaskInfo taskInfo;
@@ -18,20 +18,20 @@ public class ImportDISyncTasksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ImportDISyncTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ImportDISyncTasksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ImportDISyncTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ImportDISyncTasksResponseBody setTaskInfo(ImportDISyncTasksResponseBodyTaskInfo taskInfo) {

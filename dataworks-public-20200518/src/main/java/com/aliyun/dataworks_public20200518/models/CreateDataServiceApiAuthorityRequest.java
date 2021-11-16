@@ -4,12 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceApiAuthorityRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public Long tenantId;
-
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("ApiId")
     public Long apiId;
 
@@ -19,25 +13,15 @@ public class CreateDataServiceApiAuthorityRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("TenantId")
+    public Long tenantId;
+
     public static CreateDataServiceApiAuthorityRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceApiAuthorityRequest self = new CreateDataServiceApiAuthorityRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataServiceApiAuthorityRequest setTenantId(Long tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public Long getTenantId() {
-        return this.tenantId;
-    }
-
-    public CreateDataServiceApiAuthorityRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public CreateDataServiceApiAuthorityRequest setApiId(Long apiId) {
@@ -62,6 +46,22 @@ public class CreateDataServiceApiAuthorityRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public CreateDataServiceApiAuthorityRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateDataServiceApiAuthorityRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
     }
 
 }

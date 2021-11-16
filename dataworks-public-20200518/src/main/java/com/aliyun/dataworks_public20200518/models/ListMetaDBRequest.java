@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaDBRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
@@ -16,17 +13,12 @@ public class ListMetaDBRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static ListMetaDBRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMetaDBRequest self = new ListMetaDBRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListMetaDBRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public ListMetaDBRequest setDataSourceType(String dataSourceType) {
@@ -51,6 +43,14 @@ public class ListMetaDBRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListMetaDBRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

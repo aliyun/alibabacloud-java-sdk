@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class QueryDISyncTaskConfigProcessResultRequest extends TeaModel {
+    @NameInMap("AsyncProcessId")
+    public Long asyncProcessId;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("TaskType")
     public String taskType;
 
-    @NameInMap("AsyncProcessId")
-    public Long asyncProcessId;
-
     public static QueryDISyncTaskConfigProcessResultRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDISyncTaskConfigProcessResultRequest self = new QueryDISyncTaskConfigProcessResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDISyncTaskConfigProcessResultRequest setAsyncProcessId(Long asyncProcessId) {
+        this.asyncProcessId = asyncProcessId;
+        return this;
+    }
+    public Long getAsyncProcessId() {
+        return this.asyncProcessId;
     }
 
     public QueryDISyncTaskConfigProcessResultRequest setProjectId(Long projectId) {
@@ -32,14 +40,6 @@ public class QueryDISyncTaskConfigProcessResultRequest extends TeaModel {
     }
     public String getTaskType() {
         return this.taskType;
-    }
-
-    public QueryDISyncTaskConfigProcessResultRequest setAsyncProcessId(Long asyncProcessId) {
-        this.asyncProcessId = asyncProcessId;
-        return this;
-    }
-    public Long getAsyncProcessId() {
-        return this.asyncProcessId;
     }
 
 }

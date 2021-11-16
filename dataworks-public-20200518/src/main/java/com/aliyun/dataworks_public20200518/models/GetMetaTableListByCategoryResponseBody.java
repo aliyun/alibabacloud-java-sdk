@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableListByCategoryResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Data")
+    public GetMetaTableListByCategoryResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +22,25 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public GetMetaTableListByCategoryResponseBodyData data;
-
     public static GetMetaTableListByCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableListByCategoryResponseBody self = new GetMetaTableListByCategoryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMetaTableListByCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetMetaTableListByCategoryResponseBody setData(GetMetaTableListByCategoryResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public GetMetaTableListByCategoryResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTableListByCategoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMetaTableListByCategoryResponseBody setErrorMessage(String errorMessage) {
@@ -41,6 +49,14 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetMetaTableListByCategoryResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetMetaTableListByCategoryResponseBody setRequestId(String requestId) {
@@ -59,22 +75,6 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetMetaTableListByCategoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetMetaTableListByCategoryResponseBody setData(GetMetaTableListByCategoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMetaTableListByCategoryResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetMetaTableListByCategoryResponseBodyData extends TeaModel {
         @NameInMap("PageNumber")
         public Integer pageNumber;
@@ -82,11 +82,11 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("TableGuidList")
         public java.util.List<String> tableGuidList;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetMetaTableListByCategoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableListByCategoryResponseBodyData self = new GetMetaTableListByCategoryResponseBodyData();
@@ -109,20 +109,20 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public GetMetaTableListByCategoryResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
         public GetMetaTableListByCategoryResponseBodyData setTableGuidList(java.util.List<String> tableGuidList) {
             this.tableGuidList = tableGuidList;
             return this;
         }
         public java.util.List<String> getTableGuidList() {
             return this.tableGuidList;
+        }
+
+        public GetMetaTableListByCategoryResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

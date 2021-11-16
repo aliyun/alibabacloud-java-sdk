@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataServiceApiRequest extends TeaModel {
-    @NameInMap("TenantId")
-    public Long tenantId;
+    @NameInMap("ApiId")
+    public Long apiId;
 
     @NameInMap("ProjectId")
     public Long projectId;
 
-    @NameInMap("ApiId")
-    public Long apiId;
+    @NameInMap("TenantId")
+    public Long tenantId;
 
     public static DeleteDataServiceApiRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataServiceApiRequest self = new DeleteDataServiceApiRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataServiceApiRequest setTenantId(Long tenantId) {
-        this.tenantId = tenantId;
+    public DeleteDataServiceApiRequest setApiId(Long apiId) {
+        this.apiId = apiId;
         return this;
     }
-    public Long getTenantId() {
-        return this.tenantId;
+    public Long getApiId() {
+        return this.apiId;
     }
 
     public DeleteDataServiceApiRequest setProjectId(Long projectId) {
@@ -34,12 +34,12 @@ public class DeleteDataServiceApiRequest extends TeaModel {
         return this.projectId;
     }
 
-    public DeleteDataServiceApiRequest setApiId(Long apiId) {
-        this.apiId = apiId;
+    public DeleteDataServiceApiRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
-    public Long getApiId() {
-        return this.apiId;
+    public Long getTenantId() {
+        return this.tenantId;
     }
 
 }

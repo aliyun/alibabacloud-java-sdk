@@ -4,27 +4,51 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListAlertMessagesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListAlertMessagesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListAlertMessagesResponseBodyData data;
 
     public static ListAlertMessagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlertMessagesResponseBody self = new ListAlertMessagesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlertMessagesResponseBody setData(ListAlertMessagesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListAlertMessagesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListAlertMessagesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListAlertMessagesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListAlertMessagesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -43,22 +67,6 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAlertMessagesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListAlertMessagesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListAlertMessagesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,41 +75,25 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListAlertMessagesResponseBody setData(ListAlertMessagesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListAlertMessagesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListAlertMessagesResponseBodyDataAlertMessagesInstances extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("InstanceId")
         public Long instanceId;
-
-        @NameInMap("NodeName")
-        public String nodeName;
 
         @NameInMap("NodeId")
         public Long nodeId;
 
+        @NameInMap("NodeName")
+        public String nodeName;
+
         @NameInMap("ProjectId")
         public Long projectId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListAlertMessagesResponseBodyDataAlertMessagesInstances build(java.util.Map<String, ?> map) throws Exception {
             ListAlertMessagesResponseBodyDataAlertMessagesInstances self = new ListAlertMessagesResponseBodyDataAlertMessagesInstances();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesInstances setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesInstances setInstanceId(Long instanceId) {
@@ -112,20 +104,20 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListAlertMessagesResponseBodyDataAlertMessagesInstances setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
         public ListAlertMessagesResponseBodyDataAlertMessagesInstances setNodeId(Long nodeId) {
             this.nodeId = nodeId;
             return this;
         }
         public Long getNodeId() {
             return this.nodeId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesInstances setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesInstances setProjectId(Long projectId) {
@@ -136,91 +128,25 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.projectId;
         }
 
-    }
-
-    public static class ListAlertMessagesResponseBodyDataAlertMessagesTopics extends TeaModel {
-        @NameInMap("TopicName")
-        public String topicName;
-
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        @NameInMap("TopicId")
-        public Long topicId;
-
-        @NameInMap("TopicOwner")
-        public String topicOwner;
-
-        @NameInMap("NodeId")
-        public Long nodeId;
-
-        @NameInMap("TopicStatus")
-        public String topicStatus;
-
-        public static ListAlertMessagesResponseBodyDataAlertMessagesTopics build(java.util.Map<String, ?> map) throws Exception {
-            ListAlertMessagesResponseBodyDataAlertMessagesTopics self = new ListAlertMessagesResponseBodyDataAlertMessagesTopics();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicName(String topicName) {
-            this.topicName = topicName;
+        public ListAlertMessagesResponseBodyDataAlertMessagesInstances setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getTopicName() {
-            return this.topicName;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicId(Long topicId) {
-            this.topicId = topicId;
-            return this;
-        }
-        public Long getTopicId() {
-            return this.topicId;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicOwner(String topicOwner) {
-            this.topicOwner = topicOwner;
-            return this;
-        }
-        public String getTopicOwner() {
-            return this.topicOwner;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setNodeId(Long nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public Long getNodeId() {
-            return this.nodeId;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicStatus(String topicStatus) {
-            this.topicStatus = topicStatus;
-            return this;
-        }
-        public String getTopicStatus() {
-            return this.topicStatus;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class ListAlertMessagesResponseBodyDataAlertMessagesNodes extends TeaModel {
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("NodeId")
+        public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("NodeId")
-        public Long nodeId;
+        @NameInMap("Owner")
+        public String owner;
 
         @NameInMap("ProjectId")
         public Long projectId;
@@ -230,12 +156,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAlertMessagesResponseBodyDataAlertMessagesNodes setOwner(String owner) {
-            this.owner = owner;
+        public ListAlertMessagesResponseBodyDataAlertMessagesNodes setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public Long getNodeId() {
+            return this.nodeId;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesNodes setNodeName(String nodeName) {
@@ -246,12 +172,12 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public ListAlertMessagesResponseBodyDataAlertMessagesNodes setNodeId(Long nodeId) {
-            this.nodeId = nodeId;
+        public ListAlertMessagesResponseBodyDataAlertMessagesNodes setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public Long getNodeId() {
-            return this.nodeId;
+        public String getOwner() {
+            return this.owner;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesNodes setProjectId(Long projectId) {
@@ -265,46 +191,30 @@ public class ListAlertMessagesResponseBody extends TeaModel {
     }
 
     public static class ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("BaselineOwner")
-        public String baselineOwner;
-
         @NameInMap("BaselineId")
         public Long baselineId;
 
         @NameInMap("BaselineName")
         public String baselineName;
 
+        @NameInMap("BaselineOwner")
+        public String baselineOwner;
+
         @NameInMap("Bizdate")
         public Long bizdate;
-
-        @NameInMap("ProjectId")
-        public Long projectId;
 
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("Status")
+        public String status;
+
         public static ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert build(java.util.Map<String, ?> map) throws Exception {
             ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert self = new ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setBaselineOwner(String baselineOwner) {
-            this.baselineOwner = baselineOwner;
-            return this;
-        }
-        public String getBaselineOwner() {
-            return this.baselineOwner;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setBaselineId(Long baselineId) {
@@ -323,20 +233,20 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.baselineName;
         }
 
+        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setBaselineOwner(String baselineOwner) {
+            this.baselineOwner = baselineOwner;
+            return this;
+        }
+        public String getBaselineOwner() {
+            return this.baselineOwner;
+        }
+
         public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setBizdate(Long bizdate) {
             this.bizdate = bizdate;
             return this;
         }
         public Long getBizdate() {
             return this.bizdate;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setProjectId(Long projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Long getProjectId() {
-            return this.projectId;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setInGroupId(Integer inGroupId) {
@@ -347,115 +257,141 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.inGroupId;
         }
 
+        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class ListAlertMessagesResponseBodyDataAlertMessagesTopics extends TeaModel {
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        @NameInMap("NodeId")
+        public Long nodeId;
+
+        @NameInMap("TopicId")
+        public Long topicId;
+
+        @NameInMap("TopicName")
+        public String topicName;
+
+        @NameInMap("TopicOwner")
+        public String topicOwner;
+
+        @NameInMap("TopicStatus")
+        public String topicStatus;
+
+        public static ListAlertMessagesResponseBodyDataAlertMessagesTopics build(java.util.Map<String, ?> map) throws Exception {
+            ListAlertMessagesResponseBodyDataAlertMessagesTopics self = new ListAlertMessagesResponseBodyDataAlertMessagesTopics();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicId(Long topicId) {
+            this.topicId = topicId;
+            return this;
+        }
+        public Long getTopicId() {
+            return this.topicId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicName(String topicName) {
+            this.topicName = topicName;
+            return this;
+        }
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicOwner(String topicOwner) {
+            this.topicOwner = topicOwner;
+            return this;
+        }
+        public String getTopicOwner() {
+            return this.topicOwner;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessagesTopics setTopicStatus(String topicStatus) {
+            this.topicStatus = topicStatus;
+            return this;
+        }
+        public String getTopicStatus() {
+            return this.topicStatus;
+        }
+
     }
 
     public static class ListAlertMessagesResponseBodyDataAlertMessages extends TeaModel {
-        @NameInMap("RemindId")
-        public Long remindId;
+        @NameInMap("AlertId")
+        public Long alertId;
 
         @NameInMap("AlertMessageStatus")
         public String alertMessageStatus;
 
-        @NameInMap("AlertUser")
-        public String alertUser;
+        @NameInMap("AlertMethod")
+        public String alertMethod;
 
         @NameInMap("AlertTime")
         public Long alertTime;
 
-        @NameInMap("AlertMethod")
-        public String alertMethod;
-
-        @NameInMap("Source")
-        public String source;
+        @NameInMap("AlertUser")
+        public String alertUser;
 
         @NameInMap("Content")
         public String content;
 
-        @NameInMap("RemindName")
-        public String remindName;
-
-        @NameInMap("AlertId")
-        public Long alertId;
-
         @NameInMap("Instances")
         public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesInstances> instances;
-
-        @NameInMap("Topics")
-        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> topics;
 
         @NameInMap("Nodes")
         public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesNodes> nodes;
 
+        @NameInMap("RemindId")
+        public Long remindId;
+
+        @NameInMap("RemindName")
+        public String remindName;
+
         @NameInMap("SlaAlert")
         public ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert slaAlert;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Topics")
+        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> topics;
 
         public static ListAlertMessagesResponseBodyDataAlertMessages build(java.util.Map<String, ?> map) throws Exception {
             ListAlertMessagesResponseBodyDataAlertMessages self = new ListAlertMessagesResponseBodyDataAlertMessages();
             return TeaModel.build(map, self);
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setRemindId(Long remindId) {
-            this.remindId = remindId;
-            return this;
-        }
-        public Long getRemindId() {
-            return this.remindId;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setAlertMessageStatus(String alertMessageStatus) {
-            this.alertMessageStatus = alertMessageStatus;
-            return this;
-        }
-        public String getAlertMessageStatus() {
-            return this.alertMessageStatus;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setAlertUser(String alertUser) {
-            this.alertUser = alertUser;
-            return this;
-        }
-        public String getAlertUser() {
-            return this.alertUser;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setAlertTime(Long alertTime) {
-            this.alertTime = alertTime;
-            return this;
-        }
-        public Long getAlertTime() {
-            return this.alertTime;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setAlertMethod(String alertMethod) {
-            this.alertMethod = alertMethod;
-            return this;
-        }
-        public String getAlertMethod() {
-            return this.alertMethod;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setRemindName(String remindName) {
-            this.remindName = remindName;
-            return this;
-        }
-        public String getRemindName() {
-            return this.remindName;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessages setAlertId(Long alertId) {
@@ -466,20 +402,52 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.alertId;
         }
 
+        public ListAlertMessagesResponseBodyDataAlertMessages setAlertMessageStatus(String alertMessageStatus) {
+            this.alertMessageStatus = alertMessageStatus;
+            return this;
+        }
+        public String getAlertMessageStatus() {
+            return this.alertMessageStatus;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setAlertMethod(String alertMethod) {
+            this.alertMethod = alertMethod;
+            return this;
+        }
+        public String getAlertMethod() {
+            return this.alertMethod;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setAlertTime(Long alertTime) {
+            this.alertTime = alertTime;
+            return this;
+        }
+        public Long getAlertTime() {
+            return this.alertTime;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setAlertUser(String alertUser) {
+            this.alertUser = alertUser;
+            return this;
+        }
+        public String getAlertUser() {
+            return this.alertUser;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
         public ListAlertMessagesResponseBodyDataAlertMessages setInstances(java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesInstances> instances) {
             this.instances = instances;
             return this;
         }
         public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesInstances> getInstances() {
             return this.instances;
-        }
-
-        public ListAlertMessagesResponseBodyDataAlertMessages setTopics(java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> topics) {
-            this.topics = topics;
-            return this;
-        }
-        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> getTopics() {
-            return this.topics;
         }
 
         public ListAlertMessagesResponseBodyDataAlertMessages setNodes(java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesNodes> nodes) {
@@ -490,6 +458,22 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.nodes;
         }
 
+        public ListAlertMessagesResponseBodyDataAlertMessages setRemindId(Long remindId) {
+            this.remindId = remindId;
+            return this;
+        }
+        public Long getRemindId() {
+            return this.remindId;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setRemindName(String remindName) {
+            this.remindName = remindName;
+            return this;
+        }
+        public String getRemindName() {
+            return this.remindName;
+        }
+
         public ListAlertMessagesResponseBodyDataAlertMessages setSlaAlert(ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert slaAlert) {
             this.slaAlert = slaAlert;
             return this;
@@ -498,9 +482,28 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             return this.slaAlert;
         }
 
+        public ListAlertMessagesResponseBodyDataAlertMessages setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListAlertMessagesResponseBodyDataAlertMessages setTopics(java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> topics) {
+            this.topics = topics;
+            return this;
+        }
+        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesTopics> getTopics() {
+            return this.topics;
+        }
+
     }
 
     public static class ListAlertMessagesResponseBodyData extends TeaModel {
+        @NameInMap("AlertMessages")
+        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> alertMessages;
+
         @NameInMap("PageNumber")
         public String pageNumber;
 
@@ -510,12 +513,17 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public String totalCount;
 
-        @NameInMap("AlertMessages")
-        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> alertMessages;
-
         public static ListAlertMessagesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAlertMessagesResponseBodyData self = new ListAlertMessagesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAlertMessagesResponseBodyData setAlertMessages(java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> alertMessages) {
+            this.alertMessages = alertMessages;
+            return this;
+        }
+        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> getAlertMessages() {
+            return this.alertMessages;
         }
 
         public ListAlertMessagesResponseBodyData setPageNumber(String pageNumber) {
@@ -540,14 +548,6 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
         public String getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListAlertMessagesResponseBodyData setAlertMessages(java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> alertMessages) {
-            this.alertMessages = alertMessages;
-            return this;
-        }
-        public java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> getAlertMessages() {
-            return this.alertMessages;
         }
 
     }

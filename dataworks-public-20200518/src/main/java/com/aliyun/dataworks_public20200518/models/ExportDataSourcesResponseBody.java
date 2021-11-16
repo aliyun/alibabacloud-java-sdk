@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ExportDataSourcesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ExportDataSourcesResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,12 +16,17 @@ public class ExportDataSourcesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public ExportDataSourcesResponseBodyData data;
-
     public static ExportDataSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportDataSourcesResponseBody self = new ExportDataSourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExportDataSourcesResponseBody setData(ExportDataSourcesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ExportDataSourcesResponseBodyData getData() {
+        return this.data;
     }
 
     public ExportDataSourcesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -45,65 +53,57 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ExportDataSourcesResponseBody setData(ExportDataSourcesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ExportDataSourcesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ExportDataSourcesResponseBodyDataDataSources extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("ProjectId")
-        public Integer projectId;
-
-        @NameInMap("SubType")
-        public String subType;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("EnvType")
-        public Integer envType;
+        @NameInMap("BindingCalcEngineId")
+        public Integer bindingCalcEngineId;
 
         @NameInMap("ConnectStatus")
         public Integer connectStatus;
 
-        @NameInMap("Sequence")
-        public Integer sequence;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
         @NameInMap("DefaultEngine")
         public Boolean defaultEngine;
 
-        @NameInMap("Shared")
-        public Boolean shared;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("Operator")
-        public String operator;
+        @NameInMap("EnvType")
+        public Integer envType;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("GmtModified")
+        public String gmtModified;
 
         @NameInMap("Id")
         public Integer id;
 
-        @NameInMap("BindingCalcEngineId")
-        public Integer bindingCalcEngineId;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("ProjectId")
+        public Integer projectId;
+
+        @NameInMap("Sequence")
+        public Integer sequence;
+
+        @NameInMap("Shared")
+        public Boolean shared;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SubType")
+        public String subType;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -113,44 +113,12 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setStatus(Integer status) {
-            this.status = status;
+        public ExportDataSourcesResponseBodyDataDataSources setBindingCalcEngineId(Integer bindingCalcEngineId) {
+            this.bindingCalcEngineId = bindingCalcEngineId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ExportDataSourcesResponseBodyDataDataSources setProjectId(Integer projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public Integer getProjectId() {
-            return this.projectId;
-        }
-
-        public ExportDataSourcesResponseBodyDataDataSources setSubType(String subType) {
-            this.subType = subType;
-            return this;
-        }
-        public String getSubType() {
-            return this.subType;
-        }
-
-        public ExportDataSourcesResponseBodyDataDataSources setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public ExportDataSourcesResponseBodyDataDataSources setEnvType(Integer envType) {
-            this.envType = envType;
-            return this;
-        }
-        public Integer getEnvType() {
-            return this.envType;
+        public Integer getBindingCalcEngineId() {
+            return this.bindingCalcEngineId;
         }
 
         public ExportDataSourcesResponseBodyDataDataSources setConnectStatus(Integer connectStatus) {
@@ -161,20 +129,12 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             return this.connectStatus;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setSequence(Integer sequence) {
-            this.sequence = sequence;
+        public ExportDataSourcesResponseBodyDataDataSources setContent(String content) {
+            this.content = content;
             return this;
         }
-        public Integer getSequence() {
-            return this.sequence;
-        }
-
-        public ExportDataSourcesResponseBodyDataDataSources setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
+        public String getContent() {
+            return this.content;
         }
 
         public ExportDataSourcesResponseBodyDataDataSources setDataSourceType(String dataSourceType) {
@@ -185,14 +145,6 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             return this.dataSourceType;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
         public ExportDataSourcesResponseBodyDataDataSources setDefaultEngine(Boolean defaultEngine) {
             this.defaultEngine = defaultEngine;
             return this;
@@ -201,36 +153,36 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             return this.defaultEngine;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setShared(Boolean shared) {
-            this.shared = shared;
+        public ExportDataSourcesResponseBodyDataDataSources setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Boolean getShared() {
-            return this.shared;
+        public String getDescription() {
+            return this.description;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setOperator(String operator) {
-            this.operator = operator;
+        public ExportDataSourcesResponseBodyDataDataSources setEnvType(Integer envType) {
+            this.envType = envType;
             return this;
         }
-        public String getOperator() {
-            return this.operator;
+        public Integer getEnvType() {
+            return this.envType;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setName(String name) {
-            this.name = name;
+        public ExportDataSourcesResponseBodyDataDataSources setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setContent(String content) {
-            this.content = content;
+        public ExportDataSourcesResponseBodyDataDataSources setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public ExportDataSourcesResponseBodyDataDataSources setId(Integer id) {
@@ -241,12 +193,60 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ExportDataSourcesResponseBodyDataDataSources setBindingCalcEngineId(Integer bindingCalcEngineId) {
-            this.bindingCalcEngineId = bindingCalcEngineId;
+        public ExportDataSourcesResponseBodyDataDataSources setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getBindingCalcEngineId() {
-            return this.bindingCalcEngineId;
+        public String getName() {
+            return this.name;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setProjectId(Integer projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Integer getProjectId() {
+            return this.projectId;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setSequence(Integer sequence) {
+            this.sequence = sequence;
+            return this;
+        }
+        public Integer getSequence() {
+            return this.sequence;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setShared(Boolean shared) {
+            this.shared = shared;
+            return this;
+        }
+        public Boolean getShared() {
+            return this.shared;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ExportDataSourcesResponseBodyDataDataSources setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
         }
 
         public ExportDataSourcesResponseBodyDataDataSources setTenantId(Long tenantId) {
@@ -260,6 +260,9 @@ public class ExportDataSourcesResponseBody extends TeaModel {
     }
 
     public static class ExportDataSourcesResponseBodyData extends TeaModel {
+        @NameInMap("DataSources")
+        public java.util.List<ExportDataSourcesResponseBodyDataDataSources> dataSources;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -269,12 +272,17 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("DataSources")
-        public java.util.List<ExportDataSourcesResponseBodyDataDataSources> dataSources;
-
         public static ExportDataSourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExportDataSourcesResponseBodyData self = new ExportDataSourcesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ExportDataSourcesResponseBodyData setDataSources(java.util.List<ExportDataSourcesResponseBodyDataDataSources> dataSources) {
+            this.dataSources = dataSources;
+            return this;
+        }
+        public java.util.List<ExportDataSourcesResponseBodyDataDataSources> getDataSources() {
+            return this.dataSources;
         }
 
         public ExportDataSourcesResponseBodyData setPageNumber(Integer pageNumber) {
@@ -299,14 +307,6 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ExportDataSourcesResponseBodyData setDataSources(java.util.List<ExportDataSourcesResponseBodyDataDataSources> dataSources) {
-            this.dataSources = dataSources;
-            return this;
-        }
-        public java.util.List<ExportDataSourcesResponseBodyDataDataSources> getDataSources() {
-            return this.dataSources;
         }
 
     }

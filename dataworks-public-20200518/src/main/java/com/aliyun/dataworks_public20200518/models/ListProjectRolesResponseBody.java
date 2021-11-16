@@ -4,23 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ProjectRoleList")
     public java.util.List<ListProjectRolesResponseBodyProjectRoleList> projectRoleList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListProjectRolesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProjectRolesResponseBody self = new ListProjectRolesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListProjectRolesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListProjectRolesResponseBody setProjectRoleList(java.util.List<ListProjectRolesResponseBodyProjectRoleList> projectRoleList) {
@@ -31,22 +23,38 @@ public class ListProjectRolesResponseBody extends TeaModel {
         return this.projectRoleList;
     }
 
+    public ListProjectRolesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListProjectRolesResponseBodyProjectRoleList extends TeaModel {
+        @NameInMap("ProjectRoleCode")
+        public String projectRoleCode;
+
         @NameInMap("ProjectRoleId")
         public Integer projectRoleId;
-
-        @NameInMap("ProjectRoleType")
-        public String projectRoleType;
 
         @NameInMap("ProjectRoleName")
         public String projectRoleName;
 
-        @NameInMap("ProjectRoleCode")
-        public String projectRoleCode;
+        @NameInMap("ProjectRoleType")
+        public String projectRoleType;
 
         public static ListProjectRolesResponseBodyProjectRoleList build(java.util.Map<String, ?> map) throws Exception {
             ListProjectRolesResponseBodyProjectRoleList self = new ListProjectRolesResponseBodyProjectRoleList();
             return TeaModel.build(map, self);
+        }
+
+        public ListProjectRolesResponseBodyProjectRoleList setProjectRoleCode(String projectRoleCode) {
+            this.projectRoleCode = projectRoleCode;
+            return this;
+        }
+        public String getProjectRoleCode() {
+            return this.projectRoleCode;
         }
 
         public ListProjectRolesResponseBodyProjectRoleList setProjectRoleId(Integer projectRoleId) {
@@ -57,14 +65,6 @@ public class ListProjectRolesResponseBody extends TeaModel {
             return this.projectRoleId;
         }
 
-        public ListProjectRolesResponseBodyProjectRoleList setProjectRoleType(String projectRoleType) {
-            this.projectRoleType = projectRoleType;
-            return this;
-        }
-        public String getProjectRoleType() {
-            return this.projectRoleType;
-        }
-
         public ListProjectRolesResponseBodyProjectRoleList setProjectRoleName(String projectRoleName) {
             this.projectRoleName = projectRoleName;
             return this;
@@ -73,12 +73,12 @@ public class ListProjectRolesResponseBody extends TeaModel {
             return this.projectRoleName;
         }
 
-        public ListProjectRolesResponseBodyProjectRoleList setProjectRoleCode(String projectRoleCode) {
-            this.projectRoleCode = projectRoleCode;
+        public ListProjectRolesResponseBodyProjectRoleList setProjectRoleType(String projectRoleType) {
+            this.projectRoleType = projectRoleType;
             return this;
         }
-        public String getProjectRoleCode() {
-            return this.projectRoleCode;
+        public String getProjectRoleType() {
+            return this.projectRoleType;
         }
 
     }

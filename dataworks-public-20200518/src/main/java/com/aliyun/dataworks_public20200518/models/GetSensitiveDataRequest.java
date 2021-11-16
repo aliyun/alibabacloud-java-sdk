@@ -4,26 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetSensitiveDataRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNo")
     public Integer pageNo;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static GetSensitiveDataRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSensitiveDataRequest self = new GetSensitiveDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSensitiveDataRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public GetSensitiveDataRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getName() {
+        return this.name;
     }
 
     public GetSensitiveDataRequest setPageNo(Integer pageNo) {
@@ -34,12 +34,12 @@ public class GetSensitiveDataRequest extends TeaModel {
         return this.pageNo;
     }
 
-    public GetSensitiveDataRequest setName(String name) {
-        this.name = name;
+    public GetSensitiveDataRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileRequest extends TeaModel {
+    @NameInMap("FileId")
+    public Long fileId;
+
     @NameInMap("ProjectId")
     public Long projectId;
 
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
-    @NameInMap("FileId")
-    public Long fileId;
-
     public static DeleteFileRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileRequest self = new DeleteFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFileRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
     }
 
     public DeleteFileRequest setProjectId(Long projectId) {
@@ -32,14 +40,6 @@ public class DeleteFileRequest extends TeaModel {
     }
     public String getProjectIdentifier() {
         return this.projectIdentifier;
-    }
-
-    public DeleteFileRequest setFileId(Long fileId) {
-        this.fileId = fileId;
-        return this;
-    }
-    public Long getFileId() {
-        return this.fileId;
     }
 
 }

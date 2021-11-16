@@ -4,26 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceAmountRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("BeginDate")
     public String beginDate;
 
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("ProjectId")
+    public Long projectId;
+
     public static ListInstanceAmountRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceAmountRequest self = new ListInstanceAmountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceAmountRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public ListInstanceAmountRequest setBeginDate(String beginDate) {
@@ -40,6 +32,14 @@ public class ListInstanceAmountRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public ListInstanceAmountRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class TestNetworkConnectionRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     @NameInMap("EnvType")
     public String envType;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     @NameInMap("ResourceGroup")
     public String resourceGroup;
@@ -19,14 +19,6 @@ public class TestNetworkConnectionRequest extends TeaModel {
     public static TestNetworkConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         TestNetworkConnectionRequest self = new TestNetworkConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TestNetworkConnectionRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public TestNetworkConnectionRequest setDatasourceName(String datasourceName) {
@@ -43,6 +35,14 @@ public class TestNetworkConnectionRequest extends TeaModel {
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public TestNetworkConnectionRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public TestNetworkConnectionRequest setResourceGroup(String resourceGroup) {
