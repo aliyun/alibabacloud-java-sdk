@@ -20,9 +20,6 @@ public class WeatherforecastTimeRequest extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     public static WeatherforecastTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         WeatherforecastTimeRequest self = new WeatherforecastTimeRequest();
         return TeaModel.build(map, self);
@@ -58,14 +55,6 @@ public class WeatherforecastTimeRequest extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
-    }
-
-    public WeatherforecastTimeRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
 }
