@@ -16,6 +16,10 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("alertSourceName")
     public String alertSourceName;
 
+    // 结束时间
+    @NameInMap("endTime")
+    public String endTime;
+
     // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
@@ -27,6 +31,10 @@ public class ListAlertsRequest extends TeaModel {
     // 服务id
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
+
+    // 开始时间
+    @NameInMap("startTime")
+    public String startTime;
 
     public static ListAlertsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertsRequest self = new ListAlertsRequest();
@@ -57,6 +65,14 @@ public class ListAlertsRequest extends TeaModel {
         return this.alertSourceName;
     }
 
+    public ListAlertsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public ListAlertsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -79,6 +95,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public Long getRelatedServiceId() {
         return this.relatedServiceId;
+    }
+
+    public ListAlertsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }
