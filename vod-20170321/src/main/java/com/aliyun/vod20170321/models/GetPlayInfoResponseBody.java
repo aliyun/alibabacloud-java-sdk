@@ -67,6 +67,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Fps")
         public String fps;
 
+        // 视频流HDR类型
+        @NameInMap("HDRType")
+        public String HDRType;
+
         @NameInMap("Height")
         public Long height;
 
@@ -167,6 +171,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public String getFps() {
             return this.fps;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setHDRType(String HDRType) {
+            this.HDRType = HDRType;
+            return this;
+        }
+        public String getHDRType() {
+            return this.HDRType;
         }
 
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setHeight(Long height) {

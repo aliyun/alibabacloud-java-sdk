@@ -2136,6 +2136,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateImageInfosWithOptions(request, runtime);
     }
 
+    public UpdateStreamInfoResponse updateStreamInfoWithOptions(UpdateStreamInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateStreamInfo", "2017-03-21", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateStreamInfoResponse());
+    }
+
+    public UpdateStreamInfoResponse updateStreamInfo(UpdateStreamInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateStreamInfoWithOptions(request, runtime);
+    }
+
     public UpdateTranscodeTemplateGroupResponse updateTranscodeTemplateGroupWithOptions(UpdateTranscodeTemplateGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
