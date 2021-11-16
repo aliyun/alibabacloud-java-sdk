@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    // 资源所属的地域ID
+    @NameInMap("region_id")
+    public String regionId;
+
     // 资源ID列表
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
@@ -12,10 +16,6 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("resource_type")
     public String resourceType;
 
-    // 资源所属的地域ID
-    @NameInMap("region_id")
-    public String regionId;
-
     // 资源的标签键值对。数组长度范围：1~20。一旦传值，则不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或者https://。
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -23,6 +23,14 @@ public class TagResourcesRequest extends TeaModel {
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public TagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
@@ -39,14 +47,6 @@ public class TagResourcesRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public TagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public TagResourcesRequest setTags(java.util.List<Tag> tags) {

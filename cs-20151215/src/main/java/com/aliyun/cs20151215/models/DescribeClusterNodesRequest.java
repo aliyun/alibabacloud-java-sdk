@@ -12,17 +12,17 @@ public class DescribeClusterNodesRequest extends TeaModel {
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
-    // 节点状态。默认值：all。
-    @NameInMap("state")
-    public String state;
+    // 分页数量
+    @NameInMap("pageNumber")
+    public String pageNumber;
 
     // 每页大小。
     @NameInMap("pageSize")
     public String pageSize;
 
-    // 分页数量
-    @NameInMap("pageNumber")
-    public String pageNumber;
+    // 节点状态。默认值：all。
+    @NameInMap("state")
+    public String state;
 
     public static DescribeClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNodesRequest self = new DescribeClusterNodesRequest();
@@ -45,12 +45,12 @@ public class DescribeClusterNodesRequest extends TeaModel {
         return this.nodepoolId;
     }
 
-    public DescribeClusterNodesRequest setState(String state) {
-        this.state = state;
+    public DescribeClusterNodesRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getState() {
-        return this.state;
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeClusterNodesRequest setPageSize(String pageSize) {
@@ -61,12 +61,12 @@ public class DescribeClusterNodesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeClusterNodesRequest setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeClusterNodesRequest setState(String state) {
+        this.state = state;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public String getState() {
+        return this.state;
     }
 
 }

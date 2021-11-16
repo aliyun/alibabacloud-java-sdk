@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerRequest extends TeaModel {
+    // 触发器行为
+    @NameInMap("action")
+    public String action;
+
     // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
@@ -12,10 +16,6 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     @NameInMap("project_id")
     public String projectId;
 
-    // 触发器行为
-    @NameInMap("action")
-    public String action;
-
     // 触发器类型。默认deployment。
     @NameInMap("type")
     public String type;
@@ -23,6 +23,14 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     public static CreateKubernetesTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKubernetesTriggerRequest self = new CreateKubernetesTriggerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKubernetesTriggerRequest setAction(String action) {
+        this.action = action;
+        return this;
+    }
+    public String getAction() {
+        return this.action;
     }
 
     public CreateKubernetesTriggerRequest setClusterId(String clusterId) {
@@ -39,14 +47,6 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
-    }
-
-    public CreateKubernetesTriggerRequest setAction(String action) {
-        this.action = action;
-        return this;
-    }
-    public String getAction() {
-        return this.action;
     }
 
     public CreateKubernetesTriggerRequest setType(String type) {

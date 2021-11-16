@@ -106,13 +106,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         @NameInMap("source")
         public String source;
 
-        // ECS运行状态，例如：Running。
-        @NameInMap("state")
-        public String state;
-
         // 抢占时实例类型
         @NameInMap("spot_strategy")
         public String spotStrategy;
+
+        // ECS运行状态，例如：Running。
+        @NameInMap("state")
+        public String state;
 
         public static DescribeClusterNodesResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodesResponseBodyNodes self = new DescribeClusterNodesResponseBodyNodes();
@@ -263,20 +263,20 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             return this.source;
         }
 
-        public DescribeClusterNodesResponseBodyNodes setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public DescribeClusterNodesResponseBodyNodes setSpotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
             return this;
         }
         public String getSpotStrategy() {
             return this.spotStrategy;
+        }
+
+        public DescribeClusterNodesResponseBodyNodes setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

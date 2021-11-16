@@ -4,7 +4,7 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsRequest extends TeaModel {
-    // Request body，类型是对象数组。
+    // Request body，类型是对象数组
     @NameInMap("body")
     public java.util.List<UpgradeClusterAddonsRequestBody> body;
 
@@ -22,15 +22,15 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     }
 
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
-        // 组件名称。
+        // 组件名称
         @NameInMap("component_name")
         public String componentName;
 
-        // 可升级版本。
+        // 可升级版本
         @NameInMap("next_version")
         public String nextVersion;
 
-        // 当前版本。
+        // 当前版本
         @NameInMap("version")
         public String version;
 

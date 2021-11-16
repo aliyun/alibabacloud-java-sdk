@@ -8,14 +8,6 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     @NameInMap("cool_down_duration")
     public String coolDownDuration;
 
-    // 缩容触发时延，节点缩容时需要连续满足触发时延所设定的时间，方可进行缩容
-    @NameInMap("unneeded_duration")
-    public String unneededDuration;
-
-    // 缩容阈值，节点上 Request 的资源与总资源量的比值
-    @NameInMap("utilization_threshold")
-    public String utilizationThreshold;
-
     // GPU缩容阈值，节点上 Request 的资源与总资源量的比值
     @NameInMap("gpu_utilization_threshold")
     public String gpuUtilizationThreshold;
@@ -23,6 +15,14 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     // 弹性灵敏度，判断伸缩的间隔时间
     @NameInMap("scan_interval")
     public String scanInterval;
+
+    // 缩容触发时延，节点缩容时需要连续满足触发时延所设定的时间，方可进行缩容
+    @NameInMap("unneeded_duration")
+    public String unneededDuration;
+
+    // 缩容阈值，节点上 Request 的资源与总资源量的比值
+    @NameInMap("utilization_threshold")
+    public String utilizationThreshold;
 
     public static CreateAutoscalingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoscalingConfigRequest self = new CreateAutoscalingConfigRequest();
@@ -35,22 +35,6 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     }
     public String getCoolDownDuration() {
         return this.coolDownDuration;
-    }
-
-    public CreateAutoscalingConfigRequest setUnneededDuration(String unneededDuration) {
-        this.unneededDuration = unneededDuration;
-        return this;
-    }
-    public String getUnneededDuration() {
-        return this.unneededDuration;
-    }
-
-    public CreateAutoscalingConfigRequest setUtilizationThreshold(String utilizationThreshold) {
-        this.utilizationThreshold = utilizationThreshold;
-        return this;
-    }
-    public String getUtilizationThreshold() {
-        return this.utilizationThreshold;
     }
 
     public CreateAutoscalingConfigRequest setGpuUtilizationThreshold(String gpuUtilizationThreshold) {
@@ -67,6 +51,22 @@ public class CreateAutoscalingConfigRequest extends TeaModel {
     }
     public String getScanInterval() {
         return this.scanInterval;
+    }
+
+    public CreateAutoscalingConfigRequest setUnneededDuration(String unneededDuration) {
+        this.unneededDuration = unneededDuration;
+        return this;
+    }
+    public String getUnneededDuration() {
+        return this.unneededDuration;
+    }
+
+    public CreateAutoscalingConfigRequest setUtilizationThreshold(String utilizationThreshold) {
+        this.utilizationThreshold = utilizationThreshold;
+        return this;
+    }
+    public String getUtilizationThreshold() {
+        return this.utilizationThreshold;
     }
 
 }

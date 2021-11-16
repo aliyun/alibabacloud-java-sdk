@@ -4,9 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAttachScriptsRequest extends TeaModel {
-    // 节点池ID。将节点加入指定节点池。
-    @NameInMap("nodepool_id")
-    public String nodepoolId;
+    // 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
+    @NameInMap("arch")
+    public String arch;
 
     // 数据盘挂载
     @NameInMap("format_disk")
@@ -16,29 +16,29 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
 
-    // RDS白名单
-    @NameInMap("rds_instances")
-    public java.util.List<String> rdsInstances;
-
-    // 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
-    @NameInMap("arch")
-    public String arch;
+    // 节点池ID。将节点加入指定节点池。
+    @NameInMap("nodepool_id")
+    public String nodepoolId;
 
     // 边缘托管版集群节点的接入配置。
     @NameInMap("options")
     public String options;
+
+    // RDS白名单
+    @NameInMap("rds_instances")
+    public java.util.List<String> rdsInstances;
 
     public static DescribeClusterAttachScriptsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterAttachScriptsRequest self = new DescribeClusterAttachScriptsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterAttachScriptsRequest setNodepoolId(String nodepoolId) {
-        this.nodepoolId = nodepoolId;
+    public DescribeClusterAttachScriptsRequest setArch(String arch) {
+        this.arch = arch;
         return this;
     }
-    public String getNodepoolId() {
-        return this.nodepoolId;
+    public String getArch() {
+        return this.arch;
     }
 
     public DescribeClusterAttachScriptsRequest setFormatDisk(Boolean formatDisk) {
@@ -57,20 +57,12 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
         return this.keepInstanceName;
     }
 
-    public DescribeClusterAttachScriptsRequest setRdsInstances(java.util.List<String> rdsInstances) {
-        this.rdsInstances = rdsInstances;
+    public DescribeClusterAttachScriptsRequest setNodepoolId(String nodepoolId) {
+        this.nodepoolId = nodepoolId;
         return this;
     }
-    public java.util.List<String> getRdsInstances() {
-        return this.rdsInstances;
-    }
-
-    public DescribeClusterAttachScriptsRequest setArch(String arch) {
-        this.arch = arch;
-        return this;
-    }
-    public String getArch() {
-        return this.arch;
+    public String getNodepoolId() {
+        return this.nodepoolId;
     }
 
     public DescribeClusterAttachScriptsRequest setOptions(String options) {
@@ -79,6 +71,14 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     }
     public String getOptions() {
         return this.options;
+    }
+
+    public DescribeClusterAttachScriptsRequest setRdsInstances(java.util.List<String> rdsInstances) {
+        this.rdsInstances = rdsInstances;
+        return this;
+    }
+    public java.util.List<String> getRdsInstances() {
+        return this.rdsInstances;
     }
 
 }

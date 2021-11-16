@@ -36,13 +36,13 @@ public class DescribeEventsResponseBody extends TeaModel {
         @NameInMap("level")
         public String level;
 
-        // 事件状态
-        @NameInMap("reason")
-        public String reason;
-
         // 事件详情
         @NameInMap("message")
         public String message;
+
+        // 事件状态
+        @NameInMap("reason")
+        public String reason;
 
         public static DescribeEventsResponseBodyEventsData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventsResponseBodyEventsData self = new DescribeEventsResponseBodyEventsData();
@@ -57,14 +57,6 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.level;
         }
 
-        public DescribeEventsResponseBodyEventsData setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
-        }
-
         public DescribeEventsResponseBodyEventsData setMessage(String message) {
             this.message = message;
             return this;
@@ -73,16 +65,28 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.message;
         }
 
+        public DescribeEventsResponseBodyEventsData setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
     }
 
     public static class DescribeEventsResponseBodyEvents extends TeaModel {
+        // 集群ID
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        // 事件描述
+        @NameInMap("data")
+        public DescribeEventsResponseBodyEventsData data;
+
         // 事件ID
         @NameInMap("event_id")
         public String eventId;
-
-        // 事件类型
-        @NameInMap("type")
-        public String type;
 
         // 事件源
         @NameInMap("source")
@@ -96,17 +100,29 @@ public class DescribeEventsResponseBody extends TeaModel {
         @NameInMap("time")
         public String time;
 
-        // 集群ID
-        @NameInMap("cluster_id")
-        public String clusterId;
-
-        // 事件描述
-        @NameInMap("data")
-        public DescribeEventsResponseBodyEventsData data;
+        // 事件类型
+        @NameInMap("type")
+        public String type;
 
         public static DescribeEventsResponseBodyEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventsResponseBodyEvents self = new DescribeEventsResponseBodyEvents();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEventsResponseBodyEvents setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeEventsResponseBodyEvents setData(DescribeEventsResponseBodyEventsData data) {
+            this.data = data;
+            return this;
+        }
+        public DescribeEventsResponseBodyEventsData getData() {
+            return this.data;
         }
 
         public DescribeEventsResponseBodyEvents setEventId(String eventId) {
@@ -115,14 +131,6 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
         public String getEventId() {
             return this.eventId;
-        }
-
-        public DescribeEventsResponseBodyEvents setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeEventsResponseBodyEvents setSource(String source) {
@@ -149,32 +157,24 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.time;
         }
 
-        public DescribeEventsResponseBodyEvents setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public DescribeEventsResponseBodyEvents setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
-        }
-
-        public DescribeEventsResponseBodyEvents setData(DescribeEventsResponseBodyEventsData data) {
-            this.data = data;
-            return this;
-        }
-        public DescribeEventsResponseBodyEventsData getData() {
-            return this.data;
+        public String getType() {
+            return this.type;
         }
 
     }
 
     public static class DescribeEventsResponseBodyPageInfo extends TeaModel {
-        // 页数
-        @NameInMap("page_size")
-        public Long pageSize;
-
         // 每页记录数量
         @NameInMap("page_number")
         public Long pageNumber;
+
+        // 页数
+        @NameInMap("page_size")
+        public Long pageSize;
 
         // 结果总数
         @NameInMap("total_count")
@@ -185,20 +185,20 @@ public class DescribeEventsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventsResponseBodyPageInfo setPageSize(Long pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Long getPageSize() {
-            return this.pageSize;
-        }
-
         public DescribeEventsResponseBodyPageInfo setPageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
         public Long getPageNumber() {
             return this.pageNumber;
+        }
+
+        public DescribeEventsResponseBodyPageInfo setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Long getPageSize() {
+            return this.pageSize;
         }
 
         public DescribeEventsResponseBodyPageInfo setTotalCount(Long totalCount) {

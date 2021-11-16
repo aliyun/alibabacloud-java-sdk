@@ -26,13 +26,13 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         @NameInMap("cluster_id")
         public String clusterId;
 
-        // 工作流名称。
-        @NameInMap("job_name")
-        public String jobName;
-
         // 工作流创建时间。
         @NameInMap("create_time")
         public String createTime;
+
+        // 工作流名称。
+        @NameInMap("job_name")
+        public String jobName;
 
         public static DescribeWorkflowsResponseBodyJobs build(java.util.Map<String, ?> map) throws Exception {
             DescribeWorkflowsResponseBodyJobs self = new DescribeWorkflowsResponseBodyJobs();
@@ -47,20 +47,20 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             return this.clusterId;
         }
 
-        public DescribeWorkflowsResponseBodyJobs setJobName(String jobName) {
-            this.jobName = jobName;
-            return this;
-        }
-        public String getJobName() {
-            return this.jobName;
-        }
-
         public DescribeWorkflowsResponseBodyJobs setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeWorkflowsResponseBodyJobs setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
         }
 
     }

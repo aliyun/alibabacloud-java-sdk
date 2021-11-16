@@ -4,7 +4,7 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodePoolsResponseBody extends TeaModel {
-    // 节点池列表。	
+    // 节点池列表
     @NameInMap("nodepools")
     public java.util.List<DescribeClusterNodePoolsResponseBodyNodepools> nodepools;
 
@@ -26,17 +26,17 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("eip_bandwidth")
         public Long eipBandwidth;
 
-        // 是否绑定EIP
-        @NameInMap("is_bond_eip")
-        public Boolean isBondEip;
-
         // EIP实例计费方式
         @NameInMap("eip_internet_charge_type")
         public String eipInternetChargeType;
 
-        // 自动伸缩。	
+        // 自动伸缩
         @NameInMap("enable")
         public Boolean enable;
+
+        // 是否绑定EIP
+        @NameInMap("is_bond_eip")
+        public Boolean isBondEip;
 
         // 最大节点数	
         @NameInMap("max_instances")
@@ -46,7 +46,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("min_instances")
         public Long minInstances;
 
-        // 扩容组类型。
+        // 扩容组类型
         @NameInMap("type")
         public String type;
 
@@ -63,14 +63,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.eipBandwidth;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling setIsBondEip(Boolean isBondEip) {
-            this.isBondEip = isBondEip;
-            return this;
-        }
-        public Boolean getIsBondEip() {
-            return this.isBondEip;
-        }
-
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
             this.eipInternetChargeType = eipInternetChargeType;
             return this;
@@ -85,6 +77,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling setIsBondEip(Boolean isBondEip) {
+            this.isBondEip = isBondEip;
+            return this;
+        }
+        public Boolean getIsBondEip() {
+            return this.isBondEip;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling setMaxInstances(Long maxInstances) {
@@ -122,7 +122,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
-        // ECS标签。	
+        // ECS标签
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
@@ -205,6 +205,106 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig extends TeaModel {
+        // 是否启用自动升级，自修复
+        @NameInMap("auto_upgrade")
+        public Boolean autoUpgrade;
+
+        // 最大不可用节点数量
+        @NameInMap("max_unavailable")
+        public Long maxUnavailable;
+
+        // 额外节点数量
+        @NameInMap("surge")
+        public Long surge;
+
+        // 额外节点比例， 和surge 二选一
+        @NameInMap("surge_percentage")
+        public Long surgePercentage;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig self = new DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
+            this.autoUpgrade = autoUpgrade;
+            return this;
+        }
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setMaxUnavailable(Long maxUnavailable) {
+            this.maxUnavailable = maxUnavailable;
+            return this;
+        }
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setSurge(Long surge) {
+            this.surge = surge;
+            return this;
+        }
+        public Long getSurge() {
+            return this.surge;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setSurgePercentage(Long surgePercentage) {
+            this.surgePercentage = surgePercentage;
+            return this;
+        }
+        public Long getSurgePercentage() {
+            return this.surgePercentage;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagement extends TeaModel {
+        // 是否启用自动修复
+        @NameInMap("auto_repair")
+        public Boolean autoRepair;
+
+        // 是否开启托管版节点池
+        @NameInMap("enable")
+        public Boolean enable;
+
+        // 是否启用自动修复
+        @NameInMap("upgrade_config")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsManagement build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsManagement self = new DescribeClusterNodePoolsResponseBodyNodepoolsManagement();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setAutoRepair(Boolean autoRepair) {
+            this.autoRepair = autoRepair;
+            return this;
+        }
+        public Boolean getAutoRepair() {
+            return this.autoRepair;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setUpgradeConfig(DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig) {
+            this.upgradeConfig = upgradeConfig;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig getUpgradeConfig() {
+            return this.upgradeConfig;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo extends TeaModel {
         // 节点池创建时间
         @NameInMap("created")
@@ -222,7 +322,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
-        // 节点池所在地域ID。
+        // 节点池所在地域ID
         @NameInMap("region_id")
         public String regionId;
 
@@ -310,11 +410,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit extends TeaModel {
-        // 抢占式实例规格。
+        // 抢占式实例规格
         @NameInMap("instance_type")
         public String instanceType;
 
-        // 单台实例上限价格，单位：元/小时。
+        // 单台实例上限价格，单位：元/小时
         @NameInMap("price_limit")
         public String priceLimit;
 
@@ -350,6 +450,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
+        @NameInMap("compensate_with_on_demand")
+        public Boolean compensateWithOnDemand;
+
         // 数据盘配置	
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -366,29 +470,33 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        // 节点公网IP网络计费类型
+        @NameInMap("internet_charge_type")
+        public String internetChargeType;
+
+        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
+        @NameInMap("internet_max_bandwidth_out")
+        public Long internetMaxBandwidthOut;
+
+        // 密钥对名称，和login_password二选一。
+        @NameInMap("key_pair")
+        public String keyPair;
+
+        // 登录密码，返回结果是加密的。
+        @NameInMap("login_password")
+        public String loginPassword;
+
         // 多可用区伸缩组ECS实例扩缩容策略
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
 
-        // 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
+        // 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例
         @NameInMap("on_demand_base_capacity")
         public Long onDemandBaseCapacity;
 
-        // 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
+        // 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
-
-        // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
-        @NameInMap("spot_instance_pools")
-        public Long spotInstancePools;
-
-        // 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
-        @NameInMap("spot_instance_remedy")
-        public Boolean spotInstanceRemedy;
-
-        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
-        @NameInMap("compensate_with_on_demand")
-        public Boolean compensateWithOnDemand;
 
         // 包年包月时长	
         @NameInMap("period")
@@ -398,21 +506,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("period_unit")
         public String periodUnit;
 
-        // 操作系统发行版。取值： CentOS，AliyunLinux，Windows，WindowsCore。
+        // 操作系统发行版。取值： CentOS，AliyunLinux，Windows，WindowsCore
         @NameInMap("platform")
         public String platform;
 
         // RAM 角色名称	
         @NameInMap("ram_policy")
         public String ramPolicy;
-
-        // 抢占式实例类型
-        @NameInMap("spot_strategy")
-        public String spotStrategy;
-
-        // 抢占实例价格上限配置。
-        @NameInMap("spot_price_limit")
-        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> spotPriceLimit;
 
         // RDS列表	
         @NameInMap("rds_instances")
@@ -426,13 +526,37 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
-        // 安全组ID。	
+        // 安全组ID。
         @NameInMap("security_group_id")
         public String securityGroupId;
+
+        // 安全组ID列表
+        @NameInMap("security_group_ids")
+        public java.util.List<String> securityGroupIds;
+
+        // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10
+        @NameInMap("spot_instance_pools")
+        public Long spotInstancePools;
+
+        // 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例
+        @NameInMap("spot_instance_remedy")
+        public Boolean spotInstanceRemedy;
+
+        // 抢占实例价格上限配置
+        @NameInMap("spot_price_limit")
+        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> spotPriceLimit;
+
+        // 抢占式实例类型
+        @NameInMap("spot_strategy")
+        public String spotStrategy;
 
         // 系统盘类型。	
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
+
+        // 节点系统盘磁盘性能，只针对ESSD磁盘生效
+        @NameInMap("system_disk_performance_level")
+        public String systemDiskPerformanceLevel;
 
         // 系统盘大小	
         @NameInMap("system_disk_size")
@@ -442,25 +566,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
-        // 虚拟交换机ID。	
+        // 虚拟交换机ID
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
-
-        // 登录密码，返回结果是加密的。
-        @NameInMap("login_password")
-        public String loginPassword;
-
-        // 密钥对名称，和login_password二选一。
-        @NameInMap("key_pair")
-        public String keyPair;
-
-        // 节点公网IP网络计费类型
-        @NameInMap("internet_charge_type")
-        public String internetChargeType;
-
-        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
-        @NameInMap("internet_max_bandwidth_out")
-        public Long internetMaxBandwidthOut;
 
         public static DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup self = new DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup();
@@ -481,6 +589,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setDataDisks(java.util.List<DataDisk> dataDisks) {
@@ -515,6 +631,38 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.instanceTypes;
         }
 
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetMaxBandwidthOut(Long internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Long getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setKeyPair(String keyPair) {
+            this.keyPair = keyPair;
+            return this;
+        }
+        public String getKeyPair() {
+            return this.keyPair;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setMultiAzPolicy(String multiAzPolicy) {
             this.multiAzPolicy = multiAzPolicy;
             return this;
@@ -537,30 +685,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getOnDemandPercentageAboveBaseCapacity() {
             return this.onDemandPercentageAboveBaseCapacity;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstancePools(Long spotInstancePools) {
-            this.spotInstancePools = spotInstancePools;
-            return this;
-        }
-        public Long getSpotInstancePools() {
-            return this.spotInstancePools;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstanceRemedy(Boolean spotInstanceRemedy) {
-            this.spotInstanceRemedy = spotInstanceRemedy;
-            return this;
-        }
-        public Boolean getSpotInstanceRemedy() {
-            return this.spotInstanceRemedy;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
-            this.compensateWithOnDemand = compensateWithOnDemand;
-            return this;
-        }
-        public Boolean getCompensateWithOnDemand() {
-            return this.compensateWithOnDemand;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setPeriod(Long period) {
@@ -595,22 +719,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.ramPolicy;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotPriceLimit(java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> spotPriceLimit) {
-            this.spotPriceLimit = spotPriceLimit;
-            return this;
-        }
-        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> getSpotPriceLimit() {
-            return this.spotPriceLimit;
-        }
-
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setRdsInstances(java.util.List<String> rdsInstances) {
             this.rdsInstances = rdsInstances;
             return this;
@@ -643,12 +751,60 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstancePools(Long spotInstancePools) {
+            this.spotInstancePools = spotInstancePools;
+            return this;
+        }
+        public Long getSpotInstancePools() {
+            return this.spotInstancePools;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstanceRemedy(Boolean spotInstanceRemedy) {
+            this.spotInstanceRemedy = spotInstanceRemedy;
+            return this;
+        }
+        public Boolean getSpotInstanceRemedy() {
+            return this.spotInstanceRemedy;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotPriceLimit(java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public java.util.List<DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit> getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
         }
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSystemDiskSize(Long systemDiskSize) {
@@ -675,38 +831,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.vswitchIds;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setLoginPassword(String loginPassword) {
-            this.loginPassword = loginPassword;
-            return this;
-        }
-        public String getLoginPassword() {
-            return this.loginPassword;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setKeyPair(String keyPair) {
-            this.keyPair = keyPair;
-            return this;
-        }
-        public String getKeyPair() {
-            return this.keyPair;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetMaxBandwidthOut(Long internetMaxBandwidthOut) {
-            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-            return this;
-        }
-        public Long getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
-        }
-
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsStatus extends TeaModel {
@@ -726,7 +850,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("offline_nodes")
         public Long offlineNodes;
 
-        // 真在被移除的节点数。	
+        // 正在被移除的节点数
         @NameInMap("removing_nodes")
         public Long removingNodes;
 
@@ -833,134 +957,34 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig extends TeaModel {
-        // 是否启用自动升级，自修复。
-        @NameInMap("auto_upgrade")
-        public Boolean autoUpgrade;
-
-        // 额外节点数量。
-        @NameInMap("surge")
-        public Long surge;
-
-        // 额外节点比例， 和surge 二选一。
-        @NameInMap("surge_percentage")
-        public Long surgePercentage;
-
-        // 最大不可用节点数量。
-        @NameInMap("max_unavailable")
-        public Long maxUnavailable;
-
-        public static DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig self = new DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
-            this.autoUpgrade = autoUpgrade;
-            return this;
-        }
-        public Boolean getAutoUpgrade() {
-            return this.autoUpgrade;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setSurge(Long surge) {
-            this.surge = surge;
-            return this;
-        }
-        public Long getSurge() {
-            return this.surge;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setSurgePercentage(Long surgePercentage) {
-            this.surgePercentage = surgePercentage;
-            return this;
-        }
-        public Long getSurgePercentage() {
-            return this.surgePercentage;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig setMaxUnavailable(Long maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
-            return this;
-        }
-        public Long getMaxUnavailable() {
-            return this.maxUnavailable;
-        }
-
-    }
-
-    public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagement extends TeaModel {
-        // 是否开启托管版节点池。
-        @NameInMap("enable")
-        public Boolean enable;
-
-        // 是否启用自动修复。
-        @NameInMap("auto_repair")
-        public Boolean autoRepair;
-
-        // 是否启用自动修复。
-        @NameInMap("upgrade_config")
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig;
-
-        public static DescribeClusterNodePoolsResponseBodyNodepoolsManagement build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterNodePoolsResponseBodyNodepoolsManagement self = new DescribeClusterNodePoolsResponseBodyNodepoolsManagement();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setAutoRepair(Boolean autoRepair) {
-            this.autoRepair = autoRepair;
-            return this;
-        }
-        public Boolean getAutoRepair() {
-            return this.autoRepair;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement setUpgradeConfig(DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig) {
-            this.upgradeConfig = upgradeConfig;
-            return this;
-        }
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig getUpgradeConfig() {
-            return this.upgradeConfig;
-        }
-
-    }
-
     public static class DescribeClusterNodePoolsResponseBodyNodepools extends TeaModel {
-        // 自动伸缩配置详情。
+        // 自动伸缩配置详情
         @NameInMap("auto_scaling")
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling autoScaling;
 
-        // 集群配置信息。
+        // 集群配置信息
         @NameInMap("kubernetes_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig kubernetesConfig;
 
-        // 节点池配置详情。
+        // 托管节点池配置
+        @NameInMap("management")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement management;
+
+        // 节点池配置详情
         @NameInMap("nodepool_info")
         public DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo nodepoolInfo;
 
-        // 扩容组配置详情。
+        // 扩容组配置详情
         @NameInMap("scaling_group")
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup scalingGroup;
 
-        // 节点池状态详情。
+        // 节点池状态详情
         @NameInMap("status")
         public DescribeClusterNodePoolsResponseBodyNodepoolsStatus status;
 
-        // 加密计算配置详情。
+        // 加密计算配置详情
         @NameInMap("tee_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig teeConfig;
-
-        // 托管节点池配置。
-        @NameInMap("management")
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement management;
 
         public static DescribeClusterNodePoolsResponseBodyNodepools build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolsResponseBodyNodepools self = new DescribeClusterNodePoolsResponseBodyNodepools();
@@ -981,6 +1005,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig getKubernetesConfig() {
             return this.kubernetesConfig;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepools setManagement(DescribeClusterNodePoolsResponseBodyNodepoolsManagement management) {
+            this.management = management;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement getManagement() {
+            return this.management;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepools setNodepoolInfo(DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo nodepoolInfo) {
@@ -1013,14 +1045,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig getTeeConfig() {
             return this.teeConfig;
-        }
-
-        public DescribeClusterNodePoolsResponseBodyNodepools setManagement(DescribeClusterNodePoolsResponseBodyNodepoolsManagement management) {
-            this.management = management;
-            return this;
-        }
-        public DescribeClusterNodePoolsResponseBodyNodepoolsManagement getManagement() {
-            return this.management;
         }
 
     }

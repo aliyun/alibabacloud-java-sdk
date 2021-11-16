@@ -21,27 +21,11 @@ public class InstallClusterAddonsRequest extends TeaModel {
         return this.body;
     }
 
-    public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
-        // 组件名称。
-        @NameInMap("name")
-        public String name;
-
-        public static UnInstallClusterAddonsRequestAddons build(java.util.Map<String, ?> map) throws Exception {
-            UnInstallClusterAddonsRequestAddons self = new UnInstallClusterAddonsRequestAddons();
-            return TeaModel.build(map, self);
-        }
-
-        public UnInstallClusterAddonsRequestAddons setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
     public static class InstallClusterAddonsRequestBody extends TeaModel {
+        // 组件配置信息。
+        @NameInMap("config")
+        public String config;
+
         // 组件名称。
         @NameInMap("name")
         public String name;
@@ -50,13 +34,17 @@ public class InstallClusterAddonsRequest extends TeaModel {
         @NameInMap("version")
         public String version;
 
-        // 组件配置信息。
-        @NameInMap("config")
-        public String config;
-
         public static InstallClusterAddonsRequestBody build(java.util.Map<String, ?> map) throws Exception {
             InstallClusterAddonsRequestBody self = new InstallClusterAddonsRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public InstallClusterAddonsRequestBody setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public InstallClusterAddonsRequestBody setName(String name) {
@@ -75,12 +63,24 @@ public class InstallClusterAddonsRequest extends TeaModel {
             return this.version;
         }
 
-        public InstallClusterAddonsRequestBody setConfig(String config) {
-            this.config = config;
+    }
+
+    public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
+        // 组件名称。
+        @NameInMap("name")
+        public String name;
+
+        public static UnInstallClusterAddonsRequestAddons build(java.util.Map<String, ?> map) throws Exception {
+            UnInstallClusterAddonsRequestAddons self = new UnInstallClusterAddonsRequestAddons();
+            return TeaModel.build(map, self);
+        }
+
+        public UnInstallClusterAddonsRequestAddons setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getConfig() {
-            return this.config;
+        public String getName() {
+            return this.name;
         }
 
     }

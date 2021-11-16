@@ -38,6 +38,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @NameInMap("cluster_id")
         public String clusterId;
 
+        // 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
+        @NameInMap("cluster_spec")
+        public String clusterSpec;
+
         // 集群类型。
         @NameInMap("cluster_type")
         public String clusterType;
@@ -46,17 +50,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @NameInMap("created")
         public String created;
 
-        // 集群初始化版本。
-        @NameInMap("init_version")
-        public String initVersion;
-
         // 集群当前版本。
         @NameInMap("current_version")
         public String currentVersion;
-
-        // 集群可升级版本。
-        @NameInMap("next_version")
-        public String nextVersion;
 
         // 集群是否开启删除保护。
         @NameInMap("deletion_protection")
@@ -69,6 +65,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         // 集群负载均衡服务的ID。
         @NameInMap("external_loadbalancer_id")
         public String externalLoadbalancerId;
+
+        // 集群初始化版本。
+        @NameInMap("init_version")
+        public String initVersion;
+
+        @NameInMap("maintenance_window")
+        public MaintenanceWindow maintenanceWindow;
 
         // 集群访问地址列表。
         @NameInMap("master_url")
@@ -85,6 +88,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         // 集群使用的网络类型，例如：VPC网络。
         @NameInMap("network_mode")
         public String networkMode;
+
+        // 集群可升级版本。
+        @NameInMap("next_version")
+        public String nextVersion;
 
         // 集群是否开启Private Zone。
         @NameInMap("private_zone")
@@ -142,13 +149,6 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         @NameInMap("zone_id")
         public String zoneId;
 
-        // 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
-        @NameInMap("cluster_spec")
-        public String clusterSpec;
-
-        @NameInMap("maintenance_window")
-        public MaintenanceWindow maintenanceWindow;
-
         public static DescribeClustersV1ResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeClustersV1ResponseBodyClusters self = new DescribeClustersV1ResponseBodyClusters();
             return TeaModel.build(map, self);
@@ -160,6 +160,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setClusterSpec(String clusterSpec) {
+            this.clusterSpec = clusterSpec;
+            return this;
+        }
+        public String getClusterSpec() {
+            return this.clusterSpec;
         }
 
         public DescribeClustersV1ResponseBodyClusters setClusterType(String clusterType) {
@@ -178,28 +186,12 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.created;
         }
 
-        public DescribeClustersV1ResponseBodyClusters setInitVersion(String initVersion) {
-            this.initVersion = initVersion;
-            return this;
-        }
-        public String getInitVersion() {
-            return this.initVersion;
-        }
-
         public DescribeClustersV1ResponseBodyClusters setCurrentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
         public String getCurrentVersion() {
             return this.currentVersion;
-        }
-
-        public DescribeClustersV1ResponseBodyClusters setNextVersion(String nextVersion) {
-            this.nextVersion = nextVersion;
-            return this;
-        }
-        public String getNextVersion() {
-            return this.nextVersion;
         }
 
         public DescribeClustersV1ResponseBodyClusters setDeletionProtection(Boolean deletionProtection) {
@@ -224,6 +216,22 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getExternalLoadbalancerId() {
             return this.externalLoadbalancerId;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setInitVersion(String initVersion) {
+            this.initVersion = initVersion;
+            return this;
+        }
+        public String getInitVersion() {
+            return this.initVersion;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+        public MaintenanceWindow getMaintenanceWindow() {
+            return this.maintenanceWindow;
         }
 
         public DescribeClustersV1ResponseBodyClusters setMasterUrl(String masterUrl) {
@@ -256,6 +264,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getNetworkMode() {
             return this.networkMode;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setNextVersion(String nextVersion) {
+            this.nextVersion = nextVersion;
+            return this;
+        }
+        public String getNextVersion() {
+            return this.nextVersion;
         }
 
         public DescribeClustersV1ResponseBodyClusters setPrivateZone(Boolean privateZone) {
@@ -368,22 +384,6 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeClustersV1ResponseBodyClusters setClusterSpec(String clusterSpec) {
-            this.clusterSpec = clusterSpec;
-            return this;
-        }
-        public String getClusterSpec() {
-            return this.clusterSpec;
-        }
-
-        public DescribeClustersV1ResponseBodyClusters setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
-            return this;
-        }
-        public MaintenanceWindow getMaintenanceWindow() {
-            return this.maintenanceWindow;
         }
 
     }

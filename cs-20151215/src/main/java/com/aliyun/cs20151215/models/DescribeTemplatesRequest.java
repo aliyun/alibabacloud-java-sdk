@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
-    // 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
-    @NameInMap("template_type")
-    public String templateType;
-
     // 对查询结果进行分页处理，指定返回第几页的数据。  默认值为 1
     @NameInMap("page_num")
     public Long pageNum;
@@ -16,17 +12,13 @@ public class DescribeTemplatesRequest extends TeaModel {
     @NameInMap("page_size")
     public Long pageSize;
 
+    // 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
+    @NameInMap("template_type")
+    public String templateType;
+
     public static DescribeTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplatesRequest self = new DescribeTemplatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTemplatesRequest setTemplateType(String templateType) {
-        this.templateType = templateType;
-        return this;
-    }
-    public String getTemplateType() {
-        return this.templateType;
     }
 
     public DescribeTemplatesRequest setPageNum(Long pageNum) {
@@ -43,6 +35,14 @@ public class DescribeTemplatesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTemplatesRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }

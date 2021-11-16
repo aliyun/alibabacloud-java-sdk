@@ -8,9 +8,17 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("auto_scaling")
     public CreateClusterNodePoolRequestAutoScaling autoScaling;
 
+    // 节点数量。
+    @NameInMap("count")
+    public Long count;
+
     // 集群配置
     @NameInMap("kubernetes_config")
     public CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig;
+
+    // 托管节点池配置。
+    @NameInMap("management")
+    public CreateClusterNodePoolRequestManagement management;
 
     // 节点池配置
     @NameInMap("nodepool_info")
@@ -23,14 +31,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     // 加密计算节点池配置。
     @NameInMap("tee_config")
     public CreateClusterNodePoolRequestTeeConfig teeConfig;
-
-    // 托管节点池配置。
-    @NameInMap("management")
-    public CreateClusterNodePoolRequestManagement management;
-
-    // 节点数量。
-    @NameInMap("count")
-    public Long count;
 
     public static CreateClusterNodePoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterNodePoolRequest self = new CreateClusterNodePoolRequest();
@@ -45,12 +45,28 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.autoScaling;
     }
 
+    public CreateClusterNodePoolRequest setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
+    }
+
     public CreateClusterNodePoolRequest setKubernetesConfig(CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig) {
         this.kubernetesConfig = kubernetesConfig;
         return this;
     }
     public CreateClusterNodePoolRequestKubernetesConfig getKubernetesConfig() {
         return this.kubernetesConfig;
+    }
+
+    public CreateClusterNodePoolRequest setManagement(CreateClusterNodePoolRequestManagement management) {
+        this.management = management;
+        return this;
+    }
+    public CreateClusterNodePoolRequestManagement getManagement() {
+        return this.management;
     }
 
     public CreateClusterNodePoolRequest setNodepoolInfo(CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo) {
@@ -77,26 +93,22 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.teeConfig;
     }
 
-    public CreateClusterNodePoolRequest setManagement(CreateClusterNodePoolRequestManagement management) {
-        this.management = management;
-        return this;
-    }
-    public CreateClusterNodePoolRequestManagement getManagement() {
-        return this.management;
-    }
-
-    public CreateClusterNodePoolRequest setCount(Long count) {
-        this.count = count;
-        return this;
-    }
-    public Long getCount() {
-        return this.count;
-    }
-
     public static class CreateClusterNodePoolRequestAutoScaling extends TeaModel {
+        // 带宽峰值。
+        @NameInMap("eip_bandwidth")
+        public Long eipBandwidth;
+
+        // EIP实例规格。
+        @NameInMap("eip_internet_charge_type")
+        public String eipInternetChargeType;
+
         // 是否开启自动伸缩。
         @NameInMap("enable")
         public Boolean enable;
+
+        // 是否绑定EIP。
+        @NameInMap("is_bond_eip")
+        public Boolean isBondEip;
 
         // 最大实例数。
         @NameInMap("max_instances")
@@ -110,21 +122,25 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        // 是否绑定EIP。
-        @NameInMap("is_bond_eip")
-        public Boolean isBondEip;
-
-        // EIP实例规格。
-        @NameInMap("eip_internet_charge_type")
-        public String eipInternetChargeType;
-
-        // 带宽峰值。
-        @NameInMap("eip_bandwidth")
-        public Long eipBandwidth;
-
         public static CreateClusterNodePoolRequestAutoScaling build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterNodePoolRequestAutoScaling self = new CreateClusterNodePoolRequestAutoScaling();
             return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestAutoScaling setEipBandwidth(Long eipBandwidth) {
+            this.eipBandwidth = eipBandwidth;
+            return this;
+        }
+        public Long getEipBandwidth() {
+            return this.eipBandwidth;
+        }
+
+        public CreateClusterNodePoolRequestAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
+            this.eipInternetChargeType = eipInternetChargeType;
+            return this;
+        }
+        public String getEipInternetChargeType() {
+            return this.eipInternetChargeType;
         }
 
         public CreateClusterNodePoolRequestAutoScaling setEnable(Boolean enable) {
@@ -133,6 +149,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public CreateClusterNodePoolRequestAutoScaling setIsBondEip(Boolean isBondEip) {
+            this.isBondEip = isBondEip;
+            return this;
+        }
+        public Boolean getIsBondEip() {
+            return this.isBondEip;
         }
 
         public CreateClusterNodePoolRequestAutoScaling setMaxInstances(Long maxInstances) {
@@ -157,30 +181,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public CreateClusterNodePoolRequestAutoScaling setIsBondEip(Boolean isBondEip) {
-            this.isBondEip = isBondEip;
-            return this;
-        }
-        public Boolean getIsBondEip() {
-            return this.isBondEip;
-        }
-
-        public CreateClusterNodePoolRequestAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
-            this.eipInternetChargeType = eipInternetChargeType;
-            return this;
-        }
-        public String getEipInternetChargeType() {
-            return this.eipInternetChargeType;
-        }
-
-        public CreateClusterNodePoolRequestAutoScaling setEipBandwidth(Long eipBandwidth) {
-            this.eipBandwidth = eipBandwidth;
-            return this;
-        }
-        public Long getEipBandwidth() {
-            return this.eipBandwidth;
         }
 
     }
@@ -273,6 +273,106 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
+        // 是否启用自动升级
+        @NameInMap("auto_upgrade")
+        public Boolean autoUpgrade;
+
+        // 最大不可用节点数量。
+        @NameInMap("max_unavailable")
+        public Long maxUnavailable;
+
+        // 额外节点数量。
+        @NameInMap("surge")
+        public Long surge;
+
+        // 额外节点比例。和surge二选一。
+        @NameInMap("surge_percentage")
+        public Long surgePercentage;
+
+        public static CreateClusterNodePoolRequestManagementUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestManagementUpgradeConfig self = new CreateClusterNodePoolRequestManagementUpgradeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
+            this.autoUpgrade = autoUpgrade;
+            return this;
+        }
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setMaxUnavailable(Long maxUnavailable) {
+            this.maxUnavailable = maxUnavailable;
+            return this;
+        }
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurge(Long surge) {
+            this.surge = surge;
+            return this;
+        }
+        public Long getSurge() {
+            return this.surge;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurgePercentage(Long surgePercentage) {
+            this.surgePercentage = surgePercentage;
+            return this;
+        }
+        public Long getSurgePercentage() {
+            return this.surgePercentage;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestManagement extends TeaModel {
+        // 是否启用自动修复。
+        @NameInMap("auto_repair")
+        public Boolean autoRepair;
+
+        // 是否启用托管节点池。
+        @NameInMap("enable")
+        public Boolean enable;
+
+        // 自动升级配置。
+        @NameInMap("upgrade_config")
+        public CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
+
+        public static CreateClusterNodePoolRequestManagement build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestManagement self = new CreateClusterNodePoolRequestManagement();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestManagement setAutoRepair(Boolean autoRepair) {
+            this.autoRepair = autoRepair;
+            return this;
+        }
+        public Boolean getAutoRepair() {
+            return this.autoRepair;
+        }
+
+        public CreateClusterNodePoolRequestManagement setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateClusterNodePoolRequestManagement setUpgradeConfig(CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig) {
+            this.upgradeConfig = upgradeConfig;
+            return this;
+        }
+        public CreateClusterNodePoolRequestManagementUpgradeConfig getUpgradeConfig() {
+            return this.upgradeConfig;
         }
 
     }
@@ -382,6 +482,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
+        @NameInMap("compensate_with_on_demand")
+        public Boolean compensateWithOnDemand;
+
         // 数据盘配置。
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -389,6 +493,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         // 自定义镜像。
         @NameInMap("image_id")
         public String imageId;
+
+        // 操作系统镜像类型，和platform二选一
+        @NameInMap("image_type")
+        public String imageType;
 
         // 节点付费类型
         @NameInMap("instance_charge_type")
@@ -398,6 +506,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        // 节点公网IP网络计费类型
+        @NameInMap("internet_charge_type")
+        public String internetChargeType;
+
+        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
+        @NameInMap("internet_max_bandwidth_out")
+        public Long internetMaxBandwidthOut;
+
         // 密钥对名称，和login_password二选一。
         @NameInMap("key_pair")
         public String keyPair;
@@ -405,54 +521,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         // SSH登录密码。
         @NameInMap("login_password")
         public String loginPassword;
-
-        // 节点包年包月时长。
-        @NameInMap("period")
-        public Long period;
-
-        // 节点包年包月周期。
-        @NameInMap("period_unit")
-        public String periodUnit;
-
-        // 操作系统发行版
-        @NameInMap("platform")
-        public String platform;
-
-        // RDS实例列表。
-        @NameInMap("rds_instances")
-        public java.util.List<String> rdsInstances;
-
-        // 抢占式实例类型
-        @NameInMap("spot_strategy")
-        public String spotStrategy;
-
-        // 抢占实例价格上限配置。
-        @NameInMap("spot_price_limit")
-        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
-
-        // 自动伸缩。
-        @NameInMap("scaling_policy")
-        public String scalingPolicy;
-
-        // 安全组ID。
-        @NameInMap("security_group_id")
-        public String securityGroupId;
-
-        // 节点系统盘类型。
-        @NameInMap("system_disk_category")
-        public String systemDiskCategory;
-
-        // 节点系统盘大小。
-        @NameInMap("system_disk_size")
-        public Long systemDiskSize;
-
-        // ECS标签
-        @NameInMap("tags")
-        public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;
-
-        // 虚拟交换机ID。
-        @NameInMap("vswitch_ids")
-        public java.util.List<String> vswitchIds;
 
         // 多可用区伸缩组ECS实例扩缩容策略
         @NameInMap("multi_az_policy")
@@ -466,6 +534,34 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
+        // 节点包年包月时长。
+        @NameInMap("period")
+        public Long period;
+
+        // 节点包年包月周期。
+        @NameInMap("period_unit")
+        public String periodUnit;
+
+        // 操作系统发行版，和image_type二选一
+        @NameInMap("platform")
+        public String platform;
+
+        // RDS实例列表。
+        @NameInMap("rds_instances")
+        public java.util.List<String> rdsInstances;
+
+        // 自动伸缩。
+        @NameInMap("scaling_policy")
+        public String scalingPolicy;
+
+        // 安全组ID。
+        @NameInMap("security_group_id")
+        public String securityGroupId;
+
+        // 多安全组ID
+        @NameInMap("security_group_ids")
+        public java.util.List<String> securityGroupIds;
+
         // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
         @NameInMap("spot_instance_pools")
         public Long spotInstancePools;
@@ -474,17 +570,33 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("spot_instance_remedy")
         public Boolean spotInstanceRemedy;
 
-        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
-        @NameInMap("compensate_with_on_demand")
-        public Boolean compensateWithOnDemand;
+        // 抢占实例价格上限配置。
+        @NameInMap("spot_price_limit")
+        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
 
-        // 节点公网IP网络计费类型
-        @NameInMap("internet_charge_type")
-        public String internetChargeType;
+        // 抢占式实例类型
+        @NameInMap("spot_strategy")
+        public String spotStrategy;
 
-        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
-        @NameInMap("internet_max_bandwidth_out")
-        public Long internetMaxBandwidthOut;
+        // 节点系统盘类型。
+        @NameInMap("system_disk_category")
+        public String systemDiskCategory;
+
+        // 节点系统盘磁盘性能，只针对ESSD磁盘生效
+        @NameInMap("system_disk_performance_level")
+        public String systemDiskPerformanceLevel;
+
+        // 节点系统盘大小。
+        @NameInMap("system_disk_size")
+        public Long systemDiskSize;
+
+        // ECS标签
+        @NameInMap("tags")
+        public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;
+
+        // 虚拟交换机ID。
+        @NameInMap("vswitch_ids")
+        public java.util.List<String> vswitchIds;
 
         public static CreateClusterNodePoolRequestScalingGroup build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterNodePoolRequestScalingGroup self = new CreateClusterNodePoolRequestScalingGroup();
@@ -507,6 +619,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.autoRenewPeriod;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setDataDisks(java.util.List<DataDisk> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
@@ -521,6 +641,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setInstanceChargeType(String instanceChargeType) {
@@ -539,6 +667,22 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.instanceTypes;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setInternetMaxBandwidthOut(Long internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Long getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setKeyPair(String keyPair) {
             this.keyPair = keyPair;
             return this;
@@ -553,6 +697,30 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getLoginPassword() {
             return this.loginPassword;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setMultiAzPolicy(String multiAzPolicy) {
+            this.multiAzPolicy = multiAzPolicy;
+            return this;
+        }
+        public String getMultiAzPolicy() {
+            return this.multiAzPolicy;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setOnDemandBaseCapacity(Long onDemandBaseCapacity) {
+            this.onDemandBaseCapacity = onDemandBaseCapacity;
+            return this;
+        }
+        public Long getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setOnDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
+            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+            return this;
+        }
+        public Long getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setPeriod(Long period) {
@@ -587,22 +755,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.rdsInstances;
         }
 
-        public CreateClusterNodePoolRequestScalingGroup setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setSpotPriceLimit(java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit) {
-            this.spotPriceLimit = spotPriceLimit;
-            return this;
-        }
-        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> getSpotPriceLimit() {
-            return this.spotPriceLimit;
-        }
-
         public CreateClusterNodePoolRequestScalingGroup setScalingPolicy(String scalingPolicy) {
             this.scalingPolicy = scalingPolicy;
             return this;
@@ -619,12 +771,60 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.securityGroupId;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSpotInstancePools(Long spotInstancePools) {
+            this.spotInstancePools = spotInstancePools;
+            return this;
+        }
+        public Long getSpotInstancePools() {
+            return this.spotInstancePools;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSpotInstanceRemedy(Boolean spotInstanceRemedy) {
+            this.spotInstanceRemedy = spotInstanceRemedy;
+            return this;
+        }
+        public Boolean getSpotInstanceRemedy() {
+            return this.spotInstanceRemedy;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSpotPriceLimit(java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
         }
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskSize(Long systemDiskSize) {
@@ -651,70 +851,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.vswitchIds;
         }
 
-        public CreateClusterNodePoolRequestScalingGroup setMultiAzPolicy(String multiAzPolicy) {
-            this.multiAzPolicy = multiAzPolicy;
-            return this;
-        }
-        public String getMultiAzPolicy() {
-            return this.multiAzPolicy;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setOnDemandBaseCapacity(Long onDemandBaseCapacity) {
-            this.onDemandBaseCapacity = onDemandBaseCapacity;
-            return this;
-        }
-        public Long getOnDemandBaseCapacity() {
-            return this.onDemandBaseCapacity;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setOnDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
-            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
-            return this;
-        }
-        public Long getOnDemandPercentageAboveBaseCapacity() {
-            return this.onDemandPercentageAboveBaseCapacity;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setSpotInstancePools(Long spotInstancePools) {
-            this.spotInstancePools = spotInstancePools;
-            return this;
-        }
-        public Long getSpotInstancePools() {
-            return this.spotInstancePools;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setSpotInstanceRemedy(Boolean spotInstanceRemedy) {
-            this.spotInstanceRemedy = spotInstanceRemedy;
-            return this;
-        }
-        public Boolean getSpotInstanceRemedy() {
-            return this.spotInstanceRemedy;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
-            this.compensateWithOnDemand = compensateWithOnDemand;
-            return this;
-        }
-        public Boolean getCompensateWithOnDemand() {
-            return this.compensateWithOnDemand;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroup setInternetMaxBandwidthOut(Long internetMaxBandwidthOut) {
-            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-            return this;
-        }
-        public Long getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
-        }
-
     }
 
     public static class CreateClusterNodePoolRequestTeeConfig extends TeaModel {
@@ -733,106 +869,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getTeeEnable() {
             return this.teeEnable;
-        }
-
-    }
-
-    public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
-        // 是否启用自动升级
-        @NameInMap("auto_upgrade")
-        public Boolean autoUpgrade;
-
-        // 额外节点数量。
-        @NameInMap("surge")
-        public Long surge;
-
-        // 额外节点比例。和surge二选一。
-        @NameInMap("surge_percentage")
-        public Long surgePercentage;
-
-        // 最大不可用节点数量。
-        @NameInMap("max_unavailable")
-        public Long maxUnavailable;
-
-        public static CreateClusterNodePoolRequestManagementUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterNodePoolRequestManagementUpgradeConfig self = new CreateClusterNodePoolRequestManagementUpgradeConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterNodePoolRequestManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
-            this.autoUpgrade = autoUpgrade;
-            return this;
-        }
-        public Boolean getAutoUpgrade() {
-            return this.autoUpgrade;
-        }
-
-        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurge(Long surge) {
-            this.surge = surge;
-            return this;
-        }
-        public Long getSurge() {
-            return this.surge;
-        }
-
-        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurgePercentage(Long surgePercentage) {
-            this.surgePercentage = surgePercentage;
-            return this;
-        }
-        public Long getSurgePercentage() {
-            return this.surgePercentage;
-        }
-
-        public CreateClusterNodePoolRequestManagementUpgradeConfig setMaxUnavailable(Long maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
-            return this;
-        }
-        public Long getMaxUnavailable() {
-            return this.maxUnavailable;
-        }
-
-    }
-
-    public static class CreateClusterNodePoolRequestManagement extends TeaModel {
-        // 是否启用托管节点池。
-        @NameInMap("enable")
-        public Boolean enable;
-
-        // 是否启用自动修复。
-        @NameInMap("auto_repair")
-        public Boolean autoRepair;
-
-        // 自动升级配置。
-        @NameInMap("upgrade_config")
-        public CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
-
-        public static CreateClusterNodePoolRequestManagement build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterNodePoolRequestManagement self = new CreateClusterNodePoolRequestManagement();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterNodePoolRequestManagement setEnable(Boolean enable) {
-            this.enable = enable;
-            return this;
-        }
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        public CreateClusterNodePoolRequestManagement setAutoRepair(Boolean autoRepair) {
-            this.autoRepair = autoRepair;
-            return this;
-        }
-        public Boolean getAutoRepair() {
-            return this.autoRepair;
-        }
-
-        public CreateClusterNodePoolRequestManagement setUpgradeConfig(CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig) {
-            this.upgradeConfig = upgradeConfig;
-            return this;
-        }
-        public CreateClusterNodePoolRequestManagementUpgradeConfig getUpgradeConfig() {
-            return this.upgradeConfig;
         }
 
     }

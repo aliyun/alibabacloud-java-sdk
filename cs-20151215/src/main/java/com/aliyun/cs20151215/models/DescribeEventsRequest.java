@@ -8,17 +8,17 @@ public class DescribeEventsRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 事件类型
-    @NameInMap("type")
-    public String type;
+    // 没页记录数量
+    @NameInMap("page_number")
+    public Long pageNumber;
 
     // 页数
     @NameInMap("page_size")
     public Long pageSize;
 
-    // 没页记录数量
-    @NameInMap("page_number")
-    public Long pageNumber;
+    // 事件类型
+    @NameInMap("type")
+    public String type;
 
     public static DescribeEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventsRequest self = new DescribeEventsRequest();
@@ -33,12 +33,12 @@ public class DescribeEventsRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeEventsRequest setType(String type) {
-        this.type = type;
+    public DescribeEventsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeEventsRequest setPageSize(Long pageSize) {
@@ -49,12 +49,12 @@ public class DescribeEventsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEventsRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeEventsRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public String getType() {
+        return this.type;
     }
 
 }

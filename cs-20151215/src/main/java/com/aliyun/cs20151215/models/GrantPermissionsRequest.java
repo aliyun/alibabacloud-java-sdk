@@ -30,6 +30,14 @@ public class GrantPermissionsRequest extends TeaModel {
         @NameInMap("is_custom")
         public Boolean isCustom;
 
+        // 是否是 RAM 角色授权
+        @NameInMap("is_ram_role")
+        public Boolean isRamRole;
+
+        // 命名空间名称
+        @NameInMap("namespace")
+        public String namespace;
+
         // 预置的角色名称
         @NameInMap("role_name")
         public String roleName;
@@ -37,14 +45,6 @@ public class GrantPermissionsRequest extends TeaModel {
         // 授权类型
         @NameInMap("role_type")
         public String roleType;
-
-        // 命名空间名称
-        @NameInMap("namespace")
-        public String namespace;
-
-        // 是否是 RAM 角色授权
-        @NameInMap("is_ram_role")
-        public Boolean isRamRole;
 
         public static GrantPermissionsRequestBody build(java.util.Map<String, ?> map) throws Exception {
             GrantPermissionsRequestBody self = new GrantPermissionsRequestBody();
@@ -67,6 +67,22 @@ public class GrantPermissionsRequest extends TeaModel {
             return this.isCustom;
         }
 
+        public GrantPermissionsRequestBody setIsRamRole(Boolean isRamRole) {
+            this.isRamRole = isRamRole;
+            return this;
+        }
+        public Boolean getIsRamRole() {
+            return this.isRamRole;
+        }
+
+        public GrantPermissionsRequestBody setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public GrantPermissionsRequestBody setRoleName(String roleName) {
             this.roleName = roleName;
             return this;
@@ -81,22 +97,6 @@ public class GrantPermissionsRequest extends TeaModel {
         }
         public String getRoleType() {
             return this.roleType;
-        }
-
-        public GrantPermissionsRequestBody setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public GrantPermissionsRequestBody setIsRamRole(Boolean isRamRole) {
-            this.isRamRole = isRamRole;
-            return this;
-        }
-        public Boolean getIsRamRole() {
-            return this.isRamRole;
         }
 
     }
