@@ -8,10 +8,6 @@ public class PublishSceneResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
-    // 任务实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     // 错误消息
     @NameInMap("Message")
     public String message;
@@ -39,14 +35,6 @@ public class PublishSceneResponseBody extends TeaModel {
     }
     public Long getCode() {
         return this.code;
-    }
-
-    public PublishSceneResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public PublishSceneResponseBody setMessage(String message) {
