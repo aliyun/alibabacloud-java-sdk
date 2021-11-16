@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cs20151215</artifactId>
-  <version>2.4.5</version>
+  <version>3.0.0</version>
   <packaging>jar</packaging>
   <name>cs20151215</name>
   <description>Alibaba Cloud CS (20151215) SDK for Java
@@ -78,12 +78,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.13</version>
     </dependency>
   </dependencies>
   <build>

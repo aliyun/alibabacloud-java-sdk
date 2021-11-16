@@ -16,10 +16,6 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
-    // 实例删除保护，防止通过控制台或API误删除释放节点。
-    @NameInMap("instance_deletion_protection")
-    public Boolean instanceDeletionProtection;
-
     // 域名是否重新绑定到Ingress的SLB地址。
     @NameInMap("ingress_domain_rebinding")
     public String ingressDomainRebinding;
@@ -28,12 +24,16 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("ingress_loadbalancer_id")
     public String ingressLoadbalancerId;
 
-    // 集群资源组ID。
-    @NameInMap("resource_group_id")
-    public String resourceGroupId;
+    // 实例删除保护，防止通过控制台或API误删除释放节点。
+    @NameInMap("instance_deletion_protection")
+    public Boolean instanceDeletionProtection;
 
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
+
+    // 集群资源组ID。
+    @NameInMap("resource_group_id")
+    public String resourceGroupId;
 
     public static ModifyClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterRequest self = new ModifyClusterRequest();
@@ -64,14 +64,6 @@ public class ModifyClusterRequest extends TeaModel {
         return this.deletionProtection;
     }
 
-    public ModifyClusterRequest setInstanceDeletionProtection(Boolean instanceDeletionProtection) {
-        this.instanceDeletionProtection = instanceDeletionProtection;
-        return this;
-    }
-    public Boolean getInstanceDeletionProtection() {
-        return this.instanceDeletionProtection;
-    }
-
     public ModifyClusterRequest setIngressDomainRebinding(String ingressDomainRebinding) {
         this.ingressDomainRebinding = ingressDomainRebinding;
         return this;
@@ -88,12 +80,12 @@ public class ModifyClusterRequest extends TeaModel {
         return this.ingressLoadbalancerId;
     }
 
-    public ModifyClusterRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public ModifyClusterRequest setInstanceDeletionProtection(Boolean instanceDeletionProtection) {
+        this.instanceDeletionProtection = instanceDeletionProtection;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Boolean getInstanceDeletionProtection() {
+        return this.instanceDeletionProtection;
     }
 
     public ModifyClusterRequest setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -102,6 +94,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public MaintenanceWindow getMaintenanceWindow() {
         return this.maintenanceWindow;
+    }
+
+    public ModifyClusterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

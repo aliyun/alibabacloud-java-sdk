@@ -4,25 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersRequest extends TeaModel {
-    // 集群名称。
-    @NameInMap("name")
-    public String name;
-
     // 集群类型。
     @NameInMap("clusterType")
     public String clusterType;
 
+    // 集群名称。
+    @NameInMap("name")
+    public String name;
+
     public static DescribeClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersRequest self = new DescribeClustersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClustersRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public DescribeClustersRequest setClusterType(String clusterType) {
@@ -31,6 +23,14 @@ public class DescribeClustersRequest extends TeaModel {
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public DescribeClustersRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

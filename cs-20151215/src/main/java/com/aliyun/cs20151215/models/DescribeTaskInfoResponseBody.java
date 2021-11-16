@@ -8,29 +8,29 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
-    // 任务ID。
-    @NameInMap("task_id")
-    public String taskId;
-
     // 任务创建时间。
     @NameInMap("created")
     public String created;
-
-    // 任务更新时间。
-    @NameInMap("updated")
-    public String updated;
 
     // 任务当前状态。
     @NameInMap("state")
     public String state;
 
-    // 当前任务类型。
-    @NameInMap("task_type")
-    public String taskType;
+    // 任务ID。
+    @NameInMap("task_id")
+    public String taskId;
 
     // 任务执行详情。
     @NameInMap("task_result")
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
+
+    // 当前任务类型。
+    @NameInMap("task_type")
+    public String taskType;
+
+    // 任务更新时间。
+    @NameInMap("updated")
+    public String updated;
 
     public static DescribeTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTaskInfoResponseBody self = new DescribeTaskInfoResponseBody();
@@ -45,28 +45,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeTaskInfoResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public DescribeTaskInfoResponseBody setCreated(String created) {
         this.created = created;
         return this;
     }
     public String getCreated() {
         return this.created;
-    }
-
-    public DescribeTaskInfoResponseBody setUpdated(String updated) {
-        this.updated = updated;
-        return this;
-    }
-    public String getUpdated() {
-        return this.updated;
     }
 
     public DescribeTaskInfoResponseBody setState(String state) {
@@ -77,12 +61,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return this.state;
     }
 
-    public DescribeTaskInfoResponseBody setTaskType(String taskType) {
-        this.taskType = taskType;
+    public DescribeTaskInfoResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getTaskType() {
-        return this.taskType;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public DescribeTaskInfoResponseBody setTaskResult(java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult) {
@@ -91,6 +75,22 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> getTaskResult() {
         return this.taskResult;
+    }
+
+    public DescribeTaskInfoResponseBody setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    public DescribeTaskInfoResponseBody setUpdated(String updated) {
+        this.updated = updated;
+        return this;
+    }
+    public String getUpdated() {
+        return this.updated;
     }
 
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {

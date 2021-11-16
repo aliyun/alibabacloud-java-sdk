@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetKubernetesTriggerRequest extends TeaModel {
+    // 应用名称。
+    @NameInMap("Name")
+    public String name;
+
     // 应用所属命名空间。
     @NameInMap("Namespace")
     public String namespace;
@@ -12,10 +16,6 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    // 应用名称。
-    @NameInMap("Name")
-    public String name;
-
     // 触发器行为。
     @NameInMap("action")
     public String action;
@@ -23,6 +23,14 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     public static GetKubernetesTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKubernetesTriggerRequest self = new GetKubernetesTriggerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetKubernetesTriggerRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public GetKubernetesTriggerRequest setNamespace(String namespace) {
@@ -39,14 +47,6 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public GetKubernetesTriggerRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public GetKubernetesTriggerRequest setAction(String action) {

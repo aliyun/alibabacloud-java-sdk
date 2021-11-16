@@ -8,6 +8,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
+    // 托管版集群类型，面向托管集群。  ack.pro.small：专业托管集群。 ack.standard ：标准托管集群。
+    @NameInMap("cluster_spec")
+    public String clusterSpec;
+
     // 集群类型。
     @NameInMap("cluster_type")
     public String clusterType;
@@ -16,17 +20,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("created")
     public String created;
 
-    // 集群初始化版本。
-    @NameInMap("init_version")
-    public String initVersion;
-
     // 集群当前版本。
     @NameInMap("current_version")
     public String currentVersion;
-
-    // 集群可升级版本。
-    @NameInMap("next_version")
-    public String nextVersion;
 
     // 集群是否开启删除保护。
     @NameInMap("deletion_protection")
@@ -40,6 +36,17 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("external_loadbalancer_id")
     public String externalLoadbalancerId;
 
+    // 集群初始化版本。
+    @NameInMap("init_version")
+    public String initVersion;
+
+    @NameInMap("maintenance_window")
+    public MaintenanceWindow maintenanceWindow;
+
+    // 集群访问地址。
+    @NameInMap("master_url")
+    public String masterUrl;
+
     // 集群元数据。
     @NameInMap("meta_data")
     public String metaData;
@@ -51,6 +58,18 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     // 集群采用的网络类型，例如：VPC网络。
     @NameInMap("network_mode")
     public String networkMode;
+
+    // 集群可升级版本。
+    @NameInMap("next_version")
+    public String nextVersion;
+
+    // 集群是否启用用PrivateZone。  true：启用 false：不启用 默认值：false。
+    @NameInMap("private_zone")
+    public Boolean privateZone;
+
+    // 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
+    @NameInMap("profile")
+    public String profile;
 
     // 集群所在地域ID。
     @NameInMap("region_id")
@@ -72,6 +91,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("state")
     public String state;
 
+    // Pod网络地址段，必须是有效的私有网段，即以下网段及其子网：10.0.0.0/8，172.16-31.0.0/12-16，192.168.0.0/16。不能与 VPC 及VPC 内已有 Kubernetes 集群使用的网段重复，创建成功后不能修改。  有关集群网络规划，请参见：[VPC下 Kubernetes 的网络地址段规划](https://help.aliyun.com/document_detail/～～86500～～)。
+    @NameInMap("subnet_cidr")
+    public String subnetCidr;
+
     // 集群标签。
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -88,36 +111,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("vswitch_id")
     public String vswitchId;
 
-    // Pod网络地址段，必须是有效的私有网段，即以下网段及其子网：10.0.0.0/8，172.16-31.0.0/12-16，192.168.0.0/16。不能与 VPC 及VPC 内已有 Kubernetes 集群使用的网段重复，创建成功后不能修改。  有关集群网络规划，请参见：[VPC下 Kubernetes 的网络地址段规划](https://help.aliyun.com/document_detail/～～86500～～)。
-    @NameInMap("subnet_cidr")
-    public String subnetCidr;
-
-    // 集群所在地域内的可用区ID。
-    @NameInMap("zone_id")
-    public String zoneId;
-
-    // 集群访问地址。
-    @NameInMap("master_url")
-    public String masterUrl;
-
-    // 集群是否启用用PrivateZone。  true：启用 false：不启用 默认值：false。
-    @NameInMap("private_zone")
-    public Boolean privateZone;
-
-    // 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
-    @NameInMap("profile")
-    public String profile;
-
-    // 托管版集群类型，面向托管集群。  ack.pro.small：专业托管集群。 ack.standard ：标准托管集群。
-    @NameInMap("cluster_spec")
-    public String clusterSpec;
-
     // Worker节点RAM角色名称。
     @NameInMap("worker_ram_role_name")
     public String workerRamRoleName;
 
-    @NameInMap("maintenance_window")
-    public MaintenanceWindow maintenanceWindow;
+    // 集群所在地域内的可用区ID。
+    @NameInMap("zone_id")
+    public String zoneId;
 
     public static DescribeClusterDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterDetailResponseBody self = new DescribeClusterDetailResponseBody();
@@ -130,6 +130,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeClusterDetailResponseBody setClusterSpec(String clusterSpec) {
+        this.clusterSpec = clusterSpec;
+        return this;
+    }
+    public String getClusterSpec() {
+        return this.clusterSpec;
     }
 
     public DescribeClusterDetailResponseBody setClusterType(String clusterType) {
@@ -148,28 +156,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.created;
     }
 
-    public DescribeClusterDetailResponseBody setInitVersion(String initVersion) {
-        this.initVersion = initVersion;
-        return this;
-    }
-    public String getInitVersion() {
-        return this.initVersion;
-    }
-
     public DescribeClusterDetailResponseBody setCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
     public String getCurrentVersion() {
         return this.currentVersion;
-    }
-
-    public DescribeClusterDetailResponseBody setNextVersion(String nextVersion) {
-        this.nextVersion = nextVersion;
-        return this;
-    }
-    public String getNextVersion() {
-        return this.nextVersion;
     }
 
     public DescribeClusterDetailResponseBody setDeletionProtection(Boolean deletionProtection) {
@@ -196,6 +188,30 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.externalLoadbalancerId;
     }
 
+    public DescribeClusterDetailResponseBody setInitVersion(String initVersion) {
+        this.initVersion = initVersion;
+        return this;
+    }
+    public String getInitVersion() {
+        return this.initVersion;
+    }
+
+    public DescribeClusterDetailResponseBody setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    public DescribeClusterDetailResponseBody setMasterUrl(String masterUrl) {
+        this.masterUrl = masterUrl;
+        return this;
+    }
+    public String getMasterUrl() {
+        return this.masterUrl;
+    }
+
     public DescribeClusterDetailResponseBody setMetaData(String metaData) {
         this.metaData = metaData;
         return this;
@@ -218,6 +234,30 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getNetworkMode() {
         return this.networkMode;
+    }
+
+    public DescribeClusterDetailResponseBody setNextVersion(String nextVersion) {
+        this.nextVersion = nextVersion;
+        return this;
+    }
+    public String getNextVersion() {
+        return this.nextVersion;
+    }
+
+    public DescribeClusterDetailResponseBody setPrivateZone(Boolean privateZone) {
+        this.privateZone = privateZone;
+        return this;
+    }
+    public Boolean getPrivateZone() {
+        return this.privateZone;
+    }
+
+    public DescribeClusterDetailResponseBody setProfile(String profile) {
+        this.profile = profile;
+        return this;
+    }
+    public String getProfile() {
+        return this.profile;
     }
 
     public DescribeClusterDetailResponseBody setRegionId(String regionId) {
@@ -260,6 +300,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.state;
     }
 
+    public DescribeClusterDetailResponseBody setSubnetCidr(String subnetCidr) {
+        this.subnetCidr = subnetCidr;
+        return this;
+    }
+    public String getSubnetCidr() {
+        return this.subnetCidr;
+    }
+
     public DescribeClusterDetailResponseBody setTags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
@@ -292,54 +340,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.vswitchId;
     }
 
-    public DescribeClusterDetailResponseBody setSubnetCidr(String subnetCidr) {
-        this.subnetCidr = subnetCidr;
-        return this;
-    }
-    public String getSubnetCidr() {
-        return this.subnetCidr;
-    }
-
-    public DescribeClusterDetailResponseBody setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public DescribeClusterDetailResponseBody setMasterUrl(String masterUrl) {
-        this.masterUrl = masterUrl;
-        return this;
-    }
-    public String getMasterUrl() {
-        return this.masterUrl;
-    }
-
-    public DescribeClusterDetailResponseBody setPrivateZone(Boolean privateZone) {
-        this.privateZone = privateZone;
-        return this;
-    }
-    public Boolean getPrivateZone() {
-        return this.privateZone;
-    }
-
-    public DescribeClusterDetailResponseBody setProfile(String profile) {
-        this.profile = profile;
-        return this;
-    }
-    public String getProfile() {
-        return this.profile;
-    }
-
-    public DescribeClusterDetailResponseBody setClusterSpec(String clusterSpec) {
-        this.clusterSpec = clusterSpec;
-        return this;
-    }
-    public String getClusterSpec() {
-        return this.clusterSpec;
-    }
-
     public DescribeClusterDetailResponseBody setWorkerRamRoleName(String workerRamRoleName) {
         this.workerRamRoleName = workerRamRoleName;
         return this;
@@ -348,12 +348,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.workerRamRoleName;
     }
 
-    public DescribeClusterDetailResponseBody setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
-        this.maintenanceWindow = maintenanceWindow;
+    public DescribeClusterDetailResponseBody setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public MaintenanceWindow getMaintenanceWindow() {
-        return this.maintenanceWindow;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

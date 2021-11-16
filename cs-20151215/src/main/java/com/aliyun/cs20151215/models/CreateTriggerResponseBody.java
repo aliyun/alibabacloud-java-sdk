@@ -4,13 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerResponseBody extends TeaModel {
-    // 触发器ID。
-    @NameInMap("id")
-    public String id;
+    // 触发器行为。
+    @NameInMap("action")
+    public String action;
 
     // 集群ID。
     @NameInMap("cluster_id")
     public String clusterId;
+
+    // 触发器ID。
+    @NameInMap("id")
+    public String id;
 
     // 触发器项目名称。
     @NameInMap("project_id")
@@ -20,21 +24,17 @@ public class CreateTriggerResponseBody extends TeaModel {
     @NameInMap("type")
     public String type;
 
-    // 触发器行为。
-    @NameInMap("action")
-    public String action;
-
     public static CreateTriggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTriggerResponseBody self = new CreateTriggerResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateTriggerResponseBody setId(String id) {
-        this.id = id;
+    public CreateTriggerResponseBody setAction(String action) {
+        this.action = action;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getAction() {
+        return this.action;
     }
 
     public CreateTriggerResponseBody setClusterId(String clusterId) {
@@ -43,6 +43,14 @@ public class CreateTriggerResponseBody extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateTriggerResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public CreateTriggerResponseBody setProjectId(String projectId) {
@@ -59,14 +67,6 @@ public class CreateTriggerResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public CreateTriggerResponseBody setAction(String action) {
-        this.action = action;
-        return this;
-    }
-    public String getAction() {
-        return this.action;
     }
 
 }

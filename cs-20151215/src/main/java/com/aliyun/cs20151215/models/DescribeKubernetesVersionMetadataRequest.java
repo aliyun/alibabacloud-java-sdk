@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
-    // 地域ID。
-    @NameInMap("Region")
-    public String region;
-
     // 集群类型。
     @NameInMap("ClusterType")
     public String clusterType;
@@ -20,17 +16,13 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Profile")
     public String profile;
 
+    // 地域ID。
+    @NameInMap("Region")
+    public String region;
+
     public static DescribeKubernetesVersionMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKubernetesVersionMetadataRequest self = new DescribeKubernetesVersionMetadataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeKubernetesVersionMetadataRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
     }
 
     public DescribeKubernetesVersionMetadataRequest setClusterType(String clusterType) {
@@ -55,6 +47,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getProfile() {
         return this.profile;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }

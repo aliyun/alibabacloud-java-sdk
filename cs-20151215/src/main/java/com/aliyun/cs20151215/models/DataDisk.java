@@ -4,25 +4,37 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DataDisk extends TeaModel {
+    // 开启云盘备份时的自动备份策略。
+    @NameInMap("auto_snapshot_policy_id")
+    public String autoSnapshotPolicyId;
+
     // 数据盘类型
     @NameInMap("category")
     public String category;
-
-    // 数据盘大小，取值范围：40～32767
-    @NameInMap("size")
-    public Long size;
 
     // 是否对数据盘加密。
     @NameInMap("encrypted")
     public String encrypted;
 
-    // 开启云盘备份时的自动备份策略。
-    @NameInMap("auto_snapshot_policy_id")
-    public String autoSnapshotPolicyId;
+    // 数据盘磁盘性能，只针对ESSD磁盘生效
+    @NameInMap("performance_level")
+    public String performanceLevel;
+
+    // 数据盘大小，取值范围：40～32767
+    @NameInMap("size")
+    public Long size;
 
     public static DataDisk build(java.util.Map<String, ?> map) throws Exception {
         DataDisk self = new DataDisk();
         return TeaModel.build(map, self);
+    }
+
+    public DataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
     }
 
     public DataDisk setCategory(String category) {
@@ -33,14 +45,6 @@ public class DataDisk extends TeaModel {
         return this.category;
     }
 
-    public DataDisk setSize(Long size) {
-        this.size = size;
-        return this;
-    }
-    public Long getSize() {
-        return this.size;
-    }
-
     public DataDisk setEncrypted(String encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -49,12 +53,20 @@ public class DataDisk extends TeaModel {
         return this.encrypted;
     }
 
-    public DataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
-        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+    public DataDisk setPerformanceLevel(String performanceLevel) {
+        this.performanceLevel = performanceLevel;
         return this;
     }
-    public String getAutoSnapshotPolicyId() {
-        return this.autoSnapshotPolicyId;
+    public String getPerformanceLevel() {
+        return this.performanceLevel;
+    }
+
+    public DataDisk setSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    public Long getSize() {
+        return this.size;
     }
 
 }

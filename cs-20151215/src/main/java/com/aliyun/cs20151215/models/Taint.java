@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Taint extends TeaModel {
+    // 污点生效策略。
+    @NameInMap("effect")
+    public String effect;
+
     // key值。
     @NameInMap("key")
     public String key;
@@ -12,13 +16,17 @@ public class Taint extends TeaModel {
     @NameInMap("value")
     public String value;
 
-    // 污点生效策略。
-    @NameInMap("effect")
-    public String effect;
-
     public static Taint build(java.util.Map<String, ?> map) throws Exception {
         Taint self = new Taint();
         return TeaModel.build(map, self);
+    }
+
+    public Taint setEffect(String effect) {
+        this.effect = effect;
+        return this;
+    }
+    public String getEffect() {
+        return this.effect;
     }
 
     public Taint setKey(String key) {
@@ -35,14 +43,6 @@ public class Taint extends TeaModel {
     }
     public String getValue() {
         return this.value;
-    }
-
-    public Taint setEffect(String effect) {
-        this.effect = effect;
-        return this;
-    }
-    public String getEffect() {
-        return this.effect;
     }
 
 }

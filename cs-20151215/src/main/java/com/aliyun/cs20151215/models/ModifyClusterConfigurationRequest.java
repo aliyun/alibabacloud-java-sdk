@@ -54,25 +54,17 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyClusterConfigurationRequestCustomizeConfig extends TeaModel {
-        // 组件名称。
-        @NameInMap("name")
-        public String name;
-
         // 组件配置。
         @NameInMap("configs")
         public java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> configs;
 
+        // 组件名称。
+        @NameInMap("name")
+        public String name;
+
         public static ModifyClusterConfigurationRequestCustomizeConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyClusterConfigurationRequestCustomizeConfig self = new ModifyClusterConfigurationRequestCustomizeConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyClusterConfigurationRequestCustomizeConfig setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ModifyClusterConfigurationRequestCustomizeConfig setConfigs(java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> configs) {
@@ -81,6 +73,14 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
         }
         public java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> getConfigs() {
             return this.configs;
+        }
+
+        public ModifyClusterConfigurationRequestCustomizeConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
