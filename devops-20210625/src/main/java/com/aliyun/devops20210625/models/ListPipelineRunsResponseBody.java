@@ -4,25 +4,13 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineRunsResponseBody extends TeaModel {
-    // 请求id，每次请求都是唯一值，便于后续排查问题
-    @NameInMap("requestId")
-    public String requestId;
-
-    // 错误信息
-    @NameInMap("errorMessage")
-    public String errorMessage;
-
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // true 接口调用成功，false 接口调用失败
-    @NameInMap("success")
-    public Boolean success;
-
-    // 总数
-    @NameInMap("totalCount")
-    public Long totalCount;
+    // 错误信息
+    @NameInMap("errorMessage")
+    public String errorMessage;
 
     // 下一个分页token，为空时，表示没有下一页
     @NameInMap("nextToken")
@@ -32,25 +20,21 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     @NameInMap("pipelineRuns")
     public java.util.List<ListPipelineRunsResponseBodyPipelineRuns> pipelineRuns;
 
+    // 请求id，每次请求都是唯一值，便于后续排查问题
+    @NameInMap("requestId")
+    public String requestId;
+
+    // true 接口调用成功，false 接口调用失败
+    @NameInMap("success")
+    public Boolean success;
+
+    // 总数
+    @NameInMap("totalCount")
+    public Long totalCount;
+
     public static ListPipelineRunsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPipelineRunsResponseBody self = new ListPipelineRunsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPipelineRunsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListPipelineRunsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public ListPipelineRunsResponseBody setErrorCode(String errorCode) {
@@ -61,20 +45,12 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListPipelineRunsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ListPipelineRunsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public ListPipelineRunsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListPipelineRunsResponseBody setNextToken(String nextToken) {
@@ -93,15 +69,31 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         return this.pipelineRuns;
     }
 
+    public ListPipelineRunsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListPipelineRunsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListPipelineRunsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListPipelineRunsResponseBodyPipelineRuns extends TeaModel {
-        // 流水线id
-        @NameInMap("pipelineId")
-        public Long pipelineId;
-
-        // 开始时间
-        @NameInMap("startTime")
-        public Long startTime;
-
         // 运行人阿里云账号id
         @NameInMap("creatorAccountId")
         public String creatorAccountId;
@@ -110,37 +102,29 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         @NameInMap("endTime")
         public Long endTime;
 
+        // 流水线id
+        @NameInMap("pipelineId")
+        public Long pipelineId;
+
         // 流水线实例id
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
-        // 触发模式
-        @NameInMap("triggerMode")
-        public Long triggerMode;
+        // 开始时间
+        @NameInMap("startTime")
+        public Long startTime;
 
         // 运行状态
         @NameInMap("status")
         public String status;
 
+        // 触发模式
+        @NameInMap("triggerMode")
+        public Long triggerMode;
+
         public static ListPipelineRunsResponseBodyPipelineRuns build(java.util.Map<String, ?> map) throws Exception {
             ListPipelineRunsResponseBodyPipelineRuns self = new ListPipelineRunsResponseBodyPipelineRuns();
             return TeaModel.build(map, self);
-        }
-
-        public ListPipelineRunsResponseBodyPipelineRuns setPipelineId(Long pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public Long getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public ListPipelineRunsResponseBodyPipelineRuns setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public ListPipelineRunsResponseBodyPipelineRuns setCreatorAccountId(String creatorAccountId) {
@@ -159,6 +143,14 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public ListPipelineRunsResponseBodyPipelineRuns setPipelineId(Long pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public Long getPipelineId() {
+            return this.pipelineId;
+        }
+
         public ListPipelineRunsResponseBodyPipelineRuns setPipelineRunId(Long pipelineRunId) {
             this.pipelineRunId = pipelineRunId;
             return this;
@@ -167,12 +159,12 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             return this.pipelineRunId;
         }
 
-        public ListPipelineRunsResponseBodyPipelineRuns setTriggerMode(Long triggerMode) {
-            this.triggerMode = triggerMode;
+        public ListPipelineRunsResponseBodyPipelineRuns setStartTime(Long startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Long getTriggerMode() {
-            return this.triggerMode;
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public ListPipelineRunsResponseBodyPipelineRuns setStatus(String status) {
@@ -181,6 +173,14 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListPipelineRunsResponseBodyPipelineRuns setTriggerMode(Long triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public Long getTriggerMode() {
+            return this.triggerMode;
         }
 
     }

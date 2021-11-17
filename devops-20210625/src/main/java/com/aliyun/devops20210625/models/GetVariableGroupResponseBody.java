@@ -4,17 +4,17 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetVariableGroupResponseBody extends TeaModel {
-    // 请求id，每次请求都是唯一值，便于后续排查问题
-    @NameInMap("requestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("errorCode")
+    public String errorCode;
 
     // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // 错误码
-    @NameInMap("errorCode")
-    public String errorCode;
+    // 请求id，每次请求都是唯一值，便于后续排查问题
+    @NameInMap("requestId")
+    public String requestId;
 
     // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
@@ -29,12 +29,12 @@ public class GetVariableGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetVariableGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetVariableGroupResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetVariableGroupResponseBody setErrorMessage(String errorMessage) {
@@ -45,12 +45,12 @@ public class GetVariableGroupResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetVariableGroupResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetVariableGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetVariableGroupResponseBody setSuccess(Boolean success) {
@@ -102,37 +102,21 @@ public class GetVariableGroupResponseBody extends TeaModel {
     }
 
     public static class GetVariableGroupResponseBodyVariableGroupVariables extends TeaModel {
-        // 变量值
-        @NameInMap("value")
-        public String value;
+        // 是否加密
+        @NameInMap("isEncrypted")
+        public Boolean isEncrypted;
 
         // 变量名
         @NameInMap("name")
         public String name;
 
-        // 是否加密
-        @NameInMap("isEncrypted")
-        public Boolean isEncrypted;
+        // 变量值
+        @NameInMap("value")
+        public String value;
 
         public static GetVariableGroupResponseBodyVariableGroupVariables build(java.util.Map<String, ?> map) throws Exception {
             GetVariableGroupResponseBodyVariableGroupVariables self = new GetVariableGroupResponseBodyVariableGroupVariables();
             return TeaModel.build(map, self);
-        }
-
-        public GetVariableGroupResponseBodyVariableGroupVariables setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public GetVariableGroupResponseBodyVariableGroupVariables setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public GetVariableGroupResponseBodyVariableGroupVariables setIsEncrypted(Boolean isEncrypted) {
@@ -143,6 +127,22 @@ public class GetVariableGroupResponseBody extends TeaModel {
             return this.isEncrypted;
         }
 
+        public GetVariableGroupResponseBodyVariableGroupVariables setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetVariableGroupResponseBodyVariableGroupVariables setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class GetVariableGroupResponseBodyVariableGroup extends TeaModel {
@@ -150,13 +150,13 @@ public class GetVariableGroupResponseBody extends TeaModel {
         @NameInMap("ccreatorAccountId")
         public String ccreatorAccountId;
 
+        // 创建时间
+        @NameInMap("createTime")
+        public Long createTime;
+
         // 变量组描述
         @NameInMap("description")
         public String description;
-
-        // 更新时间
-        @NameInMap("updateTime")
-        public Long updateTime;
 
         // 变量组id
         @NameInMap("id")
@@ -174,13 +174,13 @@ public class GetVariableGroupResponseBody extends TeaModel {
         @NameInMap("relatedPipelines")
         public java.util.List<GetVariableGroupResponseBodyVariableGroupRelatedPipelines> relatedPipelines;
 
+        // 更新时间
+        @NameInMap("updateTime")
+        public Long updateTime;
+
         // 变量
         @NameInMap("variables")
         public java.util.List<GetVariableGroupResponseBodyVariableGroupVariables> variables;
-
-        // 创建时间
-        @NameInMap("createTime")
-        public Long createTime;
 
         public static GetVariableGroupResponseBodyVariableGroup build(java.util.Map<String, ?> map) throws Exception {
             GetVariableGroupResponseBodyVariableGroup self = new GetVariableGroupResponseBodyVariableGroup();
@@ -195,20 +195,20 @@ public class GetVariableGroupResponseBody extends TeaModel {
             return this.ccreatorAccountId;
         }
 
+        public GetVariableGroupResponseBodyVariableGroup setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public GetVariableGroupResponseBodyVariableGroup setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetVariableGroupResponseBodyVariableGroup setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public Long getUpdateTime() {
-            return this.updateTime;
         }
 
         public GetVariableGroupResponseBodyVariableGroup setId(Long id) {
@@ -243,20 +243,20 @@ public class GetVariableGroupResponseBody extends TeaModel {
             return this.relatedPipelines;
         }
 
+        public GetVariableGroupResponseBodyVariableGroup setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
         public GetVariableGroupResponseBodyVariableGroup setVariables(java.util.List<GetVariableGroupResponseBodyVariableGroupVariables> variables) {
             this.variables = variables;
             return this;
         }
         public java.util.List<GetVariableGroupResponseBodyVariableGroupVariables> getVariables() {
             return this.variables;
-        }
-
-        public GetVariableGroupResponseBodyVariableGroup setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
     }

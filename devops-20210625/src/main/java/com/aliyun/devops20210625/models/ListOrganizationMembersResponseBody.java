@@ -4,61 +4,37 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationMembersResponseBody extends TeaModel {
-    // 请求id，每次请求都是唯一值，便于后续排查问题
-    @NameInMap("requestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("errorCode")
+    public String errorCode;
 
     // 错误信息
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    // true 接口调用成功，false 接口调用失败
-    @NameInMap("success")
-    public Boolean success;
-
-    // 错误码
-    @NameInMap("errorCode")
-    public String errorCode;
+    // 成员列表
+    @NameInMap("members")
+    public java.util.List<ListOrganizationMembersResponseBodyMembers> members;
 
     // 分页Token
     @NameInMap("nextToken")
     public String nextToken;
 
+    // 请求id，每次请求都是唯一值，便于后续排查问题
+    @NameInMap("requestId")
+    public String requestId;
+
+    // true 接口调用成功，false 接口调用失败
+    @NameInMap("success")
+    public Boolean success;
+
     // 总数
     @NameInMap("totalCount")
     public Long totalCount;
 
-    // 成员列表
-    @NameInMap("members")
-    public java.util.List<ListOrganizationMembersResponseBodyMembers> members;
-
     public static ListOrganizationMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOrganizationMembersResponseBody self = new ListOrganizationMembersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListOrganizationMembersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListOrganizationMembersResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListOrganizationMembersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListOrganizationMembersResponseBody setErrorCode(String errorCode) {
@@ -69,20 +45,12 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListOrganizationMembersResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListOrganizationMembersResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListOrganizationMembersResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListOrganizationMembersResponseBody setMembers(java.util.List<ListOrganizationMembersResponseBodyMembers> members) {
@@ -91,6 +59,38 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     }
     public java.util.List<ListOrganizationMembersResponseBodyMembers> getMembers() {
         return this.members;
+    }
+
+    public ListOrganizationMembersResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListOrganizationMembersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListOrganizationMembersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListOrganizationMembersResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListOrganizationMembersResponseBodyMembersIdentities extends TeaModel {
@@ -166,13 +166,13 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("organizationMemberName")
         public String organizationMemberName;
 
-        // 企业角色名字
-        @NameInMap("organizationRoleName")
-        public String organizationRoleName;
-
         // 企业角色Id
         @NameInMap("organizationRoleId")
         public String organizationRoleId;
+
+        // 企业角色名字
+        @NameInMap("organizationRoleName")
+        public String organizationRoleName;
 
         // 用户状态
         @NameInMap("state")
@@ -263,20 +263,20 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             return this.organizationMemberName;
         }
 
-        public ListOrganizationMembersResponseBodyMembers setOrganizationRoleName(String organizationRoleName) {
-            this.organizationRoleName = organizationRoleName;
-            return this;
-        }
-        public String getOrganizationRoleName() {
-            return this.organizationRoleName;
-        }
-
         public ListOrganizationMembersResponseBodyMembers setOrganizationRoleId(String organizationRoleId) {
             this.organizationRoleId = organizationRoleId;
             return this;
         }
         public String getOrganizationRoleId() {
             return this.organizationRoleId;
+        }
+
+        public ListOrganizationMembersResponseBodyMembers setOrganizationRoleName(String organizationRoleName) {
+            this.organizationRoleName = organizationRoleName;
+            return this;
+        }
+        public String getOrganizationRoleName() {
+            return this.organizationRoleName;
         }
 
         public ListOrganizationMembersResponseBodyMembers setState(String state) {

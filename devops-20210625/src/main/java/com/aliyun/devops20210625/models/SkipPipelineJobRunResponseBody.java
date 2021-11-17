@@ -4,14 +4,14 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class SkipPipelineJobRunResponseBody extends TeaModel {
-    @NameInMap("requestId")
-    public String requestId;
+    @NameInMap("errorCode")
+    public String errorCode;
 
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    @NameInMap("errorCode")
-    public String errorCode;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -21,12 +21,12 @@ public class SkipPipelineJobRunResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SkipPipelineJobRunResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SkipPipelineJobRunResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public SkipPipelineJobRunResponseBody setErrorMessage(String errorMessage) {
@@ -37,12 +37,12 @@ public class SkipPipelineJobRunResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public SkipPipelineJobRunResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public SkipPipelineJobRunResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SkipPipelineJobRunResponseBody setSuccess(Boolean success) {

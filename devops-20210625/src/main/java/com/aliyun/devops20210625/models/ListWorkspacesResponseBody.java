@@ -4,21 +4,21 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-    @NameInMap("totalCount")
-    public Integer totalCount;
+    // 错误码
+    @NameInMap("errorCode")
+    public String errorCode;
 
-    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
-    @NameInMap("nextToken")
-    public String nextToken;
+    // 错误信息
+    @NameInMap("errorMessage")
+    public String errorMessage;
 
     // MaxResults本次请求所返回的最大记录条数
     @NameInMap("maxResults")
     public Integer maxResults;
 
-    // 工作空间列表
-    @NameInMap("workspaces")
-    public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
+    // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+    @NameInMap("nextToken")
+    public String nextToken;
 
     // 请求ID
     @NameInMap("requestId")
@@ -28,65 +28,17 @@ public class ListWorkspacesResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("errorCode")
-    public String errorCode;
+    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+    @NameInMap("totalCount")
+    public Integer totalCount;
 
-    // 错误信息
-    @NameInMap("errorMessage")
-    public String errorMessage;
+    // 工作空间列表
+    @NameInMap("workspaces")
+    public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
     public static ListWorkspacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWorkspacesResponseBody self = new ListWorkspacesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListWorkspacesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListWorkspacesResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListWorkspacesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListWorkspacesResponseBody setWorkspaces(java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces) {
-        this.workspaces = workspaces;
-        return this;
-    }
-    public java.util.List<ListWorkspacesResponseBodyWorkspaces> getWorkspaces() {
-        return this.workspaces;
-    }
-
-    public ListWorkspacesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListWorkspacesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListWorkspacesResponseBody setErrorCode(String errorCode) {
@@ -105,14 +57,70 @@ public class ListWorkspacesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListWorkspacesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListWorkspacesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListWorkspacesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListWorkspacesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListWorkspacesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListWorkspacesResponseBody setWorkspaces(java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces) {
+        this.workspaces = workspaces;
+        return this;
+    }
+    public java.util.List<ListWorkspacesResponseBodyWorkspaces> getWorkspaces() {
+        return this.workspaces;
+    }
+
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
+        // 代码来源URL
+        @NameInMap("codeUrl")
+        public String codeUrl;
+
         // 代码版本，支持 commitSHA、分支、标签
         @NameInMap("codeVersion")
         public String codeVersion;
 
-        // 代码来源URL
-        @NameInMap("codeUrl")
-        public String codeUrl;
+        // 创建时间戳
+        @NameInMap("createTime")
+        public String createTime;
+
+        // 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
+        @NameInMap("id")
+        public String id;
 
         // 工作空间名称
         @NameInMap("name")
@@ -130,21 +138,21 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("template")
         public String template;
 
-        // 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
-        @NameInMap("id")
-        public String id;
-
         // 用户阿里云PK
         @NameInMap("userId")
         public String userId;
 
-        // 创建时间戳
-        @NameInMap("createTime")
-        public String createTime;
-
         public static ListWorkspacesResponseBodyWorkspaces build(java.util.Map<String, ?> map) throws Exception {
             ListWorkspacesResponseBodyWorkspaces self = new ListWorkspacesResponseBodyWorkspaces();
             return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setCodeUrl(String codeUrl) {
+            this.codeUrl = codeUrl;
+            return this;
+        }
+        public String getCodeUrl() {
+            return this.codeUrl;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setCodeVersion(String codeVersion) {
@@ -155,12 +163,20 @@ public class ListWorkspacesResponseBody extends TeaModel {
             return this.codeVersion;
         }
 
-        public ListWorkspacesResponseBodyWorkspaces setCodeUrl(String codeUrl) {
-            this.codeUrl = codeUrl;
+        public ListWorkspacesResponseBodyWorkspaces setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getCodeUrl() {
-            return this.codeUrl;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setName(String name) {
@@ -195,28 +211,12 @@ public class ListWorkspacesResponseBody extends TeaModel {
             return this.template;
         }
 
-        public ListWorkspacesResponseBodyWorkspaces setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public ListWorkspacesResponseBodyWorkspaces setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public ListWorkspacesResponseBodyWorkspaces setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }

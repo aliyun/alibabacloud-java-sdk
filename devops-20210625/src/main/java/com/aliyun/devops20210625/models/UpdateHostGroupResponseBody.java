@@ -4,15 +4,15 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateHostGroupResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
+    @NameInMap("errorCode")
+    public String errorCode;
 
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    @NameInMap("errorCode")
-    public String errorCode;
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
@@ -22,12 +22,12 @@ public class UpdateHostGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateHostGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateHostGroupResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateHostGroupResponseBody setErrorMessage(String errorMessage) {
@@ -38,12 +38,12 @@ public class UpdateHostGroupResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public UpdateHostGroupResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpdateHostGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateHostGroupResponseBody setSuccess(Boolean success) {

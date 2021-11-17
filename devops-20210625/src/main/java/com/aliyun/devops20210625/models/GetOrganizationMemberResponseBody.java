@@ -4,9 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetOrganizationMemberResponseBody extends TeaModel {
-    // 请求id，每次请求都是唯一值，便于后续排查问题
-    @NameInMap("requestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("errorCode")
+    public String errorCode;
 
     // 错误信息
     @NameInMap("errorMessage")
@@ -16,9 +16,9 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
     @NameInMap("member")
     public GetOrganizationMemberResponseBodyMember member;
 
-    // 错误码
-    @NameInMap("errorCode")
-    public String errorCode;
+    // 请求id，每次请求都是唯一值，便于后续排查问题
+    @NameInMap("requestId")
+    public String requestId;
 
     // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
@@ -29,12 +29,12 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetOrganizationMemberResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetOrganizationMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetOrganizationMemberResponseBody setErrorMessage(String errorMessage) {
@@ -53,12 +53,12 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         return this.member;
     }
 
-    public GetOrganizationMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public GetOrganizationMemberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetOrganizationMemberResponseBody setSuccess(Boolean success) {
@@ -142,13 +142,13 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         @NameInMap("organizationMemberName")
         public String organizationMemberName;
 
-        // 企业角色名字
-        @NameInMap("organizationRoleName")
-        public String organizationRoleName;
-
         // 企业角色Id
         @NameInMap("organizationRoleId")
         public String organizationRoleId;
+
+        // 企业角色名字
+        @NameInMap("organizationRoleName")
+        public String organizationRoleName;
 
         // 用户状态
         @NameInMap("state")
@@ -239,20 +239,20 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             return this.organizationMemberName;
         }
 
-        public GetOrganizationMemberResponseBodyMember setOrganizationRoleName(String organizationRoleName) {
-            this.organizationRoleName = organizationRoleName;
-            return this;
-        }
-        public String getOrganizationRoleName() {
-            return this.organizationRoleName;
-        }
-
         public GetOrganizationMemberResponseBodyMember setOrganizationRoleId(String organizationRoleId) {
             this.organizationRoleId = organizationRoleId;
             return this;
         }
         public String getOrganizationRoleId() {
             return this.organizationRoleId;
+        }
+
+        public GetOrganizationMemberResponseBodyMember setOrganizationRoleName(String organizationRoleName) {
+            this.organizationRoleName = organizationRoleName;
+            return this;
+        }
+        public String getOrganizationRoleName() {
+            return this.organizationRoleName;
         }
 
         public GetOrganizationMemberResponseBodyMember setState(String state) {

@@ -3,7 +3,7 @@ package com.aliyun.devops20210625.models;
 
 import com.aliyun.tea.*;
 
-public class DeletePipelineResponseBody extends TeaModel {
+public class RefusePipelineValidateResponseBody extends TeaModel {
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -20,12 +20,12 @@ public class DeletePipelineResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static DeletePipelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeletePipelineResponseBody self = new DeletePipelineResponseBody();
+    public static RefusePipelineValidateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RefusePipelineValidateResponseBody self = new RefusePipelineValidateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeletePipelineResponseBody setErrorCode(String errorCode) {
+    public RefusePipelineValidateResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -33,7 +33,7 @@ public class DeletePipelineResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeletePipelineResponseBody setErrorMessage(String errorMessage) {
+    public RefusePipelineValidateResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -41,7 +41,7 @@ public class DeletePipelineResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public DeletePipelineResponseBody setRequestId(String requestId) {
+    public RefusePipelineValidateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,7 +49,7 @@ public class DeletePipelineResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeletePipelineResponseBody setSuccess(Boolean success) {
+    public RefusePipelineValidateResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
