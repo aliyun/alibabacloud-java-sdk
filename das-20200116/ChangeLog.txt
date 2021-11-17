@@ -1,3 +1,6 @@
+2021-11-17 Version: 2.1.5
+- Fixed useless variables.
+
 2021-11-04 Version: 2.1.4
 - Fixed useless variables.
 
