@@ -818,6 +818,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDrdsDbRdsNameListWithOptions(request, runtime);
     }
 
+    public DescribeDrdsDbSpecAndPriceResponse describeDrdsDbSpecAndPriceWithOptions(DescribeDrdsDbSpecAndPriceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeDrdsDbSpecAndPrice", "2019-01-23", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeDrdsDbSpecAndPriceResponse());
+    }
+
+    public DescribeDrdsDbSpecAndPriceResponse describeDrdsDbSpecAndPrice(DescribeDrdsDbSpecAndPriceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDrdsDbSpecAndPriceWithOptions(request, runtime);
+    }
+
     public DescribeDrdsDbTasksResponse describeDrdsDbTasksWithOptions(DescribeDrdsDbTasksRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

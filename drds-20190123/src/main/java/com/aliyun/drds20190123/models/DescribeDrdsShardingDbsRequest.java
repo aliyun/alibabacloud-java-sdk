@@ -13,6 +13,12 @@ public class DescribeDrdsShardingDbsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     public static DescribeDrdsShardingDbsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsShardingDbsRequest self = new DescribeDrdsShardingDbsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class DescribeDrdsShardingDbsRequest extends TeaModel {
     }
     public String getDrdsInstanceId() {
         return this.drdsInstanceId;
+    }
+
+    public DescribeDrdsShardingDbsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDrdsShardingDbsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
 }

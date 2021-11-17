@@ -4,6 +4,12 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public String pageNumber;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,9 +19,28 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Total")
+    public String total;
+
     public static DescribeDrdsShardingDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsShardingDbsResponseBody self = new DescribeDrdsShardingDbsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDrdsShardingDbsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDrdsShardingDbsResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDrdsShardingDbsResponseBody setRequestId(String requestId) {
@@ -40,6 +65,14 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeDrdsShardingDbsResponseBody setTotal(String total) {
+        this.total = total;
+        return this;
+    }
+    public String getTotal() {
+        return this.total;
     }
 
     public static class DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb extends TeaModel {

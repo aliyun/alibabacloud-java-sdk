@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>drds20190123</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>drds20190123</name>
   <description>Alibaba Cloud Distributed Relational Database Service (20190123) SDK for Java
@@ -66,12 +66,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.3</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.12</version>
+      <version>0.1.13</version>
     </dependency>
   </dependencies>
   <build>
