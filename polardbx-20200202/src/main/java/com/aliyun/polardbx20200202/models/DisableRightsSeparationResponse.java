@@ -3,21 +3,21 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePolarxPgInstancesResponse extends TeaModel {
+public class DisableRightsSeparationResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribePolarxPgInstancesResponseBody body;
+    public DisableRightsSeparationResponseBody body;
 
-    public static DescribePolarxPgInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribePolarxPgInstancesResponse self = new DescribePolarxPgInstancesResponse();
+    public static DisableRightsSeparationResponse build(java.util.Map<String, ?> map) throws Exception {
+        DisableRightsSeparationResponse self = new DisableRightsSeparationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribePolarxPgInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DisableRightsSeparationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribePolarxPgInstancesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribePolarxPgInstancesResponse setBody(DescribePolarxPgInstancesResponseBody body) {
+    public DisableRightsSeparationResponse setBody(DisableRightsSeparationResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribePolarxPgInstancesResponseBody getBody() {
+    public DisableRightsSeparationResponseBody getBody() {
         return this.body;
     }
 

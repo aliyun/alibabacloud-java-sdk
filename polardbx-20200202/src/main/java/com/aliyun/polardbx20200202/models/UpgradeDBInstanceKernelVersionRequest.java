@@ -10,12 +10,6 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("SwitchTime")
-    public String switchTime;
-
-    @NameInMap("UpgradeTime")
-    public String upgradeTime;
-
     public static UpgradeDBInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceKernelVersionRequest self = new UpgradeDBInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
@@ -35,22 +29,6 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public UpgradeDBInstanceKernelVersionRequest setSwitchTime(String switchTime) {
-        this.switchTime = switchTime;
-        return this;
-    }
-    public String getSwitchTime() {
-        return this.switchTime;
-    }
-
-    public UpgradeDBInstanceKernelVersionRequest setUpgradeTime(String upgradeTime) {
-        this.upgradeTime = upgradeTime;
-        return this;
-    }
-    public String getUpgradeTime() {
-        return this.upgradeTime;
     }
 
 }

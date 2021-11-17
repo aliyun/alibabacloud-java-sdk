@@ -1,3 +1,6 @@
+2021-11-17 Version: 2.0.6
+- Fixed some bugs.
+
 2021-11-04 Version: 2.0.5
 - Support DBNodeRole for DescribeDBNodePerformance.
 
