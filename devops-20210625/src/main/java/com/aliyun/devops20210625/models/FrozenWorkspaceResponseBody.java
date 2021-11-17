@@ -4,14 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class FrozenWorkspaceResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("requestId")
-    public String requestId;
-
-    // 请求是否成功
-    @NameInMap("success")
-    public Boolean success;
-
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -20,25 +12,17 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("requestId")
+    public String requestId;
+
+    // 请求是否成功
+    @NameInMap("success")
+    public Boolean success;
+
     public static FrozenWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FrozenWorkspaceResponseBody self = new FrozenWorkspaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public FrozenWorkspaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public FrozenWorkspaceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public FrozenWorkspaceResponseBody setErrorCode(String errorCode) {
@@ -55,6 +39,22 @@ public class FrozenWorkspaceResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public FrozenWorkspaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public FrozenWorkspaceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

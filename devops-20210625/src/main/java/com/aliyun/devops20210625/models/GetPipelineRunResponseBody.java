@@ -4,9 +4,9 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineRunResponseBody extends TeaModel {
-    // 请求id，每次请求都是唯一值，便于后续排查问题
-    @NameInMap("requestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("errorCode")
+    public String errorCode;
 
     // 错误信息
     @NameInMap("errorMessage")
@@ -16,25 +16,25 @@ public class GetPipelineRunResponseBody extends TeaModel {
     @NameInMap("pipelineRun")
     public GetPipelineRunResponseBodyPipelineRun pipelineRun;
 
+    // 请求id，每次请求都是唯一值，便于后续排查问题
+    @NameInMap("requestId")
+    public String requestId;
+
     // true 接口调用成功，false 接口调用失败
     @NameInMap("success")
     public Boolean success;
-
-    // 错误码
-    @NameInMap("errorCode")
-    public Boolean errorCode;
 
     public static GetPipelineRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineRunResponseBody self = new GetPipelineRunResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetPipelineRunResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetPipelineRunResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetPipelineRunResponseBody setErrorMessage(String errorMessage) {
@@ -53,20 +53,20 @@ public class GetPipelineRunResponseBody extends TeaModel {
         return this.pipelineRun;
     }
 
+    public GetPipelineRunResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetPipelineRunResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetPipelineRunResponseBody setErrorCode(Boolean errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Boolean getErrorCode() {
-        return this.errorCode;
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunSourcesData extends TeaModel {
@@ -114,6 +114,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunSources extends TeaModel {
+        // 代码源信息
+        @NameInMap("data")
+        public GetPipelineRunResponseBodyPipelineRunSourcesData data;
+
         // 代码源唯一标识
         @NameInMap("sign")
         public String sign;
@@ -122,13 +126,17 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        // 代码源信息
-        @NameInMap("data")
-        public GetPipelineRunResponseBodyPipelineRunSourcesData data;
-
         public static GetPipelineRunResponseBodyPipelineRunSources build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineRunResponseBodyPipelineRunSources self = new GetPipelineRunResponseBodyPipelineRunSources();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunSources setData(GetPipelineRunResponseBodyPipelineRunSourcesData data) {
+            this.data = data;
+            return this;
+        }
+        public GetPipelineRunResponseBodyPipelineRunSourcesData getData() {
+            return this.data;
         }
 
         public GetPipelineRunResponseBodyPipelineRunSources setSign(String sign) {
@@ -147,17 +155,57 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetPipelineRunResponseBodyPipelineRunSources setData(GetPipelineRunResponseBodyPipelineRunSourcesData data) {
-            this.data = data;
+    }
+
+    public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions extends TeaModel {
+        // 是否可用
+        @NameInMap("disable")
+        public Boolean disable;
+
+        // API参数
+        @NameInMap("params")
+        public java.util.Map<String, ?> params;
+
+        // API名称
+        @NameInMap("type")
+        public String type;
+
+        public static GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions self = new GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setDisable(Boolean disable) {
+            this.disable = disable;
             return this;
         }
-        public GetPipelineRunResponseBodyPipelineRunSourcesData getData() {
-            return this.data;
+        public Boolean getDisable() {
+            return this.disable;
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setParams(java.util.Map<String, ?> params) {
+            this.params = params;
+            return this;
+        }
+        public java.util.Map<String, ?> getParams() {
+            return this.params;
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
 
     public static class GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs extends TeaModel {
+        // 后续操作
+        @NameInMap("actions")
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions> actions;
+
         // 结束时间
         @NameInMap("endTime")
         public Long endTime;
@@ -174,17 +222,25 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("params")
         public String params;
 
-        // 状态
-        @NameInMap("status")
-        public String status;
-
         // 开始时间
         @NameInMap("startTime")
         public Long startTime;
 
+        // 状态
+        @NameInMap("status")
+        public String status;
+
         public static GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs self = new GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs setActions(java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobsActions> getActions() {
+            return this.actions;
         }
 
         public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs setEndTime(Long endTime) {
@@ -219,20 +275,20 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.params;
         }
 
-        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -242,21 +298,21 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("endTime")
         public Long endTime;
 
-        // 开始时间
-        @NameInMap("startTime")
-        public Long startTime;
+        // 任务
+        @NameInMap("jobs")
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs;
 
         // 阶段名称
         @NameInMap("name")
         public String name;
 
+        // 开始时间
+        @NameInMap("startTime")
+        public Long startTime;
+
         // 状态
         @NameInMap("status")
         public String status;
-
-        // 任务
-        @NameInMap("jobs")
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs;
 
         public static GetPipelineRunResponseBodyPipelineRunStagesStageInfo build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineRunResponseBodyPipelineRunStagesStageInfo self = new GetPipelineRunResponseBodyPipelineRunStagesStageInfo();
@@ -271,12 +327,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setStartTime(Long startTime) {
-            this.startTime = startTime;
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setJobs(java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs) {
+            this.jobs = jobs;
             return this;
         }
-        public Long getStartTime() {
-            return this.startTime;
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> getJobs() {
+            return this.jobs;
         }
 
         public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setName(String name) {
@@ -287,20 +343,20 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
         public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public GetPipelineRunResponseBodyPipelineRunStagesStageInfo setJobs(java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> jobs) {
-            this.jobs = jobs;
-            return this;
-        }
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunStagesStageInfoJobs> getJobs() {
-            return this.jobs;
         }
 
     }
@@ -338,17 +394,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
     }
 
     public static class GetPipelineRunResponseBodyPipelineRun extends TeaModel {
-        // 创建者阿里云账号id
-        @NameInMap("creatorAccountId")
-        public String creatorAccountId;
-
         // 创建时间
         @NameInMap("createTime")
         public Long createTime;
 
-        // 更新时间
-        @NameInMap("updateTime")
-        public Long updateTime;
+        // 创建者阿里云账号id
+        @NameInMap("creatorAccountId")
+        public String creatorAccountId;
 
         // 更新人阿里云账号id
         @NameInMap("modifierAccountId")
@@ -362,6 +414,18 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("pipelineRunId")
         public Long pipelineRunId;
 
+        // 代码源
+        @NameInMap("sources")
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunSources> sources;
+
+        // 阶段拓扑信息
+        @NameInMap("stageGroup")
+        public java.util.List<java.util.List<String>> stageGroup;
+
+        // 阶段信息
+        @NameInMap("stages")
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages;
+
         // 状态 FAIL 运行失败 SUCCESS 运行成功 RUNNING 运行中
         @NameInMap("status")
         public String status;
@@ -370,29 +434,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
         @NameInMap("triggerMode")
         public Integer triggerMode;
 
-        // 阶段拓扑信息
-        @NameInMap("stageGroup")
-        public java.util.List<java.util.List<String>> stageGroup;
-
-        // 代码源
-        @NameInMap("sources")
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunSources> sources;
-
-        // 阶段信息
-        @NameInMap("stages")
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages;
+        // 更新时间
+        @NameInMap("updateTime")
+        public Long updateTime;
 
         public static GetPipelineRunResponseBodyPipelineRun build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineRunResponseBodyPipelineRun self = new GetPipelineRunResponseBodyPipelineRun();
             return TeaModel.build(map, self);
-        }
-
-        public GetPipelineRunResponseBodyPipelineRun setCreatorAccountId(String creatorAccountId) {
-            this.creatorAccountId = creatorAccountId;
-            return this;
-        }
-        public String getCreatorAccountId() {
-            return this.creatorAccountId;
         }
 
         public GetPipelineRunResponseBodyPipelineRun setCreateTime(Long createTime) {
@@ -403,12 +451,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetPipelineRunResponseBodyPipelineRun setUpdateTime(Long updateTime) {
-            this.updateTime = updateTime;
+        public GetPipelineRunResponseBodyPipelineRun setCreatorAccountId(String creatorAccountId) {
+            this.creatorAccountId = creatorAccountId;
             return this;
         }
-        public Long getUpdateTime() {
-            return this.updateTime;
+        public String getCreatorAccountId() {
+            return this.creatorAccountId;
         }
 
         public GetPipelineRunResponseBodyPipelineRun setModifierAccountId(String modifierAccountId) {
@@ -435,6 +483,30 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.pipelineRunId;
         }
 
+        public GetPipelineRunResponseBodyPipelineRun setSources(java.util.List<GetPipelineRunResponseBodyPipelineRunSources> sources) {
+            this.sources = sources;
+            return this;
+        }
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunSources> getSources() {
+            return this.sources;
+        }
+
+        public GetPipelineRunResponseBodyPipelineRun setStageGroup(java.util.List<java.util.List<String>> stageGroup) {
+            this.stageGroup = stageGroup;
+            return this;
+        }
+        public java.util.List<java.util.List<String>> getStageGroup() {
+            return this.stageGroup;
+        }
+
+        public GetPipelineRunResponseBodyPipelineRun setStages(java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages) {
+            this.stages = stages;
+            return this;
+        }
+        public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> getStages() {
+            return this.stages;
+        }
+
         public GetPipelineRunResponseBodyPipelineRun setStatus(String status) {
             this.status = status;
             return this;
@@ -451,28 +523,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
             return this.triggerMode;
         }
 
-        public GetPipelineRunResponseBodyPipelineRun setStageGroup(java.util.List<java.util.List<String>> stageGroup) {
-            this.stageGroup = stageGroup;
+        public GetPipelineRunResponseBodyPipelineRun setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public java.util.List<java.util.List<String>> getStageGroup() {
-            return this.stageGroup;
-        }
-
-        public GetPipelineRunResponseBodyPipelineRun setSources(java.util.List<GetPipelineRunResponseBodyPipelineRunSources> sources) {
-            this.sources = sources;
-            return this;
-        }
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunSources> getSources() {
-            return this.sources;
-        }
-
-        public GetPipelineRunResponseBodyPipelineRun setStages(java.util.List<GetPipelineRunResponseBodyPipelineRunStages> stages) {
-            this.stages = stages;
-            return this;
-        }
-        public java.util.List<GetPipelineRunResponseBodyPipelineRunStages> getStages() {
-            return this.stages;
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
     }

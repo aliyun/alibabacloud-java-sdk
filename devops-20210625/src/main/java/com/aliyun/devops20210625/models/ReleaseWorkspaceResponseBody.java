@@ -4,14 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class ReleaseWorkspaceResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("requestId")
-    public String requestId;
-
-    // 请求是否成功
-    @NameInMap("success")
-    public Boolean success;
-
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -20,25 +12,17 @@ public class ReleaseWorkspaceResponseBody extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    // 请求ID
+    @NameInMap("requestId")
+    public String requestId;
+
+    // 请求是否成功
+    @NameInMap("success")
+    public Boolean success;
+
     public static ReleaseWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReleaseWorkspaceResponseBody self = new ReleaseWorkspaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ReleaseWorkspaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ReleaseWorkspaceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ReleaseWorkspaceResponseBody setErrorCode(String errorCode) {
@@ -55,6 +39,22 @@ public class ReleaseWorkspaceResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ReleaseWorkspaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ReleaseWorkspaceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

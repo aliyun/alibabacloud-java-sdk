@@ -4,11 +4,23 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class UpdateHostGroupRequest extends TeaModel {
-    @NameInMap("type")
-    public String type;
+    @NameInMap("aliyunRegion")
+    public String aliyunRegion;
+
+    @NameInMap("ecsLabelKey")
+    public String ecsLabelKey;
+
+    @NameInMap("ecsLabelValue")
+    public String ecsLabelValue;
+
+    @NameInMap("ecsType")
+    public String ecsType;
 
     @NameInMap("envId")
     public String envId;
+
+    @NameInMap("machineInfos")
+    public String machineInfos;
 
     @NameInMap("name")
     public String name;
@@ -19,32 +31,44 @@ public class UpdateHostGroupRequest extends TeaModel {
     @NameInMap("tagIds")
     public String tagIds;
 
-    @NameInMap("ecsType")
-    public String ecsType;
-
-    @NameInMap("ecsLabelKey")
-    public String ecsLabelKey;
-
-    @NameInMap("ecsLabelValue")
-    public String ecsLabelValue;
-
-    @NameInMap("aliyunRegion")
-    public String aliyunRegion;
-
-    @NameInMap("machineInfos")
-    public String machineInfos;
+    @NameInMap("type")
+    public String type;
 
     public static UpdateHostGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHostGroupRequest self = new UpdateHostGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateHostGroupRequest setType(String type) {
-        this.type = type;
+    public UpdateHostGroupRequest setAliyunRegion(String aliyunRegion) {
+        this.aliyunRegion = aliyunRegion;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getAliyunRegion() {
+        return this.aliyunRegion;
+    }
+
+    public UpdateHostGroupRequest setEcsLabelKey(String ecsLabelKey) {
+        this.ecsLabelKey = ecsLabelKey;
+        return this;
+    }
+    public String getEcsLabelKey() {
+        return this.ecsLabelKey;
+    }
+
+    public UpdateHostGroupRequest setEcsLabelValue(String ecsLabelValue) {
+        this.ecsLabelValue = ecsLabelValue;
+        return this;
+    }
+    public String getEcsLabelValue() {
+        return this.ecsLabelValue;
+    }
+
+    public UpdateHostGroupRequest setEcsType(String ecsType) {
+        this.ecsType = ecsType;
+        return this;
+    }
+    public String getEcsType() {
+        return this.ecsType;
     }
 
     public UpdateHostGroupRequest setEnvId(String envId) {
@@ -53,6 +77,14 @@ public class UpdateHostGroupRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public UpdateHostGroupRequest setMachineInfos(String machineInfos) {
+        this.machineInfos = machineInfos;
+        return this;
+    }
+    public String getMachineInfos() {
+        return this.machineInfos;
     }
 
     public UpdateHostGroupRequest setName(String name) {
@@ -79,44 +111,12 @@ public class UpdateHostGroupRequest extends TeaModel {
         return this.tagIds;
     }
 
-    public UpdateHostGroupRequest setEcsType(String ecsType) {
-        this.ecsType = ecsType;
+    public UpdateHostGroupRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getEcsType() {
-        return this.ecsType;
-    }
-
-    public UpdateHostGroupRequest setEcsLabelKey(String ecsLabelKey) {
-        this.ecsLabelKey = ecsLabelKey;
-        return this;
-    }
-    public String getEcsLabelKey() {
-        return this.ecsLabelKey;
-    }
-
-    public UpdateHostGroupRequest setEcsLabelValue(String ecsLabelValue) {
-        this.ecsLabelValue = ecsLabelValue;
-        return this;
-    }
-    public String getEcsLabelValue() {
-        return this.ecsLabelValue;
-    }
-
-    public UpdateHostGroupRequest setAliyunRegion(String aliyunRegion) {
-        this.aliyunRegion = aliyunRegion;
-        return this;
-    }
-    public String getAliyunRegion() {
-        return this.aliyunRegion;
-    }
-
-    public UpdateHostGroupRequest setMachineInfos(String machineInfos) {
-        this.machineInfos = machineInfos;
-        return this;
-    }
-    public String getMachineInfos() {
-        return this.machineInfos;
+    public String getType() {
+        return this.type;
     }
 
 }

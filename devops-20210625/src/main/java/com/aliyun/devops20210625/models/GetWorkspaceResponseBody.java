@@ -4,14 +4,6 @@ package com.aliyun.devops20210625.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
-    // 工作空间信息
-    @NameInMap("workspace")
-    public GetWorkspaceResponseBodyWorkspace workspace;
-
-    // 请求是否成功
-    @NameInMap("success")
-    public Boolean success;
-
     // 错误码
     @NameInMap("errorCode")
     public String errorCode;
@@ -24,25 +16,17 @@ public class GetWorkspaceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    // 请求是否成功
+    @NameInMap("success")
+    public Boolean success;
+
+    // 工作空间信息
+    @NameInMap("workspace")
+    public GetWorkspaceResponseBodyWorkspace workspace;
+
     public static GetWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetWorkspaceResponseBody self = new GetWorkspaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetWorkspaceResponseBody setWorkspace(GetWorkspaceResponseBodyWorkspace workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public GetWorkspaceResponseBodyWorkspace getWorkspace() {
-        return this.workspace;
-    }
-
-    public GetWorkspaceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetWorkspaceResponseBody setErrorCode(String errorCode) {
@@ -69,14 +53,38 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetWorkspaceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetWorkspaceResponseBody setWorkspace(GetWorkspaceResponseBodyWorkspace workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public GetWorkspaceResponseBodyWorkspace getWorkspace() {
+        return this.workspace;
+    }
+
     public static class GetWorkspaceResponseBodyWorkspace extends TeaModel {
+        // 代码来源URL
+        @NameInMap("codeUrl")
+        public String codeUrl;
+
         // 代码版本，支持 commitSHA、分支、标签
         @NameInMap("codeVersion")
         public String codeVersion;
 
-        // 代码来源URL
-        @NameInMap("codeUrl")
-        public String codeUrl;
+        // 创建时间戳
+        @NameInMap("createTime")
+        public String createTime;
+
+        // 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
+        @NameInMap("id")
+        public String id;
 
         // 工作空间名称
         @NameInMap("name")
@@ -94,21 +102,21 @@ public class GetWorkspaceResponseBody extends TeaModel {
         @NameInMap("template")
         public String template;
 
-        // 工作空间唯一标识，字符串形式，可在云效DevStudio访问空间链接中获取
-        @NameInMap("id")
-        public String id;
-
         // 用户阿里云PK
         @NameInMap("userId")
         public String userId;
 
-        // 创建时间戳
-        @NameInMap("createTime")
-        public String createTime;
-
         public static GetWorkspaceResponseBodyWorkspace build(java.util.Map<String, ?> map) throws Exception {
             GetWorkspaceResponseBodyWorkspace self = new GetWorkspaceResponseBodyWorkspace();
             return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyWorkspace setCodeUrl(String codeUrl) {
+            this.codeUrl = codeUrl;
+            return this;
+        }
+        public String getCodeUrl() {
+            return this.codeUrl;
         }
 
         public GetWorkspaceResponseBodyWorkspace setCodeVersion(String codeVersion) {
@@ -119,12 +127,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
             return this.codeVersion;
         }
 
-        public GetWorkspaceResponseBodyWorkspace setCodeUrl(String codeUrl) {
-            this.codeUrl = codeUrl;
+        public GetWorkspaceResponseBodyWorkspace setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getCodeUrl() {
-            return this.codeUrl;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetWorkspaceResponseBodyWorkspace setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public GetWorkspaceResponseBodyWorkspace setName(String name) {
@@ -159,28 +175,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
             return this.template;
         }
 
-        public GetWorkspaceResponseBodyWorkspace setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public GetWorkspaceResponseBodyWorkspace setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
-        }
-
-        public GetWorkspaceResponseBodyWorkspace setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
     }
