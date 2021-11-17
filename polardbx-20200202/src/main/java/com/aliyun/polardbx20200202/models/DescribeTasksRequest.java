@@ -34,12 +34,6 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("TaskAction")
-    public String taskAction;
-
     public static DescribeTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksRequest self = new DescribeTasksRequest();
         return TeaModel.build(map, self);
@@ -123,22 +117,6 @@ public class DescribeTasksRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeTasksRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeTasksRequest setTaskAction(String taskAction) {
-        this.taskAction = taskAction;
-        return this;
-    }
-    public String getTaskAction() {
-        return this.taskAction;
     }
 
 }
