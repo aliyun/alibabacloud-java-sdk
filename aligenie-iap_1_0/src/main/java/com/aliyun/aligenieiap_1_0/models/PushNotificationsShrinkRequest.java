@@ -8,6 +8,10 @@ public class PushNotificationsShrinkRequest extends TeaModel {
     @NameInMap("NotificationUnicastRequest")
     public String notificationUnicastRequestShrink;
 
+    // 身份信息。
+    @NameInMap("TenantInfo")
+    public String tenantInfoShrink;
+
     public static PushNotificationsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         PushNotificationsShrinkRequest self = new PushNotificationsShrinkRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class PushNotificationsShrinkRequest extends TeaModel {
     }
     public String getNotificationUnicastRequestShrink() {
         return this.notificationUnicastRequestShrink;
+    }
+
+    public PushNotificationsShrinkRequest setTenantInfoShrink(String tenantInfoShrink) {
+        this.tenantInfoShrink = tenantInfoShrink;
+        return this;
+    }
+    public String getTenantInfoShrink() {
+        return this.tenantInfoShrink;
     }
 
 }

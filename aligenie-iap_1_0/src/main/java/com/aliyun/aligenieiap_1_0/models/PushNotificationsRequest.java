@@ -8,6 +8,10 @@ public class PushNotificationsRequest extends TeaModel {
     @NameInMap("NotificationUnicastRequest")
     public PushNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
+    // 身份信息。
+    @NameInMap("TenantInfo")
+    public PushNotificationsRequestTenantInfo tenantInfo;
+
     public static PushNotificationsRequest build(java.util.Map<String, ?> map) throws Exception {
         PushNotificationsRequest self = new PushNotificationsRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class PushNotificationsRequest extends TeaModel {
     }
     public PushNotificationsRequestNotificationUnicastRequest getNotificationUnicastRequest() {
         return this.notificationUnicastRequest;
+    }
+
+    public PushNotificationsRequest setTenantInfo(PushNotificationsRequestTenantInfo tenantInfo) {
+        this.tenantInfo = tenantInfo;
+        return this;
+    }
+    public PushNotificationsRequestTenantInfo getTenantInfo() {
+        return this.tenantInfo;
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequestSendTarget extends TeaModel {
@@ -141,6 +153,14 @@ public class PushNotificationsRequest extends TeaModel {
         }
         public PushNotificationsRequestNotificationUnicastRequestSendTarget getSendTarget() {
             return this.sendTarget;
+        }
+
+    }
+
+    public static class PushNotificationsRequestTenantInfo extends TeaModel {
+        public static PushNotificationsRequestTenantInfo build(java.util.Map<String, ?> map) throws Exception {
+            PushNotificationsRequestTenantInfo self = new PushNotificationsRequestTenantInfo();
+            return TeaModel.build(map, self);
         }
 
     }
