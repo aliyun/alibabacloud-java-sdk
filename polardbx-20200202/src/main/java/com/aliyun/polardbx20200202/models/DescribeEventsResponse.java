@@ -3,21 +3,21 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class DisableRightsSeparationResponse extends TeaModel {
+public class DescribeEventsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DisableRightsSeparationResponseBody body;
+    public DescribeEventsResponseBody body;
 
-    public static DisableRightsSeparationResponse build(java.util.Map<String, ?> map) throws Exception {
-        DisableRightsSeparationResponse self = new DisableRightsSeparationResponse();
+    public static DescribeEventsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeEventsResponse self = new DescribeEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DisableRightsSeparationResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeEventsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DisableRightsSeparationResponse extends TeaModel {
         return this.headers;
     }
 
-    public DisableRightsSeparationResponse setBody(DisableRightsSeparationResponseBody body) {
+    public DescribeEventsResponse setBody(DescribeEventsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DisableRightsSeparationResponseBody getBody() {
+    public DescribeEventsResponseBody getBody() {
         return this.body;
     }
 
