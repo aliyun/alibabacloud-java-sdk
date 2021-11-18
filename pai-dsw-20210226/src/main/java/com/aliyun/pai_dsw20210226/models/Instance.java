@@ -4,9 +4,21 @@ package com.aliyun.pai_dsw20210226.models;
 import com.aliyun.tea.*;
 
 public class Instance extends TeaModel {
+    // 运行时间，毫秒数
+    @NameInMap("AccumulativeRunningTimeInMillis")
+    public Long accumulativeRunningTimeInMillis;
+
     // 累计运行时间(分钟)
     @NameInMap("AccumulativeRunningTimeInMinutes")
     public Long accumulativeRunningTimeInMinutes;
+
+    // 创建者
+    @NameInMap("CreateUser")
+    public String createUser;
+
+    // 数据集列表
+    @NameInMap("DatasetList")
+    public java.util.List<Dataset> datasetList;
 
     // ecs规格
     @NameInMap("EcsSpec")
@@ -23,6 +35,14 @@ public class Instance extends TeaModel {
     // 镜像ID
     @NameInMap("ImageId")
     public String imageId;
+
+    // 镜像名称
+    @NameInMap("ImageName")
+    public String imageName;
+
+    // 镜像类型
+    @NameInMap("ImageType")
+    public String imageType;
 
     // 镜像链接
     @NameInMap("ImageUrl")
@@ -48,13 +68,45 @@ public class Instance extends TeaModel {
     @NameInMap("InstanceUrl")
     public String instanceUrl;
 
+    // 实例版本
+    @NameInMap("InstanceVersion")
+    public String instanceVersion;
+
+    // 是否他人可见
+    @NameInMap("IsPublic")
+    public Long isPublic;
+
     // jupyter链接
     @NameInMap("JupyterlabUrl")
     public String jupyterlabUrl;
 
+    // 错误消息
+    @NameInMap("Message")
+    public String message;
+
     // nas文件系统ID
     @NameInMap("NasFileSystemId")
     public String nasFileSystemId;
+
+    // 付费类型代码
+    @NameInMap("PayType")
+    public Long payType;
+
+    // 付费类型名称
+    @NameInMap("PayTypeName")
+    public String payTypeName;
+
+    // 资源类型名称
+    @NameInMap("Resource")
+    public String resource;
+
+    // 资源类型代码
+    @NameInMap("ResourceType")
+    public Long resourceType;
+
+    // 是否支持定时关机
+    @NameInMap("ShutdownEnabled")
+    public Boolean shutdownEnabled;
 
     // 命令行终端链接
     @NameInMap("TerminalUrl")
@@ -63,6 +115,10 @@ public class Instance extends TeaModel {
     // 用户ID
     @NameInMap("UserId")
     public String userId;
+
+    // 保存用户镜像列表
+    @NameInMap("UserImageList")
+    public java.util.List<Image> userImageList;
 
     // 被打通VPC配置
     @NameInMap("UserVpc")
@@ -85,12 +141,36 @@ public class Instance extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public Instance setAccumulativeRunningTimeInMillis(Long accumulativeRunningTimeInMillis) {
+        this.accumulativeRunningTimeInMillis = accumulativeRunningTimeInMillis;
+        return this;
+    }
+    public Long getAccumulativeRunningTimeInMillis() {
+        return this.accumulativeRunningTimeInMillis;
+    }
+
     public Instance setAccumulativeRunningTimeInMinutes(Long accumulativeRunningTimeInMinutes) {
         this.accumulativeRunningTimeInMinutes = accumulativeRunningTimeInMinutes;
         return this;
     }
     public Long getAccumulativeRunningTimeInMinutes() {
         return this.accumulativeRunningTimeInMinutes;
+    }
+
+    public Instance setCreateUser(String createUser) {
+        this.createUser = createUser;
+        return this;
+    }
+    public String getCreateUser() {
+        return this.createUser;
+    }
+
+    public Instance setDatasetList(java.util.List<Dataset> datasetList) {
+        this.datasetList = datasetList;
+        return this;
+    }
+    public java.util.List<Dataset> getDatasetList() {
+        return this.datasetList;
     }
 
     public Instance setEcsSpec(String ecsSpec) {
@@ -123,6 +203,22 @@ public class Instance extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public Instance setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    public Instance setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
     }
 
     public Instance setImageUrl(String imageUrl) {
@@ -173,6 +269,22 @@ public class Instance extends TeaModel {
         return this.instanceUrl;
     }
 
+    public Instance setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
+    public Instance setIsPublic(Long isPublic) {
+        this.isPublic = isPublic;
+        return this;
+    }
+    public Long getIsPublic() {
+        return this.isPublic;
+    }
+
     public Instance setJupyterlabUrl(String jupyterlabUrl) {
         this.jupyterlabUrl = jupyterlabUrl;
         return this;
@@ -181,12 +293,60 @@ public class Instance extends TeaModel {
         return this.jupyterlabUrl;
     }
 
+    public Instance setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public Instance setNasFileSystemId(String nasFileSystemId) {
         this.nasFileSystemId = nasFileSystemId;
         return this;
     }
     public String getNasFileSystemId() {
         return this.nasFileSystemId;
+    }
+
+    public Instance setPayType(Long payType) {
+        this.payType = payType;
+        return this;
+    }
+    public Long getPayType() {
+        return this.payType;
+    }
+
+    public Instance setPayTypeName(String payTypeName) {
+        this.payTypeName = payTypeName;
+        return this;
+    }
+    public String getPayTypeName() {
+        return this.payTypeName;
+    }
+
+    public Instance setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
+    }
+
+    public Instance setResourceType(Long resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Long getResourceType() {
+        return this.resourceType;
+    }
+
+    public Instance setShutdownEnabled(Boolean shutdownEnabled) {
+        this.shutdownEnabled = shutdownEnabled;
+        return this;
+    }
+    public Boolean getShutdownEnabled() {
+        return this.shutdownEnabled;
     }
 
     public Instance setTerminalUrl(String terminalUrl) {
@@ -203,6 +363,14 @@ public class Instance extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public Instance setUserImageList(java.util.List<Image> userImageList) {
+        this.userImageList = userImageList;
+        return this;
+    }
+    public java.util.List<Image> getUserImageList() {
+        return this.userImageList;
     }
 
     public Instance setUserVpc(UserVpc userVpc) {
