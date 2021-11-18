@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SaveWebRTCStatsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("RowCount")
     public Long rowCount;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SaveWebRTCStatsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SaveWebRTCStatsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SaveWebRTCStatsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public SaveWebRTCStatsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,20 +43,28 @@ public class SaveWebRTCStatsResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
+    public SaveWebRTCStatsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SaveWebRTCStatsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SaveWebRTCStatsResponseBody setRowCount(Long rowCount) {
         this.rowCount = rowCount;
         return this;
     }
     public Long getRowCount() {
         return this.rowCount;
-    }
-
-    public SaveWebRTCStatsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public SaveWebRTCStatsResponseBody setSuccess(Boolean success) {

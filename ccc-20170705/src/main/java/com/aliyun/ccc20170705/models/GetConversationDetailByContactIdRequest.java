@@ -4,11 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetConversationDetailByContactIdRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("ContactId")
     public String contactId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -21,20 +21,20 @@ public class GetConversationDetailByContactIdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetConversationDetailByContactIdRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public GetConversationDetailByContactIdRequest setContactId(String contactId) {
         this.contactId = contactId;
         return this;
     }
     public String getContactId() {
         return this.contactId;
+    }
+
+    public GetConversationDetailByContactIdRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetConversationDetailByContactIdRequest setPageNumber(Integer pageNumber) {

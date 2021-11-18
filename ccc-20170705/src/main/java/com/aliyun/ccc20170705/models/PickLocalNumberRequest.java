@@ -4,26 +4,18 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class PickLocalNumberRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CalleeNumber")
     public String calleeNumber;
 
     @NameInMap("CandidateNumber")
     public java.util.List<String> candidateNumber;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static PickLocalNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         PickLocalNumberRequest self = new PickLocalNumberRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PickLocalNumberRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public PickLocalNumberRequest setCalleeNumber(String calleeNumber) {
@@ -40,6 +32,14 @@ public class PickLocalNumberRequest extends TeaModel {
     }
     public java.util.List<String> getCandidateNumber() {
         return this.candidateNumber;
+    }
+
+    public PickLocalNumberRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

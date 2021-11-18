@@ -4,6 +4,12 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesOfUserResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Instances")
     public ListInstancesOfUserResponseBodyInstances instances;
 
@@ -13,18 +19,28 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static ListInstancesOfUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesOfUserResponseBody self = new ListInstancesOfUserResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesOfUserResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListInstancesOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListInstancesOfUserResponseBody setInstances(ListInstancesOfUserResponseBodyInstances instances) {
@@ -51,22 +67,6 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstancesOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListInstancesOfUserResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListInstancesOfUserResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,133 +75,10 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber extends TeaModel {
-        @NameInMap("TestOnly")
-        public Boolean testOnly;
-
-        @NameInMap("Trunks")
-        public Integer trunks;
-
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Number")
-        public String number;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Usage")
-        public String usage;
-
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
-
-        @NameInMap("PhoneNumberDescription")
-        public String phoneNumberDescription;
-
-        @NameInMap("PhoneNumberId")
-        public String phoneNumberId;
-
-        public static ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
-            ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
-            this.testOnly = testOnly;
-            return this;
-        }
-        public Boolean getTestOnly() {
-            return this.testOnly;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setTrunks(Integer trunks) {
-            this.trunks = trunks;
-            return this;
-        }
-        public Integer getTrunks() {
-            return this.trunks;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setUsage(String usage) {
-            this.usage = usage;
-            return this;
-        }
-        public String getUsage() {
-            return this.usage;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
-            return this;
-        }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
-            this.phoneNumberDescription = phoneNumberDescription;
-            return this;
-        }
-        public String getPhoneNumberDescription() {
-            return this.phoneNumberDescription;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
-        }
-
-    }
-
-    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        public java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> phoneNumber;
-
-        public static ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
-            ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers setPhoneNumber(java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-    }
-
     public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail extends TeaModel {
+        @NameInMap("Department")
+        public String department;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -211,15 +88,20 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         @NameInMap("LoginName")
         public String loginName;
 
-        @NameInMap("Department")
-        public String department;
-
         @NameInMap("Phone")
         public String phone;
 
         public static ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail setDepartment(String department) {
+            this.department = department;
+            return this;
+        }
+        public String getDepartment() {
+            return this.department;
         }
 
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail setDisplayName(String displayName) {
@@ -246,14 +128,6 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             return this.loginName;
         }
 
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail setDepartment(String department) {
-            this.department = department;
-            return this;
-        }
-        public String getDepartment() {
-            return this.department;
-        }
-
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail setPhone(String phone) {
             this.phone = phone;
             return this;
@@ -265,8 +139,8 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
     }
 
     public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser extends TeaModel {
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Detail")
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail detail;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -274,20 +148,20 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         @NameInMap("RamId")
         public String ramId;
 
-        @NameInMap("Detail")
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail detail;
+        @NameInMap("UserId")
+        public String userId;
 
         public static ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser();
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser setUserId(String userId) {
-            this.userId = userId;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser setDetail(ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail detail) {
+            this.detail = detail;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail getDetail() {
+            return this.detail;
         }
 
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser setInstanceId(String instanceId) {
@@ -306,12 +180,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             return this.ramId;
         }
 
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser setDetail(ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail detail) {
-            this.detail = detail;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUser setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdminUserDetail getDetail() {
-            return this.detail;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -335,42 +209,138 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
 
     }
 
-    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstance extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("StorageMaxSize")
-        public Integer storageMaxSize;
-
-        @NameInMap("StorageMaxDays")
-        public Integer storageMaxDays;
-
-        @NameInMap("MaxOnlineAgents")
-        public Integer maxOnlineAgents;
+    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber extends TeaModel {
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("Number")
+        public String number;
 
-        @NameInMap("InstanceDescription")
-        public String instanceDescription;
+        @NameInMap("PhoneNumberDescription")
+        public String phoneNumberDescription;
 
-        @NameInMap("PhoneNumbers")
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers phoneNumbers;
+        @NameInMap("PhoneNumberId")
+        public String phoneNumberId;
+
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("TestOnly")
+        public Boolean testOnly;
+
+        @NameInMap("Trunks")
+        public Integer trunks;
+
+        @NameInMap("Usage")
+        public String usage;
+
+        public static ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
+            return this;
+        }
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
+            this.phoneNumberDescription = phoneNumberDescription;
+            return this;
+        }
+        public String getPhoneNumberDescription() {
+            return this.phoneNumberDescription;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
+            this.testOnly = testOnly;
+            return this;
+        }
+        public Boolean getTestOnly() {
+            return this.testOnly;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setTrunks(Integer trunks) {
+            this.trunks = trunks;
+            return this;
+        }
+        public Integer getTrunks() {
+            return this.trunks;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
+        }
+
+    }
+
+    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers extends TeaModel {
+        @NameInMap("PhoneNumber")
+        public java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> phoneNumber;
+
+        public static ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers self = new ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers setPhoneNumber(java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public java.util.List<ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbersPhoneNumber> getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+    }
+
+    public static class ListInstancesOfUserResponseBodyInstancesCallCenterInstance extends TeaModel {
+        @NameInMap("Admin")
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin admin;
 
         @NameInMap("ConsoleUrl")
         public String consoleUrl;
-
-        @NameInMap("StorageBucket")
-        public String storageBucket;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
 
         @NameInMap("CreatedTime")
         public Long createdTime;
@@ -378,8 +348,38 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        @NameInMap("Admin")
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin admin;
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("MaxOnlineAgents")
+        public Integer maxOnlineAgents;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("PhoneNumbers")
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers phoneNumbers;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageBucket")
+        public String storageBucket;
+
+        @NameInMap("StorageMaxDays")
+        public Integer storageMaxDays;
+
+        @NameInMap("StorageMaxSize")
+        public Integer storageMaxSize;
 
         @NameInMap("TenantId")
         public String tenantId;
@@ -389,76 +389,12 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStatus(String status) {
-            this.status = status;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setAdmin(ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin admin) {
+            this.admin = admin;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageMaxSize(Integer storageMaxSize) {
-            this.storageMaxSize = storageMaxSize;
-            return this;
-        }
-        public Integer getStorageMaxSize() {
-            return this.storageMaxSize;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageMaxDays(Integer storageMaxDays) {
-            this.storageMaxDays = storageMaxDays;
-            return this;
-        }
-        public Integer getStorageMaxDays() {
-            return this.storageMaxDays;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setMaxOnlineAgents(Integer maxOnlineAgents) {
-            this.maxOnlineAgents = maxOnlineAgents;
-            return this;
-        }
-        public Integer getMaxOnlineAgents() {
-            return this.maxOnlineAgents;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceDescription(String instanceDescription) {
-            this.instanceDescription = instanceDescription;
-            return this;
-        }
-        public String getInstanceDescription() {
-            return this.instanceDescription;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setPhoneNumbers(ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers phoneNumbers) {
-            this.phoneNumbers = phoneNumbers;
-            return this;
-        }
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers getPhoneNumbers() {
-            return this.phoneNumbers;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin getAdmin() {
+            return this.admin;
         }
 
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setConsoleUrl(String consoleUrl) {
@@ -467,22 +403,6 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         }
         public String getConsoleUrl() {
             return this.consoleUrl;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageBucket(String storageBucket) {
-            this.storageBucket = storageBucket;
-            return this;
-        }
-        public String getStorageBucket() {
-            return this.storageBucket;
-        }
-
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setCreatedTime(Long createdTime) {
@@ -501,12 +421,92 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             return this.directoryId;
         }
 
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setAdmin(ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin admin) {
-            this.admin = admin;
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public ListInstancesOfUserResponseBodyInstancesCallCenterInstanceAdmin getAdmin() {
-            return this.admin;
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setMaxOnlineAgents(Integer maxOnlineAgents) {
+            this.maxOnlineAgents = maxOnlineAgents;
+            return this;
+        }
+        public Integer getMaxOnlineAgents() {
+            return this.maxOnlineAgents;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setPhoneNumbers(ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers phoneNumbers) {
+            this.phoneNumbers = phoneNumbers;
+            return this;
+        }
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstancePhoneNumbers getPhoneNumbers() {
+            return this.phoneNumbers;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageBucket(String storageBucket) {
+            this.storageBucket = storageBucket;
+            return this;
+        }
+        public String getStorageBucket() {
+            return this.storageBucket;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageMaxDays(Integer storageMaxDays) {
+            this.storageMaxDays = storageMaxDays;
+            return this;
+        }
+        public Integer getStorageMaxDays() {
+            return this.storageMaxDays;
+        }
+
+        public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setStorageMaxSize(Integer storageMaxSize) {
+            this.storageMaxSize = storageMaxSize;
+            return this;
+        }
+        public Integer getStorageMaxSize() {
+            return this.storageMaxSize;
         }
 
         public ListInstancesOfUserResponseBodyInstancesCallCenterInstance setTenantId(String tenantId) {

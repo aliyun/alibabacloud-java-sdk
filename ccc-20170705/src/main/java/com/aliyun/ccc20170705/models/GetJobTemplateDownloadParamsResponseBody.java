@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetJobTemplateDownloadParamsResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("DownloadParams")
     public GetJobTemplateDownloadParamsResponseBodyDownloadParams downloadParams;
@@ -16,8 +13,11 @@ public class GetJobTemplateDownloadParamsResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class GetJobTemplateDownloadParamsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetJobTemplateDownloadParamsResponseBody setMessage(String message) {
-        this.message = message;
+    public GetJobTemplateDownloadParamsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetJobTemplateDownloadParamsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public GetJobTemplateDownloadParamsResponseBody setDownloadParams(GetJobTemplateDownloadParamsResponseBodyDownloadParams downloadParams) {
@@ -59,12 +51,20 @@ public class GetJobTemplateDownloadParamsResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public GetJobTemplateDownloadParamsResponseBody setCode(String code) {
-        this.code = code;
+    public GetJobTemplateDownloadParamsResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetJobTemplateDownloadParamsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetJobTemplateDownloadParamsResponseBody setSuccess(Boolean success) {

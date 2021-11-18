@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListCallEventDetailByContactIdResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Data")
-    public ListCallEventDetailByContactIdResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
     public static ListCallEventDetailByContactIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCallEventDetailByContactIdResponseBody self = new ListCallEventDetailByContactIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListCallEventDetailByContactIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListCallEventDetailByContactIdResponseBody setData(ListCallEventDetailByContactIdResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListCallEventDetailByContactIdResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListCallEventDetailByContactIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListCallEventDetailByContactIdResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListCallEventDetailByContactIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListCallEventDetailByContactIdResponseBody setData(ListCallEventDetailByContactIdResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListCallEventDetailByContactIdResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListCallEventDetailByContactIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListCallEventDetailByContactIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,32 +76,24 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
     }
 
     public static class ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData extends TeaModel {
-        @NameInMap("HangUper")
-        public String hangUper;
-
         @NameInMap("EventType")
         public String eventType;
+
+        @NameInMap("HangUper")
+        public String hangUper;
 
         @NameInMap("Helper")
         public String helper;
 
-        @NameInMap("SkillGroup")
-        public String skillGroup;
-
         @NameInMap("SatisfactionalResearch")
         public String satisfactionalResearch;
+
+        @NameInMap("SkillGroup")
+        public String skillGroup;
 
         public static ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData build(java.util.Map<String, ?> map) throws Exception {
             ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData self = new ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData();
             return TeaModel.build(map, self);
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setHangUper(String hangUper) {
-            this.hangUper = hangUper;
-            return this;
-        }
-        public String getHangUper() {
-            return this.hangUper;
         }
 
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setEventType(String eventType) {
@@ -112,20 +104,20 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             return this.eventType;
         }
 
+        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setHangUper(String hangUper) {
+            this.hangUper = hangUper;
+            return this;
+        }
+        public String getHangUper() {
+            return this.hangUper;
+        }
+
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setHelper(String helper) {
             this.helper = helper;
             return this;
         }
         public String getHelper() {
             return this.helper;
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setSkillGroup(String skillGroup) {
-            this.skillGroup = skillGroup;
-            return this;
-        }
-        public String getSkillGroup() {
-            return this.skillGroup;
         }
 
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setSatisfactionalResearch(String satisfactionalResearch) {
@@ -136,11 +128,19 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             return this.satisfactionalResearch;
         }
 
+        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData setSkillGroup(String skillGroup) {
+            this.skillGroup = skillGroup;
+            return this;
+        }
+        public String getSkillGroup() {
+            return this.skillGroup;
+        }
+
     }
 
     public static class ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AgentName")
+        public String agentName;
 
         @NameInMap("CallMode")
         public String callMode;
@@ -148,29 +148,29 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         @NameInMap("DetailData")
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetailDetailData detailData;
 
+        @NameInMap("Duration")
+        public Integer duration;
+
         @NameInMap("Event")
         public String event;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TimeStamp")
         public String timeStamp;
-
-        @NameInMap("AgentName")
-        public String agentName;
-
-        @NameInMap("Duration")
-        public Integer duration;
 
         public static ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail build(java.util.Map<String, ?> map) throws Exception {
             ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail self = new ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail();
             return TeaModel.build(map, self);
         }
 
-        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setStatus(String status) {
-            this.status = status;
+        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setAgentName(String agentName) {
+            this.agentName = agentName;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAgentName() {
+            return this.agentName;
         }
 
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setCallMode(String callMode) {
@@ -189,6 +189,14 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             return this.detailData;
         }
 
+        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setEvent(String event) {
             this.event = event;
             return this;
@@ -197,28 +205,20 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             return this.event;
         }
 
+        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setAgentName(String agentName) {
-            this.agentName = agentName;
-            return this;
-        }
-        public String getAgentName() {
-            return this.agentName;
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyDataEventsCallEventDetail setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
         }
 
     }
@@ -243,23 +243,14 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
     }
 
     public static class ListCallEventDetailByContactIdResponseBodyData extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
         @NameInMap("CallType")
         public String callType;
 
-        @NameInMap("ReleaseAgent")
-        public String releaseAgent;
+        @NameInMap("Callee")
+        public String callee;
 
         @NameInMap("Caller")
         public String caller;
-
-        @NameInMap("Callee")
-        public String callee;
 
         @NameInMap("Events")
         public ListCallEventDetailByContactIdResponseBodyDataEvents events;
@@ -267,25 +258,18 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         @NameInMap("PrivacyNumber")
         public String privacyNumber;
 
+        @NameInMap("ReleaseAgent")
+        public String releaseAgent;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static ListCallEventDetailByContactIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCallEventDetailByContactIdResponseBodyData self = new ListCallEventDetailByContactIdResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyData setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyData setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
         }
 
         public ListCallEventDetailByContactIdResponseBodyData setCallType(String callType) {
@@ -296,12 +280,12 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
             return this.callType;
         }
 
-        public ListCallEventDetailByContactIdResponseBodyData setReleaseAgent(String releaseAgent) {
-            this.releaseAgent = releaseAgent;
+        public ListCallEventDetailByContactIdResponseBodyData setCallee(String callee) {
+            this.callee = callee;
             return this;
         }
-        public String getReleaseAgent() {
-            return this.releaseAgent;
+        public String getCallee() {
+            return this.callee;
         }
 
         public ListCallEventDetailByContactIdResponseBodyData setCaller(String caller) {
@@ -310,14 +294,6 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         }
         public String getCaller() {
             return this.caller;
-        }
-
-        public ListCallEventDetailByContactIdResponseBodyData setCallee(String callee) {
-            this.callee = callee;
-            return this;
-        }
-        public String getCallee() {
-            return this.callee;
         }
 
         public ListCallEventDetailByContactIdResponseBodyData setEvents(ListCallEventDetailByContactIdResponseBodyDataEvents events) {
@@ -334,6 +310,30 @@ public class ListCallEventDetailByContactIdResponseBody extends TeaModel {
         }
         public String getPrivacyNumber() {
             return this.privacyNumber;
+        }
+
+        public ListCallEventDetailByContactIdResponseBodyData setReleaseAgent(String releaseAgent) {
+            this.releaseAgent = releaseAgent;
+            return this;
+        }
+        public String getReleaseAgent() {
+            return this.releaseAgent;
+        }
+
+        public ListCallEventDetailByContactIdResponseBodyData setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
+        }
+
+        public ListCallEventDetailByContactIdResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateScenarioFromTemplateRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("Description")
-    public String description;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -22,6 +22,14 @@ public class CreateScenarioFromTemplateRequest extends TeaModel {
     public static CreateScenarioFromTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScenarioFromTemplateRequest self = new CreateScenarioFromTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateScenarioFromTemplateRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateScenarioFromTemplateRequest setInstanceId(String instanceId) {
@@ -38,14 +46,6 @@ public class CreateScenarioFromTemplateRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateScenarioFromTemplateRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateScenarioFromTemplateRequest setTemplateId(String templateId) {

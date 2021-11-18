@@ -4,17 +4,17 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetNumberRegionInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PhoneNumber")
     public GetNumberRegionInfoResponseBodyPhoneNumber phoneNumber;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
     public static GetNumberRegionInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNumberRegionInfoResponseBody self = new GetNumberRegionInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetNumberRegionInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetNumberRegionInfoResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetNumberRegionInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetNumberRegionInfoResponseBody setPhoneNumber(GetNumberRegionInfoResponseBodyPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -48,12 +48,12 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
         return this.phoneNumber;
     }
 
-    public GetNumberRegionInfoResponseBody setCode(String code) {
-        this.code = code;
+    public GetNumberRegionInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetNumberRegionInfoResponseBody setSuccess(Boolean success) {
@@ -65,11 +65,11 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
     }
 
     public static class GetNumberRegionInfoResponseBodyPhoneNumber extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -79,20 +79,20 @@ public class GetNumberRegionInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetNumberRegionInfoResponseBodyPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public GetNumberRegionInfoResponseBodyPhoneNumber setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public GetNumberRegionInfoResponseBodyPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public GetNumberRegionInfoResponseBodyPhoneNumber setProvince(String province) {

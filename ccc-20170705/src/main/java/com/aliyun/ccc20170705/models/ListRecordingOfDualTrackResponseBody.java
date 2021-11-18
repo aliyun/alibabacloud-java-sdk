@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListRecordingOfDualTrackResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Recordings")
     public ListRecordingOfDualTrackResponseBodyRecordings recordings;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRecordingOfDualTrackResponseBody setMessage(String message) {
-        this.message = message;
+    public ListRecordingOfDualTrackResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRecordingOfDualTrackResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRecordingOfDualTrackResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,6 +43,14 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
+    public ListRecordingOfDualTrackResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ListRecordingOfDualTrackResponseBody setRecordings(ListRecordingOfDualTrackResponseBodyRecordings recordings) {
         this.recordings = recordings;
         return this;
@@ -59,12 +59,12 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
         return this.recordings;
     }
 
-    public ListRecordingOfDualTrackResponseBody setCode(String code) {
-        this.code = code;
+    public ListRecordingOfDualTrackResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRecordingOfDualTrackResponseBody setSuccess(Boolean success) {
@@ -76,56 +76,48 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
     }
 
     public static class ListRecordingOfDualTrackResponseBodyRecordingsListRecording extends TeaModel {
-        @NameInMap("ContactType")
-        public String contactType;
-
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
-        @NameInMap("FileName")
-        public String fileName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("CalledNumber")
         public String calledNumber;
-
-        @NameInMap("FilePath")
-        public String filePath;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("ContactId")
-        public String contactId;
 
         @NameInMap("CallingNumber")
         public String callingNumber;
 
-        @NameInMap("Duration")
-        public Integer duration;
-
         @NameInMap("Channel")
         public String channel;
+
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("ContactType")
+        public String contactType;
+
+        @NameInMap("Duration")
+        public Integer duration;
 
         @NameInMap("FileDescription")
         public String fileDescription;
 
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("FilePath")
+        public String filePath;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
         public static ListRecordingOfDualTrackResponseBodyRecordingsListRecording build(java.util.Map<String, ?> map) throws Exception {
             ListRecordingOfDualTrackResponseBodyRecordingsListRecording self = new ListRecordingOfDualTrackResponseBodyRecordingsListRecording();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setContactType(String contactType) {
-            this.contactType = contactType;
-            return this;
-        }
-        public String getContactType() {
-            return this.contactType;
         }
 
         public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setAgentId(String agentId) {
@@ -144,52 +136,12 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
             return this.agentName;
         }
 
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setFileName(String fileName) {
-            this.fileName = fileName;
-            return this;
-        }
-        public String getFileName() {
-            return this.fileName;
-        }
-
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setCalledNumber(String calledNumber) {
             this.calledNumber = calledNumber;
             return this;
         }
         public String getCalledNumber() {
             return this.calledNumber;
-        }
-
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
-        }
-
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
         }
 
         public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setCallingNumber(String callingNumber) {
@@ -200,14 +152,6 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
             return this.callingNumber;
         }
 
-        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
-        }
-
         public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setChannel(String channel) {
             this.channel = channel;
             return this;
@@ -216,12 +160,68 @@ public class ListRecordingOfDualTrackResponseBody extends TeaModel {
             return this.channel;
         }
 
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setContactId(String contactId) {
+            this.contactId = contactId;
+            return this;
+        }
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setContactType(String contactType) {
+            this.contactType = contactType;
+            return this;
+        }
+        public String getContactType() {
+            return this.contactType;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
         public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setFileDescription(String fileDescription) {
             this.fileDescription = fileDescription;
             return this;
         }
         public String getFileDescription() {
             return this.fileDescription;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListRecordingOfDualTrackResponseBodyRecordingsListRecording setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

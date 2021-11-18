@@ -4,11 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class FindUsersRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Criteria")
     public String criteria;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -21,20 +21,20 @@ public class FindUsersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FindUsersRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public FindUsersRequest setCriteria(String criteria) {
         this.criteria = criteria;
         return this;
     }
     public String getCriteria() {
         return this.criteria;
+    }
+
+    public FindUsersRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public FindUsersRequest setPageNumber(Integer pageNumber) {

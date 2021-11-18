@@ -4,8 +4,14 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentEventsRequest extends TeaModel {
+    @NameInMap("Event")
+    public java.util.List<String> event;
+
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RamId")
+    public java.util.List<String> ramId;
 
     @NameInMap("StartTime")
     public Long startTime;
@@ -13,15 +19,17 @@ public class ListAgentEventsRequest extends TeaModel {
     @NameInMap("StopTime")
     public Long stopTime;
 
-    @NameInMap("RamId")
-    public java.util.List<String> ramId;
-
-    @NameInMap("Event")
-    public java.util.List<String> event;
-
     public static ListAgentEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentEventsRequest self = new ListAgentEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentEventsRequest setEvent(java.util.List<String> event) {
+        this.event = event;
+        return this;
+    }
+    public java.util.List<String> getEvent() {
+        return this.event;
     }
 
     public ListAgentEventsRequest setInstanceId(String instanceId) {
@@ -30,6 +38,14 @@ public class ListAgentEventsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListAgentEventsRequest setRamId(java.util.List<String> ramId) {
+        this.ramId = ramId;
+        return this;
+    }
+    public java.util.List<String> getRamId() {
+        return this.ramId;
     }
 
     public ListAgentEventsRequest setStartTime(Long startTime) {
@@ -46,22 +62,6 @@ public class ListAgentEventsRequest extends TeaModel {
     }
     public Long getStopTime() {
         return this.stopTime;
-    }
-
-    public ListAgentEventsRequest setRamId(java.util.List<String> ramId) {
-        this.ramId = ramId;
-        return this;
-    }
-    public java.util.List<String> getRamId() {
-        return this.ramId;
-    }
-
-    public ListAgentEventsRequest setEvent(java.util.List<String> event) {
-        this.event = event;
-        return this;
-    }
-    public java.util.List<String> getEvent() {
-        return this.event;
     }
 
 }

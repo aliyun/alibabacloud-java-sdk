@@ -4,17 +4,17 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ResumeJobsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ResumeJobsResponseBody extends TeaModel {
     public static ResumeJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResumeJobsResponseBody self = new ResumeJobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ResumeJobsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ResumeJobsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ResumeJobsResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class ResumeJobsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ResumeJobsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ResumeJobsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ResumeJobsResponseBody setSuccess(Boolean success) {

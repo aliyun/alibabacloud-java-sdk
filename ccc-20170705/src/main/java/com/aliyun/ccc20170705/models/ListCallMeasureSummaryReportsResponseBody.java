@@ -7,17 +7,17 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
     @NameInMap("CallMeasureSummaryReportList")
     public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportList callMeasureSummaryReportList;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -33,6 +33,22 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
     }
     public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportList getCallMeasureSummaryReportList() {
         return this.callMeasureSummaryReportList;
+    }
+
+    public ListCallMeasureSummaryReportsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListCallMeasureSummaryReportsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListCallMeasureSummaryReportsResponseBody setMessage(String message) {
@@ -51,22 +67,6 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListCallMeasureSummaryReportsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListCallMeasureSummaryReportsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListCallMeasureSummaryReportsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -79,11 +79,14 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         @NameInMap("Day")
         public String day;
 
-        @NameInMap("Year")
-        public String year;
+        @NameInMap("InboundCount")
+        public Long inboundCount;
 
         @NameInMap("InboundDurationByMinute")
         public Long inboundDurationByMinute;
+
+        @NameInMap("Month")
+        public String month;
 
         @NameInMap("OutboundCount")
         public Long outboundCount;
@@ -91,11 +94,8 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         @NameInMap("OutboundDurationByMinute")
         public Long outboundDurationByMinute;
 
-        @NameInMap("InboundCount")
-        public Long inboundCount;
-
-        @NameInMap("Month")
-        public String month;
+        @NameInMap("Year")
+        public String year;
 
         public static ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport build(java.util.Map<String, ?> map) throws Exception {
             ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport self = new ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport();
@@ -110,12 +110,12 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
             return this.day;
         }
 
-        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setYear(String year) {
-            this.year = year;
+        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setInboundCount(Long inboundCount) {
+            this.inboundCount = inboundCount;
             return this;
         }
-        public String getYear() {
-            return this.year;
+        public Long getInboundCount() {
+            return this.inboundCount;
         }
 
         public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setInboundDurationByMinute(Long inboundDurationByMinute) {
@@ -124,6 +124,14 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
         }
         public Long getInboundDurationByMinute() {
             return this.inboundDurationByMinute;
+        }
+
+        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setMonth(String month) {
+            this.month = month;
+            return this;
+        }
+        public String getMonth() {
+            return this.month;
         }
 
         public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setOutboundCount(Long outboundCount) {
@@ -142,20 +150,12 @@ public class ListCallMeasureSummaryReportsResponseBody extends TeaModel {
             return this.outboundDurationByMinute;
         }
 
-        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setInboundCount(Long inboundCount) {
-            this.inboundCount = inboundCount;
+        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setYear(String year) {
+            this.year = year;
             return this;
         }
-        public Long getInboundCount() {
-            return this.inboundCount;
-        }
-
-        public ListCallMeasureSummaryReportsResponseBodyCallMeasureSummaryReportListCallMeasureSummaryReport setMonth(String month) {
-            this.month = month;
-            return this;
-        }
-        public String getMonth() {
-            return this.month;
+        public String getYear() {
+            return this.year;
         }
 
     }

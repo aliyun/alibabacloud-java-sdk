@@ -4,14 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListRecentCallRecordsRequest extends TeaModel {
+    @NameInMap("Criteria")
+    public String criteria;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
-    @NameInMap("StopTime")
-    public Long stopTime;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,12 +16,23 @@ public class ListRecentCallRecordsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Criteria")
-    public String criteria;
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("StopTime")
+    public Long stopTime;
 
     public static ListRecentCallRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRecentCallRecordsRequest self = new ListRecentCallRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRecentCallRecordsRequest setCriteria(String criteria) {
+        this.criteria = criteria;
+        return this;
+    }
+    public String getCriteria() {
+        return this.criteria;
     }
 
     public ListRecentCallRecordsRequest setInstanceId(String instanceId) {
@@ -33,22 +41,6 @@ public class ListRecentCallRecordsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListRecentCallRecordsRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public ListRecentCallRecordsRequest setStopTime(Long stopTime) {
-        this.stopTime = stopTime;
-        return this;
-    }
-    public Long getStopTime() {
-        return this.stopTime;
     }
 
     public ListRecentCallRecordsRequest setPageNumber(Integer pageNumber) {
@@ -67,12 +59,20 @@ public class ListRecentCallRecordsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRecentCallRecordsRequest setCriteria(String criteria) {
-        this.criteria = criteria;
+    public ListRecentCallRecordsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getCriteria() {
-        return this.criteria;
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public ListRecentCallRecordsRequest setStopTime(Long stopTime) {
+        this.stopTime = stopTime;
+        return this;
+    }
+    public Long getStopTime() {
+        return this.stopTime;
     }
 
 }

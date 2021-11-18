@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Roles")
     public ListRolesResponseBodyRoles roles;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class ListRolesResponseBody extends TeaModel {
     public static ListRolesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRolesResponseBody self = new ListRolesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRolesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListRolesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListRolesResponseBody setMessage(String message) {
@@ -43,28 +59,12 @@ public class ListRolesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRolesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListRolesResponseBody setRoles(ListRolesResponseBodyRoles roles) {
         this.roles = roles;
         return this;
     }
     public ListRolesResponseBodyRoles getRoles() {
         return this.roles;
-    }
-
-    public ListRolesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListRolesResponseBody setSuccess(Boolean success) {
@@ -76,29 +76,21 @@ public class ListRolesResponseBody extends TeaModel {
     }
 
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
-        @NameInMap("RoleDescription")
-        public String roleDescription;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("RoleName")
-        public String roleName;
+        @NameInMap("RoleDescription")
+        public String roleDescription;
 
         @NameInMap("RoleId")
         public String roleId;
 
+        @NameInMap("RoleName")
+        public String roleName;
+
         public static ListRolesResponseBodyRolesRole build(java.util.Map<String, ?> map) throws Exception {
             ListRolesResponseBodyRolesRole self = new ListRolesResponseBodyRolesRole();
             return TeaModel.build(map, self);
-        }
-
-        public ListRolesResponseBodyRolesRole setRoleDescription(String roleDescription) {
-            this.roleDescription = roleDescription;
-            return this;
-        }
-        public String getRoleDescription() {
-            return this.roleDescription;
         }
 
         public ListRolesResponseBodyRolesRole setInstanceId(String instanceId) {
@@ -109,12 +101,12 @@ public class ListRolesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListRolesResponseBodyRolesRole setRoleName(String roleName) {
-            this.roleName = roleName;
+        public ListRolesResponseBodyRolesRole setRoleDescription(String roleDescription) {
+            this.roleDescription = roleDescription;
             return this;
         }
-        public String getRoleName() {
-            return this.roleName;
+        public String getRoleDescription() {
+            return this.roleDescription;
         }
 
         public ListRolesResponseBodyRolesRole setRoleId(String roleId) {
@@ -123,6 +115,14 @@ public class ListRolesResponseBody extends TeaModel {
         }
         public String getRoleId() {
             return this.roleId;
+        }
+
+        public ListRolesResponseBodyRolesRole setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }

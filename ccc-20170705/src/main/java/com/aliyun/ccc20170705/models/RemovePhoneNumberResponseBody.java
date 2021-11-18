@@ -4,17 +4,17 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class RemovePhoneNumberResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class RemovePhoneNumberResponseBody extends TeaModel {
     public static RemovePhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemovePhoneNumberResponseBody self = new RemovePhoneNumberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemovePhoneNumberResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RemovePhoneNumberResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public RemovePhoneNumberResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class RemovePhoneNumberResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RemovePhoneNumberResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public RemovePhoneNumberResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public RemovePhoneNumberResponseBody setSuccess(Boolean success) {

@@ -10,14 +10,14 @@ public class ListBasicStatisticsReportSubItemsRequest extends TeaModel {
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
-    @NameInMap("Title")
-    public String title;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Title")
+    public String title;
 
     public static ListBasicStatisticsReportSubItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBasicStatisticsReportSubItemsRequest self = new ListBasicStatisticsReportSubItemsRequest();
@@ -40,14 +40,6 @@ public class ListBasicStatisticsReportSubItemsRequest extends TeaModel {
         return this.jobGroupId;
     }
 
-    public ListBasicStatisticsReportSubItemsRequest setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-
     public ListBasicStatisticsReportSubItemsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -62,6 +54,14 @@ public class ListBasicStatisticsReportSubItemsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListBasicStatisticsReportSubItemsRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
 }

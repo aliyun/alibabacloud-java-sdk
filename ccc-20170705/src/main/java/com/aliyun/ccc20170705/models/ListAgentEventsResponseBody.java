@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentEventsResponseBody extends TeaModel {
+    @NameInMap("AgentEventList")
+    public ListAgentEventsResponseBodyAgentEventList agentEventList;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("AgentEventList")
-    public ListAgentEventsResponseBodyAgentEventList agentEventList;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class ListAgentEventsResponseBody extends TeaModel {
     public static ListAgentEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentEventsResponseBody self = new ListAgentEventsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentEventsResponseBody setAgentEventList(ListAgentEventsResponseBodyAgentEventList agentEventList) {
+        this.agentEventList = agentEventList;
+        return this;
+    }
+    public ListAgentEventsResponseBodyAgentEventList getAgentEventList() {
+        return this.agentEventList;
+    }
+
+    public ListAgentEventsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAgentEventsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListAgentEventsResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class ListAgentEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentEventsResponseBody setAgentEventList(ListAgentEventsResponseBodyAgentEventList agentEventList) {
-        this.agentEventList = agentEventList;
-        return this;
-    }
-    public ListAgentEventsResponseBodyAgentEventList getAgentEventList() {
-        return this.agentEventList;
-    }
-
-    public ListAgentEventsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListAgentEventsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListAgentEventsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,23 +76,15 @@ public class ListAgentEventsResponseBody extends TeaModel {
     }
 
     public static class ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup extends TeaModel {
-        @NameInMap("SkillGroupName")
-        public String skillGroupName;
-
         @NameInMap("SkillGroupId")
         public String skillGroupId;
+
+        @NameInMap("SkillGroupName")
+        public String skillGroupName;
 
         public static ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup build(java.util.Map<String, ?> map) throws Exception {
             ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup self = new ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup();
             return TeaModel.build(map, self);
-        }
-
-        public ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup setSkillGroupName(String skillGroupName) {
-            this.skillGroupName = skillGroupName;
-            return this;
-        }
-        public String getSkillGroupName() {
-            return this.skillGroupName;
         }
 
         public ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup setSkillGroupId(String skillGroupId) {
@@ -101,6 +93,14 @@ public class ListAgentEventsResponseBody extends TeaModel {
         }
         public String getSkillGroupId() {
             return this.skillGroupId;
+        }
+
+        public ListAgentEventsResponseBodyAgentEventListAgentEventSkillGroupIdsSkillGroup setSkillGroupName(String skillGroupName) {
+            this.skillGroupName = skillGroupName;
+            return this;
+        }
+        public String getSkillGroupName() {
+            return this.skillGroupName;
         }
 
     }
@@ -125,17 +125,17 @@ public class ListAgentEventsResponseBody extends TeaModel {
     }
 
     public static class ListAgentEventsResponseBodyAgentEventListAgentEvent extends TeaModel {
-        @NameInMap("EventTime")
-        public Long eventTime;
-
-        @NameInMap("LoginName")
-        public String loginName;
-
         @NameInMap("Event")
         public String event;
 
+        @NameInMap("EventTime")
+        public Long eventTime;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("LoginName")
+        public String loginName;
 
         @NameInMap("RamId")
         public Long ramId;
@@ -148,22 +148,6 @@ public class ListAgentEventsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAgentEventsResponseBodyAgentEventListAgentEvent setEventTime(Long eventTime) {
-            this.eventTime = eventTime;
-            return this;
-        }
-        public Long getEventTime() {
-            return this.eventTime;
-        }
-
-        public ListAgentEventsResponseBodyAgentEventListAgentEvent setLoginName(String loginName) {
-            this.loginName = loginName;
-            return this;
-        }
-        public String getLoginName() {
-            return this.loginName;
-        }
-
         public ListAgentEventsResponseBodyAgentEventListAgentEvent setEvent(String event) {
             this.event = event;
             return this;
@@ -172,12 +156,28 @@ public class ListAgentEventsResponseBody extends TeaModel {
             return this.event;
         }
 
+        public ListAgentEventsResponseBodyAgentEventListAgentEvent setEventTime(Long eventTime) {
+            this.eventTime = eventTime;
+            return this;
+        }
+        public Long getEventTime() {
+            return this.eventTime;
+        }
+
         public ListAgentEventsResponseBodyAgentEventListAgentEvent setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListAgentEventsResponseBodyAgentEventListAgentEvent setLoginName(String loginName) {
+            this.loginName = loginName;
+            return this;
+        }
+        public String getLoginName() {
+            return this.loginName;
         }
 
         public ListAgentEventsResponseBodyAgentEventListAgentEvent setRamId(Long ramId) {

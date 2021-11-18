@@ -4,27 +4,43 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetJobDataUploadParamsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("UploadParams")
-    public GetJobDataUploadParamsResponseBodyUploadParams uploadParams;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("UploadParams")
+    public GetJobDataUploadParamsResponseBodyUploadParams uploadParams;
 
     public static GetJobDataUploadParamsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobDataUploadParamsResponseBody self = new GetJobDataUploadParamsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetJobDataUploadParamsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetJobDataUploadParamsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetJobDataUploadParamsResponseBody setMessage(String message) {
@@ -43,30 +59,6 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetJobDataUploadParamsResponseBody setUploadParams(GetJobDataUploadParamsResponseBodyUploadParams uploadParams) {
-        this.uploadParams = uploadParams;
-        return this;
-    }
-    public GetJobDataUploadParamsResponseBodyUploadParams getUploadParams() {
-        return this.uploadParams;
-    }
-
-    public GetJobDataUploadParamsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public GetJobDataUploadParamsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetJobDataUploadParamsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,9 +67,23 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetJobDataUploadParamsResponseBody setUploadParams(GetJobDataUploadParamsResponseBodyUploadParams uploadParams) {
+        this.uploadParams = uploadParams;
+        return this;
+    }
+    public GetJobDataUploadParamsResponseBodyUploadParams getUploadParams() {
+        return this.uploadParams;
+    }
+
     public static class GetJobDataUploadParamsResponseBodyUploadParams extends TeaModel {
-        @NameInMap("Signature")
-        public String signature;
+        @NameInMap("AccessId")
+        public String accessId;
+
+        @NameInMap("Expire")
+        public Integer expire;
+
+        @NameInMap("Folder")
+        public String folder;
 
         @NameInMap("Host")
         public String host;
@@ -85,26 +91,36 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
         @NameInMap("Policy")
         public String policy;
 
-        @NameInMap("Folder")
-        public String folder;
-
-        @NameInMap("AccessId")
-        public String accessId;
-
-        @NameInMap("Expire")
-        public Integer expire;
+        @NameInMap("Signature")
+        public String signature;
 
         public static GetJobDataUploadParamsResponseBodyUploadParams build(java.util.Map<String, ?> map) throws Exception {
             GetJobDataUploadParamsResponseBodyUploadParams self = new GetJobDataUploadParamsResponseBodyUploadParams();
             return TeaModel.build(map, self);
         }
 
-        public GetJobDataUploadParamsResponseBodyUploadParams setSignature(String signature) {
-            this.signature = signature;
+        public GetJobDataUploadParamsResponseBodyUploadParams setAccessId(String accessId) {
+            this.accessId = accessId;
             return this;
         }
-        public String getSignature() {
-            return this.signature;
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        public GetJobDataUploadParamsResponseBodyUploadParams setExpire(Integer expire) {
+            this.expire = expire;
+            return this;
+        }
+        public Integer getExpire() {
+            return this.expire;
+        }
+
+        public GetJobDataUploadParamsResponseBodyUploadParams setFolder(String folder) {
+            this.folder = folder;
+            return this;
+        }
+        public String getFolder() {
+            return this.folder;
         }
 
         public GetJobDataUploadParamsResponseBodyUploadParams setHost(String host) {
@@ -123,28 +139,12 @@ public class GetJobDataUploadParamsResponseBody extends TeaModel {
             return this.policy;
         }
 
-        public GetJobDataUploadParamsResponseBodyUploadParams setFolder(String folder) {
-            this.folder = folder;
+        public GetJobDataUploadParamsResponseBodyUploadParams setSignature(String signature) {
+            this.signature = signature;
             return this;
         }
-        public String getFolder() {
-            return this.folder;
-        }
-
-        public GetJobDataUploadParamsResponseBodyUploadParams setAccessId(String accessId) {
-            this.accessId = accessId;
-            return this;
-        }
-        public String getAccessId() {
-            return this.accessId;
-        }
-
-        public GetJobDataUploadParamsResponseBodyUploadParams setExpire(Integer expire) {
-            this.expire = expire;
-            return this;
-        }
-        public Integer getExpire() {
-            return this.expire;
+        public String getSignature() {
+            return this.signature;
         }
 
     }

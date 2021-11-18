@@ -4,17 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStateLogsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RamId")
-    public Long ramId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,33 +16,15 @@ public class ListAgentStateLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RamId")
+    public Long ramId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static ListAgentStateLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentStateLogsRequest self = new ListAgentStateLogsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAgentStateLogsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListAgentStateLogsRequest setRamId(Long ramId) {
-        this.ramId = ramId;
-        return this;
-    }
-    public Long getRamId() {
-        return this.ramId;
-    }
-
-    public ListAgentStateLogsRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public ListAgentStateLogsRequest setEndTime(Long endTime) {
@@ -57,6 +33,14 @@ public class ListAgentStateLogsRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public ListAgentStateLogsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListAgentStateLogsRequest setPageNumber(Integer pageNumber) {
@@ -73,6 +57,22 @@ public class ListAgentStateLogsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentStateLogsRequest setRamId(Long ramId) {
+        this.ramId = ramId;
+        return this;
+    }
+    public Long getRamId() {
+        return this.ramId;
+    }
+
+    public ListAgentStateLogsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

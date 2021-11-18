@@ -4,23 +4,23 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("NumberList")
     public ListOutboundPhoneNumberOfUserResponseBodyNumberList numberList;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("OutboundPhoneNumbers")
     public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbers outboundPhoneNumbers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -28,38 +28,6 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
     public static ListOutboundPhoneNumberOfUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundPhoneNumberOfUserResponseBody self = new ListOutboundPhoneNumberOfUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListOutboundPhoneNumberOfUserResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListOutboundPhoneNumberOfUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListOutboundPhoneNumberOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListOutboundPhoneNumberOfUserResponseBody setNumberList(ListOutboundPhoneNumberOfUserResponseBodyNumberList numberList) {
-        this.numberList = numberList;
-        return this;
-    }
-    public ListOutboundPhoneNumberOfUserResponseBodyNumberList getNumberList() {
-        return this.numberList;
     }
 
     public ListOutboundPhoneNumberOfUserResponseBody setCode(String code) {
@@ -70,12 +38,44 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListOutboundPhoneNumberOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListOutboundPhoneNumberOfUserResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListOutboundPhoneNumberOfUserResponseBody setNumberList(ListOutboundPhoneNumberOfUserResponseBodyNumberList numberList) {
+        this.numberList = numberList;
+        return this;
+    }
+    public ListOutboundPhoneNumberOfUserResponseBodyNumberList getNumberList() {
+        return this.numberList;
+    }
+
     public ListOutboundPhoneNumberOfUserResponseBody setOutboundPhoneNumbers(ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbers outboundPhoneNumbers) {
         this.outboundPhoneNumbers = outboundPhoneNumbers;
         return this;
     }
     public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbers getOutboundPhoneNumbers() {
         return this.outboundPhoneNumbers;
+    }
+
+    public ListOutboundPhoneNumberOfUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListOutboundPhoneNumberOfUserResponseBody setSuccess(Boolean success) {
@@ -106,76 +106,36 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
     }
 
     public static class ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("PoolId")
-        public String poolId;
-
-        @NameInMap("SubId")
-        public String subId;
-
-        @NameInMap("PhoneNumber")
-        public String phoneNumber;
-
-        @NameInMap("PoolName")
-        public String poolName;
-
         @NameInMap("BizId")
         public String bizId;
-
-        @NameInMap("RegionNameCity")
-        public String regionNameCity;
 
         @NameInMap("Extra")
         public String extra;
 
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("PoolId")
+        public String poolId;
+
+        @NameInMap("PoolName")
+        public String poolName;
+
+        @NameInMap("RegionNameCity")
+        public String regionNameCity;
+
+        @NameInMap("SubId")
+        public String subId;
+
         @NameInMap("TelX")
         public String telX;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber build(java.util.Map<String, ?> map) throws Exception {
             ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber self = new ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber();
             return TeaModel.build(map, self);
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPoolId(String poolId) {
-            this.poolId = poolId;
-            return this;
-        }
-        public String getPoolId() {
-            return this.poolId;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setSubId(String subId) {
-            this.subId = subId;
-            return this;
-        }
-        public String getSubId() {
-            return this.subId;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public String getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPoolName(String poolName) {
-            this.poolName = poolName;
-            return this;
-        }
-        public String getPoolName() {
-            return this.poolName;
         }
 
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setBizId(String bizId) {
@@ -186,6 +146,38 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.bizId;
         }
 
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPoolId(String poolId) {
+            this.poolId = poolId;
+            return this;
+        }
+        public String getPoolId() {
+            return this.poolId;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setPoolName(String poolName) {
+            this.poolName = poolName;
+            return this;
+        }
+        public String getPoolName() {
+            return this.poolName;
+        }
+
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setRegionNameCity(String regionNameCity) {
             this.regionNameCity = regionNameCity;
             return this;
@@ -194,12 +186,12 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.regionNameCity;
         }
 
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setExtra(String extra) {
-            this.extra = extra;
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setSubId(String subId) {
+            this.subId = subId;
             return this;
         }
-        public String getExtra() {
-            return this.extra;
+        public String getSubId() {
+            return this.subId;
         }
 
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setTelX(String telX) {
@@ -210,20 +202,19 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.telX;
         }
 
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber extends TeaModel {
-        @NameInMap("PrivateFlag")
-        public Boolean privateFlag;
-
-        @NameInMap("TestOnly")
-        public Boolean testOnly;
-
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("SipTelX")
-        public String sipTelX;
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
 
         @NameInMap("City")
         public String city;
@@ -231,65 +222,50 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Usage")
-        public String usage;
-
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
-
-        @NameInMap("PhoneNumberId")
-        public String phoneNumberId;
-
-        @NameInMap("Trunks")
-        public Integer trunks;
-
         @NameInMap("Number")
         public String number;
 
         @NameInMap("PhoneNumberDescription")
         public String phoneNumberDescription;
 
+        @NameInMap("PhoneNumberId")
+        public String phoneNumberId;
+
         @NameInMap("PrivacyNumber")
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber privacyNumber;
 
+        @NameInMap("PrivateFlag")
+        public Boolean privateFlag;
+
         @NameInMap("Province")
         public String province;
+
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("SipTelX")
+        public String sipTelX;
+
+        @NameInMap("TestOnly")
+        public Boolean testOnly;
+
+        @NameInMap("Trunks")
+        public Integer trunks;
+
+        @NameInMap("Usage")
+        public String usage;
 
         public static ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
             ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber self = new ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber();
             return TeaModel.build(map, self);
         }
 
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setPrivateFlag(Boolean privateFlag) {
-            this.privateFlag = privateFlag;
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
             return this;
         }
-        public Boolean getPrivateFlag() {
-            return this.privateFlag;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
-            this.testOnly = testOnly;
-            return this;
-        }
-        public Boolean getTestOnly() {
-            return this.testOnly;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setSipTelX(String sipTelX) {
-            this.sipTelX = sipTelX;
-            return this;
-        }
-        public String getSipTelX() {
-            return this.sipTelX;
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
         }
 
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setCity(String city) {
@@ -308,38 +284,6 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setUsage(String usage) {
-            this.usage = usage;
-            return this;
-        }
-        public String getUsage() {
-            return this.usage;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
-            return this;
-        }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
-        }
-
-        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setTrunks(Integer trunks) {
-            this.trunks = trunks;
-            return this;
-        }
-        public Integer getTrunks() {
-            return this.trunks;
-        }
-
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setNumber(String number) {
             this.number = number;
             return this;
@@ -356,6 +300,14 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.phoneNumberDescription;
         }
 
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setPrivacyNumber(ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumberPrivacyNumber privacyNumber) {
             this.privacyNumber = privacyNumber;
             return this;
@@ -364,12 +316,60 @@ public class ListOutboundPhoneNumberOfUserResponseBody extends TeaModel {
             return this.privacyNumber;
         }
 
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setPrivateFlag(Boolean privateFlag) {
+            this.privateFlag = privateFlag;
+            return this;
+        }
+        public Boolean getPrivateFlag() {
+            return this.privateFlag;
+        }
+
         public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setProvince(String province) {
             this.province = province;
             return this;
         }
         public String getProvince() {
             return this.province;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setSipTelX(String sipTelX) {
+            this.sipTelX = sipTelX;
+            return this;
+        }
+        public String getSipTelX() {
+            return this.sipTelX;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
+            this.testOnly = testOnly;
+            return this;
+        }
+        public Boolean getTestOnly() {
+            return this.testOnly;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setTrunks(Integer trunks) {
+            this.trunks = trunks;
+            return this;
+        }
+        public Integer getTrunks() {
+            return this.trunks;
+        }
+
+        public ListOutboundPhoneNumberOfUserResponseBodyOutboundPhoneNumbersPhoneNumber setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
         }
 
     }

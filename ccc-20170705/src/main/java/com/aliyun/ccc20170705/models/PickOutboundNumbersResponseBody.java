@@ -4,27 +4,51 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class PickOutboundNumbersResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DialNumberPairs")
+    public PickOutboundNumbersResponseBodyDialNumberPairs dialNumberPairs;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("DialNumberPairs")
-    public PickOutboundNumbersResponseBodyDialNumberPairs dialNumberPairs;
 
     public static PickOutboundNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PickOutboundNumbersResponseBody self = new PickOutboundNumbersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PickOutboundNumbersResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public PickOutboundNumbersResponseBody setDialNumberPairs(PickOutboundNumbersResponseBodyDialNumberPairs dialNumberPairs) {
+        this.dialNumberPairs = dialNumberPairs;
+        return this;
+    }
+    public PickOutboundNumbersResponseBodyDialNumberPairs getDialNumberPairs() {
+        return this.dialNumberPairs;
+    }
+
+    public PickOutboundNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public PickOutboundNumbersResponseBody setMessage(String message) {
@@ -43,22 +67,6 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PickOutboundNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public PickOutboundNumbersResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public PickOutboundNumbersResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,61 +75,12 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         return this.success;
     }
 
-    public PickOutboundNumbersResponseBody setDialNumberPairs(PickOutboundNumbersResponseBodyDialNumberPairs dialNumberPairs) {
-        this.dialNumberPairs = dialNumberPairs;
-        return this;
-    }
-    public PickOutboundNumbersResponseBodyDialNumberPairs getDialNumberPairs() {
-        return this.dialNumberPairs;
-    }
-
-    public static class PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
-        @NameInMap("City")
-        public String city;
-
-        @NameInMap("Province")
-        public String province;
-
-        public static PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller build(java.util.Map<String, ?> map) throws Exception {
-            PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller self = new PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller();
-            return TeaModel.build(map, self);
-        }
-
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setCity(String city) {
-            this.city = city;
-            return this;
-        }
-        public String getCity() {
-            return this.city;
-        }
-
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setProvince(String province) {
-            this.province = province;
-            return this;
-        }
-        public String getProvince() {
-            return this.province;
-        }
-
-    }
-
     public static class PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -131,20 +90,20 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee setProvince(String province) {
@@ -157,24 +116,57 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
 
     }
 
-    public static class PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair extends TeaModel {
-        @NameInMap("Caller")
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller caller;
+    public static class PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller extends TeaModel {
+        @NameInMap("City")
+        public String city;
 
+        @NameInMap("Number")
+        public String number;
+
+        @NameInMap("Province")
+        public String province;
+
+        public static PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller build(java.util.Map<String, ?> map) throws Exception {
+            PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller self = new PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller();
+            return TeaModel.build(map, self);
+        }
+
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
+        }
+
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller setProvince(String province) {
+            this.province = province;
+            return this;
+        }
+        public String getProvince() {
+            return this.province;
+        }
+
+    }
+
+    public static class PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair extends TeaModel {
         @NameInMap("Callee")
         public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee callee;
+
+        @NameInMap("Caller")
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller caller;
 
         public static PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair build(java.util.Map<String, ?> map) throws Exception {
             PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair self = new PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair();
             return TeaModel.build(map, self);
-        }
-
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair setCaller(PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller caller) {
-            this.caller = caller;
-            return this;
-        }
-        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller getCaller() {
-            return this.caller;
         }
 
         public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair setCallee(PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee callee) {
@@ -183,6 +175,14 @@ public class PickOutboundNumbersResponseBody extends TeaModel {
         }
         public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCallee getCallee() {
             return this.callee;
+        }
+
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPair setCaller(PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller caller) {
+            this.caller = caller;
+            return this;
+        }
+        public PickOutboundNumbersResponseBodyDialNumberPairsDialNumberPairCaller getCaller() {
+            return this.caller;
         }
 
     }

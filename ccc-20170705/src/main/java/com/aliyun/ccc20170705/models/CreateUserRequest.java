@@ -7,6 +7,9 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -15,9 +18,6 @@ public class CreateUserRequest extends TeaModel {
 
     @NameInMap("Phone")
     public String phone;
-
-    @NameInMap("Email")
-    public String email;
 
     @NameInMap("PrivateOutboundNumberId")
     public String privateOutboundNumberId;
@@ -44,6 +44,14 @@ public class CreateUserRequest extends TeaModel {
         return this.displayName;
     }
 
+    public CreateUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
     public CreateUserRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -66,14 +74,6 @@ public class CreateUserRequest extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
-    }
-
-    public CreateUserRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
     public CreateUserRequest setPrivateOutboundNumberId(String privateOutboundNumberId) {

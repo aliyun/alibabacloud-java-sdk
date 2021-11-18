@@ -7,14 +7,14 @@ public class ListJobsByGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("JobFailureReason")
+    public String jobFailureReason;
+
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
     @NameInMap("JobStatus")
     public String jobStatus;
-
-    @NameInMap("JobFailureReason")
-    public String jobFailureReason;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -35,6 +35,14 @@ public class ListJobsByGroupRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListJobsByGroupRequest setJobFailureReason(String jobFailureReason) {
+        this.jobFailureReason = jobFailureReason;
+        return this;
+    }
+    public String getJobFailureReason() {
+        return this.jobFailureReason;
+    }
+
     public ListJobsByGroupRequest setJobGroupId(String jobGroupId) {
         this.jobGroupId = jobGroupId;
         return this;
@@ -49,14 +57,6 @@ public class ListJobsByGroupRequest extends TeaModel {
     }
     public String getJobStatus() {
         return this.jobStatus;
-    }
-
-    public ListJobsByGroupRequest setJobFailureReason(String jobFailureReason) {
-        this.jobFailureReason = jobFailureReason;
-        return this;
-    }
-    public String getJobFailureReason() {
-        return this.jobFailureReason;
     }
 
     public ListJobsByGroupRequest setPageNumber(Integer pageNumber) {

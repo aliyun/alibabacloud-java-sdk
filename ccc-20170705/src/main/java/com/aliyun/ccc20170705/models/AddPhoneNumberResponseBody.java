@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AddPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("PhoneNumber")
     public AddPhoneNumberResponseBodyPhoneNumber phoneNumber;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class AddPhoneNumberResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddPhoneNumberResponseBody setMessage(String message) {
-        this.message = message;
+    public AddPhoneNumberResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public AddPhoneNumberResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public AddPhoneNumberResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,6 +43,14 @@ public class AddPhoneNumberResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
+    public AddPhoneNumberResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public AddPhoneNumberResponseBody setPhoneNumber(AddPhoneNumberResponseBodyPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -59,12 +59,12 @@ public class AddPhoneNumberResponseBody extends TeaModel {
         return this.phoneNumber;
     }
 
-    public AddPhoneNumberResponseBody setCode(String code) {
-        this.code = code;
+    public AddPhoneNumberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddPhoneNumberResponseBody setSuccess(Boolean success) {
@@ -76,11 +76,11 @@ public class AddPhoneNumberResponseBody extends TeaModel {
     }
 
     public static class AddPhoneNumberResponseBodyPhoneNumberContactFlow extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("ContactFlowDescription")
         public String contactFlowDescription;
+
+        @NameInMap("ContactFlowId")
+        public String contactFlowId;
 
         @NameInMap("ContactFlowName")
         public String contactFlowName;
@@ -88,20 +88,12 @@ public class AddPhoneNumberResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("ContactFlowId")
-        public String contactFlowId;
+        @NameInMap("Type")
+        public String type;
 
         public static AddPhoneNumberResponseBodyPhoneNumberContactFlow build(java.util.Map<String, ?> map) throws Exception {
             AddPhoneNumberResponseBodyPhoneNumberContactFlow self = new AddPhoneNumberResponseBodyPhoneNumberContactFlow();
             return TeaModel.build(map, self);
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumberContactFlow setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public AddPhoneNumberResponseBodyPhoneNumberContactFlow setContactFlowDescription(String contactFlowDescription) {
@@ -110,6 +102,14 @@ public class AddPhoneNumberResponseBody extends TeaModel {
         }
         public String getContactFlowDescription() {
             return this.contactFlowDescription;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumberContactFlow setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
+            return this;
+        }
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         public AddPhoneNumberResponseBodyPhoneNumberContactFlow setContactFlowName(String contactFlowName) {
@@ -128,50 +128,106 @@ public class AddPhoneNumberResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public AddPhoneNumberResponseBodyPhoneNumberContactFlow setContactFlowId(String contactFlowId) {
-            this.contactFlowId = contactFlowId;
+        public AddPhoneNumberResponseBodyPhoneNumberContactFlow setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getContactFlowId() {
-            return this.contactFlowId;
+        public String getType() {
+            return this.type;
         }
 
     }
 
     public static class AddPhoneNumberResponseBodyPhoneNumber extends TeaModel {
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
+
+        @NameInMap("ContactFlow")
+        public AddPhoneNumberResponseBodyPhoneNumberContactFlow contactFlow;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Number")
+        public String number;
+
+        @NameInMap("PhoneNumberDescription")
+        public String phoneNumberDescription;
+
+        @NameInMap("PhoneNumberId")
+        public String phoneNumberId;
+
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
         @NameInMap("TestOnly")
         public Boolean testOnly;
 
         @NameInMap("Trunks")
         public Integer trunks;
 
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Number")
-        public String number;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Usage")
         public String usage;
-
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
-
-        @NameInMap("PhoneNumberDescription")
-        public String phoneNumberDescription;
-
-        @NameInMap("ContactFlow")
-        public AddPhoneNumberResponseBodyPhoneNumberContactFlow contactFlow;
-
-        @NameInMap("PhoneNumberId")
-        public String phoneNumberId;
 
         public static AddPhoneNumberResponseBodyPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
             AddPhoneNumberResponseBodyPhoneNumber self = new AddPhoneNumberResponseBodyPhoneNumber();
             return TeaModel.build(map, self);
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
+            return this;
+        }
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setContactFlow(AddPhoneNumberResponseBodyPhoneNumberContactFlow contactFlow) {
+            this.contactFlow = contactFlow;
+            return this;
+        }
+        public AddPhoneNumberResponseBodyPhoneNumberContactFlow getContactFlow() {
+            return this.contactFlow;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
+            this.phoneNumberDescription = phoneNumberDescription;
+            return this;
+        }
+        public String getPhoneNumberDescription() {
+            return this.phoneNumberDescription;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
+        public AddPhoneNumberResponseBodyPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
         }
 
         public AddPhoneNumberResponseBodyPhoneNumber setTestOnly(Boolean testOnly) {
@@ -190,68 +246,12 @@ public class AddPhoneNumberResponseBody extends TeaModel {
             return this.trunks;
         }
 
-        public AddPhoneNumberResponseBodyPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public AddPhoneNumberResponseBodyPhoneNumber setUsage(String usage) {
             this.usage = usage;
             return this;
         }
         public String getUsage() {
             return this.usage;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
-            return this;
-        }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
-            this.phoneNumberDescription = phoneNumberDescription;
-            return this;
-        }
-        public String getPhoneNumberDescription() {
-            return this.phoneNumberDescription;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setContactFlow(AddPhoneNumberResponseBodyPhoneNumberContactFlow contactFlow) {
-            this.contactFlow = contactFlow;
-            return this;
-        }
-        public AddPhoneNumberResponseBodyPhoneNumberContactFlow getContactFlow() {
-            return this.contactFlow;
-        }
-
-        public AddPhoneNumberResponseBodyPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
         }
 
     }

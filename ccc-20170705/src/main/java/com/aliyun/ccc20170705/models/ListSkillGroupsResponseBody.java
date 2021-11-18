@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListSkillGroupsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("SkillGroups")
     public ListSkillGroupsResponseBodySkillGroups skillGroups;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class ListSkillGroupsResponseBody extends TeaModel {
     public static ListSkillGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSkillGroupsResponseBody self = new ListSkillGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSkillGroupsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSkillGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListSkillGroupsResponseBody setMessage(String message) {
@@ -43,28 +59,12 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSkillGroupsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListSkillGroupsResponseBody setSkillGroups(ListSkillGroupsResponseBodySkillGroups skillGroups) {
         this.skillGroups = skillGroups;
         return this;
     }
     public ListSkillGroupsResponseBodySkillGroups getSkillGroups() {
         return this.skillGroups;
-    }
-
-    public ListSkillGroupsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListSkillGroupsResponseBody setSuccess(Boolean success) {
@@ -76,26 +76,14 @@ public class ListSkillGroupsResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber extends TeaModel {
-        @NameInMap("TestOnly")
-        public Boolean testOnly;
-
-        @NameInMap("Trunks")
-        public Integer trunks;
-
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Number")
-        public String number;
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Usage")
-        public String usage;
-
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("PhoneNumberDescription")
         public String phoneNumberDescription;
@@ -103,9 +91,69 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         @NameInMap("PhoneNumberId")
         public String phoneNumberId;
 
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("TestOnly")
+        public Boolean testOnly;
+
+        @NameInMap("Trunks")
+        public Integer trunks;
+
+        @NameInMap("Usage")
+        public String usage;
+
         public static ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
             ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber self = new ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
+            return this;
+        }
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
+            this.phoneNumberDescription = phoneNumberDescription;
+            return this;
+        }
+        public String getPhoneNumberDescription() {
+            return this.phoneNumberDescription;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
         }
 
         public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
@@ -124,60 +172,12 @@ public class ListSkillGroupsResponseBody extends TeaModel {
             return this.trunks;
         }
 
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setUsage(String usage) {
             this.usage = usage;
             return this;
         }
         public String getUsage() {
             return this.usage;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
-            return this;
-        }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
-            this.phoneNumberDescription = phoneNumberDescription;
-            return this;
-        }
-        public String getPhoneNumberDescription() {
-            return this.phoneNumberDescription;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
         }
 
     }
@@ -202,11 +202,23 @@ public class ListSkillGroupsResponseBody extends TeaModel {
     }
 
     public static class ListSkillGroupsResponseBodySkillGroupsSkillGroup extends TeaModel {
+        @NameInMap("AccQueueName")
+        public String accQueueName;
+
+        @NameInMap("AccSkillGroupName")
+        public String accSkillGroupName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("OutboundPhoneNumbers")
         public ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbers outboundPhoneNumbers;
 
         @NameInMap("RoutingStrategy")
         public String routingStrategy;
+
+        @NameInMap("SkillGroupDescription")
+        public String skillGroupDescription;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -217,21 +229,33 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         @NameInMap("UserCount")
         public Integer userCount;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("AccQueueName")
-        public String accQueueName;
-
-        @NameInMap("AccSkillGroupName")
-        public String accSkillGroupName;
-
-        @NameInMap("SkillGroupDescription")
-        public String skillGroupDescription;
-
         public static ListSkillGroupsResponseBodySkillGroupsSkillGroup build(java.util.Map<String, ?> map) throws Exception {
             ListSkillGroupsResponseBodySkillGroupsSkillGroup self = new ListSkillGroupsResponseBodySkillGroupsSkillGroup();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setAccQueueName(String accQueueName) {
+            this.accQueueName = accQueueName;
+            return this;
+        }
+        public String getAccQueueName() {
+            return this.accQueueName;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setAccSkillGroupName(String accSkillGroupName) {
+            this.accSkillGroupName = accSkillGroupName;
+            return this;
+        }
+        public String getAccSkillGroupName() {
+            return this.accSkillGroupName;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListSkillGroupsResponseBodySkillGroupsSkillGroup setOutboundPhoneNumbers(ListSkillGroupsResponseBodySkillGroupsSkillGroupOutboundPhoneNumbers outboundPhoneNumbers) {
@@ -248,6 +272,14 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
         public String getRoutingStrategy() {
             return this.routingStrategy;
+        }
+
+        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setSkillGroupDescription(String skillGroupDescription) {
+            this.skillGroupDescription = skillGroupDescription;
+            return this;
+        }
+        public String getSkillGroupDescription() {
+            return this.skillGroupDescription;
         }
 
         public ListSkillGroupsResponseBodySkillGroupsSkillGroup setSkillGroupId(String skillGroupId) {
@@ -272,38 +304,6 @@ public class ListSkillGroupsResponseBody extends TeaModel {
         }
         public Integer getUserCount() {
             return this.userCount;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setAccQueueName(String accQueueName) {
-            this.accQueueName = accQueueName;
-            return this;
-        }
-        public String getAccQueueName() {
-            return this.accQueueName;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setAccSkillGroupName(String accSkillGroupName) {
-            this.accSkillGroupName = accSkillGroupName;
-            return this;
-        }
-        public String getAccSkillGroupName() {
-            return this.accSkillGroupName;
-        }
-
-        public ListSkillGroupsResponseBodySkillGroupsSkillGroup setSkillGroupDescription(String skillGroupDescription) {
-            this.skillGroupDescription = skillGroupDescription;
-            return this;
-        }
-        public String getSkillGroupDescription() {
-            return this.skillGroupDescription;
         }
 
     }

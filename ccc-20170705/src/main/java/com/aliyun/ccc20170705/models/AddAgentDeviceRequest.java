@@ -4,8 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AddAgentDeviceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("BrowserVersion")
+    public String browserVersion;
 
     @NameInMap("ClientIp")
     public String clientIp;
@@ -13,8 +13,8 @@ public class AddAgentDeviceRequest extends TeaModel {
     @NameInMap("ClientPort")
     public String clientPort;
 
-    @NameInMap("BrowserVersion")
-    public String browserVersion;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Remark")
     public String remark;
@@ -24,12 +24,12 @@ public class AddAgentDeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddAgentDeviceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public AddAgentDeviceRequest setBrowserVersion(String browserVersion) {
+        this.browserVersion = browserVersion;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getBrowserVersion() {
+        return this.browserVersion;
     }
 
     public AddAgentDeviceRequest setClientIp(String clientIp) {
@@ -48,12 +48,12 @@ public class AddAgentDeviceRequest extends TeaModel {
         return this.clientPort;
     }
 
-    public AddAgentDeviceRequest setBrowserVersion(String browserVersion) {
-        this.browserVersion = browserVersion;
+    public AddAgentDeviceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getBrowserVersion() {
-        return this.browserVersion;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public AddAgentDeviceRequest setRemark(String remark) {

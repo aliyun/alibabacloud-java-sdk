@@ -4,70 +4,30 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
-    @NameInMap("NumberReports")
-    public GetCallMeasureSummaryReportResponseBodyNumberReports numberReports;
-
-    @NameInMap("SummaryReport")
-    public GetCallMeasureSummaryReportResponseBodySummaryReport summaryReport;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("NumberReports")
+    public GetCallMeasureSummaryReportResponseBodyNumberReports numberReports;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("SummaryReport")
+    public GetCallMeasureSummaryReportResponseBodySummaryReport summaryReport;
+
     public static GetCallMeasureSummaryReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCallMeasureSummaryReportResponseBody self = new GetCallMeasureSummaryReportResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCallMeasureSummaryReportResponseBody setNumberReports(GetCallMeasureSummaryReportResponseBodyNumberReports numberReports) {
-        this.numberReports = numberReports;
-        return this;
-    }
-    public GetCallMeasureSummaryReportResponseBodyNumberReports getNumberReports() {
-        return this.numberReports;
-    }
-
-    public GetCallMeasureSummaryReportResponseBody setSummaryReport(GetCallMeasureSummaryReportResponseBodySummaryReport summaryReport) {
-        this.summaryReport = summaryReport;
-        return this;
-    }
-    public GetCallMeasureSummaryReportResponseBodySummaryReport getSummaryReport() {
-        return this.summaryReport;
-    }
-
-    public GetCallMeasureSummaryReportResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetCallMeasureSummaryReportResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetCallMeasureSummaryReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetCallMeasureSummaryReportResponseBody setCode(String code) {
@@ -78,6 +38,38 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetCallMeasureSummaryReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetCallMeasureSummaryReportResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetCallMeasureSummaryReportResponseBody setNumberReports(GetCallMeasureSummaryReportResponseBodyNumberReports numberReports) {
+        this.numberReports = numberReports;
+        return this;
+    }
+    public GetCallMeasureSummaryReportResponseBodyNumberReports getNumberReports() {
+        return this.numberReports;
+    }
+
+    public GetCallMeasureSummaryReportResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetCallMeasureSummaryReportResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -86,15 +78,29 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetCallMeasureSummaryReportResponseBody setSummaryReport(GetCallMeasureSummaryReportResponseBodySummaryReport summaryReport) {
+        this.summaryReport = summaryReport;
+        return this;
+    }
+    public GetCallMeasureSummaryReportResponseBodySummaryReport getSummaryReport() {
+        return this.summaryReport;
+    }
+
     public static class GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport extends TeaModel {
         @NameInMap("Day")
         public Integer day;
 
-        @NameInMap("Year")
-        public Integer year;
+        @NameInMap("InboundCount")
+        public Long inboundCount;
 
         @NameInMap("InboundDurationByMinute")
         public Long inboundDurationByMinute;
+
+        @NameInMap("Month")
+        public Integer month;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("OutboundCount")
         public Long outboundCount;
@@ -102,14 +108,8 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         @NameInMap("OutboundDurationByMinute")
         public Long outboundDurationByMinute;
 
-        @NameInMap("Number")
-        public String number;
-
-        @NameInMap("InboundCount")
-        public Long inboundCount;
-
-        @NameInMap("Month")
-        public Integer month;
+        @NameInMap("Year")
+        public Integer year;
 
         public static GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport build(java.util.Map<String, ?> map) throws Exception {
             GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport self = new GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport();
@@ -124,12 +124,12 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             return this.day;
         }
 
-        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setYear(Integer year) {
-            this.year = year;
+        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setInboundCount(Long inboundCount) {
+            this.inboundCount = inboundCount;
             return this;
         }
-        public Integer getYear() {
-            return this.year;
+        public Long getInboundCount() {
+            return this.inboundCount;
         }
 
         public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setInboundDurationByMinute(Long inboundDurationByMinute) {
@@ -138,6 +138,22 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         }
         public Long getInboundDurationByMinute() {
             return this.inboundDurationByMinute;
+        }
+
+        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setMonth(Integer month) {
+            this.month = month;
+            return this;
+        }
+        public Integer getMonth() {
+            return this.month;
+        }
+
+        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setOutboundCount(Long outboundCount) {
@@ -156,28 +172,12 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             return this.outboundDurationByMinute;
         }
 
-        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setNumber(String number) {
-            this.number = number;
+        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setYear(Integer year) {
+            this.year = year;
             return this;
         }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setInboundCount(Long inboundCount) {
-            this.inboundCount = inboundCount;
-            return this;
-        }
-        public Long getInboundCount() {
-            return this.inboundCount;
-        }
-
-        public GetCallMeasureSummaryReportResponseBodyNumberReportsListNumberReport setMonth(Integer month) {
-            this.month = month;
-            return this;
-        }
-        public Integer getMonth() {
-            return this.month;
+        public Integer getYear() {
+            return this.year;
         }
 
     }
@@ -257,11 +257,14 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         @NameInMap("Day")
         public Integer day;
 
-        @NameInMap("Year")
-        public Integer year;
+        @NameInMap("InboundCount")
+        public Long inboundCount;
 
         @NameInMap("InboundDurationByMinute")
         public Long inboundDurationByMinute;
+
+        @NameInMap("Month")
+        public Integer month;
 
         @NameInMap("OutboundCount")
         public Long outboundCount;
@@ -269,11 +272,8 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         @NameInMap("OutboundDurationByMinute")
         public Long outboundDurationByMinute;
 
-        @NameInMap("InboundCount")
-        public Long inboundCount;
-
-        @NameInMap("Month")
-        public Integer month;
+        @NameInMap("Year")
+        public Integer year;
 
         public static GetCallMeasureSummaryReportResponseBodySummaryReport build(java.util.Map<String, ?> map) throws Exception {
             GetCallMeasureSummaryReportResponseBodySummaryReport self = new GetCallMeasureSummaryReportResponseBodySummaryReport();
@@ -288,12 +288,12 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             return this.day;
         }
 
-        public GetCallMeasureSummaryReportResponseBodySummaryReport setYear(Integer year) {
-            this.year = year;
+        public GetCallMeasureSummaryReportResponseBodySummaryReport setInboundCount(Long inboundCount) {
+            this.inboundCount = inboundCount;
             return this;
         }
-        public Integer getYear() {
-            return this.year;
+        public Long getInboundCount() {
+            return this.inboundCount;
         }
 
         public GetCallMeasureSummaryReportResponseBodySummaryReport setInboundDurationByMinute(Long inboundDurationByMinute) {
@@ -302,6 +302,14 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
         }
         public Long getInboundDurationByMinute() {
             return this.inboundDurationByMinute;
+        }
+
+        public GetCallMeasureSummaryReportResponseBodySummaryReport setMonth(Integer month) {
+            this.month = month;
+            return this;
+        }
+        public Integer getMonth() {
+            return this.month;
         }
 
         public GetCallMeasureSummaryReportResponseBodySummaryReport setOutboundCount(Long outboundCount) {
@@ -320,20 +328,12 @@ public class GetCallMeasureSummaryReportResponseBody extends TeaModel {
             return this.outboundDurationByMinute;
         }
 
-        public GetCallMeasureSummaryReportResponseBodySummaryReport setInboundCount(Long inboundCount) {
-            this.inboundCount = inboundCount;
+        public GetCallMeasureSummaryReportResponseBodySummaryReport setYear(Integer year) {
+            this.year = year;
             return this;
         }
-        public Long getInboundCount() {
-            return this.inboundCount;
-        }
-
-        public GetCallMeasureSummaryReportResponseBodySummaryReport setMonth(Integer month) {
-            this.month = month;
-            return this;
-        }
-        public Integer getMonth() {
-            return this.month;
+        public Integer getYear() {
+            return this.year;
         }
 
     }

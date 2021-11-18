@@ -4,6 +4,12 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class DownloadCabRecordingResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("MediaDownloadParam")
     public DownloadCabRecordingResponseBodyMediaDownloadParam mediaDownloadParam;
 
@@ -13,18 +19,28 @@ public class DownloadCabRecordingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static DownloadCabRecordingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DownloadCabRecordingResponseBody self = new DownloadCabRecordingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DownloadCabRecordingResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DownloadCabRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public DownloadCabRecordingResponseBody setMediaDownloadParam(DownloadCabRecordingResponseBodyMediaDownloadParam mediaDownloadParam) {
@@ -51,22 +67,6 @@ public class DownloadCabRecordingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DownloadCabRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public DownloadCabRecordingResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DownloadCabRecordingResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,23 +76,15 @@ public class DownloadCabRecordingResponseBody extends TeaModel {
     }
 
     public static class DownloadCabRecordingResponseBodyMediaDownloadParam extends TeaModel {
-        @NameInMap("SignatureUrl")
-        public String signatureUrl;
-
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("SignatureUrl")
+        public String signatureUrl;
 
         public static DownloadCabRecordingResponseBodyMediaDownloadParam build(java.util.Map<String, ?> map) throws Exception {
             DownloadCabRecordingResponseBodyMediaDownloadParam self = new DownloadCabRecordingResponseBodyMediaDownloadParam();
             return TeaModel.build(map, self);
-        }
-
-        public DownloadCabRecordingResponseBodyMediaDownloadParam setSignatureUrl(String signatureUrl) {
-            this.signatureUrl = signatureUrl;
-            return this;
-        }
-        public String getSignatureUrl() {
-            return this.signatureUrl;
         }
 
         public DownloadCabRecordingResponseBodyMediaDownloadParam setFileName(String fileName) {
@@ -101,6 +93,14 @@ public class DownloadCabRecordingResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public DownloadCabRecordingResponseBodyMediaDownloadParam setSignatureUrl(String signatureUrl) {
+            this.signatureUrl = signatureUrl;
+            return this;
+        }
+        public String getSignatureUrl() {
+            return this.signatureUrl;
         }
 
     }

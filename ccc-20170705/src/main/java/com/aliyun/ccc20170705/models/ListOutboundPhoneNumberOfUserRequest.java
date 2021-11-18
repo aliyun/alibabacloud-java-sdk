@@ -7,14 +7,14 @@ public class ListOutboundPhoneNumberOfUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ListOutboundPhoneNumberOfUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundPhoneNumberOfUserRequest self = new ListOutboundPhoneNumberOfUserRequest();
@@ -27,14 +27,6 @@ public class ListOutboundPhoneNumberOfUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListOutboundPhoneNumberOfUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListOutboundPhoneNumberOfUserRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListOutboundPhoneNumberOfUserRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOutboundPhoneNumberOfUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

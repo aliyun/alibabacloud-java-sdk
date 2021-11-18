@@ -4,20 +4,14 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentSummaryReportsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
-
     @NameInMap("AgentIds")
     public String agentIds;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,25 +19,15 @@ public class ListAgentSummaryReportsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListAgentSummaryReportsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentSummaryReportsRequest self = new ListAgentSummaryReportsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAgentSummaryReportsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListAgentSummaryReportsRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
-        return this;
-    }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
     }
 
     public ListAgentSummaryReportsRequest setAgentIds(String agentIds) {
@@ -54,20 +38,20 @@ public class ListAgentSummaryReportsRequest extends TeaModel {
         return this.agentIds;
     }
 
-    public ListAgentSummaryReportsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public ListAgentSummaryReportsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListAgentSummaryReportsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListAgentSummaryReportsRequest setPageNumber(Integer pageNumber) {
@@ -84,6 +68,22 @@ public class ListAgentSummaryReportsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentSummaryReportsRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
+    public ListAgentSummaryReportsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -7,11 +7,11 @@ public class TaskPreparingRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     public static TaskPreparingRequest build(java.util.Map<String, ?> map) throws Exception {
         TaskPreparingRequest self = new TaskPreparingRequest();
@@ -26,20 +26,20 @@ public class TaskPreparingRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public TaskPreparingRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
     public TaskPreparingRequest setInstanceOwnerId(Long instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
     }
     public Long getInstanceOwnerId() {
         return this.instanceOwnerId;
+    }
+
+    public TaskPreparingRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

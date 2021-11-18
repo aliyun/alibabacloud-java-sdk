@@ -7,14 +7,14 @@ public class ListUsersOfSkillGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
 
     public static ListUsersOfSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersOfSkillGroupRequest self = new ListUsersOfSkillGroupRequest();
@@ -27,14 +27,6 @@ public class ListUsersOfSkillGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListUsersOfSkillGroupRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
-        return this;
-    }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
     }
 
     public ListUsersOfSkillGroupRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListUsersOfSkillGroupRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUsersOfSkillGroupRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
 }

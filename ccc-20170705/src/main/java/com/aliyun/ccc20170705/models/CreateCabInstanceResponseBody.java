@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateCabInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Instance")
+    public CreateCabInstanceResponseBodyInstance instance;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Instance")
-    public CreateCabInstanceResponseBodyInstance instance;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class CreateCabInstanceResponseBody extends TeaModel {
     public static CreateCabInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCabInstanceResponseBody self = new CreateCabInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCabInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateCabInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public CreateCabInstanceResponseBody setInstance(CreateCabInstanceResponseBodyInstance instance) {
+        this.instance = instance;
+        return this;
+    }
+    public CreateCabInstanceResponseBodyInstance getInstance() {
+        return this.instance;
     }
 
     public CreateCabInstanceResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class CreateCabInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateCabInstanceResponseBody setInstance(CreateCabInstanceResponseBodyInstance instance) {
-        this.instance = instance;
-        return this;
-    }
-    public CreateCabInstanceResponseBodyInstance getInstance() {
-        return this.instance;
-    }
-
-    public CreateCabInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateCabInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateCabInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,14 +76,17 @@ public class CreateCabInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateCabInstanceResponseBodyInstance extends TeaModel {
-        @NameInMap("CreationTime")
-        public Long creationTime;
-
         @NameInMap("CallCenterInstanceId")
         public String callCenterInstanceId;
 
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("CreationTime")
+        public Long creationTime;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -91,23 +94,12 @@ public class CreateCabInstanceResponseBody extends TeaModel {
         @NameInMap("MaxConcurrentConversation")
         public Integer maxConcurrentConversation;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("InstanceDescription")
-        public String instanceDescription;
+        @NameInMap("Owner")
+        public String owner;
 
         public static CreateCabInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             CreateCabInstanceResponseBodyInstance self = new CreateCabInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
-        }
-
-        public CreateCabInstanceResponseBodyInstance setCreationTime(Long creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public Long getCreationTime() {
-            return this.creationTime;
         }
 
         public CreateCabInstanceResponseBodyInstance setCallCenterInstanceId(String callCenterInstanceId) {
@@ -118,12 +110,28 @@ public class CreateCabInstanceResponseBody extends TeaModel {
             return this.callCenterInstanceId;
         }
 
-        public CreateCabInstanceResponseBodyInstance setOwner(String owner) {
-            this.owner = owner;
+        public CreateCabInstanceResponseBodyInstance setCreationTime(Long creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public Long getCreationTime() {
+            return this.creationTime;
+        }
+
+        public CreateCabInstanceResponseBodyInstance setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
+        }
+
+        public CreateCabInstanceResponseBodyInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public CreateCabInstanceResponseBodyInstance setInstanceName(String instanceName) {
@@ -142,20 +150,12 @@ public class CreateCabInstanceResponseBody extends TeaModel {
             return this.maxConcurrentConversation;
         }
 
-        public CreateCabInstanceResponseBodyInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public CreateCabInstanceResponseBodyInstance setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public CreateCabInstanceResponseBodyInstance setInstanceDescription(String instanceDescription) {
-            this.instanceDescription = instanceDescription;
-            return this;
-        }
-        public String getInstanceDescription() {
-            return this.instanceDescription;
+        public String getOwner() {
+            return this.owner;
         }
 
     }

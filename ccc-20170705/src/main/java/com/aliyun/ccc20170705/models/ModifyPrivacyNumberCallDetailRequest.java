@@ -4,26 +4,18 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrivacyNumberCallDetailRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CallId")
     public String callId;
 
     @NameInMap("ContactId")
     public String contactId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ModifyPrivacyNumberCallDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrivacyNumberCallDetailRequest self = new ModifyPrivacyNumberCallDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyPrivacyNumberCallDetailRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ModifyPrivacyNumberCallDetailRequest setCallId(String callId) {
@@ -40,6 +32,14 @@ public class ModifyPrivacyNumberCallDetailRequest extends TeaModel {
     }
     public String getContactId() {
         return this.contactId;
+    }
+
+    public ModifyPrivacyNumberCallDetailRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

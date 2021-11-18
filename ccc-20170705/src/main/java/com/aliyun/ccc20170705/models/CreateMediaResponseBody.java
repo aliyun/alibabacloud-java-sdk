@@ -4,6 +4,12 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("MediaUploadParam")
     public CreateMediaResponseBodyMediaUploadParam mediaUploadParam;
 
@@ -13,18 +19,28 @@ public class CreateMediaResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static CreateMediaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMediaResponseBody self = new CreateMediaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMediaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateMediaResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CreateMediaResponseBody setMediaUploadParam(CreateMediaResponseBodyMediaUploadParam mediaUploadParam) {
@@ -51,22 +67,6 @@ public class CreateMediaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateMediaResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateMediaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateMediaResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,43 +76,27 @@ public class CreateMediaResponseBody extends TeaModel {
     }
 
     public static class CreateMediaResponseBodyMediaUploadParam extends TeaModel {
-        @NameInMap("Instance")
-        public String instance;
-
-        @NameInMap("OssFilePath")
-        public String ossFilePath;
-
         @NameInMap("FileName")
         public String fileName;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Instance")
+        public String instance;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("OssFileName")
         public String ossFileName;
+
+        @NameInMap("OssFilePath")
+        public String ossFilePath;
 
         public static CreateMediaResponseBodyMediaUploadParam build(java.util.Map<String, ?> map) throws Exception {
             CreateMediaResponseBodyMediaUploadParam self = new CreateMediaResponseBodyMediaUploadParam();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMediaResponseBodyMediaUploadParam setInstance(String instance) {
-            this.instance = instance;
-            return this;
-        }
-        public String getInstance() {
-            return this.instance;
-        }
-
-        public CreateMediaResponseBodyMediaUploadParam setOssFilePath(String ossFilePath) {
-            this.ossFilePath = ossFilePath;
-            return this;
-        }
-        public String getOssFilePath() {
-            return this.ossFilePath;
         }
 
         public CreateMediaResponseBodyMediaUploadParam setFileName(String fileName) {
@@ -123,14 +107,6 @@ public class CreateMediaResponseBody extends TeaModel {
             return this.fileName;
         }
 
-        public CreateMediaResponseBodyMediaUploadParam setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public CreateMediaResponseBodyMediaUploadParam setId(String id) {
             this.id = id;
             return this;
@@ -139,12 +115,36 @@ public class CreateMediaResponseBody extends TeaModel {
             return this.id;
         }
 
+        public CreateMediaResponseBodyMediaUploadParam setInstance(String instance) {
+            this.instance = instance;
+            return this;
+        }
+        public String getInstance() {
+            return this.instance;
+        }
+
+        public CreateMediaResponseBodyMediaUploadParam setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public CreateMediaResponseBodyMediaUploadParam setOssFileName(String ossFileName) {
             this.ossFileName = ossFileName;
             return this;
         }
         public String getOssFileName() {
             return this.ossFileName;
+        }
+
+        public CreateMediaResponseBodyMediaUploadParam setOssFilePath(String ossFilePath) {
+            this.ossFilePath = ossFilePath;
+            return this;
+        }
+        public String getOssFilePath() {
+            return this.ossFilePath;
         }
 
     }

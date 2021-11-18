@@ -4,14 +4,17 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateJobGroupRequest extends TeaModel {
+    @NameInMap("CallingNumber")
+    public java.util.List<String> callingNumber;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("Description")
-    public String description;
 
     @NameInMap("ScenarioId")
     public String scenarioId;
@@ -19,12 +22,25 @@ public class CreateJobGroupRequest extends TeaModel {
     @NameInMap("StrategyJson")
     public String strategyJson;
 
-    @NameInMap("CallingNumber")
-    public java.util.List<String> callingNumber;
-
     public static CreateJobGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobGroupRequest self = new CreateJobGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateJobGroupRequest setCallingNumber(java.util.List<String> callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public java.util.List<String> getCallingNumber() {
+        return this.callingNumber;
+    }
+
+    public CreateJobGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateJobGroupRequest setInstanceId(String instanceId) {
@@ -43,14 +59,6 @@ public class CreateJobGroupRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateJobGroupRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public CreateJobGroupRequest setScenarioId(String scenarioId) {
         this.scenarioId = scenarioId;
         return this;
@@ -65,14 +73,6 @@ public class CreateJobGroupRequest extends TeaModel {
     }
     public String getStrategyJson() {
         return this.strategyJson;
-    }
-
-    public CreateJobGroupRequest setCallingNumber(java.util.List<String> callingNumber) {
-        this.callingNumber = callingNumber;
-        return this;
-    }
-    public java.util.List<String> getCallingNumber() {
-        return this.callingNumber;
     }
 
 }

@@ -7,29 +7,29 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
     @NameInMap("ArrearagePhoneNumbers")
     public AddBulkPhoneNumbersResponseBodyArrearagePhoneNumbers arrearagePhoneNumbers;
 
-    @NameInMap("PhoneNumbers")
-    public AddBulkPhoneNumbersResponseBodyPhoneNumbers phoneNumbers;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("FailedPhoneNumbers")
     public AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers failedPhoneNumbers;
 
-    @NameInMap("UserdPhoneNumbers")
-    public AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers userdPhoneNumbers;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PhoneNumbers")
+    public AddBulkPhoneNumbersResponseBodyPhoneNumbers phoneNumbers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("UserdPhoneNumbers")
+    public AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers userdPhoneNumbers;
 
     public static AddBulkPhoneNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddBulkPhoneNumbersResponseBody self = new AddBulkPhoneNumbersResponseBody();
@@ -44,36 +44,12 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         return this.arrearagePhoneNumbers;
     }
 
-    public AddBulkPhoneNumbersResponseBody setPhoneNumbers(AddBulkPhoneNumbersResponseBodyPhoneNumbers phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
+    public AddBulkPhoneNumbersResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddBulkPhoneNumbersResponseBodyPhoneNumbers getPhoneNumbers() {
-        return this.phoneNumbers;
-    }
-
-    public AddBulkPhoneNumbersResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public AddBulkPhoneNumbersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AddBulkPhoneNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getCode() {
+        return this.code;
     }
 
     public AddBulkPhoneNumbersResponseBody setFailedPhoneNumbers(AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers failedPhoneNumbers) {
@@ -84,20 +60,36 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         return this.failedPhoneNumbers;
     }
 
-    public AddBulkPhoneNumbersResponseBody setUserdPhoneNumbers(AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers userdPhoneNumbers) {
-        this.userdPhoneNumbers = userdPhoneNumbers;
+    public AddBulkPhoneNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers getUserdPhoneNumbers() {
-        return this.userdPhoneNumbers;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
-    public AddBulkPhoneNumbersResponseBody setCode(String code) {
-        this.code = code;
+    public AddBulkPhoneNumbersResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public AddBulkPhoneNumbersResponseBody setPhoneNumbers(AddBulkPhoneNumbersResponseBodyPhoneNumbers phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    public AddBulkPhoneNumbersResponseBodyPhoneNumbers getPhoneNumbers() {
+        return this.phoneNumbers;
+    }
+
+    public AddBulkPhoneNumbersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddBulkPhoneNumbersResponseBody setSuccess(Boolean success) {
@@ -106,6 +98,14 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public AddBulkPhoneNumbersResponseBody setUserdPhoneNumbers(AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers userdPhoneNumbers) {
+        this.userdPhoneNumbers = userdPhoneNumbers;
+        return this;
+    }
+    public AddBulkPhoneNumbersResponseBodyUserdPhoneNumbers getUserdPhoneNumbers() {
+        return this.userdPhoneNumbers;
     }
 
     public static class AddBulkPhoneNumbersResponseBodyArrearagePhoneNumbers extends TeaModel {
@@ -127,24 +127,98 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
 
     }
 
-    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup extends TeaModel {
-        @NameInMap("SkillGroupName")
-        public String skillGroupName;
+    public static class AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers extends TeaModel {
+        @NameInMap("FailedPhoneNumber")
+        public java.util.List<String> failedPhoneNumber;
 
+        public static AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
+            AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers self = new AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers();
+            return TeaModel.build(map, self);
+        }
+
+        public AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers setFailedPhoneNumber(java.util.List<String> failedPhoneNumber) {
+            this.failedPhoneNumber = failedPhoneNumber;
+            return this;
+        }
+        public java.util.List<String> getFailedPhoneNumber() {
+            return this.failedPhoneNumber;
+        }
+
+    }
+
+    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow extends TeaModel {
+        @NameInMap("ContactFlowDescription")
+        public String contactFlowDescription;
+
+        @NameInMap("ContactFlowId")
+        public String contactFlowId;
+
+        @NameInMap("ContactFlowName")
+        public String contactFlowName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow build(java.util.Map<String, ?> map) throws Exception {
+            AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow self = new AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow();
+            return TeaModel.build(map, self);
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowDescription(String contactFlowDescription) {
+            this.contactFlowDescription = contactFlowDescription;
+            return this;
+        }
+        public String getContactFlowDescription() {
+            return this.contactFlowDescription;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
+            return this;
+        }
+        public String getContactFlowId() {
+            return this.contactFlowId;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowName(String contactFlowName) {
+            this.contactFlowName = contactFlowName;
+            return this;
+        }
+        public String getContactFlowName() {
+            return this.contactFlowName;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup extends TeaModel {
         @NameInMap("SkillGroupId")
         public String skillGroupId;
+
+        @NameInMap("SkillGroupName")
+        public String skillGroupName;
 
         public static AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup build(java.util.Map<String, ?> map) throws Exception {
             AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup self = new AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup();
             return TeaModel.build(map, self);
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup setSkillGroupName(String skillGroupName) {
-            this.skillGroupName = skillGroupName;
-            return this;
-        }
-        public String getSkillGroupName() {
-            return this.skillGroupName;
         }
 
         public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup setSkillGroupId(String skillGroupId) {
@@ -153,6 +227,14 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         }
         public String getSkillGroupId() {
             return this.skillGroupId;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroupsSkillGroup setSkillGroupName(String skillGroupName) {
+            this.skillGroupName = skillGroupName;
+            return this;
+        }
+        public String getSkillGroupName() {
+            return this.skillGroupName;
         }
 
     }
@@ -176,70 +258,28 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
 
     }
 
-    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber extends TeaModel {
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
 
-        @NameInMap("ContactFlowDescription")
-        public String contactFlowDescription;
-
-        @NameInMap("ContactFlowName")
-        public String contactFlowName;
+        @NameInMap("ContactFlow")
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow contactFlow;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("ContactFlowId")
-        public String contactFlowId;
+        @NameInMap("Number")
+        public String number;
 
-        public static AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow build(java.util.Map<String, ?> map) throws Exception {
-            AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow self = new AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow();
-            return TeaModel.build(map, self);
-        }
+        @NameInMap("PhoneNumberDescription")
+        public String phoneNumberDescription;
 
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
+        @NameInMap("PhoneNumberId")
+        public String phoneNumberId;
 
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowDescription(String contactFlowDescription) {
-            this.contactFlowDescription = contactFlowDescription;
-            return this;
-        }
-        public String getContactFlowDescription() {
-            return this.contactFlowDescription;
-        }
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
 
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowName(String contactFlowName) {
-            this.contactFlowName = contactFlowName;
-            return this;
-        }
-        public String getContactFlowName() {
-            return this.contactFlowName;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow setContactFlowId(String contactFlowId) {
-            this.contactFlowId = contactFlowId;
-            return this;
-        }
-        public String getContactFlowId() {
-            return this.contactFlowId;
-        }
-
-    }
-
-    public static class AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber extends TeaModel {
         @NameInMap("SkillGroups")
         public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroups skillGroups;
 
@@ -249,33 +289,68 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         @NameInMap("Trunks")
         public Integer trunks;
 
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Number")
-        public String number;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Usage")
         public String usage;
-
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
-
-        @NameInMap("PhoneNumberDescription")
-        public String phoneNumberDescription;
-
-        @NameInMap("ContactFlow")
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow contactFlow;
-
-        @NameInMap("PhoneNumberId")
-        public String phoneNumberId;
 
         public static AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
             AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber self = new AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber();
             return TeaModel.build(map, self);
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
+            return this;
+        }
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setContactFlow(AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow contactFlow) {
+            this.contactFlow = contactFlow;
+            return this;
+        }
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow getContactFlow() {
+            return this.contactFlow;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
+            this.phoneNumberDescription = phoneNumberDescription;
+            return this;
+        }
+        public String getPhoneNumberDescription() {
+            return this.phoneNumberDescription;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
+        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
         }
 
         public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setSkillGroups(AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberSkillGroups skillGroups) {
@@ -302,68 +377,12 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
             return this.trunks;
         }
 
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setUsage(String usage) {
             this.usage = usage;
             return this;
         }
         public String getUsage() {
             return this.usage;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
-            return this;
-        }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
-            this.phoneNumberDescription = phoneNumberDescription;
-            return this;
-        }
-        public String getPhoneNumberDescription() {
-            return this.phoneNumberDescription;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setContactFlow(AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow contactFlow) {
-            this.contactFlow = contactFlow;
-            return this;
-        }
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumberContactFlow getContactFlow() {
-            return this.contactFlow;
-        }
-
-        public AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
         }
 
     }
@@ -383,25 +402,6 @@ public class AddBulkPhoneNumbersResponseBody extends TeaModel {
         }
         public java.util.List<AddBulkPhoneNumbersResponseBodyPhoneNumbersPhoneNumber> getPhoneNumber() {
             return this.phoneNumber;
-        }
-
-    }
-
-    public static class AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers extends TeaModel {
-        @NameInMap("FailedPhoneNumber")
-        public java.util.List<String> failedPhoneNumber;
-
-        public static AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
-            AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers self = new AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers();
-            return TeaModel.build(map, self);
-        }
-
-        public AddBulkPhoneNumbersResponseBodyFailedPhoneNumbers setFailedPhoneNumber(java.util.List<String> failedPhoneNumber) {
-            this.failedPhoneNumber = failedPhoneNumber;
-            return this;
-        }
-        public java.util.List<String> getFailedPhoneNumber() {
-            return this.failedPhoneNumber;
         }
 
     }

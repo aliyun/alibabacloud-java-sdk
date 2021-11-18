@@ -4,33 +4,49 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillGroupRequest extends TeaModel {
+    @NameInMap("AllowPrivateOutboundNumber")
+    public Boolean allowPrivateOutboundNumber;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OutboundPhoneNumberId")
+    public java.util.List<String> outboundPhoneNumberId;
 
     @NameInMap("RoutingStrategy")
     public String routingStrategy;
 
-    @NameInMap("AllowPrivateOutboundNumber")
-    public Boolean allowPrivateOutboundNumber;
-
-    @NameInMap("OutboundPhoneNumberId")
-    public java.util.List<String> outboundPhoneNumberId;
+    @NameInMap("SkillLevel")
+    public java.util.List<Integer> skillLevel;
 
     @NameInMap("UserId")
     public java.util.List<String> userId;
 
-    @NameInMap("SkillLevel")
-    public java.util.List<Integer> skillLevel;
-
     public static CreateSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupRequest self = new CreateSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSkillGroupRequest setAllowPrivateOutboundNumber(Boolean allowPrivateOutboundNumber) {
+        this.allowPrivateOutboundNumber = allowPrivateOutboundNumber;
+        return this;
+    }
+    public Boolean getAllowPrivateOutboundNumber() {
+        return this.allowPrivateOutboundNumber;
+    }
+
+    public CreateSkillGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateSkillGroupRequest setInstanceId(String instanceId) {
@@ -49,12 +65,12 @@ public class CreateSkillGroupRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateSkillGroupRequest setDescription(String description) {
-        this.description = description;
+    public CreateSkillGroupRequest setOutboundPhoneNumberId(java.util.List<String> outboundPhoneNumberId) {
+        this.outboundPhoneNumberId = outboundPhoneNumberId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public java.util.List<String> getOutboundPhoneNumberId() {
+        return this.outboundPhoneNumberId;
     }
 
     public CreateSkillGroupRequest setRoutingStrategy(String routingStrategy) {
@@ -65,20 +81,12 @@ public class CreateSkillGroupRequest extends TeaModel {
         return this.routingStrategy;
     }
 
-    public CreateSkillGroupRequest setAllowPrivateOutboundNumber(Boolean allowPrivateOutboundNumber) {
-        this.allowPrivateOutboundNumber = allowPrivateOutboundNumber;
+    public CreateSkillGroupRequest setSkillLevel(java.util.List<Integer> skillLevel) {
+        this.skillLevel = skillLevel;
         return this;
     }
-    public Boolean getAllowPrivateOutboundNumber() {
-        return this.allowPrivateOutboundNumber;
-    }
-
-    public CreateSkillGroupRequest setOutboundPhoneNumberId(java.util.List<String> outboundPhoneNumberId) {
-        this.outboundPhoneNumberId = outboundPhoneNumberId;
-        return this;
-    }
-    public java.util.List<String> getOutboundPhoneNumberId() {
-        return this.outboundPhoneNumberId;
+    public java.util.List<Integer> getSkillLevel() {
+        return this.skillLevel;
     }
 
     public CreateSkillGroupRequest setUserId(java.util.List<String> userId) {
@@ -87,14 +95,6 @@ public class CreateSkillGroupRequest extends TeaModel {
     }
     public java.util.List<String> getUserId() {
         return this.userId;
-    }
-
-    public CreateSkillGroupRequest setSkillLevel(java.util.List<Integer> skillLevel) {
-        this.skillLevel = skillLevel;
-        return this;
-    }
-    public java.util.List<Integer> getSkillLevel() {
-        return this.skillLevel;
     }
 
 }
