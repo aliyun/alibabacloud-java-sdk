@@ -1044,6 +1044,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listIndexesWithOptions(request, runtime);
     }
 
+    public ListInstanceLoginAuditLogResponse listInstanceLoginAuditLogWithOptions(ListInstanceLoginAuditLogRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListInstanceLoginAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListInstanceLoginAuditLogResponse());
+    }
+
+    public ListInstanceLoginAuditLogResponse listInstanceLoginAuditLog(ListInstanceLoginAuditLogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstanceLoginAuditLogWithOptions(request, runtime);
+    }
+
     public ListInstanceUserPermissionsResponse listInstanceUserPermissionsWithOptions(ListInstanceUserPermissionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1133,6 +1146,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProxyAccessesResponse listProxyAccesses(ListProxyAccessesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listProxyAccessesWithOptions(request, runtime);
+    }
+
+    public ListProxySQLExecAuditLogResponse listProxySQLExecAuditLogWithOptions(ListProxySQLExecAuditLogRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListProxySQLExecAuditLog", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListProxySQLExecAuditLogResponse());
+    }
+
+    public ListProxySQLExecAuditLogResponse listProxySQLExecAuditLog(ListProxySQLExecAuditLogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listProxySQLExecAuditLogWithOptions(request, runtime);
     }
 
     public ListSQLExecAuditLogResponse listSQLExecAuditLogWithOptions(ListSQLExecAuditLogRequest request, RuntimeOptions runtime) throws Exception {
