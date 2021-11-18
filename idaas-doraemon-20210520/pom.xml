@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>idaas_doraemon20210520</artifactId>
-  <version>1.2.2</version>
+  <version>1.2.3</version>
   <packaging>jar</packaging>
   <name>idaas_doraemon20210520</name>
   <description>Alibaba Cloud idaas-doraemon (20210520) SDK for Java

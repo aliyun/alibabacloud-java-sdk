@@ -4,14 +4,14 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListPwnedPasswordsResponseBody extends TeaModel {
-    @NameInMap("Items")
-    public java.util.List<ListPwnedPasswordsResponseBodyItems> items;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("PwnedPasswordInfos")
+    public java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> pwnedPasswordInfos;
 
     // Id of the request
     @NameInMap("RequestId")
@@ -23,14 +23,6 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
     public static ListPwnedPasswordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPwnedPasswordsResponseBody self = new ListPwnedPasswordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPwnedPasswordsResponseBody setItems(java.util.List<ListPwnedPasswordsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<ListPwnedPasswordsResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public ListPwnedPasswordsResponseBody setPageNumber(Long pageNumber) {
@@ -49,6 +41,14 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public ListPwnedPasswordsResponseBody setPwnedPasswordInfos(java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> pwnedPasswordInfos) {
+        this.pwnedPasswordInfos = pwnedPasswordInfos;
+        return this;
+    }
+    public java.util.List<ListPwnedPasswordsResponseBodyPwnedPasswordInfos> getPwnedPasswordInfos() {
+        return this.pwnedPasswordInfos;
+    }
+
     public ListPwnedPasswordsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -65,19 +65,19 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListPwnedPasswordsResponseBodyItems extends TeaModel {
+    public static class ListPwnedPasswordsResponseBodyPwnedPasswordInfos extends TeaModel {
         @NameInMap("HexPasswordSha1Hash")
         public String hexPasswordSha1Hash;
 
         @NameInMap("PwnedCount")
         public Long pwnedCount;
 
-        public static ListPwnedPasswordsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
-            ListPwnedPasswordsResponseBodyItems self = new ListPwnedPasswordsResponseBodyItems();
+        public static ListPwnedPasswordsResponseBodyPwnedPasswordInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListPwnedPasswordsResponseBodyPwnedPasswordInfos self = new ListPwnedPasswordsResponseBodyPwnedPasswordInfos();
             return TeaModel.build(map, self);
         }
 
-        public ListPwnedPasswordsResponseBodyItems setHexPasswordSha1Hash(String hexPasswordSha1Hash) {
+        public ListPwnedPasswordsResponseBodyPwnedPasswordInfos setHexPasswordSha1Hash(String hexPasswordSha1Hash) {
             this.hexPasswordSha1Hash = hexPasswordSha1Hash;
             return this;
         }
@@ -85,7 +85,7 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
             return this.hexPasswordSha1Hash;
         }
 
-        public ListPwnedPasswordsResponseBodyItems setPwnedCount(Long pwnedCount) {
+        public ListPwnedPasswordsResponseBodyPwnedPasswordInfos setPwnedCount(Long pwnedCount) {
             this.pwnedCount = pwnedCount;
             return this;
         }
