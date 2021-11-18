@@ -4,26 +4,18 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifyAgentDeviceRequest extends TeaModel {
-    @NameInMap("IsLogin")
-    public Integer isLogin;
-
     @NameInMap("AgentDeviceId")
     public Long agentDeviceId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsLogin")
+    public Integer isLogin;
+
     public static ModifyAgentDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAgentDeviceRequest self = new ModifyAgentDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyAgentDeviceRequest setIsLogin(Integer isLogin) {
-        this.isLogin = isLogin;
-        return this;
-    }
-    public Integer getIsLogin() {
-        return this.isLogin;
     }
 
     public ModifyAgentDeviceRequest setAgentDeviceId(Long agentDeviceId) {
@@ -40,6 +32,14 @@ public class ModifyAgentDeviceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyAgentDeviceRequest setIsLogin(Integer isLogin) {
+        this.isLogin = isLogin;
+        return this;
+    }
+    public Integer getIsLogin() {
+        return this.isLogin;
     }
 
 }

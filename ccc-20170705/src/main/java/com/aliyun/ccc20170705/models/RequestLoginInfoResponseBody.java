@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class RequestLoginInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("LoginInfo")
+    public RequestLoginInfoResponseBodyLoginInfo loginInfo;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("LoginInfo")
-    public RequestLoginInfoResponseBodyLoginInfo loginInfo;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class RequestLoginInfoResponseBody extends TeaModel {
     public static RequestLoginInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestLoginInfoResponseBody self = new RequestLoginInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestLoginInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RequestLoginInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public RequestLoginInfoResponseBody setLoginInfo(RequestLoginInfoResponseBodyLoginInfo loginInfo) {
+        this.loginInfo = loginInfo;
+        return this;
+    }
+    public RequestLoginInfoResponseBodyLoginInfo getLoginInfo() {
+        return this.loginInfo;
     }
 
     public RequestLoginInfoResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RequestLoginInfoResponseBody setLoginInfo(RequestLoginInfoResponseBodyLoginInfo loginInfo) {
-        this.loginInfo = loginInfo;
-        return this;
-    }
-    public RequestLoginInfoResponseBodyLoginInfo getLoginInfo() {
-        return this.loginInfo;
-    }
-
-    public RequestLoginInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public RequestLoginInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public RequestLoginInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,29 +76,21 @@ public class RequestLoginInfoResponseBody extends TeaModel {
     }
 
     public static class RequestLoginInfoResponseBodyLoginInfoRolesRole extends TeaModel {
-        @NameInMap("RoleDescription")
-        public String roleDescription;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("RoleName")
-        public String roleName;
+        @NameInMap("RoleDescription")
+        public String roleDescription;
 
         @NameInMap("RoleId")
         public String roleId;
 
+        @NameInMap("RoleName")
+        public String roleName;
+
         public static RequestLoginInfoResponseBodyLoginInfoRolesRole build(java.util.Map<String, ?> map) throws Exception {
             RequestLoginInfoResponseBodyLoginInfoRolesRole self = new RequestLoginInfoResponseBodyLoginInfoRolesRole();
             return TeaModel.build(map, self);
-        }
-
-        public RequestLoginInfoResponseBodyLoginInfoRolesRole setRoleDescription(String roleDescription) {
-            this.roleDescription = roleDescription;
-            return this;
-        }
-        public String getRoleDescription() {
-            return this.roleDescription;
         }
 
         public RequestLoginInfoResponseBodyLoginInfoRolesRole setInstanceId(String instanceId) {
@@ -109,12 +101,12 @@ public class RequestLoginInfoResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public RequestLoginInfoResponseBodyLoginInfoRolesRole setRoleName(String roleName) {
-            this.roleName = roleName;
+        public RequestLoginInfoResponseBodyLoginInfoRolesRole setRoleDescription(String roleDescription) {
+            this.roleDescription = roleDescription;
             return this;
         }
-        public String getRoleName() {
-            return this.roleName;
+        public String getRoleDescription() {
+            return this.roleDescription;
         }
 
         public RequestLoginInfoResponseBodyLoginInfoRolesRole setRoleId(String roleId) {
@@ -123,6 +115,14 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         }
         public String getRoleId() {
             return this.roleId;
+        }
+
+        public RequestLoginInfoResponseBodyLoginInfoRolesRole setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }
@@ -147,17 +147,14 @@ public class RequestLoginInfoResponseBody extends TeaModel {
     }
 
     public static class RequestLoginInfoResponseBodyLoginInfo extends TeaModel {
+        @NameInMap("AgentServerUrl")
+        public String agentServerUrl;
+
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("Signature")
-        public String signature;
-
         @NameInMap("Extension")
         public String extension;
-
-        @NameInMap("SignData")
-        public String signData;
 
         @NameInMap("PhoneNumber")
         public String phoneNumber;
@@ -165,11 +162,17 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("AgentServerUrl")
-        public String agentServerUrl;
-
         @NameInMap("Roles")
         public RequestLoginInfoResponseBodyLoginInfoRoles roles;
+
+        @NameInMap("SignData")
+        public String signData;
+
+        @NameInMap("Signature")
+        public String signature;
+
+        @NameInMap("TenantId")
+        public String tenantId;
 
         @NameInMap("UserName")
         public String userName;
@@ -177,12 +180,17 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         @NameInMap("WebRtcUrl")
         public String webRtcUrl;
 
-        @NameInMap("TenantId")
-        public String tenantId;
-
         public static RequestLoginInfoResponseBodyLoginInfo build(java.util.Map<String, ?> map) throws Exception {
             RequestLoginInfoResponseBodyLoginInfo self = new RequestLoginInfoResponseBodyLoginInfo();
             return TeaModel.build(map, self);
+        }
+
+        public RequestLoginInfoResponseBodyLoginInfo setAgentServerUrl(String agentServerUrl) {
+            this.agentServerUrl = agentServerUrl;
+            return this;
+        }
+        public String getAgentServerUrl() {
+            return this.agentServerUrl;
         }
 
         public RequestLoginInfoResponseBodyLoginInfo setDisplayName(String displayName) {
@@ -193,28 +201,12 @@ public class RequestLoginInfoResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public RequestLoginInfoResponseBodyLoginInfo setSignature(String signature) {
-            this.signature = signature;
-            return this;
-        }
-        public String getSignature() {
-            return this.signature;
-        }
-
         public RequestLoginInfoResponseBodyLoginInfo setExtension(String extension) {
             this.extension = extension;
             return this;
         }
         public String getExtension() {
             return this.extension;
-        }
-
-        public RequestLoginInfoResponseBodyLoginInfo setSignData(String signData) {
-            this.signData = signData;
-            return this;
-        }
-        public String getSignData() {
-            return this.signData;
         }
 
         public RequestLoginInfoResponseBodyLoginInfo setPhoneNumber(String phoneNumber) {
@@ -233,20 +225,36 @@ public class RequestLoginInfoResponseBody extends TeaModel {
             return this.region;
         }
 
-        public RequestLoginInfoResponseBodyLoginInfo setAgentServerUrl(String agentServerUrl) {
-            this.agentServerUrl = agentServerUrl;
-            return this;
-        }
-        public String getAgentServerUrl() {
-            return this.agentServerUrl;
-        }
-
         public RequestLoginInfoResponseBodyLoginInfo setRoles(RequestLoginInfoResponseBodyLoginInfoRoles roles) {
             this.roles = roles;
             return this;
         }
         public RequestLoginInfoResponseBodyLoginInfoRoles getRoles() {
             return this.roles;
+        }
+
+        public RequestLoginInfoResponseBodyLoginInfo setSignData(String signData) {
+            this.signData = signData;
+            return this;
+        }
+        public String getSignData() {
+            return this.signData;
+        }
+
+        public RequestLoginInfoResponseBodyLoginInfo setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
+        }
+
+        public RequestLoginInfoResponseBodyLoginInfo setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
         public RequestLoginInfoResponseBodyLoginInfo setUserName(String userName) {
@@ -263,14 +271,6 @@ public class RequestLoginInfoResponseBody extends TeaModel {
         }
         public String getWebRtcUrl() {
             return this.webRtcUrl;
-        }
-
-        public RequestLoginInfoResponseBodyLoginInfo setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public String getTenantId() {
-            return this.tenantId;
         }
 
     }

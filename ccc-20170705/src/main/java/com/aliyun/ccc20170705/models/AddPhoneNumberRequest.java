@@ -4,6 +4,9 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AddPhoneNumberRequest extends TeaModel {
+    @NameInMap("ContactFlowId")
+    public String contactFlowId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class AddPhoneNumberRequest extends TeaModel {
     @NameInMap("Usage")
     public String usage;
 
-    @NameInMap("ContactFlowId")
-    public String contactFlowId;
-
     public static AddPhoneNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         AddPhoneNumberRequest self = new AddPhoneNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddPhoneNumberRequest setContactFlowId(String contactFlowId) {
+        this.contactFlowId = contactFlowId;
+        return this;
+    }
+    public String getContactFlowId() {
+        return this.contactFlowId;
     }
 
     public AddPhoneNumberRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class AddPhoneNumberRequest extends TeaModel {
     }
     public String getUsage() {
         return this.usage;
-    }
-
-    public AddPhoneNumberRequest setContactFlowId(String contactFlowId) {
-        this.contactFlowId = contactFlowId;
-        return this;
-    }
-    public String getContactFlowId() {
-        return this.contactFlowId;
     }
 
 }

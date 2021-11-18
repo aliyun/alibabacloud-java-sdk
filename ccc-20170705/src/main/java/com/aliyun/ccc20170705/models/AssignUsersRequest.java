@@ -7,9 +7,6 @@ public class AssignUsersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserRamId")
-    public java.util.List<String> userRamId;
-
     @NameInMap("RoleId")
     public java.util.List<String> roleId;
 
@@ -18,6 +15,9 @@ public class AssignUsersRequest extends TeaModel {
 
     @NameInMap("SkillLevel")
     public java.util.List<Integer> skillLevel;
+
+    @NameInMap("UserRamId")
+    public java.util.List<String> userRamId;
 
     public static AssignUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignUsersRequest self = new AssignUsersRequest();
@@ -30,14 +30,6 @@ public class AssignUsersRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public AssignUsersRequest setUserRamId(java.util.List<String> userRamId) {
-        this.userRamId = userRamId;
-        return this;
-    }
-    public java.util.List<String> getUserRamId() {
-        return this.userRamId;
     }
 
     public AssignUsersRequest setRoleId(java.util.List<String> roleId) {
@@ -62,6 +54,14 @@ public class AssignUsersRequest extends TeaModel {
     }
     public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
+    }
+
+    public AssignUsersRequest setUserRamId(java.util.List<String> userRamId) {
+        this.userRamId = userRamId;
+        return this;
+    }
+    public java.util.List<String> getUserRamId() {
+        return this.userRamId;
     }
 
 }

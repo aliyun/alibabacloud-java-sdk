@@ -4,17 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetAgentDataRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("StartDay")
-    public String startDay;
-
     @NameInMap("EndDay")
     public String endDay;
 
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,25 +16,15 @@ public class GetAgentDataRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("StartDay")
+    public String startDay;
+
+    @NameInMap("UserId")
+    public String userId;
+
     public static GetAgentDataRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAgentDataRequest self = new GetAgentDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAgentDataRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetAgentDataRequest setStartDay(String startDay) {
-        this.startDay = startDay;
-        return this;
-    }
-    public String getStartDay() {
-        return this.startDay;
     }
 
     public GetAgentDataRequest setEndDay(String endDay) {
@@ -51,12 +35,12 @@ public class GetAgentDataRequest extends TeaModel {
         return this.endDay;
     }
 
-    public GetAgentDataRequest setUserId(String userId) {
-        this.userId = userId;
+    public GetAgentDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetAgentDataRequest setPageNumber(Integer pageNumber) {
@@ -73,6 +57,22 @@ public class GetAgentDataRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetAgentDataRequest setStartDay(String startDay) {
+        this.startDay = startDay;
+        return this;
+    }
+    public String getStartDay() {
+        return this.startDay;
+    }
+
+    public GetAgentDataRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

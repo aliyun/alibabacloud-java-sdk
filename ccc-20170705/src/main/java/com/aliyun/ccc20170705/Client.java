@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -55,6 +56,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AbortPredictiveJobsResponse abortPredictiveJobsWithOptions(AbortPredictiveJobsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AbortPredictiveJobs", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new AbortPredictiveJobsResponse());
+    }
+
+    public AbortPredictiveJobsResponse abortPredictiveJobs(AbortPredictiveJobsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.abortPredictiveJobsWithOptions(request, runtime);
+    }
+
     public AddAgentDeviceResponse addAgentDeviceWithOptions(AddAgentDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -79,6 +93,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddBulkPhoneNumbersResponse addBulkPhoneNumbers(AddBulkPhoneNumbersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addBulkPhoneNumbersWithOptions(request, runtime);
+    }
+
+    public AddJobsToPredictiveJobGroupResponse addJobsToPredictiveJobGroupWithOptions(AddJobsToPredictiveJobGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddJobsToPredictiveJobGroup", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new AddJobsToPredictiveJobGroupResponse());
+    }
+
+    public AddJobsToPredictiveJobGroupResponse addJobsToPredictiveJobGroup(AddJobsToPredictiveJobGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addJobsToPredictiveJobGroupWithOptions(request, runtime);
     }
 
     public AddPhoneNumberResponse addPhoneNumberWithOptions(AddPhoneNumberRequest request, RuntimeOptions runtime) throws Exception {
@@ -614,6 +641,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getConfigWithOptions(request, runtime);
     }
 
+    public GetContactInfoByOutboundTaskIdResponse getContactInfoByOutboundTaskIdWithOptions(GetContactInfoByOutboundTaskIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetContactInfoByOutboundTaskId", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new GetContactInfoByOutboundTaskIdResponse());
+    }
+
+    public GetContactInfoByOutboundTaskIdResponse getContactInfoByOutboundTaskId(GetContactInfoByOutboundTaskIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getContactInfoByOutboundTaskIdWithOptions(request, runtime);
+    }
+
     public GetConversationDetailByContactIdResponse getConversationDetailByContactIdWithOptions(GetConversationDetailByContactIdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -809,6 +849,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getNumberRegionInfoWithOptions(request, runtime);
     }
 
+    public GetPredictiveJobGroupResponse getPredictiveJobGroupWithOptions(GetPredictiveJobGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPredictiveJobGroup", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new GetPredictiveJobGroupResponse());
+    }
+
+    public GetPredictiveJobGroupResponse getPredictiveJobGroup(GetPredictiveJobGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPredictiveJobGroupWithOptions(request, runtime);
+    }
+
+    public GetPredictiveTaskDataResponse getPredictiveTaskDataWithOptions(GetPredictiveTaskDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPredictiveTaskData", "2017-07-05", "HTTPS", "GET", "AK", "json", req, runtime), new GetPredictiveTaskDataResponse());
+    }
+
+    public GetPredictiveTaskDataResponse getPredictiveTaskData(GetPredictiveTaskDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPredictiveTaskDataWithOptions(request, runtime);
+    }
+
     public GetRecordOssUploadParamResponse getRecordOssUploadParamWithOptions(GetRecordOssUploadParamRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -887,19 +954,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSurveyWithOptions(request, runtime);
     }
 
-    public GetTaskListResponse getTaskListWithOptions(GetTaskListRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetTaskList", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new GetTaskListResponse());
-    }
-
-    public GetTaskListResponse getTaskList(GetTaskListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getTaskListWithOptions(request, runtime);
-    }
-
     public GetTURNCredentialsResponse getTURNCredentialsWithOptions(GetTURNCredentialsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -924,6 +978,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTURNServerListResponse getTURNServerList(GetTURNServerListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getTURNServerListWithOptions(request, runtime);
+    }
+
+    public GetTaskListResponse getTaskListWithOptions(GetTaskListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTaskList", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new GetTaskListResponse());
+    }
+
+    public GetTaskListResponse getTaskList(GetTaskListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTaskListWithOptions(request, runtime);
     }
 
     public GetUserResponse getUserWithOptions(GetUserRequest request, RuntimeOptions runtime) throws Exception {
@@ -1196,19 +1263,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listJobGroupsWithOptions(request, runtime);
     }
 
-    public ListJobsByGroupResponse listJobsByGroupWithOptions(ListJobsByGroupRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListJobsByGroup", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListJobsByGroupResponse());
-    }
-
-    public ListJobsByGroupResponse listJobsByGroup(ListJobsByGroupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listJobsByGroupWithOptions(request, runtime);
-    }
-
     public ListJobStatusResponse listJobStatusWithOptions(ListJobStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1220,6 +1274,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListJobStatusResponse listJobStatus(ListJobStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listJobStatusWithOptions(request, runtime);
+    }
+
+    public ListJobsByGroupResponse listJobsByGroupWithOptions(ListJobsByGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListJobsByGroup", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListJobsByGroupResponse());
+    }
+
+    public ListJobsByGroupResponse listJobsByGroup(ListJobsByGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listJobsByGroupWithOptions(request, runtime);
     }
 
     public ListMediasResponse listMediasWithOptions(ListMediasRequest request, RuntimeOptions runtime) throws Exception {
@@ -1352,6 +1419,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRolesWithOptions(request, runtime);
     }
 
+    public ListScenarioTemplatesResponse listScenarioTemplatesWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("ListScenarioTemplates", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListScenarioTemplatesResponse());
+    }
+
+    public ListScenarioTemplatesResponse listScenarioTemplates() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listScenarioTemplatesWithOptions(runtime);
+    }
+
     public ListScenariosResponse listScenariosWithOptions(ListScenariosRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1363,42 +1440,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListScenariosResponse listScenarios(ListScenariosRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listScenariosWithOptions(request, runtime);
-    }
-
-    public ListScenarioTemplatesResponse listScenarioTemplatesWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        return TeaModel.toModel(this.doRPCRequest("ListScenarioTemplates", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListScenarioTemplatesResponse());
-    }
-
-    public ListScenarioTemplatesResponse listScenarioTemplates() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listScenarioTemplatesWithOptions(runtime);
-    }
-
-    public ListSkillGroupsResponse listSkillGroupsWithOptions(ListSkillGroupsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListSkillGroups", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListSkillGroupsResponse());
-    }
-
-    public ListSkillGroupsResponse listSkillGroups(ListSkillGroupsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listSkillGroupsWithOptions(request, runtime);
-    }
-
-    public ListSkillGroupsOfUserResponse listSkillGroupsOfUserWithOptions(ListSkillGroupsOfUserRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListSkillGroupsOfUser", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListSkillGroupsOfUserResponse());
-    }
-
-    public ListSkillGroupsOfUserResponse listSkillGroupsOfUser(ListSkillGroupsOfUserRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listSkillGroupsOfUserWithOptions(request, runtime);
     }
 
     public ListSkillGroupStatesResponse listSkillGroupStatesWithOptions(ListSkillGroupStatesRequest request, RuntimeOptions runtime) throws Exception {
@@ -1451,6 +1492,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSkillGroupSummaryReportsSinceMidnightResponse listSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listSkillGroupSummaryReportsSinceMidnightWithOptions(request, runtime);
+    }
+
+    public ListSkillGroupsResponse listSkillGroupsWithOptions(ListSkillGroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListSkillGroups", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListSkillGroupsResponse());
+    }
+
+    public ListSkillGroupsResponse listSkillGroups(ListSkillGroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listSkillGroupsWithOptions(request, runtime);
+    }
+
+    public ListSkillGroupsOfUserResponse listSkillGroupsOfUserWithOptions(ListSkillGroupsOfUserRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListSkillGroupsOfUser", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ListSkillGroupsOfUserResponse());
+    }
+
+    public ListSkillGroupsOfUserResponse listSkillGroupsOfUser(ListSkillGroupsOfUserRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listSkillGroupsOfUserWithOptions(request, runtime);
     }
 
     public ListSurveysResponse listSurveysWithOptions(ListSurveysRequest request, RuntimeOptions runtime) throws Exception {
@@ -1578,6 +1645,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCabInstanceResponse modifyCabInstance(ModifyCabInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyCabInstanceWithOptions(request, runtime);
+    }
+
+    public ModifyCallRatioResponse modifyCallRatioWithOptions(ModifyCallRatioRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyCallRatio", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyCallRatioResponse());
+    }
+
+    public ModifyCallRatioResponse modifyCallRatio(ModifyCallRatioRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyCallRatioWithOptions(request, runtime);
     }
 
     public ModifyPhoneNumberResponse modifyPhoneNumberWithOptions(ModifyPhoneNumberRequest request, RuntimeOptions runtime) throws Exception {
@@ -1903,6 +1983,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveStatsResponse saveStats(SaveStatsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.saveStatsWithOptions(request, runtime);
+    }
+
+    public SaveTerminalLogResponse saveTerminalLogWithOptions(SaveTerminalLogRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SaveTerminalLog", "2017-07-05", "HTTPS", "POST", "AK", "json", req, runtime), new SaveTerminalLogResponse());
+    }
+
+    public SaveTerminalLogResponse saveTerminalLog(SaveTerminalLogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.saveTerminalLogWithOptions(request, runtime);
     }
 
     public SaveWebRTCStatsResponse saveWebRTCStatsWithOptions(SaveWebRTCStatsRequest request, RuntimeOptions runtime) throws Exception {

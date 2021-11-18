@@ -4,17 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStatesRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
-
     @NameInMap("AgentIds")
     public String agentIds;
 
-    @NameInMap("State")
-    public String state;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,25 +16,15 @@ public class ListAgentStatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
+    @NameInMap("State")
+    public String state;
+
     public static ListAgentStatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentStatesRequest self = new ListAgentStatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAgentStatesRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListAgentStatesRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
-        return this;
-    }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
     }
 
     public ListAgentStatesRequest setAgentIds(String agentIds) {
@@ -51,12 +35,12 @@ public class ListAgentStatesRequest extends TeaModel {
         return this.agentIds;
     }
 
-    public ListAgentStatesRequest setState(String state) {
-        this.state = state;
+    public ListAgentStatesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getState() {
-        return this.state;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListAgentStatesRequest setPageNumber(Integer pageNumber) {
@@ -73,6 +57,22 @@ public class ListAgentStatesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAgentStatesRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
+    public ListAgentStatesRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
 }

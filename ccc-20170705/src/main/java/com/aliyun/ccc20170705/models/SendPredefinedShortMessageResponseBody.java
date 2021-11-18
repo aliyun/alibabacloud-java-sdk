@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SendPredefinedShortMessageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("BizId")
+    public String bizId;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("BizId")
-    public String bizId;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,28 +27,12 @@ public class SendPredefinedShortMessageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SendPredefinedShortMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SendPredefinedShortMessageResponseBody setBizId(String bizId) {
+        this.bizId = bizId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SendPredefinedShortMessageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public SendPredefinedShortMessageResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getBizId() {
+        return this.bizId;
     }
 
     public SendPredefinedShortMessageResponseBody setCode(String code) {
@@ -59,12 +43,28 @@ public class SendPredefinedShortMessageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SendPredefinedShortMessageResponseBody setBizId(String bizId) {
-        this.bizId = bizId;
+    public SendPredefinedShortMessageResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getBizId() {
-        return this.bizId;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public SendPredefinedShortMessageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SendPredefinedShortMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SendPredefinedShortMessageResponseBody setSuccess(Boolean success) {

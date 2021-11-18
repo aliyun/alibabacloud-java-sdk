@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreatePredictiveJobGroupResponseBody extends TeaModel {
-    @NameInMap("JobGroupId")
-    public String jobGroupId;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("JobGroupId")
+    public String jobGroupId;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,28 +27,12 @@ public class CreatePredictiveJobGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreatePredictiveJobGroupResponseBody setJobGroupId(String jobGroupId) {
-        this.jobGroupId = jobGroupId;
+    public CreatePredictiveJobGroupResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getJobGroupId() {
-        return this.jobGroupId;
-    }
-
-    public CreatePredictiveJobGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreatePredictiveJobGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public CreatePredictiveJobGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -59,12 +43,28 @@ public class CreatePredictiveJobGroupResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreatePredictiveJobGroupResponseBody setCode(String code) {
-        this.code = code;
+    public CreatePredictiveJobGroupResponseBody setJobGroupId(String jobGroupId) {
+        this.jobGroupId = jobGroupId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getJobGroupId() {
+        return this.jobGroupId;
+    }
+
+    public CreatePredictiveJobGroupResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreatePredictiveJobGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreatePredictiveJobGroupResponseBody setSuccess(Boolean success) {

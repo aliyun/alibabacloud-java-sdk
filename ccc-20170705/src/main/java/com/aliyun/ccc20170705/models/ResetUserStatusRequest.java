@@ -8,7 +8,7 @@ public class ResetUserStatusRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("RamIdList")
-    public java.util.List<Integer> ramIdList;
+    public java.util.List<Long> ramIdList;
 
     public static ResetUserStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetUserStatusRequest self = new ResetUserStatusRequest();
@@ -23,11 +23,11 @@ public class ResetUserStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ResetUserStatusRequest setRamIdList(java.util.List<Integer> ramIdList) {
+    public ResetUserStatusRequest setRamIdList(java.util.List<Long> ramIdList) {
         this.ramIdList = ramIdList;
         return this;
     }
-    public java.util.List<Integer> getRamIdList() {
+    public java.util.List<Long> getRamIdList() {
         return this.ramIdList;
     }
 

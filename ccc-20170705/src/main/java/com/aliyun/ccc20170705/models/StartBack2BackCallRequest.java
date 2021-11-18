@@ -4,24 +4,48 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class StartBack2BackCallRequest extends TeaModel {
+    @NameInMap("CallCenterNumber")
+    public String callCenterNumber;
+
+    @NameInMap("Callee")
+    public String callee;
+
+    @NameInMap("Caller")
+    public String caller;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("WorkflowId")
     public String workflowId;
 
-    @NameInMap("CallCenterNumber")
-    public String callCenterNumber;
-
-    @NameInMap("Caller")
-    public String caller;
-
-    @NameInMap("Callee")
-    public String callee;
-
     public static StartBack2BackCallRequest build(java.util.Map<String, ?> map) throws Exception {
         StartBack2BackCallRequest self = new StartBack2BackCallRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartBack2BackCallRequest setCallCenterNumber(String callCenterNumber) {
+        this.callCenterNumber = callCenterNumber;
+        return this;
+    }
+    public String getCallCenterNumber() {
+        return this.callCenterNumber;
+    }
+
+    public StartBack2BackCallRequest setCallee(String callee) {
+        this.callee = callee;
+        return this;
+    }
+    public String getCallee() {
+        return this.callee;
+    }
+
+    public StartBack2BackCallRequest setCaller(String caller) {
+        this.caller = caller;
+        return this;
+    }
+    public String getCaller() {
+        return this.caller;
     }
 
     public StartBack2BackCallRequest setInstanceId(String instanceId) {
@@ -38,30 +62,6 @@ public class StartBack2BackCallRequest extends TeaModel {
     }
     public String getWorkflowId() {
         return this.workflowId;
-    }
-
-    public StartBack2BackCallRequest setCallCenterNumber(String callCenterNumber) {
-        this.callCenterNumber = callCenterNumber;
-        return this;
-    }
-    public String getCallCenterNumber() {
-        return this.callCenterNumber;
-    }
-
-    public StartBack2BackCallRequest setCaller(String caller) {
-        this.caller = caller;
-        return this;
-    }
-    public String getCaller() {
-        return this.caller;
-    }
-
-    public StartBack2BackCallRequest setCallee(String callee) {
-        this.callee = callee;
-        return this;
-    }
-    public String getCallee() {
-        return this.callee;
     }
 
 }

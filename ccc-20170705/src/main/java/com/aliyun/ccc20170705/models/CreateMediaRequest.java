@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Content")
+    public String content;
 
     @NameInMap("Description")
     public String description;
@@ -16,17 +13,20 @@ public class CreateMediaRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
-    @NameInMap("Content")
-    public String content;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OssFileName")
     public String ossFileName;
 
     @NameInMap("OssFilePath")
     public String ossFilePath;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UploadResult")
     public String uploadResult;
@@ -36,20 +36,12 @@ public class CreateMediaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMediaRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateMediaRequest setContent(String content) {
+        this.content = content;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateMediaRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getContent() {
+        return this.content;
     }
 
     public CreateMediaRequest setDescription(String description) {
@@ -68,20 +60,20 @@ public class CreateMediaRequest extends TeaModel {
         return this.fileName;
     }
 
-    public CreateMediaRequest setType(String type) {
-        this.type = type;
+    public CreateMediaRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
-    public CreateMediaRequest setContent(String content) {
-        this.content = content;
+    public CreateMediaRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContent() {
-        return this.content;
+    public String getName() {
+        return this.name;
     }
 
     public CreateMediaRequest setOssFileName(String ossFileName) {
@@ -98,6 +90,14 @@ public class CreateMediaRequest extends TeaModel {
     }
     public String getOssFilePath() {
         return this.ossFilePath;
+    }
+
+    public CreateMediaRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public CreateMediaRequest setUploadResult(String uploadResult) {

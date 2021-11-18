@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Instance")
+    public CreateInstanceResponseBodyInstance instance;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Instance")
-    public CreateInstanceResponseBodyInstance instance;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponseBody self = new CreateInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public CreateInstanceResponseBody setInstance(CreateInstanceResponseBodyInstance instance) {
+        this.instance = instance;
+        return this;
+    }
+    public CreateInstanceResponseBodyInstance getInstance() {
+        return this.instance;
     }
 
     public CreateInstanceResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateInstanceResponseBody setInstance(CreateInstanceResponseBodyInstance instance) {
-        this.instance = instance;
-        return this;
-    }
-    public CreateInstanceResponseBodyInstance getInstance() {
-        return this.instance;
-    }
-
-    public CreateInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,91 +75,96 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateInstanceResponseBodyInstanceSuccessLoginNames extends TeaModel {
-        @NameInMap("SuccessLoginName")
-        public java.util.List<String> successLoginName;
+    public static class CreateInstanceResponseBodyInstanceAdminUserDetail extends TeaModel {
+        @NameInMap("Department")
+        public String department;
 
-        public static CreateInstanceResponseBodyInstanceSuccessLoginNames build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstanceSuccessLoginNames self = new CreateInstanceResponseBodyInstanceSuccessLoginNames();
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("Email")
+        public String email;
+
+        @NameInMap("LoginName")
+        public String loginName;
+
+        @NameInMap("Phone")
+        public String phone;
+
+        public static CreateInstanceResponseBodyInstanceAdminUserDetail build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstanceAdminUserDetail self = new CreateInstanceResponseBodyInstanceAdminUserDetail();
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstanceSuccessLoginNames setSuccessLoginName(java.util.List<String> successLoginName) {
-            this.successLoginName = successLoginName;
+        public CreateInstanceResponseBodyInstanceAdminUserDetail setDepartment(String department) {
+            this.department = department;
             return this;
         }
-        public java.util.List<String> getSuccessLoginName() {
-            return this.successLoginName;
+        public String getDepartment() {
+            return this.department;
+        }
+
+        public CreateInstanceResponseBodyInstanceAdminUserDetail setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public CreateInstanceResponseBodyInstanceAdminUserDetail setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
+        }
+
+        public CreateInstanceResponseBodyInstanceAdminUserDetail setLoginName(String loginName) {
+            this.loginName = loginName;
+            return this;
+        }
+        public String getLoginName() {
+            return this.loginName;
+        }
+
+        public CreateInstanceResponseBodyInstanceAdminUserDetail setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
         }
 
     }
 
-    public static class CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber extends TeaModel {
-        @NameInMap("TestOnly")
-        public Boolean testOnly;
-
-        @NameInMap("Trunks")
-        public Integer trunks;
-
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Number")
-        public String number;
+    public static class CreateInstanceResponseBodyInstanceAdminUser extends TeaModel {
+        @NameInMap("Detail")
+        public CreateInstanceResponseBodyInstanceAdminUserDetail detail;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Usage")
-        public String usage;
+        @NameInMap("RamId")
+        public String ramId;
 
-        @NameInMap("AllowOutbound")
-        public Boolean allowOutbound;
+        @NameInMap("UserId")
+        public String userId;
 
-        @NameInMap("PhoneNumberDescription")
-        public String phoneNumberDescription;
-
-        @NameInMap("PhoneNumberId")
-        public String phoneNumberId;
-
-        public static CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber self = new CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber();
+        public static CreateInstanceResponseBodyInstanceAdminUser build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstanceAdminUser self = new CreateInstanceResponseBodyInstanceAdminUser();
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
-            this.testOnly = testOnly;
+        public CreateInstanceResponseBodyInstanceAdminUser setDetail(CreateInstanceResponseBodyInstanceAdminUserDetail detail) {
+            this.detail = detail;
             return this;
         }
-        public Boolean getTestOnly() {
-            return this.testOnly;
+        public CreateInstanceResponseBodyInstanceAdminUserDetail getDetail() {
+            return this.detail;
         }
 
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setTrunks(Integer trunks) {
-            this.trunks = trunks;
-            return this;
-        }
-        public Integer getTrunks() {
-            return this.trunks;
-        }
-
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setInstanceId(String instanceId) {
+        public CreateInstanceResponseBodyInstanceAdminUser setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -167,74 +172,39 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setUsage(String usage) {
-            this.usage = usage;
+        public CreateInstanceResponseBodyInstanceAdminUser setRamId(String ramId) {
+            this.ramId = ramId;
             return this;
         }
-        public String getUsage() {
-            return this.usage;
+        public String getRamId() {
+            return this.ramId;
         }
 
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
-            this.allowOutbound = allowOutbound;
+        public CreateInstanceResponseBodyInstanceAdminUser setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public Boolean getAllowOutbound() {
-            return this.allowOutbound;
-        }
-
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
-            this.phoneNumberDescription = phoneNumberDescription;
-            return this;
-        }
-        public String getPhoneNumberDescription() {
-            return this.phoneNumberDescription;
-        }
-
-        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
-            this.phoneNumberId = phoneNumberId;
-            return this;
-        }
-        public String getPhoneNumberId() {
-            return this.phoneNumberId;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
 
-    public static class CreateInstanceResponseBodyInstancePhoneNumbers extends TeaModel {
-        @NameInMap("PhoneNumber")
-        public java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> phoneNumber;
+    public static class CreateInstanceResponseBodyInstanceAdmin extends TeaModel {
+        @NameInMap("User")
+        public java.util.List<CreateInstanceResponseBodyInstanceAdminUser> user;
 
-        public static CreateInstanceResponseBodyInstancePhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstancePhoneNumbers self = new CreateInstanceResponseBodyInstancePhoneNumbers();
+        public static CreateInstanceResponseBodyInstanceAdmin build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstanceAdmin self = new CreateInstanceResponseBodyInstanceAdmin();
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstancePhoneNumbers setPhoneNumber(java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> phoneNumber) {
-            this.phoneNumber = phoneNumber;
+        public CreateInstanceResponseBodyInstanceAdmin setUser(java.util.List<CreateInstanceResponseBodyInstanceAdminUser> user) {
+            this.user = user;
             return this;
         }
-        public java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-    }
-
-    public static class CreateInstanceResponseBodyInstanceSuccessPhoneNumbers extends TeaModel {
-        @NameInMap("SuccessPhoneNumber")
-        public java.util.List<String> successPhoneNumber;
-
-        public static CreateInstanceResponseBodyInstanceSuccessPhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstanceSuccessPhoneNumbers self = new CreateInstanceResponseBodyInstanceSuccessPhoneNumbers();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers setSuccessPhoneNumber(java.util.List<String> successPhoneNumber) {
-            this.successPhoneNumber = successPhoneNumber;
-            return this;
-        }
-        public java.util.List<String> getSuccessPhoneNumber() {
-            return this.successPhoneNumber;
+        public java.util.List<CreateInstanceResponseBodyInstanceAdminUser> getUser() {
+            return this.user;
         }
 
     }
@@ -277,96 +247,48 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     }
 
-    public static class CreateInstanceResponseBodyInstanceAdminUserDetail extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("Email")
-        public String email;
-
-        @NameInMap("LoginName")
-        public String loginName;
-
-        @NameInMap("Department")
-        public String department;
-
-        @NameInMap("Phone")
-        public String phone;
-
-        public static CreateInstanceResponseBodyInstanceAdminUserDetail build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstanceAdminUserDetail self = new CreateInstanceResponseBodyInstanceAdminUserDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceResponseBodyInstanceAdminUserDetail setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public CreateInstanceResponseBodyInstanceAdminUserDetail setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-        public String getEmail() {
-            return this.email;
-        }
-
-        public CreateInstanceResponseBodyInstanceAdminUserDetail setLoginName(String loginName) {
-            this.loginName = loginName;
-            return this;
-        }
-        public String getLoginName() {
-            return this.loginName;
-        }
-
-        public CreateInstanceResponseBodyInstanceAdminUserDetail setDepartment(String department) {
-            this.department = department;
-            return this;
-        }
-        public String getDepartment() {
-            return this.department;
-        }
-
-        public CreateInstanceResponseBodyInstanceAdminUserDetail setPhone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-        public String getPhone() {
-            return this.phone;
-        }
-
-    }
-
-    public static class CreateInstanceResponseBodyInstanceAdminUser extends TeaModel {
-        @NameInMap("UserId")
-        public String userId;
+    public static class CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber extends TeaModel {
+        @NameInMap("AllowOutbound")
+        public Boolean allowOutbound;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("RamId")
-        public String ramId;
+        @NameInMap("Number")
+        public String number;
 
-        @NameInMap("Detail")
-        public CreateInstanceResponseBodyInstanceAdminUserDetail detail;
+        @NameInMap("PhoneNumberDescription")
+        public String phoneNumberDescription;
 
-        public static CreateInstanceResponseBodyInstanceAdminUser build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstanceAdminUser self = new CreateInstanceResponseBodyInstanceAdminUser();
+        @NameInMap("PhoneNumberId")
+        public String phoneNumberId;
+
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("TestOnly")
+        public Boolean testOnly;
+
+        @NameInMap("Trunks")
+        public Integer trunks;
+
+        @NameInMap("Usage")
+        public String usage;
+
+        public static CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber self = new CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber();
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstanceAdminUser setUserId(String userId) {
-            this.userId = userId;
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setAllowOutbound(Boolean allowOutbound) {
+            this.allowOutbound = allowOutbound;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Boolean getAllowOutbound() {
+            return this.allowOutbound;
         }
 
-        public CreateInstanceResponseBodyInstanceAdminUser setInstanceId(String instanceId) {
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -374,91 +296,127 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public CreateInstanceResponseBodyInstanceAdminUser setRamId(String ramId) {
-            this.ramId = ramId;
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setNumber(String number) {
+            this.number = number;
             return this;
         }
-        public String getRamId() {
-            return this.ramId;
+        public String getNumber() {
+            return this.number;
         }
 
-        public CreateInstanceResponseBodyInstanceAdminUser setDetail(CreateInstanceResponseBodyInstanceAdminUserDetail detail) {
-            this.detail = detail;
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
+            this.phoneNumberDescription = phoneNumberDescription;
             return this;
         }
-        public CreateInstanceResponseBodyInstanceAdminUserDetail getDetail() {
-            return this.detail;
+        public String getPhoneNumberDescription() {
+            return this.phoneNumberDescription;
+        }
+
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setPhoneNumberId(String phoneNumberId) {
+            this.phoneNumberId = phoneNumberId;
+            return this;
+        }
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
+        }
+
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setTestOnly(Boolean testOnly) {
+            this.testOnly = testOnly;
+            return this;
+        }
+        public Boolean getTestOnly() {
+            return this.testOnly;
+        }
+
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setTrunks(Integer trunks) {
+            this.trunks = trunks;
+            return this;
+        }
+        public Integer getTrunks() {
+            return this.trunks;
+        }
+
+        public CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
         }
 
     }
 
-    public static class CreateInstanceResponseBodyInstanceAdmin extends TeaModel {
-        @NameInMap("User")
-        public java.util.List<CreateInstanceResponseBodyInstanceAdminUser> user;
+    public static class CreateInstanceResponseBodyInstancePhoneNumbers extends TeaModel {
+        @NameInMap("PhoneNumber")
+        public java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> phoneNumber;
 
-        public static CreateInstanceResponseBodyInstanceAdmin build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceResponseBodyInstanceAdmin self = new CreateInstanceResponseBodyInstanceAdmin();
+        public static CreateInstanceResponseBodyInstancePhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstancePhoneNumbers self = new CreateInstanceResponseBodyInstancePhoneNumbers();
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstanceAdmin setUser(java.util.List<CreateInstanceResponseBodyInstanceAdminUser> user) {
-            this.user = user;
+        public CreateInstanceResponseBodyInstancePhoneNumbers setPhoneNumber(java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> phoneNumber) {
+            this.phoneNumber = phoneNumber;
             return this;
         }
-        public java.util.List<CreateInstanceResponseBodyInstanceAdminUser> getUser() {
-            return this.user;
+        public java.util.List<CreateInstanceResponseBodyInstancePhoneNumbersPhoneNumber> getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+    }
+
+    public static class CreateInstanceResponseBodyInstanceSuccessLoginNames extends TeaModel {
+        @NameInMap("SuccessLoginName")
+        public java.util.List<String> successLoginName;
+
+        public static CreateInstanceResponseBodyInstanceSuccessLoginNames build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstanceSuccessLoginNames self = new CreateInstanceResponseBodyInstanceSuccessLoginNames();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceResponseBodyInstanceSuccessLoginNames setSuccessLoginName(java.util.List<String> successLoginName) {
+            this.successLoginName = successLoginName;
+            return this;
+        }
+        public java.util.List<String> getSuccessLoginName() {
+            return this.successLoginName;
+        }
+
+    }
+
+    public static class CreateInstanceResponseBodyInstanceSuccessPhoneNumbers extends TeaModel {
+        @NameInMap("SuccessPhoneNumber")
+        public java.util.List<String> successPhoneNumber;
+
+        public static CreateInstanceResponseBodyInstanceSuccessPhoneNumbers build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceResponseBodyInstanceSuccessPhoneNumbers self = new CreateInstanceResponseBodyInstanceSuccessPhoneNumbers();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers setSuccessPhoneNumber(java.util.List<String> successPhoneNumber) {
+            this.successPhoneNumber = successPhoneNumber;
+            return this;
+        }
+        public java.util.List<String> getSuccessPhoneNumber() {
+            return this.successPhoneNumber;
         }
 
     }
 
     public static class CreateInstanceResponseBodyInstance extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("StorageMaxSize")
-        public Integer storageMaxSize;
-
-        @NameInMap("StorageMaxDays")
-        public Integer storageMaxDays;
-
-        @NameInMap("MaxOnlineAgents")
-        public Integer maxOnlineAgents;
-
-        @NameInMap("SuccessLoginNames")
-        public CreateInstanceResponseBodyInstanceSuccessLoginNames successLoginNames;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
-        @NameInMap("InstanceDescription")
-        public String instanceDescription;
-
-        @NameInMap("PhoneNumbers")
-        public CreateInstanceResponseBodyInstancePhoneNumbers phoneNumbers;
+        @NameInMap("Admin")
+        public CreateInstanceResponseBodyInstanceAdmin admin;
 
         @NameInMap("ConsoleUrl")
         public String consoleUrl;
-
-        @NameInMap("SuccessPhoneNumbers")
-        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers successPhoneNumbers;
-
-        @NameInMap("FailLoginNames")
-        public CreateInstanceResponseBodyInstanceFailLoginNames failLoginNames;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("StorageBucket")
-        public String storageBucket;
-
-        @NameInMap("FailPhoneNumbers")
-        public CreateInstanceResponseBodyInstanceFailPhoneNumbers failPhoneNumbers;
 
         @NameInMap("CreatedTime")
         public Long createdTime;
@@ -466,8 +424,50 @@ public class CreateInstanceResponseBody extends TeaModel {
         @NameInMap("DirectoryId")
         public String directoryId;
 
-        @NameInMap("Admin")
-        public CreateInstanceResponseBodyInstanceAdmin admin;
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("FailLoginNames")
+        public CreateInstanceResponseBodyInstanceFailLoginNames failLoginNames;
+
+        @NameInMap("FailPhoneNumbers")
+        public CreateInstanceResponseBodyInstanceFailPhoneNumbers failPhoneNumbers;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("MaxOnlineAgents")
+        public Integer maxOnlineAgents;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("PhoneNumbers")
+        public CreateInstanceResponseBodyInstancePhoneNumbers phoneNumbers;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageBucket")
+        public String storageBucket;
+
+        @NameInMap("StorageMaxDays")
+        public Integer storageMaxDays;
+
+        @NameInMap("StorageMaxSize")
+        public Integer storageMaxSize;
+
+        @NameInMap("SuccessLoginNames")
+        public CreateInstanceResponseBodyInstanceSuccessLoginNames successLoginNames;
+
+        @NameInMap("SuccessPhoneNumbers")
+        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers successPhoneNumbers;
 
         @NameInMap("TenantId")
         public String tenantId;
@@ -477,84 +477,12 @@ public class CreateInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateInstanceResponseBodyInstance setStatus(String status) {
-            this.status = status;
+        public CreateInstanceResponseBodyInstance setAdmin(CreateInstanceResponseBodyInstanceAdmin admin) {
+            this.admin = admin;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public CreateInstanceResponseBodyInstance setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public CreateInstanceResponseBodyInstance setStorageMaxSize(Integer storageMaxSize) {
-            this.storageMaxSize = storageMaxSize;
-            return this;
-        }
-        public Integer getStorageMaxSize() {
-            return this.storageMaxSize;
-        }
-
-        public CreateInstanceResponseBodyInstance setStorageMaxDays(Integer storageMaxDays) {
-            this.storageMaxDays = storageMaxDays;
-            return this;
-        }
-        public Integer getStorageMaxDays() {
-            return this.storageMaxDays;
-        }
-
-        public CreateInstanceResponseBodyInstance setMaxOnlineAgents(Integer maxOnlineAgents) {
-            this.maxOnlineAgents = maxOnlineAgents;
-            return this;
-        }
-        public Integer getMaxOnlineAgents() {
-            return this.maxOnlineAgents;
-        }
-
-        public CreateInstanceResponseBodyInstance setSuccessLoginNames(CreateInstanceResponseBodyInstanceSuccessLoginNames successLoginNames) {
-            this.successLoginNames = successLoginNames;
-            return this;
-        }
-        public CreateInstanceResponseBodyInstanceSuccessLoginNames getSuccessLoginNames() {
-            return this.successLoginNames;
-        }
-
-        public CreateInstanceResponseBodyInstance setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public CreateInstanceResponseBodyInstance setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public CreateInstanceResponseBodyInstance setInstanceDescription(String instanceDescription) {
-            this.instanceDescription = instanceDescription;
-            return this;
-        }
-        public String getInstanceDescription() {
-            return this.instanceDescription;
-        }
-
-        public CreateInstanceResponseBodyInstance setPhoneNumbers(CreateInstanceResponseBodyInstancePhoneNumbers phoneNumbers) {
-            this.phoneNumbers = phoneNumbers;
-            return this;
-        }
-        public CreateInstanceResponseBodyInstancePhoneNumbers getPhoneNumbers() {
-            return this.phoneNumbers;
+        public CreateInstanceResponseBodyInstanceAdmin getAdmin() {
+            return this.admin;
         }
 
         public CreateInstanceResponseBodyInstance setConsoleUrl(String consoleUrl) {
@@ -563,46 +491,6 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
         public String getConsoleUrl() {
             return this.consoleUrl;
-        }
-
-        public CreateInstanceResponseBodyInstance setSuccessPhoneNumbers(CreateInstanceResponseBodyInstanceSuccessPhoneNumbers successPhoneNumbers) {
-            this.successPhoneNumbers = successPhoneNumbers;
-            return this;
-        }
-        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers getSuccessPhoneNumbers() {
-            return this.successPhoneNumbers;
-        }
-
-        public CreateInstanceResponseBodyInstance setFailLoginNames(CreateInstanceResponseBodyInstanceFailLoginNames failLoginNames) {
-            this.failLoginNames = failLoginNames;
-            return this;
-        }
-        public CreateInstanceResponseBodyInstanceFailLoginNames getFailLoginNames() {
-            return this.failLoginNames;
-        }
-
-        public CreateInstanceResponseBodyInstance setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public CreateInstanceResponseBodyInstance setStorageBucket(String storageBucket) {
-            this.storageBucket = storageBucket;
-            return this;
-        }
-        public String getStorageBucket() {
-            return this.storageBucket;
-        }
-
-        public CreateInstanceResponseBodyInstance setFailPhoneNumbers(CreateInstanceResponseBodyInstanceFailPhoneNumbers failPhoneNumbers) {
-            this.failPhoneNumbers = failPhoneNumbers;
-            return this;
-        }
-        public CreateInstanceResponseBodyInstanceFailPhoneNumbers getFailPhoneNumbers() {
-            return this.failPhoneNumbers;
         }
 
         public CreateInstanceResponseBodyInstance setCreatedTime(Long createdTime) {
@@ -621,12 +509,124 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this.directoryId;
         }
 
-        public CreateInstanceResponseBodyInstance setAdmin(CreateInstanceResponseBodyInstanceAdmin admin) {
-            this.admin = admin;
+        public CreateInstanceResponseBodyInstance setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public CreateInstanceResponseBodyInstanceAdmin getAdmin() {
-            return this.admin;
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public CreateInstanceResponseBodyInstance setFailLoginNames(CreateInstanceResponseBodyInstanceFailLoginNames failLoginNames) {
+            this.failLoginNames = failLoginNames;
+            return this;
+        }
+        public CreateInstanceResponseBodyInstanceFailLoginNames getFailLoginNames() {
+            return this.failLoginNames;
+        }
+
+        public CreateInstanceResponseBodyInstance setFailPhoneNumbers(CreateInstanceResponseBodyInstanceFailPhoneNumbers failPhoneNumbers) {
+            this.failPhoneNumbers = failPhoneNumbers;
+            return this;
+        }
+        public CreateInstanceResponseBodyInstanceFailPhoneNumbers getFailPhoneNumbers() {
+            return this.failPhoneNumbers;
+        }
+
+        public CreateInstanceResponseBodyInstance setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
+        }
+
+        public CreateInstanceResponseBodyInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateInstanceResponseBodyInstance setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public CreateInstanceResponseBodyInstance setMaxOnlineAgents(Integer maxOnlineAgents) {
+            this.maxOnlineAgents = maxOnlineAgents;
+            return this;
+        }
+        public Integer getMaxOnlineAgents() {
+            return this.maxOnlineAgents;
+        }
+
+        public CreateInstanceResponseBodyInstance setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public CreateInstanceResponseBodyInstance setPhoneNumbers(CreateInstanceResponseBodyInstancePhoneNumbers phoneNumbers) {
+            this.phoneNumbers = phoneNumbers;
+            return this;
+        }
+        public CreateInstanceResponseBodyInstancePhoneNumbers getPhoneNumbers() {
+            return this.phoneNumbers;
+        }
+
+        public CreateInstanceResponseBodyInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CreateInstanceResponseBodyInstance setStorageBucket(String storageBucket) {
+            this.storageBucket = storageBucket;
+            return this;
+        }
+        public String getStorageBucket() {
+            return this.storageBucket;
+        }
+
+        public CreateInstanceResponseBodyInstance setStorageMaxDays(Integer storageMaxDays) {
+            this.storageMaxDays = storageMaxDays;
+            return this;
+        }
+        public Integer getStorageMaxDays() {
+            return this.storageMaxDays;
+        }
+
+        public CreateInstanceResponseBodyInstance setStorageMaxSize(Integer storageMaxSize) {
+            this.storageMaxSize = storageMaxSize;
+            return this;
+        }
+        public Integer getStorageMaxSize() {
+            return this.storageMaxSize;
+        }
+
+        public CreateInstanceResponseBodyInstance setSuccessLoginNames(CreateInstanceResponseBodyInstanceSuccessLoginNames successLoginNames) {
+            this.successLoginNames = successLoginNames;
+            return this;
+        }
+        public CreateInstanceResponseBodyInstanceSuccessLoginNames getSuccessLoginNames() {
+            return this.successLoginNames;
+        }
+
+        public CreateInstanceResponseBodyInstance setSuccessPhoneNumbers(CreateInstanceResponseBodyInstanceSuccessPhoneNumbers successPhoneNumbers) {
+            this.successPhoneNumbers = successPhoneNumbers;
+            return this;
+        }
+        public CreateInstanceResponseBodyInstanceSuccessPhoneNumbers getSuccessPhoneNumbers() {
+            return this.successPhoneNumbers;
         }
 
         public CreateInstanceResponseBodyInstance setTenantId(String tenantId) {

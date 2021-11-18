@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListIvrTrackingDetailResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -16,8 +13,11 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
     @NameInMap("IvrTrackingDetails")
     public ListIvrTrackingDetailResponseBodyIvrTrackingDetails ivrTrackingDetails;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListIvrTrackingDetailResponseBody setMessage(String message) {
-        this.message = message;
+    public ListIvrTrackingDetailResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListIvrTrackingDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ListIvrTrackingDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -59,12 +51,20 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
         return this.ivrTrackingDetails;
     }
 
-    public ListIvrTrackingDetailResponseBody setCode(String code) {
-        this.code = code;
+    public ListIvrTrackingDetailResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListIvrTrackingDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListIvrTrackingDetailResponseBody setSuccess(Boolean success) {
@@ -76,44 +76,44 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
     }
 
     public static class ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DeviceID")
-        public String deviceID;
-
-        @NameInMap("InputData")
-        public String inputData;
-
-        @NameInMap("FlowName")
-        public String flowName;
-
-        @NameInMap("StopTime")
-        public Long stopTime;
-
         @NameInMap("CalledNumber")
         public String calledNumber;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("NodeType")
-        public String nodeType;
-
-        @NameInMap("ContactId")
-        public String contactId;
-
-        @NameInMap("NodeName")
-        public String nodeName;
 
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DeviceID")
+        public String deviceID;
+
+        @NameInMap("FlowName")
+        public String flowName;
+
+        @NameInMap("InputData")
+        public String inputData;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("NodeType")
+        public String nodeType;
+
         @NameInMap("OutputData")
         public String outputData;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StopTime")
+        public Long stopTime;
 
         @NameInMap("TenantId")
         public String tenantId;
@@ -121,46 +121,6 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
         public static ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail build(java.util.Map<String, ?> map) throws Exception {
             ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail self = new ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail();
             return TeaModel.build(map, self);
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setDeviceID(String deviceID) {
-            this.deviceID = deviceID;
-            return this;
-        }
-        public String getDeviceID() {
-            return this.deviceID;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setInputData(String inputData) {
-            this.inputData = inputData;
-            return this;
-        }
-        public String getInputData() {
-            return this.inputData;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setFlowName(String flowName) {
-            this.flowName = flowName;
-            return this;
-        }
-        public String getFlowName() {
-            return this.flowName;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStopTime(Long stopTime) {
-            this.stopTime = stopTime;
-            return this;
-        }
-        public Long getStopTime() {
-            return this.stopTime;
         }
 
         public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setCalledNumber(String calledNumber) {
@@ -171,28 +131,12 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
             return this.calledNumber;
         }
 
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStartTime(Long startTime) {
-            this.startTime = startTime;
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
             return this;
         }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
+        public String getCallingNumber() {
+            return this.callingNumber;
         }
 
         public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setContactId(String contactId) {
@@ -203,6 +147,38 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
             return this.contactId;
         }
 
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setDeviceID(String deviceID) {
+            this.deviceID = deviceID;
+            return this;
+        }
+        public String getDeviceID() {
+            return this.deviceID;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setFlowName(String flowName) {
+            this.flowName = flowName;
+            return this;
+        }
+        public String getFlowName() {
+            return this.flowName;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setInputData(String inputData) {
+            this.inputData = inputData;
+            return this;
+        }
+        public String getInputData() {
+            return this.inputData;
+        }
+
         public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setNodeName(String nodeName) {
             this.nodeName = nodeName;
             return this;
@@ -211,12 +187,12 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setCallingNumber(String callingNumber) {
-            this.callingNumber = callingNumber;
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setNodeType(String nodeType) {
+            this.nodeType = nodeType;
             return this;
         }
-        public String getCallingNumber() {
-            return this.callingNumber;
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setOutputData(String outputData) {
@@ -225,6 +201,30 @@ public class ListIvrTrackingDetailResponseBody extends TeaModel {
         }
         public String getOutputData() {
             return this.outputData;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setStopTime(Long stopTime) {
+            this.stopTime = stopTime;
+            return this;
+        }
+        public Long getStopTime() {
+            return this.stopTime;
         }
 
         public ListIvrTrackingDetailResponseBodyIvrTrackingDetailsListIvrTrackingDetail setTenantId(String tenantId) {

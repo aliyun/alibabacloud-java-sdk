@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("ConfigItems")
     public ListConfigResponseBodyConfigItems configItems;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,12 +27,28 @@ public class ListConfigResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public ListConfigResponseBody setConfigItems(ListConfigResponseBodyConfigItems configItems) {
         this.configItems = configItems;
         return this;
     }
     public ListConfigResponseBodyConfigItems getConfigItems() {
         return this.configItems;
+    }
+
+    public ListConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListConfigResponseBody setMessage(String message) {
@@ -51,22 +67,6 @@ public class ListConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,23 +76,15 @@ public class ListConfigResponseBody extends TeaModel {
     }
 
     public static class ListConfigResponseBodyConfigItemsConfigItem extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ListConfigResponseBodyConfigItemsConfigItem build(java.util.Map<String, ?> map) throws Exception {
             ListConfigResponseBodyConfigItemsConfigItem self = new ListConfigResponseBodyConfigItemsConfigItem();
             return TeaModel.build(map, self);
-        }
-
-        public ListConfigResponseBodyConfigItemsConfigItem setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public ListConfigResponseBodyConfigItemsConfigItem setName(String name) {
@@ -101,6 +93,14 @@ public class ListConfigResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListConfigResponseBodyConfigItemsConfigItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

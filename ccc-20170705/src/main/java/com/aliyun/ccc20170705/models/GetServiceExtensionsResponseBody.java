@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetServiceExtensionsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("ServiceExtensions")
     public GetServiceExtensionsResponseBodyServiceExtensions serviceExtensions;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
     public static GetServiceExtensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceExtensionsResponseBody self = new GetServiceExtensionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceExtensionsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetServiceExtensionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetServiceExtensionsResponseBody setMessage(String message) {
@@ -43,28 +59,12 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetServiceExtensionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public GetServiceExtensionsResponseBody setServiceExtensions(GetServiceExtensionsResponseBodyServiceExtensions serviceExtensions) {
         this.serviceExtensions = serviceExtensions;
         return this;
     }
     public GetServiceExtensionsResponseBodyServiceExtensions getServiceExtensions() {
         return this.serviceExtensions;
-    }
-
-    public GetServiceExtensionsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetServiceExtensionsResponseBody setSuccess(Boolean success) {
@@ -76,23 +76,15 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
     }
 
     public static class GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Number")
+        public String number;
 
         public static GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension build(java.util.Map<String, ?> map) throws Exception {
             GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension self = new GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension();
             return TeaModel.build(map, self);
-        }
-
-        public GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
         }
 
         public GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension setName(String name) {
@@ -101,6 +93,14 @@ public class GetServiceExtensionsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetServiceExtensionsResponseBodyServiceExtensionsServiceExtension setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
     }

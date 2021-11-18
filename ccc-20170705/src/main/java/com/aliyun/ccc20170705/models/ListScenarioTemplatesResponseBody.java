@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListScenarioTemplatesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("ScenarioTemplates")
     public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplates> scenarioTemplates;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,22 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
     public static ListScenarioTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListScenarioTemplatesResponseBody self = new ListScenarioTemplatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListScenarioTemplatesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListScenarioTemplatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListScenarioTemplatesResponseBody setMessage(String message) {
@@ -43,28 +59,12 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListScenarioTemplatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListScenarioTemplatesResponseBody setScenarioTemplates(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplates> scenarioTemplates) {
         this.scenarioTemplates = scenarioTemplates;
         return this;
     }
     public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplates> getScenarioTemplates() {
         return this.scenarioTemplates;
-    }
-
-    public ListScenarioTemplatesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListScenarioTemplatesResponseBody setSuccess(Boolean success) {
@@ -76,34 +76,18 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow extends TeaModel {
-        @NameInMap("IsPublished")
-        public Boolean isPublished;
+        @NameInMap("FlowId")
+        public String flowId;
 
         @NameInMap("FlowJson")
         public String flowJson;
 
-        @NameInMap("FlowId")
-        public String flowId;
+        @NameInMap("IsPublished")
+        public Boolean isPublished;
 
         public static ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow build(java.util.Map<String, ?> map) throws Exception {
             ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow self = new ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow();
             return TeaModel.build(map, self);
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow setIsPublished(Boolean isPublished) {
-            this.isPublished = isPublished;
-            return this;
-        }
-        public Boolean getIsPublished() {
-            return this.isPublished;
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow setFlowJson(String flowJson) {
-            this.flowJson = flowJson;
-            return this;
-        }
-        public String getFlowJson() {
-            return this.flowJson;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow setFlowId(String flowId) {
@@ -114,26 +98,34 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.flowId;
         }
 
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow setFlowJson(String flowJson) {
+            this.flowJson = flowJson;
+            return this;
+        }
+        public String getFlowJson() {
+            return this.flowJson;
+        }
+
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow setIsPublished(Boolean isPublished) {
+            this.isPublished = isPublished;
+            return this;
+        }
+        public Boolean getIsPublished() {
+            return this.isPublished;
+        }
+
     }
 
     public static class ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
-
         @NameInMap("IntentId")
         public String intentId;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         public static ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents build(java.util.Map<String, ?> map) throws Exception {
             ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents self = new ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents();
             return TeaModel.build(map, self);
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents setIntentId(String intentId) {
@@ -144,23 +136,31 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.intentId;
         }
 
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
     }
 
     public static class ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys extends TeaModel {
-        @NameInMap("GlobalQuestions")
-        public String globalQuestions;
-
-        @NameInMap("Round")
-        public Integer round;
+        @NameInMap("BeebotId")
+        public String beebotId;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("BeebotId")
-        public String beebotId;
-
         @NameInMap("Flow")
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow flow;
+
+        @NameInMap("GlobalQuestions")
+        public String globalQuestions;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Intents")
         public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents> intents;
@@ -171,36 +171,12 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Round")
+        public Integer round;
 
         public static ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys build(java.util.Map<String, ?> map) throws Exception {
             ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys self = new ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys();
             return TeaModel.build(map, self);
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setGlobalQuestions(String globalQuestions) {
-            this.globalQuestions = globalQuestions;
-            return this;
-        }
-        public String getGlobalQuestions() {
-            return this.globalQuestions;
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setRound(Integer round) {
-            this.round = round;
-            return this;
-        }
-        public Integer getRound() {
-            return this.round;
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setBeebotId(String beebotId) {
@@ -211,12 +187,36 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.beebotId;
         }
 
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setFlow(ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow flow) {
             this.flow = flow;
             return this;
         }
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysFlow getFlow() {
             return this.flow;
+        }
+
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setGlobalQuestions(String globalQuestions) {
+            this.globalQuestions = globalQuestions;
+            return this;
+        }
+        public String getGlobalQuestions() {
+            return this.globalQuestions;
+        }
+
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setIntents(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveysIntents> intents) {
@@ -243,12 +243,12 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.role;
         }
 
-        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setId(String id) {
-            this.id = id;
+        public ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys setRound(Integer round) {
+            this.round = round;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Integer getRound() {
+            return this.round;
         }
 
     }
@@ -284,46 +284,30 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListScenarioTemplatesResponseBodyScenarioTemplates extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("IsTemplate")
-        public Boolean isTemplate;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Surveys")
-        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> surveys;
-
-        @NameInMap("Variables")
-        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> variables;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("IsTemplate")
+        public Boolean isTemplate;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Surveys")
+        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> surveys;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Variables")
+        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> variables;
+
         public static ListScenarioTemplatesResponseBodyScenarioTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListScenarioTemplatesResponseBodyScenarioTemplates self = new ListScenarioTemplatesResponseBodyScenarioTemplates();
             return TeaModel.build(map, self);
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplates setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListScenarioTemplatesResponseBodyScenarioTemplates setIsTemplate(Boolean isTemplate) {
-            this.isTemplate = isTemplate;
-            return this;
-        }
-        public Boolean getIsTemplate() {
-            return this.isTemplate;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplates setDescription(String description) {
@@ -334,20 +318,20 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListScenarioTemplatesResponseBodyScenarioTemplates setSurveys(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> surveys) {
-            this.surveys = surveys;
+        public ListScenarioTemplatesResponseBodyScenarioTemplates setId(String id) {
+            this.id = id;
             return this;
         }
-        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> getSurveys() {
-            return this.surveys;
+        public String getId() {
+            return this.id;
         }
 
-        public ListScenarioTemplatesResponseBodyScenarioTemplates setVariables(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> variables) {
-            this.variables = variables;
+        public ListScenarioTemplatesResponseBodyScenarioTemplates setIsTemplate(Boolean isTemplate) {
+            this.isTemplate = isTemplate;
             return this;
         }
-        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> getVariables() {
-            return this.variables;
+        public Boolean getIsTemplate() {
+            return this.isTemplate;
         }
 
         public ListScenarioTemplatesResponseBodyScenarioTemplates setName(String name) {
@@ -358,12 +342,28 @@ public class ListScenarioTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListScenarioTemplatesResponseBodyScenarioTemplates setId(String id) {
-            this.id = id;
+        public ListScenarioTemplatesResponseBodyScenarioTemplates setSurveys(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> surveys) {
+            this.surveys = surveys;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesSurveys> getSurveys() {
+            return this.surveys;
+        }
+
+        public ListScenarioTemplatesResponseBodyScenarioTemplates setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListScenarioTemplatesResponseBodyScenarioTemplates setVariables(java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> variables) {
+            this.variables = variables;
+            return this;
+        }
+        public java.util.List<ListScenarioTemplatesResponseBodyScenarioTemplatesVariables> getVariables() {
+            return this.variables;
         }
 
     }

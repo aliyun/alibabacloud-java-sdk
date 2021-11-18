@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListRecordingsByContactIdResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("Recordings")
     public ListRecordingsByContactIdResponseBodyRecordings recordings;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRecordingsByContactIdResponseBody setMessage(String message) {
-        this.message = message;
+    public ListRecordingsByContactIdResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRecordingsByContactIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRecordingsByContactIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,6 +43,14 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
+    public ListRecordingsByContactIdResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public ListRecordingsByContactIdResponseBody setRecordings(ListRecordingsByContactIdResponseBodyRecordings recordings) {
         this.recordings = recordings;
         return this;
@@ -59,12 +59,12 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         return this.recordings;
     }
 
-    public ListRecordingsByContactIdResponseBody setCode(String code) {
-        this.code = code;
+    public ListRecordingsByContactIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRecordingsByContactIdResponseBody setSuccess(Boolean success) {
@@ -76,41 +76,26 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
     }
 
     public static class ListRecordingsByContactIdResponseBodyRecordingsRecording extends TeaModel {
-        @NameInMap("ContactType")
-        public String contactType;
-
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
-        @NameInMap("FileName")
-        public String fileName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("CalledNumber")
         public String calledNumber;
 
-        @NameInMap("QualityCheckTid")
-        public String qualityCheckTid;
+        @NameInMap("CallingNumber")
+        public String callingNumber;
 
-        @NameInMap("FilePath")
-        public String filePath;
-
-        @NameInMap("StartTime")
-        public Long startTime;
+        @NameInMap("Channel")
+        public String channel;
 
         @NameInMap("ContactId")
         public String contactId;
 
-        @NameInMap("QualityCheckTaskId")
-        public String qualityCheckTaskId;
-
-        @NameInMap("CallingNumber")
-        public String callingNumber;
+        @NameInMap("ContactType")
+        public String contactType;
 
         @NameInMap("Duration")
         public Integer duration;
@@ -118,20 +103,27 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
         @NameInMap("FileDescription")
         public String fileDescription;
 
-        @NameInMap("Channel")
-        public String channel;
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("FilePath")
+        public String filePath;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("QualityCheckTaskId")
+        public String qualityCheckTaskId;
+
+        @NameInMap("QualityCheckTid")
+        public String qualityCheckTid;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static ListRecordingsByContactIdResponseBodyRecordingsRecording build(java.util.Map<String, ?> map) throws Exception {
             ListRecordingsByContactIdResponseBodyRecordingsRecording self = new ListRecordingsByContactIdResponseBodyRecordingsRecording();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setContactType(String contactType) {
-            this.contactType = contactType;
-            return this;
-        }
-        public String getContactType() {
-            return this.contactType;
         }
 
         public ListRecordingsByContactIdResponseBodyRecordingsRecording setAgentId(String agentId) {
@@ -150,22 +142,6 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
             return this.agentName;
         }
 
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setFileName(String fileName) {
-            this.fileName = fileName;
-            return this;
-        }
-        public String getFileName() {
-            return this.fileName;
-        }
-
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public ListRecordingsByContactIdResponseBodyRecordingsRecording setCalledNumber(String calledNumber) {
             this.calledNumber = calledNumber;
             return this;
@@ -174,28 +150,20 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
             return this.calledNumber;
         }
 
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setQualityCheckTid(String qualityCheckTid) {
-            this.qualityCheckTid = qualityCheckTid;
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
             return this;
         }
-        public String getQualityCheckTid() {
-            return this.qualityCheckTid;
+        public String getCallingNumber() {
+            return this.callingNumber;
         }
 
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setFilePath(String filePath) {
-            this.filePath = filePath;
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setChannel(String channel) {
+            this.channel = channel;
             return this;
         }
-        public String getFilePath() {
-            return this.filePath;
-        }
-
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
+        public String getChannel() {
+            return this.channel;
         }
 
         public ListRecordingsByContactIdResponseBodyRecordingsRecording setContactId(String contactId) {
@@ -206,20 +174,12 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
             return this.contactId;
         }
 
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setQualityCheckTaskId(String qualityCheckTaskId) {
-            this.qualityCheckTaskId = qualityCheckTaskId;
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setContactType(String contactType) {
+            this.contactType = contactType;
             return this;
         }
-        public String getQualityCheckTaskId() {
-            return this.qualityCheckTaskId;
-        }
-
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setCallingNumber(String callingNumber) {
-            this.callingNumber = callingNumber;
-            return this;
-        }
-        public String getCallingNumber() {
-            return this.callingNumber;
+        public String getContactType() {
+            return this.contactType;
         }
 
         public ListRecordingsByContactIdResponseBodyRecordingsRecording setDuration(Integer duration) {
@@ -238,12 +198,52 @@ public class ListRecordingsByContactIdResponseBody extends TeaModel {
             return this.fileDescription;
         }
 
-        public ListRecordingsByContactIdResponseBodyRecordingsRecording setChannel(String channel) {
-            this.channel = channel;
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setFileName(String fileName) {
+            this.fileName = fileName;
             return this;
         }
-        public String getChannel() {
-            return this.channel;
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
+        }
+
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setQualityCheckTaskId(String qualityCheckTaskId) {
+            this.qualityCheckTaskId = qualityCheckTaskId;
+            return this;
+        }
+        public String getQualityCheckTaskId() {
+            return this.qualityCheckTaskId;
+        }
+
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setQualityCheckTid(String qualityCheckTid) {
+            this.qualityCheckTid = qualityCheckTid;
+            return this;
+        }
+        public String getQualityCheckTid() {
+            return this.qualityCheckTid;
+        }
+
+        public ListRecordingsByContactIdResponseBodyRecordingsRecording setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

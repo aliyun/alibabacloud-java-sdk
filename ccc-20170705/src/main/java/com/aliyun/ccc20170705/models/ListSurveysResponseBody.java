@@ -4,8 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListSurveysResponseBody extends TeaModel {
-    @NameInMap("Surveys")
-    public java.util.List<ListSurveysResponseBodySurveys> surveys;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -13,26 +16,31 @@ public class ListSurveysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Surveys")
+    public java.util.List<ListSurveysResponseBodySurveys> surveys;
 
     public static ListSurveysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSurveysResponseBody self = new ListSurveysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListSurveysResponseBody setSurveys(java.util.List<ListSurveysResponseBodySurveys> surveys) {
-        this.surveys = surveys;
+    public ListSurveysResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.List<ListSurveysResponseBodySurveys> getSurveys() {
-        return this.surveys;
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSurveysResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListSurveysResponseBody setMessage(String message) {
@@ -51,22 +59,6 @@ public class ListSurveysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSurveysResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListSurveysResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListSurveysResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,24 +67,24 @@ public class ListSurveysResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListSurveysResponseBodySurveysAsrCustomModel extends TeaModel {
-        @NameInMap("CustomModelStatus")
-        public Integer customModelStatus;
+    public ListSurveysResponseBody setSurveys(java.util.List<ListSurveysResponseBodySurveys> surveys) {
+        this.surveys = surveys;
+        return this;
+    }
+    public java.util.List<ListSurveysResponseBodySurveys> getSurveys() {
+        return this.surveys;
+    }
 
+    public static class ListSurveysResponseBodySurveysAsrCustomModel extends TeaModel {
         @NameInMap("Corpora")
         public String corpora;
+
+        @NameInMap("CustomModelStatus")
+        public Integer customModelStatus;
 
         public static ListSurveysResponseBodySurveysAsrCustomModel build(java.util.Map<String, ?> map) throws Exception {
             ListSurveysResponseBodySurveysAsrCustomModel self = new ListSurveysResponseBodySurveysAsrCustomModel();
             return TeaModel.build(map, self);
-        }
-
-        public ListSurveysResponseBodySurveysAsrCustomModel setCustomModelStatus(Integer customModelStatus) {
-            this.customModelStatus = customModelStatus;
-            return this;
-        }
-        public Integer getCustomModelStatus() {
-            return this.customModelStatus;
         }
 
         public ListSurveysResponseBodySurveysAsrCustomModel setCorpora(String corpora) {
@@ -103,37 +95,29 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.corpora;
         }
 
+        public ListSurveysResponseBodySurveysAsrCustomModel setCustomModelStatus(Integer customModelStatus) {
+            this.customModelStatus = customModelStatus;
+            return this;
+        }
+        public Integer getCustomModelStatus() {
+            return this.customModelStatus;
+        }
+
     }
 
     public static class ListSurveysResponseBodySurveysFlow extends TeaModel {
-        @NameInMap("IsPublished")
-        public Boolean isPublished;
+        @NameInMap("FlowId")
+        public String flowId;
 
         @NameInMap("FlowJson")
         public String flowJson;
 
-        @NameInMap("FlowId")
-        public String flowId;
+        @NameInMap("IsPublished")
+        public Boolean isPublished;
 
         public static ListSurveysResponseBodySurveysFlow build(java.util.Map<String, ?> map) throws Exception {
             ListSurveysResponseBodySurveysFlow self = new ListSurveysResponseBodySurveysFlow();
             return TeaModel.build(map, self);
-        }
-
-        public ListSurveysResponseBodySurveysFlow setIsPublished(Boolean isPublished) {
-            this.isPublished = isPublished;
-            return this;
-        }
-        public Boolean getIsPublished() {
-            return this.isPublished;
-        }
-
-        public ListSurveysResponseBodySurveysFlow setFlowJson(String flowJson) {
-            this.flowJson = flowJson;
-            return this;
-        }
-        public String getFlowJson() {
-            return this.flowJson;
         }
 
         public ListSurveysResponseBodySurveysFlow setFlowId(String flowId) {
@@ -144,85 +128,61 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.flowId;
         }
 
+        public ListSurveysResponseBodySurveysFlow setFlowJson(String flowJson) {
+            this.flowJson = flowJson;
+            return this;
+        }
+        public String getFlowJson() {
+            return this.flowJson;
+        }
+
+        public ListSurveysResponseBodySurveysFlow setIsPublished(Boolean isPublished) {
+            this.isPublished = isPublished;
+            return this;
+        }
+        public Boolean getIsPublished() {
+            return this.isPublished;
+        }
+
     }
 
     public static class ListSurveysResponseBodySurveys extends TeaModel {
-        @NameInMap("GlobalQuestions")
-        public String globalQuestions;
-
-        @NameInMap("Round")
-        public Integer round;
-
-        @NameInMap("SpeechOptimizationParam")
-        public String speechOptimizationParam;
+        @NameInMap("AsrCustomModel")
+        public ListSurveysResponseBodySurveysAsrCustomModel asrCustomModel;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("HotWords")
-        public String hotWords;
-
-        @NameInMap("AsrCustomModel")
-        public ListSurveysResponseBodySurveysAsrCustomModel asrCustomModel;
-
         @NameInMap("Flow")
         public ListSurveysResponseBodySurveysFlow flow;
 
-        @NameInMap("Role")
-        public String role;
+        @NameInMap("GlobalQuestions")
+        public String globalQuestions;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ScenarioUuid")
-        public String scenarioUuid;
+        @NameInMap("HotWords")
+        public String hotWords;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Round")
+        public Integer round;
+
+        @NameInMap("ScenarioUuid")
+        public String scenarioUuid;
+
+        @NameInMap("SpeechOptimizationParam")
+        public String speechOptimizationParam;
+
         public static ListSurveysResponseBodySurveys build(java.util.Map<String, ?> map) throws Exception {
             ListSurveysResponseBodySurveys self = new ListSurveysResponseBodySurveys();
             return TeaModel.build(map, self);
-        }
-
-        public ListSurveysResponseBodySurveys setGlobalQuestions(String globalQuestions) {
-            this.globalQuestions = globalQuestions;
-            return this;
-        }
-        public String getGlobalQuestions() {
-            return this.globalQuestions;
-        }
-
-        public ListSurveysResponseBodySurveys setRound(Integer round) {
-            this.round = round;
-            return this;
-        }
-        public Integer getRound() {
-            return this.round;
-        }
-
-        public ListSurveysResponseBodySurveys setSpeechOptimizationParam(String speechOptimizationParam) {
-            this.speechOptimizationParam = speechOptimizationParam;
-            return this;
-        }
-        public String getSpeechOptimizationParam() {
-            return this.speechOptimizationParam;
-        }
-
-        public ListSurveysResponseBodySurveys setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListSurveysResponseBodySurveys setHotWords(String hotWords) {
-            this.hotWords = hotWords;
-            return this;
-        }
-        public String getHotWords() {
-            return this.hotWords;
         }
 
         public ListSurveysResponseBodySurveys setAsrCustomModel(ListSurveysResponseBodySurveysAsrCustomModel asrCustomModel) {
@@ -233,6 +193,14 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.asrCustomModel;
         }
 
+        public ListSurveysResponseBodySurveys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListSurveysResponseBodySurveys setFlow(ListSurveysResponseBodySurveysFlow flow) {
             this.flow = flow;
             return this;
@@ -241,12 +209,28 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public ListSurveysResponseBodySurveys setRole(String role) {
-            this.role = role;
+        public ListSurveysResponseBodySurveys setGlobalQuestions(String globalQuestions) {
+            this.globalQuestions = globalQuestions;
             return this;
         }
-        public String getRole() {
-            return this.role;
+        public String getGlobalQuestions() {
+            return this.globalQuestions;
+        }
+
+        public ListSurveysResponseBodySurveys setHotWords(String hotWords) {
+            this.hotWords = hotWords;
+            return this;
+        }
+        public String getHotWords() {
+            return this.hotWords;
+        }
+
+        public ListSurveysResponseBodySurveys setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListSurveysResponseBodySurveys setName(String name) {
@@ -257,6 +241,22 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListSurveysResponseBodySurveys setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public ListSurveysResponseBodySurveys setRound(Integer round) {
+            this.round = round;
+            return this;
+        }
+        public Integer getRound() {
+            return this.round;
+        }
+
         public ListSurveysResponseBodySurveys setScenarioUuid(String scenarioUuid) {
             this.scenarioUuid = scenarioUuid;
             return this;
@@ -265,12 +265,12 @@ public class ListSurveysResponseBody extends TeaModel {
             return this.scenarioUuid;
         }
 
-        public ListSurveysResponseBodySurveys setId(String id) {
-            this.id = id;
+        public ListSurveysResponseBodySurveys setSpeechOptimizationParam(String speechOptimizationParam) {
+            this.speechOptimizationParam = speechOptimizationParam;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getSpeechOptimizationParam() {
+            return this.speechOptimizationParam;
         }
 
     }

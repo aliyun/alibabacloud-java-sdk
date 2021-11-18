@@ -10,17 +10,17 @@ public class GetJobListRequest extends TeaModel {
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
-    @NameInMap("Status")
-    public Integer status;
-
-    @NameInMap("QueryAll")
-    public Boolean queryAll;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("QueryAll")
+    public Boolean queryAll;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static GetJobListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetJobListRequest self = new GetJobListRequest();
@@ -43,22 +43,6 @@ public class GetJobListRequest extends TeaModel {
         return this.jobGroupId;
     }
 
-    public GetJobListRequest setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public GetJobListRequest setQueryAll(Boolean queryAll) {
-        this.queryAll = queryAll;
-        return this;
-    }
-    public Boolean getQueryAll() {
-        return this.queryAll;
-    }
-
     public GetJobListRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -73,6 +57,22 @@ public class GetJobListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetJobListRequest setQueryAll(Boolean queryAll) {
+        this.queryAll = queryAll;
+        return this;
+    }
+    public Boolean getQueryAll() {
+        return this.queryAll;
+    }
+
+    public GetJobListRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

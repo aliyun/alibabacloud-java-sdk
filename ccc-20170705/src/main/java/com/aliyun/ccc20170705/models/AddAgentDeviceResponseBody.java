@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class AddAgentDeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("AgentDeviceId")
     public Long agentDeviceId;
+
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,22 +25,6 @@ public class AddAgentDeviceResponseBody extends TeaModel {
     public static AddAgentDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddAgentDeviceResponseBody self = new AddAgentDeviceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddAgentDeviceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AddAgentDeviceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public AddAgentDeviceResponseBody setAgentDeviceId(Long agentDeviceId) {
@@ -51,6 +35,14 @@ public class AddAgentDeviceResponseBody extends TeaModel {
         return this.agentDeviceId;
     }
 
+    public AddAgentDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public AddAgentDeviceResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -59,12 +51,20 @@ public class AddAgentDeviceResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public AddAgentDeviceResponseBody setCode(String code) {
-        this.code = code;
+    public AddAgentDeviceResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public AddAgentDeviceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddAgentDeviceResponseBody setSuccess(Boolean success) {

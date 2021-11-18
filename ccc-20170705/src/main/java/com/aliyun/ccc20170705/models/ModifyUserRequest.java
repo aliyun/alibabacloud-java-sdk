@@ -7,17 +7,14 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    @NameInMap("Email")
+    public String email;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("Phone")
     public String phone;
-
-    @NameInMap("Email")
-    public String email;
 
     @NameInMap("PrivateOutboundNumberId")
     public String privateOutboundNumberId;
@@ -30,6 +27,9 @@ public class ModifyUserRequest extends TeaModel {
 
     @NameInMap("SkillLevel")
     public java.util.List<Integer> skillLevel;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ModifyUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUserRequest self = new ModifyUserRequest();
@@ -44,6 +44,14 @@ public class ModifyUserRequest extends TeaModel {
         return this.displayName;
     }
 
+    public ModifyUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
     public ModifyUserRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -52,28 +60,12 @@ public class ModifyUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public ModifyUserRequest setPhone(String phone) {
         this.phone = phone;
         return this;
     }
     public String getPhone() {
         return this.phone;
-    }
-
-    public ModifyUserRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
     public ModifyUserRequest setPrivateOutboundNumberId(String privateOutboundNumberId) {
@@ -106,6 +98,14 @@ public class ModifyUserRequest extends TeaModel {
     }
     public java.util.List<Integer> getSkillLevel() {
         return this.skillLevel;
+    }
+
+    public ModifyUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

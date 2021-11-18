@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class DialogueResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Feedback")
     public DialogueResponseBodyFeedback feedback;
@@ -16,8 +13,11 @@ public class DialogueResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class DialogueResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DialogueResponseBody setMessage(String message) {
-        this.message = message;
+    public DialogueResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DialogueResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public DialogueResponseBody setFeedback(DialogueResponseBodyFeedback feedback) {
@@ -59,12 +51,20 @@ public class DialogueResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public DialogueResponseBody setCode(String code) {
-        this.code = code;
+    public DialogueResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DialogueResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DialogueResponseBody setSuccess(Boolean success) {
@@ -79,14 +79,14 @@ public class DialogueResponseBody extends TeaModel {
         @NameInMap("Action")
         public String action;
 
-        @NameInMap("Interruptible")
-        public Boolean interruptible;
-
         @NameInMap("ActionParams")
         public String actionParams;
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Interruptible")
+        public Boolean interruptible;
 
         public static DialogueResponseBodyFeedback build(java.util.Map<String, ?> map) throws Exception {
             DialogueResponseBodyFeedback self = new DialogueResponseBodyFeedback();
@@ -99,14 +99,6 @@ public class DialogueResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
-        }
-
-        public DialogueResponseBodyFeedback setInterruptible(Boolean interruptible) {
-            this.interruptible = interruptible;
-            return this;
-        }
-        public Boolean getInterruptible() {
-            return this.interruptible;
         }
 
         public DialogueResponseBodyFeedback setActionParams(String actionParams) {
@@ -123,6 +115,14 @@ public class DialogueResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DialogueResponseBodyFeedback setInterruptible(Boolean interruptible) {
+            this.interruptible = interruptible;
+            return this;
+        }
+        public Boolean getInterruptible() {
+            return this.interruptible;
         }
 
     }

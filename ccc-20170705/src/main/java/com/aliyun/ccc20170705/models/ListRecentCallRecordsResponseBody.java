@@ -4,27 +4,59 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListRecentCallRecordsResponseBody extends TeaModel {
+    @NameInMap("CallDetailRecords")
+    public ListRecentCallRecordsResponseBodyCallDetailRecords callDetailRecords;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("CallDetailRecords")
-    public ListRecentCallRecordsResponseBodyCallDetailRecords callDetailRecords;
-
     public static ListRecentCallRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRecentCallRecordsResponseBody self = new ListRecentCallRecordsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRecentCallRecordsResponseBody setCallDetailRecords(ListRecentCallRecordsResponseBodyCallDetailRecords callDetailRecords) {
+        this.callDetailRecords = callDetailRecords;
+        return this;
+    }
+    public ListRecentCallRecordsResponseBodyCallDetailRecords getCallDetailRecords() {
+        return this.callDetailRecords;
+    }
+
+    public ListRecentCallRecordsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListRecentCallRecordsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListRecentCallRecordsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListRecentCallRecordsResponseBody setRequestId(String requestId) {
@@ -43,50 +75,21 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListRecentCallRecordsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListRecentCallRecordsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRecentCallRecordsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListRecentCallRecordsResponseBody setCallDetailRecords(ListRecentCallRecordsResponseBodyCallDetailRecords callDetailRecords) {
-        this.callDetailRecords = callDetailRecords;
-        return this;
-    }
-    public ListRecentCallRecordsResponseBodyCallDetailRecords getCallDetailRecords() {
-        return this.callDetailRecords;
-    }
-
     public static class ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent extends TeaModel {
-        @NameInMap("ContactId")
-        public String contactId;
-
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
-        @NameInMap("SkillGroupName")
-        public String skillGroupName;
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("Feedback")
+        public String feedback;
+
+        @NameInMap("HoldTime")
+        public Integer holdTime;
 
         @NameInMap("QueueTime")
         public Integer queueTime;
@@ -94,35 +97,24 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         @NameInMap("RingTime")
         public Integer ringTime;
 
+        @NameInMap("Satisfaction")
+        public String satisfaction;
+
+        @NameInMap("SkillGroupName")
+        public String skillGroupName;
+
         @NameInMap("StartTime")
         public Long startTime;
 
         @NameInMap("TalkTime")
         public Integer talkTime;
 
-        @NameInMap("HoldTime")
-        public Integer holdTime;
-
         @NameInMap("WorkTime")
         public Integer workTime;
-
-        @NameInMap("Satisfaction")
-        public String satisfaction;
-
-        @NameInMap("Feedback")
-        public String feedback;
 
         public static ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent self = new ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setAgentId(String agentId) {
@@ -141,12 +133,28 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.agentName;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setSkillGroupName(String skillGroupName) {
-            this.skillGroupName = skillGroupName;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setContactId(String contactId) {
+            this.contactId = contactId;
             return this;
         }
-        public String getSkillGroupName() {
-            return this.skillGroupName;
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setFeedback(String feedback) {
+            this.feedback = feedback;
+            return this;
+        }
+        public String getFeedback() {
+            return this.feedback;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setHoldTime(Integer holdTime) {
+            this.holdTime = holdTime;
+            return this;
+        }
+        public Integer getHoldTime() {
+            return this.holdTime;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setQueueTime(Integer queueTime) {
@@ -165,6 +173,22 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.ringTime;
         }
 
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setSatisfaction(String satisfaction) {
+            this.satisfaction = satisfaction;
+            return this;
+        }
+        public String getSatisfaction() {
+            return this.satisfaction;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setSkillGroupName(String skillGroupName) {
+            this.skillGroupName = skillGroupName;
+            return this;
+        }
+        public String getSkillGroupName() {
+            return this.skillGroupName;
+        }
+
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
@@ -181,36 +205,12 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.talkTime;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setHoldTime(Integer holdTime) {
-            this.holdTime = holdTime;
-            return this;
-        }
-        public Integer getHoldTime() {
-            return this.holdTime;
-        }
-
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setWorkTime(Integer workTime) {
             this.workTime = workTime;
             return this;
         }
         public Integer getWorkTime() {
             return this.workTime;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setSatisfaction(String satisfaction) {
-            this.satisfaction = satisfaction;
-            return this;
-        }
-        public String getSatisfaction() {
-            return this.satisfaction;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgentsCallDetailAgent setFeedback(String feedback) {
-            this.feedback = feedback;
-            return this;
-        }
-        public String getFeedback() {
-            return this.feedback;
         }
 
     }
@@ -235,29 +235,32 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
     }
 
     public static class ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording extends TeaModel {
-        @NameInMap("ContactId")
-        public String contactId;
-
-        @NameInMap("ContactType")
-        public String contactType;
-
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
-        @NameInMap("CallingNumber")
-        public String callingNumber;
-
         @NameInMap("CalledNumber")
         public String calledNumber;
 
-        @NameInMap("StartTime")
-        public Long startTime;
+        @NameInMap("CallingNumber")
+        public String callingNumber;
+
+        @NameInMap("Channel")
+        public String channel;
+
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("ContactType")
+        public String contactType;
 
         @NameInMap("Duration")
         public Integer duration;
+
+        @NameInMap("FileDescription")
+        public String fileDescription;
 
         @NameInMap("FileName")
         public String fileName;
@@ -265,34 +268,15 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         @NameInMap("FilePath")
         public String filePath;
 
-        @NameInMap("FileDescription")
-        public String fileDescription;
-
-        @NameInMap("Channel")
-        public String channel;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording self = new ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setContactType(String contactType) {
-            this.contactType = contactType;
-            return this;
-        }
-        public String getContactType() {
-            return this.contactType;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setAgentId(String agentId) {
@@ -311,14 +295,6 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.agentName;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setCallingNumber(String callingNumber) {
-            this.callingNumber = callingNumber;
-            return this;
-        }
-        public String getCallingNumber() {
-            return this.callingNumber;
-        }
-
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setCalledNumber(String calledNumber) {
             this.calledNumber = calledNumber;
             return this;
@@ -327,12 +303,36 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.calledNumber;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setStartTime(Long startTime) {
-            this.startTime = startTime;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
             return this;
         }
-        public Long getStartTime() {
-            return this.startTime;
+        public String getCallingNumber() {
+            return this.callingNumber;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setContactId(String contactId) {
+            this.contactId = contactId;
+            return this;
+        }
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setContactType(String contactType) {
+            this.contactType = contactType;
+            return this;
+        }
+        public String getContactType() {
+            return this.contactType;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setDuration(Integer duration) {
@@ -341,6 +341,14 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setFileDescription(String fileDescription) {
+            this.fileDescription = fileDescription;
+            return this;
+        }
+        public String getFileDescription() {
+            return this.fileDescription;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setFileName(String fileName) {
@@ -359,28 +367,20 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.filePath;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setFileDescription(String fileDescription) {
-            this.fileDescription = fileDescription;
-            return this;
-        }
-        public String getFileDescription() {
-            return this.fileDescription;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setChannel(String channel) {
-            this.channel = channel;
-            return this;
-        }
-        public String getChannel() {
-            return this.channel;
-        }
-
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordingsRecording setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }
@@ -405,121 +405,57 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
     }
 
     public static class ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord extends TeaModel {
-        @NameInMap("ContactId")
-        public String contactId;
-
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("Duration")
-        public Integer duration;
-
-        @NameInMap("Satisfaction")
-        public Integer satisfaction;
-
-        @NameInMap("ContactType")
-        public String contactType;
-
-        @NameInMap("ContactDisposition")
-        public String contactDisposition;
-
-        @NameInMap("CallingNumber")
-        public String callingNumber;
-
-        @NameInMap("CalledNumber")
-        public String calledNumber;
-
         @NameInMap("AgentNames")
         public String agentNames;
-
-        @NameInMap("SkillGroupNames")
-        public String skillGroupNames;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("ExtraAttr")
-        public String extraAttr;
-
-        @NameInMap("SatisfactionDesc")
-        public String satisfactionDesc;
-
-        @NameInMap("Feedback")
-        public String feedback;
 
         @NameInMap("Agents")
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgents agents;
 
+        @NameInMap("CalledNumber")
+        public String calledNumber;
+
+        @NameInMap("CallingNumber")
+        public String callingNumber;
+
+        @NameInMap("ContactDisposition")
+        public String contactDisposition;
+
+        @NameInMap("ContactId")
+        public String contactId;
+
+        @NameInMap("ContactType")
+        public String contactType;
+
+        @NameInMap("Duration")
+        public Integer duration;
+
+        @NameInMap("ExtraAttr")
+        public String extraAttr;
+
+        @NameInMap("Feedback")
+        public String feedback;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("Recordings")
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings recordings;
+
+        @NameInMap("Satisfaction")
+        public Integer satisfaction;
+
+        @NameInMap("SatisfactionDesc")
+        public String satisfactionDesc;
+
+        @NameInMap("SkillGroupNames")
+        public String skillGroupNames;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord self = new ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord();
             return TeaModel.build(map, self);
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSatisfaction(Integer satisfaction) {
-            this.satisfaction = satisfaction;
-            return this;
-        }
-        public Integer getSatisfaction() {
-            return this.satisfaction;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactType(String contactType) {
-            this.contactType = contactType;
-            return this;
-        }
-        public String getContactType() {
-            return this.contactType;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactDisposition(String contactDisposition) {
-            this.contactDisposition = contactDisposition;
-            return this;
-        }
-        public String getContactDisposition() {
-            return this.contactDisposition;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setCallingNumber(String callingNumber) {
-            this.callingNumber = callingNumber;
-            return this;
-        }
-        public String getCallingNumber() {
-            return this.callingNumber;
-        }
-
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setCalledNumber(String calledNumber) {
-            this.calledNumber = calledNumber;
-            return this;
-        }
-        public String getCalledNumber() {
-            return this.calledNumber;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setAgentNames(String agentNames) {
@@ -530,20 +466,60 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.agentNames;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSkillGroupNames(String skillGroupNames) {
-            this.skillGroupNames = skillGroupNames;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setAgents(ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgents agents) {
+            this.agents = agents;
             return this;
         }
-        public String getSkillGroupNames() {
-            return this.skillGroupNames;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgents getAgents() {
+            return this.agents;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setCalledNumber(String calledNumber) {
+            this.calledNumber = calledNumber;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getCalledNumber() {
+            return this.calledNumber;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
+            return this;
+        }
+        public String getCallingNumber() {
+            return this.callingNumber;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactDisposition(String contactDisposition) {
+            this.contactDisposition = contactDisposition;
+            return this;
+        }
+        public String getContactDisposition() {
+            return this.contactDisposition;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactId(String contactId) {
+            this.contactId = contactId;
+            return this;
+        }
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setContactType(String contactType) {
+            this.contactType = contactType;
+            return this;
+        }
+        public String getContactType() {
+            return this.contactType;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setExtraAttr(String extraAttr) {
@@ -554,14 +530,6 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.extraAttr;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSatisfactionDesc(String satisfactionDesc) {
-            this.satisfactionDesc = satisfactionDesc;
-            return this;
-        }
-        public String getSatisfactionDesc() {
-            return this.satisfactionDesc;
-        }
-
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setFeedback(String feedback) {
             this.feedback = feedback;
             return this;
@@ -570,12 +538,12 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.feedback;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setAgents(ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgents agents) {
-            this.agents = agents;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordAgents getAgents() {
-            return this.agents;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setRecordings(ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings recordings) {
@@ -584,6 +552,38 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         }
         public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecordRecordings getRecordings() {
             return this.recordings;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSatisfaction(Integer satisfaction) {
+            this.satisfaction = satisfaction;
+            return this;
+        }
+        public Integer getSatisfaction() {
+            return this.satisfaction;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSatisfactionDesc(String satisfactionDesc) {
+            this.satisfactionDesc = satisfactionDesc;
+            return this;
+        }
+        public String getSatisfactionDesc() {
+            return this.satisfactionDesc;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setSkillGroupNames(String skillGroupNames) {
+            this.skillGroupNames = skillGroupNames;
+            return this;
+        }
+        public String getSkillGroupNames() {
+            return this.skillGroupNames;
+        }
+
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsListCallDetailRecord setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }
@@ -608,8 +608,8 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
     }
 
     public static class ListRecentCallRecordsResponseBodyCallDetailRecords extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("List")
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsList list;
 
         @NameInMap("PageNumber")
         public Integer pageNumber;
@@ -617,20 +617,20 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("List")
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsList list;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListRecentCallRecordsResponseBodyCallDetailRecords build(java.util.Map<String, ?> map) throws Exception {
             ListRecentCallRecordsResponseBodyCallDetailRecords self = new ListRecentCallRecordsResponseBodyCallDetailRecords();
             return TeaModel.build(map, self);
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecords setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public ListRecentCallRecordsResponseBodyCallDetailRecords setList(ListRecentCallRecordsResponseBodyCallDetailRecordsList list) {
+            this.list = list;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public ListRecentCallRecordsResponseBodyCallDetailRecordsList getList() {
+            return this.list;
         }
 
         public ListRecentCallRecordsResponseBodyCallDetailRecords setPageNumber(Integer pageNumber) {
@@ -649,12 +649,12 @@ public class ListRecentCallRecordsResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListRecentCallRecordsResponseBodyCallDetailRecords setList(ListRecentCallRecordsResponseBodyCallDetailRecordsList list) {
-            this.list = list;
+        public ListRecentCallRecordsResponseBodyCallDetailRecords setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public ListRecentCallRecordsResponseBodyCallDetailRecordsList getList() {
-            return this.list;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

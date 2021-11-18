@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetJobListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Jobs")
+    public GetJobListResponseBodyJobs jobs;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Jobs")
-    public GetJobListResponseBodyJobs jobs;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class GetJobListResponseBody extends TeaModel {
     public static GetJobListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobListResponseBody self = new GetJobListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetJobListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetJobListResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetJobListResponseBody setJobs(GetJobListResponseBodyJobs jobs) {
+        this.jobs = jobs;
+        return this;
+    }
+    public GetJobListResponseBodyJobs getJobs() {
+        return this.jobs;
     }
 
     public GetJobListResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class GetJobListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetJobListResponseBody setJobs(GetJobListResponseBodyJobs jobs) {
-        this.jobs = jobs;
-        return this;
-    }
-    public GetJobListResponseBodyJobs getJobs() {
-        return this.jobs;
-    }
-
-    public GetJobListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public GetJobListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetJobListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,138 +75,34 @@ public class GetJobListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetJobListResponseBodyJobsListSummary extends TeaModel {
-        @NameInMap("SummaryName")
-        public String summaryName;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("SummaryId")
-        public String summaryId;
-
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("ConversationDetailId")
-        public String conversationDetailId;
-
-        public static GetJobListResponseBodyJobsListSummary build(java.util.Map<String, ?> map) throws Exception {
-            GetJobListResponseBodyJobsListSummary self = new GetJobListResponseBodyJobsListSummary();
-            return TeaModel.build(map, self);
-        }
-
-        public GetJobListResponseBodyJobsListSummary setSummaryName(String summaryName) {
-            this.summaryName = summaryName;
-            return this;
-        }
-        public String getSummaryName() {
-            return this.summaryName;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setSummaryId(String summaryId) {
-            this.summaryId = summaryId;
-            return this;
-        }
-        public String getSummaryId() {
-            return this.summaryId;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public GetJobListResponseBodyJobsListSummary setConversationDetailId(String conversationDetailId) {
-            this.conversationDetailId = conversationDetailId;
-            return this;
-        }
-        public String getConversationDetailId() {
-            return this.conversationDetailId;
-        }
-
-    }
-
     public static class GetJobListResponseBodyJobsListContacts extends TeaModel {
-        @NameInMap("PhoneNumber")
-        public String phoneNumber;
-
         @NameInMap("ContactId")
         public String contactId;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("Honorific")
-        public String honorific;
 
         @NameInMap("ContactName")
         public String contactName;
 
-        @NameInMap("Role")
-        public String role;
+        @NameInMap("Honorific")
+        public String honorific;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
 
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("State")
+        public String state;
+
         public static GetJobListResponseBodyJobsListContacts build(java.util.Map<String, ?> map) throws Exception {
             GetJobListResponseBodyJobsListContacts self = new GetJobListResponseBodyJobsListContacts();
             return TeaModel.build(map, self);
-        }
-
-        public GetJobListResponseBodyJobsListContacts setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public String getPhoneNumber() {
-            return this.phoneNumber;
         }
 
         public GetJobListResponseBodyJobsListContacts setContactId(String contactId) {
@@ -217,20 +113,12 @@ public class GetJobListResponseBody extends TeaModel {
             return this.contactId;
         }
 
-        public GetJobListResponseBodyJobsListContacts setState(String state) {
-            this.state = state;
+        public GetJobListResponseBodyJobsListContacts setContactName(String contactName) {
+            this.contactName = contactName;
             return this;
         }
-        public String getState() {
-            return this.state;
-        }
-
-        public GetJobListResponseBodyJobsListContacts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
+        public String getContactName() {
+            return this.contactName;
         }
 
         public GetJobListResponseBodyJobsListContacts setHonorific(String honorific) {
@@ -241,12 +129,28 @@ public class GetJobListResponseBody extends TeaModel {
             return this.honorific;
         }
 
-        public GetJobListResponseBodyJobsListContacts setContactName(String contactName) {
-            this.contactName = contactName;
+        public GetJobListResponseBodyJobsListContacts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getContactName() {
-            return this.contactName;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public GetJobListResponseBodyJobsListContacts setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public GetJobListResponseBodyJobsListContacts setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public GetJobListResponseBodyJobsListContacts setRole(String role) {
@@ -257,12 +161,12 @@ public class GetJobListResponseBody extends TeaModel {
             return this.role;
         }
 
-        public GetJobListResponseBodyJobsListContacts setReferenceId(String referenceId) {
-            this.referenceId = referenceId;
+        public GetJobListResponseBodyJobsListContacts setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getReferenceId() {
-            return this.referenceId;
+        public String getState() {
+            return this.state;
         }
 
     }
@@ -297,39 +201,15 @@ public class GetJobListResponseBody extends TeaModel {
 
     }
 
-    public static class GetJobListResponseBodyJobsList extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public static class GetJobListResponseBodyJobsListSummary extends TeaModel {
+        @NameInMap("Category")
+        public String category;
 
-        @NameInMap("CallingNumbers")
-        public java.util.List<String> callingNumbers;
+        @NameInMap("Content")
+        public String content;
 
-        @NameInMap("Summary")
-        public java.util.List<GetJobListResponseBodyJobsListSummary> summary;
-
-        @NameInMap("Contacts")
-        public java.util.List<GetJobListResponseBodyJobsListContacts> contacts;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("FailureReason")
-        public String failureReason;
-
-        @NameInMap("SystemPriority")
-        public Integer systemPriority;
-
-        @NameInMap("Extras")
-        public java.util.List<GetJobListResponseBodyJobsListExtras> extras;
-
-        @NameInMap("ReferenceId")
-        public String referenceId;
-
-        @NameInMap("ScenarioId")
-        public String scenarioId;
-
-        @NameInMap("StrategyId")
-        public String strategyId;
+        @NameInMap("ConversationDetailId")
+        public String conversationDetailId;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -337,17 +217,129 @@ public class GetJobListResponseBody extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
-        public static GetJobListResponseBodyJobsList build(java.util.Map<String, ?> map) throws Exception {
-            GetJobListResponseBodyJobsList self = new GetJobListResponseBodyJobsList();
+        @NameInMap("SummaryId")
+        public String summaryId;
+
+        @NameInMap("SummaryName")
+        public String summaryName;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        public static GetJobListResponseBodyJobsListSummary build(java.util.Map<String, ?> map) throws Exception {
+            GetJobListResponseBodyJobsListSummary self = new GetJobListResponseBodyJobsListSummary();
             return TeaModel.build(map, self);
         }
 
-        public GetJobListResponseBodyJobsList setStatus(String status) {
-            this.status = status;
+        public GetJobListResponseBodyJobsListSummary setCategory(String category) {
+            this.category = category;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCategory() {
+            return this.category;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setConversationDetailId(String conversationDetailId) {
+            this.conversationDetailId = conversationDetailId;
+            return this;
+        }
+        public String getConversationDetailId() {
+            return this.conversationDetailId;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setSummaryId(String summaryId) {
+            this.summaryId = summaryId;
+            return this;
+        }
+        public String getSummaryId() {
+            return this.summaryId;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setSummaryName(String summaryName) {
+            this.summaryName = summaryName;
+            return this;
+        }
+        public String getSummaryName() {
+            return this.summaryName;
+        }
+
+        public GetJobListResponseBodyJobsListSummary setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+    }
+
+    public static class GetJobListResponseBodyJobsList extends TeaModel {
+        @NameInMap("CallingNumbers")
+        public java.util.List<String> callingNumbers;
+
+        @NameInMap("Contacts")
+        public java.util.List<GetJobListResponseBodyJobsListContacts> contacts;
+
+        @NameInMap("Extras")
+        public java.util.List<GetJobListResponseBodyJobsListExtras> extras;
+
+        @NameInMap("FailureReason")
+        public String failureReason;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("ReferenceId")
+        public String referenceId;
+
+        @NameInMap("ScenarioId")
+        public String scenarioId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StrategyId")
+        public String strategyId;
+
+        @NameInMap("Summary")
+        public java.util.List<GetJobListResponseBodyJobsListSummary> summary;
+
+        @NameInMap("SystemPriority")
+        public Integer systemPriority;
+
+        public static GetJobListResponseBodyJobsList build(java.util.Map<String, ?> map) throws Exception {
+            GetJobListResponseBodyJobsList self = new GetJobListResponseBodyJobsList();
+            return TeaModel.build(map, self);
         }
 
         public GetJobListResponseBodyJobsList setCallingNumbers(java.util.List<String> callingNumbers) {
@@ -358,14 +350,6 @@ public class GetJobListResponseBody extends TeaModel {
             return this.callingNumbers;
         }
 
-        public GetJobListResponseBodyJobsList setSummary(java.util.List<GetJobListResponseBodyJobsListSummary> summary) {
-            this.summary = summary;
-            return this;
-        }
-        public java.util.List<GetJobListResponseBodyJobsListSummary> getSummary() {
-            return this.summary;
-        }
-
         public GetJobListResponseBodyJobsList setContacts(java.util.List<GetJobListResponseBodyJobsListContacts> contacts) {
             this.contacts = contacts;
             return this;
@@ -374,12 +358,12 @@ public class GetJobListResponseBody extends TeaModel {
             return this.contacts;
         }
 
-        public GetJobListResponseBodyJobsList setPriority(Integer priority) {
-            this.priority = priority;
+        public GetJobListResponseBodyJobsList setExtras(java.util.List<GetJobListResponseBodyJobsListExtras> extras) {
+            this.extras = extras;
             return this;
         }
-        public Integer getPriority() {
-            return this.priority;
+        public java.util.List<GetJobListResponseBodyJobsListExtras> getExtras() {
+            return this.extras;
         }
 
         public GetJobListResponseBodyJobsList setFailureReason(String failureReason) {
@@ -390,20 +374,28 @@ public class GetJobListResponseBody extends TeaModel {
             return this.failureReason;
         }
 
-        public GetJobListResponseBodyJobsList setSystemPriority(Integer systemPriority) {
-            this.systemPriority = systemPriority;
+        public GetJobListResponseBodyJobsList setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public Integer getSystemPriority() {
-            return this.systemPriority;
+        public String getGroupId() {
+            return this.groupId;
         }
 
-        public GetJobListResponseBodyJobsList setExtras(java.util.List<GetJobListResponseBodyJobsListExtras> extras) {
-            this.extras = extras;
+        public GetJobListResponseBodyJobsList setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public java.util.List<GetJobListResponseBodyJobsListExtras> getExtras() {
-            return this.extras;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public GetJobListResponseBodyJobsList setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public GetJobListResponseBodyJobsList setReferenceId(String referenceId) {
@@ -422,6 +414,14 @@ public class GetJobListResponseBody extends TeaModel {
             return this.scenarioId;
         }
 
+        public GetJobListResponseBodyJobsList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public GetJobListResponseBodyJobsList setStrategyId(String strategyId) {
             this.strategyId = strategyId;
             return this;
@@ -430,20 +430,20 @@ public class GetJobListResponseBody extends TeaModel {
             return this.strategyId;
         }
 
-        public GetJobListResponseBodyJobsList setGroupId(String groupId) {
-            this.groupId = groupId;
+        public GetJobListResponseBodyJobsList setSummary(java.util.List<GetJobListResponseBodyJobsListSummary> summary) {
+            this.summary = summary;
             return this;
         }
-        public String getGroupId() {
-            return this.groupId;
+        public java.util.List<GetJobListResponseBodyJobsListSummary> getSummary() {
+            return this.summary;
         }
 
-        public GetJobListResponseBodyJobsList setJobId(String jobId) {
-            this.jobId = jobId;
+        public GetJobListResponseBodyJobsList setSystemPriority(Integer systemPriority) {
+            this.systemPriority = systemPriority;
             return this;
         }
-        public String getJobId() {
-            return this.jobId;
+        public Integer getSystemPriority() {
+            return this.systemPriority;
         }
 
     }

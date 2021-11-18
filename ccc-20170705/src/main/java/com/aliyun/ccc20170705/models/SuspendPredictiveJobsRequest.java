@@ -4,14 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SuspendPredictiveJobsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
-
     @NameInMap("All")
     public Boolean all;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("JobGroupId")
     public String jobGroupId;
@@ -19,25 +16,12 @@ public class SuspendPredictiveJobsRequest extends TeaModel {
     @NameInMap("JobId")
     public java.util.List<String> jobId;
 
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
     public static SuspendPredictiveJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         SuspendPredictiveJobsRequest self = new SuspendPredictiveJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SuspendPredictiveJobsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public SuspendPredictiveJobsRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
-        return this;
-    }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
     }
 
     public SuspendPredictiveJobsRequest setAll(Boolean all) {
@@ -46,6 +30,14 @@ public class SuspendPredictiveJobsRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
+    }
+
+    public SuspendPredictiveJobsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public SuspendPredictiveJobsRequest setJobGroupId(String jobGroupId) {
@@ -62,6 +54,14 @@ public class SuspendPredictiveJobsRequest extends TeaModel {
     }
     public java.util.List<String> getJobId() {
         return this.jobId;
+    }
+
+    public SuspendPredictiveJobsRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
 }

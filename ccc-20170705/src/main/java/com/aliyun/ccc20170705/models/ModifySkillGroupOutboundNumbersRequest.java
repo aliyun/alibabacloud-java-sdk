@@ -7,14 +7,14 @@ public class ModifySkillGroupOutboundNumbersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
-
     @NameInMap("OperationType")
     public Integer operationType;
 
     @NameInMap("OutboundPhoneNumberId")
     public java.util.List<String> outboundPhoneNumberId;
+
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
 
     public static ModifySkillGroupOutboundNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySkillGroupOutboundNumbersRequest self = new ModifySkillGroupOutboundNumbersRequest();
@@ -27,14 +27,6 @@ public class ModifySkillGroupOutboundNumbersRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ModifySkillGroupOutboundNumbersRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
-        return this;
-    }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
     }
 
     public ModifySkillGroupOutboundNumbersRequest setOperationType(Integer operationType) {
@@ -51,6 +43,14 @@ public class ModifySkillGroupOutboundNumbersRequest extends TeaModel {
     }
     public java.util.List<String> getOutboundPhoneNumberId() {
         return this.outboundPhoneNumberId;
+    }
+
+    public ModifySkillGroupOutboundNumbersRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
 }

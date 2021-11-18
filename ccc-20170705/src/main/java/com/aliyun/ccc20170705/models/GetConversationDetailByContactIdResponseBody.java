@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetConversationDetailByContactIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("DataList")
     public GetConversationDetailByContactIdResponseBodyDataList dataList;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,12 +27,28 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetConversationDetailByContactIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public GetConversationDetailByContactIdResponseBody setDataList(GetConversationDetailByContactIdResponseBodyDataList dataList) {
         this.dataList = dataList;
         return this;
     }
     public GetConversationDetailByContactIdResponseBodyDataList getDataList() {
         return this.dataList;
+    }
+
+    public GetConversationDetailByContactIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetConversationDetailByContactIdResponseBody setMessage(String message) {
@@ -51,22 +67,6 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetConversationDetailByContactIdResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public GetConversationDetailByContactIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetConversationDetailByContactIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,32 +76,24 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
     }
 
     public static class GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase extends TeaModel {
-        @NameInMap("Words")
-        public String words;
-
         @NameInMap("Begin")
         public Long begin;
-
-        @NameInMap("Identity")
-        public String identity;
 
         @NameInMap("End")
         public Long end;
 
+        @NameInMap("Identity")
+        public String identity;
+
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("Words")
+        public String words;
 
         public static GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase build(java.util.Map<String, ?> map) throws Exception {
             GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase self = new GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase();
             return TeaModel.build(map, self);
-        }
-
-        public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setWords(String words) {
-            this.words = words;
-            return this;
-        }
-        public String getWords() {
-            return this.words;
         }
 
         public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setBegin(Long begin) {
@@ -112,14 +104,6 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
             return this.begin;
         }
 
-        public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setIdentity(String identity) {
-            this.identity = identity;
-            return this;
-        }
-        public String getIdentity() {
-            return this.identity;
-        }
-
         public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setEnd(Long end) {
             this.end = end;
             return this;
@@ -128,12 +112,28 @@ public class GetConversationDetailByContactIdResponseBody extends TeaModel {
             return this.end;
         }
 
+        public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setIdentity(String identity) {
+            this.identity = identity;
+            return this;
+        }
+        public String getIdentity() {
+            return this.identity;
+        }
+
         public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setRole(String role) {
             this.role = role;
             return this;
         }
         public String getRole() {
             return this.role;
+        }
+
+        public GetConversationDetailByContactIdResponseBodyDataListListQualityCheckPhrase setWords(String words) {
+            this.words = words;
+            return this;
+        }
+        public String getWords() {
+            return this.words;
         }
 
     }

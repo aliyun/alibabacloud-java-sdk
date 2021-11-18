@@ -4,17 +4,17 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrimaryTrunksOfSkillGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ModifyPrimaryTrunksOfSkillGroupResponseBody extends TeaModel {
     public static ModifyPrimaryTrunksOfSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrimaryTrunksOfSkillGroupResponseBody self = new ModifyPrimaryTrunksOfSkillGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPrimaryTrunksOfSkillGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ModifyPrimaryTrunksOfSkillGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ModifyPrimaryTrunksOfSkillGroupResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class ModifyPrimaryTrunksOfSkillGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModifyPrimaryTrunksOfSkillGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ModifyPrimaryTrunksOfSkillGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ModifyPrimaryTrunksOfSkillGroupResponseBody setSuccess(Boolean success) {

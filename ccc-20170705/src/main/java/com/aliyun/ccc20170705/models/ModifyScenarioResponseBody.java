@@ -4,27 +4,43 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ModifyScenarioResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Scenario")
+    public ModifyScenarioResponseBodyScenario scenario;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Scenario")
-    public ModifyScenarioResponseBodyScenario scenario;
-
     public static ModifyScenarioResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyScenarioResponseBody self = new ModifyScenarioResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyScenarioResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ModifyScenarioResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ModifyScenarioResponseBody setMessage(String message) {
@@ -43,20 +59,12 @@ public class ModifyScenarioResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyScenarioResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public ModifyScenarioResponseBody setScenario(ModifyScenarioResponseBodyScenario scenario) {
+        this.scenario = scenario;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ModifyScenarioResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public ModifyScenarioResponseBodyScenario getScenario() {
+        return this.scenario;
     }
 
     public ModifyScenarioResponseBody setSuccess(Boolean success) {
@@ -67,32 +75,16 @@ public class ModifyScenarioResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifyScenarioResponseBody setScenario(ModifyScenarioResponseBodyScenario scenario) {
-        this.scenario = scenario;
-        return this;
-    }
-    public ModifyScenarioResponseBodyScenario getScenario() {
-        return this.scenario;
-    }
-
     public static class ModifyScenarioResponseBodyScenarioStrategyWorkingTime extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
         @NameInMap("BeginTime")
         public String beginTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         public static ModifyScenarioResponseBodyScenarioStrategyWorkingTime build(java.util.Map<String, ?> map) throws Exception {
             ModifyScenarioResponseBodyScenarioStrategyWorkingTime self = new ModifyScenarioResponseBodyScenarioStrategyWorkingTime();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategyWorkingTime setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
         }
 
         public ModifyScenarioResponseBodyScenarioStrategyWorkingTime setBeginTime(String beginTime) {
@@ -103,47 +95,31 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.beginTime;
         }
 
+        public ModifyScenarioResponseBodyScenarioStrategyWorkingTime setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
     }
 
     public static class ModifyScenarioResponseBodyScenarioStrategy extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("StrategyName")
-        public String strategyName;
-
-        @NameInMap("MaxAttemptsPerDay")
-        public Integer maxAttemptsPerDay;
-
-        @NameInMap("WorkingTime")
-        public java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> workingTime;
-
-        @NameInMap("FollowUpStrategy")
-        public String followUpStrategy;
+        @NameInMap("Customized")
+        public String customized;
 
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("Customized")
-        public String customized;
-
-        @NameInMap("StartTime")
-        public Long startTime;
+        @NameInMap("FollowUpStrategy")
+        public String followUpStrategy;
 
         @NameInMap("IsTemplate")
         public Boolean isTemplate;
 
-        @NameInMap("StrategyId")
-        public String strategyId;
-
-        @NameInMap("RepeatDays")
-        public java.util.List<String> repeatDays;
-
-        @NameInMap("RoutingStrategy")
-        public String routingStrategy;
-
-        @NameInMap("StrategyDescription")
-        public String strategyDescription;
+        @NameInMap("MaxAttemptsPerDay")
+        public Integer maxAttemptsPerDay;
 
         @NameInMap("MinAttemptInterval")
         public Integer minAttemptInterval;
@@ -151,57 +127,33 @@ public class ModifyScenarioResponseBody extends TeaModel {
         @NameInMap("RepeatBy")
         public String repeatBy;
 
+        @NameInMap("RepeatDays")
+        public java.util.List<String> repeatDays;
+
+        @NameInMap("RoutingStrategy")
+        public String routingStrategy;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("StrategyDescription")
+        public String strategyDescription;
+
+        @NameInMap("StrategyId")
+        public String strategyId;
+
+        @NameInMap("StrategyName")
+        public String strategyName;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("WorkingTime")
+        public java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> workingTime;
+
         public static ModifyScenarioResponseBodyScenarioStrategy build(java.util.Map<String, ?> map) throws Exception {
             ModifyScenarioResponseBodyScenarioStrategy self = new ModifyScenarioResponseBodyScenarioStrategy();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setStrategyName(String strategyName) {
-            this.strategyName = strategyName;
-            return this;
-        }
-        public String getStrategyName() {
-            return this.strategyName;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setMaxAttemptsPerDay(Integer maxAttemptsPerDay) {
-            this.maxAttemptsPerDay = maxAttemptsPerDay;
-            return this;
-        }
-        public Integer getMaxAttemptsPerDay() {
-            return this.maxAttemptsPerDay;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setWorkingTime(java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> workingTime) {
-            this.workingTime = workingTime;
-            return this;
-        }
-        public java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> getWorkingTime() {
-            return this.workingTime;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setFollowUpStrategy(String followUpStrategy) {
-            this.followUpStrategy = followUpStrategy;
-            return this;
-        }
-        public String getFollowUpStrategy() {
-            return this.followUpStrategy;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
         }
 
         public ModifyScenarioResponseBodyScenarioStrategy setCustomized(String customized) {
@@ -212,12 +164,20 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.customized;
         }
 
-        public ModifyScenarioResponseBodyScenarioStrategy setStartTime(Long startTime) {
-            this.startTime = startTime;
+        public ModifyScenarioResponseBodyScenarioStrategy setEndTime(Long endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public Long getStartTime() {
-            return this.startTime;
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setFollowUpStrategy(String followUpStrategy) {
+            this.followUpStrategy = followUpStrategy;
+            return this;
+        }
+        public String getFollowUpStrategy() {
+            return this.followUpStrategy;
         }
 
         public ModifyScenarioResponseBodyScenarioStrategy setIsTemplate(Boolean isTemplate) {
@@ -228,36 +188,12 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.isTemplate;
         }
 
-        public ModifyScenarioResponseBodyScenarioStrategy setStrategyId(String strategyId) {
-            this.strategyId = strategyId;
+        public ModifyScenarioResponseBodyScenarioStrategy setMaxAttemptsPerDay(Integer maxAttemptsPerDay) {
+            this.maxAttemptsPerDay = maxAttemptsPerDay;
             return this;
         }
-        public String getStrategyId() {
-            return this.strategyId;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setRepeatDays(java.util.List<String> repeatDays) {
-            this.repeatDays = repeatDays;
-            return this;
-        }
-        public java.util.List<String> getRepeatDays() {
-            return this.repeatDays;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setRoutingStrategy(String routingStrategy) {
-            this.routingStrategy = routingStrategy;
-            return this;
-        }
-        public String getRoutingStrategy() {
-            return this.routingStrategy;
-        }
-
-        public ModifyScenarioResponseBodyScenarioStrategy setStrategyDescription(String strategyDescription) {
-            this.strategyDescription = strategyDescription;
-            return this;
-        }
-        public String getStrategyDescription() {
-            return this.strategyDescription;
+        public Integer getMaxAttemptsPerDay() {
+            return this.maxAttemptsPerDay;
         }
 
         public ModifyScenarioResponseBodyScenarioStrategy setMinAttemptInterval(Integer minAttemptInterval) {
@@ -276,26 +212,82 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.repeatBy;
         }
 
+        public ModifyScenarioResponseBodyScenarioStrategy setRepeatDays(java.util.List<String> repeatDays) {
+            this.repeatDays = repeatDays;
+            return this;
+        }
+        public java.util.List<String> getRepeatDays() {
+            return this.repeatDays;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setRoutingStrategy(String routingStrategy) {
+            this.routingStrategy = routingStrategy;
+            return this;
+        }
+        public String getRoutingStrategy() {
+            return this.routingStrategy;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setStrategyDescription(String strategyDescription) {
+            this.strategyDescription = strategyDescription;
+            return this;
+        }
+        public String getStrategyDescription() {
+            return this.strategyDescription;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setStrategyId(String strategyId) {
+            this.strategyId = strategyId;
+            return this;
+        }
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setStrategyName(String strategyName) {
+            this.strategyName = strategyName;
+            return this;
+        }
+        public String getStrategyName() {
+            return this.strategyName;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ModifyScenarioResponseBodyScenarioStrategy setWorkingTime(java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> workingTime) {
+            this.workingTime = workingTime;
+            return this;
+        }
+        public java.util.List<ModifyScenarioResponseBodyScenarioStrategyWorkingTime> getWorkingTime() {
+            return this.workingTime;
+        }
+
     }
 
     public static class ModifyScenarioResponseBodyScenarioSurveysIntents extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
-
         @NameInMap("IntentId")
         public String intentId;
+
+        @NameInMap("NodeId")
+        public String nodeId;
 
         public static ModifyScenarioResponseBodyScenarioSurveysIntents build(java.util.Map<String, ?> map) throws Exception {
             ModifyScenarioResponseBodyScenarioSurveysIntents self = new ModifyScenarioResponseBodyScenarioSurveysIntents();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyScenarioResponseBodyScenarioSurveysIntents setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
         }
 
         public ModifyScenarioResponseBodyScenarioSurveysIntents setIntentId(String intentId) {
@@ -306,49 +298,41 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.intentId;
         }
 
+        public ModifyScenarioResponseBodyScenarioSurveysIntents setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
     }
 
     public static class ModifyScenarioResponseBodyScenarioSurveys extends TeaModel {
-        @NameInMap("Round")
-        public Integer round;
-
-        @NameInMap("SurveyDescription")
-        public String surveyDescription;
-
         @NameInMap("BeebotId")
         public String beebotId;
 
         @NameInMap("Intents")
         public java.util.List<ModifyScenarioResponseBodyScenarioSurveysIntents> intents;
 
-        @NameInMap("SurveyName")
-        public String surveyName;
-
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("Round")
+        public Integer round;
+
+        @NameInMap("SurveyDescription")
+        public String surveyDescription;
 
         @NameInMap("SurveyId")
         public String surveyId;
 
+        @NameInMap("SurveyName")
+        public String surveyName;
+
         public static ModifyScenarioResponseBodyScenarioSurveys build(java.util.Map<String, ?> map) throws Exception {
             ModifyScenarioResponseBodyScenarioSurveys self = new ModifyScenarioResponseBodyScenarioSurveys();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyScenarioResponseBodyScenarioSurveys setRound(Integer round) {
-            this.round = round;
-            return this;
-        }
-        public Integer getRound() {
-            return this.round;
-        }
-
-        public ModifyScenarioResponseBodyScenarioSurveys setSurveyDescription(String surveyDescription) {
-            this.surveyDescription = surveyDescription;
-            return this;
-        }
-        public String getSurveyDescription() {
-            return this.surveyDescription;
         }
 
         public ModifyScenarioResponseBodyScenarioSurveys setBeebotId(String beebotId) {
@@ -367,14 +351,6 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.intents;
         }
 
-        public ModifyScenarioResponseBodyScenarioSurveys setSurveyName(String surveyName) {
-            this.surveyName = surveyName;
-            return this;
-        }
-        public String getSurveyName() {
-            return this.surveyName;
-        }
-
         public ModifyScenarioResponseBodyScenarioSurveys setRole(String role) {
             this.role = role;
             return this;
@@ -383,12 +359,36 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.role;
         }
 
+        public ModifyScenarioResponseBodyScenarioSurveys setRound(Integer round) {
+            this.round = round;
+            return this;
+        }
+        public Integer getRound() {
+            return this.round;
+        }
+
+        public ModifyScenarioResponseBodyScenarioSurveys setSurveyDescription(String surveyDescription) {
+            this.surveyDescription = surveyDescription;
+            return this;
+        }
+        public String getSurveyDescription() {
+            return this.surveyDescription;
+        }
+
         public ModifyScenarioResponseBodyScenarioSurveys setSurveyId(String surveyId) {
             this.surveyId = surveyId;
             return this;
         }
         public String getSurveyId() {
             return this.surveyId;
+        }
+
+        public ModifyScenarioResponseBodyScenarioSurveys setSurveyName(String surveyName) {
+            this.surveyName = surveyName;
+            return this;
+        }
+        public String getSurveyName() {
+            return this.surveyName;
         }
 
     }
@@ -424,26 +424,26 @@ public class ModifyScenarioResponseBody extends TeaModel {
     }
 
     public static class ModifyScenarioResponseBodyScenario extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("ScenarioId")
-        public String scenarioId;
-
-        @NameInMap("Strategy")
-        public ModifyScenarioResponseBodyScenarioStrategy strategy;
-
         @NameInMap("IsTemplate")
         public Boolean isTemplate;
 
         @NameInMap("ScenarioDescription")
         public String scenarioDescription;
 
+        @NameInMap("ScenarioId")
+        public String scenarioId;
+
         @NameInMap("ScenarioName")
         public String scenarioName;
 
+        @NameInMap("Strategy")
+        public ModifyScenarioResponseBodyScenarioStrategy strategy;
+
         @NameInMap("Surveys")
         public java.util.List<ModifyScenarioResponseBodyScenarioSurveys> surveys;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Variables")
         public java.util.List<ModifyScenarioResponseBodyScenarioVariables> variables;
@@ -451,30 +451,6 @@ public class ModifyScenarioResponseBody extends TeaModel {
         public static ModifyScenarioResponseBodyScenario build(java.util.Map<String, ?> map) throws Exception {
             ModifyScenarioResponseBodyScenario self = new ModifyScenarioResponseBodyScenario();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyScenarioResponseBodyScenario setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ModifyScenarioResponseBodyScenario setScenarioId(String scenarioId) {
-            this.scenarioId = scenarioId;
-            return this;
-        }
-        public String getScenarioId() {
-            return this.scenarioId;
-        }
-
-        public ModifyScenarioResponseBodyScenario setStrategy(ModifyScenarioResponseBodyScenarioStrategy strategy) {
-            this.strategy = strategy;
-            return this;
-        }
-        public ModifyScenarioResponseBodyScenarioStrategy getStrategy() {
-            return this.strategy;
         }
 
         public ModifyScenarioResponseBodyScenario setIsTemplate(Boolean isTemplate) {
@@ -493,6 +469,14 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.scenarioDescription;
         }
 
+        public ModifyScenarioResponseBodyScenario setScenarioId(String scenarioId) {
+            this.scenarioId = scenarioId;
+            return this;
+        }
+        public String getScenarioId() {
+            return this.scenarioId;
+        }
+
         public ModifyScenarioResponseBodyScenario setScenarioName(String scenarioName) {
             this.scenarioName = scenarioName;
             return this;
@@ -501,12 +485,28 @@ public class ModifyScenarioResponseBody extends TeaModel {
             return this.scenarioName;
         }
 
+        public ModifyScenarioResponseBodyScenario setStrategy(ModifyScenarioResponseBodyScenarioStrategy strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public ModifyScenarioResponseBodyScenarioStrategy getStrategy() {
+            return this.strategy;
+        }
+
         public ModifyScenarioResponseBodyScenario setSurveys(java.util.List<ModifyScenarioResponseBodyScenarioSurveys> surveys) {
             this.surveys = surveys;
             return this;
         }
         public java.util.List<ModifyScenarioResponseBodyScenarioSurveys> getSurveys() {
             return this.surveys;
+        }
+
+        public ModifyScenarioResponseBodyScenario setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ModifyScenarioResponseBodyScenario setVariables(java.util.List<ModifyScenarioResponseBodyScenarioVariables> variables) {

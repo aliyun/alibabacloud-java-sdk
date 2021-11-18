@@ -4,51 +4,27 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceStateResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RealTimeInstanceState")
     public GetInstanceStateResponseBodyRealTimeInstanceState realTimeInstanceState;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetInstanceStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceStateResponseBody self = new GetInstanceStateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceStateResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetInstanceStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetInstanceStateResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetInstanceStateResponseBody setCode(String code) {
@@ -59,12 +35,20 @@ public class GetInstanceStateResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetInstanceStateResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetInstanceStateResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetInstanceStateResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetInstanceStateResponseBody setRealTimeInstanceState(GetInstanceStateResponseBodyRealTimeInstanceState realTimeInstanceState) {
@@ -75,24 +59,32 @@ public class GetInstanceStateResponseBody extends TeaModel {
         return this.realTimeInstanceState;
     }
 
-    public static class GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount extends TeaModel {
-        @NameInMap("State")
-        public String state;
+    public GetInstanceStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public GetInstanceStateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount extends TeaModel {
         @NameInMap("Count")
         public Long count;
+
+        @NameInMap("State")
+        public String state;
 
         public static GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount self = new GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount setCount(Long count) {
@@ -101,6 +93,14 @@ public class GetInstanceStateResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public GetInstanceStateResponseBodyRealTimeInstanceStateAgentStateDistributionsAgentStateCount setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

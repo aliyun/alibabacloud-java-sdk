@@ -4,32 +4,35 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class SubmitCabRecordingRequest extends TeaModel {
-    @NameInMap("InstanceOwnerId")
-    public Long instanceOwnerId;
+    @NameInMap("EarlyMediaRecording")
+    public String earlyMediaRecording;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("InstanceOwnerId")
+    public Long instanceOwnerId;
+
+    @NameInMap("MergedRecording")
+    public String mergedRecording;
 
     @NameInMap("ResourceRecording")
     public String resourceRecording;
 
-    @NameInMap("MergedRecording")
-    public String mergedRecording;
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static SubmitCabRecordingRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCabRecordingRequest self = new SubmitCabRecordingRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitCabRecordingRequest setInstanceOwnerId(Long instanceOwnerId) {
-        this.instanceOwnerId = instanceOwnerId;
+    public SubmitCabRecordingRequest setEarlyMediaRecording(String earlyMediaRecording) {
+        this.earlyMediaRecording = earlyMediaRecording;
         return this;
     }
-    public Long getInstanceOwnerId() {
-        return this.instanceOwnerId;
+    public String getEarlyMediaRecording() {
+        return this.earlyMediaRecording;
     }
 
     public SubmitCabRecordingRequest setInstanceId(String instanceId) {
@@ -40,12 +43,20 @@ public class SubmitCabRecordingRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SubmitCabRecordingRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public SubmitCabRecordingRequest setInstanceOwnerId(Long instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public Long getInstanceOwnerId() {
+        return this.instanceOwnerId;
+    }
+
+    public SubmitCabRecordingRequest setMergedRecording(String mergedRecording) {
+        this.mergedRecording = mergedRecording;
+        return this;
+    }
+    public String getMergedRecording() {
+        return this.mergedRecording;
     }
 
     public SubmitCabRecordingRequest setResourceRecording(String resourceRecording) {
@@ -56,12 +67,12 @@ public class SubmitCabRecordingRequest extends TeaModel {
         return this.resourceRecording;
     }
 
-    public SubmitCabRecordingRequest setMergedRecording(String mergedRecording) {
-        this.mergedRecording = mergedRecording;
+    public SubmitCabRecordingRequest setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getMergedRecording() {
-        return this.mergedRecording;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

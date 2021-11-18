@@ -4,27 +4,43 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class StartJobResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TaskIds")
-    public java.util.List<StartJobResponseBodyTaskIds> taskIds;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TaskIds")
+    public java.util.List<StartJobResponseBodyTaskIds> taskIds;
 
     public static StartJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartJobResponseBody self = new StartJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartJobResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public StartJobResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public StartJobResponseBody setMessage(String message) {
@@ -43,36 +59,20 @@ public class StartJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartJobResponseBody setTaskIds(java.util.List<StartJobResponseBodyTaskIds> taskIds) {
-        this.taskIds = taskIds;
-        return this;
-    }
-    public java.util.List<StartJobResponseBodyTaskIds> getTaskIds() {
-        return this.taskIds;
-    }
-
-    public StartJobResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public StartJobResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public StartJobResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public StartJobResponseBody setTaskIds(java.util.List<StartJobResponseBodyTaskIds> taskIds) {
+        this.taskIds = taskIds;
+        return this;
+    }
+    public java.util.List<StartJobResponseBodyTaskIds> getTaskIds() {
+        return this.taskIds;
     }
 
     public static class StartJobResponseBodyTaskIds extends TeaModel {

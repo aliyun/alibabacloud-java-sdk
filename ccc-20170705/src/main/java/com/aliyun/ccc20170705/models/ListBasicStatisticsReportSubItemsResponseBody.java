@@ -4,8 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
-    @NameInMap("SubItems")
-    public ListBasicStatisticsReportSubItemsResponseBodySubItems subItems;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -13,11 +16,8 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("SubItems")
+    public ListBasicStatisticsReportSubItemsResponseBodySubItems subItems;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,12 +27,20 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListBasicStatisticsReportSubItemsResponseBody setSubItems(ListBasicStatisticsReportSubItemsResponseBodySubItems subItems) {
-        this.subItems = subItems;
+    public ListBasicStatisticsReportSubItemsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public ListBasicStatisticsReportSubItemsResponseBodySubItems getSubItems() {
-        return this.subItems;
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListBasicStatisticsReportSubItemsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListBasicStatisticsReportSubItemsResponseBody setMessage(String message) {
@@ -51,20 +59,12 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListBasicStatisticsReportSubItemsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public ListBasicStatisticsReportSubItemsResponseBody setSubItems(ListBasicStatisticsReportSubItemsResponseBodySubItems subItems) {
+        this.subItems = subItems;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListBasicStatisticsReportSubItemsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public ListBasicStatisticsReportSubItemsResponseBodySubItems getSubItems() {
+        return this.subItems;
     }
 
     public ListBasicStatisticsReportSubItemsResponseBody setSuccess(Boolean success) {
@@ -109,17 +109,17 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
         @NameInMap("BasicStatisticsReportSubItemName")
         public String basicStatisticsReportSubItemName;
 
-        @NameInMap("Value")
-        public String value;
+        @NameInMap("Count")
+        public Integer count;
 
         @NameInMap("Percentage")
         public Integer percentage;
 
-        @NameInMap("Count")
-        public Integer count;
-
         @NameInMap("Row")
         public java.util.List<ListBasicStatisticsReportSubItemsResponseBodySubItemsListRow> row;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ListBasicStatisticsReportSubItemsResponseBodySubItemsList build(java.util.Map<String, ?> map) throws Exception {
             ListBasicStatisticsReportSubItemsResponseBodySubItemsList self = new ListBasicStatisticsReportSubItemsResponseBodySubItemsList();
@@ -134,12 +134,12 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
             return this.basicStatisticsReportSubItemName;
         }
 
-        public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setValue(String value) {
-            this.value = value;
+        public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setCount(Integer count) {
+            this.count = count;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public Integer getCount() {
+            return this.count;
         }
 
         public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setPercentage(Integer percentage) {
@@ -150,20 +150,20 @@ public class ListBasicStatisticsReportSubItemsResponseBody extends TeaModel {
             return this.percentage;
         }
 
-        public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
         public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setRow(java.util.List<ListBasicStatisticsReportSubItemsResponseBodySubItemsListRow> row) {
             this.row = row;
             return this;
         }
         public java.util.List<ListBasicStatisticsReportSubItemsResponseBodySubItemsListRow> getRow() {
             return this.row;
+        }
+
+        public ListBasicStatisticsReportSubItemsResponseBodySubItemsList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

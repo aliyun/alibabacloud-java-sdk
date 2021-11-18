@@ -4,8 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListUnreachableContactsResponseBody extends TeaModel {
-    @NameInMap("UnreachableContacts")
-    public ListUnreachableContactsResponseBodyUnreachableContacts unreachableContacts;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -13,26 +16,31 @@ public class ListUnreachableContactsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("UnreachableContacts")
+    public ListUnreachableContactsResponseBodyUnreachableContacts unreachableContacts;
 
     public static ListUnreachableContactsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUnreachableContactsResponseBody self = new ListUnreachableContactsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListUnreachableContactsResponseBody setUnreachableContacts(ListUnreachableContactsResponseBodyUnreachableContacts unreachableContacts) {
-        this.unreachableContacts = unreachableContacts;
+    public ListUnreachableContactsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public ListUnreachableContactsResponseBodyUnreachableContacts getUnreachableContacts() {
-        return this.unreachableContacts;
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListUnreachableContactsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListUnreachableContactsResponseBody setMessage(String message) {
@@ -51,22 +59,6 @@ public class ListUnreachableContactsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListUnreachableContactsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListUnreachableContactsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListUnreachableContactsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,36 +67,36 @@ public class ListUnreachableContactsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListUnreachableContactsResponseBodyUnreachableContactsListContacts extends TeaModel {
-        @NameInMap("PhoneNumber")
-        public String phoneNumber;
+    public ListUnreachableContactsResponseBody setUnreachableContacts(ListUnreachableContactsResponseBodyUnreachableContacts unreachableContacts) {
+        this.unreachableContacts = unreachableContacts;
+        return this;
+    }
+    public ListUnreachableContactsResponseBodyUnreachableContacts getUnreachableContacts() {
+        return this.unreachableContacts;
+    }
 
+    public static class ListUnreachableContactsResponseBodyUnreachableContactsListContacts extends TeaModel {
         @NameInMap("ContactId")
         public String contactId;
-
-        @NameInMap("State")
-        public String state;
 
         @NameInMap("ContactName")
         public String contactName;
 
-        @NameInMap("Role")
-        public String role;
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
 
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("State")
+        public String state;
+
         public static ListUnreachableContactsResponseBodyUnreachableContactsListContacts build(java.util.Map<String, ?> map) throws Exception {
             ListUnreachableContactsResponseBodyUnreachableContactsListContacts self = new ListUnreachableContactsResponseBodyUnreachableContactsListContacts();
             return TeaModel.build(map, self);
-        }
-
-        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public String getPhoneNumber() {
-            return this.phoneNumber;
         }
 
         public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setContactId(String contactId) {
@@ -115,20 +107,28 @@ public class ListUnreachableContactsResponseBody extends TeaModel {
             return this.contactId;
         }
 
-        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setContactName(String contactName) {
             this.contactName = contactName;
             return this;
         }
         public String getContactName() {
             return this.contactName;
+        }
+
+        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setReferenceId(String referenceId) {
+            this.referenceId = referenceId;
+            return this;
+        }
+        public String getReferenceId() {
+            return this.referenceId;
         }
 
         public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setRole(String role) {
@@ -139,12 +139,12 @@ public class ListUnreachableContactsResponseBody extends TeaModel {
             return this.role;
         }
 
-        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setReferenceId(String referenceId) {
-            this.referenceId = referenceId;
+        public ListUnreachableContactsResponseBodyUnreachableContactsListContacts setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getReferenceId() {
-            return this.referenceId;
+        public String getState() {
+            return this.state;
         }
 
     }

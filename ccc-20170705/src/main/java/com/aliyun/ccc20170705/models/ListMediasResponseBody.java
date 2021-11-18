@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListMediasResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -16,8 +13,11 @@ public class ListMediasResponseBody extends TeaModel {
     @NameInMap("Medias")
     public ListMediasResponseBodyMedias medias;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class ListMediasResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListMediasResponseBody setMessage(String message) {
-        this.message = message;
+    public ListMediasResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListMediasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ListMediasResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -59,12 +51,20 @@ public class ListMediasResponseBody extends TeaModel {
         return this.medias;
     }
 
-    public ListMediasResponseBody setCode(String code) {
-        this.code = code;
+    public ListMediasResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListMediasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListMediasResponseBody setSuccess(Boolean success) {
@@ -76,17 +76,8 @@ public class ListMediasResponseBody extends TeaModel {
     }
 
     public static class ListMediasResponseBodyMediasListMedia extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("FilePath")
-        public String filePath;
-
-        @NameInMap("Instance")
-        public String instance;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("Description")
         public String description;
@@ -94,50 +85,35 @@ public class ListMediasResponseBody extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        @NameInMap("FilePath")
+        public String filePath;
+
+        @NameInMap("Instance")
+        public String instance;
+
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("OssFileName")
         public String ossFileName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListMediasResponseBodyMediasListMedia build(java.util.Map<String, ?> map) throws Exception {
             ListMediasResponseBodyMediasListMedia self = new ListMediasResponseBodyMediasListMedia();
             return TeaModel.build(map, self);
         }
 
-        public ListMediasResponseBodyMediasListMedia setStatus(String status) {
-            this.status = status;
+        public ListMediasResponseBodyMediasListMedia setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListMediasResponseBodyMediasListMedia setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListMediasResponseBodyMediasListMedia setFilePath(String filePath) {
-            this.filePath = filePath;
-            return this;
-        }
-        public String getFilePath() {
-            return this.filePath;
-        }
-
-        public ListMediasResponseBodyMediasListMedia setInstance(String instance) {
-            this.instance = instance;
-            return this;
-        }
-        public String getInstance() {
-            return this.instance;
+        public String getContent() {
+            return this.content;
         }
 
         public ListMediasResponseBodyMediasListMedia setDescription(String description) {
@@ -156,6 +132,22 @@ public class ListMediasResponseBody extends TeaModel {
             return this.fileName;
         }
 
+        public ListMediasResponseBodyMediasListMedia setFilePath(String filePath) {
+            this.filePath = filePath;
+            return this;
+        }
+        public String getFilePath() {
+            return this.filePath;
+        }
+
+        public ListMediasResponseBodyMediasListMedia setInstance(String instance) {
+            this.instance = instance;
+            return this;
+        }
+        public String getInstance() {
+            return this.instance;
+        }
+
         public ListMediasResponseBodyMediasListMedia setName(String name) {
             this.name = name;
             return this;
@@ -164,20 +156,28 @@ public class ListMediasResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListMediasResponseBodyMediasListMedia setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
         public ListMediasResponseBodyMediasListMedia setOssFileName(String ossFileName) {
             this.ossFileName = ossFileName;
             return this;
         }
         public String getOssFileName() {
             return this.ossFileName;
+        }
+
+        public ListMediasResponseBodyMediasListMedia setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListMediasResponseBodyMediasListMedia setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

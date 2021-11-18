@@ -4,14 +4,26 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class DialogueRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ActionKey")
+    public String actionKey;
+
+    @NameInMap("ActionParams")
+    public String actionParams;
 
     @NameInMap("CallId")
     public String callId;
 
     @NameInMap("CallType")
     public String callType;
+
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("CallingNumber")
+    public String callingNumber;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ScenarioId")
     public String scenarioId;
@@ -22,32 +34,25 @@ public class DialogueRequest extends TeaModel {
     @NameInMap("Utterance")
     public String utterance;
 
-    @NameInMap("ActionKey")
-    public String actionKey;
-
-    @NameInMap("ActionParams")
-    public String actionParams;
-
-    @NameInMap("CallingNumber")
-    public String callingNumber;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
-
-    @NameInMap("InstanceOwnerId")
-    public Long instanceOwnerId;
-
     public static DialogueRequest build(java.util.Map<String, ?> map) throws Exception {
         DialogueRequest self = new DialogueRequest();
         return TeaModel.build(map, self);
     }
 
-    public DialogueRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DialogueRequest setActionKey(String actionKey) {
+        this.actionKey = actionKey;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getActionKey() {
+        return this.actionKey;
+    }
+
+    public DialogueRequest setActionParams(String actionParams) {
+        this.actionParams = actionParams;
+        return this;
+    }
+    public String getActionParams() {
+        return this.actionParams;
     }
 
     public DialogueRequest setCallId(String callId) {
@@ -64,6 +69,30 @@ public class DialogueRequest extends TeaModel {
     }
     public String getCallType() {
         return this.callType;
+    }
+
+    public DialogueRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public DialogueRequest setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public String getCallingNumber() {
+        return this.callingNumber;
+    }
+
+    public DialogueRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DialogueRequest setScenarioId(String scenarioId) {
@@ -88,46 +117,6 @@ public class DialogueRequest extends TeaModel {
     }
     public String getUtterance() {
         return this.utterance;
-    }
-
-    public DialogueRequest setActionKey(String actionKey) {
-        this.actionKey = actionKey;
-        return this;
-    }
-    public String getActionKey() {
-        return this.actionKey;
-    }
-
-    public DialogueRequest setActionParams(String actionParams) {
-        this.actionParams = actionParams;
-        return this;
-    }
-    public String getActionParams() {
-        return this.actionParams;
-    }
-
-    public DialogueRequest setCallingNumber(String callingNumber) {
-        this.callingNumber = callingNumber;
-        return this;
-    }
-    public String getCallingNumber() {
-        return this.callingNumber;
-    }
-
-    public DialogueRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
-    }
-
-    public DialogueRequest setInstanceOwnerId(Long instanceOwnerId) {
-        this.instanceOwnerId = instanceOwnerId;
-        return this;
-    }
-    public Long getInstanceOwnerId() {
-        return this.instanceOwnerId;
     }
 
 }

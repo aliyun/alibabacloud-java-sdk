@@ -7,11 +7,11 @@ public class InflightTaskTimeoutRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static InflightTaskTimeoutRequest build(java.util.Map<String, ?> map) throws Exception {
         InflightTaskTimeoutRequest self = new InflightTaskTimeoutRequest();
@@ -26,20 +26,20 @@ public class InflightTaskTimeoutRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public InflightTaskTimeoutRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public InflightTaskTimeoutRequest setInstanceOwnerId(Long instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
     }
     public Long getInstanceOwnerId() {
         return this.instanceOwnerId;
+    }
+
+    public InflightTaskTimeoutRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -4,11 +4,8 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class DownloadAllTypeRecordingResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -16,8 +13,11 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
     @NameInMap("MediaDownloadParamList")
     public DownloadAllTypeRecordingResponseBodyMediaDownloadParamList mediaDownloadParamList;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DownloadAllTypeRecordingResponseBody setMessage(String message) {
-        this.message = message;
+    public DownloadAllTypeRecordingResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DownloadAllTypeRecordingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public DownloadAllTypeRecordingResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -59,12 +51,20 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         return this.mediaDownloadParamList;
     }
 
-    public DownloadAllTypeRecordingResponseBody setCode(String code) {
-        this.code = code;
+    public DownloadAllTypeRecordingResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DownloadAllTypeRecordingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DownloadAllTypeRecordingResponseBody setSuccess(Boolean success) {
@@ -76,23 +76,15 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
     }
 
     public static class DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam extends TeaModel {
-        @NameInMap("SignatureUrl")
-        public String signatureUrl;
-
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("SignatureUrl")
+        public String signatureUrl;
 
         public static DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam build(java.util.Map<String, ?> map) throws Exception {
             DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam self = new DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam();
             return TeaModel.build(map, self);
-        }
-
-        public DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam setSignatureUrl(String signatureUrl) {
-            this.signatureUrl = signatureUrl;
-            return this;
-        }
-        public String getSignatureUrl() {
-            return this.signatureUrl;
         }
 
         public DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam setFileName(String fileName) {
@@ -101,6 +93,14 @@ public class DownloadAllTypeRecordingResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public DownloadAllTypeRecordingResponseBodyMediaDownloadParamListMediaDownloadParam setSignatureUrl(String signatureUrl) {
+            this.signatureUrl = signatureUrl;
+            return this;
+        }
+        public String getSignatureUrl() {
+            return this.signatureUrl;
         }
 
     }

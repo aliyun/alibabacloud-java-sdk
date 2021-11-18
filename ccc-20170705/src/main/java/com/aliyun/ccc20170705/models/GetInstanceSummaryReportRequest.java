@@ -4,14 +4,11 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSummaryReportRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,25 +16,12 @@ public class GetInstanceSummaryReportRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static GetInstanceSummaryReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceSummaryReportRequest self = new GetInstanceSummaryReportRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceSummaryReportRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetInstanceSummaryReportRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public GetInstanceSummaryReportRequest setEndTime(String endTime) {
@@ -46,6 +30,14 @@ public class GetInstanceSummaryReportRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetInstanceSummaryReportRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetInstanceSummaryReportRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +54,14 @@ public class GetInstanceSummaryReportRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetInstanceSummaryReportRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

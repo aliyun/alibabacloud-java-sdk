@@ -7,14 +7,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SkillGroups")
-    public String skillGroups;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SkillGroups")
+    public String skillGroups;
 
     public static ListSkillGroupSummaryReportsSinceMidnightRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillGroupSummaryReportsSinceMidnightRequest self = new ListSkillGroupSummaryReportsSinceMidnightRequest();
@@ -27,14 +27,6 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListSkillGroupSummaryReportsSinceMidnightRequest setSkillGroups(String skillGroups) {
-        this.skillGroups = skillGroups;
-        return this;
-    }
-    public String getSkillGroups() {
-        return this.skillGroups;
     }
 
     public ListSkillGroupSummaryReportsSinceMidnightRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSkillGroupSummaryReportsSinceMidnightRequest setSkillGroups(String skillGroups) {
+        this.skillGroups = skillGroups;
+        return this;
+    }
+    public String getSkillGroups() {
+        return this.skillGroups;
     }
 
 }

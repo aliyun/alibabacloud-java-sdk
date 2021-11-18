@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CallOnlinePrivacyNumberResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Data")
-    public CallOnlinePrivacyNumberResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
     public static CallOnlinePrivacyNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CallOnlinePrivacyNumberResponseBody self = new CallOnlinePrivacyNumberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CallOnlinePrivacyNumberResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CallOnlinePrivacyNumberResponseBody setData(CallOnlinePrivacyNumberResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CallOnlinePrivacyNumberResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CallOnlinePrivacyNumberResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CallOnlinePrivacyNumberResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CallOnlinePrivacyNumberResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CallOnlinePrivacyNumberResponseBody setData(CallOnlinePrivacyNumberResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CallOnlinePrivacyNumberResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CallOnlinePrivacyNumberResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CallOnlinePrivacyNumberResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,17 +76,17 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
     }
 
     public static class CallOnlinePrivacyNumberResponseBodyData extends TeaModel {
-        @NameInMap("Represent")
-        public String represent;
-
-        @NameInMap("StatusCode")
-        public String statusCode;
-
         @NameInMap("CallId")
         public String callId;
 
         @NameInMap("DateCreated")
         public String dateCreated;
+
+        @NameInMap("Represent")
+        public String represent;
+
+        @NameInMap("StatusCode")
+        public String statusCode;
 
         @NameInMap("TelX")
         public String telX;
@@ -94,22 +94,6 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
         public static CallOnlinePrivacyNumberResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CallOnlinePrivacyNumberResponseBodyData self = new CallOnlinePrivacyNumberResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CallOnlinePrivacyNumberResponseBodyData setRepresent(String represent) {
-            this.represent = represent;
-            return this;
-        }
-        public String getRepresent() {
-            return this.represent;
-        }
-
-        public CallOnlinePrivacyNumberResponseBodyData setStatusCode(String statusCode) {
-            this.statusCode = statusCode;
-            return this;
-        }
-        public String getStatusCode() {
-            return this.statusCode;
         }
 
         public CallOnlinePrivacyNumberResponseBodyData setCallId(String callId) {
@@ -126,6 +110,22 @@ public class CallOnlinePrivacyNumberResponseBody extends TeaModel {
         }
         public String getDateCreated() {
             return this.dateCreated;
+        }
+
+        public CallOnlinePrivacyNumberResponseBodyData setRepresent(String represent) {
+            this.represent = represent;
+            return this;
+        }
+        public String getRepresent() {
+            return this.represent;
+        }
+
+        public CallOnlinePrivacyNumberResponseBodyData setStatusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public String getStatusCode() {
+            return this.statusCode;
         }
 
         public CallOnlinePrivacyNumberResponseBodyData setTelX(String telX) {

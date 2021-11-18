@@ -4,27 +4,51 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStateLogsResponseBody extends TeaModel {
+    @NameInMap("AgentStateLogPage")
+    public ListAgentStateLogsResponseBodyAgentStateLogPage agentStateLogPage;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("AgentStateLogPage")
-    public ListAgentStateLogsResponseBodyAgentStateLogPage agentStateLogPage;
 
     public static ListAgentStateLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentStateLogsResponseBody self = new ListAgentStateLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentStateLogsResponseBody setAgentStateLogPage(ListAgentStateLogsResponseBodyAgentStateLogPage agentStateLogPage) {
+        this.agentStateLogPage = agentStateLogPage;
+        return this;
+    }
+    public ListAgentStateLogsResponseBodyAgentStateLogPage getAgentStateLogPage() {
+        return this.agentStateLogPage;
+    }
+
+    public ListAgentStateLogsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAgentStateLogsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListAgentStateLogsResponseBody setMessage(String message) {
@@ -43,22 +67,6 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentStateLogsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListAgentStateLogsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListAgentStateLogsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,29 +75,15 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListAgentStateLogsResponseBody setAgentStateLogPage(ListAgentStateLogsResponseBodyAgentStateLogPage agentStateLogPage) {
-        this.agentStateLogPage = agentStateLogPage;
-        return this;
-    }
-    public ListAgentStateLogsResponseBodyAgentStateLogPage getAgentStateLogPage() {
-        return this.agentStateLogPage;
-    }
-
     public static class ListAgentStateLogsResponseBodyAgentStateLogPageList extends TeaModel {
-        @NameInMap("StateCode")
-        public String stateCode;
+        @NameInMap("ConnectId")
+        public String connectId;
 
         @NameInMap("ContactId")
         public String contactId;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("ConnectId")
-        public String connectId;
-
-        @NameInMap("StateTime")
-        public Long stateTime;
+        @NameInMap("CounterParty")
+        public String counterParty;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -100,36 +94,18 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
         @NameInMap("SkillGroupIds")
         public String skillGroupIds;
 
-        @NameInMap("CounterParty")
-        public String counterParty;
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("StateCode")
+        public String stateCode;
+
+        @NameInMap("StateTime")
+        public Long stateTime;
 
         public static ListAgentStateLogsResponseBodyAgentStateLogPageList build(java.util.Map<String, ?> map) throws Exception {
             ListAgentStateLogsResponseBodyAgentStateLogPageList self = new ListAgentStateLogsResponseBodyAgentStateLogPageList();
             return TeaModel.build(map, self);
-        }
-
-        public ListAgentStateLogsResponseBodyAgentStateLogPageList setStateCode(String stateCode) {
-            this.stateCode = stateCode;
-            return this;
-        }
-        public String getStateCode() {
-            return this.stateCode;
-        }
-
-        public ListAgentStateLogsResponseBodyAgentStateLogPageList setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
-        }
-
-        public ListAgentStateLogsResponseBodyAgentStateLogPageList setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public ListAgentStateLogsResponseBodyAgentStateLogPageList setConnectId(String connectId) {
@@ -140,12 +116,20 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             return this.connectId;
         }
 
-        public ListAgentStateLogsResponseBodyAgentStateLogPageList setStateTime(Long stateTime) {
-            this.stateTime = stateTime;
+        public ListAgentStateLogsResponseBodyAgentStateLogPageList setContactId(String contactId) {
+            this.contactId = contactId;
             return this;
         }
-        public Long getStateTime() {
-            return this.stateTime;
+        public String getContactId() {
+            return this.contactId;
+        }
+
+        public ListAgentStateLogsResponseBodyAgentStateLogPageList setCounterParty(String counterParty) {
+            this.counterParty = counterParty;
+            return this;
+        }
+        public String getCounterParty() {
+            return this.counterParty;
         }
 
         public ListAgentStateLogsResponseBodyAgentStateLogPageList setInstanceId(String instanceId) {
@@ -172,12 +156,28 @@ public class ListAgentStateLogsResponseBody extends TeaModel {
             return this.skillGroupIds;
         }
 
-        public ListAgentStateLogsResponseBodyAgentStateLogPageList setCounterParty(String counterParty) {
-            this.counterParty = counterParty;
+        public ListAgentStateLogsResponseBodyAgentStateLogPageList setState(String state) {
+            this.state = state;
             return this;
         }
-        public String getCounterParty() {
-            return this.counterParty;
+        public String getState() {
+            return this.state;
+        }
+
+        public ListAgentStateLogsResponseBodyAgentStateLogPageList setStateCode(String stateCode) {
+            this.stateCode = stateCode;
+            return this;
+        }
+        public String getStateCode() {
+            return this.stateCode;
+        }
+
+        public ListAgentStateLogsResponseBodyAgentStateLogPageList setStateTime(Long stateTime) {
+            this.stateTime = stateTime;
+            return this;
+        }
+        public Long getStateTime() {
+            return this.stateTime;
         }
 
     }

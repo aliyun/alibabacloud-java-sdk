@@ -4,20 +4,20 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListAgentStatesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListAgentStatesResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("Data")
-    public ListAgentStatesResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class ListAgentStatesResponseBody extends TeaModel {
     public static ListAgentStatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentStatesResponseBody self = new ListAgentStatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentStatesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAgentStatesResponseBody setData(ListAgentStatesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListAgentStatesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListAgentStatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListAgentStatesResponseBody setMessage(String message) {
@@ -43,30 +67,6 @@ public class ListAgentStatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentStatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListAgentStatesResponseBody setData(ListAgentStatesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListAgentStatesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListAgentStatesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListAgentStatesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,62 +76,30 @@ public class ListAgentStatesResponseBody extends TeaModel {
     }
 
     public static class ListAgentStatesResponseBodyDataListRealTimeAgentState extends TeaModel {
-        @NameInMap("LoginName")
-        public String loginName;
-
-        @NameInMap("Dn")
-        public String dn;
-
-        @NameInMap("StateDuration")
-        public String stateDuration;
-
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("AgentId")
         public String agentId;
 
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("Dn")
+        public String dn;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("LoginName")
+        public String loginName;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("StateDuration")
+        public String stateDuration;
 
         public static ListAgentStatesResponseBodyDataListRealTimeAgentState build(java.util.Map<String, ?> map) throws Exception {
             ListAgentStatesResponseBodyDataListRealTimeAgentState self = new ListAgentStatesResponseBodyDataListRealTimeAgentState();
             return TeaModel.build(map, self);
-        }
-
-        public ListAgentStatesResponseBodyDataListRealTimeAgentState setLoginName(String loginName) {
-            this.loginName = loginName;
-            return this;
-        }
-        public String getLoginName() {
-            return this.loginName;
-        }
-
-        public ListAgentStatesResponseBodyDataListRealTimeAgentState setDn(String dn) {
-            this.dn = dn;
-            return this;
-        }
-        public String getDn() {
-            return this.dn;
-        }
-
-        public ListAgentStatesResponseBodyDataListRealTimeAgentState setStateDuration(String stateDuration) {
-            this.stateDuration = stateDuration;
-            return this;
-        }
-        public String getStateDuration() {
-            return this.stateDuration;
-        }
-
-        public ListAgentStatesResponseBodyDataListRealTimeAgentState setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public ListAgentStatesResponseBodyDataListRealTimeAgentState setAgentId(String agentId) {
@@ -150,12 +118,44 @@ public class ListAgentStatesResponseBody extends TeaModel {
             return this.agentName;
         }
 
+        public ListAgentStatesResponseBodyDataListRealTimeAgentState setDn(String dn) {
+            this.dn = dn;
+            return this;
+        }
+        public String getDn() {
+            return this.dn;
+        }
+
         public ListAgentStatesResponseBodyDataListRealTimeAgentState setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListAgentStatesResponseBodyDataListRealTimeAgentState setLoginName(String loginName) {
+            this.loginName = loginName;
+            return this;
+        }
+        public String getLoginName() {
+            return this.loginName;
+        }
+
+        public ListAgentStatesResponseBodyDataListRealTimeAgentState setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListAgentStatesResponseBodyDataListRealTimeAgentState setStateDuration(String stateDuration) {
+            this.stateDuration = stateDuration;
+            return this;
+        }
+        public String getStateDuration() {
+            return this.stateDuration;
         }
 
     }

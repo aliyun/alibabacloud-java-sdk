@@ -4,23 +4,23 @@ package com.aliyun.ccc20170705.models;
 import com.aliyun.tea.*;
 
 public class ListVoiceAppraiseResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Notice")
-    public String notice;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ContactFlow")
     public ListVoiceAppraiseResponseBodyContactFlow contactFlow;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Notice")
+    public String notice;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -28,38 +28,6 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
     public static ListVoiceAppraiseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVoiceAppraiseResponseBody self = new ListVoiceAppraiseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVoiceAppraiseResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListVoiceAppraiseResponseBody setNotice(String notice) {
-        this.notice = notice;
-        return this;
-    }
-    public String getNotice() {
-        return this.notice;
-    }
-
-    public ListVoiceAppraiseResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListVoiceAppraiseResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public ListVoiceAppraiseResponseBody setCode(String code) {
@@ -78,6 +46,38 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
         return this.contactFlow;
     }
 
+    public ListVoiceAppraiseResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListVoiceAppraiseResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListVoiceAppraiseResponseBody setNotice(String notice) {
+        this.notice = notice;
+        return this;
+    }
+    public String getNotice() {
+        return this.notice;
+    }
+
+    public ListVoiceAppraiseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListVoiceAppraiseResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -87,17 +87,11 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
     }
 
     public static class ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber extends TeaModel {
-        @NameInMap("Trunks")
-        public Integer trunks;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("Number")
         public String number;
-
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("PhoneNumberDescription")
         public String phoneNumberDescription;
@@ -105,33 +99,15 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
         @NameInMap("PhoneNumberId")
         public String phoneNumberId;
 
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("Trunks")
+        public Integer trunks;
+
         public static ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber build(java.util.Map<String, ?> map) throws Exception {
             ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber self = new ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber();
             return TeaModel.build(map, self);
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setTrunks(Integer trunks) {
-            this.trunks = trunks;
-            return this;
-        }
-        public Integer getTrunks() {
-            return this.trunks;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setInstanceId(String instanceId) {
@@ -140,6 +116,14 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setPhoneNumberDescription(String phoneNumberDescription) {
@@ -156,6 +140,22 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
         }
         public String getPhoneNumberId() {
             return this.phoneNumberId;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbersPhoneNumber setTrunks(Integer trunks) {
+            this.trunks = trunks;
+            return this;
+        }
+        public Integer getTrunks() {
+            return this.trunks;
         }
 
     }
@@ -180,62 +180,30 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
     }
 
     public static class ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("LastModified")
-        public String lastModified;
-
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("ContactFlowVersionDescription")
+        public String contactFlowVersionDescription;
 
         @NameInMap("ContactFlowVersionId")
         public String contactFlowVersionId;
 
-        @NameInMap("ContactFlowVersionDescription")
-        public String contactFlowVersionDescription;
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("LastModified")
+        public String lastModified;
 
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Version")
+        public String version;
 
         public static ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion build(java.util.Map<String, ?> map) throws Exception {
             ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion self = new ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion();
             return TeaModel.build(map, self);
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setLastModified(String lastModified) {
-            this.lastModified = lastModified;
-            return this;
-        }
-        public String getLastModified() {
-            return this.lastModified;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setContactFlowVersionId(String contactFlowVersionId) {
-            this.contactFlowVersionId = contactFlowVersionId;
-            return this;
-        }
-        public String getContactFlowVersionId() {
-            return this.contactFlowVersionId;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setContactFlowVersionDescription(String contactFlowVersionDescription) {
@@ -246,12 +214,12 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
             return this.contactFlowVersionDescription;
         }
 
-        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setLastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = lastModifiedBy;
+        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setContactFlowVersionId(String contactFlowVersionId) {
+            this.contactFlowVersionId = contactFlowVersionId;
             return this;
         }
-        public String getLastModifiedBy() {
-            return this.lastModifiedBy;
+        public String getContactFlowVersionId() {
+            return this.contactFlowVersionId;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setContent(String content) {
@@ -260,6 +228,38 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setLastModified(String lastModified) {
+            this.lastModified = lastModified;
+            return this;
+        }
+        public String getLastModified() {
+            return this.lastModified;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setLastModifiedBy(String lastModifiedBy) {
+            this.lastModifiedBy = lastModifiedBy;
+            return this;
+        }
+        public String getLastModifiedBy() {
+            return this.lastModifiedBy;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlowVersionsContactFlowVersion setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
@@ -284,33 +284,41 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
     }
 
     public static class ListVoiceAppraiseResponseBodyContactFlow extends TeaModel {
+        @NameInMap("AppliedVersion")
+        public String appliedVersion;
+
         @NameInMap("ContactFlowDescription")
         public String contactFlowDescription;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("PhoneNumbers")
-        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers phoneNumbers;
-
-        @NameInMap("ContactFlowName")
-        public String contactFlowName;
-
-        @NameInMap("Versions")
-        public ListVoiceAppraiseResponseBodyContactFlowVersions versions;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("ContactFlowId")
         public String contactFlowId;
 
-        @NameInMap("AppliedVersion")
-        public String appliedVersion;
+        @NameInMap("ContactFlowName")
+        public String contactFlowName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("PhoneNumbers")
+        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers phoneNumbers;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Versions")
+        public ListVoiceAppraiseResponseBodyContactFlowVersions versions;
 
         public static ListVoiceAppraiseResponseBodyContactFlow build(java.util.Map<String, ?> map) throws Exception {
             ListVoiceAppraiseResponseBodyContactFlow self = new ListVoiceAppraiseResponseBodyContactFlow();
             return TeaModel.build(map, self);
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlow setAppliedVersion(String appliedVersion) {
+            this.appliedVersion = appliedVersion;
+            return this;
+        }
+        public String getAppliedVersion() {
+            return this.appliedVersion;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlow setContactFlowDescription(String contactFlowDescription) {
@@ -321,20 +329,12 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
             return this.contactFlowDescription;
         }
 
-        public ListVoiceAppraiseResponseBodyContactFlow setType(String type) {
-            this.type = type;
+        public ListVoiceAppraiseResponseBodyContactFlow setContactFlowId(String contactFlowId) {
+            this.contactFlowId = contactFlowId;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListVoiceAppraiseResponseBodyContactFlow setPhoneNumbers(ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers phoneNumbers) {
-            this.phoneNumbers = phoneNumbers;
-            return this;
-        }
-        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers getPhoneNumbers() {
-            return this.phoneNumbers;
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         public ListVoiceAppraiseResponseBodyContactFlow setContactFlowName(String contactFlowName) {
@@ -345,14 +345,6 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
             return this.contactFlowName;
         }
 
-        public ListVoiceAppraiseResponseBodyContactFlow setVersions(ListVoiceAppraiseResponseBodyContactFlowVersions versions) {
-            this.versions = versions;
-            return this;
-        }
-        public ListVoiceAppraiseResponseBodyContactFlowVersions getVersions() {
-            return this.versions;
-        }
-
         public ListVoiceAppraiseResponseBodyContactFlow setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -361,20 +353,28 @@ public class ListVoiceAppraiseResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListVoiceAppraiseResponseBodyContactFlow setContactFlowId(String contactFlowId) {
-            this.contactFlowId = contactFlowId;
+        public ListVoiceAppraiseResponseBodyContactFlow setPhoneNumbers(ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers phoneNumbers) {
+            this.phoneNumbers = phoneNumbers;
             return this;
         }
-        public String getContactFlowId() {
-            return this.contactFlowId;
+        public ListVoiceAppraiseResponseBodyContactFlowPhoneNumbers getPhoneNumbers() {
+            return this.phoneNumbers;
         }
 
-        public ListVoiceAppraiseResponseBodyContactFlow setAppliedVersion(String appliedVersion) {
-            this.appliedVersion = appliedVersion;
+        public ListVoiceAppraiseResponseBodyContactFlow setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getAppliedVersion() {
-            return this.appliedVersion;
+        public String getType() {
+            return this.type;
+        }
+
+        public ListVoiceAppraiseResponseBodyContactFlow setVersions(ListVoiceAppraiseResponseBodyContactFlowVersions versions) {
+            this.versions = versions;
+            return this;
+        }
+        public ListVoiceAppraiseResponseBodyContactFlowVersions getVersions() {
+            return this.versions;
         }
 
     }
