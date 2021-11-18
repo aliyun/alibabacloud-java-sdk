@@ -16,6 +16,14 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("ImageTypeEquals")
     public String imageTypeEquals;
 
+    // 产品
+    @NameInMap("Product")
+    public String product;
+
+    // 工作空间Id
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
         return TeaModel.build(map, self);
@@ -43,6 +51,22 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getImageTypeEquals() {
         return this.imageTypeEquals;
+    }
+
+    public ListImagesRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public ListImagesRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

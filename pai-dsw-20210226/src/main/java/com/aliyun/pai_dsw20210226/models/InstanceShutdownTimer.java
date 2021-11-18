@@ -20,6 +20,10 @@ public class InstanceShutdownTimer extends TeaModel {
     @NameInMap("ScheduleTime")
     public String scheduleTime;
 
+    // 多少毫秒后定时关机（如果设定可以覆盖ScheduleTime）
+    @NameInMap("TtlInMillis")
+    public Long ttlInMillis;
+
     public static InstanceShutdownTimer build(java.util.Map<String, ?> map) throws Exception {
         InstanceShutdownTimer self = new InstanceShutdownTimer();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class InstanceShutdownTimer extends TeaModel {
     }
     public String getScheduleTime() {
         return this.scheduleTime;
+    }
+
+    public InstanceShutdownTimer setTtlInMillis(Long ttlInMillis) {
+        this.ttlInMillis = ttlInMillis;
+        return this;
+    }
+    public Long getTtlInMillis() {
+        return this.ttlInMillis;
     }
 
 }
