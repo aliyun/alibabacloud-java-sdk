@@ -88,6 +88,9 @@ public class GetOpLogResponseBody extends TeaModel {
         @NameInMap("OpTime")
         public String opTime;
 
+        @NameInMap("OpUserId")
+        public Long opUserId;
+
         @NameInMap("OrderId")
         public Long orderId;
 
@@ -132,6 +135,14 @@ public class GetOpLogResponseBody extends TeaModel {
         }
         public String getOpTime() {
             return this.opTime;
+        }
+
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOpUserId(Long opUserId) {
+            this.opUserId = opUserId;
+            return this;
+        }
+        public Long getOpUserId() {
+            return this.opUserId;
         }
 
         public GetOpLogResponseBodyOpLogDetailsOpLogDetail setOrderId(Long orderId) {
