@@ -104,6 +104,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
+    // 负载均衡规格
+    @NameInMap("load_balancer_spec")
+    public String loadBalancerSpec;
+
     // ASK 集群开启日志服务
     @NameInMap("logging_type")
     public String loggingType;
@@ -530,6 +534,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
+    }
+
+    public CreateClusterRequest setLoadBalancerSpec(String loadBalancerSpec) {
+        this.loadBalancerSpec = loadBalancerSpec;
+        return this;
+    }
+    public String getLoadBalancerSpec() {
+        return this.loadBalancerSpec;
     }
 
     public CreateClusterRequest setLoggingType(String loggingType) {

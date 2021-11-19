@@ -12,6 +12,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("count")
     public Long count;
 
+    // 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
+    @NameInMap("interconnect_config")
+    public CreateClusterNodePoolRequestInterconnectConfig interconnectConfig;
+
+    // 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义。
+    @NameInMap("interconnect_mode")
+    public String interconnectMode;
+
     // 集群配置
     @NameInMap("kubernetes_config")
     public CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig;
@@ -19,6 +27,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     // 托管节点池配置。
     @NameInMap("management")
     public CreateClusterNodePoolRequestManagement management;
+
+    // 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
+    @NameInMap("max_nodes")
+    public Long maxNodes;
 
     // 节点池配置
     @NameInMap("nodepool_info")
@@ -53,6 +65,22 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.count;
     }
 
+    public CreateClusterNodePoolRequest setInterconnectConfig(CreateClusterNodePoolRequestInterconnectConfig interconnectConfig) {
+        this.interconnectConfig = interconnectConfig;
+        return this;
+    }
+    public CreateClusterNodePoolRequestInterconnectConfig getInterconnectConfig() {
+        return this.interconnectConfig;
+    }
+
+    public CreateClusterNodePoolRequest setInterconnectMode(String interconnectMode) {
+        this.interconnectMode = interconnectMode;
+        return this;
+    }
+    public String getInterconnectMode() {
+        return this.interconnectMode;
+    }
+
     public CreateClusterNodePoolRequest setKubernetesConfig(CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig) {
         this.kubernetesConfig = kubernetesConfig;
         return this;
@@ -67,6 +95,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
     public CreateClusterNodePoolRequestManagement getManagement() {
         return this.management;
+    }
+
+    public CreateClusterNodePoolRequest setMaxNodes(Long maxNodes) {
+        this.maxNodes = maxNodes;
+        return this;
+    }
+    public Long getMaxNodes() {
+        return this.maxNodes;
     }
 
     public CreateClusterNodePoolRequest setNodepoolInfo(CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo) {
@@ -181,6 +217,74 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestInterconnectConfig extends TeaModel {
+        // 边缘增强型节点池的网络带宽，单位M。
+        @NameInMap("bandwidth")
+        public Long bandwidth;
+
+        // 边缘增强型节点池绑定的云连接网实例ID(CCNID)
+        @NameInMap("ccn_id")
+        public String ccnId;
+
+        // 边缘增强型节点池绑定的云连接网实例所属的区域
+        @NameInMap("ccn_region_id")
+        public String ccnRegionId;
+
+        // 边缘增强型节点池绑定的云企业网实例ID(CENID)
+        @NameInMap("cen_id")
+        public String cenId;
+
+        // 边缘增强型节点池的购买时长，单位月
+        @NameInMap("improved_period")
+        public String improvedPeriod;
+
+        public static CreateClusterNodePoolRequestInterconnectConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestInterconnectConfig self = new CreateClusterNodePoolRequestInterconnectConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestInterconnectConfig setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public CreateClusterNodePoolRequestInterconnectConfig setCcnId(String ccnId) {
+            this.ccnId = ccnId;
+            return this;
+        }
+        public String getCcnId() {
+            return this.ccnId;
+        }
+
+        public CreateClusterNodePoolRequestInterconnectConfig setCcnRegionId(String ccnRegionId) {
+            this.ccnRegionId = ccnRegionId;
+            return this;
+        }
+        public String getCcnRegionId() {
+            return this.ccnRegionId;
+        }
+
+        public CreateClusterNodePoolRequestInterconnectConfig setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public CreateClusterNodePoolRequestInterconnectConfig setImprovedPeriod(String improvedPeriod) {
+            this.improvedPeriod = improvedPeriod;
+            return this;
+        }
+        public String getImprovedPeriod() {
+            return this.improvedPeriod;
         }
 
     }
@@ -386,6 +490,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
+        // 节点池类型，对于边缘节点池来说，类型为"edge"
+        @NameInMap("type")
+        public String type;
+
         public static CreateClusterNodePoolRequestNodepoolInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterNodePoolRequestNodepoolInfo self = new CreateClusterNodePoolRequestNodepoolInfo();
             return TeaModel.build(map, self);
@@ -405,6 +513,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public CreateClusterNodePoolRequestNodepoolInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

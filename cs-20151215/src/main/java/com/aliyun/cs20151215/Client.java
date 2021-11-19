@@ -334,6 +334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("kubernetes_version", request.kubernetesVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerSpec)) {
+            body.put("load_balancer_spec", request.loadBalancerSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.loggingType)) {
             body.put("logging_type", request.loggingType);
         }
@@ -583,12 +587,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("count", request.count);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.interconnectConfig))) {
+            body.put("interconnect_config", request.interconnectConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interconnectMode)) {
+            body.put("interconnect_mode", request.interconnectMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.kubernetesConfig))) {
             body.put("kubernetes_config", request.kubernetesConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.management))) {
             body.put("management", request.management);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxNodes)) {
+            body.put("max_nodes", request.maxNodes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.nodepoolInfo))) {

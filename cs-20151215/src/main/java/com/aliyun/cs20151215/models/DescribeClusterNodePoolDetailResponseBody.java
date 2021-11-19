@@ -8,6 +8,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("auto_scaling")
     public DescribeClusterNodePoolDetailResponseBodyAutoScaling autoScaling;
 
+    // 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
+    @NameInMap("interconnect_config")
+    public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig interconnectConfig;
+
+    // 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义
+    @NameInMap("interconnect_mode")
+    public String interconnectMode;
+
     // 节点池所属集群配置。
     @NameInMap("kubernetes_config")
     public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig;
@@ -15,6 +23,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     // 托管版节点池配置。
     @NameInMap("management")
     public DescribeClusterNodePoolDetailResponseBodyManagement management;
+
+    // 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
+    @NameInMap("max_nodes")
+    public Long maxNodes;
 
     // 节点池详情。
     @NameInMap("nodepool_info")
@@ -45,6 +57,22 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         return this.autoScaling;
     }
 
+    public DescribeClusterNodePoolDetailResponseBody setInterconnectConfig(DescribeClusterNodePoolDetailResponseBodyInterconnectConfig interconnectConfig) {
+        this.interconnectConfig = interconnectConfig;
+        return this;
+    }
+    public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig getInterconnectConfig() {
+        return this.interconnectConfig;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setInterconnectMode(String interconnectMode) {
+        this.interconnectMode = interconnectMode;
+        return this;
+    }
+    public String getInterconnectMode() {
+        return this.interconnectMode;
+    }
+
     public DescribeClusterNodePoolDetailResponseBody setKubernetesConfig(DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig) {
         this.kubernetesConfig = kubernetesConfig;
         return this;
@@ -59,6 +87,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public DescribeClusterNodePoolDetailResponseBodyManagement getManagement() {
         return this.management;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setMaxNodes(Long maxNodes) {
+        this.maxNodes = maxNodes;
+        return this;
+    }
+    public Long getMaxNodes() {
+        return this.maxNodes;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setNodepoolInfo(DescribeClusterNodePoolDetailResponseBodyNodepoolInfo nodepoolInfo) {
@@ -181,6 +217,74 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyInterconnectConfig extends TeaModel {
+        // 边缘增强型节点池的网络带宽，单位M
+        @NameInMap("bandwidth")
+        public Long bandwidth;
+
+        // 边缘增强型节点池绑定的云连接网实例ID(CCNID)
+        @NameInMap("ccn_id")
+        public String ccnId;
+
+        // 边缘增强型节点池绑定的云连接网实例所属的区域
+        @NameInMap("ccn_region_id")
+        public String ccnRegionId;
+
+        // 边缘增强型节点池绑定的云企业网实例ID(CENID)
+        @NameInMap("cen_id")
+        public String cenId;
+
+        // 边缘增强型节点池的购买时长，单位月
+        @NameInMap("improved_period")
+        public String improvedPeriod;
+
+        public static DescribeClusterNodePoolDetailResponseBodyInterconnectConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyInterconnectConfig self = new DescribeClusterNodePoolDetailResponseBodyInterconnectConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig setCcnId(String ccnId) {
+            this.ccnId = ccnId;
+            return this;
+        }
+        public String getCcnId() {
+            return this.ccnId;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig setCcnRegionId(String ccnRegionId) {
+            this.ccnRegionId = ccnRegionId;
+            return this;
+        }
+        public String getCcnRegionId() {
+            return this.ccnRegionId;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig setCenId(String cenId) {
+            this.cenId = cenId;
+            return this;
+        }
+        public String getCenId() {
+            return this.cenId;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig setImprovedPeriod(String improvedPeriod) {
+            this.improvedPeriod = improvedPeriod;
+            return this;
+        }
+        public String getImprovedPeriod() {
+            return this.improvedPeriod;
         }
 
     }
