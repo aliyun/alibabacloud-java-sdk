@@ -4,10 +4,6 @@ package com.aliyun.aiearth_meteorology20210928.models;
 import com.aliyun.tea.*;
 
 public class GridQueryResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 响应码
     @NameInMap("code")
     public Long code;
@@ -16,25 +12,21 @@ public class GridQueryResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    // 请求是否成功
-    @NameInMap("success")
-    public Boolean success;
-
     // 响应结果
     @NameInMap("module")
     public GridQueryResponseBodyModule module;
 
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
+    // 请求是否成功
+    @NameInMap("success")
+    public Boolean success;
+
     public static GridQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GridQueryResponseBody self = new GridQueryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GridQueryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GridQueryResponseBody setCode(Long code) {
@@ -53,20 +45,28 @@ public class GridQueryResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GridQueryResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public GridQueryResponseBody setModule(GridQueryResponseBodyModule module) {
         this.module = module;
         return this;
     }
     public GridQueryResponseBodyModule getModule() {
         return this.module;
+    }
+
+    public GridQueryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GridQueryResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GridQueryResponseBodyModuleList extends TeaModel {
@@ -86,13 +86,17 @@ public class GridQueryResponseBody extends TeaModel {
         @NameInMap("forecastTimestamp")
         public String forecastTimestamp;
 
+        // 查询点纬度
+        @NameInMap("latitude")
+        public Double latitude;
+
         // 查询点经度
         @NameInMap("longitude")
         public Double longitude;
 
-        // 查询点纬度
-        @NameInMap("latitude")
-        public Double latitude;
+        // 起报时间
+        @NameInMap("reportTimestamp")
+        public String reportTimestamp;
 
         // 当前网格值
         @NameInMap("value")
@@ -135,6 +139,14 @@ public class GridQueryResponseBody extends TeaModel {
             return this.forecastTimestamp;
         }
 
+        public GridQueryResponseBodyModuleList setLatitude(Double latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+        public Double getLatitude() {
+            return this.latitude;
+        }
+
         public GridQueryResponseBodyModuleList setLongitude(Double longitude) {
             this.longitude = longitude;
             return this;
@@ -143,12 +155,12 @@ public class GridQueryResponseBody extends TeaModel {
             return this.longitude;
         }
 
-        public GridQueryResponseBodyModuleList setLatitude(Double latitude) {
-            this.latitude = latitude;
+        public GridQueryResponseBodyModuleList setReportTimestamp(String reportTimestamp) {
+            this.reportTimestamp = reportTimestamp;
             return this;
         }
-        public Double getLatitude() {
-            return this.latitude;
+        public String getReportTimestamp() {
+            return this.reportTimestamp;
         }
 
         public GridQueryResponseBodyModuleList setValue(Double value) {
@@ -162,6 +174,10 @@ public class GridQueryResponseBody extends TeaModel {
     }
 
     public static class GridQueryResponseBodyModule extends TeaModel {
+        // 分页结果列表
+        @NameInMap("list")
+        public java.util.List<GridQueryResponseBodyModuleList> list;
+
         // 分页编号
         @NameInMap("pageNo")
         public Integer pageNo;
@@ -170,13 +186,17 @@ public class GridQueryResponseBody extends TeaModel {
         @NameInMap("pageSize")
         public Integer pageSize;
 
-        // 分页结果列表
-        @NameInMap("list")
-        public java.util.List<GridQueryResponseBodyModuleList> list;
-
         public static GridQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             GridQueryResponseBodyModule self = new GridQueryResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public GridQueryResponseBodyModule setList(java.util.List<GridQueryResponseBodyModuleList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<GridQueryResponseBodyModuleList> getList() {
+            return this.list;
         }
 
         public GridQueryResponseBodyModule setPageNo(Integer pageNo) {
@@ -193,14 +213,6 @@ public class GridQueryResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
-        }
-
-        public GridQueryResponseBodyModule setList(java.util.List<GridQueryResponseBodyModuleList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<GridQueryResponseBodyModuleList> getList() {
-            return this.list;
         }
 
     }

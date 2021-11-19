@@ -42,8 +42,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         dataType = com.aliyun.openapiutil.Client.getEncodeParam(dataType);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
-            query.put("product", request.product);
+        if (!com.aliyun.teautil.Common.isUnset(request.element)) {
+            query.put("element", request.element);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forecastTimestamp)) {
+            query.put("forecastTimestamp", request.forecastTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("longitude", request.longitude);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
@@ -54,20 +66,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.element)) {
-            query.put("element", request.element);
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("product", request.product);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.forecastTimestamp)) {
-            query.put("forecastTimestamp", request.forecastTimestamp);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
-            query.put("longitude", request.longitude);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
-            query.put("latitude", request.latitude);
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTimestamp)) {
+            query.put("reportTimestamp", request.reportTimestamp);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
