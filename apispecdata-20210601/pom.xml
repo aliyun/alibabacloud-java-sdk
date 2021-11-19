@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>apispecdata20210601</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>apispecdata20210601</name>
   <description>Alibaba Cloud APISpecData (20210601) SDK for Java
