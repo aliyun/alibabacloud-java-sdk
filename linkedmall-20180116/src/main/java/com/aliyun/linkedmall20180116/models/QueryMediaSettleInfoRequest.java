@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaSettleInfoRequest extends TeaModel {
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("ChannelId")
     public String channelId;
 
@@ -31,6 +34,14 @@ public class QueryMediaSettleInfoRequest extends TeaModel {
     public static QueryMediaSettleInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaSettleInfoRequest self = new QueryMediaSettleInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaSettleInfoRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public QueryMediaSettleInfoRequest setChannelId(String channelId) {

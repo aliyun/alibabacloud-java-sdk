@@ -4,6 +4,10 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CreateSettleConfirmRequest extends TeaModel {
+    // 业务ID
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("ExtInfo")
     public String extInfo;
 
@@ -25,6 +29,14 @@ public class CreateSettleConfirmRequest extends TeaModel {
     public static CreateSettleConfirmRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSettleConfirmRequest self = new CreateSettleConfirmRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSettleConfirmRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public CreateSettleConfirmRequest setExtInfo(String extInfo) {

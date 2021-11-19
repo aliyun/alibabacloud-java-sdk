@@ -1563,6 +1563,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.registAnonymousTbAccountWithOptions(request, runtime);
     }
 
+    public RegisterSettleAccountResponse registerSettleAccountWithOptions(RegisterSettleAccountRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RegisterSettleAccount", "2018-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new RegisterSettleAccountResponse());
+    }
+
+    public RegisterSettleAccountResponse registerSettleAccount(RegisterSettleAccountRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.registerSettleAccountWithOptions(request, runtime);
+    }
+
     public ReleaseMovieSeatResponse releaseMovieSeatWithOptions(ReleaseMovieSeatRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
