@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.pts20201020.models;
+
+import com.aliyun.tea.*;
+
+public class DeletePtsSceneResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeletePtsSceneResponseBody body;
+
+    public static DeletePtsSceneResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeletePtsSceneResponse self = new DeletePtsSceneResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeletePtsSceneResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeletePtsSceneResponse setBody(DeletePtsSceneResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeletePtsSceneResponseBody getBody() {
+        return this.body;
+    }
+
+}
