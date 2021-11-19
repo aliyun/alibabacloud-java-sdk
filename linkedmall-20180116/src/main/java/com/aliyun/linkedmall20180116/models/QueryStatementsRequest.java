@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryStatementsRequest extends TeaModel {
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -37,6 +40,14 @@ public class QueryStatementsRequest extends TeaModel {
     public static QueryStatementsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryStatementsRequest self = new QueryStatementsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryStatementsRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public QueryStatementsRequest setEndTime(String endTime) {

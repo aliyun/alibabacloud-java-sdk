@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ExecuteNodeRequest extends TeaModel {
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -22,6 +25,14 @@ public class ExecuteNodeRequest extends TeaModel {
     public static ExecuteNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteNodeRequest self = new ExecuteNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteNodeRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public ExecuteNodeRequest setNodeId(String nodeId) {

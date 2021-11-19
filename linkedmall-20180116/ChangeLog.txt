@@ -1,3 +1,6 @@
+2021-11-19 Version: 1.0.6
+- Add register settle account API.
+
 2021-11-16 Version: 1.0.5
 - Add query budget item APIs.
 
