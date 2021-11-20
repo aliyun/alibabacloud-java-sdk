@@ -43,4 +43,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.doROARequest("AdadaA", "2021-11-15_13-11-23-360", "HTTP", "POST", "AK", "/caihe_cloud_product_1/1_0_0/adadaA", "json", req, runtime), new AdadaAResponse());
     }
+
+    public YxTestApiResponse yxTestApi() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.yxTestApiWithOptions(headers, runtime);
+    }
+
+    public YxTestApiResponse yxTestApiWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("YxTestApi", "2021-11-15_13-11-23-360", "HTTPS", "POST", "AK", "/caihe_cloud_product_1/1_0_0/yxTestApi", "json", req, runtime), new YxTestApiResponse());
+    }
 }
