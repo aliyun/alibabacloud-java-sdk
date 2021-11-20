@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperateRuleResult")
     public DeleteConfigRulesResponseBodyOperateRuleResult operateRuleResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteConfigRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteConfigRulesResponseBody self = new DeleteConfigRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteConfigRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteConfigRulesResponseBody setOperateRuleResult(DeleteConfigRulesResponseBodyOperateRuleResult operateRuleResult) {
@@ -31,19 +23,35 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
         return this.operateRuleResult;
     }
 
+    public DeleteConfigRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("Success")
         public Boolean success;
 
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
         public static DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList build(java.util.Map<String, ?> map) throws Exception {
             DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList self = new DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setErrorCode(String errorCode) {
@@ -60,14 +68,6 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
-        }
-
-        public DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
     }

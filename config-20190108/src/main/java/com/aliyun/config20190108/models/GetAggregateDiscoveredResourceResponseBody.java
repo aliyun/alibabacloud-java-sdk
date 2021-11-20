@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DiscoveredResourceDetail")
     public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail discoveredResourceDetail;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAggregateDiscoveredResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateDiscoveredResourceResponseBody self = new GetAggregateDiscoveredResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAggregateDiscoveredResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAggregateDiscoveredResourceResponseBody setDiscoveredResourceDetail(GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail discoveredResourceDetail) {
@@ -31,12 +23,20 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         return this.discoveredResourceDetail;
     }
 
+    public GetAggregateDiscoveredResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
 
         @NameInMap("Configuration")
         public String configuration;
@@ -47,17 +47,11 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("AccountId")
-        public Long accountId;
+        @NameInMap("ResourceDeleted")
+        public Integer resourceDeleted;
 
         @NameInMap("ResourceId")
         public String resourceId;
-
-        @NameInMap("ResourceDeleted")
-        public Integer resourceDeleted;
 
         @NameInMap("ResourceName")
         public String resourceName;
@@ -65,9 +59,23 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Tags")
+        public String tags;
+
         public static GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail self = new GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setAvailabilityZone(String availabilityZone) {
@@ -76,14 +84,6 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         }
         public String getAvailabilityZone() {
             return this.availabilityZone;
-        }
-
-        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
         public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setConfiguration(String configuration) {
@@ -110,20 +110,12 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             return this.resourceCreationTime;
         }
 
-        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setTags(String tags) {
-            this.tags = tags;
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceDeleted(Integer resourceDeleted) {
+            this.resourceDeleted = resourceDeleted;
             return this;
         }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
+        public Integer getResourceDeleted() {
+            return this.resourceDeleted;
         }
 
         public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceId(String resourceId) {
@@ -132,14 +124,6 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
-        }
-
-        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceDeleted(Integer resourceDeleted) {
-            this.resourceDeleted = resourceDeleted;
-            return this;
-        }
-        public Integer getResourceDeleted() {
-            return this.resourceDeleted;
         }
 
         public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceName(String resourceName) {
@@ -156,6 +140,22 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
     }

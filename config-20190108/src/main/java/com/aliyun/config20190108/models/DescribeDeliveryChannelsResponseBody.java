@@ -32,35 +32,32 @@ public class DescribeDeliveryChannelsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeliveryChannelsResponseBodyDeliveryChannels extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("DeliveryChannelName")
-        public String deliveryChannelName;
-
-        @NameInMap("DeliveryChannelId")
-        public String deliveryChannelId;
-
-        @NameInMap("DeliveryChannelType")
-        public String deliveryChannelType;
-
-        @NameInMap("DeliveryChannelAssumeRoleArn")
-        public String deliveryChannelAssumeRoleArn;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("DeliveryChannelCondition")
-        public String deliveryChannelCondition;
-
-        @NameInMap("DeliveryChannelTargetArn")
-        public String deliveryChannelTargetArn;
+        @NameInMap("ConfigurationItemChangeNotification")
+        public Boolean configurationItemChangeNotification;
 
         @NameInMap("ConfigurationSnapshot")
         public Boolean configurationSnapshot;
 
-        @NameInMap("ConfigurationItemChangeNotification")
-        public Boolean configurationItemChangeNotification;
+        @NameInMap("DeliveryChannelAssumeRoleArn")
+        public String deliveryChannelAssumeRoleArn;
+
+        @NameInMap("DeliveryChannelCondition")
+        public String deliveryChannelCondition;
+
+        @NameInMap("DeliveryChannelId")
+        public String deliveryChannelId;
+
+        @NameInMap("DeliveryChannelName")
+        public String deliveryChannelName;
+
+        @NameInMap("DeliveryChannelTargetArn")
+        public String deliveryChannelTargetArn;
+
+        @NameInMap("DeliveryChannelType")
+        public String deliveryChannelType;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NonCompliantNotification")
         public Boolean nonCompliantNotification;
@@ -68,73 +65,20 @@ public class DescribeDeliveryChannelsResponseBody extends TeaModel {
         @NameInMap("OversizedDataOSSTargetArn")
         public String oversizedDataOSSTargetArn;
 
+        @NameInMap("Status")
+        public Integer status;
+
         public static DescribeDeliveryChannelsResponseBodyDeliveryChannels build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeliveryChannelsResponseBodyDeliveryChannels self = new DescribeDeliveryChannelsResponseBodyDeliveryChannels();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setStatus(Integer status) {
-            this.status = status;
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setConfigurationItemChangeNotification(Boolean configurationItemChangeNotification) {
+            this.configurationItemChangeNotification = configurationItemChangeNotification;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelName(String deliveryChannelName) {
-            this.deliveryChannelName = deliveryChannelName;
-            return this;
-        }
-        public String getDeliveryChannelName() {
-            return this.deliveryChannelName;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelId(String deliveryChannelId) {
-            this.deliveryChannelId = deliveryChannelId;
-            return this;
-        }
-        public String getDeliveryChannelId() {
-            return this.deliveryChannelId;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelType(String deliveryChannelType) {
-            this.deliveryChannelType = deliveryChannelType;
-            return this;
-        }
-        public String getDeliveryChannelType() {
-            return this.deliveryChannelType;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelAssumeRoleArn(String deliveryChannelAssumeRoleArn) {
-            this.deliveryChannelAssumeRoleArn = deliveryChannelAssumeRoleArn;
-            return this;
-        }
-        public String getDeliveryChannelAssumeRoleArn() {
-            return this.deliveryChannelAssumeRoleArn;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelCondition(String deliveryChannelCondition) {
-            this.deliveryChannelCondition = deliveryChannelCondition;
-            return this;
-        }
-        public String getDeliveryChannelCondition() {
-            return this.deliveryChannelCondition;
-        }
-
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelTargetArn(String deliveryChannelTargetArn) {
-            this.deliveryChannelTargetArn = deliveryChannelTargetArn;
-            return this;
-        }
-        public String getDeliveryChannelTargetArn() {
-            return this.deliveryChannelTargetArn;
+        public Boolean getConfigurationItemChangeNotification() {
+            return this.configurationItemChangeNotification;
         }
 
         public DescribeDeliveryChannelsResponseBodyDeliveryChannels setConfigurationSnapshot(Boolean configurationSnapshot) {
@@ -145,12 +89,60 @@ public class DescribeDeliveryChannelsResponseBody extends TeaModel {
             return this.configurationSnapshot;
         }
 
-        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setConfigurationItemChangeNotification(Boolean configurationItemChangeNotification) {
-            this.configurationItemChangeNotification = configurationItemChangeNotification;
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelAssumeRoleArn(String deliveryChannelAssumeRoleArn) {
+            this.deliveryChannelAssumeRoleArn = deliveryChannelAssumeRoleArn;
             return this;
         }
-        public Boolean getConfigurationItemChangeNotification() {
-            return this.configurationItemChangeNotification;
+        public String getDeliveryChannelAssumeRoleArn() {
+            return this.deliveryChannelAssumeRoleArn;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelCondition(String deliveryChannelCondition) {
+            this.deliveryChannelCondition = deliveryChannelCondition;
+            return this;
+        }
+        public String getDeliveryChannelCondition() {
+            return this.deliveryChannelCondition;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelId(String deliveryChannelId) {
+            this.deliveryChannelId = deliveryChannelId;
+            return this;
+        }
+        public String getDeliveryChannelId() {
+            return this.deliveryChannelId;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelName(String deliveryChannelName) {
+            this.deliveryChannelName = deliveryChannelName;
+            return this;
+        }
+        public String getDeliveryChannelName() {
+            return this.deliveryChannelName;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelTargetArn(String deliveryChannelTargetArn) {
+            this.deliveryChannelTargetArn = deliveryChannelTargetArn;
+            return this;
+        }
+        public String getDeliveryChannelTargetArn() {
+            return this.deliveryChannelTargetArn;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDeliveryChannelType(String deliveryChannelType) {
+            this.deliveryChannelType = deliveryChannelType;
+            return this;
+        }
+        public String getDeliveryChannelType() {
+            return this.deliveryChannelType;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDeliveryChannelsResponseBodyDeliveryChannels setNonCompliantNotification(Boolean nonCompliantNotification) {
@@ -167,6 +159,14 @@ public class DescribeDeliveryChannelsResponseBody extends TeaModel {
         }
         public String getOversizedDataOSSTargetArn() {
             return this.oversizedDataOSSTargetArn;
+        }
+
+        public DescribeDeliveryChannelsResponseBodyDeliveryChannels setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

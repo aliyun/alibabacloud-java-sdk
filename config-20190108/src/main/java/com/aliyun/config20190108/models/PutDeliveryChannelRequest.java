@@ -7,23 +7,23 @@ public class PutDeliveryChannelRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeliveryChannelAssumeRoleArn")
+    public String deliveryChannelAssumeRoleArn;
+
+    @NameInMap("DeliveryChannelCondition")
+    public String deliveryChannelCondition;
+
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;
 
     @NameInMap("DeliveryChannelName")
     public String deliveryChannelName;
 
-    @NameInMap("DeliveryChannelType")
-    public String deliveryChannelType;
-
     @NameInMap("DeliveryChannelTargetArn")
     public String deliveryChannelTargetArn;
 
-    @NameInMap("DeliveryChannelAssumeRoleArn")
-    public String deliveryChannelAssumeRoleArn;
-
-    @NameInMap("DeliveryChannelCondition")
-    public String deliveryChannelCondition;
+    @NameInMap("DeliveryChannelType")
+    public String deliveryChannelType;
 
     @NameInMap("Description")
     public String description;
@@ -44,6 +44,22 @@ public class PutDeliveryChannelRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public PutDeliveryChannelRequest setDeliveryChannelAssumeRoleArn(String deliveryChannelAssumeRoleArn) {
+        this.deliveryChannelAssumeRoleArn = deliveryChannelAssumeRoleArn;
+        return this;
+    }
+    public String getDeliveryChannelAssumeRoleArn() {
+        return this.deliveryChannelAssumeRoleArn;
+    }
+
+    public PutDeliveryChannelRequest setDeliveryChannelCondition(String deliveryChannelCondition) {
+        this.deliveryChannelCondition = deliveryChannelCondition;
+        return this;
+    }
+    public String getDeliveryChannelCondition() {
+        return this.deliveryChannelCondition;
+    }
+
     public PutDeliveryChannelRequest setDeliveryChannelId(String deliveryChannelId) {
         this.deliveryChannelId = deliveryChannelId;
         return this;
@@ -60,14 +76,6 @@ public class PutDeliveryChannelRequest extends TeaModel {
         return this.deliveryChannelName;
     }
 
-    public PutDeliveryChannelRequest setDeliveryChannelType(String deliveryChannelType) {
-        this.deliveryChannelType = deliveryChannelType;
-        return this;
-    }
-    public String getDeliveryChannelType() {
-        return this.deliveryChannelType;
-    }
-
     public PutDeliveryChannelRequest setDeliveryChannelTargetArn(String deliveryChannelTargetArn) {
         this.deliveryChannelTargetArn = deliveryChannelTargetArn;
         return this;
@@ -76,20 +84,12 @@ public class PutDeliveryChannelRequest extends TeaModel {
         return this.deliveryChannelTargetArn;
     }
 
-    public PutDeliveryChannelRequest setDeliveryChannelAssumeRoleArn(String deliveryChannelAssumeRoleArn) {
-        this.deliveryChannelAssumeRoleArn = deliveryChannelAssumeRoleArn;
+    public PutDeliveryChannelRequest setDeliveryChannelType(String deliveryChannelType) {
+        this.deliveryChannelType = deliveryChannelType;
         return this;
     }
-    public String getDeliveryChannelAssumeRoleArn() {
-        return this.deliveryChannelAssumeRoleArn;
-    }
-
-    public PutDeliveryChannelRequest setDeliveryChannelCondition(String deliveryChannelCondition) {
-        this.deliveryChannelCondition = deliveryChannelCondition;
-        return this;
-    }
-    public String getDeliveryChannelCondition() {
-        return this.deliveryChannelCondition;
+    public String getDeliveryChannelType() {
+        return this.deliveryChannelType;
     }
 
     public PutDeliveryChannelRequest setDescription(String description) {

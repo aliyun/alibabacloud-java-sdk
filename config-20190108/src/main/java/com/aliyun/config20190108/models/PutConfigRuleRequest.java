@@ -4,6 +4,9 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutConfigRuleRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
@@ -16,17 +19,14 @@ public class PutConfigRuleRequest extends TeaModel {
     @NameInMap("InputParameters")
     public String inputParameters;
 
-    @NameInMap("SourceOwner")
-    public String sourceOwner;
+    @NameInMap("MemberId")
+    public Long memberId;
 
-    @NameInMap("SourceIdentifier")
-    public String sourceIdentifier;
+    @NameInMap("MultiAccount")
+    public Boolean multiAccount;
 
-    @NameInMap("SourceDetailMessageType")
-    public String sourceDetailMessageType;
-
-    @NameInMap("SourceMaximumExecutionFrequency")
-    public String sourceMaximumExecutionFrequency;
+    @NameInMap("RiskLevel")
+    public Integer riskLevel;
 
     @NameInMap("ScopeComplianceResourceId")
     public String scopeComplianceResourceId;
@@ -34,21 +34,29 @@ public class PutConfigRuleRequest extends TeaModel {
     @NameInMap("ScopeComplianceResourceTypes")
     public String scopeComplianceResourceTypes;
 
-    @NameInMap("RiskLevel")
-    public Integer riskLevel;
+    @NameInMap("SourceDetailMessageType")
+    public String sourceDetailMessageType;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("SourceIdentifier")
+    public String sourceIdentifier;
 
-    @NameInMap("MultiAccount")
-    public Boolean multiAccount;
+    @NameInMap("SourceMaximumExecutionFrequency")
+    public String sourceMaximumExecutionFrequency;
 
-    @NameInMap("MemberId")
-    public Long memberId;
+    @NameInMap("SourceOwner")
+    public String sourceOwner;
 
     public static PutConfigRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutConfigRuleRequest self = new PutConfigRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutConfigRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public PutConfigRuleRequest setConfigRuleId(String configRuleId) {
@@ -83,36 +91,28 @@ public class PutConfigRuleRequest extends TeaModel {
         return this.inputParameters;
     }
 
-    public PutConfigRuleRequest setSourceOwner(String sourceOwner) {
-        this.sourceOwner = sourceOwner;
+    public PutConfigRuleRequest setMemberId(Long memberId) {
+        this.memberId = memberId;
         return this;
     }
-    public String getSourceOwner() {
-        return this.sourceOwner;
+    public Long getMemberId() {
+        return this.memberId;
     }
 
-    public PutConfigRuleRequest setSourceIdentifier(String sourceIdentifier) {
-        this.sourceIdentifier = sourceIdentifier;
+    public PutConfigRuleRequest setMultiAccount(Boolean multiAccount) {
+        this.multiAccount = multiAccount;
         return this;
     }
-    public String getSourceIdentifier() {
-        return this.sourceIdentifier;
+    public Boolean getMultiAccount() {
+        return this.multiAccount;
     }
 
-    public PutConfigRuleRequest setSourceDetailMessageType(String sourceDetailMessageType) {
-        this.sourceDetailMessageType = sourceDetailMessageType;
+    public PutConfigRuleRequest setRiskLevel(Integer riskLevel) {
+        this.riskLevel = riskLevel;
         return this;
     }
-    public String getSourceDetailMessageType() {
-        return this.sourceDetailMessageType;
-    }
-
-    public PutConfigRuleRequest setSourceMaximumExecutionFrequency(String sourceMaximumExecutionFrequency) {
-        this.sourceMaximumExecutionFrequency = sourceMaximumExecutionFrequency;
-        return this;
-    }
-    public String getSourceMaximumExecutionFrequency() {
-        return this.sourceMaximumExecutionFrequency;
+    public Integer getRiskLevel() {
+        return this.riskLevel;
     }
 
     public PutConfigRuleRequest setScopeComplianceResourceId(String scopeComplianceResourceId) {
@@ -131,36 +131,36 @@ public class PutConfigRuleRequest extends TeaModel {
         return this.scopeComplianceResourceTypes;
     }
 
-    public PutConfigRuleRequest setRiskLevel(Integer riskLevel) {
-        this.riskLevel = riskLevel;
+    public PutConfigRuleRequest setSourceDetailMessageType(String sourceDetailMessageType) {
+        this.sourceDetailMessageType = sourceDetailMessageType;
         return this;
     }
-    public Integer getRiskLevel() {
-        return this.riskLevel;
+    public String getSourceDetailMessageType() {
+        return this.sourceDetailMessageType;
     }
 
-    public PutConfigRuleRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public PutConfigRuleRequest setSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSourceIdentifier() {
+        return this.sourceIdentifier;
     }
 
-    public PutConfigRuleRequest setMultiAccount(Boolean multiAccount) {
-        this.multiAccount = multiAccount;
+    public PutConfigRuleRequest setSourceMaximumExecutionFrequency(String sourceMaximumExecutionFrequency) {
+        this.sourceMaximumExecutionFrequency = sourceMaximumExecutionFrequency;
         return this;
     }
-    public Boolean getMultiAccount() {
-        return this.multiAccount;
+    public String getSourceMaximumExecutionFrequency() {
+        return this.sourceMaximumExecutionFrequency;
     }
 
-    public PutConfigRuleRequest setMemberId(Long memberId) {
-        this.memberId = memberId;
+    public PutConfigRuleRequest setSourceOwner(String sourceOwner) {
+        this.sourceOwner = sourceOwner;
         return this;
     }
-    public Long getMemberId() {
-        return this.memberId;
+    public String getSourceOwner() {
+        return this.sourceOwner;
     }
 
 }

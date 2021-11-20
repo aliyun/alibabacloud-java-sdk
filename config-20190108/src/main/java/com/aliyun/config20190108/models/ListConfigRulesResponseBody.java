@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigRules")
     public ListConfigRulesResponseBodyConfigRules configRules;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListConfigRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConfigRulesResponseBody self = new ListConfigRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListConfigRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListConfigRulesResponseBody setConfigRules(ListConfigRulesResponseBodyConfigRules configRules) {
@@ -29,6 +21,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
     public ListConfigRulesResponseBodyConfigRules getConfigRules() {
         return this.configRules;
+    }
+
+    public ListConfigRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
@@ -92,72 +92,48 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
-        @NameInMap("CompliancePackId")
-        public String compliancePackId;
-
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
-
-        @NameInMap("SourceOwner")
-        public String sourceOwner;
-
         @NameInMap("AccountId")
         public Long accountId;
-
-        @NameInMap("ConfigRuleState")
-        public String configRuleState;
-
-        @NameInMap("Compliance")
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
-
-        @NameInMap("SourceIdentifier")
-        public String sourceIdentifier;
-
-        @NameInMap("ConfigRuleArn")
-        public String configRuleArn;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreateBy")
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
 
         @NameInMap("AutomationType")
         public String automationType;
 
-        @NameInMap("ConfigRuleName")
-        public String configRuleName;
+        @NameInMap("Compliance")
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
+
+        @NameInMap("CompliancePackId")
+        public String compliancePackId;
+
+        @NameInMap("ConfigRuleArn")
+        public String configRuleArn;
 
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        @NameInMap("ConfigRuleName")
+        public String configRuleName;
+
+        @NameInMap("ConfigRuleState")
+        public String configRuleState;
+
+        @NameInMap("CreateBy")
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
+        @NameInMap("SourceIdentifier")
+        public String sourceIdentifier;
+
+        @NameInMap("SourceOwner")
+        public String sourceOwner;
+
         public static ListConfigRulesResponseBodyConfigRulesConfigRuleList build(java.util.Map<String, ?> map) throws Exception {
             ListConfigRulesResponseBodyConfigRulesConfigRuleList self = new ListConfigRulesResponseBodyConfigRulesConfigRuleList();
             return TeaModel.build(map, self);
-        }
-
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setCompliancePackId(String compliancePackId) {
-            this.compliancePackId = compliancePackId;
-            return this;
-        }
-        public String getCompliancePackId() {
-            return this.compliancePackId;
-        }
-
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
-            return this;
-        }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
-        }
-
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setSourceOwner(String sourceOwner) {
-            this.sourceOwner = sourceOwner;
-            return this;
-        }
-        public String getSourceOwner() {
-            return this.sourceOwner;
         }
 
         public ListConfigRulesResponseBodyConfigRulesConfigRuleList setAccountId(Long accountId) {
@@ -168,12 +144,12 @@ public class ListConfigRulesResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleState(String configRuleState) {
-            this.configRuleState = configRuleState;
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setAutomationType(String automationType) {
+            this.automationType = automationType;
             return this;
         }
-        public String getConfigRuleState() {
-            return this.configRuleState;
+        public String getAutomationType() {
+            return this.automationType;
         }
 
         public ListConfigRulesResponseBodyConfigRulesConfigRuleList setCompliance(ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance) {
@@ -184,12 +160,12 @@ public class ListConfigRulesResponseBody extends TeaModel {
             return this.compliance;
         }
 
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setSourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = sourceIdentifier;
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setCompliancePackId(String compliancePackId) {
+            this.compliancePackId = compliancePackId;
             return this;
         }
-        public String getSourceIdentifier() {
-            return this.sourceIdentifier;
+        public String getCompliancePackId() {
+            return this.compliancePackId;
         }
 
         public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleArn(String configRuleArn) {
@@ -200,28 +176,12 @@ public class ListConfigRulesResponseBody extends TeaModel {
             return this.configRuleArn;
         }
 
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setDescription(String description) {
-            this.description = description;
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setCreateBy(ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy) {
-            this.createBy = createBy;
-            return this;
-        }
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy getCreateBy() {
-            return this.createBy;
-        }
-
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setAutomationType(String automationType) {
-            this.automationType = automationType;
-            return this;
-        }
-        public String getAutomationType() {
-            return this.automationType;
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleName(String configRuleName) {
@@ -232,12 +192,52 @@ public class ListConfigRulesResponseBody extends TeaModel {
             return this.configRuleName;
         }
 
-        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleState(String configRuleState) {
+            this.configRuleState = configRuleState;
             return this;
         }
-        public String getConfigRuleId() {
-            return this.configRuleId;
+        public String getConfigRuleState() {
+            return this.configRuleState;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setCreateBy(ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy) {
+            this.createBy = createBy;
+            return this;
+        }
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy getCreateBy() {
+            return this.createBy;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setSourceIdentifier(String sourceIdentifier) {
+            this.sourceIdentifier = sourceIdentifier;
+            return this;
+        }
+        public String getSourceIdentifier() {
+            return this.sourceIdentifier;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setSourceOwner(String sourceOwner) {
+            this.sourceOwner = sourceOwner;
+            return this;
+        }
+        public String getSourceOwner() {
+            return this.sourceOwner;
         }
 
     }

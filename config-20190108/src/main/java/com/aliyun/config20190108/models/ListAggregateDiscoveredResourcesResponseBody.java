@@ -32,8 +32,8 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("Region")
         public String region;
@@ -41,11 +41,8 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("AccountId")
-        public Long accountId;
+        @NameInMap("ResourceDeleted")
+        public Integer resourceDeleted;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -53,26 +50,29 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceName")
         public String resourceName;
 
-        @NameInMap("ResourceDeleted")
-        public Integer resourceDeleted;
+        @NameInMap("ResourceOwnerId")
+        public Long resourceOwnerId;
 
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
-        @NameInMap("ResourceOwnerId")
-        public Long resourceOwnerId;
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Tags")
+        public String tags;
 
         public static ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList self = new ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList();
             return TeaModel.build(map, self);
         }
 
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setAccountId(Long accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setRegion(String region) {
@@ -91,20 +91,12 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             return this.resourceCreationTime;
         }
 
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setTags(String tags) {
-            this.tags = tags;
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceDeleted(Integer resourceDeleted) {
+            this.resourceDeleted = resourceDeleted;
             return this;
         }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
+        public Integer getResourceDeleted() {
+            return this.resourceDeleted;
         }
 
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceId(String resourceId) {
@@ -123,12 +115,12 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             return this.resourceName;
         }
 
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceDeleted(Integer resourceDeleted) {
-            this.resourceDeleted = resourceDeleted;
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceOwnerId(Long resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
-        public Integer getResourceDeleted() {
-            return this.resourceDeleted;
+        public Long getResourceOwnerId() {
+            return this.resourceOwnerId;
         }
 
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceStatus(String resourceStatus) {
@@ -139,12 +131,20 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             return this.resourceStatus;
         }
 
-        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceOwnerId(Long resourceOwnerId) {
-            this.resourceOwnerId = resourceOwnerId;
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
-        public Long getResourceOwnerId() {
-            return this.resourceOwnerId;
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
     }
