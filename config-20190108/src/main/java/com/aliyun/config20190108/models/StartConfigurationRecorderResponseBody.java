@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class StartConfigurationRecorderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigurationRecorder")
     public StartConfigurationRecorderResponseBodyConfigurationRecorder configurationRecorder;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartConfigurationRecorderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartConfigurationRecorderResponseBody self = new StartConfigurationRecorderResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartConfigurationRecorderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StartConfigurationRecorderResponseBody setConfigurationRecorder(StartConfigurationRecorderResponseBodyConfigurationRecorder configurationRecorder) {
@@ -31,18 +23,26 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
         return this.configurationRecorder;
     }
 
+    public StartConfigurationRecorderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class StartConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
-        @NameInMap("OrganizationEnableStatus")
-        public String organizationEnableStatus;
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;
 
+        @NameInMap("OrganizationEnableStatus")
+        public String organizationEnableStatus;
+
         @NameInMap("OrganizationMasterId")
         public Long organizationMasterId;
-
-        @NameInMap("AccountId")
-        public Long accountId;
 
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
@@ -52,12 +52,12 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public StartConfigurationRecorderResponseBodyConfigurationRecorder setOrganizationEnableStatus(String organizationEnableStatus) {
-            this.organizationEnableStatus = organizationEnableStatus;
+        public StartConfigurationRecorderResponseBodyConfigurationRecorder setAccountId(Long accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getOrganizationEnableStatus() {
-            return this.organizationEnableStatus;
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public StartConfigurationRecorderResponseBodyConfigurationRecorder setConfigurationRecorderStatus(String configurationRecorderStatus) {
@@ -68,20 +68,20 @@ public class StartConfigurationRecorderResponseBody extends TeaModel {
             return this.configurationRecorderStatus;
         }
 
+        public StartConfigurationRecorderResponseBodyConfigurationRecorder setOrganizationEnableStatus(String organizationEnableStatus) {
+            this.organizationEnableStatus = organizationEnableStatus;
+            return this;
+        }
+        public String getOrganizationEnableStatus() {
+            return this.organizationEnableStatus;
+        }
+
         public StartConfigurationRecorderResponseBodyConfigurationRecorder setOrganizationMasterId(Long organizationMasterId) {
             this.organizationMasterId = organizationMasterId;
             return this;
         }
         public Long getOrganizationMasterId() {
             return this.organizationMasterId;
-        }
-
-        public StartConfigurationRecorderResponseBodyConfigurationRecorder setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
         }
 
         public StartConfigurationRecorderResponseBodyConfigurationRecorder setResourceTypes(java.util.List<String> resourceTypes) {

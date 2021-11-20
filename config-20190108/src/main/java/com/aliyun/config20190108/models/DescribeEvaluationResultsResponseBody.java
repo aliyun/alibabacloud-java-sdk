@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeEvaluationResultsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EvaluationResults")
     public DescribeEvaluationResultsResponseBodyEvaluationResults evaluationResults;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeEvaluationResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEvaluationResultsResponseBody self = new DescribeEvaluationResultsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEvaluationResultsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEvaluationResultsResponseBody setEvaluationResults(DescribeEvaluationResultsResponseBodyEvaluationResults evaluationResults) {
@@ -31,27 +23,35 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
         return this.evaluationResults;
     }
 
+    public DescribeEvaluationResultsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier extends TeaModel {
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
-        @NameInMap("ResourceType")
-        public String resourceType;
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
 
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ResourceId")
         public String resourceId;
-
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
 
         @NameInMap("ResourceName")
         public String resourceName;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         public static DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier build(java.util.Map<String, ?> map) throws Exception {
             DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier self = new DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier();
@@ -66,12 +66,12 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.configRuleArn;
         }
 
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setConfigRuleName(String configRuleName) {
@@ -82,20 +82,20 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.configRuleName;
         }
 
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
         public String getResourceId() {
             return this.resourceId;
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceName(String resourceName) {
@@ -106,34 +106,26 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.resourceName;
         }
 
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getResourceType() {
+            return this.resourceType;
         }
 
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier extends TeaModel {
-        @NameInMap("OrderingTimestamp")
-        public Long orderingTimestamp;
-
         @NameInMap("EvaluationResultQualifier")
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier;
+
+        @NameInMap("OrderingTimestamp")
+        public Long orderingTimestamp;
 
         public static DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier build(java.util.Map<String, ?> map) throws Exception {
             DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier self = new DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier setOrderingTimestamp(Long orderingTimestamp) {
-            this.orderingTimestamp = orderingTimestamp;
-            return this;
-        }
-        public Long getOrderingTimestamp() {
-            return this.orderingTimestamp;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier setEvaluationResultQualifier(DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier) {
@@ -144,60 +136,44 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.evaluationResultQualifier;
         }
 
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier setOrderingTimestamp(Long orderingTimestamp) {
+            this.orderingTimestamp = orderingTimestamp;
+            return this;
+        }
+        public Long getOrderingTimestamp() {
+            return this.orderingTimestamp;
+        }
+
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
+        @NameInMap("Annotation")
+        public String annotation;
 
         @NameInMap("ComplianceType")
         public String complianceType;
 
-        @NameInMap("ResultRecordedTimestamp")
-        public Long resultRecordedTimestamp;
-
-        @NameInMap("Annotation")
-        public String annotation;
-
         @NameInMap("ConfigRuleInvokedTimestamp")
         public Long configRuleInvokedTimestamp;
-
-        @NameInMap("InvokingEventMessageType")
-        public String invokingEventMessageType;
 
         @NameInMap("EvaluationResultIdentifier")
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
 
+        @NameInMap("InvokingEventMessageType")
+        public String invokingEventMessageType;
+
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
+
+        @NameInMap("ResultRecordedTimestamp")
+        public Long resultRecordedTimestamp;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
 
         public static DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList build(java.util.Map<String, ?> map) throws Exception {
             DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList self = new DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
-            return this;
-        }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setComplianceType(String complianceType) {
-            this.complianceType = complianceType;
-            return this;
-        }
-        public String getComplianceType() {
-            return this.complianceType;
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setResultRecordedTimestamp(Long resultRecordedTimestamp) {
-            this.resultRecordedTimestamp = resultRecordedTimestamp;
-            return this;
-        }
-        public Long getResultRecordedTimestamp() {
-            return this.resultRecordedTimestamp;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setAnnotation(String annotation) {
@@ -208,20 +184,20 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.annotation;
         }
 
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setConfigRuleInvokedTimestamp(Long configRuleInvokedTimestamp) {
             this.configRuleInvokedTimestamp = configRuleInvokedTimestamp;
             return this;
         }
         public Long getConfigRuleInvokedTimestamp() {
             return this.configRuleInvokedTimestamp;
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setInvokingEventMessageType(String invokingEventMessageType) {
-            this.invokingEventMessageType = invokingEventMessageType;
-            return this;
-        }
-        public String getInvokingEventMessageType() {
-            return this.invokingEventMessageType;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationResultIdentifier(DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier) {
@@ -232,12 +208,36 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.evaluationResultIdentifier;
         }
 
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setInvokingEventMessageType(String invokingEventMessageType) {
+            this.invokingEventMessageType = invokingEventMessageType;
+            return this;
+        }
+        public String getInvokingEventMessageType() {
+            return this.invokingEventMessageType;
+        }
+
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRemediationEnabled(Boolean remediationEnabled) {
             this.remediationEnabled = remediationEnabled;
             return this;
         }
         public Boolean getRemediationEnabled() {
             return this.remediationEnabled;
+        }
+
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setResultRecordedTimestamp(Long resultRecordedTimestamp) {
+            this.resultRecordedTimestamp = resultRecordedTimestamp;
+            return this;
+        }
+        public Long getResultRecordedTimestamp() {
+            return this.resultRecordedTimestamp;
+        }
+
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

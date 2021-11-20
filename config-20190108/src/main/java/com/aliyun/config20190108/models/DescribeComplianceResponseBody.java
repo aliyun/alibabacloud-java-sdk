@@ -62,23 +62,15 @@ public class DescribeComplianceResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceResponseBodyComplianceResult extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Compliances")
         public java.util.List<DescribeComplianceResponseBodyComplianceResultCompliances> compliances;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static DescribeComplianceResponseBodyComplianceResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeComplianceResponseBodyComplianceResult self = new DescribeComplianceResponseBodyComplianceResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeComplianceResponseBodyComplianceResult setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public DescribeComplianceResponseBodyComplianceResult setCompliances(java.util.List<DescribeComplianceResponseBodyComplianceResultCompliances> compliances) {
@@ -87,6 +79,14 @@ public class DescribeComplianceResponseBody extends TeaModel {
         }
         public java.util.List<DescribeComplianceResponseBodyComplianceResultCompliances> getCompliances() {
             return this.compliances;
+        }
+
+        public DescribeComplianceResponseBodyComplianceResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

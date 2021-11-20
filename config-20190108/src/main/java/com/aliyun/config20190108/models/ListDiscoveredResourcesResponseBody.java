@@ -32,8 +32,8 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("Region")
         public String region;
@@ -41,11 +41,8 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("AccountId")
-        public Long accountId;
+        @NameInMap("ResourceDeleted")
+        public Integer resourceDeleted;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -53,23 +50,26 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("ResourceName")
         public String resourceName;
 
-        @NameInMap("ResourceDeleted")
-        public Integer resourceDeleted;
-
         @NameInMap("ResourceStatus")
         public String resourceStatus;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Tags")
+        public String tags;
 
         public static ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList build(java.util.Map<String, ?> map) throws Exception {
             ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList self = new ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList();
             return TeaModel.build(map, self);
         }
 
-        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setAccountId(Long accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setRegion(String region) {
@@ -88,20 +88,12 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             return this.resourceCreationTime;
         }
 
-        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setTags(String tags) {
-            this.tags = tags;
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceDeleted(Integer resourceDeleted) {
+            this.resourceDeleted = resourceDeleted;
             return this;
         }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
+        public Integer getResourceDeleted() {
+            return this.resourceDeleted;
         }
 
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceId(String resourceId) {
@@ -120,20 +112,28 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             return this.resourceName;
         }
 
-        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceDeleted(Integer resourceDeleted) {
-            this.resourceDeleted = resourceDeleted;
-            return this;
-        }
-        public Integer getResourceDeleted() {
-            return this.resourceDeleted;
-        }
-
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceStatus(String resourceStatus) {
             this.resourceStatus = resourceStatus;
             return this;
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
     }

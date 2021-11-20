@@ -32,26 +32,11 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList extends TeaModel {
-        @NameInMap("Tags")
-        public String tags;
-
         @NameInMap("AccountId")
         public Long accountId;
 
-        @NameInMap("ResourceEventType")
-        public String resourceEventType;
-
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("ResourceCreateTime")
-        public String resourceCreateTime;
-
-        @NameInMap("Region")
-        public String region;
 
         @NameInMap("CaptureTime")
         public String captureTime;
@@ -59,23 +44,30 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceCreateTime")
+        public String resourceCreateTime;
+
+        @NameInMap("ResourceEventType")
+        public String resourceEventType;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
         @NameInMap("ResourceName")
         public String resourceName;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Tags")
+        public String tags;
+
         public static GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList build(java.util.Map<String, ?> map) throws Exception {
             GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList self = new GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setAccountId(Long accountId) {
@@ -86,44 +78,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceEventType(String resourceEventType) {
-            this.resourceEventType = resourceEventType;
-            return this;
-        }
-        public String getResourceEventType() {
-            return this.resourceEventType;
-        }
-
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setAvailabilityZone(String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
         public String getAvailabilityZone() {
             return this.availabilityZone;
-        }
-
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceCreateTime(String resourceCreateTime) {
-            this.resourceCreateTime = resourceCreateTime;
-            return this;
-        }
-        public String getResourceCreateTime() {
-            return this.resourceCreateTime;
-        }
-
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setCaptureTime(String captureTime) {
@@ -142,6 +102,30 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return this.configurationDiff;
         }
 
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceCreateTime(String resourceCreateTime) {
+            this.resourceCreateTime = resourceCreateTime;
+            return this;
+        }
+        public String getResourceCreateTime() {
+            return this.resourceCreateTime;
+        }
+
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceEventType(String resourceEventType) {
+            this.resourceEventType = resourceEventType;
+            return this;
+        }
+        public String getResourceEventType() {
+            return this.resourceEventType;
+        }
+
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -158,17 +142,33 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return this.resourceName;
         }
 
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline extends TeaModel {
-        @NameInMap("NextToken")
-        public String nextToken;
+        @NameInMap("ConfigurationList")
+        public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
 
         @NameInMap("Limit")
         public Integer limit;
 
-        @NameInMap("ConfigurationList")
-        public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
+        @NameInMap("NextToken")
+        public String nextToken;
 
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -178,12 +178,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setNextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setConfigurationList(java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList) {
+            this.configurationList = configurationList;
             return this;
         }
-        public String getNextToken() {
-            return this.nextToken;
+        public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> getConfigurationList() {
+            return this.configurationList;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setLimit(Integer limit) {
@@ -194,12 +194,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return this.limit;
         }
 
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setConfigurationList(java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList) {
-            this.configurationList = configurationList;
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> getConfigurationList() {
-            return this.configurationList;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setTotalCount(Long totalCount) {
