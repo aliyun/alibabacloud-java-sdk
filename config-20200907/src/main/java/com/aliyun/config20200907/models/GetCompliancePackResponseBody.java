@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetCompliancePackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CompliancePack")
     public GetCompliancePackResponseBodyCompliancePack compliancePack;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetCompliancePackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCompliancePackResponseBody self = new GetCompliancePackResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCompliancePackResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetCompliancePackResponseBody setCompliancePack(GetCompliancePackResponseBodyCompliancePack compliancePack) {
@@ -31,27 +23,27 @@ public class GetCompliancePackResponseBody extends TeaModel {
         return this.compliancePack;
     }
 
-    public static class GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters extends TeaModel {
-        @NameInMap("Required")
-        public Boolean required;
+    public GetCompliancePackResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters extends TeaModel {
         @NameInMap("ParameterName")
         public String parameterName;
 
         @NameInMap("ParameterValue")
         public String parameterValue;
 
+        @NameInMap("Required")
+        public Boolean required;
+
         public static GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters build(java.util.Map<String, ?> map) throws Exception {
             GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters self = new GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters();
             return TeaModel.build(map, self);
-        }
-
-        public GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
         }
 
         public GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters setParameterName(String parameterName) {
@@ -70,23 +62,31 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.parameterValue;
         }
 
+        public GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
-        @NameInMap("ManagedRuleIdentifier")
-        public String managedRuleIdentifier;
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
 
         @NameInMap("ConfigRuleName")
         public String configRuleName;
-
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
 
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ManagedRuleIdentifier")
+        public String managedRuleIdentifier;
 
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -96,12 +96,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetCompliancePackResponseBodyCompliancePackConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
-            this.managedRuleIdentifier = managedRuleIdentifier;
+        public GetCompliancePackResponseBodyCompliancePackConfigRules setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
             return this;
         }
-        public String getManagedRuleIdentifier() {
-            return this.managedRuleIdentifier;
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public GetCompliancePackResponseBodyCompliancePackConfigRules setConfigRuleName(String configRuleName) {
@@ -110,14 +110,6 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
         public String getConfigRuleName() {
             return this.configRuleName;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePackConfigRules setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
         public GetCompliancePackResponseBodyCompliancePackConfigRules setConfigRuleParameters(java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters) {
@@ -136,6 +128,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetCompliancePackResponseBodyCompliancePackConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
+            this.managedRuleIdentifier = managedRuleIdentifier;
+            return this;
+        }
+        public String getManagedRuleIdentifier() {
+            return this.managedRuleIdentifier;
+        }
+
         public GetCompliancePackResponseBodyCompliancePackConfigRules setRiskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -147,84 +147,36 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePack extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ConfigRules")
-        public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules;
-
         @NameInMap("CompliancePackName")
         public String compliancePackName;
-
-        @NameInMap("AccountId")
-        public Long accountId;
 
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
 
+        @NameInMap("ConfigRules")
+        public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules;
+
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetCompliancePackResponseBodyCompliancePack build(java.util.Map<String, ?> map) throws Exception {
             GetCompliancePackResponseBodyCompliancePack self = new GetCompliancePackResponseBodyCompliancePack();
             return TeaModel.build(map, self);
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setCompliancePackId(String compliancePackId) {
-            this.compliancePackId = compliancePackId;
-            return this;
-        }
-        public String getCompliancePackId() {
-            return this.compliancePackId;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
-            return this;
-        }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setConfigRules(java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules) {
-            this.configRules = configRules;
-            return this;
-        }
-        public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> getConfigRules() {
-            return this.configRules;
-        }
-
-        public GetCompliancePackResponseBodyCompliancePack setCompliancePackName(String compliancePackName) {
-            this.compliancePackName = compliancePackName;
-            return this;
-        }
-        public String getCompliancePackName() {
-            return this.compliancePackName;
         }
 
         public GetCompliancePackResponseBodyCompliancePack setAccountId(Long accountId) {
@@ -235,6 +187,22 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetCompliancePackResponseBodyCompliancePack setCompliancePackId(String compliancePackId) {
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+        public String getCompliancePackId() {
+            return this.compliancePackId;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setCompliancePackName(String compliancePackName) {
+            this.compliancePackName = compliancePackName;
+            return this;
+        }
+        public String getCompliancePackName() {
+            return this.compliancePackName;
+        }
+
         public GetCompliancePackResponseBodyCompliancePack setCompliancePackTemplateId(String compliancePackTemplateId) {
             this.compliancePackTemplateId = compliancePackTemplateId;
             return this;
@@ -243,12 +211,44 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.compliancePackTemplateId;
         }
 
+        public GetCompliancePackResponseBodyCompliancePack setConfigRules(java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules) {
+            this.configRules = configRules;
+            return this;
+        }
+        public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> getConfigRules() {
+            return this.configRules;
+        }
+
         public GetCompliancePackResponseBodyCompliancePack setCreateTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
             return this;
         }
         public Long getCreateTimestamp() {
             return this.createTimestamp;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public GetCompliancePackResponseBodyCompliancePack setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

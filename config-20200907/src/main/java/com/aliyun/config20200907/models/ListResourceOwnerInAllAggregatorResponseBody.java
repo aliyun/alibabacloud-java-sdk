@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListResourceOwnerInAllAggregatorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccountInAggregator")
     public java.util.List<ListResourceOwnerInAllAggregatorResponseBodyAccountInAggregator> accountInAggregator;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListResourceOwnerInAllAggregatorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourceOwnerInAllAggregatorResponseBody self = new ListResourceOwnerInAllAggregatorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListResourceOwnerInAllAggregatorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListResourceOwnerInAllAggregatorResponseBody setAccountInAggregator(java.util.List<ListResourceOwnerInAllAggregatorResponseBodyAccountInAggregator> accountInAggregator) {
@@ -29,6 +21,14 @@ public class ListResourceOwnerInAllAggregatorResponseBody extends TeaModel {
     }
     public java.util.List<ListResourceOwnerInAllAggregatorResponseBodyAccountInAggregator> getAccountInAggregator() {
         return this.accountInAggregator;
+    }
+
+    public ListResourceOwnerInAllAggregatorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListResourceOwnerInAllAggregatorResponseBodyAccountInAggregator extends TeaModel {

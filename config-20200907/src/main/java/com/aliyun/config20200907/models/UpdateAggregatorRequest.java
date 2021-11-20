@@ -4,24 +4,32 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregatorRequest extends TeaModel {
+    @NameInMap("AggregatorAccounts")
+    public java.util.List<UpdateAggregatorRequestAggregatorAccounts> aggregatorAccounts;
+
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     @NameInMap("AggregatorName")
     public String aggregatorName;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("AggregatorAccounts")
-    public java.util.List<UpdateAggregatorRequestAggregatorAccounts> aggregatorAccounts;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
 
     public static UpdateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAggregatorRequest self = new UpdateAggregatorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAggregatorRequest setAggregatorAccounts(java.util.List<UpdateAggregatorRequestAggregatorAccounts> aggregatorAccounts) {
+        this.aggregatorAccounts = aggregatorAccounts;
+        return this;
+    }
+    public java.util.List<UpdateAggregatorRequestAggregatorAccounts> getAggregatorAccounts() {
+        return this.aggregatorAccounts;
     }
 
     public UpdateAggregatorRequest setAggregatorId(String aggregatorId) {
@@ -40,28 +48,20 @@ public class UpdateAggregatorRequest extends TeaModel {
         return this.aggregatorName;
     }
 
-    public UpdateAggregatorRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public UpdateAggregatorRequest setAggregatorAccounts(java.util.List<UpdateAggregatorRequestAggregatorAccounts> aggregatorAccounts) {
-        this.aggregatorAccounts = aggregatorAccounts;
-        return this;
-    }
-    public java.util.List<UpdateAggregatorRequestAggregatorAccounts> getAggregatorAccounts() {
-        return this.aggregatorAccounts;
-    }
-
     public UpdateAggregatorRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateAggregatorRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public static class UpdateAggregatorRequestAggregatorAccounts extends TeaModel {

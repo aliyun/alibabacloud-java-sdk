@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteAggregatorsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperateAggregatorsResult")
     public DeleteAggregatorsResponseBodyOperateAggregatorsResult operateAggregatorsResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteAggregatorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAggregatorsResponseBody self = new DeleteAggregatorsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAggregatorsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteAggregatorsResponseBody setOperateAggregatorsResult(DeleteAggregatorsResponseBodyOperateAggregatorsResult operateAggregatorsResult) {
@@ -31,19 +23,35 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         return this.operateAggregatorsResult;
     }
 
+    public DeleteAggregatorsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators extends TeaModel {
+        @NameInMap("AggregatorId")
+        public String aggregatorId;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("Success")
         public Boolean success;
 
-        @NameInMap("AggregatorId")
-        public String aggregatorId;
-
         public static DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators build(java.util.Map<String, ?> map) throws Exception {
             DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators self = new DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators setAggregatorId(String aggregatorId) {
+            this.aggregatorId = aggregatorId;
+            return this;
+        }
+        public String getAggregatorId() {
+            return this.aggregatorId;
         }
 
         public DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators setErrorCode(String errorCode) {
@@ -60,14 +68,6 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
-        }
-
-        public DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators setAggregatorId(String aggregatorId) {
-            this.aggregatorId = aggregatorId;
-            return this;
-        }
-        public String getAggregatorId() {
-            return this.aggregatorId;
         }
 
     }

@@ -62,23 +62,15 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceByConfigRuleResponseBodyComplianceResult extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Compliances")
         public java.util.List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetResourceComplianceByConfigRuleResponseBodyComplianceResult build(java.util.Map<String, ?> map) throws Exception {
             GetResourceComplianceByConfigRuleResponseBodyComplianceResult self = new GetResourceComplianceByConfigRuleResponseBodyComplianceResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceComplianceByConfigRuleResponseBodyComplianceResult setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public GetResourceComplianceByConfigRuleResponseBodyComplianceResult setCompliances(java.util.List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances) {
@@ -87,6 +79,14 @@ public class GetResourceComplianceByConfigRuleResponseBody extends TeaModel {
         }
         public java.util.List<GetResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> getCompliances() {
             return this.compliances;
+        }
+
+        public GetResourceComplianceByConfigRuleResponseBodyComplianceResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

@@ -4,8 +4,20 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregateCompliancePackRequest extends TeaModel {
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("CompliancePackId")
     public String compliancePackId;
+
+    @NameInMap("CompliancePackName")
+    public String compliancePackName;
+
+    @NameInMap("ConfigRules")
+    public java.util.List<UpdateAggregateCompliancePackRequestConfigRules> configRules;
 
     @NameInMap("Description")
     public String description;
@@ -13,18 +25,25 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    @NameInMap("ConfigRules")
-    public java.util.List<UpdateAggregateCompliancePackRequestConfigRules> configRules;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
     public static UpdateAggregateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAggregateCompliancePackRequest self = new UpdateAggregateCompliancePackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAggregateCompliancePackRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
+        return this;
+    }
+    public String getAggregatorId() {
+        return this.aggregatorId;
+    }
+
+    public UpdateAggregateCompliancePackRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateAggregateCompliancePackRequest setCompliancePackId(String compliancePackId) {
@@ -33,6 +52,22 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     }
     public String getCompliancePackId() {
         return this.compliancePackId;
+    }
+
+    public UpdateAggregateCompliancePackRequest setCompliancePackName(String compliancePackName) {
+        this.compliancePackName = compliancePackName;
+        return this;
+    }
+    public String getCompliancePackName() {
+        return this.compliancePackName;
+    }
+
+    public UpdateAggregateCompliancePackRequest setConfigRules(java.util.List<UpdateAggregateCompliancePackRequestConfigRules> configRules) {
+        this.configRules = configRules;
+        return this;
+    }
+    public java.util.List<UpdateAggregateCompliancePackRequestConfigRules> getConfigRules() {
+        return this.configRules;
     }
 
     public UpdateAggregateCompliancePackRequest setDescription(String description) {
@@ -49,30 +84,6 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
-    }
-
-    public UpdateAggregateCompliancePackRequest setConfigRules(java.util.List<UpdateAggregateCompliancePackRequestConfigRules> configRules) {
-        this.configRules = configRules;
-        return this;
-    }
-    public java.util.List<UpdateAggregateCompliancePackRequestConfigRules> getConfigRules() {
-        return this.configRules;
-    }
-
-    public UpdateAggregateCompliancePackRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public UpdateAggregateCompliancePackRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
-        return this;
-    }
-    public String getAggregatorId() {
-        return this.aggregatorId;
     }
 
     public static class UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
@@ -106,20 +117,20 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class UpdateAggregateCompliancePackRequestConfigRules extends TeaModel {
-        @NameInMap("ManagedRuleIdentifier")
-        public String managedRuleIdentifier;
-
-        @NameInMap("ConfigRuleParameters")
-        public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
-
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        @NameInMap("ConfigRuleParameters")
+        public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
+
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ManagedRuleIdentifier")
+        public String managedRuleIdentifier;
 
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -127,22 +138,6 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         public static UpdateAggregateCompliancePackRequestConfigRules build(java.util.Map<String, ?> map) throws Exception {
             UpdateAggregateCompliancePackRequestConfigRules self = new UpdateAggregateCompliancePackRequestConfigRules();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateAggregateCompliancePackRequestConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
-            this.managedRuleIdentifier = managedRuleIdentifier;
-            return this;
-        }
-        public String getManagedRuleIdentifier() {
-            return this.managedRuleIdentifier;
-        }
-
-        public UpdateAggregateCompliancePackRequestConfigRules setConfigRuleParameters(java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters) {
-            this.configRuleParameters = configRuleParameters;
-            return this;
-        }
-        public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> getConfigRuleParameters() {
-            return this.configRuleParameters;
         }
 
         public UpdateAggregateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
@@ -161,12 +156,28 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
             return this.configRuleName;
         }
 
+        public UpdateAggregateCompliancePackRequestConfigRules setConfigRuleParameters(java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters) {
+            this.configRuleParameters = configRuleParameters;
+            return this;
+        }
+        public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> getConfigRuleParameters() {
+            return this.configRuleParameters;
+        }
+
         public UpdateAggregateCompliancePackRequestConfigRules setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public UpdateAggregateCompliancePackRequestConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
+            this.managedRuleIdentifier = managedRuleIdentifier;
+            return this;
+        }
+        public String getManagedRuleIdentifier() {
+            return this.managedRuleIdentifier;
         }
 
         public UpdateAggregateCompliancePackRequestConfigRules setRiskLevel(Integer riskLevel) {

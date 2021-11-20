@@ -4,24 +4,32 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
+
     @NameInMap("ComplianceType")
     public String complianceType;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
 
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
-    @NameInMap("CompliancePackId")
-    public String compliancePackId;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListConfigRuleEvaluationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConfigRuleEvaluationResultsRequest self = new ListConfigRuleEvaluationResultsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListConfigRuleEvaluationResultsRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
+        return this;
+    }
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     public ListConfigRuleEvaluationResultsRequest setComplianceType(String complianceType) {
@@ -32,12 +40,12 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
         return this.complianceType;
     }
 
-    public ListConfigRuleEvaluationResultsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListConfigRuleEvaluationResultsRequest setConfigRuleId(String configRuleId) {
+        this.configRuleId = configRuleId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getConfigRuleId() {
+        return this.configRuleId;
     }
 
     public ListConfigRuleEvaluationResultsRequest setMaxResults(Integer maxResults) {
@@ -48,20 +56,12 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListConfigRuleEvaluationResultsRequest setConfigRuleId(String configRuleId) {
-        this.configRuleId = configRuleId;
+    public ListConfigRuleEvaluationResultsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getConfigRuleId() {
-        return this.configRuleId;
-    }
-
-    public ListConfigRuleEvaluationResultsRequest setCompliancePackId(String compliancePackId) {
-        this.compliancePackId = compliancePackId;
-        return this;
-    }
-    public String getCompliancePackId() {
-        return this.compliancePackId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

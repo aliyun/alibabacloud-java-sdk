@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccountComplianceResult")
     public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult accountComplianceResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAggregateAccountComplianceByPackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateAccountComplianceByPackResponseBody self = new GetAggregateAccountComplianceByPackResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAggregateAccountComplianceByPackResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAggregateAccountComplianceByPackResponseBody setAccountComplianceResult(GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult accountComplianceResult) {
@@ -31,27 +23,27 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         return this.accountComplianceResult;
     }
 
-    public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances extends TeaModel {
-        @NameInMap("ComplianceType")
-        public String complianceType;
+    public GetAggregateAccountComplianceByPackResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances extends TeaModel {
         @NameInMap("AccountId")
         public Long accountId;
 
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("ComplianceType")
+        public String complianceType;
+
         public static GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances self = new GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances();
             return TeaModel.build(map, self);
-        }
-
-        public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances setComplianceType(String complianceType) {
-            this.complianceType = complianceType;
-            return this;
-        }
-        public String getComplianceType() {
-            return this.complianceType;
         }
 
         public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances setAccountId(Long accountId) {
@@ -70,9 +62,20 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances setComplianceType(String complianceType) {
+            this.complianceType = complianceType;
+            return this;
+        }
+        public String getComplianceType() {
+            return this.complianceType;
+        }
+
     }
 
     public static class GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult extends TeaModel {
+        @NameInMap("AccountCompliances")
+        public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances;
+
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
@@ -82,12 +85,17 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("AccountCompliances")
-        public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances;
-
         public static GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult self = new GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult setAccountCompliances(java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances) {
+            this.accountCompliances = accountCompliances;
+            return this;
+        }
+        public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> getAccountCompliances() {
+            return this.accountCompliances;
         }
 
         public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult setCompliancePackId(String compliancePackId) {
@@ -112,14 +120,6 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResult setAccountCompliances(java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> accountCompliances) {
-            this.accountCompliances = accountCompliances;
-            return this;
-        }
-        public java.util.List<GetAggregateAccountComplianceByPackResponseBodyAccountComplianceResultAccountCompliances> getAccountCompliances() {
-            return this.accountCompliances;
         }
 
     }

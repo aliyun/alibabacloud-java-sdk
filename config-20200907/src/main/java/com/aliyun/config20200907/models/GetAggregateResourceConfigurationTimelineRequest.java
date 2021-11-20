@@ -4,11 +4,8 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
-    @NameInMap("ResourceId")
-    public String resourceId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
 
     @NameInMap("EndTime")
     public Long endTime;
@@ -16,40 +13,35 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static GetAggregateResourceConfigurationTimelineRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceConfigurationTimelineRequest self = new GetAggregateResourceConfigurationTimelineRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAggregateResourceConfigurationTimelineRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
+    public GetAggregateResourceConfigurationTimelineRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
         return this;
     }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    public GetAggregateResourceConfigurationTimelineRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getAggregatorId() {
+        return this.aggregatorId;
     }
 
     public GetAggregateResourceConfigurationTimelineRequest setEndTime(Long endTime) {
@@ -68,12 +60,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public GetAggregateResourceConfigurationTimelineRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public GetAggregateResourceConfigurationTimelineRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public GetAggregateResourceConfigurationTimelineRequest setRegion(String region) {
@@ -84,12 +76,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
         return this.region;
     }
 
-    public GetAggregateResourceConfigurationTimelineRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
+    public GetAggregateResourceConfigurationTimelineRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getAggregatorId() {
-        return this.aggregatorId;
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public GetAggregateResourceConfigurationTimelineRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -100,12 +92,20 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetAggregateResourceConfigurationTimelineRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public GetAggregateResourceConfigurationTimelineRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetAggregateResourceConfigurationTimelineRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

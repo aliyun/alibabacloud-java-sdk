@@ -4,20 +4,35 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ConfigRuleName")
     public String configRuleName;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("InputParameters")
-    public String inputParametersShrink;
 
     @NameInMap("ConfigRuleTriggerTypes")
     public String configRuleTriggerTypes;
 
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
+
+    @NameInMap("InputParameters")
+    public String inputParametersShrink;
+
     @NameInMap("MaximumExecutionFrequency")
     public String maximumExecutionFrequency;
+
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
+
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
 
     @NameInMap("ResourceTypesScope")
     public String resourceTypesScopeShrink;
@@ -25,20 +40,11 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("SourceIdentifier")
+    public String sourceIdentifier;
 
-    @NameInMap("RegionIdsScope")
-    public String regionIdsScope;
-
-    @NameInMap("ExcludeResourceIdsScope")
-    public String excludeResourceIdsScope;
-
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
-    @NameInMap("ResourceGroupIdsScope")
-    public String resourceGroupIdsScope;
+    @NameInMap("SourceOwner")
+    public String sourceOwner;
 
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
@@ -46,15 +52,25 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
-    @NameInMap("SourceOwner")
-    public String sourceOwner;
-
-    @NameInMap("SourceIdentifier")
-    public String sourceIdentifier;
-
     public static CreateAggregateConfigRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregateConfigRuleShrinkRequest self = new CreateAggregateConfigRuleShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
+        return this;
+    }
+    public String getAggregatorId() {
+        return this.aggregatorId;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setConfigRuleName(String configRuleName) {
@@ -65,12 +81,28 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.configRuleName;
     }
 
+    public CreateAggregateConfigRuleShrinkRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
+        this.configRuleTriggerTypes = configRuleTriggerTypes;
+        return this;
+    }
+    public String getConfigRuleTriggerTypes() {
+        return this.configRuleTriggerTypes;
+    }
+
     public CreateAggregateConfigRuleShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+        this.excludeResourceIdsScope = excludeResourceIdsScope;
+        return this;
+    }
+    public String getExcludeResourceIdsScope() {
+        return this.excludeResourceIdsScope;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setInputParametersShrink(String inputParametersShrink) {
@@ -81,20 +113,28 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.inputParametersShrink;
     }
 
-    public CreateAggregateConfigRuleShrinkRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
-        this.configRuleTriggerTypes = configRuleTriggerTypes;
-        return this;
-    }
-    public String getConfigRuleTriggerTypes() {
-        return this.configRuleTriggerTypes;
-    }
-
     public CreateAggregateConfigRuleShrinkRequest setMaximumExecutionFrequency(String maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
     }
     public String getMaximumExecutionFrequency() {
         return this.maximumExecutionFrequency;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setRegionIdsScope(String regionIdsScope) {
+        this.regionIdsScope = regionIdsScope;
+        return this;
+    }
+    public String getRegionIdsScope() {
+        return this.regionIdsScope;
+    }
+
+    public CreateAggregateConfigRuleShrinkRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
+        this.resourceGroupIdsScope = resourceGroupIdsScope;
+        return this;
+    }
+    public String getResourceGroupIdsScope() {
+        return this.resourceGroupIdsScope;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setResourceTypesScopeShrink(String resourceTypesScopeShrink) {
@@ -113,44 +153,20 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.riskLevel;
     }
 
-    public CreateAggregateConfigRuleShrinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateAggregateConfigRuleShrinkRequest setSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSourceIdentifier() {
+        return this.sourceIdentifier;
     }
 
-    public CreateAggregateConfigRuleShrinkRequest setRegionIdsScope(String regionIdsScope) {
-        this.regionIdsScope = regionIdsScope;
+    public CreateAggregateConfigRuleShrinkRequest setSourceOwner(String sourceOwner) {
+        this.sourceOwner = sourceOwner;
         return this;
     }
-    public String getRegionIdsScope() {
-        return this.regionIdsScope;
-    }
-
-    public CreateAggregateConfigRuleShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
-        this.excludeResourceIdsScope = excludeResourceIdsScope;
-        return this;
-    }
-    public String getExcludeResourceIdsScope() {
-        return this.excludeResourceIdsScope;
-    }
-
-    public CreateAggregateConfigRuleShrinkRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
-        return this;
-    }
-    public String getAggregatorId() {
-        return this.aggregatorId;
-    }
-
-    public CreateAggregateConfigRuleShrinkRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
-        this.resourceGroupIdsScope = resourceGroupIdsScope;
-        return this;
-    }
-    public String getResourceGroupIdsScope() {
-        return this.resourceGroupIdsScope;
+    public String getSourceOwner() {
+        return this.sourceOwner;
     }
 
     public CreateAggregateConfigRuleShrinkRequest setTagKeyScope(String tagKeyScope) {
@@ -167,22 +183,6 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     }
     public String getTagValueScope() {
         return this.tagValueScope;
-    }
-
-    public CreateAggregateConfigRuleShrinkRequest setSourceOwner(String sourceOwner) {
-        this.sourceOwner = sourceOwner;
-        return this;
-    }
-    public String getSourceOwner() {
-        return this.sourceOwner;
-    }
-
-    public CreateAggregateConfigRuleShrinkRequest setSourceIdentifier(String sourceIdentifier) {
-        this.sourceIdentifier = sourceIdentifier;
-        return this;
-    }
-    public String getSourceIdentifier() {
-        return this.sourceIdentifier;
     }
 
 }

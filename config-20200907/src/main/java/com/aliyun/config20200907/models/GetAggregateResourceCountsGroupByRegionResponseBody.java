@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DiscoveredResourceCountsSummary")
     public java.util.List<GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAggregateResourceCountsGroupByRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceCountsGroupByRegionResponseBody self = new GetAggregateResourceCountsGroupByRegionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAggregateResourceCountsGroupByRegionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAggregateResourceCountsGroupByRegionResponseBody setDiscoveredResourceCountsSummary(java.util.List<GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
@@ -31,24 +23,24 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
         return this.discoveredResourceCountsSummary;
     }
 
-    public static class GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
-        @NameInMap("ResourceCount")
-        public Long resourceCount;
+    public GetAggregateResourceCountsGroupByRegionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary extends TeaModel {
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("ResourceCount")
+        public Long resourceCount;
 
         public static GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary self = new GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary();
             return TeaModel.build(map, self);
-        }
-
-        public GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary setResourceCount(Long resourceCount) {
-            this.resourceCount = resourceCount;
-            return this;
-        }
-        public Long getResourceCount() {
-            return this.resourceCount;
         }
 
         public GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary setRegion(String region) {
@@ -57,6 +49,14 @@ public class GetAggregateResourceCountsGroupByRegionResponseBody extends TeaMode
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public GetAggregateResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary setResourceCount(Long resourceCount) {
+            this.resourceCount = resourceCount;
+            return this;
+        }
+        public Long getResourceCount() {
+            return this.resourceCount;
         }
 
     }

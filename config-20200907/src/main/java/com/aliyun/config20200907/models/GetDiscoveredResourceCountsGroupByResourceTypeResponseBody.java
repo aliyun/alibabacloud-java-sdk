@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DiscoveredResourceCountsSummary")
     public java.util.List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetDiscoveredResourceCountsGroupByResourceTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDiscoveredResourceCountsGroupByResourceTypeResponseBody self = new GetDiscoveredResourceCountsGroupByResourceTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDiscoveredResourceCountsGroupByResourceTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDiscoveredResourceCountsGroupByResourceTypeResponseBody setDiscoveredResourceCountsSummary(java.util.List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary) {
@@ -29,6 +21,14 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     }
     public java.util.List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> getDiscoveredResourceCountsSummary() {
         return this.discoveredResourceCountsSummary;
+    }
+
+    public GetDiscoveredResourceCountsGroupByResourceTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary extends TeaModel {

@@ -4,11 +4,23 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigRuleShrinkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    @NameInMap("ConfigRuleName")
+    public String configRuleName;
+
+    @NameInMap("ConfigRuleTriggerTypes")
+    public String configRuleTriggerTypes;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
 
     @NameInMap("InputParameters")
     public String inputParametersShrink;
@@ -16,26 +28,17 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     @NameInMap("MaximumExecutionFrequency")
     public String maximumExecutionFrequency;
 
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
+
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
+
     @NameInMap("ResourceTypesScope")
     public String resourceTypesScopeShrink;
 
     @NameInMap("RiskLevel")
     public Integer riskLevel;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionIdsScope")
-    public String regionIdsScope;
-
-    @NameInMap("ExcludeResourceIdsScope")
-    public String excludeResourceIdsScope;
-
-    @NameInMap("ConfigRuleTriggerTypes")
-    public String configRuleTriggerTypes;
-
-    @NameInMap("ResourceGroupIdsScope")
-    public String resourceGroupIdsScope;
 
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
@@ -48,6 +51,14 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateConfigRuleShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public UpdateConfigRuleShrinkRequest setConfigRuleId(String configRuleId) {
         this.configRuleId = configRuleId;
         return this;
@@ -56,12 +67,36 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
         return this.configRuleId;
     }
 
+    public UpdateConfigRuleShrinkRequest setConfigRuleName(String configRuleName) {
+        this.configRuleName = configRuleName;
+        return this;
+    }
+    public String getConfigRuleName() {
+        return this.configRuleName;
+    }
+
+    public UpdateConfigRuleShrinkRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
+        this.configRuleTriggerTypes = configRuleTriggerTypes;
+        return this;
+    }
+    public String getConfigRuleTriggerTypes() {
+        return this.configRuleTriggerTypes;
+    }
+
     public UpdateConfigRuleShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateConfigRuleShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+        this.excludeResourceIdsScope = excludeResourceIdsScope;
+        return this;
+    }
+    public String getExcludeResourceIdsScope() {
+        return this.excludeResourceIdsScope;
     }
 
     public UpdateConfigRuleShrinkRequest setInputParametersShrink(String inputParametersShrink) {
@@ -80,6 +115,22 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
         return this.maximumExecutionFrequency;
     }
 
+    public UpdateConfigRuleShrinkRequest setRegionIdsScope(String regionIdsScope) {
+        this.regionIdsScope = regionIdsScope;
+        return this;
+    }
+    public String getRegionIdsScope() {
+        return this.regionIdsScope;
+    }
+
+    public UpdateConfigRuleShrinkRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
+        this.resourceGroupIdsScope = resourceGroupIdsScope;
+        return this;
+    }
+    public String getResourceGroupIdsScope() {
+        return this.resourceGroupIdsScope;
+    }
+
     public UpdateConfigRuleShrinkRequest setResourceTypesScopeShrink(String resourceTypesScopeShrink) {
         this.resourceTypesScopeShrink = resourceTypesScopeShrink;
         return this;
@@ -94,46 +145,6 @@ public class UpdateConfigRuleShrinkRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
-    }
-
-    public UpdateConfigRuleShrinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public UpdateConfigRuleShrinkRequest setRegionIdsScope(String regionIdsScope) {
-        this.regionIdsScope = regionIdsScope;
-        return this;
-    }
-    public String getRegionIdsScope() {
-        return this.regionIdsScope;
-    }
-
-    public UpdateConfigRuleShrinkRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
-        this.excludeResourceIdsScope = excludeResourceIdsScope;
-        return this;
-    }
-    public String getExcludeResourceIdsScope() {
-        return this.excludeResourceIdsScope;
-    }
-
-    public UpdateConfigRuleShrinkRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
-        this.configRuleTriggerTypes = configRuleTriggerTypes;
-        return this;
-    }
-    public String getConfigRuleTriggerTypes() {
-        return this.configRuleTriggerTypes;
-    }
-
-    public UpdateConfigRuleShrinkRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
-        this.resourceGroupIdsScope = resourceGroupIdsScope;
-        return this;
-    }
-    public String getResourceGroupIdsScope() {
-        return this.resourceGroupIdsScope;
     }
 
     public UpdateConfigRuleShrinkRequest setTagKeyScope(String tagKeyScope) {

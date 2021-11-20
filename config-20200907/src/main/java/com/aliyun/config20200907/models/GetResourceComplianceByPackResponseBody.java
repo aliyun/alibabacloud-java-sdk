@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("ResourceComplianceResult")
-    public GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceComplianceResult")
+    public GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
 
     public static GetResourceComplianceByPackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceComplianceByPackResponseBody self = new GetResourceComplianceByPackResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetResourceComplianceByPackResponseBody setResourceComplianceResult(GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult) {
-        this.resourceComplianceResult = resourceComplianceResult;
-        return this;
-    }
-    public GetResourceComplianceByPackResponseBodyResourceComplianceResult getResourceComplianceResult() {
-        return this.resourceComplianceResult;
     }
 
     public GetResourceComplianceByPackResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetResourceComplianceByPackResponseBody setResourceComplianceResult(GetResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult) {
+        this.resourceComplianceResult = resourceComplianceResult;
+        return this;
+    }
+    public GetResourceComplianceByPackResponseBodyResourceComplianceResult getResourceComplianceResult() {
+        return this.resourceComplianceResult;
     }
 
     public static class GetResourceComplianceByPackResponseBodyResourceComplianceResult extends TeaModel {

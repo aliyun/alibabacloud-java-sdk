@@ -4,11 +4,26 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateAggregateConfigRuleRequest extends TeaModel {
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    @NameInMap("ConfigRuleName")
+    public String configRuleName;
+
+    @NameInMap("ConfigRuleTriggerTypes")
+    public String configRuleTriggerTypes;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("ExcludeResourceIdsScope")
+    public String excludeResourceIdsScope;
 
     @NameInMap("InputParameters")
     public java.util.Map<String, ?> inputParameters;
@@ -16,29 +31,17 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     @NameInMap("MaximumExecutionFrequency")
     public String maximumExecutionFrequency;
 
+    @NameInMap("RegionIdsScope")
+    public String regionIdsScope;
+
+    @NameInMap("ResourceGroupIdsScope")
+    public String resourceGroupIdsScope;
+
     @NameInMap("ResourceTypesScope")
     public java.util.List<String> resourceTypesScope;
 
     @NameInMap("RiskLevel")
     public Integer riskLevel;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionIdsScope")
-    public String regionIdsScope;
-
-    @NameInMap("ExcludeResourceIdsScope")
-    public String excludeResourceIdsScope;
-
-    @NameInMap("ConfigRuleTriggerTypes")
-    public String configRuleTriggerTypes;
-
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
-    @NameInMap("ResourceGroupIdsScope")
-    public String resourceGroupIdsScope;
 
     @NameInMap("TagKeyScope")
     public String tagKeyScope;
@@ -51,6 +54,22 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateAggregateConfigRuleRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
+        return this;
+    }
+    public String getAggregatorId() {
+        return this.aggregatorId;
+    }
+
+    public UpdateAggregateConfigRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public UpdateAggregateConfigRuleRequest setConfigRuleId(String configRuleId) {
         this.configRuleId = configRuleId;
         return this;
@@ -59,12 +78,36 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
         return this.configRuleId;
     }
 
+    public UpdateAggregateConfigRuleRequest setConfigRuleName(String configRuleName) {
+        this.configRuleName = configRuleName;
+        return this;
+    }
+    public String getConfigRuleName() {
+        return this.configRuleName;
+    }
+
+    public UpdateAggregateConfigRuleRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
+        this.configRuleTriggerTypes = configRuleTriggerTypes;
+        return this;
+    }
+    public String getConfigRuleTriggerTypes() {
+        return this.configRuleTriggerTypes;
+    }
+
     public UpdateAggregateConfigRuleRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAggregateConfigRuleRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
+        this.excludeResourceIdsScope = excludeResourceIdsScope;
+        return this;
+    }
+    public String getExcludeResourceIdsScope() {
+        return this.excludeResourceIdsScope;
     }
 
     public UpdateAggregateConfigRuleRequest setInputParameters(java.util.Map<String, ?> inputParameters) {
@@ -83,6 +126,22 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
         return this.maximumExecutionFrequency;
     }
 
+    public UpdateAggregateConfigRuleRequest setRegionIdsScope(String regionIdsScope) {
+        this.regionIdsScope = regionIdsScope;
+        return this;
+    }
+    public String getRegionIdsScope() {
+        return this.regionIdsScope;
+    }
+
+    public UpdateAggregateConfigRuleRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
+        this.resourceGroupIdsScope = resourceGroupIdsScope;
+        return this;
+    }
+    public String getResourceGroupIdsScope() {
+        return this.resourceGroupIdsScope;
+    }
+
     public UpdateAggregateConfigRuleRequest setResourceTypesScope(java.util.List<String> resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -97,54 +156,6 @@ public class UpdateAggregateConfigRuleRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
-    }
-
-    public UpdateAggregateConfigRuleRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public UpdateAggregateConfigRuleRequest setRegionIdsScope(String regionIdsScope) {
-        this.regionIdsScope = regionIdsScope;
-        return this;
-    }
-    public String getRegionIdsScope() {
-        return this.regionIdsScope;
-    }
-
-    public UpdateAggregateConfigRuleRequest setExcludeResourceIdsScope(String excludeResourceIdsScope) {
-        this.excludeResourceIdsScope = excludeResourceIdsScope;
-        return this;
-    }
-    public String getExcludeResourceIdsScope() {
-        return this.excludeResourceIdsScope;
-    }
-
-    public UpdateAggregateConfigRuleRequest setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
-        this.configRuleTriggerTypes = configRuleTriggerTypes;
-        return this;
-    }
-    public String getConfigRuleTriggerTypes() {
-        return this.configRuleTriggerTypes;
-    }
-
-    public UpdateAggregateConfigRuleRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
-        return this;
-    }
-    public String getAggregatorId() {
-        return this.aggregatorId;
-    }
-
-    public UpdateAggregateConfigRuleRequest setResourceGroupIdsScope(String resourceGroupIdsScope) {
-        this.resourceGroupIdsScope = resourceGroupIdsScope;
-        return this;
-    }
-    public String getResourceGroupIdsScope() {
-        return this.resourceGroupIdsScope;
     }
 
     public UpdateAggregateConfigRuleRequest setTagKeyScope(String tagKeyScope) {

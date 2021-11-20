@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteCompliancePacksRequest extends TeaModel {
-    @NameInMap("CompliancePackIds")
-    public String compliancePackIds;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("CompliancePackIds")
+    public String compliancePackIds;
 
     public static DeleteCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCompliancePacksRequest self = new DeleteCompliancePacksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCompliancePacksRequest setCompliancePackIds(String compliancePackIds) {
-        this.compliancePackIds = compliancePackIds;
-        return this;
-    }
-    public String getCompliancePackIds() {
-        return this.compliancePackIds;
     }
 
     public DeleteCompliancePacksRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class DeleteCompliancePacksRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteCompliancePacksRequest setCompliancePackIds(String compliancePackIds) {
+        this.compliancePackIds = compliancePackIds;
+        return this;
+    }
+    public String getCompliancePackIds() {
+        return this.compliancePackIds;
     }
 
 }

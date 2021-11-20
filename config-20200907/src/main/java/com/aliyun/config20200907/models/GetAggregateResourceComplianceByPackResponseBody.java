@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("ResourceComplianceResult")
-    public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceComplianceResult")
+    public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult;
 
     public static GetAggregateResourceComplianceByPackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceComplianceByPackResponseBody self = new GetAggregateResourceComplianceByPackResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAggregateResourceComplianceByPackResponseBody setResourceComplianceResult(GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult) {
-        this.resourceComplianceResult = resourceComplianceResult;
-        return this;
-    }
-    public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult getResourceComplianceResult() {
-        return this.resourceComplianceResult;
     }
 
     public GetAggregateResourceComplianceByPackResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAggregateResourceComplianceByPackResponseBody setResourceComplianceResult(GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult resourceComplianceResult) {
+        this.resourceComplianceResult = resourceComplianceResult;
+        return this;
+    }
+    public GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult getResourceComplianceResult() {
+        return this.resourceComplianceResult;
     }
 
     public static class GetAggregateResourceComplianceByPackResponseBodyResourceComplianceResult extends TeaModel {

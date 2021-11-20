@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperateRuleResult")
     public ActiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ActiveAggregateConfigRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ActiveAggregateConfigRulesResponseBody self = new ActiveAggregateConfigRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ActiveAggregateConfigRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ActiveAggregateConfigRulesResponseBody setOperateRuleResult(ActiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult) {
@@ -31,19 +23,35 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         return this.operateRuleResult;
     }
 
+    public ActiveAggregateConfigRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("Success")
         public Boolean success;
 
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
         public static ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList build(java.util.Map<String, ?> map) throws Exception {
             ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList self = new ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList();
             return TeaModel.build(map, self);
+        }
+
+        public ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setErrorCode(String errorCode) {
@@ -60,14 +68,6 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
-        }
-
-        public ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
     }

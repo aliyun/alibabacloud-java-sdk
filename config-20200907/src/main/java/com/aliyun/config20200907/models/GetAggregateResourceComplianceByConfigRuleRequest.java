@@ -4,18 +4,26 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel {
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
+
     @NameInMap("ComplianceType")
     public String complianceType;
 
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
     public static GetAggregateResourceComplianceByConfigRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceComplianceByConfigRuleRequest self = new GetAggregateResourceComplianceByConfigRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAggregateResourceComplianceByConfigRuleRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
+        return this;
+    }
+    public String getAggregatorId() {
+        return this.aggregatorId;
     }
 
     public GetAggregateResourceComplianceByConfigRuleRequest setComplianceType(String complianceType) {
@@ -32,14 +40,6 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     }
     public String getConfigRuleId() {
         return this.configRuleId;
-    }
-
-    public GetAggregateResourceComplianceByConfigRuleRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
-        return this;
-    }
-    public String getAggregatorId() {
-        return this.aggregatorId;
     }
 
 }
