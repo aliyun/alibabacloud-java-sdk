@@ -32,37 +32,21 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
     }
 
     public static class GetAggregateResourceInventoryResponseBodyResourceInventory extends TeaModel {
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AccountId")
         public Long accountId;
+
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
 
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
+        @NameInMap("Status")
+        public String status;
+
         public static GetAggregateResourceInventoryResponseBodyResourceInventory build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateResourceInventoryResponseBodyResourceInventory self = new GetAggregateResourceInventoryResponseBodyResourceInventory();
             return TeaModel.build(map, self);
-        }
-
-        public GetAggregateResourceInventoryResponseBodyResourceInventory setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
-        }
-
-        public GetAggregateResourceInventoryResponseBodyResourceInventory setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetAggregateResourceInventoryResponseBodyResourceInventory setAccountId(Long accountId) {
@@ -73,12 +57,28 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetAggregateResourceInventoryResponseBodyResourceInventory setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
         public GetAggregateResourceInventoryResponseBodyResourceInventory setResourceInventoryGenerateTime(Long resourceInventoryGenerateTime) {
             this.resourceInventoryGenerateTime = resourceInventoryGenerateTime;
             return this;
         }
         public Long getResourceInventoryGenerateTime() {
             return this.resourceInventoryGenerateTime;
+        }
+
+        public GetAggregateResourceInventoryResponseBodyResourceInventory setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateCompliancePacksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CompliancePacksResult")
     public ListAggregateCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAggregateCompliancePacksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAggregateCompliancePacksResponseBody self = new ListAggregateCompliancePacksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAggregateCompliancePacksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAggregateCompliancePacksResponseBody setCompliancePacksResult(ListAggregateCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult) {
@@ -31,27 +23,26 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         return this.compliancePacksResult;
     }
 
+    public ListAggregateCompliancePacksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
-
-        @NameInMap("CompliancePackId")
-        public String compliancePackId;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CompliancePackName")
-        public String compliancePackName;
-
         @NameInMap("AccountId")
         public Long accountId;
 
         @NameInMap("AggregatorId")
         public String aggregatorId;
+
+        @NameInMap("CompliancePackId")
+        public String compliancePackId;
+
+        @NameInMap("CompliancePackName")
+        public String compliancePackName;
 
         @NameInMap("CompliancePackTemplateId")
         public String compliancePackTemplateId;
@@ -59,49 +50,18 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
+        @NameInMap("Status")
+        public String status;
+
         public static ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks self = new ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks();
             return TeaModel.build(map, self);
-        }
-
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
-            return this;
-        }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
-        }
-
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setCompliancePackId(String compliancePackId) {
-            this.compliancePackId = compliancePackId;
-            return this;
-        }
-        public String getCompliancePackId() {
-            return this.compliancePackId;
-        }
-
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setCompliancePackName(String compliancePackName) {
-            this.compliancePackName = compliancePackName;
-            return this;
-        }
-        public String getCompliancePackName() {
-            return this.compliancePackName;
         }
 
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setAccountId(Long accountId) {
@@ -120,6 +80,22 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             return this.aggregatorId;
         }
 
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setCompliancePackId(String compliancePackId) {
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+        public String getCompliancePackId() {
+            return this.compliancePackId;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setCompliancePackName(String compliancePackName) {
+            this.compliancePackName = compliancePackName;
+            return this;
+        }
+        public String getCompliancePackName() {
+            return this.compliancePackName;
+        }
+
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setCompliancePackTemplateId(String compliancePackTemplateId) {
             this.compliancePackTemplateId = compliancePackTemplateId;
             return this;
@@ -136,17 +112,41 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             return this.createTimestamp;
         }
 
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         @NameInMap("CompliancePacks")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;
 
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -164,20 +164,20 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             return this.compliancePacks;
         }
 
-        public ListAggregateCompliancePacksResponseBodyCompliancePacksResult setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResult setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
         public Integer getPageNumber() {
             return this.pageNumber;
+        }
+
+        public ListAggregateCompliancePacksResponseBodyCompliancePacksResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResult setTotalCount(Long totalCount) {

@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregatorsRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListAggregatorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAggregatorsRequest self = new ListAggregatorsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAggregatorsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public ListAggregatorsRequest setMaxResults(Integer maxResults) {
@@ -29,6 +21,14 @@ public class ListAggregatorsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListAggregatorsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class StartRemediationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StartRemediationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartRemediationResponseBody self = new StartRemediationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartRemediationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StartRemediationResponseBody setData(Boolean data) {
@@ -29,6 +21,14 @@ public class StartRemediationResponseBody extends TeaModel {
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public StartRemediationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

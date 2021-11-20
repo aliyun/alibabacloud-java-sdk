@@ -7,11 +7,11 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     @NameInMap("CompliancePackTemplateId")
     public String compliancePackTemplateId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static ListCompliancePackTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCompliancePackTemplatesRequest self = new ListCompliancePackTemplatesRequest();
@@ -26,20 +26,20 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
         return this.compliancePackTemplateId;
     }
 
-    public ListCompliancePackTemplatesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ListCompliancePackTemplatesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListCompliancePackTemplatesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

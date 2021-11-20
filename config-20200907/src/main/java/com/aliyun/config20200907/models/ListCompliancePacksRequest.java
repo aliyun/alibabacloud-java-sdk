@@ -4,26 +4,26 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListCompliancePacksRequest extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Status")
+    public String status;
 
     public static ListCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCompliancePacksRequest self = new ListCompliancePacksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCompliancePacksRequest setStatus(String status) {
-        this.status = status;
+    public ListCompliancePacksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListCompliancePacksRequest setPageSize(Integer pageSize) {
@@ -34,12 +34,12 @@ public class ListCompliancePacksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListCompliancePacksRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListCompliancePacksRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getStatus() {
+        return this.status;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigRules")
     public ListAggregateConfigRulesResponseBodyConfigRules configRules;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAggregateConfigRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAggregateConfigRulesResponseBody self = new ListAggregateConfigRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAggregateConfigRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAggregateConfigRulesResponseBody setConfigRules(ListAggregateConfigRulesResponseBodyConfigRules configRules) {
@@ -29,6 +21,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
     }
     public ListAggregateConfigRulesResponseBodyConfigRules getConfigRules() {
         return this.configRules;
+    }
+
+    public ListAggregateConfigRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
@@ -62,14 +62,20 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy extends TeaModel {
-        @NameInMap("CompliancePackId")
-        public String compliancePackId;
+        @NameInMap("AggregatorId")
+        public String aggregatorId;
 
         @NameInMap("AggregatorName")
         public String aggregatorName;
 
+        @NameInMap("CompliancePackId")
+        public String compliancePackId;
+
         @NameInMap("CompliancePackName")
         public String compliancePackName;
+
+        @NameInMap("CreatorId")
+        public String creatorId;
 
         @NameInMap("CreatorName")
         public String creatorName;
@@ -77,23 +83,17 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         @NameInMap("CreatorType")
         public String creatorType;
 
-        @NameInMap("CreatorId")
-        public String creatorId;
-
-        @NameInMap("AggregatorId")
-        public String aggregatorId;
-
         public static ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy self = new ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy();
             return TeaModel.build(map, self);
         }
 
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCompliancePackId(String compliancePackId) {
-            this.compliancePackId = compliancePackId;
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setAggregatorId(String aggregatorId) {
+            this.aggregatorId = aggregatorId;
             return this;
         }
-        public String getCompliancePackId() {
-            return this.compliancePackId;
+        public String getAggregatorId() {
+            return this.aggregatorId;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setAggregatorName(String aggregatorName) {
@@ -104,12 +104,28 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.aggregatorName;
         }
 
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCompliancePackId(String compliancePackId) {
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+        public String getCompliancePackId() {
+            return this.compliancePackId;
+        }
+
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCompliancePackName(String compliancePackName) {
             this.compliancePackName = compliancePackName;
             return this;
         }
         public String getCompliancePackName() {
             return this.compliancePackName;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCreatorName(String creatorName) {
@@ -128,80 +144,48 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.creatorType;
         }
 
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setCreatorId(String creatorId) {
-            this.creatorId = creatorId;
-            return this;
-        }
-        public String getCreatorId() {
-            return this.creatorId;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy setAggregatorId(String aggregatorId) {
-            this.aggregatorId = aggregatorId;
-            return this;
-        }
-        public String getAggregatorId() {
-            return this.aggregatorId;
-        }
-
     }
 
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
-
-        @NameInMap("SourceOwner")
-        public String sourceOwner;
-
         @NameInMap("AccountId")
         public Long accountId;
-
-        @NameInMap("ConfigRuleState")
-        public String configRuleState;
-
-        @NameInMap("Compliance")
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
-
-        @NameInMap("SourceIdentifier")
-        public String sourceIdentifier;
-
-        @NameInMap("ConfigRuleArn")
-        public String configRuleArn;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreateBy")
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
 
         @NameInMap("AutomationType")
         public String automationType;
 
-        @NameInMap("ConfigRuleName")
-        public String configRuleName;
+        @NameInMap("Compliance")
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
+
+        @NameInMap("ConfigRuleArn")
+        public String configRuleArn;
 
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        @NameInMap("ConfigRuleName")
+        public String configRuleName;
+
+        @NameInMap("ConfigRuleState")
+        public String configRuleState;
+
+        @NameInMap("CreateBy")
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
+        @NameInMap("SourceIdentifier")
+        public String sourceIdentifier;
+
+        @NameInMap("SourceOwner")
+        public String sourceOwner;
+
         public static ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList self = new ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList();
             return TeaModel.build(map, self);
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
-            return this;
-        }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setSourceOwner(String sourceOwner) {
-            this.sourceOwner = sourceOwner;
-            return this;
-        }
-        public String getSourceOwner() {
-            return this.sourceOwner;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setAccountId(Long accountId) {
@@ -212,12 +196,12 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleState(String configRuleState) {
-            this.configRuleState = configRuleState;
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setAutomationType(String automationType) {
+            this.automationType = automationType;
             return this;
         }
-        public String getConfigRuleState() {
-            return this.configRuleState;
+        public String getAutomationType() {
+            return this.automationType;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setCompliance(ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance) {
@@ -228,52 +212,12 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.compliance;
         }
 
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setSourceIdentifier(String sourceIdentifier) {
-            this.sourceIdentifier = sourceIdentifier;
-            return this;
-        }
-        public String getSourceIdentifier() {
-            return this.sourceIdentifier;
-        }
-
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleArn(String configRuleArn) {
             this.configRuleArn = configRuleArn;
             return this;
         }
         public String getConfigRuleArn() {
             return this.configRuleArn;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setCreateBy(ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy) {
-            this.createBy = createBy;
-            return this;
-        }
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy getCreateBy() {
-            return this.createBy;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setAutomationType(String automationType) {
-            this.automationType = automationType;
-            return this;
-        }
-        public String getAutomationType() {
-            return this.automationType;
-        }
-
-        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleName(String configRuleName) {
-            this.configRuleName = configRuleName;
-            return this;
-        }
-        public String getConfigRuleName() {
-            return this.configRuleName;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleId(String configRuleId) {
@@ -284,17 +228,73 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.configRuleId;
         }
 
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleName(String configRuleName) {
+            this.configRuleName = configRuleName;
+            return this;
+        }
+        public String getConfigRuleName() {
+            return this.configRuleName;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setConfigRuleState(String configRuleState) {
+            this.configRuleState = configRuleState;
+            return this;
+        }
+        public String getConfigRuleState() {
+            return this.configRuleState;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setCreateBy(ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy) {
+            this.createBy = createBy;
+            return this;
+        }
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy getCreateBy() {
+            return this.createBy;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setSourceIdentifier(String sourceIdentifier) {
+            this.sourceIdentifier = sourceIdentifier;
+            return this;
+        }
+        public String getSourceIdentifier() {
+            return this.sourceIdentifier;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList setSourceOwner(String sourceOwner) {
+            this.sourceOwner = sourceOwner;
+            return this;
+        }
+        public String getSourceOwner() {
+            return this.sourceOwner;
+        }
+
     }
 
     public static class ListAggregateConfigRulesResponseBodyConfigRules extends TeaModel {
         @NameInMap("ConfigRuleList")
         public java.util.List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;
 
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -312,20 +312,20 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             return this.configRuleList;
         }
 
-        public ListAggregateConfigRulesResponseBodyConfigRules setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
         public ListAggregateConfigRulesResponseBodyConfigRules setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
         public Integer getPageNumber() {
             return this.pageNumber;
+        }
+
+        public ListAggregateConfigRulesResponseBodyConfigRules setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListAggregateConfigRulesResponseBodyConfigRules setTotalCount(Long totalCount) {

@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetConfigRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigRule")
     public GetConfigRuleResponseBodyConfigRule configRule;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetConfigRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConfigRuleResponseBody self = new GetConfigRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetConfigRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetConfigRuleResponseBody setConfigRule(GetConfigRuleResponseBodyConfigRule configRule) {
@@ -31,281 +23,23 @@ public class GetConfigRuleResponseBody extends TeaModel {
         return this.configRule;
     }
 
-    public static class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
-        @NameInMap("MessageType")
-        public String messageType;
-
-        @NameInMap("EventSource")
-        public String eventSource;
-
-        @NameInMap("MaximumExecutionFrequency")
-        public String maximumExecutionFrequency;
-
-        public static GetConfigRuleResponseBodyConfigRuleSourceSourceDetails build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleSourceSourceDetails self = new GetConfigRuleResponseBodyConfigRuleSourceSourceDetails();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setMessageType(String messageType) {
-            this.messageType = messageType;
-            return this;
-        }
-        public String getMessageType() {
-            return this.messageType;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setEventSource(String eventSource) {
-            this.eventSource = eventSource;
-            return this;
-        }
-        public String getEventSource() {
-            return this.eventSource;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setMaximumExecutionFrequency(String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = maximumExecutionFrequency;
-            return this;
-        }
-        public String getMaximumExecutionFrequency() {
-            return this.maximumExecutionFrequency;
-        }
-
+    public GetConfigRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
     }
-
-    public static class GetConfigRuleResponseBodyConfigRuleSource extends TeaModel {
-        @NameInMap("SourceDetails")
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("Identifier")
-        public String identifier;
-
-        public static GetConfigRuleResponseBodyConfigRuleSource build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleSource self = new GetConfigRuleResponseBodyConfigRuleSource();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSource setSourceDetails(java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails) {
-            this.sourceDetails = sourceDetails;
-            return this;
-        }
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> getSourceDetails() {
-            return this.sourceDetails;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSource setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSource setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-    }
-
-    public static class GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails extends TeaModel {
-        @NameInMap("MessageType")
-        public String messageType;
-
-        @NameInMap("EventSource")
-        public String eventSource;
-
-        @NameInMap("MaximumExecutionFrequency")
-        public String maximumExecutionFrequency;
-
-        public static GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails self = new GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setMessageType(String messageType) {
-            this.messageType = messageType;
-            return this;
-        }
-        public String getMessageType() {
-            return this.messageType;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setEventSource(String eventSource) {
-            this.eventSource = eventSource;
-            return this;
-        }
-        public String getEventSource() {
-            return this.eventSource;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setMaximumExecutionFrequency(String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = maximumExecutionFrequency;
-            return this;
-        }
-        public String getMaximumExecutionFrequency() {
-            return this.maximumExecutionFrequency;
-        }
-
-    }
-
-    public static class GetConfigRuleResponseBodyConfigRuleManagedRule extends TeaModel {
-        @NameInMap("SourceDetails")
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Labels")
-        public java.util.List<String> labels;
-
-        @NameInMap("Identifier")
-        public String identifier;
-
-        @NameInMap("OptionalInputParameterDetails")
-        public java.util.Map<String, ?> optionalInputParameterDetails;
-
-        @NameInMap("ManagedRuleName")
-        public String managedRuleName;
-
-        @NameInMap("CompulsoryInputParameterDetails")
-        public java.util.Map<String, ?> compulsoryInputParameterDetails;
-
-        public static GetConfigRuleResponseBodyConfigRuleManagedRule build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleManagedRule self = new GetConfigRuleResponseBodyConfigRuleManagedRule();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setSourceDetails(java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails) {
-            this.sourceDetails = sourceDetails;
-            return this;
-        }
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> getSourceDetails() {
-            return this.sourceDetails;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setLabels(java.util.List<String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.List<String> getLabels() {
-            return this.labels;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setOptionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
-            this.optionalInputParameterDetails = optionalInputParameterDetails;
-            return this;
-        }
-        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
-            return this.optionalInputParameterDetails;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setManagedRuleName(String managedRuleName) {
-            this.managedRuleName = managedRuleName;
-            return this;
-        }
-        public String getManagedRuleName() {
-            return this.managedRuleName;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleManagedRule setCompulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
-            this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
-            return this;
-        }
-        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
-            return this.compulsoryInputParameterDetails;
-        }
-
-    }
-
-    public static class GetConfigRuleResponseBodyConfigRuleCreateBy extends TeaModel {
-        @NameInMap("CompliancePackId")
-        public String compliancePackId;
-
-        @NameInMap("CompliancePackName")
-        public String compliancePackName;
-
-        @NameInMap("CreatorName")
-        public String creatorName;
-
-        @NameInMap("CreatorId")
-        public String creatorId;
-
-        public static GetConfigRuleResponseBodyConfigRuleCreateBy build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleCreateBy self = new GetConfigRuleResponseBodyConfigRuleCreateBy();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleCreateBy setCompliancePackId(String compliancePackId) {
-            this.compliancePackId = compliancePackId;
-            return this;
-        }
-        public String getCompliancePackId() {
-            return this.compliancePackId;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleCreateBy setCompliancePackName(String compliancePackName) {
-            this.compliancePackName = compliancePackName;
-            return this;
-        }
-        public String getCompliancePackName() {
-            return this.compliancePackName;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleCreateBy setCreatorName(String creatorName) {
-            this.creatorName = creatorName;
-            return this;
-        }
-        public String getCreatorName() {
-            return this.creatorName;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleCreateBy setCreatorId(String creatorId) {
-            this.creatorId = creatorId;
-            return this;
-        }
-        public String getCreatorId() {
-            return this.creatorId;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus extends TeaModel {
-        @NameInMap("LastErrorCode")
-        public String lastErrorCode;
-
-        @NameInMap("LastSuccessfulEvaluationTimestamp")
-        public Long lastSuccessfulEvaluationTimestamp;
-
         @NameInMap("FirstActivatedTimestamp")
         public Long firstActivatedTimestamp;
 
         @NameInMap("FirstEvaluationStarted")
         public Boolean firstEvaluationStarted;
 
-        @NameInMap("LastSuccessfulInvocationTimestamp")
-        public Long lastSuccessfulInvocationTimestamp;
+        @NameInMap("LastErrorCode")
+        public String lastErrorCode;
 
         @NameInMap("LastErrorMessage")
         public String lastErrorMessage;
@@ -316,25 +50,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("LastFailedInvocationTimestamp")
         public Long lastFailedInvocationTimestamp;
 
+        @NameInMap("LastSuccessfulEvaluationTimestamp")
+        public Long lastSuccessfulEvaluationTimestamp;
+
+        @NameInMap("LastSuccessfulInvocationTimestamp")
+        public Long lastSuccessfulInvocationTimestamp;
+
         public static GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus build(java.util.Map<String, ?> map) throws Exception {
             GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus self = new GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus();
             return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastErrorCode(String lastErrorCode) {
-            this.lastErrorCode = lastErrorCode;
-            return this;
-        }
-        public String getLastErrorCode() {
-            return this.lastErrorCode;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastSuccessfulEvaluationTimestamp(Long lastSuccessfulEvaluationTimestamp) {
-            this.lastSuccessfulEvaluationTimestamp = lastSuccessfulEvaluationTimestamp;
-            return this;
-        }
-        public Long getLastSuccessfulEvaluationTimestamp() {
-            return this.lastSuccessfulEvaluationTimestamp;
         }
 
         public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setFirstActivatedTimestamp(Long firstActivatedTimestamp) {
@@ -353,12 +77,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.firstEvaluationStarted;
         }
 
-        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastSuccessfulInvocationTimestamp(Long lastSuccessfulInvocationTimestamp) {
-            this.lastSuccessfulInvocationTimestamp = lastSuccessfulInvocationTimestamp;
+        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastErrorCode(String lastErrorCode) {
+            this.lastErrorCode = lastErrorCode;
             return this;
         }
-        public Long getLastSuccessfulInvocationTimestamp() {
-            return this.lastSuccessfulInvocationTimestamp;
+        public String getLastErrorCode() {
+            return this.lastErrorCode;
         }
 
         public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastErrorMessage(String lastErrorMessage) {
@@ -385,110 +109,100 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.lastFailedInvocationTimestamp;
         }
 
+        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastSuccessfulEvaluationTimestamp(Long lastSuccessfulEvaluationTimestamp) {
+            this.lastSuccessfulEvaluationTimestamp = lastSuccessfulEvaluationTimestamp;
+            return this;
+        }
+        public Long getLastSuccessfulEvaluationTimestamp() {
+            return this.lastSuccessfulEvaluationTimestamp;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus setLastSuccessfulInvocationTimestamp(Long lastSuccessfulInvocationTimestamp) {
+            this.lastSuccessfulInvocationTimestamp = lastSuccessfulInvocationTimestamp;
+            return this;
+        }
+        public Long getLastSuccessfulInvocationTimestamp() {
+            return this.lastSuccessfulInvocationTimestamp;
+        }
+
     }
 
-    public static class GetConfigRuleResponseBodyConfigRule extends TeaModel {
-        @NameInMap("RiskLevel")
-        public Integer riskLevel;
+    public static class GetConfigRuleResponseBodyConfigRuleCreateBy extends TeaModel {
+        @NameInMap("CompliancePackId")
+        public String compliancePackId;
 
-        @NameInMap("InputParameters")
-        public java.util.Map<String, ?> inputParameters;
+        @NameInMap("CompliancePackName")
+        public String compliancePackName;
 
-        @NameInMap("Source")
-        public GetConfigRuleResponseBodyConfigRuleSource source;
+        @NameInMap("CreatorId")
+        public String creatorId;
 
-        @NameInMap("ConfigRuleState")
-        public String configRuleState;
+        @NameInMap("CreatorName")
+        public String creatorName;
+
+        public static GetConfigRuleResponseBodyConfigRuleCreateBy build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleCreateBy self = new GetConfigRuleResponseBodyConfigRuleCreateBy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCreateBy setCompliancePackId(String compliancePackId) {
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+        public String getCompliancePackId() {
+            return this.compliancePackId;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCreateBy setCompliancePackName(String compliancePackName) {
+            this.compliancePackName = compliancePackName;
+            return this;
+        }
+        public String getCompliancePackName() {
+            return this.compliancePackName;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCreateBy setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleCreateBy setCreatorName(String creatorName) {
+            this.creatorName = creatorName;
+            return this;
+        }
+        public String getCreatorName() {
+            return this.creatorName;
+        }
+
+    }
+
+    public static class GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails extends TeaModel {
+        @NameInMap("EventSource")
+        public String eventSource;
 
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
 
-        @NameInMap("ManagedRule")
-        public GetConfigRuleResponseBodyConfigRuleManagedRule managedRule;
+        @NameInMap("MessageType")
+        public String messageType;
 
-        @NameInMap("ConfigRuleArn")
-        public String configRuleArn;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreateBy")
-        public GetConfigRuleResponseBodyConfigRuleCreateBy createBy;
-
-        @NameInMap("ConfigRuleName")
-        public String configRuleName;
-
-        @NameInMap("ConfigRuleEvaluationStatus")
-        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus configRuleEvaluationStatus;
-
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
-        @NameInMap("ModifiedTimestamp")
-        public Long modifiedTimestamp;
-
-        @NameInMap("CreateTimestamp")
-        public Long createTimestamp;
-
-        @NameInMap("ResourceTypesScope")
-        public String resourceTypesScope;
-
-        @NameInMap("RegionIdsScope")
-        public String regionIdsScope;
-
-        @NameInMap("ExcludeResourceIdsScope")
-        public String excludeResourceIdsScope;
-
-        @NameInMap("ResourceGroupIdsScope")
-        public String resourceGroupIdsScope;
-
-        @NameInMap("TagKeyScope")
-        public String tagKeyScope;
-
-        @NameInMap("TagValueScope")
-        public String tagValueScope;
-
-        @NameInMap("ConfigRuleTriggerTypes")
-        public String configRuleTriggerTypes;
-
-        public static GetConfigRuleResponseBodyConfigRule build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRule self = new GetConfigRuleResponseBodyConfigRule();
+        public static GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails self = new GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails();
             return TeaModel.build(map, self);
         }
 
-        public GetConfigRuleResponseBodyConfigRule setRiskLevel(Integer riskLevel) {
-            this.riskLevel = riskLevel;
+        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setEventSource(String eventSource) {
+            this.eventSource = eventSource;
             return this;
         }
-        public Integer getRiskLevel() {
-            return this.riskLevel;
+        public String getEventSource() {
+            return this.eventSource;
         }
 
-        public GetConfigRuleResponseBodyConfigRule setInputParameters(java.util.Map<String, ?> inputParameters) {
-            this.inputParameters = inputParameters;
-            return this;
-        }
-        public java.util.Map<String, ?> getInputParameters() {
-            return this.inputParameters;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setSource(GetConfigRuleResponseBodyConfigRuleSource source) {
-            this.source = source;
-            return this;
-        }
-        public GetConfigRuleResponseBodyConfigRuleSource getSource() {
-            return this.source;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setConfigRuleState(String configRuleState) {
-            this.configRuleState = configRuleState;
-            return this;
-        }
-        public String getConfigRuleState() {
-            return this.configRuleState;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setMaximumExecutionFrequency(String maximumExecutionFrequency) {
+        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setMaximumExecutionFrequency(String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
@@ -496,12 +210,250 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.maximumExecutionFrequency;
         }
 
-        public GetConfigRuleResponseBodyConfigRule setManagedRule(GetConfigRuleResponseBodyConfigRuleManagedRule managedRule) {
-            this.managedRule = managedRule;
+        public GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails setMessageType(String messageType) {
+            this.messageType = messageType;
             return this;
         }
-        public GetConfigRuleResponseBodyConfigRuleManagedRule getManagedRule() {
-            return this.managedRule;
+        public String getMessageType() {
+            return this.messageType;
+        }
+
+    }
+
+    public static class GetConfigRuleResponseBodyConfigRuleManagedRule extends TeaModel {
+        @NameInMap("CompulsoryInputParameterDetails")
+        public java.util.Map<String, ?> compulsoryInputParameterDetails;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Identifier")
+        public String identifier;
+
+        @NameInMap("Labels")
+        public java.util.List<String> labels;
+
+        @NameInMap("ManagedRuleName")
+        public String managedRuleName;
+
+        @NameInMap("OptionalInputParameterDetails")
+        public java.util.Map<String, ?> optionalInputParameterDetails;
+
+        @NameInMap("SourceDetails")
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
+
+        public static GetConfigRuleResponseBodyConfigRuleManagedRule build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleManagedRule self = new GetConfigRuleResponseBodyConfigRuleManagedRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setCompulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
+            this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
+            return this;
+        }
+        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
+            return this.compulsoryInputParameterDetails;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setLabels(java.util.List<String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<String> getLabels() {
+            return this.labels;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setManagedRuleName(String managedRuleName) {
+            this.managedRuleName = managedRuleName;
+            return this;
+        }
+        public String getManagedRuleName() {
+            return this.managedRuleName;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setOptionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
+            this.optionalInputParameterDetails = optionalInputParameterDetails;
+            return this;
+        }
+        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
+            return this.optionalInputParameterDetails;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleManagedRule setSourceDetails(java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails) {
+            this.sourceDetails = sourceDetails;
+            return this;
+        }
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> getSourceDetails() {
+            return this.sourceDetails;
+        }
+
+    }
+
+    public static class GetConfigRuleResponseBodyConfigRuleSourceSourceDetails extends TeaModel {
+        @NameInMap("EventSource")
+        public String eventSource;
+
+        @NameInMap("MaximumExecutionFrequency")
+        public String maximumExecutionFrequency;
+
+        @NameInMap("MessageType")
+        public String messageType;
+
+        public static GetConfigRuleResponseBodyConfigRuleSourceSourceDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleSourceSourceDetails self = new GetConfigRuleResponseBodyConfigRuleSourceSourceDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setEventSource(String eventSource) {
+            this.eventSource = eventSource;
+            return this;
+        }
+        public String getEventSource() {
+            return this.eventSource;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setMaximumExecutionFrequency(String maximumExecutionFrequency) {
+            this.maximumExecutionFrequency = maximumExecutionFrequency;
+            return this;
+        }
+        public String getMaximumExecutionFrequency() {
+            return this.maximumExecutionFrequency;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSourceSourceDetails setMessageType(String messageType) {
+            this.messageType = messageType;
+            return this;
+        }
+        public String getMessageType() {
+            return this.messageType;
+        }
+
+    }
+
+    public static class GetConfigRuleResponseBodyConfigRuleSource extends TeaModel {
+        @NameInMap("Identifier")
+        public String identifier;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("SourceDetails")
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
+
+        public static GetConfigRuleResponseBodyConfigRuleSource build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRuleSource self = new GetConfigRuleResponseBodyConfigRuleSource();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSource setIdentifier(String identifier) {
+            this.identifier = identifier;
+            return this;
+        }
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSource setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetConfigRuleResponseBodyConfigRuleSource setSourceDetails(java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails) {
+            this.sourceDetails = sourceDetails;
+            return this;
+        }
+        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> getSourceDetails() {
+            return this.sourceDetails;
+        }
+
+    }
+
+    public static class GetConfigRuleResponseBodyConfigRule extends TeaModel {
+        @NameInMap("ConfigRuleArn")
+        public String configRuleArn;
+
+        @NameInMap("ConfigRuleEvaluationStatus")
+        public GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus configRuleEvaluationStatus;
+
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
+        @NameInMap("ConfigRuleName")
+        public String configRuleName;
+
+        @NameInMap("ConfigRuleState")
+        public String configRuleState;
+
+        @NameInMap("ConfigRuleTriggerTypes")
+        public String configRuleTriggerTypes;
+
+        @NameInMap("CreateBy")
+        public GetConfigRuleResponseBodyConfigRuleCreateBy createBy;
+
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ExcludeResourceIdsScope")
+        public String excludeResourceIdsScope;
+
+        @NameInMap("InputParameters")
+        public java.util.Map<String, ?> inputParameters;
+
+        @NameInMap("ManagedRule")
+        public GetConfigRuleResponseBodyConfigRuleManagedRule managedRule;
+
+        @NameInMap("MaximumExecutionFrequency")
+        public String maximumExecutionFrequency;
+
+        @NameInMap("ModifiedTimestamp")
+        public Long modifiedTimestamp;
+
+        @NameInMap("RegionIdsScope")
+        public String regionIdsScope;
+
+        @NameInMap("ResourceGroupIdsScope")
+        public String resourceGroupIdsScope;
+
+        @NameInMap("ResourceTypesScope")
+        public String resourceTypesScope;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
+        @NameInMap("Source")
+        public GetConfigRuleResponseBodyConfigRuleSource source;
+
+        @NameInMap("TagKeyScope")
+        public String tagKeyScope;
+
+        @NameInMap("TagValueScope")
+        public String tagValueScope;
+
+        public static GetConfigRuleResponseBodyConfigRule build(java.util.Map<String, ?> map) throws Exception {
+            GetConfigRuleResponseBodyConfigRule self = new GetConfigRuleResponseBodyConfigRule();
+            return TeaModel.build(map, self);
         }
 
         public GetConfigRuleResponseBodyConfigRule setConfigRuleArn(String configRuleArn) {
@@ -510,30 +462,6 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getConfigRuleArn() {
             return this.configRuleArn;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setCreateBy(GetConfigRuleResponseBodyConfigRuleCreateBy createBy) {
-            this.createBy = createBy;
-            return this;
-        }
-        public GetConfigRuleResponseBodyConfigRuleCreateBy getCreateBy() {
-            return this.createBy;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setConfigRuleName(String configRuleName) {
-            this.configRuleName = configRuleName;
-            return this;
-        }
-        public String getConfigRuleName() {
-            return this.configRuleName;
         }
 
         public GetConfigRuleResponseBodyConfigRule setConfigRuleEvaluationStatus(GetConfigRuleResponseBodyConfigRuleConfigRuleEvaluationStatus configRuleEvaluationStatus) {
@@ -552,12 +480,36 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.configRuleId;
         }
 
-        public GetConfigRuleResponseBodyConfigRule setModifiedTimestamp(Long modifiedTimestamp) {
-            this.modifiedTimestamp = modifiedTimestamp;
+        public GetConfigRuleResponseBodyConfigRule setConfigRuleName(String configRuleName) {
+            this.configRuleName = configRuleName;
             return this;
         }
-        public Long getModifiedTimestamp() {
-            return this.modifiedTimestamp;
+        public String getConfigRuleName() {
+            return this.configRuleName;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setConfigRuleState(String configRuleState) {
+            this.configRuleState = configRuleState;
+            return this;
+        }
+        public String getConfigRuleState() {
+            return this.configRuleState;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
+            this.configRuleTriggerTypes = configRuleTriggerTypes;
+            return this;
+        }
+        public String getConfigRuleTriggerTypes() {
+            return this.configRuleTriggerTypes;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setCreateBy(GetConfigRuleResponseBodyConfigRuleCreateBy createBy) {
+            this.createBy = createBy;
+            return this;
+        }
+        public GetConfigRuleResponseBodyConfigRuleCreateBy getCreateBy() {
+            return this.createBy;
         }
 
         public GetConfigRuleResponseBodyConfigRule setCreateTimestamp(Long createTimestamp) {
@@ -568,20 +520,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.createTimestamp;
         }
 
-        public GetConfigRuleResponseBodyConfigRule setResourceTypesScope(String resourceTypesScope) {
-            this.resourceTypesScope = resourceTypesScope;
+        public GetConfigRuleResponseBodyConfigRule setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getResourceTypesScope() {
-            return this.resourceTypesScope;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setRegionIdsScope(String regionIdsScope) {
-            this.regionIdsScope = regionIdsScope;
-            return this;
-        }
-        public String getRegionIdsScope() {
-            return this.regionIdsScope;
+        public String getDescription() {
+            return this.description;
         }
 
         public GetConfigRuleResponseBodyConfigRule setExcludeResourceIdsScope(String excludeResourceIdsScope) {
@@ -592,12 +536,76 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.excludeResourceIdsScope;
         }
 
+        public GetConfigRuleResponseBodyConfigRule setInputParameters(java.util.Map<String, ?> inputParameters) {
+            this.inputParameters = inputParameters;
+            return this;
+        }
+        public java.util.Map<String, ?> getInputParameters() {
+            return this.inputParameters;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setManagedRule(GetConfigRuleResponseBodyConfigRuleManagedRule managedRule) {
+            this.managedRule = managedRule;
+            return this;
+        }
+        public GetConfigRuleResponseBodyConfigRuleManagedRule getManagedRule() {
+            return this.managedRule;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setMaximumExecutionFrequency(String maximumExecutionFrequency) {
+            this.maximumExecutionFrequency = maximumExecutionFrequency;
+            return this;
+        }
+        public String getMaximumExecutionFrequency() {
+            return this.maximumExecutionFrequency;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setModifiedTimestamp(Long modifiedTimestamp) {
+            this.modifiedTimestamp = modifiedTimestamp;
+            return this;
+        }
+        public Long getModifiedTimestamp() {
+            return this.modifiedTimestamp;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setRegionIdsScope(String regionIdsScope) {
+            this.regionIdsScope = regionIdsScope;
+            return this;
+        }
+        public String getRegionIdsScope() {
+            return this.regionIdsScope;
+        }
+
         public GetConfigRuleResponseBodyConfigRule setResourceGroupIdsScope(String resourceGroupIdsScope) {
             this.resourceGroupIdsScope = resourceGroupIdsScope;
             return this;
         }
         public String getResourceGroupIdsScope() {
             return this.resourceGroupIdsScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setResourceTypesScope(String resourceTypesScope) {
+            this.resourceTypesScope = resourceTypesScope;
+            return this;
+        }
+        public String getResourceTypesScope() {
+            return this.resourceTypesScope;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public GetConfigRuleResponseBodyConfigRule setSource(GetConfigRuleResponseBodyConfigRuleSource source) {
+            this.source = source;
+            return this;
+        }
+        public GetConfigRuleResponseBodyConfigRuleSource getSource() {
+            return this.source;
         }
 
         public GetConfigRuleResponseBodyConfigRule setTagKeyScope(String tagKeyScope) {
@@ -614,14 +622,6 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getTagValueScope() {
             return this.tagValueScope;
-        }
-
-        public GetConfigRuleResponseBodyConfigRule setConfigRuleTriggerTypes(String configRuleTriggerTypes) {
-            this.configRuleTriggerTypes = configRuleTriggerTypes;
-            return this;
-        }
-        public String getConfigRuleTriggerTypes() {
-            return this.configRuleTriggerTypes;
         }
 
     }

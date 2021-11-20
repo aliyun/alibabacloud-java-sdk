@@ -4,14 +4,8 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("ResourceId")
-    public String resourceId;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
 
     @NameInMap("EndTime")
     public Long endTime;
@@ -19,45 +13,35 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static GetAggregateResourceComplianceTimelineRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAggregateResourceComplianceTimelineRequest self = new GetAggregateResourceComplianceTimelineRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAggregateResourceComplianceTimelineRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public GetAggregateResourceComplianceTimelineRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public GetAggregateResourceComplianceTimelineRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
-    public GetAggregateResourceComplianceTimelineRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getAggregatorId() {
+        return this.aggregatorId;
     }
 
     public GetAggregateResourceComplianceTimelineRequest setEndTime(Long endTime) {
@@ -76,20 +60,12 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public GetAggregateResourceComplianceTimelineRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
+    public GetAggregateResourceComplianceTimelineRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getAggregatorId() {
-        return this.aggregatorId;
-    }
-
-    public GetAggregateResourceComplianceTimelineRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public GetAggregateResourceComplianceTimelineRequest setRegion(String region) {
@@ -100,12 +76,36 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
         return this.region;
     }
 
-    public GetAggregateResourceComplianceTimelineRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public GetAggregateResourceComplianceTimelineRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public GetAggregateResourceComplianceTimelineRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public GetAggregateResourceComplianceTimelineRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetAggregateResourceComplianceTimelineRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

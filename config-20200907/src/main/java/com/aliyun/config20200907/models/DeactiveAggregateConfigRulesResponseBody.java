@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperateRuleResult")
     public DeactiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeactiveAggregateConfigRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeactiveAggregateConfigRulesResponseBody self = new DeactiveAggregateConfigRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeactiveAggregateConfigRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeactiveAggregateConfigRulesResponseBody setOperateRuleResult(DeactiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult) {
@@ -31,19 +23,35 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
         return this.operateRuleResult;
     }
 
+    public DeactiveAggregateConfigRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("Success")
         public Boolean success;
 
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
         public static DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList build(java.util.Map<String, ?> map) throws Exception {
             DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList self = new DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList();
             return TeaModel.build(map, self);
+        }
+
+        public DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setErrorCode(String errorCode) {
@@ -60,14 +68,6 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
-        }
-
-        public DeactiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
     }

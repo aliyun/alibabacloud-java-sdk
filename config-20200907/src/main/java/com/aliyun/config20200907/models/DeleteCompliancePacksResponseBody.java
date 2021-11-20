@@ -4,23 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class DeleteCompliancePacksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OperateCompliancePacksResult")
     public DeleteCompliancePacksResponseBodyOperateCompliancePacksResult operateCompliancePacksResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteCompliancePacksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteCompliancePacksResponseBody self = new DeleteCompliancePacksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCompliancePacksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteCompliancePacksResponseBody setOperateCompliancePacksResult(DeleteCompliancePacksResponseBodyOperateCompliancePacksResult operateCompliancePacksResult) {
@@ -29,6 +21,14 @@ public class DeleteCompliancePacksResponseBody extends TeaModel {
     }
     public DeleteCompliancePacksResponseBodyOperateCompliancePacksResult getOperateCompliancePacksResult() {
         return this.operateCompliancePacksResult;
+    }
+
+    public DeleteCompliancePacksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DeleteCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks extends TeaModel {

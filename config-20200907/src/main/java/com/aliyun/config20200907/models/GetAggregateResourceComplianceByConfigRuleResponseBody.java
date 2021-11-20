@@ -62,23 +62,15 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
     }
 
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Compliances")
         public java.util.List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult self = new GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult setCompliances(java.util.List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances) {
@@ -87,6 +79,14 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
         }
         public java.util.List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> getCompliances() {
             return this.compliances;
+        }
+
+        public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

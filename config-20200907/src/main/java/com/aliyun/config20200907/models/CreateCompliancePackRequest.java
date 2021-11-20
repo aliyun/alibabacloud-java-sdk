@@ -4,11 +4,17 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class CreateCompliancePackRequest extends TeaModel {
-    @NameInMap("CompliancePackTemplateId")
-    public String compliancePackTemplateId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("CompliancePackName")
     public String compliancePackName;
+
+    @NameInMap("CompliancePackTemplateId")
+    public String compliancePackTemplateId;
+
+    @NameInMap("ConfigRules")
+    public java.util.List<CreateCompliancePackRequestConfigRules> configRules;
 
     @NameInMap("Description")
     public String description;
@@ -16,15 +22,25 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    @NameInMap("ConfigRules")
-    public java.util.List<CreateCompliancePackRequestConfigRules> configRules;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCompliancePackRequest self = new CreateCompliancePackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCompliancePackRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateCompliancePackRequest setCompliancePackName(String compliancePackName) {
+        this.compliancePackName = compliancePackName;
+        return this;
+    }
+    public String getCompliancePackName() {
+        return this.compliancePackName;
     }
 
     public CreateCompliancePackRequest setCompliancePackTemplateId(String compliancePackTemplateId) {
@@ -35,12 +51,12 @@ public class CreateCompliancePackRequest extends TeaModel {
         return this.compliancePackTemplateId;
     }
 
-    public CreateCompliancePackRequest setCompliancePackName(String compliancePackName) {
-        this.compliancePackName = compliancePackName;
+    public CreateCompliancePackRequest setConfigRules(java.util.List<CreateCompliancePackRequestConfigRules> configRules) {
+        this.configRules = configRules;
         return this;
     }
-    public String getCompliancePackName() {
-        return this.compliancePackName;
+    public java.util.List<CreateCompliancePackRequestConfigRules> getConfigRules() {
+        return this.configRules;
     }
 
     public CreateCompliancePackRequest setDescription(String description) {
@@ -57,22 +73,6 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
-    }
-
-    public CreateCompliancePackRequest setConfigRules(java.util.List<CreateCompliancePackRequestConfigRules> configRules) {
-        this.configRules = configRules;
-        return this;
-    }
-    public java.util.List<CreateCompliancePackRequestConfigRules> getConfigRules() {
-        return this.configRules;
-    }
-
-    public CreateCompliancePackRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public static class CreateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {
@@ -106,8 +106,8 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateCompliancePackRequestConfigRules extends TeaModel {
-        @NameInMap("ManagedRuleIdentifier")
-        public String managedRuleIdentifier;
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
 
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -115,11 +115,11 @@ public class CreateCompliancePackRequest extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<CreateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ManagedRuleIdentifier")
+        public String managedRuleIdentifier;
 
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -129,12 +129,12 @@ public class CreateCompliancePackRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateCompliancePackRequestConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
-            this.managedRuleIdentifier = managedRuleIdentifier;
+        public CreateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
             return this;
         }
-        public String getManagedRuleIdentifier() {
-            return this.managedRuleIdentifier;
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
         public CreateCompliancePackRequestConfigRules setConfigRuleName(String configRuleName) {
@@ -153,20 +153,20 @@ public class CreateCompliancePackRequest extends TeaModel {
             return this.configRuleParameters;
         }
 
-        public CreateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
-        }
-
         public CreateCompliancePackRequestConfigRules setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateCompliancePackRequestConfigRules setManagedRuleIdentifier(String managedRuleIdentifier) {
+            this.managedRuleIdentifier = managedRuleIdentifier;
+            return this;
+        }
+        public String getManagedRuleIdentifier() {
+            return this.managedRuleIdentifier;
         }
 
         public CreateCompliancePackRequestConfigRules setRiskLevel(Integer riskLevel) {

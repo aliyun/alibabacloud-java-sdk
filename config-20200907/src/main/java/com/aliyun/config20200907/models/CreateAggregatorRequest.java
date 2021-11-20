@@ -4,40 +4,24 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class CreateAggregatorRequest extends TeaModel {
-    @NameInMap("AggregatorName")
-    public String aggregatorName;
-
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("AggregatorAccounts")
     public java.util.List<CreateAggregatorRequestAggregatorAccounts> aggregatorAccounts;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("AggregatorName")
+    public String aggregatorName;
 
     @NameInMap("AggregatorType")
     public String aggregatorType;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
     public static CreateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregatorRequest self = new CreateAggregatorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAggregatorRequest setAggregatorName(String aggregatorName) {
-        this.aggregatorName = aggregatorName;
-        return this;
-    }
-    public String getAggregatorName() {
-        return this.aggregatorName;
-    }
-
-    public CreateAggregatorRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateAggregatorRequest setAggregatorAccounts(java.util.List<CreateAggregatorRequestAggregatorAccounts> aggregatorAccounts) {
@@ -48,12 +32,12 @@ public class CreateAggregatorRequest extends TeaModel {
         return this.aggregatorAccounts;
     }
 
-    public CreateAggregatorRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateAggregatorRequest setAggregatorName(String aggregatorName) {
+        this.aggregatorName = aggregatorName;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getAggregatorName() {
+        return this.aggregatorName;
     }
 
     public CreateAggregatorRequest setAggregatorType(String aggregatorType) {
@@ -62,6 +46,22 @@ public class CreateAggregatorRequest extends TeaModel {
     }
     public String getAggregatorType() {
         return this.aggregatorType;
+    }
+
+    public CreateAggregatorRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateAggregatorRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public static class CreateAggregatorRequestAggregatorAccounts extends TeaModel {

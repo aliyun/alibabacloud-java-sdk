@@ -32,37 +32,21 @@ public class GetResourceInventoryResponseBody extends TeaModel {
     }
 
     public static class GetResourceInventoryResponseBodyResourceInventory extends TeaModel {
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AccountId")
         public Long accountId;
+
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
 
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
+        @NameInMap("Status")
+        public String status;
+
         public static GetResourceInventoryResponseBodyResourceInventory build(java.util.Map<String, ?> map) throws Exception {
             GetResourceInventoryResponseBodyResourceInventory self = new GetResourceInventoryResponseBodyResourceInventory();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceInventoryResponseBodyResourceInventory setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
-        }
-
-        public GetResourceInventoryResponseBodyResourceInventory setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetResourceInventoryResponseBodyResourceInventory setAccountId(Long accountId) {
@@ -73,12 +57,28 @@ public class GetResourceInventoryResponseBody extends TeaModel {
             return this.accountId;
         }
 
+        public GetResourceInventoryResponseBodyResourceInventory setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
+            return this;
+        }
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
         public GetResourceInventoryResponseBodyResourceInventory setResourceInventoryGenerateTime(Long resourceInventoryGenerateTime) {
             this.resourceInventoryGenerateTime = resourceInventoryGenerateTime;
             return this;
         }
         public Long getResourceInventoryGenerateTime() {
             return this.resourceInventoryGenerateTime;
+        }
+
+        public GetResourceInventoryResponseBodyResourceInventory setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

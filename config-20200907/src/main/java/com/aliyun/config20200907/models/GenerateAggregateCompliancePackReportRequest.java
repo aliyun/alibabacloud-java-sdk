@@ -4,26 +4,26 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GenerateAggregateCompliancePackReportRequest extends TeaModel {
-    @NameInMap("CompliancePackId")
-    public String compliancePackId;
+    @NameInMap("AggregatorId")
+    public String aggregatorId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("AggregatorId")
-    public String aggregatorId;
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
 
     public static GenerateAggregateCompliancePackReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateAggregateCompliancePackReportRequest self = new GenerateAggregateCompliancePackReportRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenerateAggregateCompliancePackReportRequest setCompliancePackId(String compliancePackId) {
-        this.compliancePackId = compliancePackId;
+    public GenerateAggregateCompliancePackReportRequest setAggregatorId(String aggregatorId) {
+        this.aggregatorId = aggregatorId;
         return this;
     }
-    public String getCompliancePackId() {
-        return this.compliancePackId;
+    public String getAggregatorId() {
+        return this.aggregatorId;
     }
 
     public GenerateAggregateCompliancePackReportRequest setClientToken(String clientToken) {
@@ -34,12 +34,12 @@ public class GenerateAggregateCompliancePackReportRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public GenerateAggregateCompliancePackReportRequest setAggregatorId(String aggregatorId) {
-        this.aggregatorId = aggregatorId;
+    public GenerateAggregateCompliancePackReportRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
         return this;
     }
-    public String getAggregatorId() {
-        return this.aggregatorId;
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
 }

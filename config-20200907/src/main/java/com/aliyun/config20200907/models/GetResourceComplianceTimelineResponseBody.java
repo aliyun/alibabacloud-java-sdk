@@ -32,32 +32,26 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList extends TeaModel {
-        @NameInMap("Tags")
-        public String tags;
-
         @NameInMap("AccountId")
         public String accountId;
 
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("ResourceCreateTime")
-        public Long resourceCreateTime;
-
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("CaptureTime")
+        public Long captureTime;
 
         @NameInMap("Configuration")
         public String configuration;
 
-        @NameInMap("CaptureTime")
-        public Long captureTime;
-
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceCreateTime")
+        public Long resourceCreateTime;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -68,17 +62,15 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Tags")
+        public String tags;
+
         public static GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList build(java.util.Map<String, ?> map) throws Exception {
             GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList self = new GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setAccountId(String accountId) {
@@ -97,28 +89,12 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return this.availabilityZone;
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setCaptureTime(Long captureTime) {
+            this.captureTime = captureTime;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setResourceCreateTime(Long resourceCreateTime) {
-            this.resourceCreateTime = resourceCreateTime;
-            return this;
-        }
-        public Long getResourceCreateTime() {
-            return this.resourceCreateTime;
-        }
-
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public Long getCaptureTime() {
+            return this.captureTime;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setConfiguration(String configuration) {
@@ -129,20 +105,28 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return this.configuration;
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setCaptureTime(Long captureTime) {
-            this.captureTime = captureTime;
-            return this;
-        }
-        public Long getCaptureTime() {
-            return this.captureTime;
-        }
-
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setConfigurationDiff(String configurationDiff) {
             this.configurationDiff = configurationDiff;
             return this;
         }
         public String getConfigurationDiff() {
             return this.configurationDiff;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setResourceCreateTime(Long resourceCreateTime) {
+            this.resourceCreateTime = resourceCreateTime;
+            return this;
+        }
+        public Long getResourceCreateTime() {
+            return this.resourceCreateTime;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setResourceId(String resourceId) {
@@ -169,29 +153,45 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return this.resourceStatus;
         }
 
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
-        @NameInMap("NextToken")
-        public String nextToken;
+        @NameInMap("ComplianceList")
+        public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
 
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        @NameInMap("ComplianceList")
-        public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
+        @NameInMap("NextToken")
+        public String nextToken;
 
         public static GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline build(java.util.Map<String, ?> map) throws Exception {
             GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline self = new GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline();
             return TeaModel.build(map, self);
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setNextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setComplianceList(java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList) {
+            this.complianceList = complianceList;
             return this;
         }
-        public String getNextToken() {
-            return this.nextToken;
+        public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> getComplianceList() {
+            return this.complianceList;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setMaxResults(Integer maxResults) {
@@ -202,12 +202,12 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return this.maxResults;
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setComplianceList(java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList) {
-            this.complianceList = complianceList;
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> getComplianceList() {
-            return this.complianceList;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
     }
