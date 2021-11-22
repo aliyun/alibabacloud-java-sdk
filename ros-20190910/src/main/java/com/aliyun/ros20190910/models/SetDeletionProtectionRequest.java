@@ -4,26 +4,18 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class SetDeletionProtectionRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
     @NameInMap("DeletionProtection")
     public String deletionProtection;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StackId")
+    public String stackId;
+
     public static SetDeletionProtectionRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDeletionProtectionRequest self = new SetDeletionProtectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDeletionProtectionRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
     }
 
     public SetDeletionProtectionRequest setDeletionProtection(String deletionProtection) {
@@ -40,6 +32,14 @@ public class SetDeletionProtectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SetDeletionProtectionRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
 }

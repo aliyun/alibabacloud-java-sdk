@@ -4,116 +4,60 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("TemplateARN")
-    public String templateARN;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ChangeSetId")
+    public String changeSetId;
 
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("StackGroupName")
-    public String stackGroupName;
-
-    @NameInMap("TemplateVersion")
-    public String templateVersion;
-
-    @NameInMap("TemplateBody")
-    public String templateBody;
-
-    @NameInMap("ChangeSetId")
-    public String changeSetId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("UpdateTime")
-    public String updateTime;
-
     @NameInMap("Permissions")
     public java.util.List<GetTemplateResponseBodyPermissions> permissions;
-
-    @NameInMap("TemplateName")
-    public String templateName;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    @NameInMap("StackId")
-    public String stackId;
-
-    @NameInMap("ShareType")
-    public String shareType;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ShareType")
+    public String shareType;
+
+    @NameInMap("StackGroupName")
+    public String stackGroupName;
+
+    @NameInMap("StackId")
+    public String stackId;
+
+    @NameInMap("TemplateARN")
+    public String templateARN;
+
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateName")
+    public String templateName;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
+    @NameInMap("UpdateTime")
+    public String updateTime;
+
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetTemplateResponseBody setTemplateARN(String templateARN) {
-        this.templateARN = templateARN;
-        return this;
-    }
-    public String getTemplateARN() {
-        return this.templateARN;
-    }
-
-    public GetTemplateResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public GetTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetTemplateResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public GetTemplateResponseBody setStackGroupName(String stackGroupName) {
-        this.stackGroupName = stackGroupName;
-        return this;
-    }
-    public String getStackGroupName() {
-        return this.stackGroupName;
-    }
-
-    public GetTemplateResponseBody setTemplateVersion(String templateVersion) {
-        this.templateVersion = templateVersion;
-        return this;
-    }
-    public String getTemplateVersion() {
-        return this.templateVersion;
-    }
-
-    public GetTemplateResponseBody setTemplateBody(String templateBody) {
-        this.templateBody = templateBody;
-        return this;
-    }
-    public String getTemplateBody() {
-        return this.templateBody;
     }
 
     public GetTemplateResponseBody setChangeSetId(String changeSetId) {
@@ -124,20 +68,28 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.changeSetId;
     }
 
+    public GetTemplateResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public GetTemplateResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public GetTemplateResponseBody setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public String getOwnerId() {
         return this.ownerId;
-    }
-
-    public GetTemplateResponseBody setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-        return this;
-    }
-    public String getUpdateTime() {
-        return this.updateTime;
     }
 
     public GetTemplateResponseBody setPermissions(java.util.List<GetTemplateResponseBodyPermissions> permissions) {
@@ -148,14 +100,6 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.permissions;
     }
 
-    public GetTemplateResponseBody setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
-    }
-
     public GetTemplateResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -164,28 +108,12 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public GetTemplateResponseBody setTemplateId(String templateId) {
-        this.templateId = templateId;
+    public GetTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public GetTemplateResponseBody setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
-    }
-
-    public GetTemplateResponseBody setShareType(String shareType) {
-        this.shareType = shareType;
-        return this;
-    }
-    public String getShareType() {
-        return this.shareType;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetTemplateResponseBody setResourceGroupId(String resourceGroupId) {
@@ -196,10 +124,79 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public static class GetTemplateResponseBodyPermissions extends TeaModel {
-        @NameInMap("VersionOption")
-        public String versionOption;
+    public GetTemplateResponseBody setShareType(String shareType) {
+        this.shareType = shareType;
+        return this;
+    }
+    public String getShareType() {
+        return this.shareType;
+    }
 
+    public GetTemplateResponseBody setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public GetTemplateResponseBody setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public GetTemplateResponseBody setTemplateARN(String templateARN) {
+        this.templateARN = templateARN;
+        return this;
+    }
+    public String getTemplateARN() {
+        return this.templateARN;
+    }
+
+    public GetTemplateResponseBody setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public GetTemplateResponseBody setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public GetTemplateResponseBody setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public GetTemplateResponseBody setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
+    }
+
+    public GetTemplateResponseBody setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+    public String getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public static class GetTemplateResponseBodyPermissions extends TeaModel {
         @NameInMap("AccountId")
         public String accountId;
 
@@ -209,17 +206,12 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        @NameInMap("VersionOption")
+        public String versionOption;
+
         public static GetTemplateResponseBodyPermissions build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateResponseBodyPermissions self = new GetTemplateResponseBodyPermissions();
             return TeaModel.build(map, self);
-        }
-
-        public GetTemplateResponseBodyPermissions setVersionOption(String versionOption) {
-            this.versionOption = versionOption;
-            return this;
-        }
-        public String getVersionOption() {
-            return this.versionOption;
         }
 
         public GetTemplateResponseBodyPermissions setAccountId(String accountId) {
@@ -244,6 +236,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getTemplateVersion() {
             return this.templateVersion;
+        }
+
+        public GetTemplateResponseBodyPermissions setVersionOption(String versionOption) {
+            this.versionOption = versionOption;
+            return this;
+        }
+        public String getVersionOption() {
+            return this.versionOption;
         }
 
     }

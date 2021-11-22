@@ -4,27 +4,51 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class SignalResourceRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("UniqueId")
-    public String uniqueId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StackId")
+    public String stackId;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("UniqueId")
+    public String uniqueId;
+
     public static SignalResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         SignalResourceRequest self = new SignalResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SignalResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public SignalResourceRequest setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
+    public SignalResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SignalResourceRequest setStackId(String stackId) {
@@ -43,36 +67,12 @@ public class SignalResourceRequest extends TeaModel {
         return this.status;
     }
 
-    public SignalResourceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public SignalResourceRequest setUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
     }
     public String getUniqueId() {
         return this.uniqueId;
-    }
-
-    public SignalResourceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public SignalResourceRequest setLogicalResourceId(String logicalResourceId) {
-        this.logicalResourceId = logicalResourceId;
-        return this;
-    }
-    public String getLogicalResourceId() {
-        return this.logicalResourceId;
     }
 
 }

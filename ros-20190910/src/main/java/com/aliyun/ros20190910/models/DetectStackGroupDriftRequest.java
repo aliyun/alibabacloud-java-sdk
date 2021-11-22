@@ -7,14 +7,14 @@ public class DetectStackGroupDriftRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OperationPreferences")
+    public java.util.Map<String, ?> operationPreferences;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("StackGroupName")
     public String stackGroupName;
-
-    @NameInMap("OperationPreferences")
-    public java.util.Map<String, ?> operationPreferences;
 
     public static DetectStackGroupDriftRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectStackGroupDriftRequest self = new DetectStackGroupDriftRequest();
@@ -27,6 +27,14 @@ public class DetectStackGroupDriftRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DetectStackGroupDriftRequest setOperationPreferences(java.util.Map<String, ?> operationPreferences) {
+        this.operationPreferences = operationPreferences;
+        return this;
+    }
+    public java.util.Map<String, ?> getOperationPreferences() {
+        return this.operationPreferences;
     }
 
     public DetectStackGroupDriftRequest setRegionId(String regionId) {
@@ -43,14 +51,6 @@ public class DetectStackGroupDriftRequest extends TeaModel {
     }
     public String getStackGroupName() {
         return this.stackGroupName;
-    }
-
-    public DetectStackGroupDriftRequest setOperationPreferences(java.util.Map<String, ?> operationPreferences) {
-        this.operationPreferences = operationPreferences;
-        return this;
-    }
-    public java.util.Map<String, ?> getOperationPreferences() {
-        return this.operationPreferences;
     }
 
 }

@@ -43,43 +43,27 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class ListTemplateVersionsResponseBodyVersions extends TeaModel {
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
 
-        @NameInMap("TemplateId")
-        public String templateId;
-
         @NameInMap("TemplateVersion")
         public String templateVersion;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static ListTemplateVersionsResponseBodyVersions build(java.util.Map<String, ?> map) throws Exception {
             ListTemplateVersionsResponseBodyVersions self = new ListTemplateVersionsResponseBodyVersions();
             return TeaModel.build(map, self);
-        }
-
-        public ListTemplateVersionsResponseBodyVersions setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListTemplateVersionsResponseBodyVersions setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListTemplateVersionsResponseBodyVersions setCreateTime(String createTime) {
@@ -90,12 +74,12 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListTemplateVersionsResponseBodyVersions setTemplateName(String templateName) {
-            this.templateName = templateName;
+        public ListTemplateVersionsResponseBodyVersions setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getTemplateName() {
-            return this.templateName;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListTemplateVersionsResponseBodyVersions setTemplateId(String templateId) {
@@ -106,12 +90,28 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             return this.templateId;
         }
 
+        public ListTemplateVersionsResponseBodyVersions setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
         public ListTemplateVersionsResponseBodyVersions setTemplateVersion(String templateVersion) {
             this.templateVersion = templateVersion;
             return this;
         }
         public String getTemplateVersion() {
             return this.templateVersion;
+        }
+
+        public ListTemplateVersionsResponseBodyVersions setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CancelUpdateStackRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
+    @NameInMap("CancelType")
+    public String cancelType;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("CancelType")
-    public String cancelType;
+    @NameInMap("StackId")
+    public String stackId;
 
     public static CancelUpdateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelUpdateStackRequest self = new CancelUpdateStackRequest();
         return TeaModel.build(map, self);
     }
 
-    public CancelUpdateStackRequest setStackId(String stackId) {
-        this.stackId = stackId;
+    public CancelUpdateStackRequest setCancelType(String cancelType) {
+        this.cancelType = cancelType;
         return this;
     }
-    public String getStackId() {
-        return this.stackId;
+    public String getCancelType() {
+        return this.cancelType;
     }
 
     public CancelUpdateStackRequest setRegionId(String regionId) {
@@ -34,12 +34,12 @@ public class CancelUpdateStackRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CancelUpdateStackRequest setCancelType(String cancelType) {
-        this.cancelType = cancelType;
+    public CancelUpdateStackRequest setStackId(String stackId) {
+        this.stackId = stackId;
         return this;
     }
-    public String getCancelType() {
-        return this.cancelType;
+    public String getStackId() {
+        return this.stackId;
     }
 
 }

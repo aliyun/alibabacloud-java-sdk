@@ -4,48 +4,24 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupOperationResultsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StackGroupOperationResults")
     public java.util.List<ListStackGroupOperationResultsResponseBodyStackGroupOperationResults> stackGroupOperationResults;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListStackGroupOperationResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackGroupOperationResultsResponseBody self = new ListStackGroupOperationResultsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListStackGroupOperationResultsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListStackGroupOperationResultsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListStackGroupOperationResultsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListStackGroupOperationResultsResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +32,22 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListStackGroupOperationResultsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStackGroupOperationResultsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListStackGroupOperationResultsResponseBody setStackGroupOperationResults(java.util.List<ListStackGroupOperationResultsResponseBodyStackGroupOperationResults> stackGroupOperationResults) {
         this.stackGroupOperationResults = stackGroupOperationResults;
         return this;
@@ -64,25 +56,57 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         return this.stackGroupOperationResults;
     }
 
+    public ListStackGroupOperationResultsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListStackGroupOperationResultsResponseBodyStackGroupOperationResults extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
+        @NameInMap("RdFolderId")
+        public String rdFolderId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StatusReason")
         public String statusReason;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("RdFolderId")
-        public String rdFolderId;
-
         public static ListStackGroupOperationResultsResponseBodyStackGroupOperationResults build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupOperationResultsResponseBodyStackGroupOperationResults self = new ListStackGroupOperationResultsResponseBodyStackGroupOperationResults();
             return TeaModel.build(map, self);
+        }
+
+        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRdFolderId(String rdFolderId) {
+            this.rdFolderId = rdFolderId;
+            return this;
+        }
+        public String getRdFolderId() {
+            return this.rdFolderId;
+        }
+
+        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setStatus(String status) {
@@ -99,30 +123,6 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         }
         public String getStatusReason() {
             return this.statusReason;
-        }
-
-        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
-        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRdFolderId(String rdFolderId) {
-            this.rdFolderId = rdFolderId;
-            return this;
-        }
-        public String getRdFolderId() {
-            return this.rdFolderId;
         }
 
     }

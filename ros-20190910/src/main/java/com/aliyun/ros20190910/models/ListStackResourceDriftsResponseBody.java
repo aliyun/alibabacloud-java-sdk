@@ -49,11 +49,11 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         @NameInMap("DifferenceType")
         public String differenceType;
 
-        @NameInMap("PropertyPath")
-        public String propertyPath;
-
         @NameInMap("ExpectedValue")
         public String expectedValue;
+
+        @NameInMap("PropertyPath")
+        public String propertyPath;
 
         public static ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences build(java.util.Map<String, ?> map) throws Exception {
             ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences self = new ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences();
@@ -76,14 +76,6 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             return this.differenceType;
         }
 
-        public ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences setPropertyPath(String propertyPath) {
-            this.propertyPath = propertyPath;
-            return this;
-        }
-        public String getPropertyPath() {
-            return this.propertyPath;
-        }
-
         public ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences setExpectedValue(String expectedValue) {
             this.expectedValue = expectedValue;
             return this;
@@ -92,95 +84,47 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             return this.expectedValue;
         }
 
+        public ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences setPropertyPath(String propertyPath) {
+            this.propertyPath = propertyPath;
+            return this;
+        }
+        public String getPropertyPath() {
+            return this.propertyPath;
+        }
+
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDrifts extends TeaModel {
-        @NameInMap("LogicalResourceId")
-        public String logicalResourceId;
-
-        @NameInMap("StackId")
-        public String stackId;
-
-        @NameInMap("PhysicalResourceId")
-        public String physicalResourceId;
+        @NameInMap("ActualProperties")
+        public String actualProperties;
 
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
-        @NameInMap("ResourceType")
-        public String resourceType;
-
         @NameInMap("ExpectedProperties")
         public String expectedProperties;
 
-        @NameInMap("ResourceDriftStatus")
-        public String resourceDriftStatus;
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
 
-        @NameInMap("ActualProperties")
-        public String actualProperties;
+        @NameInMap("PhysicalResourceId")
+        public String physicalResourceId;
 
         @NameInMap("PropertyDifferences")
         public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
 
+        @NameInMap("ResourceDriftStatus")
+        public String resourceDriftStatus;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("StackId")
+        public String stackId;
+
         public static ListStackResourceDriftsResponseBodyResourceDrifts build(java.util.Map<String, ?> map) throws Exception {
             ListStackResourceDriftsResponseBodyResourceDrifts self = new ListStackResourceDriftsResponseBodyResourceDrifts();
             return TeaModel.build(map, self);
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setLogicalResourceId(String logicalResourceId) {
-            this.logicalResourceId = logicalResourceId;
-            return this;
-        }
-        public String getLogicalResourceId() {
-            return this.logicalResourceId;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setStackId(String stackId) {
-            this.stackId = stackId;
-            return this;
-        }
-        public String getStackId() {
-            return this.stackId;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setPhysicalResourceId(String physicalResourceId) {
-            this.physicalResourceId = physicalResourceId;
-            return this;
-        }
-        public String getPhysicalResourceId() {
-            return this.physicalResourceId;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setDriftDetectionTime(String driftDetectionTime) {
-            this.driftDetectionTime = driftDetectionTime;
-            return this;
-        }
-        public String getDriftDetectionTime() {
-            return this.driftDetectionTime;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setExpectedProperties(String expectedProperties) {
-            this.expectedProperties = expectedProperties;
-            return this;
-        }
-        public String getExpectedProperties() {
-            return this.expectedProperties;
-        }
-
-        public ListStackResourceDriftsResponseBodyResourceDrifts setResourceDriftStatus(String resourceDriftStatus) {
-            this.resourceDriftStatus = resourceDriftStatus;
-            return this;
-        }
-        public String getResourceDriftStatus() {
-            return this.resourceDriftStatus;
         }
 
         public ListStackResourceDriftsResponseBodyResourceDrifts setActualProperties(String actualProperties) {
@@ -191,12 +135,68 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             return this.actualProperties;
         }
 
+        public ListStackResourceDriftsResponseBodyResourceDrifts setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
+            return this;
+        }
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setExpectedProperties(String expectedProperties) {
+            this.expectedProperties = expectedProperties;
+            return this;
+        }
+        public String getExpectedProperties() {
+            return this.expectedProperties;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setPhysicalResourceId(String physicalResourceId) {
+            this.physicalResourceId = physicalResourceId;
+            return this;
+        }
+        public String getPhysicalResourceId() {
+            return this.physicalResourceId;
+        }
+
         public ListStackResourceDriftsResponseBodyResourceDrifts setPropertyDifferences(java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences) {
             this.propertyDifferences = propertyDifferences;
             return this;
         }
         public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> getPropertyDifferences() {
             return this.propertyDifferences;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setResourceDriftStatus(String resourceDriftStatus) {
+            this.resourceDriftStatus = resourceDriftStatus;
+            return this;
+        }
+        public String getResourceDriftStatus() {
+            return this.resourceDriftStatus;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
         }
 
     }

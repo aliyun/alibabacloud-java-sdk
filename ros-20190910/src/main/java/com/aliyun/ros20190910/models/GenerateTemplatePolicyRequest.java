@@ -4,14 +4,14 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyRequest extends TeaModel {
-    @NameInMap("TemplateURL")
-    public String templateURL;
-
     @NameInMap("TemplateBody")
     public String templateBody;
 
     @NameInMap("TemplateId")
     public String templateId;
+
+    @NameInMap("TemplateURL")
+    public String templateURL;
 
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -19,14 +19,6 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
     public static GenerateTemplatePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateTemplatePolicyRequest self = new GenerateTemplatePolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateTemplatePolicyRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
-        return this;
-    }
-    public String getTemplateURL() {
-        return this.templateURL;
     }
 
     public GenerateTemplatePolicyRequest setTemplateBody(String templateBody) {
@@ -43,6 +35,14 @@ public class GenerateTemplatePolicyRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public GenerateTemplatePolicyRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
     }
 
     public GenerateTemplatePolicyRequest setTemplateVersion(String templateVersion) {

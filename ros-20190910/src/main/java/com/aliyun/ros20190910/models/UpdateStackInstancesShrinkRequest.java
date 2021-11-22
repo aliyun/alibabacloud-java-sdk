@@ -4,20 +4,14 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackInstancesShrinkRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("StackGroupName")
-    public String stackGroupName;
-
     @NameInMap("AccountIds")
     public String accountIdsShrink;
 
-    @NameInMap("RegionIds")
-    public String regionIdsShrink;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
 
     @NameInMap("OperationDescription")
     public String operationDescription;
@@ -25,34 +19,24 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
-    @NameInMap("TimeoutInMinutes")
-    public Long timeoutInMinutes;
-
     @NameInMap("ParameterOverrides")
     public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
-    @NameInMap("DeploymentTargets")
-    public String deploymentTargetsShrink;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RegionIds")
+    public String regionIdsShrink;
+
+    @NameInMap("StackGroupName")
+    public String stackGroupName;
+
+    @NameInMap("TimeoutInMinutes")
+    public Long timeoutInMinutes;
 
     public static UpdateStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesShrinkRequest self = new UpdateStackInstancesShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateStackInstancesShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpdateStackInstancesShrinkRequest setStackGroupName(String stackGroupName) {
-        this.stackGroupName = stackGroupName;
-        return this;
-    }
-    public String getStackGroupName() {
-        return this.stackGroupName;
     }
 
     public UpdateStackInstancesShrinkRequest setAccountIdsShrink(String accountIdsShrink) {
@@ -63,20 +47,20 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
         return this.accountIdsShrink;
     }
 
-    public UpdateStackInstancesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
-        this.regionIdsShrink = regionIdsShrink;
-        return this;
-    }
-    public String getRegionIdsShrink() {
-        return this.regionIdsShrink;
-    }
-
     public UpdateStackInstancesShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
     }
 
     public UpdateStackInstancesShrinkRequest setOperationDescription(String operationDescription) {
@@ -95,14 +79,6 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
         return this.operationPreferencesShrink;
     }
 
-    public UpdateStackInstancesShrinkRequest setTimeoutInMinutes(Long timeoutInMinutes) {
-        this.timeoutInMinutes = timeoutInMinutes;
-        return this;
-    }
-    public Long getTimeoutInMinutes() {
-        return this.timeoutInMinutes;
-    }
-
     public UpdateStackInstancesShrinkRequest setParameterOverrides(java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides) {
         this.parameterOverrides = parameterOverrides;
         return this;
@@ -111,12 +87,36 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
         return this.parameterOverrides;
     }
 
-    public UpdateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
-        this.deploymentTargetsShrink = deploymentTargetsShrink;
+    public UpdateStackInstancesShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDeploymentTargetsShrink() {
-        return this.deploymentTargetsShrink;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateStackInstancesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
+        this.regionIdsShrink = regionIdsShrink;
+        return this;
+    }
+    public String getRegionIdsShrink() {
+        return this.regionIdsShrink;
+    }
+
+    public UpdateStackInstancesShrinkRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public UpdateStackInstancesShrinkRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    public Long getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
     }
 
     public static class UpdateStackInstancesShrinkRequestParameterOverrides extends TeaModel {

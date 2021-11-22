@@ -32,11 +32,20 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     }
 
     public static class ListStackOperationRisksResponseBodyRiskResources extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        @NameInMap("Message")
+        public String message;
+
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
+
+        @NameInMap("Reason")
+        public String reason;
 
         @NameInMap("RequestId")
         public String requestId;
@@ -44,21 +53,20 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("RiskType")
         public String riskType;
-
-        @NameInMap("Reason")
-        public String reason;
 
         public static ListStackOperationRisksResponseBodyRiskResources build(java.util.Map<String, ?> map) throws Exception {
             ListStackOperationRisksResponseBodyRiskResources self = new ListStackOperationRisksResponseBodyRiskResources();
             return TeaModel.build(map, self);
+        }
+
+        public ListStackOperationRisksResponseBodyRiskResources setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public ListStackOperationRisksResponseBodyRiskResources setLogicalResourceId(String logicalResourceId) {
@@ -69,12 +77,28 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             return this.logicalResourceId;
         }
 
+        public ListStackOperationRisksResponseBodyRiskResources setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public ListStackOperationRisksResponseBodyRiskResources setPhysicalResourceId(String physicalResourceId) {
             this.physicalResourceId = physicalResourceId;
             return this;
         }
         public String getPhysicalResourceId() {
             return this.physicalResourceId;
+        }
+
+        public ListStackOperationRisksResponseBodyRiskResources setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public ListStackOperationRisksResponseBodyRiskResources setRequestId(String requestId) {
@@ -93,36 +117,12 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public ListStackOperationRisksResponseBodyRiskResources setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public ListStackOperationRisksResponseBodyRiskResources setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public ListStackOperationRisksResponseBodyRiskResources setRiskType(String riskType) {
             this.riskType = riskType;
             return this;
         }
         public String getRiskType() {
             return this.riskType;
-        }
-
-        public ListStackOperationRisksResponseBodyRiskResources setReason(String reason) {
-            this.reason = reason;
-            return this;
-        }
-        public String getReason() {
-            return this.reason;
         }
 
     }

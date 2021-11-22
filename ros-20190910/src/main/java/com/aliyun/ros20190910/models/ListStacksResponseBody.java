@@ -4,8 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class ListStacksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListStacksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStacksResponseBody self = new ListStacksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListStacksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListStacksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListStacksResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class ListStacksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListStacksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListStacksResponseBody setStacks(java.util.List<ListStacksResponseBodyStacks> stacks) {
         this.stacks = stacks;
         return this;
     }
     public java.util.List<ListStacksResponseBodyStacks> getStacks() {
         return this.stacks;
+    }
+
+    public ListStacksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListStacksResponseBodyStacksTags extends TeaModel {
@@ -95,86 +95,54 @@ public class ListStacksResponseBody extends TeaModel {
     }
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("DriftDetectionTime")
-        public String driftDetectionTime;
-
-        @NameInMap("StatusReason")
-        public String statusReason;
-
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
 
-        @NameInMap("Tags")
-        public java.util.List<ListStacksResponseBodyStacksTags> tags;
-
-        @NameInMap("StackName")
-        public String stackName;
-
-        @NameInMap("TimeoutInMinutes")
-        public Integer timeoutInMinutes;
-
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("DriftDetectionTime")
+        public String driftDetectionTime;
 
         @NameInMap("ParentStackId")
         public String parentStackId;
 
-        @NameInMap("StackId")
-        public String stackId;
-
-        @NameInMap("StackDriftStatus")
-        public String stackDriftStatus;
-
-        @NameInMap("StackType")
-        public String stackType;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("StackDriftStatus")
+        public String stackDriftStatus;
+
+        @NameInMap("StackId")
+        public String stackId;
+
+        @NameInMap("StackName")
+        public String stackName;
+
+        @NameInMap("StackType")
+        public String stackType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusReason")
+        public String statusReason;
+
+        @NameInMap("Tags")
+        public java.util.List<ListStacksResponseBodyStacksTags> tags;
+
+        @NameInMap("TimeoutInMinutes")
+        public Integer timeoutInMinutes;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static ListStacksResponseBodyStacks build(java.util.Map<String, ?> map) throws Exception {
             ListStacksResponseBodyStacks self = new ListStacksResponseBodyStacks();
             return TeaModel.build(map, self);
-        }
-
-        public ListStacksResponseBodyStacks setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListStacksResponseBodyStacks setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListStacksResponseBodyStacks setDriftDetectionTime(String driftDetectionTime) {
-            this.driftDetectionTime = driftDetectionTime;
-            return this;
-        }
-        public String getDriftDetectionTime() {
-            return this.driftDetectionTime;
-        }
-
-        public ListStacksResponseBodyStacks setStatusReason(String statusReason) {
-            this.statusReason = statusReason;
-            return this;
-        }
-        public String getStatusReason() {
-            return this.statusReason;
         }
 
         public ListStacksResponseBodyStacks setCreateTime(String createTime) {
@@ -193,36 +161,12 @@ public class ListStacksResponseBody extends TeaModel {
             return this.disableRollback;
         }
 
-        public ListStacksResponseBodyStacks setTags(java.util.List<ListStacksResponseBodyStacksTags> tags) {
-            this.tags = tags;
+        public ListStacksResponseBodyStacks setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
             return this;
         }
-        public java.util.List<ListStacksResponseBodyStacksTags> getTags() {
-            return this.tags;
-        }
-
-        public ListStacksResponseBodyStacks setStackName(String stackName) {
-            this.stackName = stackName;
-            return this;
-        }
-        public String getStackName() {
-            return this.stackName;
-        }
-
-        public ListStacksResponseBodyStacks setTimeoutInMinutes(Integer timeoutInMinutes) {
-            this.timeoutInMinutes = timeoutInMinutes;
-            return this;
-        }
-        public Integer getTimeoutInMinutes() {
-            return this.timeoutInMinutes;
-        }
-
-        public ListStacksResponseBodyStacks setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
         }
 
         public ListStacksResponseBodyStacks setParentStackId(String parentStackId) {
@@ -233,12 +177,20 @@ public class ListStacksResponseBody extends TeaModel {
             return this.parentStackId;
         }
 
-        public ListStacksResponseBodyStacks setStackId(String stackId) {
-            this.stackId = stackId;
+        public ListStacksResponseBodyStacks setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getStackId() {
-            return this.stackId;
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListStacksResponseBodyStacks setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListStacksResponseBodyStacks setStackDriftStatus(String stackDriftStatus) {
@@ -249,6 +201,22 @@ public class ListStacksResponseBody extends TeaModel {
             return this.stackDriftStatus;
         }
 
+        public ListStacksResponseBodyStacks setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
+        }
+
+        public ListStacksResponseBodyStacks setStackName(String stackName) {
+            this.stackName = stackName;
+            return this;
+        }
+        public String getStackName() {
+            return this.stackName;
+        }
+
         public ListStacksResponseBodyStacks setStackType(String stackType) {
             this.stackType = stackType;
             return this;
@@ -257,12 +225,44 @@ public class ListStacksResponseBody extends TeaModel {
             return this.stackType;
         }
 
-        public ListStacksResponseBodyStacks setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public ListStacksResponseBodyStacks setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListStacksResponseBodyStacks setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        public ListStacksResponseBodyStacks setTags(java.util.List<ListStacksResponseBodyStacksTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListStacksResponseBodyStacksTags> getTags() {
+            return this.tags;
+        }
+
+        public ListStacksResponseBodyStacks setTimeoutInMinutes(Integer timeoutInMinutes) {
+            this.timeoutInMinutes = timeoutInMinutes;
+            return this;
+        }
+        public Integer getTimeoutInMinutes() {
+            return this.timeoutInMinutes;
+        }
+
+        public ListStacksResponseBodyStacks setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

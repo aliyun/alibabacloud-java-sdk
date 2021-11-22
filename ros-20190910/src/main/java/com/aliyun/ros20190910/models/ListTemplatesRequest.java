@@ -10,8 +10,8 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("TemplateName")
-    public String templateName;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ShareType")
     public String shareType;
@@ -19,8 +19,8 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListTemplatesRequestTag> tag;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("TemplateName")
+    public String templateName;
 
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
@@ -43,12 +43,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTemplatesRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public ListTemplatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getTemplateName() {
-        return this.templateName;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListTemplatesRequest setShareType(String shareType) {
@@ -67,12 +67,12 @@ public class ListTemplatesRequest extends TeaModel {
         return this.tag;
     }
 
-    public ListTemplatesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public ListTemplatesRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public static class ListTemplatesRequestTag extends TeaModel {

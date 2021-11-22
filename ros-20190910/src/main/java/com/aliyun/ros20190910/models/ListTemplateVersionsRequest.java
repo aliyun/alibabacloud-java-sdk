@@ -4,11 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateVersionsRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("MaxResults")
     public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -18,20 +18,20 @@ public class ListTemplateVersionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListTemplateVersionsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListTemplateVersionsRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListTemplateVersionsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListTemplateVersionsRequest setTemplateId(String templateId) {

@@ -4,26 +4,18 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ExecuteChangeSetRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ExecuteChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteChangeSetRequest self = new ExecuteChangeSetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ExecuteChangeSetRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ExecuteChangeSetRequest setChangeSetId(String changeSetId) {
@@ -40,6 +32,14 @@ public class ExecuteChangeSetRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ExecuteChangeSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

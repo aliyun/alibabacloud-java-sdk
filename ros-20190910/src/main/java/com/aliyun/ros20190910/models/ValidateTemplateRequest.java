@@ -4,8 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ValidateTemplateRequest extends TeaModel {
-    @NameInMap("TemplateURL")
-    public String templateURL;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -13,8 +13,8 @@ public class ValidateTemplateRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("TemplateURL")
+    public String templateURL;
 
     @NameInMap("ValidationOption")
     public String validationOption;
@@ -24,12 +24,12 @@ public class ValidateTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ValidateTemplateRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
+    public ValidateTemplateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTemplateURL() {
-        return this.templateURL;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ValidateTemplateRequest setRegionId(String regionId) {
@@ -48,12 +48,12 @@ public class ValidateTemplateRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public ValidateTemplateRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ValidateTemplateRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getTemplateURL() {
+        return this.templateURL;
     }
 
     public ValidateTemplateRequest setValidationOption(String validationOption) {

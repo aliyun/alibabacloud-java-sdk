@@ -4,74 +4,66 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("StackPolicyDuringUpdateBody")
-    public String stackPolicyDuringUpdateBody;
-
-    @NameInMap("TimeoutInMinutes")
-    public Long timeoutInMinutes;
-
-    @NameInMap("TemplateBody")
-    public String templateBody;
-
-    @NameInMap("StackPolicyURL")
-    public String stackPolicyURL;
-
-    @NameInMap("StackPolicyDuringUpdateURL")
-    public String stackPolicyDuringUpdateURL;
-
-    @NameInMap("StackPolicyBody")
-    public String stackPolicyBody;
-
-    @NameInMap("UsePreviousParameters")
-    public Boolean usePreviousParameters;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
-    @NameInMap("TemplateURL")
-    public String templateURL;
-
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
-
-    @NameInMap("ReplacementOption")
-    public String replacementOption;
-
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    @NameInMap("TemplateVersion")
-    public String templateVersion;
+    @NameInMap("Parallelism")
+    public Long parallelism;
 
     @NameInMap("Parameters")
     public java.util.List<UpdateStackRequestParameters> parameters;
 
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ReplacementOption")
+    public String replacementOption;
+
+    @NameInMap("StackId")
+    public String stackId;
+
+    @NameInMap("StackPolicyBody")
+    public String stackPolicyBody;
+
+    @NameInMap("StackPolicyDuringUpdateBody")
+    public String stackPolicyDuringUpdateBody;
+
+    @NameInMap("StackPolicyDuringUpdateURL")
+    public String stackPolicyDuringUpdateURL;
+
+    @NameInMap("StackPolicyURL")
+    public String stackPolicyURL;
+
     @NameInMap("Tags")
     public java.util.List<UpdateStackRequestTags> tags;
 
-    @NameInMap("Parallelism")
-    public Long parallelism;
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
+    @NameInMap("TimeoutInMinutes")
+    public Long timeoutInMinutes;
+
+    @NameInMap("UsePreviousParameters")
+    public Boolean usePreviousParameters;
 
     public static UpdateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackRequest self = new UpdateStackRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateStackRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
     }
 
     public UpdateStackRequest setClientToken(String clientToken) {
@@ -82,70 +74,6 @@ public class UpdateStackRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateStackRequest setStackPolicyDuringUpdateBody(String stackPolicyDuringUpdateBody) {
-        this.stackPolicyDuringUpdateBody = stackPolicyDuringUpdateBody;
-        return this;
-    }
-    public String getStackPolicyDuringUpdateBody() {
-        return this.stackPolicyDuringUpdateBody;
-    }
-
-    public UpdateStackRequest setTimeoutInMinutes(Long timeoutInMinutes) {
-        this.timeoutInMinutes = timeoutInMinutes;
-        return this;
-    }
-    public Long getTimeoutInMinutes() {
-        return this.timeoutInMinutes;
-    }
-
-    public UpdateStackRequest setTemplateBody(String templateBody) {
-        this.templateBody = templateBody;
-        return this;
-    }
-    public String getTemplateBody() {
-        return this.templateBody;
-    }
-
-    public UpdateStackRequest setStackPolicyURL(String stackPolicyURL) {
-        this.stackPolicyURL = stackPolicyURL;
-        return this;
-    }
-    public String getStackPolicyURL() {
-        return this.stackPolicyURL;
-    }
-
-    public UpdateStackRequest setStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
-        this.stackPolicyDuringUpdateURL = stackPolicyDuringUpdateURL;
-        return this;
-    }
-    public String getStackPolicyDuringUpdateURL() {
-        return this.stackPolicyDuringUpdateURL;
-    }
-
-    public UpdateStackRequest setStackPolicyBody(String stackPolicyBody) {
-        this.stackPolicyBody = stackPolicyBody;
-        return this;
-    }
-    public String getStackPolicyBody() {
-        return this.stackPolicyBody;
-    }
-
-    public UpdateStackRequest setUsePreviousParameters(Boolean usePreviousParameters) {
-        this.usePreviousParameters = usePreviousParameters;
-        return this;
-    }
-    public Boolean getUsePreviousParameters() {
-        return this.usePreviousParameters;
-    }
-
-    public UpdateStackRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public UpdateStackRequest setDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -154,44 +82,12 @@ public class UpdateStackRequest extends TeaModel {
         return this.disableRollback;
     }
 
-    public UpdateStackRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
+    public UpdateStackRequest setParallelism(Long parallelism) {
+        this.parallelism = parallelism;
         return this;
     }
-    public String getTemplateURL() {
-        return this.templateURL;
-    }
-
-    public UpdateStackRequest setRamRoleName(String ramRoleName) {
-        this.ramRoleName = ramRoleName;
-        return this;
-    }
-    public String getRamRoleName() {
-        return this.ramRoleName;
-    }
-
-    public UpdateStackRequest setReplacementOption(String replacementOption) {
-        this.replacementOption = replacementOption;
-        return this;
-    }
-    public String getReplacementOption() {
-        return this.replacementOption;
-    }
-
-    public UpdateStackRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public UpdateStackRequest setTemplateVersion(String templateVersion) {
-        this.templateVersion = templateVersion;
-        return this;
-    }
-    public String getTemplateVersion() {
-        return this.templateVersion;
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     public UpdateStackRequest setParameters(java.util.List<UpdateStackRequestParameters> parameters) {
@@ -202,6 +98,70 @@ public class UpdateStackRequest extends TeaModel {
         return this.parameters;
     }
 
+    public UpdateStackRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    public UpdateStackRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateStackRequest setReplacementOption(String replacementOption) {
+        this.replacementOption = replacementOption;
+        return this;
+    }
+    public String getReplacementOption() {
+        return this.replacementOption;
+    }
+
+    public UpdateStackRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public UpdateStackRequest setStackPolicyBody(String stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    public String getStackPolicyBody() {
+        return this.stackPolicyBody;
+    }
+
+    public UpdateStackRequest setStackPolicyDuringUpdateBody(String stackPolicyDuringUpdateBody) {
+        this.stackPolicyDuringUpdateBody = stackPolicyDuringUpdateBody;
+        return this;
+    }
+    public String getStackPolicyDuringUpdateBody() {
+        return this.stackPolicyDuringUpdateBody;
+    }
+
+    public UpdateStackRequest setStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
+        this.stackPolicyDuringUpdateURL = stackPolicyDuringUpdateURL;
+        return this;
+    }
+    public String getStackPolicyDuringUpdateURL() {
+        return this.stackPolicyDuringUpdateURL;
+    }
+
+    public UpdateStackRequest setStackPolicyURL(String stackPolicyURL) {
+        this.stackPolicyURL = stackPolicyURL;
+        return this;
+    }
+    public String getStackPolicyURL() {
+        return this.stackPolicyURL;
+    }
+
     public UpdateStackRequest setTags(java.util.List<UpdateStackRequestTags> tags) {
         this.tags = tags;
         return this;
@@ -210,12 +170,52 @@ public class UpdateStackRequest extends TeaModel {
         return this.tags;
     }
 
-    public UpdateStackRequest setParallelism(Long parallelism) {
-        this.parallelism = parallelism;
+    public UpdateStackRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
         return this;
     }
-    public Long getParallelism() {
-        return this.parallelism;
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public UpdateStackRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public UpdateStackRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public UpdateStackRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
+    }
+
+    public UpdateStackRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    public Long getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
+    }
+
+    public UpdateStackRequest setUsePreviousParameters(Boolean usePreviousParameters) {
+        this.usePreviousParameters = usePreviousParameters;
+        return this;
+    }
+    public Boolean getUsePreviousParameters() {
+        return this.usePreviousParameters;
     }
 
     public static class UpdateStackRequestParameters extends TeaModel {

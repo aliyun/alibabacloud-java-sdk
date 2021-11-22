@@ -4,8 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateEstimateCostRequest extends TeaModel {
-    @NameInMap("TemplateURL")
-    public String templateURL;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Parameters")
+    public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -13,29 +16,34 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
     @NameInMap("TemplateVersion")
     public String templateVersion;
-
-    @NameInMap("Parameters")
-    public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 
     public static GetTemplateEstimateCostRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateEstimateCostRequest self = new GetTemplateEstimateCostRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetTemplateEstimateCostRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
+    public GetTemplateEstimateCostRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTemplateURL() {
-        return this.templateURL;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public GetTemplateEstimateCostRequest setParameters(java.util.List<GetTemplateEstimateCostRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetTemplateEstimateCostRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public GetTemplateEstimateCostRequest setRegionId(String regionId) {
@@ -54,14 +62,6 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public GetTemplateEstimateCostRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public GetTemplateEstimateCostRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -70,20 +70,20 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
         return this.templateId;
     }
 
+    public GetTemplateEstimateCostRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
     public GetTemplateEstimateCostRequest setTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     public String getTemplateVersion() {
         return this.templateVersion;
-    }
-
-    public GetTemplateEstimateCostRequest setParameters(java.util.List<GetTemplateEstimateCostRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<GetTemplateEstimateCostRequestParameters> getParameters() {
-        return this.parameters;
     }
 
     public static class GetTemplateEstimateCostRequestParameters extends TeaModel {

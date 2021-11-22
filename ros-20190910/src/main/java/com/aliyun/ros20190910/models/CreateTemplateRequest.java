@@ -4,11 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
-    @NameInMap("TemplateURL")
-    public String templateURL;
-
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -16,20 +16,12 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("TemplateURL")
+    public String templateURL;
 
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateRequest self = new CreateTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTemplateRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
-        return this;
-    }
-    public String getTemplateURL() {
-        return this.templateURL;
     }
 
     public CreateTemplateRequest setDescription(String description) {
@@ -38,6 +30,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateTemplateRequest setTemplateBody(String templateBody) {
@@ -56,12 +56,12 @@ public class CreateTemplateRequest extends TeaModel {
         return this.templateName;
     }
 
-    public CreateTemplateRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public CreateTemplateRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getTemplateURL() {
+        return this.templateURL;
     }
 
 }

@@ -4,23 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListChangeSetsRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     @NameInMap("ChangeSetId")
     public String changeSetId;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
 
     @NameInMap("ChangeSetName")
     public java.util.List<String> changeSetName;
@@ -28,17 +13,56 @@ public class ListChangeSetsRequest extends TeaModel {
     @NameInMap("ExecutionStatus")
     public java.util.List<String> executionStatus;
 
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StackId")
+    public String stackId;
+
+    @NameInMap("Status")
+    public java.util.List<String> status;
+
     public static ListChangeSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChangeSetsRequest self = new ListChangeSetsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListChangeSetsRequest setStackId(String stackId) {
-        this.stackId = stackId;
+    public ListChangeSetsRequest setChangeSetId(String changeSetId) {
+        this.changeSetId = changeSetId;
         return this;
     }
-    public String getStackId() {
-        return this.stackId;
+    public String getChangeSetId() {
+        return this.changeSetId;
+    }
+
+    public ListChangeSetsRequest setChangeSetName(java.util.List<String> changeSetName) {
+        this.changeSetName = changeSetName;
+        return this;
+    }
+    public java.util.List<String> getChangeSetName() {
+        return this.changeSetName;
+    }
+
+    public ListChangeSetsRequest setExecutionStatus(java.util.List<String> executionStatus) {
+        this.executionStatus = executionStatus;
+        return this;
+    }
+    public java.util.List<String> getExecutionStatus() {
+        return this.executionStatus;
+    }
+
+    public ListChangeSetsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListChangeSetsRequest setPageSize(Long pageSize) {
@@ -57,20 +81,12 @@ public class ListChangeSetsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListChangeSetsRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListChangeSetsRequest setStackId(String stackId) {
+        this.stackId = stackId;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListChangeSetsRequest setChangeSetId(String changeSetId) {
-        this.changeSetId = changeSetId;
-        return this;
-    }
-    public String getChangeSetId() {
-        return this.changeSetId;
+    public String getStackId() {
+        return this.stackId;
     }
 
     public ListChangeSetsRequest setStatus(java.util.List<String> status) {
@@ -79,22 +95,6 @@ public class ListChangeSetsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
-    }
-
-    public ListChangeSetsRequest setChangeSetName(java.util.List<String> changeSetName) {
-        this.changeSetName = changeSetName;
-        return this;
-    }
-    public java.util.List<String> getChangeSetName() {
-        return this.changeSetName;
-    }
-
-    public ListChangeSetsRequest setExecutionStatus(java.util.List<String> executionStatus) {
-        this.executionStatus = executionStatus;
-        return this;
-    }
-    public java.util.List<String> getExecutionStatus() {
-        return this.executionStatus;
     }
 
 }

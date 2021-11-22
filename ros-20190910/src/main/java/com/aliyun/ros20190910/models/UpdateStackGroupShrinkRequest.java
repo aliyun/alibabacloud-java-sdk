@@ -4,29 +4,26 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackGroupShrinkRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AccountIds")
+    public String accountIdsShrink;
 
-    @NameInMap("StackGroupName")
-    public String stackGroupName;
+    @NameInMap("AdministrationRoleName")
+    public String administrationRoleName;
+
+    @NameInMap("AutoDeployment")
+    public String autoDeploymentShrink;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("AccountIds")
-    public String accountIdsShrink;
-
-    @NameInMap("RegionIds")
-    public String regionIdsShrink;
-
-    @NameInMap("TemplateBody")
-    public String templateBody;
-
-    @NameInMap("TemplateURL")
-    public String templateURL;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("ExecutionRoleName")
+    public String executionRoleName;
 
     @NameInMap("OperationDescription")
     public String operationDescription;
@@ -34,57 +31,36 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
-    @NameInMap("AdministrationRoleName")
-    public String administrationRoleName;
-
-    @NameInMap("ExecutionRoleName")
-    public String executionRoleName;
-
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    @NameInMap("TemplateVersion")
-    public String templateVersion;
-
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupShrinkRequestParameters> parameters;
 
     @NameInMap("PermissionModel")
     public String permissionModel;
 
-    @NameInMap("AutoDeployment")
-    public String autoDeploymentShrink;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("DeploymentTargets")
-    public String deploymentTargetsShrink;
+    @NameInMap("RegionIds")
+    public String regionIdsShrink;
+
+    @NameInMap("StackGroupName")
+    public String stackGroupName;
+
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateURL")
+    public String templateURL;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
 
     public static UpdateStackGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupShrinkRequest self = new UpdateStackGroupShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateStackGroupShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpdateStackGroupShrinkRequest setStackGroupName(String stackGroupName) {
-        this.stackGroupName = stackGroupName;
-        return this;
-    }
-    public String getStackGroupName() {
-        return this.stackGroupName;
-    }
-
-    public UpdateStackGroupShrinkRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public UpdateStackGroupShrinkRequest setAccountIdsShrink(String accountIdsShrink) {
@@ -95,28 +71,20 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
         return this.accountIdsShrink;
     }
 
-    public UpdateStackGroupShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
-        this.regionIdsShrink = regionIdsShrink;
+    public UpdateStackGroupShrinkRequest setAdministrationRoleName(String administrationRoleName) {
+        this.administrationRoleName = administrationRoleName;
         return this;
     }
-    public String getRegionIdsShrink() {
-        return this.regionIdsShrink;
+    public String getAdministrationRoleName() {
+        return this.administrationRoleName;
     }
 
-    public UpdateStackGroupShrinkRequest setTemplateBody(String templateBody) {
-        this.templateBody = templateBody;
+    public UpdateStackGroupShrinkRequest setAutoDeploymentShrink(String autoDeploymentShrink) {
+        this.autoDeploymentShrink = autoDeploymentShrink;
         return this;
     }
-    public String getTemplateBody() {
-        return this.templateBody;
-    }
-
-    public UpdateStackGroupShrinkRequest setTemplateURL(String templateURL) {
-        this.templateURL = templateURL;
-        return this;
-    }
-    public String getTemplateURL() {
-        return this.templateURL;
+    public String getAutoDeploymentShrink() {
+        return this.autoDeploymentShrink;
     }
 
     public UpdateStackGroupShrinkRequest setClientToken(String clientToken) {
@@ -125,6 +93,30 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateStackGroupShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
+    }
+
+    public UpdateStackGroupShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateStackGroupShrinkRequest setExecutionRoleName(String executionRoleName) {
+        this.executionRoleName = executionRoleName;
+        return this;
+    }
+    public String getExecutionRoleName() {
+        return this.executionRoleName;
     }
 
     public UpdateStackGroupShrinkRequest setOperationDescription(String operationDescription) {
@@ -143,38 +135,6 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
         return this.operationPreferencesShrink;
     }
 
-    public UpdateStackGroupShrinkRequest setAdministrationRoleName(String administrationRoleName) {
-        this.administrationRoleName = administrationRoleName;
-        return this;
-    }
-    public String getAdministrationRoleName() {
-        return this.administrationRoleName;
-    }
-
-    public UpdateStackGroupShrinkRequest setExecutionRoleName(String executionRoleName) {
-        this.executionRoleName = executionRoleName;
-        return this;
-    }
-    public String getExecutionRoleName() {
-        return this.executionRoleName;
-    }
-
-    public UpdateStackGroupShrinkRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public UpdateStackGroupShrinkRequest setTemplateVersion(String templateVersion) {
-        this.templateVersion = templateVersion;
-        return this;
-    }
-    public String getTemplateVersion() {
-        return this.templateVersion;
-    }
-
     public UpdateStackGroupShrinkRequest setParameters(java.util.List<UpdateStackGroupShrinkRequestParameters> parameters) {
         this.parameters = parameters;
         return this;
@@ -191,20 +151,60 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
         return this.permissionModel;
     }
 
-    public UpdateStackGroupShrinkRequest setAutoDeploymentShrink(String autoDeploymentShrink) {
-        this.autoDeploymentShrink = autoDeploymentShrink;
+    public UpdateStackGroupShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAutoDeploymentShrink() {
-        return this.autoDeploymentShrink;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public UpdateStackGroupShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
-        this.deploymentTargetsShrink = deploymentTargetsShrink;
+    public UpdateStackGroupShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
+        this.regionIdsShrink = regionIdsShrink;
         return this;
     }
-    public String getDeploymentTargetsShrink() {
-        return this.deploymentTargetsShrink;
+    public String getRegionIdsShrink() {
+        return this.regionIdsShrink;
+    }
+
+    public UpdateStackGroupShrinkRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public UpdateStackGroupShrinkRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public UpdateStackGroupShrinkRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public UpdateStackGroupShrinkRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public UpdateStackGroupShrinkRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
     public static class UpdateStackGroupShrinkRequestParameters extends TeaModel {
