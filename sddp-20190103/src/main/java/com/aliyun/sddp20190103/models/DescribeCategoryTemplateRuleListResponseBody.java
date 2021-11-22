@@ -65,9 +65,6 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeCategoryTemplateRuleListResponseBodyItems extends TeaModel {
-        @NameInMap("CustomType")
-        public Integer customType;
-
         @NameInMap("Description")
         public String description;
 
@@ -89,20 +86,9 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("TemplateId")
-        public Long templateId;
-
         public static DescribeCategoryTemplateRuleListResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeCategoryTemplateRuleListResponseBodyItems self = new DescribeCategoryTemplateRuleListResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCategoryTemplateRuleListResponseBodyItems setCustomType(Integer customType) {
-            this.customType = customType;
-            return this;
-        }
-        public Integer getCustomType() {
-            return this.customType;
         }
 
         public DescribeCategoryTemplateRuleListResponseBodyItems setDescription(String description) {
@@ -159,14 +145,6 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
-        }
-
-        public DescribeCategoryTemplateRuleListResponseBodyItems setTemplateId(Long templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public Long getTemplateId() {
-            return this.templateId;
         }
 
     }
