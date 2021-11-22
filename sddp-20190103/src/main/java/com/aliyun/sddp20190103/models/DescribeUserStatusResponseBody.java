@@ -44,56 +44,17 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("DataMaskColumns")
-        public Long dataMaskColumns;
-
-        @NameInMap("DataMaskTasks")
-        public Long dataMaskTasks;
-
-        @NameInMap("DatamaskColumns")
-        public Long datamaskColumns;
-
-        @NameInMap("DivulgeCount")
-        public Long divulgeCount;
-
-        @NameInMap("DlpTotalCount")
-        public Long dlpTotalCount;
-
-        @NameInMap("IncSensitiveObjects")
-        public Long incSensitiveObjects;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
-        @NameInMap("InstanceStatus")
-        public Integer instanceStatus;
-
         @NameInMap("LabStatus")
         public Integer labStatus;
 
-        @NameInMap("OssBucketSet")
-        public Boolean ossBucketSet;
-
-        @NameInMap("OssSize")
-        public Long ossSize;
-
         @NameInMap("RemainDays")
         public Integer remainDays;
-
-        @NameInMap("SensitiveObject")
-        public Long sensitiveObject;
-
-        @NameInMap("SensitiveTable")
-        public Long sensitiveTable;
-
-        @NameInMap("SensitiveTables")
-        public Long sensitiveTables;
-
-        @NameInMap("TotalDataMaskColumns")
-        public Long totalDataMaskColumns;
 
         @NameInMap("Trail")
         public Boolean trail;
@@ -141,54 +102,6 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public DescribeUserStatusResponseBodyUserStatus setDataMaskColumns(Long dataMaskColumns) {
-            this.dataMaskColumns = dataMaskColumns;
-            return this;
-        }
-        public Long getDataMaskColumns() {
-            return this.dataMaskColumns;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setDataMaskTasks(Long dataMaskTasks) {
-            this.dataMaskTasks = dataMaskTasks;
-            return this;
-        }
-        public Long getDataMaskTasks() {
-            return this.dataMaskTasks;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setDatamaskColumns(Long datamaskColumns) {
-            this.datamaskColumns = datamaskColumns;
-            return this;
-        }
-        public Long getDatamaskColumns() {
-            return this.datamaskColumns;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setDivulgeCount(Long divulgeCount) {
-            this.divulgeCount = divulgeCount;
-            return this;
-        }
-        public Long getDivulgeCount() {
-            return this.divulgeCount;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setDlpTotalCount(Long dlpTotalCount) {
-            this.dlpTotalCount = dlpTotalCount;
-            return this;
-        }
-        public Long getDlpTotalCount() {
-            return this.dlpTotalCount;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setIncSensitiveObjects(Long incSensitiveObjects) {
-            this.incSensitiveObjects = incSensitiveObjects;
-            return this;
-        }
-        public Long getIncSensitiveObjects() {
-            return this.incSensitiveObjects;
-        }
-
         public DescribeUserStatusResponseBodyUserStatus setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -205,14 +118,6 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             return this.instanceNum;
         }
 
-        public DescribeUserStatusResponseBodyUserStatus setInstanceStatus(Integer instanceStatus) {
-            this.instanceStatus = instanceStatus;
-            return this;
-        }
-        public Integer getInstanceStatus() {
-            return this.instanceStatus;
-        }
-
         public DescribeUserStatusResponseBodyUserStatus setLabStatus(Integer labStatus) {
             this.labStatus = labStatus;
             return this;
@@ -221,60 +126,12 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             return this.labStatus;
         }
 
-        public DescribeUserStatusResponseBodyUserStatus setOssBucketSet(Boolean ossBucketSet) {
-            this.ossBucketSet = ossBucketSet;
-            return this;
-        }
-        public Boolean getOssBucketSet() {
-            return this.ossBucketSet;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setOssSize(Long ossSize) {
-            this.ossSize = ossSize;
-            return this;
-        }
-        public Long getOssSize() {
-            return this.ossSize;
-        }
-
         public DescribeUserStatusResponseBodyUserStatus setRemainDays(Integer remainDays) {
             this.remainDays = remainDays;
             return this;
         }
         public Integer getRemainDays() {
             return this.remainDays;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setSensitiveObject(Long sensitiveObject) {
-            this.sensitiveObject = sensitiveObject;
-            return this;
-        }
-        public Long getSensitiveObject() {
-            return this.sensitiveObject;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setSensitiveTable(Long sensitiveTable) {
-            this.sensitiveTable = sensitiveTable;
-            return this;
-        }
-        public Long getSensitiveTable() {
-            return this.sensitiveTable;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setSensitiveTables(Long sensitiveTables) {
-            this.sensitiveTables = sensitiveTables;
-            return this;
-        }
-        public Long getSensitiveTables() {
-            return this.sensitiveTables;
-        }
-
-        public DescribeUserStatusResponseBodyUserStatus setTotalDataMaskColumns(Long totalDataMaskColumns) {
-            this.totalDataMaskColumns = totalDataMaskColumns;
-            return this;
-        }
-        public Long getTotalDataMaskColumns() {
-            return this.totalDataMaskColumns;
         }
 
         public DescribeUserStatusResponseBodyUserStatus setTrail(Boolean trail) {

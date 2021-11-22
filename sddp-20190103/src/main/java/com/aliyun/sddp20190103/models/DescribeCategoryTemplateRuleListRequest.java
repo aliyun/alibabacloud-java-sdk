@@ -7,9 +7,6 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("CustomType")
-    public Integer customType;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -22,9 +19,6 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
-    @NameInMap("TemplateId")
-    public Long templateId;
-
     public static DescribeCategoryTemplateRuleListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCategoryTemplateRuleListRequest self = new DescribeCategoryTemplateRuleListRequest();
         return TeaModel.build(map, self);
@@ -36,14 +30,6 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
-    }
-
-    public DescribeCategoryTemplateRuleListRequest setCustomType(Integer customType) {
-        this.customType = customType;
-        return this;
-    }
-    public Integer getCustomType() {
-        return this.customType;
     }
 
     public DescribeCategoryTemplateRuleListRequest setLang(String lang) {
@@ -76,14 +62,6 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
-    }
-
-    public DescribeCategoryTemplateRuleListRequest setTemplateId(Long templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public Long getTemplateId() {
-        return this.templateId;
     }
 
 }
