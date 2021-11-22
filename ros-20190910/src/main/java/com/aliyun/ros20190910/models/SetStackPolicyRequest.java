@@ -4,11 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class SetStackPolicyRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("StackId")
+    public String stackId;
 
     @NameInMap("StackPolicyBody")
     public String stackPolicyBody;
@@ -21,20 +21,20 @@ public class SetStackPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetStackPolicyRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
-    }
-
     public SetStackPolicyRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SetStackPolicyRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
     public SetStackPolicyRequest setStackPolicyBody(String stackPolicyBody) {

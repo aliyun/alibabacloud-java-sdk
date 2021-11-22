@@ -7,14 +7,14 @@ public class DetectStackGroupDriftShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OperationPreferences")
+    public String operationPreferencesShrink;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("StackGroupName")
     public String stackGroupName;
-
-    @NameInMap("OperationPreferences")
-    public String operationPreferencesShrink;
 
     public static DetectStackGroupDriftShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectStackGroupDriftShrinkRequest self = new DetectStackGroupDriftShrinkRequest();
@@ -27,6 +27,14 @@ public class DetectStackGroupDriftShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DetectStackGroupDriftShrinkRequest setOperationPreferencesShrink(String operationPreferencesShrink) {
+        this.operationPreferencesShrink = operationPreferencesShrink;
+        return this;
+    }
+    public String getOperationPreferencesShrink() {
+        return this.operationPreferencesShrink;
     }
 
     public DetectStackGroupDriftShrinkRequest setRegionId(String regionId) {
@@ -43,14 +51,6 @@ public class DetectStackGroupDriftShrinkRequest extends TeaModel {
     }
     public String getStackGroupName() {
         return this.stackGroupName;
-    }
-
-    public DetectStackGroupDriftShrinkRequest setOperationPreferencesShrink(String operationPreferencesShrink) {
-        this.operationPreferencesShrink = operationPreferencesShrink;
-        return this;
-    }
-    public String getOperationPreferencesShrink() {
-        return this.operationPreferencesShrink;
     }
 
 }

@@ -4,6 +4,12 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackInstancesRequest extends TeaModel {
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -16,15 +22,25 @@ public class ListStackInstancesRequest extends TeaModel {
     @NameInMap("StackInstanceRegionId")
     public String stackInstanceRegionId;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     public static ListStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackInstancesRequest self = new ListStackInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListStackInstancesRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListStackInstancesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListStackInstancesRequest setRegionId(String regionId) {
@@ -57,22 +73,6 @@ public class ListStackInstancesRequest extends TeaModel {
     }
     public String getStackInstanceRegionId() {
         return this.stackInstanceRegionId;
-    }
-
-    public ListStackInstancesRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListStackInstancesRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
 }

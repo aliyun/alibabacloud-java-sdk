@@ -4,20 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackOperationRisksRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("StackId")
-    public String stackId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("OperationType")
     public String operationType;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("RamRoleName")
     public String ramRoleName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
@@ -25,33 +22,12 @@ public class ListStackOperationRisksRequest extends TeaModel {
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
 
+    @NameInMap("StackId")
+    public String stackId;
+
     public static ListStackOperationRisksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackOperationRisksRequest self = new ListStackOperationRisksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListStackOperationRisksRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListStackOperationRisksRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
-    }
-
-    public ListStackOperationRisksRequest setOperationType(String operationType) {
-        this.operationType = operationType;
-        return this;
-    }
-    public String getOperationType() {
-        return this.operationType;
     }
 
     public ListStackOperationRisksRequest setClientToken(String clientToken) {
@@ -62,12 +38,28 @@ public class ListStackOperationRisksRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ListStackOperationRisksRequest setOperationType(String operationType) {
+        this.operationType = operationType;
+        return this;
+    }
+    public String getOperationType() {
+        return this.operationType;
+    }
+
     public ListStackOperationRisksRequest setRamRoleName(String ramRoleName) {
         this.ramRoleName = ramRoleName;
         return this;
     }
     public String getRamRoleName() {
         return this.ramRoleName;
+    }
+
+    public ListStackOperationRisksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListStackOperationRisksRequest setRetainAllResources(Boolean retainAllResources) {
@@ -84,6 +76,14 @@ public class ListStackOperationRisksRequest extends TeaModel {
     }
     public java.util.List<String> getRetainResources() {
         return this.retainResources;
+    }
+
+    public ListStackOperationRisksRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
 }

@@ -111,16 +111,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
-            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
+            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
             request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
-            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -194,16 +194,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
-            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
+            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
             request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
-            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -327,6 +327,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getChangeSetWithOptions(request, runtime);
     }
 
+    public GetFeatureDetailsResponse getFeatureDetailsWithOptions(GetFeatureDetailsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetFeatureDetails", "2019-09-10", "HTTPS", "POST", "AK", "json", req, runtime), new GetFeatureDetailsResponse());
+    }
+
+    public GetFeatureDetailsResponse getFeatureDetails(GetFeatureDetailsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getFeatureDetailsWithOptions(request, runtime);
+    }
+
     public GetResourceTypeResponse getResourceTypeWithOptions(GetResourceTypeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -351,6 +364,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResourceTypeTemplateResponse getResourceTypeTemplate(GetResourceTypeTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getResourceTypeTemplateWithOptions(request, runtime);
+    }
+
+    public GetServiceProvisionsResponse getServiceProvisionsWithOptions(GetServiceProvisionsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetServiceProvisions", "2019-09-10", "HTTPS", "POST", "AK", "json", req, runtime), new GetServiceProvisionsResponse());
+    }
+
+    public GetServiceProvisionsResponse getServiceProvisions(GetServiceProvisionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getServiceProvisionsWithOptions(request, runtime);
     }
 
     public GetStackResponse getStackWithOptions(GetStackRequest request, RuntimeOptions runtime) throws Exception {
@@ -468,6 +494,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTemplateEstimateCostResponse getTemplateEstimateCost(GetTemplateEstimateCostRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getTemplateEstimateCostWithOptions(request, runtime);
+    }
+
+    public GetTemplateParameterConstraintsResponse getTemplateParameterConstraintsWithOptions(GetTemplateParameterConstraintsRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetTemplateParameterConstraintsShrinkRequest request = new GetTemplateParameterConstraintsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parametersKeyFilter)) {
+            request.parametersKeyFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parametersKeyFilter, "ParametersKeyFilter", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTemplateParameterConstraints", "2019-09-10", "HTTPS", "POST", "AK", "json", req, runtime), new GetTemplateParameterConstraintsResponse());
+    }
+
+    public GetTemplateParameterConstraintsResponse getTemplateParameterConstraints(GetTemplateParameterConstraintsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTemplateParameterConstraintsWithOptions(request, runtime);
     }
 
     public GetTemplateSummaryResponse getTemplateSummaryWithOptions(GetTemplateSummaryRequest request, RuntimeOptions runtime) throws Exception {
@@ -662,19 +707,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagValuesWithOptions(request, runtime);
     }
 
-    public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListTemplates", "2019-09-10", "HTTPS", "POST", "AK", "json", req, runtime), new ListTemplatesResponse());
-    }
-
-    public ListTemplatesResponse listTemplates(ListTemplatesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listTemplatesWithOptions(request, runtime);
-    }
-
     public ListTemplateVersionsResponse listTemplateVersionsWithOptions(ListTemplateVersionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -686,6 +718,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTemplateVersionsResponse listTemplateVersions(ListTemplateVersionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listTemplateVersionsWithOptions(request, runtime);
+    }
+
+    public ListTemplatesResponse listTemplatesWithOptions(ListTemplatesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListTemplates", "2019-09-10", "HTTPS", "POST", "AK", "json", req, runtime), new ListTemplatesResponse());
+    }
+
+    public ListTemplatesResponse listTemplates(ListTemplatesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listTemplatesWithOptions(request, runtime);
     }
 
     public MoveResourceGroupResponse moveResourceGroupWithOptions(MoveResourceGroupRequest request, RuntimeOptions runtime) throws Exception {
@@ -826,20 +871,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
-            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
-            request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.autoDeployment))) {
             request.autoDeploymentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.autoDeployment), "AutoDeployment", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
             request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -861,16 +906,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
-            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
+            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationPreferences)) {
             request.operationPreferencesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationPreferences, "OperationPreferences", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deploymentTargets))) {
-            request.deploymentTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deploymentTargets), "DeploymentTargets", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

@@ -31,6 +31,36 @@ public class GetStackGroupResponseBody extends TeaModel {
         return this.stackGroup;
     }
 
+    public static class GetStackGroupResponseBodyStackGroupAutoDeployment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("RetainStacksOnAccountRemoval")
+        public Boolean retainStacksOnAccountRemoval;
+
+        public static GetStackGroupResponseBodyStackGroupAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
+            GetStackGroupResponseBodyStackGroupAutoDeployment self = new GetStackGroupResponseBodyStackGroupAutoDeployment();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackGroupResponseBodyStackGroupAutoDeployment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetStackGroupResponseBodyStackGroupAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            return this;
+        }
+        public Boolean getRetainStacksOnAccountRemoval() {
+            return this.retainStacksOnAccountRemoval;
+        }
+
+    }
+
     public static class GetStackGroupResponseBodyStackGroupParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -62,20 +92,20 @@ public class GetStackGroupResponseBody extends TeaModel {
     }
 
     public static class GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail extends TeaModel {
-        @NameInMap("DriftDetectionTime")
-        public String driftDetectionTime;
-
-        @NameInMap("TotalStackInstancesCount")
-        public Integer totalStackInstancesCount;
-
-        @NameInMap("FailedStackInstancesCount")
-        public Integer failedStackInstancesCount;
+        @NameInMap("CancelledStackInstancesCount")
+        public Integer cancelledStackInstancesCount;
 
         @NameInMap("DriftDetectionStatus")
         public String driftDetectionStatus;
 
-        @NameInMap("StackGroupDriftStatus")
-        public String stackGroupDriftStatus;
+        @NameInMap("DriftDetectionTime")
+        public String driftDetectionTime;
+
+        @NameInMap("DriftedStackInstancesCount")
+        public Integer driftedStackInstancesCount;
+
+        @NameInMap("FailedStackInstancesCount")
+        public Integer failedStackInstancesCount;
 
         @NameInMap("InProgressStackInstancesCount")
         public Integer inProgressStackInstancesCount;
@@ -83,39 +113,23 @@ public class GetStackGroupResponseBody extends TeaModel {
         @NameInMap("InSyncStackInstancesCount")
         public Integer inSyncStackInstancesCount;
 
-        @NameInMap("CancelledStackInstancesCount")
-        public Integer cancelledStackInstancesCount;
+        @NameInMap("StackGroupDriftStatus")
+        public String stackGroupDriftStatus;
 
-        @NameInMap("DriftedStackInstancesCount")
-        public Integer driftedStackInstancesCount;
+        @NameInMap("TotalStackInstancesCount")
+        public Integer totalStackInstancesCount;
 
         public static GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail self = new GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail();
             return TeaModel.build(map, self);
         }
 
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setDriftDetectionTime(String driftDetectionTime) {
-            this.driftDetectionTime = driftDetectionTime;
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setCancelledStackInstancesCount(Integer cancelledStackInstancesCount) {
+            this.cancelledStackInstancesCount = cancelledStackInstancesCount;
             return this;
         }
-        public String getDriftDetectionTime() {
-            return this.driftDetectionTime;
-        }
-
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setTotalStackInstancesCount(Integer totalStackInstancesCount) {
-            this.totalStackInstancesCount = totalStackInstancesCount;
-            return this;
-        }
-        public Integer getTotalStackInstancesCount() {
-            return this.totalStackInstancesCount;
-        }
-
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setFailedStackInstancesCount(Integer failedStackInstancesCount) {
-            this.failedStackInstancesCount = failedStackInstancesCount;
-            return this;
-        }
-        public Integer getFailedStackInstancesCount() {
-            return this.failedStackInstancesCount;
+        public Integer getCancelledStackInstancesCount() {
+            return this.cancelledStackInstancesCount;
         }
 
         public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setDriftDetectionStatus(String driftDetectionStatus) {
@@ -126,12 +140,28 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.driftDetectionStatus;
         }
 
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setStackGroupDriftStatus(String stackGroupDriftStatus) {
-            this.stackGroupDriftStatus = stackGroupDriftStatus;
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
             return this;
         }
-        public String getStackGroupDriftStatus() {
-            return this.stackGroupDriftStatus;
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setDriftedStackInstancesCount(Integer driftedStackInstancesCount) {
+            this.driftedStackInstancesCount = driftedStackInstancesCount;
+            return this;
+        }
+        public Integer getDriftedStackInstancesCount() {
+            return this.driftedStackInstancesCount;
+        }
+
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setFailedStackInstancesCount(Integer failedStackInstancesCount) {
+            this.failedStackInstancesCount = failedStackInstancesCount;
+            return this;
+        }
+        public Integer getFailedStackInstancesCount() {
+            return this.failedStackInstancesCount;
         }
 
         public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setInProgressStackInstancesCount(Integer inProgressStackInstancesCount) {
@@ -150,113 +180,67 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.inSyncStackInstancesCount;
         }
 
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setCancelledStackInstancesCount(Integer cancelledStackInstancesCount) {
-            this.cancelledStackInstancesCount = cancelledStackInstancesCount;
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setStackGroupDriftStatus(String stackGroupDriftStatus) {
+            this.stackGroupDriftStatus = stackGroupDriftStatus;
             return this;
         }
-        public Integer getCancelledStackInstancesCount() {
-            return this.cancelledStackInstancesCount;
+        public String getStackGroupDriftStatus() {
+            return this.stackGroupDriftStatus;
         }
 
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setDriftedStackInstancesCount(Integer driftedStackInstancesCount) {
-            this.driftedStackInstancesCount = driftedStackInstancesCount;
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail setTotalStackInstancesCount(Integer totalStackInstancesCount) {
+            this.totalStackInstancesCount = totalStackInstancesCount;
             return this;
         }
-        public Integer getDriftedStackInstancesCount() {
-            return this.driftedStackInstancesCount;
-        }
-
-    }
-
-    public static class GetStackGroupResponseBodyStackGroupAutoDeployment extends TeaModel {
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("RetainStacksOnAccountRemoval")
-        public Boolean retainStacksOnAccountRemoval;
-
-        public static GetStackGroupResponseBodyStackGroupAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
-            GetStackGroupResponseBodyStackGroupAutoDeployment self = new GetStackGroupResponseBodyStackGroupAutoDeployment();
-            return TeaModel.build(map, self);
-        }
-
-        public GetStackGroupResponseBodyStackGroupAutoDeployment setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public GetStackGroupResponseBodyStackGroupAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
-            return this;
-        }
-        public Boolean getRetainStacksOnAccountRemoval() {
-            return this.retainStacksOnAccountRemoval;
+        public Integer getTotalStackInstancesCount() {
+            return this.totalStackInstancesCount;
         }
 
     }
 
     public static class GetStackGroupResponseBodyStackGroup extends TeaModel {
-        @NameInMap("StackGroupId")
-        public String stackGroupId;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AdministrationRoleName")
         public String administrationRoleName;
-
-        @NameInMap("Parameters")
-        public java.util.List<GetStackGroupResponseBodyStackGroupParameters> parameters;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("StackGroupName")
-        public String stackGroupName;
-
-        @NameInMap("ExecutionRoleName")
-        public String executionRoleName;
-
-        @NameInMap("TemplateBody")
-        public String templateBody;
-
-        @NameInMap("StackGroupDriftDetectionDetail")
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("PermissionModel")
-        public String permissionModel;
 
         @NameInMap("AutoDeployment")
         public GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ExecutionRoleName")
+        public String executionRoleName;
+
+        @NameInMap("Parameters")
+        public java.util.List<GetStackGroupResponseBodyStackGroupParameters> parameters;
+
+        @NameInMap("PermissionModel")
+        public String permissionModel;
+
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("StackGroupDriftDetectionDetail")
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
+
+        @NameInMap("StackGroupId")
+        public String stackGroupId;
+
+        @NameInMap("StackGroupName")
+        public String stackGroupName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TemplateBody")
+        public String templateBody;
 
         public static GetStackGroupResponseBodyStackGroup build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseBodyStackGroup self = new GetStackGroupResponseBodyStackGroup();
             return TeaModel.build(map, self);
-        }
-
-        public GetStackGroupResponseBodyStackGroup setStackGroupId(String stackGroupId) {
-            this.stackGroupId = stackGroupId;
-            return this;
-        }
-        public String getStackGroupId() {
-            return this.stackGroupId;
-        }
-
-        public GetStackGroupResponseBodyStackGroup setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetStackGroupResponseBodyStackGroup setAdministrationRoleName(String administrationRoleName) {
@@ -267,12 +251,12 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.administrationRoleName;
         }
 
-        public GetStackGroupResponseBodyStackGroup setParameters(java.util.List<GetStackGroupResponseBodyStackGroupParameters> parameters) {
-            this.parameters = parameters;
+        public GetStackGroupResponseBodyStackGroup setAutoDeployment(GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment) {
+            this.autoDeployment = autoDeployment;
             return this;
         }
-        public java.util.List<GetStackGroupResponseBodyStackGroupParameters> getParameters() {
-            return this.parameters;
+        public GetStackGroupResponseBodyStackGroupAutoDeployment getAutoDeployment() {
+            return this.autoDeployment;
         }
 
         public GetStackGroupResponseBodyStackGroup setDescription(String description) {
@@ -283,14 +267,6 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetStackGroupResponseBodyStackGroup setStackGroupName(String stackGroupName) {
-            this.stackGroupName = stackGroupName;
-            return this;
-        }
-        public String getStackGroupName() {
-            return this.stackGroupName;
-        }
-
         public GetStackGroupResponseBodyStackGroup setExecutionRoleName(String executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
@@ -299,28 +275,12 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.executionRoleName;
         }
 
-        public GetStackGroupResponseBodyStackGroup setTemplateBody(String templateBody) {
-            this.templateBody = templateBody;
+        public GetStackGroupResponseBodyStackGroup setParameters(java.util.List<GetStackGroupResponseBodyStackGroupParameters> parameters) {
+            this.parameters = parameters;
             return this;
         }
-        public String getTemplateBody() {
-            return this.templateBody;
-        }
-
-        public GetStackGroupResponseBodyStackGroup setStackGroupDriftDetectionDetail(GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
-            this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
-            return this;
-        }
-        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
-            return this.stackGroupDriftDetectionDetail;
-        }
-
-        public GetStackGroupResponseBodyStackGroup setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public java.util.List<GetStackGroupResponseBodyStackGroupParameters> getParameters() {
+            return this.parameters;
         }
 
         public GetStackGroupResponseBodyStackGroup setPermissionModel(String permissionModel) {
@@ -331,20 +291,60 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.permissionModel;
         }
 
-        public GetStackGroupResponseBodyStackGroup setAutoDeployment(GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment) {
-            this.autoDeployment = autoDeployment;
-            return this;
-        }
-        public GetStackGroupResponseBodyStackGroupAutoDeployment getAutoDeployment() {
-            return this.autoDeployment;
-        }
-
         public GetStackGroupResponseBodyStackGroup setRdFolderIds(java.util.List<String> rdFolderIds) {
             this.rdFolderIds = rdFolderIds;
             return this;
         }
         public java.util.List<String> getRdFolderIds() {
             return this.rdFolderIds;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setStackGroupDriftDetectionDetail(GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
+            this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
+            return this;
+        }
+        public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
+            return this.stackGroupDriftDetectionDetail;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setStackGroupId(String stackGroupId) {
+            this.stackGroupId = stackGroupId;
+            return this;
+        }
+        public String getStackGroupId() {
+            return this.stackGroupId;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setStackGroupName(String stackGroupName) {
+            this.stackGroupName = stackGroupName;
+            return this;
+        }
+        public String getStackGroupName() {
+            return this.stackGroupName;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setTemplateBody(String templateBody) {
+            this.templateBody = templateBody;
+            return this;
+        }
+        public String getTemplateBody() {
+            return this.templateBody;
         }
 
     }

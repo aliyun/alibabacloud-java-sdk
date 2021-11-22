@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -13,8 +16,8 @@ public class ListStacksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ShowNestedStack")
     public Boolean showNestedStack;
@@ -22,21 +25,29 @@ public class ListStacksRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
-    @NameInMap("Status")
-    public java.util.List<String> status;
+    @NameInMap("StackIds")
+    public java.util.List<String> stackIds;
 
     @NameInMap("StackName")
     public java.util.List<String> stackName;
 
+    @NameInMap("Status")
+    public java.util.List<String> status;
+
     @NameInMap("Tag")
     public java.util.List<ListStacksRequestTag> tag;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     public static ListStacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStacksRequest self = new ListStacksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListStacksRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListStacksRequest setPageSize(Long pageSize) {
@@ -63,12 +74,12 @@ public class ListStacksRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListStacksRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListStacksRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListStacksRequest setShowNestedStack(Boolean showNestedStack) {
@@ -87,12 +98,12 @@ public class ListStacksRequest extends TeaModel {
         return this.stackId;
     }
 
-    public ListStacksRequest setStatus(java.util.List<String> status) {
-        this.status = status;
+    public ListStacksRequest setStackIds(java.util.List<String> stackIds) {
+        this.stackIds = stackIds;
         return this;
     }
-    public java.util.List<String> getStatus() {
-        return this.status;
+    public java.util.List<String> getStackIds() {
+        return this.stackIds;
     }
 
     public ListStacksRequest setStackName(java.util.List<String> stackName) {
@@ -103,20 +114,20 @@ public class ListStacksRequest extends TeaModel {
         return this.stackName;
     }
 
+    public ListStacksRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
+    }
+
     public ListStacksRequest setTag(java.util.List<ListStacksRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<ListStacksRequestTag> getTag() {
         return this.tag;
-    }
-
-    public ListStacksRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public static class ListStacksRequestTag extends TeaModel {

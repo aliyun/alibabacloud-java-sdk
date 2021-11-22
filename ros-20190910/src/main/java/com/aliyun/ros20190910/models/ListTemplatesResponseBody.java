@@ -4,8 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesResponseBody self = new ListTemplatesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListTemplatesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListTemplatesResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplatesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListTemplatesResponseBody setTemplates(java.util.List<ListTemplatesResponseBodyTemplates> templates) {
         this.templates = templates;
         return this;
@@ -64,18 +56,35 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.templates;
     }
 
-    public static class ListTemplatesResponseBodyTemplates extends TeaModel {
-        @NameInMap("TemplateARN")
-        public String templateARN;
+    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
-        @NameInMap("UpdateTime")
-        public String updateTime;
+    public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("ShareType")
+        public String shareType;
+
+        @NameInMap("TemplateARN")
+        public String templateARN;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -83,37 +92,20 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        @NameInMap("OwnerId")
-        public String ownerId;
-
-        @NameInMap("ShareType")
-        public String shareType;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
         }
 
-        public ListTemplatesResponseBodyTemplates setTemplateARN(String templateARN) {
-            this.templateARN = templateARN;
+        public ListTemplatesResponseBodyTemplates setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getTemplateARN() {
-            return this.templateARN;
-        }
-
-        public ListTemplatesResponseBodyTemplates setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListTemplatesResponseBodyTemplates setDescription(String description) {
@@ -124,12 +116,44 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListTemplatesResponseBodyTemplates setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListTemplatesResponseBodyTemplates setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        public ListTemplatesResponseBodyTemplates setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListTemplatesResponseBodyTemplates setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateARN(String templateARN) {
+            this.templateARN = templateARN;
+            return this;
+        }
+        public String getTemplateARN() {
+            return this.templateARN;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateName(String templateName) {
@@ -148,36 +172,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.templateVersion;
         }
 
-        public ListTemplatesResponseBodyTemplates setTemplateId(String templateId) {
-            this.templateId = templateId;
+        public ListTemplatesResponseBodyTemplates setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-        public ListTemplatesResponseBodyTemplates setOwnerId(String ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-        public String getOwnerId() {
-            return this.ownerId;
-        }
-
-        public ListTemplatesResponseBodyTemplates setShareType(String shareType) {
-            this.shareType = shareType;
-            return this;
-        }
-        public String getShareType() {
-            return this.shareType;
-        }
-
-        public ListTemplatesResponseBodyTemplates setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

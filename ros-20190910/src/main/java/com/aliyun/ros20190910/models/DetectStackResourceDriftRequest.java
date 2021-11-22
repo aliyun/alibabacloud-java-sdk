@@ -4,29 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DetectStackResourceDriftRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
-
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("StackId")
+    public String stackId;
+
     public static DetectStackResourceDriftRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectStackResourceDriftRequest self = new DetectStackResourceDriftRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectStackResourceDriftRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
     }
 
     public DetectStackResourceDriftRequest setClientToken(String clientToken) {
@@ -37,6 +29,14 @@ public class DetectStackResourceDriftRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DetectStackResourceDriftRequest setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
     public DetectStackResourceDriftRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -45,12 +45,12 @@ public class DetectStackResourceDriftRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DetectStackResourceDriftRequest setLogicalResourceId(String logicalResourceId) {
-        this.logicalResourceId = logicalResourceId;
+    public DetectStackResourceDriftRequest setStackId(String stackId) {
+        this.stackId = stackId;
         return this;
     }
-    public String getLogicalResourceId() {
-        return this.logicalResourceId;
+    public String getStackId() {
+        return this.stackId;
     }
 
 }

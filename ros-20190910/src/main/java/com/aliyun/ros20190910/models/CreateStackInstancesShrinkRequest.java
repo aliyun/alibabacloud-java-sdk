@@ -4,20 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateStackInstancesShrinkRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("StackGroupName")
-    public String stackGroupName;
-
     @NameInMap("AccountIds")
     public String accountIdsShrink;
 
-    @NameInMap("RegionIds")
-    public String regionIdsShrink;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
+
+    @NameInMap("DisableRollback")
+    public Boolean disableRollback;
 
     @NameInMap("OperationDescription")
     public String operationDescription;
@@ -25,37 +22,24 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
-    @NameInMap("TimeoutInMinutes")
-    public Long timeoutInMinutes;
-
-    @NameInMap("DisableRollback")
-    public Boolean disableRollback;
-
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
-    @NameInMap("DeploymentTargets")
-    public String deploymentTargetsShrink;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RegionIds")
+    public String regionIdsShrink;
+
+    @NameInMap("StackGroupName")
+    public String stackGroupName;
+
+    @NameInMap("TimeoutInMinutes")
+    public Long timeoutInMinutes;
 
     public static CreateStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackInstancesShrinkRequest self = new CreateStackInstancesShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateStackInstancesShrinkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateStackInstancesShrinkRequest setStackGroupName(String stackGroupName) {
-        this.stackGroupName = stackGroupName;
-        return this;
-    }
-    public String getStackGroupName() {
-        return this.stackGroupName;
     }
 
     public CreateStackInstancesShrinkRequest setAccountIdsShrink(String accountIdsShrink) {
@@ -66,20 +50,28 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
         return this.accountIdsShrink;
     }
 
-    public CreateStackInstancesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
-        this.regionIdsShrink = regionIdsShrink;
-        return this;
-    }
-    public String getRegionIdsShrink() {
-        return this.regionIdsShrink;
-    }
-
     public CreateStackInstancesShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
+    }
+
+    public CreateStackInstancesShrinkRequest setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+        return this;
+    }
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
     }
 
     public CreateStackInstancesShrinkRequest setOperationDescription(String operationDescription) {
@@ -98,22 +90,6 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
         return this.operationPreferencesShrink;
     }
 
-    public CreateStackInstancesShrinkRequest setTimeoutInMinutes(Long timeoutInMinutes) {
-        this.timeoutInMinutes = timeoutInMinutes;
-        return this;
-    }
-    public Long getTimeoutInMinutes() {
-        return this.timeoutInMinutes;
-    }
-
-    public CreateStackInstancesShrinkRequest setDisableRollback(Boolean disableRollback) {
-        this.disableRollback = disableRollback;
-        return this;
-    }
-    public Boolean getDisableRollback() {
-        return this.disableRollback;
-    }
-
     public CreateStackInstancesShrinkRequest setParameterOverrides(java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides) {
         this.parameterOverrides = parameterOverrides;
         return this;
@@ -122,12 +98,36 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
         return this.parameterOverrides;
     }
 
-    public CreateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
-        this.deploymentTargetsShrink = deploymentTargetsShrink;
+    public CreateStackInstancesShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDeploymentTargetsShrink() {
-        return this.deploymentTargetsShrink;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateStackInstancesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
+        this.regionIdsShrink = regionIdsShrink;
+        return this;
+    }
+    public String getRegionIdsShrink() {
+        return this.regionIdsShrink;
+    }
+
+    public CreateStackInstancesShrinkRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public CreateStackInstancesShrinkRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    public Long getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
     }
 
     public static class CreateStackInstancesShrinkRequestParameterOverrides extends TeaModel {

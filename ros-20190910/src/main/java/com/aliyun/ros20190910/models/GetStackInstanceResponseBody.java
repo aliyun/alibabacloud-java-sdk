@@ -62,106 +62,42 @@ public class GetStackInstanceResponseBody extends TeaModel {
     }
 
     public static class GetStackInstanceResponseBodyStackInstance extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("StackGroupId")
-        public String stackGroupId;
-
-        @NameInMap("StackId")
-        public String stackId;
+        @NameInMap("AccountId")
+        public String accountId;
 
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
-        @NameInMap("StackDriftStatus")
-        public String stackDriftStatus;
-
-        @NameInMap("StatusReason")
-        public String statusReason;
-
         @NameInMap("ParameterOverrides")
         public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides;
-
-        @NameInMap("StackGroupName")
-        public String stackGroupName;
-
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("RdFolderId")
         public String rdFolderId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("StackDriftStatus")
+        public String stackDriftStatus;
+
+        @NameInMap("StackGroupId")
+        public String stackGroupId;
+
+        @NameInMap("StackGroupName")
+        public String stackGroupName;
+
+        @NameInMap("StackId")
+        public String stackId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusReason")
+        public String statusReason;
+
         public static GetStackInstanceResponseBodyStackInstance build(java.util.Map<String, ?> map) throws Exception {
             GetStackInstanceResponseBodyStackInstance self = new GetStackInstanceResponseBodyStackInstance();
             return TeaModel.build(map, self);
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStackGroupId(String stackGroupId) {
-            this.stackGroupId = stackGroupId;
-            return this;
-        }
-        public String getStackGroupId() {
-            return this.stackGroupId;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStackId(String stackId) {
-            this.stackId = stackId;
-            return this;
-        }
-        public String getStackId() {
-            return this.stackId;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setDriftDetectionTime(String driftDetectionTime) {
-            this.driftDetectionTime = driftDetectionTime;
-            return this;
-        }
-        public String getDriftDetectionTime() {
-            return this.driftDetectionTime;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStackDriftStatus(String stackDriftStatus) {
-            this.stackDriftStatus = stackDriftStatus;
-            return this;
-        }
-        public String getStackDriftStatus() {
-            return this.stackDriftStatus;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStatusReason(String statusReason) {
-            this.statusReason = statusReason;
-            return this;
-        }
-        public String getStatusReason() {
-            return this.statusReason;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setParameterOverrides(java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides) {
-            this.parameterOverrides = parameterOverrides;
-            return this;
-        }
-        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> getParameterOverrides() {
-            return this.parameterOverrides;
-        }
-
-        public GetStackInstanceResponseBodyStackInstance setStackGroupName(String stackGroupName) {
-            this.stackGroupName = stackGroupName;
-            return this;
-        }
-        public String getStackGroupName() {
-            return this.stackGroupName;
         }
 
         public GetStackInstanceResponseBodyStackInstance setAccountId(String accountId) {
@@ -172,12 +108,20 @@ public class GetStackInstanceResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public GetStackInstanceResponseBodyStackInstance setRegionId(String regionId) {
-            this.regionId = regionId;
+        public GetStackInstanceResponseBodyStackInstance setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setParameterOverrides(java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides) {
+            this.parameterOverrides = parameterOverrides;
+            return this;
+        }
+        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> getParameterOverrides() {
+            return this.parameterOverrides;
         }
 
         public GetStackInstanceResponseBodyStackInstance setRdFolderId(String rdFolderId) {
@@ -186,6 +130,62 @@ public class GetStackInstanceResponseBody extends TeaModel {
         }
         public String getRdFolderId() {
             return this.rdFolderId;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStackDriftStatus(String stackDriftStatus) {
+            this.stackDriftStatus = stackDriftStatus;
+            return this;
+        }
+        public String getStackDriftStatus() {
+            return this.stackDriftStatus;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStackGroupId(String stackGroupId) {
+            this.stackGroupId = stackGroupId;
+            return this;
+        }
+        public String getStackGroupId() {
+            return this.stackGroupId;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStackGroupName(String stackGroupName) {
+            this.stackGroupName = stackGroupName;
+            return this;
+        }
+        public String getStackGroupName() {
+            return this.stackGroupName;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
         }
 
     }

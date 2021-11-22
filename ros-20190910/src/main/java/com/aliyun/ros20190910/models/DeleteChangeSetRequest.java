@@ -4,23 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteChangeSetRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ChangeSetId")
     public String changeSetId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChangeSetRequest self = new DeleteChangeSetRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteChangeSetRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteChangeSetRequest setChangeSetId(String changeSetId) {
@@ -29,6 +21,14 @@ public class DeleteChangeSetRequest extends TeaModel {
     }
     public String getChangeSetId() {
         return this.changeSetId;
+    }
+
+    public DeleteChangeSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

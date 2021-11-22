@@ -7,14 +7,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Outputs")
+    public java.util.List<ValidateTemplateResponseBodyOutputs> outputs;
+
     @NameInMap("Parameters")
     public java.util.List<java.util.Map<String, ?>> parameters;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Outputs")
-    public java.util.List<ValidateTemplateResponseBodyOutputs> outputs;
 
     public static ValidateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateResponseBody self = new ValidateTemplateResponseBody();
@@ -27,6 +27,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ValidateTemplateResponseBody setOutputs(java.util.List<ValidateTemplateResponseBodyOutputs> outputs) {
+        this.outputs = outputs;
+        return this;
+    }
+    public java.util.List<ValidateTemplateResponseBodyOutputs> getOutputs() {
+        return this.outputs;
     }
 
     public ValidateTemplateResponseBody setParameters(java.util.List<java.util.Map<String, ?>> parameters) {
@@ -45,32 +53,16 @@ public class ValidateTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ValidateTemplateResponseBody setOutputs(java.util.List<ValidateTemplateResponseBodyOutputs> outputs) {
-        this.outputs = outputs;
-        return this;
-    }
-    public java.util.List<ValidateTemplateResponseBodyOutputs> getOutputs() {
-        return this.outputs;
-    }
-
     public static class ValidateTemplateResponseBodyOutputs extends TeaModel {
-        @NameInMap("OutputKey")
-        public String outputKey;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("OutputKey")
+        public String outputKey;
 
         public static ValidateTemplateResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
             ValidateTemplateResponseBodyOutputs self = new ValidateTemplateResponseBodyOutputs();
             return TeaModel.build(map, self);
-        }
-
-        public ValidateTemplateResponseBodyOutputs setOutputKey(String outputKey) {
-            this.outputKey = outputKey;
-            return this;
-        }
-        public String getOutputKey() {
-            return this.outputKey;
         }
 
         public ValidateTemplateResponseBodyOutputs setDescription(String description) {
@@ -79,6 +71,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ValidateTemplateResponseBodyOutputs setOutputKey(String outputKey) {
+            this.outputKey = outputKey;
+            return this;
+        }
+        public String getOutputKey() {
+            return this.outputKey;
         }
 
     }

@@ -4,8 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackEventsRequest extends TeaModel {
-    @NameInMap("StackId")
-    public String stackId;
+    @NameInMap("LogicalResourceId")
+    public java.util.List<String> logicalResourceId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
@@ -13,29 +16,34 @@ public class ListStackEventsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
-
     @NameInMap("ResourceType")
     public java.util.List<String> resourceType;
 
-    @NameInMap("LogicalResourceId")
-    public java.util.List<String> logicalResourceId;
+    @NameInMap("StackId")
+    public String stackId;
+
+    @NameInMap("Status")
+    public java.util.List<String> status;
 
     public static ListStackEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackEventsRequest self = new ListStackEventsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListStackEventsRequest setStackId(String stackId) {
-        this.stackId = stackId;
+    public ListStackEventsRequest setLogicalResourceId(java.util.List<String> logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
         return this;
     }
-    public String getStackId() {
-        return this.stackId;
+    public java.util.List<String> getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
+    public ListStackEventsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListStackEventsRequest setPageSize(Long pageSize) {
@@ -54,22 +62,6 @@ public class ListStackEventsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListStackEventsRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListStackEventsRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
-    }
-
     public ListStackEventsRequest setResourceType(java.util.List<String> resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -78,12 +70,20 @@ public class ListStackEventsRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListStackEventsRequest setLogicalResourceId(java.util.List<String> logicalResourceId) {
-        this.logicalResourceId = logicalResourceId;
+    public ListStackEventsRequest setStackId(String stackId) {
+        this.stackId = stackId;
         return this;
     }
-    public java.util.List<String> getLogicalResourceId() {
-        return this.logicalResourceId;
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public ListStackEventsRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
     }
 
 }

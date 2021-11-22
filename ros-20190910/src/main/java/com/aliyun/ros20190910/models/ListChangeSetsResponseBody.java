@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListChangeSetsResponseBody extends TeaModel {
+    @NameInMap("ChangeSets")
+    public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -16,12 +19,17 @@ public class ListChangeSetsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("ChangeSets")
-    public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
-
     public static ListChangeSetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChangeSetsResponseBody self = new ListChangeSetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListChangeSetsResponseBody setChangeSets(java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets) {
+        this.changeSets = changeSets;
+        return this;
+    }
+    public java.util.List<ListChangeSetsResponseBodyChangeSets> getChangeSets() {
+        return this.changeSets;
     }
 
     public ListChangeSetsResponseBody setPageNumber(Integer pageNumber) {
@@ -56,41 +64,21 @@ public class ListChangeSetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListChangeSetsResponseBody setChangeSets(java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets) {
-        this.changeSets = changeSets;
-        return this;
-    }
-    public java.util.List<ListChangeSetsResponseBodyChangeSets> getChangeSets() {
-        return this.changeSets;
-    }
-
     public static class ListChangeSetsResponseBodyChangeSets extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("StackId")
-        public String stackId;
+        @NameInMap("ChangeSetId")
+        public String changeSetId;
 
         @NameInMap("ChangeSetName")
         public String changeSetName;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("ChangeSetType")
         public String changeSetType;
-
-        @NameInMap("StatusReason")
-        public String statusReason;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("ChangeSetId")
-        public String changeSetId;
-
-        @NameInMap("StackName")
-        public String stackName;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("ExecutionStatus")
         public String executionStatus;
@@ -98,65 +86,21 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("StackId")
+        public String stackId;
+
+        @NameInMap("StackName")
+        public String stackName;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StatusReason")
+        public String statusReason;
+
         public static ListChangeSetsResponseBodyChangeSets build(java.util.Map<String, ?> map) throws Exception {
             ListChangeSetsResponseBodyChangeSets self = new ListChangeSetsResponseBodyChangeSets();
             return TeaModel.build(map, self);
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setStackId(String stackId) {
-            this.stackId = stackId;
-            return this;
-        }
-        public String getStackId() {
-            return this.stackId;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setChangeSetName(String changeSetName) {
-            this.changeSetName = changeSetName;
-            return this;
-        }
-        public String getChangeSetName() {
-            return this.changeSetName;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setChangeSetType(String changeSetType) {
-            this.changeSetType = changeSetType;
-            return this;
-        }
-        public String getChangeSetType() {
-            return this.changeSetType;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setStatusReason(String statusReason) {
-            this.statusReason = statusReason;
-            return this;
-        }
-        public String getStatusReason() {
-            return this.statusReason;
-        }
-
-        public ListChangeSetsResponseBodyChangeSets setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public ListChangeSetsResponseBodyChangeSets setChangeSetId(String changeSetId) {
@@ -167,12 +111,36 @@ public class ListChangeSetsResponseBody extends TeaModel {
             return this.changeSetId;
         }
 
-        public ListChangeSetsResponseBodyChangeSets setStackName(String stackName) {
-            this.stackName = stackName;
+        public ListChangeSetsResponseBodyChangeSets setChangeSetName(String changeSetName) {
+            this.changeSetName = changeSetName;
             return this;
         }
-        public String getStackName() {
-            return this.stackName;
+        public String getChangeSetName() {
+            return this.changeSetName;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setChangeSetType(String changeSetType) {
+            this.changeSetType = changeSetType;
+            return this;
+        }
+        public String getChangeSetType() {
+            return this.changeSetType;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListChangeSetsResponseBodyChangeSets setExecutionStatus(String executionStatus) {
@@ -189,6 +157,38 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setStackName(String stackName) {
+            this.stackName = stackName;
+            return this;
+        }
+        public String getStackName() {
+            return this.stackName;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
         }
 
     }
