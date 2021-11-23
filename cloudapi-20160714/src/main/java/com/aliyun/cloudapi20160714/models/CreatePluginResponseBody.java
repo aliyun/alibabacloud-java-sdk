@@ -7,11 +7,11 @@ public class CreatePluginResponseBody extends TeaModel {
     @NameInMap("PluginId")
     public String pluginId;
 
-    @NameInMap("TagStatus")
-    public Boolean tagStatus;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TagStatus")
+    public Boolean tagStatus;
 
     public static CreatePluginResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePluginResponseBody self = new CreatePluginResponseBody();
@@ -26,20 +26,20 @@ public class CreatePluginResponseBody extends TeaModel {
         return this.pluginId;
     }
 
-    public CreatePluginResponseBody setTagStatus(Boolean tagStatus) {
-        this.tagStatus = tagStatus;
-        return this;
-    }
-    public Boolean getTagStatus() {
-        return this.tagStatus;
-    }
-
     public CreatePluginResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreatePluginResponseBody setTagStatus(Boolean tagStatus) {
+        this.tagStatus = tagStatus;
+        return this;
+    }
+    public Boolean getTagStatus() {
+        return this.tagStatus;
     }
 
 }

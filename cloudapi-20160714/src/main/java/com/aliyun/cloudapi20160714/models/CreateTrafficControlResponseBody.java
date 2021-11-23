@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficControlResponseBody extends TeaModel {
-    @NameInMap("TrafficControlId")
-    public String trafficControlId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TrafficControlId")
+    public String trafficControlId;
 
     public static CreateTrafficControlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTrafficControlResponseBody self = new CreateTrafficControlResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTrafficControlResponseBody setTrafficControlId(String trafficControlId) {
-        this.trafficControlId = trafficControlId;
-        return this;
-    }
-    public String getTrafficControlId() {
-        return this.trafficControlId;
     }
 
     public CreateTrafficControlResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class CreateTrafficControlResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateTrafficControlResponseBody setTrafficControlId(String trafficControlId) {
+        this.trafficControlId = trafficControlId;
+        return this;
+    }
+    public String getTrafficControlId() {
+        return this.trafficControlId;
     }
 
 }

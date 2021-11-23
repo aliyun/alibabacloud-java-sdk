@@ -7,11 +7,11 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -32,20 +32,20 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeVpcAccessesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeVpcAccessesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVpcAccessesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVpcAccessesResponseBody setTotalCount(Integer totalCount) {
@@ -65,8 +65,8 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
         @NameInMap("Description")
         public String description;
@@ -74,29 +74,29 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Port")
-        public Integer port;
-
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
+        @NameInMap("Port")
+        public Integer port;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute self = new DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setDescription(String description) {
@@ -115,14 +115,6 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setName(String name) {
             this.name = name;
             return this;
@@ -131,12 +123,12 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setPort(Integer port) {
+            this.port = port;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
+        public Integer getPort() {
+            return this.port;
         }
 
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setRegionId(String regionId) {
@@ -145,6 +137,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

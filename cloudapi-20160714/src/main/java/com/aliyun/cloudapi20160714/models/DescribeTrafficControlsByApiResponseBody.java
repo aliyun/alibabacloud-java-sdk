@@ -32,11 +32,11 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem extends TeaModel {
-        @NameInMap("TrafficControlItemId")
-        public String trafficControlItemId;
-
         @NameInMap("BoundTime")
         public String boundTime;
+
+        @NameInMap("TrafficControlItemId")
+        public String trafficControlItemId;
 
         @NameInMap("TrafficControlItemName")
         public String trafficControlItemName;
@@ -46,20 +46,20 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem setTrafficControlItemId(String trafficControlItemId) {
-            this.trafficControlItemId = trafficControlItemId;
-            return this;
-        }
-        public String getTrafficControlItemId() {
-            return this.trafficControlItemId;
-        }
-
         public DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem setBoundTime(String boundTime) {
             this.boundTime = boundTime;
             return this;
         }
         public String getBoundTime() {
             return this.boundTime;
+        }
+
+        public DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem setTrafficControlItemId(String trafficControlItemId) {
+            this.trafficControlItemId = trafficControlItemId;
+            return this;
+        }
+        public String getTrafficControlItemId() {
+            return this.trafficControlItemId;
         }
 
         public DescribeTrafficControlsByApiResponseBodyTrafficControlItemsTrafficControlItem setTrafficControlItemName(String trafficControlItemName) {

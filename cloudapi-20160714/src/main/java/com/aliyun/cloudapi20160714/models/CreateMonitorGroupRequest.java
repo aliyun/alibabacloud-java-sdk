@@ -4,8 +4,8 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Auth")
+    public String auth;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -13,20 +13,20 @@ public class CreateMonitorGroupRequest extends TeaModel {
     @NameInMap("RawMonitorGroupId")
     public Long rawMonitorGroupId;
 
-    @NameInMap("Auth")
-    public String auth;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static CreateMonitorGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupRequest self = new CreateMonitorGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMonitorGroupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public CreateMonitorGroupRequest setAuth(String auth) {
+        this.auth = auth;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAuth() {
+        return this.auth;
     }
 
     public CreateMonitorGroupRequest setGroupId(String groupId) {
@@ -45,12 +45,12 @@ public class CreateMonitorGroupRequest extends TeaModel {
         return this.rawMonitorGroupId;
     }
 
-    public CreateMonitorGroupRequest setAuth(String auth) {
-        this.auth = auth;
+    public CreateMonitorGroupRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getAuth() {
-        return this.auth;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

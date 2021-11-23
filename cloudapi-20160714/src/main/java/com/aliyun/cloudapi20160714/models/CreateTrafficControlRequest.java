@@ -4,6 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateTrafficControlRequest extends TeaModel {
+    @NameInMap("ApiDefault")
+    public Integer apiDefault;
+
+    @NameInMap("AppDefault")
+    public Integer appDefault;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -13,21 +22,36 @@ public class CreateTrafficControlRequest extends TeaModel {
     @NameInMap("TrafficControlUnit")
     public String trafficControlUnit;
 
-    @NameInMap("ApiDefault")
-    public Integer apiDefault;
-
     @NameInMap("UserDefault")
     public Integer userDefault;
-
-    @NameInMap("AppDefault")
-    public Integer appDefault;
-
-    @NameInMap("Description")
-    public String description;
 
     public static CreateTrafficControlRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTrafficControlRequest self = new CreateTrafficControlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTrafficControlRequest setApiDefault(Integer apiDefault) {
+        this.apiDefault = apiDefault;
+        return this;
+    }
+    public Integer getApiDefault() {
+        return this.apiDefault;
+    }
+
+    public CreateTrafficControlRequest setAppDefault(Integer appDefault) {
+        this.appDefault = appDefault;
+        return this;
+    }
+    public Integer getAppDefault() {
+        return this.appDefault;
+    }
+
+    public CreateTrafficControlRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateTrafficControlRequest setSecurityToken(String securityToken) {
@@ -54,36 +78,12 @@ public class CreateTrafficControlRequest extends TeaModel {
         return this.trafficControlUnit;
     }
 
-    public CreateTrafficControlRequest setApiDefault(Integer apiDefault) {
-        this.apiDefault = apiDefault;
-        return this;
-    }
-    public Integer getApiDefault() {
-        return this.apiDefault;
-    }
-
     public CreateTrafficControlRequest setUserDefault(Integer userDefault) {
         this.userDefault = userDefault;
         return this;
     }
     public Integer getUserDefault() {
         return this.userDefault;
-    }
-
-    public CreateTrafficControlRequest setAppDefault(Integer appDefault) {
-        this.appDefault = appDefault;
-        return this;
-    }
-    public Integer getAppDefault() {
-        return this.appDefault;
-    }
-
-    public CreateTrafficControlRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

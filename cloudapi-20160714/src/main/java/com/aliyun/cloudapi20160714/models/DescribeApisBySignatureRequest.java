@@ -4,21 +4,37 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisBySignatureRequest extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("SignatureId")
     public String signatureId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     public static DescribeApisBySignatureRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisBySignatureRequest self = new DescribeApisBySignatureRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeApisBySignatureRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeApisBySignatureRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeApisBySignatureRequest setSecurityToken(String securityToken) {
@@ -35,22 +51,6 @@ public class DescribeApisBySignatureRequest extends TeaModel {
     }
     public String getSignatureId() {
         return this.signatureId;
-    }
-
-    public DescribeApisBySignatureRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeApisBySignatureRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

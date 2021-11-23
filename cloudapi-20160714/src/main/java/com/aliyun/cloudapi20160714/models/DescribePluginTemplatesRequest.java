@@ -4,26 +4,26 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginTemplatesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Language")
+    public String language;
 
     @NameInMap("PluginName")
     public String pluginName;
 
-    @NameInMap("Language")
-    public String language;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribePluginTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePluginTemplatesRequest self = new DescribePluginTemplatesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePluginTemplatesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribePluginTemplatesRequest setLanguage(String language) {
+        this.language = language;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribePluginTemplatesRequest setPluginName(String pluginName) {
@@ -34,12 +34,12 @@ public class DescribePluginTemplatesRequest extends TeaModel {
         return this.pluginName;
     }
 
-    public DescribePluginTemplatesRequest setLanguage(String language) {
-        this.language = language;
+    public DescribePluginTemplatesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

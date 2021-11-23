@@ -7,11 +7,11 @@ public class CreateSignatureRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("SignatureName")
-    public String signatureName;
-
     @NameInMap("SignatureKey")
     public String signatureKey;
+
+    @NameInMap("SignatureName")
+    public String signatureName;
 
     @NameInMap("SignatureSecret")
     public String signatureSecret;
@@ -29,20 +29,20 @@ public class CreateSignatureRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public CreateSignatureRequest setSignatureName(String signatureName) {
-        this.signatureName = signatureName;
-        return this;
-    }
-    public String getSignatureName() {
-        return this.signatureName;
-    }
-
     public CreateSignatureRequest setSignatureKey(String signatureKey) {
         this.signatureKey = signatureKey;
         return this;
     }
     public String getSignatureKey() {
         return this.signatureKey;
+    }
+
+    public CreateSignatureRequest setSignatureName(String signatureName) {
+        this.signatureName = signatureName;
+        return this;
+    }
+    public String getSignatureName() {
+        return this.signatureName;
     }
 
     public CreateSignatureRequest setSignatureSecret(String signatureSecret) {

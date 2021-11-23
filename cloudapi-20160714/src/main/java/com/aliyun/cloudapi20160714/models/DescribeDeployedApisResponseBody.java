@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployedApisResponseBody extends TeaModel {
+    @NameInMap("DeployedApis")
+    public DescribeDeployedApisResponseBodyDeployedApis deployedApis;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("DeployedApis")
-    public DescribeDeployedApisResponseBodyDeployedApis deployedApis;
 
     public static DescribeDeployedApisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeployedApisResponseBody self = new DescribeDeployedApisResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeployedApisResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDeployedApisResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDeployedApisResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDeployedApisResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDeployedApisResponseBody setDeployedApis(DescribeDeployedApisResponseBodyDeployedApis deployedApis) {
@@ -64,45 +32,69 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         return this.deployedApis;
     }
 
-    public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
-        @NameInMap("Visibility")
-        public String visibility;
+    public DescribeDeployedApisResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public DescribeDeployedApisResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDeployedApisResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDeployedApisResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("DeployedTime")
-        public String deployedTime;
-
-        @NameInMap("StageName")
-        public String stageName;
 
         @NameInMap("ApiName")
         public String apiName;
 
+        @NameInMap("DeployedTime")
+        public String deployedTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("StageName")
+        public String stageName;
+
+        @NameInMap("Visibility")
+        public String visibility;
 
         public static DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem self = new DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setVisibility(String visibility) {
-            this.visibility = visibility;
-            return this;
-        }
-        public String getVisibility() {
-            return this.visibility;
         }
 
         public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setApiId(String apiId) {
@@ -113,28 +105,12 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             return this.apiId;
         }
 
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setDescription(String description) {
-            this.description = description;
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setApiName(String apiName) {
+            this.apiName = apiName;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getApiName() {
+            return this.apiName;
         }
 
         public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setDeployedTime(String deployedTime) {
@@ -145,20 +121,28 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             return this.deployedTime;
         }
 
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setStageName(String stageName) {
-            this.stageName = stageName;
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getStageName() {
-            return this.stageName;
+        public String getDescription() {
+            return this.description;
         }
 
-        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setApiName(String apiName) {
-            this.apiName = apiName;
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getApiName() {
-            return this.apiName;
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setRegionId(String regionId) {
@@ -167,6 +151,22 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
+        }
+
+        public DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem setVisibility(String visibility) {
+            this.visibility = visibility;
+            return this;
+        }
+        public String getVisibility() {
+            return this.visibility;
         }
 
     }

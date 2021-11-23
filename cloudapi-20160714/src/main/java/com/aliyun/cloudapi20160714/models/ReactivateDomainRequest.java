@@ -4,26 +4,26 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ReactivateDomainRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ReactivateDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ReactivateDomainRequest self = new ReactivateDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReactivateDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ReactivateDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public ReactivateDomainRequest setGroupId(String groupId) {
@@ -34,12 +34,12 @@ public class ReactivateDomainRequest extends TeaModel {
         return this.groupId;
     }
 
-    public ReactivateDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public ReactivateDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

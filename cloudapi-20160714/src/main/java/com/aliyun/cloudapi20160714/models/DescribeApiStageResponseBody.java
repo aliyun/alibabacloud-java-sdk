@@ -4,8 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiStageResponseBody extends TeaModel {
-    @NameInMap("StageId")
-    public String stageId;
+    @NameInMap("CreatedTime")
+    public String createdTime;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("ModifiedTime")
     public String modifiedTime;
@@ -13,17 +19,11 @@ public class DescribeApiStageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("StageId")
+    public String stageId;
 
     @NameInMap("StageName")
     public String stageName;
-
-    @NameInMap("CreatedTime")
-    public String createdTime;
 
     @NameInMap("Variables")
     public DescribeApiStageResponseBodyVariables variables;
@@ -33,12 +33,28 @@ public class DescribeApiStageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeApiStageResponseBody setStageId(String stageId) {
-        this.stageId = stageId;
+    public DescribeApiStageResponseBody setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
-    public String getStageId() {
-        return this.stageId;
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public DescribeApiStageResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeApiStageResponseBody setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeApiStageResponseBody setModifiedTime(String modifiedTime) {
@@ -57,20 +73,12 @@ public class DescribeApiStageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeApiStageResponseBody setGroupId(String groupId) {
-        this.groupId = groupId;
+    public DescribeApiStageResponseBody setStageId(String stageId) {
+        this.stageId = stageId;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeApiStageResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getStageId() {
+        return this.stageId;
     }
 
     public DescribeApiStageResponseBody setStageName(String stageName) {
@@ -79,14 +87,6 @@ public class DescribeApiStageResponseBody extends TeaModel {
     }
     public String getStageName() {
         return this.stageName;
-    }
-
-    public DescribeApiStageResponseBody setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
-        return this;
-    }
-    public String getCreatedTime() {
-        return this.createdTime;
     }
 
     public DescribeApiStageResponseBody setVariables(DescribeApiStageResponseBodyVariables variables) {
@@ -98,37 +98,21 @@ public class DescribeApiStageResponseBody extends TeaModel {
     }
 
     public static class DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem extends TeaModel {
-        @NameInMap("ResultValue")
-        public String resultValue;
-
-        @NameInMap("MinValue")
-        public Long minValue;
-
         @NameInMap("ConditionValue")
         public String conditionValue;
 
         @NameInMap("MaxValue")
         public Long maxValue;
 
+        @NameInMap("MinValue")
+        public Long minValue;
+
+        @NameInMap("ResultValue")
+        public String resultValue;
+
         public static DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem self = new DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem setResultValue(String resultValue) {
-            this.resultValue = resultValue;
-            return this;
-        }
-        public String getResultValue() {
-            return this.resultValue;
-        }
-
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem setMinValue(Long minValue) {
-            this.minValue = minValue;
-            return this;
-        }
-        public Long getMinValue() {
-            return this.minValue;
         }
 
         public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem setConditionValue(String conditionValue) {
@@ -145,6 +129,22 @@ public class DescribeApiStageResponseBody extends TeaModel {
         }
         public Long getMaxValue() {
             return this.maxValue;
+        }
+
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem setMinValue(Long minValue) {
+            this.minValue = minValue;
+            return this;
+        }
+        public Long getMinValue() {
+            return this.minValue;
+        }
+
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRulesRouteRuleItem setResultValue(String resultValue) {
+            this.resultValue = resultValue;
+            return this;
+        }
+        public String getResultValue() {
+            return this.resultValue;
         }
 
     }
@@ -169,43 +169,27 @@ public class DescribeApiStageResponseBody extends TeaModel {
     }
 
     public static class DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel extends TeaModel {
-        @NameInMap("RouteMatchSymbol")
-        public String routeMatchSymbol;
-
-        @NameInMap("ParameterType")
-        public String parameterType;
-
         @NameInMap("Location")
         public String location;
 
         @NameInMap("ParameterCatalog")
         public String parameterCatalog;
 
-        @NameInMap("ServiceParameterName")
-        public String serviceParameterName;
+        @NameInMap("ParameterType")
+        public String parameterType;
+
+        @NameInMap("RouteMatchSymbol")
+        public String routeMatchSymbol;
 
         @NameInMap("RouteRules")
         public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRules routeRules;
 
+        @NameInMap("ServiceParameterName")
+        public String serviceParameterName;
+
         public static DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel self = new DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setRouteMatchSymbol(String routeMatchSymbol) {
-            this.routeMatchSymbol = routeMatchSymbol;
-            return this;
-        }
-        public String getRouteMatchSymbol() {
-            return this.routeMatchSymbol;
-        }
-
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setParameterType(String parameterType) {
-            this.parameterType = parameterType;
-            return this;
-        }
-        public String getParameterType() {
-            return this.parameterType;
         }
 
         public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setLocation(String location) {
@@ -224,12 +208,20 @@ public class DescribeApiStageResponseBody extends TeaModel {
             return this.parameterCatalog;
         }
 
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setServiceParameterName(String serviceParameterName) {
-            this.serviceParameterName = serviceParameterName;
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setParameterType(String parameterType) {
+            this.parameterType = parameterType;
             return this;
         }
-        public String getServiceParameterName() {
-            return this.serviceParameterName;
+        public String getParameterType() {
+            return this.parameterType;
+        }
+
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setRouteMatchSymbol(String routeMatchSymbol) {
+            this.routeMatchSymbol = routeMatchSymbol;
+            return this;
+        }
+        public String getRouteMatchSymbol() {
+            return this.routeMatchSymbol;
         }
 
         public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setRouteRules(DescribeApiStageResponseBodyVariablesVariableItemStageRouteModelRouteRules routeRules) {
@@ -240,40 +232,40 @@ public class DescribeApiStageResponseBody extends TeaModel {
             return this.routeRules;
         }
 
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel setServiceParameterName(String serviceParameterName) {
+            this.serviceParameterName = serviceParameterName;
+            return this;
+        }
+        public String getServiceParameterName() {
+            return this.serviceParameterName;
+        }
+
     }
 
     public static class DescribeApiStageResponseBodyVariablesVariableItem extends TeaModel {
-        @NameInMap("VariableValue")
-        public String variableValue;
-
-        @NameInMap("VariableName")
-        public String variableName;
+        @NameInMap("StageRouteModel")
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel stageRouteModel;
 
         @NameInMap("SupportRoute")
         public Boolean supportRoute;
 
-        @NameInMap("StageRouteModel")
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel stageRouteModel;
+        @NameInMap("VariableName")
+        public String variableName;
+
+        @NameInMap("VariableValue")
+        public String variableValue;
 
         public static DescribeApiStageResponseBodyVariablesVariableItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiStageResponseBodyVariablesVariableItem self = new DescribeApiStageResponseBodyVariablesVariableItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApiStageResponseBodyVariablesVariableItem setVariableValue(String variableValue) {
-            this.variableValue = variableValue;
+        public DescribeApiStageResponseBodyVariablesVariableItem setStageRouteModel(DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel stageRouteModel) {
+            this.stageRouteModel = stageRouteModel;
             return this;
         }
-        public String getVariableValue() {
-            return this.variableValue;
-        }
-
-        public DescribeApiStageResponseBodyVariablesVariableItem setVariableName(String variableName) {
-            this.variableName = variableName;
-            return this;
-        }
-        public String getVariableName() {
-            return this.variableName;
+        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel getStageRouteModel() {
+            return this.stageRouteModel;
         }
 
         public DescribeApiStageResponseBodyVariablesVariableItem setSupportRoute(Boolean supportRoute) {
@@ -284,12 +276,20 @@ public class DescribeApiStageResponseBody extends TeaModel {
             return this.supportRoute;
         }
 
-        public DescribeApiStageResponseBodyVariablesVariableItem setStageRouteModel(DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel stageRouteModel) {
-            this.stageRouteModel = stageRouteModel;
+        public DescribeApiStageResponseBodyVariablesVariableItem setVariableName(String variableName) {
+            this.variableName = variableName;
             return this;
         }
-        public DescribeApiStageResponseBodyVariablesVariableItemStageRouteModel getStageRouteModel() {
-            return this.stageRouteModel;
+        public String getVariableName() {
+            return this.variableName;
+        }
+
+        public DescribeApiStageResponseBodyVariablesVariableItem setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }

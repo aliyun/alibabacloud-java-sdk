@@ -4,26 +4,26 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiMarketAttributesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ApiId")
+    public String apiId;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("ApiId")
-    public String apiId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeApiMarketAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiMarketAttributesRequest self = new DescribeApiMarketAttributesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApiMarketAttributesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeApiMarketAttributesRequest setApiId(String apiId) {
+        this.apiId = apiId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getApiId() {
+        return this.apiId;
     }
 
     public DescribeApiMarketAttributesRequest setGroupId(String groupId) {
@@ -34,12 +34,12 @@ public class DescribeApiMarketAttributesRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DescribeApiMarketAttributesRequest setApiId(String apiId) {
-        this.apiId = apiId;
+    public DescribeApiMarketAttributesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getApiId() {
-        return this.apiId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -7,14 +7,14 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
     @NameInMap("ApiId")
     public String apiId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MarketChargingMode")
     public String marketChargingMode;
 
     @NameInMap("NeedCharging")
     public String needCharging;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeApiMarketAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiMarketAttributesResponseBody self = new DescribeApiMarketAttributesResponseBody();
@@ -27,14 +27,6 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
     }
     public String getApiId() {
         return this.apiId;
-    }
-
-    public DescribeApiMarketAttributesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeApiMarketAttributesResponseBody setMarketChargingMode(String marketChargingMode) {
@@ -51,6 +43,14 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
     }
     public String getNeedCharging() {
         return this.needCharging;
+    }
+
+    public DescribeApiMarketAttributesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

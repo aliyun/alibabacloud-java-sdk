@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppsResponseBody extends TeaModel {
+    @NameInMap("Apps")
+    public DescribeAppsResponseBodyApps apps;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Apps")
-    public DescribeAppsResponseBodyApps apps;
 
     public static DescribeAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppsResponseBody self = new DescribeAppsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAppsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAppsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAppsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeAppsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAppsResponseBody setApps(DescribeAppsResponseBodyApps apps) {
@@ -64,19 +32,59 @@ public class DescribeAppsResponseBody extends TeaModel {
         return this.apps;
     }
 
+    public DescribeAppsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAppsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAppsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAppsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAppsResponseBodyAppsAppItem extends TeaModel {
+        @NameInMap("AppId")
+        public Long appId;
+
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AppId")
-        public Long appId;
-
         public static DescribeAppsResponseBodyAppsAppItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppsResponseBodyAppsAppItem self = new DescribeAppsResponseBodyAppsAppItem();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAppsResponseBodyAppsAppItem setAppId(Long appId) {
+            this.appId = appId;
+            return this;
+        }
+        public Long getAppId() {
+            return this.appId;
         }
 
         public DescribeAppsResponseBodyAppsAppItem setAppName(String appName) {
@@ -93,14 +101,6 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeAppsResponseBodyAppsAppItem setAppId(Long appId) {
-            this.appId = appId;
-            return this;
-        }
-        public Long getAppId() {
-            return this.appId;
         }
 
     }

@@ -4,23 +4,23 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("PluginId")
-    public String pluginId;
-
-    @NameInMap("PluginType")
-    public String pluginType;
-
-    @NameInMap("PluginName")
-    public String pluginName;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("PluginId")
+    public String pluginId;
+
+    @NameInMap("PluginName")
+    public String pluginName;
+
+    @NameInMap("PluginType")
+    public String pluginType;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DescribePluginsRequestTag> tag;
@@ -28,38 +28,6 @@ public class DescribePluginsRequest extends TeaModel {
     public static DescribePluginsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePluginsRequest self = new DescribePluginsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePluginsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribePluginsRequest setPluginId(String pluginId) {
-        this.pluginId = pluginId;
-        return this;
-    }
-    public String getPluginId() {
-        return this.pluginId;
-    }
-
-    public DescribePluginsRequest setPluginType(String pluginType) {
-        this.pluginType = pluginType;
-        return this;
-    }
-    public String getPluginType() {
-        return this.pluginType;
-    }
-
-    public DescribePluginsRequest setPluginName(String pluginName) {
-        this.pluginName = pluginName;
-        return this;
-    }
-    public String getPluginName() {
-        return this.pluginName;
     }
 
     public DescribePluginsRequest setPageNumber(Integer pageNumber) {
@@ -76,6 +44,38 @@ public class DescribePluginsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribePluginsRequest setPluginId(String pluginId) {
+        this.pluginId = pluginId;
+        return this;
+    }
+    public String getPluginId() {
+        return this.pluginId;
+    }
+
+    public DescribePluginsRequest setPluginName(String pluginName) {
+        this.pluginName = pluginName;
+        return this;
+    }
+    public String getPluginName() {
+        return this.pluginName;
+    }
+
+    public DescribePluginsRequest setPluginType(String pluginType) {
+        this.pluginType = pluginType;
+        return this;
+    }
+    public String getPluginType() {
+        return this.pluginType;
+    }
+
+    public DescribePluginsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribePluginsRequest setTag(java.util.List<DescribePluginsRequestTag> tag) {

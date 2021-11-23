@@ -4,40 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiHistoryRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ApiId")
+    public String apiId;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("ApiId")
-    public String apiId;
+    @NameInMap("HistoryVersion")
+    public String historyVersion;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StageName")
     public String stageName;
 
-    @NameInMap("HistoryVersion")
-    public String historyVersion;
-
     public static DescribeApiHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiHistoryRequest self = new DescribeApiHistoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApiHistoryRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeApiHistoryRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public DescribeApiHistoryRequest setApiId(String apiId) {
@@ -48,12 +32,12 @@ public class DescribeApiHistoryRequest extends TeaModel {
         return this.apiId;
     }
 
-    public DescribeApiHistoryRequest setStageName(String stageName) {
-        this.stageName = stageName;
+    public DescribeApiHistoryRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getStageName() {
-        return this.stageName;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeApiHistoryRequest setHistoryVersion(String historyVersion) {
@@ -62,6 +46,22 @@ public class DescribeApiHistoryRequest extends TeaModel {
     }
     public String getHistoryVersion() {
         return this.historyVersion;
+    }
+
+    public DescribeApiHistoryRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeApiHistoryRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
     }
 
 }

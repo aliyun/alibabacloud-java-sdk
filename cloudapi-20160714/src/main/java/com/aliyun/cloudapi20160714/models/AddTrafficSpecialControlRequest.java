@@ -7,14 +7,14 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("TrafficControlId")
-    public String trafficControlId;
+    @NameInMap("SpecialKey")
+    public String specialKey;
 
     @NameInMap("SpecialType")
     public String specialType;
 
-    @NameInMap("SpecialKey")
-    public String specialKey;
+    @NameInMap("TrafficControlId")
+    public String trafficControlId;
 
     @NameInMap("TrafficValue")
     public Integer trafficValue;
@@ -32,12 +32,12 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public AddTrafficSpecialControlRequest setTrafficControlId(String trafficControlId) {
-        this.trafficControlId = trafficControlId;
+    public AddTrafficSpecialControlRequest setSpecialKey(String specialKey) {
+        this.specialKey = specialKey;
         return this;
     }
-    public String getTrafficControlId() {
-        return this.trafficControlId;
+    public String getSpecialKey() {
+        return this.specialKey;
     }
 
     public AddTrafficSpecialControlRequest setSpecialType(String specialType) {
@@ -48,12 +48,12 @@ public class AddTrafficSpecialControlRequest extends TeaModel {
         return this.specialType;
     }
 
-    public AddTrafficSpecialControlRequest setSpecialKey(String specialKey) {
-        this.specialKey = specialKey;
+    public AddTrafficSpecialControlRequest setTrafficControlId(String trafficControlId) {
+        this.trafficControlId = trafficControlId;
         return this;
     }
-    public String getSpecialKey() {
-        return this.specialKey;
+    public String getTrafficControlId() {
+        return this.trafficControlId;
     }
 
     public AddTrafficSpecialControlRequest setTrafficValue(Integer trafficValue) {

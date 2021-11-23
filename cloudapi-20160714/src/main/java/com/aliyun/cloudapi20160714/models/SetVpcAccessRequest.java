@@ -4,51 +4,35 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetVpcAccessRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("Port")
     public Integer port;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static SetVpcAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         SetVpcAccessRequest self = new SetVpcAccessRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetVpcAccessRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SetVpcAccessRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public SetVpcAccessRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public SetVpcAccessRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getDescription() {
+        return this.description;
     }
 
     public SetVpcAccessRequest setInstanceId(String instanceId) {
@@ -59,6 +43,14 @@ public class SetVpcAccessRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public SetVpcAccessRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public SetVpcAccessRequest setPort(Integer port) {
         this.port = port;
         return this;
@@ -67,12 +59,20 @@ public class SetVpcAccessRequest extends TeaModel {
         return this.port;
     }
 
-    public SetVpcAccessRequest setDescription(String description) {
-        this.description = description;
+    public SetVpcAccessRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public SetVpcAccessRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

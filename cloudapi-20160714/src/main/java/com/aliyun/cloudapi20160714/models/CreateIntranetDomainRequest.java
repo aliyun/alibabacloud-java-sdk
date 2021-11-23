@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateIntranetDomainRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static CreateIntranetDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIntranetDomainRequest self = new CreateIntranetDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateIntranetDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateIntranetDomainRequest setGroupId(String groupId) {
@@ -29,6 +21,14 @@ public class CreateIntranetDomainRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public CreateIntranetDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

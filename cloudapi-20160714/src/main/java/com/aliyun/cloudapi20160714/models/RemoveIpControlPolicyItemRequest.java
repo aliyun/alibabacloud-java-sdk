@@ -4,26 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveIpControlPolicyItemRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("IpControlId")
     public String ipControlId;
 
     @NameInMap("PolicyItemIds")
     public String policyItemIds;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static RemoveIpControlPolicyItemRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveIpControlPolicyItemRequest self = new RemoveIpControlPolicyItemRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveIpControlPolicyItemRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public RemoveIpControlPolicyItemRequest setIpControlId(String ipControlId) {
@@ -40,6 +32,14 @@ public class RemoveIpControlPolicyItemRequest extends TeaModel {
     }
     public String getPolicyItemIds() {
         return this.policyItemIds;
+    }
+
+    public RemoveIpControlPolicyItemRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

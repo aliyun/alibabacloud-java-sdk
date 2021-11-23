@@ -4,17 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRequest extends TeaModel {
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("BindStageName")
     public String bindStageName;
 
     @NameInMap("CustomDomainType")
     public String customDomainType;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("IsForce")
     public Boolean isForce;
@@ -22,22 +22,6 @@ public class SetDomainRequest extends TeaModel {
     public static SetDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRequest self = new SetDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDomainRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public SetDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetDomainRequest setBindStageName(String bindStageName) {
@@ -54,6 +38,22 @@ public class SetDomainRequest extends TeaModel {
     }
     public String getCustomDomainType() {
         return this.customDomainType;
+    }
+
+    public SetDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public SetDomainRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public SetDomainRequest setIsForce(Boolean isForce) {

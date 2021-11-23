@@ -4,17 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveIpControlApisRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("IpControlId")
-    public String ipControlId;
+    @NameInMap("ApiIds")
+    public String apiIds;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("ApiIds")
-    public String apiIds;
+    @NameInMap("IpControlId")
+    public String ipControlId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StageName")
     public String stageName;
@@ -24,20 +24,12 @@ public class RemoveIpControlApisRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RemoveIpControlApisRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public RemoveIpControlApisRequest setApiIds(String apiIds) {
+        this.apiIds = apiIds;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public RemoveIpControlApisRequest setIpControlId(String ipControlId) {
-        this.ipControlId = ipControlId;
-        return this;
-    }
-    public String getIpControlId() {
-        return this.ipControlId;
+    public String getApiIds() {
+        return this.apiIds;
     }
 
     public RemoveIpControlApisRequest setGroupId(String groupId) {
@@ -48,12 +40,20 @@ public class RemoveIpControlApisRequest extends TeaModel {
         return this.groupId;
     }
 
-    public RemoveIpControlApisRequest setApiIds(String apiIds) {
-        this.apiIds = apiIds;
+    public RemoveIpControlApisRequest setIpControlId(String ipControlId) {
+        this.ipControlId = ipControlId;
         return this;
     }
-    public String getApiIds() {
-        return this.apiIds;
+    public String getIpControlId() {
+        return this.ipControlId;
+    }
+
+    public RemoveIpControlApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public RemoveIpControlApisRequest setStageName(String stageName) {

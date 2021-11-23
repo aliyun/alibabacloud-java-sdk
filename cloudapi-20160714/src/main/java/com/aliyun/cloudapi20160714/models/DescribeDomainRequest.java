@@ -4,26 +4,26 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRequest self = new DescribeDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeDomainRequest setGroupId(String groupId) {
@@ -34,12 +34,12 @@ public class DescribeDomainRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DescribeDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuthorizedApisResponseBody extends TeaModel {
+    @NameInMap("AuthorizedApis")
+    public DescribeAuthorizedApisResponseBodyAuthorizedApis authorizedApis;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("AuthorizedApis")
-    public DescribeAuthorizedApisResponseBodyAuthorizedApis authorizedApis;
 
     public static DescribeAuthorizedApisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuthorizedApisResponseBody self = new DescribeAuthorizedApisResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAuthorizedApisResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAuthorizedApisResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAuthorizedApisResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeAuthorizedApisResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAuthorizedApisResponseBody setAuthorizedApis(DescribeAuthorizedApisResponseBodyAuthorizedApis authorizedApis) {
@@ -64,39 +32,71 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
         return this.authorizedApis;
     }
 
+    public DescribeAuthorizedApisResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAuthorizedApisResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAuthorizedApisResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAuthorizedApisResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
 
-        @NameInMap("AuthorizationSource")
-        public String authorizationSource;
+        @NameInMap("ApiName")
+        public String apiName;
 
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("AuthorizationSource")
+        public String authorizationSource;
 
         @NameInMap("AuthorizedTime")
         public String authorizedTime;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
         @NameInMap("Operator")
         public String operator;
 
-        @NameInMap("StageName")
-        public String stageName;
-
-        @NameInMap("ApiName")
-        public String apiName;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("StageName")
+        public String stageName;
 
         public static DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi self = new DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi();
@@ -111,12 +111,12 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             return this.apiId;
         }
 
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setAuthorizationSource(String authorizationSource) {
-            this.authorizationSource = authorizationSource;
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setApiName(String apiName) {
+            this.apiName = apiName;
             return this;
         }
-        public String getAuthorizationSource() {
-            return this.authorizationSource;
+        public String getApiName() {
+            return this.apiName;
         }
 
         public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setAuthVaildTime(String authVaildTime) {
@@ -127,28 +127,12 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             return this.authVaildTime;
         }
 
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setDescription(String description) {
-            this.description = description;
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setAuthorizationSource(String authorizationSource) {
+            this.authorizationSource = authorizationSource;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getAuthorizationSource() {
+            return this.authorizationSource;
         }
 
         public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setAuthorizedTime(String authorizedTime) {
@@ -159,6 +143,30 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             return this.authorizedTime;
         }
 
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
         public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setOperator(String operator) {
             this.operator = operator;
             return this;
@@ -167,28 +175,20 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
             return this.operator;
         }
 
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setStageName(String stageName) {
-            this.stageName = stageName;
-            return this;
-        }
-        public String getStageName() {
-            return this.stageName;
-        }
-
-        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setApiName(String apiName) {
-            this.apiName = apiName;
-            return this;
-        }
-        public String getApiName() {
-            return this.apiName;
-        }
-
         public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeAuthorizedApisResponseBodyAuthorizedApisAuthorizedApi setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
     }

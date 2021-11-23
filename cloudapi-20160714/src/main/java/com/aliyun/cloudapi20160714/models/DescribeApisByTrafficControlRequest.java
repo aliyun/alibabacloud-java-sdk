@@ -4,21 +4,37 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByTrafficControlRequest extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     public static DescribeApisByTrafficControlRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisByTrafficControlRequest self = new DescribeApisByTrafficControlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeApisByTrafficControlRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeApisByTrafficControlRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeApisByTrafficControlRequest setSecurityToken(String securityToken) {
@@ -35,22 +51,6 @@ public class DescribeApisByTrafficControlRequest extends TeaModel {
     }
     public String getTrafficControlId() {
         return this.trafficControlId;
-    }
-
-    public DescribeApisByTrafficControlRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeApisByTrafficControlRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

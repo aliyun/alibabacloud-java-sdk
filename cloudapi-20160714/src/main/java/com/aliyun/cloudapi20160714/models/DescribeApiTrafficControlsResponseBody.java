@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficControlsResponseBody extends TeaModel {
+    @NameInMap("ApiTrafficControls")
+    public DescribeApiTrafficControlsResponseBodyApiTrafficControls apiTrafficControls;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("ApiTrafficControls")
-    public DescribeApiTrafficControlsResponseBodyApiTrafficControls apiTrafficControls;
 
     public static DescribeApiTrafficControlsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiTrafficControlsResponseBody self = new DescribeApiTrafficControlsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApiTrafficControlsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeApiTrafficControlsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeApiTrafficControlsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeApiTrafficControlsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeApiTrafficControlsResponseBody setApiTrafficControls(DescribeApiTrafficControlsResponseBodyApiTrafficControls apiTrafficControls) {
@@ -64,12 +32,47 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         return this.apiTrafficControls;
     }
 
-    public static class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem extends TeaModel {
-        @NameInMap("BoundTime")
-        public String boundTime;
+    public DescribeApiTrafficControlsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public DescribeApiTrafficControlsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApiTrafficControlsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeApiTrafficControlsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
+
+        @NameInMap("ApiName")
+        public String apiName;
+
+        @NameInMap("BoundTime")
+        public String boundTime;
 
         @NameInMap("TrafficControlId")
         public String trafficControlId;
@@ -77,20 +80,9 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         @NameInMap("TrafficControlName")
         public String trafficControlName;
 
-        @NameInMap("ApiName")
-        public String apiName;
-
         public static DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem self = new DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setBoundTime(String boundTime) {
-            this.boundTime = boundTime;
-            return this;
-        }
-        public String getBoundTime() {
-            return this.boundTime;
         }
 
         public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setApiId(String apiId) {
@@ -99,6 +91,22 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
         public String getApiId() {
             return this.apiId;
+        }
+
+        public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setApiName(String apiName) {
+            this.apiName = apiName;
+            return this;
+        }
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setBoundTime(String boundTime) {
+            this.boundTime = boundTime;
+            return this;
+        }
+        public String getBoundTime() {
+            return this.boundTime;
         }
 
         public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setTrafficControlId(String trafficControlId) {
@@ -115,14 +123,6 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
         }
         public String getTrafficControlName() {
             return this.trafficControlName;
-        }
-
-        public DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem setApiName(String apiName) {
-            this.apiName = apiName;
-            return this;
-        }
-        public String getApiName() {
-            return this.apiName;
         }
 
     }

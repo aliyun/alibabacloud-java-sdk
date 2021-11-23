@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("AppId")
     public Long appId;
 
@@ -19,17 +16,12 @@ public class DescribeAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppsRequest self = new DescribeAppsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAppsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeAppsRequest setAppId(Long appId) {
@@ -62,6 +54,14 @@ public class DescribeAppsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAppsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

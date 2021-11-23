@@ -4,20 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployedApisRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("StageName")
-    public String stageName;
-
     @NameInMap("ApiId")
     public String apiId;
 
     @NameInMap("ApiName")
     public String apiName;
+
+    @NameInMap("EnableTagAuth")
+    public Boolean enableTagAuth;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,8 +22,11 @@ public class DescribeDeployedApisRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("EnableTagAuth")
-    public Boolean enableTagAuth;
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StageName")
+    public String stageName;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDeployedApisRequestTag> tag;
@@ -34,30 +34,6 @@ public class DescribeDeployedApisRequest extends TeaModel {
     public static DescribeDeployedApisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeployedApisRequest self = new DescribeDeployedApisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeployedApisRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeDeployedApisRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeDeployedApisRequest setStageName(String stageName) {
-        this.stageName = stageName;
-        return this;
-    }
-    public String getStageName() {
-        return this.stageName;
     }
 
     public DescribeDeployedApisRequest setApiId(String apiId) {
@@ -76,6 +52,22 @@ public class DescribeDeployedApisRequest extends TeaModel {
         return this.apiName;
     }
 
+    public DescribeDeployedApisRequest setEnableTagAuth(Boolean enableTagAuth) {
+        this.enableTagAuth = enableTagAuth;
+        return this;
+    }
+    public Boolean getEnableTagAuth() {
+        return this.enableTagAuth;
+    }
+
+    public DescribeDeployedApisRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
     public DescribeDeployedApisRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -92,12 +84,20 @@ public class DescribeDeployedApisRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDeployedApisRequest setEnableTagAuth(Boolean enableTagAuth) {
-        this.enableTagAuth = enableTagAuth;
+    public DescribeDeployedApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public Boolean getEnableTagAuth() {
-        return this.enableTagAuth;
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeDeployedApisRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
     }
 
     public DescribeDeployedApisRequest setTag(java.util.List<DescribeDeployedApisRequestTag> tag) {

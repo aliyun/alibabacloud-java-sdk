@@ -7,11 +7,11 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -32,20 +32,20 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTrafficControlsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeTrafficControlsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTrafficControlsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeTrafficControlsResponseBody setTotalCount(Integer totalCount) {
@@ -65,23 +65,15 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial extends TeaModel {
-        @NameInMap("TrafficValue")
-        public Integer trafficValue;
-
         @NameInMap("SpecialKey")
         public String specialKey;
+
+        @NameInMap("TrafficValue")
+        public Integer trafficValue;
 
         public static DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial build(java.util.Map<String, ?> map) throws Exception {
             DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial self = new DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial setTrafficValue(Integer trafficValue) {
-            this.trafficValue = trafficValue;
-            return this;
-        }
-        public Integer getTrafficValue() {
-            return this.trafficValue;
         }
 
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial setSpecialKey(String specialKey) {
@@ -90,6 +82,14 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         }
         public String getSpecialKey() {
             return this.specialKey;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPoliciesSpecialPolicySpecialsSpecial setTrafficValue(Integer trafficValue) {
+            this.trafficValue = trafficValue;
+            return this;
+        }
+        public Integer getTrafficValue() {
+            return this.trafficValue;
         }
 
     }
@@ -163,47 +163,39 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl extends TeaModel {
-        @NameInMap("UserDefault")
-        public Integer userDefault;
-
         @NameInMap("ApiDefault")
         public Integer apiDefault;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("TrafficControlUnit")
-        public String trafficControlUnit;
-
-        @NameInMap("TrafficControlName")
-        public String trafficControlName;
 
         @NameInMap("AppDefault")
         public Integer appDefault;
 
-        @NameInMap("TrafficControlId")
-        public String trafficControlId;
-
         @NameInMap("CreatedTime")
         public String createdTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
         @NameInMap("SpecialPolicies")
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies specialPolicies;
 
+        @NameInMap("TrafficControlId")
+        public String trafficControlId;
+
+        @NameInMap("TrafficControlName")
+        public String trafficControlName;
+
+        @NameInMap("TrafficControlUnit")
+        public String trafficControlUnit;
+
+        @NameInMap("UserDefault")
+        public Integer userDefault;
+
         public static DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl build(java.util.Map<String, ?> map) throws Exception {
             DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl self = new DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setUserDefault(Integer userDefault) {
-            this.userDefault = userDefault;
-            return this;
-        }
-        public Integer getUserDefault() {
-            return this.userDefault;
         }
 
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setApiDefault(Integer apiDefault) {
@@ -214,52 +206,12 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             return this.apiDefault;
         }
 
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlUnit(String trafficControlUnit) {
-            this.trafficControlUnit = trafficControlUnit;
-            return this;
-        }
-        public String getTrafficControlUnit() {
-            return this.trafficControlUnit;
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlName(String trafficControlName) {
-            this.trafficControlName = trafficControlName;
-            return this;
-        }
-        public String getTrafficControlName() {
-            return this.trafficControlName;
-        }
-
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setAppDefault(Integer appDefault) {
             this.appDefault = appDefault;
             return this;
         }
         public Integer getAppDefault() {
             return this.appDefault;
-        }
-
-        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlId(String trafficControlId) {
-            this.trafficControlId = trafficControlId;
-            return this;
-        }
-        public String getTrafficControlId() {
-            return this.trafficControlId;
         }
 
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setCreatedTime(String createdTime) {
@@ -270,12 +222,60 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
             return this.createdTime;
         }
 
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setSpecialPolicies(DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies specialPolicies) {
             this.specialPolicies = specialPolicies;
             return this;
         }
         public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControlSpecialPolicies getSpecialPolicies() {
             return this.specialPolicies;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlId(String trafficControlId) {
+            this.trafficControlId = trafficControlId;
+            return this;
+        }
+        public String getTrafficControlId() {
+            return this.trafficControlId;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlName(String trafficControlName) {
+            this.trafficControlName = trafficControlName;
+            return this;
+        }
+        public String getTrafficControlName() {
+            return this.trafficControlName;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setTrafficControlUnit(String trafficControlUnit) {
+            this.trafficControlUnit = trafficControlUnit;
+            return this;
+        }
+        public String getTrafficControlUnit() {
+            return this.trafficControlUnit;
+        }
+
+        public DescribeTrafficControlsResponseBodyTrafficControlsTrafficControl setUserDefault(Integer userDefault) {
+            this.userDefault = userDefault;
+            return this;
+        }
+        public Integer getUserDefault() {
+            return this.userDefault;
         }
 
     }

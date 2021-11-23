@@ -4,12 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ImportSwaggerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public ImportSwaggerResponseBodySuccess success;
-
     @NameInMap("Failed")
     public ImportSwaggerResponseBodyFailed failed;
 
@@ -19,25 +13,15 @@ public class ImportSwaggerResponseBody extends TeaModel {
     @NameInMap("ModelSuccess")
     public ImportSwaggerResponseBodyModelSuccess modelSuccess;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public ImportSwaggerResponseBodySuccess success;
+
     public static ImportSwaggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportSwaggerResponseBody self = new ImportSwaggerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ImportSwaggerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ImportSwaggerResponseBody setSuccess(ImportSwaggerResponseBodySuccess success) {
-        this.success = success;
-        return this;
-    }
-    public ImportSwaggerResponseBodySuccess getSuccess() {
-        return this.success;
     }
 
     public ImportSwaggerResponseBody setFailed(ImportSwaggerResponseBodyFailed failed) {
@@ -64,98 +48,43 @@ public class ImportSwaggerResponseBody extends TeaModel {
         return this.modelSuccess;
     }
 
-    public static class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess extends TeaModel {
-        @NameInMap("Path")
-        public String path;
-
-        @NameInMap("HttpMethod")
-        public String httpMethod;
-
-        @NameInMap("ApiOperation")
-        public String apiOperation;
-
-        @NameInMap("ApiUid")
-        public String apiUid;
-
-        public static ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess build(java.util.Map<String, ?> map) throws Exception {
-            ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess self = new ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess();
-            return TeaModel.build(map, self);
-        }
-
-        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setHttpMethod(String httpMethod) {
-            this.httpMethod = httpMethod;
-            return this;
-        }
-        public String getHttpMethod() {
-            return this.httpMethod;
-        }
-
-        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setApiOperation(String apiOperation) {
-            this.apiOperation = apiOperation;
-            return this;
-        }
-        public String getApiOperation() {
-            return this.apiOperation;
-        }
-
-        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setApiUid(String apiUid) {
-            this.apiUid = apiUid;
-            return this;
-        }
-        public String getApiUid() {
-            return this.apiUid;
-        }
-
+    public ImportSwaggerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static class ImportSwaggerResponseBodySuccess extends TeaModel {
-        @NameInMap("ApiImportSwaggerSuccess")
-        public java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> apiImportSwaggerSuccess;
-
-        public static ImportSwaggerResponseBodySuccess build(java.util.Map<String, ?> map) throws Exception {
-            ImportSwaggerResponseBodySuccess self = new ImportSwaggerResponseBodySuccess();
-            return TeaModel.build(map, self);
-        }
-
-        public ImportSwaggerResponseBodySuccess setApiImportSwaggerSuccess(java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> apiImportSwaggerSuccess) {
-            this.apiImportSwaggerSuccess = apiImportSwaggerSuccess;
-            return this;
-        }
-        public java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> getApiImportSwaggerSuccess() {
-            return this.apiImportSwaggerSuccess;
-        }
-
+    public ImportSwaggerResponseBody setSuccess(ImportSwaggerResponseBodySuccess success) {
+        this.success = success;
+        return this;
+    }
+    public ImportSwaggerResponseBodySuccess getSuccess() {
+        return this.success;
     }
 
     public static class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
 
         @NameInMap("HttpMethod")
         public String httpMethod;
 
-        @NameInMap("ErrorMsg")
-        public String errorMsg;
+        @NameInMap("Path")
+        public String path;
 
         public static ImportSwaggerResponseBodyFailedApiImportSwaggerFailed build(java.util.Map<String, ?> map) throws Exception {
             ImportSwaggerResponseBodyFailedApiImportSwaggerFailed self = new ImportSwaggerResponseBodyFailedApiImportSwaggerFailed();
             return TeaModel.build(map, self);
         }
 
-        public ImportSwaggerResponseBodyFailedApiImportSwaggerFailed setPath(String path) {
-            this.path = path;
+        public ImportSwaggerResponseBodyFailedApiImportSwaggerFailed setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         public ImportSwaggerResponseBodyFailedApiImportSwaggerFailed setHttpMethod(String httpMethod) {
@@ -166,12 +95,12 @@ public class ImportSwaggerResponseBody extends TeaModel {
             return this.httpMethod;
         }
 
-        public ImportSwaggerResponseBodyFailedApiImportSwaggerFailed setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
+        public ImportSwaggerResponseBodyFailedApiImportSwaggerFailed setPath(String path) {
+            this.path = path;
             return this;
         }
-        public String getErrorMsg() {
-            return this.errorMsg;
+        public String getPath() {
+            return this.path;
         }
 
     }
@@ -199,11 +128,11 @@ public class ImportSwaggerResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        @NameInMap("ModelName")
-        public String modelName;
-
         @NameInMap("GroupId")
         public String groupId;
+
+        @NameInMap("ModelName")
+        public String modelName;
 
         public static ImportSwaggerResponseBodyModelFailedApiImportModelFailed build(java.util.Map<String, ?> map) throws Exception {
             ImportSwaggerResponseBodyModelFailedApiImportModelFailed self = new ImportSwaggerResponseBodyModelFailedApiImportModelFailed();
@@ -218,20 +147,20 @@ public class ImportSwaggerResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
-        public ImportSwaggerResponseBodyModelFailedApiImportModelFailed setModelName(String modelName) {
-            this.modelName = modelName;
-            return this;
-        }
-        public String getModelName() {
-            return this.modelName;
-        }
-
         public ImportSwaggerResponseBodyModelFailedApiImportModelFailed setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public ImportSwaggerResponseBodyModelFailedApiImportModelFailed setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
         }
 
     }
@@ -256,37 +185,21 @@ public class ImportSwaggerResponseBody extends TeaModel {
     }
 
     public static class ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
-        @NameInMap("ModelUid")
-        public String modelUid;
+        @NameInMap("GroupId")
+        public String groupId;
 
         @NameInMap("ModelName")
         public String modelName;
 
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("ModelOperation")
         public String modelOperation;
+
+        @NameInMap("ModelUid")
+        public String modelUid;
 
         public static ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess build(java.util.Map<String, ?> map) throws Exception {
             ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess self = new ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess();
             return TeaModel.build(map, self);
-        }
-
-        public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setModelUid(String modelUid) {
-            this.modelUid = modelUid;
-            return this;
-        }
-        public String getModelUid() {
-            return this.modelUid;
-        }
-
-        public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setModelName(String modelName) {
-            this.modelName = modelName;
-            return this;
-        }
-        public String getModelName() {
-            return this.modelName;
         }
 
         public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setGroupId(String groupId) {
@@ -297,12 +210,28 @@ public class ImportSwaggerResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
         public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setModelOperation(String modelOperation) {
             this.modelOperation = modelOperation;
             return this;
         }
         public String getModelOperation() {
             return this.modelOperation;
+        }
+
+        public ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess setModelUid(String modelUid) {
+            this.modelUid = modelUid;
+            return this;
+        }
+        public String getModelUid() {
+            return this.modelUid;
         }
 
     }
@@ -322,6 +251,77 @@ public class ImportSwaggerResponseBody extends TeaModel {
         }
         public java.util.List<ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess> getApiImportModelSuccess() {
             return this.apiImportModelSuccess;
+        }
+
+    }
+
+    public static class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess extends TeaModel {
+        @NameInMap("ApiOperation")
+        public String apiOperation;
+
+        @NameInMap("ApiUid")
+        public String apiUid;
+
+        @NameInMap("HttpMethod")
+        public String httpMethod;
+
+        @NameInMap("Path")
+        public String path;
+
+        public static ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess build(java.util.Map<String, ?> map) throws Exception {
+            ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess self = new ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setApiOperation(String apiOperation) {
+            this.apiOperation = apiOperation;
+            return this;
+        }
+        public String getApiOperation() {
+            return this.apiOperation;
+        }
+
+        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setApiUid(String apiUid) {
+            this.apiUid = apiUid;
+            return this;
+        }
+        public String getApiUid() {
+            return this.apiUid;
+        }
+
+        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setHttpMethod(String httpMethod) {
+            this.httpMethod = httpMethod;
+            return this;
+        }
+        public String getHttpMethod() {
+            return this.httpMethod;
+        }
+
+        public ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class ImportSwaggerResponseBodySuccess extends TeaModel {
+        @NameInMap("ApiImportSwaggerSuccess")
+        public java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> apiImportSwaggerSuccess;
+
+        public static ImportSwaggerResponseBodySuccess build(java.util.Map<String, ?> map) throws Exception {
+            ImportSwaggerResponseBodySuccess self = new ImportSwaggerResponseBodySuccess();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportSwaggerResponseBodySuccess setApiImportSwaggerSuccess(java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> apiImportSwaggerSuccess) {
+            this.apiImportSwaggerSuccess = apiImportSwaggerSuccess;
+            return this;
+        }
+        public java.util.List<ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess> getApiImportSwaggerSuccess() {
+            return this.apiImportSwaggerSuccess;
         }
 
     }

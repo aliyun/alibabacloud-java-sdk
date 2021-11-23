@@ -4,11 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiGroupRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DeleteApiGroupRequestTag> tag;
@@ -18,20 +18,20 @@ public class DeleteApiGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteApiGroupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public DeleteApiGroupRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteApiGroupRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteApiGroupRequest setTag(java.util.List<DeleteApiGroupRequestTag> tag) {

@@ -4,11 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("AppId")
     public Long appId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DeleteAppRequestTag> tag;
@@ -18,20 +18,20 @@ public class DeleteAppRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteAppRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public DeleteAppRequest setAppId(Long appId) {
         this.appId = appId;
         return this;
     }
     public Long getAppId() {
         return this.appId;
+    }
+
+    public DeleteAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteAppRequest setTag(java.util.List<DeleteAppRequestTag> tag) {

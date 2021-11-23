@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiIpControlsResponseBody extends TeaModel {
+    @NameInMap("ApiIpControls")
+    public DescribeApiIpControlsResponseBodyApiIpControls apiIpControls;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("ApiIpControls")
-    public DescribeApiIpControlsResponseBodyApiIpControls apiIpControls;
 
     public static DescribeApiIpControlsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiIpControlsResponseBody self = new DescribeApiIpControlsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApiIpControlsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeApiIpControlsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeApiIpControlsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeApiIpControlsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeApiIpControlsResponseBody setApiIpControls(DescribeApiIpControlsResponseBodyApiIpControls apiIpControls) {
@@ -64,12 +32,47 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         return this.apiIpControls;
     }
 
-    public static class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem extends TeaModel {
-        @NameInMap("BoundTime")
-        public String boundTime;
+    public DescribeApiIpControlsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public DescribeApiIpControlsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApiIpControlsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeApiIpControlsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
+
+        @NameInMap("ApiName")
+        public String apiName;
+
+        @NameInMap("BoundTime")
+        public String boundTime;
 
         @NameInMap("IpControlId")
         public String ipControlId;
@@ -77,20 +80,9 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         @NameInMap("IpControlName")
         public String ipControlName;
 
-        @NameInMap("ApiName")
-        public String apiName;
-
         public static DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem self = new DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setBoundTime(String boundTime) {
-            this.boundTime = boundTime;
-            return this;
-        }
-        public String getBoundTime() {
-            return this.boundTime;
         }
 
         public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setApiId(String apiId) {
@@ -99,6 +91,22 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
         public String getApiId() {
             return this.apiId;
+        }
+
+        public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setApiName(String apiName) {
+            this.apiName = apiName;
+            return this;
+        }
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setBoundTime(String boundTime) {
+            this.boundTime = boundTime;
+            return this;
+        }
+        public String getBoundTime() {
+            return this.boundTime;
         }
 
         public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setIpControlId(String ipControlId) {
@@ -115,14 +123,6 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         }
         public String getIpControlName() {
             return this.ipControlName;
-        }
-
-        public DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem setApiName(String apiName) {
-            this.apiName = apiName;
-            return this;
-        }
-        public String getApiName() {
-            return this.apiName;
         }
 
     }
