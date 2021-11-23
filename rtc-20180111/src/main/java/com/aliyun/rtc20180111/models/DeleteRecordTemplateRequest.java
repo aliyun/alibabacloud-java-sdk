@@ -4,14 +4,11 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecordTemplateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -21,28 +18,20 @@ public class DeleteRecordTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteRecordTemplateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteRecordTemplateRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
-    }
-
     public DeleteRecordTemplateRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteRecordTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteRecordTemplateRequest setTemplateId(String templateId) {

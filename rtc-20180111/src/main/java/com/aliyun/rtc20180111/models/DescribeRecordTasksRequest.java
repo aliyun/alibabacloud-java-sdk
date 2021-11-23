@@ -4,32 +4,29 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordTasksRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("ChannelId")
     public String channelId;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNum")
+    public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
@@ -37,22 +34,6 @@ public class DescribeRecordTasksRequest extends TeaModel {
     public static DescribeRecordTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordTasksRequest self = new DescribeRecordTasksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordTasksRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeRecordTasksRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeRecordTasksRequest setAppId(String appId) {
@@ -71,28 +52,28 @@ public class DescribeRecordTasksRequest extends TeaModel {
         return this.channelId;
     }
 
-    public DescribeRecordTasksRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeRecordTasksRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeRecordTasksRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeRecordTasksRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeRecordTasksRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
     }
 
     public DescribeRecordTasksRequest setPageSize(Integer pageSize) {
@@ -103,12 +84,20 @@ public class DescribeRecordTasksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRecordTasksRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public DescribeRecordTasksRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeRecordTasksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeRecordTasksRequest setTaskIds(java.util.List<String> taskIds) {

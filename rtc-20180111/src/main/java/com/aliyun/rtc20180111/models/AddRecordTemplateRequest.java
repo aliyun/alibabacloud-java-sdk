@@ -4,26 +4,44 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class AddRecordTemplateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("BackgroundColor")
+    public Integer backgroundColor;
 
-    @NameInMap("TaskProfile")
-    public String taskProfile;
+    @NameInMap("Backgrounds")
+    public java.util.List<AddRecordTemplateRequestBackgrounds> backgrounds;
+
+    @NameInMap("ClockWidgets")
+    public java.util.List<AddRecordTemplateRequestClockWidgets> clockWidgets;
+
+    @NameInMap("DelayStopTime")
+    public Integer delayStopTime;
+
+    @NameInMap("EnableM3u8DateTime")
+    public Boolean enableM3u8DateTime;
+
+    @NameInMap("FileSplitInterval")
+    public Integer fileSplitInterval;
+
+    @NameInMap("Formats")
+    public java.util.List<String> formats;
+
+    @NameInMap("HttpCallbackUrl")
+    public String httpCallbackUrl;
+
+    @NameInMap("LayoutIds")
+    public java.util.List<Long> layoutIds;
 
     @NameInMap("MediaEncode")
     public Integer mediaEncode;
 
-    @NameInMap("BackgroundColor")
-    public Integer backgroundColor;
+    @NameInMap("MnsQueue")
+    public String mnsQueue;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OssBucket")
     public String ossBucket;
@@ -31,52 +49,18 @@ public class AddRecordTemplateRequest extends TeaModel {
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
 
-    @NameInMap("FileSplitInterval")
-    public Integer fileSplitInterval;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("DelayStopTime")
-    public Integer delayStopTime;
-
-    @NameInMap("MnsQueue")
-    public String mnsQueue;
-
-    @NameInMap("HttpCallbackUrl")
-    public String httpCallbackUrl;
-
-    @NameInMap("LayoutIds")
-    public java.util.List<Integer> layoutIds;
-
-    @NameInMap("Formats")
-    public java.util.List<String> formats;
-
-    @NameInMap("Backgrounds")
-    public java.util.List<AddRecordTemplateRequestBackgrounds> backgrounds;
+    @NameInMap("TaskProfile")
+    public String taskProfile;
 
     @NameInMap("Watermarks")
     public java.util.List<AddRecordTemplateRequestWatermarks> watermarks;
 
-    @NameInMap("ClockWidgets")
-    public java.util.List<AddRecordTemplateRequestClockWidgets> clockWidgets;
-
     public static AddRecordTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddRecordTemplateRequest self = new AddRecordTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddRecordTemplateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddRecordTemplateRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public AddRecordTemplateRequest setAppId(String appId) {
@@ -87,20 +71,76 @@ public class AddRecordTemplateRequest extends TeaModel {
         return this.appId;
     }
 
-    public AddRecordTemplateRequest setName(String name) {
-        this.name = name;
+    public AddRecordTemplateRequest setBackgroundColor(Integer backgroundColor) {
+        this.backgroundColor = backgroundColor;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Integer getBackgroundColor() {
+        return this.backgroundColor;
     }
 
-    public AddRecordTemplateRequest setTaskProfile(String taskProfile) {
-        this.taskProfile = taskProfile;
+    public AddRecordTemplateRequest setBackgrounds(java.util.List<AddRecordTemplateRequestBackgrounds> backgrounds) {
+        this.backgrounds = backgrounds;
         return this;
     }
-    public String getTaskProfile() {
-        return this.taskProfile;
+    public java.util.List<AddRecordTemplateRequestBackgrounds> getBackgrounds() {
+        return this.backgrounds;
+    }
+
+    public AddRecordTemplateRequest setClockWidgets(java.util.List<AddRecordTemplateRequestClockWidgets> clockWidgets) {
+        this.clockWidgets = clockWidgets;
+        return this;
+    }
+    public java.util.List<AddRecordTemplateRequestClockWidgets> getClockWidgets() {
+        return this.clockWidgets;
+    }
+
+    public AddRecordTemplateRequest setDelayStopTime(Integer delayStopTime) {
+        this.delayStopTime = delayStopTime;
+        return this;
+    }
+    public Integer getDelayStopTime() {
+        return this.delayStopTime;
+    }
+
+    public AddRecordTemplateRequest setEnableM3u8DateTime(Boolean enableM3u8DateTime) {
+        this.enableM3u8DateTime = enableM3u8DateTime;
+        return this;
+    }
+    public Boolean getEnableM3u8DateTime() {
+        return this.enableM3u8DateTime;
+    }
+
+    public AddRecordTemplateRequest setFileSplitInterval(Integer fileSplitInterval) {
+        this.fileSplitInterval = fileSplitInterval;
+        return this;
+    }
+    public Integer getFileSplitInterval() {
+        return this.fileSplitInterval;
+    }
+
+    public AddRecordTemplateRequest setFormats(java.util.List<String> formats) {
+        this.formats = formats;
+        return this;
+    }
+    public java.util.List<String> getFormats() {
+        return this.formats;
+    }
+
+    public AddRecordTemplateRequest setHttpCallbackUrl(String httpCallbackUrl) {
+        this.httpCallbackUrl = httpCallbackUrl;
+        return this;
+    }
+    public String getHttpCallbackUrl() {
+        return this.httpCallbackUrl;
+    }
+
+    public AddRecordTemplateRequest setLayoutIds(java.util.List<Long> layoutIds) {
+        this.layoutIds = layoutIds;
+        return this;
+    }
+    public java.util.List<Long> getLayoutIds() {
+        return this.layoutIds;
     }
 
     public AddRecordTemplateRequest setMediaEncode(Integer mediaEncode) {
@@ -111,12 +151,20 @@ public class AddRecordTemplateRequest extends TeaModel {
         return this.mediaEncode;
     }
 
-    public AddRecordTemplateRequest setBackgroundColor(Integer backgroundColor) {
-        this.backgroundColor = backgroundColor;
+    public AddRecordTemplateRequest setMnsQueue(String mnsQueue) {
+        this.mnsQueue = mnsQueue;
         return this;
     }
-    public Integer getBackgroundColor() {
-        return this.backgroundColor;
+    public String getMnsQueue() {
+        return this.mnsQueue;
+    }
+
+    public AddRecordTemplateRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public AddRecordTemplateRequest setOssBucket(String ossBucket) {
@@ -135,60 +183,20 @@ public class AddRecordTemplateRequest extends TeaModel {
         return this.ossFilePrefix;
     }
 
-    public AddRecordTemplateRequest setFileSplitInterval(Integer fileSplitInterval) {
-        this.fileSplitInterval = fileSplitInterval;
+    public AddRecordTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getFileSplitInterval() {
-        return this.fileSplitInterval;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public AddRecordTemplateRequest setDelayStopTime(Integer delayStopTime) {
-        this.delayStopTime = delayStopTime;
+    public AddRecordTemplateRequest setTaskProfile(String taskProfile) {
+        this.taskProfile = taskProfile;
         return this;
     }
-    public Integer getDelayStopTime() {
-        return this.delayStopTime;
-    }
-
-    public AddRecordTemplateRequest setMnsQueue(String mnsQueue) {
-        this.mnsQueue = mnsQueue;
-        return this;
-    }
-    public String getMnsQueue() {
-        return this.mnsQueue;
-    }
-
-    public AddRecordTemplateRequest setHttpCallbackUrl(String httpCallbackUrl) {
-        this.httpCallbackUrl = httpCallbackUrl;
-        return this;
-    }
-    public String getHttpCallbackUrl() {
-        return this.httpCallbackUrl;
-    }
-
-    public AddRecordTemplateRequest setLayoutIds(java.util.List<Integer> layoutIds) {
-        this.layoutIds = layoutIds;
-        return this;
-    }
-    public java.util.List<Integer> getLayoutIds() {
-        return this.layoutIds;
-    }
-
-    public AddRecordTemplateRequest setFormats(java.util.List<String> formats) {
-        this.formats = formats;
-        return this;
-    }
-    public java.util.List<String> getFormats() {
-        return this.formats;
-    }
-
-    public AddRecordTemplateRequest setBackgrounds(java.util.List<AddRecordTemplateRequestBackgrounds> backgrounds) {
-        this.backgrounds = backgrounds;
-        return this;
-    }
-    public java.util.List<AddRecordTemplateRequestBackgrounds> getBackgrounds() {
-        return this.backgrounds;
+    public String getTaskProfile() {
+        return this.taskProfile;
     }
 
     public AddRecordTemplateRequest setWatermarks(java.util.List<AddRecordTemplateRequestWatermarks> watermarks) {
@@ -199,71 +207,31 @@ public class AddRecordTemplateRequest extends TeaModel {
         return this.watermarks;
     }
 
-    public AddRecordTemplateRequest setClockWidgets(java.util.List<AddRecordTemplateRequestClockWidgets> clockWidgets) {
-        this.clockWidgets = clockWidgets;
-        return this;
-    }
-    public java.util.List<AddRecordTemplateRequestClockWidgets> getClockWidgets() {
-        return this.clockWidgets;
-    }
-
     public static class AddRecordTemplateRequestBackgrounds extends TeaModel {
-        @NameInMap("Width")
-        public Float width;
+        @NameInMap("Display")
+        public Integer display;
 
         @NameInMap("Height")
         public Float height;
 
-        @NameInMap("Y")
-        public Float y;
-
         @NameInMap("Url")
         public String url;
 
-        @NameInMap("Display")
-        public Integer display;
-
-        @NameInMap("ZOrder")
-        public Integer ZOrder;
+        @NameInMap("Width")
+        public Float width;
 
         @NameInMap("X")
         public Float x;
 
+        @NameInMap("Y")
+        public Float y;
+
+        @NameInMap("ZOrder")
+        public Integer ZOrder;
+
         public static AddRecordTemplateRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
             AddRecordTemplateRequestBackgrounds self = new AddRecordTemplateRequestBackgrounds();
             return TeaModel.build(map, self);
-        }
-
-        public AddRecordTemplateRequestBackgrounds setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
-        }
-
-        public AddRecordTemplateRequestBackgrounds setHeight(Float height) {
-            this.height = height;
-            return this;
-        }
-        public Float getHeight() {
-            return this.height;
-        }
-
-        public AddRecordTemplateRequestBackgrounds setY(Float y) {
-            this.y = y;
-            return this;
-        }
-        public Float getY() {
-            return this.y;
-        }
-
-        public AddRecordTemplateRequestBackgrounds setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public AddRecordTemplateRequestBackgrounds setDisplay(Integer display) {
@@ -274,12 +242,28 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.display;
         }
 
-        public AddRecordTemplateRequestBackgrounds setZOrder(Integer ZOrder) {
-            this.ZOrder = ZOrder;
+        public AddRecordTemplateRequestBackgrounds setHeight(Float height) {
+            this.height = height;
             return this;
         }
-        public Integer getZOrder() {
-            return this.ZOrder;
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public AddRecordTemplateRequestBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public AddRecordTemplateRequestBackgrounds setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
         }
 
         public AddRecordTemplateRequestBackgrounds setX(Float x) {
@@ -290,63 +274,7 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.x;
         }
 
-    }
-
-    public static class AddRecordTemplateRequestWatermarks extends TeaModel {
-        @NameInMap("Alpha")
-        public Float alpha;
-
-        @NameInMap("Width")
-        public Float width;
-
-        @NameInMap("Height")
-        public Float height;
-
-        @NameInMap("Y")
-        public Float y;
-
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Display")
-        public Integer display;
-
-        @NameInMap("ZOrder")
-        public Integer ZOrder;
-
-        @NameInMap("X")
-        public Float x;
-
-        public static AddRecordTemplateRequestWatermarks build(java.util.Map<String, ?> map) throws Exception {
-            AddRecordTemplateRequestWatermarks self = new AddRecordTemplateRequestWatermarks();
-            return TeaModel.build(map, self);
-        }
-
-        public AddRecordTemplateRequestWatermarks setAlpha(Float alpha) {
-            this.alpha = alpha;
-            return this;
-        }
-        public Float getAlpha() {
-            return this.alpha;
-        }
-
-        public AddRecordTemplateRequestWatermarks setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
-        }
-
-        public AddRecordTemplateRequestWatermarks setHeight(Float height) {
-            this.height = height;
-            return this;
-        }
-        public Float getHeight() {
-            return this.height;
-        }
-
-        public AddRecordTemplateRequestWatermarks setY(Float y) {
+        public AddRecordTemplateRequestBackgrounds setY(Float y) {
             this.y = y;
             return this;
         }
@@ -354,23 +282,7 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.y;
         }
 
-        public AddRecordTemplateRequestWatermarks setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public AddRecordTemplateRequestWatermarks setDisplay(Integer display) {
-            this.display = display;
-            return this;
-        }
-        public Integer getDisplay() {
-            return this.display;
-        }
-
-        public AddRecordTemplateRequestWatermarks setZOrder(Integer ZOrder) {
+        public AddRecordTemplateRequestBackgrounds setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }
@@ -378,22 +290,20 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.ZOrder;
         }
 
-        public AddRecordTemplateRequestWatermarks setX(Float x) {
-            this.x = x;
-            return this;
-        }
-        public Float getX() {
-            return this.x;
-        }
-
     }
 
     public static class AddRecordTemplateRequestClockWidgets extends TeaModel {
+        @NameInMap("FontColor")
+        public Integer fontColor;
+
+        @NameInMap("FontSize")
+        public Integer fontSize;
+
         @NameInMap("FontType")
         public Integer fontType;
 
-        @NameInMap("FontColor")
-        public Integer fontColor;
+        @NameInMap("X")
+        public Float x;
 
         @NameInMap("Y")
         public Float y;
@@ -401,15 +311,25 @@ public class AddRecordTemplateRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        @NameInMap("X")
-        public Float x;
-
-        @NameInMap("FontSize")
-        public Integer fontSize;
-
         public static AddRecordTemplateRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
             AddRecordTemplateRequestClockWidgets self = new AddRecordTemplateRequestClockWidgets();
             return TeaModel.build(map, self);
+        }
+
+        public AddRecordTemplateRequestClockWidgets setFontColor(Integer fontColor) {
+            this.fontColor = fontColor;
+            return this;
+        }
+        public Integer getFontColor() {
+            return this.fontColor;
+        }
+
+        public AddRecordTemplateRequestClockWidgets setFontSize(Integer fontSize) {
+            this.fontSize = fontSize;
+            return this;
+        }
+        public Integer getFontSize() {
+            return this.fontSize;
         }
 
         public AddRecordTemplateRequestClockWidgets setFontType(Integer fontType) {
@@ -420,12 +340,12 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.fontType;
         }
 
-        public AddRecordTemplateRequestClockWidgets setFontColor(Integer fontColor) {
-            this.fontColor = fontColor;
+        public AddRecordTemplateRequestClockWidgets setX(Float x) {
+            this.x = x;
             return this;
         }
-        public Integer getFontColor() {
-            return this.fontColor;
+        public Float getX() {
+            return this.x;
         }
 
         public AddRecordTemplateRequestClockWidgets setY(Float y) {
@@ -444,7 +364,79 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.ZOrder;
         }
 
-        public AddRecordTemplateRequestClockWidgets setX(Float x) {
+    }
+
+    public static class AddRecordTemplateRequestWatermarks extends TeaModel {
+        @NameInMap("Alpha")
+        public Float alpha;
+
+        @NameInMap("Display")
+        public Integer display;
+
+        @NameInMap("Height")
+        public Float height;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Width")
+        public Float width;
+
+        @NameInMap("X")
+        public Float x;
+
+        @NameInMap("Y")
+        public Float y;
+
+        @NameInMap("ZOrder")
+        public Integer ZOrder;
+
+        public static AddRecordTemplateRequestWatermarks build(java.util.Map<String, ?> map) throws Exception {
+            AddRecordTemplateRequestWatermarks self = new AddRecordTemplateRequestWatermarks();
+            return TeaModel.build(map, self);
+        }
+
+        public AddRecordTemplateRequestWatermarks setAlpha(Float alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Float getAlpha() {
+            return this.alpha;
+        }
+
+        public AddRecordTemplateRequestWatermarks setDisplay(Integer display) {
+            this.display = display;
+            return this;
+        }
+        public Integer getDisplay() {
+            return this.display;
+        }
+
+        public AddRecordTemplateRequestWatermarks setHeight(Float height) {
+            this.height = height;
+            return this;
+        }
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public AddRecordTemplateRequestWatermarks setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public AddRecordTemplateRequestWatermarks setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
+        }
+
+        public AddRecordTemplateRequestWatermarks setX(Float x) {
             this.x = x;
             return this;
         }
@@ -452,12 +444,20 @@ public class AddRecordTemplateRequest extends TeaModel {
             return this.x;
         }
 
-        public AddRecordTemplateRequestClockWidgets setFontSize(Integer fontSize) {
-            this.fontSize = fontSize;
+        public AddRecordTemplateRequestWatermarks setY(Float y) {
+            this.y = y;
             return this;
         }
-        public Integer getFontSize() {
-            return this.fontSize;
+        public Float getY() {
+            return this.y;
+        }
+
+        public AddRecordTemplateRequestWatermarks setZOrder(Integer ZOrder) {
+            this.ZOrder = ZOrder;
+            return this;
+        }
+        public Integer getZOrder() {
+            return this.ZOrder;
         }
 
     }

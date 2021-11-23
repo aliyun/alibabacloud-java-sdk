@@ -4,29 +4,26 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordFilesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("ChannelId")
     public String channelId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
@@ -34,22 +31,6 @@ public class DescribeRecordFilesRequest extends TeaModel {
     public static DescribeRecordFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordFilesRequest self = new DescribeRecordFilesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordFilesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeRecordFilesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeRecordFilesRequest setAppId(String appId) {
@@ -68,12 +49,20 @@ public class DescribeRecordFilesRequest extends TeaModel {
         return this.channelId;
     }
 
-    public DescribeRecordFilesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeRecordFilesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeRecordFilesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRecordFilesRequest setPageNum(Integer pageNum) {
@@ -84,20 +73,20 @@ public class DescribeRecordFilesRequest extends TeaModel {
         return this.pageNum;
     }
 
+    public DescribeRecordFilesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeRecordFilesRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeRecordFilesRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public DescribeRecordFilesRequest setTaskIds(java.util.List<String> taskIds) {

@@ -35,11 +35,11 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
-        @NameInMap("Message")
-        public String message;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Message")
+        public String message;
 
         public static RemoveTerminalsResponseBodyTerminalsTerminal build(java.util.Map<String, ?> map) throws Exception {
             RemoveTerminalsResponseBodyTerminalsTerminal self = new RemoveTerminalsResponseBodyTerminalsTerminal();
@@ -54,20 +54,20 @@ public class RemoveTerminalsResponseBody extends TeaModel {
             return this.code;
         }
 
-        public RemoveTerminalsResponseBodyTerminalsTerminal setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
         public RemoveTerminalsResponseBodyTerminalsTerminal setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public RemoveTerminalsResponseBodyTerminalsTerminal setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
     }

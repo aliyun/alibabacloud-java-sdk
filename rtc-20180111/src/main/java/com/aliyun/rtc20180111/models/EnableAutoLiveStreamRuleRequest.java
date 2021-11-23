@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
+public class EnableAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
@@ -13,12 +13,12 @@ public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
-    public static DeleteAutoLiveStreamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAutoLiveStreamRuleRequest self = new DeleteAutoLiveStreamRuleRequest();
+    public static EnableAutoLiveStreamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
+        EnableAutoLiveStreamRuleRequest self = new EnableAutoLiveStreamRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAutoLiveStreamRuleRequest setAppId(String appId) {
+    public EnableAutoLiveStreamRuleRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
         return this.appId;
     }
 
-    public DeleteAutoLiveStreamRuleRequest setOwnerId(Long ownerId) {
+    public EnableAutoLiveStreamRuleRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -34,7 +34,7 @@ public class DeleteAutoLiveStreamRuleRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteAutoLiveStreamRuleRequest setRuleId(Long ruleId) {
+    public EnableAutoLiveStreamRuleRequest setRuleId(Long ruleId) {
         this.ruleId = ruleId;
         return this;
     }

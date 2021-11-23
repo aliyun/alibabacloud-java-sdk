@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAutoLiveStreamRuleRequest extends TeaModel {
+public class UpdateAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
@@ -25,15 +25,18 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
     @NameInMap("PlayDomain")
     public String playDomain;
 
+    @NameInMap("RuleId")
+    public Integer ruleId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
-    public static CreateAutoLiveStreamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAutoLiveStreamRuleRequest self = new CreateAutoLiveStreamRuleRequest();
+    public static UpdateAutoLiveStreamRuleRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAutoLiveStreamRuleRequest self = new UpdateAutoLiveStreamRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAutoLiveStreamRuleRequest setAppId(String appId) {
+    public UpdateAutoLiveStreamRuleRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -41,7 +44,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.appId;
     }
 
-    public CreateAutoLiveStreamRuleRequest setCallBack(String callBack) {
+    public UpdateAutoLiveStreamRuleRequest setCallBack(String callBack) {
         this.callBack = callBack;
         return this;
     }
@@ -49,7 +52,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.callBack;
     }
 
-    public CreateAutoLiveStreamRuleRequest setChannelIdPrefixes(java.util.List<String> channelIdPrefixes) {
+    public UpdateAutoLiveStreamRuleRequest setChannelIdPrefixes(java.util.List<String> channelIdPrefixes) {
         this.channelIdPrefixes = channelIdPrefixes;
         return this;
     }
@@ -57,7 +60,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.channelIdPrefixes;
     }
 
-    public CreateAutoLiveStreamRuleRequest setChannelIds(java.util.List<String> channelIds) {
+    public UpdateAutoLiveStreamRuleRequest setChannelIds(java.util.List<String> channelIds) {
         this.channelIds = channelIds;
         return this;
     }
@@ -65,7 +68,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.channelIds;
     }
 
-    public CreateAutoLiveStreamRuleRequest setMediaEncode(Integer mediaEncode) {
+    public UpdateAutoLiveStreamRuleRequest setMediaEncode(Integer mediaEncode) {
         this.mediaEncode = mediaEncode;
         return this;
     }
@@ -73,7 +76,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.mediaEncode;
     }
 
-    public CreateAutoLiveStreamRuleRequest setOwnerId(Long ownerId) {
+    public UpdateAutoLiveStreamRuleRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -81,7 +84,7 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateAutoLiveStreamRuleRequest setPlayDomain(String playDomain) {
+    public UpdateAutoLiveStreamRuleRequest setPlayDomain(String playDomain) {
         this.playDomain = playDomain;
         return this;
     }
@@ -89,7 +92,15 @@ public class CreateAutoLiveStreamRuleRequest extends TeaModel {
         return this.playDomain;
     }
 
-    public CreateAutoLiveStreamRuleRequest setRuleName(String ruleName) {
+    public UpdateAutoLiveStreamRuleRequest setRuleId(Integer ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Integer getRuleId() {
+        return this.ruleId;
+    }
+
+    public UpdateAutoLiveStreamRuleRequest setRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }

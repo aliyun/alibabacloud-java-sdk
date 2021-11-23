@@ -4,17 +4,14 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class RemoveTerminalsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("ChannelId")
     public String channelId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("TerminalIds")
     public java.util.List<String> terminalIds;
@@ -22,22 +19,6 @@ public class RemoveTerminalsRequest extends TeaModel {
     public static RemoveTerminalsRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveTerminalsRequest self = new RemoveTerminalsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveTerminalsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public RemoveTerminalsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public RemoveTerminalsRequest setAppId(String appId) {
@@ -54,6 +35,14 @@ public class RemoveTerminalsRequest extends TeaModel {
     }
     public String getChannelId() {
         return this.channelId;
+    }
+
+    public RemoveTerminalsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public RemoveTerminalsRequest setTerminalIds(java.util.List<String> terminalIds) {
