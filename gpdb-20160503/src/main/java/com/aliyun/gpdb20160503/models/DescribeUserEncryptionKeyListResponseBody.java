@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("KmsKeys")
     public java.util.List<DescribeUserEncryptionKeyListResponseBodyKmsKeys> kmsKeys;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeUserEncryptionKeyListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserEncryptionKeyListResponseBody self = new DescribeUserEncryptionKeyListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserEncryptionKeyListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeUserEncryptionKeyListResponseBody setKmsKeys(java.util.List<DescribeUserEncryptionKeyListResponseBodyKmsKeys> kmsKeys) {
@@ -29,6 +21,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     }
     public java.util.List<DescribeUserEncryptionKeyListResponseBodyKmsKeys> getKmsKeys() {
         return this.kmsKeys;
+    }
+
+    public DescribeUserEncryptionKeyListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeUserEncryptionKeyListResponseBodyKmsKeys extends TeaModel {

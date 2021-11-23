@@ -7,17 +7,17 @@ public class DescribeLogBackupsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeLogBackupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogBackupsRequest self = new DescribeLogBackupsRequest();
@@ -32,20 +32,20 @@ public class DescribeLogBackupsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeLogBackupsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeLogBackupsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeLogBackupsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeLogBackupsRequest setPageSize(Integer pageSize) {
@@ -56,12 +56,12 @@ public class DescribeLogBackupsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLogBackupsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLogBackupsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

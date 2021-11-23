@@ -10,11 +10,11 @@ public class DescribeSQLLogFilesRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeSQLLogFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogFilesRequest self = new DescribeSQLLogFilesRequest();
@@ -37,20 +37,20 @@ public class DescribeSQLLogFilesRequest extends TeaModel {
         return this.fileName;
     }
 
-    public DescribeSQLLogFilesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeSQLLogFilesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeSQLLogFilesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

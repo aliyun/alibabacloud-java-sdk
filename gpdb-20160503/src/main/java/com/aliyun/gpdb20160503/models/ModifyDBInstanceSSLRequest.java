@@ -4,11 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSSLRequest extends TeaModel {
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("ConnectionString")
     public String connectionString;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("SSLEnabled")
     public Integer SSLEnabled;
@@ -18,20 +18,20 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBInstanceSSLRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
     public ModifyDBInstanceSSLRequest setConnectionString(String connectionString) {
         this.connectionString = connectionString;
         return this;
     }
     public String getConnectionString() {
         return this.connectionString;
+    }
+
+    public ModifyDBInstanceSSLRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public ModifyDBInstanceSSLRequest setSSLEnabled(Integer SSLEnabled) {

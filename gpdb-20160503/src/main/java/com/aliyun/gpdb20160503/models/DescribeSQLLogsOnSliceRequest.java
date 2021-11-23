@@ -4,11 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsOnSliceRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("ExecuteState")
+    public String executeState;
 
     @NameInMap("MaxExecuteCost")
     public String maxExecuteCost;
@@ -16,11 +16,11 @@ public class DescribeSQLLogsOnSliceRequest extends TeaModel {
     @NameInMap("MinExecuteCost")
     public String minExecuteCost;
 
-    @NameInMap("ExecuteState")
-    public String executeState;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("QueryId")
     public String queryId;
@@ -33,20 +33,20 @@ public class DescribeSQLLogsOnSliceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLLogsOnSliceRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeSQLLogsOnSliceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
-    public DescribeSQLLogsOnSliceRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSQLLogsOnSliceRequest setExecuteState(String executeState) {
+        this.executeState = executeState;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getExecuteState() {
+        return this.executeState;
     }
 
     public DescribeSQLLogsOnSliceRequest setMaxExecuteCost(String maxExecuteCost) {
@@ -65,20 +65,20 @@ public class DescribeSQLLogsOnSliceRequest extends TeaModel {
         return this.minExecuteCost;
     }
 
-    public DescribeSQLLogsOnSliceRequest setExecuteState(String executeState) {
-        this.executeState = executeState;
+    public DescribeSQLLogsOnSliceRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getExecuteState() {
-        return this.executeState;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public DescribeSQLLogsOnSliceRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DescribeSQLLogsOnSliceRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeSQLLogsOnSliceRequest setQueryId(String queryId) {

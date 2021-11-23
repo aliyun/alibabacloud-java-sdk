@@ -4,24 +4,40 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataBackupsResponseBody extends TeaModel {
+    @NameInMap("Items")
+    public java.util.List<DescribeDataBackupsResponseBodyItems> items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeDataBackupsResponseBodyItems> items;
 
     public static DescribeDataBackupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataBackupsResponseBody self = new DescribeDataBackupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataBackupsResponseBody setItems(java.util.List<DescribeDataBackupsResponseBodyItems> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<DescribeDataBackupsResponseBodyItems> getItems() {
+        return this.items;
+    }
+
+    public DescribeDataBackupsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDataBackupsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDataBackupsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeDataBackupsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,86 +64,46 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDataBackupsResponseBody setItems(java.util.List<DescribeDataBackupsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeDataBackupsResponseBodyItems> getItems() {
-        return this.items;
-    }
-
     public static class DescribeDataBackupsResponseBodyItems extends TeaModel {
-        @NameInMap("DataType")
-        public String dataType;
-
-        @NameInMap("ConsistentTime")
-        public Long consistentTime;
-
-        @NameInMap("BackupStatus")
-        public String backupStatus;
-
-        @NameInMap("BackupStartTime")
-        public String backupStartTime;
-
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         @NameInMap("BackupEndTimeLocal")
         public String backupEndTimeLocal;
 
+        @NameInMap("BackupMode")
+        public String backupMode;
+
         @NameInMap("BackupSetId")
         public String backupSetId;
-
-        @NameInMap("BaksetName")
-        public String baksetName;
 
         @NameInMap("BackupSize")
         public Long backupSize;
 
-        @NameInMap("BackupMode")
-        public String backupMode;
+        @NameInMap("BackupStartTime")
+        public String backupStartTime;
 
         @NameInMap("BackupStartTimeLocal")
         public String backupStartTimeLocal;
 
+        @NameInMap("BackupStatus")
+        public String backupStatus;
+
+        @NameInMap("BaksetName")
+        public String baksetName;
+
+        @NameInMap("ConsistentTime")
+        public Long consistentTime;
+
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
+
+        @NameInMap("DataType")
+        public String dataType;
 
         public static DescribeDataBackupsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataBackupsResponseBodyItems self = new DescribeDataBackupsResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataBackupsResponseBodyItems setDataType(String dataType) {
-            this.dataType = dataType;
-            return this;
-        }
-        public String getDataType() {
-            return this.dataType;
-        }
-
-        public DescribeDataBackupsResponseBodyItems setConsistentTime(Long consistentTime) {
-            this.consistentTime = consistentTime;
-            return this;
-        }
-        public Long getConsistentTime() {
-            return this.consistentTime;
-        }
-
-        public DescribeDataBackupsResponseBodyItems setBackupStatus(String backupStatus) {
-            this.backupStatus = backupStatus;
-            return this;
-        }
-        public String getBackupStatus() {
-            return this.backupStatus;
-        }
-
-        public DescribeDataBackupsResponseBodyItems setBackupStartTime(String backupStartTime) {
-            this.backupStartTime = backupStartTime;
-            return this;
-        }
-        public String getBackupStartTime() {
-            return this.backupStartTime;
         }
 
         public DescribeDataBackupsResponseBodyItems setBackupEndTime(String backupEndTime) {
@@ -154,20 +122,20 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             return this.backupEndTimeLocal;
         }
 
+        public DescribeDataBackupsResponseBodyItems setBackupMode(String backupMode) {
+            this.backupMode = backupMode;
+            return this;
+        }
+        public String getBackupMode() {
+            return this.backupMode;
+        }
+
         public DescribeDataBackupsResponseBodyItems setBackupSetId(String backupSetId) {
             this.backupSetId = backupSetId;
             return this;
         }
         public String getBackupSetId() {
             return this.backupSetId;
-        }
-
-        public DescribeDataBackupsResponseBodyItems setBaksetName(String baksetName) {
-            this.baksetName = baksetName;
-            return this;
-        }
-        public String getBaksetName() {
-            return this.baksetName;
         }
 
         public DescribeDataBackupsResponseBodyItems setBackupSize(Long backupSize) {
@@ -178,12 +146,12 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             return this.backupSize;
         }
 
-        public DescribeDataBackupsResponseBodyItems setBackupMode(String backupMode) {
-            this.backupMode = backupMode;
+        public DescribeDataBackupsResponseBodyItems setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
             return this;
         }
-        public String getBackupMode() {
-            return this.backupMode;
+        public String getBackupStartTime() {
+            return this.backupStartTime;
         }
 
         public DescribeDataBackupsResponseBodyItems setBackupStartTimeLocal(String backupStartTimeLocal) {
@@ -194,12 +162,44 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             return this.backupStartTimeLocal;
         }
 
+        public DescribeDataBackupsResponseBodyItems setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        public DescribeDataBackupsResponseBodyItems setBaksetName(String baksetName) {
+            this.baksetName = baksetName;
+            return this;
+        }
+        public String getBaksetName() {
+            return this.baksetName;
+        }
+
+        public DescribeDataBackupsResponseBodyItems setConsistentTime(Long consistentTime) {
+            this.consistentTime = consistentTime;
+            return this;
+        }
+        public Long getConsistentTime() {
+            return this.consistentTime;
+        }
+
         public DescribeDataBackupsResponseBodyItems setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeDataBackupsResponseBodyItems setDataType(String dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public String getDataType() {
+            return this.dataType;
         }
 
     }

@@ -10,14 +10,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
     @NameInMap("VPCId")
     public String VPCId;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
-
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
 
     public static ModifyDBInstanceNetworkTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetworkTypeRequest self = new ModifyDBInstanceNetworkTypeRequest();
@@ -40,6 +40,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
         return this.instanceNetworkType;
     }
 
+    public ModifyDBInstanceNetworkTypeRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
     public ModifyDBInstanceNetworkTypeRequest setVPCId(String VPCId) {
         this.VPCId = VPCId;
         return this;
@@ -54,14 +62,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public ModifyDBInstanceNetworkTypeRequest setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("AddressType")
+    public String addressType;
 
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
-    @NameInMap("AddressType")
-    public String addressType;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     public static ReleaseInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstancePublicConnectionRequest self = new ReleaseInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseInstancePublicConnectionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public ReleaseInstancePublicConnectionRequest setAddressType(String addressType) {
+        this.addressType = addressType;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public ReleaseInstancePublicConnectionRequest setCurrentConnectionString(String currentConnectionString) {
@@ -34,12 +34,12 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
         return this.currentConnectionString;
     }
 
-    public ReleaseInstancePublicConnectionRequest setAddressType(String addressType) {
-        this.addressType = addressType;
+    public ReleaseInstancePublicConnectionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getAddressType() {
-        return this.addressType;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
 }

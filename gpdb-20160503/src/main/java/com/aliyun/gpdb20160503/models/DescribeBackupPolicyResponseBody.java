@@ -7,8 +7,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("EnableRecoveryPoint")
+    public Boolean enableRecoveryPoint;
 
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
@@ -19,8 +19,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RecoveryPointPeriod")
     public String recoveryPointPeriod;
 
-    @NameInMap("EnableRecoveryPoint")
-    public Boolean enableRecoveryPoint;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
@@ -35,12 +35,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.backupRetentionPeriod;
     }
 
-    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupPolicyResponseBody setEnableRecoveryPoint(Boolean enableRecoveryPoint) {
+        this.enableRecoveryPoint = enableRecoveryPoint;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getEnableRecoveryPoint() {
+        return this.enableRecoveryPoint;
     }
 
     public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
@@ -67,12 +67,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.recoveryPointPeriod;
     }
 
-    public DescribeBackupPolicyResponseBody setEnableRecoveryPoint(Boolean enableRecoveryPoint) {
-        this.enableRecoveryPoint = enableRecoveryPoint;
+    public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getEnableRecoveryPoint() {
-        return this.enableRecoveryPoint;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

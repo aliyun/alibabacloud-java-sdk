@@ -4,26 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("PageNumber")
     public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeUserEncryptionKeyListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserEncryptionKeyListRequest self = new DescribeUserEncryptionKeyListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserEncryptionKeyListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeUserEncryptionKeyListRequest setPageNumber(String pageNumber) {
@@ -40,6 +32,14 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeUserEncryptionKeyListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

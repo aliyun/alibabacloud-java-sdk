@@ -4,17 +4,17 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpecificationRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("CpuCores")
+    public Integer cpuCores;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("StorageType")
     public String storageType;
-
-    @NameInMap("CpuCores")
-    public Integer cpuCores;
 
     @NameInMap("TotalNodeNum")
     public Integer totalNodeNum;
@@ -24,12 +24,12 @@ public class DescribeSpecificationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSpecificationRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeSpecificationRequest setCpuCores(Integer cpuCores) {
+        this.cpuCores = cpuCores;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Integer getCpuCores() {
+        return this.cpuCores;
     }
 
     public DescribeSpecificationRequest setDBInstanceId(String DBInstanceId) {
@@ -40,20 +40,20 @@ public class DescribeSpecificationRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public DescribeSpecificationRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DescribeSpecificationRequest setStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     public String getStorageType() {
         return this.storageType;
-    }
-
-    public DescribeSpecificationRequest setCpuCores(Integer cpuCores) {
-        this.cpuCores = cpuCores;
-        return this;
-    }
-    public Integer getCpuCores() {
-        return this.cpuCores;
     }
 
     public DescribeSpecificationRequest setTotalNodeNum(Integer totalNodeNum) {

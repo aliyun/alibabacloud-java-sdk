@@ -4,14 +4,14 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SliceLogItems")
     public java.util.List<DescribeSQLLogsOnSliceResponseBodySliceLogItems> sliceLogItems;
@@ -21,12 +21,12 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLLogsOnSliceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSQLLogsOnSliceResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSQLLogsOnSliceResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -37,12 +37,12 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
-    public DescribeSQLLogsOnSliceResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSQLLogsOnSliceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSQLLogsOnSliceResponseBody setSliceLogItems(java.util.List<DescribeSQLLogsOnSliceResponseBodySliceLogItems> sliceLogItems) {
@@ -54,26 +54,26 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogsOnSliceResponseBodySliceLogItems extends TeaModel {
-        @NameInMap("ExecuteStatus")
-        public String executeStatus;
-
         @NameInMap("ExecuteCost")
         public Float executeCost;
 
-        @NameInMap("ReturnRowCounts")
-        public Long returnRowCounts;
+        @NameInMap("ExecuteStatus")
+        public String executeStatus;
+
+        @NameInMap("OperationExecuteEndTime")
+        public String operationExecuteEndTime;
 
         @NameInMap("OperationExecuteTime")
         public String operationExecuteTime;
 
-        @NameInMap("SegmentId")
-        public String segmentId;
-
         @NameInMap("PeakMemory")
         public Float peakMemory;
 
-        @NameInMap("OperationExecuteEndTime")
-        public String operationExecuteEndTime;
+        @NameInMap("ReturnRowCounts")
+        public Long returnRowCounts;
+
+        @NameInMap("SegmentId")
+        public String segmentId;
 
         @NameInMap("SegmentName")
         public String segmentName;
@@ -81,14 +81,6 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
         public static DescribeSQLLogsOnSliceResponseBodySliceLogItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogsOnSliceResponseBodySliceLogItems self = new DescribeSQLLogsOnSliceResponseBodySliceLogItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setExecuteStatus(String executeStatus) {
-            this.executeStatus = executeStatus;
-            return this;
-        }
-        public String getExecuteStatus() {
-            return this.executeStatus;
         }
 
         public DescribeSQLLogsOnSliceResponseBodySliceLogItems setExecuteCost(Float executeCost) {
@@ -99,12 +91,20 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
             return this.executeCost;
         }
 
-        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setReturnRowCounts(Long returnRowCounts) {
-            this.returnRowCounts = returnRowCounts;
+        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setExecuteStatus(String executeStatus) {
+            this.executeStatus = executeStatus;
             return this;
         }
-        public Long getReturnRowCounts() {
-            return this.returnRowCounts;
+        public String getExecuteStatus() {
+            return this.executeStatus;
+        }
+
+        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setOperationExecuteEndTime(String operationExecuteEndTime) {
+            this.operationExecuteEndTime = operationExecuteEndTime;
+            return this;
+        }
+        public String getOperationExecuteEndTime() {
+            return this.operationExecuteEndTime;
         }
 
         public DescribeSQLLogsOnSliceResponseBodySliceLogItems setOperationExecuteTime(String operationExecuteTime) {
@@ -115,14 +115,6 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
             return this.operationExecuteTime;
         }
 
-        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setSegmentId(String segmentId) {
-            this.segmentId = segmentId;
-            return this;
-        }
-        public String getSegmentId() {
-            return this.segmentId;
-        }
-
         public DescribeSQLLogsOnSliceResponseBodySliceLogItems setPeakMemory(Float peakMemory) {
             this.peakMemory = peakMemory;
             return this;
@@ -131,12 +123,20 @@ public class DescribeSQLLogsOnSliceResponseBody extends TeaModel {
             return this.peakMemory;
         }
 
-        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setOperationExecuteEndTime(String operationExecuteEndTime) {
-            this.operationExecuteEndTime = operationExecuteEndTime;
+        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setReturnRowCounts(Long returnRowCounts) {
+            this.returnRowCounts = returnRowCounts;
             return this;
         }
-        public String getOperationExecuteEndTime() {
-            return this.operationExecuteEndTime;
+        public Long getReturnRowCounts() {
+            return this.returnRowCounts;
+        }
+
+        public DescribeSQLLogsOnSliceResponseBodySliceLogItems setSegmentId(String segmentId) {
+            this.segmentId = segmentId;
+            return this;
+        }
+        public String getSegmentId() {
+            return this.segmentId;
         }
 
         public DescribeSQLLogsOnSliceResponseBodySliceLogItems setSegmentName(String segmentName) {

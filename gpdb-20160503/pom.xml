@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>gpdb20160503</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>gpdb20160503</name>
   <description>Alibaba Cloud AnalyticDB for PostgreSQL (20160503) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.2</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -57,6 +57,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.1.14</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.1.13</version>
     </dependency>
   </dependencies>
   <build>
