@@ -4,24 +4,16 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePdfResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RecognizePdfResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public RecognizePdfResponseBodyData data;
-
     public static RecognizePdfResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizePdfResponseBody self = new RecognizePdfResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizePdfResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizePdfResponseBody setData(RecognizePdfResponseBodyData data) {
@@ -30,6 +22,14 @@ public class RecognizePdfResponseBody extends TeaModel {
     }
     public RecognizePdfResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizePdfResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizePdfResponseBodyDataWordsInfoPositions extends TeaModel {
@@ -66,23 +66,23 @@ public class RecognizePdfResponseBody extends TeaModel {
         @NameInMap("Angle")
         public Long angle;
 
-        @NameInMap("Word")
-        public String word;
-
         @NameInMap("Height")
         public Long height;
 
+        @NameInMap("Positions")
+        public java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> positions;
+
         @NameInMap("Width")
         public Long width;
+
+        @NameInMap("Word")
+        public String word;
 
         @NameInMap("X")
         public Long x;
 
         @NameInMap("Y")
         public Long y;
-
-        @NameInMap("Positions")
-        public java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> positions;
 
         public static RecognizePdfResponseBodyDataWordsInfo build(java.util.Map<String, ?> map) throws Exception {
             RecognizePdfResponseBodyDataWordsInfo self = new RecognizePdfResponseBodyDataWordsInfo();
@@ -97,14 +97,6 @@ public class RecognizePdfResponseBody extends TeaModel {
             return this.angle;
         }
 
-        public RecognizePdfResponseBodyDataWordsInfo setWord(String word) {
-            this.word = word;
-            return this;
-        }
-        public String getWord() {
-            return this.word;
-        }
-
         public RecognizePdfResponseBodyDataWordsInfo setHeight(Long height) {
             this.height = height;
             return this;
@@ -113,12 +105,28 @@ public class RecognizePdfResponseBody extends TeaModel {
             return this.height;
         }
 
+        public RecognizePdfResponseBodyDataWordsInfo setPositions(java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> positions) {
+            this.positions = positions;
+            return this;
+        }
+        public java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> getPositions() {
+            return this.positions;
+        }
+
         public RecognizePdfResponseBodyDataWordsInfo setWidth(Long width) {
             this.width = width;
             return this;
         }
         public Long getWidth() {
             return this.width;
+        }
+
+        public RecognizePdfResponseBodyDataWordsInfo setWord(String word) {
+            this.word = word;
+            return this;
+        }
+        public String getWord() {
+            return this.word;
         }
 
         public RecognizePdfResponseBodyDataWordsInfo setX(Long x) {
@@ -137,22 +145,14 @@ public class RecognizePdfResponseBody extends TeaModel {
             return this.y;
         }
 
-        public RecognizePdfResponseBodyDataWordsInfo setPositions(java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> positions) {
-            this.positions = positions;
-            return this;
-        }
-        public java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> getPositions() {
-            return this.positions;
-        }
-
     }
 
     public static class RecognizePdfResponseBodyData extends TeaModel {
+        @NameInMap("Angle")
+        public Long angle;
+
         @NameInMap("Height")
         public Long height;
-
-        @NameInMap("Width")
-        public Long width;
 
         @NameInMap("OrgHeight")
         public Long orgHeight;
@@ -163,8 +163,8 @@ public class RecognizePdfResponseBody extends TeaModel {
         @NameInMap("PageIndex")
         public Long pageIndex;
 
-        @NameInMap("Angle")
-        public Long angle;
+        @NameInMap("Width")
+        public Long width;
 
         @NameInMap("WordsInfo")
         public java.util.List<RecognizePdfResponseBodyDataWordsInfo> wordsInfo;
@@ -174,20 +174,20 @@ public class RecognizePdfResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RecognizePdfResponseBodyData setAngle(Long angle) {
+            this.angle = angle;
+            return this;
+        }
+        public Long getAngle() {
+            return this.angle;
+        }
+
         public RecognizePdfResponseBodyData setHeight(Long height) {
             this.height = height;
             return this;
         }
         public Long getHeight() {
             return this.height;
-        }
-
-        public RecognizePdfResponseBodyData setWidth(Long width) {
-            this.width = width;
-            return this;
-        }
-        public Long getWidth() {
-            return this.width;
         }
 
         public RecognizePdfResponseBodyData setOrgHeight(Long orgHeight) {
@@ -214,12 +214,12 @@ public class RecognizePdfResponseBody extends TeaModel {
             return this.pageIndex;
         }
 
-        public RecognizePdfResponseBodyData setAngle(Long angle) {
-            this.angle = angle;
+        public RecognizePdfResponseBodyData setWidth(Long width) {
+            this.width = width;
             return this;
         }
-        public Long getAngle() {
-            return this.angle;
+        public Long getWidth() {
+            return this.width;
         }
 
         public RecognizePdfResponseBodyData setWordsInfo(java.util.List<RecognizePdfResponseBodyDataWordsInfo> wordsInfo) {

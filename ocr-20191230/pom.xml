@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ocr20191230</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>ocr20191230</name>
   <description>Aliyun OCR SDK for Java
@@ -64,7 +64,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
-      <version>3.0.2</version>
+      <version>3.0.3</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
@@ -107,7 +107,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-util</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -128,12 +128,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.18</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.8</version>
+      <version>0.1.13</version>
     </dependency>
   </dependencies>
   <build>

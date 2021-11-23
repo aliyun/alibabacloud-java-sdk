@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeLicensePlateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeLicensePlateResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeLicensePlateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeLicensePlateResponseBody self = new RecognizeLicensePlateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeLicensePlateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeLicensePlateResponseBody setData(RecognizeLicensePlateResponseBodyData data) {
@@ -31,56 +23,12 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeLicensePlateResponseBodyDataPlatesRoi extends TeaModel {
-        @NameInMap("W")
-        public Integer w;
-
-        @NameInMap("H")
-        public Integer h;
-
-        @NameInMap("Y")
-        public Integer y;
-
-        @NameInMap("X")
-        public Integer x;
-
-        public static RecognizeLicensePlateResponseBodyDataPlatesRoi build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeLicensePlateResponseBodyDataPlatesRoi self = new RecognizeLicensePlateResponseBodyDataPlatesRoi();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi setW(Integer w) {
-            this.w = w;
-            return this;
-        }
-        public Integer getW() {
-            return this.w;
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi setH(Integer h) {
-            this.h = h;
-            return this;
-        }
-        public Integer getH() {
-            return this.h;
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi setY(Integer y) {
-            this.y = y;
-            return this;
-        }
-        public Integer getY() {
-            return this.y;
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi setX(Integer x) {
-            this.x = x;
-            return this;
-        }
-        public Integer getX() {
-            return this.x;
-        }
-
+    public RecognizeLicensePlateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeLicensePlateResponseBodyDataPlatesPositions extends TeaModel {
@@ -113,44 +61,80 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
 
     }
 
+    public static class RecognizeLicensePlateResponseBodyDataPlatesRoi extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static RecognizeLicensePlateResponseBodyDataPlatesRoi build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeLicensePlateResponseBodyDataPlatesRoi self = new RecognizeLicensePlateResponseBodyDataPlatesRoi();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class RecognizeLicensePlateResponseBodyDataPlates extends TeaModel {
-        @NameInMap("PlateTypeConfidence")
-        public Float plateTypeConfidence;
-
-        @NameInMap("PlateType")
-        public String plateType;
-
         @NameInMap("Confidence")
         public Float confidence;
 
         @NameInMap("PlateNumber")
         public String plateNumber;
 
-        @NameInMap("Roi")
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi roi;
+        @NameInMap("PlateType")
+        public String plateType;
+
+        @NameInMap("PlateTypeConfidence")
+        public Float plateTypeConfidence;
 
         @NameInMap("Positions")
         public java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> positions;
 
+        @NameInMap("Roi")
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi roi;
+
         public static RecognizeLicensePlateResponseBodyDataPlates build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLicensePlateResponseBodyDataPlates self = new RecognizeLicensePlateResponseBodyDataPlates();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlates setPlateTypeConfidence(Float plateTypeConfidence) {
-            this.plateTypeConfidence = plateTypeConfidence;
-            return this;
-        }
-        public Float getPlateTypeConfidence() {
-            return this.plateTypeConfidence;
-        }
-
-        public RecognizeLicensePlateResponseBodyDataPlates setPlateType(String plateType) {
-            this.plateType = plateType;
-            return this;
-        }
-        public String getPlateType() {
-            return this.plateType;
         }
 
         public RecognizeLicensePlateResponseBodyDataPlates setConfidence(Float confidence) {
@@ -169,12 +153,20 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
             return this.plateNumber;
         }
 
-        public RecognizeLicensePlateResponseBodyDataPlates setRoi(RecognizeLicensePlateResponseBodyDataPlatesRoi roi) {
-            this.roi = roi;
+        public RecognizeLicensePlateResponseBodyDataPlates setPlateType(String plateType) {
+            this.plateType = plateType;
             return this;
         }
-        public RecognizeLicensePlateResponseBodyDataPlatesRoi getRoi() {
-            return this.roi;
+        public String getPlateType() {
+            return this.plateType;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlates setPlateTypeConfidence(Float plateTypeConfidence) {
+            this.plateTypeConfidence = plateTypeConfidence;
+            return this;
+        }
+        public Float getPlateTypeConfidence() {
+            return this.plateTypeConfidence;
         }
 
         public RecognizeLicensePlateResponseBodyDataPlates setPositions(java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> positions) {
@@ -183,6 +175,14 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> getPositions() {
             return this.positions;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlates setRoi(RecognizeLicensePlateResponseBodyDataPlatesRoi roi) {
+            this.roi = roi;
+            return this;
+        }
+        public RecognizeLicensePlateResponseBodyDataPlatesRoi getRoi() {
+            return this.roi;
         }
 
     }

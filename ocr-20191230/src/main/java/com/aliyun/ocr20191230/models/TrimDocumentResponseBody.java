@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class TrimDocumentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public TrimDocumentResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static TrimDocumentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TrimDocumentResponseBody self = new TrimDocumentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public TrimDocumentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public TrimDocumentResponseBody setData(TrimDocumentResponseBodyData data) {
@@ -29,6 +21,14 @@ public class TrimDocumentResponseBody extends TeaModel {
     }
     public TrimDocumentResponseBodyData getData() {
         return this.data;
+    }
+
+    public TrimDocumentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class TrimDocumentResponseBodyData extends TeaModel {

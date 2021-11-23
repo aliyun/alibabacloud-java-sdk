@@ -4,24 +4,16 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTicketInvoiceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RecognizeTicketInvoiceResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public RecognizeTicketInvoiceResponseBodyData data;
-
     public static RecognizeTicketInvoiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTicketInvoiceResponseBody self = new RecognizeTicketInvoiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeTicketInvoiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeTicketInvoiceResponseBody setData(RecognizeTicketInvoiceResponseBodyData data) {
@@ -32,18 +24,26 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeTicketInvoiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeTicketInvoiceResponseBodyDataResultsContent extends TeaModel {
+        @NameInMap("AntiFakeCode")
+        public String antiFakeCode;
+
         @NameInMap("InvoiceCode")
         public String invoiceCode;
-
-        @NameInMap("InvoiceNumber")
-        public String invoiceNumber;
 
         @NameInMap("InvoiceDate")
         public String invoiceDate;
 
-        @NameInMap("AntiFakeCode")
-        public String antiFakeCode;
+        @NameInMap("InvoiceNumber")
+        public String invoiceNumber;
 
         @NameInMap("PayeeName")
         public String payeeName;
@@ -65,20 +65,20 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RecognizeTicketInvoiceResponseBodyDataResultsContent setAntiFakeCode(String antiFakeCode) {
+            this.antiFakeCode = antiFakeCode;
+            return this;
+        }
+        public String getAntiFakeCode() {
+            return this.antiFakeCode;
+        }
+
         public RecognizeTicketInvoiceResponseBodyDataResultsContent setInvoiceCode(String invoiceCode) {
             this.invoiceCode = invoiceCode;
             return this;
         }
         public String getInvoiceCode() {
             return this.invoiceCode;
-        }
-
-        public RecognizeTicketInvoiceResponseBodyDataResultsContent setInvoiceNumber(String invoiceNumber) {
-            this.invoiceNumber = invoiceNumber;
-            return this;
-        }
-        public String getInvoiceNumber() {
-            return this.invoiceNumber;
         }
 
         public RecognizeTicketInvoiceResponseBodyDataResultsContent setInvoiceDate(String invoiceDate) {
@@ -89,12 +89,12 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
             return this.invoiceDate;
         }
 
-        public RecognizeTicketInvoiceResponseBodyDataResultsContent setAntiFakeCode(String antiFakeCode) {
-            this.antiFakeCode = antiFakeCode;
+        public RecognizeTicketInvoiceResponseBodyDataResultsContent setInvoiceNumber(String invoiceNumber) {
+            this.invoiceNumber = invoiceNumber;
             return this;
         }
-        public String getAntiFakeCode() {
-            return this.antiFakeCode;
+        public String getInvoiceNumber() {
+            return this.invoiceNumber;
         }
 
         public RecognizeTicketInvoiceResponseBodyDataResultsContent setPayeeName(String payeeName) {
@@ -252,14 +252,11 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTicketInvoiceResponseBodyDataResults extends TeaModel {
-        @NameInMap("Index")
-        public Long index;
-
         @NameInMap("Content")
         public RecognizeTicketInvoiceResponseBodyDataResultsContent content;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Index")
+        public Long index;
 
         @NameInMap("KeyValueInfos")
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos> keyValueInfos;
@@ -267,17 +264,12 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         @NameInMap("SliceRectangle")
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResultsSliceRectangle> sliceRectangle;
 
+        @NameInMap("Type")
+        public String type;
+
         public static RecognizeTicketInvoiceResponseBodyDataResults build(java.util.Map<String, ?> map) throws Exception {
             RecognizeTicketInvoiceResponseBodyDataResults self = new RecognizeTicketInvoiceResponseBodyDataResults();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeTicketInvoiceResponseBodyDataResults setIndex(Long index) {
-            this.index = index;
-            return this;
-        }
-        public Long getIndex() {
-            return this.index;
         }
 
         public RecognizeTicketInvoiceResponseBodyDataResults setContent(RecognizeTicketInvoiceResponseBodyDataResultsContent content) {
@@ -288,12 +280,12 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
             return this.content;
         }
 
-        public RecognizeTicketInvoiceResponseBodyDataResults setType(String type) {
-            this.type = type;
+        public RecognizeTicketInvoiceResponseBodyDataResults setIndex(Long index) {
+            this.index = index;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public Long getIndex() {
+            return this.index;
         }
 
         public RecognizeTicketInvoiceResponseBodyDataResults setKeyValueInfos(java.util.List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfos> keyValueInfos) {
@@ -312,6 +304,14 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
             return this.sliceRectangle;
         }
 
+        public RecognizeTicketInvoiceResponseBodyDataResults setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class RecognizeTicketInvoiceResponseBodyData extends TeaModel {
@@ -321,9 +321,6 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         @NameInMap("Height")
         public Long height;
 
-        @NameInMap("Width")
-        public Long width;
-
         @NameInMap("OrgHeight")
         public Long orgHeight;
 
@@ -332,6 +329,9 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
 
         @NameInMap("Results")
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResults> results;
+
+        @NameInMap("Width")
+        public Long width;
 
         public static RecognizeTicketInvoiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeTicketInvoiceResponseBodyData self = new RecognizeTicketInvoiceResponseBodyData();
@@ -352,14 +352,6 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         }
         public Long getHeight() {
             return this.height;
-        }
-
-        public RecognizeTicketInvoiceResponseBodyData setWidth(Long width) {
-            this.width = width;
-            return this;
-        }
-        public Long getWidth() {
-            return this.width;
         }
 
         public RecognizeTicketInvoiceResponseBodyData setOrgHeight(Long orgHeight) {
@@ -384,6 +376,14 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResults> getResults() {
             return this.results;
+        }
+
+        public RecognizeTicketInvoiceResponseBodyData setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
         }
 
     }

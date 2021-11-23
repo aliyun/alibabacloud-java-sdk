@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVINCodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeVINCodeResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeVINCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVINCodeResponseBody self = new RecognizeVINCodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVINCodeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeVINCodeResponseBody setData(RecognizeVINCodeResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RecognizeVINCodeResponseBody extends TeaModel {
     }
     public RecognizeVINCodeResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeVINCodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeVINCodeResponseBodyData extends TeaModel {

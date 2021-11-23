@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVerificationcodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeVerificationcodeResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeVerificationcodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVerificationcodeResponseBody self = new RecognizeVerificationcodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVerificationcodeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeVerificationcodeResponseBody setData(RecognizeVerificationcodeResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RecognizeVerificationcodeResponseBody extends TeaModel {
     }
     public RecognizeVerificationcodeResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeVerificationcodeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeVerificationcodeResponseBodyData extends TeaModel {

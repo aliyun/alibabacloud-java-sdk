@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeStampResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeStampResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeStampResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeStampResponseBody self = new RecognizeStampResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeStampResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeStampResponseBody setData(RecognizeStampResponseBodyData data) {
@@ -31,86 +23,12 @@ public class RecognizeStampResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeStampResponseBodyDataResultsText extends TeaModel {
-        @NameInMap("Confidence")
-        public Float confidence;
-
-        @NameInMap("Content")
-        public String content;
-
-        public static RecognizeStampResponseBodyDataResultsText build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeStampResponseBodyDataResultsText self = new RecognizeStampResponseBodyDataResultsText();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeStampResponseBodyDataResultsText setConfidence(Float confidence) {
-            this.confidence = confidence;
-            return this;
-        }
-        public Float getConfidence() {
-            return this.confidence;
-        }
-
-        public RecognizeStampResponseBodyDataResultsText setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
+    public RecognizeStampResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
     }
-
-    public static class RecognizeStampResponseBodyDataResultsRoi extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("Left")
-        public Integer left;
-
-        public static RecognizeStampResponseBodyDataResultsRoi build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeStampResponseBodyDataResultsRoi self = new RecognizeStampResponseBodyDataResultsRoi();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeStampResponseBodyDataResultsRoi setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public RecognizeStampResponseBodyDataResultsRoi setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public RecognizeStampResponseBodyDataResultsRoi setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public RecognizeStampResponseBodyDataResultsRoi setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeStampResponseBodyDataResultsGeneralText extends TeaModel {
@@ -143,27 +61,109 @@ public class RecognizeStampResponseBody extends TeaModel {
 
     }
 
+    public static class RecognizeStampResponseBodyDataResultsRoi extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        public static RecognizeStampResponseBodyDataResultsRoi build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeStampResponseBodyDataResultsRoi self = new RecognizeStampResponseBodyDataResultsRoi();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeStampResponseBodyDataResultsRoi setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public RecognizeStampResponseBodyDataResultsRoi setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public RecognizeStampResponseBodyDataResultsRoi setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public RecognizeStampResponseBodyDataResultsRoi setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class RecognizeStampResponseBodyDataResultsText extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("Content")
+        public String content;
+
+        public static RecognizeStampResponseBodyDataResultsText build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeStampResponseBodyDataResultsText self = new RecognizeStampResponseBodyDataResultsText();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeStampResponseBodyDataResultsText setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public RecognizeStampResponseBodyDataResultsText setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
     public static class RecognizeStampResponseBodyDataResults extends TeaModel {
-        @NameInMap("Text")
-        public RecognizeStampResponseBodyDataResultsText text;
+        @NameInMap("GeneralText")
+        public java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> generalText;
 
         @NameInMap("Roi")
         public RecognizeStampResponseBodyDataResultsRoi roi;
 
-        @NameInMap("GeneralText")
-        public java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> generalText;
+        @NameInMap("Text")
+        public RecognizeStampResponseBodyDataResultsText text;
 
         public static RecognizeStampResponseBodyDataResults build(java.util.Map<String, ?> map) throws Exception {
             RecognizeStampResponseBodyDataResults self = new RecognizeStampResponseBodyDataResults();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeStampResponseBodyDataResults setText(RecognizeStampResponseBodyDataResultsText text) {
-            this.text = text;
+        public RecognizeStampResponseBodyDataResults setGeneralText(java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> generalText) {
+            this.generalText = generalText;
             return this;
         }
-        public RecognizeStampResponseBodyDataResultsText getText() {
-            return this.text;
+        public java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> getGeneralText() {
+            return this.generalText;
         }
 
         public RecognizeStampResponseBodyDataResults setRoi(RecognizeStampResponseBodyDataResultsRoi roi) {
@@ -174,12 +174,12 @@ public class RecognizeStampResponseBody extends TeaModel {
             return this.roi;
         }
 
-        public RecognizeStampResponseBodyDataResults setGeneralText(java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> generalText) {
-            this.generalText = generalText;
+        public RecognizeStampResponseBodyDataResults setText(RecognizeStampResponseBodyDataResultsText text) {
+            this.text = text;
             return this;
         }
-        public java.util.List<RecognizeStampResponseBodyDataResultsGeneralText> getGeneralText() {
-            return this.generalText;
+        public RecognizeStampResponseBodyDataResultsText getText() {
+            return this.text;
         }
 
     }

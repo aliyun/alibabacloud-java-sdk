@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeTableResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTableResponseBody self = new RecognizeTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeTableResponseBody setData(RecognizeTableResponseBodyData data) {
@@ -31,39 +23,39 @@ public class RecognizeTableResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeTableResponseBodyDataTablesTableRowsTableColumns extends TeaModel {
-        @NameInMap("EndRow")
-        public Integer endRow;
+    public RecognizeTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeTableResponseBodyDataTablesTableRowsTableColumns extends TeaModel {
         @NameInMap("EndColumn")
         public Integer endColumn;
 
-        @NameInMap("Width")
-        public Integer width;
+        @NameInMap("EndRow")
+        public Integer endRow;
 
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Texts")
-        public java.util.List<String> texts;
+        @NameInMap("StartColumn")
+        public Integer startColumn;
 
         @NameInMap("StartRow")
         public Integer startRow;
 
-        @NameInMap("StartColumn")
-        public Integer startColumn;
+        @NameInMap("Texts")
+        public java.util.List<String> texts;
+
+        @NameInMap("Width")
+        public Integer width;
 
         public static RecognizeTableResponseBodyDataTablesTableRowsTableColumns build(java.util.Map<String, ?> map) throws Exception {
             RecognizeTableResponseBodyDataTablesTableRowsTableColumns self = new RecognizeTableResponseBodyDataTablesTableRowsTableColumns();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setEndRow(Integer endRow) {
-            this.endRow = endRow;
-            return this;
-        }
-        public Integer getEndRow() {
-            return this.endRow;
         }
 
         public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setEndColumn(Integer endColumn) {
@@ -74,12 +66,12 @@ public class RecognizeTableResponseBody extends TeaModel {
             return this.endColumn;
         }
 
-        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setWidth(Integer width) {
-            this.width = width;
+        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setEndRow(Integer endRow) {
+            this.endRow = endRow;
             return this;
         }
-        public Integer getWidth() {
-            return this.width;
+        public Integer getEndRow() {
+            return this.endRow;
         }
 
         public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setHeight(Integer height) {
@@ -90,12 +82,12 @@ public class RecognizeTableResponseBody extends TeaModel {
             return this.height;
         }
 
-        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setTexts(java.util.List<String> texts) {
-            this.texts = texts;
+        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setStartColumn(Integer startColumn) {
+            this.startColumn = startColumn;
             return this;
         }
-        public java.util.List<String> getTexts() {
-            return this.texts;
+        public Integer getStartColumn() {
+            return this.startColumn;
         }
 
         public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setStartRow(Integer startRow) {
@@ -106,12 +98,20 @@ public class RecognizeTableResponseBody extends TeaModel {
             return this.startRow;
         }
 
-        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setStartColumn(Integer startColumn) {
-            this.startColumn = startColumn;
+        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setTexts(java.util.List<String> texts) {
+            this.texts = texts;
             return this;
         }
-        public Integer getStartColumn() {
-            return this.startColumn;
+        public java.util.List<String> getTexts() {
+            return this.texts;
+        }
+
+        public RecognizeTableResponseBodyDataTablesTableRowsTableColumns setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }
@@ -139,11 +139,11 @@ public class RecognizeTableResponseBody extends TeaModel {
         @NameInMap("Head")
         public java.util.List<String> head;
 
-        @NameInMap("Tail")
-        public java.util.List<String> tail;
-
         @NameInMap("TableRows")
         public java.util.List<RecognizeTableResponseBodyDataTablesTableRows> tableRows;
+
+        @NameInMap("Tail")
+        public java.util.List<String> tail;
 
         public static RecognizeTableResponseBodyDataTables build(java.util.Map<String, ?> map) throws Exception {
             RecognizeTableResponseBodyDataTables self = new RecognizeTableResponseBodyDataTables();
@@ -158,20 +158,20 @@ public class RecognizeTableResponseBody extends TeaModel {
             return this.head;
         }
 
-        public RecognizeTableResponseBodyDataTables setTail(java.util.List<String> tail) {
-            this.tail = tail;
-            return this;
-        }
-        public java.util.List<String> getTail() {
-            return this.tail;
-        }
-
         public RecognizeTableResponseBodyDataTables setTableRows(java.util.List<RecognizeTableResponseBodyDataTablesTableRows> tableRows) {
             this.tableRows = tableRows;
             return this;
         }
         public java.util.List<RecognizeTableResponseBodyDataTablesTableRows> getTableRows() {
             return this.tableRows;
+        }
+
+        public RecognizeTableResponseBodyDataTables setTail(java.util.List<String> tail) {
+            this.tail = tail;
+            return this;
+        }
+        public java.util.List<String> getTail() {
+            return this.tail;
         }
 
     }
