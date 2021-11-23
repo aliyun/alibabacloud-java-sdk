@@ -4,23 +4,15 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class EnableBillGenerationRequest extends TeaModel {
-    @NameInMap("ProductCode")
-    public String productCode;
-
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProductCode")
+    public String productCode;
 
     public static EnableBillGenerationRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableBillGenerationRequest self = new EnableBillGenerationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableBillGenerationRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
     }
 
     public EnableBillGenerationRequest setOwnerId(Long ownerId) {
@@ -29,6 +21,14 @@ public class EnableBillGenerationRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public EnableBillGenerationRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
 }

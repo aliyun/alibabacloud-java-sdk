@@ -4,76 +4,36 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePackagePriceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ProductCode")
-    public String productCode;
-
-    @NameInMap("PackageType")
-    public String packageType;
+    @NameInMap("Duration")
+    public Integer duration;
 
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
-    @NameInMap("Specification")
-    public String specification;
-
-    @NameInMap("Duration")
-    public Integer duration;
-
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("OrderType")
     public String orderType;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PackageType")
+    public String packageType;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    @NameInMap("Specification")
+    public String specification;
 
     public static GetResourcePackagePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourcePackagePriceRequest self = new GetResourcePackagePriceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetResourcePackagePriceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GetResourcePackagePriceRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
-    }
-
-    public GetResourcePackagePriceRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
-    }
-
-    public GetResourcePackagePriceRequest setEffectiveDate(String effectiveDate) {
-        this.effectiveDate = effectiveDate;
-        return this;
-    }
-    public String getEffectiveDate() {
-        return this.effectiveDate;
-    }
-
-    public GetResourcePackagePriceRequest setSpecification(String specification) {
-        this.specification = specification;
-        return this;
-    }
-    public String getSpecification() {
-        return this.specification;
     }
 
     public GetResourcePackagePriceRequest setDuration(Integer duration) {
@@ -84,12 +44,20 @@ public class GetResourcePackagePriceRequest extends TeaModel {
         return this.duration;
     }
 
-    public GetResourcePackagePriceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
+    public GetResourcePackagePriceRequest setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
         return this;
     }
-    public String getPricingCycle() {
-        return this.pricingCycle;
+    public String getEffectiveDate() {
+        return this.effectiveDate;
+    }
+
+    public GetResourcePackagePriceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetResourcePackagePriceRequest setOrderType(String orderType) {
@@ -100,12 +68,44 @@ public class GetResourcePackagePriceRequest extends TeaModel {
         return this.orderType;
     }
 
-    public GetResourcePackagePriceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public GetResourcePackagePriceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetResourcePackagePriceRequest setPackageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    public String getPackageType() {
+        return this.packageType;
+    }
+
+    public GetResourcePackagePriceRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public GetResourcePackagePriceRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public GetResourcePackagePriceRequest setSpecification(String specification) {
+        this.specification = specification;
+        return this;
+    }
+    public String getSpecification() {
+        return this.specification;
     }
 
 }

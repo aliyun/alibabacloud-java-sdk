@@ -7,6 +7,9 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeResourceUsageTotalResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeResourceUsageTotalResponseBodyData data;
 
     public static DescribeResourceUsageTotalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceUsageTotalResponseBody self = new DescribeResourceUsageTotalResponseBody();
@@ -30,6 +30,14 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeResourceUsageTotalResponseBody setData(DescribeResourceUsageTotalResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeResourceUsageTotalResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeResourceUsageTotalResponseBody setMessage(String message) {
@@ -56,32 +64,16 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeResourceUsageTotalResponseBody setData(DescribeResourceUsageTotalResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeResourceUsageTotalResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeResourceUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
-        @NameInMap("UsagePercentage")
-        public Float usagePercentage;
-
         @NameInMap("Period")
         public String period;
+
+        @NameInMap("UsagePercentage")
+        public Float usagePercentage;
 
         public static DescribeResourceUsageTotalResponseBodyDataPeriodCoverage build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceUsageTotalResponseBodyDataPeriodCoverage self = new DescribeResourceUsageTotalResponseBodyDataPeriodCoverage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeResourceUsageTotalResponseBodyDataPeriodCoverage setUsagePercentage(Float usagePercentage) {
-            this.usagePercentage = usagePercentage;
-            return this;
-        }
-        public Float getUsagePercentage() {
-            return this.usagePercentage;
         }
 
         public DescribeResourceUsageTotalResponseBodyDataPeriodCoverage setPeriod(String period) {
@@ -92,23 +84,31 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             return this.period;
         }
 
+        public DescribeResourceUsageTotalResponseBodyDataPeriodCoverage setUsagePercentage(Float usagePercentage) {
+            this.usagePercentage = usagePercentage;
+            return this;
+        }
+        public Float getUsagePercentage() {
+            return this.usagePercentage;
+        }
+
     }
 
     public static class DescribeResourceUsageTotalResponseBodyDataTotalUsage extends TeaModel {
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
-        @NameInMap("SavedCost")
-        public Float savedCost;
-
-        @NameInMap("UsagePercentage")
-        public Float usagePercentage;
-
         @NameInMap("PotentialSavedCost")
         public Float potentialSavedCost;
 
         @NameInMap("ReservationCost")
         public Float reservationCost;
+
+        @NameInMap("SavedCost")
+        public Float savedCost;
+
+        @NameInMap("UsagePercentage")
+        public Float usagePercentage;
 
         public static DescribeResourceUsageTotalResponseBodyDataTotalUsage build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceUsageTotalResponseBodyDataTotalUsage self = new DescribeResourceUsageTotalResponseBodyDataTotalUsage();
@@ -121,22 +121,6 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
         public Float getPostpaidCost() {
             return this.postpaidCost;
-        }
-
-        public DescribeResourceUsageTotalResponseBodyDataTotalUsage setSavedCost(Float savedCost) {
-            this.savedCost = savedCost;
-            return this;
-        }
-        public Float getSavedCost() {
-            return this.savedCost;
-        }
-
-        public DescribeResourceUsageTotalResponseBodyDataTotalUsage setUsagePercentage(Float usagePercentage) {
-            this.usagePercentage = usagePercentage;
-            return this;
-        }
-        public Float getUsagePercentage() {
-            return this.usagePercentage;
         }
 
         public DescribeResourceUsageTotalResponseBodyDataTotalUsage setPotentialSavedCost(Float potentialSavedCost) {
@@ -153,6 +137,22 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
         public Float getReservationCost() {
             return this.reservationCost;
+        }
+
+        public DescribeResourceUsageTotalResponseBodyDataTotalUsage setSavedCost(Float savedCost) {
+            this.savedCost = savedCost;
+            return this;
+        }
+        public Float getSavedCost() {
+            return this.savedCost;
+        }
+
+        public DescribeResourceUsageTotalResponseBodyDataTotalUsage setUsagePercentage(Float usagePercentage) {
+            this.usagePercentage = usagePercentage;
+            return this;
+        }
+        public Float getUsagePercentage() {
+            return this.usagePercentage;
         }
 
     }

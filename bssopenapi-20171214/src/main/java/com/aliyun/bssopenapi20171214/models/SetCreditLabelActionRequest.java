@@ -7,9 +7,6 @@ public class SetCreditLabelActionRequest extends TeaModel {
     @NameInMap("ActionType")
     public String actionType;
 
-    @NameInMap("Uid")
-    public String uid;
-
     @NameInMap("ClearCycle")
     public String clearCycle;
 
@@ -55,6 +52,9 @@ public class SetCreditLabelActionRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("Uid")
+    public String uid;
+
     public static SetCreditLabelActionRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCreditLabelActionRequest self = new SetCreditLabelActionRequest();
         return TeaModel.build(map, self);
@@ -66,14 +66,6 @@ public class SetCreditLabelActionRequest extends TeaModel {
     }
     public String getActionType() {
         return this.actionType;
-    }
-
-    public SetCreditLabelActionRequest setUid(String uid) {
-        this.uid = uid;
-        return this;
-    }
-    public String getUid() {
-        return this.uid;
     }
 
     public SetCreditLabelActionRequest setClearCycle(String clearCycle) {
@@ -194,6 +186,14 @@ public class SetCreditLabelActionRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public SetCreditLabelActionRequest setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
     }
 
 }

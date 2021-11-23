@@ -4,23 +4,23 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class AddAccountRelationRequest extends TeaModel {
-    @NameInMap("RelationType")
-    public String relationType;
-
-    @NameInMap("ParentUserId")
-    public Long parentUserId;
-
     @NameInMap("ChildNick")
     public String childNick;
 
     @NameInMap("ChildUserId")
     public Long childUserId;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ParentUserId")
+    public Long parentUserId;
 
     @NameInMap("PermissionCodes")
     public java.util.List<String> permissionCodes;
+
+    @NameInMap("RelationType")
+    public String relationType;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RoleCodes")
     public java.util.List<String> roleCodes;
@@ -28,22 +28,6 @@ public class AddAccountRelationRequest extends TeaModel {
     public static AddAccountRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAccountRelationRequest self = new AddAccountRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddAccountRelationRequest setRelationType(String relationType) {
-        this.relationType = relationType;
-        return this;
-    }
-    public String getRelationType() {
-        return this.relationType;
-    }
-
-    public AddAccountRelationRequest setParentUserId(Long parentUserId) {
-        this.parentUserId = parentUserId;
-        return this;
-    }
-    public Long getParentUserId() {
-        return this.parentUserId;
     }
 
     public AddAccountRelationRequest setChildNick(String childNick) {
@@ -62,12 +46,12 @@ public class AddAccountRelationRequest extends TeaModel {
         return this.childUserId;
     }
 
-    public AddAccountRelationRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddAccountRelationRequest setParentUserId(Long parentUserId) {
+        this.parentUserId = parentUserId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getParentUserId() {
+        return this.parentUserId;
     }
 
     public AddAccountRelationRequest setPermissionCodes(java.util.List<String> permissionCodes) {
@@ -76,6 +60,22 @@ public class AddAccountRelationRequest extends TeaModel {
     }
     public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
+    }
+
+    public AddAccountRelationRequest setRelationType(String relationType) {
+        this.relationType = relationType;
+        return this;
+    }
+    public String getRelationType() {
+        return this.relationType;
+    }
+
+    public AddAccountRelationRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddAccountRelationRequest setRoleCodes(java.util.List<String> roleCodes) {

@@ -7,6 +7,9 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetCustomerAccountInfoResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetCustomerAccountInfoResponseBodyData data;
 
     public static GetCustomerAccountInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomerAccountInfoResponseBody self = new GetCustomerAccountInfoResponseBody();
@@ -30,6 +30,14 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetCustomerAccountInfoResponseBody setData(GetCustomerAccountInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetCustomerAccountInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public GetCustomerAccountInfoResponseBody setMessage(String message) {
@@ -56,60 +64,28 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetCustomerAccountInfoResponseBody setData(GetCustomerAccountInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetCustomerAccountInfoResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetCustomerAccountInfoResponseBodyData extends TeaModel {
-        @NameInMap("Mpk")
-        public Long mpk;
-
-        @NameInMap("LoginEmail")
-        public String loginEmail;
-
-        @NameInMap("HostingStatus")
-        public String hostingStatus;
-
         @NameInMap("AccountType")
         public String accountType;
 
         @NameInMap("CreditLimitStatus")
         public String creditLimitStatus;
 
+        @NameInMap("HostingStatus")
+        public String hostingStatus;
+
         @NameInMap("IsCertified")
         public Boolean isCertified;
+
+        @NameInMap("LoginEmail")
+        public String loginEmail;
+
+        @NameInMap("Mpk")
+        public Long mpk;
 
         public static GetCustomerAccountInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCustomerAccountInfoResponseBodyData self = new GetCustomerAccountInfoResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetCustomerAccountInfoResponseBodyData setMpk(Long mpk) {
-            this.mpk = mpk;
-            return this;
-        }
-        public Long getMpk() {
-            return this.mpk;
-        }
-
-        public GetCustomerAccountInfoResponseBodyData setLoginEmail(String loginEmail) {
-            this.loginEmail = loginEmail;
-            return this;
-        }
-        public String getLoginEmail() {
-            return this.loginEmail;
-        }
-
-        public GetCustomerAccountInfoResponseBodyData setHostingStatus(String hostingStatus) {
-            this.hostingStatus = hostingStatus;
-            return this;
-        }
-        public String getHostingStatus() {
-            return this.hostingStatus;
         }
 
         public GetCustomerAccountInfoResponseBodyData setAccountType(String accountType) {
@@ -128,12 +104,36 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             return this.creditLimitStatus;
         }
 
+        public GetCustomerAccountInfoResponseBodyData setHostingStatus(String hostingStatus) {
+            this.hostingStatus = hostingStatus;
+            return this;
+        }
+        public String getHostingStatus() {
+            return this.hostingStatus;
+        }
+
         public GetCustomerAccountInfoResponseBodyData setIsCertified(Boolean isCertified) {
             this.isCertified = isCertified;
             return this;
         }
         public Boolean getIsCertified() {
             return this.isCertified;
+        }
+
+        public GetCustomerAccountInfoResponseBodyData setLoginEmail(String loginEmail) {
+            this.loginEmail = loginEmail;
+            return this;
+        }
+        public String getLoginEmail() {
+            return this.loginEmail;
+        }
+
+        public GetCustomerAccountInfoResponseBodyData setMpk(Long mpk) {
+            this.mpk = mpk;
+            return this;
+        }
+        public Long getMpk() {
+            return this.mpk;
         }
 
     }

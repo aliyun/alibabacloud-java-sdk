@@ -4,20 +4,11 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountTransactionsRequest extends TeaModel {
-    @NameInMap("TransactionNumber")
-    public String transactionNumber;
-
-    @NameInMap("RecordID")
-    public String recordID;
-
-    @NameInMap("TransactionChannelSN")
-    public String transactionChannelSN;
+    @NameInMap("CreateTimeEnd")
+    public String createTimeEnd;
 
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
-
-    @NameInMap("CreateTimeEnd")
-    public String createTimeEnd;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -25,17 +16,50 @@ public class QueryAccountTransactionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RecordID")
+    public String recordID;
+
+    @NameInMap("TransactionChannelSN")
+    public String transactionChannelSN;
+
+    @NameInMap("TransactionNumber")
+    public String transactionNumber;
+
     public static QueryAccountTransactionsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountTransactionsRequest self = new QueryAccountTransactionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryAccountTransactionsRequest setTransactionNumber(String transactionNumber) {
-        this.transactionNumber = transactionNumber;
+    public QueryAccountTransactionsRequest setCreateTimeEnd(String createTimeEnd) {
+        this.createTimeEnd = createTimeEnd;
         return this;
     }
-    public String getTransactionNumber() {
-        return this.transactionNumber;
+    public String getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    public QueryAccountTransactionsRequest setCreateTimeStart(String createTimeStart) {
+        this.createTimeStart = createTimeStart;
+        return this;
+    }
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    public QueryAccountTransactionsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryAccountTransactionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryAccountTransactionsRequest setRecordID(String recordID) {
@@ -54,36 +78,12 @@ public class QueryAccountTransactionsRequest extends TeaModel {
         return this.transactionChannelSN;
     }
 
-    public QueryAccountTransactionsRequest setCreateTimeStart(String createTimeStart) {
-        this.createTimeStart = createTimeStart;
+    public QueryAccountTransactionsRequest setTransactionNumber(String transactionNumber) {
+        this.transactionNumber = transactionNumber;
         return this;
     }
-    public String getCreateTimeStart() {
-        return this.createTimeStart;
-    }
-
-    public QueryAccountTransactionsRequest setCreateTimeEnd(String createTimeEnd) {
-        this.createTimeEnd = createTimeEnd;
-        return this;
-    }
-    public String getCreateTimeEnd() {
-        return this.createTimeEnd;
-    }
-
-    public QueryAccountTransactionsRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public QueryAccountTransactionsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getTransactionNumber() {
+        return this.transactionNumber;
     }
 
 }

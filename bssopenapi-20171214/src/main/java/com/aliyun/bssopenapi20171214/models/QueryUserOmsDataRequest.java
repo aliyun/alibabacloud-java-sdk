@@ -4,17 +4,8 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryUserOmsDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("Table")
-    public String table;
-
     @NameInMap("DataType")
     public String dataType;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,28 +13,21 @@ public class QueryUserOmsDataRequest extends TeaModel {
     @NameInMap("Marker")
     public String marker;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Table")
+    public String table;
 
     public static QueryUserOmsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryUserOmsDataRequest self = new QueryUserOmsDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryUserOmsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public QueryUserOmsDataRequest setTable(String table) {
-        this.table = table;
-        return this;
-    }
-    public String getTable() {
-        return this.table;
     }
 
     public QueryUserOmsDataRequest setDataType(String dataType) {
@@ -52,14 +36,6 @@ public class QueryUserOmsDataRequest extends TeaModel {
     }
     public String getDataType() {
         return this.dataType;
-    }
-
-    public QueryUserOmsDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public QueryUserOmsDataRequest setEndTime(String endTime) {
@@ -78,12 +54,36 @@ public class QueryUserOmsDataRequest extends TeaModel {
         return this.marker;
     }
 
+    public QueryUserOmsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public QueryUserOmsDataRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryUserOmsDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public QueryUserOmsDataRequest setTable(String table) {
+        this.table = table;
+        return this;
+    }
+    public String getTable() {
+        return this.table;
     }
 
 }

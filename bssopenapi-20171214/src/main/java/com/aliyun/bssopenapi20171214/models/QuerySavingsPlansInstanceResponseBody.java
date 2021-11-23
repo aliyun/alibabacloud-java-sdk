@@ -7,6 +7,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QuerySavingsPlansInstanceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QuerySavingsPlansInstanceResponseBodyData data;
 
     public static QuerySavingsPlansInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingsPlansInstanceResponseBody self = new QuerySavingsPlansInstanceResponseBody();
@@ -30,6 +30,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QuerySavingsPlansInstanceResponseBody setData(QuerySavingsPlansInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySavingsPlansInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public QuerySavingsPlansInstanceResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QuerySavingsPlansInstanceResponseBody setData(QuerySavingsPlansInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySavingsPlansInstanceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItemsTags extends TeaModel {
@@ -95,118 +95,69 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyDataItems extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("SavingsType")
-        public String savingsType;
-
-        @NameInMap("Utilization")
-        public String utilization;
-
-        @NameInMap("PrepayFee")
-        public String prepayFee;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("AllocationStatus")
+        public String allocationStatus;
 
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("Cycle")
+        public String cycle;
+
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("AllocationStatus")
-        public String allocationStatus;
+        @NameInMap("EndTimestamp")
+        public Long endTimestamp;
 
         @NameInMap("InstanceFamily")
         public String instanceFamily;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
-        @NameInMap("TotalSave")
-        public String totalSave;
+        @NameInMap("LastBillTotalUsage")
+        public String lastBillTotalUsage;
 
-        @NameInMap("PoolValue")
-        public String poolValue;
+        @NameInMap("LastBillUtilization")
+        public String lastBillUtilization;
 
         @NameInMap("PayMode")
         public String payMode;
 
+        @NameInMap("PoolValue")
+        public String poolValue;
+
+        @NameInMap("PrepayFee")
+        public String prepayFee;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SavingsType")
+        public String savingsType;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("StartTimestamp")
+        public Long startTimestamp;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Tags")
         public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags;
+
+        @NameInMap("TotalSave")
+        public String totalSave;
+
+        @NameInMap("Utilization")
+        public String utilization;
 
         public static QuerySavingsPlansInstanceResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             QuerySavingsPlansInstanceResponseBodyDataItems self = new QuerySavingsPlansInstanceResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setSavingsType(String savingsType) {
-            this.savingsType = savingsType;
-            return this;
-        }
-        public String getSavingsType() {
-            return this.savingsType;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setUtilization(String utilization) {
-            this.utilization = utilization;
-            return this;
-        }
-        public String getUtilization() {
-            return this.utilization;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setPrepayFee(String prepayFee) {
-            this.prepayFee = prepayFee;
-            return this;
-        }
-        public String getPrepayFee() {
-            return this.prepayFee;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyDataItems setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setAllocationStatus(String allocationStatus) {
@@ -217,6 +168,38 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
+        public QuerySavingsPlansInstanceResponseBodyDataItems setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setCycle(String cycle) {
+            this.cycle = cycle;
+            return this;
+        }
+        public String getCycle() {
+            return this.cycle;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setEndTimestamp(Long endTimestamp) {
+            this.endTimestamp = endTimestamp;
+            return this;
+        }
+        public Long getEndTimestamp() {
+            return this.endTimestamp;
+        }
+
         public QuerySavingsPlansInstanceResponseBodyDataItems setInstanceFamily(String instanceFamily) {
             this.instanceFamily = instanceFamily;
             return this;
@@ -225,28 +208,28 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.instanceFamily;
         }
 
-        public QuerySavingsPlansInstanceResponseBodyDataItems setRegion(String region) {
-            this.region = region;
+        public QuerySavingsPlansInstanceResponseBodyDataItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
-        public QuerySavingsPlansInstanceResponseBodyDataItems setTotalSave(String totalSave) {
-            this.totalSave = totalSave;
+        public QuerySavingsPlansInstanceResponseBodyDataItems setLastBillTotalUsage(String lastBillTotalUsage) {
+            this.lastBillTotalUsage = lastBillTotalUsage;
             return this;
         }
-        public String getTotalSave() {
-            return this.totalSave;
+        public String getLastBillTotalUsage() {
+            return this.lastBillTotalUsage;
         }
 
-        public QuerySavingsPlansInstanceResponseBodyDataItems setPoolValue(String poolValue) {
-            this.poolValue = poolValue;
+        public QuerySavingsPlansInstanceResponseBodyDataItems setLastBillUtilization(String lastBillUtilization) {
+            this.lastBillUtilization = lastBillUtilization;
             return this;
         }
-        public String getPoolValue() {
-            return this.poolValue;
+        public String getLastBillUtilization() {
+            return this.lastBillUtilization;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setPayMode(String payMode) {
@@ -257,6 +240,62 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.payMode;
         }
 
+        public QuerySavingsPlansInstanceResponseBodyDataItems setPoolValue(String poolValue) {
+            this.poolValue = poolValue;
+            return this;
+        }
+        public String getPoolValue() {
+            return this.poolValue;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setPrepayFee(String prepayFee) {
+            this.prepayFee = prepayFee;
+            return this;
+        }
+        public String getPrepayFee() {
+            return this.prepayFee;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setSavingsType(String savingsType) {
+            this.savingsType = savingsType;
+            return this;
+        }
+        public String getSavingsType() {
+            return this.savingsType;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setStartTimestamp(Long startTimestamp) {
+            this.startTimestamp = startTimestamp;
+            return this;
+        }
+        public Long getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public QuerySavingsPlansInstanceResponseBodyDataItems setTags(java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags) {
             this.tags = tags;
             return this;
@@ -265,9 +304,28 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.tags;
         }
 
+        public QuerySavingsPlansInstanceResponseBodyDataItems setTotalSave(String totalSave) {
+            this.totalSave = totalSave;
+            return this;
+        }
+        public String getTotalSave() {
+            return this.totalSave;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setUtilization(String utilization) {
+            this.utilization = utilization;
+            return this;
+        }
+        public String getUtilization() {
+            return this.utilization;
+        }
+
     }
 
     public static class QuerySavingsPlansInstanceResponseBodyData extends TeaModel {
+        @NameInMap("Items")
+        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -277,12 +335,17 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Items")
-        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items;
-
         public static QuerySavingsPlansInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySavingsPlansInstanceResponseBodyData self = new QuerySavingsPlansInstanceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyData setItems(java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public QuerySavingsPlansInstanceResponseBodyData setPageNum(Integer pageNum) {
@@ -307,14 +370,6 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public QuerySavingsPlansInstanceResponseBodyData setItems(java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
     }

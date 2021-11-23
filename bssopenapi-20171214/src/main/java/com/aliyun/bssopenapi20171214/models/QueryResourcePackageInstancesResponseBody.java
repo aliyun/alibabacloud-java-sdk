@@ -4,33 +4,73 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResourcePackageInstancesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryResourcePackageInstancesResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Page")
+    public Integer page;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("Data")
-    public QueryResourcePackageInstancesResponseBodyData data;
 
     public static QueryResourcePackageInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryResourcePackageInstancesResponseBody self = new QueryResourcePackageInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryResourcePackageInstancesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryResourcePackageInstancesResponseBody setData(QueryResourcePackageInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryResourcePackageInstancesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryResourcePackageInstancesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryResourcePackageInstancesResponseBody setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public QueryResourcePackageInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryResourcePackageInstancesResponseBody setRequestId(String requestId) {
@@ -49,52 +89,12 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryResourcePackageInstancesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryResourcePackageInstancesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryResourcePackageInstancesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public QueryResourcePackageInstancesResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public QueryResourcePackageInstancesResponseBody setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public QueryResourcePackageInstancesResponseBody setData(QueryResourcePackageInstancesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryResourcePackageInstancesResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts extends TeaModel {
@@ -117,17 +117,17 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryResourcePackageInstancesResponseBodyDataInstancesInstance extends TeaModel {
+        @NameInMap("ApplicableProducts")
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts;
+
+        @NameInMap("DeductType")
+        public String deductType;
+
+        @NameInMap("EffectiveTime")
+        public String effectiveTime;
+
         @NameInMap("ExpiryTime")
         public String expiryTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("RemainingAmountUnit")
-        public String remainingAmountUnit;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -135,30 +135,54 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         @NameInMap("PackageType")
         public String packageType;
 
-        @NameInMap("EffectiveTime")
-        public String effectiveTime;
-
         @NameInMap("Region")
         public String region;
-
-        @NameInMap("TotalAmount")
-        public String totalAmount;
-
-        @NameInMap("DeductType")
-        public String deductType;
-
-        @NameInMap("TotalAmountUnit")
-        public String totalAmountUnit;
 
         @NameInMap("RemainingAmount")
         public String remainingAmount;
 
-        @NameInMap("ApplicableProducts")
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts;
+        @NameInMap("RemainingAmountUnit")
+        public String remainingAmountUnit;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TotalAmount")
+        public String totalAmount;
+
+        @NameInMap("TotalAmountUnit")
+        public String totalAmountUnit;
 
         public static QueryResourcePackageInstancesResponseBodyDataInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             QueryResourcePackageInstancesResponseBodyDataInstancesInstance self = new QueryResourcePackageInstancesResponseBodyDataInstancesInstance();
             return TeaModel.build(map, self);
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setApplicableProducts(QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts) {
+            this.applicableProducts = applicableProducts;
+            return this;
+        }
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts getApplicableProducts() {
+            return this.applicableProducts;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setDeductType(String deductType) {
+            this.deductType = deductType;
+            return this;
+        }
+        public String getDeductType() {
+            return this.deductType;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setEffectiveTime(String effectiveTime) {
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+        public String getEffectiveTime() {
+            return this.effectiveTime;
         }
 
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setExpiryTime(String expiryTime) {
@@ -167,30 +191,6 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
         public String getExpiryTime() {
             return this.expiryTime;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRemainingAmountUnit(String remainingAmountUnit) {
-            this.remainingAmountUnit = remainingAmountUnit;
-            return this;
-        }
-        public String getRemainingAmountUnit() {
-            return this.remainingAmountUnit;
         }
 
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setInstanceId(String instanceId) {
@@ -209,44 +209,12 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             return this.packageType;
         }
 
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setEffectiveTime(String effectiveTime) {
-            this.effectiveTime = effectiveTime;
-            return this;
-        }
-        public String getEffectiveTime() {
-            return this.effectiveTime;
-        }
-
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setTotalAmount(String totalAmount) {
-            this.totalAmount = totalAmount;
-            return this;
-        }
-        public String getTotalAmount() {
-            return this.totalAmount;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setDeductType(String deductType) {
-            this.deductType = deductType;
-            return this;
-        }
-        public String getDeductType() {
-            return this.deductType;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setTotalAmountUnit(String totalAmountUnit) {
-            this.totalAmountUnit = totalAmountUnit;
-            return this;
-        }
-        public String getTotalAmountUnit() {
-            return this.totalAmountUnit;
         }
 
         public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRemainingAmount(String remainingAmount) {
@@ -257,12 +225,44 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
             return this.remainingAmount;
         }
 
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setApplicableProducts(QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts applicableProducts) {
-            this.applicableProducts = applicableProducts;
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRemainingAmountUnit(String remainingAmountUnit) {
+            this.remainingAmountUnit = remainingAmountUnit;
             return this;
         }
-        public QueryResourcePackageInstancesResponseBodyDataInstancesInstanceApplicableProducts getApplicableProducts() {
-            return this.applicableProducts;
+        public String getRemainingAmountUnit() {
+            return this.remainingAmountUnit;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setTotalAmount(String totalAmount) {
+            this.totalAmount = totalAmount;
+            return this;
+        }
+        public String getTotalAmount() {
+            return this.totalAmount;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyDataInstancesInstance setTotalAmountUnit(String totalAmountUnit) {
+            this.totalAmountUnit = totalAmountUnit;
+            return this;
+        }
+        public String getTotalAmountUnit() {
+            return this.totalAmountUnit;
         }
 
     }
@@ -287,6 +287,12 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
     }
 
     public static class QueryResourcePackageInstancesResponseBodyData extends TeaModel {
+        @NameInMap("HostId")
+        public String hostId;
+
+        @NameInMap("Instances")
+        public QueryResourcePackageInstancesResponseBodyDataInstances instances;
+
         @NameInMap("PageNum")
         public String pageNum;
 
@@ -296,15 +302,25 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public String totalCount;
 
-        @NameInMap("HostId")
-        public String hostId;
-
-        @NameInMap("Instances")
-        public QueryResourcePackageInstancesResponseBodyDataInstances instances;
-
         public static QueryResourcePackageInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryResourcePackageInstancesResponseBodyData self = new QueryResourcePackageInstancesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryResourcePackageInstancesResponseBodyData setHostId(String hostId) {
+            this.hostId = hostId;
+            return this;
+        }
+        public String getHostId() {
+            return this.hostId;
+        }
+
+        public QueryResourcePackageInstancesResponseBodyData setInstances(QueryResourcePackageInstancesResponseBodyDataInstances instances) {
+            this.instances = instances;
+            return this;
+        }
+        public QueryResourcePackageInstancesResponseBodyDataInstances getInstances() {
+            return this.instances;
         }
 
         public QueryResourcePackageInstancesResponseBodyData setPageNum(String pageNum) {
@@ -329,22 +345,6 @@ public class QueryResourcePackageInstancesResponseBody extends TeaModel {
         }
         public String getTotalCount() {
             return this.totalCount;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyData setHostId(String hostId) {
-            this.hostId = hostId;
-            return this;
-        }
-        public String getHostId() {
-            return this.hostId;
-        }
-
-        public QueryResourcePackageInstancesResponseBodyData setInstances(QueryResourcePackageInstancesResponseBodyDataInstances instances) {
-            this.instances = instances;
-            return this;
-        }
-        public QueryResourcePackageInstancesResponseBodyDataInstances getInstances() {
-            return this.instances;
         }
 
     }

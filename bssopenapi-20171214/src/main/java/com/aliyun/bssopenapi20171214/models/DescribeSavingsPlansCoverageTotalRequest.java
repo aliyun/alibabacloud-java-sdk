@@ -4,8 +4,8 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
-    @NameInMap("StartPeriod")
-    public String startPeriod;
+    @NameInMap("BillOwnerId")
+    public Long billOwnerId;
 
     @NameInMap("EndPeriod")
     public String endPeriod;
@@ -13,20 +13,20 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
     @NameInMap("PeriodType")
     public String periodType;
 
-    @NameInMap("BillOwnerId")
-    public Long billOwnerId;
+    @NameInMap("StartPeriod")
+    public String startPeriod;
 
     public static DescribeSavingsPlansCoverageTotalRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSavingsPlansCoverageTotalRequest self = new DescribeSavingsPlansCoverageTotalRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSavingsPlansCoverageTotalRequest setStartPeriod(String startPeriod) {
-        this.startPeriod = startPeriod;
+    public DescribeSavingsPlansCoverageTotalRequest setBillOwnerId(Long billOwnerId) {
+        this.billOwnerId = billOwnerId;
         return this;
     }
-    public String getStartPeriod() {
-        return this.startPeriod;
+    public Long getBillOwnerId() {
+        return this.billOwnerId;
     }
 
     public DescribeSavingsPlansCoverageTotalRequest setEndPeriod(String endPeriod) {
@@ -45,12 +45,12 @@ public class DescribeSavingsPlansCoverageTotalRequest extends TeaModel {
         return this.periodType;
     }
 
-    public DescribeSavingsPlansCoverageTotalRequest setBillOwnerId(Long billOwnerId) {
-        this.billOwnerId = billOwnerId;
+    public DescribeSavingsPlansCoverageTotalRequest setStartPeriod(String startPeriod) {
+        this.startPeriod = startPeriod;
         return this;
     }
-    public Long getBillOwnerId() {
-        return this.billOwnerId;
+    public String getStartPeriod() {
+        return this.startPeriod;
     }
 
 }

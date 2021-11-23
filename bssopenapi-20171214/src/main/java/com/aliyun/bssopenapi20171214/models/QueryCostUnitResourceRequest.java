@@ -7,14 +7,14 @@ public class QueryCostUnitResourceRequest extends TeaModel {
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
-    @NameInMap("UnitId")
-    public Long unitId;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("UnitId")
+    public Long unitId;
 
     public static QueryCostUnitResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCostUnitResourceRequest self = new QueryCostUnitResourceRequest();
@@ -27,14 +27,6 @@ public class QueryCostUnitResourceRequest extends TeaModel {
     }
     public Long getOwnerUid() {
         return this.ownerUid;
-    }
-
-    public QueryCostUnitResourceRequest setUnitId(Long unitId) {
-        this.unitId = unitId;
-        return this;
-    }
-    public Long getUnitId() {
-        return this.unitId;
     }
 
     public QueryCostUnitResourceRequest setPageNum(Integer pageNum) {
@@ -51,6 +43,14 @@ public class QueryCostUnitResourceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryCostUnitResourceRequest setUnitId(Long unitId) {
+        this.unitId = unitId;
+        return this;
+    }
+    public Long getUnitId() {
+        return this.unitId;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetRenewalRequest extends TeaModel {
-    @NameInMap("RenewalPeriod")
-    public Integer renewalPeriod;
-
     @NameInMap("InstanceIDs")
     public String instanceIDs;
 
@@ -19,8 +16,8 @@ public class SetRenewalRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
-    @NameInMap("SubscriptionType")
-    public String subscriptionType;
+    @NameInMap("RenewalPeriod")
+    public Integer renewalPeriod;
 
     @NameInMap("RenewalPeriodUnit")
     public String renewalPeriodUnit;
@@ -28,17 +25,12 @@ public class SetRenewalRequest extends TeaModel {
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
+    @NameInMap("SubscriptionType")
+    public String subscriptionType;
+
     public static SetRenewalRequest build(java.util.Map<String, ?> map) throws Exception {
         SetRenewalRequest self = new SetRenewalRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetRenewalRequest setRenewalPeriod(Integer renewalPeriod) {
-        this.renewalPeriod = renewalPeriod;
-        return this;
-    }
-    public Integer getRenewalPeriod() {
-        return this.renewalPeriod;
     }
 
     public SetRenewalRequest setInstanceIDs(String instanceIDs) {
@@ -73,12 +65,12 @@ public class SetRenewalRequest extends TeaModel {
         return this.productType;
     }
 
-    public SetRenewalRequest setSubscriptionType(String subscriptionType) {
-        this.subscriptionType = subscriptionType;
+    public SetRenewalRequest setRenewalPeriod(Integer renewalPeriod) {
+        this.renewalPeriod = renewalPeriod;
         return this;
     }
-    public String getSubscriptionType() {
-        return this.subscriptionType;
+    public Integer getRenewalPeriod() {
+        return this.renewalPeriod;
     }
 
     public SetRenewalRequest setRenewalPeriodUnit(String renewalPeriodUnit) {
@@ -95,6 +87,14 @@ public class SetRenewalRequest extends TeaModel {
     }
     public String getRenewalStatus() {
         return this.renewalStatus;
+    }
+
+    public SetRenewalRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
     }
 
 }

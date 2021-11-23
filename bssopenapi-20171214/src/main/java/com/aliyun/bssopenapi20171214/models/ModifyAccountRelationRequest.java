@@ -4,20 +4,23 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountRelationRequest extends TeaModel {
-    @NameInMap("RelationType")
-    public String relationType;
-
-    @NameInMap("RelationOperation")
-    public String relationOperation;
-
-    @NameInMap("ParentUserId")
-    public Long parentUserId;
-
     @NameInMap("ChildNick")
     public String childNick;
 
     @NameInMap("ChildUserId")
     public Long childUserId;
+
+    @NameInMap("ParentUserId")
+    public Long parentUserId;
+
+    @NameInMap("PermissionCodes")
+    public java.util.List<String> permissionCodes;
+
+    @NameInMap("RelationOperation")
+    public String relationOperation;
+
+    @NameInMap("RelationType")
+    public String relationType;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -25,36 +28,9 @@ public class ModifyAccountRelationRequest extends TeaModel {
     @NameInMap("RoleCodes")
     public java.util.List<String> roleCodes;
 
-    @NameInMap("PermissionCodes")
-    public java.util.List<String> permissionCodes;
-
     public static ModifyAccountRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountRelationRequest self = new ModifyAccountRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyAccountRelationRequest setRelationType(String relationType) {
-        this.relationType = relationType;
-        return this;
-    }
-    public String getRelationType() {
-        return this.relationType;
-    }
-
-    public ModifyAccountRelationRequest setRelationOperation(String relationOperation) {
-        this.relationOperation = relationOperation;
-        return this;
-    }
-    public String getRelationOperation() {
-        return this.relationOperation;
-    }
-
-    public ModifyAccountRelationRequest setParentUserId(Long parentUserId) {
-        this.parentUserId = parentUserId;
-        return this;
-    }
-    public Long getParentUserId() {
-        return this.parentUserId;
     }
 
     public ModifyAccountRelationRequest setChildNick(String childNick) {
@@ -73,6 +49,38 @@ public class ModifyAccountRelationRequest extends TeaModel {
         return this.childUserId;
     }
 
+    public ModifyAccountRelationRequest setParentUserId(Long parentUserId) {
+        this.parentUserId = parentUserId;
+        return this;
+    }
+    public Long getParentUserId() {
+        return this.parentUserId;
+    }
+
+    public ModifyAccountRelationRequest setPermissionCodes(java.util.List<String> permissionCodes) {
+        this.permissionCodes = permissionCodes;
+        return this;
+    }
+    public java.util.List<String> getPermissionCodes() {
+        return this.permissionCodes;
+    }
+
+    public ModifyAccountRelationRequest setRelationOperation(String relationOperation) {
+        this.relationOperation = relationOperation;
+        return this;
+    }
+    public String getRelationOperation() {
+        return this.relationOperation;
+    }
+
+    public ModifyAccountRelationRequest setRelationType(String relationType) {
+        this.relationType = relationType;
+        return this;
+    }
+    public String getRelationType() {
+        return this.relationType;
+    }
+
     public ModifyAccountRelationRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -87,14 +95,6 @@ public class ModifyAccountRelationRequest extends TeaModel {
     }
     public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
-    }
-
-    public ModifyAccountRelationRequest setPermissionCodes(java.util.List<String> permissionCodes) {
-        this.permissionCodes = permissionCodes;
-        return this;
-    }
-    public java.util.List<String> getPermissionCodes() {
-        return this.permissionCodes;
     }
 
 }

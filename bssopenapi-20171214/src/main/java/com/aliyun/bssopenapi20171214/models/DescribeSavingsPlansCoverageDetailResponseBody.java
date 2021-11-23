@@ -7,6 +7,9 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeSavingsPlansCoverageDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeSavingsPlansCoverageDetailResponseBodyData data;
 
     public static DescribeSavingsPlansCoverageDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSavingsPlansCoverageDetailResponseBody self = new DescribeSavingsPlansCoverageDetailResponseBody();
@@ -30,6 +30,14 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeSavingsPlansCoverageDetailResponseBody setData(DescribeSavingsPlansCoverageDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSavingsPlansCoverageDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeSavingsPlansCoverageDetailResponseBody setMessage(String message) {
@@ -56,23 +64,21 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeSavingsPlansCoverageDetailResponseBody setData(DescribeSavingsPlansCoverageDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSavingsPlansCoverageDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeSavingsPlansCoverageDetailResponseBodyDataItems extends TeaModel {
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("CoveragePercentage")
+        public Float coveragePercentage;
 
         @NameInMap("Currency")
         public String currency;
+
+        @NameInMap("DeductAmount")
+        public Float deductAmount;
+
+        @NameInMap("EndPeriod")
+        public String endPeriod;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceSpec")
         public String instanceSpec;
@@ -80,14 +86,8 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
-        @NameInMap("CoveragePercentage")
-        public Float coveragePercentage;
-
         @NameInMap("Region")
         public String region;
-
-        @NameInMap("DeductAmount")
-        public Float deductAmount;
 
         @NameInMap("StartPeriod")
         public String startPeriod;
@@ -95,31 +95,23 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         @NameInMap("TotalAmount")
         public Float totalAmount;
 
+        @NameInMap("UserId")
+        public Long userId;
+
         @NameInMap("UserName")
         public String userName;
-
-        @NameInMap("EndPeriod")
-        public String endPeriod;
 
         public static DescribeSavingsPlansCoverageDetailResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSavingsPlansCoverageDetailResponseBodyDataItems self = new DescribeSavingsPlansCoverageDetailResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setUserId(Long userId) {
-            this.userId = userId;
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setCoveragePercentage(Float coveragePercentage) {
+            this.coveragePercentage = coveragePercentage;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
+        public Float getCoveragePercentage() {
+            return this.coveragePercentage;
         }
 
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setCurrency(String currency) {
@@ -128,6 +120,30 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setDeductAmount(Float deductAmount) {
+            this.deductAmount = deductAmount;
+            return this;
+        }
+        public Float getDeductAmount() {
+            return this.deductAmount;
+        }
+
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setEndPeriod(String endPeriod) {
+            this.endPeriod = endPeriod;
+            return this;
+        }
+        public String getEndPeriod() {
+            return this.endPeriod;
+        }
+
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setInstanceSpec(String instanceSpec) {
@@ -146,28 +162,12 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             return this.postpaidCost;
         }
 
-        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setCoveragePercentage(Float coveragePercentage) {
-            this.coveragePercentage = coveragePercentage;
-            return this;
-        }
-        public Float getCoveragePercentage() {
-            return this.coveragePercentage;
-        }
-
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setDeductAmount(Float deductAmount) {
-            this.deductAmount = deductAmount;
-            return this;
-        }
-        public Float getDeductAmount() {
-            return this.deductAmount;
         }
 
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setStartPeriod(String startPeriod) {
@@ -186,6 +186,14 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             return this.totalAmount;
         }
 
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setUserName(String userName) {
             this.userName = userName;
             return this;
@@ -194,37 +202,29 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setEndPeriod(String endPeriod) {
-            this.endPeriod = endPeriod;
-            return this;
-        }
-        public String getEndPeriod() {
-            return this.endPeriod;
-        }
-
     }
 
     public static class DescribeSavingsPlansCoverageDetailResponseBodyData extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("Items")
+        public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items;
 
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("Items")
-        public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribeSavingsPlansCoverageDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSavingsPlansCoverageDetailResponseBodyData self = new DescribeSavingsPlansCoverageDetailResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSavingsPlansCoverageDetailResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public DescribeSavingsPlansCoverageDetailResponseBodyData setItems(java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items) {
+            this.items = items;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public DescribeSavingsPlansCoverageDetailResponseBodyData setNextToken(String nextToken) {
@@ -235,12 +235,12 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             return this.nextToken;
         }
 
-        public DescribeSavingsPlansCoverageDetailResponseBodyData setItems(java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items) {
-            this.items = items;
+        public DescribeSavingsPlansCoverageDetailResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> getItems() {
-            return this.items;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

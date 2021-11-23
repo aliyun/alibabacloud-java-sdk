@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillOverviewRequest extends TeaModel {
+    @NameInMap("BillOwnerId")
+    public Long billOwnerId;
+
     @NameInMap("BillingCycle")
     public String billingCycle;
 
@@ -16,12 +19,17 @@ public class QueryBillOverviewRequest extends TeaModel {
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
-    @NameInMap("BillOwnerId")
-    public Long billOwnerId;
-
     public static QueryBillOverviewRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBillOverviewRequest self = new QueryBillOverviewRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryBillOverviewRequest setBillOwnerId(Long billOwnerId) {
+        this.billOwnerId = billOwnerId;
+        return this;
+    }
+    public Long getBillOwnerId() {
+        return this.billOwnerId;
     }
 
     public QueryBillOverviewRequest setBillingCycle(String billingCycle) {
@@ -54,14 +62,6 @@ public class QueryBillOverviewRequest extends TeaModel {
     }
     public String getSubscriptionType() {
         return this.subscriptionType;
-    }
-
-    public QueryBillOverviewRequest setBillOwnerId(Long billOwnerId) {
-        this.billOwnerId = billOwnerId;
-        return this;
-    }
-    public Long getBillOwnerId() {
-        return this.billOwnerId;
     }
 
 }

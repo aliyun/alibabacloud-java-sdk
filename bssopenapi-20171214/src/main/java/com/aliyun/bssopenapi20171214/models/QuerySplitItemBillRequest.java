@@ -4,17 +4,11 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySplitItemBillRequest extends TeaModel {
+    @NameInMap("BillOwnerId")
+    public Long billOwnerId;
+
     @NameInMap("BillingCycle")
     public String billingCycle;
-
-    @NameInMap("ProductCode")
-    public String productCode;
-
-    @NameInMap("ProductType")
-    public String productType;
-
-    @NameInMap("SubscriptionType")
-    public String subscriptionType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -25,12 +19,26 @@ public class QuerySplitItemBillRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("BillOwnerId")
-    public Long billOwnerId;
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    @NameInMap("ProductType")
+    public String productType;
+
+    @NameInMap("SubscriptionType")
+    public String subscriptionType;
 
     public static QuerySplitItemBillRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySplitItemBillRequest self = new QuerySplitItemBillRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySplitItemBillRequest setBillOwnerId(Long billOwnerId) {
+        this.billOwnerId = billOwnerId;
+        return this;
+    }
+    public Long getBillOwnerId() {
+        return this.billOwnerId;
     }
 
     public QuerySplitItemBillRequest setBillingCycle(String billingCycle) {
@@ -39,30 +47,6 @@ public class QuerySplitItemBillRequest extends TeaModel {
     }
     public String getBillingCycle() {
         return this.billingCycle;
-    }
-
-    public QuerySplitItemBillRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
-    }
-
-    public QuerySplitItemBillRequest setProductType(String productType) {
-        this.productType = productType;
-        return this;
-    }
-    public String getProductType() {
-        return this.productType;
-    }
-
-    public QuerySplitItemBillRequest setSubscriptionType(String subscriptionType) {
-        this.subscriptionType = subscriptionType;
-        return this;
-    }
-    public String getSubscriptionType() {
-        return this.subscriptionType;
     }
 
     public QuerySplitItemBillRequest setOwnerId(Long ownerId) {
@@ -89,12 +73,28 @@ public class QuerySplitItemBillRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QuerySplitItemBillRequest setBillOwnerId(Long billOwnerId) {
-        this.billOwnerId = billOwnerId;
+    public QuerySplitItemBillRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public Long getBillOwnerId() {
-        return this.billOwnerId;
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public QuerySplitItemBillRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public QuerySplitItemBillRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
     }
 
 }

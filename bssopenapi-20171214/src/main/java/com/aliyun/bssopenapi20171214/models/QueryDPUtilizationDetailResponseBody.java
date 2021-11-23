@@ -7,6 +7,9 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryDPUtilizationDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryDPUtilizationDetailResponseBodyData data;
 
     public static QueryDPUtilizationDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDPUtilizationDetailResponseBody self = new QueryDPUtilizationDetailResponseBody();
@@ -30,6 +30,14 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryDPUtilizationDetailResponseBody setData(QueryDPUtilizationDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDPUtilizationDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryDPUtilizationDetailResponseBody setMessage(String message) {
@@ -56,53 +64,45 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryDPUtilizationDetailResponseBody setData(QueryDPUtilizationDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryDPUtilizationDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryDPUtilizationDetailResponseBodyDataDetailListDetailList extends TeaModel {
-        @NameInMap("DeductedInstanceId")
-        public String deductedInstanceId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("DeductHours")
-        public Float deductHours;
-
-        @NameInMap("ShareUid")
-        public Long shareUid;
-
         @NameInMap("DeductDate")
         public String deductDate;
-
-        @NameInMap("InstanceSpec")
-        public String instanceSpec;
-
-        @NameInMap("DeductedCommodityCode")
-        public String deductedCommodityCode;
-
-        @NameInMap("DeductedProductDetail")
-        public String deductedProductDetail;
-
-        @NameInMap("DeductMeasure")
-        public Float deductMeasure;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("DeductQuantity")
-        public Float deductQuantity;
 
         @NameInMap("DeductFactorTotal")
         public Float deductFactorTotal;
 
+        @NameInMap("DeductHours")
+        public Float deductHours;
+
+        @NameInMap("DeductMeasure")
+        public Float deductMeasure;
+
+        @NameInMap("DeductQuantity")
+        public Float deductQuantity;
+
+        @NameInMap("DeductedCommodityCode")
+        public String deductedCommodityCode;
+
+        @NameInMap("DeductedInstanceId")
+        public String deductedInstanceId;
+
+        @NameInMap("DeductedProductDetail")
+        public String deductedProductDetail;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceSpec")
+        public String instanceSpec;
+
+        @NameInMap("Region")
+        public String region;
+
         @NameInMap("ResCode")
         public String resCode;
+
+        @NameInMap("ShareUid")
+        public Long shareUid;
 
         @NameInMap("Uid")
         public Long uid;
@@ -110,38 +110,6 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         public static QueryDPUtilizationDetailResponseBodyDataDetailListDetailList build(java.util.Map<String, ?> map) throws Exception {
             QueryDPUtilizationDetailResponseBodyDataDetailListDetailList self = new QueryDPUtilizationDetailResponseBodyDataDetailListDetailList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedInstanceId(String deductedInstanceId) {
-            this.deductedInstanceId = deductedInstanceId;
-            return this;
-        }
-        public String getDeductedInstanceId() {
-            return this.deductedInstanceId;
-        }
-
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductHours(Float deductHours) {
-            this.deductHours = deductHours;
-            return this;
-        }
-        public Float getDeductHours() {
-            return this.deductHours;
-        }
-
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setShareUid(Long shareUid) {
-            this.shareUid = shareUid;
-            return this;
-        }
-        public Long getShareUid() {
-            return this.shareUid;
         }
 
         public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductDate(String deductDate) {
@@ -152,28 +120,20 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             return this.deductDate;
         }
 
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setInstanceSpec(String instanceSpec) {
-            this.instanceSpec = instanceSpec;
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductFactorTotal(Float deductFactorTotal) {
+            this.deductFactorTotal = deductFactorTotal;
             return this;
         }
-        public String getInstanceSpec() {
-            return this.instanceSpec;
+        public Float getDeductFactorTotal() {
+            return this.deductFactorTotal;
         }
 
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedCommodityCode(String deductedCommodityCode) {
-            this.deductedCommodityCode = deductedCommodityCode;
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductHours(Float deductHours) {
+            this.deductHours = deductHours;
             return this;
         }
-        public String getDeductedCommodityCode() {
-            return this.deductedCommodityCode;
-        }
-
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedProductDetail(String deductedProductDetail) {
-            this.deductedProductDetail = deductedProductDetail;
-            return this;
-        }
-        public String getDeductedProductDetail() {
-            return this.deductedProductDetail;
+        public Float getDeductHours() {
+            return this.deductHours;
         }
 
         public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductMeasure(Float deductMeasure) {
@@ -184,14 +144,6 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             return this.deductMeasure;
         }
 
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductQuantity(Float deductQuantity) {
             this.deductQuantity = deductQuantity;
             return this;
@@ -200,12 +152,52 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
             return this.deductQuantity;
         }
 
-        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductFactorTotal(Float deductFactorTotal) {
-            this.deductFactorTotal = deductFactorTotal;
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedCommodityCode(String deductedCommodityCode) {
+            this.deductedCommodityCode = deductedCommodityCode;
             return this;
         }
-        public Float getDeductFactorTotal() {
-            return this.deductFactorTotal;
+        public String getDeductedCommodityCode() {
+            return this.deductedCommodityCode;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedInstanceId(String deductedInstanceId) {
+            this.deductedInstanceId = deductedInstanceId;
+            return this;
+        }
+        public String getDeductedInstanceId() {
+            return this.deductedInstanceId;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setDeductedProductDetail(String deductedProductDetail) {
+            this.deductedProductDetail = deductedProductDetail;
+            return this;
+        }
+        public String getDeductedProductDetail() {
+            return this.deductedProductDetail;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setInstanceSpec(String instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public String getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setResCode(String resCode) {
@@ -214,6 +206,14 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         }
         public String getResCode() {
             return this.resCode;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setShareUid(Long shareUid) {
+            this.shareUid = shareUid;
+            return this;
+        }
+        public Long getShareUid() {
+            return this.shareUid;
         }
 
         public QueryDPUtilizationDetailResponseBodyDataDetailListDetailList setUid(Long uid) {
@@ -246,23 +246,15 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryDPUtilizationDetailResponseBodyData extends TeaModel {
-        @NameInMap("NextToken")
-        public String nextToken;
-
         @NameInMap("DetailList")
         public QueryDPUtilizationDetailResponseBodyDataDetailList detailList;
+
+        @NameInMap("NextToken")
+        public String nextToken;
 
         public static QueryDPUtilizationDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDPUtilizationDetailResponseBodyData self = new QueryDPUtilizationDetailResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryDPUtilizationDetailResponseBodyData setNextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-        public String getNextToken() {
-            return this.nextToken;
         }
 
         public QueryDPUtilizationDetailResponseBodyData setDetailList(QueryDPUtilizationDetailResponseBodyDataDetailList detailList) {
@@ -271,6 +263,14 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
         }
         public QueryDPUtilizationDetailResponseBodyDataDetailList getDetailList() {
             return this.detailList;
+        }
+
+        public QueryDPUtilizationDetailResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
     }

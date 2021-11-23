@@ -7,6 +7,9 @@ public class AddAccountRelationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public AddAccountRelationResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class AddAccountRelationResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public AddAccountRelationResponseBodyData data;
 
     public static AddAccountRelationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddAccountRelationResponseBody self = new AddAccountRelationResponseBody();
@@ -30,6 +30,14 @@ public class AddAccountRelationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AddAccountRelationResponseBody setData(AddAccountRelationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AddAccountRelationResponseBodyData getData() {
+        return this.data;
     }
 
     public AddAccountRelationResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class AddAccountRelationResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public AddAccountRelationResponseBody setData(AddAccountRelationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AddAccountRelationResponseBodyData getData() {
-        return this.data;
     }
 
     public static class AddAccountRelationResponseBodyData extends TeaModel {

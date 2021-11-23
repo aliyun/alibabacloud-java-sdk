@@ -7,6 +7,9 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeResourceCoverageTotalResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeResourceCoverageTotalResponseBodyData data;
 
     public static DescribeResourceCoverageTotalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceCoverageTotalResponseBody self = new DescribeResourceCoverageTotalResponseBody();
@@ -30,6 +30,14 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeResourceCoverageTotalResponseBody setData(DescribeResourceCoverageTotalResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeResourceCoverageTotalResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeResourceCoverageTotalResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeResourceCoverageTotalResponseBody setData(DescribeResourceCoverageTotalResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeResourceCoverageTotalResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
@@ -98,11 +98,11 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
-        @NameInMap("DeductQuantity")
-        public Float deductQuantity;
-
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
+
+        @NameInMap("DeductQuantity")
+        public Float deductQuantity;
 
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
@@ -120,20 +120,20 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             return this.capacityUnit;
         }
 
-        public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage setDeductQuantity(Float deductQuantity) {
-            this.deductQuantity = deductQuantity;
-            return this;
-        }
-        public Float getDeductQuantity() {
-            return this.deductQuantity;
-        }
-
         public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage setCoveragePercentage(Float coveragePercentage) {
             this.coveragePercentage = coveragePercentage;
             return this;
         }
         public Float getCoveragePercentage() {
             return this.coveragePercentage;
+        }
+
+        public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage setDeductQuantity(Float deductQuantity) {
+            this.deductQuantity = deductQuantity;
+            return this;
+        }
+        public Float getDeductQuantity() {
+            return this.deductQuantity;
         }
 
         public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage setTotalQuantity(Float totalQuantity) {

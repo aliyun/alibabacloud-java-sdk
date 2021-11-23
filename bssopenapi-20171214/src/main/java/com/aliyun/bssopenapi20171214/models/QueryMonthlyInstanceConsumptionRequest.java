@@ -4,8 +4,8 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
-    @NameInMap("ProductCode")
-    public String productCode;
+    @NameInMap("BillingCycle")
+    public String billingCycle;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,8 +16,8 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("BillingCycle")
-    public String billingCycle;
+    @NameInMap("ProductCode")
+    public String productCode;
 
     @NameInMap("ProductType")
     public String productType;
@@ -30,12 +30,12 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryMonthlyInstanceConsumptionRequest setProductCode(String productCode) {
-        this.productCode = productCode;
+    public QueryMonthlyInstanceConsumptionRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
         return this;
     }
-    public String getProductCode() {
-        return this.productCode;
+    public String getBillingCycle() {
+        return this.billingCycle;
     }
 
     public QueryMonthlyInstanceConsumptionRequest setOwnerId(Long ownerId) {
@@ -62,12 +62,12 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryMonthlyInstanceConsumptionRequest setBillingCycle(String billingCycle) {
-        this.billingCycle = billingCycle;
+    public QueryMonthlyInstanceConsumptionRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public String getBillingCycle() {
-        return this.billingCycle;
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public QueryMonthlyInstanceConsumptionRequest setProductType(String productType) {

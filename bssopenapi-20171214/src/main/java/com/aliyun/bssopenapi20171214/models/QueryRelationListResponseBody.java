@@ -7,6 +7,9 @@ public class QueryRelationListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryRelationListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryRelationListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryRelationListResponseBodyData data;
 
     public static QueryRelationListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRelationListResponseBody self = new QueryRelationListResponseBody();
@@ -30,6 +30,14 @@ public class QueryRelationListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryRelationListResponseBody setData(QueryRelationListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryRelationListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryRelationListResponseBody setMessage(String message) {
@@ -56,23 +64,30 @@ public class QueryRelationListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryRelationListResponseBody setData(QueryRelationListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryRelationListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryRelationListResponseBodyDataFinancialRelationInfoList extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
+        @NameInMap("AccountName")
+        public String accountName;
+
+        @NameInMap("AccountNickName")
+        public String accountNickName;
+
+        @NameInMap("AccountType")
+        public String accountType;
+
         @NameInMap("EndTime")
         public String endTime;
+
+        @NameInMap("RelationId")
+        public Long relationId;
 
         @NameInMap("RelationType")
         public String relationType;
 
-        @NameInMap("AccountNickName")
-        public String accountNickName;
+        @NameInMap("SetupTime")
+        public String setupTime;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -80,24 +95,41 @@ public class QueryRelationListResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        @NameInMap("AccountId")
-        public Long accountId;
-
-        @NameInMap("SetupTime")
-        public String setupTime;
-
-        @NameInMap("AccountType")
-        public String accountType;
-
-        @NameInMap("AccountName")
-        public String accountName;
-
-        @NameInMap("RelationId")
-        public Long relationId;
-
         public static QueryRelationListResponseBodyDataFinancialRelationInfoList build(java.util.Map<String, ?> map) throws Exception {
             QueryRelationListResponseBodyDataFinancialRelationInfoList self = new QueryRelationListResponseBodyDataFinancialRelationInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
+        }
+
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
+        }
+
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountNickName(String accountNickName) {
+            this.accountNickName = accountNickName;
+            return this;
+        }
+        public String getAccountNickName() {
+            return this.accountNickName;
+        }
+
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
         }
 
         public QueryRelationListResponseBodyDataFinancialRelationInfoList setEndTime(String endTime) {
@@ -108,6 +140,14 @@ public class QueryRelationListResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setRelationId(Long relationId) {
+            this.relationId = relationId;
+            return this;
+        }
+        public Long getRelationId() {
+            return this.relationId;
+        }
+
         public QueryRelationListResponseBodyDataFinancialRelationInfoList setRelationType(String relationType) {
             this.relationType = relationType;
             return this;
@@ -116,12 +156,12 @@ public class QueryRelationListResponseBody extends TeaModel {
             return this.relationType;
         }
 
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountNickName(String accountNickName) {
-            this.accountNickName = accountNickName;
+        public QueryRelationListResponseBodyDataFinancialRelationInfoList setSetupTime(String setupTime) {
+            this.setupTime = setupTime;
             return this;
         }
-        public String getAccountNickName() {
-            return this.accountNickName;
+        public String getSetupTime() {
+            return this.setupTime;
         }
 
         public QueryRelationListResponseBodyDataFinancialRelationInfoList setStartTime(String startTime) {
@@ -140,49 +180,12 @@ public class QueryRelationListResponseBody extends TeaModel {
             return this.state;
         }
 
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
-        }
-
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setSetupTime(String setupTime) {
-            this.setupTime = setupTime;
-            return this;
-        }
-        public String getSetupTime() {
-            return this.setupTime;
-        }
-
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountType(String accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public String getAccountType() {
-            return this.accountType;
-        }
-
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
-        }
-
-        public QueryRelationListResponseBodyDataFinancialRelationInfoList setRelationId(Long relationId) {
-            this.relationId = relationId;
-            return this;
-        }
-        public Long getRelationId() {
-            return this.relationId;
-        }
-
     }
 
     public static class QueryRelationListResponseBodyData extends TeaModel {
+        @NameInMap("FinancialRelationInfoList")
+        public java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> financialRelationInfoList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -192,12 +195,17 @@ public class QueryRelationListResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("FinancialRelationInfoList")
-        public java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> financialRelationInfoList;
-
         public static QueryRelationListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryRelationListResponseBodyData self = new QueryRelationListResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRelationListResponseBodyData setFinancialRelationInfoList(java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> financialRelationInfoList) {
+            this.financialRelationInfoList = financialRelationInfoList;
+            return this;
+        }
+        public java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> getFinancialRelationInfoList() {
+            return this.financialRelationInfoList;
         }
 
         public QueryRelationListResponseBodyData setPageNum(Integer pageNum) {
@@ -222,14 +230,6 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public QueryRelationListResponseBodyData setFinancialRelationInfoList(java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> financialRelationInfoList) {
-            this.financialRelationInfoList = financialRelationInfoList;
-            return this;
-        }
-        public java.util.List<QueryRelationListResponseBodyDataFinancialRelationInfoList> getFinancialRelationInfoList() {
-            return this.financialRelationInfoList;
         }
 
     }

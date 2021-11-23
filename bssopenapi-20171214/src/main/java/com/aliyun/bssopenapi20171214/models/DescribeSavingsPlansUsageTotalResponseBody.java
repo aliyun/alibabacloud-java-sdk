@@ -7,6 +7,9 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeSavingsPlansUsageTotalResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeSavingsPlansUsageTotalResponseBodyData data;
 
     public static DescribeSavingsPlansUsageTotalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSavingsPlansUsageTotalResponseBody self = new DescribeSavingsPlansUsageTotalResponseBody();
@@ -30,6 +30,14 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeSavingsPlansUsageTotalResponseBody setData(DescribeSavingsPlansUsageTotalResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSavingsPlansUsageTotalResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeSavingsPlansUsageTotalResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeSavingsPlansUsageTotalResponseBody setData(DescribeSavingsPlansUsageTotalResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSavingsPlansUsageTotalResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
@@ -95,6 +95,9 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     }
 
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage extends TeaModel {
+        @NameInMap("PoolValue")
+        public Float poolValue;
+
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
@@ -104,12 +107,17 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         @NameInMap("UsagePercentage")
         public Float usagePercentage;
 
-        @NameInMap("PoolValue")
-        public Float poolValue;
-
         public static DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage build(java.util.Map<String, ?> map) throws Exception {
             DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage self = new DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage setPoolValue(Float poolValue) {
+            this.poolValue = poolValue;
+            return this;
+        }
+        public Float getPoolValue() {
+            return this.poolValue;
         }
 
         public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage setPostpaidCost(Float postpaidCost) {
@@ -134,14 +142,6 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
         public Float getUsagePercentage() {
             return this.usagePercentage;
-        }
-
-        public DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage setPoolValue(Float poolValue) {
-            this.poolValue = poolValue;
-            return this;
-        }
-        public Float getPoolValue() {
-            return this.poolValue;
         }
 
     }

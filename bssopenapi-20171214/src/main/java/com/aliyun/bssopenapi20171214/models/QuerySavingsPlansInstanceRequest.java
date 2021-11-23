@@ -4,8 +4,11 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Locale")
     public String locale;
@@ -13,14 +16,11 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     @NameInMap("PageNum")
     public Integer pageNum;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("Tag")
     public java.util.List<QuerySavingsPlansInstanceRequestTag> tag;
@@ -30,12 +30,20 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QuerySavingsPlansInstanceRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public QuerySavingsPlansInstanceRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public QuerySavingsPlansInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QuerySavingsPlansInstanceRequest setLocale(String locale) {
@@ -54,12 +62,12 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public QuerySavingsPlansInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public QuerySavingsPlansInstanceRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QuerySavingsPlansInstanceRequest setStartTime(String startTime) {
@@ -68,14 +76,6 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public QuerySavingsPlansInstanceRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public QuerySavingsPlansInstanceRequest setTag(java.util.List<QuerySavingsPlansInstanceRequestTag> tag) {

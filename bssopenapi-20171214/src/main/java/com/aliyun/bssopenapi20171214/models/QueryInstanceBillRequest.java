@@ -4,8 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceBillRequest extends TeaModel {
+    @NameInMap("BillOwnerId")
+    public Long billOwnerId;
+
     @NameInMap("BillingCycle")
     public String billingCycle;
+
+    @NameInMap("BillingDate")
+    public String billingDate;
+
+    @NameInMap("Granularity")
+    public String granularity;
+
+    @NameInMap("IsBillingItem")
+    public Boolean isBillingItem;
+
+    @NameInMap("IsHideZeroCharge")
+    public Boolean isHideZeroCharge;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -16,33 +40,17 @@ public class QueryInstanceBillRequest extends TeaModel {
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("IsBillingItem")
-    public Boolean isBillingItem;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("IsHideZeroCharge")
-    public Boolean isHideZeroCharge;
-
-    @NameInMap("BillingDate")
-    public String billingDate;
-
-    @NameInMap("Granularity")
-    public String granularity;
-
-    @NameInMap("BillOwnerId")
-    public Long billOwnerId;
-
     public static QueryInstanceBillRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryInstanceBillRequest self = new QueryInstanceBillRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInstanceBillRequest setBillOwnerId(Long billOwnerId) {
+        this.billOwnerId = billOwnerId;
+        return this;
+    }
+    public Long getBillOwnerId() {
+        return this.billOwnerId;
     }
 
     public QueryInstanceBillRequest setBillingCycle(String billingCycle) {
@@ -51,6 +59,62 @@ public class QueryInstanceBillRequest extends TeaModel {
     }
     public String getBillingCycle() {
         return this.billingCycle;
+    }
+
+    public QueryInstanceBillRequest setBillingDate(String billingDate) {
+        this.billingDate = billingDate;
+        return this;
+    }
+    public String getBillingDate() {
+        return this.billingDate;
+    }
+
+    public QueryInstanceBillRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
+    public QueryInstanceBillRequest setIsBillingItem(Boolean isBillingItem) {
+        this.isBillingItem = isBillingItem;
+        return this;
+    }
+    public Boolean getIsBillingItem() {
+        return this.isBillingItem;
+    }
+
+    public QueryInstanceBillRequest setIsHideZeroCharge(Boolean isHideZeroCharge) {
+        this.isHideZeroCharge = isHideZeroCharge;
+        return this;
+    }
+    public Boolean getIsHideZeroCharge() {
+        return this.isHideZeroCharge;
+    }
+
+    public QueryInstanceBillRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public QueryInstanceBillRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryInstanceBillRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryInstanceBillRequest setProductCode(String productCode) {
@@ -75,70 +139,6 @@ public class QueryInstanceBillRequest extends TeaModel {
     }
     public String getSubscriptionType() {
         return this.subscriptionType;
-    }
-
-    public QueryInstanceBillRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public QueryInstanceBillRequest setIsBillingItem(Boolean isBillingItem) {
-        this.isBillingItem = isBillingItem;
-        return this;
-    }
-    public Boolean getIsBillingItem() {
-        return this.isBillingItem;
-    }
-
-    public QueryInstanceBillRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public QueryInstanceBillRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryInstanceBillRequest setIsHideZeroCharge(Boolean isHideZeroCharge) {
-        this.isHideZeroCharge = isHideZeroCharge;
-        return this;
-    }
-    public Boolean getIsHideZeroCharge() {
-        return this.isHideZeroCharge;
-    }
-
-    public QueryInstanceBillRequest setBillingDate(String billingDate) {
-        this.billingDate = billingDate;
-        return this;
-    }
-    public String getBillingDate() {
-        return this.billingDate;
-    }
-
-    public QueryInstanceBillRequest setGranularity(String granularity) {
-        this.granularity = granularity;
-        return this;
-    }
-    public String getGranularity() {
-        return this.granularity;
-    }
-
-    public QueryInstanceBillRequest setBillOwnerId(Long billOwnerId) {
-        this.billOwnerId = billOwnerId;
-        return this;
-    }
-    public Long getBillOwnerId() {
-        return this.billOwnerId;
     }
 
 }

@@ -7,6 +7,9 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryFinancialAccountInfoResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryFinancialAccountInfoResponseBodyData data;
 
     public static QueryFinancialAccountInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFinancialAccountInfoResponseBody self = new QueryFinancialAccountInfoResponseBody();
@@ -30,6 +30,14 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryFinancialAccountInfoResponseBody setData(QueryFinancialAccountInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryFinancialAccountInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryFinancialAccountInfoResponseBody setMessage(String message) {
@@ -56,68 +64,28 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryFinancialAccountInfoResponseBody setData(QueryFinancialAccountInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryFinancialAccountInfoResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryFinancialAccountInfoResponseBodyData extends TeaModel {
-        @NameInMap("MemberNickName")
-        public String memberNickName;
+        @NameInMap("AccountType")
+        public String accountType;
 
         @NameInMap("IsFinancialAccount")
         public Boolean isFinancialAccount;
 
+        @NameInMap("MemberGroupId")
+        public Long memberGroupId;
+
         @NameInMap("MemberGroupName")
         public String memberGroupName;
+
+        @NameInMap("MemberNickName")
+        public String memberNickName;
 
         @NameInMap("UserName")
         public String userName;
 
-        @NameInMap("AccountType")
-        public String accountType;
-
-        @NameInMap("MemberGroupId")
-        public Long memberGroupId;
-
         public static QueryFinancialAccountInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryFinancialAccountInfoResponseBodyData self = new QueryFinancialAccountInfoResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryFinancialAccountInfoResponseBodyData setMemberNickName(String memberNickName) {
-            this.memberNickName = memberNickName;
-            return this;
-        }
-        public String getMemberNickName() {
-            return this.memberNickName;
-        }
-
-        public QueryFinancialAccountInfoResponseBodyData setIsFinancialAccount(Boolean isFinancialAccount) {
-            this.isFinancialAccount = isFinancialAccount;
-            return this;
-        }
-        public Boolean getIsFinancialAccount() {
-            return this.isFinancialAccount;
-        }
-
-        public QueryFinancialAccountInfoResponseBodyData setMemberGroupName(String memberGroupName) {
-            this.memberGroupName = memberGroupName;
-            return this;
-        }
-        public String getMemberGroupName() {
-            return this.memberGroupName;
-        }
-
-        public QueryFinancialAccountInfoResponseBodyData setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public QueryFinancialAccountInfoResponseBodyData setAccountType(String accountType) {
@@ -128,12 +96,44 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             return this.accountType;
         }
 
+        public QueryFinancialAccountInfoResponseBodyData setIsFinancialAccount(Boolean isFinancialAccount) {
+            this.isFinancialAccount = isFinancialAccount;
+            return this;
+        }
+        public Boolean getIsFinancialAccount() {
+            return this.isFinancialAccount;
+        }
+
         public QueryFinancialAccountInfoResponseBodyData setMemberGroupId(Long memberGroupId) {
             this.memberGroupId = memberGroupId;
             return this;
         }
         public Long getMemberGroupId() {
             return this.memberGroupId;
+        }
+
+        public QueryFinancialAccountInfoResponseBodyData setMemberGroupName(String memberGroupName) {
+            this.memberGroupName = memberGroupName;
+            return this;
+        }
+        public String getMemberGroupName() {
+            return this.memberGroupName;
+        }
+
+        public QueryFinancialAccountInfoResponseBodyData setMemberNickName(String memberNickName) {
+            this.memberNickName = memberNickName;
+            return this;
+        }
+        public String getMemberNickName() {
+            return this.memberNickName;
+        }
+
+        public QueryFinancialAccountInfoResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

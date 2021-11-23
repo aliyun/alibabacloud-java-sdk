@@ -4,11 +4,23 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
-    @NameInMap("ProductCode")
-    public String productCode;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("ModifyType")
+    public String modifyType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Parameter")
+    public java.util.List<ModifyInstanceRequestParameter> parameter;
+
+    @NameInMap("ProductCode")
+    public String productCode;
 
     @NameInMap("ProductType")
     public String productType;
@@ -16,29 +28,33 @@ public class ModifyInstanceRequest extends TeaModel {
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
-    @NameInMap("ModifyType")
-    public String modifyType;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("Parameter")
-    public java.util.List<ModifyInstanceRequestParameter> parameter;
-
     public static ModifyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceRequest self = new ModifyInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceRequest setProductCode(String productCode) {
-        this.productCode = productCode;
+    public ModifyInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getProductCode() {
-        return this.productCode;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceRequest setModifyType(String modifyType) {
+        this.modifyType = modifyType;
+        return this;
+    }
+    public String getModifyType() {
+        return this.modifyType;
     }
 
     public ModifyInstanceRequest setOwnerId(Long ownerId) {
@@ -47,6 +63,22 @@ public class ModifyInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
+        return this.parameter;
+    }
+
+    public ModifyInstanceRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public ModifyInstanceRequest setProductType(String productType) {
@@ -65,56 +97,16 @@ public class ModifyInstanceRequest extends TeaModel {
         return this.subscriptionType;
     }
 
-    public ModifyInstanceRequest setModifyType(String modifyType) {
-        this.modifyType = modifyType;
-        return this;
-    }
-    public String getModifyType() {
-        return this.modifyType;
-    }
-
-    public ModifyInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
-        this.parameter = parameter;
-        return this;
-    }
-    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
-        return this.parameter;
-    }
-
     public static class ModifyInstanceRequestParameter extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ModifyInstanceRequestParameter build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceRequestParameter self = new ModifyInstanceRequestParameter();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyInstanceRequestParameter setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public ModifyInstanceRequestParameter setCode(String code) {
@@ -123,6 +115,14 @@ public class ModifyInstanceRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public ModifyInstanceRequestParameter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

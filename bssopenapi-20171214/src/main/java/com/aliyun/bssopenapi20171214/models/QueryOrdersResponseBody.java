@@ -7,6 +7,9 @@ public class QueryOrdersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryOrdersResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryOrdersResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryOrdersResponseBodyData data;
 
     public static QueryOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOrdersResponseBody self = new QueryOrdersResponseBody();
@@ -30,6 +30,14 @@ public class QueryOrdersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryOrdersResponseBody setData(QueryOrdersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryOrdersResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryOrdersResponseBody setMessage(String message) {
@@ -56,23 +64,12 @@ public class QueryOrdersResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryOrdersResponseBody setData(QueryOrdersResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryOrdersResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryOrdersResponseBodyDataOrderListOrder extends TeaModel {
-        @NameInMap("PretaxAmount")
-        public String pretaxAmount;
+        @NameInMap("AfterTaxAmount")
+        public String afterTaxAmount;
 
         @NameInMap("CommodityCode")
         public String commodityCode;
-
-        @NameInMap("RelatedOrderId")
-        public String relatedOrderId;
 
         @NameInMap("CreateTime")
         public String createTime;
@@ -80,53 +77,56 @@ public class QueryOrdersResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
-
-        @NameInMap("PaymentCurrency")
-        public String paymentCurrency;
-
-        @NameInMap("ProductType")
-        public String productType;
-
-        @NameInMap("AfterTaxAmount")
-        public String afterTaxAmount;
-
-        @NameInMap("PaymentTime")
-        public String paymentTime;
-
-        @NameInMap("PretaxGrossAmount")
-        public String pretaxGrossAmount;
+        @NameInMap("OrderId")
+        public String orderId;
 
         @NameInMap("OrderType")
         public String orderType;
 
+        @NameInMap("PaymentCurrency")
+        public String paymentCurrency;
+
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
-        @NameInMap("OrderId")
-        public String orderId;
+        @NameInMap("PaymentTime")
+        public String paymentTime;
 
-        @NameInMap("Tax")
-        public String tax;
+        @NameInMap("PretaxAmount")
+        public String pretaxAmount;
 
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
+        @NameInMap("PretaxGrossAmount")
+        public String pretaxGrossAmount;
+
         @NameInMap("ProductCode")
         public String productCode;
+
+        @NameInMap("ProductType")
+        public String productType;
+
+        @NameInMap("RelatedOrderId")
+        public String relatedOrderId;
+
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
+
+        @NameInMap("Tax")
+        public String tax;
 
         public static QueryOrdersResponseBodyDataOrderListOrder build(java.util.Map<String, ?> map) throws Exception {
             QueryOrdersResponseBodyDataOrderListOrder self = new QueryOrdersResponseBodyDataOrderListOrder();
             return TeaModel.build(map, self);
         }
 
-        public QueryOrdersResponseBodyDataOrderListOrder setPretaxAmount(String pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
+        public QueryOrdersResponseBodyDataOrderListOrder setAfterTaxAmount(String afterTaxAmount) {
+            this.afterTaxAmount = afterTaxAmount;
             return this;
         }
-        public String getPretaxAmount() {
-            return this.pretaxAmount;
+        public String getAfterTaxAmount() {
+            return this.afterTaxAmount;
         }
 
         public QueryOrdersResponseBodyDataOrderListOrder setCommodityCode(String commodityCode) {
@@ -135,14 +135,6 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
         public String getCommodityCode() {
             return this.commodityCode;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setRelatedOrderId(String relatedOrderId) {
-            this.relatedOrderId = relatedOrderId;
-            return this;
-        }
-        public String getRelatedOrderId() {
-            return this.relatedOrderId;
         }
 
         public QueryOrdersResponseBodyDataOrderListOrder setCreateTime(String createTime) {
@@ -161,52 +153,12 @@ public class QueryOrdersResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QueryOrdersResponseBodyDataOrderListOrder setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
+        public QueryOrdersResponseBodyDataOrderListOrder setOrderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setPaymentCurrency(String paymentCurrency) {
-            this.paymentCurrency = paymentCurrency;
-            return this;
-        }
-        public String getPaymentCurrency() {
-            return this.paymentCurrency;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setProductType(String productType) {
-            this.productType = productType;
-            return this;
-        }
-        public String getProductType() {
-            return this.productType;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setAfterTaxAmount(String afterTaxAmount) {
-            this.afterTaxAmount = afterTaxAmount;
-            return this;
-        }
-        public String getAfterTaxAmount() {
-            return this.afterTaxAmount;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setPaymentTime(String paymentTime) {
-            this.paymentTime = paymentTime;
-            return this;
-        }
-        public String getPaymentTime() {
-            return this.paymentTime;
-        }
-
-        public QueryOrdersResponseBodyDataOrderListOrder setPretaxGrossAmount(String pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
-            return this;
-        }
-        public String getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
+        public String getOrderId() {
+            return this.orderId;
         }
 
         public QueryOrdersResponseBodyDataOrderListOrder setOrderType(String orderType) {
@@ -217,6 +169,14 @@ public class QueryOrdersResponseBody extends TeaModel {
             return this.orderType;
         }
 
+        public QueryOrdersResponseBodyDataOrderListOrder setPaymentCurrency(String paymentCurrency) {
+            this.paymentCurrency = paymentCurrency;
+            return this;
+        }
+        public String getPaymentCurrency() {
+            return this.paymentCurrency;
+        }
+
         public QueryOrdersResponseBodyDataOrderListOrder setPaymentStatus(String paymentStatus) {
             this.paymentStatus = paymentStatus;
             return this;
@@ -225,20 +185,20 @@ public class QueryOrdersResponseBody extends TeaModel {
             return this.paymentStatus;
         }
 
-        public QueryOrdersResponseBodyDataOrderListOrder setOrderId(String orderId) {
-            this.orderId = orderId;
+        public QueryOrdersResponseBodyDataOrderListOrder setPaymentTime(String paymentTime) {
+            this.paymentTime = paymentTime;
             return this;
         }
-        public String getOrderId() {
-            return this.orderId;
+        public String getPaymentTime() {
+            return this.paymentTime;
         }
 
-        public QueryOrdersResponseBodyDataOrderListOrder setTax(String tax) {
-            this.tax = tax;
+        public QueryOrdersResponseBodyDataOrderListOrder setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
             return this;
         }
-        public String getTax() {
-            return this.tax;
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
         }
 
         public QueryOrdersResponseBodyDataOrderListOrder setPretaxAmountLocal(String pretaxAmountLocal) {
@@ -249,12 +209,52 @@ public class QueryOrdersResponseBody extends TeaModel {
             return this.pretaxAmountLocal;
         }
 
+        public QueryOrdersResponseBodyDataOrderListOrder setPretaxGrossAmount(String pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public String getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
+        }
+
         public QueryOrdersResponseBodyDataOrderListOrder setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public QueryOrdersResponseBodyDataOrderListOrder setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public QueryOrdersResponseBodyDataOrderListOrder setRelatedOrderId(String relatedOrderId) {
+            this.relatedOrderId = relatedOrderId;
+            return this;
+        }
+        public String getRelatedOrderId() {
+            return this.relatedOrderId;
+        }
+
+        public QueryOrdersResponseBodyDataOrderListOrder setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
+            return this;
+        }
+        public String getSubscriptionType() {
+            return this.subscriptionType;
+        }
+
+        public QueryOrdersResponseBodyDataOrderListOrder setTax(String tax) {
+            this.tax = tax;
+            return this;
+        }
+        public String getTax() {
+            return this.tax;
         }
 
     }
@@ -282,6 +282,9 @@ public class QueryOrdersResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        @NameInMap("OrderList")
+        public QueryOrdersResponseBodyDataOrderList orderList;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -290,9 +293,6 @@ public class QueryOrdersResponseBody extends TeaModel {
 
         @NameInMap("TotalCount")
         public Integer totalCount;
-
-        @NameInMap("OrderList")
-        public QueryOrdersResponseBodyDataOrderList orderList;
 
         public static QueryOrdersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOrdersResponseBodyData self = new QueryOrdersResponseBodyData();
@@ -305,6 +305,14 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
         public String getHostName() {
             return this.hostName;
+        }
+
+        public QueryOrdersResponseBodyData setOrderList(QueryOrdersResponseBodyDataOrderList orderList) {
+            this.orderList = orderList;
+            return this;
+        }
+        public QueryOrdersResponseBodyDataOrderList getOrderList() {
+            return this.orderList;
         }
 
         public QueryOrdersResponseBodyData setPageNum(Integer pageNum) {
@@ -329,14 +337,6 @@ public class QueryOrdersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public QueryOrdersResponseBodyData setOrderList(QueryOrdersResponseBodyDataOrderList orderList) {
-            this.orderList = orderList;
-            return this;
-        }
-        public QueryOrdersResponseBodyDataOrderList getOrderList() {
-            return this.orderList;
         }
 
     }

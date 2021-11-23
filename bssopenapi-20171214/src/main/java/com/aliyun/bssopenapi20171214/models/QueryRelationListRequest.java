@@ -4,9 +4,6 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRelationListRequest extends TeaModel {
-    @NameInMap("UserId")
-    public Long userId;
-
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -16,17 +13,12 @@ public class QueryRelationListRequest extends TeaModel {
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 
+    @NameInMap("UserId")
+    public Long userId;
+
     public static QueryRelationListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRelationListRequest self = new QueryRelationListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryRelationListRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
     }
 
     public QueryRelationListRequest setPageNum(Integer pageNum) {
@@ -51,6 +43,14 @@ public class QueryRelationListRequest extends TeaModel {
     }
     public java.util.List<String> getStatusList() {
         return this.statusList;
+    }
+
+    public QueryRelationListRequest setUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+    public Long getUserId() {
+        return this.userId;
     }
 
 }
