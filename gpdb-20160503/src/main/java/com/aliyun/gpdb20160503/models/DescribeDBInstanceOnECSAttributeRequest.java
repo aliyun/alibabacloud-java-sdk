@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceOnECSAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeDBInstanceOnECSAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceOnECSAttributeRequest self = new DescribeDBInstanceOnECSAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceOnECSAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDBInstanceOnECSAttributeRequest setDBInstanceId(String DBInstanceId) {
@@ -29,6 +21,14 @@ public class DescribeDBInstanceOnECSAttributeRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceOnECSAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

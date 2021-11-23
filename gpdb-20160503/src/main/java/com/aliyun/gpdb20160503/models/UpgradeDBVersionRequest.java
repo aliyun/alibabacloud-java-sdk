@@ -4,30 +4,54 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBVersionRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("MajorVersion")
+    public String majorVersion;
+
+    @NameInMap("MinorVersion")
+    public String minorVersion;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("MinorVersion")
-    public String minorVersion;
-
-    @NameInMap("MajorVersion")
-    public String majorVersion;
+    @NameInMap("SwitchTime")
+    public String switchTime;
 
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 
-    @NameInMap("SwitchTime")
-    public String switchTime;
-
     public static UpgradeDBVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBVersionRequest self = new UpgradeDBVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeDBVersionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public UpgradeDBVersionRequest setMajorVersion(String majorVersion) {
+        this.majorVersion = majorVersion;
+        return this;
+    }
+    public String getMajorVersion() {
+        return this.majorVersion;
+    }
+
+    public UpgradeDBVersionRequest setMinorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
+        return this;
+    }
+    public String getMinorVersion() {
+        return this.minorVersion;
     }
 
     public UpgradeDBVersionRequest setOwnerId(Long ownerId) {
@@ -46,28 +70,12 @@ public class UpgradeDBVersionRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpgradeDBVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public UpgradeDBVersionRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public UpgradeDBVersionRequest setMinorVersion(String minorVersion) {
-        this.minorVersion = minorVersion;
-        return this;
-    }
-    public String getMinorVersion() {
-        return this.minorVersion;
-    }
-
-    public UpgradeDBVersionRequest setMajorVersion(String majorVersion) {
-        this.majorVersion = majorVersion;
-        return this;
-    }
-    public String getMajorVersion() {
-        return this.majorVersion;
+    public String getSwitchTime() {
+        return this.switchTime;
     }
 
     public UpgradeDBVersionRequest setSwitchTimeMode(String switchTimeMode) {
@@ -76,14 +84,6 @@ public class UpgradeDBVersionRequest extends TeaModel {
     }
     public String getSwitchTimeMode() {
         return this.switchTimeMode;
-    }
-
-    public UpgradeDBVersionRequest setSwitchTime(String switchTime) {
-        this.switchTime = switchTime;
-        return this;
-    }
-    public String getSwitchTime() {
-        return this.switchTime;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HasServiceLinkedRole")
     public String hasServiceLinkedRole;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CheckServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckServiceLinkedRoleResponseBody self = new CheckServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckServiceLinkedRoleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CheckServiceLinkedRoleResponseBody setHasServiceLinkedRole(String hasServiceLinkedRole) {
@@ -40,6 +32,14 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CheckServiceLinkedRoleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

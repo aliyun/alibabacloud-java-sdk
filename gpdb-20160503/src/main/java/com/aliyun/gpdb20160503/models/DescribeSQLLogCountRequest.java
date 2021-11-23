@@ -7,17 +7,8 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("QueryKeywords")
-    public String queryKeywords;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("Database")
     public String database;
-
-    @NameInMap("User")
-    public String user;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,11 +16,14 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     @NameInMap("ExecuteCost")
     public String executeCost;
 
-    @NameInMap("SourceIP")
-    public String sourceIP;
-
     @NameInMap("ExecuteState")
     public String executeState;
+
+    @NameInMap("MaxExecuteCost")
+    public String maxExecuteCost;
+
+    @NameInMap("MinExecuteCost")
+    public String minExecuteCost;
 
     @NameInMap("OperationClass")
     public String operationClass;
@@ -37,11 +31,17 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     @NameInMap("OperationType")
     public String operationType;
 
-    @NameInMap("MaxExecuteCost")
-    public String maxExecuteCost;
+    @NameInMap("QueryKeywords")
+    public String queryKeywords;
 
-    @NameInMap("MinExecuteCost")
-    public String minExecuteCost;
+    @NameInMap("SourceIP")
+    public String sourceIP;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("User")
+    public String user;
 
     public static DescribeSQLLogCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogCountRequest self = new DescribeSQLLogCountRequest();
@@ -56,36 +56,12 @@ public class DescribeSQLLogCountRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeSQLLogCountRequest setQueryKeywords(String queryKeywords) {
-        this.queryKeywords = queryKeywords;
-        return this;
-    }
-    public String getQueryKeywords() {
-        return this.queryKeywords;
-    }
-
-    public DescribeSQLLogCountRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeSQLLogCountRequest setDatabase(String database) {
         this.database = database;
         return this;
     }
     public String getDatabase() {
         return this.database;
-    }
-
-    public DescribeSQLLogCountRequest setUser(String user) {
-        this.user = user;
-        return this;
-    }
-    public String getUser() {
-        return this.user;
     }
 
     public DescribeSQLLogCountRequest setEndTime(String endTime) {
@@ -104,20 +80,28 @@ public class DescribeSQLLogCountRequest extends TeaModel {
         return this.executeCost;
     }
 
-    public DescribeSQLLogCountRequest setSourceIP(String sourceIP) {
-        this.sourceIP = sourceIP;
-        return this;
-    }
-    public String getSourceIP() {
-        return this.sourceIP;
-    }
-
     public DescribeSQLLogCountRequest setExecuteState(String executeState) {
         this.executeState = executeState;
         return this;
     }
     public String getExecuteState() {
         return this.executeState;
+    }
+
+    public DescribeSQLLogCountRequest setMaxExecuteCost(String maxExecuteCost) {
+        this.maxExecuteCost = maxExecuteCost;
+        return this;
+    }
+    public String getMaxExecuteCost() {
+        return this.maxExecuteCost;
+    }
+
+    public DescribeSQLLogCountRequest setMinExecuteCost(String minExecuteCost) {
+        this.minExecuteCost = minExecuteCost;
+        return this;
+    }
+    public String getMinExecuteCost() {
+        return this.minExecuteCost;
     }
 
     public DescribeSQLLogCountRequest setOperationClass(String operationClass) {
@@ -136,20 +120,36 @@ public class DescribeSQLLogCountRequest extends TeaModel {
         return this.operationType;
     }
 
-    public DescribeSQLLogCountRequest setMaxExecuteCost(String maxExecuteCost) {
-        this.maxExecuteCost = maxExecuteCost;
+    public DescribeSQLLogCountRequest setQueryKeywords(String queryKeywords) {
+        this.queryKeywords = queryKeywords;
         return this;
     }
-    public String getMaxExecuteCost() {
-        return this.maxExecuteCost;
+    public String getQueryKeywords() {
+        return this.queryKeywords;
     }
 
-    public DescribeSQLLogCountRequest setMinExecuteCost(String minExecuteCost) {
-        this.minExecuteCost = minExecuteCost;
+    public DescribeSQLLogCountRequest setSourceIP(String sourceIP) {
+        this.sourceIP = sourceIP;
         return this;
     }
-    public String getMinExecuteCost() {
-        return this.minExecuteCost;
+    public String getSourceIP() {
+        return this.sourceIP;
+    }
+
+    public DescribeSQLLogCountRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeSQLLogCountRequest setUser(String user) {
+        this.user = user;
+        return this;
+    }
+    public String getUser() {
+        return this.user;
     }
 
 }

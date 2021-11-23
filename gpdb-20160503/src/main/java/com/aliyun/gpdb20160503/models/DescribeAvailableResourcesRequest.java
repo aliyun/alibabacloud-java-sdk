@@ -4,18 +4,26 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourcesRequest extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     @NameInMap("Region")
     public String region;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("ChargeType")
-    public String chargeType;
-
     public static DescribeAvailableResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableResourcesRequest self = new DescribeAvailableResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAvailableResourcesRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeAvailableResourcesRequest setRegion(String region) {
@@ -32,14 +40,6 @@ public class DescribeAvailableResourcesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeAvailableResourcesRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
     }
 
 }

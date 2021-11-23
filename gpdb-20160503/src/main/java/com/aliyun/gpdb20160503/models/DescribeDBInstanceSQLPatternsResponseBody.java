@@ -4,8 +4,14 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSQLPatternsResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Patterns")
+    public java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> patterns;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class DescribeDBInstanceSQLPatternsResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Patterns")
-    public java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> patterns;
-
     public static DescribeDBInstanceSQLPatternsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceSQLPatternsResponseBody self = new DescribeDBInstanceSQLPatternsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceSQLPatternsResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeDBInstanceSQLPatternsResponseBody setEndTime(String endTime) {
@@ -30,6 +38,14 @@ public class DescribeDBInstanceSQLPatternsResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBInstanceSQLPatternsResponseBody setPatterns(java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> patterns) {
+        this.patterns = patterns;
+        return this;
+    }
+    public java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> getPatterns() {
+        return this.patterns;
     }
 
     public DescribeDBInstanceSQLPatternsResponseBody setRequestId(String requestId) {
@@ -46,22 +62,6 @@ public class DescribeDBInstanceSQLPatternsResponseBody extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDBInstanceSQLPatternsResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeDBInstanceSQLPatternsResponseBody setPatterns(java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> patterns) {
-        this.patterns = patterns;
-        return this;
-    }
-    public java.util.List<DescribeDBInstanceSQLPatternsResponseBodyPatterns> getPatterns() {
-        return this.patterns;
     }
 
     public static class DescribeDBInstanceSQLPatternsResponseBodyPatterns extends TeaModel {

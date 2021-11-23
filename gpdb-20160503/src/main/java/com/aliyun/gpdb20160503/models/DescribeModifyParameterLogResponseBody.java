@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Changelogs")
     public java.util.List<DescribeModifyParameterLogResponseBodyChangelogs> changelogs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeModifyParameterLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeModifyParameterLogResponseBody self = new DescribeModifyParameterLogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeModifyParameterLogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeModifyParameterLogResponseBody setChangelogs(java.util.List<DescribeModifyParameterLogResponseBodyChangelogs> changelogs) {
@@ -31,12 +23,17 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return this.changelogs;
     }
 
-    public static class DescribeModifyParameterLogResponseBodyChangelogs extends TeaModel {
-        @NameInMap("ParameterValueAfter")
-        public String parameterValueAfter;
+    public DescribeModifyParameterLogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("ParameterValueBefore")
-        public String parameterValueBefore;
+    public static class DescribeModifyParameterLogResponseBodyChangelogs extends TeaModel {
+        @NameInMap("EffectTime")
+        public String effectTime;
 
         @NameInMap("ParameterName")
         public String parameterName;
@@ -44,28 +41,23 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         @NameInMap("ParameterValid")
         public String parameterValid;
 
-        @NameInMap("EffectTime")
-        public String effectTime;
+        @NameInMap("ParameterValueAfter")
+        public String parameterValueAfter;
+
+        @NameInMap("ParameterValueBefore")
+        public String parameterValueBefore;
 
         public static DescribeModifyParameterLogResponseBodyChangelogs build(java.util.Map<String, ?> map) throws Exception {
             DescribeModifyParameterLogResponseBodyChangelogs self = new DescribeModifyParameterLogResponseBodyChangelogs();
             return TeaModel.build(map, self);
         }
 
-        public DescribeModifyParameterLogResponseBodyChangelogs setParameterValueAfter(String parameterValueAfter) {
-            this.parameterValueAfter = parameterValueAfter;
+        public DescribeModifyParameterLogResponseBodyChangelogs setEffectTime(String effectTime) {
+            this.effectTime = effectTime;
             return this;
         }
-        public String getParameterValueAfter() {
-            return this.parameterValueAfter;
-        }
-
-        public DescribeModifyParameterLogResponseBodyChangelogs setParameterValueBefore(String parameterValueBefore) {
-            this.parameterValueBefore = parameterValueBefore;
-            return this;
-        }
-        public String getParameterValueBefore() {
-            return this.parameterValueBefore;
+        public String getEffectTime() {
+            return this.effectTime;
         }
 
         public DescribeModifyParameterLogResponseBodyChangelogs setParameterName(String parameterName) {
@@ -84,12 +76,20 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             return this.parameterValid;
         }
 
-        public DescribeModifyParameterLogResponseBodyChangelogs setEffectTime(String effectTime) {
-            this.effectTime = effectTime;
+        public DescribeModifyParameterLogResponseBodyChangelogs setParameterValueAfter(String parameterValueAfter) {
+            this.parameterValueAfter = parameterValueAfter;
             return this;
         }
-        public String getEffectTime() {
-            return this.effectTime;
+        public String getParameterValueAfter() {
+            return this.parameterValueAfter;
+        }
+
+        public DescribeModifyParameterLogResponseBodyChangelogs setParameterValueBefore(String parameterValueBefore) {
+            this.parameterValueBefore = parameterValueBefore;
+            return this;
+        }
+        public String getParameterValueBefore() {
+            return this.parameterValueBefore;
         }
 
     }

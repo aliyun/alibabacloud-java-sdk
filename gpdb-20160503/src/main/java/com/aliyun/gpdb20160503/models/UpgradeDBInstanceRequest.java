@@ -4,12 +4,6 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -19,28 +13,18 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PayType")
     public String payType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpgradeDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceRequest self = new UpgradeDBInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeDBInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpgradeDBInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpgradeDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
@@ -67,12 +51,28 @@ public class UpgradeDBInstanceRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public UpgradeDBInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public UpgradeDBInstanceRequest setPayType(String payType) {
         this.payType = payType;
         return this;
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public UpgradeDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,26 +4,38 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DBInstanceCategories")
+    public java.util.List<String> DBInstanceCategories;
 
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DBInstanceIds")
+    public String DBInstanceIds;
+
+    @NameInMap("DBInstanceModes")
+    public java.util.List<String> DBInstanceModes;
+
+    @NameInMap("DBInstanceStatuses")
+    public java.util.List<String> DBInstanceStatuses;
+
+    @NameInMap("InstanceDeployTypes")
+    public java.util.List<String> instanceDeployTypes;
+
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
-    @NameInMap("DBInstanceIds")
-    public String DBInstanceIds;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;
@@ -33,20 +45,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeDBInstancesRequest setDBInstanceCategories(java.util.List<String> DBInstanceCategories) {
+        this.DBInstanceCategories = DBInstanceCategories;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDBInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<String> getDBInstanceCategories() {
+        return this.DBInstanceCategories;
     }
 
     public DescribeDBInstancesRequest setDBInstanceDescription(String DBInstanceDescription) {
@@ -57,6 +61,38 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.DBInstanceDescription;
     }
 
+    public DescribeDBInstancesRequest setDBInstanceIds(String DBInstanceIds) {
+        this.DBInstanceIds = DBInstanceIds;
+        return this;
+    }
+    public String getDBInstanceIds() {
+        return this.DBInstanceIds;
+    }
+
+    public DescribeDBInstancesRequest setDBInstanceModes(java.util.List<String> DBInstanceModes) {
+        this.DBInstanceModes = DBInstanceModes;
+        return this;
+    }
+    public java.util.List<String> getDBInstanceModes() {
+        return this.DBInstanceModes;
+    }
+
+    public DescribeDBInstancesRequest setDBInstanceStatuses(java.util.List<String> DBInstanceStatuses) {
+        this.DBInstanceStatuses = DBInstanceStatuses;
+        return this;
+    }
+    public java.util.List<String> getDBInstanceStatuses() {
+        return this.DBInstanceStatuses;
+    }
+
+    public DescribeDBInstancesRequest setInstanceDeployTypes(java.util.List<String> instanceDeployTypes) {
+        this.instanceDeployTypes = instanceDeployTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceDeployTypes() {
+        return this.instanceDeployTypes;
+    }
+
     public DescribeDBInstancesRequest setInstanceNetworkType(String instanceNetworkType) {
         this.instanceNetworkType = instanceNetworkType;
         return this;
@@ -65,12 +101,20 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.instanceNetworkType;
     }
 
-    public DescribeDBInstancesRequest setDBInstanceIds(String DBInstanceIds) {
-        this.DBInstanceIds = DBInstanceIds;
+    public DescribeDBInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDBInstanceIds() {
-        return this.DBInstanceIds;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDBInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDBInstancesRequest setPageSize(Integer pageSize) {
@@ -81,12 +125,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDBInstancesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDBInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDBInstancesRequest setTag(java.util.List<DescribeDBInstancesRequestTag> tag) {

@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
@@ -31,24 +23,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeRegionsResponseBodyRegionsRegionZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegionZonesZone self = new DescribeRegionsResponseBodyRegionsRegionZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeRegionsResponseBodyRegionsRegionZonesZone setVpcEnabled(Boolean vpcEnabled) {
@@ -57,6 +49,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public Boolean getVpcEnabled() {
             return this.vpcEnabled;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

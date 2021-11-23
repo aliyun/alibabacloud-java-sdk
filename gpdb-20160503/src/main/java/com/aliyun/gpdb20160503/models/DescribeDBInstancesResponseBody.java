@@ -4,8 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("Items")
+    public DescribeDBInstancesResponseBodyItems items;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
@@ -13,23 +16,28 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Items")
-    public DescribeDBInstancesResponseBodyItems items;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeDBInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesResponseBody self = new DescribeDBInstancesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancesResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeDBInstancesResponseBody setItems(DescribeDBInstancesResponseBodyItems items) {
+        this.items = items;
         return this;
     }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public DescribeDBInstancesResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public DescribeDBInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDBInstancesResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -48,20 +56,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDBInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDBInstancesResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDBInstancesResponseBody setItems(DescribeDBInstancesResponseBodyItems items) {
-        this.items = items;
-        return this;
-    }
-    public DescribeDBInstancesResponseBodyItems getItems() {
-        return this.items;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstanceTagsTag extends TeaModel {
@@ -114,65 +114,59 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("DBInstanceNetType")
-        public String DBInstanceNetType;
-
-        @NameInMap("InstanceDeployType")
-        public String instanceDeployType;
-
-        @NameInMap("StorageType")
-        public String storageType;
+        @NameInMap("ConnectionMode")
+        public String connectionMode;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("PayType")
-        public String payType;
+        @NameInMap("DBInstanceCategory")
+        public String DBInstanceCategory;
 
-        @NameInMap("Tags")
-        public DescribeDBInstancesResponseBodyItemsDBInstanceTags tags;
-
-        @NameInMap("LockReason")
-        public String lockReason;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("ConnectionMode")
-        public String connectionMode;
-
-        @NameInMap("LockMode")
-        public String lockMode;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("InstanceNetworkType")
-        public String instanceNetworkType;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("DBInstanceMode")
+        public String DBInstanceMode;
+
+        @NameInMap("DBInstanceNetType")
+        public String DBInstanceNetType;
+
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
         @NameInMap("Engine")
         public String engine;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("InstanceDeployType")
+        public String instanceDeployType;
+
+        @NameInMap("InstanceNetworkType")
+        public String instanceNetworkType;
+
+        @NameInMap("LockMode")
+        public String lockMode;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("MasterNodeNum")
+        public Integer masterNodeNum;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("SegNodeNum")
         public String segNodeNum;
@@ -180,92 +174,24 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("StorageSize")
         public String storageSize;
 
-        @NameInMap("MasterNodeNum")
-        public Integer masterNodeNum;
+        @NameInMap("StorageType")
+        public String storageType;
+
+        @NameInMap("Tags")
+        public DescribeDBInstancesResponseBodyItemsDBInstanceTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDBInstancesResponseBodyItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyItemsDBInstance self = new DescribeDBInstancesResponseBodyItemsDBInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
-            this.DBInstanceNetType = DBInstanceNetType;
-            return this;
-        }
-        public String getDBInstanceNetType() {
-            return this.DBInstanceNetType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceDeployType(String instanceDeployType) {
-            this.instanceDeployType = instanceDeployType;
-            return this;
-        }
-        public String getInstanceDeployType() {
-            return this.instanceDeployType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setTags(DescribeDBInstancesResponseBodyItemsDBInstanceTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeDBInstancesResponseBodyItemsDBInstanceTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setLockReason(String lockReason) {
-            this.lockReason = lockReason;
-            return this;
-        }
-        public String getLockReason() {
-            return this.lockReason;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
-            this.DBInstanceStatus = DBInstanceStatus;
-            return this;
-        }
-        public String getDBInstanceStatus() {
-            return this.DBInstanceStatus;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setConnectionMode(String connectionMode) {
@@ -276,52 +202,28 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.connectionMode;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setLockMode(String lockMode) {
-            this.lockMode = lockMode;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getLockMode() {
-            return this.lockMode;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceCategory(String DBInstanceCategory) {
+            this.DBInstanceCategory = DBInstanceCategory;
             return this;
         }
-        public String getEngineVersion() {
-            return this.engineVersion;
+        public String getDBInstanceCategory() {
+            return this.DBInstanceCategory;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
-            this.instanceNetworkType = instanceNetworkType;
-            return this;
-        }
-        public String getInstanceNetworkType() {
-            return this.instanceNetworkType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceId(String DBInstanceId) {
@@ -332,6 +234,30 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceMode(String DBInstanceMode) {
+            this.DBInstanceMode = DBInstanceMode;
+            return this;
+        }
+        public String getDBInstanceMode() {
+            return this.DBInstanceMode;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+        public String getDBInstanceNetType() {
+            return this.DBInstanceNetType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
+        }
+
         public DescribeDBInstancesResponseBodyItemsDBInstance setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -340,12 +266,76 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceDeployType(String instanceDeployType) {
+            this.instanceDeployType = instanceDeployType;
+            return this;
+        }
+        public String getInstanceDeployType() {
+            return this.instanceDeployType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
+            this.instanceNetworkType = instanceNetworkType;
+            return this;
+        }
+        public String getInstanceNetworkType() {
+            return this.instanceNetworkType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setMasterNodeNum(Integer masterNodeNum) {
+            this.masterNodeNum = masterNodeNum;
+            return this;
+        }
+        public Integer getMasterNodeNum() {
+            return this.masterNodeNum;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setSegNodeNum(String segNodeNum) {
@@ -364,12 +354,44 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.storageSize;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setMasterNodeNum(Integer masterNodeNum) {
-            this.masterNodeNum = masterNodeNum;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setStorageType(String storageType) {
+            this.storageType = storageType;
             return this;
         }
-        public Integer getMasterNodeNum() {
-            return this.masterNodeNum;
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setTags(DescribeDBInstancesResponseBodyItemsDBInstanceTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDBInstancesResponseBodyItemsDBInstanceTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

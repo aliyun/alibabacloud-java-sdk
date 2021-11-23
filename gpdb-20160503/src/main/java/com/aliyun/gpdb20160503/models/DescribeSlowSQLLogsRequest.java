@@ -7,32 +7,20 @@ public class DescribeSlowSQLLogsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("QueryKeywords")
-    public String queryKeywords;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("Database")
     public String database;
-
-    @NameInMap("User")
-    public String user;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("SourceIP")
-    public String sourceIP;
-
     @NameInMap("ExecuteState")
     public String executeState;
+
+    @NameInMap("MaxExecuteCost")
+    public String maxExecuteCost;
+
+    @NameInMap("MinExecuteCost")
+    public String minExecuteCost;
 
     @NameInMap("OperationClass")
     public String operationClass;
@@ -40,11 +28,23 @@ public class DescribeSlowSQLLogsRequest extends TeaModel {
     @NameInMap("OperationType")
     public String operationType;
 
-    @NameInMap("MinExecuteCost")
-    public String minExecuteCost;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("MaxExecuteCost")
-    public String maxExecuteCost;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryKeywords")
+    public String queryKeywords;
+
+    @NameInMap("SourceIP")
+    public String sourceIP;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("User")
+    public String user;
 
     public static DescribeSlowSQLLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlowSQLLogsRequest self = new DescribeSlowSQLLogsRequest();
@@ -59,36 +59,12 @@ public class DescribeSlowSQLLogsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeSlowSQLLogsRequest setQueryKeywords(String queryKeywords) {
-        this.queryKeywords = queryKeywords;
-        return this;
-    }
-    public String getQueryKeywords() {
-        return this.queryKeywords;
-    }
-
-    public DescribeSlowSQLLogsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeSlowSQLLogsRequest setDatabase(String database) {
         this.database = database;
         return this;
     }
     public String getDatabase() {
         return this.database;
-    }
-
-    public DescribeSlowSQLLogsRequest setUser(String user) {
-        this.user = user;
-        return this;
-    }
-    public String getUser() {
-        return this.user;
     }
 
     public DescribeSlowSQLLogsRequest setEndTime(String endTime) {
@@ -99,36 +75,28 @@ public class DescribeSlowSQLLogsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeSlowSQLLogsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSlowSQLLogsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeSlowSQLLogsRequest setSourceIP(String sourceIP) {
-        this.sourceIP = sourceIP;
-        return this;
-    }
-    public String getSourceIP() {
-        return this.sourceIP;
-    }
-
     public DescribeSlowSQLLogsRequest setExecuteState(String executeState) {
         this.executeState = executeState;
         return this;
     }
     public String getExecuteState() {
         return this.executeState;
+    }
+
+    public DescribeSlowSQLLogsRequest setMaxExecuteCost(String maxExecuteCost) {
+        this.maxExecuteCost = maxExecuteCost;
+        return this;
+    }
+    public String getMaxExecuteCost() {
+        return this.maxExecuteCost;
+    }
+
+    public DescribeSlowSQLLogsRequest setMinExecuteCost(String minExecuteCost) {
+        this.minExecuteCost = minExecuteCost;
+        return this;
+    }
+    public String getMinExecuteCost() {
+        return this.minExecuteCost;
     }
 
     public DescribeSlowSQLLogsRequest setOperationClass(String operationClass) {
@@ -147,20 +115,52 @@ public class DescribeSlowSQLLogsRequest extends TeaModel {
         return this.operationType;
     }
 
-    public DescribeSlowSQLLogsRequest setMinExecuteCost(String minExecuteCost) {
-        this.minExecuteCost = minExecuteCost;
+    public DescribeSlowSQLLogsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getMinExecuteCost() {
-        return this.minExecuteCost;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public DescribeSlowSQLLogsRequest setMaxExecuteCost(String maxExecuteCost) {
-        this.maxExecuteCost = maxExecuteCost;
+    public DescribeSlowSQLLogsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getMaxExecuteCost() {
-        return this.maxExecuteCost;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSlowSQLLogsRequest setQueryKeywords(String queryKeywords) {
+        this.queryKeywords = queryKeywords;
+        return this;
+    }
+    public String getQueryKeywords() {
+        return this.queryKeywords;
+    }
+
+    public DescribeSlowSQLLogsRequest setSourceIP(String sourceIP) {
+        this.sourceIP = sourceIP;
+        return this;
+    }
+    public String getSourceIP() {
+        return this.sourceIP;
+    }
+
+    public DescribeSlowSQLLogsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeSlowSQLLogsRequest setUser(String user) {
+        this.user = user;
+        return this;
+    }
+    public String getUser() {
+        return this.user;
     }
 
 }

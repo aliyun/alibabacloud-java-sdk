@@ -4,11 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBVersionResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeDBVersionResponseBody setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
     public UpgradeDBVersionResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public UpgradeDBVersionResponseBody setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     public UpgradeDBVersionResponseBody setRequestId(String requestId) {

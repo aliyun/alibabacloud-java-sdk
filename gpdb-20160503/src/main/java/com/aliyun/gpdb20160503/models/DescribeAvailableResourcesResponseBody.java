@@ -43,34 +43,18 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount extends TeaModel {
-        @NameInMap("Step")
-        public String step;
+        @NameInMap("MaxCount")
+        public String maxCount;
 
         @NameInMap("MinCount")
         public String minCount;
 
-        @NameInMap("MaxCount")
-        public String maxCount;
+        @NameInMap("Step")
+        public String step;
 
         public static DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount self = new DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount setStep(String step) {
-            this.step = step;
-            return this;
-        }
-        public String getStep() {
-            return this.step;
-        }
-
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount setMinCount(String minCount) {
-            this.minCount = minCount;
-            return this;
-        }
-        public String getMinCount() {
-            return this.minCount;
         }
 
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount setMaxCount(String maxCount) {
@@ -81,24 +65,15 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             return this.maxCount;
         }
 
-    }
-
-    public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize extends TeaModel {
-        @NameInMap("Step")
-        public String step;
-
-        @NameInMap("MinCount")
-        public String minCount;
-
-        @NameInMap("MaxCount")
-        public String maxCount;
-
-        public static DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize self = new DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize();
-            return TeaModel.build(map, self);
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount setMinCount(String minCount) {
+            this.minCount = minCount;
+            return this;
+        }
+        public String getMinCount() {
+            return this.minCount;
         }
 
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize setStep(String step) {
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount setStep(String step) {
             this.step = step;
             return this;
         }
@@ -106,12 +81,21 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             return this.step;
         }
 
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize setMinCount(String minCount) {
-            this.minCount = minCount;
-            return this;
-        }
-        public String getMinCount() {
-            return this.minCount;
+    }
+
+    public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize extends TeaModel {
+        @NameInMap("MaxCount")
+        public String maxCount;
+
+        @NameInMap("MinCount")
+        public String minCount;
+
+        @NameInMap("Step")
+        public String step;
+
+        public static DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize self = new DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize();
+            return TeaModel.build(map, self);
         }
 
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize setMaxCount(String maxCount) {
@@ -122,12 +106,25 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             return this.maxCount;
         }
 
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize setMinCount(String minCount) {
+            this.minCount = minCount;
+            return this;
+        }
+        public String getMinCount() {
+            return this.minCount;
+        }
+
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize setStep(String step) {
+            this.step = step;
+            return this;
+        }
+        public String getStep() {
+            return this.step;
+        }
+
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses extends TeaModel {
-        @NameInMap("StorageType")
-        public String storageType;
-
         @NameInMap("Description")
         public String description;
 
@@ -143,17 +140,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         @NameInMap("StorageSize")
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize storageSize;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         public static DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses self = new DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
         }
 
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses setDescription(String description) {
@@ -196,14 +188,22 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             return this.storageSize;
         }
 
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
     }
 
     public static class DescribeAvailableResourcesResponseBodyResourcesSupportedEngines extends TeaModel {
-        @NameInMap("SupportedEngineVersion")
-        public String supportedEngineVersion;
-
         @NameInMap("Mode")
         public String mode;
+
+        @NameInMap("SupportedEngineVersion")
+        public String supportedEngineVersion;
 
         @NameInMap("SupportedInstanceClasses")
         public java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses> supportedInstanceClasses;
@@ -213,20 +213,20 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourcesResponseBodyResourcesSupportedEngines setSupportedEngineVersion(String supportedEngineVersion) {
-            this.supportedEngineVersion = supportedEngineVersion;
-            return this;
-        }
-        public String getSupportedEngineVersion() {
-            return this.supportedEngineVersion;
-        }
-
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEngines setMode(String mode) {
             this.mode = mode;
             return this;
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public DescribeAvailableResourcesResponseBodyResourcesSupportedEngines setSupportedEngineVersion(String supportedEngineVersion) {
+            this.supportedEngineVersion = supportedEngineVersion;
+            return this;
+        }
+        public String getSupportedEngineVersion() {
+            return this.supportedEngineVersion;
         }
 
         public DescribeAvailableResourcesResponseBodyResourcesSupportedEngines setSupportedInstanceClasses(java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses> supportedInstanceClasses) {
@@ -240,23 +240,15 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourcesResponseBodyResources extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEngines> supportedEngines;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeAvailableResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourcesResponseBodyResources self = new DescribeAvailableResourcesResponseBodyResources();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourcesResponseBodyResources setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeAvailableResourcesResponseBodyResources setSupportedEngines(java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEngines> supportedEngines) {
@@ -265,6 +257,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAvailableResourcesResponseBodyResourcesSupportedEngines> getSupportedEngines() {
             return this.supportedEngines;
+        }
+
+        public DescribeAvailableResourcesResponseBodyResources setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

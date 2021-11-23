@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     @NameInMap("AccountName")
     public String accountName;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     public static DescribeAccountsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsRequest self = new DescribeAccountsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountsRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
     public DescribeAccountsRequest setAccountName(String accountName) {
@@ -29,6 +21,14 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public DescribeAccountsRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
 }

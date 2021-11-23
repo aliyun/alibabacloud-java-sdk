@@ -7,14 +7,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("Key")
     public String key;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     public static DescribeDBClusterPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterPerformanceRequest self = new DescribeDBClusterPerformanceRequest();
@@ -27,6 +27,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBClusterPerformanceRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDBClusterPerformanceRequest setKey(String key) {
@@ -43,14 +51,6 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDBClusterPerformanceRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

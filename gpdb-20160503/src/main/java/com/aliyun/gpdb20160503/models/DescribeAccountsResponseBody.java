@@ -4,23 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsResponseBody self = new DescribeAccountsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAccountsResponseBody setAccounts(DescribeAccountsResponseBodyAccounts accounts) {
@@ -31,18 +23,26 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.accounts;
     }
 
+    public DescribeAccountsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
 
         public static DescribeAccountsResponseBodyAccountsDBInstanceAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsDBInstanceAccount self = new DescribeAccountsResponseBodyAccountsDBInstanceAccount();
@@ -57,12 +57,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountDescription;
         }
 
-        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountStatus(String accountStatus) {
@@ -73,12 +73,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountStatus;
         }
 
-        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
         }
 
     }

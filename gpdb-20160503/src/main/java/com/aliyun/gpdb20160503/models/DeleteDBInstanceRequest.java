@@ -4,26 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBInstanceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static DeleteDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBInstanceRequest self = new DeleteDBInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDBInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteDBInstanceRequest setClientToken(String clientToken) {
@@ -40,6 +32,14 @@ public class DeleteDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DeleteDBInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

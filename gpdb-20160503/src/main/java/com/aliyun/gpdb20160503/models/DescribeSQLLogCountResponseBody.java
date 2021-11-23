@@ -4,8 +4,14 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogCountResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Items")
+    public java.util.List<DescribeSQLLogCountResponseBodyItems> items;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeSQLLogCountResponseBodyItems> items;
-
     public static DescribeSQLLogCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogCountResponseBody self = new DescribeSQLLogCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSQLLogCountResponseBody setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     public DescribeSQLLogCountResponseBody setEndTime(String endTime) {
@@ -30,6 +38,14 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeSQLLogCountResponseBody setItems(java.util.List<DescribeSQLLogCountResponseBodyItems> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<DescribeSQLLogCountResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeSQLLogCountResponseBody setRequestId(String requestId) {
@@ -46,22 +62,6 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeSQLLogCountResponseBody setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeSQLLogCountResponseBody setItems(java.util.List<DescribeSQLLogCountResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeSQLLogCountResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeSQLLogCountResponseBodyItemsSeriesValues extends TeaModel {
@@ -103,23 +103,15 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogCountResponseBodyItems extends TeaModel {
-        @NameInMap("Series")
-        public java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> series;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Series")
+        public java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> series;
 
         public static DescribeSQLLogCountResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogCountResponseBodyItems self = new DescribeSQLLogCountResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSQLLogCountResponseBodyItems setSeries(java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> series) {
-            this.series = series;
-            return this;
-        }
-        public java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> getSeries() {
-            return this.series;
         }
 
         public DescribeSQLLogCountResponseBodyItems setName(String name) {
@@ -128,6 +120,14 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeSQLLogCountResponseBodyItems setSeries(java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> series) {
+            this.series = series;
+            return this;
+        }
+        public java.util.List<DescribeSQLLogCountResponseBodyItemsSeries> getSeries() {
+            return this.series;
         }
 
     }
