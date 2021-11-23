@@ -201,32 +201,33 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
     }
 
     public static class GetOpenJMeterSceneResponseBodySceneFileList extends TeaModel {
+        // 文件名
         @NameInMap("FileName")
         public String fileName;
 
+        // 文件地址
         @NameInMap("FileOssAddress")
         public String fileOssAddress;
 
+        // 文件大小
         @NameInMap("FileSize")
         public Long fileSize;
 
+        // 文件类型
         @NameInMap("FileType")
         public String fileType;
 
+        // 文件ID
         @NameInMap("Id")
         public Long id;
 
+        // 文件的md5值
         @NameInMap("Md5")
         public String md5;
 
+        // csv文件是否切分
         @NameInMap("SplitCsv")
         public Boolean splitCsv;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("UriStr")
-        public String uriStr;
 
         public static GetOpenJMeterSceneResponseBodySceneFileList build(java.util.Map<String, ?> map) throws Exception {
             GetOpenJMeterSceneResponseBodySceneFileList self = new GetOpenJMeterSceneResponseBodySceneFileList();
@@ -287,22 +288,6 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
         public Boolean getSplitCsv() {
             return this.splitCsv;
-        }
-
-        public GetOpenJMeterSceneResponseBodySceneFileList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public GetOpenJMeterSceneResponseBodySceneFileList setUriStr(String uriStr) {
-            this.uriStr = uriStr;
-            return this;
-        }
-        public String getUriStr() {
-            return this.uriStr;
         }
 
     }
