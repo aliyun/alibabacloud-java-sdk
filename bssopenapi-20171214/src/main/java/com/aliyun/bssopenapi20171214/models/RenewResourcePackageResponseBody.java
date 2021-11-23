@@ -7,20 +7,20 @@ public class RenewResourcePackageResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public RenewResourcePackageResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("OrderId")
+    public Long orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("OrderId")
-    public Long orderId;
-
-    @NameInMap("Data")
-    public RenewResourcePackageResponseBodyData data;
 
     public static RenewResourcePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RenewResourcePackageResponseBody self = new RenewResourcePackageResponseBody();
@@ -35,12 +35,28 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         return this.code;
     }
 
+    public RenewResourcePackageResponseBody setData(RenewResourcePackageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RenewResourcePackageResponseBodyData getData() {
+        return this.data;
+    }
+
     public RenewResourcePackageResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public RenewResourcePackageResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public RenewResourcePackageResponseBody setRequestId(String requestId) {
@@ -59,40 +75,16 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RenewResourcePackageResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    public RenewResourcePackageResponseBody setData(RenewResourcePackageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RenewResourcePackageResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RenewResourcePackageResponseBodyData extends TeaModel {
-        @NameInMap("OrderId")
-        public Long orderId;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("OrderId")
+        public Long orderId;
 
         public static RenewResourcePackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RenewResourcePackageResponseBodyData self = new RenewResourcePackageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public RenewResourcePackageResponseBodyData setOrderId(Long orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public Long getOrderId() {
-            return this.orderId;
         }
 
         public RenewResourcePackageResponseBodyData setInstanceId(String instanceId) {
@@ -101,6 +93,14 @@ public class RenewResourcePackageResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public RenewResourcePackageResponseBodyData setOrderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public Long getOrderId() {
+            return this.orderId;
         }
 
     }

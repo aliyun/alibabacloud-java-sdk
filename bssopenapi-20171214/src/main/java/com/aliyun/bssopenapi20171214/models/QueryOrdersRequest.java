@@ -7,11 +7,23 @@ public class QueryOrdersRequest extends TeaModel {
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
+    @NameInMap("CreateTimeStart")
+    public String createTimeStart;
+
+    @NameInMap("OrderType")
+    public String orderType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("PaymentStatus")
+    public String paymentStatus;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -21,18 +33,6 @@ public class QueryOrdersRequest extends TeaModel {
 
     @NameInMap("SubscriptionType")
     public String subscriptionType;
-
-    @NameInMap("OrderType")
-    public String orderType;
-
-    @NameInMap("PaymentStatus")
-    public String paymentStatus;
-
-    @NameInMap("CreateTimeStart")
-    public String createTimeStart;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     public static QueryOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrdersRequest self = new QueryOrdersRequest();
@@ -45,6 +45,30 @@ public class QueryOrdersRequest extends TeaModel {
     }
     public String getCreateTimeEnd() {
         return this.createTimeEnd;
+    }
+
+    public QueryOrdersRequest setCreateTimeStart(String createTimeStart) {
+        this.createTimeStart = createTimeStart;
+        return this;
+    }
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    public QueryOrdersRequest setOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    public String getOrderType() {
+        return this.orderType;
+    }
+
+    public QueryOrdersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryOrdersRequest setPageNum(Integer pageNum) {
@@ -61,6 +85,14 @@ public class QueryOrdersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryOrdersRequest setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
+        return this;
+    }
+    public String getPaymentStatus() {
+        return this.paymentStatus;
     }
 
     public QueryOrdersRequest setProductCode(String productCode) {
@@ -85,38 +117,6 @@ public class QueryOrdersRequest extends TeaModel {
     }
     public String getSubscriptionType() {
         return this.subscriptionType;
-    }
-
-    public QueryOrdersRequest setOrderType(String orderType) {
-        this.orderType = orderType;
-        return this;
-    }
-    public String getOrderType() {
-        return this.orderType;
-    }
-
-    public QueryOrdersRequest setPaymentStatus(String paymentStatus) {
-        this.paymentStatus = paymentStatus;
-        return this;
-    }
-    public String getPaymentStatus() {
-        return this.paymentStatus;
-    }
-
-    public QueryOrdersRequest setCreateTimeStart(String createTimeStart) {
-        this.createTimeStart = createTimeStart;
-        return this;
-    }
-    public String getCreateTimeStart() {
-        return this.createTimeStart;
-    }
-
-    public QueryOrdersRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
 }

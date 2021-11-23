@@ -7,6 +7,9 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeSavingsPlansUsageDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribeSavingsPlansUsageDetailResponseBodyData data;
 
     public static DescribeSavingsPlansUsageDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSavingsPlansUsageDetailResponseBody self = new DescribeSavingsPlansUsageDetailResponseBody();
@@ -30,6 +30,14 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeSavingsPlansUsageDetailResponseBody setData(DescribeSavingsPlansUsageDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSavingsPlansUsageDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeSavingsPlansUsageDetailResponseBody setMessage(String message) {
@@ -56,15 +64,31 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeSavingsPlansUsageDetailResponseBody setData(DescribeSavingsPlansUsageDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSavingsPlansUsageDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeSavingsPlansUsageDetailResponseBodyDataItems extends TeaModel {
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("DeductValue")
+        public Float deductValue;
+
+        @NameInMap("EndPeriod")
+        public String endPeriod;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("PoolValue")
+        public Float poolValue;
+
+        @NameInMap("PostpaidCost")
+        public Float postpaidCost;
+
+        @NameInMap("SavedCost")
+        public Float savedCost;
+
+        @NameInMap("StartPeriod")
+        public String startPeriod;
+
         @NameInMap("Status")
         public String status;
 
@@ -77,36 +101,76 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
         @NameInMap("UserId")
         public Long userId;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Currency")
-        public String currency;
-
-        @NameInMap("PostpaidCost")
-        public Float postpaidCost;
-
-        @NameInMap("DeductValue")
-        public Float deductValue;
-
-        @NameInMap("StartPeriod")
-        public String startPeriod;
-
-        @NameInMap("SavedCost")
-        public Float savedCost;
-
-        @NameInMap("PoolValue")
-        public Float poolValue;
-
         @NameInMap("UserName")
         public String userName;
-
-        @NameInMap("EndPeriod")
-        public String endPeriod;
 
         public static DescribeSavingsPlansUsageDetailResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSavingsPlansUsageDetailResponseBodyDataItems self = new DescribeSavingsPlansUsageDetailResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setDeductValue(Float deductValue) {
+            this.deductValue = deductValue;
+            return this;
+        }
+        public Float getDeductValue() {
+            return this.deductValue;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setEndPeriod(String endPeriod) {
+            this.endPeriod = endPeriod;
+            return this;
+        }
+        public String getEndPeriod() {
+            return this.endPeriod;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setPoolValue(Float poolValue) {
+            this.poolValue = poolValue;
+            return this;
+        }
+        public Float getPoolValue() {
+            return this.poolValue;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setPostpaidCost(Float postpaidCost) {
+            this.postpaidCost = postpaidCost;
+            return this;
+        }
+        public Float getPostpaidCost() {
+            return this.postpaidCost;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setSavedCost(Float savedCost) {
+            this.savedCost = savedCost;
+            return this;
+        }
+        public Float getSavedCost() {
+            return this.savedCost;
+        }
+
+        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setStartPeriod(String startPeriod) {
+            this.startPeriod = startPeriod;
+            return this;
+        }
+        public String getStartPeriod() {
+            return this.startPeriod;
         }
 
         public DescribeSavingsPlansUsageDetailResponseBodyDataItems setStatus(String status) {
@@ -141,62 +205,6 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setPostpaidCost(Float postpaidCost) {
-            this.postpaidCost = postpaidCost;
-            return this;
-        }
-        public Float getPostpaidCost() {
-            return this.postpaidCost;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setDeductValue(Float deductValue) {
-            this.deductValue = deductValue;
-            return this;
-        }
-        public Float getDeductValue() {
-            return this.deductValue;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setStartPeriod(String startPeriod) {
-            this.startPeriod = startPeriod;
-            return this;
-        }
-        public String getStartPeriod() {
-            return this.startPeriod;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setSavedCost(Float savedCost) {
-            this.savedCost = savedCost;
-            return this;
-        }
-        public Float getSavedCost() {
-            return this.savedCost;
-        }
-
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setPoolValue(Float poolValue) {
-            this.poolValue = poolValue;
-            return this;
-        }
-        public Float getPoolValue() {
-            return this.poolValue;
-        }
-
         public DescribeSavingsPlansUsageDetailResponseBodyDataItems setUserName(String userName) {
             this.userName = userName;
             return this;
@@ -205,37 +213,29 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeSavingsPlansUsageDetailResponseBodyDataItems setEndPeriod(String endPeriod) {
-            this.endPeriod = endPeriod;
-            return this;
-        }
-        public String getEndPeriod() {
-            return this.endPeriod;
-        }
-
     }
 
     public static class DescribeSavingsPlansUsageDetailResponseBodyData extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("Items")
+        public java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> items;
 
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("Items")
-        public java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> items;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribeSavingsPlansUsageDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSavingsPlansUsageDetailResponseBodyData self = new DescribeSavingsPlansUsageDetailResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSavingsPlansUsageDetailResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public DescribeSavingsPlansUsageDetailResponseBodyData setItems(java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> items) {
+            this.items = items;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public DescribeSavingsPlansUsageDetailResponseBodyData setNextToken(String nextToken) {
@@ -246,12 +246,12 @@ public class DescribeSavingsPlansUsageDetailResponseBody extends TeaModel {
             return this.nextToken;
         }
 
-        public DescribeSavingsPlansUsageDetailResponseBodyData setItems(java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> items) {
-            this.items = items;
+        public DescribeSavingsPlansUsageDetailResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<DescribeSavingsPlansUsageDetailResponseBodyDataItems> getItems() {
-            return this.items;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

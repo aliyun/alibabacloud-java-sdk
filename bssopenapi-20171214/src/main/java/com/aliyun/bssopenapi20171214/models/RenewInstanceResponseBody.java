@@ -7,6 +7,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public RenewInstanceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class RenewInstanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public RenewInstanceResponseBodyData data;
 
     public static RenewInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceResponseBody self = new RenewInstanceResponseBody();
@@ -30,6 +30,14 @@ public class RenewInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public RenewInstanceResponseBody setData(RenewInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RenewInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public RenewInstanceResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class RenewInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public RenewInstanceResponseBody setData(RenewInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RenewInstanceResponseBodyData getData() {
-        return this.data;
     }
 
     public static class RenewInstanceResponseBodyData extends TeaModel {

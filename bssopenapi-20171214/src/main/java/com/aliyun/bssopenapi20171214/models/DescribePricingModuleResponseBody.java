@@ -7,6 +7,9 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribePricingModuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DescribePricingModuleResponseBodyData data;
 
     public static DescribePricingModuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePricingModuleResponseBody self = new DescribePricingModuleResponseBody();
@@ -30,6 +30,14 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribePricingModuleResponseBody setData(DescribePricingModuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribePricingModuleResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribePricingModuleResponseBody setMessage(String message) {
@@ -56,131 +64,38 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribePricingModuleResponseBody setData(DescribePricingModuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribePricingModuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public static class DescribePricingModuleResponseBodyDataModuleListModuleConfigList extends TeaModel {
-        @NameInMap("ConfigList")
-        public java.util.List<String> configList;
-
-        public static DescribePricingModuleResponseBodyDataModuleListModuleConfigList build(java.util.Map<String, ?> map) throws Exception {
-            DescribePricingModuleResponseBodyDataModuleListModuleConfigList self = new DescribePricingModuleResponseBodyDataModuleListModuleConfigList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList setConfigList(java.util.List<String> configList) {
-            this.configList = configList;
-            return this;
-        }
-        public java.util.List<String> getConfigList() {
-            return this.configList;
-        }
-
-    }
-
-    public static class DescribePricingModuleResponseBodyDataModuleListModule extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
-
-        @NameInMap("PriceType")
-        public String priceType;
-
-        @NameInMap("Currency")
-        public String currency;
-
-        @NameInMap("ModuleCode")
-        public String moduleCode;
-
-        @NameInMap("ConfigList")
-        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList configList;
-
-        public static DescribePricingModuleResponseBodyDataModuleListModule build(java.util.Map<String, ?> map) throws Exception {
-            DescribePricingModuleResponseBodyDataModuleListModule self = new DescribePricingModuleResponseBodyDataModuleListModule();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModule setModuleName(String moduleName) {
-            this.moduleName = moduleName;
-            return this;
-        }
-        public String getModuleName() {
-            return this.moduleName;
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModule setPriceType(String priceType) {
-            this.priceType = priceType;
-            return this;
-        }
-        public String getPriceType() {
-            return this.priceType;
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModule setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModule setModuleCode(String moduleCode) {
-            this.moduleCode = moduleCode;
-            return this;
-        }
-        public String getModuleCode() {
-            return this.moduleCode;
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleListModule setConfigList(DescribePricingModuleResponseBodyDataModuleListModuleConfigList configList) {
-            this.configList = configList;
-            return this;
-        }
-        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList getConfigList() {
-            return this.configList;
-        }
-
-    }
-
-    public static class DescribePricingModuleResponseBodyDataModuleList extends TeaModel {
-        @NameInMap("Module")
-        public java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> module;
-
-        public static DescribePricingModuleResponseBodyDataModuleList build(java.util.Map<String, ?> map) throws Exception {
-            DescribePricingModuleResponseBodyDataModuleList self = new DescribePricingModuleResponseBodyDataModuleList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePricingModuleResponseBodyDataModuleList setModule(java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> module) {
-            this.module = module;
-            return this;
-        }
-        public java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> getModule() {
-            return this.module;
-        }
-
-    }
-
     public static class DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("Name")
-        public String name;
-
         public static DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue build(java.util.Map<String, ?> map) throws Exception {
             DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue self = new DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue setType(String type) {
@@ -197,22 +112,6 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }
@@ -307,24 +206,117 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
 
-    public static class DescribePricingModuleResponseBodyData extends TeaModel {
-        @NameInMap("ModuleList")
-        public DescribePricingModuleResponseBodyDataModuleList moduleList;
+    public static class DescribePricingModuleResponseBodyDataModuleListModuleConfigList extends TeaModel {
+        @NameInMap("ConfigList")
+        public java.util.List<String> configList;
 
+        public static DescribePricingModuleResponseBodyDataModuleListModuleConfigList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePricingModuleResponseBodyDataModuleListModuleConfigList self = new DescribePricingModuleResponseBodyDataModuleListModuleConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList setConfigList(java.util.List<String> configList) {
+            this.configList = configList;
+            return this;
+        }
+        public java.util.List<String> getConfigList() {
+            return this.configList;
+        }
+
+    }
+
+    public static class DescribePricingModuleResponseBodyDataModuleListModule extends TeaModel {
+        @NameInMap("ConfigList")
+        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList configList;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("ModuleCode")
+        public String moduleCode;
+
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        @NameInMap("PriceType")
+        public String priceType;
+
+        public static DescribePricingModuleResponseBodyDataModuleListModule build(java.util.Map<String, ?> map) throws Exception {
+            DescribePricingModuleResponseBodyDataModuleListModule self = new DescribePricingModuleResponseBodyDataModuleListModule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModule setConfigList(DescribePricingModuleResponseBodyDataModuleListModuleConfigList configList) {
+            this.configList = configList;
+            return this;
+        }
+        public DescribePricingModuleResponseBodyDataModuleListModuleConfigList getConfigList() {
+            return this.configList;
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModule setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModule setModuleCode(String moduleCode) {
+            this.moduleCode = moduleCode;
+            return this;
+        }
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModule setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleListModule setPriceType(String priceType) {
+            this.priceType = priceType;
+            return this;
+        }
+        public String getPriceType() {
+            return this.priceType;
+        }
+
+    }
+
+    public static class DescribePricingModuleResponseBodyDataModuleList extends TeaModel {
+        @NameInMap("Module")
+        public java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> module;
+
+        public static DescribePricingModuleResponseBodyDataModuleList build(java.util.Map<String, ?> map) throws Exception {
+            DescribePricingModuleResponseBodyDataModuleList self = new DescribePricingModuleResponseBodyDataModuleList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePricingModuleResponseBodyDataModuleList setModule(java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> module) {
+            this.module = module;
+            return this;
+        }
+        public java.util.List<DescribePricingModuleResponseBodyDataModuleListModule> getModule() {
+            return this.module;
+        }
+
+    }
+
+    public static class DescribePricingModuleResponseBodyData extends TeaModel {
         @NameInMap("AttributeList")
         public DescribePricingModuleResponseBodyDataAttributeList attributeList;
+
+        @NameInMap("ModuleList")
+        public DescribePricingModuleResponseBodyDataModuleList moduleList;
 
         public static DescribePricingModuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribePricingModuleResponseBodyData self = new DescribePricingModuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePricingModuleResponseBodyData setModuleList(DescribePricingModuleResponseBodyDataModuleList moduleList) {
-            this.moduleList = moduleList;
-            return this;
-        }
-        public DescribePricingModuleResponseBodyDataModuleList getModuleList() {
-            return this.moduleList;
         }
 
         public DescribePricingModuleResponseBodyData setAttributeList(DescribePricingModuleResponseBodyDataAttributeList attributeList) {
@@ -333,6 +325,14 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         }
         public DescribePricingModuleResponseBodyDataAttributeList getAttributeList() {
             return this.attributeList;
+        }
+
+        public DescribePricingModuleResponseBodyData setModuleList(DescribePricingModuleResponseBodyDataModuleList moduleList) {
+            this.moduleList = moduleList;
+            return this;
+        }
+        public DescribePricingModuleResponseBodyDataModuleList getModuleList() {
+            return this.moduleList;
         }
 
     }

@@ -7,6 +7,9 @@ public class QueryProductListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryProductListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryProductListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryProductListResponseBodyData data;
 
     public static QueryProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryProductListResponseBody self = new QueryProductListResponseBody();
@@ -30,6 +30,14 @@ public class QueryProductListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryProductListResponseBody setMessage(String message) {
@@ -56,15 +64,10 @@ public class QueryProductListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryProductListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryProductListResponseBodyDataProductListProduct extends TeaModel {
+        @NameInMap("ProductCode")
+        public String productCode;
+
         @NameInMap("ProductName")
         public String productName;
 
@@ -74,12 +77,17 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
-        @NameInMap("ProductCode")
-        public String productCode;
-
         public static QueryProductListResponseBodyDataProductListProduct build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseBodyDataProductListProduct self = new QueryProductListResponseBodyDataProductListProduct();
             return TeaModel.build(map, self);
+        }
+
+        public QueryProductListResponseBodyDataProductListProduct setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
         }
 
         public QueryProductListResponseBodyDataProductListProduct setProductName(String productName) {
@@ -104,14 +112,6 @@ public class QueryProductListResponseBody extends TeaModel {
         }
         public String getSubscriptionType() {
             return this.subscriptionType;
-        }
-
-        public QueryProductListResponseBodyDataProductListProduct setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
         }
 
     }
@@ -142,11 +142,11 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("ProductList")
         public QueryProductListResponseBodyDataProductList productList;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static QueryProductListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseBodyData self = new QueryProductListResponseBodyData();
@@ -169,20 +169,20 @@ public class QueryProductListResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QueryProductListResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public QueryProductListResponseBodyData setProductList(QueryProductListResponseBodyDataProductList productList) {
             this.productList = productList;
             return this;
         }
         public QueryProductListResponseBodyDataProductList getProductList() {
             return this.productList;
+        }
+
+        public QueryProductListResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

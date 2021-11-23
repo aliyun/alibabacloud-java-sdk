@@ -7,20 +7,20 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeResourcePackageProductResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("OrderId")
+    public Long orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("OrderId")
-    public Long orderId;
-
-    @NameInMap("Data")
-    public DescribeResourcePackageProductResponseBodyData data;
 
     public static DescribeResourcePackageProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcePackageProductResponseBody self = new DescribeResourcePackageProductResponseBody();
@@ -35,12 +35,28 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeResourcePackageProductResponseBody setData(DescribeResourcePackageProductResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeResourcePackageProductResponseBodyData getData() {
+        return this.data;
+    }
+
     public DescribeResourcePackageProductResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeResourcePackageProductResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public DescribeResourcePackageProductResponseBody setRequestId(String requestId) {
@@ -57,22 +73,6 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeResourcePackageProductResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    public DescribeResourcePackageProductResponseBody setData(DescribeResourcePackageProductResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeResourcePackageProductResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty extends TeaModel {
@@ -125,26 +125,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration extends TeaModel {
-        @NameInMap("Value")
-        public Integer value;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Unit")
         public String unit;
 
+        @NameInMap("Value")
+        public Integer value;
+
         public static DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration self = new DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setValue(Integer value) {
-            this.value = value;
-            return this;
-        }
-        public Integer getValue() {
-            return this.value;
         }
 
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setName(String name) {
@@ -161,6 +153,14 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
         public String getUnit() {
             return this.unit;
+        }
+
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setValue(Integer value) {
+            this.value = value;
+            return this;
+        }
+        public Integer getValue() {
+            return this.value;
         }
 
     }
@@ -185,18 +185,26 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification extends TeaModel {
+        @NameInMap("AvailableDurations")
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("AvailableDurations")
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations;
-
         public static DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification self = new DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setAvailableDurations(DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations) {
+            this.availableDurations = availableDurations;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations getAvailableDurations() {
+            return this.availableDurations;
         }
 
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setName(String name) {
@@ -213,14 +221,6 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setAvailableDurations(DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations) {
-            this.availableDurations = availableDurations;
-            return this;
-        }
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations getAvailableDurations() {
-            return this.availableDurations;
         }
 
     }
@@ -316,29 +316,21 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage extends TeaModel {
-        @NameInMap("ProductType")
-        public String productType;
-
         @NameInMap("Name")
         public String name;
-
-        @NameInMap("ProductCode")
-        public String productCode;
 
         @NameInMap("PackageTypes")
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes packageTypes;
 
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductType")
+        public String productType;
+
         public static DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage self = new DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setProductType(String productType) {
-            this.productType = productType;
-            return this;
-        }
-        public String getProductType() {
-            return this.productType;
         }
 
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setName(String name) {
@@ -349,6 +341,14 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setPackageTypes(DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes packageTypes) {
+            this.packageTypes = packageTypes;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes getPackageTypes() {
+            return this.packageTypes;
+        }
+
         public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
@@ -357,12 +357,12 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
             return this.productCode;
         }
 
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setPackageTypes(DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes packageTypes) {
-            this.packageTypes = packageTypes;
+        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage setProductType(String productType) {
+            this.productType = productType;
             return this;
         }
-        public DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypes getPackageTypes() {
-            return this.packageTypes;
+        public String getProductType() {
+            return this.productType;
         }
 
     }

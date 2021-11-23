@@ -7,11 +7,11 @@ public class SetCreditLabelActionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class SetCreditLabelActionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SetCreditLabelActionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public SetCreditLabelActionResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public SetCreditLabelActionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SetCreditLabelActionResponseBody setRequestId(String requestId) {

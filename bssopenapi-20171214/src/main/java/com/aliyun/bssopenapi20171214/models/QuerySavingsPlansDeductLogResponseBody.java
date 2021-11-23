@@ -7,6 +7,9 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QuerySavingsPlansDeductLogResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QuerySavingsPlansDeductLogResponseBodyData data;
 
     public static QuerySavingsPlansDeductLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingsPlansDeductLogResponseBody self = new QuerySavingsPlansDeductLogResponseBody();
@@ -30,6 +30,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QuerySavingsPlansDeductLogResponseBody setData(QuerySavingsPlansDeductLogResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySavingsPlansDeductLogResponseBodyData getData() {
+        return this.data;
     }
 
     public QuerySavingsPlansDeductLogResponseBody setMessage(String message) {
@@ -56,91 +64,43 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySavingsPlansDeductLogResponseBody setData(QuerySavingsPlansDeductLogResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySavingsPlansDeductLogResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySavingsPlansDeductLogResponseBodyDataItems extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("SavingsType")
-        public String savingsType;
-
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("DiscountRate")
-        public String discountRate;
-
         @NameInMap("BillModule")
         public String billModule;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("DeductInstanceId")
-        public String deductInstanceId;
 
         @NameInMap("DeductCommodity")
         public String deductCommodity;
 
+        @NameInMap("DeductFee")
+        public String deductFee;
+
+        @NameInMap("DeductInstanceId")
+        public String deductInstanceId;
+
         @NameInMap("DeductRate")
         public String deductRate;
 
-        @NameInMap("DeductFee")
-        public String deductFee;
+        @NameInMap("DiscountRate")
+        public String discountRate;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("SavingsType")
+        public String savingsType;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("UserId")
+        public Long userId;
 
         public static QuerySavingsPlansDeductLogResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             QuerySavingsPlansDeductLogResponseBodyDataItems self = new QuerySavingsPlansDeductLogResponseBodyDataItems();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setSavingsType(String savingsType) {
-            this.savingsType = savingsType;
-            return this;
-        }
-        public String getSavingsType() {
-            return this.savingsType;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setDiscountRate(String discountRate) {
-            this.discountRate = discountRate;
-            return this;
-        }
-        public String getDiscountRate() {
-            return this.discountRate;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyDataItems setBillModule(String billModule) {
@@ -151,36 +111,12 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             return this.billModule;
         }
 
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductInstanceId(String deductInstanceId) {
-            this.deductInstanceId = deductInstanceId;
-            return this;
-        }
-        public String getDeductInstanceId() {
-            return this.deductInstanceId;
-        }
-
         public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductCommodity(String deductCommodity) {
             this.deductCommodity = deductCommodity;
             return this;
         }
         public String getDeductCommodity() {
             return this.deductCommodity;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductRate(String deductRate) {
-            this.deductRate = deductRate;
-            return this;
-        }
-        public String getDeductRate() {
-            return this.deductRate;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductFee(String deductFee) {
@@ -191,9 +127,76 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             return this.deductFee;
         }
 
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductInstanceId(String deductInstanceId) {
+            this.deductInstanceId = deductInstanceId;
+            return this;
+        }
+        public String getDeductInstanceId() {
+            return this.deductInstanceId;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setDeductRate(String deductRate) {
+            this.deductRate = deductRate;
+            return this;
+        }
+        public String getDeductRate() {
+            return this.deductRate;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setDiscountRate(String discountRate) {
+            this.discountRate = discountRate;
+            return this;
+        }
+        public String getDiscountRate() {
+            return this.discountRate;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setSavingsType(String savingsType) {
+            this.savingsType = savingsType;
+            return this;
+        }
+        public String getSavingsType() {
+            return this.savingsType;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyDataItems setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
     }
 
     public static class QuerySavingsPlansDeductLogResponseBodyData extends TeaModel {
+        @NameInMap("Items")
+        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -203,12 +206,17 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Items")
-        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
-
         public static QuerySavingsPlansDeductLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySavingsPlansDeductLogResponseBodyData self = new QuerySavingsPlansDeductLogResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyData setItems(java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyData setPageNum(Integer pageNum) {
@@ -233,14 +241,6 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyData setItems(java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
     }

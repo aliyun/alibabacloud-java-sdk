@@ -7,6 +7,9 @@ public class DeleteCostUnitResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DeleteCostUnitResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class DeleteCostUnitResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public DeleteCostUnitResponseBodyData data;
 
     public static DeleteCostUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteCostUnitResponseBody self = new DeleteCostUnitResponseBody();
@@ -30,6 +30,14 @@ public class DeleteCostUnitResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DeleteCostUnitResponseBody setData(DeleteCostUnitResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteCostUnitResponseBodyData getData() {
+        return this.data;
     }
 
     public DeleteCostUnitResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class DeleteCostUnitResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteCostUnitResponseBody setData(DeleteCostUnitResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteCostUnitResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DeleteCostUnitResponseBodyData extends TeaModel {
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
-        @NameInMap("UnitId")
-        public Long unitId;
-
         @NameInMap("OwnerUid")
         public Long ownerUid;
+
+        @NameInMap("UnitId")
+        public Long unitId;
 
         public static DeleteCostUnitResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteCostUnitResponseBodyData self = new DeleteCostUnitResponseBodyData();
@@ -87,20 +87,20 @@ public class DeleteCostUnitResponseBody extends TeaModel {
             return this.isSuccess;
         }
 
-        public DeleteCostUnitResponseBodyData setUnitId(Long unitId) {
-            this.unitId = unitId;
-            return this;
-        }
-        public Long getUnitId() {
-            return this.unitId;
-        }
-
         public DeleteCostUnitResponseBodyData setOwnerUid(Long ownerUid) {
             this.ownerUid = ownerUid;
             return this;
         }
         public Long getOwnerUid() {
             return this.ownerUid;
+        }
+
+        public DeleteCostUnitResponseBodyData setUnitId(Long unitId) {
+            this.unitId = unitId;
+            return this;
+        }
+        public Long getUnitId() {
+            return this.unitId;
         }
 
     }

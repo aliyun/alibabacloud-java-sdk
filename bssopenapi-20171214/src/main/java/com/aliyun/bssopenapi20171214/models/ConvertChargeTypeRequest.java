@@ -4,14 +4,11 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ConvertChargeTypeRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ProductType")
-    public String productType;
-
-    @NameInMap("SubscriptionType")
-    public String subscriptionType;
 
     @NameInMap("Period")
     public Integer period;
@@ -19,12 +16,23 @@ public class ConvertChargeTypeRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ProductType")
+    public String productType;
+
+    @NameInMap("SubscriptionType")
+    public String subscriptionType;
 
     public static ConvertChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertChargeTypeRequest self = new ConvertChargeTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConvertChargeTypeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ConvertChargeTypeRequest setOwnerId(Long ownerId) {
@@ -33,22 +41,6 @@ public class ConvertChargeTypeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ConvertChargeTypeRequest setProductType(String productType) {
-        this.productType = productType;
-        return this;
-    }
-    public String getProductType() {
-        return this.productType;
-    }
-
-    public ConvertChargeTypeRequest setSubscriptionType(String subscriptionType) {
-        this.subscriptionType = subscriptionType;
-        return this;
-    }
-    public String getSubscriptionType() {
-        return this.subscriptionType;
     }
 
     public ConvertChargeTypeRequest setPeriod(Integer period) {
@@ -67,12 +59,20 @@ public class ConvertChargeTypeRequest extends TeaModel {
         return this.productCode;
     }
 
-    public ConvertChargeTypeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ConvertChargeTypeRequest setProductType(String productType) {
+        this.productType = productType;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public ConvertChargeTypeRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
     }
 
 }

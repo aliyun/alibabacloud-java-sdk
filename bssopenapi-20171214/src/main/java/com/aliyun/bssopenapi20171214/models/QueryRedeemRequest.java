@@ -4,14 +4,14 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRedeemRequest extends TeaModel {
-    @NameInMap("ExpiryTimeStart")
-    public String expiryTimeStart;
+    @NameInMap("EffectiveOrNot")
+    public Boolean effectiveOrNot;
 
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
-    @NameInMap("EffectiveOrNot")
-    public Boolean effectiveOrNot;
+    @NameInMap("ExpiryTimeStart")
+    public String expiryTimeStart;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -24,12 +24,12 @@ public class QueryRedeemRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryRedeemRequest setExpiryTimeStart(String expiryTimeStart) {
-        this.expiryTimeStart = expiryTimeStart;
+    public QueryRedeemRequest setEffectiveOrNot(Boolean effectiveOrNot) {
+        this.effectiveOrNot = effectiveOrNot;
         return this;
     }
-    public String getExpiryTimeStart() {
-        return this.expiryTimeStart;
+    public Boolean getEffectiveOrNot() {
+        return this.effectiveOrNot;
     }
 
     public QueryRedeemRequest setExpiryTimeEnd(String expiryTimeEnd) {
@@ -40,12 +40,12 @@ public class QueryRedeemRequest extends TeaModel {
         return this.expiryTimeEnd;
     }
 
-    public QueryRedeemRequest setEffectiveOrNot(Boolean effectiveOrNot) {
-        this.effectiveOrNot = effectiveOrNot;
+    public QueryRedeemRequest setExpiryTimeStart(String expiryTimeStart) {
+        this.expiryTimeStart = expiryTimeStart;
         return this;
     }
-    public Boolean getEffectiveOrNot() {
-        return this.effectiveOrNot;
+    public String getExpiryTimeStart() {
+        return this.expiryTimeStart;
     }
 
     public QueryRedeemRequest setPageNum(Integer pageNum) {

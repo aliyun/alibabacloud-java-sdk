@@ -4,11 +4,11 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceByTagRequest extends TeaModel {
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tag")
     public java.util.List<QueryInstanceByTagRequestTag> tag;
@@ -18,20 +18,20 @@ public class QueryInstanceByTagRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryInstanceByTagRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public QueryInstanceByTagRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public QueryInstanceByTagRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public QueryInstanceByTagRequest setTag(java.util.List<QueryInstanceByTagRequestTag> tag) {

@@ -7,6 +7,9 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryRIUtilizationDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryRIUtilizationDetailResponseBodyData data;
 
     public static QueryRIUtilizationDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRIUtilizationDetailResponseBody self = new QueryRIUtilizationDetailResponseBody();
@@ -30,6 +30,14 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryRIUtilizationDetailResponseBody setData(QueryRIUtilizationDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryRIUtilizationDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryRIUtilizationDetailResponseBody setMessage(String message) {
@@ -56,93 +64,37 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryRIUtilizationDetailResponseBody setData(QueryRIUtilizationDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryRIUtilizationDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryRIUtilizationDetailResponseBodyDataDetailListDetailList extends TeaModel {
-        @NameInMap("DeductedCommodityCode")
-        public String deductedCommodityCode;
-
-        @NameInMap("DeductedProductDetail")
-        public String deductedProductDetail;
-
-        @NameInMap("DeductedInstanceId")
-        public String deductedInstanceId;
+        @NameInMap("DeductDate")
+        public String deductDate;
 
         @NameInMap("DeductFactorTotal")
         public Float deductFactorTotal;
 
-        @NameInMap("DeductQuantity")
-        public Float deductQuantity;
-
         @NameInMap("DeductHours")
         public String deductHours;
 
-        @NameInMap("DeductDate")
-        public String deductDate;
+        @NameInMap("DeductQuantity")
+        public Float deductQuantity;
 
-        @NameInMap("RIInstanceId")
-        public String RIInstanceId;
+        @NameInMap("DeductedCommodityCode")
+        public String deductedCommodityCode;
+
+        @NameInMap("DeductedInstanceId")
+        public String deductedInstanceId;
+
+        @NameInMap("DeductedProductDetail")
+        public String deductedProductDetail;
 
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        @NameInMap("RIInstanceId")
+        public String RIInstanceId;
+
         public static QueryRIUtilizationDetailResponseBodyDataDetailListDetailList build(java.util.Map<String, ?> map) throws Exception {
             QueryRIUtilizationDetailResponseBodyDataDetailListDetailList self = new QueryRIUtilizationDetailResponseBodyDataDetailListDetailList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedCommodityCode(String deductedCommodityCode) {
-            this.deductedCommodityCode = deductedCommodityCode;
-            return this;
-        }
-        public String getDeductedCommodityCode() {
-            return this.deductedCommodityCode;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedProductDetail(String deductedProductDetail) {
-            this.deductedProductDetail = deductedProductDetail;
-            return this;
-        }
-        public String getDeductedProductDetail() {
-            return this.deductedProductDetail;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedInstanceId(String deductedInstanceId) {
-            this.deductedInstanceId = deductedInstanceId;
-            return this;
-        }
-        public String getDeductedInstanceId() {
-            return this.deductedInstanceId;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductFactorTotal(Float deductFactorTotal) {
-            this.deductFactorTotal = deductFactorTotal;
-            return this;
-        }
-        public Float getDeductFactorTotal() {
-            return this.deductFactorTotal;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductQuantity(Float deductQuantity) {
-            this.deductQuantity = deductQuantity;
-            return this;
-        }
-        public Float getDeductQuantity() {
-            return this.deductQuantity;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductHours(String deductHours) {
-            this.deductHours = deductHours;
-            return this;
-        }
-        public String getDeductHours() {
-            return this.deductHours;
         }
 
         public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductDate(String deductDate) {
@@ -153,12 +105,52 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             return this.deductDate;
         }
 
-        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setRIInstanceId(String RIInstanceId) {
-            this.RIInstanceId = RIInstanceId;
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductFactorTotal(Float deductFactorTotal) {
+            this.deductFactorTotal = deductFactorTotal;
             return this;
         }
-        public String getRIInstanceId() {
-            return this.RIInstanceId;
+        public Float getDeductFactorTotal() {
+            return this.deductFactorTotal;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductHours(String deductHours) {
+            this.deductHours = deductHours;
+            return this;
+        }
+        public String getDeductHours() {
+            return this.deductHours;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductQuantity(Float deductQuantity) {
+            this.deductQuantity = deductQuantity;
+            return this;
+        }
+        public Float getDeductQuantity() {
+            return this.deductQuantity;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedCommodityCode(String deductedCommodityCode) {
+            this.deductedCommodityCode = deductedCommodityCode;
+            return this;
+        }
+        public String getDeductedCommodityCode() {
+            return this.deductedCommodityCode;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedInstanceId(String deductedInstanceId) {
+            this.deductedInstanceId = deductedInstanceId;
+            return this;
+        }
+        public String getDeductedInstanceId() {
+            return this.deductedInstanceId;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setDeductedProductDetail(String deductedProductDetail) {
+            this.deductedProductDetail = deductedProductDetail;
+            return this;
+        }
+        public String getDeductedProductDetail() {
+            return this.deductedProductDetail;
         }
 
         public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setInstanceSpec(String instanceSpec) {
@@ -167,6 +159,14 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
         public String getInstanceSpec() {
             return this.instanceSpec;
+        }
+
+        public QueryRIUtilizationDetailResponseBodyDataDetailListDetailList setRIInstanceId(String RIInstanceId) {
+            this.RIInstanceId = RIInstanceId;
+            return this;
+        }
+        public String getRIInstanceId() {
+            return this.RIInstanceId;
         }
 
     }
@@ -191,6 +191,9 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryRIUtilizationDetailResponseBodyData extends TeaModel {
+        @NameInMap("DetailList")
+        public QueryRIUtilizationDetailResponseBodyDataDetailList detailList;
+
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -200,12 +203,17 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("DetailList")
-        public QueryRIUtilizationDetailResponseBodyDataDetailList detailList;
-
         public static QueryRIUtilizationDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryRIUtilizationDetailResponseBodyData self = new QueryRIUtilizationDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRIUtilizationDetailResponseBodyData setDetailList(QueryRIUtilizationDetailResponseBodyDataDetailList detailList) {
+            this.detailList = detailList;
+            return this;
+        }
+        public QueryRIUtilizationDetailResponseBodyDataDetailList getDetailList() {
+            return this.detailList;
         }
 
         public QueryRIUtilizationDetailResponseBodyData setPageNum(Long pageNum) {
@@ -230,14 +238,6 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public QueryRIUtilizationDetailResponseBodyData setDetailList(QueryRIUtilizationDetailResponseBodyDataDetailList detailList) {
-            this.detailList = detailList;
-            return this;
-        }
-        public QueryRIUtilizationDetailResponseBodyDataDetailList getDetailList() {
-            return this.detailList;
         }
 
     }

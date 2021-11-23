@@ -4,17 +4,17 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResourcePackageInstancesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ProductCode")
-    public String productCode;
+    @NameInMap("ExpiryTimeEnd")
+    public String expiryTimeEnd;
 
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;
 
-    @NameInMap("ExpiryTimeEnd")
-    public String expiryTimeEnd;
+    @NameInMap("IncludePartner")
+    public Boolean includePartner;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -22,25 +22,20 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProductCode")
+    public String productCode;
+
     public static QueryResourcePackageInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryResourcePackageInstancesRequest self = new QueryResourcePackageInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryResourcePackageInstancesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public QueryResourcePackageInstancesRequest setExpiryTimeEnd(String expiryTimeEnd) {
+        this.expiryTimeEnd = expiryTimeEnd;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public QueryResourcePackageInstancesRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
+    public String getExpiryTimeEnd() {
+        return this.expiryTimeEnd;
     }
 
     public QueryResourcePackageInstancesRequest setExpiryTimeStart(String expiryTimeStart) {
@@ -51,12 +46,20 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
         return this.expiryTimeStart;
     }
 
-    public QueryResourcePackageInstancesRequest setExpiryTimeEnd(String expiryTimeEnd) {
-        this.expiryTimeEnd = expiryTimeEnd;
+    public QueryResourcePackageInstancesRequest setIncludePartner(Boolean includePartner) {
+        this.includePartner = includePartner;
         return this;
     }
-    public String getExpiryTimeEnd() {
-        return this.expiryTimeEnd;
+    public Boolean getIncludePartner() {
+        return this.includePartner;
+    }
+
+    public QueryResourcePackageInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryResourcePackageInstancesRequest setPageNum(Integer pageNum) {
@@ -73,6 +76,14 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryResourcePackageInstancesRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
 }

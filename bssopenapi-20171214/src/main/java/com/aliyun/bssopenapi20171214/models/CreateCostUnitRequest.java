@@ -21,11 +21,11 @@ public class CreateCostUnitRequest extends TeaModel {
     }
 
     public static class CreateCostUnitRequestUnitEntityList extends TeaModel {
-        @NameInMap("ParentUnitId")
-        public Long parentUnitId;
-
         @NameInMap("OwnerUid")
         public Long ownerUid;
+
+        @NameInMap("ParentUnitId")
+        public Long parentUnitId;
 
         @NameInMap("UnitName")
         public String unitName;
@@ -35,20 +35,20 @@ public class CreateCostUnitRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateCostUnitRequestUnitEntityList setParentUnitId(Long parentUnitId) {
-            this.parentUnitId = parentUnitId;
-            return this;
-        }
-        public Long getParentUnitId() {
-            return this.parentUnitId;
-        }
-
         public CreateCostUnitRequestUnitEntityList setOwnerUid(Long ownerUid) {
             this.ownerUid = ownerUid;
             return this;
         }
         public Long getOwnerUid() {
             return this.ownerUid;
+        }
+
+        public CreateCostUnitRequestUnitEntityList setParentUnitId(Long parentUnitId) {
+            this.parentUnitId = parentUnitId;
+            return this;
+        }
+        public Long getParentUnitId() {
+            return this.parentUnitId;
         }
 
         public CreateCostUnitRequestUnitEntityList setUnitName(String unitName) {

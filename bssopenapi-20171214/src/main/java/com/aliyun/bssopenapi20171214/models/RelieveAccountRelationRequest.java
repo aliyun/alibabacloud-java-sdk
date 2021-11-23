@@ -4,14 +4,14 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RelieveAccountRelationRequest extends TeaModel {
-    @NameInMap("RelationType")
-    public String relationType;
+    @NameInMap("ChildUserId")
+    public Long childUserId;
 
     @NameInMap("ParentUserId")
     public Long parentUserId;
 
-    @NameInMap("ChildUserId")
-    public Long childUserId;
+    @NameInMap("RelationType")
+    public String relationType;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,12 +21,12 @@ public class RelieveAccountRelationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RelieveAccountRelationRequest setRelationType(String relationType) {
-        this.relationType = relationType;
+    public RelieveAccountRelationRequest setChildUserId(Long childUserId) {
+        this.childUserId = childUserId;
         return this;
     }
-    public String getRelationType() {
-        return this.relationType;
+    public Long getChildUserId() {
+        return this.childUserId;
     }
 
     public RelieveAccountRelationRequest setParentUserId(Long parentUserId) {
@@ -37,12 +37,12 @@ public class RelieveAccountRelationRequest extends TeaModel {
         return this.parentUserId;
     }
 
-    public RelieveAccountRelationRequest setChildUserId(Long childUserId) {
-        this.childUserId = childUserId;
+    public RelieveAccountRelationRequest setRelationType(String relationType) {
+        this.relationType = relationType;
         return this;
     }
-    public Long getChildUserId() {
-        return this.childUserId;
+    public String getRelationType() {
+        return this.relationType;
     }
 
     public RelieveAccountRelationRequest setRequestId(String requestId) {

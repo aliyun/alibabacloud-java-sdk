@@ -7,6 +7,9 @@ public class CreateCostUnitResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateCostUnitResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CreateCostUnitResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public CreateCostUnitResponseBodyData data;
 
     public static CreateCostUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCostUnitResponseBody self = new CreateCostUnitResponseBody();
@@ -30,6 +30,14 @@ public class CreateCostUnitResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateCostUnitResponseBody setData(CreateCostUnitResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateCostUnitResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateCostUnitResponseBody setMessage(String message) {
@@ -56,30 +64,30 @@ public class CreateCostUnitResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateCostUnitResponseBody setData(CreateCostUnitResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateCostUnitResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class CreateCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
+        @NameInMap("OwnerUid")
+        public Long ownerUid;
+
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
-
-        @NameInMap("UnitName")
-        public String unitName;
 
         @NameInMap("UnitId")
         public Long unitId;
 
-        @NameInMap("OwnerUid")
-        public Long ownerUid;
+        @NameInMap("UnitName")
+        public String unitName;
 
         public static CreateCostUnitResponseBodyDataCostUnitDtoList build(java.util.Map<String, ?> map) throws Exception {
             CreateCostUnitResponseBodyDataCostUnitDtoList self = new CreateCostUnitResponseBodyDataCostUnitDtoList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCostUnitResponseBodyDataCostUnitDtoList setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
         }
 
         public CreateCostUnitResponseBodyDataCostUnitDtoList setParentUnitId(Long parentUnitId) {
@@ -90,14 +98,6 @@ public class CreateCostUnitResponseBody extends TeaModel {
             return this.parentUnitId;
         }
 
-        public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitName(String unitName) {
-            this.unitName = unitName;
-            return this;
-        }
-        public String getUnitName() {
-            return this.unitName;
-        }
-
         public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitId(Long unitId) {
             this.unitId = unitId;
             return this;
@@ -106,12 +106,12 @@ public class CreateCostUnitResponseBody extends TeaModel {
             return this.unitId;
         }
 
-        public CreateCostUnitResponseBodyDataCostUnitDtoList setOwnerUid(Long ownerUid) {
-            this.ownerUid = ownerUid;
+        public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitName(String unitName) {
+            this.unitName = unitName;
             return this;
         }
-        public Long getOwnerUid() {
-            return this.ownerUid;
+        public String getUnitName() {
+            return this.unitName;
         }
 
     }

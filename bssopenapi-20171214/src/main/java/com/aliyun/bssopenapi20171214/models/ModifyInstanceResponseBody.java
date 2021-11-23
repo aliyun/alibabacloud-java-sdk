@@ -7,6 +7,9 @@ public class ModifyInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ModifyInstanceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class ModifyInstanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ModifyInstanceResponseBodyData data;
 
     public static ModifyInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceResponseBody self = new ModifyInstanceResponseBody();
@@ -30,6 +30,14 @@ public class ModifyInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ModifyInstanceResponseBody setData(ModifyInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ModifyInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public ModifyInstanceResponseBody setMessage(String message) {
@@ -56,32 +64,16 @@ public class ModifyInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifyInstanceResponseBody setData(ModifyInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ModifyInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ModifyInstanceResponseBodyData extends TeaModel {
-        @NameInMap("OrderId")
-        public String orderId;
-
         @NameInMap("HostId")
         public String hostId;
+
+        @NameInMap("OrderId")
+        public String orderId;
 
         public static ModifyInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceResponseBodyData self = new ModifyInstanceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyInstanceResponseBodyData setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
         }
 
         public ModifyInstanceResponseBodyData setHostId(String hostId) {
@@ -90,6 +82,14 @@ public class ModifyInstanceResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public ModifyInstanceResponseBodyData setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UpgradeResourcePackageRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("EffectiveDate")
+    public String effectiveDate;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("EffectiveDate")
-    public String effectiveDate;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Specification")
     public String specification;
@@ -21,12 +21,12 @@ public class UpgradeResourcePackageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeResourcePackageRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public UpgradeResourcePackageRequest setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getEffectiveDate() {
+        return this.effectiveDate;
     }
 
     public UpgradeResourcePackageRequest setInstanceId(String instanceId) {
@@ -37,12 +37,12 @@ public class UpgradeResourcePackageRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpgradeResourcePackageRequest setEffectiveDate(String effectiveDate) {
-        this.effectiveDate = effectiveDate;
+    public UpgradeResourcePackageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getEffectiveDate() {
-        return this.effectiveDate;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpgradeResourcePackageRequest setSpecification(String specification) {

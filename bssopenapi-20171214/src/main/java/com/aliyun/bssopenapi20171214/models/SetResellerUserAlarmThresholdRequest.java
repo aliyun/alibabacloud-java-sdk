@@ -4,26 +4,26 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AlarmThresholds")
+    public String alarmThresholds;
 
     @NameInMap("AlarmType")
     public String alarmType;
 
-    @NameInMap("AlarmThresholds")
-    public String alarmThresholds;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static SetResellerUserAlarmThresholdRequest build(java.util.Map<String, ?> map) throws Exception {
         SetResellerUserAlarmThresholdRequest self = new SetResellerUserAlarmThresholdRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetResellerUserAlarmThresholdRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetResellerUserAlarmThresholdRequest setAlarmThresholds(String alarmThresholds) {
+        this.alarmThresholds = alarmThresholds;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAlarmThresholds() {
+        return this.alarmThresholds;
     }
 
     public SetResellerUserAlarmThresholdRequest setAlarmType(String alarmType) {
@@ -34,12 +34,12 @@ public class SetResellerUserAlarmThresholdRequest extends TeaModel {
         return this.alarmType;
     }
 
-    public SetResellerUserAlarmThresholdRequest setAlarmThresholds(String alarmThresholds) {
-        this.alarmThresholds = alarmThresholds;
+    public SetResellerUserAlarmThresholdRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAlarmThresholds() {
-        return this.alarmThresholds;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

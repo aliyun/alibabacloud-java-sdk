@@ -7,6 +7,9 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public RelieveAccountRelationResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public RelieveAccountRelationResponseBodyData data;
 
     public static RelieveAccountRelationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RelieveAccountRelationResponseBody self = new RelieveAccountRelationResponseBody();
@@ -30,6 +30,14 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public RelieveAccountRelationResponseBody setData(RelieveAccountRelationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RelieveAccountRelationResponseBodyData getData() {
+        return this.data;
     }
 
     public RelieveAccountRelationResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public RelieveAccountRelationResponseBody setData(RelieveAccountRelationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RelieveAccountRelationResponseBodyData getData() {
-        return this.data;
     }
 
     public static class RelieveAccountRelationResponseBodyData extends TeaModel {

@@ -7,6 +7,9 @@ public class CancelOrderResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CancelOrderResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CancelOrderResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public CancelOrderResponseBodyData data;
 
     public static CancelOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelOrderResponseBody self = new CancelOrderResponseBody();
@@ -30,6 +30,14 @@ public class CancelOrderResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CancelOrderResponseBody setData(CancelOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CancelOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public CancelOrderResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class CancelOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CancelOrderResponseBody setData(CancelOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CancelOrderResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CancelOrderResponseBodyData extends TeaModel {

@@ -4,14 +4,14 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceGaapCostRequest extends TeaModel {
+    @NameInMap("BillingCycle")
+    public String billingCycle;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("BillingCycle")
-    public String billingCycle;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -25,6 +25,14 @@ public class QueryInstanceGaapCostRequest extends TeaModel {
     public static QueryInstanceGaapCostRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryInstanceGaapCostRequest self = new QueryInstanceGaapCostRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInstanceGaapCostRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
     }
 
     public QueryInstanceGaapCostRequest setPageNum(Integer pageNum) {
@@ -41,14 +49,6 @@ public class QueryInstanceGaapCostRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public QueryInstanceGaapCostRequest setBillingCycle(String billingCycle) {
-        this.billingCycle = billingCycle;
-        return this;
-    }
-    public String getBillingCycle() {
-        return this.billingCycle;
     }
 
     public QueryInstanceGaapCostRequest setProductCode(String productCode) {

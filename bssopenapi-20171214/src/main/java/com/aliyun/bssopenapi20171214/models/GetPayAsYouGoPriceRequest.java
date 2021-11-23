@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetPayAsYouGoPriceRequest extends TeaModel {
+    @NameInMap("ModuleList")
+    public java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +16,23 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
-    @NameInMap("SubscriptionType")
-    public String subscriptionType;
-
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("ModuleList")
-    public java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList;
+    @NameInMap("SubscriptionType")
+    public String subscriptionType;
 
     public static GetPayAsYouGoPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPayAsYouGoPriceRequest self = new GetPayAsYouGoPriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPayAsYouGoPriceRequest setModuleList(java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList) {
+        this.moduleList = moduleList;
+        return this;
+    }
+    public java.util.List<GetPayAsYouGoPriceRequestModuleList> getModuleList() {
+        return this.moduleList;
     }
 
     public GetPayAsYouGoPriceRequest setOwnerId(Long ownerId) {
@@ -51,14 +59,6 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
         return this.productType;
     }
 
-    public GetPayAsYouGoPriceRequest setSubscriptionType(String subscriptionType) {
-        this.subscriptionType = subscriptionType;
-        return this;
-    }
-    public String getSubscriptionType() {
-        return this.subscriptionType;
-    }
-
     public GetPayAsYouGoPriceRequest setRegion(String region) {
         this.region = region;
         return this;
@@ -67,27 +67,35 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
         return this.region;
     }
 
-    public GetPayAsYouGoPriceRequest setModuleList(java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList) {
-        this.moduleList = moduleList;
+    public GetPayAsYouGoPriceRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
         return this;
     }
-    public java.util.List<GetPayAsYouGoPriceRequestModuleList> getModuleList() {
-        return this.moduleList;
+    public String getSubscriptionType() {
+        return this.subscriptionType;
     }
 
     public static class GetPayAsYouGoPriceRequestModuleList extends TeaModel {
+        @NameInMap("Config")
+        public String config;
+
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         @NameInMap("PriceType")
         public String priceType;
 
-        @NameInMap("Config")
-        public String config;
-
         public static GetPayAsYouGoPriceRequestModuleList build(java.util.Map<String, ?> map) throws Exception {
             GetPayAsYouGoPriceRequestModuleList self = new GetPayAsYouGoPriceRequestModuleList();
             return TeaModel.build(map, self);
+        }
+
+        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public GetPayAsYouGoPriceRequestModuleList setModuleCode(String moduleCode) {
@@ -104,14 +112,6 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
         }
         public String getPriceType() {
             return this.priceType;
-        }
-
-        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
         }
 
     }

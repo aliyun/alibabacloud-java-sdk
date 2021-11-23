@@ -7,6 +7,9 @@ public class ConfirmRelationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ConfirmRelationResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class ConfirmRelationResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ConfirmRelationResponseBodyData data;
 
     public static ConfirmRelationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfirmRelationResponseBody self = new ConfirmRelationResponseBody();
@@ -30,6 +30,14 @@ public class ConfirmRelationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ConfirmRelationResponseBody setData(ConfirmRelationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ConfirmRelationResponseBodyData getData() {
+        return this.data;
     }
 
     public ConfirmRelationResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class ConfirmRelationResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ConfirmRelationResponseBody setData(ConfirmRelationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ConfirmRelationResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ConfirmRelationResponseBodyData extends TeaModel {

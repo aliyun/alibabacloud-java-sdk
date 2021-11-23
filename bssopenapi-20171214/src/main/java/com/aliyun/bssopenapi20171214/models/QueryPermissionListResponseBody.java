@@ -7,6 +7,9 @@ public class QueryPermissionListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryPermissionListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public QueryPermissionListResponseBodyData data;
 
     public static QueryPermissionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPermissionListResponseBody self = new QueryPermissionListResponseBody();
@@ -30,6 +30,14 @@ public class QueryPermissionListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryPermissionListResponseBody setData(QueryPermissionListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryPermissionListResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryPermissionListResponseBody setMessage(String message) {
@@ -56,26 +64,18 @@ public class QueryPermissionListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryPermissionListResponseBody setData(QueryPermissionListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryPermissionListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryPermissionListResponseBodyDataPermissionList extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
 
         @NameInMap("PermissionCode")
         public String permissionCode;
 
         @NameInMap("PermissionName")
         public String permissionName;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static QueryPermissionListResponseBodyDataPermissionList build(java.util.Map<String, ?> map) throws Exception {
             QueryPermissionListResponseBodyDataPermissionList self = new QueryPermissionListResponseBodyDataPermissionList();
@@ -88,14 +88,6 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public QueryPermissionListResponseBodyDataPermissionList setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public QueryPermissionListResponseBodyDataPermissionList setPermissionCode(String permissionCode) {
@@ -114,20 +106,19 @@ public class QueryPermissionListResponseBody extends TeaModel {
             return this.permissionName;
         }
 
+        public QueryPermissionListResponseBodyDataPermissionList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class QueryPermissionListResponseBodyData extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("RelationType")
-        public String relationType;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("State")
-        public String state;
 
         @NameInMap("MasterId")
         public Long masterId;
@@ -135,11 +126,20 @@ public class QueryPermissionListResponseBody extends TeaModel {
         @NameInMap("MemberId")
         public Long memberId;
 
+        @NameInMap("PermissionList")
+        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList;
+
+        @NameInMap("RelationType")
+        public String relationType;
+
         @NameInMap("SetupTime")
         public String setupTime;
 
-        @NameInMap("PermissionList")
-        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList;
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("State")
+        public String state;
 
         public static QueryPermissionListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryPermissionListResponseBodyData self = new QueryPermissionListResponseBodyData();
@@ -152,30 +152,6 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public QueryPermissionListResponseBodyData setRelationType(String relationType) {
-            this.relationType = relationType;
-            return this;
-        }
-        public String getRelationType() {
-            return this.relationType;
-        }
-
-        public QueryPermissionListResponseBodyData setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public QueryPermissionListResponseBodyData setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public QueryPermissionListResponseBodyData setMasterId(Long masterId) {
@@ -194,6 +170,22 @@ public class QueryPermissionListResponseBody extends TeaModel {
             return this.memberId;
         }
 
+        public QueryPermissionListResponseBodyData setPermissionList(java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList) {
+            this.permissionList = permissionList;
+            return this;
+        }
+        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> getPermissionList() {
+            return this.permissionList;
+        }
+
+        public QueryPermissionListResponseBodyData setRelationType(String relationType) {
+            this.relationType = relationType;
+            return this;
+        }
+        public String getRelationType() {
+            return this.relationType;
+        }
+
         public QueryPermissionListResponseBodyData setSetupTime(String setupTime) {
             this.setupTime = setupTime;
             return this;
@@ -202,12 +194,20 @@ public class QueryPermissionListResponseBody extends TeaModel {
             return this.setupTime;
         }
 
-        public QueryPermissionListResponseBodyData setPermissionList(java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList) {
-            this.permissionList = permissionList;
+        public QueryPermissionListResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> getPermissionList() {
-            return this.permissionList;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public QueryPermissionListResponseBodyData setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

@@ -4,8 +4,20 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryEvaluateListRequest extends TeaModel {
-    @NameInMap("Type")
-    public Integer type;
+    @NameInMap("BillCycle")
+    public String billCycle;
+
+    @NameInMap("BizTypeList")
+    public java.util.List<String> bizTypeList;
+
+    @NameInMap("EndAmount")
+    public Long endAmount;
+
+    @NameInMap("EndBizTime")
+    public String endBizTime;
+
+    @NameInMap("EndSearchTime")
+    public String endSearchTime;
 
     @NameInMap("OutBizId")
     public String outBizId;
@@ -19,44 +31,64 @@ public class QueryEvaluateListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SortType")
+    public Integer sortType;
+
     @NameInMap("StartAmount")
     public Long startAmount;
-
-    @NameInMap("EndAmount")
-    public Long endAmount;
 
     @NameInMap("StartBizTime")
     public String startBizTime;
 
-    @NameInMap("EndBizTime")
-    public String endBizTime;
-
-    @NameInMap("SortType")
-    public Integer sortType;
-
     @NameInMap("StartSearchTime")
     public String startSearchTime;
 
-    @NameInMap("EndSearchTime")
-    public String endSearchTime;
-
-    @NameInMap("BillCycle")
-    public String billCycle;
-
-    @NameInMap("BizTypeList")
-    public java.util.List<String> bizTypeList;
+    @NameInMap("Type")
+    public Integer type;
 
     public static QueryEvaluateListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEvaluateListRequest self = new QueryEvaluateListRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryEvaluateListRequest setType(Integer type) {
-        this.type = type;
+    public QueryEvaluateListRequest setBillCycle(String billCycle) {
+        this.billCycle = billCycle;
         return this;
     }
-    public Integer getType() {
-        return this.type;
+    public String getBillCycle() {
+        return this.billCycle;
+    }
+
+    public QueryEvaluateListRequest setBizTypeList(java.util.List<String> bizTypeList) {
+        this.bizTypeList = bizTypeList;
+        return this;
+    }
+    public java.util.List<String> getBizTypeList() {
+        return this.bizTypeList;
+    }
+
+    public QueryEvaluateListRequest setEndAmount(Long endAmount) {
+        this.endAmount = endAmount;
+        return this;
+    }
+    public Long getEndAmount() {
+        return this.endAmount;
+    }
+
+    public QueryEvaluateListRequest setEndBizTime(String endBizTime) {
+        this.endBizTime = endBizTime;
+        return this;
+    }
+    public String getEndBizTime() {
+        return this.endBizTime;
+    }
+
+    public QueryEvaluateListRequest setEndSearchTime(String endSearchTime) {
+        this.endSearchTime = endSearchTime;
+        return this;
+    }
+    public String getEndSearchTime() {
+        return this.endSearchTime;
     }
 
     public QueryEvaluateListRequest setOutBizId(String outBizId) {
@@ -91,20 +123,20 @@ public class QueryEvaluateListRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryEvaluateListRequest setSortType(Integer sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public Integer getSortType() {
+        return this.sortType;
+    }
+
     public QueryEvaluateListRequest setStartAmount(Long startAmount) {
         this.startAmount = startAmount;
         return this;
     }
     public Long getStartAmount() {
         return this.startAmount;
-    }
-
-    public QueryEvaluateListRequest setEndAmount(Long endAmount) {
-        this.endAmount = endAmount;
-        return this;
-    }
-    public Long getEndAmount() {
-        return this.endAmount;
     }
 
     public QueryEvaluateListRequest setStartBizTime(String startBizTime) {
@@ -115,22 +147,6 @@ public class QueryEvaluateListRequest extends TeaModel {
         return this.startBizTime;
     }
 
-    public QueryEvaluateListRequest setEndBizTime(String endBizTime) {
-        this.endBizTime = endBizTime;
-        return this;
-    }
-    public String getEndBizTime() {
-        return this.endBizTime;
-    }
-
-    public QueryEvaluateListRequest setSortType(Integer sortType) {
-        this.sortType = sortType;
-        return this;
-    }
-    public Integer getSortType() {
-        return this.sortType;
-    }
-
     public QueryEvaluateListRequest setStartSearchTime(String startSearchTime) {
         this.startSearchTime = startSearchTime;
         return this;
@@ -139,28 +155,12 @@ public class QueryEvaluateListRequest extends TeaModel {
         return this.startSearchTime;
     }
 
-    public QueryEvaluateListRequest setEndSearchTime(String endSearchTime) {
-        this.endSearchTime = endSearchTime;
+    public QueryEvaluateListRequest setType(Integer type) {
+        this.type = type;
         return this;
     }
-    public String getEndSearchTime() {
-        return this.endSearchTime;
-    }
-
-    public QueryEvaluateListRequest setBillCycle(String billCycle) {
-        this.billCycle = billCycle;
-        return this;
-    }
-    public String getBillCycle() {
-        return this.billCycle;
-    }
-
-    public QueryEvaluateListRequest setBizTypeList(java.util.List<String> bizTypeList) {
-        this.bizTypeList = bizTypeList;
-        return this;
-    }
-    public java.util.List<String> getBizTypeList() {
-        return this.bizTypeList;
+    public Integer getType() {
+        return this.type;
     }
 
 }
