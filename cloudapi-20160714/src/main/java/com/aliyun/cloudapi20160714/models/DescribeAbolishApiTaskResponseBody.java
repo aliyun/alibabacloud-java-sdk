@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAbolishApiTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ApiAbolishResults")
     public DescribeAbolishApiTaskResponseBodyApiAbolishResults apiAbolishResults;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAbolishApiTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAbolishApiTaskResponseBody self = new DescribeAbolishApiTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAbolishApiTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAbolishApiTaskResponseBody setApiAbolishResults(DescribeAbolishApiTaskResponseBodyApiAbolishResults apiAbolishResults) {
@@ -31,18 +23,20 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         return this.apiAbolishResults;
     }
 
-    public static class DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult extends TeaModel {
-        @NameInMap("StageId")
-        public String stageId;
+    public DescribeAbolishApiTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult extends TeaModel {
         @NameInMap("AbolishStatus")
         public String abolishStatus;
 
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("GroupName")
-        public String groupName;
+        @NameInMap("ApiName")
+        public String apiName;
 
         @NameInMap("ApiUid")
         public String apiUid;
@@ -50,23 +44,21 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("StageId")
+        public String stageId;
+
         @NameInMap("StageName")
         public String stageName;
-
-        @NameInMap("ApiName")
-        public String apiName;
 
         public static DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult self = new DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setStageId(String stageId) {
-            this.stageId = stageId;
-            return this;
-        }
-        public String getStageId() {
-            return this.stageId;
         }
 
         public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setAbolishStatus(String abolishStatus) {
@@ -77,20 +69,12 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             return this.abolishStatus;
         }
 
-        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setGroupId(String groupId) {
-            this.groupId = groupId;
+        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setApiName(String apiName) {
+            this.apiName = apiName;
             return this;
         }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
+        public String getApiName() {
+            return this.apiName;
         }
 
         public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setApiUid(String apiUid) {
@@ -109,20 +93,36 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
+        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setStageId(String stageId) {
+            this.stageId = stageId;
+            return this;
+        }
+        public String getStageId() {
+            return this.stageId;
+        }
+
         public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setStageName(String stageName) {
             this.stageName = stageName;
             return this;
         }
         public String getStageName() {
             return this.stageName;
-        }
-
-        public DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult setApiName(String apiName) {
-            this.apiName = apiName;
-            return this;
-        }
-        public String getApiName() {
-            return this.apiName;
         }
 
     }

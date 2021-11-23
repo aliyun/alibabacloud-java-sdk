@@ -4,37 +4,29 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetDomainWebSocketStatusRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("ActionValue")
+    public String actionValue;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("ActionValue")
-    public String actionValue;
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static SetDomainWebSocketStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainWebSocketStatusRequest self = new SetDomainWebSocketStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainWebSocketStatusRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SetDomainWebSocketStatusRequest setActionValue(String actionValue) {
+        this.actionValue = actionValue;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public SetDomainWebSocketStatusRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public String getActionValue() {
+        return this.actionValue;
     }
 
     public SetDomainWebSocketStatusRequest setDomainName(String domainName) {
@@ -45,12 +37,20 @@ public class SetDomainWebSocketStatusRequest extends TeaModel {
         return this.domainName;
     }
 
-    public SetDomainWebSocketStatusRequest setActionValue(String actionValue) {
-        this.actionValue = actionValue;
+    public SetDomainWebSocketStatusRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getActionValue() {
-        return this.actionValue;
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public SetDomainWebSocketStatusRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

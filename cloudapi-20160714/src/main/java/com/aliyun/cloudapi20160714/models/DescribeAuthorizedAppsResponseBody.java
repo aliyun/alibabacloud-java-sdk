@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuthorizedAppsResponseBody extends TeaModel {
+    @NameInMap("AuthorizedApps")
+    public DescribeAuthorizedAppsResponseBodyAuthorizedApps authorizedApps;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("AuthorizedApps")
-    public DescribeAuthorizedAppsResponseBodyAuthorizedApps authorizedApps;
 
     public static DescribeAuthorizedAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuthorizedAppsResponseBody self = new DescribeAuthorizedAppsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAuthorizedAppsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAuthorizedAppsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAuthorizedAppsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeAuthorizedAppsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAuthorizedAppsResponseBody setAuthorizedApps(DescribeAuthorizedAppsResponseBodyAuthorizedApps authorizedApps) {
@@ -64,74 +32,66 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         return this.authorizedApps;
     }
 
+    public DescribeAuthorizedAppsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAuthorizedAppsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAuthorizedAppsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAuthorizedAppsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp extends TeaModel {
+        @NameInMap("AppId")
+        public Long appId;
+
         @NameInMap("AppName")
         public String appName;
-
-        @NameInMap("AuthorizationSource")
-        public String authorizationSource;
 
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("AuthorizationSource")
+        public String authorizationSource;
 
         @NameInMap("AuthorizedTime")
         public String authorizedTime;
 
-        @NameInMap("AppId")
-        public Long appId;
-
-        @NameInMap("StageName")
-        public String stageName;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Operator")
         public String operator;
 
+        @NameInMap("StageName")
+        public String stageName;
+
         public static DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp build(java.util.Map<String, ?> map) throws Exception {
             DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp self = new DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthorizationSource(String authorizationSource) {
-            this.authorizationSource = authorizationSource;
-            return this;
-        }
-        public String getAuthorizationSource() {
-            return this.authorizationSource;
-        }
-
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthVaildTime(String authVaildTime) {
-            this.authVaildTime = authVaildTime;
-            return this;
-        }
-        public String getAuthVaildTime() {
-            return this.authVaildTime;
-        }
-
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthorizedTime(String authorizedTime) {
-            this.authorizedTime = authorizedTime;
-            return this;
-        }
-        public String getAuthorizedTime() {
-            return this.authorizedTime;
         }
 
         public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAppId(Long appId) {
@@ -142,12 +102,44 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setStageName(String stageName) {
-            this.stageName = stageName;
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getStageName() {
-            return this.stageName;
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthVaildTime(String authVaildTime) {
+            this.authVaildTime = authVaildTime;
+            return this;
+        }
+        public String getAuthVaildTime() {
+            return this.authVaildTime;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthorizationSource(String authorizationSource) {
+            this.authorizationSource = authorizationSource;
+            return this;
+        }
+        public String getAuthorizationSource() {
+            return this.authorizationSource;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setAuthorizedTime(String authorizedTime) {
+            this.authorizedTime = authorizedTime;
+            return this;
+        }
+        public String getAuthorizedTime() {
+            return this.authorizedTime;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setOperator(String operator) {
@@ -156,6 +148,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
         public String getOperator() {
             return this.operator;
+        }
+
+        public DescribeAuthorizedAppsResponseBodyAuthorizedAppsAuthorizedApp setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
     }

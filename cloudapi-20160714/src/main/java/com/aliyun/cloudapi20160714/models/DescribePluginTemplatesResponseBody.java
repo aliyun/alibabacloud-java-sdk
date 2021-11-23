@@ -32,14 +32,11 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribePluginTemplatesResponseBodyTemplatesTemplate extends TeaModel {
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("DocumentAnchor")
         public String documentAnchor;
-
-        @NameInMap("Description")
-        public String description;
 
         @NameInMap("DocumentId")
         public String documentId;
@@ -47,25 +44,12 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         @NameInMap("Sample")
         public String sample;
 
+        @NameInMap("Title")
+        public String title;
+
         public static DescribePluginTemplatesResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
             DescribePluginTemplatesResponseBodyTemplatesTemplate self = new DescribePluginTemplatesResponseBodyTemplatesTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePluginTemplatesResponseBodyTemplatesTemplate setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public DescribePluginTemplatesResponseBodyTemplatesTemplate setDocumentAnchor(String documentAnchor) {
-            this.documentAnchor = documentAnchor;
-            return this;
-        }
-        public String getDocumentAnchor() {
-            return this.documentAnchor;
         }
 
         public DescribePluginTemplatesResponseBodyTemplatesTemplate setDescription(String description) {
@@ -74,6 +58,14 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribePluginTemplatesResponseBodyTemplatesTemplate setDocumentAnchor(String documentAnchor) {
+            this.documentAnchor = documentAnchor;
+            return this;
+        }
+        public String getDocumentAnchor() {
+            return this.documentAnchor;
         }
 
         public DescribePluginTemplatesResponseBodyTemplatesTemplate setDocumentId(String documentId) {
@@ -90,6 +82,14 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         }
         public String getSample() {
             return this.sample;
+        }
+
+        public DescribePluginTemplatesResponseBodyTemplatesTemplate setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }

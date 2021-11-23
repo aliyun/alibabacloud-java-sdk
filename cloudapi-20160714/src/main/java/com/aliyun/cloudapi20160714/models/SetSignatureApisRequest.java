@@ -4,17 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetSignatureApisRequest extends TeaModel {
+    @NameInMap("ApiIds")
+    public String apiIds;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("SignatureId")
     public String signatureId;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("ApiIds")
-    public String apiIds;
 
     @NameInMap("StageName")
     public String stageName;
@@ -22,6 +22,22 @@ public class SetSignatureApisRequest extends TeaModel {
     public static SetSignatureApisRequest build(java.util.Map<String, ?> map) throws Exception {
         SetSignatureApisRequest self = new SetSignatureApisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetSignatureApisRequest setApiIds(String apiIds) {
+        this.apiIds = apiIds;
+        return this;
+    }
+    public String getApiIds() {
+        return this.apiIds;
+    }
+
+    public SetSignatureApisRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public SetSignatureApisRequest setSecurityToken(String securityToken) {
@@ -38,22 +54,6 @@ public class SetSignatureApisRequest extends TeaModel {
     }
     public String getSignatureId() {
         return this.signatureId;
-    }
-
-    public SetSignatureApisRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public SetSignatureApisRequest setApiIds(String apiIds) {
-        this.apiIds = apiIds;
-        return this;
-    }
-    public String getApiIds() {
-        return this.apiIds;
     }
 
     public SetSignatureApisRequest setStageName(String stageName) {

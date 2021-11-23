@@ -4,56 +4,28 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByAppResponseBody extends TeaModel {
+    @NameInMap("AppApiRelationInfos")
+    public DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
+
+    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
+    // 每页条目
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 总条目数
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("AppApiRelationInfos")
-    public DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
     public static DescribeApisByAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisByAppResponseBody self = new DescribeApisByAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApisByAppResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeApisByAppResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeApisByAppResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeApisByAppResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeApisByAppResponseBody setAppApiRelationInfos(DescribeApisByAppResponseBodyAppApiRelationInfos appApiRelationInfos) {
@@ -64,39 +36,89 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         return this.appApiRelationInfos;
     }
 
+    public DescribeApisByAppResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeApisByAppResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApisByAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeApisByAppResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo extends TeaModel {
+        // API的ID
         @NameInMap("ApiId")
         public String apiId;
 
-        @NameInMap("AuthorizationSource")
-        public String authorizationSource;
+        // API名称
+        @NameInMap("ApiName")
+        public String apiName;
 
+        // 授权有效时间
         @NameInMap("AuthVaildTime")
         public String authVaildTime;
 
+        // 授权来源
+        @NameInMap("AuthorizationSource")
+        public String authorizationSource;
+
+        // 授权时间
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        // 描述
         @NameInMap("Description")
         public String description;
 
+        // 分组ID
+        @NameInMap("GroupId")
+        public String groupId;
+
+        // 分组名称
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("GroupId")
-        public String groupId;
+        // API的请求HTTP Method
+        @NameInMap("Method")
+        public String method;
 
         @NameInMap("Operator")
         public String operator;
 
-        @NameInMap("StageName")
-        public String stageName;
+        // API的请求路径
+        @NameInMap("Path")
+        public String path;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("ApiName")
-        public String apiName;
-
+        // 地区ID
         @NameInMap("RegionId")
         public String regionId;
+
+        // 环境名称
+        @NameInMap("StageName")
+        public String stageName;
 
         public static DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo self = new DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo();
@@ -111,12 +133,12 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             return this.apiId;
         }
 
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setAuthorizationSource(String authorizationSource) {
-            this.authorizationSource = authorizationSource;
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setApiName(String apiName) {
+            this.apiName = apiName;
             return this;
         }
-        public String getAuthorizationSource() {
-            return this.authorizationSource;
+        public String getApiName() {
+            return this.apiName;
         }
 
         public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setAuthVaildTime(String authVaildTime) {
@@ -127,44 +149,12 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             return this.authVaildTime;
         }
 
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setDescription(String description) {
-            this.description = description;
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setAuthorizationSource(String authorizationSource) {
+            this.authorizationSource = authorizationSource;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setOperator(String operator) {
-            this.operator = operator;
-            return this;
-        }
-        public String getOperator() {
-            return this.operator;
-        }
-
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setStageName(String stageName) {
-            this.stageName = stageName;
-            return this;
-        }
-        public String getStageName() {
-            return this.stageName;
+        public String getAuthorizationSource() {
+            return this.authorizationSource;
         }
 
         public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setCreatedTime(String createdTime) {
@@ -175,12 +165,52 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setApiName(String apiName) {
-            this.apiName = apiName;
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getApiName() {
-            return this.apiName;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setRegionId(String regionId) {
@@ -189,6 +219,14 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeApisByAppResponseBodyAppApiRelationInfosAppApiRelationInfo setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
     }

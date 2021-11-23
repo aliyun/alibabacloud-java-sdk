@@ -4,14 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginsByApiRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ApiId")
+    public String apiId;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("ApiId")
-    public String apiId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StageName")
     public String stageName;
@@ -21,12 +21,12 @@ public class DescribePluginsByApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribePluginsByApiRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribePluginsByApiRequest setApiId(String apiId) {
+        this.apiId = apiId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getApiId() {
+        return this.apiId;
     }
 
     public DescribePluginsByApiRequest setGroupId(String groupId) {
@@ -37,12 +37,12 @@ public class DescribePluginsByApiRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DescribePluginsByApiRequest setApiId(String apiId) {
-        this.apiId = apiId;
+    public DescribePluginsByApiRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getApiId() {
-        return this.apiId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribePluginsByApiRequest setStageName(String stageName) {

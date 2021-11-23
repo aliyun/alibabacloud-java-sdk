@@ -4,24 +4,32 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesResponseBody extends TeaModel {
+    @NameInMap("Apps")
+    public DescribeAppAttributesResponseBodyApps apps;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Apps")
-    public DescribeAppAttributesResponseBodyApps apps;
 
     public static DescribeAppAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppAttributesResponseBody self = new DescribeAppAttributesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAppAttributesResponseBody setApps(DescribeAppAttributesResponseBodyApps apps) {
+        this.apps = apps;
+        return this;
+    }
+    public DescribeAppAttributesResponseBodyApps getApps() {
+        return this.apps;
     }
 
     public DescribeAppAttributesResponseBody setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeAppAttributesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeAppAttributesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,20 +48,20 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeAppAttributesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeAppAttributesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeAppAttributesResponseBody setApps(DescribeAppAttributesResponseBodyApps apps) {
-        this.apps = apps;
-        return this;
-    }
-    public DescribeAppAttributesResponseBodyApps getApps() {
-        return this.apps;
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
@@ -114,20 +114,20 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
+        @NameInMap("AppId")
+        public Long appId;
+
         @NameInMap("AppName")
         public String appName;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
-
-        @NameInMap("Description")
-        public String description;
 
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        @NameInMap("AppId")
-        public Long appId;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
         @NameInMap("Tags")
         public DescribeAppAttributesResponseBodyAppsAppAttributeTags tags;
@@ -135,6 +135,14 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         public static DescribeAppAttributesResponseBodyAppsAppAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppAttributesResponseBodyAppsAppAttribute self = new DescribeAppAttributesResponseBodyAppsAppAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAttributesResponseBodyAppsAppAttribute setAppId(Long appId) {
+            this.appId = appId;
+            return this;
+        }
+        public Long getAppId() {
+            return this.appId;
         }
 
         public DescribeAppAttributesResponseBodyAppsAppAttribute setAppName(String appName) {
@@ -145,12 +153,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeAppAttributesResponseBodyAppsAppAttribute setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
+        public DescribeAppAttributesResponseBodyAppsAppAttribute setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeAppAttributesResponseBodyAppsAppAttribute setDescription(String description) {
@@ -161,20 +169,12 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeAppAttributesResponseBodyAppsAppAttribute setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
+        public DescribeAppAttributesResponseBodyAppsAppAttribute setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
             return this;
         }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribeAppAttributesResponseBodyAppsAppAttribute setAppId(Long appId) {
-            this.appId = appId;
-            return this;
-        }
-        public Long getAppId() {
-            return this.appId;
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public DescribeAppAttributesResponseBodyAppsAppAttribute setTags(DescribeAppAttributesResponseBodyAppsAppAttributeTags tags) {

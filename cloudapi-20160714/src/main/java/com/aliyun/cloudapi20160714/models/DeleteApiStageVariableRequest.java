@@ -4,11 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiStageVariableRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("StageId")
     public String stageId;
@@ -21,20 +21,20 @@ public class DeleteApiStageVariableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteApiStageVariableRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public DeleteApiStageVariableRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteApiStageVariableRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeleteApiStageVariableRequest setStageId(String stageId) {

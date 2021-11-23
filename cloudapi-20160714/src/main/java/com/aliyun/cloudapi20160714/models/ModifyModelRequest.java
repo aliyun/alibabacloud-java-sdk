@@ -4,32 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyModelRequest extends TeaModel {
-    @NameInMap("ModelName")
-    public String modelName;
-
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("Schema")
-    public String schema;
 
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("NewModelName")
     public String newModelName;
+
+    @NameInMap("Schema")
+    public String schema;
 
     public static ModifyModelRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyModelRequest self = new ModifyModelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyModelRequest setModelName(String modelName) {
-        this.modelName = modelName;
-        return this;
-    }
-    public String getModelName() {
-        return this.modelName;
     }
 
     public ModifyModelRequest setDescription(String description) {
@@ -40,14 +32,6 @@ public class ModifyModelRequest extends TeaModel {
         return this.description;
     }
 
-    public ModifyModelRequest setSchema(String schema) {
-        this.schema = schema;
-        return this;
-    }
-    public String getSchema() {
-        return this.schema;
-    }
-
     public ModifyModelRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -56,12 +40,28 @@ public class ModifyModelRequest extends TeaModel {
         return this.groupId;
     }
 
+    public ModifyModelRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
+    }
+
     public ModifyModelRequest setNewModelName(String newModelName) {
         this.newModelName = newModelName;
         return this;
     }
     public String getNewModelName() {
         return this.newModelName;
+    }
+
+    public ModifyModelRequest setSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    public String getSchema() {
+        return this.schema;
     }
 
 }

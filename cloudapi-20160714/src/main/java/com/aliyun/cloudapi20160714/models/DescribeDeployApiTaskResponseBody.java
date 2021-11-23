@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployApiTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeployedResults")
     public DescribeDeployApiTaskResponseBodyDeployedResults deployedResults;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDeployApiTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeployApiTaskResponseBody self = new DescribeDeployApiTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeployApiTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDeployApiTaskResponseBody setDeployedResults(DescribeDeployApiTaskResponseBodyDeployedResults deployedResults) {
@@ -31,49 +23,33 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         return this.deployedResults;
     }
 
+    public DescribeDeployApiTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult extends TeaModel {
-        @NameInMap("ErrorMsg")
-        public String errorMsg;
-
-        @NameInMap("StageName")
-        public String stageName;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("ApiUid")
         public String apiUid;
 
         @NameInMap("DeployedStatus")
         public String deployedStatus;
 
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("StageName")
+        public String stageName;
+
         public static DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult self = new DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setStageName(String stageName) {
-            this.stageName = stageName;
-            return this;
-        }
-        public String getStageName() {
-            return this.stageName;
-        }
-
-        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
         public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setApiUid(String apiUid) {
@@ -90,6 +66,30 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
         }
         public String getDeployedStatus() {
             return this.deployedStatus;
+        }
+
+        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeDeployApiTaskResponseBodyDeployedResultsDeployedResult setStageName(String stageName) {
+            this.stageName = stageName;
+            return this;
+        }
+        public String getStageName() {
+            return this.stageName;
         }
 
     }

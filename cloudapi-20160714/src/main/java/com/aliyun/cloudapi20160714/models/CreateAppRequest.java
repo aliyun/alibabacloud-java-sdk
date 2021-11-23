@@ -4,14 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Source")
     public String source;
@@ -22,14 +22,6 @@ public class CreateAppRequest extends TeaModel {
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAppRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateAppRequest setAppName(String appName) {
@@ -46,6 +38,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public CreateAppRequest setSource(String source) {

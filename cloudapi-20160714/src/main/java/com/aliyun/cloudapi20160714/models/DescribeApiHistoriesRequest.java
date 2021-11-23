@@ -4,54 +4,30 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiHistoriesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("StageName")
-    public String stageName;
-
     @NameInMap("ApiId")
     public String apiId;
 
     @NameInMap("ApiName")
     public String apiName;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StageName")
+    public String stageName;
+
     public static DescribeApiHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiHistoriesRequest self = new DescribeApiHistoriesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApiHistoriesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeApiHistoriesRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeApiHistoriesRequest setStageName(String stageName) {
-        this.stageName = stageName;
-        return this;
-    }
-    public String getStageName() {
-        return this.stageName;
     }
 
     public DescribeApiHistoriesRequest setApiId(String apiId) {
@@ -70,12 +46,12 @@ public class DescribeApiHistoriesRequest extends TeaModel {
         return this.apiName;
     }
 
-    public DescribeApiHistoriesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeApiHistoriesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeApiHistoriesRequest setPageNumber(Integer pageNumber) {
@@ -84,6 +60,30 @@ public class DescribeApiHistoriesRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeApiHistoriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApiHistoriesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeApiHistoriesRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
     }
 
 }

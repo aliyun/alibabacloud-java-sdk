@@ -4,12 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("ApiId")
     public String apiId;
 
@@ -19,40 +13,30 @@ public class DescribeApisRequest extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
-    @NameInMap("Visibility")
-    public String visibility;
+    @NameInMap("EnableTagAuth")
+    public Boolean enableTagAuth;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("EnableTagAuth")
-    public Boolean enableTagAuth;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DescribeApisRequestTag> tag;
 
+    @NameInMap("Visibility")
+    public String visibility;
+
     public static DescribeApisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisRequest self = new DescribeApisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApisRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeApisRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public DescribeApisRequest setApiId(String apiId) {
@@ -79,20 +63,20 @@ public class DescribeApisRequest extends TeaModel {
         return this.catalogId;
     }
 
-    public DescribeApisRequest setVisibility(String visibility) {
-        this.visibility = visibility;
+    public DescribeApisRequest setEnableTagAuth(Boolean enableTagAuth) {
+        this.enableTagAuth = enableTagAuth;
         return this;
     }
-    public String getVisibility() {
-        return this.visibility;
+    public Boolean getEnableTagAuth() {
+        return this.enableTagAuth;
     }
 
-    public DescribeApisRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeApisRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeApisRequest setPageNumber(Integer pageNumber) {
@@ -103,12 +87,20 @@ public class DescribeApisRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeApisRequest setEnableTagAuth(Boolean enableTagAuth) {
-        this.enableTagAuth = enableTagAuth;
+    public DescribeApisRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Boolean getEnableTagAuth() {
-        return this.enableTagAuth;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApisRequest setTag(java.util.List<DescribeApisRequestTag> tag) {
@@ -117,6 +109,14 @@ public class DescribeApisRequest extends TeaModel {
     }
     public java.util.List<DescribeApisRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeApisRequest setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
     }
 
     public static class DescribeApisRequestTag extends TeaModel {

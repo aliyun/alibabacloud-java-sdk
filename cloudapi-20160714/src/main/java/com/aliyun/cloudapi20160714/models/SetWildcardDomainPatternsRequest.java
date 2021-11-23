@@ -4,14 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SetWildcardDomainPatternsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("WildcardDomainPatterns")
     public String wildcardDomainPatterns;
@@ -21,12 +21,12 @@ public class SetWildcardDomainPatternsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetWildcardDomainPatternsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public SetWildcardDomainPatternsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SetWildcardDomainPatternsRequest setGroupId(String groupId) {
@@ -37,12 +37,12 @@ public class SetWildcardDomainPatternsRequest extends TeaModel {
         return this.groupId;
     }
 
-    public SetWildcardDomainPatternsRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public SetWildcardDomainPatternsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public SetWildcardDomainPatternsRequest setWildcardDomainPatterns(String wildcardDomainPatterns) {

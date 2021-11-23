@@ -4,8 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AccurateQuery")
+    public Boolean accurateQuery;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +16,28 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("AccurateQuery")
-    public Boolean accurateQuery;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static DescribeVpcAccessesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcAccessesRequest self = new DescribeVpcAccessesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcAccessesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeVpcAccessesRequest setAccurateQuery(Boolean accurateQuery) {
+        this.accurateQuery = accurateQuery;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Boolean getAccurateQuery() {
+        return this.accurateQuery;
+    }
+
+    public DescribeVpcAccessesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeVpcAccessesRequest setPageNumber(Integer pageNumber) {
@@ -48,20 +56,12 @@ public class DescribeVpcAccessesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVpcAccessesRequest setName(String name) {
-        this.name = name;
+    public DescribeVpcAccessesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeVpcAccessesRequest setAccurateQuery(Boolean accurateQuery) {
-        this.accurateQuery = accurateQuery;
-        return this;
-    }
-    public Boolean getAccurateQuery() {
-        return this.accurateQuery;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,14 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedApiGroupResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("PurchasedTime")
-    public String purchasedTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Domains")
+    public DescribePurchasedApiGroupResponseBodyDomains domains;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -19,42 +16,37 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("PurchasedTime")
+    public String purchasedTime;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Domains")
-    public DescribePurchasedApiGroupResponseBodyDomains domains;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
 
     public static DescribePurchasedApiGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedApiGroupResponseBody self = new DescribePurchasedApiGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePurchasedApiGroupResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribePurchasedApiGroupResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getDescription() {
+        return this.description;
     }
 
-    public DescribePurchasedApiGroupResponseBody setPurchasedTime(String purchasedTime) {
-        this.purchasedTime = purchasedTime;
+    public DescribePurchasedApiGroupResponseBody setDomains(DescribePurchasedApiGroupResponseBodyDomains domains) {
+        this.domains = domains;
         return this;
     }
-    public String getPurchasedTime() {
-        return this.purchasedTime;
-    }
-
-    public DescribePurchasedApiGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribePurchasedApiGroupResponseBodyDomains getDomains() {
+        return this.domains;
     }
 
     public DescribePurchasedApiGroupResponseBody setGroupId(String groupId) {
@@ -73,12 +65,12 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         return this.groupName;
     }
 
-    public DescribePurchasedApiGroupResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribePurchasedApiGroupResponseBody setPurchasedTime(String purchasedTime) {
+        this.purchasedTime = purchasedTime;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getPurchasedTime() {
+        return this.purchasedTime;
     }
 
     public DescribePurchasedApiGroupResponseBody setRegionId(String regionId) {
@@ -89,12 +81,20 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public DescribePurchasedApiGroupResponseBody setDomains(DescribePurchasedApiGroupResponseBodyDomains domains) {
-        this.domains = domains;
+    public DescribePurchasedApiGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribePurchasedApiGroupResponseBodyDomains getDomains() {
-        return this.domains;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePurchasedApiGroupResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public static class DescribePurchasedApiGroupResponseBodyDomainsDomainItem extends TeaModel {

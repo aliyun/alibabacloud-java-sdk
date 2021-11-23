@@ -7,17 +7,17 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PurchasedApiGroupAttributes")
     public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributes purchasedApiGroupAttributes;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribePurchasedApiGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedApiGroupsResponseBody self = new DescribePurchasedApiGroupsResponseBody();
@@ -32,28 +32,12 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribePurchasedApiGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePurchasedApiGroupsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribePurchasedApiGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribePurchasedApiGroupsResponseBody setPurchasedApiGroupAttributes(DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributes purchasedApiGroupAttributes) {
@@ -64,24 +48,37 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         return this.purchasedApiGroupAttributes;
     }
 
+    public DescribePurchasedApiGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePurchasedApiGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("PurchasedTime")
-        public String purchasedTime;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
+        @NameInMap("BillingType")
+        public String billingType;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("GroupName")
-        public String groupName;
+        @NameInMap("ExpireTime")
+        public String expireTime;
 
         @NameInMap("GroupId")
         public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("InvokeTimesMax")
         public Long invokeTimesMax;
@@ -89,39 +86,26 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         @NameInMap("InvokeTimesNow")
         public Long invokeTimesNow;
 
-        @NameInMap("BillingType")
-        public String billingType;
+        @NameInMap("PurchasedTime")
+        public String purchasedTime;
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute self = new DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setStatus(String status) {
-            this.status = status;
+        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setBillingType(String billingType) {
+            this.billingType = billingType;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setPurchasedTime(String purchasedTime) {
-            this.purchasedTime = purchasedTime;
-            return this;
-        }
-        public String getPurchasedTime() {
-            return this.purchasedTime;
-        }
-
-        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
+        public String getBillingType() {
+            return this.billingType;
         }
 
         public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setDescription(String description) {
@@ -132,12 +116,12 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setGroupName(String groupName) {
-            this.groupName = groupName;
+        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getGroupName() {
-            return this.groupName;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setGroupId(String groupId) {
@@ -146,6 +130,14 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setInvokeTimesMax(Long invokeTimesMax) {
@@ -164,12 +156,12 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
             return this.invokeTimesNow;
         }
 
-        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setBillingType(String billingType) {
-            this.billingType = billingType;
+        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setPurchasedTime(String purchasedTime) {
+            this.purchasedTime = purchasedTime;
             return this;
         }
-        public String getBillingType() {
-            return this.billingType;
+        public String getPurchasedTime() {
+            return this.purchasedTime;
         }
 
         public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setRegionId(String regionId) {
@@ -178,6 +170,14 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribePurchasedApiGroupsResponseBodyPurchasedApiGroupAttributesPurchasedApiGroupAttribute setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

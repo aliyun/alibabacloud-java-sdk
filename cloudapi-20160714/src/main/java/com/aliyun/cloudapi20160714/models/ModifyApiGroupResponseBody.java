@@ -4,11 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BasePath")
     public String basePath;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -16,8 +16,8 @@ public class ModifyApiGroupResponseBody extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SubDomain")
     public String subDomain;
@@ -27,20 +27,20 @@ public class ModifyApiGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyApiGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ModifyApiGroupResponseBody setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
     }
     public String getBasePath() {
         return this.basePath;
+    }
+
+    public ModifyApiGroupResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyApiGroupResponseBody setGroupId(String groupId) {
@@ -59,12 +59,12 @@ public class ModifyApiGroupResponseBody extends TeaModel {
         return this.groupName;
     }
 
-    public ModifyApiGroupResponseBody setDescription(String description) {
-        this.description = description;
+    public ModifyApiGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ModifyApiGroupResponseBody setSubDomain(String subDomain) {

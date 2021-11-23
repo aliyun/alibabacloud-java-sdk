@@ -4,11 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeletePluginRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("PluginId")
     public String pluginId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DeletePluginRequestTag> tag;
@@ -18,20 +18,20 @@ public class DeletePluginRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeletePluginRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public DeletePluginRequest setPluginId(String pluginId) {
         this.pluginId = pluginId;
         return this;
     }
     public String getPluginId() {
         return this.pluginId;
+    }
+
+    public DeletePluginRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DeletePluginRequest setTag(java.util.List<DeletePluginRequestTag> tag) {

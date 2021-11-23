@@ -7,17 +7,17 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("Plugins")
     public DescribePluginsByApiResponseBodyPlugins plugins;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribePluginsByApiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePluginsByApiResponseBody self = new DescribePluginsByApiResponseBody();
@@ -32,28 +32,12 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribePluginsByApiResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePluginsByApiResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribePluginsByApiResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribePluginsByApiResponseBody setPlugins(DescribePluginsByApiResponseBodyPlugins plugins) {
@@ -64,9 +48,28 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         return this.plugins;
     }
 
+    public DescribePluginsByApiResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePluginsByApiResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribePluginsByApiResponseBodyPluginsPluginAttribute extends TeaModel {
-        @NameInMap("PluginId")
-        public String pluginId;
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -74,14 +77,11 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         @NameInMap("PluginData")
         public String pluginData;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("PluginId")
+        public String pluginId;
 
         @NameInMap("PluginName")
         public String pluginName;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
 
         @NameInMap("PluginType")
         public String pluginType;
@@ -94,12 +94,20 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setPluginId(String pluginId) {
-            this.pluginId = pluginId;
+        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getPluginId() {
-            return this.pluginId;
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribePluginsByApiResponseBodyPluginsPluginAttribute setModifiedTime(String modifiedTime) {
@@ -118,12 +126,12 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
             return this.pluginData;
         }
 
-        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setDescription(String description) {
-            this.description = description;
+        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setPluginId(String pluginId) {
+            this.pluginId = pluginId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getPluginId() {
+            return this.pluginId;
         }
 
         public DescribePluginsByApiResponseBodyPluginsPluginAttribute setPluginName(String pluginName) {
@@ -132,14 +140,6 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         }
         public String getPluginName() {
             return this.pluginName;
-        }
-
-        public DescribePluginsByApiResponseBodyPluginsPluginAttribute setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
         }
 
         public DescribePluginsByApiResponseBodyPluginsPluginAttribute setPluginType(String pluginType) {

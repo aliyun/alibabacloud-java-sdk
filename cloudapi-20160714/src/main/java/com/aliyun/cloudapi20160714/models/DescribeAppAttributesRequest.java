@@ -4,14 +4,20 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AppCode")
+    public String appCode;
 
     @NameInMap("AppId")
     public Long appId;
 
+    @NameInMap("AppKey")
+    public String appKey;
+
     @NameInMap("AppName")
     public String appName;
+
+    @NameInMap("EnableTagAuth")
+    public Boolean enableTagAuth;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,17 +25,11 @@ public class DescribeAppAttributesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AppCode")
-    public String appCode;
-
-    @NameInMap("AppKey")
-    public String appKey;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Sort")
     public String sort;
-
-    @NameInMap("EnableTagAuth")
-    public Boolean enableTagAuth;
 
     @NameInMap("Tag")
     public java.util.List<DescribeAppAttributesRequestTag> tag;
@@ -39,12 +39,12 @@ public class DescribeAppAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAppAttributesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeAppAttributesRequest setAppCode(String appCode) {
+        this.appCode = appCode;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAppCode() {
+        return this.appCode;
     }
 
     public DescribeAppAttributesRequest setAppId(Long appId) {
@@ -55,12 +55,28 @@ public class DescribeAppAttributesRequest extends TeaModel {
         return this.appId;
     }
 
+    public DescribeAppAttributesRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
+    }
+
     public DescribeAppAttributesRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DescribeAppAttributesRequest setEnableTagAuth(Boolean enableTagAuth) {
+        this.enableTagAuth = enableTagAuth;
+        return this;
+    }
+    public Boolean getEnableTagAuth() {
+        return this.enableTagAuth;
     }
 
     public DescribeAppAttributesRequest setPageNumber(Integer pageNumber) {
@@ -79,20 +95,12 @@ public class DescribeAppAttributesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAppAttributesRequest setAppCode(String appCode) {
-        this.appCode = appCode;
+    public DescribeAppAttributesRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getAppCode() {
-        return this.appCode;
-    }
-
-    public DescribeAppAttributesRequest setAppKey(String appKey) {
-        this.appKey = appKey;
-        return this;
-    }
-    public String getAppKey() {
-        return this.appKey;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeAppAttributesRequest setSort(String sort) {
@@ -101,14 +109,6 @@ public class DescribeAppAttributesRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
-    }
-
-    public DescribeAppAttributesRequest setEnableTagAuth(Boolean enableTagAuth) {
-        this.enableTagAuth = enableTagAuth;
-        return this;
-    }
-    public Boolean getEnableTagAuth() {
-        return this.enableTagAuth;
     }
 
     public DescribeAppAttributesRequest setTag(java.util.List<DescribeAppAttributesRequestTag> tag) {

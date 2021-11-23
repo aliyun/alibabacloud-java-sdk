@@ -4,8 +4,23 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyApiGroupRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("BasePath")
+    public String basePath;
+
+    @NameInMap("CompatibleFlags")
+    public String compatibleFlags;
+
+    @NameInMap("CustomTraceConfig")
+    public String customTraceConfig;
+
+    @NameInMap("CustomerConfigs")
+    public String customerConfigs;
+
+    @NameInMap("DefaultDomain")
+    public String defaultDomain;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -13,47 +28,72 @@ public class ModifyApiGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
-    @NameInMap("BasePath")
-    public String basePath;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("UserLogConfig")
-    public String userLogConfig;
-
-    @NameInMap("CustomTraceConfig")
-    public String customTraceConfig;
-
-    @NameInMap("CompatibleFlags")
-    public String compatibleFlags;
-
-    @NameInMap("CustomerConfigs")
-    public String customerConfigs;
-
     @NameInMap("PassthroughHeaders")
     public String passthroughHeaders;
-
-    @NameInMap("DefaultDomain")
-    public String defaultDomain;
 
     @NameInMap("RpcPattern")
     public String rpcPattern;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Tag")
     public java.util.List<ModifyApiGroupRequestTag> tag;
+
+    @NameInMap("UserLogConfig")
+    public String userLogConfig;
 
     public static ModifyApiGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyApiGroupRequest self = new ModifyApiGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyApiGroupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyApiGroupRequest setBasePath(String basePath) {
+        this.basePath = basePath;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getBasePath() {
+        return this.basePath;
+    }
+
+    public ModifyApiGroupRequest setCompatibleFlags(String compatibleFlags) {
+        this.compatibleFlags = compatibleFlags;
+        return this;
+    }
+    public String getCompatibleFlags() {
+        return this.compatibleFlags;
+    }
+
+    public ModifyApiGroupRequest setCustomTraceConfig(String customTraceConfig) {
+        this.customTraceConfig = customTraceConfig;
+        return this;
+    }
+    public String getCustomTraceConfig() {
+        return this.customTraceConfig;
+    }
+
+    public ModifyApiGroupRequest setCustomerConfigs(String customerConfigs) {
+        this.customerConfigs = customerConfigs;
+        return this;
+    }
+    public String getCustomerConfigs() {
+        return this.customerConfigs;
+    }
+
+    public ModifyApiGroupRequest setDefaultDomain(String defaultDomain) {
+        this.defaultDomain = defaultDomain;
+        return this;
+    }
+    public String getDefaultDomain() {
+        return this.defaultDomain;
+    }
+
+    public ModifyApiGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyApiGroupRequest setGroupId(String groupId) {
@@ -72,68 +112,12 @@ public class ModifyApiGroupRequest extends TeaModel {
         return this.groupName;
     }
 
-    public ModifyApiGroupRequest setBasePath(String basePath) {
-        this.basePath = basePath;
-        return this;
-    }
-    public String getBasePath() {
-        return this.basePath;
-    }
-
-    public ModifyApiGroupRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyApiGroupRequest setUserLogConfig(String userLogConfig) {
-        this.userLogConfig = userLogConfig;
-        return this;
-    }
-    public String getUserLogConfig() {
-        return this.userLogConfig;
-    }
-
-    public ModifyApiGroupRequest setCustomTraceConfig(String customTraceConfig) {
-        this.customTraceConfig = customTraceConfig;
-        return this;
-    }
-    public String getCustomTraceConfig() {
-        return this.customTraceConfig;
-    }
-
-    public ModifyApiGroupRequest setCompatibleFlags(String compatibleFlags) {
-        this.compatibleFlags = compatibleFlags;
-        return this;
-    }
-    public String getCompatibleFlags() {
-        return this.compatibleFlags;
-    }
-
-    public ModifyApiGroupRequest setCustomerConfigs(String customerConfigs) {
-        this.customerConfigs = customerConfigs;
-        return this;
-    }
-    public String getCustomerConfigs() {
-        return this.customerConfigs;
-    }
-
     public ModifyApiGroupRequest setPassthroughHeaders(String passthroughHeaders) {
         this.passthroughHeaders = passthroughHeaders;
         return this;
     }
     public String getPassthroughHeaders() {
         return this.passthroughHeaders;
-    }
-
-    public ModifyApiGroupRequest setDefaultDomain(String defaultDomain) {
-        this.defaultDomain = defaultDomain;
-        return this;
-    }
-    public String getDefaultDomain() {
-        return this.defaultDomain;
     }
 
     public ModifyApiGroupRequest setRpcPattern(String rpcPattern) {
@@ -144,12 +128,28 @@ public class ModifyApiGroupRequest extends TeaModel {
         return this.rpcPattern;
     }
 
+    public ModifyApiGroupRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public ModifyApiGroupRequest setTag(java.util.List<ModifyApiGroupRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<ModifyApiGroupRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ModifyApiGroupRequest setUserLogConfig(String userLogConfig) {
+        this.userLogConfig = userLogConfig;
+        return this;
+    }
+    public String getUserLogConfig() {
+        return this.userLogConfig;
     }
 
     public static class ModifyApiGroupRequestTag extends TeaModel {

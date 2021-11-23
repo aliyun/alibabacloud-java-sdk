@@ -4,8 +4,8 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("EnableTagAuth")
+    public Boolean enableTagAuth;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -13,17 +13,17 @@ public class DescribeApiGroupsRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("EnableTagAuth")
-    public Boolean enableTagAuth;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Sort")
     public String sort;
@@ -36,12 +36,12 @@ public class DescribeApiGroupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeApiGroupsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeApiGroupsRequest setEnableTagAuth(Boolean enableTagAuth) {
+        this.enableTagAuth = enableTagAuth;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Boolean getEnableTagAuth() {
+        return this.enableTagAuth;
     }
 
     public DescribeApiGroupsRequest setGroupId(String groupId) {
@@ -60,6 +60,14 @@ public class DescribeApiGroupsRequest extends TeaModel {
         return this.groupName;
     }
 
+    public DescribeApiGroupsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeApiGroupsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -76,20 +84,12 @@ public class DescribeApiGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeApiGroupsRequest setEnableTagAuth(Boolean enableTagAuth) {
-        this.enableTagAuth = enableTagAuth;
+    public DescribeApiGroupsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public Boolean getEnableTagAuth() {
-        return this.enableTagAuth;
-    }
-
-    public DescribeApiGroupsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeApiGroupsRequest setSort(String sort) {

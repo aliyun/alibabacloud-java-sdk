@@ -4,56 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlsResponseBody extends TeaModel {
+    @NameInMap("IpControlInfos")
+    public DescribeIpControlsResponseBodyIpControlInfos ipControlInfos;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("IpControlInfos")
-    public DescribeIpControlsResponseBodyIpControlInfos ipControlInfos;
 
     public static DescribeIpControlsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpControlsResponseBody self = new DescribeIpControlsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIpControlsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeIpControlsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeIpControlsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeIpControlsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeIpControlsResponseBody setIpControlInfos(DescribeIpControlsResponseBodyIpControlInfos ipControlInfos) {
@@ -64,24 +32,56 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         return this.ipControlInfos;
     }
 
+    public DescribeIpControlsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeIpControlsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeIpControlsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeIpControlsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeIpControlsResponseBodyIpControlInfosIpControlInfo extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("IpControlId")
         public String ipControlId;
+
+        @NameInMap("IpControlName")
+        public String ipControlName;
 
         @NameInMap("IpControlType")
         public String ipControlType;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
-
-        @NameInMap("IpControlName")
-        public String ipControlName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("CreateTime")
-        public String createTime;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -91,12 +91,36 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setIpControlId(String ipControlId) {
             this.ipControlId = ipControlId;
             return this;
         }
         public String getIpControlId() {
             return this.ipControlId;
+        }
+
+        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setIpControlName(String ipControlName) {
+            this.ipControlName = ipControlName;
+            return this;
+        }
+        public String getIpControlName() {
+            return this.ipControlName;
         }
 
         public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setIpControlType(String ipControlType) {
@@ -113,30 +137,6 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
-        }
-
-        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setIpControlName(String ipControlName) {
-            this.ipControlName = ipControlName;
-            return this;
-        }
-        public String getIpControlName() {
-            return this.ipControlName;
-        }
-
-        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public DescribeIpControlsResponseBodyIpControlInfosIpControlInfo setRegionId(String regionId) {

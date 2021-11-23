@@ -4,8 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyPluginRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("PluginData")
+    public String pluginData;
 
     @NameInMap("PluginId")
     public String pluginId;
@@ -13,11 +16,8 @@ public class ModifyPluginRequest extends TeaModel {
     @NameInMap("PluginName")
     public String pluginName;
 
-    @NameInMap("PluginData")
-    public String pluginData;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<ModifyPluginRequestTag> tag;
@@ -27,12 +27,20 @@ public class ModifyPluginRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyPluginRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyPluginRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyPluginRequest setPluginData(String pluginData) {
+        this.pluginData = pluginData;
+        return this;
+    }
+    public String getPluginData() {
+        return this.pluginData;
     }
 
     public ModifyPluginRequest setPluginId(String pluginId) {
@@ -51,20 +59,12 @@ public class ModifyPluginRequest extends TeaModel {
         return this.pluginName;
     }
 
-    public ModifyPluginRequest setPluginData(String pluginData) {
-        this.pluginData = pluginData;
+    public ModifyPluginRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getPluginData() {
-        return this.pluginData;
-    }
-
-    public ModifyPluginRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyPluginRequest setTag(java.util.List<ModifyPluginRequestTag> tag) {

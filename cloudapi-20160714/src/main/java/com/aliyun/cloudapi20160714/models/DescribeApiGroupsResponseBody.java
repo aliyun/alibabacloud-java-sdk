@@ -4,24 +4,32 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiGroupsResponseBody extends TeaModel {
+    @NameInMap("ApiGroupAttributes")
+    public DescribeApiGroupsResponseBodyApiGroupAttributes apiGroupAttributes;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("ApiGroupAttributes")
-    public DescribeApiGroupsResponseBodyApiGroupAttributes apiGroupAttributes;
 
     public static DescribeApiGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiGroupsResponseBody self = new DescribeApiGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeApiGroupsResponseBody setApiGroupAttributes(DescribeApiGroupsResponseBodyApiGroupAttributes apiGroupAttributes) {
+        this.apiGroupAttributes = apiGroupAttributes;
+        return this;
+    }
+    public DescribeApiGroupsResponseBodyApiGroupAttributes getApiGroupAttributes() {
+        return this.apiGroupAttributes;
     }
 
     public DescribeApiGroupsResponseBody setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeApiGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeApiGroupsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,20 +48,20 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeApiGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeApiGroupsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeApiGroupsResponseBody setApiGroupAttributes(DescribeApiGroupsResponseBodyApiGroupAttributes apiGroupAttributes) {
-        this.apiGroupAttributes = apiGroupAttributes;
-        return this;
-    }
-    public DescribeApiGroupsResponseBodyApiGroupAttributes getApiGroupAttributes() {
-        return this.apiGroupAttributes;
     }
 
     public static class DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTagsTagInfo extends TeaModel {
@@ -120,20 +120,11 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         @NameInMap("BillingStatus")
         public String billingStatus;
 
-        @NameInMap("TrafficLimit")
-        public Integer trafficLimit;
+        @NameInMap("CreatedTime")
+        public String createdTime;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -141,23 +132,32 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("HttpsPolicy")
+        public String httpsPolicy;
 
         @NameInMap("IllegalStatus")
         public String illegalStatus;
 
-        @NameInMap("HttpsPolicy")
-        public String httpsPolicy;
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("SubDomain")
         public String subDomain;
 
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
         @NameInMap("Tags")
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTags tags;
+
+        @NameInMap("TrafficLimit")
+        public Integer trafficLimit;
 
         public static DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute self = new DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute();
@@ -180,44 +180,20 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             return this.billingStatus;
         }
 
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setTrafficLimit(Integer trafficLimit) {
-            this.trafficLimit = trafficLimit;
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public Integer getTrafficLimit() {
-            return this.trafficLimit;
+        public String getCreatedTime() {
+            return this.createdTime;
         }
 
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
-            return this;
-        }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setGroupId(String groupId) {
@@ -236,12 +212,12 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setDescription(String description) {
-            this.description = description;
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setHttpsPolicy(String httpsPolicy) {
+            this.httpsPolicy = httpsPolicy;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getHttpsPolicy() {
+            return this.httpsPolicy;
         }
 
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setIllegalStatus(String illegalStatus) {
@@ -252,12 +228,36 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             return this.illegalStatus;
         }
 
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setHttpsPolicy(String httpsPolicy) {
-            this.httpsPolicy = httpsPolicy;
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getHttpsPolicy() {
-            return this.httpsPolicy;
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setSubDomain(String subDomain) {
@@ -268,20 +268,20 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
             return this.subDomain;
         }
 
-        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setTags(DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTags tags) {
             this.tags = tags;
             return this;
         }
         public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttributeTags getTags() {
             return this.tags;
+        }
+
+        public DescribeApiGroupsResponseBodyApiGroupAttributesApiGroupAttribute setTrafficLimit(Integer trafficLimit) {
+            this.trafficLimit = trafficLimit;
+            return this;
+        }
+        public Integer getTrafficLimit() {
+            return this.trafficLimit;
         }
 
     }

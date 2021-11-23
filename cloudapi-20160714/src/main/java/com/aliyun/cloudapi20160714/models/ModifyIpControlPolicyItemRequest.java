@@ -4,8 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpControlPolicyItemRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("CidrIp")
+    public String cidrIp;
 
     @NameInMap("IpControlId")
     public String ipControlId;
@@ -13,23 +16,28 @@ public class ModifyIpControlPolicyItemRequest extends TeaModel {
     @NameInMap("PolicyItemId")
     public String policyItemId;
 
-    @NameInMap("AppId")
-    public String appId;
-
-    @NameInMap("CidrIp")
-    public String cidrIp;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static ModifyIpControlPolicyItemRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpControlPolicyItemRequest self = new ModifyIpControlPolicyItemRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIpControlPolicyItemRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ModifyIpControlPolicyItemRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public ModifyIpControlPolicyItemRequest setCidrIp(String cidrIp) {
+        this.cidrIp = cidrIp;
+        return this;
+    }
+    public String getCidrIp() {
+        return this.cidrIp;
     }
 
     public ModifyIpControlPolicyItemRequest setIpControlId(String ipControlId) {
@@ -48,20 +56,12 @@ public class ModifyIpControlPolicyItemRequest extends TeaModel {
         return this.policyItemId;
     }
 
-    public ModifyIpControlPolicyItemRequest setAppId(String appId) {
-        this.appId = appId;
+    public ModifyIpControlPolicyItemRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
-    }
-
-    public ModifyIpControlPolicyItemRequest setCidrIp(String cidrIp) {
-        this.cidrIp = cidrIp;
-        return this;
-    }
-    public String getCidrIp() {
-        return this.cidrIp;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

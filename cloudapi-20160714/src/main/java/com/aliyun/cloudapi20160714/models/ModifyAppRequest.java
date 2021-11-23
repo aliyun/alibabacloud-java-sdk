@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("AppId")
     public Long appId;
 
@@ -16,20 +13,15 @@ public class ModifyAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("Tag")
     public java.util.List<ModifyAppRequestTag> tag;
 
     public static ModifyAppRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppRequest self = new ModifyAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyAppRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyAppRequest setAppId(Long appId) {
@@ -54,6 +46,14 @@ public class ModifyAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public ModifyAppRequest setTag(java.util.List<ModifyAppRequestTag> tag) {

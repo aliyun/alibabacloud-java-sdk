@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginSchemasResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PluginSchemas")
     public DescribePluginSchemasResponseBodyPluginSchemas pluginSchemas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePluginSchemasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePluginSchemasResponseBody self = new DescribePluginSchemasResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePluginSchemasResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePluginSchemasResponseBody setPluginSchemas(DescribePluginSchemasResponseBodyPluginSchemas pluginSchemas) {
@@ -31,33 +23,33 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
         return this.pluginSchemas;
     }
 
-    public static class DescribePluginSchemasResponseBodyPluginSchemasPluginSchema extends TeaModel {
-        @NameInMap("Title")
-        public String title;
+    public DescribePluginSchemasResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribePluginSchemasResponseBodyPluginSchemasPluginSchema extends TeaModel {
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("DocumentId")
         public String documentId;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("SupportClassic")
         public Boolean supportClassic;
+
+        @NameInMap("Title")
+        public String title;
 
         public static DescribePluginSchemasResponseBodyPluginSchemasPluginSchema build(java.util.Map<String, ?> map) throws Exception {
             DescribePluginSchemasResponseBodyPluginSchemasPluginSchema self = new DescribePluginSchemasResponseBodyPluginSchemasPluginSchema();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
         public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setDescription(String description) {
@@ -68,14 +60,6 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setDocumentId(String documentId) {
             this.documentId = documentId;
             return this;
@@ -84,12 +68,28 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
             return this.documentId;
         }
 
+        public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setSupportClassic(Boolean supportClassic) {
             this.supportClassic = supportClassic;
             return this;
         }
         public Boolean getSupportClassic() {
             return this.supportClassic;
+        }
+
+        public DescribePluginSchemasResponseBodyPluginSchemasPluginSchema setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }

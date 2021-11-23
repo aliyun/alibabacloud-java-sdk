@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class BatchAbolishApisRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("Api")
     public java.util.List<BatchAbolishApisRequestApi> api;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static BatchAbolishApisRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAbolishApisRequest self = new BatchAbolishApisRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchAbolishApisRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public BatchAbolishApisRequest setApi(java.util.List<BatchAbolishApisRequestApi> api) {
@@ -31,27 +23,35 @@ public class BatchAbolishApisRequest extends TeaModel {
         return this.api;
     }
 
+    public BatchAbolishApisRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public static class BatchAbolishApisRequestApi extends TeaModel {
-        @NameInMap("StageId")
-        public String stageId;
+        @NameInMap("ApiUid")
+        public String apiUid;
 
         @NameInMap("GroupId")
         public String groupId;
 
-        @NameInMap("ApiUid")
-        public String apiUid;
+        @NameInMap("StageId")
+        public String stageId;
 
         public static BatchAbolishApisRequestApi build(java.util.Map<String, ?> map) throws Exception {
             BatchAbolishApisRequestApi self = new BatchAbolishApisRequestApi();
             return TeaModel.build(map, self);
         }
 
-        public BatchAbolishApisRequestApi setStageId(String stageId) {
-            this.stageId = stageId;
+        public BatchAbolishApisRequestApi setApiUid(String apiUid) {
+            this.apiUid = apiUid;
             return this;
         }
-        public String getStageId() {
-            return this.stageId;
+        public String getApiUid() {
+            return this.apiUid;
         }
 
         public BatchAbolishApisRequestApi setGroupId(String groupId) {
@@ -62,12 +62,12 @@ public class BatchAbolishApisRequest extends TeaModel {
             return this.groupId;
         }
 
-        public BatchAbolishApisRequestApi setApiUid(String apiUid) {
-            this.apiUid = apiUid;
+        public BatchAbolishApisRequestApi setStageId(String stageId) {
+            this.stageId = stageId;
             return this;
         }
-        public String getApiUid() {
-            return this.apiUid;
+        public String getStageId() {
+            return this.stageId;
         }
 
     }

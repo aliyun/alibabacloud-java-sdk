@@ -4,14 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceSpec")
     public String instanceSpec;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
 
     @NameInMap("Token")
     public String token;
@@ -19,6 +19,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public static ModifyInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSpecRequest self = new ModifyInstanceSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceSpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public ModifyInstanceSpecRequest setInstanceId(String instanceId) {
@@ -35,14 +43,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getInstanceSpec() {
         return this.instanceSpec;
-    }
-
-    public ModifyInstanceSpecRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
     }
 
     public ModifyInstanceSpecRequest setToken(String token) {

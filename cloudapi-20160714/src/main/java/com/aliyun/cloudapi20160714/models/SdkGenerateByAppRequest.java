@@ -4,26 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SdkGenerateByAppRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("AppId")
     public Long appId;
 
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static SdkGenerateByAppRequest build(java.util.Map<String, ?> map) throws Exception {
         SdkGenerateByAppRequest self = new SdkGenerateByAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SdkGenerateByAppRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public SdkGenerateByAppRequest setAppId(Long appId) {
@@ -40,6 +32,14 @@ public class SdkGenerateByAppRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public SdkGenerateByAppRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

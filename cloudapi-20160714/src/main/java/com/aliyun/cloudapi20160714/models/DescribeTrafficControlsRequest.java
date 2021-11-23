@@ -4,23 +4,11 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("TrafficControlId")
-    public String trafficControlId;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("ApiId")
     public String apiId;
 
-    @NameInMap("StageName")
-    public String stageName;
-
-    @NameInMap("TrafficControlName")
-    public String trafficControlName;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,33 +16,21 @@ public class DescribeTrafficControlsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StageName")
+    public String stageName;
+
+    @NameInMap("TrafficControlId")
+    public String trafficControlId;
+
+    @NameInMap("TrafficControlName")
+    public String trafficControlName;
+
     public static DescribeTrafficControlsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTrafficControlsRequest self = new DescribeTrafficControlsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTrafficControlsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeTrafficControlsRequest setTrafficControlId(String trafficControlId) {
-        this.trafficControlId = trafficControlId;
-        return this;
-    }
-    public String getTrafficControlId() {
-        return this.trafficControlId;
-    }
-
-    public DescribeTrafficControlsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
     }
 
     public DescribeTrafficControlsRequest setApiId(String apiId) {
@@ -65,20 +41,12 @@ public class DescribeTrafficControlsRequest extends TeaModel {
         return this.apiId;
     }
 
-    public DescribeTrafficControlsRequest setStageName(String stageName) {
-        this.stageName = stageName;
+    public DescribeTrafficControlsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getStageName() {
-        return this.stageName;
-    }
-
-    public DescribeTrafficControlsRequest setTrafficControlName(String trafficControlName) {
-        this.trafficControlName = trafficControlName;
-        return this;
-    }
-    public String getTrafficControlName() {
-        return this.trafficControlName;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeTrafficControlsRequest setPageNumber(Integer pageNumber) {
@@ -95,6 +63,38 @@ public class DescribeTrafficControlsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTrafficControlsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeTrafficControlsRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
+    }
+
+    public DescribeTrafficControlsRequest setTrafficControlId(String trafficControlId) {
+        this.trafficControlId = trafficControlId;
+        return this;
+    }
+    public String getTrafficControlId() {
+        return this.trafficControlId;
+    }
+
+    public DescribeTrafficControlsRequest setTrafficControlName(String trafficControlName) {
+        this.trafficControlName = trafficControlName;
+        return this;
+    }
+    public String getTrafficControlName() {
+        return this.trafficControlName;
     }
 
 }

@@ -4,11 +4,8 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateModelResponseBody extends TeaModel {
-    @NameInMap("ModifiedTime")
-    public String modifiedTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CreatedTime")
+    public String createdTime;
 
     @NameInMap("Description")
     public String description;
@@ -16,43 +13,38 @@ public class CreateModelResponseBody extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("Schema")
-    public String schema;
+    @NameInMap("ModelId")
+    public String modelId;
 
     @NameInMap("ModelName")
     public String modelName;
 
-    @NameInMap("CreatedTime")
-    public String createdTime;
+    @NameInMap("ModelRef")
+    public String modelRef;
 
-    @NameInMap("ModelId")
-    public String modelId;
+    @NameInMap("ModifiedTime")
+    public String modifiedTime;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ModelRef")
-    public String modelRef;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Schema")
+    public String schema;
 
     public static CreateModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateModelResponseBody self = new CreateModelResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateModelResponseBody setModifiedTime(String modifiedTime) {
-        this.modifiedTime = modifiedTime;
+    public CreateModelResponseBody setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
-    public String getModifiedTime() {
-        return this.modifiedTime;
-    }
-
-    public CreateModelResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCreatedTime() {
+        return this.createdTime;
     }
 
     public CreateModelResponseBody setDescription(String description) {
@@ -71,12 +63,12 @@ public class CreateModelResponseBody extends TeaModel {
         return this.groupId;
     }
 
-    public CreateModelResponseBody setSchema(String schema) {
-        this.schema = schema;
+    public CreateModelResponseBody setModelId(String modelId) {
+        this.modelId = modelId;
         return this;
     }
-    public String getSchema() {
-        return this.schema;
+    public String getModelId() {
+        return this.modelId;
     }
 
     public CreateModelResponseBody setModelName(String modelName) {
@@ -87,20 +79,20 @@ public class CreateModelResponseBody extends TeaModel {
         return this.modelName;
     }
 
-    public CreateModelResponseBody setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
+    public CreateModelResponseBody setModelRef(String modelRef) {
+        this.modelRef = modelRef;
         return this;
     }
-    public String getCreatedTime() {
-        return this.createdTime;
+    public String getModelRef() {
+        return this.modelRef;
     }
 
-    public CreateModelResponseBody setModelId(String modelId) {
-        this.modelId = modelId;
+    public CreateModelResponseBody setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
         return this;
     }
-    public String getModelId() {
-        return this.modelId;
+    public String getModifiedTime() {
+        return this.modifiedTime;
     }
 
     public CreateModelResponseBody setRegionId(String regionId) {
@@ -111,12 +103,20 @@ public class CreateModelResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public CreateModelResponseBody setModelRef(String modelRef) {
-        this.modelRef = modelRef;
+    public CreateModelResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getModelRef() {
-        return this.modelRef;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateModelResponseBody setSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    public String getSchema() {
+        return this.schema;
     }
 
 }

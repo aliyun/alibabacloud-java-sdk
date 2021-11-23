@@ -7,14 +7,14 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("TrafficControlId")
-    public String trafficControlId;
+    @NameInMap("SpecialKey")
+    public String specialKey;
 
     @NameInMap("SpecialType")
     public String specialType;
 
-    @NameInMap("SpecialKey")
-    public String specialKey;
+    @NameInMap("TrafficControlId")
+    public String trafficControlId;
 
     public static DeleteTrafficSpecialControlRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteTrafficSpecialControlRequest self = new DeleteTrafficSpecialControlRequest();
@@ -29,12 +29,12 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public DeleteTrafficSpecialControlRequest setTrafficControlId(String trafficControlId) {
-        this.trafficControlId = trafficControlId;
+    public DeleteTrafficSpecialControlRequest setSpecialKey(String specialKey) {
+        this.specialKey = specialKey;
         return this;
     }
-    public String getTrafficControlId() {
-        return this.trafficControlId;
+    public String getSpecialKey() {
+        return this.specialKey;
     }
 
     public DeleteTrafficSpecialControlRequest setSpecialType(String specialType) {
@@ -45,12 +45,12 @@ public class DeleteTrafficSpecialControlRequest extends TeaModel {
         return this.specialType;
     }
 
-    public DeleteTrafficSpecialControlRequest setSpecialKey(String specialKey) {
-        this.specialKey = specialKey;
+    public DeleteTrafficSpecialControlRequest setTrafficControlId(String trafficControlId) {
+        this.trafficControlId = trafficControlId;
         return this;
     }
-    public String getSpecialKey() {
-        return this.specialKey;
+    public String getTrafficControlId() {
+        return this.trafficControlId;
     }
 
 }

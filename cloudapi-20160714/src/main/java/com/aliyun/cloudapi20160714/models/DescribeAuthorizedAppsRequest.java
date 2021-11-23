@@ -4,23 +4,8 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuthorizedAppsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("StageName")
-    public String stageName;
-
     @NameInMap("ApiId")
     public String apiId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("AppId")
     public Long appId;
@@ -31,33 +16,24 @@ public class DescribeAuthorizedAppsRequest extends TeaModel {
     @NameInMap("AppOwnerId")
     public Long appOwnerId;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("StageName")
+    public String stageName;
+
     public static DescribeAuthorizedAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAuthorizedAppsRequest self = new DescribeAuthorizedAppsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAuthorizedAppsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeAuthorizedAppsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public DescribeAuthorizedAppsRequest setStageName(String stageName) {
-        this.stageName = stageName;
-        return this;
-    }
-    public String getStageName() {
-        return this.stageName;
     }
 
     public DescribeAuthorizedAppsRequest setApiId(String apiId) {
@@ -66,22 +42,6 @@ public class DescribeAuthorizedAppsRequest extends TeaModel {
     }
     public String getApiId() {
         return this.apiId;
-    }
-
-    public DescribeAuthorizedAppsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAuthorizedAppsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeAuthorizedAppsRequest setAppId(Long appId) {
@@ -106,6 +66,46 @@ public class DescribeAuthorizedAppsRequest extends TeaModel {
     }
     public Long getAppOwnerId() {
         return this.appOwnerId;
+    }
+
+    public DescribeAuthorizedAppsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeAuthorizedAppsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAuthorizedAppsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAuthorizedAppsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeAuthorizedAppsRequest setStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    public String getStageName() {
+        return this.stageName;
     }
 
 }

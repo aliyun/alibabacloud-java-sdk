@@ -4,9 +4,6 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("IpControlId")
     public String ipControlId;
 
@@ -22,17 +19,12 @@ public class DescribeIpControlsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeIpControlsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpControlsRequest self = new DescribeIpControlsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIpControlsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeIpControlsRequest setIpControlId(String ipControlId) {
@@ -73,6 +65,14 @@ public class DescribeIpControlsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeIpControlsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

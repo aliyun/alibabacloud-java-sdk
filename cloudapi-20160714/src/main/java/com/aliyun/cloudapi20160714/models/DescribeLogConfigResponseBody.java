@@ -4,23 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LogInfos")
     public DescribeLogConfigResponseBodyLogInfos logInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLogConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogConfigResponseBody self = new DescribeLogConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLogConfigResponseBody setLogInfos(DescribeLogConfigResponseBodyLogInfos logInfos) {
@@ -31,30 +23,30 @@ public class DescribeLogConfigResponseBody extends TeaModel {
         return this.logInfos;
     }
 
-    public static class DescribeLogConfigResponseBodyLogInfosLogInfo extends TeaModel {
-        @NameInMap("SlsLogStore")
-        public String slsLogStore;
+    public DescribeLogConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeLogConfigResponseBodyLogInfosLogInfo extends TeaModel {
         @NameInMap("LogType")
         public String logType;
-
-        @NameInMap("SlsProject")
-        public String slsProject;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SlsLogStore")
+        public String slsLogStore;
+
+        @NameInMap("SlsProject")
+        public String slsProject;
+
         public static DescribeLogConfigResponseBodyLogInfosLogInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogConfigResponseBodyLogInfosLogInfo self = new DescribeLogConfigResponseBodyLogInfosLogInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogConfigResponseBodyLogInfosLogInfo setSlsLogStore(String slsLogStore) {
-            this.slsLogStore = slsLogStore;
-            return this;
-        }
-        public String getSlsLogStore() {
-            return this.slsLogStore;
         }
 
         public DescribeLogConfigResponseBodyLogInfosLogInfo setLogType(String logType) {
@@ -65,20 +57,28 @@ public class DescribeLogConfigResponseBody extends TeaModel {
             return this.logType;
         }
 
-        public DescribeLogConfigResponseBodyLogInfosLogInfo setSlsProject(String slsProject) {
-            this.slsProject = slsProject;
-            return this;
-        }
-        public String getSlsProject() {
-            return this.slsProject;
-        }
-
         public DescribeLogConfigResponseBodyLogInfosLogInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeLogConfigResponseBodyLogInfosLogInfo setSlsLogStore(String slsLogStore) {
+            this.slsLogStore = slsLogStore;
+            return this;
+        }
+        public String getSlsLogStore() {
+            return this.slsLogStore;
+        }
+
+        public DescribeLogConfigResponseBodyLogInfosLogInfo setSlsProject(String slsProject) {
+            this.slsProject = slsProject;
+            return this;
+        }
+        public String getSlsProject() {
+            return this.slsProject;
         }
 
     }
