@@ -4,8 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListTaskRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("FilterKey")
+    public String filterKey;
+
+    @NameInMap("FilterValue")
+    public String filterValue;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,29 +16,34 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SortKey")
     public String sortKey;
 
     @NameInMap("SortType")
     public String sortType;
 
-    @NameInMap("FilterKey")
-    public String filterKey;
-
-    @NameInMap("FilterValue")
-    public String filterValue;
-
     public static ListTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskRequest self = new ListTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTaskRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListTaskRequest setFilterKey(String filterKey) {
+        this.filterKey = filterKey;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getFilterKey() {
+        return this.filterKey;
+    }
+
+    public ListTaskRequest setFilterValue(String filterValue) {
+        this.filterValue = filterValue;
+        return this;
+    }
+    public String getFilterValue() {
+        return this.filterValue;
     }
 
     public ListTaskRequest setPageNumber(Integer pageNumber) {
@@ -54,6 +62,14 @@ public class ListTaskRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListTaskRequest setSortKey(String sortKey) {
         this.sortKey = sortKey;
         return this;
@@ -68,22 +84,6 @@ public class ListTaskRequest extends TeaModel {
     }
     public String getSortType() {
         return this.sortType;
-    }
-
-    public ListTaskRequest setFilterKey(String filterKey) {
-        this.filterKey = filterKey;
-        return this;
-    }
-    public String getFilterKey() {
-        return this.filterKey;
-    }
-
-    public ListTaskRequest setFilterValue(String filterValue) {
-        this.filterValue = filterValue;
-        return this;
-    }
-    public String getFilterValue() {
-        return this.filterValue;
     }
 
 }

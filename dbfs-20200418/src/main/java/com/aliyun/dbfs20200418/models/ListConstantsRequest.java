@@ -4,8 +4,8 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListConstantsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ConstantsData")
+    public String constantsData;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,20 +13,20 @@ public class ListConstantsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ConstantsData")
-    public String constantsData;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListConstantsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConstantsRequest self = new ListConstantsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListConstantsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListConstantsRequest setConstantsData(String constantsData) {
+        this.constantsData = constantsData;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getConstantsData() {
+        return this.constantsData;
     }
 
     public ListConstantsRequest setPageNumber(Integer pageNumber) {
@@ -45,12 +45,12 @@ public class ListConstantsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListConstantsRequest setConstantsData(String constantsData) {
-        this.constantsData = constantsData;
+    public ListConstantsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getConstantsData() {
-        return this.constantsData;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

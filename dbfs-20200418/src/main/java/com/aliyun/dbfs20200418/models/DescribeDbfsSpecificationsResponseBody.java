@@ -4,18 +4,26 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DescribeDbfsSpecificationsResponseBody extends TeaModel {
+    @NameInMap("MaxDbfsNumberPerEcs")
+    public java.util.Map<String, ?> maxDbfsNumberPerEcs;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SupportedEcsInstanceTypeFamily")
     public java.util.List<String> supportedEcsInstanceTypeFamily;
 
-    @NameInMap("MaxDbfsNumberPerEcs")
-    public java.util.Map<String, ?> maxDbfsNumberPerEcs;
-
     public static DescribeDbfsSpecificationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDbfsSpecificationsResponseBody self = new DescribeDbfsSpecificationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDbfsSpecificationsResponseBody setMaxDbfsNumberPerEcs(java.util.Map<String, ?> maxDbfsNumberPerEcs) {
+        this.maxDbfsNumberPerEcs = maxDbfsNumberPerEcs;
+        return this;
+    }
+    public java.util.Map<String, ?> getMaxDbfsNumberPerEcs() {
+        return this.maxDbfsNumberPerEcs;
     }
 
     public DescribeDbfsSpecificationsResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DescribeDbfsSpecificationsResponseBody extends TeaModel {
     }
     public java.util.List<String> getSupportedEcsInstanceTypeFamily() {
         return this.supportedEcsInstanceTypeFamily;
-    }
-
-    public DescribeDbfsSpecificationsResponseBody setMaxDbfsNumberPerEcs(java.util.Map<String, ?> maxDbfsNumberPerEcs) {
-        this.maxDbfsNumberPerEcs = maxDbfsNumberPerEcs;
-        return this;
-    }
-    public java.util.Map<String, ?> getMaxDbfsNumberPerEcs() {
-        return this.maxDbfsNumberPerEcs;
     }
 
 }

@@ -4,33 +4,25 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class UpdateConstantsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static UpdateConstantsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateConstantsResponseBody self = new UpdateConstantsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateConstantsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateConstantsResponseBody setData(String data) {
@@ -41,6 +33,14 @@ public class UpdateConstantsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public UpdateConstantsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public UpdateConstantsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -49,20 +49,20 @@ public class UpdateConstantsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public UpdateConstantsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public UpdateConstantsResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public UpdateConstantsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
 }

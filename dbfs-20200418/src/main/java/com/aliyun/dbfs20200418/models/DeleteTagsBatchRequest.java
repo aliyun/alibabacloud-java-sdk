@@ -4,11 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagsBatchRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DbfsList")
     public String dbfsList;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Tags")
     public String tags;
@@ -18,20 +18,20 @@ public class DeleteTagsBatchRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteTagsBatchRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DeleteTagsBatchRequest setDbfsList(String dbfsList) {
         this.dbfsList = dbfsList;
         return this;
     }
     public String getDbfsList() {
         return this.dbfsList;
+    }
+
+    public DeleteTagsBatchRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteTagsBatchRequest setTags(String tags) {

@@ -4,18 +4,26 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
 
-    @NameInMap("Force")
-    public Boolean force;
-
     public static DeleteSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnapshotRequest self = new DeleteSnapshotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSnapshotRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteSnapshotRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DeleteSnapshotRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
-    }
-
-    public DeleteSnapshotRequest setForce(Boolean force) {
-        this.force = force;
-        return this;
-    }
-    public Boolean getForce() {
-        return this.force;
     }
 
 }

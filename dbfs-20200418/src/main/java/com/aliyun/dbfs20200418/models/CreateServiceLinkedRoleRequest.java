@@ -4,23 +4,15 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateServiceLinkedRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceLinkedRoleRequest self = new CreateServiceLinkedRoleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServiceLinkedRoleRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateServiceLinkedRoleRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateServiceLinkedRoleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

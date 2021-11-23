@@ -4,8 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListDbfsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("FilterKey")
+    public String filterKey;
+
+    @NameInMap("FilterValue")
+    public String filterValue;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,17 +16,14 @@ public class ListDbfsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SortKey")
     public String sortKey;
 
     @NameInMap("SortType")
     public String sortType;
-
-    @NameInMap("FilterKey")
-    public String filterKey;
-
-    @NameInMap("FilterValue")
-    public String filterValue;
 
     @NameInMap("Tags")
     public String tags;
@@ -33,12 +33,20 @@ public class ListDbfsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDbfsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListDbfsRequest setFilterKey(String filterKey) {
+        this.filterKey = filterKey;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getFilterKey() {
+        return this.filterKey;
+    }
+
+    public ListDbfsRequest setFilterValue(String filterValue) {
+        this.filterValue = filterValue;
+        return this;
+    }
+    public String getFilterValue() {
+        return this.filterValue;
     }
 
     public ListDbfsRequest setPageNumber(Integer pageNumber) {
@@ -57,6 +65,14 @@ public class ListDbfsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListDbfsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListDbfsRequest setSortKey(String sortKey) {
         this.sortKey = sortKey;
         return this;
@@ -71,22 +87,6 @@ public class ListDbfsRequest extends TeaModel {
     }
     public String getSortType() {
         return this.sortType;
-    }
-
-    public ListDbfsRequest setFilterKey(String filterKey) {
-        this.filterKey = filterKey;
-        return this;
-    }
-    public String getFilterKey() {
-        return this.filterKey;
-    }
-
-    public ListDbfsRequest setFilterValue(String filterValue) {
-        this.filterValue = filterValue;
-        return this;
-    }
-    public String getFilterValue() {
-        return this.filterValue;
     }
 
     public ListDbfsRequest setTags(String tags) {

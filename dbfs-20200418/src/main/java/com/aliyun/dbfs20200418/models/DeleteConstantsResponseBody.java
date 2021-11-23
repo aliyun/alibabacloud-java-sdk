@@ -4,33 +4,25 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DeleteConstantsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static DeleteConstantsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteConstantsResponseBody self = new DeleteConstantsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteConstantsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteConstantsResponseBody setData(String data) {
@@ -41,6 +33,14 @@ public class DeleteConstantsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DeleteConstantsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DeleteConstantsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -49,20 +49,20 @@ public class DeleteConstantsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DeleteConstantsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DeleteConstantsResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public DeleteConstantsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
 }

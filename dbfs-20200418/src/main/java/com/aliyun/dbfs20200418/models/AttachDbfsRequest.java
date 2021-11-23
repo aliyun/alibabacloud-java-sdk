@@ -4,11 +4,14 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class AttachDbfsRequest extends TeaModel {
+    @NameInMap("AttachMode")
+    public String attachMode;
+
+    @NameInMap("AttachPoint")
+    public String attachPoint;
+
     @NameInMap("ECSInstanceId")
     public String ECSInstanceId;
-
-    @NameInMap("ServerUrl")
-    public String serverUrl;
 
     @NameInMap("FsId")
     public String fsId;
@@ -16,15 +19,28 @@ public class AttachDbfsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("AttachMode")
-    public String attachMode;
-
-    @NameInMap("AttachPoint")
-    public String attachPoint;
+    @NameInMap("ServerUrl")
+    public String serverUrl;
 
     public static AttachDbfsRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachDbfsRequest self = new AttachDbfsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachDbfsRequest setAttachMode(String attachMode) {
+        this.attachMode = attachMode;
+        return this;
+    }
+    public String getAttachMode() {
+        return this.attachMode;
+    }
+
+    public AttachDbfsRequest setAttachPoint(String attachPoint) {
+        this.attachPoint = attachPoint;
+        return this;
+    }
+    public String getAttachPoint() {
+        return this.attachPoint;
     }
 
     public AttachDbfsRequest setECSInstanceId(String ECSInstanceId) {
@@ -33,14 +49,6 @@ public class AttachDbfsRequest extends TeaModel {
     }
     public String getECSInstanceId() {
         return this.ECSInstanceId;
-    }
-
-    public AttachDbfsRequest setServerUrl(String serverUrl) {
-        this.serverUrl = serverUrl;
-        return this;
-    }
-    public String getServerUrl() {
-        return this.serverUrl;
     }
 
     public AttachDbfsRequest setFsId(String fsId) {
@@ -59,20 +67,12 @@ public class AttachDbfsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public AttachDbfsRequest setAttachMode(String attachMode) {
-        this.attachMode = attachMode;
+    public AttachDbfsRequest setServerUrl(String serverUrl) {
+        this.serverUrl = serverUrl;
         return this;
     }
-    public String getAttachMode() {
-        return this.attachMode;
-    }
-
-    public AttachDbfsRequest setAttachPoint(String attachPoint) {
-        this.attachPoint = attachPoint;
-        return this;
-    }
-    public String getAttachPoint() {
-        return this.attachPoint;
+    public String getServerUrl() {
+        return this.serverUrl;
     }
 
 }

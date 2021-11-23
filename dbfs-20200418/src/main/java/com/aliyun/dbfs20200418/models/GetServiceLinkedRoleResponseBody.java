@@ -7,14 +7,14 @@ public class GetServiceLinkedRoleResponseBody extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DbfsLinkedRole")
     public Boolean dbfsLinkedRole;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceLinkedRoleResponseBody self = new GetServiceLinkedRoleResponseBody();
@@ -27,14 +27,6 @@ public class GetServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
-    }
-
-    public GetServiceLinkedRoleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetServiceLinkedRoleResponseBody setDbfsLinkedRole(Boolean dbfsLinkedRole) {
@@ -51,6 +43,14 @@ public class GetServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetServiceLinkedRoleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
