@@ -4,8 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListDbfsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DBFSInfo")
+    public java.util.List<ListDbfsResponseBodyDBFSInfo> DBFSInfo;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class ListDbfsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("DBFSInfo")
-    public java.util.List<ListDbfsResponseBodyDBFSInfo> DBFSInfo;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListDbfsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDbfsResponseBody self = new ListDbfsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDbfsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListDbfsResponseBody setDBFSInfo(java.util.List<ListDbfsResponseBodyDBFSInfo> DBFSInfo) {
+        this.DBFSInfo = DBFSInfo;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListDbfsResponseBodyDBFSInfo> getDBFSInfo() {
+        return this.DBFSInfo;
+    }
+
+    public ListDbfsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListDbfsResponseBody setPageSize(Integer pageSize) {
@@ -48,80 +56,12 @@ public class ListDbfsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDbfsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListDbfsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListDbfsResponseBody setDBFSInfo(java.util.List<ListDbfsResponseBodyDBFSInfo> DBFSInfo) {
-        this.DBFSInfo = DBFSInfo;
-        return this;
-    }
-    public java.util.List<ListDbfsResponseBodyDBFSInfo> getDBFSInfo() {
-        return this.DBFSInfo;
-    }
-
-    public static class ListDbfsResponseBodyDBFSInfoTags extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        public static ListDbfsResponseBodyDBFSInfoTags build(java.util.Map<String, ?> map) throws Exception {
-            ListDbfsResponseBodyDBFSInfoTags self = new ListDbfsResponseBodyDBFSInfoTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDbfsResponseBodyDBFSInfoTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public ListDbfsResponseBodyDBFSInfoTags setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public ListDbfsResponseBodyDBFSInfoTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-    }
-
-    public static class ListDbfsResponseBodyDBFSInfoEcsList extends TeaModel {
-        @NameInMap("EcsId")
-        public String ecsId;
-
-        public static ListDbfsResponseBodyDBFSInfoEcsList build(java.util.Map<String, ?> map) throws Exception {
-            ListDbfsResponseBodyDBFSInfoEcsList self = new ListDbfsResponseBodyDBFSInfoEcsList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDbfsResponseBodyDBFSInfoEcsList setEcsId(String ecsId) {
-            this.ecsId = ecsId;
-            return this;
-        }
-        public String getEcsId() {
-            return this.ecsId;
-        }
-
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListDbfsResponseBodyDBFSInfoEbsList extends TeaModel {
@@ -154,42 +94,69 @@ public class ListDbfsResponseBody extends TeaModel {
 
     }
 
+    public static class ListDbfsResponseBodyDBFSInfoEcsList extends TeaModel {
+        @NameInMap("EcsId")
+        public String ecsId;
+
+        public static ListDbfsResponseBodyDBFSInfoEcsList build(java.util.Map<String, ?> map) throws Exception {
+            ListDbfsResponseBodyDBFSInfoEcsList self = new ListDbfsResponseBodyDBFSInfoEcsList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDbfsResponseBodyDBFSInfoEcsList setEcsId(String ecsId) {
+            this.ecsId = ecsId;
+            return this;
+        }
+        public String getEcsId() {
+            return this.ecsId;
+        }
+
+    }
+
+    public static class ListDbfsResponseBodyDBFSInfoTags extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListDbfsResponseBodyDBFSInfoTags build(java.util.Map<String, ?> map) throws Exception {
+            ListDbfsResponseBodyDBFSInfoTags self = new ListDbfsResponseBodyDBFSInfoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDbfsResponseBodyDBFSInfoTags setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListDbfsResponseBodyDBFSInfoTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListDbfsResponseBodyDBFSInfoTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListDbfsResponseBodyDBFSInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Encryption")
-        public Boolean encryption;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("FsId")
-        public String fsId;
-
-        @NameInMap("Tags")
-        public java.util.List<ListDbfsResponseBodyDBFSInfoTags> tags;
-
-        @NameInMap("SizeG")
-        public Integer sizeG;
-
-        @NameInMap("EcsList")
-        public java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> ecsList;
-
-        @NameInMap("EbsList")
-        public java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> ebsList;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("DBFSClusterId")
-        public String DBFSClusterId;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("FsName")
-        public String fsName;
+        @NameInMap("AttachNodeNumber")
+        public Integer attachNodeNumber;
 
         @NameInMap("Category")
         public String category;
@@ -197,17 +164,32 @@ public class ListDbfsResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        @NameInMap("AttachNodeNumber")
-        public Integer attachNodeNumber;
+        @NameInMap("DBFSClusterId")
+        public String DBFSClusterId;
+
+        @NameInMap("EbsList")
+        public java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> ebsList;
+
+        @NameInMap("EcsList")
+        public java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> ecsList;
+
+        @NameInMap("EnableRaid")
+        public Boolean enableRaid;
+
+        @NameInMap("Encryption")
+        public Boolean encryption;
+
+        @NameInMap("FsId")
+        public String fsId;
+
+        @NameInMap("FsName")
+        public String fsName;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
-
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        @NameInMap("UsedScene")
-        public String usedScene;
 
         @NameInMap("LastMountTime")
         public String lastMountTime;
@@ -215,111 +197,44 @@ public class ListDbfsResponseBody extends TeaModel {
         @NameInMap("LastUmountTime")
         public String lastUmountTime;
 
-        @NameInMap("EnableRaid")
-        public Boolean enableRaid;
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
 
         @NameInMap("RaidStrip")
         public Integer raidStrip;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SizeG")
+        public Integer sizeG;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListDbfsResponseBodyDBFSInfoTags> tags;
+
+        @NameInMap("UsedScene")
+        public String usedScene;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static ListDbfsResponseBodyDBFSInfo build(java.util.Map<String, ?> map) throws Exception {
             ListDbfsResponseBodyDBFSInfo self = new ListDbfsResponseBodyDBFSInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListDbfsResponseBodyDBFSInfo setStatus(String status) {
-            this.status = status;
+        public ListDbfsResponseBodyDBFSInfo setAttachNodeNumber(Integer attachNodeNumber) {
+            this.attachNodeNumber = attachNodeNumber;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setEncryption(Boolean encryption) {
-            this.encryption = encryption;
-            return this;
-        }
-        public Boolean getEncryption() {
-            return this.encryption;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setFsId(String fsId) {
-            this.fsId = fsId;
-            return this;
-        }
-        public String getFsId() {
-            return this.fsId;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setTags(java.util.List<ListDbfsResponseBodyDBFSInfoTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListDbfsResponseBodyDBFSInfoTags> getTags() {
-            return this.tags;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setSizeG(Integer sizeG) {
-            this.sizeG = sizeG;
-            return this;
-        }
-        public Integer getSizeG() {
-            return this.sizeG;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setEcsList(java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> ecsList) {
-            this.ecsList = ecsList;
-            return this;
-        }
-        public java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> getEcsList() {
-            return this.ecsList;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setEbsList(java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> ebsList) {
-            this.ebsList = ebsList;
-            return this;
-        }
-        public java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> getEbsList() {
-            return this.ebsList;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setDBFSClusterId(String DBFSClusterId) {
-            this.DBFSClusterId = DBFSClusterId;
-            return this;
-        }
-        public String getDBFSClusterId() {
-            return this.DBFSClusterId;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setFsName(String fsName) {
-            this.fsName = fsName;
-            return this;
-        }
-        public String getFsName() {
-            return this.fsName;
+        public Integer getAttachNodeNumber() {
+            return this.attachNodeNumber;
         }
 
         public ListDbfsResponseBodyDBFSInfo setCategory(String category) {
@@ -338,12 +253,68 @@ public class ListDbfsResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public ListDbfsResponseBodyDBFSInfo setAttachNodeNumber(Integer attachNodeNumber) {
-            this.attachNodeNumber = attachNodeNumber;
+        public ListDbfsResponseBodyDBFSInfo setDBFSClusterId(String DBFSClusterId) {
+            this.DBFSClusterId = DBFSClusterId;
             return this;
         }
-        public Integer getAttachNodeNumber() {
-            return this.attachNodeNumber;
+        public String getDBFSClusterId() {
+            return this.DBFSClusterId;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setEbsList(java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> ebsList) {
+            this.ebsList = ebsList;
+            return this;
+        }
+        public java.util.List<ListDbfsResponseBodyDBFSInfoEbsList> getEbsList() {
+            return this.ebsList;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setEcsList(java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> ecsList) {
+            this.ecsList = ecsList;
+            return this;
+        }
+        public java.util.List<ListDbfsResponseBodyDBFSInfoEcsList> getEcsList() {
+            return this.ecsList;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setEnableRaid(Boolean enableRaid) {
+            this.enableRaid = enableRaid;
+            return this;
+        }
+        public Boolean getEnableRaid() {
+            return this.enableRaid;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setEncryption(Boolean encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public Boolean getEncryption() {
+            return this.encryption;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setFsId(String fsId) {
+            this.fsId = fsId;
+            return this;
+        }
+        public String getFsId() {
+            return this.fsId;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setFsName(String fsName) {
+            this.fsName = fsName;
+            return this;
+        }
+        public String getFsName() {
+            return this.fsName;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public ListDbfsResponseBodyDBFSInfo setKMSKeyId(String KMSKeyId) {
@@ -352,22 +323,6 @@ public class ListDbfsResponseBody extends TeaModel {
         }
         public String getKMSKeyId() {
             return this.KMSKeyId;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        public ListDbfsResponseBodyDBFSInfo setUsedScene(String usedScene) {
-            this.usedScene = usedScene;
-            return this;
-        }
-        public String getUsedScene() {
-            return this.usedScene;
         }
 
         public ListDbfsResponseBodyDBFSInfo setLastMountTime(String lastMountTime) {
@@ -386,12 +341,20 @@ public class ListDbfsResponseBody extends TeaModel {
             return this.lastUmountTime;
         }
 
-        public ListDbfsResponseBodyDBFSInfo setEnableRaid(Boolean enableRaid) {
-            this.enableRaid = enableRaid;
+        public ListDbfsResponseBodyDBFSInfo setPayType(String payType) {
+            this.payType = payType;
             return this;
         }
-        public Boolean getEnableRaid() {
-            return this.enableRaid;
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public ListDbfsResponseBodyDBFSInfo setRaidStrip(Integer raidStrip) {
@@ -400,6 +363,54 @@ public class ListDbfsResponseBody extends TeaModel {
         }
         public Integer getRaidStrip() {
             return this.raidStrip;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setSizeG(Integer sizeG) {
+            this.sizeG = sizeG;
+            return this;
+        }
+        public Integer getSizeG() {
+            return this.sizeG;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setTags(java.util.List<ListDbfsResponseBodyDBFSInfoTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListDbfsResponseBodyDBFSInfoTags> getTags() {
+            return this.tags;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setUsedScene(String usedScene) {
+            this.usedScene = usedScene;
+            return this;
+        }
+        public String getUsedScene() {
+            return this.usedScene;
+        }
+
+        public ListDbfsResponseBodyDBFSInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

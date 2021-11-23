@@ -4,11 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class RenameDbfsRequest extends TeaModel {
-    @NameInMap("FsName")
-    public String fsName;
-
     @NameInMap("FsId")
     public String fsId;
+
+    @NameInMap("FsName")
+    public String fsName;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -18,20 +18,20 @@ public class RenameDbfsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RenameDbfsRequest setFsName(String fsName) {
-        this.fsName = fsName;
-        return this;
-    }
-    public String getFsName() {
-        return this.fsName;
-    }
-
     public RenameDbfsRequest setFsId(String fsId) {
         this.fsId = fsId;
         return this;
     }
     public String getFsId() {
         return this.fsId;
+    }
+
+    public RenameDbfsRequest setFsName(String fsName) {
+        this.fsName = fsName;
+        return this;
+    }
+    public String getFsName() {
+        return this.fsName;
     }
 
     public RenameDbfsRequest setRegionId(String regionId) {

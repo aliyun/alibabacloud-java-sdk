@@ -4,11 +4,8 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ListTaskResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Tasks")
-    public java.util.List<ListTaskResponseBodyTasks> tasks;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,28 +13,23 @@ public class ListTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Tasks")
+    public java.util.List<ListTaskResponseBodyTasks> tasks;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskResponseBody self = new ListTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListTaskResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListTaskResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTaskResponseBody setTasks(java.util.List<ListTaskResponseBodyTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<ListTaskResponseBodyTasks> getTasks() {
-        return this.tasks;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListTaskResponseBody setPageSize(Integer pageSize) {
@@ -56,62 +48,31 @@ public class ListTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTaskResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListTaskResponseBody setTasks(java.util.List<ListTaskResponseBodyTasks> tasks) {
+        this.tasks = tasks;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public java.util.List<ListTaskResponseBodyTasks> getTasks() {
+        return this.tasks;
+    }
+
+    public ListTaskResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListTaskResponseBodyTasks extends TeaModel {
-        @NameInMap("TaskErrorReason")
-        public String taskErrorReason;
-
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("Priority")
-        public String priority;
-
-        @NameInMap("NextExecutionTime")
-        public String nextExecutionTime;
+        @NameInMap("ClientToken")
+        public String clientToken;
 
         @NameInMap("CompletionTime")
         public String completionTime;
 
-        @NameInMap("TaskType")
-        public String taskType;
-
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
-        @NameInMap("TaskStatusCode")
-        public Integer taskStatusCode;
-
-        @NameInMap("TaskExecutionCounts")
-        public Integer taskExecutionCounts;
-
-        @NameInMap("ClientToken")
-        public String clientToken;
-
-        @NameInMap("TaskAdder")
-        public String taskAdder;
-
-        @NameInMap("TaskProgressDescription")
-        public String taskProgressDescription;
-
         @NameInMap("CreatedTime")
         public String createdTime;
-
-        @NameInMap("TaskRunner")
-        public String taskRunner;
-
-        @NameInMap("TaskProgress")
-        public Integer taskProgress;
-
-        @NameInMap("TaskOwner")
-        public String taskOwner;
 
         @NameInMap("Id")
         public Integer id;
@@ -119,41 +80,56 @@ public class ListTaskResponseBody extends TeaModel {
         @NameInMap("MaxRetry")
         public Integer maxRetry;
 
+        @NameInMap("NextExecutionTime")
+        public String nextExecutionTime;
+
+        @NameInMap("Priority")
+        public String priority;
+
+        @NameInMap("TaskAdder")
+        public String taskAdder;
+
+        @NameInMap("TaskErrorReason")
+        public String taskErrorReason;
+
+        @NameInMap("TaskExecutionCounts")
+        public Integer taskExecutionCounts;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        @NameInMap("TaskOwner")
+        public String taskOwner;
+
+        @NameInMap("TaskProgress")
+        public Integer taskProgress;
+
+        @NameInMap("TaskProgressDescription")
+        public String taskProgressDescription;
+
+        @NameInMap("TaskRunner")
+        public String taskRunner;
+
+        @NameInMap("TaskStatus")
+        public String taskStatus;
+
+        @NameInMap("TaskStatusCode")
+        public Integer taskStatusCode;
+
+        @NameInMap("TaskType")
+        public String taskType;
+
         public static ListTaskResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
             ListTaskResponseBodyTasks self = new ListTaskResponseBodyTasks();
             return TeaModel.build(map, self);
         }
 
-        public ListTaskResponseBodyTasks setTaskErrorReason(String taskErrorReason) {
-            this.taskErrorReason = taskErrorReason;
+        public ListTaskResponseBodyTasks setClientToken(String clientToken) {
+            this.clientToken = clientToken;
             return this;
         }
-        public String getTaskErrorReason() {
-            return this.taskErrorReason;
-        }
-
-        public ListTaskResponseBodyTasks setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public ListTaskResponseBodyTasks setPriority(String priority) {
-            this.priority = priority;
-            return this;
-        }
-        public String getPriority() {
-            return this.priority;
-        }
-
-        public ListTaskResponseBodyTasks setNextExecutionTime(String nextExecutionTime) {
-            this.nextExecutionTime = nextExecutionTime;
-            return this;
-        }
-        public String getNextExecutionTime() {
-            return this.nextExecutionTime;
+        public String getClientToken() {
+            return this.clientToken;
         }
 
         public ListTaskResponseBodyTasks setCompletionTime(String completionTime) {
@@ -164,12 +140,108 @@ public class ListTaskResponseBody extends TeaModel {
             return this.completionTime;
         }
 
-        public ListTaskResponseBodyTasks setTaskType(String taskType) {
-            this.taskType = taskType;
+        public ListTaskResponseBodyTasks setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getTaskType() {
-            return this.taskType;
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public ListTaskResponseBodyTasks setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public ListTaskResponseBodyTasks setMaxRetry(Integer maxRetry) {
+            this.maxRetry = maxRetry;
+            return this;
+        }
+        public Integer getMaxRetry() {
+            return this.maxRetry;
+        }
+
+        public ListTaskResponseBodyTasks setNextExecutionTime(String nextExecutionTime) {
+            this.nextExecutionTime = nextExecutionTime;
+            return this;
+        }
+        public String getNextExecutionTime() {
+            return this.nextExecutionTime;
+        }
+
+        public ListTaskResponseBodyTasks setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public ListTaskResponseBodyTasks setTaskAdder(String taskAdder) {
+            this.taskAdder = taskAdder;
+            return this;
+        }
+        public String getTaskAdder() {
+            return this.taskAdder;
+        }
+
+        public ListTaskResponseBodyTasks setTaskErrorReason(String taskErrorReason) {
+            this.taskErrorReason = taskErrorReason;
+            return this;
+        }
+        public String getTaskErrorReason() {
+            return this.taskErrorReason;
+        }
+
+        public ListTaskResponseBodyTasks setTaskExecutionCounts(Integer taskExecutionCounts) {
+            this.taskExecutionCounts = taskExecutionCounts;
+            return this;
+        }
+        public Integer getTaskExecutionCounts() {
+            return this.taskExecutionCounts;
+        }
+
+        public ListTaskResponseBodyTasks setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public ListTaskResponseBodyTasks setTaskOwner(String taskOwner) {
+            this.taskOwner = taskOwner;
+            return this;
+        }
+        public String getTaskOwner() {
+            return this.taskOwner;
+        }
+
+        public ListTaskResponseBodyTasks setTaskProgress(Integer taskProgress) {
+            this.taskProgress = taskProgress;
+            return this;
+        }
+        public Integer getTaskProgress() {
+            return this.taskProgress;
+        }
+
+        public ListTaskResponseBodyTasks setTaskProgressDescription(String taskProgressDescription) {
+            this.taskProgressDescription = taskProgressDescription;
+            return this;
+        }
+        public String getTaskProgressDescription() {
+            return this.taskProgressDescription;
+        }
+
+        public ListTaskResponseBodyTasks setTaskRunner(String taskRunner) {
+            this.taskRunner = taskRunner;
+            return this;
+        }
+        public String getTaskRunner() {
+            return this.taskRunner;
         }
 
         public ListTaskResponseBodyTasks setTaskStatus(String taskStatus) {
@@ -188,84 +260,12 @@ public class ListTaskResponseBody extends TeaModel {
             return this.taskStatusCode;
         }
 
-        public ListTaskResponseBodyTasks setTaskExecutionCounts(Integer taskExecutionCounts) {
-            this.taskExecutionCounts = taskExecutionCounts;
+        public ListTaskResponseBodyTasks setTaskType(String taskType) {
+            this.taskType = taskType;
             return this;
         }
-        public Integer getTaskExecutionCounts() {
-            return this.taskExecutionCounts;
-        }
-
-        public ListTaskResponseBodyTasks setClientToken(String clientToken) {
-            this.clientToken = clientToken;
-            return this;
-        }
-        public String getClientToken() {
-            return this.clientToken;
-        }
-
-        public ListTaskResponseBodyTasks setTaskAdder(String taskAdder) {
-            this.taskAdder = taskAdder;
-            return this;
-        }
-        public String getTaskAdder() {
-            return this.taskAdder;
-        }
-
-        public ListTaskResponseBodyTasks setTaskProgressDescription(String taskProgressDescription) {
-            this.taskProgressDescription = taskProgressDescription;
-            return this;
-        }
-        public String getTaskProgressDescription() {
-            return this.taskProgressDescription;
-        }
-
-        public ListTaskResponseBodyTasks setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public ListTaskResponseBodyTasks setTaskRunner(String taskRunner) {
-            this.taskRunner = taskRunner;
-            return this;
-        }
-        public String getTaskRunner() {
-            return this.taskRunner;
-        }
-
-        public ListTaskResponseBodyTasks setTaskProgress(Integer taskProgress) {
-            this.taskProgress = taskProgress;
-            return this;
-        }
-        public Integer getTaskProgress() {
-            return this.taskProgress;
-        }
-
-        public ListTaskResponseBodyTasks setTaskOwner(String taskOwner) {
-            this.taskOwner = taskOwner;
-            return this;
-        }
-        public String getTaskOwner() {
-            return this.taskOwner;
-        }
-
-        public ListTaskResponseBodyTasks setId(Integer id) {
-            this.id = id;
-            return this;
-        }
-        public Integer getId() {
-            return this.id;
-        }
-
-        public ListTaskResponseBodyTasks setMaxRetry(Integer maxRetry) {
-            this.maxRetry = maxRetry;
-            return this;
-        }
-        public Integer getMaxRetry() {
-            return this.maxRetry;
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }

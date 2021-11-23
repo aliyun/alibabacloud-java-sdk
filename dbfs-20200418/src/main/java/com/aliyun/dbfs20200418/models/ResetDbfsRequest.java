@@ -4,11 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class ResetDbfsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("FsId")
     public String fsId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SnapshotId")
     public String snapshotId;
@@ -18,20 +18,20 @@ public class ResetDbfsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ResetDbfsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ResetDbfsRequest setFsId(String fsId) {
         this.fsId = fsId;
         return this;
     }
     public String getFsId() {
         return this.fsId;
+    }
+
+    public ResetDbfsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ResetDbfsRequest setSnapshotId(String snapshotId) {

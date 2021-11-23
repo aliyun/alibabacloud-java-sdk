@@ -4,11 +4,11 @@ package com.aliyun.dbfs20200418.models;
 import com.aliyun.tea.*;
 
 public class DetachDbfsRequest extends TeaModel {
-    @NameInMap("FsId")
-    public String fsId;
-
     @NameInMap("ECSInstanceId")
     public String ECSInstanceId;
+
+    @NameInMap("FsId")
+    public String fsId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -18,20 +18,20 @@ public class DetachDbfsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetachDbfsRequest setFsId(String fsId) {
-        this.fsId = fsId;
-        return this;
-    }
-    public String getFsId() {
-        return this.fsId;
-    }
-
     public DetachDbfsRequest setECSInstanceId(String ECSInstanceId) {
         this.ECSInstanceId = ECSInstanceId;
         return this;
     }
     public String getECSInstanceId() {
         return this.ECSInstanceId;
+    }
+
+    public DetachDbfsRequest setFsId(String fsId) {
+        this.fsId = fsId;
+        return this;
+    }
+    public String getFsId() {
+        return this.fsId;
     }
 
     public DetachDbfsRequest setRegionId(String regionId) {
