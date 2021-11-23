@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class StartMPUTaskRequest extends TeaModel {
+public class UpdateMPUTaskRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
@@ -11,19 +11,13 @@ public class StartMPUTaskRequest extends TeaModel {
     public Integer backgroundColor;
 
     @NameInMap("Backgrounds")
-    public java.util.List<StartMPUTaskRequestBackgrounds> backgrounds;
-
-    @NameInMap("ChannelId")
-    public String channelId;
+    public java.util.List<UpdateMPUTaskRequestBackgrounds> backgrounds;
 
     @NameInMap("ClockWidgets")
-    public java.util.List<StartMPUTaskRequestClockWidgets> clockWidgets;
+    public java.util.List<UpdateMPUTaskRequestClockWidgets> clockWidgets;
 
     @NameInMap("CropMode")
     public Integer cropMode;
-
-    @NameInMap("EnhancedParam")
-    public StartMPUTaskRequestEnhancedParam enhancedParam;
 
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
@@ -37,23 +31,11 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("PayloadType")
-    public Integer payloadType;
-
-    @NameInMap("ReportVad")
-    public Integer reportVad;
-
-    @NameInMap("RtpExtInfo")
-    public Integer rtpExtInfo;
-
     @NameInMap("SourceType")
     public String sourceType;
 
     @NameInMap("StreamType")
     public Integer streamType;
-
-    @NameInMap("StreamURL")
-    public String streamURL;
 
     @NameInMap("SubSpecAudioUsers")
     public java.util.List<String> subSpecAudioUsers;
@@ -70,12 +52,6 @@ public class StartMPUTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("TaskType")
-    public Integer taskType;
-
-    @NameInMap("TimeStampRef")
-    public Long timeStampRef;
-
     @NameInMap("UnsubSpecAudioUsers")
     public java.util.List<String> unsubSpecAudioUsers;
 
@@ -86,20 +62,17 @@ public class StartMPUTaskRequest extends TeaModel {
     public java.util.List<String> unsubSpecShareScreenUsers;
 
     @NameInMap("UserPanes")
-    public java.util.List<StartMPUTaskRequestUserPanes> userPanes;
-
-    @NameInMap("VadInterval")
-    public Long vadInterval;
+    public java.util.List<UpdateMPUTaskRequestUserPanes> userPanes;
 
     @NameInMap("Watermarks")
-    public java.util.List<StartMPUTaskRequestWatermarks> watermarks;
+    public java.util.List<UpdateMPUTaskRequestWatermarks> watermarks;
 
-    public static StartMPUTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartMPUTaskRequest self = new StartMPUTaskRequest();
+    public static UpdateMPUTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMPUTaskRequest self = new UpdateMPUTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartMPUTaskRequest setAppId(String appId) {
+    public UpdateMPUTaskRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -107,7 +80,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.appId;
     }
 
-    public StartMPUTaskRequest setBackgroundColor(Integer backgroundColor) {
+    public UpdateMPUTaskRequest setBackgroundColor(Integer backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
@@ -115,31 +88,23 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.backgroundColor;
     }
 
-    public StartMPUTaskRequest setBackgrounds(java.util.List<StartMPUTaskRequestBackgrounds> backgrounds) {
+    public UpdateMPUTaskRequest setBackgrounds(java.util.List<UpdateMPUTaskRequestBackgrounds> backgrounds) {
         this.backgrounds = backgrounds;
         return this;
     }
-    public java.util.List<StartMPUTaskRequestBackgrounds> getBackgrounds() {
+    public java.util.List<UpdateMPUTaskRequestBackgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
-    public StartMPUTaskRequest setChannelId(String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-    public String getChannelId() {
-        return this.channelId;
-    }
-
-    public StartMPUTaskRequest setClockWidgets(java.util.List<StartMPUTaskRequestClockWidgets> clockWidgets) {
+    public UpdateMPUTaskRequest setClockWidgets(java.util.List<UpdateMPUTaskRequestClockWidgets> clockWidgets) {
         this.clockWidgets = clockWidgets;
         return this;
     }
-    public java.util.List<StartMPUTaskRequestClockWidgets> getClockWidgets() {
+    public java.util.List<UpdateMPUTaskRequestClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
-    public StartMPUTaskRequest setCropMode(Integer cropMode) {
+    public UpdateMPUTaskRequest setCropMode(Integer cropMode) {
         this.cropMode = cropMode;
         return this;
     }
@@ -147,15 +112,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.cropMode;
     }
 
-    public StartMPUTaskRequest setEnhancedParam(StartMPUTaskRequestEnhancedParam enhancedParam) {
-        this.enhancedParam = enhancedParam;
-        return this;
-    }
-    public StartMPUTaskRequestEnhancedParam getEnhancedParam() {
-        return this.enhancedParam;
-    }
-
-    public StartMPUTaskRequest setLayoutIds(java.util.List<Long> layoutIds) {
+    public UpdateMPUTaskRequest setLayoutIds(java.util.List<Long> layoutIds) {
         this.layoutIds = layoutIds;
         return this;
     }
@@ -163,7 +120,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.layoutIds;
     }
 
-    public StartMPUTaskRequest setMediaEncode(Integer mediaEncode) {
+    public UpdateMPUTaskRequest setMediaEncode(Integer mediaEncode) {
         this.mediaEncode = mediaEncode;
         return this;
     }
@@ -171,7 +128,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.mediaEncode;
     }
 
-    public StartMPUTaskRequest setMixMode(Integer mixMode) {
+    public UpdateMPUTaskRequest setMixMode(Integer mixMode) {
         this.mixMode = mixMode;
         return this;
     }
@@ -179,7 +136,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.mixMode;
     }
 
-    public StartMPUTaskRequest setOwnerId(Long ownerId) {
+    public UpdateMPUTaskRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -187,31 +144,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StartMPUTaskRequest setPayloadType(Integer payloadType) {
-        this.payloadType = payloadType;
-        return this;
-    }
-    public Integer getPayloadType() {
-        return this.payloadType;
-    }
-
-    public StartMPUTaskRequest setReportVad(Integer reportVad) {
-        this.reportVad = reportVad;
-        return this;
-    }
-    public Integer getReportVad() {
-        return this.reportVad;
-    }
-
-    public StartMPUTaskRequest setRtpExtInfo(Integer rtpExtInfo) {
-        this.rtpExtInfo = rtpExtInfo;
-        return this;
-    }
-    public Integer getRtpExtInfo() {
-        return this.rtpExtInfo;
-    }
-
-    public StartMPUTaskRequest setSourceType(String sourceType) {
+    public UpdateMPUTaskRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
@@ -219,7 +152,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.sourceType;
     }
 
-    public StartMPUTaskRequest setStreamType(Integer streamType) {
+    public UpdateMPUTaskRequest setStreamType(Integer streamType) {
         this.streamType = streamType;
         return this;
     }
@@ -227,15 +160,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.streamType;
     }
 
-    public StartMPUTaskRequest setStreamURL(String streamURL) {
-        this.streamURL = streamURL;
-        return this;
-    }
-    public String getStreamURL() {
-        return this.streamURL;
-    }
-
-    public StartMPUTaskRequest setSubSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
+    public UpdateMPUTaskRequest setSubSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
         this.subSpecAudioUsers = subSpecAudioUsers;
         return this;
     }
@@ -243,7 +168,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.subSpecAudioUsers;
     }
 
-    public StartMPUTaskRequest setSubSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
+    public UpdateMPUTaskRequest setSubSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
         this.subSpecCameraUsers = subSpecCameraUsers;
         return this;
     }
@@ -251,7 +176,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.subSpecCameraUsers;
     }
 
-    public StartMPUTaskRequest setSubSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
+    public UpdateMPUTaskRequest setSubSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
         this.subSpecShareScreenUsers = subSpecShareScreenUsers;
         return this;
     }
@@ -259,7 +184,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.subSpecShareScreenUsers;
     }
 
-    public StartMPUTaskRequest setSubSpecUsers(java.util.List<String> subSpecUsers) {
+    public UpdateMPUTaskRequest setSubSpecUsers(java.util.List<String> subSpecUsers) {
         this.subSpecUsers = subSpecUsers;
         return this;
     }
@@ -267,7 +192,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.subSpecUsers;
     }
 
-    public StartMPUTaskRequest setTaskId(String taskId) {
+    public UpdateMPUTaskRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -275,23 +200,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.taskId;
     }
 
-    public StartMPUTaskRequest setTaskType(Integer taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public Integer getTaskType() {
-        return this.taskType;
-    }
-
-    public StartMPUTaskRequest setTimeStampRef(Long timeStampRef) {
-        this.timeStampRef = timeStampRef;
-        return this;
-    }
-    public Long getTimeStampRef() {
-        return this.timeStampRef;
-    }
-
-    public StartMPUTaskRequest setUnsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
+    public UpdateMPUTaskRequest setUnsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
         this.unsubSpecAudioUsers = unsubSpecAudioUsers;
         return this;
     }
@@ -299,7 +208,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.unsubSpecAudioUsers;
     }
 
-    public StartMPUTaskRequest setUnsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
+    public UpdateMPUTaskRequest setUnsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
         this.unsubSpecCameraUsers = unsubSpecCameraUsers;
         return this;
     }
@@ -307,7 +216,7 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.unsubSpecCameraUsers;
     }
 
-    public StartMPUTaskRequest setUnsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
+    public UpdateMPUTaskRequest setUnsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
         this.unsubSpecShareScreenUsers = unsubSpecShareScreenUsers;
         return this;
     }
@@ -315,31 +224,23 @@ public class StartMPUTaskRequest extends TeaModel {
         return this.unsubSpecShareScreenUsers;
     }
 
-    public StartMPUTaskRequest setUserPanes(java.util.List<StartMPUTaskRequestUserPanes> userPanes) {
+    public UpdateMPUTaskRequest setUserPanes(java.util.List<UpdateMPUTaskRequestUserPanes> userPanes) {
         this.userPanes = userPanes;
         return this;
     }
-    public java.util.List<StartMPUTaskRequestUserPanes> getUserPanes() {
+    public java.util.List<UpdateMPUTaskRequestUserPanes> getUserPanes() {
         return this.userPanes;
     }
 
-    public StartMPUTaskRequest setVadInterval(Long vadInterval) {
-        this.vadInterval = vadInterval;
-        return this;
-    }
-    public Long getVadInterval() {
-        return this.vadInterval;
-    }
-
-    public StartMPUTaskRequest setWatermarks(java.util.List<StartMPUTaskRequestWatermarks> watermarks) {
+    public UpdateMPUTaskRequest setWatermarks(java.util.List<UpdateMPUTaskRequestWatermarks> watermarks) {
         this.watermarks = watermarks;
         return this;
     }
-    public java.util.List<StartMPUTaskRequestWatermarks> getWatermarks() {
+    public java.util.List<UpdateMPUTaskRequestWatermarks> getWatermarks() {
         return this.watermarks;
     }
 
-    public static class StartMPUTaskRequestBackgrounds extends TeaModel {
+    public static class UpdateMPUTaskRequestBackgrounds extends TeaModel {
         @NameInMap("Display")
         public Integer display;
 
@@ -361,12 +262,12 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        public static StartMPUTaskRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestBackgrounds self = new StartMPUTaskRequestBackgrounds();
+        public static UpdateMPUTaskRequestBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestBackgrounds self = new UpdateMPUTaskRequestBackgrounds();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestBackgrounds setDisplay(Integer display) {
+        public UpdateMPUTaskRequestBackgrounds setDisplay(Integer display) {
             this.display = display;
             return this;
         }
@@ -374,7 +275,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.display;
         }
 
-        public StartMPUTaskRequestBackgrounds setHeight(Float height) {
+        public UpdateMPUTaskRequestBackgrounds setHeight(Float height) {
             this.height = height;
             return this;
         }
@@ -382,7 +283,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.height;
         }
 
-        public StartMPUTaskRequestBackgrounds setUrl(String url) {
+        public UpdateMPUTaskRequestBackgrounds setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -390,7 +291,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.url;
         }
 
-        public StartMPUTaskRequestBackgrounds setWidth(Float width) {
+        public UpdateMPUTaskRequestBackgrounds setWidth(Float width) {
             this.width = width;
             return this;
         }
@@ -398,7 +299,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.width;
         }
 
-        public StartMPUTaskRequestBackgrounds setX(Float x) {
+        public UpdateMPUTaskRequestBackgrounds setX(Float x) {
             this.x = x;
             return this;
         }
@@ -406,7 +307,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.x;
         }
 
-        public StartMPUTaskRequestBackgrounds setY(Float y) {
+        public UpdateMPUTaskRequestBackgrounds setY(Float y) {
             this.y = y;
             return this;
         }
@@ -414,7 +315,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.y;
         }
 
-        public StartMPUTaskRequestBackgrounds setZOrder(Integer ZOrder) {
+        public UpdateMPUTaskRequestBackgrounds setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }
@@ -424,7 +325,7 @@ public class StartMPUTaskRequest extends TeaModel {
 
     }
 
-    public static class StartMPUTaskRequestClockWidgets extends TeaModel {
+    public static class UpdateMPUTaskRequestClockWidgets extends TeaModel {
         @NameInMap("FontColor")
         public Integer fontColor;
 
@@ -443,12 +344,12 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        public static StartMPUTaskRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestClockWidgets self = new StartMPUTaskRequestClockWidgets();
+        public static UpdateMPUTaskRequestClockWidgets build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestClockWidgets self = new UpdateMPUTaskRequestClockWidgets();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestClockWidgets setFontColor(Integer fontColor) {
+        public UpdateMPUTaskRequestClockWidgets setFontColor(Integer fontColor) {
             this.fontColor = fontColor;
             return this;
         }
@@ -456,7 +357,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontColor;
         }
 
-        public StartMPUTaskRequestClockWidgets setFontSize(Integer fontSize) {
+        public UpdateMPUTaskRequestClockWidgets setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -464,7 +365,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public StartMPUTaskRequestClockWidgets setFontType(Integer fontType) {
+        public UpdateMPUTaskRequestClockWidgets setFontType(Integer fontType) {
             this.fontType = fontType;
             return this;
         }
@@ -472,7 +373,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontType;
         }
 
-        public StartMPUTaskRequestClockWidgets setX(Float x) {
+        public UpdateMPUTaskRequestClockWidgets setX(Float x) {
             this.x = x;
             return this;
         }
@@ -480,7 +381,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.x;
         }
 
-        public StartMPUTaskRequestClockWidgets setY(Float y) {
+        public UpdateMPUTaskRequestClockWidgets setY(Float y) {
             this.y = y;
             return this;
         }
@@ -488,7 +389,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.y;
         }
 
-        public StartMPUTaskRequestClockWidgets setZOrder(Integer ZOrder) {
+        public UpdateMPUTaskRequestClockWidgets setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }
@@ -498,26 +399,7 @@ public class StartMPUTaskRequest extends TeaModel {
 
     }
 
-    public static class StartMPUTaskRequestEnhancedParam extends TeaModel {
-        @NameInMap("EnablePortraitSegmentation")
-        public Boolean enablePortraitSegmentation;
-
-        public static StartMPUTaskRequestEnhancedParam build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestEnhancedParam self = new StartMPUTaskRequestEnhancedParam();
-            return TeaModel.build(map, self);
-        }
-
-        public StartMPUTaskRequestEnhancedParam setEnablePortraitSegmentation(Boolean enablePortraitSegmentation) {
-            this.enablePortraitSegmentation = enablePortraitSegmentation;
-            return this;
-        }
-        public Boolean getEnablePortraitSegmentation() {
-            return this.enablePortraitSegmentation;
-        }
-
-    }
-
-    public static class StartMPUTaskRequestUserPanesImages extends TeaModel {
+    public static class UpdateMPUTaskRequestUserPanesImages extends TeaModel {
         @NameInMap("Display")
         public Integer display;
 
@@ -539,12 +421,12 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        public static StartMPUTaskRequestUserPanesImages build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestUserPanesImages self = new StartMPUTaskRequestUserPanesImages();
+        public static UpdateMPUTaskRequestUserPanesImages build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestUserPanesImages self = new UpdateMPUTaskRequestUserPanesImages();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestUserPanesImages setDisplay(Integer display) {
+        public UpdateMPUTaskRequestUserPanesImages setDisplay(Integer display) {
             this.display = display;
             return this;
         }
@@ -552,7 +434,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.display;
         }
 
-        public StartMPUTaskRequestUserPanesImages setHeight(Float height) {
+        public UpdateMPUTaskRequestUserPanesImages setHeight(Float height) {
             this.height = height;
             return this;
         }
@@ -560,7 +442,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.height;
         }
 
-        public StartMPUTaskRequestUserPanesImages setUrl(String url) {
+        public UpdateMPUTaskRequestUserPanesImages setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -568,7 +450,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.url;
         }
 
-        public StartMPUTaskRequestUserPanesImages setWidth(Float width) {
+        public UpdateMPUTaskRequestUserPanesImages setWidth(Float width) {
             this.width = width;
             return this;
         }
@@ -576,7 +458,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.width;
         }
 
-        public StartMPUTaskRequestUserPanesImages setX(Float x) {
+        public UpdateMPUTaskRequestUserPanesImages setX(Float x) {
             this.x = x;
             return this;
         }
@@ -584,7 +466,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.x;
         }
 
-        public StartMPUTaskRequestUserPanesImages setY(Float y) {
+        public UpdateMPUTaskRequestUserPanesImages setY(Float y) {
             this.y = y;
             return this;
         }
@@ -592,7 +474,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.y;
         }
 
-        public StartMPUTaskRequestUserPanesImages setZOrder(Integer ZOrder) {
+        public UpdateMPUTaskRequestUserPanesImages setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }
@@ -602,7 +484,7 @@ public class StartMPUTaskRequest extends TeaModel {
 
     }
 
-    public static class StartMPUTaskRequestUserPanesTexts extends TeaModel {
+    public static class UpdateMPUTaskRequestUserPanesTexts extends TeaModel {
         @NameInMap("FontColor")
         public Integer fontColor;
 
@@ -624,12 +506,12 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        public static StartMPUTaskRequestUserPanesTexts build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestUserPanesTexts self = new StartMPUTaskRequestUserPanesTexts();
+        public static UpdateMPUTaskRequestUserPanesTexts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestUserPanesTexts self = new UpdateMPUTaskRequestUserPanesTexts();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestUserPanesTexts setFontColor(Integer fontColor) {
+        public UpdateMPUTaskRequestUserPanesTexts setFontColor(Integer fontColor) {
             this.fontColor = fontColor;
             return this;
         }
@@ -637,7 +519,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontColor;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setFontSize(Integer fontSize) {
+        public UpdateMPUTaskRequestUserPanesTexts setFontSize(Integer fontSize) {
             this.fontSize = fontSize;
             return this;
         }
@@ -645,7 +527,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontSize;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setFontType(Integer fontType) {
+        public UpdateMPUTaskRequestUserPanesTexts setFontType(Integer fontType) {
             this.fontType = fontType;
             return this;
         }
@@ -653,7 +535,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.fontType;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setText(String text) {
+        public UpdateMPUTaskRequestUserPanesTexts setText(String text) {
             this.text = text;
             return this;
         }
@@ -661,7 +543,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.text;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setX(Float x) {
+        public UpdateMPUTaskRequestUserPanesTexts setX(Float x) {
             this.x = x;
             return this;
         }
@@ -669,7 +551,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.x;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setY(Float y) {
+        public UpdateMPUTaskRequestUserPanesTexts setY(Float y) {
             this.y = y;
             return this;
         }
@@ -677,7 +559,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.y;
         }
 
-        public StartMPUTaskRequestUserPanesTexts setZOrder(Integer ZOrder) {
+        public UpdateMPUTaskRequestUserPanesTexts setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }
@@ -687,9 +569,9 @@ public class StartMPUTaskRequest extends TeaModel {
 
     }
 
-    public static class StartMPUTaskRequestUserPanes extends TeaModel {
+    public static class UpdateMPUTaskRequestUserPanes extends TeaModel {
         @NameInMap("Images")
-        public java.util.List<StartMPUTaskRequestUserPanesImages> images;
+        public java.util.List<UpdateMPUTaskRequestUserPanesImages> images;
 
         @NameInMap("PaneId")
         public Integer paneId;
@@ -701,25 +583,25 @@ public class StartMPUTaskRequest extends TeaModel {
         public String sourceType;
 
         @NameInMap("Texts")
-        public java.util.List<StartMPUTaskRequestUserPanesTexts> texts;
+        public java.util.List<UpdateMPUTaskRequestUserPanesTexts> texts;
 
         @NameInMap("UserId")
         public String userId;
 
-        public static StartMPUTaskRequestUserPanes build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestUserPanes self = new StartMPUTaskRequestUserPanes();
+        public static UpdateMPUTaskRequestUserPanes build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestUserPanes self = new UpdateMPUTaskRequestUserPanes();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestUserPanes setImages(java.util.List<StartMPUTaskRequestUserPanesImages> images) {
+        public UpdateMPUTaskRequestUserPanes setImages(java.util.List<UpdateMPUTaskRequestUserPanesImages> images) {
             this.images = images;
             return this;
         }
-        public java.util.List<StartMPUTaskRequestUserPanesImages> getImages() {
+        public java.util.List<UpdateMPUTaskRequestUserPanesImages> getImages() {
             return this.images;
         }
 
-        public StartMPUTaskRequestUserPanes setPaneId(Integer paneId) {
+        public UpdateMPUTaskRequestUserPanes setPaneId(Integer paneId) {
             this.paneId = paneId;
             return this;
         }
@@ -727,7 +609,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.paneId;
         }
 
-        public StartMPUTaskRequestUserPanes setSegmentType(Integer segmentType) {
+        public UpdateMPUTaskRequestUserPanes setSegmentType(Integer segmentType) {
             this.segmentType = segmentType;
             return this;
         }
@@ -735,7 +617,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.segmentType;
         }
 
-        public StartMPUTaskRequestUserPanes setSourceType(String sourceType) {
+        public UpdateMPUTaskRequestUserPanes setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -743,15 +625,15 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.sourceType;
         }
 
-        public StartMPUTaskRequestUserPanes setTexts(java.util.List<StartMPUTaskRequestUserPanesTexts> texts) {
+        public UpdateMPUTaskRequestUserPanes setTexts(java.util.List<UpdateMPUTaskRequestUserPanesTexts> texts) {
             this.texts = texts;
             return this;
         }
-        public java.util.List<StartMPUTaskRequestUserPanesTexts> getTexts() {
+        public java.util.List<UpdateMPUTaskRequestUserPanesTexts> getTexts() {
             return this.texts;
         }
 
-        public StartMPUTaskRequestUserPanes setUserId(String userId) {
+        public UpdateMPUTaskRequestUserPanes setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -761,7 +643,7 @@ public class StartMPUTaskRequest extends TeaModel {
 
     }
 
-    public static class StartMPUTaskRequestWatermarks extends TeaModel {
+    public static class UpdateMPUTaskRequestWatermarks extends TeaModel {
         @NameInMap("Alpha")
         public Float alpha;
 
@@ -786,12 +668,12 @@ public class StartMPUTaskRequest extends TeaModel {
         @NameInMap("ZOrder")
         public Integer ZOrder;
 
-        public static StartMPUTaskRequestWatermarks build(java.util.Map<String, ?> map) throws Exception {
-            StartMPUTaskRequestWatermarks self = new StartMPUTaskRequestWatermarks();
+        public static UpdateMPUTaskRequestWatermarks build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMPUTaskRequestWatermarks self = new UpdateMPUTaskRequestWatermarks();
             return TeaModel.build(map, self);
         }
 
-        public StartMPUTaskRequestWatermarks setAlpha(Float alpha) {
+        public UpdateMPUTaskRequestWatermarks setAlpha(Float alpha) {
             this.alpha = alpha;
             return this;
         }
@@ -799,7 +681,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.alpha;
         }
 
-        public StartMPUTaskRequestWatermarks setDisplay(Integer display) {
+        public UpdateMPUTaskRequestWatermarks setDisplay(Integer display) {
             this.display = display;
             return this;
         }
@@ -807,7 +689,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.display;
         }
 
-        public StartMPUTaskRequestWatermarks setHeight(Float height) {
+        public UpdateMPUTaskRequestWatermarks setHeight(Float height) {
             this.height = height;
             return this;
         }
@@ -815,7 +697,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.height;
         }
 
-        public StartMPUTaskRequestWatermarks setUrl(String url) {
+        public UpdateMPUTaskRequestWatermarks setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -823,7 +705,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.url;
         }
 
-        public StartMPUTaskRequestWatermarks setWidth(Float width) {
+        public UpdateMPUTaskRequestWatermarks setWidth(Float width) {
             this.width = width;
             return this;
         }
@@ -831,7 +713,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.width;
         }
 
-        public StartMPUTaskRequestWatermarks setX(Float x) {
+        public UpdateMPUTaskRequestWatermarks setX(Float x) {
             this.x = x;
             return this;
         }
@@ -839,7 +721,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.x;
         }
 
-        public StartMPUTaskRequestWatermarks setY(Float y) {
+        public UpdateMPUTaskRequestWatermarks setY(Float y) {
             this.y = y;
             return this;
         }
@@ -847,7 +729,7 @@ public class StartMPUTaskRequest extends TeaModel {
             return this.y;
         }
 
-        public StartMPUTaskRequestWatermarks setZOrder(Integer ZOrder) {
+        public UpdateMPUTaskRequestWatermarks setZOrder(Integer ZOrder) {
             this.ZOrder = ZOrder;
             return this;
         }

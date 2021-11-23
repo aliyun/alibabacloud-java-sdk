@@ -4,14 +4,11 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class StopMPUTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -21,28 +18,20 @@ public class StopMPUTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StopMPUTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public StopMPUTaskRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
-    }
-
     public StopMPUTaskRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public StopMPUTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StopMPUTaskRequest setTaskId(String taskId) {

@@ -35,17 +35,29 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         @NameInMap("CallBack")
         public String callBack;
 
-        @NameInMap("PlayDomain")
-        public String playDomain;
+        @NameInMap("ChannelIdPrefixes")
+        public java.util.List<String> channelIdPrefixes;
+
+        @NameInMap("ChannelIds")
+        public java.util.List<String> channelIds;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("RuleName")
-        public String ruleName;
+        @NameInMap("MediaEncode")
+        public Integer mediaEncode;
+
+        @NameInMap("PlayDomain")
+        public String playDomain;
 
         @NameInMap("RuleId")
         public Long ruleId;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeAutoLiveStreamRuleResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoLiveStreamRuleResponseBodyRules self = new DescribeAutoLiveStreamRuleResponseBodyRules();
@@ -60,12 +72,20 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             return this.callBack;
         }
 
-        public DescribeAutoLiveStreamRuleResponseBodyRules setPlayDomain(String playDomain) {
-            this.playDomain = playDomain;
+        public DescribeAutoLiveStreamRuleResponseBodyRules setChannelIdPrefixes(java.util.List<String> channelIdPrefixes) {
+            this.channelIdPrefixes = channelIdPrefixes;
             return this;
         }
-        public String getPlayDomain() {
-            return this.playDomain;
+        public java.util.List<String> getChannelIdPrefixes() {
+            return this.channelIdPrefixes;
+        }
+
+        public DescribeAutoLiveStreamRuleResponseBodyRules setChannelIds(java.util.List<String> channelIds) {
+            this.channelIds = channelIds;
+            return this;
+        }
+        public java.util.List<String> getChannelIds() {
+            return this.channelIds;
         }
 
         public DescribeAutoLiveStreamRuleResponseBodyRules setCreateTime(String createTime) {
@@ -76,12 +96,20 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeAutoLiveStreamRuleResponseBodyRules setRuleName(String ruleName) {
-            this.ruleName = ruleName;
+        public DescribeAutoLiveStreamRuleResponseBodyRules setMediaEncode(Integer mediaEncode) {
+            this.mediaEncode = mediaEncode;
             return this;
         }
-        public String getRuleName() {
-            return this.ruleName;
+        public Integer getMediaEncode() {
+            return this.mediaEncode;
+        }
+
+        public DescribeAutoLiveStreamRuleResponseBodyRules setPlayDomain(String playDomain) {
+            this.playDomain = playDomain;
+            return this;
+        }
+        public String getPlayDomain() {
+            return this.playDomain;
         }
 
         public DescribeAutoLiveStreamRuleResponseBodyRules setRuleId(Long ruleId) {
@@ -90,6 +118,22 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         }
         public Long getRuleId() {
             return this.ruleId;
+        }
+
+        public DescribeAutoLiveStreamRuleResponseBodyRules setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public DescribeAutoLiveStreamRuleResponseBodyRules setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -4,17 +4,17 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelParticipantsResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
-    @NameInMap("TotalPage")
-    public Integer totalPage;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Timestamp")
     public Integer timestamp;
+
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
+    @NameInMap("TotalPage")
+    public Integer totalPage;
 
     @NameInMap("UserList")
     public DescribeChannelParticipantsResponseBodyUserList userList;
@@ -22,22 +22,6 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     public static DescribeChannelParticipantsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelParticipantsResponseBody self = new DescribeChannelParticipantsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeChannelParticipantsResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
-    }
-
-    public DescribeChannelParticipantsResponseBody setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
-        return this;
-    }
-    public Integer getTotalPage() {
-        return this.totalPage;
     }
 
     public DescribeChannelParticipantsResponseBody setRequestId(String requestId) {
@@ -54,6 +38,22 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     }
     public Integer getTimestamp() {
         return this.timestamp;
+    }
+
+    public DescribeChannelParticipantsResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeChannelParticipantsResponseBody setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+        return this;
+    }
+    public Integer getTotalPage() {
+        return this.totalPage;
     }
 
     public DescribeChannelParticipantsResponseBody setUserList(DescribeChannelParticipantsResponseBodyUserList userList) {

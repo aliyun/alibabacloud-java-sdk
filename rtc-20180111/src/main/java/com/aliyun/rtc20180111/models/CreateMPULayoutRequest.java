@@ -4,20 +4,17 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateMPULayoutRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("AudioMixCount")
+    public Integer audioMixCount;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("AudioMixCount")
-    public Integer audioMixCount;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Panes")
     public java.util.List<CreateMPULayoutRequestPanes> panes;
@@ -25,22 +22,6 @@ public class CreateMPULayoutRequest extends TeaModel {
     public static CreateMPULayoutRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMPULayoutRequest self = new CreateMPULayoutRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMPULayoutRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateMPULayoutRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public CreateMPULayoutRequest setAppId(String appId) {
@@ -51,6 +32,14 @@ public class CreateMPULayoutRequest extends TeaModel {
         return this.appId;
     }
 
+    public CreateMPULayoutRequest setAudioMixCount(Integer audioMixCount) {
+        this.audioMixCount = audioMixCount;
+        return this;
+    }
+    public Integer getAudioMixCount() {
+        return this.audioMixCount;
+    }
+
     public CreateMPULayoutRequest setName(String name) {
         this.name = name;
         return this;
@@ -59,12 +48,12 @@ public class CreateMPULayoutRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateMPULayoutRequest setAudioMixCount(Integer audioMixCount) {
-        this.audioMixCount = audioMixCount;
+    public CreateMPULayoutRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getAudioMixCount() {
-        return this.audioMixCount;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateMPULayoutRequest setPanes(java.util.List<CreateMPULayoutRequestPanes> panes) {
@@ -76,46 +65,30 @@ public class CreateMPULayoutRequest extends TeaModel {
     }
 
     public static class CreateMPULayoutRequestPanes extends TeaModel {
-        @NameInMap("MajorPane")
-        public Integer majorPane;
-
-        @NameInMap("Width")
-        public Float width;
-
         @NameInMap("Height")
         public Float height;
 
-        @NameInMap("Y")
-        public Float y;
+        @NameInMap("MajorPane")
+        public Integer majorPane;
 
         @NameInMap("PaneId")
         public Integer paneId;
 
-        @NameInMap("ZOrder")
-        public Integer ZOrder;
+        @NameInMap("Width")
+        public Float width;
 
         @NameInMap("X")
         public Float x;
 
+        @NameInMap("Y")
+        public Float y;
+
+        @NameInMap("ZOrder")
+        public Integer ZOrder;
+
         public static CreateMPULayoutRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             CreateMPULayoutRequestPanes self = new CreateMPULayoutRequestPanes();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMPULayoutRequestPanes setMajorPane(Integer majorPane) {
-            this.majorPane = majorPane;
-            return this;
-        }
-        public Integer getMajorPane() {
-            return this.majorPane;
-        }
-
-        public CreateMPULayoutRequestPanes setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
         }
 
         public CreateMPULayoutRequestPanes setHeight(Float height) {
@@ -126,12 +99,12 @@ public class CreateMPULayoutRequest extends TeaModel {
             return this.height;
         }
 
-        public CreateMPULayoutRequestPanes setY(Float y) {
-            this.y = y;
+        public CreateMPULayoutRequestPanes setMajorPane(Integer majorPane) {
+            this.majorPane = majorPane;
             return this;
         }
-        public Float getY() {
-            return this.y;
+        public Integer getMajorPane() {
+            return this.majorPane;
         }
 
         public CreateMPULayoutRequestPanes setPaneId(Integer paneId) {
@@ -142,12 +115,12 @@ public class CreateMPULayoutRequest extends TeaModel {
             return this.paneId;
         }
 
-        public CreateMPULayoutRequestPanes setZOrder(Integer ZOrder) {
-            this.ZOrder = ZOrder;
+        public CreateMPULayoutRequestPanes setWidth(Float width) {
+            this.width = width;
             return this;
         }
-        public Integer getZOrder() {
-            return this.ZOrder;
+        public Float getWidth() {
+            return this.width;
         }
 
         public CreateMPULayoutRequestPanes setX(Float x) {
@@ -156,6 +129,22 @@ public class CreateMPULayoutRequest extends TeaModel {
         }
         public Float getX() {
             return this.x;
+        }
+
+        public CreateMPULayoutRequestPanes setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+        public CreateMPULayoutRequestPanes setZOrder(Integer ZOrder) {
+            this.ZOrder = ZOrder;
+            return this;
+        }
+        public Integer getZOrder() {
+            return this.ZOrder;
         }
 
     }

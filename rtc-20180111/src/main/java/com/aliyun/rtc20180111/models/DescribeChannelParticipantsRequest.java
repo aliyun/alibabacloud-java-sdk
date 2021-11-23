@@ -4,12 +4,6 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelParticipantsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
@@ -18,6 +12,9 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
 
     @NameInMap("Order")
     public String order;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -28,22 +25,6 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     public static DescribeChannelParticipantsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelParticipantsRequest self = new DescribeChannelParticipantsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeChannelParticipantsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeChannelParticipantsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeChannelParticipantsRequest setAppId(String appId) {
@@ -68,6 +49,14 @@ public class DescribeChannelParticipantsRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public DescribeChannelParticipantsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeChannelParticipantsRequest setPageNum(Integer pageNum) {

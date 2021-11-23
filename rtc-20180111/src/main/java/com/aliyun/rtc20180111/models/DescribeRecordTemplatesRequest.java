@@ -4,20 +4,17 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordTemplatesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
@@ -25,22 +22,6 @@ public class DescribeRecordTemplatesRequest extends TeaModel {
     public static DescribeRecordTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordTemplatesRequest self = new DescribeRecordTemplatesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordTemplatesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeRecordTemplatesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeRecordTemplatesRequest setAppId(String appId) {
@@ -51,12 +32,12 @@ public class DescribeRecordTemplatesRequest extends TeaModel {
         return this.appId;
     }
 
-    public DescribeRecordTemplatesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeRecordTemplatesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRecordTemplatesRequest setPageNum(Integer pageNum) {
@@ -65,6 +46,14 @@ public class DescribeRecordTemplatesRequest extends TeaModel {
     }
     public Integer getPageNum() {
         return this.pageNum;
+    }
+
+    public DescribeRecordTemplatesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeRecordTemplatesRequest setTemplateIds(java.util.List<String> templateIds) {

@@ -4,23 +4,20 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class ModifyMPULayoutRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("AppId")
     public String appId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("AudioMixCount")
+    public Integer audioMixCount;
 
     @NameInMap("LayoutId")
     public Long layoutId;
 
-    @NameInMap("AudioMixCount")
-    public Integer audioMixCount;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Panes")
     public java.util.List<ModifyMPULayoutRequestPanes> panes;
@@ -28,22 +25,6 @@ public class ModifyMPULayoutRequest extends TeaModel {
     public static ModifyMPULayoutRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMPULayoutRequest self = new ModifyMPULayoutRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyMPULayoutRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyMPULayoutRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public ModifyMPULayoutRequest setAppId(String appId) {
@@ -54,12 +35,12 @@ public class ModifyMPULayoutRequest extends TeaModel {
         return this.appId;
     }
 
-    public ModifyMPULayoutRequest setName(String name) {
-        this.name = name;
+    public ModifyMPULayoutRequest setAudioMixCount(Integer audioMixCount) {
+        this.audioMixCount = audioMixCount;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Integer getAudioMixCount() {
+        return this.audioMixCount;
     }
 
     public ModifyMPULayoutRequest setLayoutId(Long layoutId) {
@@ -70,12 +51,20 @@ public class ModifyMPULayoutRequest extends TeaModel {
         return this.layoutId;
     }
 
-    public ModifyMPULayoutRequest setAudioMixCount(Integer audioMixCount) {
-        this.audioMixCount = audioMixCount;
+    public ModifyMPULayoutRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Integer getAudioMixCount() {
-        return this.audioMixCount;
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyMPULayoutRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyMPULayoutRequest setPanes(java.util.List<ModifyMPULayoutRequestPanes> panes) {
@@ -87,46 +76,30 @@ public class ModifyMPULayoutRequest extends TeaModel {
     }
 
     public static class ModifyMPULayoutRequestPanes extends TeaModel {
-        @NameInMap("MajorPane")
-        public Integer majorPane;
-
-        @NameInMap("Width")
-        public Float width;
-
         @NameInMap("Height")
         public Float height;
 
-        @NameInMap("Y")
-        public Float y;
+        @NameInMap("MajorPane")
+        public Integer majorPane;
 
         @NameInMap("PaneId")
         public Integer paneId;
 
-        @NameInMap("ZOrder")
-        public Integer ZOrder;
+        @NameInMap("Width")
+        public Float width;
 
         @NameInMap("X")
         public Float x;
 
+        @NameInMap("Y")
+        public Float y;
+
+        @NameInMap("ZOrder")
+        public Integer ZOrder;
+
         public static ModifyMPULayoutRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             ModifyMPULayoutRequestPanes self = new ModifyMPULayoutRequestPanes();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyMPULayoutRequestPanes setMajorPane(Integer majorPane) {
-            this.majorPane = majorPane;
-            return this;
-        }
-        public Integer getMajorPane() {
-            return this.majorPane;
-        }
-
-        public ModifyMPULayoutRequestPanes setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
         }
 
         public ModifyMPULayoutRequestPanes setHeight(Float height) {
@@ -137,12 +110,12 @@ public class ModifyMPULayoutRequest extends TeaModel {
             return this.height;
         }
 
-        public ModifyMPULayoutRequestPanes setY(Float y) {
-            this.y = y;
+        public ModifyMPULayoutRequestPanes setMajorPane(Integer majorPane) {
+            this.majorPane = majorPane;
             return this;
         }
-        public Float getY() {
-            return this.y;
+        public Integer getMajorPane() {
+            return this.majorPane;
         }
 
         public ModifyMPULayoutRequestPanes setPaneId(Integer paneId) {
@@ -153,12 +126,12 @@ public class ModifyMPULayoutRequest extends TeaModel {
             return this.paneId;
         }
 
-        public ModifyMPULayoutRequestPanes setZOrder(Integer ZOrder) {
-            this.ZOrder = ZOrder;
+        public ModifyMPULayoutRequestPanes setWidth(Float width) {
+            this.width = width;
             return this;
         }
-        public Integer getZOrder() {
-            return this.ZOrder;
+        public Float getWidth() {
+            return this.width;
         }
 
         public ModifyMPULayoutRequestPanes setX(Float x) {
@@ -167,6 +140,22 @@ public class ModifyMPULayoutRequest extends TeaModel {
         }
         public Float getX() {
             return this.x;
+        }
+
+        public ModifyMPULayoutRequestPanes setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+        public ModifyMPULayoutRequestPanes setZOrder(Integer ZOrder) {
+            this.ZOrder = ZOrder;
+            return this;
+        }
+        public Integer getZOrder() {
+            return this.ZOrder;
         }
 
     }
