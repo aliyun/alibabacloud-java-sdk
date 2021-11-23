@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTakeoutOrderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeTakeoutOrderResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeTakeoutOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTakeoutOrderResponseBody self = new RecognizeTakeoutOrderResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeTakeoutOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeTakeoutOrderResponseBody setData(RecognizeTakeoutOrderResponseBodyData data) {
@@ -31,30 +23,30 @@ public class RecognizeTakeoutOrderResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeTakeoutOrderResponseBodyDataElements extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public RecognizeTakeoutOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeTakeoutOrderResponseBodyDataElements extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
-
-        @NameInMap("Score")
-        public Float score;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Score")
+        public Float score;
+
+        @NameInMap("Value")
+        public String value;
+
         public static RecognizeTakeoutOrderResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeTakeoutOrderResponseBodyDataElements self = new RecognizeTakeoutOrderResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeTakeoutOrderResponseBodyDataElements setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public RecognizeTakeoutOrderResponseBodyDataElements setBoxes(java.util.List<Integer> boxes) {
@@ -65,6 +57,14 @@ public class RecognizeTakeoutOrderResponseBody extends TeaModel {
             return this.boxes;
         }
 
+        public RecognizeTakeoutOrderResponseBodyDataElements setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public RecognizeTakeoutOrderResponseBodyDataElements setScore(Float score) {
             this.score = score;
             return this;
@@ -73,12 +73,12 @@ public class RecognizeTakeoutOrderResponseBody extends TeaModel {
             return this.score;
         }
 
-        public RecognizeTakeoutOrderResponseBodyDataElements setName(String name) {
-            this.name = name;
+        public RecognizeTakeoutOrderResponseBodyDataElements setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getValue() {
+            return this.value;
         }
 
     }

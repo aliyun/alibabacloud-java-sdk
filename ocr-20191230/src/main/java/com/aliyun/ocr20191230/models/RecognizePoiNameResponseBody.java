@@ -4,15 +4,23 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePoiNameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizePoiNameResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizePoiNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizePoiNameResponseBody self = new RecognizePoiNameResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizePoiNameResponseBody setData(RecognizePoiNameResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RecognizePoiNameResponseBodyData getData() {
+        return this.data;
     }
 
     public RecognizePoiNameResponseBody setRequestId(String requestId) {
@@ -23,12 +31,86 @@ public class RecognizePoiNameResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RecognizePoiNameResponseBody setData(RecognizePoiNameResponseBodyData data) {
-        this.data = data;
-        return this;
+    public static class RecognizePoiNameResponseBodyDataSignboardsTexts extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Points")
+        public java.util.List<Integer> points;
+
+        @NameInMap("Score")
+        public Float score;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static RecognizePoiNameResponseBodyDataSignboardsTexts build(java.util.Map<String, ?> map) throws Exception {
+            RecognizePoiNameResponseBodyDataSignboardsTexts self = new RecognizePoiNameResponseBodyDataSignboardsTexts();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboardsTexts setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboardsTexts setPoints(java.util.List<Integer> points) {
+            this.points = points;
+            return this;
+        }
+        public java.util.List<Integer> getPoints() {
+            return this.points;
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboardsTexts setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboardsTexts setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboardsTexts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
-    public RecognizePoiNameResponseBodyData getData() {
-        return this.data;
+
+    public static class RecognizePoiNameResponseBodyDataSignboards extends TeaModel {
+        @NameInMap("Texts")
+        public java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> texts;
+
+        public static RecognizePoiNameResponseBodyDataSignboards build(java.util.Map<String, ?> map) throws Exception {
+            RecognizePoiNameResponseBodyDataSignboards self = new RecognizePoiNameResponseBodyDataSignboards();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizePoiNameResponseBodyDataSignboards setTexts(java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> texts) {
+            this.texts = texts;
+            return this;
+        }
+        public java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> getTexts() {
+            return this.texts;
+        }
+
     }
 
     public static class RecognizePoiNameResponseBodyDataSummary extends TeaModel {
@@ -61,106 +143,16 @@ public class RecognizePoiNameResponseBody extends TeaModel {
 
     }
 
-    public static class RecognizePoiNameResponseBodyDataSignboardsTexts extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Score")
-        public Float score;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Points")
-        public java.util.List<Integer> points;
-
-        public static RecognizePoiNameResponseBodyDataSignboardsTexts build(java.util.Map<String, ?> map) throws Exception {
-            RecognizePoiNameResponseBodyDataSignboardsTexts self = new RecognizePoiNameResponseBodyDataSignboardsTexts();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboardsTexts setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboardsTexts setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboardsTexts setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboardsTexts setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboardsTexts setPoints(java.util.List<Integer> points) {
-            this.points = points;
-            return this;
-        }
-        public java.util.List<Integer> getPoints() {
-            return this.points;
-        }
-
-    }
-
-    public static class RecognizePoiNameResponseBodyDataSignboards extends TeaModel {
-        @NameInMap("Texts")
-        public java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> texts;
-
-        public static RecognizePoiNameResponseBodyDataSignboards build(java.util.Map<String, ?> map) throws Exception {
-            RecognizePoiNameResponseBodyDataSignboards self = new RecognizePoiNameResponseBodyDataSignboards();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizePoiNameResponseBodyDataSignboards setTexts(java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> texts) {
-            this.texts = texts;
-            return this;
-        }
-        public java.util.List<RecognizePoiNameResponseBodyDataSignboardsTexts> getTexts() {
-            return this.texts;
-        }
-
-    }
-
     public static class RecognizePoiNameResponseBodyData extends TeaModel {
-        @NameInMap("Summary")
-        public RecognizePoiNameResponseBodyDataSummary summary;
-
         @NameInMap("Signboards")
         public java.util.List<RecognizePoiNameResponseBodyDataSignboards> signboards;
+
+        @NameInMap("Summary")
+        public RecognizePoiNameResponseBodyDataSummary summary;
 
         public static RecognizePoiNameResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizePoiNameResponseBodyData self = new RecognizePoiNameResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizePoiNameResponseBodyData setSummary(RecognizePoiNameResponseBodyDataSummary summary) {
-            this.summary = summary;
-            return this;
-        }
-        public RecognizePoiNameResponseBodyDataSummary getSummary() {
-            return this.summary;
         }
 
         public RecognizePoiNameResponseBodyData setSignboards(java.util.List<RecognizePoiNameResponseBodyDataSignboards> signboards) {
@@ -169,6 +161,14 @@ public class RecognizePoiNameResponseBody extends TeaModel {
         }
         public java.util.List<RecognizePoiNameResponseBodyDataSignboards> getSignboards() {
             return this.signboards;
+        }
+
+        public RecognizePoiNameResponseBodyData setSummary(RecognizePoiNameResponseBodyDataSummary summary) {
+            this.summary = summary;
+            return this;
+        }
+        public RecognizePoiNameResponseBodyDataSummary getSummary() {
+            return this.summary;
         }
 
     }

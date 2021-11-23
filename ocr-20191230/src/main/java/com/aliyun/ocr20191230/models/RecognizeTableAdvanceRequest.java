@@ -8,20 +8,20 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("OutputFormat")
-    public String outputFormat;
-
-    @NameInMap("UseFinanceModel")
-    public Boolean useFinanceModel;
-
     @NameInMap("AssureDirection")
     public Boolean assureDirection;
 
     @NameInMap("HasLine")
     public Boolean hasLine;
 
+    @NameInMap("OutputFormat")
+    public String outputFormat;
+
     @NameInMap("SkipDetection")
     public Boolean skipDetection;
+
+    @NameInMap("UseFinanceModel")
+    public Boolean useFinanceModel;
 
     public static RecognizeTableAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTableAdvanceRequest self = new RecognizeTableAdvanceRequest();
@@ -34,22 +34,6 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public RecognizeTableAdvanceRequest setOutputFormat(String outputFormat) {
-        this.outputFormat = outputFormat;
-        return this;
-    }
-    public String getOutputFormat() {
-        return this.outputFormat;
-    }
-
-    public RecognizeTableAdvanceRequest setUseFinanceModel(Boolean useFinanceModel) {
-        this.useFinanceModel = useFinanceModel;
-        return this;
-    }
-    public Boolean getUseFinanceModel() {
-        return this.useFinanceModel;
     }
 
     public RecognizeTableAdvanceRequest setAssureDirection(Boolean assureDirection) {
@@ -68,12 +52,28 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
         return this.hasLine;
     }
 
+    public RecognizeTableAdvanceRequest setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public String getOutputFormat() {
+        return this.outputFormat;
+    }
+
     public RecognizeTableAdvanceRequest setSkipDetection(Boolean skipDetection) {
         this.skipDetection = skipDetection;
         return this;
     }
     public Boolean getSkipDetection() {
         return this.skipDetection;
+    }
+
+    public RecognizeTableAdvanceRequest setUseFinanceModel(Boolean useFinanceModel) {
+        this.useFinanceModel = useFinanceModel;
+        return this;
+    }
+    public Boolean getUseFinanceModel() {
+        return this.useFinanceModel;
     }
 
 }

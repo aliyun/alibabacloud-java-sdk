@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeDriverLicenseResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeDriverLicenseResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeDriverLicenseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeDriverLicenseResponseBody self = new RecognizeDriverLicenseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeDriverLicenseResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeDriverLicenseResponseBody setData(RecognizeDriverLicenseResponseBodyData data) {
@@ -31,15 +23,23 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeDriverLicenseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeDriverLicenseResponseBodyDataBackResult extends TeaModel {
         @NameInMap("ArchiveNumber")
         public String archiveNumber;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("CardNumber")
         public String cardNumber;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Record")
         public String record;
@@ -57,20 +57,20 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
             return this.archiveNumber;
         }
 
-        public RecognizeDriverLicenseResponseBodyDataBackResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public RecognizeDriverLicenseResponseBodyDataBackResult setCardNumber(String cardNumber) {
             this.cardNumber = cardNumber;
             return this;
         }
         public String getCardNumber() {
             return this.cardNumber;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataBackResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public RecognizeDriverLicenseResponseBodyDataBackResult setRecord(String record) {
@@ -84,11 +84,8 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeDriverLicenseResponseBodyDataFaceResult extends TeaModel {
-        @NameInMap("VehicleType")
-        public String vehicleType;
-
-        @NameInMap("IssueDate")
-        public String issueDate;
+        @NameInMap("Address")
+        public String address;
 
         @NameInMap("EndDate")
         public String endDate;
@@ -96,11 +93,11 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("Gender")
         public String gender;
 
-        @NameInMap("Address")
-        public String address;
+        @NameInMap("IssueDate")
+        public String issueDate;
 
-        @NameInMap("StartDate")
-        public String startDate;
+        @NameInMap("IssueUnit")
+        public String issueUnit;
 
         @NameInMap("LicenseNumber")
         public String licenseNumber;
@@ -108,28 +105,23 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("IssueUnit")
-        public String issueUnit;
+        @NameInMap("StartDate")
+        public String startDate;
+
+        @NameInMap("VehicleType")
+        public String vehicleType;
 
         public static RecognizeDriverLicenseResponseBodyDataFaceResult build(java.util.Map<String, ?> map) throws Exception {
             RecognizeDriverLicenseResponseBodyDataFaceResult self = new RecognizeDriverLicenseResponseBodyDataFaceResult();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeDriverLicenseResponseBodyDataFaceResult setVehicleType(String vehicleType) {
-            this.vehicleType = vehicleType;
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setAddress(String address) {
+            this.address = address;
             return this;
         }
-        public String getVehicleType() {
-            return this.vehicleType;
-        }
-
-        public RecognizeDriverLicenseResponseBodyDataFaceResult setIssueDate(String issueDate) {
-            this.issueDate = issueDate;
-            return this;
-        }
-        public String getIssueDate() {
-            return this.issueDate;
+        public String getAddress() {
+            return this.address;
         }
 
         public RecognizeDriverLicenseResponseBodyDataFaceResult setEndDate(String endDate) {
@@ -148,20 +140,20 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
             return this.gender;
         }
 
-        public RecognizeDriverLicenseResponseBodyDataFaceResult setAddress(String address) {
-            this.address = address;
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setIssueDate(String issueDate) {
+            this.issueDate = issueDate;
             return this;
         }
-        public String getAddress() {
-            return this.address;
+        public String getIssueDate() {
+            return this.issueDate;
         }
 
-        public RecognizeDriverLicenseResponseBodyDataFaceResult setStartDate(String startDate) {
-            this.startDate = startDate;
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setIssueUnit(String issueUnit) {
+            this.issueUnit = issueUnit;
             return this;
         }
-        public String getStartDate() {
-            return this.startDate;
+        public String getIssueUnit() {
+            return this.issueUnit;
         }
 
         public RecognizeDriverLicenseResponseBodyDataFaceResult setLicenseNumber(String licenseNumber) {
@@ -180,12 +172,20 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
             return this.name;
         }
 
-        public RecognizeDriverLicenseResponseBodyDataFaceResult setIssueUnit(String issueUnit) {
-            this.issueUnit = issueUnit;
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setStartDate(String startDate) {
+            this.startDate = startDate;
             return this;
         }
-        public String getIssueUnit() {
-            return this.issueUnit;
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setVehicleType(String vehicleType) {
+            this.vehicleType = vehicleType;
+            return this;
+        }
+        public String getVehicleType() {
+            return this.vehicleType;
         }
 
     }

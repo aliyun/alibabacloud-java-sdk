@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVATInvoiceRequest extends TeaModel {
-    @NameInMap("FileURL")
-    public String fileURL;
-
     @NameInMap("FileType")
     public String fileType;
+
+    @NameInMap("FileURL")
+    public String fileURL;
 
     public static RecognizeVATInvoiceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVATInvoiceRequest self = new RecognizeVATInvoiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVATInvoiceRequest setFileURL(String fileURL) {
-        this.fileURL = fileURL;
-        return this;
-    }
-    public String getFileURL() {
-        return this.fileURL;
     }
 
     public RecognizeVATInvoiceRequest setFileType(String fileType) {
@@ -29,6 +21,14 @@ public class RecognizeVATInvoiceRequest extends TeaModel {
     }
     public String getFileType() {
         return this.fileType;
+    }
+
+    public RecognizeVATInvoiceRequest setFileURL(String fileURL) {
+        this.fileURL = fileURL;
+        return this;
+    }
+    public String getFileURL() {
+        return this.fileURL;
     }
 
 }

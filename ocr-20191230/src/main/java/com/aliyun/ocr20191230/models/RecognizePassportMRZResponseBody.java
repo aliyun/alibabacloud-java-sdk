@@ -4,23 +4,15 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePassportMRZResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizePassportMRZResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizePassportMRZResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizePassportMRZResponseBody self = new RecognizePassportMRZResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizePassportMRZResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizePassportMRZResponseBody setData(RecognizePassportMRZResponseBodyData data) {
@@ -31,9 +23,20 @@ public class RecognizePassportMRZResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizePassportMRZResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizePassportMRZResponseBodyDataRegions extends TeaModel {
-        @NameInMap("RecognitionScore")
-        public Float recognitionScore;
+        @NameInMap("BandBoxes")
+        public java.util.List<Float> bandBoxes;
+
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("DetectionScore")
         public Float detectionScore;
@@ -41,23 +44,28 @@ public class RecognizePassportMRZResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("BandBoxes")
-        public java.util.List<Float> bandBoxes;
+        @NameInMap("RecognitionScore")
+        public Float recognitionScore;
 
         public static RecognizePassportMRZResponseBodyDataRegions build(java.util.Map<String, ?> map) throws Exception {
             RecognizePassportMRZResponseBodyDataRegions self = new RecognizePassportMRZResponseBodyDataRegions();
             return TeaModel.build(map, self);
         }
 
-        public RecognizePassportMRZResponseBodyDataRegions setRecognitionScore(Float recognitionScore) {
-            this.recognitionScore = recognitionScore;
+        public RecognizePassportMRZResponseBodyDataRegions setBandBoxes(java.util.List<Float> bandBoxes) {
+            this.bandBoxes = bandBoxes;
             return this;
         }
-        public Float getRecognitionScore() {
-            return this.recognitionScore;
+        public java.util.List<Float> getBandBoxes() {
+            return this.bandBoxes;
+        }
+
+        public RecognizePassportMRZResponseBodyDataRegions setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
         public RecognizePassportMRZResponseBodyDataRegions setDetectionScore(Float detectionScore) {
@@ -76,20 +84,12 @@ public class RecognizePassportMRZResponseBody extends TeaModel {
             return this.name;
         }
 
-        public RecognizePassportMRZResponseBodyDataRegions setContent(String content) {
-            this.content = content;
+        public RecognizePassportMRZResponseBodyDataRegions setRecognitionScore(Float recognitionScore) {
+            this.recognitionScore = recognitionScore;
             return this;
         }
-        public String getContent() {
-            return this.content;
-        }
-
-        public RecognizePassportMRZResponseBodyDataRegions setBandBoxes(java.util.List<Float> bandBoxes) {
-            this.bandBoxes = bandBoxes;
-            return this;
-        }
-        public java.util.List<Float> getBandBoxes() {
-            return this.bandBoxes;
+        public Float getRecognitionScore() {
+            return this.recognitionScore;
         }
 
     }

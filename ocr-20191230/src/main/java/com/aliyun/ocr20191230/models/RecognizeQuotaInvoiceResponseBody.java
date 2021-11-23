@@ -4,24 +4,16 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RecognizeQuotaInvoiceResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public RecognizeQuotaInvoiceResponseBodyData data;
-
     public static RecognizeQuotaInvoiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeQuotaInvoiceResponseBody self = new RecognizeQuotaInvoiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeQuotaInvoiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeQuotaInvoiceResponseBody setData(RecognizeQuotaInvoiceResponseBodyData data) {
@@ -32,49 +24,33 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeQuotaInvoiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeQuotaInvoiceResponseBodyDataContent extends TeaModel {
-        @NameInMap("SumAmount")
-        public String sumAmount;
+        @NameInMap("InvoiceAmount")
+        public String invoiceAmount;
 
         @NameInMap("InvoiceCode")
         public String invoiceCode;
 
+        @NameInMap("InvoiceDetails")
+        public String invoiceDetails;
+
         @NameInMap("InvoiceNo")
         public String invoiceNo;
 
-        @NameInMap("InvoiceAmount")
-        public String invoiceAmount;
-
-        @NameInMap("InvoiceDetails")
-        public String invoiceDetails;
+        @NameInMap("SumAmount")
+        public String sumAmount;
 
         public static RecognizeQuotaInvoiceResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             RecognizeQuotaInvoiceResponseBodyDataContent self = new RecognizeQuotaInvoiceResponseBodyDataContent();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeQuotaInvoiceResponseBodyDataContent setSumAmount(String sumAmount) {
-            this.sumAmount = sumAmount;
-            return this;
-        }
-        public String getSumAmount() {
-            return this.sumAmount;
-        }
-
-        public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceCode(String invoiceCode) {
-            this.invoiceCode = invoiceCode;
-            return this;
-        }
-        public String getInvoiceCode() {
-            return this.invoiceCode;
-        }
-
-        public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceNo(String invoiceNo) {
-            this.invoiceNo = invoiceNo;
-            return this;
-        }
-        public String getInvoiceNo() {
-            return this.invoiceNo;
         }
 
         public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceAmount(String invoiceAmount) {
@@ -85,12 +61,36 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
             return this.invoiceAmount;
         }
 
+        public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceCode(String invoiceCode) {
+            this.invoiceCode = invoiceCode;
+            return this;
+        }
+        public String getInvoiceCode() {
+            return this.invoiceCode;
+        }
+
         public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceDetails(String invoiceDetails) {
             this.invoiceDetails = invoiceDetails;
             return this;
         }
         public String getInvoiceDetails() {
             return this.invoiceDetails;
+        }
+
+        public RecognizeQuotaInvoiceResponseBodyDataContent setInvoiceNo(String invoiceNo) {
+            this.invoiceNo = invoiceNo;
+            return this;
+        }
+        public String getInvoiceNo() {
+            return this.invoiceNo;
+        }
+
+        public RecognizeQuotaInvoiceResponseBodyDataContent setSumAmount(String sumAmount) {
+            this.sumAmount = sumAmount;
+            return this;
+        }
+        public String getSumAmount() {
+            return this.sumAmount;
         }
 
     }
@@ -181,11 +181,14 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
         @NameInMap("Angle")
         public Long angle;
 
+        @NameInMap("Content")
+        public RecognizeQuotaInvoiceResponseBodyDataContent content;
+
         @NameInMap("Height")
         public Long height;
 
-        @NameInMap("Width")
-        public Long width;
+        @NameInMap("KeyValueInfos")
+        public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> keyValueInfos;
 
         @NameInMap("OrgHeight")
         public Long orgHeight;
@@ -193,11 +196,8 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
         @NameInMap("OrgWidth")
         public Long orgWidth;
 
-        @NameInMap("Content")
-        public RecognizeQuotaInvoiceResponseBodyDataContent content;
-
-        @NameInMap("KeyValueInfos")
-        public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> keyValueInfos;
+        @NameInMap("Width")
+        public Long width;
 
         public static RecognizeQuotaInvoiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeQuotaInvoiceResponseBodyData self = new RecognizeQuotaInvoiceResponseBodyData();
@@ -212,6 +212,14 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
             return this.angle;
         }
 
+        public RecognizeQuotaInvoiceResponseBodyData setContent(RecognizeQuotaInvoiceResponseBodyDataContent content) {
+            this.content = content;
+            return this;
+        }
+        public RecognizeQuotaInvoiceResponseBodyDataContent getContent() {
+            return this.content;
+        }
+
         public RecognizeQuotaInvoiceResponseBodyData setHeight(Long height) {
             this.height = height;
             return this;
@@ -220,12 +228,12 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
             return this.height;
         }
 
-        public RecognizeQuotaInvoiceResponseBodyData setWidth(Long width) {
-            this.width = width;
+        public RecognizeQuotaInvoiceResponseBodyData setKeyValueInfos(java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> keyValueInfos) {
+            this.keyValueInfos = keyValueInfos;
             return this;
         }
-        public Long getWidth() {
-            return this.width;
+        public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> getKeyValueInfos() {
+            return this.keyValueInfos;
         }
 
         public RecognizeQuotaInvoiceResponseBodyData setOrgHeight(Long orgHeight) {
@@ -244,20 +252,12 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
             return this.orgWidth;
         }
 
-        public RecognizeQuotaInvoiceResponseBodyData setContent(RecognizeQuotaInvoiceResponseBodyDataContent content) {
-            this.content = content;
+        public RecognizeQuotaInvoiceResponseBodyData setWidth(Long width) {
+            this.width = width;
             return this;
         }
-        public RecognizeQuotaInvoiceResponseBodyDataContent getContent() {
-            return this.content;
-        }
-
-        public RecognizeQuotaInvoiceResponseBodyData setKeyValueInfos(java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> keyValueInfos) {
-            this.keyValueInfos = keyValueInfos;
-            return this;
-        }
-        public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> getKeyValueInfos() {
-            return this.keyValueInfos;
+        public Long getWidth() {
+            return this.width;
         }
 
     }
