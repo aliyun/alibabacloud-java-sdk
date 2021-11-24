@@ -4,33 +4,25 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceIdByIdentityResponseBody extends TeaModel {
+    // 返回的错误码
+    @NameInMap("Code")
+    public Integer code;
+
     // 返回的错误信息
     @NameInMap("Message")
     public String message;
 
-    // 返回的错误码
-    @NameInMap("Code")
-    public Integer code;
+    // 请求ID，用于排查问题，如果没有这个参数，可以在responseHeader里进行排查。
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 返回result
     @NameInMap("Result")
     public GetDeviceIdByIdentityResponseBodyResult result;
 
-    // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
-
     public static GetDeviceIdByIdentityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceIdByIdentityResponseBody self = new GetDeviceIdByIdentityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDeviceIdByIdentityResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetDeviceIdByIdentityResponseBody setCode(Integer code) {
@@ -41,12 +33,12 @@ public class GetDeviceIdByIdentityResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetDeviceIdByIdentityResponseBody setResult(GetDeviceIdByIdentityResponseBodyResult result) {
-        this.result = result;
+    public GetDeviceIdByIdentityResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public GetDeviceIdByIdentityResponseBodyResult getResult() {
-        return this.result;
+    public String getMessage() {
+        return this.message;
     }
 
     public GetDeviceIdByIdentityResponseBody setRequestId(String requestId) {
@@ -57,26 +49,26 @@ public class GetDeviceIdByIdentityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds extends TeaModel {
-        // 组织id，
-        @NameInMap("OrganizationId")
-        public String organizationId;
+    public GetDeviceIdByIdentityResponseBody setResult(GetDeviceIdByIdentityResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public GetDeviceIdByIdentityResponseBodyResult getResult() {
+        return this.result;
+    }
 
+    public static class GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds extends TeaModel {
         // 组织id对应的归一id
         @NameInMap("DeviceUnionId")
         public String deviceUnionId;
 
+        // 组织id
+        @NameInMap("OrganizationId")
+        public String organizationId;
+
         public static GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds self = new GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds();
             return TeaModel.build(map, self);
-        }
-
-        public GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
-            return this;
-        }
-        public String getOrganizationId() {
-            return this.organizationId;
         }
 
         public GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds setDeviceUnionId(String deviceUnionId) {
@@ -85,6 +77,14 @@ public class GetDeviceIdByIdentityResponseBody extends TeaModel {
         }
         public String getDeviceUnionId() {
             return this.deviceUnionId;
+        }
+
+        public GetDeviceIdByIdentityResponseBodyResultDeviceUnionIds setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
     }
