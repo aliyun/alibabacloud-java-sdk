@@ -16,6 +16,10 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
+    // 启用或禁用 RRSA 功能。true: 启用，false: 禁用
+    @NameInMap("enable_rrsa")
+    public Boolean enableRrsa;
+
     // 域名是否重新绑定到Ingress的SLB地址。
     @NameInMap("ingress_domain_rebinding")
     public String ingressDomainRebinding;
@@ -62,6 +66,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
+    }
+
+    public ModifyClusterRequest setEnableRrsa(Boolean enableRrsa) {
+        this.enableRrsa = enableRrsa;
+        return this;
+    }
+    public Boolean getEnableRrsa() {
+        return this.enableRrsa;
     }
 
     public ModifyClusterRequest setIngressDomainRebinding(String ingressDomainRebinding) {
