@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     public static ListAnsServiceClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAnsServiceClustersResponseBody self = new ListAnsServiceClustersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAnsServiceClustersResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListAnsServiceClustersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAnsServiceClustersResponseBody setData(ListAnsServiceClustersResponseBodyData data) {
@@ -56,6 +40,22 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListAnsServiceClustersResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListAnsServiceClustersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListAnsServiceClustersResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -68,23 +68,23 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("DefaultCheckPort")
         public Integer defaultCheckPort;
 
+        @NameInMap("DefaultPort")
+        public Integer defaultPort;
+
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
 
-        @NameInMap("UseIPPort4Check")
-        public Boolean useIPPort4Check;
-
-        @NameInMap("ServiceName")
-        public String serviceName;
+        @NameInMap("Metadata")
+        public java.util.Map<String, ?> metadata;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("DefaultPort")
-        public Integer defaultPort;
+        @NameInMap("ServiceName")
+        public String serviceName;
 
-        @NameInMap("Metadata")
-        public java.util.Map<String, ?> metadata;
+        @NameInMap("UseIPPort4Check")
+        public Boolean useIPPort4Check;
 
         public static ListAnsServiceClustersResponseBodyDataClusters build(java.util.Map<String, ?> map) throws Exception {
             ListAnsServiceClustersResponseBodyDataClusters self = new ListAnsServiceClustersResponseBodyDataClusters();
@@ -99,44 +99,20 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             return this.defaultCheckPort;
         }
 
-        public ListAnsServiceClustersResponseBodyDataClusters setHealthCheckerType(String healthCheckerType) {
-            this.healthCheckerType = healthCheckerType;
-            return this;
-        }
-        public String getHealthCheckerType() {
-            return this.healthCheckerType;
-        }
-
-        public ListAnsServiceClustersResponseBodyDataClusters setUseIPPort4Check(Boolean useIPPort4Check) {
-            this.useIPPort4Check = useIPPort4Check;
-            return this;
-        }
-        public Boolean getUseIPPort4Check() {
-            return this.useIPPort4Check;
-        }
-
-        public ListAnsServiceClustersResponseBodyDataClusters setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public ListAnsServiceClustersResponseBodyDataClusters setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public ListAnsServiceClustersResponseBodyDataClusters setDefaultPort(Integer defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
         public Integer getDefaultPort() {
             return this.defaultPort;
+        }
+
+        public ListAnsServiceClustersResponseBodyDataClusters setHealthCheckerType(String healthCheckerType) {
+            this.healthCheckerType = healthCheckerType;
+            return this;
+        }
+        public String getHealthCheckerType() {
+            return this.healthCheckerType;
         }
 
         public ListAnsServiceClustersResponseBodyDataClusters setMetadata(java.util.Map<String, ?> metadata) {
@@ -147,46 +123,54 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             return this.metadata;
         }
 
+        public ListAnsServiceClustersResponseBodyDataClusters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListAnsServiceClustersResponseBodyDataClusters setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public ListAnsServiceClustersResponseBodyDataClusters setUseIPPort4Check(Boolean useIPPort4Check) {
+            this.useIPPort4Check = useIPPort4Check;
+            return this;
+        }
+        public Boolean getUseIPPort4Check() {
+            return this.useIPPort4Check;
+        }
+
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
-        @NameInMap("ProtectThreshold")
-        public Float protectThreshold;
+        @NameInMap("Clusters")
+        public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
 
         @NameInMap("GroupName")
         public String groupName;
 
-        @NameInMap("Clusters")
-        public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
+        @NameInMap("Metadata")
+        public java.util.Map<String, ?> metadata;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ProtectThreshold")
+        public Float protectThreshold;
+
         @NameInMap("SelectorType")
         public String selectorType;
-
-        @NameInMap("Metadata")
-        public java.util.Map<String, ?> metadata;
 
         public static ListAnsServiceClustersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAnsServiceClustersResponseBodyData self = new ListAnsServiceClustersResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListAnsServiceClustersResponseBodyData setProtectThreshold(Float protectThreshold) {
-            this.protectThreshold = protectThreshold;
-            return this;
-        }
-        public Float getProtectThreshold() {
-            return this.protectThreshold;
-        }
-
-        public ListAnsServiceClustersResponseBodyData setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public ListAnsServiceClustersResponseBodyData setClusters(java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters) {
@@ -197,20 +181,12 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             return this.clusters;
         }
 
-        public ListAnsServiceClustersResponseBodyData setName(String name) {
-            this.name = name;
+        public ListAnsServiceClustersResponseBodyData setGroupName(String groupName) {
+            this.groupName = groupName;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListAnsServiceClustersResponseBodyData setSelectorType(String selectorType) {
-            this.selectorType = selectorType;
-            return this;
-        }
-        public String getSelectorType() {
-            return this.selectorType;
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public ListAnsServiceClustersResponseBodyData setMetadata(java.util.Map<String, ?> metadata) {
@@ -219,6 +195,30 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
+        }
+
+        public ListAnsServiceClustersResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListAnsServiceClustersResponseBodyData setProtectThreshold(Float protectThreshold) {
+            this.protectThreshold = protectThreshold;
+            return this;
+        }
+        public Float getProtectThreshold() {
+            return this.protectThreshold;
+        }
+
+        public ListAnsServiceClustersResponseBodyData setSelectorType(String selectorType) {
+            this.selectorType = selectorType;
+            return this;
+        }
+        public String getSelectorType() {
+            return this.selectorType;
         }
 
     }

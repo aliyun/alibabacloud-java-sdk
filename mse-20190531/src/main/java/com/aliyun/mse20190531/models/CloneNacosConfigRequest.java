@@ -4,24 +4,32 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CloneNacosConfigRequest extends TeaModel {
+    @NameInMap("Ids")
+    public String ids;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OriginNamespaceId")
     public String originNamespaceId;
 
-    @NameInMap("TargetNamespaceId")
-    public String targetNamespaceId;
-
     @NameInMap("Policy")
     public String policy;
 
-    @NameInMap("Ids")
-    public String ids;
+    @NameInMap("TargetNamespaceId")
+    public String targetNamespaceId;
 
     public static CloneNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CloneNacosConfigRequest self = new CloneNacosConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CloneNacosConfigRequest setIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    public String getIds() {
+        return this.ids;
     }
 
     public CloneNacosConfigRequest setInstanceId(String instanceId) {
@@ -40,14 +48,6 @@ public class CloneNacosConfigRequest extends TeaModel {
         return this.originNamespaceId;
     }
 
-    public CloneNacosConfigRequest setTargetNamespaceId(String targetNamespaceId) {
-        this.targetNamespaceId = targetNamespaceId;
-        return this;
-    }
-    public String getTargetNamespaceId() {
-        return this.targetNamespaceId;
-    }
-
     public CloneNacosConfigRequest setPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -56,12 +56,12 @@ public class CloneNacosConfigRequest extends TeaModel {
         return this.policy;
     }
 
-    public CloneNacosConfigRequest setIds(String ids) {
-        this.ids = ids;
+    public CloneNacosConfigRequest setTargetNamespaceId(String targetNamespaceId) {
+        this.targetNamespaceId = targetNamespaceId;
         return this;
     }
-    public String getIds() {
-        return this.ids;
+    public String getTargetNamespaceId() {
+        return this.targetNamespaceId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteClusterResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,15 +16,20 @@ public class DeleteClusterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static DeleteClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterResponseBody self = new DeleteClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteClusterResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteClusterResponseBody setHttpCode(String httpCode) {
@@ -46,14 +54,6 @@ public class DeleteClusterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteClusterResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public DeleteClusterResponseBody setSuccess(Boolean success) {

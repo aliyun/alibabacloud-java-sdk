@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteEngineNamespaceResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,15 +16,20 @@ public class DeleteEngineNamespaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static DeleteEngineNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteEngineNamespaceResponseBody self = new DeleteEngineNamespaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEngineNamespaceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteEngineNamespaceResponseBody setHttpCode(String httpCode) {
@@ -46,14 +54,6 @@ public class DeleteEngineNamespaceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteEngineNamespaceResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public DeleteEngineNamespaceResponseBody setSuccess(Boolean success) {

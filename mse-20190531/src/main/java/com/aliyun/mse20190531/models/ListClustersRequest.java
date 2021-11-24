@@ -4,8 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("ClusterAliasName")
+    public String clusterAliasName;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,23 +13,23 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ClusterAliasName")
-    public String clusterAliasName;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     public static ListClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClustersRequest self = new ListClustersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListClustersRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
+    public ListClustersRequest setClusterAliasName(String clusterAliasName) {
+        this.clusterAliasName = clusterAliasName;
         return this;
     }
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getClusterAliasName() {
+        return this.clusterAliasName;
     }
 
     public ListClustersRequest setPageNum(Integer pageNum) {
@@ -48,20 +48,20 @@ public class ListClustersRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListClustersRequest setClusterAliasName(String clusterAliasName) {
-        this.clusterAliasName = clusterAliasName;
-        return this;
-    }
-    public String getClusterAliasName() {
-        return this.clusterAliasName;
-    }
-
     public ListClustersRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListClustersRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

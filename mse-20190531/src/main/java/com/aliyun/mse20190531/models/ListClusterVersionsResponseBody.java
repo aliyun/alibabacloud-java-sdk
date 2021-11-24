@@ -4,8 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterVersionsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<ListClusterVersionsResponseBodyData> data;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,24 +28,41 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("Data")
-    public java.util.List<ListClusterVersionsResponseBodyData> data;
-
     public static ListClusterVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClusterVersionsResponseBody self = new ListClusterVersionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterVersionsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListClusterVersionsResponseBody setData(java.util.List<ListClusterVersionsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListClusterVersionsResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListClusterVersionsResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public ListClusterVersionsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListClusterVersionsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -39,6 +71,14 @@ public class ListClusterVersionsResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ListClusterVersionsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListClusterVersionsResponseBody setRequestId(String requestId) {
@@ -57,59 +97,27 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListClusterVersionsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListClusterVersionsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ListClusterVersionsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListClusterVersionsResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListClusterVersionsResponseBody setData(java.util.List<ListClusterVersionsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListClusterVersionsResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListClusterVersionsResponseBodyData extends TeaModel {
+        @NameInMap("ClusterType")
+        public String clusterType;
+
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ShowName")
         public String showName;
 
-        @NameInMap("ClusterType")
-        public String clusterType;
-
         public static ListClusterVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListClusterVersionsResponseBodyData self = new ListClusterVersionsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListClusterVersionsResponseBodyData setClusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public String getClusterType() {
+            return this.clusterType;
         }
 
         public ListClusterVersionsResponseBodyData setCode(String code) {
@@ -126,14 +134,6 @@ public class ListClusterVersionsResponseBody extends TeaModel {
         }
         public String getShowName() {
             return this.showName;
-        }
-
-        public ListClusterVersionsResponseBodyData setClusterType(String clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-        public String getClusterType() {
-            return this.clusterType;
         }
 
     }

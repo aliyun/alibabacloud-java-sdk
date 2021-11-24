@@ -4,8 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public QueryClusterDiskSpecificationResponseBodyData data;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,24 +28,41 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("Data")
-    public QueryClusterDiskSpecificationResponseBodyData data;
-
     public static QueryClusterDiskSpecificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterDiskSpecificationResponseBody self = new QueryClusterDiskSpecificationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryClusterDiskSpecificationResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public QueryClusterDiskSpecificationResponseBody setData(QueryClusterDiskSpecificationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryClusterDiskSpecificationResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryClusterDiskSpecificationResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public QueryClusterDiskSpecificationResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public QueryClusterDiskSpecificationResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -39,6 +71,14 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public QueryClusterDiskSpecificationResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryClusterDiskSpecificationResponseBody setRequestId(String requestId) {
@@ -57,67 +97,19 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryClusterDiskSpecificationResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public QueryClusterDiskSpecificationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public QueryClusterDiskSpecificationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryClusterDiskSpecificationResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public QueryClusterDiskSpecificationResponseBody setData(QueryClusterDiskSpecificationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryClusterDiskSpecificationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryClusterDiskSpecificationResponseBodyData extends TeaModel {
-        @NameInMap("Step")
-        public Integer step;
-
         @NameInMap("Max")
         public Integer max;
 
         @NameInMap("Min")
         public Integer min;
 
+        @NameInMap("Step")
+        public Integer step;
+
         public static QueryClusterDiskSpecificationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDiskSpecificationResponseBodyData self = new QueryClusterDiskSpecificationResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryClusterDiskSpecificationResponseBodyData setStep(Integer step) {
-            this.step = step;
-            return this;
-        }
-        public Integer getStep() {
-            return this.step;
         }
 
         public QueryClusterDiskSpecificationResponseBodyData setMax(Integer max) {
@@ -134,6 +126,14 @@ public class QueryClusterDiskSpecificationResponseBody extends TeaModel {
         }
         public Integer getMin() {
             return this.min;
+        }
+
+        public QueryClusterDiskSpecificationResponseBodyData setStep(Integer step) {
+            this.step = step;
+            return this;
+        }
+        public Integer getStep() {
+            return this.step;
         }
 
     }

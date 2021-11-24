@@ -4,11 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateAlarmRuleRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Aggregates")
+    public String aggregates;
 
     @NameInMap("AlarmAliasName")
     public String alarmAliasName;
+
+    @NameInMap("AlarmItem")
+    public String alarmItem;
 
     @NameInMap("AlertWay")
     public java.util.Map<String, ?> alertWay;
@@ -16,17 +19,14 @@ public class CreateAlarmRuleRequest extends TeaModel {
     @NameInMap("ContactGroupIds")
     public java.util.Map<String, ?> contactGroupIds;
 
-    @NameInMap("AlarmItem")
-    public String alarmItem;
-
-    @NameInMap("Operator")
-    public String operator;
-
-    @NameInMap("Aggregates")
-    public String aggregates;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("NValue")
     public Integer NValue;
+
+    @NameInMap("Operator")
+    public String operator;
 
     @NameInMap("Value")
     public Float value;
@@ -36,12 +36,12 @@ public class CreateAlarmRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateAlarmRuleRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateAlarmRuleRequest setAggregates(String aggregates) {
+        this.aggregates = aggregates;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getAggregates() {
+        return this.aggregates;
     }
 
     public CreateAlarmRuleRequest setAlarmAliasName(String alarmAliasName) {
@@ -50,6 +50,14 @@ public class CreateAlarmRuleRequest extends TeaModel {
     }
     public String getAlarmAliasName() {
         return this.alarmAliasName;
+    }
+
+    public CreateAlarmRuleRequest setAlarmItem(String alarmItem) {
+        this.alarmItem = alarmItem;
+        return this;
+    }
+    public String getAlarmItem() {
+        return this.alarmItem;
     }
 
     public CreateAlarmRuleRequest setAlertWay(java.util.Map<String, ?> alertWay) {
@@ -68,28 +76,12 @@ public class CreateAlarmRuleRequest extends TeaModel {
         return this.contactGroupIds;
     }
 
-    public CreateAlarmRuleRequest setAlarmItem(String alarmItem) {
-        this.alarmItem = alarmItem;
+    public CreateAlarmRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getAlarmItem() {
-        return this.alarmItem;
-    }
-
-    public CreateAlarmRuleRequest setOperator(String operator) {
-        this.operator = operator;
-        return this;
-    }
-    public String getOperator() {
-        return this.operator;
-    }
-
-    public CreateAlarmRuleRequest setAggregates(String aggregates) {
-        this.aggregates = aggregates;
-        return this;
-    }
-    public String getAggregates() {
-        return this.aggregates;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateAlarmRuleRequest setNValue(Integer NValue) {
@@ -98,6 +90,14 @@ public class CreateAlarmRuleRequest extends TeaModel {
     }
     public Integer getNValue() {
         return this.NValue;
+    }
+
+    public CreateAlarmRuleRequest setOperator(String operator) {
+        this.operator = operator;
+        return this;
+    }
+    public String getOperator() {
+        return this.operator;
     }
 
     public CreateAlarmRuleRequest setValue(Float value) {

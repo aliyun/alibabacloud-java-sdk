@@ -4,14 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateZnodeResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class UpdateZnodeResponseBody extends TeaModel {
     public static UpdateZnodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateZnodeResponseBody self = new UpdateZnodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateZnodeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateZnodeResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class UpdateZnodeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateZnodeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public UpdateZnodeResponseBody setSuccess(Boolean success) {

@@ -4,8 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("AlarmMseType")
+    public String alarmMseType;
+
+    @NameInMap("AlarmName")
+    public String alarmName;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,29 +19,39 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AlarmMseType")
-    public String alarmMseType;
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     @NameInMap("StartTime")
     public Long startTime;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("AlarmName")
-    public String alarmName;
 
     public static ListAlarmHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmHistoriesRequest self = new ListAlarmHistoriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListAlarmHistoriesRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
+    public ListAlarmHistoriesRequest setAlarmMseType(String alarmMseType) {
+        this.alarmMseType = alarmMseType;
         return this;
     }
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getAlarmMseType() {
+        return this.alarmMseType;
+    }
+
+    public ListAlarmHistoriesRequest setAlarmName(String alarmName) {
+        this.alarmName = alarmName;
+        return this;
+    }
+    public String getAlarmName() {
+        return this.alarmName;
+    }
+
+    public ListAlarmHistoriesRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListAlarmHistoriesRequest setPageNum(Integer pageNum) {
@@ -54,12 +70,12 @@ public class ListAlarmHistoriesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAlarmHistoriesRequest setAlarmMseType(String alarmMseType) {
-        this.alarmMseType = alarmMseType;
+    public ListAlarmHistoriesRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
         return this;
     }
-    public String getAlarmMseType() {
-        return this.alarmMseType;
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
     public ListAlarmHistoriesRequest setStartTime(Long startTime) {
@@ -68,22 +84,6 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public ListAlarmHistoriesRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public ListAlarmHistoriesRequest setAlarmName(String alarmName) {
-        this.alarmName = alarmName;
-        return this;
-    }
-    public String getAlarmName() {
-        return this.alarmName;
     }
 
 }

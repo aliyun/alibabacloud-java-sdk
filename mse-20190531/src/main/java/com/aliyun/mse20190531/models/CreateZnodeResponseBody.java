@@ -4,6 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateZnodeResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public CreateZnodeResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,18 +19,28 @@ public class CreateZnodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateZnodeResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static CreateZnodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateZnodeResponseBody self = new CreateZnodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateZnodeResponseBody setData(CreateZnodeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateZnodeResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CreateZnodeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateZnodeResponseBody setHttpCode(String httpCode) {
@@ -51,22 +67,6 @@ public class CreateZnodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateZnodeResponseBody setData(CreateZnodeResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateZnodeResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateZnodeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public CreateZnodeResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -79,14 +79,14 @@ public class CreateZnodeResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("Path")
-        public String path;
-
         @NameInMap("Dir")
         public Boolean dir;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Path")
+        public String path;
 
         public static CreateZnodeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateZnodeResponseBodyData self = new CreateZnodeResponseBodyData();
@@ -99,14 +99,6 @@ public class CreateZnodeResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
-        }
-
-        public CreateZnodeResponseBodyData setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
         }
 
         public CreateZnodeResponseBodyData setDir(Boolean dir) {
@@ -123,6 +115,14 @@ public class CreateZnodeResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateZnodeResponseBodyData setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
     }

@@ -4,69 +4,45 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DataId")
-    public String dataId;
-
-    @NameInMap("Group")
-    public String group;
-
     @NameInMap("AppName")
     public String appName;
-
-    @NameInMap("Tags")
-    public String tags;
-
-    @NameInMap("Desc")
-    public String desc;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Content")
-    public String content;
-
-    @NameInMap("NamespaceId")
-    public String namespaceId;
-
-    @NameInMap("Md5")
-    public String md5;
 
     @NameInMap("BetaIps")
     public String betaIps;
 
+    @NameInMap("Content")
+    public String content;
+
+    @NameInMap("DataId")
+    public String dataId;
+
+    @NameInMap("Desc")
+    public String desc;
+
     @NameInMap("EncryptedDataKey")
     public String encryptedDataKey;
+
+    @NameInMap("Group")
+    public String group;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Md5")
+    public String md5;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
+
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("Type")
+    public String type;
 
     public static UpdateNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNacosConfigRequest self = new UpdateNacosConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateNacosConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public UpdateNacosConfigRequest setDataId(String dataId) {
-        this.dataId = dataId;
-        return this;
-    }
-    public String getDataId() {
-        return this.dataId;
-    }
-
-    public UpdateNacosConfigRequest setGroup(String group) {
-        this.group = group;
-        return this;
-    }
-    public String getGroup() {
-        return this.group;
     }
 
     public UpdateNacosConfigRequest setAppName(String appName) {
@@ -77,28 +53,12 @@ public class UpdateNacosConfigRequest extends TeaModel {
         return this.appName;
     }
 
-    public UpdateNacosConfigRequest setTags(String tags) {
-        this.tags = tags;
+    public UpdateNacosConfigRequest setBetaIps(String betaIps) {
+        this.betaIps = betaIps;
         return this;
     }
-    public String getTags() {
-        return this.tags;
-    }
-
-    public UpdateNacosConfigRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
-    }
-
-    public UpdateNacosConfigRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public String getBetaIps() {
+        return this.betaIps;
     }
 
     public UpdateNacosConfigRequest setContent(String content) {
@@ -109,12 +69,44 @@ public class UpdateNacosConfigRequest extends TeaModel {
         return this.content;
     }
 
-    public UpdateNacosConfigRequest setNamespaceId(String namespaceId) {
-        this.namespaceId = namespaceId;
+    public UpdateNacosConfigRequest setDataId(String dataId) {
+        this.dataId = dataId;
         return this;
     }
-    public String getNamespaceId() {
-        return this.namespaceId;
+    public String getDataId() {
+        return this.dataId;
+    }
+
+    public UpdateNacosConfigRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public UpdateNacosConfigRequest setEncryptedDataKey(String encryptedDataKey) {
+        this.encryptedDataKey = encryptedDataKey;
+        return this;
+    }
+    public String getEncryptedDataKey() {
+        return this.encryptedDataKey;
+    }
+
+    public UpdateNacosConfigRequest setGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    public String getGroup() {
+        return this.group;
+    }
+
+    public UpdateNacosConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public UpdateNacosConfigRequest setMd5(String md5) {
@@ -125,20 +117,28 @@ public class UpdateNacosConfigRequest extends TeaModel {
         return this.md5;
     }
 
-    public UpdateNacosConfigRequest setBetaIps(String betaIps) {
-        this.betaIps = betaIps;
+    public UpdateNacosConfigRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public String getBetaIps() {
-        return this.betaIps;
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
-    public UpdateNacosConfigRequest setEncryptedDataKey(String encryptedDataKey) {
-        this.encryptedDataKey = encryptedDataKey;
+    public UpdateNacosConfigRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public String getEncryptedDataKey() {
-        return this.encryptedDataKey;
+    public String getTags() {
+        return this.tags;
+    }
+
+    public UpdateNacosConfigRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

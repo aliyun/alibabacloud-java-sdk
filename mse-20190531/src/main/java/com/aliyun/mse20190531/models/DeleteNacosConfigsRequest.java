@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Ids")
     public String ids;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("NamespaceId")
     public String namespaceId;
@@ -18,20 +18,20 @@ public class DeleteNacosConfigsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteNacosConfigsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DeleteNacosConfigsRequest setIds(String ids) {
         this.ids = ids;
         return this;
     }
     public String getIds() {
         return this.ids;
+    }
+
+    public DeleteNacosConfigsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DeleteNacosConfigsRequest setNamespaceId(String namespaceId) {

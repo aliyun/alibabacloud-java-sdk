@@ -4,14 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateAlarmRuleResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
     public static CreateAlarmRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAlarmRuleResponseBody self = new CreateAlarmRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAlarmRuleResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public CreateAlarmRuleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CreateAlarmRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateAlarmRuleResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public CreateAlarmRuleResponseBody setSuccess(Boolean success) {

@@ -4,8 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("DataId")
+    public String dataId;
+
+    @NameInMap("Group")
+    public String group;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,64 +22,15 @@ public class ListNacosHistoryConfigsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("DataId")
-    public String dataId;
-
-    @NameInMap("Group")
-    public String group;
-
-    @NameInMap("NamespaceId")
-    public String namespaceId;
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     public static ListNacosHistoryConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNacosHistoryConfigsRequest self = new ListNacosHistoryConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListNacosHistoryConfigsRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
-        return this;
-    }
-    public String getRequestPars() {
-        return this.requestPars;
-    }
-
-    public ListNacosHistoryConfigsRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public ListNacosHistoryConfigsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListNacosHistoryConfigsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListNacosHistoryConfigsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListNacosHistoryConfigsRequest setDataId(String dataId) {
@@ -89,12 +49,52 @@ public class ListNacosHistoryConfigsRequest extends TeaModel {
         return this.group;
     }
 
+    public ListNacosHistoryConfigsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ListNacosHistoryConfigsRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public ListNacosHistoryConfigsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListNacosHistoryConfigsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListNacosHistoryConfigsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListNacosHistoryConfigsRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

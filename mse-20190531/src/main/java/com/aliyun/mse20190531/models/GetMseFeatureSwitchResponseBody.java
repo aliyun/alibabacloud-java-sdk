@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetMseFeatureSwitchResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,15 +16,20 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.Map<String, ?> result;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static GetMseFeatureSwitchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMseFeatureSwitchResponseBody self = new GetMseFeatureSwitchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMseFeatureSwitchResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetMseFeatureSwitchResponseBody setMessage(String message) {
@@ -46,14 +54,6 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getResult() {
         return this.result;
-    }
-
-    public GetMseFeatureSwitchResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetMseFeatureSwitchResponseBody setSuccess(Boolean success) {

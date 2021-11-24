@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateEngineNamespaceResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public UpdateEngineNamespaceResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     public static UpdateEngineNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateEngineNamespaceResponseBody self = new UpdateEngineNamespaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEngineNamespaceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpdateEngineNamespaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateEngineNamespaceResponseBody setData(UpdateEngineNamespaceResponseBodyData data) {
@@ -56,6 +40,22 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public UpdateEngineNamespaceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpdateEngineNamespaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public UpdateEngineNamespaceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,14 +65,8 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
     }
 
     public static class UpdateEngineNamespaceResponseBodyData extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("NamespaceShowName")
-        public String namespaceShowName;
-
-        @NameInMap("Quota")
-        public Integer quota;
+        @NameInMap("ConfigCount")
+        public Integer configCount;
 
         @NameInMap("Namespace")
         public String namespace;
@@ -80,36 +74,26 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
         @NameInMap("NamespaceDesc")
         public String namespaceDesc;
 
-        @NameInMap("ConfigCount")
-        public Integer configCount;
+        @NameInMap("NamespaceShowName")
+        public String namespaceShowName;
+
+        @NameInMap("Quota")
+        public Integer quota;
+
+        @NameInMap("Type")
+        public Integer type;
 
         public static UpdateEngineNamespaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateEngineNamespaceResponseBodyData self = new UpdateEngineNamespaceResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public UpdateEngineNamespaceResponseBodyData setType(Integer type) {
-            this.type = type;
+        public UpdateEngineNamespaceResponseBodyData setConfigCount(Integer configCount) {
+            this.configCount = configCount;
             return this;
         }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public UpdateEngineNamespaceResponseBodyData setNamespaceShowName(String namespaceShowName) {
-            this.namespaceShowName = namespaceShowName;
-            return this;
-        }
-        public String getNamespaceShowName() {
-            return this.namespaceShowName;
-        }
-
-        public UpdateEngineNamespaceResponseBodyData setQuota(Integer quota) {
-            this.quota = quota;
-            return this;
-        }
-        public Integer getQuota() {
-            return this.quota;
+        public Integer getConfigCount() {
+            return this.configCount;
         }
 
         public UpdateEngineNamespaceResponseBodyData setNamespace(String namespace) {
@@ -128,12 +112,28 @@ public class UpdateEngineNamespaceResponseBody extends TeaModel {
             return this.namespaceDesc;
         }
 
-        public UpdateEngineNamespaceResponseBodyData setConfigCount(Integer configCount) {
-            this.configCount = configCount;
+        public UpdateEngineNamespaceResponseBodyData setNamespaceShowName(String namespaceShowName) {
+            this.namespaceShowName = namespaceShowName;
             return this;
         }
-        public Integer getConfigCount() {
-            return this.configCount;
+        public String getNamespaceShowName() {
+            return this.namespaceShowName;
+        }
+
+        public UpdateEngineNamespaceResponseBodyData setQuota(Integer quota) {
+            this.quota = quota;
+            return this;
+        }
+        public Integer getQuota() {
+            return this.quota;
+        }
+
+        public UpdateEngineNamespaceResponseBodyData setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

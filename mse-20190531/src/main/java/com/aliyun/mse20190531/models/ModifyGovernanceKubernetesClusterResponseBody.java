@@ -4,6 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public Boolean data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,18 +19,28 @@ public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public Boolean data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static ModifyGovernanceKubernetesClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyGovernanceKubernetesClusterResponseBody self = new ModifyGovernanceKubernetesClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyGovernanceKubernetesClusterResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ModifyGovernanceKubernetesClusterResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public ModifyGovernanceKubernetesClusterResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -49,22 +65,6 @@ public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModifyGovernanceKubernetesClusterResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public ModifyGovernanceKubernetesClusterResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public ModifyGovernanceKubernetesClusterResponseBody setSuccess(Boolean success) {

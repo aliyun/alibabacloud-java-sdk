@@ -4,8 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaServicesRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,23 +13,23 @@ public class ListEurekaServicesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     public static ListEurekaServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEurekaServicesRequest self = new ListEurekaServicesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListEurekaServicesRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
+    public ListEurekaServicesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public ListEurekaServicesRequest setPageNum(Integer pageNum) {
@@ -48,20 +48,20 @@ public class ListEurekaServicesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListEurekaServicesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
     public ListEurekaServicesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListEurekaServicesRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigsResponseBody extends TeaModel {
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,28 +27,12 @@ public class DeleteNacosConfigsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteNacosConfigsResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
+    public DeleteNacosConfigsResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
-    public DeleteNacosConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DeleteNacosConfigsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteNacosConfigsResponseBody setErrorCode(String errorCode) {
@@ -59,12 +43,28 @@ public class DeleteNacosConfigsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteNacosConfigsResponseBody setCode(Integer code) {
-        this.code = code;
+    public DeleteNacosConfigsResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public DeleteNacosConfigsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteNacosConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteNacosConfigsResponseBody setSuccess(Boolean success) {

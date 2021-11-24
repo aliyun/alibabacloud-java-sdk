@@ -4,48 +4,24 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayShrinkRequest extends TeaModel {
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("OrderItem")
-    public String orderItem;
-
     @NameInMap("DescSort")
     public Boolean descSort;
 
     @NameInMap("FilterParams")
     public String filterParamsShrink;
 
+    @NameInMap("OrderItem")
+    public String orderItem;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static ListGatewayShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayShrinkRequest self = new ListGatewayShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListGatewayShrinkRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListGatewayShrinkRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListGatewayShrinkRequest setOrderItem(String orderItem) {
-        this.orderItem = orderItem;
-        return this;
-    }
-    public String getOrderItem() {
-        return this.orderItem;
     }
 
     public ListGatewayShrinkRequest setDescSort(Boolean descSort) {
@@ -62,6 +38,30 @@ public class ListGatewayShrinkRequest extends TeaModel {
     }
     public String getFilterParamsShrink() {
         return this.filterParamsShrink;
+    }
+
+    public ListGatewayShrinkRequest setOrderItem(String orderItem) {
+        this.orderItem = orderItem;
+        return this;
+    }
+    public String getOrderItem() {
+        return this.orderItem;
+    }
+
+    public ListGatewayShrinkRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListGatewayShrinkRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

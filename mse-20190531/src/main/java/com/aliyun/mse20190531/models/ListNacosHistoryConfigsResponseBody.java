@@ -4,84 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListNacosHistoryConfigsResponseBody extends TeaModel {
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("HistoryItems")
     public java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> historyItems;
 
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListNacosHistoryConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNacosHistoryConfigsResponseBody self = new ListNacosHistoryConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNacosHistoryConfigsResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
-    public ListNacosHistoryConfigsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListNacosHistoryConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListNacosHistoryConfigsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListNacosHistoryConfigsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListNacosHistoryConfigsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListNacosHistoryConfigsResponseBody setErrorCode(String errorCode) {
@@ -92,6 +44,54 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListNacosHistoryConfigsResponseBody setHistoryItems(java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> historyItems) {
+        this.historyItems = historyItems;
+        return this;
+    }
+    public java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> getHistoryItems() {
+        return this.historyItems;
+    }
+
+    public ListNacosHistoryConfigsResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public ListNacosHistoryConfigsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListNacosHistoryConfigsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListNacosHistoryConfigsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListNacosHistoryConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListNacosHistoryConfigsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -100,12 +100,12 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListNacosHistoryConfigsResponseBody setHistoryItems(java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> historyItems) {
-        this.historyItems = historyItems;
+    public ListNacosHistoryConfigsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public java.util.List<ListNacosHistoryConfigsResponseBodyHistoryItems> getHistoryItems() {
-        return this.historyItems;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListNacosHistoryConfigsResponseBodyHistoryItems extends TeaModel {
@@ -118,11 +118,11 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         @NameInMap("Group")
         public String group;
 
-        @NameInMap("LastModifiedTime")
-        public Long lastModifiedTime;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("LastModifiedTime")
+        public Long lastModifiedTime;
 
         @NameInMap("OpType")
         public String opType;
@@ -156,20 +156,20 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             return this.group;
         }
 
-        public ListNacosHistoryConfigsResponseBodyHistoryItems setLastModifiedTime(Long lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
-            return this;
-        }
-        public Long getLastModifiedTime() {
-            return this.lastModifiedTime;
-        }
-
         public ListNacosHistoryConfigsResponseBodyHistoryItems setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListNacosHistoryConfigsResponseBodyHistoryItems setLastModifiedTime(Long lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         public ListNacosHistoryConfigsResponseBodyHistoryItems setOpType(String opType) {

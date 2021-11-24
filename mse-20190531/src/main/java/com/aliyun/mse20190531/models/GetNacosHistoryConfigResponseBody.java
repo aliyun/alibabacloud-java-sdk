@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Configuration")
     public GetNacosHistoryConfigResponseBodyConfiguration configuration;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
     public static GetNacosHistoryConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNacosHistoryConfigResponseBody self = new GetNacosHistoryConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetNacosHistoryConfigResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetNacosHistoryConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetNacosHistoryConfigResponseBody setConfiguration(GetNacosHistoryConfigResponseBodyConfiguration configuration) {
@@ -56,6 +40,22 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public GetNacosHistoryConfigResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetNacosHistoryConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetNacosHistoryConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -68,23 +68,23 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("Md5")
-        public String md5;
+        @NameInMap("Content")
+        public String content;
 
         @NameInMap("DataId")
         public String dataId;
 
-        @NameInMap("Content")
-        public String content;
+        @NameInMap("EncryptedDataKey")
+        public String encryptedDataKey;
 
         @NameInMap("Group")
         public String group;
 
+        @NameInMap("Md5")
+        public String md5;
+
         @NameInMap("OpType")
         public String opType;
-
-        @NameInMap("EncryptedDataKey")
-        public String encryptedDataKey;
 
         public static GetNacosHistoryConfigResponseBodyConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetNacosHistoryConfigResponseBodyConfiguration self = new GetNacosHistoryConfigResponseBodyConfiguration();
@@ -99,12 +99,12 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public GetNacosHistoryConfigResponseBodyConfiguration setMd5(String md5) {
-            this.md5 = md5;
+        public GetNacosHistoryConfigResponseBodyConfiguration setContent(String content) {
+            this.content = content;
             return this;
         }
-        public String getMd5() {
-            return this.md5;
+        public String getContent() {
+            return this.content;
         }
 
         public GetNacosHistoryConfigResponseBodyConfiguration setDataId(String dataId) {
@@ -115,12 +115,12 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             return this.dataId;
         }
 
-        public GetNacosHistoryConfigResponseBodyConfiguration setContent(String content) {
-            this.content = content;
+        public GetNacosHistoryConfigResponseBodyConfiguration setEncryptedDataKey(String encryptedDataKey) {
+            this.encryptedDataKey = encryptedDataKey;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public String getEncryptedDataKey() {
+            return this.encryptedDataKey;
         }
 
         public GetNacosHistoryConfigResponseBodyConfiguration setGroup(String group) {
@@ -131,20 +131,20 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             return this.group;
         }
 
+        public GetNacosHistoryConfigResponseBodyConfiguration setMd5(String md5) {
+            this.md5 = md5;
+            return this;
+        }
+        public String getMd5() {
+            return this.md5;
+        }
+
         public GetNacosHistoryConfigResponseBodyConfiguration setOpType(String opType) {
             this.opType = opType;
             return this;
         }
         public String getOpType() {
             return this.opType;
-        }
-
-        public GetNacosHistoryConfigResponseBodyConfiguration setEncryptedDataKey(String encryptedDataKey) {
-            this.encryptedDataKey = encryptedDataKey;
-            return this;
-        }
-        public String getEncryptedDataKey() {
-            return this.encryptedDataKey;
         }
 
     }

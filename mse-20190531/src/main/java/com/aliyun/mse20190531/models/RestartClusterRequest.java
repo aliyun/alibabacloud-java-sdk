@@ -4,26 +4,26 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class RestartClusterRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     public static RestartClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartClusterRequest self = new RestartClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public RestartClusterRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
+    public RestartClusterRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public RestartClusterRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class RestartClusterRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public RestartClusterRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public RestartClusterRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
         return this;
     }
-    public String getClusterId() {
-        return this.clusterId;
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }
