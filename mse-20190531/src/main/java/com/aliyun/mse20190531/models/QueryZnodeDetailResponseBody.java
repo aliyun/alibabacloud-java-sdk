@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryZnodeDetailResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryZnodeDetailResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -22,22 +22,6 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
     public static QueryZnodeDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryZnodeDetailResponseBody self = new QueryZnodeDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryZnodeDetailResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryZnodeDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryZnodeDetailResponseBody setData(QueryZnodeDetailResponseBodyData data) {
@@ -56,6 +40,22 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public QueryZnodeDetailResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryZnodeDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryZnodeDetailResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -68,14 +68,14 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("Path")
-        public String path;
-
         @NameInMap("Dir")
         public Boolean dir;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Path")
+        public String path;
 
         public static QueryZnodeDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryZnodeDetailResponseBodyData self = new QueryZnodeDetailResponseBodyData();
@@ -88,14 +88,6 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
-        }
-
-        public QueryZnodeDetailResponseBodyData setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
         }
 
         public QueryZnodeDetailResponseBodyData setDir(Boolean dir) {
@@ -112,6 +104,14 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public QueryZnodeDetailResponseBodyData setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
     }

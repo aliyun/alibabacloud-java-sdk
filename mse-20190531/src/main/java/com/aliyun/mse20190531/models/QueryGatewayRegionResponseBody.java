@@ -4,9 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryGatewayRegionResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<String> data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -14,26 +16,32 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public Integer code;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<String> data;
 
     public static QueryGatewayRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryGatewayRegionResponseBody self = new QueryGatewayRegionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryGatewayRegionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryGatewayRegionResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public QueryGatewayRegionResponseBody setData(java.util.List<String> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<String> getData() {
+        return this.data;
     }
 
     public QueryGatewayRegionResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -52,12 +60,12 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryGatewayRegionResponseBody setCode(Integer code) {
-        this.code = code;
+    public QueryGatewayRegionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryGatewayRegionResponseBody setSuccess(Boolean success) {
@@ -66,14 +74,6 @@ public class QueryGatewayRegionResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryGatewayRegionResponseBody setData(java.util.List<String> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<String> getData() {
-        return this.data;
     }
 
 }

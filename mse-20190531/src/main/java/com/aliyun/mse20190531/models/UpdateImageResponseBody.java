@@ -4,15 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,12 +22,12 @@ public class UpdateImageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateImageResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateImageResponseBody setMessage(String message) {
@@ -38,12 +38,12 @@ public class UpdateImageResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateImageResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpdateImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateImageResponseBody setSuccess(Boolean success) {

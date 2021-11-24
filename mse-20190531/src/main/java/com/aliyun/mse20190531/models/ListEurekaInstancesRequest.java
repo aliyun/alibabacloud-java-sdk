@@ -4,8 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListEurekaInstancesRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -13,8 +13,8 @@ public class ListEurekaInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
+    @NameInMap("RequestPars")
+    public String requestPars;
 
     @NameInMap("ServiceName")
     public String serviceName;
@@ -24,12 +24,12 @@ public class ListEurekaInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListEurekaInstancesRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
+    public ListEurekaInstancesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getRequestPars() {
-        return this.requestPars;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public ListEurekaInstancesRequest setPageNum(Integer pageNum) {
@@ -48,12 +48,12 @@ public class ListEurekaInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListEurekaInstancesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public ListEurekaInstancesRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
         return this;
     }
-    public String getClusterId() {
-        return this.clusterId;
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
     public ListEurekaInstancesRequest setServiceName(String serviceName) {

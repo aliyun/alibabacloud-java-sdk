@@ -4,9 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QuerySlbSpecResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<QuerySlbSpecResponseBodyData> data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -14,26 +16,32 @@ public class QuerySlbSpecResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public Integer code;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<QuerySlbSpecResponseBodyData> data;
 
     public static QuerySlbSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySlbSpecResponseBody self = new QuerySlbSpecResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QuerySlbSpecResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QuerySlbSpecResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public QuerySlbSpecResponseBody setData(java.util.List<QuerySlbSpecResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<QuerySlbSpecResponseBodyData> getData() {
+        return this.data;
     }
 
     public QuerySlbSpecResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -52,12 +60,12 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QuerySlbSpecResponseBody setCode(Integer code) {
-        this.code = code;
+    public QuerySlbSpecResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QuerySlbSpecResponseBody setSuccess(Boolean success) {
@@ -68,32 +76,24 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySlbSpecResponseBody setData(java.util.List<QuerySlbSpecResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<QuerySlbSpecResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class QuerySlbSpecResponseBodyData extends TeaModel {
         @NameInMap("Id")
         public Integer id;
 
-        @NameInMap("Spec")
-        public String spec;
+        @NameInMap("MaxConnection")
+        public String maxConnection;
 
         @NameInMap("Name")
         public String name;
-
-        @NameInMap("MaxConnection")
-        public String maxConnection;
 
         @NameInMap("NewConnectionPerSecond")
         public String newConnectionPerSecond;
 
         @NameInMap("Qps")
         public String qps;
+
+        @NameInMap("Spec")
+        public String spec;
 
         public static QuerySlbSpecResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySlbSpecResponseBodyData self = new QuerySlbSpecResponseBodyData();
@@ -108,12 +108,12 @@ public class QuerySlbSpecResponseBody extends TeaModel {
             return this.id;
         }
 
-        public QuerySlbSpecResponseBodyData setSpec(String spec) {
-            this.spec = spec;
+        public QuerySlbSpecResponseBodyData setMaxConnection(String maxConnection) {
+            this.maxConnection = maxConnection;
             return this;
         }
-        public String getSpec() {
-            return this.spec;
+        public String getMaxConnection() {
+            return this.maxConnection;
         }
 
         public QuerySlbSpecResponseBodyData setName(String name) {
@@ -122,14 +122,6 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public QuerySlbSpecResponseBodyData setMaxConnection(String maxConnection) {
-            this.maxConnection = maxConnection;
-            return this;
-        }
-        public String getMaxConnection() {
-            return this.maxConnection;
         }
 
         public QuerySlbSpecResponseBodyData setNewConnectionPerSecond(String newConnectionPerSecond) {
@@ -146,6 +138,14 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         }
         public String getQps() {
             return this.qps;
+        }
+
+        public QuerySlbSpecResponseBodyData setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
         }
 
     }

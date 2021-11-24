@@ -4,8 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Beta")
+    public Boolean beta;
 
     @NameInMap("DataId")
     public String dataId;
@@ -13,23 +13,23 @@ public class GetNacosConfigRequest extends TeaModel {
     @NameInMap("Group")
     public String group;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
-
-    @NameInMap("Beta")
-    public Boolean beta;
 
     public static GetNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNacosConfigRequest self = new GetNacosConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetNacosConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public GetNacosConfigRequest setBeta(Boolean beta) {
+        this.beta = beta;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getBeta() {
+        return this.beta;
     }
 
     public GetNacosConfigRequest setDataId(String dataId) {
@@ -48,20 +48,20 @@ public class GetNacosConfigRequest extends TeaModel {
         return this.group;
     }
 
+    public GetNacosConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public GetNacosConfigRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
     public String getNamespaceId() {
         return this.namespaceId;
-    }
-
-    public GetNacosConfigRequest setBeta(Boolean beta) {
-        this.beta = beta;
-        return this;
-    }
-    public Boolean getBeta() {
-        return this.beta;
     }
 
 }

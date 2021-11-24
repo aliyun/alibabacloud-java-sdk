@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ImportNacosConfigRequest extends TeaModel {
+    @NameInMap("FileUrl")
+    public String fileUrl;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class ImportNacosConfigRequest extends TeaModel {
     @NameInMap("Policy")
     public String policy;
 
-    @NameInMap("FileUrl")
-    public String fileUrl;
-
     public static ImportNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportNacosConfigRequest self = new ImportNacosConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportNacosConfigRequest setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+        return this;
+    }
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
     public ImportNacosConfigRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class ImportNacosConfigRequest extends TeaModel {
     }
     public String getPolicy() {
         return this.policy;
-    }
-
-    public ImportNacosConfigRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-        return this;
-    }
-    public String getFileUrl() {
-        return this.fileUrl;
     }
 
 }

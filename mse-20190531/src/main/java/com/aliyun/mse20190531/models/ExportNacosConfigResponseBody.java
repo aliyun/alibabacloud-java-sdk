@@ -4,8 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ExportNacosConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public ExportNacosConfigResponseBodyData data;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,24 +28,41 @@ public class ExportNacosConfigResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("Data")
-    public ExportNacosConfigResponseBodyData data;
-
     public static ExportNacosConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportNacosConfigResponseBody self = new ExportNacosConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExportNacosConfigResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ExportNacosConfigResponseBody setData(ExportNacosConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ExportNacosConfigResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ExportNacosConfigResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public ExportNacosConfigResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ExportNacosConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -39,6 +71,14 @@ public class ExportNacosConfigResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ExportNacosConfigResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ExportNacosConfigResponseBody setRequestId(String requestId) {
@@ -55,46 +95,6 @@ public class ExportNacosConfigResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ExportNacosConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ExportNacosConfigResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ExportNacosConfigResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ExportNacosConfigResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ExportNacosConfigResponseBody setData(ExportNacosConfigResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ExportNacosConfigResponseBodyData getData() {
-        return this.data;
     }
 
     public static class ExportNacosConfigResponseBodyData extends TeaModel {

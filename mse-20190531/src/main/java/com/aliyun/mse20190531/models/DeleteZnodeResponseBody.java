@@ -4,6 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteZnodeResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DeleteZnodeResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,18 +19,28 @@ public class DeleteZnodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DeleteZnodeResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static DeleteZnodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteZnodeResponseBody self = new DeleteZnodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteZnodeResponseBody setData(DeleteZnodeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteZnodeResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DeleteZnodeResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteZnodeResponseBody setHttpCode(String httpCode) {
@@ -51,22 +67,6 @@ public class DeleteZnodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteZnodeResponseBody setData(DeleteZnodeResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteZnodeResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteZnodeResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public DeleteZnodeResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -79,14 +79,14 @@ public class DeleteZnodeResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("Path")
-        public String path;
-
         @NameInMap("Dir")
         public Boolean dir;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Path")
+        public String path;
 
         public static DeleteZnodeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteZnodeResponseBodyData self = new DeleteZnodeResponseBodyData();
@@ -99,14 +99,6 @@ public class DeleteZnodeResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
-        }
-
-        public DeleteZnodeResponseBodyData setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
         }
 
         public DeleteZnodeResponseBodyData setDir(Boolean dir) {
@@ -123,6 +115,14 @@ public class DeleteZnodeResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DeleteZnodeResponseBodyData setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
     }

@@ -4,8 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTypesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<ListClusterTypesResponseBodyData> data;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,24 +28,41 @@ public class ListClusterTypesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("Data")
-    public java.util.List<ListClusterTypesResponseBodyData> data;
-
     public static ListClusterTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClusterTypesResponseBody self = new ListClusterTypesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterTypesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListClusterTypesResponseBody setData(java.util.List<ListClusterTypesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListClusterTypesResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListClusterTypesResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public ListClusterTypesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListClusterTypesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -39,6 +71,14 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ListClusterTypesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListClusterTypesResponseBody setRequestId(String requestId) {
@@ -55,46 +95,6 @@ public class ListClusterTypesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ListClusterTypesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListClusterTypesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ListClusterTypesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListClusterTypesResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListClusterTypesResponseBody setData(java.util.List<ListClusterTypesResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListClusterTypesResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class ListClusterTypesResponseBodyData extends TeaModel {

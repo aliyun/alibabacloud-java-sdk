@@ -4,20 +4,20 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,30 +25,6 @@ public class CreateClusterResponseBody extends TeaModel {
     public static CreateClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterResponseBody self = new CreateClusterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateClusterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateClusterResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateClusterResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public CreateClusterResponseBody setErrorCode(String errorCode) {
@@ -59,12 +35,36 @@ public class CreateClusterResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public CreateClusterResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateClusterResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public CreateClusterResponseBody setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateClusterResponseBody setSuccess(Boolean success) {

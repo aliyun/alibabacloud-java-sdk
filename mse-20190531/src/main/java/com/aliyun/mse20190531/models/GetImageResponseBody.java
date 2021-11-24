@@ -4,68 +4,28 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Data")
+    public GetImageResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("HttpCode")
     public String httpCode;
 
-    @NameInMap("Data")
-    public GetImageResponseBodyData data;
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageResponseBody self = new GetImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetImageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetImageResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetImageResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetImageResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
     }
 
     public GetImageResponseBody setData(GetImageResponseBodyData data) {
@@ -76,10 +36,54 @@ public class GetImageResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetImageResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetImageResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public GetImageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetImageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetImageResponseBodyData extends TeaModel {
         // 当前集群镜像版本的4位全名
         @NameInMap("CurrentVersionFullShowName")
         public String currentVersionFullShowName;
+
+        // 可升级的最大版本变更日志url
+        @NameInMap("MaxVersionChangelogUrl")
+        public String maxVersionChangelogUrl;
 
         // 可升级的增量版本Code
         @NameInMap("MaxVersionCode")
@@ -88,10 +92,6 @@ public class GetImageResponseBody extends TeaModel {
         // 可升级的增量版本全名
         @NameInMap("MaxVersionFullShowName")
         public String maxVersionFullShowName;
-
-        // 可升级的最大版本变更日志url
-        @NameInMap("MaxVersionChangelogUrl")
-        public String maxVersionChangelogUrl;
 
         public static GetImageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetImageResponseBodyData self = new GetImageResponseBodyData();
@@ -104,6 +104,14 @@ public class GetImageResponseBody extends TeaModel {
         }
         public String getCurrentVersionFullShowName() {
             return this.currentVersionFullShowName;
+        }
+
+        public GetImageResponseBodyData setMaxVersionChangelogUrl(String maxVersionChangelogUrl) {
+            this.maxVersionChangelogUrl = maxVersionChangelogUrl;
+            return this;
+        }
+        public String getMaxVersionChangelogUrl() {
+            return this.maxVersionChangelogUrl;
         }
 
         public GetImageResponseBodyData setMaxVersionCode(String maxVersionCode) {
@@ -120,14 +128,6 @@ public class GetImageResponseBody extends TeaModel {
         }
         public String getMaxVersionFullShowName() {
             return this.maxVersionFullShowName;
-        }
-
-        public GetImageResponseBodyData setMaxVersionChangelogUrl(String maxVersionChangelogUrl) {
-            this.maxVersionChangelogUrl = maxVersionChangelogUrl;
-            return this;
-        }
-        public String getMaxVersionChangelogUrl() {
-            return this.maxVersionChangelogUrl;
         }
 
     }

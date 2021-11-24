@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("HttpCode")
     public String httpCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,12 +24,12 @@ public class UpgradeClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeClusterResponseBody setMessage(String message) {
-        this.message = message;
+    public UpgradeClusterResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpgradeClusterResponseBody setHttpCode(String httpCode) {
@@ -40,20 +40,20 @@ public class UpgradeClusterResponseBody extends TeaModel {
         return this.httpCode;
     }
 
+    public UpgradeClusterResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public UpgradeClusterResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpgradeClusterResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public UpgradeClusterResponseBody setSuccess(Boolean success) {

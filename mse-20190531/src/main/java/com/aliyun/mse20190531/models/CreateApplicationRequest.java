@@ -7,17 +7,17 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("ExtraInfo")
+    public String extraInfo;
+
+    @NameInMap("Language")
+    public String language;
+
     @NameInMap("Region")
     public String region;
 
     @NameInMap("Source")
     public String source;
-
-    @NameInMap("Language")
-    public String language;
-
-    @NameInMap("ExtraInfo")
-    public String extraInfo;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
@@ -30,6 +30,22 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public CreateApplicationRequest setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public String getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    public CreateApplicationRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public CreateApplicationRequest setRegion(String region) {
@@ -46,22 +62,6 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
-    }
-
-    public CreateApplicationRequest setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-    public String getLanguage() {
-        return this.language;
-    }
-
-    public CreateApplicationRequest setExtraInfo(String extraInfo) {
-        this.extraInfo = extraInfo;
-        return this;
-    }
-    public String getExtraInfo() {
-        return this.extraInfo;
     }
 
 }

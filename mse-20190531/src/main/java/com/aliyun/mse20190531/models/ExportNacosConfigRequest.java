@@ -4,14 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ExportNacosConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("NamespaceId")
-    public String namespaceId;
-
-    @NameInMap("Ids")
-    public String ids;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DataId")
     public String dataId;
@@ -19,36 +13,26 @@ public class ExportNacosConfigRequest extends TeaModel {
     @NameInMap("Group")
     public String group;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("Ids")
+    public String ids;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static ExportNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportNacosConfigRequest self = new ExportNacosConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExportNacosConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ExportNacosConfigRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ExportNacosConfigRequest setNamespaceId(String namespaceId) {
-        this.namespaceId = namespaceId;
-        return this;
-    }
-    public String getNamespaceId() {
-        return this.namespaceId;
-    }
-
-    public ExportNacosConfigRequest setIds(String ids) {
-        this.ids = ids;
-        return this;
-    }
-    public String getIds() {
-        return this.ids;
+    public String getAppName() {
+        return this.appName;
     }
 
     public ExportNacosConfigRequest setDataId(String dataId) {
@@ -67,12 +51,28 @@ public class ExportNacosConfigRequest extends TeaModel {
         return this.group;
     }
 
-    public ExportNacosConfigRequest setAppName(String appName) {
-        this.appName = appName;
+    public ExportNacosConfigRequest setIds(String ids) {
+        this.ids = ids;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getIds() {
+        return this.ids;
+    }
+
+    public ExportNacosConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ExportNacosConfigRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

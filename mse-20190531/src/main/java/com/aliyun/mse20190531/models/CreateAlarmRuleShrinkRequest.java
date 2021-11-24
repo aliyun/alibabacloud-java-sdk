@@ -4,11 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateAlarmRuleShrinkRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Aggregates")
+    public String aggregates;
 
     @NameInMap("AlarmAliasName")
     public String alarmAliasName;
+
+    @NameInMap("AlarmItem")
+    public String alarmItem;
 
     @NameInMap("AlertWay")
     public String alertWayShrink;
@@ -16,17 +19,14 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
     @NameInMap("ContactGroupIds")
     public String contactGroupIdsShrink;
 
-    @NameInMap("AlarmItem")
-    public String alarmItem;
-
-    @NameInMap("Operator")
-    public String operator;
-
-    @NameInMap("Aggregates")
-    public String aggregates;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("NValue")
     public Integer NValue;
+
+    @NameInMap("Operator")
+    public String operator;
 
     @NameInMap("Value")
     public Float value;
@@ -36,12 +36,12 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateAlarmRuleShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateAlarmRuleShrinkRequest setAggregates(String aggregates) {
+        this.aggregates = aggregates;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getAggregates() {
+        return this.aggregates;
     }
 
     public CreateAlarmRuleShrinkRequest setAlarmAliasName(String alarmAliasName) {
@@ -50,6 +50,14 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
     }
     public String getAlarmAliasName() {
         return this.alarmAliasName;
+    }
+
+    public CreateAlarmRuleShrinkRequest setAlarmItem(String alarmItem) {
+        this.alarmItem = alarmItem;
+        return this;
+    }
+    public String getAlarmItem() {
+        return this.alarmItem;
     }
 
     public CreateAlarmRuleShrinkRequest setAlertWayShrink(String alertWayShrink) {
@@ -68,28 +76,12 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
         return this.contactGroupIdsShrink;
     }
 
-    public CreateAlarmRuleShrinkRequest setAlarmItem(String alarmItem) {
-        this.alarmItem = alarmItem;
+    public CreateAlarmRuleShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getAlarmItem() {
-        return this.alarmItem;
-    }
-
-    public CreateAlarmRuleShrinkRequest setOperator(String operator) {
-        this.operator = operator;
-        return this;
-    }
-    public String getOperator() {
-        return this.operator;
-    }
-
-    public CreateAlarmRuleShrinkRequest setAggregates(String aggregates) {
-        this.aggregates = aggregates;
-        return this;
-    }
-    public String getAggregates() {
-        return this.aggregates;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateAlarmRuleShrinkRequest setNValue(Integer NValue) {
@@ -98,6 +90,14 @@ public class CreateAlarmRuleShrinkRequest extends TeaModel {
     }
     public Integer getNValue() {
         return this.NValue;
+    }
+
+    public CreateAlarmRuleShrinkRequest setOperator(String operator) {
+        this.operator = operator;
+        return this;
+    }
+    public String getOperator() {
+        return this.operator;
     }
 
     public CreateAlarmRuleShrinkRequest setValue(Float value) {

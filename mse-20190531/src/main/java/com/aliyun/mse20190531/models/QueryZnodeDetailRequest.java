@@ -4,26 +4,18 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryZnodeDetailRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("Path")
     public String path;
 
+    @NameInMap("RequestPars")
+    public String requestPars;
+
     public static QueryZnodeDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryZnodeDetailRequest self = new QueryZnodeDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryZnodeDetailRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
-        return this;
-    }
-    public String getRequestPars() {
-        return this.requestPars;
     }
 
     public QueryZnodeDetailRequest setClusterId(String clusterId) {
@@ -40,6 +32,14 @@ public class QueryZnodeDetailRequest extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public QueryZnodeDetailRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

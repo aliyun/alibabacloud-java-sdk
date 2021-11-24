@@ -4,8 +4,23 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListClusterConnectionTypesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<ListClusterConnectionTypesResponseBodyData> data;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,24 +28,41 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("Data")
-    public java.util.List<ListClusterConnectionTypesResponseBodyData> data;
-
     public static ListClusterConnectionTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClusterConnectionTypesResponseBody self = new ListClusterConnectionTypesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterConnectionTypesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListClusterConnectionTypesResponseBody setData(java.util.List<ListClusterConnectionTypesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListClusterConnectionTypesResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListClusterConnectionTypesResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public ListClusterConnectionTypesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListClusterConnectionTypesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -39,6 +71,14 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public ListClusterConnectionTypesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListClusterConnectionTypesResponseBody setRequestId(String requestId) {
@@ -55,46 +95,6 @@ public class ListClusterConnectionTypesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ListClusterConnectionTypesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListClusterConnectionTypesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ListClusterConnectionTypesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListClusterConnectionTypesResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public ListClusterConnectionTypesResponseBody setData(java.util.List<ListClusterConnectionTypesResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListClusterConnectionTypesResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class ListClusterConnectionTypesResponseBodyData extends TeaModel {

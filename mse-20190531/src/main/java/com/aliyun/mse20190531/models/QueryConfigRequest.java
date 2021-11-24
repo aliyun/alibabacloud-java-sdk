@@ -4,9 +4,6 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryConfigRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,17 +13,12 @@ public class QueryConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RequestPars")
+    public String requestPars;
+
     public static QueryConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConfigRequest self = new QueryConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryConfigRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
-        return this;
-    }
-    public String getRequestPars() {
-        return this.requestPars;
     }
 
     public QueryConfigRequest setClusterId(String clusterId) {
@@ -51,6 +43,14 @@ public class QueryConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryConfigRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
+        return this;
+    }
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

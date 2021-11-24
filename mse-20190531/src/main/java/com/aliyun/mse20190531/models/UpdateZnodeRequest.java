@@ -4,29 +4,21 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateZnodeRequest extends TeaModel {
-    @NameInMap("RequestPars")
-    public String requestPars;
-
     @NameInMap("ClusterId")
     public String clusterId;
-
-    @NameInMap("Path")
-    public String path;
 
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Path")
+    public String path;
+
+    @NameInMap("RequestPars")
+    public String requestPars;
+
     public static UpdateZnodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateZnodeRequest self = new UpdateZnodeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateZnodeRequest setRequestPars(String requestPars) {
-        this.requestPars = requestPars;
-        return this;
-    }
-    public String getRequestPars() {
-        return this.requestPars;
     }
 
     public UpdateZnodeRequest setClusterId(String clusterId) {
@@ -37,6 +29,14 @@ public class UpdateZnodeRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public UpdateZnodeRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
     public UpdateZnodeRequest setPath(String path) {
         this.path = path;
         return this;
@@ -45,12 +45,12 @@ public class UpdateZnodeRequest extends TeaModel {
         return this.path;
     }
 
-    public UpdateZnodeRequest setData(String data) {
-        this.data = data;
+    public UpdateZnodeRequest setRequestPars(String requestPars) {
+        this.requestPars = requestPars;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestPars() {
+        return this.requestPars;
     }
 
 }

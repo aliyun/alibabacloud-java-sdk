@@ -4,6 +4,12 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public GetGovernanceKubernetesClusterListResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,18 +19,28 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetGovernanceKubernetesClusterListResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static GetGovernanceKubernetesClusterListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGovernanceKubernetesClusterListResponseBody self = new GetGovernanceKubernetesClusterListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetGovernanceKubernetesClusterListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public GetGovernanceKubernetesClusterListResponseBody setData(GetGovernanceKubernetesClusterListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetGovernanceKubernetesClusterListResponseBodyData getData() {
+        return this.data;
     }
 
     public GetGovernanceKubernetesClusterListResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,22 +67,6 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetGovernanceKubernetesClusterListResponseBody setData(GetGovernanceKubernetesClusterListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetGovernanceKubernetesClusterListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetGovernanceKubernetesClusterListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetGovernanceKubernetesClusterListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -76,14 +76,11 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterListResponseBodyDataResult extends TeaModel {
-        @NameInMap("ClusterName")
-        public String clusterName;
-
         @NameInMap("ClusterId")
         public String clusterId;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("ClusterName")
+        public String clusterName;
 
         @NameInMap("K8sVersion")
         public String k8sVersion;
@@ -94,17 +91,12 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        @NameInMap("Region")
+        public String region;
+
         public static GetGovernanceKubernetesClusterListResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GetGovernanceKubernetesClusterListResponseBodyDataResult self = new GetGovernanceKubernetesClusterListResponseBodyDataResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetGovernanceKubernetesClusterListResponseBodyDataResult setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
         }
 
         public GetGovernanceKubernetesClusterListResponseBodyDataResult setClusterId(String clusterId) {
@@ -115,12 +107,12 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
             return this.clusterId;
         }
 
-        public GetGovernanceKubernetesClusterListResponseBodyDataResult setRegion(String region) {
-            this.region = region;
+        public GetGovernanceKubernetesClusterListResponseBodyDataResult setClusterName(String clusterName) {
+            this.clusterName = clusterName;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getClusterName() {
+            return this.clusterName;
         }
 
         public GetGovernanceKubernetesClusterListResponseBodyDataResult setK8sVersion(String k8sVersion) {
@@ -147,40 +139,32 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
             return this.pilotStartTime;
         }
 
+        public GetGovernanceKubernetesClusterListResponseBodyDataResult setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
     }
 
     public static class GetGovernanceKubernetesClusterListResponseBodyData extends TeaModel {
-        @NameInMap("Result")
-        public java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> result;
-
-        @NameInMap("TotalSize")
-        public Integer totalSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("Result")
+        public java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> result;
+
+        @NameInMap("TotalSize")
+        public Integer totalSize;
+
         public static GetGovernanceKubernetesClusterListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGovernanceKubernetesClusterListResponseBodyData self = new GetGovernanceKubernetesClusterListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetGovernanceKubernetesClusterListResponseBodyData setResult(java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> result) {
-            this.result = result;
-            return this;
-        }
-        public java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> getResult() {
-            return this.result;
-        }
-
-        public GetGovernanceKubernetesClusterListResponseBodyData setTotalSize(Integer totalSize) {
-            this.totalSize = totalSize;
-            return this;
-        }
-        public Integer getTotalSize() {
-            return this.totalSize;
         }
 
         public GetGovernanceKubernetesClusterListResponseBodyData setPageNumber(Integer pageNumber) {
@@ -197,6 +181,22 @@ public class GetGovernanceKubernetesClusterListResponseBody extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public GetGovernanceKubernetesClusterListResponseBodyData setResult(java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<GetGovernanceKubernetesClusterListResponseBodyDataResult> getResult() {
+            return this.result;
+        }
+
+        public GetGovernanceKubernetesClusterListResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
         }
 
     }

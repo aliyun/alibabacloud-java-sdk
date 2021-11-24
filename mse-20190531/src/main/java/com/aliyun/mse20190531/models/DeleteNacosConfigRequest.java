@@ -4,8 +4,8 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Beta")
+    public Boolean beta;
 
     @NameInMap("DataId")
     public String dataId;
@@ -13,23 +13,23 @@ public class DeleteNacosConfigRequest extends TeaModel {
     @NameInMap("Group")
     public String group;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("NamespaceId")
     public String namespaceId;
-
-    @NameInMap("Beta")
-    public Boolean beta;
 
     public static DeleteNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNacosConfigRequest self = new DeleteNacosConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteNacosConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DeleteNacosConfigRequest setBeta(Boolean beta) {
+        this.beta = beta;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getBeta() {
+        return this.beta;
     }
 
     public DeleteNacosConfigRequest setDataId(String dataId) {
@@ -48,20 +48,20 @@ public class DeleteNacosConfigRequest extends TeaModel {
         return this.group;
     }
 
+    public DeleteNacosConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DeleteNacosConfigRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
     public String getNamespaceId() {
         return this.namespaceId;
-    }
-
-    public DeleteNacosConfigRequest setBeta(Boolean beta) {
-        this.beta = beta;
-        return this;
-    }
-    public Boolean getBeta() {
-        return this.beta;
     }
 
 }

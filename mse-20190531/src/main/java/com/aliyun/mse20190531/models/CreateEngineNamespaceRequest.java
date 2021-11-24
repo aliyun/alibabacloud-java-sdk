@@ -7,14 +7,14 @@ public class CreateEngineNamespaceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Desc")
     public String desc;
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("ServiceCount")
     public Integer serviceCount;
@@ -32,14 +32,6 @@ public class CreateEngineNamespaceRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public CreateEngineNamespaceRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public CreateEngineNamespaceRequest setDesc(String desc) {
         this.desc = desc;
         return this;
@@ -54,6 +46,14 @@ public class CreateEngineNamespaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateEngineNamespaceRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public CreateEngineNamespaceRequest setServiceCount(Integer serviceCount) {

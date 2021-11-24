@@ -4,9 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public ListGatewayResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -14,26 +16,32 @@ public class ListGatewayResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public Integer code;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public ListGatewayResponseBodyData data;
 
     public static ListGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGatewayResponseBody self = new ListGatewayResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListGatewayResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListGatewayResponseBody setData(ListGatewayResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListGatewayResponseBodyData getData() {
+        return this.data;
     }
 
     public ListGatewayResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -52,12 +60,12 @@ public class ListGatewayResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListGatewayResponseBody setCode(Integer code) {
-        this.code = code;
+    public ListGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListGatewayResponseBody setSuccess(Boolean success) {
@@ -68,15 +76,19 @@ public class ListGatewayResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListGatewayResponseBody setData(ListGatewayResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListGatewayResponseBodyData getData() {
-        return this.data;
-    }
+    public static class ListGatewayResponseBodyDataResultInternetSlb extends TeaModel {
+        @NameInMap("GatewaySlbMode")
+        public String gatewaySlbMode;
 
-    public static class ListGatewayResponseBodyDataResultSlb extends TeaModel {
+        @NameInMap("GatewaySlbStatus")
+        public String gatewaySlbStatus;
+
+        @NameInMap("InternetNetworkFlow")
+        public String internetNetworkFlow;
+
+        @NameInMap("SlbId")
+        public String slbId;
+
         @NameInMap("SlbIp")
         public String slbIp;
 
@@ -86,75 +98,18 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("SlbSpec")
         public String slbSpec;
 
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("GatewaySlbStatus")
-        public String gatewaySlbStatus;
-
         @NameInMap("StatusDesc")
         public String statusDesc;
 
-        @NameInMap("GatewaySlbMode")
-        public String gatewaySlbMode;
+        @NameInMap("Type")
+        public String type;
 
-        @NameInMap("SlbId")
-        public String slbId;
-
-        public static ListGatewayResponseBodyDataResultSlb build(java.util.Map<String, ?> map) throws Exception {
-            ListGatewayResponseBodyDataResultSlb self = new ListGatewayResponseBodyDataResultSlb();
+        public static ListGatewayResponseBodyDataResultInternetSlb build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultInternetSlb self = new ListGatewayResponseBodyDataResultInternetSlb();
             return TeaModel.build(map, self);
         }
 
-        public ListGatewayResponseBodyDataResultSlb setSlbIp(String slbIp) {
-            this.slbIp = slbIp;
-            return this;
-        }
-        public String getSlbIp() {
-            return this.slbIp;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setSlbPort(String slbPort) {
-            this.slbPort = slbPort;
-            return this;
-        }
-        public String getSlbPort() {
-            return this.slbPort;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setSlbSpec(String slbSpec) {
-            this.slbSpec = slbSpec;
-            return this;
-        }
-        public String getSlbSpec() {
-            return this.slbSpec;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setGatewaySlbStatus(String gatewaySlbStatus) {
-            this.gatewaySlbStatus = gatewaySlbStatus;
-            return this;
-        }
-        public String getGatewaySlbStatus() {
-            return this.gatewaySlbStatus;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setStatusDesc(String statusDesc) {
-            this.statusDesc = statusDesc;
-            return this;
-        }
-        public String getStatusDesc() {
-            return this.statusDesc;
-        }
-
-        public ListGatewayResponseBodyDataResultSlb setGatewaySlbMode(String gatewaySlbMode) {
+        public ListGatewayResponseBodyDataResultInternetSlb setGatewaySlbMode(String gatewaySlbMode) {
             this.gatewaySlbMode = gatewaySlbMode;
             return this;
         }
@@ -162,47 +117,28 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.gatewaySlbMode;
         }
 
-        public ListGatewayResponseBodyDataResultSlb setSlbId(String slbId) {
+        public ListGatewayResponseBodyDataResultInternetSlb setGatewaySlbStatus(String gatewaySlbStatus) {
+            this.gatewaySlbStatus = gatewaySlbStatus;
+            return this;
+        }
+        public String getGatewaySlbStatus() {
+            return this.gatewaySlbStatus;
+        }
+
+        public ListGatewayResponseBodyDataResultInternetSlb setInternetNetworkFlow(String internetNetworkFlow) {
+            this.internetNetworkFlow = internetNetworkFlow;
+            return this;
+        }
+        public String getInternetNetworkFlow() {
+            return this.internetNetworkFlow;
+        }
+
+        public ListGatewayResponseBodyDataResultInternetSlb setSlbId(String slbId) {
             this.slbId = slbId;
             return this;
         }
         public String getSlbId() {
             return this.slbId;
-        }
-
-    }
-
-    public static class ListGatewayResponseBodyDataResultInternetSlb extends TeaModel {
-        @NameInMap("SlbIp")
-        public String slbIp;
-
-        @NameInMap("SlbPort")
-        public String slbPort;
-
-        @NameInMap("SlbSpec")
-        public String slbSpec;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("InternetNetworkFlow")
-        public String internetNetworkFlow;
-
-        @NameInMap("GatewaySlbStatus")
-        public String gatewaySlbStatus;
-
-        @NameInMap("StatusDesc")
-        public String statusDesc;
-
-        @NameInMap("GatewaySlbMode")
-        public String gatewaySlbMode;
-
-        @NameInMap("SlbId")
-        public String slbId;
-
-        public static ListGatewayResponseBodyDataResultInternetSlb build(java.util.Map<String, ?> map) throws Exception {
-            ListGatewayResponseBodyDataResultInternetSlb self = new ListGatewayResponseBodyDataResultInternetSlb();
-            return TeaModel.build(map, self);
         }
 
         public ListGatewayResponseBodyDataResultInternetSlb setSlbIp(String slbIp) {
@@ -229,30 +165,6 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.slbSpec;
         }
 
-        public ListGatewayResponseBodyDataResultInternetSlb setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListGatewayResponseBodyDataResultInternetSlb setInternetNetworkFlow(String internetNetworkFlow) {
-            this.internetNetworkFlow = internetNetworkFlow;
-            return this;
-        }
-        public String getInternetNetworkFlow() {
-            return this.internetNetworkFlow;
-        }
-
-        public ListGatewayResponseBodyDataResultInternetSlb setGatewaySlbStatus(String gatewaySlbStatus) {
-            this.gatewaySlbStatus = gatewaySlbStatus;
-            return this;
-        }
-        public String getGatewaySlbStatus() {
-            return this.gatewaySlbStatus;
-        }
-
         public ListGatewayResponseBodyDataResultInternetSlb setStatusDesc(String statusDesc) {
             this.statusDesc = statusDesc;
             return this;
@@ -261,7 +173,47 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.statusDesc;
         }
 
-        public ListGatewayResponseBodyDataResultInternetSlb setGatewaySlbMode(String gatewaySlbMode) {
+        public ListGatewayResponseBodyDataResultInternetSlb setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListGatewayResponseBodyDataResultSlb extends TeaModel {
+        @NameInMap("GatewaySlbMode")
+        public String gatewaySlbMode;
+
+        @NameInMap("GatewaySlbStatus")
+        public String gatewaySlbStatus;
+
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbIp")
+        public String slbIp;
+
+        @NameInMap("SlbPort")
+        public String slbPort;
+
+        @NameInMap("SlbSpec")
+        public String slbSpec;
+
+        @NameInMap("StatusDesc")
+        public String statusDesc;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListGatewayResponseBodyDataResultSlb build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultSlb self = new ListGatewayResponseBodyDataResultSlb();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setGatewaySlbMode(String gatewaySlbMode) {
             this.gatewaySlbMode = gatewaySlbMode;
             return this;
         }
@@ -269,7 +221,15 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.gatewaySlbMode;
         }
 
-        public ListGatewayResponseBodyDataResultInternetSlb setSlbId(String slbId) {
+        public ListGatewayResponseBodyDataResultSlb setGatewaySlbStatus(String gatewaySlbStatus) {
+            this.gatewaySlbStatus = gatewaySlbStatus;
+            return this;
+        }
+        public String getGatewaySlbStatus() {
+            return this.gatewaySlbStatus;
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setSlbId(String slbId) {
             this.slbId = slbId;
             return this;
         }
@@ -277,41 +237,69 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.slbId;
         }
 
+        public ListGatewayResponseBodyDataResultSlb setSlbIp(String slbIp) {
+            this.slbIp = slbIp;
+            return this;
+        }
+        public String getSlbIp() {
+            return this.slbIp;
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setSlbPort(String slbPort) {
+            this.slbPort = slbPort;
+            return this;
+        }
+        public String getSlbPort() {
+            return this.slbPort;
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setSlbSpec(String slbSpec) {
+            this.slbSpec = slbSpec;
+            return this;
+        }
+        public String getSlbSpec() {
+            return this.slbSpec;
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
+        public ListGatewayResponseBodyDataResultSlb setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class ListGatewayResponseBodyDataResult extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("GatewayUniqueId")
-        public String gatewayUniqueId;
-
-        @NameInMap("GatewayType")
-        public String gatewayType;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("PrimaryUser")
-        public String primaryUser;
-
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("AhasOn")
         public Boolean ahasOn;
 
         @NameInMap("ArmsOn")
         public Boolean armsOn;
 
-        @NameInMap("Spec")
-        public String spec;
+        @NameInMap("ChargeType")
+        public String chargeType;
 
-        @NameInMap("Replica")
-        public Integer replica;
+        @NameInMap("CurrentVersion")
+        public String currentVersion;
+
+        @NameInMap("EndDate")
+        public String endDate;
+
+        @NameInMap("GatewayType")
+        public String gatewayType;
+
+        @NameInMap("GatewayUniqueId")
+        public String gatewayUniqueId;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -319,101 +307,57 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("StatusDesc")
-        public String statusDesc;
-
-        @NameInMap("Slb")
-        public java.util.List<ListGatewayResponseBodyDataResultSlb> slb;
-
-        @NameInMap("InternetSlb")
-        public java.util.List<ListGatewayResponseBodyDataResultInternetSlb> internetSlb;
-
-        @NameInMap("Upgrade")
-        public Boolean upgrade;
-
-        @NameInMap("MustUpgrade")
-        public Boolean mustUpgrade;
-
-        @NameInMap("CurrentVersion")
-        public String currentVersion;
-
-        @NameInMap("LatestVersion")
-        public String latestVersion;
-
-        @NameInMap("Vswitch2")
-        public String vswitch2;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("ChargeType")
-        public String chargeType;
+        @NameInMap("InternetSlb")
+        public java.util.List<ListGatewayResponseBodyDataResultInternetSlb> internetSlb;
 
-        @NameInMap("EndDate")
-        public String endDate;
+        @NameInMap("LatestVersion")
+        public String latestVersion;
+
+        @NameInMap("MustUpgrade")
+        public Boolean mustUpgrade;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PrimaryUser")
+        public String primaryUser;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Replica")
+        public Integer replica;
+
+        @NameInMap("Slb")
+        public java.util.List<ListGatewayResponseBodyDataResultSlb> slb;
+
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("StatusDesc")
+        public String statusDesc;
 
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Upgrade")
+        public Boolean upgrade;
+
+        @NameInMap("Vswitch2")
+        public String vswitch2;
+
         public static ListGatewayResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayResponseBodyDataResult self = new ListGatewayResponseBodyDataResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListGatewayResponseBodyDataResult setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public ListGatewayResponseBodyDataResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListGatewayResponseBodyDataResult setGatewayUniqueId(String gatewayUniqueId) {
-            this.gatewayUniqueId = gatewayUniqueId;
-            return this;
-        }
-        public String getGatewayUniqueId() {
-            return this.gatewayUniqueId;
-        }
-
-        public ListGatewayResponseBodyDataResult setGatewayType(String gatewayType) {
-            this.gatewayType = gatewayType;
-            return this;
-        }
-        public String getGatewayType() {
-            return this.gatewayType;
-        }
-
-        public ListGatewayResponseBodyDataResult setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public ListGatewayResponseBodyDataResult setPrimaryUser(String primaryUser) {
-            this.primaryUser = primaryUser;
-            return this;
-        }
-        public String getPrimaryUser() {
-            return this.primaryUser;
-        }
-
-        public ListGatewayResponseBodyDataResult setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
         }
 
         public ListGatewayResponseBodyDataResult setAhasOn(Boolean ahasOn) {
@@ -432,20 +376,44 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.armsOn;
         }
 
-        public ListGatewayResponseBodyDataResult setSpec(String spec) {
-            this.spec = spec;
+        public ListGatewayResponseBodyDataResult setChargeType(String chargeType) {
+            this.chargeType = chargeType;
             return this;
         }
-        public String getSpec() {
-            return this.spec;
+        public String getChargeType() {
+            return this.chargeType;
         }
 
-        public ListGatewayResponseBodyDataResult setReplica(Integer replica) {
-            this.replica = replica;
+        public ListGatewayResponseBodyDataResult setCurrentVersion(String currentVersion) {
+            this.currentVersion = currentVersion;
             return this;
         }
-        public Integer getReplica() {
-            return this.replica;
+        public String getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        public ListGatewayResponseBodyDataResult setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public ListGatewayResponseBodyDataResult setGatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
+            return this;
+        }
+        public String getGatewayType() {
+            return this.gatewayType;
+        }
+
+        public ListGatewayResponseBodyDataResult setGatewayUniqueId(String gatewayUniqueId) {
+            this.gatewayUniqueId = gatewayUniqueId;
+            return this;
+        }
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
         }
 
         public ListGatewayResponseBodyDataResult setGmtCreate(String gmtCreate) {
@@ -464,68 +432,12 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListGatewayResponseBodyDataResult setStatusDesc(String statusDesc) {
-            this.statusDesc = statusDesc;
+        public ListGatewayResponseBodyDataResult setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getStatusDesc() {
-            return this.statusDesc;
-        }
-
-        public ListGatewayResponseBodyDataResult setSlb(java.util.List<ListGatewayResponseBodyDataResultSlb> slb) {
-            this.slb = slb;
-            return this;
-        }
-        public java.util.List<ListGatewayResponseBodyDataResultSlb> getSlb() {
-            return this.slb;
-        }
-
-        public ListGatewayResponseBodyDataResult setInternetSlb(java.util.List<ListGatewayResponseBodyDataResultInternetSlb> internetSlb) {
-            this.internetSlb = internetSlb;
-            return this;
-        }
-        public java.util.List<ListGatewayResponseBodyDataResultInternetSlb> getInternetSlb() {
-            return this.internetSlb;
-        }
-
-        public ListGatewayResponseBodyDataResult setUpgrade(Boolean upgrade) {
-            this.upgrade = upgrade;
-            return this;
-        }
-        public Boolean getUpgrade() {
-            return this.upgrade;
-        }
-
-        public ListGatewayResponseBodyDataResult setMustUpgrade(Boolean mustUpgrade) {
-            this.mustUpgrade = mustUpgrade;
-            return this;
-        }
-        public Boolean getMustUpgrade() {
-            return this.mustUpgrade;
-        }
-
-        public ListGatewayResponseBodyDataResult setCurrentVersion(String currentVersion) {
-            this.currentVersion = currentVersion;
-            return this;
-        }
-        public String getCurrentVersion() {
-            return this.currentVersion;
-        }
-
-        public ListGatewayResponseBodyDataResult setLatestVersion(String latestVersion) {
-            this.latestVersion = latestVersion;
-            return this;
-        }
-        public String getLatestVersion() {
-            return this.latestVersion;
-        }
-
-        public ListGatewayResponseBodyDataResult setVswitch2(String vswitch2) {
-            this.vswitch2 = vswitch2;
-            return this;
-        }
-        public String getVswitch2() {
-            return this.vswitch2;
+        public Long getId() {
+            return this.id;
         }
 
         public ListGatewayResponseBodyDataResult setInstanceId(String instanceId) {
@@ -536,20 +448,92 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListGatewayResponseBodyDataResult setChargeType(String chargeType) {
-            this.chargeType = chargeType;
+        public ListGatewayResponseBodyDataResult setInternetSlb(java.util.List<ListGatewayResponseBodyDataResultInternetSlb> internetSlb) {
+            this.internetSlb = internetSlb;
             return this;
         }
-        public String getChargeType() {
-            return this.chargeType;
+        public java.util.List<ListGatewayResponseBodyDataResultInternetSlb> getInternetSlb() {
+            return this.internetSlb;
         }
 
-        public ListGatewayResponseBodyDataResult setEndDate(String endDate) {
-            this.endDate = endDate;
+        public ListGatewayResponseBodyDataResult setLatestVersion(String latestVersion) {
+            this.latestVersion = latestVersion;
             return this;
         }
-        public String getEndDate() {
-            return this.endDate;
+        public String getLatestVersion() {
+            return this.latestVersion;
+        }
+
+        public ListGatewayResponseBodyDataResult setMustUpgrade(Boolean mustUpgrade) {
+            this.mustUpgrade = mustUpgrade;
+            return this;
+        }
+        public Boolean getMustUpgrade() {
+            return this.mustUpgrade;
+        }
+
+        public ListGatewayResponseBodyDataResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListGatewayResponseBodyDataResult setPrimaryUser(String primaryUser) {
+            this.primaryUser = primaryUser;
+            return this;
+        }
+        public String getPrimaryUser() {
+            return this.primaryUser;
+        }
+
+        public ListGatewayResponseBodyDataResult setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListGatewayResponseBodyDataResult setReplica(Integer replica) {
+            this.replica = replica;
+            return this;
+        }
+        public Integer getReplica() {
+            return this.replica;
+        }
+
+        public ListGatewayResponseBodyDataResult setSlb(java.util.List<ListGatewayResponseBodyDataResultSlb> slb) {
+            this.slb = slb;
+            return this;
+        }
+        public java.util.List<ListGatewayResponseBodyDataResultSlb> getSlb() {
+            return this.slb;
+        }
+
+        public ListGatewayResponseBodyDataResult setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public ListGatewayResponseBodyDataResult setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListGatewayResponseBodyDataResult setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
+            return this;
+        }
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         public ListGatewayResponseBodyDataResult setTag(String tag) {
@@ -560,12 +544,25 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.tag;
         }
 
+        public ListGatewayResponseBodyDataResult setUpgrade(Boolean upgrade) {
+            this.upgrade = upgrade;
+            return this;
+        }
+        public Boolean getUpgrade() {
+            return this.upgrade;
+        }
+
+        public ListGatewayResponseBodyDataResult setVswitch2(String vswitch2) {
+            this.vswitch2 = vswitch2;
+            return this;
+        }
+        public String getVswitch2() {
+            return this.vswitch2;
+        }
+
     }
 
     public static class ListGatewayResponseBodyData extends TeaModel {
-        @NameInMap("TotalSize")
-        public Long totalSize;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -575,17 +572,12 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<ListGatewayResponseBodyDataResult> result;
 
+        @NameInMap("TotalSize")
+        public Long totalSize;
+
         public static ListGatewayResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayResponseBodyData self = new ListGatewayResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListGatewayResponseBodyData setTotalSize(Long totalSize) {
-            this.totalSize = totalSize;
-            return this;
-        }
-        public Long getTotalSize() {
-            return this.totalSize;
         }
 
         public ListGatewayResponseBodyData setPageNumber(Integer pageNumber) {
@@ -610,6 +602,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public java.util.List<ListGatewayResponseBodyDataResult> getResult() {
             return this.result;
+        }
+
+        public ListGatewayResponseBodyData setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
         }
 
     }

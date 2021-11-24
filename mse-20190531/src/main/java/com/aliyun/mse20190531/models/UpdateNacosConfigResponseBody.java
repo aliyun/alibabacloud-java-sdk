@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacosConfigResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -13,15 +16,20 @@ public class UpdateNacosConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
 
     public static UpdateNacosConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateNacosConfigResponseBody self = new UpdateNacosConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateNacosConfigResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateNacosConfigResponseBody setHttpCode(String httpCode) {
@@ -46,14 +54,6 @@ public class UpdateNacosConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateNacosConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public UpdateNacosConfigResponseBody setSuccess(Boolean success) {

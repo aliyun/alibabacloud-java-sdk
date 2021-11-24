@@ -4,84 +4,36 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmItemsResponseBody extends TeaModel {
-    @NameInMap("HttpCode")
-    public String httpCode;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("Data")
     public java.util.List<ListAlarmItemsResponseBodyData> data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListAlarmItemsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmItemsResponseBody self = new ListAlarmItemsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAlarmItemsResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
-    public ListAlarmItemsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAlarmItemsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAlarmItemsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListAlarmItemsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListAlarmItemsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListAlarmItemsResponseBody setData(java.util.List<ListAlarmItemsResponseBodyData> data) {
@@ -100,6 +52,46 @@ public class ListAlarmItemsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListAlarmItemsResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public ListAlarmItemsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListAlarmItemsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAlarmItemsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAlarmItemsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListAlarmItemsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -108,19 +100,35 @@ public class ListAlarmItemsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListAlarmItemsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListAlarmItemsResponseBodyData extends TeaModel {
+        @NameInMap("AlarmCode")
+        public String alarmCode;
+
         @NameInMap("AlarmDesc")
         public String alarmDesc;
 
         @NameInMap("ClusterType")
         public String clusterType;
 
-        @NameInMap("AlarmCode")
-        public String alarmCode;
-
         public static ListAlarmItemsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmItemsResponseBodyData self = new ListAlarmItemsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAlarmItemsResponseBodyData setAlarmCode(String alarmCode) {
+            this.alarmCode = alarmCode;
+            return this;
+        }
+        public String getAlarmCode() {
+            return this.alarmCode;
         }
 
         public ListAlarmItemsResponseBodyData setAlarmDesc(String alarmDesc) {
@@ -137,14 +145,6 @@ public class ListAlarmItemsResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
-        }
-
-        public ListAlarmItemsResponseBodyData setAlarmCode(String alarmCode) {
-            this.alarmCode = alarmCode;
-            return this;
-        }
-        public String getAlarmCode() {
-            return this.alarmCode;
         }
 
     }

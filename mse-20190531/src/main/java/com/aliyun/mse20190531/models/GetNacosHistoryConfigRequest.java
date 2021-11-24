@@ -4,14 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("DataId")
     public String dataId;
 
     @NameInMap("Group")
     public String group;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("NamespaceId")
     public String namespaceId;
@@ -22,14 +22,6 @@ public class GetNacosHistoryConfigRequest extends TeaModel {
     public static GetNacosHistoryConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNacosHistoryConfigRequest self = new GetNacosHistoryConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetNacosHistoryConfigRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public GetNacosHistoryConfigRequest setDataId(String dataId) {
@@ -46,6 +38,14 @@ public class GetNacosHistoryConfigRequest extends TeaModel {
     }
     public String getGroup() {
         return this.group;
+    }
+
+    public GetNacosHistoryConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetNacosHistoryConfigRequest setNamespaceId(String namespaceId) {

@@ -4,17 +4,17 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterDetailResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public QueryClusterDetailResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     public static QueryClusterDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterDetailResponseBody self = new QueryClusterDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryClusterDetailResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryClusterDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryClusterDetailResponseBody setData(QueryClusterDetailResponseBodyData data) {
@@ -56,6 +40,22 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public QueryClusterDetailResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryClusterDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryClusterDetailResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,11 +65,8 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
-        @NameInMap("PodName")
-        public String podName;
-
-        @NameInMap("SingleTunnelVip")
-        public String singleTunnelVip;
+        @NameInMap("HealthStatus")
+        public String healthStatus;
 
         @NameInMap("InternetIp")
         public String internetIp;
@@ -77,31 +74,26 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("PodName")
+        public String podName;
+
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("HealthStatus")
-        public String healthStatus;
+        @NameInMap("SingleTunnelVip")
+        public String singleTunnelVip;
 
         public static QueryClusterDetailResponseBodyDataInstanceModels build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDetailResponseBodyDataInstanceModels self = new QueryClusterDetailResponseBodyDataInstanceModels();
             return TeaModel.build(map, self);
         }
 
-        public QueryClusterDetailResponseBodyDataInstanceModels setPodName(String podName) {
-            this.podName = podName;
+        public QueryClusterDetailResponseBodyDataInstanceModels setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
             return this;
         }
-        public String getPodName() {
-            return this.podName;
-        }
-
-        public QueryClusterDetailResponseBodyDataInstanceModels setSingleTunnelVip(String singleTunnelVip) {
-            this.singleTunnelVip = singleTunnelVip;
-            return this;
-        }
-        public String getSingleTunnelVip() {
-            return this.singleTunnelVip;
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         public QueryClusterDetailResponseBodyDataInstanceModels setInternetIp(String internetIp) {
@@ -120,6 +112,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public QueryClusterDetailResponseBodyDataInstanceModels setPodName(String podName) {
+            this.podName = podName;
+            return this;
+        }
+        public String getPodName() {
+            return this.podName;
+        }
+
         public QueryClusterDetailResponseBodyDataInstanceModels setRole(String role) {
             this.role = role;
             return this;
@@ -128,67 +128,58 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.role;
         }
 
-        public QueryClusterDetailResponseBodyDataInstanceModels setHealthStatus(String healthStatus) {
-            this.healthStatus = healthStatus;
+        public QueryClusterDetailResponseBodyDataInstanceModels setSingleTunnelVip(String singleTunnelVip) {
+            this.singleTunnelVip = singleTunnelVip;
             return this;
         }
-        public String getHealthStatus() {
-            return this.healthStatus;
+        public String getSingleTunnelVip() {
+            return this.singleTunnelVip;
         }
 
     }
 
     public static class QueryClusterDetailResponseBodyData extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("AclEntryList")
+        public String aclEntryList;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("AclId")
+        public String aclId;
 
-        @NameInMap("IntranetAddress")
-        public String intranetAddress;
+        @NameInMap("AppVersion")
+        public String appVersion;
 
-        @NameInMap("DiskType")
-        public String diskType;
-
-        @NameInMap("PubNetworkFlow")
-        public String pubNetworkFlow;
-
-        @NameInMap("DiskCapacity")
-        public Long diskCapacity;
-
-        @NameInMap("MemoryCapacity")
-        public Long memoryCapacity;
+        @NameInMap("ChargeType")
+        public String chargeType;
 
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
+        @NameInMap("ClusterName")
+        public String clusterName;
 
-        @NameInMap("IntranetPort")
-        public String intranetPort;
+        @NameInMap("ClusterSpecification")
+        public String clusterSpecification;
 
-        @NameInMap("InstanceModels")
-        public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels;
+        @NameInMap("ClusterType")
+        public String clusterType;
 
-        @NameInMap("IntranetDomain")
-        public String intranetDomain;
+        @NameInMap("ClusterVersion")
+        public String clusterVersion;
 
-        @NameInMap("InternetDomain")
-        public String internetDomain;
+        @NameInMap("ConnectionType")
+        public String connectionType;
 
-        @NameInMap("PayInfo")
-        public String payInfo;
+        @NameInMap("Cpu")
+        public Integer cpu;
 
-        @NameInMap("InternetAddress")
-        public String internetAddress;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("DiskCapacity")
+        public Long diskCapacity;
 
-        @NameInMap("AclEntryList")
-        public String aclEntryList;
+        @NameInMap("DiskType")
+        public String diskType;
 
         @NameInMap("HealthStatus")
         public String healthStatus;
@@ -196,110 +187,95 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("InitCostTime")
         public Long initCostTime;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("AclId")
-        public String aclId;
-
-        @NameInMap("Cpu")
-        public Integer cpu;
-
-        @NameInMap("ClusterType")
-        public String clusterType;
-
-        @NameInMap("ClusterName")
-        public String clusterName;
-
         @NameInMap("InitStatus")
         public String initStatus;
+
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceModels")
+        public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels;
+
+        @NameInMap("InternetAddress")
+        public String internetAddress;
+
+        @NameInMap("InternetDomain")
+        public String internetDomain;
 
         @NameInMap("InternetPort")
         public String internetPort;
 
-        @NameInMap("AppVersion")
-        public String appVersion;
+        @NameInMap("IntranetAddress")
+        public String intranetAddress;
 
-        @NameInMap("NetType")
-        public String netType;
+        @NameInMap("IntranetDomain")
+        public String intranetDomain;
 
-        @NameInMap("ClusterVersion")
-        public String clusterVersion;
+        @NameInMap("IntranetPort")
+        public String intranetPort;
 
-        @NameInMap("ClusterSpecification")
-        public String clusterSpecification;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("ConnectionType")
-        public String connectionType;
+        @NameInMap("MemoryCapacity")
+        public Long memoryCapacity;
 
         @NameInMap("MseVersion")
         public String mseVersion;
 
-        @NameInMap("ChargeType")
-        public String chargeType;
+        @NameInMap("NetType")
+        public String netType;
+
+        @NameInMap("PayInfo")
+        public String payInfo;
+
+        @NameInMap("PubNetworkFlow")
+        public String pubNetworkFlow;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static QueryClusterDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDetailResponseBodyData self = new QueryClusterDetailResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryClusterDetailResponseBodyData setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public QueryClusterDetailResponseBodyData setAclEntryList(String aclEntryList) {
+            this.aclEntryList = aclEntryList;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getAclEntryList() {
+            return this.aclEntryList;
         }
 
-        public QueryClusterDetailResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public QueryClusterDetailResponseBodyData setAclId(String aclId) {
+            this.aclId = aclId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getAclId() {
+            return this.aclId;
         }
 
-        public QueryClusterDetailResponseBodyData setIntranetAddress(String intranetAddress) {
-            this.intranetAddress = intranetAddress;
+        public QueryClusterDetailResponseBodyData setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
             return this;
         }
-        public String getIntranetAddress() {
-            return this.intranetAddress;
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
-        public QueryClusterDetailResponseBodyData setDiskType(String diskType) {
-            this.diskType = diskType;
+        public QueryClusterDetailResponseBodyData setChargeType(String chargeType) {
+            this.chargeType = chargeType;
             return this;
         }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public QueryClusterDetailResponseBodyData setPubNetworkFlow(String pubNetworkFlow) {
-            this.pubNetworkFlow = pubNetworkFlow;
-            return this;
-        }
-        public String getPubNetworkFlow() {
-            return this.pubNetworkFlow;
-        }
-
-        public QueryClusterDetailResponseBodyData setDiskCapacity(Long diskCapacity) {
-            this.diskCapacity = diskCapacity;
-            return this;
-        }
-        public Long getDiskCapacity() {
-            return this.diskCapacity;
-        }
-
-        public QueryClusterDetailResponseBodyData setMemoryCapacity(Long memoryCapacity) {
-            this.memoryCapacity = memoryCapacity;
-            return this;
-        }
-        public Long getMemoryCapacity() {
-            return this.memoryCapacity;
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public QueryClusterDetailResponseBodyData setClusterAliasName(String clusterAliasName) {
@@ -310,76 +286,76 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.clusterAliasName;
         }
 
-        public QueryClusterDetailResponseBodyData setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
+        public QueryClusterDetailResponseBodyData setClusterName(String clusterName) {
+            this.clusterName = clusterName;
             return this;
         }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
+        public String getClusterName() {
+            return this.clusterName;
         }
 
-        public QueryClusterDetailResponseBodyData setIntranetPort(String intranetPort) {
-            this.intranetPort = intranetPort;
+        public QueryClusterDetailResponseBodyData setClusterSpecification(String clusterSpecification) {
+            this.clusterSpecification = clusterSpecification;
             return this;
         }
-        public String getIntranetPort() {
-            return this.intranetPort;
+        public String getClusterSpecification() {
+            return this.clusterSpecification;
         }
 
-        public QueryClusterDetailResponseBodyData setInstanceModels(java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels) {
-            this.instanceModels = instanceModels;
+        public QueryClusterDetailResponseBodyData setClusterType(String clusterType) {
+            this.clusterType = clusterType;
             return this;
         }
-        public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> getInstanceModels() {
-            return this.instanceModels;
+        public String getClusterType() {
+            return this.clusterType;
         }
 
-        public QueryClusterDetailResponseBodyData setIntranetDomain(String intranetDomain) {
-            this.intranetDomain = intranetDomain;
+        public QueryClusterDetailResponseBodyData setClusterVersion(String clusterVersion) {
+            this.clusterVersion = clusterVersion;
             return this;
         }
-        public String getIntranetDomain() {
-            return this.intranetDomain;
+        public String getClusterVersion() {
+            return this.clusterVersion;
         }
 
-        public QueryClusterDetailResponseBodyData setInternetDomain(String internetDomain) {
-            this.internetDomain = internetDomain;
+        public QueryClusterDetailResponseBodyData setConnectionType(String connectionType) {
+            this.connectionType = connectionType;
             return this;
         }
-        public String getInternetDomain() {
-            return this.internetDomain;
+        public String getConnectionType() {
+            return this.connectionType;
         }
 
-        public QueryClusterDetailResponseBodyData setPayInfo(String payInfo) {
-            this.payInfo = payInfo;
+        public QueryClusterDetailResponseBodyData setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public String getPayInfo() {
-            return this.payInfo;
+        public Integer getCpu() {
+            return this.cpu;
         }
 
-        public QueryClusterDetailResponseBodyData setInternetAddress(String internetAddress) {
-            this.internetAddress = internetAddress;
+        public QueryClusterDetailResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getInternetAddress() {
-            return this.internetAddress;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public QueryClusterDetailResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public QueryClusterDetailResponseBodyData setDiskCapacity(Long diskCapacity) {
+            this.diskCapacity = diskCapacity;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public Long getDiskCapacity() {
+            return this.diskCapacity;
         }
 
-        public QueryClusterDetailResponseBodyData setAclEntryList(String aclEntryList) {
-            this.aclEntryList = aclEntryList;
+        public QueryClusterDetailResponseBodyData setDiskType(String diskType) {
+            this.diskType = diskType;
             return this;
         }
-        public String getAclEntryList() {
-            return this.aclEntryList;
+        public String getDiskType() {
+            return this.diskType;
         }
 
         public QueryClusterDetailResponseBodyData setHealthStatus(String healthStatus) {
@@ -398,52 +374,52 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.initCostTime;
         }
 
-        public QueryClusterDetailResponseBodyData setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public QueryClusterDetailResponseBodyData setAclId(String aclId) {
-            this.aclId = aclId;
-            return this;
-        }
-        public String getAclId() {
-            return this.aclId;
-        }
-
-        public QueryClusterDetailResponseBodyData setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public QueryClusterDetailResponseBodyData setClusterType(String clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-        public String getClusterType() {
-            return this.clusterType;
-        }
-
-        public QueryClusterDetailResponseBodyData setClusterName(String clusterName) {
-            this.clusterName = clusterName;
-            return this;
-        }
-        public String getClusterName() {
-            return this.clusterName;
-        }
-
         public QueryClusterDetailResponseBodyData setInitStatus(String initStatus) {
             this.initStatus = initStatus;
             return this;
         }
         public String getInitStatus() {
             return this.initStatus;
+        }
+
+        public QueryClusterDetailResponseBodyData setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public QueryClusterDetailResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public QueryClusterDetailResponseBodyData setInstanceModels(java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> instanceModels) {
+            this.instanceModels = instanceModels;
+            return this;
+        }
+        public java.util.List<QueryClusterDetailResponseBodyDataInstanceModels> getInstanceModels() {
+            return this.instanceModels;
+        }
+
+        public QueryClusterDetailResponseBodyData setInternetAddress(String internetAddress) {
+            this.internetAddress = internetAddress;
+            return this;
+        }
+        public String getInternetAddress() {
+            return this.internetAddress;
+        }
+
+        public QueryClusterDetailResponseBodyData setInternetDomain(String internetDomain) {
+            this.internetDomain = internetDomain;
+            return this;
+        }
+        public String getInternetDomain() {
+            return this.internetDomain;
         }
 
         public QueryClusterDetailResponseBodyData setInternetPort(String internetPort) {
@@ -454,52 +430,36 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.internetPort;
         }
 
-        public QueryClusterDetailResponseBodyData setAppVersion(String appVersion) {
-            this.appVersion = appVersion;
+        public QueryClusterDetailResponseBodyData setIntranetAddress(String intranetAddress) {
+            this.intranetAddress = intranetAddress;
             return this;
         }
-        public String getAppVersion() {
-            return this.appVersion;
+        public String getIntranetAddress() {
+            return this.intranetAddress;
         }
 
-        public QueryClusterDetailResponseBodyData setNetType(String netType) {
-            this.netType = netType;
+        public QueryClusterDetailResponseBodyData setIntranetDomain(String intranetDomain) {
+            this.intranetDomain = intranetDomain;
             return this;
         }
-        public String getNetType() {
-            return this.netType;
+        public String getIntranetDomain() {
+            return this.intranetDomain;
         }
 
-        public QueryClusterDetailResponseBodyData setClusterVersion(String clusterVersion) {
-            this.clusterVersion = clusterVersion;
+        public QueryClusterDetailResponseBodyData setIntranetPort(String intranetPort) {
+            this.intranetPort = intranetPort;
             return this;
         }
-        public String getClusterVersion() {
-            return this.clusterVersion;
+        public String getIntranetPort() {
+            return this.intranetPort;
         }
 
-        public QueryClusterDetailResponseBodyData setClusterSpecification(String clusterSpecification) {
-            this.clusterSpecification = clusterSpecification;
+        public QueryClusterDetailResponseBodyData setMemoryCapacity(Long memoryCapacity) {
+            this.memoryCapacity = memoryCapacity;
             return this;
         }
-        public String getClusterSpecification() {
-            return this.clusterSpecification;
-        }
-
-        public QueryClusterDetailResponseBodyData setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public QueryClusterDetailResponseBodyData setConnectionType(String connectionType) {
-            this.connectionType = connectionType;
-            return this;
-        }
-        public String getConnectionType() {
-            return this.connectionType;
+        public Long getMemoryCapacity() {
+            return this.memoryCapacity;
         }
 
         public QueryClusterDetailResponseBodyData setMseVersion(String mseVersion) {
@@ -510,12 +470,52 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             return this.mseVersion;
         }
 
-        public QueryClusterDetailResponseBodyData setChargeType(String chargeType) {
-            this.chargeType = chargeType;
+        public QueryClusterDetailResponseBodyData setNetType(String netType) {
+            this.netType = netType;
             return this;
         }
-        public String getChargeType() {
-            return this.chargeType;
+        public String getNetType() {
+            return this.netType;
+        }
+
+        public QueryClusterDetailResponseBodyData setPayInfo(String payInfo) {
+            this.payInfo = payInfo;
+            return this;
+        }
+        public String getPayInfo() {
+            return this.payInfo;
+        }
+
+        public QueryClusterDetailResponseBodyData setPubNetworkFlow(String pubNetworkFlow) {
+            this.pubNetworkFlow = pubNetworkFlow;
+            return this;
+        }
+        public String getPubNetworkFlow() {
+            return this.pubNetworkFlow;
+        }
+
+        public QueryClusterDetailResponseBodyData setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public QueryClusterDetailResponseBodyData setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public QueryClusterDetailResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

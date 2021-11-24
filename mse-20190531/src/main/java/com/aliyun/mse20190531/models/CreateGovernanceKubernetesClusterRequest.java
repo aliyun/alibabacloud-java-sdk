@@ -4,35 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateGovernanceKubernetesClusterRequest extends TeaModel {
-    @NameInMap("ClusterName")
-    public String clusterName;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClusterName")
+    public String clusterName;
 
     @NameInMap("K8sVersion")
     public String k8sVersion;
 
+    @NameInMap("NameSpaceInfos")
+    public String nameSpaceInfos;
+
     @NameInMap("PilotStartTime")
     public Long pilotStartTime;
 
-    @NameInMap("NameSpaceInfos")
-    public String nameSpaceInfos;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateGovernanceKubernetesClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGovernanceKubernetesClusterRequest self = new CreateGovernanceKubernetesClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGovernanceKubernetesClusterRequest setClusterName(String clusterName) {
-        this.clusterName = clusterName;
-        return this;
-    }
-    public String getClusterName() {
-        return this.clusterName;
     }
 
     public CreateGovernanceKubernetesClusterRequest setClusterId(String clusterId) {
@@ -43,12 +35,12 @@ public class CreateGovernanceKubernetesClusterRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public CreateGovernanceKubernetesClusterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateGovernanceKubernetesClusterRequest setClusterName(String clusterName) {
+        this.clusterName = clusterName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     public CreateGovernanceKubernetesClusterRequest setK8sVersion(String k8sVersion) {
@@ -59,6 +51,14 @@ public class CreateGovernanceKubernetesClusterRequest extends TeaModel {
         return this.k8sVersion;
     }
 
+    public CreateGovernanceKubernetesClusterRequest setNameSpaceInfos(String nameSpaceInfos) {
+        this.nameSpaceInfos = nameSpaceInfos;
+        return this;
+    }
+    public String getNameSpaceInfos() {
+        return this.nameSpaceInfos;
+    }
+
     public CreateGovernanceKubernetesClusterRequest setPilotStartTime(Long pilotStartTime) {
         this.pilotStartTime = pilotStartTime;
         return this;
@@ -67,12 +67,12 @@ public class CreateGovernanceKubernetesClusterRequest extends TeaModel {
         return this.pilotStartTime;
     }
 
-    public CreateGovernanceKubernetesClusterRequest setNameSpaceInfos(String nameSpaceInfos) {
-        this.nameSpaceInfos = nameSpaceInfos;
+    public CreateGovernanceKubernetesClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNameSpaceInfos() {
-        return this.nameSpaceInfos;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
