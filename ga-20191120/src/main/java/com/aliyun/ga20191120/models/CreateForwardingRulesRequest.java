@@ -4,40 +4,24 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateForwardingRulesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("ForwardingRules")
+    public java.util.List<CreateForwardingRulesRequestForwardingRules> forwardingRules;
 
     @NameInMap("ListenerId")
     public String listenerId;
 
-    @NameInMap("ForwardingRules")
-    public java.util.List<CreateForwardingRulesRequestForwardingRules> forwardingRules;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateForwardingRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateForwardingRulesRequest self = new CreateForwardingRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateForwardingRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateForwardingRulesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateForwardingRulesRequest setAcceleratorId(String acceleratorId) {
@@ -48,12 +32,12 @@ public class CreateForwardingRulesRequest extends TeaModel {
         return this.acceleratorId;
     }
 
-    public CreateForwardingRulesRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
+    public CreateForwardingRulesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getListenerId() {
-        return this.listenerId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateForwardingRulesRequest setForwardingRules(java.util.List<CreateForwardingRulesRequestForwardingRules> forwardingRules) {
@@ -64,83 +48,20 @@ public class CreateForwardingRulesRequest extends TeaModel {
         return this.forwardingRules;
     }
 
-    public static class CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig extends TeaModel {
-        @NameInMap("Values")
-        public java.util.List<String> values;
-
-        public static CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig self = new CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
+    public CreateForwardingRulesRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
     }
 
-    public static class CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig extends TeaModel {
-        @NameInMap("Values")
-        public java.util.List<String> values;
-
-        public static CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig self = new CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
+    public CreateForwardingRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
     }
-
-    public static class CreateForwardingRulesRequestForwardingRulesRuleConditions extends TeaModel {
-        @NameInMap("RuleConditionType")
-        public String ruleConditionType;
-
-        @NameInMap("PathConfig")
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig pathConfig;
-
-        @NameInMap("HostConfig")
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig hostConfig;
-
-        public static CreateForwardingRulesRequestForwardingRulesRuleConditions build(java.util.Map<String, ?> map) throws Exception {
-            CreateForwardingRulesRequestForwardingRulesRuleConditions self = new CreateForwardingRulesRequestForwardingRulesRuleConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateForwardingRulesRequestForwardingRulesRuleConditions setRuleConditionType(String ruleConditionType) {
-            this.ruleConditionType = ruleConditionType;
-            return this;
-        }
-        public String getRuleConditionType() {
-            return this.ruleConditionType;
-        }
-
-        public CreateForwardingRulesRequestForwardingRulesRuleConditions setPathConfig(CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig pathConfig) {
-            this.pathConfig = pathConfig;
-            return this;
-        }
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig getPathConfig() {
-            return this.pathConfig;
-        }
-
-        public CreateForwardingRulesRequestForwardingRulesRuleConditions setHostConfig(CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig hostConfig) {
-            this.hostConfig = hostConfig;
-            return this;
-        }
-        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig getHostConfig() {
-            return this.hostConfig;
-        }
-
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
@@ -182,18 +103,26 @@ public class CreateForwardingRulesRequest extends TeaModel {
     }
 
     public static class CreateForwardingRulesRequestForwardingRulesRuleActions extends TeaModel {
+        @NameInMap("ForwardGroupConfig")
+        public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig;
+
         @NameInMap("Order")
         public Integer order;
 
         @NameInMap("RuleActionType")
         public String ruleActionType;
 
-        @NameInMap("ForwardGroupConfig")
-        public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig;
-
         public static CreateForwardingRulesRequestForwardingRulesRuleActions build(java.util.Map<String, ?> map) throws Exception {
             CreateForwardingRulesRequestForwardingRulesRuleActions self = new CreateForwardingRulesRequestForwardingRulesRuleActions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleActions setForwardGroupConfig(CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig) {
+            this.forwardGroupConfig = forwardGroupConfig;
+            return this;
+        }
+        public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig getForwardGroupConfig() {
+            return this.forwardGroupConfig;
         }
 
         public CreateForwardingRulesRequestForwardingRulesRuleActions setOrder(Integer order) {
@@ -212,32 +141,111 @@ public class CreateForwardingRulesRequest extends TeaModel {
             return this.ruleActionType;
         }
 
-        public CreateForwardingRulesRequestForwardingRulesRuleActions setForwardGroupConfig(CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig) {
-            this.forwardGroupConfig = forwardGroupConfig;
+    }
+
+    public static class CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig extends TeaModel {
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig self = new CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig setValues(java.util.List<String> values) {
+            this.values = values;
             return this;
         }
-        public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig getForwardGroupConfig() {
-            return this.forwardGroupConfig;
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig extends TeaModel {
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig self = new CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class CreateForwardingRulesRequestForwardingRulesRuleConditions extends TeaModel {
+        @NameInMap("HostConfig")
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig hostConfig;
+
+        @NameInMap("PathConfig")
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig pathConfig;
+
+        @NameInMap("RuleConditionType")
+        public String ruleConditionType;
+
+        public static CreateForwardingRulesRequestForwardingRulesRuleConditions build(java.util.Map<String, ?> map) throws Exception {
+            CreateForwardingRulesRequestForwardingRulesRuleConditions self = new CreateForwardingRulesRequestForwardingRulesRuleConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleConditions setHostConfig(CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig hostConfig) {
+            this.hostConfig = hostConfig;
+            return this;
+        }
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig getHostConfig() {
+            return this.hostConfig;
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleConditions setPathConfig(CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig pathConfig) {
+            this.pathConfig = pathConfig;
+            return this;
+        }
+        public CreateForwardingRulesRequestForwardingRulesRuleConditionsPathConfig getPathConfig() {
+            return this.pathConfig;
+        }
+
+        public CreateForwardingRulesRequestForwardingRulesRuleConditions setRuleConditionType(String ruleConditionType) {
+            this.ruleConditionType = ruleConditionType;
+            return this;
+        }
+        public String getRuleConditionType() {
+            return this.ruleConditionType;
         }
 
     }
 
     public static class CreateForwardingRulesRequestForwardingRules extends TeaModel {
+        @NameInMap("ForwardingRuleName")
+        public String forwardingRuleName;
+
         @NameInMap("Priority")
         public Integer priority;
-
-        @NameInMap("RuleConditions")
-        public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions;
 
         @NameInMap("RuleActions")
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleActions> ruleActions;
 
-        @NameInMap("ForwardingRuleName")
-        public String forwardingRuleName;
+        @NameInMap("RuleConditions")
+        public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions;
 
         public static CreateForwardingRulesRequestForwardingRules build(java.util.Map<String, ?> map) throws Exception {
             CreateForwardingRulesRequestForwardingRules self = new CreateForwardingRulesRequestForwardingRules();
             return TeaModel.build(map, self);
+        }
+
+        public CreateForwardingRulesRequestForwardingRules setForwardingRuleName(String forwardingRuleName) {
+            this.forwardingRuleName = forwardingRuleName;
+            return this;
+        }
+        public String getForwardingRuleName() {
+            return this.forwardingRuleName;
         }
 
         public CreateForwardingRulesRequestForwardingRules setPriority(Integer priority) {
@@ -248,14 +256,6 @@ public class CreateForwardingRulesRequest extends TeaModel {
             return this.priority;
         }
 
-        public CreateForwardingRulesRequestForwardingRules setRuleConditions(java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions) {
-            this.ruleConditions = ruleConditions;
-            return this;
-        }
-        public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> getRuleConditions() {
-            return this.ruleConditions;
-        }
-
         public CreateForwardingRulesRequestForwardingRules setRuleActions(java.util.List<CreateForwardingRulesRequestForwardingRulesRuleActions> ruleActions) {
             this.ruleActions = ruleActions;
             return this;
@@ -264,12 +264,12 @@ public class CreateForwardingRulesRequest extends TeaModel {
             return this.ruleActions;
         }
 
-        public CreateForwardingRulesRequestForwardingRules setForwardingRuleName(String forwardingRuleName) {
-            this.forwardingRuleName = forwardingRuleName;
+        public CreateForwardingRulesRequestForwardingRules setRuleConditions(java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions) {
+            this.ruleConditions = ruleConditions;
             return this;
         }
-        public String getForwardingRuleName() {
-            return this.forwardingRuleName;
+        public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> getRuleConditions() {
+            return this.ruleConditions;
         }
 
     }

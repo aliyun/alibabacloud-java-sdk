@@ -4,14 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class RemoveEntriesFromAclRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AclEntries")
+    public java.util.List<RemoveEntriesFromAclRequestAclEntries> aclEntries;
 
     @NameInMap("AclId")
     public String aclId;
-
-    @NameInMap("AclEntries")
-    public java.util.List<RemoveEntriesFromAclRequestAclEntries> aclEntries;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -19,25 +16,12 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RemoveEntriesFromAclRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveEntriesFromAclRequest self = new RemoveEntriesFromAclRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveEntriesFromAclRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RemoveEntriesFromAclRequest setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
     }
 
     public RemoveEntriesFromAclRequest setAclEntries(java.util.List<RemoveEntriesFromAclRequestAclEntries> aclEntries) {
@@ -46,6 +30,14 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     }
     public java.util.List<RemoveEntriesFromAclRequestAclEntries> getAclEntries() {
         return this.aclEntries;
+    }
+
+    public RemoveEntriesFromAclRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
     }
 
     public RemoveEntriesFromAclRequest setClientToken(String clientToken) {
@@ -62,6 +54,14 @@ public class RemoveEntriesFromAclRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public RemoveEntriesFromAclRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class RemoveEntriesFromAclRequestAclEntries extends TeaModel {

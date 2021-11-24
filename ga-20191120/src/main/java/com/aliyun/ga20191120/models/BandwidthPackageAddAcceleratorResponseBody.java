@@ -4,26 +4,18 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Accelerators")
     public java.util.List<String> accelerators;
 
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static BandwidthPackageAddAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BandwidthPackageAddAcceleratorResponseBody self = new BandwidthPackageAddAcceleratorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BandwidthPackageAddAcceleratorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BandwidthPackageAddAcceleratorResponseBody setAccelerators(java.util.List<String> accelerators) {
@@ -40,6 +32,14 @@ public class BandwidthPackageAddAcceleratorResponseBody extends TeaModel {
     }
     public String getBandwidthPackageId() {
         return this.bandwidthPackageId;
+    }
+
+    public BandwidthPackageAddAcceleratorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

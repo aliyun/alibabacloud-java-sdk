@@ -7,11 +7,11 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
     @NameInMap("DdosId")
     public String ddosId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("GaId")
     public String gaId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AttachDdosToAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachDdosToAcceleratorResponseBody self = new AttachDdosToAcceleratorResponseBody();
@@ -26,20 +26,20 @@ public class AttachDdosToAcceleratorResponseBody extends TeaModel {
         return this.ddosId;
     }
 
-    public AttachDdosToAcceleratorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public AttachDdosToAcceleratorResponseBody setGaId(String gaId) {
         this.gaId = gaId;
         return this;
     }
     public String getGaId() {
         return this.gaId;
+    }
+
+    public AttachDdosToAcceleratorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

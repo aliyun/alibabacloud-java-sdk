@@ -4,63 +4,31 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetAclResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AclEntries")
+    public java.util.List<GetAclResponseBodyAclEntries> aclEntries;
 
     @NameInMap("AclId")
     public String aclId;
 
-    @NameInMap("AddressIPVersion")
-    public String addressIPVersion;
+    @NameInMap("AclName")
+    public String aclName;
 
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("AclEntries")
-    public java.util.List<GetAclResponseBodyAclEntries> aclEntries;
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
 
     @NameInMap("RelatedListeners")
     public java.util.List<GetAclResponseBodyRelatedListeners> relatedListeners;
 
-    @NameInMap("AclName")
-    public String aclName;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAclResponseBody self = new GetAclResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAclResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetAclResponseBody setAclId(String aclId) {
-        this.aclId = aclId;
-        return this;
-    }
-    public String getAclId() {
-        return this.aclId;
-    }
-
-    public GetAclResponseBody setAddressIPVersion(String addressIPVersion) {
-        this.addressIPVersion = addressIPVersion;
-        return this;
-    }
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
-    }
-
-    public GetAclResponseBody setAclStatus(String aclStatus) {
-        this.aclStatus = aclStatus;
-        return this;
-    }
-    public String getAclStatus() {
-        return this.aclStatus;
     }
 
     public GetAclResponseBody setAclEntries(java.util.List<GetAclResponseBodyAclEntries> aclEntries) {
@@ -71,12 +39,12 @@ public class GetAclResponseBody extends TeaModel {
         return this.aclEntries;
     }
 
-    public GetAclResponseBody setRelatedListeners(java.util.List<GetAclResponseBodyRelatedListeners> relatedListeners) {
-        this.relatedListeners = relatedListeners;
+    public GetAclResponseBody setAclId(String aclId) {
+        this.aclId = aclId;
         return this;
     }
-    public java.util.List<GetAclResponseBodyRelatedListeners> getRelatedListeners() {
-        return this.relatedListeners;
+    public String getAclId() {
+        return this.aclId;
     }
 
     public GetAclResponseBody setAclName(String aclName) {
@@ -85,6 +53,38 @@ public class GetAclResponseBody extends TeaModel {
     }
     public String getAclName() {
         return this.aclName;
+    }
+
+    public GetAclResponseBody setAclStatus(String aclStatus) {
+        this.aclStatus = aclStatus;
+        return this;
+    }
+    public String getAclStatus() {
+        return this.aclStatus;
+    }
+
+    public GetAclResponseBody setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
+    }
+
+    public GetAclResponseBody setRelatedListeners(java.util.List<GetAclResponseBodyRelatedListeners> relatedListeners) {
+        this.relatedListeners = relatedListeners;
+        return this;
+    }
+    public java.util.List<GetAclResponseBodyRelatedListeners> getRelatedListeners() {
+        return this.relatedListeners;
+    }
+
+    public GetAclResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetAclResponseBodyAclEntries extends TeaModel {
@@ -118,26 +118,26 @@ public class GetAclResponseBody extends TeaModel {
     }
 
     public static class GetAclResponseBodyRelatedListeners extends TeaModel {
-        @NameInMap("ListenerId")
-        public String listenerId;
+        @NameInMap("AcceleratorId")
+        public String acceleratorId;
 
         @NameInMap("AclType")
         public String aclType;
 
-        @NameInMap("AcceleratorId")
-        public String acceleratorId;
+        @NameInMap("ListenerId")
+        public String listenerId;
 
         public static GetAclResponseBodyRelatedListeners build(java.util.Map<String, ?> map) throws Exception {
             GetAclResponseBodyRelatedListeners self = new GetAclResponseBodyRelatedListeners();
             return TeaModel.build(map, self);
         }
 
-        public GetAclResponseBodyRelatedListeners setListenerId(String listenerId) {
-            this.listenerId = listenerId;
+        public GetAclResponseBodyRelatedListeners setAcceleratorId(String acceleratorId) {
+            this.acceleratorId = acceleratorId;
             return this;
         }
-        public String getListenerId() {
-            return this.listenerId;
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
         public GetAclResponseBodyRelatedListeners setAclType(String aclType) {
@@ -148,12 +148,12 @@ public class GetAclResponseBody extends TeaModel {
             return this.aclType;
         }
 
-        public GetAclResponseBodyRelatedListeners setAcceleratorId(String acceleratorId) {
-            this.acceleratorId = acceleratorId;
+        public GetAclResponseBodyRelatedListeners setListenerId(String listenerId) {
+            this.listenerId = listenerId;
             return this;
         }
-        public String getAcceleratorId() {
-            return this.acceleratorId;
+        public String getListenerId() {
+            return this.listenerId;
         }
 
     }

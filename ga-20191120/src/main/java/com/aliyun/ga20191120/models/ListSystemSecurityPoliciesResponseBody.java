@@ -4,49 +4,25 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSystemSecurityPoliciesResponseBodySecurityPolicies> securityPolicies;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListSystemSecurityPoliciesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSystemSecurityPoliciesResponseBody self = new ListSystemSecurityPoliciesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSystemSecurityPoliciesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListSystemSecurityPoliciesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListSystemSecurityPoliciesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListSystemSecurityPoliciesResponseBody setPageNumber(Integer pageNumber) {
@@ -57,6 +33,22 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListSystemSecurityPoliciesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListSystemSecurityPoliciesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListSystemSecurityPoliciesResponseBody setSecurityPolicies(java.util.List<ListSystemSecurityPoliciesResponseBodySecurityPolicies> securityPolicies) {
         this.securityPolicies = securityPolicies;
         return this;
@@ -65,19 +57,35 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         return this.securityPolicies;
     }
 
+    public ListSystemSecurityPoliciesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListSystemSecurityPoliciesResponseBodySecurityPolicies extends TeaModel {
+        @NameInMap("Ciphers")
+        public java.util.List<String> ciphers;
+
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
         @NameInMap("TlsVersions")
         public java.util.List<String> tlsVersions;
 
-        @NameInMap("Ciphers")
-        public java.util.List<String> ciphers;
-
         public static ListSystemSecurityPoliciesResponseBodySecurityPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListSystemSecurityPoliciesResponseBodySecurityPolicies self = new ListSystemSecurityPoliciesResponseBodySecurityPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ListSystemSecurityPoliciesResponseBodySecurityPolicies setCiphers(java.util.List<String> ciphers) {
+            this.ciphers = ciphers;
+            return this;
+        }
+        public java.util.List<String> getCiphers() {
+            return this.ciphers;
         }
 
         public ListSystemSecurityPoliciesResponseBodySecurityPolicies setSecurityPolicyId(String securityPolicyId) {
@@ -94,14 +102,6 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         }
         public java.util.List<String> getTlsVersions() {
             return this.tlsVersions;
-        }
-
-        public ListSystemSecurityPoliciesResponseBodySecurityPolicies setCiphers(java.util.List<String> ciphers) {
-            this.ciphers = ciphers;
-            return this;
-        }
-        public java.util.List<String> getCiphers() {
-            return this.ciphers;
         }
 
     }

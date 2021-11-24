@@ -4,11 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteListenerRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("AcceleratorId")
     public String acceleratorId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ListenerId")
     public String listenerId;
@@ -18,20 +18,20 @@ public class DeleteListenerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteListenerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public DeleteListenerRequest setAcceleratorId(String acceleratorId) {
         this.acceleratorId = acceleratorId;
         return this;
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public DeleteListenerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteListenerRequest setListenerId(String listenerId) {

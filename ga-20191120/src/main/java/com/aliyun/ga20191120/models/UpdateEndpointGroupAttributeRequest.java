@@ -4,11 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEndpointGroupAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -16,20 +16,12 @@ public class UpdateEndpointGroupAttributeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdateEndpointGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEndpointGroupAttributeRequest self = new UpdateEndpointGroupAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEndpointGroupAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateEndpointGroupAttributeRequest setClientToken(String clientToken) {
@@ -38,6 +30,14 @@ public class UpdateEndpointGroupAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateEndpointGroupAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateEndpointGroupAttributeRequest setEndpointGroupId(String endpointGroupId) {
@@ -56,12 +56,12 @@ public class UpdateEndpointGroupAttributeRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateEndpointGroupAttributeRequest setDescription(String description) {
-        this.description = description;
+    public UpdateEndpointGroupAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

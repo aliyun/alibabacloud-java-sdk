@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListIpSetsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,20 +13,20 @@ public class ListIpSetsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListIpSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIpSetsRequest self = new ListIpSetsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListIpSetsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListIpSetsRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public ListIpSetsRequest setPageNumber(Integer pageNumber) {
@@ -45,12 +45,12 @@ public class ListIpSetsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListIpSetsRequest setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public ListIpSetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,27 +4,19 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DissociateAclsFromListenerResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     @NameInMap("ListenerId")
     public String listenerId;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DissociateAclsFromListenerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DissociateAclsFromListenerResponseBody self = new DissociateAclsFromListenerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DissociateAclsFromListenerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DissociateAclsFromListenerResponseBody setAclIds(java.util.List<String> aclIds) {
@@ -41,6 +33,14 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
     }
     public String getListenerId() {
         return this.listenerId;
+    }
+
+    public DissociateAclsFromListenerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

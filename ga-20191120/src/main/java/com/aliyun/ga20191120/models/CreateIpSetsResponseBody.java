@@ -4,26 +4,26 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateIpSetsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("IpSets")
     public java.util.List<CreateIpSetsResponseBodyIpSets> ipSets;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateIpSetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIpSetsResponseBody self = new CreateIpSetsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateIpSetsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateIpSetsResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public CreateIpSetsResponseBody setIpSets(java.util.List<CreateIpSetsResponseBodyIpSets> ipSets) {
@@ -34,12 +34,12 @@ public class CreateIpSetsResponseBody extends TeaModel {
         return this.ipSets;
     }
 
-    public CreateIpSetsResponseBody setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public CreateIpSetsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateIpSetsResponseBodyIpSets extends TeaModel {

@@ -4,23 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateIpSetsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("IpSets")
     public java.util.List<UpdateIpSetsRequestIpSets> ipSets;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdateIpSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIpSetsRequest self = new UpdateIpSetsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateIpSetsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateIpSetsRequest setIpSets(java.util.List<UpdateIpSetsRequestIpSets> ipSets) {
@@ -29,6 +21,14 @@ public class UpdateIpSetsRequest extends TeaModel {
     }
     public java.util.List<UpdateIpSetsRequestIpSets> getIpSets() {
         return this.ipSets;
+    }
+
+    public UpdateIpSetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class UpdateIpSetsRequestIpSets extends TeaModel {

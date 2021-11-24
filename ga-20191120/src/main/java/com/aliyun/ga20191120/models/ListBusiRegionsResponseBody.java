@@ -4,23 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBusiRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public java.util.List<ListBusiRegionsResponseBodyRegions> regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListBusiRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBusiRegionsResponseBody self = new ListBusiRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListBusiRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListBusiRegionsResponseBody setRegions(java.util.List<ListBusiRegionsResponseBodyRegions> regions) {
@@ -29,6 +21,14 @@ public class ListBusiRegionsResponseBody extends TeaModel {
     }
     public java.util.List<ListBusiRegionsResponseBodyRegions> getRegions() {
         return this.regions;
+    }
+
+    public ListBusiRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListBusiRegionsResponseBodyRegions extends TeaModel {
