@@ -4,8 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBandwidthackagesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("BandwidthPackages")
+    public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("BandwidthPackages")
-    public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListBandwidthackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBandwidthackagesResponseBody self = new ListBandwidthackagesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListBandwidthackagesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListBandwidthackagesResponseBody setBandwidthPackages(java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages) {
+        this.bandwidthPackages = bandwidthPackages;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> getBandwidthPackages() {
+        return this.bandwidthPackages;
+    }
+
+    public ListBandwidthackagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListBandwidthackagesResponseBody setPageSize(Integer pageSize) {
@@ -48,28 +56,29 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListBandwidthackagesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListBandwidthackagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListBandwidthackagesResponseBody setBandwidthPackages(java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> bandwidthPackages) {
-        this.bandwidthPackages = bandwidthPackages;
-        return this;
-    }
-    public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackages> getBandwidthPackages() {
-        return this.bandwidthPackages;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackages extends TeaModel {
-        @NameInMap("BandwidthPackageId")
-        public String bandwidthPackageId;
+        @NameInMap("Accelerators")
+        public java.util.List<String> accelerators;
 
         @NameInMap("Bandwidth")
         public Integer bandwidth;
+
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
@@ -77,27 +86,34 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ChargeType")
-        public String chargeType;
-
-        @NameInMap("Accelerators")
-        public java.util.List<String> accelerators;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("State")
+        public String state;
+
         public static ListBandwidthackagesResponseBodyBandwidthPackages build(java.util.Map<String, ?> map) throws Exception {
             ListBandwidthackagesResponseBodyBandwidthPackages self = new ListBandwidthackagesResponseBodyBandwidthPackages();
             return TeaModel.build(map, self);
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackages setAccelerators(java.util.List<String> accelerators) {
+            this.accelerators = accelerators;
+            return this;
+        }
+        public java.util.List<String> getAccelerators() {
+            return this.accelerators;
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackages setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         public ListBandwidthackagesResponseBodyBandwidthPackages setBandwidthPackageId(String bandwidthPackageId) {
@@ -108,12 +124,20 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             return this.bandwidthPackageId;
         }
 
-        public ListBandwidthackagesResponseBodyBandwidthPackages setBandwidth(Integer bandwidth) {
-            this.bandwidth = bandwidth;
+        public ListBandwidthackagesResponseBodyBandwidthPackages setChargeType(String chargeType) {
+            this.chargeType = chargeType;
             return this;
         }
-        public Integer getBandwidth() {
-            return this.bandwidth;
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackages setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListBandwidthackagesResponseBodyBandwidthPackages setDescription(String description) {
@@ -132,38 +156,6 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public ListBandwidthackagesResponseBodyBandwidthPackages setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public ListBandwidthackagesResponseBodyBandwidthPackages setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListBandwidthackagesResponseBodyBandwidthPackages setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        public ListBandwidthackagesResponseBodyBandwidthPackages setAccelerators(java.util.List<String> accelerators) {
-            this.accelerators = accelerators;
-            return this;
-        }
-        public java.util.List<String> getAccelerators() {
-            return this.accelerators;
-        }
-
         public ListBandwidthackagesResponseBodyBandwidthPackages setName(String name) {
             this.name = name;
             return this;
@@ -178,6 +170,14 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListBandwidthackagesResponseBodyBandwidthPackages setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

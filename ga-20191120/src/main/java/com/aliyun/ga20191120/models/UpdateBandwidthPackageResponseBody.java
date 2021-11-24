@@ -10,11 +10,11 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateBandwidthPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateBandwidthPackageResponseBody self = new UpdateBandwidthPackageResponseBody();
@@ -37,20 +37,20 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         return this.description;
     }
 
-    public UpdateBandwidthPackageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public UpdateBandwidthPackageResponseBody setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateBandwidthPackageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

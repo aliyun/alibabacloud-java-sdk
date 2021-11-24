@@ -4,46 +4,22 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class GetHealthStatusResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ListenerId")
-    public String listenerId;
+    @NameInMap("EndpointGroups")
+    public java.util.List<GetHealthStatusResponseBodyEndpointGroups> endpointGroups;
 
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    @NameInMap("EndpointGroups")
-    public java.util.List<GetHealthStatusResponseBodyEndpointGroups> endpointGroups;
+    @NameInMap("ListenerId")
+    public String listenerId;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetHealthStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHealthStatusResponseBody self = new GetHealthStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetHealthStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetHealthStatusResponseBody setListenerId(String listenerId) {
-        this.listenerId = listenerId;
-        return this;
-    }
-    public String getListenerId() {
-        return this.listenerId;
-    }
-
-    public GetHealthStatusResponseBody setHealthStatus(String healthStatus) {
-        this.healthStatus = healthStatus;
-        return this;
-    }
-    public String getHealthStatus() {
-        return this.healthStatus;
     }
 
     public GetHealthStatusResponseBody setEndpointGroups(java.util.List<GetHealthStatusResponseBodyEndpointGroups> endpointGroups) {
@@ -54,18 +30,42 @@ public class GetHealthStatusResponseBody extends TeaModel {
         return this.endpointGroups;
     }
 
-    public static class GetHealthStatusResponseBodyEndpointGroupsEndpoints extends TeaModel {
-        @NameInMap("EndpointId")
-        public String endpointId;
+    public GetHealthStatusResponseBody setHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+        return this;
+    }
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
 
+    public GetHealthStatusResponseBody setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
+    }
+
+    public GetHealthStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class GetHealthStatusResponseBodyEndpointGroupsEndpoints extends TeaModel {
         @NameInMap("Address")
         public String address;
 
-        @NameInMap("HealthStatus")
-        public String healthStatus;
+        @NameInMap("EndpointId")
+        public String endpointId;
 
         @NameInMap("HealthDetail")
         public String healthDetail;
+
+        @NameInMap("HealthStatus")
+        public String healthStatus;
 
         @NameInMap("Port")
         public Long port;
@@ -78,14 +78,6 @@ public class GetHealthStatusResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetHealthStatusResponseBodyEndpointGroupsEndpoints setEndpointId(String endpointId) {
-            this.endpointId = endpointId;
-            return this;
-        }
-        public String getEndpointId() {
-            return this.endpointId;
-        }
-
         public GetHealthStatusResponseBodyEndpointGroupsEndpoints setAddress(String address) {
             this.address = address;
             return this;
@@ -94,12 +86,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
             return this.address;
         }
 
-        public GetHealthStatusResponseBodyEndpointGroupsEndpoints setHealthStatus(String healthStatus) {
-            this.healthStatus = healthStatus;
+        public GetHealthStatusResponseBodyEndpointGroupsEndpoints setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
             return this;
         }
-        public String getHealthStatus() {
-            return this.healthStatus;
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
         public GetHealthStatusResponseBodyEndpointGroupsEndpoints setHealthDetail(String healthDetail) {
@@ -108,6 +100,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
         public String getHealthDetail() {
             return this.healthDetail;
+        }
+
+        public GetHealthStatusResponseBodyEndpointGroupsEndpoints setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
+            return this;
+        }
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         public GetHealthStatusResponseBodyEndpointGroupsEndpoints setPort(Long port) {
@@ -135,14 +135,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
-        @NameInMap("HealthStatus")
-        public String healthStatus;
+        @NameInMap("Endpoints")
+        public java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> endpoints;
 
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
 
-        @NameInMap("Endpoints")
-        public java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> endpoints;
+        @NameInMap("HealthStatus")
+        public String healthStatus;
 
         public static GetHealthStatusResponseBodyEndpointGroups build(java.util.Map<String, ?> map) throws Exception {
             GetHealthStatusResponseBodyEndpointGroups self = new GetHealthStatusResponseBodyEndpointGroups();
@@ -165,12 +165,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
             return this.endpointGroupType;
         }
 
-        public GetHealthStatusResponseBodyEndpointGroups setHealthStatus(String healthStatus) {
-            this.healthStatus = healthStatus;
+        public GetHealthStatusResponseBodyEndpointGroups setEndpoints(java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> endpoints) {
+            this.endpoints = endpoints;
             return this;
         }
-        public String getHealthStatus() {
-            return this.healthStatus;
+        public java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> getEndpoints() {
+            return this.endpoints;
         }
 
         public GetHealthStatusResponseBodyEndpointGroups setForwardingRuleIds(java.util.List<String> forwardingRuleIds) {
@@ -181,12 +181,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
             return this.forwardingRuleIds;
         }
 
-        public GetHealthStatusResponseBodyEndpointGroups setEndpoints(java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> endpoints) {
-            this.endpoints = endpoints;
+        public GetHealthStatusResponseBodyEndpointGroups setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
             return this;
         }
-        public java.util.List<GetHealthStatusResponseBodyEndpointGroupsEndpoints> getEndpoints() {
-            return this.endpoints;
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
     }

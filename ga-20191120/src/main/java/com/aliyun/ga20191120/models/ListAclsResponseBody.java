@@ -4,24 +4,48 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAclsResponseBody extends TeaModel {
+    @NameInMap("Acls")
+    public java.util.List<ListAclsResponseBodyAcls> acls;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("Acls")
-    public java.util.List<ListAclsResponseBodyAcls> acls;
-
     public static ListAclsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAclsResponseBody self = new ListAclsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAclsResponseBody setAcls(java.util.List<ListAclsResponseBodyAcls> acls) {
+        this.acls = acls;
+        return this;
+    }
+    public java.util.List<ListAclsResponseBodyAcls> getAcls() {
+        return this.acls;
+    }
+
+    public ListAclsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListAclsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListAclsResponseBody setRequestId(String requestId) {
@@ -40,30 +64,6 @@ public class ListAclsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListAclsResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListAclsResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListAclsResponseBody setAcls(java.util.List<ListAclsResponseBodyAcls> acls) {
-        this.acls = acls;
-        return this;
-    }
-    public java.util.List<ListAclsResponseBodyAcls> getAcls() {
-        return this.acls;
-    }
-
     public static class ListAclsResponseBodyAcls extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
@@ -71,11 +71,11 @@ public class ListAclsResponseBody extends TeaModel {
         @NameInMap("AclName")
         public String aclName;
 
-        @NameInMap("AddressIPVersion")
-        public String addressIPVersion;
-
         @NameInMap("AclStatus")
         public String aclStatus;
+
+        @NameInMap("AddressIPVersion")
+        public String addressIPVersion;
 
         public static ListAclsResponseBodyAcls build(java.util.Map<String, ?> map) throws Exception {
             ListAclsResponseBodyAcls self = new ListAclsResponseBodyAcls();
@@ -98,20 +98,20 @@ public class ListAclsResponseBody extends TeaModel {
             return this.aclName;
         }
 
-        public ListAclsResponseBodyAcls setAddressIPVersion(String addressIPVersion) {
-            this.addressIPVersion = addressIPVersion;
-            return this;
-        }
-        public String getAddressIPVersion() {
-            return this.addressIPVersion;
-        }
-
         public ListAclsResponseBodyAcls setAclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
             return this;
         }
         public String getAclStatus() {
             return this.aclStatus;
+        }
+
+        public ListAclsResponseBodyAcls setAddressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
+            return this;
+        }
+        public String getAddressIPVersion() {
+            return this.addressIPVersion;
         }
 
     }

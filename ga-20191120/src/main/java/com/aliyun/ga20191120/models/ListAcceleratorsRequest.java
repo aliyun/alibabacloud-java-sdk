@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListAcceleratorsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,8 +13,8 @@ public class ListAcceleratorsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("State")
     public String state;
@@ -24,12 +24,12 @@ public class ListAcceleratorsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListAcceleratorsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListAcceleratorsRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public ListAcceleratorsRequest setPageNumber(Integer pageNumber) {
@@ -48,12 +48,12 @@ public class ListAcceleratorsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListAcceleratorsRequest setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public ListAcceleratorsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListAcceleratorsRequest setState(String state) {

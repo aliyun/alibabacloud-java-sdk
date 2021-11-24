@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteForwardingRulesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,23 +13,23 @@ public class DeleteForwardingRulesRequest extends TeaModel {
     @NameInMap("ForwardingRuleIds")
     public java.util.List<String> forwardingRuleIds;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
-
     @NameInMap("ListenerId")
     public String listenerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteForwardingRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteForwardingRulesRequest self = new DeleteForwardingRulesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteForwardingRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteForwardingRulesRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public DeleteForwardingRulesRequest setClientToken(String clientToken) {
@@ -48,20 +48,20 @@ public class DeleteForwardingRulesRequest extends TeaModel {
         return this.forwardingRuleIds;
     }
 
-    public DeleteForwardingRulesRequest setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
-        return this;
-    }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
-    }
-
     public DeleteForwardingRulesRequest setListenerId(String listenerId) {
         this.listenerId = listenerId;
         return this;
     }
     public String getListenerId() {
         return this.listenerId;
+    }
+
+    public DeleteForwardingRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

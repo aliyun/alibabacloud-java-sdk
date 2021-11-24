@@ -4,40 +4,24 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DissociateAdditionalCertificatesFromListenerRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("Domains")
+    public java.util.List<String> domains;
 
     @NameInMap("ListenerId")
     public String listenerId;
 
-    @NameInMap("Domains")
-    public java.util.List<String> domains;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DissociateAdditionalCertificatesFromListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         DissociateAdditionalCertificatesFromListenerRequest self = new DissociateAdditionalCertificatesFromListenerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DissociateAdditionalCertificatesFromListenerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DissociateAdditionalCertificatesFromListenerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public DissociateAdditionalCertificatesFromListenerRequest setAcceleratorId(String acceleratorId) {
@@ -48,12 +32,12 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
         return this.acceleratorId;
     }
 
-    public DissociateAdditionalCertificatesFromListenerRequest setListenerId(String listenerId) {
-        this.listenerId = listenerId;
+    public DissociateAdditionalCertificatesFromListenerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getListenerId() {
-        return this.listenerId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DissociateAdditionalCertificatesFromListenerRequest setDomains(java.util.List<String> domains) {
@@ -62,6 +46,22 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
     }
     public java.util.List<String> getDomains() {
         return this.domains;
+    }
+
+    public DissociateAdditionalCertificatesFromListenerRequest setListenerId(String listenerId) {
+        this.listenerId = listenerId;
+        return this;
+    }
+    public String getListenerId() {
+        return this.listenerId;
+    }
+
+    public DissociateAdditionalCertificatesFromListenerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

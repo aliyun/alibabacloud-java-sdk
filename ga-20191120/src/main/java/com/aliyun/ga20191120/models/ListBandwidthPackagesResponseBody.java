@@ -4,8 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("BandwidthPackages")
+    public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> bandwidthPackages;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("BandwidthPackages")
-    public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> bandwidthPackages;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListBandwidthPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBandwidthPackagesResponseBody self = new ListBandwidthPackagesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListBandwidthPackagesResponseBody setBandwidthPackages(java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> bandwidthPackages) {
+        this.bandwidthPackages = bandwidthPackages;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> getBandwidthPackages() {
+        return this.bandwidthPackages;
+    }
+
+    public ListBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListBandwidthPackagesResponseBody setPageSize(Integer pageSize) {
@@ -48,49 +56,41 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListBandwidthPackagesResponseBody setBandwidthPackages(java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> bandwidthPackages) {
-        this.bandwidthPackages = bandwidthPackages;
-        return this;
-    }
-    public java.util.List<ListBandwidthPackagesResponseBodyBandwidthPackages> getBandwidthPackages() {
-        return this.bandwidthPackages;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListBandwidthPackagesResponseBodyBandwidthPackages extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Accelerators")
+        public java.util.List<String> accelerators;
 
-        @NameInMap("BandwidthType")
-        public String bandwidthType;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ChargeType")
-        public String chargeType;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("CbnGeographicRegionIdA")
-        public String cbnGeographicRegionIdA;
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
 
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
-        @NameInMap("Bandwidth")
-        public Integer bandwidth;
+        @NameInMap("BandwidthType")
+        public String bandwidthType;
+
+        @NameInMap("BillingType")
+        public String billingType;
+
+        @NameInMap("CbnGeographicRegionIdA")
+        public String cbnGeographicRegionIdA;
+
+        @NameInMap("CbnGeographicRegionIdB")
+        public String cbnGeographicRegionIdB;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
@@ -98,80 +98,40 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("Accelerators")
-        public java.util.List<String> accelerators;
-
-        @NameInMap("CbnGeographicRegionIdB")
-        public String cbnGeographicRegionIdB;
-
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("BillingType")
-        public String billingType;
-
         @NameInMap("Ratio")
         public Integer ratio;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListBandwidthPackagesResponseBodyBandwidthPackages build(java.util.Map<String, ?> map) throws Exception {
             ListBandwidthPackagesResponseBodyBandwidthPackages self = new ListBandwidthPackagesResponseBodyBandwidthPackages();
             return TeaModel.build(map, self);
         }
 
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setType(String type) {
-            this.type = type;
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setAccelerators(java.util.List<String> accelerators) {
+            this.accelerators = accelerators;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public java.util.List<String> getAccelerators() {
+            return this.accelerators;
         }
 
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setBandwidthType(String bandwidthType) {
-            this.bandwidthType = bandwidthType;
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
             return this;
         }
-        public String getBandwidthType() {
-            return this.bandwidthType;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setCbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
-            this.cbnGeographicRegionIdA = cbnGeographicRegionIdA;
-            return this;
-        }
-        public String getCbnGeographicRegionIdA() {
-            return this.cbnGeographicRegionIdA;
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         public ListBandwidthPackagesResponseBodyBandwidthPackages setBandwidthPackageId(String bandwidthPackageId) {
@@ -182,12 +142,52 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             return this.bandwidthPackageId;
         }
 
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setBandwidth(Integer bandwidth) {
-            this.bandwidth = bandwidth;
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setBandwidthType(String bandwidthType) {
+            this.bandwidthType = bandwidthType;
             return this;
         }
-        public Integer getBandwidth() {
-            return this.bandwidth;
+        public String getBandwidthType() {
+            return this.bandwidthType;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setBillingType(String billingType) {
+            this.billingType = billingType;
+            return this;
+        }
+        public String getBillingType() {
+            return this.billingType;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setCbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
+            this.cbnGeographicRegionIdA = cbnGeographicRegionIdA;
+            return this;
+        }
+        public String getCbnGeographicRegionIdA() {
+            return this.cbnGeographicRegionIdA;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setCbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
+            this.cbnGeographicRegionIdB = cbnGeographicRegionIdB;
+            return this;
+        }
+        public String getCbnGeographicRegionIdB() {
+            return this.cbnGeographicRegionIdB;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListBandwidthPackagesResponseBodyBandwidthPackages setDescription(String description) {
@@ -206,22 +206,6 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setAccelerators(java.util.List<String> accelerators) {
-            this.accelerators = accelerators;
-            return this;
-        }
-        public java.util.List<String> getAccelerators() {
-            return this.accelerators;
-        }
-
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setCbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
-            this.cbnGeographicRegionIdB = cbnGeographicRegionIdB;
-            return this;
-        }
-        public String getCbnGeographicRegionIdB() {
-            return this.cbnGeographicRegionIdB;
-        }
-
         public ListBandwidthPackagesResponseBodyBandwidthPackages setName(String name) {
             this.name = name;
             return this;
@@ -230,20 +214,36 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListBandwidthPackagesResponseBodyBandwidthPackages setBillingType(String billingType) {
-            this.billingType = billingType;
-            return this;
-        }
-        public String getBillingType() {
-            return this.billingType;
-        }
-
         public ListBandwidthPackagesResponseBodyBandwidthPackages setRatio(Integer ratio) {
             this.ratio = ratio;
             return this;
         }
         public Integer getRatio() {
             return this.ratio;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

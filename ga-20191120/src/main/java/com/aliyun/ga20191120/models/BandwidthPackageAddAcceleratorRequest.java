@@ -4,26 +4,26 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static BandwidthPackageAddAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
         BandwidthPackageAddAcceleratorRequest self = new BandwidthPackageAddAcceleratorRequest();
         return TeaModel.build(map, self);
     }
 
-    public BandwidthPackageAddAcceleratorRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public BandwidthPackageAddAcceleratorRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public BandwidthPackageAddAcceleratorRequest setBandwidthPackageId(String bandwidthPackageId) {
@@ -34,12 +34,12 @@ public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
         return this.bandwidthPackageId;
     }
 
-    public BandwidthPackageAddAcceleratorRequest setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public BandwidthPackageAddAcceleratorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

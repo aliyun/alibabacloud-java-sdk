@@ -4,23 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateForwardingRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ForwardingRules")
     public java.util.List<CreateForwardingRulesResponseBodyForwardingRules> forwardingRules;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateForwardingRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateForwardingRulesResponseBody self = new CreateForwardingRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateForwardingRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateForwardingRulesResponseBody setForwardingRules(java.util.List<CreateForwardingRulesResponseBodyForwardingRules> forwardingRules) {
@@ -29,6 +21,14 @@ public class CreateForwardingRulesResponseBody extends TeaModel {
     }
     public java.util.List<CreateForwardingRulesResponseBodyForwardingRules> getForwardingRules() {
         return this.forwardingRules;
+    }
+
+    public CreateForwardingRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateForwardingRulesResponseBodyForwardingRules extends TeaModel {

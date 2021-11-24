@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateSpareIpsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,8 +13,8 @@ public class CreateSpareIpsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SpareIps")
     public java.util.List<String> spareIps;
@@ -24,12 +24,12 @@ public class CreateSpareIpsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateSpareIpsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateSpareIpsRequest setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
     public CreateSpareIpsRequest setClientToken(String clientToken) {
@@ -48,12 +48,12 @@ public class CreateSpareIpsRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public CreateSpareIpsRequest setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public CreateSpareIpsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSpareIpsRequest setSpareIps(java.util.List<String> spareIps) {

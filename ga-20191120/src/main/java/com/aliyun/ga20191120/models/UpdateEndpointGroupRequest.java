@@ -4,26 +4,26 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEndpointGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("EndpointGroupId")
-    public String endpointGroupId;
-
-    @NameInMap("Name")
-    public String name;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EndpointConfigurations")
+    public java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
+
+    @NameInMap("EndpointGroupId")
+    public String endpointGroupId;
+
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
-    @NameInMap("TrafficPercentage")
-    public Integer trafficPercentage;
+    @NameInMap("EndpointRequestProtocol")
+    public String endpointRequestProtocol;
+
+    @NameInMap("HealthCheckEnabled")
+    public Boolean healthCheckEnabled;
 
     @NameInMap("HealthCheckIntervalSeconds")
     public Integer healthCheckIntervalSeconds;
@@ -37,32 +37,24 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
-    @NameInMap("ThresholdCount")
-    public Integer thresholdCount;
-
-    @NameInMap("EndpointConfigurations")
-    public java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
-
-    @NameInMap("EndpointRequestProtocol")
-    public String endpointRequestProtocol;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PortOverrides")
     public java.util.List<UpdateEndpointGroupRequestPortOverrides> portOverrides;
 
-    @NameInMap("HealthCheckEnabled")
-    public Boolean healthCheckEnabled;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ThresholdCount")
+    public Integer thresholdCount;
+
+    @NameInMap("TrafficPercentage")
+    public Integer trafficPercentage;
 
     public static UpdateEndpointGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEndpointGroupRequest self = new UpdateEndpointGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEndpointGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateEndpointGroupRequest setClientToken(String clientToken) {
@@ -73,28 +65,28 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateEndpointGroupRequest setEndpointGroupId(String endpointGroupId) {
-        this.endpointGroupId = endpointGroupId;
-        return this;
-    }
-    public String getEndpointGroupId() {
-        return this.endpointGroupId;
-    }
-
-    public UpdateEndpointGroupRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public UpdateEndpointGroupRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateEndpointGroupRequest setEndpointConfigurations(java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> endpointConfigurations) {
+        this.endpointConfigurations = endpointConfigurations;
+        return this;
+    }
+    public java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> getEndpointConfigurations() {
+        return this.endpointConfigurations;
+    }
+
+    public UpdateEndpointGroupRequest setEndpointGroupId(String endpointGroupId) {
+        this.endpointGroupId = endpointGroupId;
+        return this;
+    }
+    public String getEndpointGroupId() {
+        return this.endpointGroupId;
     }
 
     public UpdateEndpointGroupRequest setEndpointGroupRegion(String endpointGroupRegion) {
@@ -105,12 +97,20 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         return this.endpointGroupRegion;
     }
 
-    public UpdateEndpointGroupRequest setTrafficPercentage(Integer trafficPercentage) {
-        this.trafficPercentage = trafficPercentage;
+    public UpdateEndpointGroupRequest setEndpointRequestProtocol(String endpointRequestProtocol) {
+        this.endpointRequestProtocol = endpointRequestProtocol;
         return this;
     }
-    public Integer getTrafficPercentage() {
-        return this.trafficPercentage;
+    public String getEndpointRequestProtocol() {
+        return this.endpointRequestProtocol;
+    }
+
+    public UpdateEndpointGroupRequest setHealthCheckEnabled(Boolean healthCheckEnabled) {
+        this.healthCheckEnabled = healthCheckEnabled;
+        return this;
+    }
+    public Boolean getHealthCheckEnabled() {
+        return this.healthCheckEnabled;
     }
 
     public UpdateEndpointGroupRequest setHealthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
@@ -145,28 +145,12 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         return this.healthCheckProtocol;
     }
 
-    public UpdateEndpointGroupRequest setThresholdCount(Integer thresholdCount) {
-        this.thresholdCount = thresholdCount;
+    public UpdateEndpointGroupRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public Integer getThresholdCount() {
-        return this.thresholdCount;
-    }
-
-    public UpdateEndpointGroupRequest setEndpointConfigurations(java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> endpointConfigurations) {
-        this.endpointConfigurations = endpointConfigurations;
-        return this;
-    }
-    public java.util.List<UpdateEndpointGroupRequestEndpointConfigurations> getEndpointConfigurations() {
-        return this.endpointConfigurations;
-    }
-
-    public UpdateEndpointGroupRequest setEndpointRequestProtocol(String endpointRequestProtocol) {
-        this.endpointRequestProtocol = endpointRequestProtocol;
-        return this;
-    }
-    public String getEndpointRequestProtocol() {
-        return this.endpointRequestProtocol;
+    public String getName() {
+        return this.name;
     }
 
     public UpdateEndpointGroupRequest setPortOverrides(java.util.List<UpdateEndpointGroupRequestPortOverrides> portOverrides) {
@@ -177,38 +161,46 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         return this.portOverrides;
     }
 
-    public UpdateEndpointGroupRequest setHealthCheckEnabled(Boolean healthCheckEnabled) {
-        this.healthCheckEnabled = healthCheckEnabled;
+    public UpdateEndpointGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Boolean getHealthCheckEnabled() {
-        return this.healthCheckEnabled;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateEndpointGroupRequest setThresholdCount(Integer thresholdCount) {
+        this.thresholdCount = thresholdCount;
+        return this;
+    }
+    public Integer getThresholdCount() {
+        return this.thresholdCount;
+    }
+
+    public UpdateEndpointGroupRequest setTrafficPercentage(Integer trafficPercentage) {
+        this.trafficPercentage = trafficPercentage;
+        return this;
+    }
+    public Integer getTrafficPercentage() {
+        return this.trafficPercentage;
     }
 
     public static class UpdateEndpointGroupRequestEndpointConfigurations extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
-
-        @NameInMap("Weight")
-        public Integer weight;
 
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static UpdateEndpointGroupRequestEndpointConfigurations build(java.util.Map<String, ?> map) throws Exception {
             UpdateEndpointGroupRequestEndpointConfigurations self = new UpdateEndpointGroupRequestEndpointConfigurations();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateEndpointGroupRequestEndpointConfigurations setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public UpdateEndpointGroupRequestEndpointConfigurations setEnableClientIPPreservation(Boolean enableClientIPPreservation) {
@@ -219,14 +211,6 @@ public class UpdateEndpointGroupRequest extends TeaModel {
             return this.enableClientIPPreservation;
         }
 
-        public UpdateEndpointGroupRequestEndpointConfigurations setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
         public UpdateEndpointGroupRequestEndpointConfigurations setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
@@ -235,26 +219,34 @@ public class UpdateEndpointGroupRequest extends TeaModel {
             return this.endpoint;
         }
 
+        public UpdateEndpointGroupRequestEndpointConfigurations setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateEndpointGroupRequestEndpointConfigurations setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
     }
 
     public static class UpdateEndpointGroupRequestPortOverrides extends TeaModel {
-        @NameInMap("ListenerPort")
-        public Integer listenerPort;
-
         @NameInMap("EndpointPort")
         public Integer endpointPort;
+
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
 
         public static UpdateEndpointGroupRequestPortOverrides build(java.util.Map<String, ?> map) throws Exception {
             UpdateEndpointGroupRequestPortOverrides self = new UpdateEndpointGroupRequestPortOverrides();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateEndpointGroupRequestPortOverrides setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public Integer getListenerPort() {
-            return this.listenerPort;
         }
 
         public UpdateEndpointGroupRequestPortOverrides setEndpointPort(Integer endpointPort) {
@@ -263,6 +255,14 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         }
         public Integer getEndpointPort() {
             return this.endpointPort;
+        }
+
+        public UpdateEndpointGroupRequestPortOverrides setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public Integer getListenerPort() {
+            return this.listenerPort;
         }
 
     }

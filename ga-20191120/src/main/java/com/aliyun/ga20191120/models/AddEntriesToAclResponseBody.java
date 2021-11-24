@@ -4,24 +4,16 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class AddEntriesToAclResponseBody extends TeaModel {
+    @NameInMap("AclId")
+    public String aclId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AclId")
-    public String aclId;
-
     public static AddEntriesToAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddEntriesToAclResponseBody self = new AddEntriesToAclResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddEntriesToAclResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddEntriesToAclResponseBody setAclId(String aclId) {
@@ -30,6 +22,14 @@ public class AddEntriesToAclResponseBody extends TeaModel {
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public AddEntriesToAclResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

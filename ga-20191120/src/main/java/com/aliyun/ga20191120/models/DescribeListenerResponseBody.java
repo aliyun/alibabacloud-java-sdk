@@ -4,20 +4,11 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeListenerResponseBody extends TeaModel {
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("State")
-    public String state;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("PortRanges")
-    public java.util.List<DescribeListenerResponseBodyPortRanges> portRanges;
+    @NameInMap("AclType")
+    public String aclType;
 
     @NameInMap("BackendPorts")
     public java.util.List<DescribeListenerResponseBodyBackendPorts> backendPorts;
@@ -25,79 +16,64 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("Certificates")
     public java.util.List<DescribeListenerResponseBodyCertificates> certificates;
 
-    @NameInMap("Protocol")
-    public String protocol;
+    @NameInMap("ClientAffinity")
+    public String clientAffinity;
+
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("ListenerId")
     public String listenerId;
 
-    @NameInMap("ClientAffinity")
-    public String clientAffinity;
-
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("RelatedAcls")
-    public java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls;
+    @NameInMap("PortRanges")
+    public java.util.List<DescribeListenerResponseBodyPortRanges> portRanges;
 
-    @NameInMap("AclType")
-    public String aclType;
-
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("Protocol")
+    public String protocol;
 
     @NameInMap("ProxyProtocol")
     public Boolean proxyProtocol;
 
-    @NameInMap("XForwardedForConfig")
-    public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig;
+    @NameInMap("RelatedAcls")
+    public java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
+
+    @NameInMap("State")
+    public String state;
+
+    @NameInMap("XForwardedForConfig")
+    public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig;
 
     public static DescribeListenerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeListenerResponseBody self = new DescribeListenerResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeListenerResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribeListenerResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
-    public DescribeListenerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeListenerResponseBody setAclType(String aclType) {
+        this.aclType = aclType;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeListenerResponseBody setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
-    }
-
-    public DescribeListenerResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeListenerResponseBody setPortRanges(java.util.List<DescribeListenerResponseBodyPortRanges> portRanges) {
-        this.portRanges = portRanges;
-        return this;
-    }
-    public java.util.List<DescribeListenerResponseBodyPortRanges> getPortRanges() {
-        return this.portRanges;
+    public String getAclType() {
+        return this.aclType;
     }
 
     public DescribeListenerResponseBody setBackendPorts(java.util.List<DescribeListenerResponseBodyBackendPorts> backendPorts) {
@@ -116,12 +92,28 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.certificates;
     }
 
-    public DescribeListenerResponseBody setProtocol(String protocol) {
-        this.protocol = protocol;
+    public DescribeListenerResponseBody setClientAffinity(String clientAffinity) {
+        this.clientAffinity = clientAffinity;
         return this;
     }
-    public String getProtocol() {
-        return this.protocol;
+    public String getClientAffinity() {
+        return this.clientAffinity;
+    }
+
+    public DescribeListenerResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeListenerResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeListenerResponseBody setListenerId(String listenerId) {
@@ -132,14 +124,6 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.listenerId;
     }
 
-    public DescribeListenerResponseBody setClientAffinity(String clientAffinity) {
-        this.clientAffinity = clientAffinity;
-        return this;
-    }
-    public String getClientAffinity() {
-        return this.clientAffinity;
-    }
-
     public DescribeListenerResponseBody setName(String name) {
         this.name = name;
         return this;
@@ -148,28 +132,20 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.name;
     }
 
-    public DescribeListenerResponseBody setRelatedAcls(java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls) {
-        this.relatedAcls = relatedAcls;
+    public DescribeListenerResponseBody setPortRanges(java.util.List<DescribeListenerResponseBodyPortRanges> portRanges) {
+        this.portRanges = portRanges;
         return this;
     }
-    public java.util.List<DescribeListenerResponseBodyRelatedAcls> getRelatedAcls() {
-        return this.relatedAcls;
+    public java.util.List<DescribeListenerResponseBodyPortRanges> getPortRanges() {
+        return this.portRanges;
     }
 
-    public DescribeListenerResponseBody setAclType(String aclType) {
-        this.aclType = aclType;
+    public DescribeListenerResponseBody setProtocol(String protocol) {
+        this.protocol = protocol;
         return this;
     }
-    public String getAclType() {
-        return this.aclType;
-    }
-
-    public DescribeListenerResponseBody setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
-        return this;
-    }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public DescribeListenerResponseBody setProxyProtocol(Boolean proxyProtocol) {
@@ -180,12 +156,20 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.proxyProtocol;
     }
 
-    public DescribeListenerResponseBody setXForwardedForConfig(DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig) {
-        this.XForwardedForConfig = XForwardedForConfig;
+    public DescribeListenerResponseBody setRelatedAcls(java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls) {
+        this.relatedAcls = relatedAcls;
         return this;
     }
-    public DescribeListenerResponseBodyXForwardedForConfig getXForwardedForConfig() {
-        return this.XForwardedForConfig;
+    public java.util.List<DescribeListenerResponseBodyRelatedAcls> getRelatedAcls() {
+        return this.relatedAcls;
+    }
+
+    public DescribeListenerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeListenerResponseBody setSecurityPolicyId(String securityPolicyId) {
@@ -196,34 +180,20 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.securityPolicyId;
     }
 
-    public static class DescribeListenerResponseBodyPortRanges extends TeaModel {
-        @NameInMap("FromPort")
-        public Integer fromPort;
+    public DescribeListenerResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
 
-        @NameInMap("ToPort")
-        public Integer toPort;
-
-        public static DescribeListenerResponseBodyPortRanges build(java.util.Map<String, ?> map) throws Exception {
-            DescribeListenerResponseBodyPortRanges self = new DescribeListenerResponseBodyPortRanges();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeListenerResponseBodyPortRanges setFromPort(Integer fromPort) {
-            this.fromPort = fromPort;
-            return this;
-        }
-        public Integer getFromPort() {
-            return this.fromPort;
-        }
-
-        public DescribeListenerResponseBodyPortRanges setToPort(Integer toPort) {
-            this.toPort = toPort;
-            return this;
-        }
-        public Integer getToPort() {
-            return this.toPort;
-        }
-
+    public DescribeListenerResponseBody setXForwardedForConfig(DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig) {
+        this.XForwardedForConfig = XForwardedForConfig;
+        return this;
+    }
+    public DescribeListenerResponseBodyXForwardedForConfig getXForwardedForConfig() {
+        return this.XForwardedForConfig;
     }
 
     public static class DescribeListenerResponseBodyBackendPorts extends TeaModel {
@@ -257,15 +227,23 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyCertificates extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeListenerResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
             DescribeListenerResponseBodyCertificates self = new DescribeListenerResponseBodyCertificates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeListenerResponseBodyCertificates setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeListenerResponseBodyCertificates setType(String type) {
@@ -276,12 +254,34 @@ public class DescribeListenerResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeListenerResponseBodyCertificates setId(String id) {
-            this.id = id;
+    }
+
+    public static class DescribeListenerResponseBodyPortRanges extends TeaModel {
+        @NameInMap("FromPort")
+        public Integer fromPort;
+
+        @NameInMap("ToPort")
+        public Integer toPort;
+
+        public static DescribeListenerResponseBodyPortRanges build(java.util.Map<String, ?> map) throws Exception {
+            DescribeListenerResponseBodyPortRanges self = new DescribeListenerResponseBodyPortRanges();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeListenerResponseBodyPortRanges setFromPort(Integer fromPort) {
+            this.fromPort = fromPort;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Integer getFromPort() {
+            return this.fromPort;
+        }
+
+        public DescribeListenerResponseBodyPortRanges setToPort(Integer toPort) {
+            this.toPort = toPort;
+            return this;
+        }
+        public Integer getToPort() {
+            return this.toPort;
         }
 
     }
@@ -317,17 +317,17 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
 
     public static class DescribeListenerResponseBodyXForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaIdEnabled")
-        public Boolean XForwardedForGaIdEnabled;
-
         @NameInMap("XForwardedForGaApEnabled")
         public Boolean XForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
-        public Boolean XForwardedForProtoEnabled;
+        @NameInMap("XForwardedForGaIdEnabled")
+        public Boolean XForwardedForGaIdEnabled;
 
         @NameInMap("XForwardedForPortEnabled")
         public Boolean XForwardedForPortEnabled;
+
+        @NameInMap("XForwardedForProtoEnabled")
+        public Boolean XForwardedForProtoEnabled;
 
         @NameInMap("XRealIpEnabled")
         public Boolean XRealIpEnabled;
@@ -335,14 +335,6 @@ public class DescribeListenerResponseBody extends TeaModel {
         public static DescribeListenerResponseBodyXForwardedForConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeListenerResponseBodyXForwardedForConfig self = new DescribeListenerResponseBodyXForwardedForConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
-            this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
-            return this;
-        }
-        public Boolean getXForwardedForGaIdEnabled() {
-            return this.XForwardedForGaIdEnabled;
         }
 
         public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
@@ -353,12 +345,12 @@ public class DescribeListenerResponseBody extends TeaModel {
             return this.XForwardedForGaApEnabled;
         }
 
-        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
-            this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
+            this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
             return this;
         }
-        public Boolean getXForwardedForProtoEnabled() {
-            return this.XForwardedForProtoEnabled;
+        public Boolean getXForwardedForGaIdEnabled() {
+            return this.XForwardedForGaIdEnabled;
         }
 
         public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
@@ -367,6 +359,14 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
         public Boolean getXForwardedForPortEnabled() {
             return this.XForwardedForPortEnabled;
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
+            this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForProtoEnabled() {
+            return this.XForwardedForProtoEnabled;
         }
 
         public DescribeListenerResponseBodyXForwardedForConfig setXRealIpEnabled(Boolean XRealIpEnabled) {

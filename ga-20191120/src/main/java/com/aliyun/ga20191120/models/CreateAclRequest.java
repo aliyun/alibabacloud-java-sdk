@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AclEntries")
+    public java.util.List<CreateAclRequestAclEntries> aclEntries;
 
     @NameInMap("AclName")
     public String aclName;
@@ -13,26 +13,26 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    @NameInMap("AclEntries")
-    public java.util.List<CreateAclRequestAclEntries> aclEntries;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAclRequest self = new CreateAclRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAclRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateAclRequest setAclEntries(java.util.List<CreateAclRequestAclEntries> aclEntries) {
+        this.aclEntries = aclEntries;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<CreateAclRequestAclEntries> getAclEntries() {
+        return this.aclEntries;
     }
 
     public CreateAclRequest setAclName(String aclName) {
@@ -51,14 +51,6 @@ public class CreateAclRequest extends TeaModel {
         return this.addressIPVersion;
     }
 
-    public CreateAclRequest setAclEntries(java.util.List<CreateAclRequestAclEntries> aclEntries) {
-        this.aclEntries = aclEntries;
-        return this;
-    }
-    public java.util.List<CreateAclRequestAclEntries> getAclEntries() {
-        return this.aclEntries;
-    }
-
     public CreateAclRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -73,6 +65,14 @@ public class CreateAclRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateAclRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class CreateAclRequestAclEntries extends TeaModel {

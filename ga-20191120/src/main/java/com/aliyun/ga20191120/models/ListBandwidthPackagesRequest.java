@@ -4,8 +4,8 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListBandwidthPackagesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,26 +13,26 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("State")
     public String state;
 
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("BandwidthPackageId")
-    public String bandwidthPackageId;
-
     public static ListBandwidthPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBandwidthPackagesRequest self = new ListBandwidthPackagesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListBandwidthPackagesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListBandwidthPackagesRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
     }
 
     public ListBandwidthPackagesRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +51,14 @@ public class ListBandwidthPackagesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListBandwidthPackagesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListBandwidthPackagesRequest setState(String state) {
         this.state = state;
         return this;
@@ -65,14 +73,6 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public ListBandwidthPackagesRequest setBandwidthPackageId(String bandwidthPackageId) {
-        this.bandwidthPackageId = bandwidthPackageId;
-        return this;
-    }
-    public String getBandwidthPackageId() {
-        return this.bandwidthPackageId;
     }
 
 }

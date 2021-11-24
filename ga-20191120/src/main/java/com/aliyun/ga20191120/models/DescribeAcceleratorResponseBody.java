@@ -4,20 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeAcceleratorResponseBody extends TeaModel {
-    @NameInMap("DdosId")
-    public String ddosId;
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
 
-    @NameInMap("DnsName")
-    public String dnsName;
+    @NameInMap("BasicBandwidthPackage")
+    public DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
+    @NameInMap("CenId")
+    public String cenId;
 
     @NameInMap("CreateTime")
     public Long createTime;
@@ -25,76 +19,66 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     @NameInMap("CrossDomainBandwidthPackage")
     public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage crossDomainBandwidthPackage;
 
-    @NameInMap("SecondDnsName")
-    public String secondDnsName;
+    @NameInMap("DdosId")
+    public String ddosId;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("BasicBandwidthPackage")
-    public DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage;
-
-    @NameInMap("State")
-    public String state;
+    @NameInMap("DnsName")
+    public String dnsName;
 
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
-    @NameInMap("CenId")
-    public String cenId;
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SecondDnsName")
+    public String secondDnsName;
+
     @NameInMap("Spec")
     public String spec;
 
-    @NameInMap("AcceleratorId")
-    public String acceleratorId;
+    @NameInMap("State")
+    public String state;
 
     public static DescribeAcceleratorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAcceleratorResponseBody self = new DescribeAcceleratorResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAcceleratorResponseBody setDdosId(String ddosId) {
-        this.ddosId = ddosId;
+    public DescribeAcceleratorResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
         return this;
     }
-    public String getDdosId() {
-        return this.ddosId;
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
-    public DescribeAcceleratorResponseBody setDnsName(String dnsName) {
-        this.dnsName = dnsName;
+    public DescribeAcceleratorResponseBody setBasicBandwidthPackage(DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage) {
+        this.basicBandwidthPackage = basicBandwidthPackage;
         return this;
     }
-    public String getDnsName() {
-        return this.dnsName;
+    public DescribeAcceleratorResponseBodyBasicBandwidthPackage getBasicBandwidthPackage() {
+        return this.basicBandwidthPackage;
     }
 
-    public DescribeAcceleratorResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribeAcceleratorResponseBody setCenId(String cenId) {
+        this.cenId = cenId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeAcceleratorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAcceleratorResponseBody setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
+    public String getCenId() {
+        return this.cenId;
     }
 
     public DescribeAcceleratorResponseBody setCreateTime(Long createTime) {
@@ -113,36 +97,28 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.crossDomainBandwidthPackage;
     }
 
-    public DescribeAcceleratorResponseBody setSecondDnsName(String secondDnsName) {
-        this.secondDnsName = secondDnsName;
+    public DescribeAcceleratorResponseBody setDdosId(String ddosId) {
+        this.ddosId = ddosId;
         return this;
     }
-    public String getSecondDnsName() {
-        return this.secondDnsName;
+    public String getDdosId() {
+        return this.ddosId;
     }
 
-    public DescribeAcceleratorResponseBody setName(String name) {
-        this.name = name;
+    public DescribeAcceleratorResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getDescription() {
+        return this.description;
     }
 
-    public DescribeAcceleratorResponseBody setBasicBandwidthPackage(DescribeAcceleratorResponseBodyBasicBandwidthPackage basicBandwidthPackage) {
-        this.basicBandwidthPackage = basicBandwidthPackage;
+    public DescribeAcceleratorResponseBody setDnsName(String dnsName) {
+        this.dnsName = dnsName;
         return this;
     }
-    public DescribeAcceleratorResponseBodyBasicBandwidthPackage getBasicBandwidthPackage() {
-        return this.basicBandwidthPackage;
-    }
-
-    public DescribeAcceleratorResponseBody setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
+    public String getDnsName() {
+        return this.dnsName;
     }
 
     public DescribeAcceleratorResponseBody setExpiredTime(Long expiredTime) {
@@ -153,12 +129,20 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.expiredTime;
     }
 
-    public DescribeAcceleratorResponseBody setCenId(String cenId) {
-        this.cenId = cenId;
+    public DescribeAcceleratorResponseBody setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
         return this;
     }
-    public String getCenId() {
-        return this.cenId;
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public DescribeAcceleratorResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeAcceleratorResponseBody setRegionId(String regionId) {
@@ -169,6 +153,22 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeAcceleratorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAcceleratorResponseBody setSecondDnsName(String secondDnsName) {
+        this.secondDnsName = secondDnsName;
+        return this;
+    }
+    public String getSecondDnsName() {
+        return this.secondDnsName;
+    }
+
     public DescribeAcceleratorResponseBody setSpec(String spec) {
         this.spec = spec;
         return this;
@@ -177,42 +177,12 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.spec;
     }
 
-    public DescribeAcceleratorResponseBody setAcceleratorId(String acceleratorId) {
-        this.acceleratorId = acceleratorId;
+    public DescribeAcceleratorResponseBody setState(String state) {
+        this.state = state;
         return this;
     }
-    public String getAcceleratorId() {
-        return this.acceleratorId;
-    }
-
-    public static class DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
-        public Integer bandwidth;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        public static DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage self = new DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage setBandwidth(Integer bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Integer getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
+    public String getState() {
+        return this.state;
     }
 
     public static class DescribeAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {
@@ -247,6 +217,36 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         }
 
         public DescribeAcceleratorResponseBodyBasicBandwidthPackage setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        public static DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage self = new DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }

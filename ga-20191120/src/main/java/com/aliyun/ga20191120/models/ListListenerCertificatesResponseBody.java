@@ -4,24 +4,48 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
+    @NameInMap("Certificates")
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("Certificates")
-    public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
-
     public static ListListenerCertificatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListListenerCertificatesResponseBody self = new ListListenerCertificatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListListenerCertificatesResponseBody setCertificates(java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates) {
+        this.certificates = certificates;
+        return this;
+    }
+    public java.util.List<ListListenerCertificatesResponseBodyCertificates> getCertificates() {
+        return this.certificates;
+    }
+
+    public ListListenerCertificatesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListListenerCertificatesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListListenerCertificatesResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListListenerCertificatesResponseBody setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public ListListenerCertificatesResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    public ListListenerCertificatesResponseBody setCertificates(java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates) {
-        this.certificates = certificates;
-        return this;
-    }
-    public java.util.List<ListListenerCertificatesResponseBodyCertificates> getCertificates() {
-        return this.certificates;
-    }
-
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         @NameInMap("CertificateId")
         public String certificateId;
 
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         @NameInMap("Domain")
         public String domain;
+
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         public static ListListenerCertificatesResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
             ListListenerCertificatesResponseBodyCertificates self = new ListListenerCertificatesResponseBodyCertificates();
@@ -87,20 +87,20 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             return this.certificateId;
         }
 
-        public ListListenerCertificatesResponseBodyCertificates setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
-        }
-
         public ListListenerCertificatesResponseBodyCertificates setDomain(String domain) {
             this.domain = domain;
             return this;
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public ListListenerCertificatesResponseBodyCertificates setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
     }
