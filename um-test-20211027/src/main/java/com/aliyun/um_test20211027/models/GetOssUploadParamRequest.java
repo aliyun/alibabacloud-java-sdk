@@ -20,10 +20,6 @@ public class GetOssUploadParamRequest extends TeaModel {
     @NameInMap("fileType")
     public Integer fileType;
 
-    // 友盟用户id
-    @NameInMap("userId")
-    public Long userId;
-
     public static GetOssUploadParamRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOssUploadParamRequest self = new GetOssUploadParamRequest();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class GetOssUploadParamRequest extends TeaModel {
     }
     public Integer getFileType() {
         return this.fileType;
-    }
-
-    public GetOssUploadParamRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
     }
 
 }
