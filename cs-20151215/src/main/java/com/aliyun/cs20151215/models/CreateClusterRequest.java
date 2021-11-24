@@ -64,6 +64,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("disable_rollback")
     public Boolean disableRollback;
 
+    // 启用 RRSA 功能
+    @NameInMap("enable_rrsa")
+    public Boolean enableRrsa;
+
     // Secret落盘加密
     @NameInMap("encryption_provider_key")
     public String encryptionProviderKey;
@@ -454,6 +458,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Boolean getDisableRollback() {
         return this.disableRollback;
+    }
+
+    public CreateClusterRequest setEnableRrsa(Boolean enableRrsa) {
+        this.enableRrsa = enableRrsa;
+        return this;
+    }
+    public Boolean getEnableRrsa() {
+        return this.enableRrsa;
     }
 
     public CreateClusterRequest setEncryptionProviderKey(String encryptionProviderKey) {

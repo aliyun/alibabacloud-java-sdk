@@ -8,6 +8,10 @@ public class DeletePolicyInstanceResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeletePolicyInstanceResponseBody body;
+
     public static DeletePolicyInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeletePolicyInstanceResponse self = new DeletePolicyInstanceResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DeletePolicyInstanceResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DeletePolicyInstanceResponse setBody(DeletePolicyInstanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeletePolicyInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

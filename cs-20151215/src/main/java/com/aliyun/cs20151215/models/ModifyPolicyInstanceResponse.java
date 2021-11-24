@@ -8,6 +8,10 @@ public class ModifyPolicyInstanceResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyPolicyInstanceResponseBody body;
+
     public static ModifyPolicyInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyInstanceResponse self = new ModifyPolicyInstanceResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class ModifyPolicyInstanceResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyPolicyInstanceResponse setBody(ModifyPolicyInstanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyPolicyInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }
