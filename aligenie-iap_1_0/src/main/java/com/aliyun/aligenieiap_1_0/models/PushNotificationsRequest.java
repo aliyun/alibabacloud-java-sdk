@@ -88,7 +88,7 @@ public class PushNotificationsRequest extends TeaModel {
 
         // 占位符信息，例如：模板是【你好，{nick}！】这里可以是：{"nick":"小甜甜"}
         @NameInMap("PlaceHolder")
-        public java.util.Map<String, ?> placeHolder;
+        public java.util.Map<String, String> placeHolder;
 
         // 消息推送的目标信息。
         @NameInMap("SendTarget")
@@ -139,11 +139,11 @@ public class PushNotificationsRequest extends TeaModel {
             return this.organizationId;
         }
 
-        public PushNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, ?> placeHolder) {
+        public PushNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, String> placeHolder) {
             this.placeHolder = placeHolder;
             return this;
         }
-        public java.util.Map<String, ?> getPlaceHolder() {
+        public java.util.Map<String, String> getPlaceHolder() {
             return this.placeHolder;
         }
 
