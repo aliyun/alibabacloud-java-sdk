@@ -125,6 +125,14 @@ public class SendNotificationsRequest extends TeaModel {
 
     }
 
+    public static class SendNotificationsRequestNotificationUnicastRequestSendTarget extends TeaModel {
+        public static SendNotificationsRequestNotificationUnicastRequestSendTarget build(java.util.Map<String, ?> map) throws Exception {
+            SendNotificationsRequestNotificationUnicastRequestSendTarget self = new SendNotificationsRequestNotificationUnicastRequestSendTarget();
+            return TeaModel.build(map, self);
+        }
+
+    }
+
     public static class SendNotificationsRequestNotificationUnicastRequest extends TeaModel {
         // 调试标识
         @NameInMap("IsDebug")
@@ -136,7 +144,11 @@ public class SendNotificationsRequest extends TeaModel {
 
         // 占位符信息，例如：模板是【你好，{nick}！】这里可以是：{"nick":"小甜甜"}
         @NameInMap("PlaceHolder")
-        public java.util.Map<String, ?> placeHolder;
+        public java.util.Map<String, String> placeHolder;
+
+        // 消息推送的目标信息。
+        @NameInMap("SendTarget")
+        public SendNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
 
         public static SendNotificationsRequestNotificationUnicastRequest build(java.util.Map<String, ?> map) throws Exception {
             SendNotificationsRequestNotificationUnicastRequest self = new SendNotificationsRequestNotificationUnicastRequest();
@@ -159,12 +171,20 @@ public class SendNotificationsRequest extends TeaModel {
             return this.messageTemplateId;
         }
 
-        public SendNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, ?> placeHolder) {
+        public SendNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, String> placeHolder) {
             this.placeHolder = placeHolder;
             return this;
         }
-        public java.util.Map<String, ?> getPlaceHolder() {
+        public java.util.Map<String, String> getPlaceHolder() {
             return this.placeHolder;
+        }
+
+        public SendNotificationsRequestNotificationUnicastRequest setSendTarget(SendNotificationsRequestNotificationUnicastRequestSendTarget sendTarget) {
+            this.sendTarget = sendTarget;
+            return this;
+        }
+        public SendNotificationsRequestNotificationUnicastRequestSendTarget getSendTarget() {
+            return this.sendTarget;
         }
 
     }

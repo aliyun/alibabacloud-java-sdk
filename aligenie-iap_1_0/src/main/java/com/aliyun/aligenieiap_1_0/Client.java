@@ -73,11 +73,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -139,11 +139,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -197,11 +197,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -263,11 +263,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -329,11 +329,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -387,11 +387,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -461,11 +461,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -527,11 +527,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -561,10 +561,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public WakeUpAppResponse wakeUpAppWithOptions(WakeUpAppRequest request, WakeUpAppHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.genieAppId)) {
-            body.put("GenieAppId", request.genieAppId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.isDebug)) {
             body.put("IsDebug", request.isDebug);
         }
@@ -583,11 +579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

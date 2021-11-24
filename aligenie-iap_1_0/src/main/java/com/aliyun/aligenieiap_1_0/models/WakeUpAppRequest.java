@@ -4,10 +4,6 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class WakeUpAppRequest extends TeaModel {
-    // 猫精应用id，控制台中创建应用后得到的应用id。
-    @NameInMap("GenieAppId")
-    public String genieAppId;
-
     // 是否调试
     @NameInMap("IsDebug")
     public Boolean isDebug;
@@ -23,14 +19,6 @@ public class WakeUpAppRequest extends TeaModel {
     public static WakeUpAppRequest build(java.util.Map<String, ?> map) throws Exception {
         WakeUpAppRequest self = new WakeUpAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public WakeUpAppRequest setGenieAppId(String genieAppId) {
-        this.genieAppId = genieAppId;
-        return this;
-    }
-    public String getGenieAppId() {
-        return this.genieAppId;
     }
 
     public WakeUpAppRequest setIsDebug(Boolean isDebug) {
