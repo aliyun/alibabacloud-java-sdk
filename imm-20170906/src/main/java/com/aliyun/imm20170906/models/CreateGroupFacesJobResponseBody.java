@@ -4,6 +4,9 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupFacesJobResponseBody extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
     @NameInMap("JobType")
     public String jobType;
 
@@ -13,12 +16,17 @@ public class CreateGroupFacesJobResponseBody extends TeaModel {
     @NameInMap("SetId")
     public String setId;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     public static CreateGroupFacesJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupFacesJobResponseBody self = new CreateGroupFacesJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupFacesJobResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public CreateGroupFacesJobResponseBody setJobType(String jobType) {
@@ -43,14 +51,6 @@ public class CreateGroupFacesJobResponseBody extends TeaModel {
     }
     public String getSetId() {
         return this.setId;
-    }
-
-    public CreateGroupFacesJobResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
 }

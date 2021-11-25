@@ -43,41 +43,33 @@ public class ListSetsResponseBody extends TeaModel {
     }
 
     public static class ListSetsResponseBodySets extends TeaModel {
-        @NameInMap("VideoCount")
-        public Integer videoCount;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("VideoLength")
-        public Integer videoLength;
-
-        @NameInMap("SetId")
-        public String setId;
-
-        @NameInMap("ImageCount")
-        public Integer imageCount;
 
         @NameInMap("FaceCount")
         public Integer faceCount;
 
-        @NameInMap("SetName")
-        public String setName;
+        @NameInMap("ImageCount")
+        public Integer imageCount;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("SetId")
+        public String setId;
+
+        @NameInMap("SetName")
+        public String setName;
+
+        @NameInMap("VideoCount")
+        public Integer videoCount;
+
+        @NameInMap("VideoLength")
+        public Integer videoLength;
+
         public static ListSetsResponseBodySets build(java.util.Map<String, ?> map) throws Exception {
             ListSetsResponseBodySets self = new ListSetsResponseBodySets();
             return TeaModel.build(map, self);
-        }
-
-        public ListSetsResponseBodySets setVideoCount(Integer videoCount) {
-            this.videoCount = videoCount;
-            return this;
-        }
-        public Integer getVideoCount() {
-            return this.videoCount;
         }
 
         public ListSetsResponseBodySets setCreateTime(String createTime) {
@@ -88,20 +80,12 @@ public class ListSetsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListSetsResponseBodySets setVideoLength(Integer videoLength) {
-            this.videoLength = videoLength;
+        public ListSetsResponseBodySets setFaceCount(Integer faceCount) {
+            this.faceCount = faceCount;
             return this;
         }
-        public Integer getVideoLength() {
-            return this.videoLength;
-        }
-
-        public ListSetsResponseBodySets setSetId(String setId) {
-            this.setId = setId;
-            return this;
-        }
-        public String getSetId() {
-            return this.setId;
+        public Integer getFaceCount() {
+            return this.faceCount;
         }
 
         public ListSetsResponseBodySets setImageCount(Integer imageCount) {
@@ -112,12 +96,20 @@ public class ListSetsResponseBody extends TeaModel {
             return this.imageCount;
         }
 
-        public ListSetsResponseBodySets setFaceCount(Integer faceCount) {
-            this.faceCount = faceCount;
+        public ListSetsResponseBodySets setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
-        public Integer getFaceCount() {
-            return this.faceCount;
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public ListSetsResponseBodySets setSetId(String setId) {
+            this.setId = setId;
+            return this;
+        }
+        public String getSetId() {
+            return this.setId;
         }
 
         public ListSetsResponseBodySets setSetName(String setName) {
@@ -128,12 +120,20 @@ public class ListSetsResponseBody extends TeaModel {
             return this.setName;
         }
 
-        public ListSetsResponseBodySets setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
+        public ListSetsResponseBodySets setVideoCount(Integer videoCount) {
+            this.videoCount = videoCount;
             return this;
         }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public Integer getVideoCount() {
+            return this.videoCount;
+        }
+
+        public ListSetsResponseBodySets setVideoLength(Integer videoLength) {
+            this.videoLength = videoLength;
+            return this;
+        }
+        public Integer getVideoLength() {
+            return this.videoLength;
         }
 
     }

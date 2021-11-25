@@ -7,17 +7,11 @@ public class GetOfficePreviewURLRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
-    @NameInMap("SrcUri")
-    public String srcUri;
-
     @NameInMap("SrcType")
     public String srcType;
 
-    @NameInMap("WatermarkType")
-    public Integer watermarkType;
-
-    @NameInMap("WatermarkValue")
-    public String watermarkValue;
+    @NameInMap("SrcUri")
+    public String srcUri;
 
     @NameInMap("WatermarkFillStyle")
     public String watermarkFillStyle;
@@ -25,11 +19,17 @@ public class GetOfficePreviewURLRequest extends TeaModel {
     @NameInMap("WatermarkFont")
     public String watermarkFont;
 
+    @NameInMap("WatermarkHorizontal")
+    public Integer watermarkHorizontal;
+
     @NameInMap("WatermarkRotate")
     public Float watermarkRotate;
 
-    @NameInMap("WatermarkHorizontal")
-    public Integer watermarkHorizontal;
+    @NameInMap("WatermarkType")
+    public Integer watermarkType;
+
+    @NameInMap("WatermarkValue")
+    public String watermarkValue;
 
     @NameInMap("WatermarkVertical")
     public Integer watermarkVertical;
@@ -47,14 +47,6 @@ public class GetOfficePreviewURLRequest extends TeaModel {
         return this.project;
     }
 
-    public GetOfficePreviewURLRequest setSrcUri(String srcUri) {
-        this.srcUri = srcUri;
-        return this;
-    }
-    public String getSrcUri() {
-        return this.srcUri;
-    }
-
     public GetOfficePreviewURLRequest setSrcType(String srcType) {
         this.srcType = srcType;
         return this;
@@ -63,20 +55,12 @@ public class GetOfficePreviewURLRequest extends TeaModel {
         return this.srcType;
     }
 
-    public GetOfficePreviewURLRequest setWatermarkType(Integer watermarkType) {
-        this.watermarkType = watermarkType;
+    public GetOfficePreviewURLRequest setSrcUri(String srcUri) {
+        this.srcUri = srcUri;
         return this;
     }
-    public Integer getWatermarkType() {
-        return this.watermarkType;
-    }
-
-    public GetOfficePreviewURLRequest setWatermarkValue(String watermarkValue) {
-        this.watermarkValue = watermarkValue;
-        return this;
-    }
-    public String getWatermarkValue() {
-        return this.watermarkValue;
+    public String getSrcUri() {
+        return this.srcUri;
     }
 
     public GetOfficePreviewURLRequest setWatermarkFillStyle(String watermarkFillStyle) {
@@ -95,6 +79,14 @@ public class GetOfficePreviewURLRequest extends TeaModel {
         return this.watermarkFont;
     }
 
+    public GetOfficePreviewURLRequest setWatermarkHorizontal(Integer watermarkHorizontal) {
+        this.watermarkHorizontal = watermarkHorizontal;
+        return this;
+    }
+    public Integer getWatermarkHorizontal() {
+        return this.watermarkHorizontal;
+    }
+
     public GetOfficePreviewURLRequest setWatermarkRotate(Float watermarkRotate) {
         this.watermarkRotate = watermarkRotate;
         return this;
@@ -103,12 +95,20 @@ public class GetOfficePreviewURLRequest extends TeaModel {
         return this.watermarkRotate;
     }
 
-    public GetOfficePreviewURLRequest setWatermarkHorizontal(Integer watermarkHorizontal) {
-        this.watermarkHorizontal = watermarkHorizontal;
+    public GetOfficePreviewURLRequest setWatermarkType(Integer watermarkType) {
+        this.watermarkType = watermarkType;
         return this;
     }
-    public Integer getWatermarkHorizontal() {
-        return this.watermarkHorizontal;
+    public Integer getWatermarkType() {
+        return this.watermarkType;
+    }
+
+    public GetOfficePreviewURLRequest setWatermarkValue(String watermarkValue) {
+        this.watermarkValue = watermarkValue;
+        return this;
+    }
+    public String getWatermarkValue() {
+        return this.watermarkValue;
     }
 
     public GetOfficePreviewURLRequest setWatermarkVertical(Integer watermarkVertical) {

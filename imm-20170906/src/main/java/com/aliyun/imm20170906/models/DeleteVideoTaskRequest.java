@@ -7,11 +7,11 @@ public class DeleteVideoTaskRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
-    @NameInMap("TaskType")
-    public String taskType;
-
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("TaskType")
+    public String taskType;
 
     public static DeleteVideoTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVideoTaskRequest self = new DeleteVideoTaskRequest();
@@ -26,20 +26,20 @@ public class DeleteVideoTaskRequest extends TeaModel {
         return this.project;
     }
 
-    public DeleteVideoTaskRequest setTaskType(String taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public String getTaskType() {
-        return this.taskType;
-    }
-
     public DeleteVideoTaskRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public DeleteVideoTaskRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

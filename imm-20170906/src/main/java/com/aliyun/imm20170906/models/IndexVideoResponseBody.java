@@ -4,20 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class IndexVideoResponseBody extends TeaModel {
-    @NameInMap("ModifyTime")
-    public String modifyTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("ExternalId")
     public String externalId;
 
-    @NameInMap("VideoUri")
-    public String videoUri;
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     @NameInMap("RemarksA")
     public String remarksA;
@@ -31,28 +25,18 @@ public class IndexVideoResponseBody extends TeaModel {
     @NameInMap("RemarksD")
     public String remarksD;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SetId")
     public String setId;
+
+    @NameInMap("VideoUri")
+    public String videoUri;
 
     public static IndexVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IndexVideoResponseBody self = new IndexVideoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public IndexVideoResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
-        return this;
-    }
-    public String getModifyTime() {
-        return this.modifyTime;
-    }
-
-    public IndexVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public IndexVideoResponseBody setCreateTime(String createTime) {
@@ -71,12 +55,12 @@ public class IndexVideoResponseBody extends TeaModel {
         return this.externalId;
     }
 
-    public IndexVideoResponseBody setVideoUri(String videoUri) {
-        this.videoUri = videoUri;
+    public IndexVideoResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
         return this;
     }
-    public String getVideoUri() {
-        return this.videoUri;
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public IndexVideoResponseBody setRemarksA(String remarksA) {
@@ -111,12 +95,28 @@ public class IndexVideoResponseBody extends TeaModel {
         return this.remarksD;
     }
 
+    public IndexVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public IndexVideoResponseBody setSetId(String setId) {
         this.setId = setId;
         return this;
     }
     public String getSetId() {
         return this.setId;
+    }
+
+    public IndexVideoResponseBody setVideoUri(String videoUri) {
+        this.videoUri = videoUri;
+        return this;
+    }
+    public String getVideoUri() {
+        return this.videoUri;
     }
 
 }

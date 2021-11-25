@@ -7,14 +7,14 @@ public class DeleteVideoRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
+    @NameInMap("Resources")
+    public Boolean resources;
+
     @NameInMap("SetId")
     public String setId;
 
     @NameInMap("VideoUri")
     public String videoUri;
-
-    @NameInMap("Resources")
-    public Boolean resources;
 
     public static DeleteVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVideoRequest self = new DeleteVideoRequest();
@@ -27,6 +27,14 @@ public class DeleteVideoRequest extends TeaModel {
     }
     public String getProject() {
         return this.project;
+    }
+
+    public DeleteVideoRequest setResources(Boolean resources) {
+        this.resources = resources;
+        return this;
+    }
+    public Boolean getResources() {
+        return this.resources;
     }
 
     public DeleteVideoRequest setSetId(String setId) {
@@ -43,14 +51,6 @@ public class DeleteVideoRequest extends TeaModel {
     }
     public String getVideoUri() {
         return this.videoUri;
-    }
-
-    public DeleteVideoRequest setResources(Boolean resources) {
-        this.resources = resources;
-        return this;
-    }
-    public Boolean getResources() {
-        return this.resources;
     }
 
 }

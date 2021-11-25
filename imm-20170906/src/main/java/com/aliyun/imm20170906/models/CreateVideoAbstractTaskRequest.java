@@ -4,54 +4,38 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoAbstractTaskRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
-    @NameInMap("VideoUri")
-    public String videoUri;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
+    @NameInMap("AbstractLength")
+    public Integer abstractLength;
 
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
-    @NameInMap("TargetVideoUri")
-    public String targetVideoUri;
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("TargetClipsUri")
     public String targetClipsUri;
 
-    @NameInMap("AbstractLength")
-    public Integer abstractLength;
+    @NameInMap("TargetVideoUri")
+    public String targetVideoUri;
+
+    @NameInMap("VideoUri")
+    public String videoUri;
 
     public static CreateVideoAbstractTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVideoAbstractTaskRequest self = new CreateVideoAbstractTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateVideoAbstractTaskRequest setProject(String project) {
-        this.project = project;
+    public CreateVideoAbstractTaskRequest setAbstractLength(Integer abstractLength) {
+        this.abstractLength = abstractLength;
         return this;
     }
-    public String getProject() {
-        return this.project;
-    }
-
-    public CreateVideoAbstractTaskRequest setVideoUri(String videoUri) {
-        this.videoUri = videoUri;
-        return this;
-    }
-    public String getVideoUri() {
-        return this.videoUri;
-    }
-
-    public CreateVideoAbstractTaskRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
+    public Integer getAbstractLength() {
+        return this.abstractLength;
     }
 
     public CreateVideoAbstractTaskRequest setNotifyEndpoint(String notifyEndpoint) {
@@ -62,12 +46,20 @@ public class CreateVideoAbstractTaskRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public CreateVideoAbstractTaskRequest setTargetVideoUri(String targetVideoUri) {
-        this.targetVideoUri = targetVideoUri;
+    public CreateVideoAbstractTaskRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
         return this;
     }
-    public String getTargetVideoUri() {
-        return this.targetVideoUri;
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public CreateVideoAbstractTaskRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
     public CreateVideoAbstractTaskRequest setTargetClipsUri(String targetClipsUri) {
@@ -78,12 +70,20 @@ public class CreateVideoAbstractTaskRequest extends TeaModel {
         return this.targetClipsUri;
     }
 
-    public CreateVideoAbstractTaskRequest setAbstractLength(Integer abstractLength) {
-        this.abstractLength = abstractLength;
+    public CreateVideoAbstractTaskRequest setTargetVideoUri(String targetVideoUri) {
+        this.targetVideoUri = targetVideoUri;
         return this;
     }
-    public Integer getAbstractLength() {
-        return this.abstractLength;
+    public String getTargetVideoUri() {
+        return this.targetVideoUri;
+    }
+
+    public CreateVideoAbstractTaskRequest setVideoUri(String videoUri) {
+        this.videoUri = videoUri;
+        return this;
+    }
+    public String getVideoUri() {
+        return this.videoUri;
     }
 
 }

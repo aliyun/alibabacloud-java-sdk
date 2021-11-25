@@ -4,17 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListFaceGroupsRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
-    @NameInMap("SetId")
-    public String setId;
-
-    @NameInMap("Marker")
-    public String marker;
+    @NameInMap("ExternalId")
+    public String externalId;
 
     @NameInMap("Limit")
     public Integer limit;
+
+    @NameInMap("Marker")
+    public String marker;
 
     @NameInMap("Order")
     public String order;
@@ -22,8 +19,17 @@ public class ListFaceGroupsRequest extends TeaModel {
     @NameInMap("OrderBy")
     public String orderBy;
 
+    @NameInMap("Project")
+    public String project;
+
     @NameInMap("RemarksAQuery")
     public String remarksAQuery;
+
+    @NameInMap("RemarksArrayAQuery")
+    public String remarksArrayAQuery;
+
+    @NameInMap("RemarksArrayBQuery")
+    public String remarksArrayBQuery;
 
     @NameInMap("RemarksBQuery")
     public String remarksBQuery;
@@ -34,42 +40,20 @@ public class ListFaceGroupsRequest extends TeaModel {
     @NameInMap("RemarksDQuery")
     public String remarksDQuery;
 
-    @NameInMap("RemarksArrayAQuery")
-    public String remarksArrayAQuery;
-
-    @NameInMap("RemarksArrayBQuery")
-    public String remarksArrayBQuery;
-
-    @NameInMap("ExternalId")
-    public String externalId;
+    @NameInMap("SetId")
+    public String setId;
 
     public static ListFaceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFaceGroupsRequest self = new ListFaceGroupsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFaceGroupsRequest setProject(String project) {
-        this.project = project;
+    public ListFaceGroupsRequest setExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
-    public String getProject() {
-        return this.project;
-    }
-
-    public ListFaceGroupsRequest setSetId(String setId) {
-        this.setId = setId;
-        return this;
-    }
-    public String getSetId() {
-        return this.setId;
-    }
-
-    public ListFaceGroupsRequest setMarker(String marker) {
-        this.marker = marker;
-        return this;
-    }
-    public String getMarker() {
-        return this.marker;
+    public String getExternalId() {
+        return this.externalId;
     }
 
     public ListFaceGroupsRequest setLimit(Integer limit) {
@@ -78,6 +62,14 @@ public class ListFaceGroupsRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public ListFaceGroupsRequest setMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String getMarker() {
+        return this.marker;
     }
 
     public ListFaceGroupsRequest setOrder(String order) {
@@ -96,12 +88,36 @@ public class ListFaceGroupsRequest extends TeaModel {
         return this.orderBy;
     }
 
+    public ListFaceGroupsRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
+    }
+
     public ListFaceGroupsRequest setRemarksAQuery(String remarksAQuery) {
         this.remarksAQuery = remarksAQuery;
         return this;
     }
     public String getRemarksAQuery() {
         return this.remarksAQuery;
+    }
+
+    public ListFaceGroupsRequest setRemarksArrayAQuery(String remarksArrayAQuery) {
+        this.remarksArrayAQuery = remarksArrayAQuery;
+        return this;
+    }
+    public String getRemarksArrayAQuery() {
+        return this.remarksArrayAQuery;
+    }
+
+    public ListFaceGroupsRequest setRemarksArrayBQuery(String remarksArrayBQuery) {
+        this.remarksArrayBQuery = remarksArrayBQuery;
+        return this;
+    }
+    public String getRemarksArrayBQuery() {
+        return this.remarksArrayBQuery;
     }
 
     public ListFaceGroupsRequest setRemarksBQuery(String remarksBQuery) {
@@ -128,28 +144,12 @@ public class ListFaceGroupsRequest extends TeaModel {
         return this.remarksDQuery;
     }
 
-    public ListFaceGroupsRequest setRemarksArrayAQuery(String remarksArrayAQuery) {
-        this.remarksArrayAQuery = remarksArrayAQuery;
+    public ListFaceGroupsRequest setSetId(String setId) {
+        this.setId = setId;
         return this;
     }
-    public String getRemarksArrayAQuery() {
-        return this.remarksArrayAQuery;
-    }
-
-    public ListFaceGroupsRequest setRemarksArrayBQuery(String remarksArrayBQuery) {
-        this.remarksArrayBQuery = remarksArrayBQuery;
-        return this;
-    }
-    public String getRemarksArrayBQuery() {
-        return this.remarksArrayBQuery;
-    }
-
-    public ListFaceGroupsRequest setExternalId(String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-    public String getExternalId() {
-        return this.externalId;
+    public String getSetId() {
+        return this.setId;
     }
 
 }

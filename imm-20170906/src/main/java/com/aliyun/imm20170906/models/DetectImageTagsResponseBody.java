@@ -43,11 +43,14 @@ public class DetectImageTagsResponseBody extends TeaModel {
     }
 
     public static class DetectImageTagsResponseBodyTags extends TeaModel {
+        @NameInMap("CentricScore")
+        public Float centricScore;
+
         @NameInMap("ParentTagEnName")
         public String parentTagEnName;
 
-        @NameInMap("TagName")
-        public String tagName;
+        @NameInMap("ParentTagName")
+        public String parentTagName;
 
         @NameInMap("TagConfidence")
         public Float tagConfidence;
@@ -58,12 +61,20 @@ public class DetectImageTagsResponseBody extends TeaModel {
         @NameInMap("TagLevel")
         public Integer tagLevel;
 
-        @NameInMap("ParentTagName")
-        public String parentTagName;
+        @NameInMap("TagName")
+        public String tagName;
 
         public static DetectImageTagsResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
             DetectImageTagsResponseBodyTags self = new DetectImageTagsResponseBodyTags();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageTagsResponseBodyTags setCentricScore(Float centricScore) {
+            this.centricScore = centricScore;
+            return this;
+        }
+        public Float getCentricScore() {
+            return this.centricScore;
         }
 
         public DetectImageTagsResponseBodyTags setParentTagEnName(String parentTagEnName) {
@@ -74,12 +85,12 @@ public class DetectImageTagsResponseBody extends TeaModel {
             return this.parentTagEnName;
         }
 
-        public DetectImageTagsResponseBodyTags setTagName(String tagName) {
-            this.tagName = tagName;
+        public DetectImageTagsResponseBodyTags setParentTagName(String parentTagName) {
+            this.parentTagName = parentTagName;
             return this;
         }
-        public String getTagName() {
-            return this.tagName;
+        public String getParentTagName() {
+            return this.parentTagName;
         }
 
         public DetectImageTagsResponseBodyTags setTagConfidence(Float tagConfidence) {
@@ -106,12 +117,12 @@ public class DetectImageTagsResponseBody extends TeaModel {
             return this.tagLevel;
         }
 
-        public DetectImageTagsResponseBodyTags setParentTagName(String parentTagName) {
-            this.parentTagName = parentTagName;
+        public DetectImageTagsResponseBodyTags setTagName(String tagName) {
+            this.tagName = tagName;
             return this;
         }
-        public String getParentTagName() {
-            return this.parentTagName;
+        public String getTagName() {
+            return this.tagName;
         }
 
     }

@@ -4,17 +4,8 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class CreateMergeFaceGroupsJobRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
-    @NameInMap("SetId")
-    public String setId;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
+    @NameInMap("CustomMessage")
+    public String customMessage;
 
     @NameInMap("GroupIdFrom")
     public String groupIdFrom;
@@ -22,44 +13,29 @@ public class CreateMergeFaceGroupsJobRequest extends TeaModel {
     @NameInMap("GroupIdTo")
     public String groupIdTo;
 
-    @NameInMap("CustomMessage")
-    public String customMessage;
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("Project")
+    public String project;
+
+    @NameInMap("SetId")
+    public String setId;
 
     public static CreateMergeFaceGroupsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMergeFaceGroupsJobRequest self = new CreateMergeFaceGroupsJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMergeFaceGroupsJobRequest setProject(String project) {
-        this.project = project;
+    public CreateMergeFaceGroupsJobRequest setCustomMessage(String customMessage) {
+        this.customMessage = customMessage;
         return this;
     }
-    public String getProject() {
-        return this.project;
-    }
-
-    public CreateMergeFaceGroupsJobRequest setSetId(String setId) {
-        this.setId = setId;
-        return this;
-    }
-    public String getSetId() {
-        return this.setId;
-    }
-
-    public CreateMergeFaceGroupsJobRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
-    }
-
-    public CreateMergeFaceGroupsJobRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
+    public String getCustomMessage() {
+        return this.customMessage;
     }
 
     public CreateMergeFaceGroupsJobRequest setGroupIdFrom(String groupIdFrom) {
@@ -78,12 +54,36 @@ public class CreateMergeFaceGroupsJobRequest extends TeaModel {
         return this.groupIdTo;
     }
 
-    public CreateMergeFaceGroupsJobRequest setCustomMessage(String customMessage) {
-        this.customMessage = customMessage;
+    public CreateMergeFaceGroupsJobRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
         return this;
     }
-    public String getCustomMessage() {
-        return this.customMessage;
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public CreateMergeFaceGroupsJobRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public CreateMergeFaceGroupsJobRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
+    }
+
+    public CreateMergeFaceGroupsJobRequest setSetId(String setId) {
+        this.setId = setId;
+        return this;
+    }
+    public String getSetId() {
+        return this.setId;
     }
 
 }

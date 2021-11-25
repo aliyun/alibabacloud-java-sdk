@@ -4,6 +4,9 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListVideoAudiosRequest extends TeaModel {
+    @NameInMap("Marker")
+    public String marker;
+
     @NameInMap("Project")
     public String project;
 
@@ -13,12 +16,17 @@ public class ListVideoAudiosRequest extends TeaModel {
     @NameInMap("VideoUri")
     public String videoUri;
 
-    @NameInMap("Marker")
-    public String marker;
-
     public static ListVideoAudiosRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVideoAudiosRequest self = new ListVideoAudiosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListVideoAudiosRequest setMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String getMarker() {
+        return this.marker;
     }
 
     public ListVideoAudiosRequest setProject(String project) {
@@ -43,14 +51,6 @@ public class ListVideoAudiosRequest extends TeaModel {
     }
     public String getVideoUri() {
         return this.videoUri;
-    }
-
-    public ListVideoAudiosRequest setMarker(String marker) {
-        this.marker = marker;
-        return this;
-    }
-    public String getMarker() {
-        return this.marker;
     }
 
 }

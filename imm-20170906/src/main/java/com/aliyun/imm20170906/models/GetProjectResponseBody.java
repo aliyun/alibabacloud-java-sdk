@@ -4,11 +4,8 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BillingType")
+    public String billingType;
 
     @NameInMap("CU")
     public Integer CU;
@@ -19,8 +16,8 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("Endpoint")
     public String endpoint;
 
-    @NameInMap("ServiceRole")
-    public String serviceRole;
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     @NameInMap("Project")
     public String project;
@@ -28,31 +25,26 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("BillingType")
-    public String billingType;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("ModifyTime")
-    public String modifyTime;
+    @NameInMap("ServiceRole")
+    public String serviceRole;
+
+    @NameInMap("Type")
+    public String type;
 
     public static GetProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProjectResponseBody self = new GetProjectResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetProjectResponseBody setType(String type) {
-        this.type = type;
+    public GetProjectResponseBody setBillingType(String billingType) {
+        this.billingType = billingType;
         return this;
     }
-    public String getType() {
-        return this.type;
-    }
-
-    public GetProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getBillingType() {
+        return this.billingType;
     }
 
     public GetProjectResponseBody setCU(Integer CU) {
@@ -79,12 +71,12 @@ public class GetProjectResponseBody extends TeaModel {
         return this.endpoint;
     }
 
-    public GetProjectResponseBody setServiceRole(String serviceRole) {
-        this.serviceRole = serviceRole;
+    public GetProjectResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
         return this;
     }
-    public String getServiceRole() {
-        return this.serviceRole;
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public GetProjectResponseBody setProject(String project) {
@@ -103,20 +95,28 @@ public class GetProjectResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public GetProjectResponseBody setBillingType(String billingType) {
-        this.billingType = billingType;
+    public GetProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getBillingType() {
-        return this.billingType;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetProjectResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
+    public GetProjectResponseBody setServiceRole(String serviceRole) {
+        this.serviceRole = serviceRole;
         return this;
     }
-    public String getModifyTime() {
-        return this.modifyTime;
+    public String getServiceRole() {
+        return this.serviceRole;
+    }
+
+    public GetProjectResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

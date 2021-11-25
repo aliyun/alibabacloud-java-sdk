@@ -4,26 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetContentKeyResponseBody extends TeaModel {
-    @NameInMap("VersionId")
-    public String versionId;
+    @NameInMap("KeyInfos")
+    public String keyInfos;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("KeyInfos")
-    public String keyInfos;
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static GetContentKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetContentKeyResponseBody self = new GetContentKeyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetContentKeyResponseBody setVersionId(String versionId) {
-        this.versionId = versionId;
+    public GetContentKeyResponseBody setKeyInfos(String keyInfos) {
+        this.keyInfos = keyInfos;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
+    public String getKeyInfos() {
+        return this.keyInfos;
     }
 
     public GetContentKeyResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class GetContentKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetContentKeyResponseBody setKeyInfos(String keyInfos) {
-        this.keyInfos = keyInfos;
+    public GetContentKeyResponseBody setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public String getKeyInfos() {
-        return this.keyInfos;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

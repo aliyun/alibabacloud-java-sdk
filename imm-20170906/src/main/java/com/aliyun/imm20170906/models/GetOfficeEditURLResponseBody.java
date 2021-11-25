@@ -4,8 +4,8 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeEditURLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AccessToken")
+    public String accessToken;
 
     @NameInMap("AccessTokenExpiredTime")
     public String accessTokenExpiredTime;
@@ -13,26 +13,26 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
     @NameInMap("EditURL")
     public String editURL;
 
-    @NameInMap("AccessToken")
-    public String accessToken;
-
     @NameInMap("RefreshToken")
     public String refreshToken;
 
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetOfficeEditURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeEditURLResponseBody self = new GetOfficeEditURLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetOfficeEditURLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetOfficeEditURLResponseBody setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getAccessToken() {
+        return this.accessToken;
     }
 
     public GetOfficeEditURLResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
@@ -51,14 +51,6 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
         return this.editURL;
     }
 
-    public GetOfficeEditURLResponseBody setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-        return this;
-    }
-    public String getAccessToken() {
-        return this.accessToken;
-    }
-
     public GetOfficeEditURLResponseBody setRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -73,6 +65,14 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
     }
     public String getRefreshTokenExpiredTime() {
         return this.refreshTokenExpiredTime;
+    }
+
+    public GetOfficeEditURLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

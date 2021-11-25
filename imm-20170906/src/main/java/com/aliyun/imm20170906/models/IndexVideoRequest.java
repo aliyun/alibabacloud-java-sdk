@@ -4,14 +4,17 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class IndexVideoRequest extends TeaModel {
+    @NameInMap("ExternalId")
+    public String externalId;
+
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
     @NameInMap("Project")
     public String project;
-
-    @NameInMap("SetId")
-    public String setId;
-
-    @NameInMap("VideoUri")
-    public String videoUri;
 
     @NameInMap("RemarksA")
     public String remarksA;
@@ -19,27 +22,48 @@ public class IndexVideoRequest extends TeaModel {
     @NameInMap("RemarksB")
     public String remarksB;
 
-    @NameInMap("TgtUri")
-    public String tgtUri;
-
     @NameInMap("RemarksC")
     public String remarksC;
 
     @NameInMap("RemarksD")
     public String remarksD;
 
-    @NameInMap("ExternalId")
-    public String externalId;
+    @NameInMap("SetId")
+    public String setId;
 
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
+    @NameInMap("TgtUri")
+    public String tgtUri;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
+    @NameInMap("VideoUri")
+    public String videoUri;
 
     public static IndexVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         IndexVideoRequest self = new IndexVideoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IndexVideoRequest setExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    public IndexVideoRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public IndexVideoRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
     }
 
     public IndexVideoRequest setProject(String project) {
@@ -48,22 +72,6 @@ public class IndexVideoRequest extends TeaModel {
     }
     public String getProject() {
         return this.project;
-    }
-
-    public IndexVideoRequest setSetId(String setId) {
-        this.setId = setId;
-        return this;
-    }
-    public String getSetId() {
-        return this.setId;
-    }
-
-    public IndexVideoRequest setVideoUri(String videoUri) {
-        this.videoUri = videoUri;
-        return this;
-    }
-    public String getVideoUri() {
-        return this.videoUri;
     }
 
     public IndexVideoRequest setRemarksA(String remarksA) {
@@ -82,14 +90,6 @@ public class IndexVideoRequest extends TeaModel {
         return this.remarksB;
     }
 
-    public IndexVideoRequest setTgtUri(String tgtUri) {
-        this.tgtUri = tgtUri;
-        return this;
-    }
-    public String getTgtUri() {
-        return this.tgtUri;
-    }
-
     public IndexVideoRequest setRemarksC(String remarksC) {
         this.remarksC = remarksC;
         return this;
@@ -106,28 +106,28 @@ public class IndexVideoRequest extends TeaModel {
         return this.remarksD;
     }
 
-    public IndexVideoRequest setExternalId(String externalId) {
-        this.externalId = externalId;
+    public IndexVideoRequest setSetId(String setId) {
+        this.setId = setId;
         return this;
     }
-    public String getExternalId() {
-        return this.externalId;
+    public String getSetId() {
+        return this.setId;
     }
 
-    public IndexVideoRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
+    public IndexVideoRequest setTgtUri(String tgtUri) {
+        this.tgtUri = tgtUri;
         return this;
     }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
+    public String getTgtUri() {
+        return this.tgtUri;
     }
 
-    public IndexVideoRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
+    public IndexVideoRequest setVideoUri(String videoUri) {
+        this.videoUri = videoUri;
         return this;
     }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
+    public String getVideoUri() {
+        return this.videoUri;
     }
 
 }

@@ -7,6 +7,12 @@ public class CreateMergeFaceGroupsJobResponseBody extends TeaModel {
     @NameInMap("GroupIdFrom")
     public String groupIdFrom;
 
+    @NameInMap("GroupIdTo")
+    public String groupIdTo;
+
+    @NameInMap("JobId")
+    public String jobId;
+
     @NameInMap("JobType")
     public String jobType;
 
@@ -15,12 +21,6 @@ public class CreateMergeFaceGroupsJobResponseBody extends TeaModel {
 
     @NameInMap("SetId")
     public String setId;
-
-    @NameInMap("GroupIdTo")
-    public String groupIdTo;
-
-    @NameInMap("JobId")
-    public String jobId;
 
     public static CreateMergeFaceGroupsJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMergeFaceGroupsJobResponseBody self = new CreateMergeFaceGroupsJobResponseBody();
@@ -33,6 +33,22 @@ public class CreateMergeFaceGroupsJobResponseBody extends TeaModel {
     }
     public String getGroupIdFrom() {
         return this.groupIdFrom;
+    }
+
+    public CreateMergeFaceGroupsJobResponseBody setGroupIdTo(String groupIdTo) {
+        this.groupIdTo = groupIdTo;
+        return this;
+    }
+    public String getGroupIdTo() {
+        return this.groupIdTo;
+    }
+
+    public CreateMergeFaceGroupsJobResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public CreateMergeFaceGroupsJobResponseBody setJobType(String jobType) {
@@ -57,22 +73,6 @@ public class CreateMergeFaceGroupsJobResponseBody extends TeaModel {
     }
     public String getSetId() {
         return this.setId;
-    }
-
-    public CreateMergeFaceGroupsJobResponseBody setGroupIdTo(String groupIdTo) {
-        this.groupIdTo = groupIdTo;
-        return this;
-    }
-    public String getGroupIdTo() {
-        return this.groupIdTo;
-    }
-
-    public CreateMergeFaceGroupsJobResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
     }
 
 }
