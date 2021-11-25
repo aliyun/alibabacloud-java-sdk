@@ -20,9 +20,13 @@ public class RecognizeHandwritingRequest extends TeaModel {
     @NameInMap("OutputTable")
     public Boolean outputTable;
 
-    // 图片链接（长度不超 1014，不支持 base64）
+    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
+
+    // 图片二进制字节流，最大10MB
+    @NameInMap("body")
+    public java.io.InputStream body;
 
     public static RecognizeHandwritingRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeHandwritingRequest self = new RecognizeHandwritingRequest();
@@ -67,6 +71,14 @@ public class RecognizeHandwritingRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public RecognizeHandwritingRequest setBody(java.io.InputStream body) {
+        this.body = body;
+        return this;
+    }
+    public java.io.InputStream getBody() {
+        return this.body;
     }
 
 }
