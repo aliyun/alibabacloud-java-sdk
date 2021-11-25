@@ -4,6 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class RegisterDeviceResponseBody extends TeaModel {
     @NameInMap("RetryInterval")
     public String retryInterval;
 
-    @NameInMap("Code")
-    public String code;
-
     public static RegisterDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterDeviceResponseBody self = new RegisterDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterDeviceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public RegisterDeviceResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class RegisterDeviceResponseBody extends TeaModel {
     }
     public String getRetryInterval() {
         return this.retryInterval;
-    }
-
-    public RegisterDeviceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

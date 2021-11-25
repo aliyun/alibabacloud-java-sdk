@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class InvokeMotorModelRequest extends TeaModel {
-    @NameInMap("PicId")
-    public String picId;
-
     @NameInMap("CorpId")
     public String corpId;
+
+    @NameInMap("PicId")
+    public String picId;
 
     @NameInMap("PicPath")
     public String picPath;
@@ -21,20 +21,20 @@ public class InvokeMotorModelRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public InvokeMotorModelRequest setPicId(String picId) {
-        this.picId = picId;
-        return this;
-    }
-    public String getPicId() {
-        return this.picId;
-    }
-
     public InvokeMotorModelRequest setCorpId(String corpId) {
         this.corpId = corpId;
         return this;
     }
     public String getCorpId() {
         return this.corpId;
+    }
+
+    public InvokeMotorModelRequest setPicId(String picId) {
+        this.picId = picId;
+        return this;
+    }
+    public String getPicId() {
+        return this.picId;
     }
 
     public InvokeMotorModelRequest setPicPath(String picPath) {

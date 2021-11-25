@@ -4,41 +4,38 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetProfileListShrinkRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
-    @NameInMap("IsvSubId")
-    public String isvSubId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("BizId")
+    public String bizId;
 
     @NameInMap("CatalogId")
     public Long catalogId;
 
-    @NameInMap("IdNumber")
-    public String idNumber;
+    @NameInMap("CorpId")
+    public String corpId;
+
+    @NameInMap("FaceImageId")
+    public String faceImageId;
 
     @NameInMap("FaceUrl")
     public String faceUrl;
 
-    @NameInMap("LiveAddress")
-    public String liveAddress;
-
     @NameInMap("Gender")
     public Integer gender;
 
-    @NameInMap("PlateNo")
-    public String plateNo;
+    @NameInMap("IdNumber")
+    public String idNumber;
 
-    @NameInMap("PhoneNo")
-    public String phoneNo;
+    @NameInMap("IsvSubId")
+    public String isvSubId;
 
-    @NameInMap("SceneType")
-    public String sceneType;
+    @NameInMap("LiveAddress")
+    public String liveAddress;
 
-    @NameInMap("BizId")
-    public String bizId;
+    @NameInMap("MatchingRateThreshold")
+    public String matchingRateThreshold;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -49,42 +46,29 @@ public class GetProfileListShrinkRequest extends TeaModel {
     @NameInMap("PersonIdList")
     public String personIdListShrink;
 
+    @NameInMap("PhoneNo")
+    public String phoneNo;
+
+    @NameInMap("PlateNo")
+    public String plateNo;
+
     @NameInMap("ProfileIdList")
     public String profileIdListShrink;
 
-    @NameInMap("MatchingRateThreshold")
-    public String matchingRateThreshold;
-
-    @NameInMap("FaceImageId")
-    public String faceImageId;
+    @NameInMap("SceneType")
+    public String sceneType;
 
     public static GetProfileListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProfileListShrinkRequest self = new GetProfileListShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetProfileListShrinkRequest setCorpId(String corpId) {
-        this.corpId = corpId;
+    public GetProfileListShrinkRequest setBizId(String bizId) {
+        this.bizId = bizId;
         return this;
     }
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    public GetProfileListShrinkRequest setIsvSubId(String isvSubId) {
-        this.isvSubId = isvSubId;
-        return this;
-    }
-    public String getIsvSubId() {
-        return this.isvSubId;
-    }
-
-    public GetProfileListShrinkRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getBizId() {
+        return this.bizId;
     }
 
     public GetProfileListShrinkRequest setCatalogId(Long catalogId) {
@@ -95,12 +79,20 @@ public class GetProfileListShrinkRequest extends TeaModel {
         return this.catalogId;
     }
 
-    public GetProfileListShrinkRequest setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+    public GetProfileListShrinkRequest setCorpId(String corpId) {
+        this.corpId = corpId;
         return this;
     }
-    public String getIdNumber() {
-        return this.idNumber;
+    public String getCorpId() {
+        return this.corpId;
+    }
+
+    public GetProfileListShrinkRequest setFaceImageId(String faceImageId) {
+        this.faceImageId = faceImageId;
+        return this;
+    }
+    public String getFaceImageId() {
+        return this.faceImageId;
     }
 
     public GetProfileListShrinkRequest setFaceUrl(String faceUrl) {
@@ -111,14 +103,6 @@ public class GetProfileListShrinkRequest extends TeaModel {
         return this.faceUrl;
     }
 
-    public GetProfileListShrinkRequest setLiveAddress(String liveAddress) {
-        this.liveAddress = liveAddress;
-        return this;
-    }
-    public String getLiveAddress() {
-        return this.liveAddress;
-    }
-
     public GetProfileListShrinkRequest setGender(Integer gender) {
         this.gender = gender;
         return this;
@@ -127,36 +111,44 @@ public class GetProfileListShrinkRequest extends TeaModel {
         return this.gender;
     }
 
-    public GetProfileListShrinkRequest setPlateNo(String plateNo) {
-        this.plateNo = plateNo;
+    public GetProfileListShrinkRequest setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
         return this;
     }
-    public String getPlateNo() {
-        return this.plateNo;
+    public String getIdNumber() {
+        return this.idNumber;
     }
 
-    public GetProfileListShrinkRequest setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public GetProfileListShrinkRequest setIsvSubId(String isvSubId) {
+        this.isvSubId = isvSubId;
         return this;
     }
-    public String getPhoneNo() {
-        return this.phoneNo;
+    public String getIsvSubId() {
+        return this.isvSubId;
     }
 
-    public GetProfileListShrinkRequest setSceneType(String sceneType) {
-        this.sceneType = sceneType;
+    public GetProfileListShrinkRequest setLiveAddress(String liveAddress) {
+        this.liveAddress = liveAddress;
         return this;
     }
-    public String getSceneType() {
-        return this.sceneType;
+    public String getLiveAddress() {
+        return this.liveAddress;
     }
 
-    public GetProfileListShrinkRequest setBizId(String bizId) {
-        this.bizId = bizId;
+    public GetProfileListShrinkRequest setMatchingRateThreshold(String matchingRateThreshold) {
+        this.matchingRateThreshold = matchingRateThreshold;
         return this;
     }
-    public String getBizId() {
-        return this.bizId;
+    public String getMatchingRateThreshold() {
+        return this.matchingRateThreshold;
+    }
+
+    public GetProfileListShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public GetProfileListShrinkRequest setPageNumber(Long pageNumber) {
@@ -183,6 +175,22 @@ public class GetProfileListShrinkRequest extends TeaModel {
         return this.personIdListShrink;
     }
 
+    public GetProfileListShrinkRequest setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+        return this;
+    }
+    public String getPhoneNo() {
+        return this.phoneNo;
+    }
+
+    public GetProfileListShrinkRequest setPlateNo(String plateNo) {
+        this.plateNo = plateNo;
+        return this;
+    }
+    public String getPlateNo() {
+        return this.plateNo;
+    }
+
     public GetProfileListShrinkRequest setProfileIdListShrink(String profileIdListShrink) {
         this.profileIdListShrink = profileIdListShrink;
         return this;
@@ -191,20 +199,12 @@ public class GetProfileListShrinkRequest extends TeaModel {
         return this.profileIdListShrink;
     }
 
-    public GetProfileListShrinkRequest setMatchingRateThreshold(String matchingRateThreshold) {
-        this.matchingRateThreshold = matchingRateThreshold;
+    public GetProfileListShrinkRequest setSceneType(String sceneType) {
+        this.sceneType = sceneType;
         return this;
     }
-    public String getMatchingRateThreshold() {
-        return this.matchingRateThreshold;
-    }
-
-    public GetProfileListShrinkRequest setFaceImageId(String faceImageId) {
-        this.faceImageId = faceImageId;
-        return this;
-    }
-    public String getFaceImageId() {
-        return this.faceImageId;
+    public String getSceneType() {
+        return this.sceneType;
     }
 
 }

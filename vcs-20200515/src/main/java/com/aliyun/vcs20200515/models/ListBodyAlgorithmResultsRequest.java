@@ -4,17 +4,17 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListBodyAlgorithmResultsRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
     @NameInMap("AlgorithmType")
     public String algorithmType;
 
+    @NameInMap("CapStyle")
+    public String capStyle;
+
+    @NameInMap("CorpId")
+    public String corpId;
+
     @NameInMap("DataSourceId")
     public String dataSourceId;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,20 +25,12 @@ public class ListBodyAlgorithmResultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("CapStyle")
-    public String capStyle;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ListBodyAlgorithmResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBodyAlgorithmResultsRequest self = new ListBodyAlgorithmResultsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBodyAlgorithmResultsRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public ListBodyAlgorithmResultsRequest setAlgorithmType(String algorithmType) {
@@ -49,20 +41,28 @@ public class ListBodyAlgorithmResultsRequest extends TeaModel {
         return this.algorithmType;
     }
 
+    public ListBodyAlgorithmResultsRequest setCapStyle(String capStyle) {
+        this.capStyle = capStyle;
+        return this;
+    }
+    public String getCapStyle() {
+        return this.capStyle;
+    }
+
+    public ListBodyAlgorithmResultsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
     public ListBodyAlgorithmResultsRequest setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     public String getDataSourceId() {
         return this.dataSourceId;
-    }
-
-    public ListBodyAlgorithmResultsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListBodyAlgorithmResultsRequest setEndTime(String endTime) {
@@ -89,12 +89,12 @@ public class ListBodyAlgorithmResultsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListBodyAlgorithmResultsRequest setCapStyle(String capStyle) {
-        this.capStyle = capStyle;
+    public ListBodyAlgorithmResultsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getCapStyle() {
-        return this.capStyle;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

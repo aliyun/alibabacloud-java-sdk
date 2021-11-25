@@ -4,44 +4,35 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListUsersRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
-    @NameInMap("IsvSubId")
-    public String isvSubId;
-
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("UserGroupId")
-    public Long userGroupId;
-
-    @NameInMap("IdNumber")
-    public String idNumber;
-
-    @NameInMap("FaceImageUrl")
-    public String faceImageUrl;
-
     @NameInMap("Address")
     public String address;
 
     @NameInMap("Age")
     public Integer age;
 
-    @NameInMap("Gender")
-    public Integer gender;
-
-    @NameInMap("PlateNo")
-    public String plateNo;
-
-    @NameInMap("PhoneNo")
-    public String phoneNo;
-
     @NameInMap("Attachment")
     public String attachment;
 
     @NameInMap("BizId")
     public String bizId;
+
+    @NameInMap("CorpId")
+    public String corpId;
+
+    @NameInMap("FaceImageUrl")
+    public String faceImageUrl;
+
+    @NameInMap("Gender")
+    public Integer gender;
+
+    @NameInMap("IdNumber")
+    public String idNumber;
+
+    @NameInMap("IsvSubId")
+    public String isvSubId;
+
+    @NameInMap("MatchingRateThreshold")
+    public String matchingRateThreshold;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -52,63 +43,24 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("PersonList")
     public java.util.Map<String, ?> personList;
 
+    @NameInMap("PhoneNo")
+    public String phoneNo;
+
+    @NameInMap("PlateNo")
+    public String plateNo;
+
+    @NameInMap("UserGroupId")
+    public Long userGroupId;
+
     @NameInMap("UserList")
     public java.util.Map<String, ?> userList;
 
-    @NameInMap("MatchingRateThreshold")
-    public String matchingRateThreshold;
+    @NameInMap("UserName")
+    public String userName;
 
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListUsersRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
-    }
-
-    public ListUsersRequest setIsvSubId(String isvSubId) {
-        this.isvSubId = isvSubId;
-        return this;
-    }
-    public String getIsvSubId() {
-        return this.isvSubId;
-    }
-
-    public ListUsersRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public ListUsersRequest setUserGroupId(Long userGroupId) {
-        this.userGroupId = userGroupId;
-        return this;
-    }
-    public Long getUserGroupId() {
-        return this.userGroupId;
-    }
-
-    public ListUsersRequest setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
-        return this;
-    }
-    public String getIdNumber() {
-        return this.idNumber;
-    }
-
-    public ListUsersRequest setFaceImageUrl(String faceImageUrl) {
-        this.faceImageUrl = faceImageUrl;
-        return this;
-    }
-    public String getFaceImageUrl() {
-        return this.faceImageUrl;
     }
 
     public ListUsersRequest setAddress(String address) {
@@ -127,30 +79,6 @@ public class ListUsersRequest extends TeaModel {
         return this.age;
     }
 
-    public ListUsersRequest setGender(Integer gender) {
-        this.gender = gender;
-        return this;
-    }
-    public Integer getGender() {
-        return this.gender;
-    }
-
-    public ListUsersRequest setPlateNo(String plateNo) {
-        this.plateNo = plateNo;
-        return this;
-    }
-    public String getPlateNo() {
-        return this.plateNo;
-    }
-
-    public ListUsersRequest setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-        return this;
-    }
-    public String getPhoneNo() {
-        return this.phoneNo;
-    }
-
     public ListUsersRequest setAttachment(String attachment) {
         this.attachment = attachment;
         return this;
@@ -165,6 +93,54 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public ListUsersRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
+    public ListUsersRequest setFaceImageUrl(String faceImageUrl) {
+        this.faceImageUrl = faceImageUrl;
+        return this;
+    }
+    public String getFaceImageUrl() {
+        return this.faceImageUrl;
+    }
+
+    public ListUsersRequest setGender(Integer gender) {
+        this.gender = gender;
+        return this;
+    }
+    public Integer getGender() {
+        return this.gender;
+    }
+
+    public ListUsersRequest setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
+        return this;
+    }
+    public String getIdNumber() {
+        return this.idNumber;
+    }
+
+    public ListUsersRequest setIsvSubId(String isvSubId) {
+        this.isvSubId = isvSubId;
+        return this;
+    }
+    public String getIsvSubId() {
+        return this.isvSubId;
+    }
+
+    public ListUsersRequest setMatchingRateThreshold(String matchingRateThreshold) {
+        this.matchingRateThreshold = matchingRateThreshold;
+        return this;
+    }
+    public String getMatchingRateThreshold() {
+        return this.matchingRateThreshold;
     }
 
     public ListUsersRequest setPageNumber(Long pageNumber) {
@@ -191,6 +167,30 @@ public class ListUsersRequest extends TeaModel {
         return this.personList;
     }
 
+    public ListUsersRequest setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+        return this;
+    }
+    public String getPhoneNo() {
+        return this.phoneNo;
+    }
+
+    public ListUsersRequest setPlateNo(String plateNo) {
+        this.plateNo = plateNo;
+        return this;
+    }
+    public String getPlateNo() {
+        return this.plateNo;
+    }
+
+    public ListUsersRequest setUserGroupId(Long userGroupId) {
+        this.userGroupId = userGroupId;
+        return this;
+    }
+    public Long getUserGroupId() {
+        return this.userGroupId;
+    }
+
     public ListUsersRequest setUserList(java.util.Map<String, ?> userList) {
         this.userList = userList;
         return this;
@@ -199,12 +199,12 @@ public class ListUsersRequest extends TeaModel {
         return this.userList;
     }
 
-    public ListUsersRequest setMatchingRateThreshold(String matchingRateThreshold) {
-        this.matchingRateThreshold = matchingRateThreshold;
+    public ListUsersRequest setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public String getMatchingRateThreshold() {
-        return this.matchingRateThreshold;
+    public String getUserName() {
+        return this.userName;
     }
 
 }

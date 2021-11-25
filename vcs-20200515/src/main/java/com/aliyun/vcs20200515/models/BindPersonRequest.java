@@ -10,11 +10,11 @@ public class BindPersonRequest extends TeaModel {
     @NameInMap("IsvSubId")
     public String isvSubId;
 
-    @NameInMap("PersonMatchingRate")
-    public String personMatchingRate;
-
     @NameInMap("PersonId")
     public String personId;
+
+    @NameInMap("PersonMatchingRate")
+    public String personMatchingRate;
 
     @NameInMap("ProfileId")
     public Long profileId;
@@ -40,20 +40,20 @@ public class BindPersonRequest extends TeaModel {
         return this.isvSubId;
     }
 
-    public BindPersonRequest setPersonMatchingRate(String personMatchingRate) {
-        this.personMatchingRate = personMatchingRate;
-        return this;
-    }
-    public String getPersonMatchingRate() {
-        return this.personMatchingRate;
-    }
-
     public BindPersonRequest setPersonId(String personId) {
         this.personId = personId;
         return this;
     }
     public String getPersonId() {
         return this.personId;
+    }
+
+    public BindPersonRequest setPersonMatchingRate(String personMatchingRate) {
+        this.personMatchingRate = personMatchingRate;
+        return this;
+    }
+    public String getPersonMatchingRate() {
+        return this.personMatchingRate;
     }
 
     public BindPersonRequest setProfileId(Long profileId) {

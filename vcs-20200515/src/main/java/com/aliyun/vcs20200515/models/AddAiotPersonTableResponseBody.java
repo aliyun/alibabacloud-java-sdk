@@ -4,10 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddAiotPersonTableResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
@@ -17,17 +13,13 @@ public class AddAiotPersonTableResponseBody extends TeaModel {
     @NameInMap("PersonTableId")
     public String personTableId;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AddAiotPersonTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddAiotPersonTableResponseBody self = new AddAiotPersonTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddAiotPersonTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddAiotPersonTableResponseBody setCode(String code) {
@@ -52,6 +44,14 @@ public class AddAiotPersonTableResponseBody extends TeaModel {
     }
     public String getPersonTableId() {
         return this.personTableId;
+    }
+
+    public AddAiotPersonTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

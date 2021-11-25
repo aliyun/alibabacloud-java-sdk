@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateUserGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateUserGroupResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateUserGroupResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static CreateUserGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUserGroupResponseBody self = new CreateUserGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUserGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateUserGroupResponseBody setData(CreateUserGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateUserGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateUserGroupResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class CreateUserGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateUserGroupResponseBody setData(CreateUserGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateUserGroupResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateUserGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class CreateUserGroupResponseBodyData extends TeaModel {

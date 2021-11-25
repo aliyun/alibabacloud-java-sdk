@@ -4,20 +4,20 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoComposeTaskRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
+    @NameInMap("AudioFileName")
+    public String audioFileName;
 
     @NameInMap("BucketName")
     public String bucketName;
+
+    @NameInMap("CorpId")
+    public String corpId;
 
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("ImageFileNames")
     public String imageFileNames;
-
-    @NameInMap("AudioFileName")
-    public String audioFileName;
 
     @NameInMap("ImageParameters")
     public String imageParameters;
@@ -33,12 +33,12 @@ public class CreateVideoComposeTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateVideoComposeTaskRequest setCorpId(String corpId) {
-        this.corpId = corpId;
+    public CreateVideoComposeTaskRequest setAudioFileName(String audioFileName) {
+        this.audioFileName = audioFileName;
         return this;
     }
-    public String getCorpId() {
-        return this.corpId;
+    public String getAudioFileName() {
+        return this.audioFileName;
     }
 
     public CreateVideoComposeTaskRequest setBucketName(String bucketName) {
@@ -47,6 +47,14 @@ public class CreateVideoComposeTaskRequest extends TeaModel {
     }
     public String getBucketName() {
         return this.bucketName;
+    }
+
+    public CreateVideoComposeTaskRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
     }
 
     public CreateVideoComposeTaskRequest setDomainName(String domainName) {
@@ -63,14 +71,6 @@ public class CreateVideoComposeTaskRequest extends TeaModel {
     }
     public String getImageFileNames() {
         return this.imageFileNames;
-    }
-
-    public CreateVideoComposeTaskRequest setAudioFileName(String audioFileName) {
-        this.audioFileName = audioFileName;
-        return this;
-    }
-    public String getAudioFileName() {
-        return this.audioFileName;
     }
 
     public CreateVideoComposeTaskRequest setImageParameters(String imageParameters) {

@@ -7,14 +7,14 @@ public class SearchFaceRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
+    @NameInMap("EndTimeStamp")
+    public Long endTimeStamp;
+
     @NameInMap("GbId")
     public String gbId;
 
-    @NameInMap("StartTimeStamp")
-    public Long startTimeStamp;
-
-    @NameInMap("EndTimeStamp")
-    public Long endTimeStamp;
+    @NameInMap("OptionList")
+    public java.util.Map<String, ?> optionList;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -22,8 +22,8 @@ public class SearchFaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OptionList")
-    public java.util.Map<String, ?> optionList;
+    @NameInMap("StartTimeStamp")
+    public Long startTimeStamp;
 
     public static SearchFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceRequest self = new SearchFaceRequest();
@@ -38,6 +38,14 @@ public class SearchFaceRequest extends TeaModel {
         return this.corpId;
     }
 
+    public SearchFaceRequest setEndTimeStamp(Long endTimeStamp) {
+        this.endTimeStamp = endTimeStamp;
+        return this;
+    }
+    public Long getEndTimeStamp() {
+        return this.endTimeStamp;
+    }
+
     public SearchFaceRequest setGbId(String gbId) {
         this.gbId = gbId;
         return this;
@@ -46,20 +54,12 @@ public class SearchFaceRequest extends TeaModel {
         return this.gbId;
     }
 
-    public SearchFaceRequest setStartTimeStamp(Long startTimeStamp) {
-        this.startTimeStamp = startTimeStamp;
+    public SearchFaceRequest setOptionList(java.util.Map<String, ?> optionList) {
+        this.optionList = optionList;
         return this;
     }
-    public Long getStartTimeStamp() {
-        return this.startTimeStamp;
-    }
-
-    public SearchFaceRequest setEndTimeStamp(Long endTimeStamp) {
-        this.endTimeStamp = endTimeStamp;
-        return this;
-    }
-    public Long getEndTimeStamp() {
-        return this.endTimeStamp;
+    public java.util.Map<String, ?> getOptionList() {
+        return this.optionList;
     }
 
     public SearchFaceRequest setPageNo(Integer pageNo) {
@@ -78,12 +78,12 @@ public class SearchFaceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchFaceRequest setOptionList(java.util.Map<String, ?> optionList) {
-        this.optionList = optionList;
+    public SearchFaceRequest setStartTimeStamp(Long startTimeStamp) {
+        this.startTimeStamp = startTimeStamp;
         return this;
     }
-    public java.util.Map<String, ?> getOptionList() {
-        return this.optionList;
+    public Long getStartTimeStamp() {
+        return this.startTimeStamp;
     }
 
 }

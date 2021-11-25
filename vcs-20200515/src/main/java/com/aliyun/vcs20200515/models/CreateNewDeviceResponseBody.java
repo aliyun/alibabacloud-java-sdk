@@ -4,29 +4,21 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateNewDeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public CreateNewDeviceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateNewDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNewDeviceResponseBody self = new CreateNewDeviceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateNewDeviceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateNewDeviceResponseBody setCode(String code) {
@@ -37,6 +29,14 @@ public class CreateNewDeviceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public CreateNewDeviceResponseBody setData(CreateNewDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateNewDeviceResponseBodyData getData() {
+        return this.data;
+    }
+
     public CreateNewDeviceResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -45,12 +45,12 @@ public class CreateNewDeviceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateNewDeviceResponseBody setData(CreateNewDeviceResponseBodyData data) {
-        this.data = data;
+    public CreateNewDeviceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateNewDeviceResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateNewDeviceResponseBodyDataSubDeviceInfo extends TeaModel {
@@ -73,23 +73,23 @@ public class CreateNewDeviceResponseBody extends TeaModel {
     }
 
     public static class CreateNewDeviceResponseBodyData extends TeaModel {
-        @NameInMap("SipRealm")
-        public String sipRealm;
-
-        @NameInMap("ServerIp")
-        public String serverIp;
-
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("ServerPort")
-        public String serverPort;
+        @NameInMap("Password")
+        public String password;
 
         @NameInMap("ServerId")
         public String serverId;
 
-        @NameInMap("Password")
-        public String password;
+        @NameInMap("ServerIp")
+        public String serverIp;
+
+        @NameInMap("ServerPort")
+        public String serverPort;
+
+        @NameInMap("SipRealm")
+        public String sipRealm;
 
         @NameInMap("SubDeviceInfo")
         public java.util.List<CreateNewDeviceResponseBodyDataSubDeviceInfo> subDeviceInfo;
@@ -97,22 +97,6 @@ public class CreateNewDeviceResponseBody extends TeaModel {
         public static CreateNewDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateNewDeviceResponseBodyData self = new CreateNewDeviceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreateNewDeviceResponseBodyData setSipRealm(String sipRealm) {
-            this.sipRealm = sipRealm;
-            return this;
-        }
-        public String getSipRealm() {
-            return this.sipRealm;
-        }
-
-        public CreateNewDeviceResponseBodyData setServerIp(String serverIp) {
-            this.serverIp = serverIp;
-            return this;
-        }
-        public String getServerIp() {
-            return this.serverIp;
         }
 
         public CreateNewDeviceResponseBodyData setDeviceId(String deviceId) {
@@ -123,12 +107,12 @@ public class CreateNewDeviceResponseBody extends TeaModel {
             return this.deviceId;
         }
 
-        public CreateNewDeviceResponseBodyData setServerPort(String serverPort) {
-            this.serverPort = serverPort;
+        public CreateNewDeviceResponseBodyData setPassword(String password) {
+            this.password = password;
             return this;
         }
-        public String getServerPort() {
-            return this.serverPort;
+        public String getPassword() {
+            return this.password;
         }
 
         public CreateNewDeviceResponseBodyData setServerId(String serverId) {
@@ -139,12 +123,28 @@ public class CreateNewDeviceResponseBody extends TeaModel {
             return this.serverId;
         }
 
-        public CreateNewDeviceResponseBodyData setPassword(String password) {
-            this.password = password;
+        public CreateNewDeviceResponseBodyData setServerIp(String serverIp) {
+            this.serverIp = serverIp;
             return this;
         }
-        public String getPassword() {
-            return this.password;
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        public CreateNewDeviceResponseBodyData setServerPort(String serverPort) {
+            this.serverPort = serverPort;
+            return this;
+        }
+        public String getServerPort() {
+            return this.serverPort;
+        }
+
+        public CreateNewDeviceResponseBodyData setSipRealm(String sipRealm) {
+            this.sipRealm = sipRealm;
+            return this;
+        }
+        public String getSipRealm() {
+            return this.sipRealm;
         }
 
         public CreateNewDeviceResponseBodyData setSubDeviceInfo(java.util.List<CreateNewDeviceResponseBodyDataSubDeviceInfo> subDeviceInfo) {

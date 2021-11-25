@@ -4,17 +4,23 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceGroupsRequest extends TeaModel {
-    @NameInMap("DeviceCodeList")
-    public String deviceCodeList;
-
     @NameInMap("CorpIdList")
     public String corpIdList;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
+    @NameInMap("DeviceCodeList")
+    public String deviceCodeList;
+
+    @NameInMap("Group")
+    public String group;
 
     @NameInMap("IsPage")
     public Integer isPage;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -22,23 +28,9 @@ public class ListDeviceGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Group")
-    public String group;
-
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
-
     public static ListDeviceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceGroupsRequest self = new ListDeviceGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceGroupsRequest setDeviceCodeList(String deviceCodeList) {
-        this.deviceCodeList = deviceCodeList;
-        return this;
-    }
-    public String getDeviceCodeList() {
-        return this.deviceCodeList;
     }
 
     public ListDeviceGroupsRequest setCorpIdList(String corpIdList) {
@@ -49,12 +41,28 @@ public class ListDeviceGroupsRequest extends TeaModel {
         return this.corpIdList;
     }
 
-    public ListDeviceGroupsRequest setName(String name) {
-        this.name = name;
+    public ListDeviceGroupsRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
+    public ListDeviceGroupsRequest setDeviceCodeList(String deviceCodeList) {
+        this.deviceCodeList = deviceCodeList;
+        return this;
+    }
+    public String getDeviceCodeList() {
+        return this.deviceCodeList;
+    }
+
+    public ListDeviceGroupsRequest setGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    public String getGroup() {
+        return this.group;
     }
 
     public ListDeviceGroupsRequest setIsPage(Integer isPage) {
@@ -63,6 +71,14 @@ public class ListDeviceGroupsRequest extends TeaModel {
     }
     public Integer getIsPage() {
         return this.isPage;
+    }
+
+    public ListDeviceGroupsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListDeviceGroupsRequest setPageNum(Integer pageNum) {
@@ -79,22 +95,6 @@ public class ListDeviceGroupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListDeviceGroupsRequest setGroup(String group) {
-        this.group = group;
-        return this;
-    }
-    public String getGroup() {
-        return this.group;
-    }
-
-    public ListDeviceGroupsRequest setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
-        return this;
-    }
-    public String getDataSourceType() {
-        return this.dataSourceType;
     }
 
 }

@@ -4,15 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceForInstanceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Devices")
-    public java.util.List<DeleteDeviceForInstanceRequestDevices> devices;
-
-    @NameInMap("ProjectId")
-    public String projectId;
-
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
@@ -22,33 +13,18 @@ public class DeleteDeviceForInstanceRequest extends TeaModel {
     @NameInMap("DeviceCount")
     public String deviceCount;
 
+    @NameInMap("Devices")
+    public java.util.List<DeleteDeviceForInstanceRequestDevices> devices;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("ProjectId")
+    public String projectId;
+
     public static DeleteDeviceForInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceForInstanceRequest self = new DeleteDeviceForInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDeviceForInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DeleteDeviceForInstanceRequest setDevices(java.util.List<DeleteDeviceForInstanceRequestDevices> devices) {
-        this.devices = devices;
-        return this;
-    }
-    public java.util.List<DeleteDeviceForInstanceRequestDevices> getDevices() {
-        return this.devices;
-    }
-
-    public DeleteDeviceForInstanceRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public DeleteDeviceForInstanceRequest setAlgorithmId(String algorithmId) {
@@ -73,6 +49,30 @@ public class DeleteDeviceForInstanceRequest extends TeaModel {
     }
     public String getDeviceCount() {
         return this.deviceCount;
+    }
+
+    public DeleteDeviceForInstanceRequest setDevices(java.util.List<DeleteDeviceForInstanceRequestDevices> devices) {
+        this.devices = devices;
+        return this;
+    }
+    public java.util.List<DeleteDeviceForInstanceRequestDevices> getDevices() {
+        return this.devices;
+    }
+
+    public DeleteDeviceForInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteDeviceForInstanceRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public static class DeleteDeviceForInstanceRequestDevices extends TeaModel {

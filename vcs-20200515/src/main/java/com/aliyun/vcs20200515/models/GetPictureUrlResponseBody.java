@@ -10,11 +10,11 @@ public class GetPictureUrlResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Url")
-    public String url;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Url")
+    public String url;
 
     public static GetPictureUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPictureUrlResponseBody self = new GetPictureUrlResponseBody();
@@ -37,20 +37,20 @@ public class GetPictureUrlResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetPictureUrlResponseBody setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
-    }
-
     public GetPictureUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetPictureUrlResponseBody setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListCorpsRequest extends TeaModel {
+    @NameInMap("CorpName")
+    public String corpName;
+
     // 页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -12,12 +15,17 @@ public class ListCorpsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CorpName")
-    public String corpName;
-
     public static ListCorpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCorpsRequest self = new ListCorpsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCorpsRequest setCorpName(String corpName) {
+        this.corpName = corpName;
+        return this;
+    }
+    public String getCorpName() {
+        return this.corpName;
     }
 
     public ListCorpsRequest setPageNumber(Integer pageNumber) {
@@ -34,14 +42,6 @@ public class ListCorpsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListCorpsRequest setCorpName(String corpName) {
-        this.corpName = corpName;
-        return this;
-    }
-    public String getCorpName() {
-        return this.corpName;
     }
 
 }

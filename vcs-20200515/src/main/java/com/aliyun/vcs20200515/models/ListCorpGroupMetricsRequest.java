@@ -4,11 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListCorpGroupMetricsRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("CorpId")
+    public String corpId;
 
-    @NameInMap("TagCode")
-    public String tagCode;
+    @NameInMap("DeviceGroup")
+    public String deviceGroup;
+
+    @NameInMap("DeviceId")
+    public String deviceId;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,37 +25,42 @@ public class ListCorpGroupMetricsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
+    @NameInMap("StartTime")
+    public String startTime;
 
-    @NameInMap("CorpId")
-    public String corpId;
+    @NameInMap("TagCode")
+    public String tagCode;
 
     @NameInMap("UserGroup")
     public String userGroup;
-
-    @NameInMap("DeviceGroup")
-    public String deviceGroup;
 
     public static ListCorpGroupMetricsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCorpGroupMetricsRequest self = new ListCorpGroupMetricsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCorpGroupMetricsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public ListCorpGroupMetricsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getCorpId() {
+        return this.corpId;
     }
 
-    public ListCorpGroupMetricsRequest setTagCode(String tagCode) {
-        this.tagCode = tagCode;
+    public ListCorpGroupMetricsRequest setDeviceGroup(String deviceGroup) {
+        this.deviceGroup = deviceGroup;
         return this;
     }
-    public String getTagCode() {
-        return this.tagCode;
+    public String getDeviceGroup() {
+        return this.deviceGroup;
+    }
+
+    public ListCorpGroupMetricsRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public ListCorpGroupMetricsRequest setEndTime(String endTime) {
@@ -87,20 +95,20 @@ public class ListCorpGroupMetricsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListCorpGroupMetricsRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public ListCorpGroupMetricsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getDeviceId() {
-        return this.deviceId;
+    public String getStartTime() {
+        return this.startTime;
     }
 
-    public ListCorpGroupMetricsRequest setCorpId(String corpId) {
-        this.corpId = corpId;
+    public ListCorpGroupMetricsRequest setTagCode(String tagCode) {
+        this.tagCode = tagCode;
         return this;
     }
-    public String getCorpId() {
-        return this.corpId;
+    public String getTagCode() {
+        return this.tagCode;
     }
 
     public ListCorpGroupMetricsRequest setUserGroup(String userGroup) {
@@ -109,14 +117,6 @@ public class ListCorpGroupMetricsRequest extends TeaModel {
     }
     public String getUserGroup() {
         return this.userGroup;
-    }
-
-    public ListCorpGroupMetricsRequest setDeviceGroup(String deviceGroup) {
-        this.deviceGroup = deviceGroup;
-        return this;
-    }
-    public String getDeviceGroup() {
-        return this.deviceGroup;
     }
 
 }

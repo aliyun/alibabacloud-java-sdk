@@ -4,6 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchTargetResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public SearchTargetResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class SearchTargetResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public SearchTargetResponseBodyData data;
-
     public static SearchTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTargetResponseBody self = new SearchTargetResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SearchTargetResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SearchTargetResponseBody setData(SearchTargetResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SearchTargetResponseBodyData getData() {
+        return this.data;
+    }
+
+    public SearchTargetResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SearchTargetResponseBody setRequestId(String requestId) {
@@ -41,48 +65,9 @@ public class SearchTargetResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SearchTargetResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SearchTargetResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public SearchTargetResponseBody setData(SearchTargetResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public SearchTargetResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class SearchTargetResponseBodyDataRecords extends TeaModel {
-        @NameInMap("TargetType")
-        public String targetType;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
         @NameInMap("DeviceId")
         public String deviceId;
-
-        @NameInMap("TargetAttributes")
-        public String targetAttributes;
-
-        @NameInMap("TargetImageUrl")
-        public String targetImageUrl;
-
-        @NameInMap("SourceImageUrl")
-        public String sourceImageUrl;
 
         @NameInMap("LeftTopX")
         public Long leftTopX;
@@ -96,28 +81,27 @@ public class SearchTargetResponseBody extends TeaModel {
         @NameInMap("RightBottomY")
         public Long rightBottomY;
 
+        @NameInMap("SourceImageUrl")
+        public String sourceImageUrl;
+
+        @NameInMap("TargetAttributes")
+        public String targetAttributes;
+
         @NameInMap("TargetImageSimilarity")
         public Double targetImageSimilarity;
+
+        @NameInMap("TargetImageUrl")
+        public String targetImageUrl;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
 
         public static SearchTargetResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             SearchTargetResponseBodyDataRecords self = new SearchTargetResponseBodyDataRecords();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTargetResponseBodyDataRecords setTargetType(String targetType) {
-            this.targetType = targetType;
-            return this;
-        }
-        public String getTargetType() {
-            return this.targetType;
-        }
-
-        public SearchTargetResponseBodyDataRecords setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
         }
 
         public SearchTargetResponseBodyDataRecords setDeviceId(String deviceId) {
@@ -126,30 +110,6 @@ public class SearchTargetResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
-        }
-
-        public SearchTargetResponseBodyDataRecords setTargetAttributes(String targetAttributes) {
-            this.targetAttributes = targetAttributes;
-            return this;
-        }
-        public String getTargetAttributes() {
-            return this.targetAttributes;
-        }
-
-        public SearchTargetResponseBodyDataRecords setTargetImageUrl(String targetImageUrl) {
-            this.targetImageUrl = targetImageUrl;
-            return this;
-        }
-        public String getTargetImageUrl() {
-            return this.targetImageUrl;
-        }
-
-        public SearchTargetResponseBodyDataRecords setSourceImageUrl(String sourceImageUrl) {
-            this.sourceImageUrl = sourceImageUrl;
-            return this;
-        }
-        public String getSourceImageUrl() {
-            return this.sourceImageUrl;
         }
 
         public SearchTargetResponseBodyDataRecords setLeftTopX(Long leftTopX) {
@@ -184,6 +144,22 @@ public class SearchTargetResponseBody extends TeaModel {
             return this.rightBottomY;
         }
 
+        public SearchTargetResponseBodyDataRecords setSourceImageUrl(String sourceImageUrl) {
+            this.sourceImageUrl = sourceImageUrl;
+            return this;
+        }
+        public String getSourceImageUrl() {
+            return this.sourceImageUrl;
+        }
+
+        public SearchTargetResponseBodyDataRecords setTargetAttributes(String targetAttributes) {
+            this.targetAttributes = targetAttributes;
+            return this;
+        }
+        public String getTargetAttributes() {
+            return this.targetAttributes;
+        }
+
         public SearchTargetResponseBodyDataRecords setTargetImageSimilarity(Double targetImageSimilarity) {
             this.targetImageSimilarity = targetImageSimilarity;
             return this;
@@ -192,24 +168,64 @@ public class SearchTargetResponseBody extends TeaModel {
             return this.targetImageSimilarity;
         }
 
+        public SearchTargetResponseBodyDataRecords setTargetImageUrl(String targetImageUrl) {
+            this.targetImageUrl = targetImageUrl;
+            return this;
+        }
+        public String getTargetImageUrl() {
+            return this.targetImageUrl;
+        }
+
+        public SearchTargetResponseBodyDataRecords setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        public SearchTargetResponseBodyDataRecords setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
     }
 
     public static class SearchTargetResponseBodyData extends TeaModel {
+        @NameInMap("PageNumber")
+        public Long pageNumber;
+
+        @NameInMap("PageSize")
+        public Long pageSize;
+
         @NameInMap("Records")
         public java.util.List<SearchTargetResponseBodyDataRecords> records;
 
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("PageSize")
-        public Long pageSize;
-
-        @NameInMap("PageNumber")
-        public Long pageNumber;
-
         public static SearchTargetResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SearchTargetResponseBodyData self = new SearchTargetResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public SearchTargetResponseBodyData setPageNumber(Long pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Long getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public SearchTargetResponseBodyData setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Long getPageSize() {
+            return this.pageSize;
         }
 
         public SearchTargetResponseBodyData setRecords(java.util.List<SearchTargetResponseBodyDataRecords> records) {
@@ -226,22 +242,6 @@ public class SearchTargetResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public SearchTargetResponseBodyData setPageSize(Long pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Long getPageSize() {
-            return this.pageSize;
-        }
-
-        public SearchTargetResponseBodyData setPageNumber(Long pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Long getPageNumber() {
-            return this.pageNumber;
         }
 
     }

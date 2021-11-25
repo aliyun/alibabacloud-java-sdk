@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceForInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -21,12 +21,12 @@ public class DeleteDeviceForInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeviceForInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDeviceForInstanceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteDeviceForInstanceResponseBody setMessage(String message) {
@@ -37,12 +37,12 @@ public class DeleteDeviceForInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteDeviceForInstanceResponseBody setCode(String code) {
-        this.code = code;
+    public DeleteDeviceForInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteDeviceForInstanceResponseBody setSuccess(Boolean success) {

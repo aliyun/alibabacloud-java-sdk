@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddDataSourceResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public AddDataSourceResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,12 +21,12 @@ public class AddDataSourceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddDataSourceResponseBody setMessage(String message) {
-        this.message = message;
+    public AddDataSourceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public AddDataSourceResponseBody setData(AddDataSourceResponseBodyData data) {
@@ -37,12 +37,12 @@ public class AddDataSourceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public AddDataSourceResponseBody setCode(String code) {
-        this.code = code;
+    public AddDataSourceResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
     }
 
     public AddDataSourceResponseBody setRequestId(String requestId) {
@@ -54,11 +54,11 @@ public class AddDataSourceResponseBody extends TeaModel {
     }
 
     public static class AddDataSourceResponseBodyData extends TeaModel {
-        @NameInMap("KafkaTopic")
-        public String kafkaTopic;
-
         @NameInMap("DataSourceId")
         public String dataSourceId;
+
+        @NameInMap("KafkaTopic")
+        public String kafkaTopic;
 
         @NameInMap("OssPath")
         public String ossPath;
@@ -68,20 +68,20 @@ public class AddDataSourceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AddDataSourceResponseBodyData setKafkaTopic(String kafkaTopic) {
-            this.kafkaTopic = kafkaTopic;
-            return this;
-        }
-        public String getKafkaTopic() {
-            return this.kafkaTopic;
-        }
-
         public AddDataSourceResponseBodyData setDataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        public AddDataSourceResponseBodyData setKafkaTopic(String kafkaTopic) {
+            this.kafkaTopic = kafkaTopic;
+            return this;
+        }
+        public String getKafkaTopic() {
+            return this.kafkaTopic;
         }
 
         public AddDataSourceResponseBodyData setOssPath(String ossPath) {

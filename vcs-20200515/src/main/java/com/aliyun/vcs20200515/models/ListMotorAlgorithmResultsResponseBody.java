@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListMotorAlgorithmResultsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListMotorAlgorithmResultsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ListMotorAlgorithmResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMotorAlgorithmResultsResponseBody self = new ListMotorAlgorithmResultsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMotorAlgorithmResultsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListMotorAlgorithmResultsResponseBody setData(ListMotorAlgorithmResultsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListMotorAlgorithmResultsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListMotorAlgorithmResultsResponseBody setMessage(String message) {
@@ -37,31 +53,39 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListMotorAlgorithmResultsResponseBody setData(ListMotorAlgorithmResultsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListMotorAlgorithmResultsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListMotorAlgorithmResultsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListMotorAlgorithmResultsResponseBodyDataRecords extends TeaModel {
-        @NameInMap("MotorClass")
-        public String motorClass;
+        @NameInMap("Calling")
+        public String calling;
 
-        @NameInMap("RightBottomY")
-        public Float rightBottomY;
+        @NameInMap("CorpId")
+        public String corpId;
 
         @NameInMap("DataSourceId")
         public String dataSourceId;
+
+        @NameInMap("LeftTopX")
+        public Float leftTopX;
+
+        @NameInMap("LeftTopY")
+        public Float leftTopY;
+
+        @NameInMap("MotorBrand")
+        public String motorBrand;
+
+        @NameInMap("MotorClass")
+        public String motorClass;
+
+        @NameInMap("MotorColor")
+        public String motorColor;
+
+        @NameInMap("MotorId")
+        public String motorId;
+
+        @NameInMap("MotorModel")
+        public String motorModel;
+
+        @NameInMap("MotorStyle")
+        public String motorStyle;
 
         @NameInMap("PicUrlPath")
         public String picUrlPath;
@@ -72,54 +96,78 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
         @NameInMap("PlateColor")
         public String plateColor;
 
+        @NameInMap("PlateNumber")
+        public String plateNumber;
+
         @NameInMap("RightBottomX")
         public Float rightBottomX;
 
-        @NameInMap("SourceId")
-        public String sourceId;
+        @NameInMap("RightBottomY")
+        public Float rightBottomY;
 
         @NameInMap("SafetyBelt")
         public String safetyBelt;
 
-        @NameInMap("MotorStyle")
-        public String motorStyle;
+        @NameInMap("ShotTime")
+        public String shotTime;
+
+        @NameInMap("SourceId")
+        public String sourceId;
 
         @NameInMap("TargetPicUrlPath")
         public String targetPicUrlPath;
 
-        @NameInMap("LeftTopY")
-        public Float leftTopY;
-
-        @NameInMap("MotorColor")
-        public String motorColor;
-
-        @NameInMap("PlateNumber")
-        public String plateNumber;
-
-        @NameInMap("CorpId")
-        public String corpId;
-
-        @NameInMap("ShotTime")
-        public String shotTime;
-
-        @NameInMap("Calling")
-        public String calling;
-
-        @NameInMap("LeftTopX")
-        public Float leftTopX;
-
-        @NameInMap("MotorBrand")
-        public String motorBrand;
-
-        @NameInMap("MotorModel")
-        public String motorModel;
-
-        @NameInMap("MotorId")
-        public String motorId;
-
         public static ListMotorAlgorithmResultsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListMotorAlgorithmResultsResponseBodyDataRecords self = new ListMotorAlgorithmResultsResponseBodyDataRecords();
             return TeaModel.build(map, self);
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setCalling(String calling) {
+            this.calling = calling;
+            return this;
+        }
+        public String getCalling() {
+            return this.calling;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setCorpId(String corpId) {
+            this.corpId = corpId;
+            return this;
+        }
+        public String getCorpId() {
+            return this.corpId;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setDataSourceId(String dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public String getDataSourceId() {
+            return this.dataSourceId;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setLeftTopX(Float leftTopX) {
+            this.leftTopX = leftTopX;
+            return this;
+        }
+        public Float getLeftTopX() {
+            return this.leftTopX;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setLeftTopY(Float leftTopY) {
+            this.leftTopY = leftTopY;
+            return this;
+        }
+        public Float getLeftTopY() {
+            return this.leftTopY;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorBrand(String motorBrand) {
+            this.motorBrand = motorBrand;
+            return this;
+        }
+        public String getMotorBrand() {
+            return this.motorBrand;
         }
 
         public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorClass(String motorClass) {
@@ -130,20 +178,36 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.motorClass;
         }
 
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setRightBottomY(Float rightBottomY) {
-            this.rightBottomY = rightBottomY;
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorColor(String motorColor) {
+            this.motorColor = motorColor;
             return this;
         }
-        public Float getRightBottomY() {
-            return this.rightBottomY;
+        public String getMotorColor() {
+            return this.motorColor;
         }
 
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setDataSourceId(String dataSourceId) {
-            this.dataSourceId = dataSourceId;
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorId(String motorId) {
+            this.motorId = motorId;
             return this;
         }
-        public String getDataSourceId() {
-            return this.dataSourceId;
+        public String getMotorId() {
+            return this.motorId;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorModel(String motorModel) {
+            this.motorModel = motorModel;
+            return this;
+        }
+        public String getMotorModel() {
+            return this.motorModel;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorStyle(String motorStyle) {
+            this.motorStyle = motorStyle;
+            return this;
+        }
+        public String getMotorStyle() {
+            return this.motorStyle;
         }
 
         public ListMotorAlgorithmResultsResponseBodyDataRecords setPicUrlPath(String picUrlPath) {
@@ -170,6 +234,14 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.plateColor;
         }
 
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setPlateNumber(String plateNumber) {
+            this.plateNumber = plateNumber;
+            return this;
+        }
+        public String getPlateNumber() {
+            return this.plateNumber;
+        }
+
         public ListMotorAlgorithmResultsResponseBodyDataRecords setRightBottomX(Float rightBottomX) {
             this.rightBottomX = rightBottomX;
             return this;
@@ -178,12 +250,12 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.rightBottomX;
         }
 
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setSourceId(String sourceId) {
-            this.sourceId = sourceId;
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setRightBottomY(Float rightBottomY) {
+            this.rightBottomY = rightBottomY;
             return this;
         }
-        public String getSourceId() {
-            return this.sourceId;
+        public Float getRightBottomY() {
+            return this.rightBottomY;
         }
 
         public ListMotorAlgorithmResultsResponseBodyDataRecords setSafetyBelt(String safetyBelt) {
@@ -194,12 +266,20 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.safetyBelt;
         }
 
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorStyle(String motorStyle) {
-            this.motorStyle = motorStyle;
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setShotTime(String shotTime) {
+            this.shotTime = shotTime;
             return this;
         }
-        public String getMotorStyle() {
-            return this.motorStyle;
+        public String getShotTime() {
+            return this.shotTime;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyDataRecords setSourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+        public String getSourceId() {
+            return this.sourceId;
         }
 
         public ListMotorAlgorithmResultsResponseBodyDataRecords setTargetPicUrlPath(String targetPicUrlPath) {
@@ -210,123 +290,27 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.targetPicUrlPath;
         }
 
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setLeftTopY(Float leftTopY) {
-            this.leftTopY = leftTopY;
-            return this;
-        }
-        public Float getLeftTopY() {
-            return this.leftTopY;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorColor(String motorColor) {
-            this.motorColor = motorColor;
-            return this;
-        }
-        public String getMotorColor() {
-            return this.motorColor;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setPlateNumber(String plateNumber) {
-            this.plateNumber = plateNumber;
-            return this;
-        }
-        public String getPlateNumber() {
-            return this.plateNumber;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setCorpId(String corpId) {
-            this.corpId = corpId;
-            return this;
-        }
-        public String getCorpId() {
-            return this.corpId;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setShotTime(String shotTime) {
-            this.shotTime = shotTime;
-            return this;
-        }
-        public String getShotTime() {
-            return this.shotTime;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setCalling(String calling) {
-            this.calling = calling;
-            return this;
-        }
-        public String getCalling() {
-            return this.calling;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setLeftTopX(Float leftTopX) {
-            this.leftTopX = leftTopX;
-            return this;
-        }
-        public Float getLeftTopX() {
-            return this.leftTopX;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorBrand(String motorBrand) {
-            this.motorBrand = motorBrand;
-            return this;
-        }
-        public String getMotorBrand() {
-            return this.motorBrand;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorModel(String motorModel) {
-            this.motorModel = motorModel;
-            return this;
-        }
-        public String getMotorModel() {
-            return this.motorModel;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyDataRecords setMotorId(String motorId) {
-            this.motorId = motorId;
-            return this;
-        }
-        public String getMotorId() {
-            return this.motorId;
-        }
-
     }
 
     public static class ListMotorAlgorithmResultsResponseBodyData extends TeaModel {
-        @NameInMap("Records")
-        public java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> records;
-
-        @NameInMap("TotalPage")
-        public Integer totalPage;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("Records")
+        public java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> records;
+
         @NameInMap("TotalCount")
         public Integer totalCount;
+
+        @NameInMap("TotalPage")
+        public Integer totalPage;
 
         public static ListMotorAlgorithmResultsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMotorAlgorithmResultsResponseBodyData self = new ListMotorAlgorithmResultsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyData setRecords(java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> records) {
-            this.records = records;
-            return this;
-        }
-        public java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> getRecords() {
-            return this.records;
-        }
-
-        public ListMotorAlgorithmResultsResponseBodyData setTotalPage(Integer totalPage) {
-            this.totalPage = totalPage;
-            return this;
-        }
-        public Integer getTotalPage() {
-            return this.totalPage;
         }
 
         public ListMotorAlgorithmResultsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -345,12 +329,28 @@ public class ListMotorAlgorithmResultsResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public ListMotorAlgorithmResultsResponseBodyData setRecords(java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<ListMotorAlgorithmResultsResponseBodyDataRecords> getRecords() {
+            return this.records;
+        }
+
         public ListMotorAlgorithmResultsResponseBodyData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public ListMotorAlgorithmResultsResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
         }
 
     }

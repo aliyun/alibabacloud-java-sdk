@@ -4,27 +4,19 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteAiotPersonTableResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteAiotPersonTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAiotPersonTableResponseBody self = new DeleteAiotPersonTableResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAiotPersonTableResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteAiotPersonTableResponseBody setCode(String code) {
@@ -41,6 +33,14 @@ public class DeleteAiotPersonTableResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DeleteAiotPersonTableResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

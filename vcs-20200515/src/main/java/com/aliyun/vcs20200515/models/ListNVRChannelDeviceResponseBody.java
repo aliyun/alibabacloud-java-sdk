@@ -4,6 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListNVRChannelDeviceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<ListNVRChannelDeviceResponseBodyData> data;
+
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -14,15 +20,25 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
     @NameInMap("Total")
     public String total;
 
-    @NameInMap("Data")
-    public java.util.List<ListNVRChannelDeviceResponseBodyData> data;
-
-    @NameInMap("Message")
-    public String message;
-
     public static ListNVRChannelDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNVRChannelDeviceResponseBody self = new ListNVRChannelDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNVRChannelDeviceResponseBody setData(java.util.List<ListNVRChannelDeviceResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListNVRChannelDeviceResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListNVRChannelDeviceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListNVRChannelDeviceResponseBody setRequestId(String requestId) {
@@ -49,65 +65,73 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListNVRChannelDeviceResponseBody setData(java.util.List<ListNVRChannelDeviceResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListNVRChannelDeviceResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public ListNVRChannelDeviceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public static class ListNVRChannelDeviceResponseBodyData extends TeaModel {
+        @NameInMap("ComptureStatus")
+        public String comptureStatus;
+
+        @NameInMap("CorpId")
+        public String corpId;
+
+        @NameInMap("DatasourceType")
+        public String datasourceType;
+
         @NameInMap("DeviceCode")
         public String deviceCode;
 
         @NameInMap("DeviceName")
         public String deviceName;
 
-        @NameInMap("DeviceType")
-        public String deviceType;
-
-        @NameInMap("DatasourceType")
-        public String datasourceType;
+        @NameInMap("DeviceSn")
+        public String deviceSn;
 
         @NameInMap("DeviceStatus")
         public String deviceStatus;
 
-        @NameInMap("StreamStatus")
-        public String streamStatus;
-
-        @NameInMap("ComptureStatus")
-        public String comptureStatus;
-
-        @NameInMap("DeviceSn")
-        public String deviceSn;
-
-        @NameInMap("SampleName")
-        public String sampleName;
-
-        @NameInMap("RegionName")
-        public String regionName;
-
-        @NameInMap("CorpId")
-        public String corpId;
-
-        @NameInMap("Vap")
-        public String vap;
+        @NameInMap("DeviceType")
+        public String deviceType;
 
         @NameInMap("ProjectName")
         public String projectName;
 
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("SampleName")
+        public String sampleName;
+
+        @NameInMap("StreamStatus")
+        public String streamStatus;
+
+        @NameInMap("Vap")
+        public String vap;
+
         public static ListNVRChannelDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNVRChannelDeviceResponseBodyData self = new ListNVRChannelDeviceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setComptureStatus(String comptureStatus) {
+            this.comptureStatus = comptureStatus;
+            return this;
+        }
+        public String getComptureStatus() {
+            return this.comptureStatus;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setCorpId(String corpId) {
+            this.corpId = corpId;
+            return this;
+        }
+        public String getCorpId() {
+            return this.corpId;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setDatasourceType(String datasourceType) {
+            this.datasourceType = datasourceType;
+            return this;
+        }
+        public String getDatasourceType() {
+            return this.datasourceType;
         }
 
         public ListNVRChannelDeviceResponseBodyData setDeviceCode(String deviceCode) {
@@ -126,20 +150,12 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public ListNVRChannelDeviceResponseBodyData setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
+        public ListNVRChannelDeviceResponseBodyData setDeviceSn(String deviceSn) {
+            this.deviceSn = deviceSn;
             return this;
         }
-        public String getDeviceType() {
-            return this.deviceType;
-        }
-
-        public ListNVRChannelDeviceResponseBodyData setDatasourceType(String datasourceType) {
-            this.datasourceType = datasourceType;
-            return this;
-        }
-        public String getDatasourceType() {
-            return this.datasourceType;
+        public String getDeviceSn() {
+            return this.deviceSn;
         }
 
         public ListNVRChannelDeviceResponseBodyData setDeviceStatus(String deviceStatus) {
@@ -150,36 +166,20 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
             return this.deviceStatus;
         }
 
-        public ListNVRChannelDeviceResponseBodyData setStreamStatus(String streamStatus) {
-            this.streamStatus = streamStatus;
+        public ListNVRChannelDeviceResponseBodyData setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
             return this;
         }
-        public String getStreamStatus() {
-            return this.streamStatus;
+        public String getDeviceType() {
+            return this.deviceType;
         }
 
-        public ListNVRChannelDeviceResponseBodyData setComptureStatus(String comptureStatus) {
-            this.comptureStatus = comptureStatus;
+        public ListNVRChannelDeviceResponseBodyData setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public String getComptureStatus() {
-            return this.comptureStatus;
-        }
-
-        public ListNVRChannelDeviceResponseBodyData setDeviceSn(String deviceSn) {
-            this.deviceSn = deviceSn;
-            return this;
-        }
-        public String getDeviceSn() {
-            return this.deviceSn;
-        }
-
-        public ListNVRChannelDeviceResponseBodyData setSampleName(String sampleName) {
-            this.sampleName = sampleName;
-            return this;
-        }
-        public String getSampleName() {
-            return this.sampleName;
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public ListNVRChannelDeviceResponseBodyData setRegionName(String regionName) {
@@ -190,12 +190,20 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
             return this.regionName;
         }
 
-        public ListNVRChannelDeviceResponseBodyData setCorpId(String corpId) {
-            this.corpId = corpId;
+        public ListNVRChannelDeviceResponseBodyData setSampleName(String sampleName) {
+            this.sampleName = sampleName;
             return this;
         }
-        public String getCorpId() {
-            return this.corpId;
+        public String getSampleName() {
+            return this.sampleName;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setStreamStatus(String streamStatus) {
+            this.streamStatus = streamStatus;
+            return this;
+        }
+        public String getStreamStatus() {
+            return this.streamStatus;
         }
 
         public ListNVRChannelDeviceResponseBodyData setVap(String vap) {
@@ -204,14 +212,6 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         }
         public String getVap() {
             return this.vap;
-        }
-
-        public ListNVRChannelDeviceResponseBodyData setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
         }
 
     }

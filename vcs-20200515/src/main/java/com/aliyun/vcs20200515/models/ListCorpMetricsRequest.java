@@ -7,11 +7,11 @@ public class ListCorpMetricsRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("TagCode")
-    public String tagCode;
+    @NameInMap("DeviceGroupList")
+    public String deviceGroupList;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DeviceIdList")
+    public String deviceIdList;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,14 +22,14 @@ public class ListCorpMetricsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("TagCode")
+    public String tagCode;
+
     @NameInMap("UserGroupList")
     public String userGroupList;
-
-    @NameInMap("DeviceGroupList")
-    public String deviceGroupList;
-
-    @NameInMap("DeviceIdList")
-    public String deviceIdList;
 
     public static ListCorpMetricsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCorpMetricsRequest self = new ListCorpMetricsRequest();
@@ -44,20 +44,20 @@ public class ListCorpMetricsRequest extends TeaModel {
         return this.corpId;
     }
 
-    public ListCorpMetricsRequest setTagCode(String tagCode) {
-        this.tagCode = tagCode;
+    public ListCorpMetricsRequest setDeviceGroupList(String deviceGroupList) {
+        this.deviceGroupList = deviceGroupList;
         return this;
     }
-    public String getTagCode() {
-        return this.tagCode;
+    public String getDeviceGroupList() {
+        return this.deviceGroupList;
     }
 
-    public ListCorpMetricsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public ListCorpMetricsRequest setDeviceIdList(String deviceIdList) {
+        this.deviceIdList = deviceIdList;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDeviceIdList() {
+        return this.deviceIdList;
     }
 
     public ListCorpMetricsRequest setEndTime(String endTime) {
@@ -84,28 +84,28 @@ public class ListCorpMetricsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListCorpMetricsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public ListCorpMetricsRequest setTagCode(String tagCode) {
+        this.tagCode = tagCode;
+        return this;
+    }
+    public String getTagCode() {
+        return this.tagCode;
+    }
+
     public ListCorpMetricsRequest setUserGroupList(String userGroupList) {
         this.userGroupList = userGroupList;
         return this;
     }
     public String getUserGroupList() {
         return this.userGroupList;
-    }
-
-    public ListCorpMetricsRequest setDeviceGroupList(String deviceGroupList) {
-        this.deviceGroupList = deviceGroupList;
-        return this;
-    }
-    public String getDeviceGroupList() {
-        return this.deviceGroupList;
-    }
-
-    public ListCorpMetricsRequest setDeviceIdList(String deviceIdList) {
-        this.deviceIdList = deviceIdList;
-        return this;
-    }
-    public String getDeviceIdList() {
-        return this.deviceIdList;
     }
 
 }

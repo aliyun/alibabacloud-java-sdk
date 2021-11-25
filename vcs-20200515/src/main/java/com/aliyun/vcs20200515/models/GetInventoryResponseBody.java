@@ -32,30 +32,38 @@ public class GetInventoryResponseBody extends TeaModel {
     }
 
     public static class GetInventoryResponseBodyDataResultObject extends TeaModel {
+        @NameInMap("BuyerId")
+        public String buyerId;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("CurrentInventory")
         public String currentInventory;
 
-        @NameInMap("InventoryId")
-        public String inventoryId;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("BuyerId")
-        public String buyerId;
-
-        @NameInMap("ValidStartTime")
-        public String validStartTime;
+        @NameInMap("InventoryId")
+        public String inventoryId;
 
         @NameInMap("ValidEndTime")
         public String validEndTime;
 
+        @NameInMap("ValidStartTime")
+        public String validStartTime;
+
         public static GetInventoryResponseBodyDataResultObject build(java.util.Map<String, ?> map) throws Exception {
             GetInventoryResponseBodyDataResultObject self = new GetInventoryResponseBodyDataResultObject();
             return TeaModel.build(map, self);
+        }
+
+        public GetInventoryResponseBodyDataResultObject setBuyerId(String buyerId) {
+            this.buyerId = buyerId;
+            return this;
+        }
+        public String getBuyerId() {
+            return this.buyerId;
         }
 
         public GetInventoryResponseBodyDataResultObject setCommodityCode(String commodityCode) {
@@ -74,14 +82,6 @@ public class GetInventoryResponseBody extends TeaModel {
             return this.currentInventory;
         }
 
-        public GetInventoryResponseBodyDataResultObject setInventoryId(String inventoryId) {
-            this.inventoryId = inventoryId;
-            return this;
-        }
-        public String getInventoryId() {
-            return this.inventoryId;
-        }
-
         public GetInventoryResponseBodyDataResultObject setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -90,20 +90,12 @@ public class GetInventoryResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetInventoryResponseBodyDataResultObject setBuyerId(String buyerId) {
-            this.buyerId = buyerId;
+        public GetInventoryResponseBodyDataResultObject setInventoryId(String inventoryId) {
+            this.inventoryId = inventoryId;
             return this;
         }
-        public String getBuyerId() {
-            return this.buyerId;
-        }
-
-        public GetInventoryResponseBodyDataResultObject setValidStartTime(String validStartTime) {
-            this.validStartTime = validStartTime;
-            return this;
-        }
-        public String getValidStartTime() {
-            return this.validStartTime;
+        public String getInventoryId() {
+            return this.inventoryId;
         }
 
         public GetInventoryResponseBodyDataResultObject setValidEndTime(String validEndTime) {
@@ -112,6 +104,14 @@ public class GetInventoryResponseBody extends TeaModel {
         }
         public String getValidEndTime() {
             return this.validEndTime;
+        }
+
+        public GetInventoryResponseBodyDataResultObject setValidStartTime(String validStartTime) {
+            this.validStartTime = validStartTime;
+            return this;
+        }
+        public String getValidStartTime() {
+            return this.validStartTime;
         }
 
     }

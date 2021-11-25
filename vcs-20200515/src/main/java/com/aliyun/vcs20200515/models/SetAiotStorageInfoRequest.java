@@ -32,9 +32,6 @@ public class SetAiotStorageInfoRequest extends TeaModel {
     }
 
     public static class SetAiotStorageInfoRequestEventAlarmMq extends TeaModel {
-        @NameInMap("MqType")
-        public String mqType;
-
         @NameInMap("AlarmTopic")
         public String alarmTopic;
 
@@ -44,23 +41,18 @@ public class SetAiotStorageInfoRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("MqType")
+        public String mqType;
 
         @NameInMap("RamArnRole")
         public String ramArnRole;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static SetAiotStorageInfoRequestEventAlarmMq build(java.util.Map<String, ?> map) throws Exception {
             SetAiotStorageInfoRequestEventAlarmMq self = new SetAiotStorageInfoRequestEventAlarmMq();
             return TeaModel.build(map, self);
-        }
-
-        public SetAiotStorageInfoRequestEventAlarmMq setMqType(String mqType) {
-            this.mqType = mqType;
-            return this;
-        }
-        public String getMqType() {
-            return this.mqType;
         }
 
         public SetAiotStorageInfoRequestEventAlarmMq setAlarmTopic(String alarmTopic) {
@@ -87,12 +79,12 @@ public class SetAiotStorageInfoRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public SetAiotStorageInfoRequestEventAlarmMq setRegionId(String regionId) {
-            this.regionId = regionId;
+        public SetAiotStorageInfoRequestEventAlarmMq setMqType(String mqType) {
+            this.mqType = mqType;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getMqType() {
+            return this.mqType;
         }
 
         public SetAiotStorageInfoRequestEventAlarmMq setRamArnRole(String ramArnRole) {
@@ -103,46 +95,38 @@ public class SetAiotStorageInfoRequest extends TeaModel {
             return this.ramArnRole;
         }
 
+        public SetAiotStorageInfoRequestEventAlarmMq setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
     }
 
     public static class SetAiotStorageInfoRequestEventAlarmPictureStorage extends TeaModel {
-        @NameInMap("StorageType")
-        public String storageType;
+        @NameInMap("Bucket")
+        public String bucket;
 
         @NameInMap("Endpoint")
         public String endpoint;
 
-        @NameInMap("Bucket")
-        public String bucket;
-
         @NameInMap("Path")
         public String path;
-
-        @NameInMap("RamArnRole")
-        public String ramArnRole;
 
         @NameInMap("Proxy")
         public String proxy;
 
+        @NameInMap("RamArnRole")
+        public String ramArnRole;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
         public static SetAiotStorageInfoRequestEventAlarmPictureStorage build(java.util.Map<String, ?> map) throws Exception {
             SetAiotStorageInfoRequestEventAlarmPictureStorage self = new SetAiotStorageInfoRequestEventAlarmPictureStorage();
             return TeaModel.build(map, self);
-        }
-
-        public SetAiotStorageInfoRequestEventAlarmPictureStorage setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-        public SetAiotStorageInfoRequestEventAlarmPictureStorage setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
         }
 
         public SetAiotStorageInfoRequestEventAlarmPictureStorage setBucket(String bucket) {
@@ -153,12 +137,28 @@ public class SetAiotStorageInfoRequest extends TeaModel {
             return this.bucket;
         }
 
+        public SetAiotStorageInfoRequestEventAlarmPictureStorage setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
         public SetAiotStorageInfoRequestEventAlarmPictureStorage setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public SetAiotStorageInfoRequestEventAlarmPictureStorage setProxy(String proxy) {
+            this.proxy = proxy;
+            return this;
+        }
+        public String getProxy() {
+            return this.proxy;
         }
 
         public SetAiotStorageInfoRequestEventAlarmPictureStorage setRamArnRole(String ramArnRole) {
@@ -169,12 +169,12 @@ public class SetAiotStorageInfoRequest extends TeaModel {
             return this.ramArnRole;
         }
 
-        public SetAiotStorageInfoRequestEventAlarmPictureStorage setProxy(String proxy) {
-            this.proxy = proxy;
+        public SetAiotStorageInfoRequestEventAlarmPictureStorage setStorageType(String storageType) {
+            this.storageType = storageType;
             return this;
         }
-        public String getProxy() {
-            return this.proxy;
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

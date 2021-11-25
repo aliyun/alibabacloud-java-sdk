@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteChannelResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteChannelResponseBody self = new DeleteChannelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteChannelResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteChannelResponseBody setCode(String code) {
@@ -38,6 +30,14 @@ public class DeleteChannelResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DeleteChannelResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
     public DeleteChannelResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -46,12 +46,12 @@ public class DeleteChannelResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteChannelResponseBody setData(String data) {
-        this.data = data;
+    public DeleteChannelResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

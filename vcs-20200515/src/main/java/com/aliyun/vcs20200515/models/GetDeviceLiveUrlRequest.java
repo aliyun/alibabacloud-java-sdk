@@ -10,14 +10,14 @@ public class GetDeviceLiveUrlRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("StreamType")
-    public String streamType;
+    @NameInMap("GbId")
+    public String gbId;
 
     @NameInMap("OutProtocol")
     public String outProtocol;
 
-    @NameInMap("GbId")
-    public String gbId;
+    @NameInMap("StreamType")
+    public String streamType;
 
     public static GetDeviceLiveUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceLiveUrlRequest self = new GetDeviceLiveUrlRequest();
@@ -40,12 +40,12 @@ public class GetDeviceLiveUrlRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public GetDeviceLiveUrlRequest setStreamType(String streamType) {
-        this.streamType = streamType;
+    public GetDeviceLiveUrlRequest setGbId(String gbId) {
+        this.gbId = gbId;
         return this;
     }
-    public String getStreamType() {
-        return this.streamType;
+    public String getGbId() {
+        return this.gbId;
     }
 
     public GetDeviceLiveUrlRequest setOutProtocol(String outProtocol) {
@@ -56,12 +56,12 @@ public class GetDeviceLiveUrlRequest extends TeaModel {
         return this.outProtocol;
     }
 
-    public GetDeviceLiveUrlRequest setGbId(String gbId) {
-        this.gbId = gbId;
+    public GetDeviceLiveUrlRequest setStreamType(String streamType) {
+        this.streamType = streamType;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
+    public String getStreamType() {
+        return this.streamType;
     }
 
 }

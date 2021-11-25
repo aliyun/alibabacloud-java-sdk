@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetPictureUrlRequest extends TeaModel {
-    @NameInMap("OriginUrl")
-    public String originUrl;
-
     @NameInMap("ExpireTime")
     public String expireTime;
+
+    @NameInMap("OriginUrl")
+    public String originUrl;
 
     @NameInMap("Protocol")
     public String protocol;
@@ -18,20 +18,20 @@ public class GetPictureUrlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetPictureUrlRequest setOriginUrl(String originUrl) {
-        this.originUrl = originUrl;
-        return this;
-    }
-    public String getOriginUrl() {
-        return this.originUrl;
-    }
-
     public GetPictureUrlRequest setExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public GetPictureUrlRequest setOriginUrl(String originUrl) {
+        this.originUrl = originUrl;
+        return this;
+    }
+    public String getOriginUrl() {
+        return this.originUrl;
     }
 
     public GetPictureUrlRequest setProtocol(String protocol) {

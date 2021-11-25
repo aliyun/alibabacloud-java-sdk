@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListMetricsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListMetricsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListMetricsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static ListMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMetricsResponseBody self = new ListMetricsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMetricsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListMetricsResponseBody setData(ListMetricsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListMetricsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListMetricsResponseBody setMessage(String message) {
@@ -37,62 +53,22 @@ public class ListMetricsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListMetricsResponseBody setData(ListMetricsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListMetricsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListMetricsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListMetricsResponseBodyDataRecords extends TeaModel {
-        @NameInMap("TagMetric")
-        public String tagMetric;
+        @NameInMap("DateTime")
+        public String dateTime;
 
         @NameInMap("TagCode")
         public String tagCode;
 
+        @NameInMap("TagMetric")
+        public String tagMetric;
+
         @NameInMap("TagValue")
         public String tagValue;
-
-        @NameInMap("DateTime")
-        public String dateTime;
 
         public static ListMetricsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             ListMetricsResponseBodyDataRecords self = new ListMetricsResponseBodyDataRecords();
             return TeaModel.build(map, self);
-        }
-
-        public ListMetricsResponseBodyDataRecords setTagMetric(String tagMetric) {
-            this.tagMetric = tagMetric;
-            return this;
-        }
-        public String getTagMetric() {
-            return this.tagMetric;
-        }
-
-        public ListMetricsResponseBodyDataRecords setTagCode(String tagCode) {
-            this.tagCode = tagCode;
-            return this;
-        }
-        public String getTagCode() {
-            return this.tagCode;
-        }
-
-        public ListMetricsResponseBodyDataRecords setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListMetricsResponseBodyDataRecords setDateTime(String dateTime) {
@@ -103,43 +79,51 @@ public class ListMetricsResponseBody extends TeaModel {
             return this.dateTime;
         }
 
+        public ListMetricsResponseBodyDataRecords setTagCode(String tagCode) {
+            this.tagCode = tagCode;
+            return this;
+        }
+        public String getTagCode() {
+            return this.tagCode;
+        }
+
+        public ListMetricsResponseBodyDataRecords setTagMetric(String tagMetric) {
+            this.tagMetric = tagMetric;
+            return this;
+        }
+        public String getTagMetric() {
+            return this.tagMetric;
+        }
+
+        public ListMetricsResponseBodyDataRecords setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class ListMetricsResponseBodyData extends TeaModel {
-        @NameInMap("Records")
-        public java.util.List<ListMetricsResponseBodyDataRecords> records;
-
-        @NameInMap("TotalPage")
-        public Integer totalPage;
-
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("Records")
+        public java.util.List<ListMetricsResponseBodyDataRecords> records;
+
         @NameInMap("TotalCount")
         public Integer totalCount;
+
+        @NameInMap("TotalPage")
+        public Integer totalPage;
 
         public static ListMetricsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMetricsResponseBodyData self = new ListMetricsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListMetricsResponseBodyData setRecords(java.util.List<ListMetricsResponseBodyDataRecords> records) {
-            this.records = records;
-            return this;
-        }
-        public java.util.List<ListMetricsResponseBodyDataRecords> getRecords() {
-            return this.records;
-        }
-
-        public ListMetricsResponseBodyData setTotalPage(Integer totalPage) {
-            this.totalPage = totalPage;
-            return this;
-        }
-        public Integer getTotalPage() {
-            return this.totalPage;
         }
 
         public ListMetricsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -158,12 +142,28 @@ public class ListMetricsResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public ListMetricsResponseBodyData setRecords(java.util.List<ListMetricsResponseBodyDataRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<ListMetricsResponseBodyDataRecords> getRecords() {
+            return this.records;
+        }
+
         public ListMetricsResponseBodyData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public ListMetricsResponseBodyData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
         }
 
     }

@@ -7,17 +7,17 @@ public class ListEventAlgorithmResultsRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("EventType")
-    public String eventType;
-
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("EventType")
+    public String eventType;
+
+    @NameInMap("ExtendValue")
+    public String extendValue;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -25,8 +25,8 @@ public class ListEventAlgorithmResultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("ExtendValue")
-    public String extendValue;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ListEventAlgorithmResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEventAlgorithmResultsRequest self = new ListEventAlgorithmResultsRequest();
@@ -41,14 +41,6 @@ public class ListEventAlgorithmResultsRequest extends TeaModel {
         return this.corpId;
     }
 
-    public ListEventAlgorithmResultsRequest setEventType(String eventType) {
-        this.eventType = eventType;
-        return this;
-    }
-    public String getEventType() {
-        return this.eventType;
-    }
-
     public ListEventAlgorithmResultsRequest setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -57,20 +49,28 @@ public class ListEventAlgorithmResultsRequest extends TeaModel {
         return this.dataSourceId;
     }
 
-    public ListEventAlgorithmResultsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public ListEventAlgorithmResultsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListEventAlgorithmResultsRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    public ListEventAlgorithmResultsRequest setExtendValue(String extendValue) {
+        this.extendValue = extendValue;
+        return this;
+    }
+    public String getExtendValue() {
+        return this.extendValue;
     }
 
     public ListEventAlgorithmResultsRequest setPageNumber(String pageNumber) {
@@ -89,12 +89,12 @@ public class ListEventAlgorithmResultsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListEventAlgorithmResultsRequest setExtendValue(String extendValue) {
-        this.extendValue = extendValue;
+    public ListEventAlgorithmResultsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getExtendValue() {
-        return this.extendValue;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

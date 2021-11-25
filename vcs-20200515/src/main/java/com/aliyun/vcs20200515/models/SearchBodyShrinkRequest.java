@@ -7,14 +7,14 @@ public class SearchBodyShrinkRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
+    @NameInMap("EndTimeStamp")
+    public Long endTimeStamp;
+
     @NameInMap("GbId")
     public String gbId;
 
-    @NameInMap("StartTimeStamp")
-    public Long startTimeStamp;
-
-    @NameInMap("EndTimeStamp")
-    public Long endTimeStamp;
+    @NameInMap("OptionList")
+    public String optionListShrink;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -22,8 +22,8 @@ public class SearchBodyShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OptionList")
-    public String optionListShrink;
+    @NameInMap("StartTimeStamp")
+    public Long startTimeStamp;
 
     public static SearchBodyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchBodyShrinkRequest self = new SearchBodyShrinkRequest();
@@ -38,6 +38,14 @@ public class SearchBodyShrinkRequest extends TeaModel {
         return this.corpId;
     }
 
+    public SearchBodyShrinkRequest setEndTimeStamp(Long endTimeStamp) {
+        this.endTimeStamp = endTimeStamp;
+        return this;
+    }
+    public Long getEndTimeStamp() {
+        return this.endTimeStamp;
+    }
+
     public SearchBodyShrinkRequest setGbId(String gbId) {
         this.gbId = gbId;
         return this;
@@ -46,20 +54,12 @@ public class SearchBodyShrinkRequest extends TeaModel {
         return this.gbId;
     }
 
-    public SearchBodyShrinkRequest setStartTimeStamp(Long startTimeStamp) {
-        this.startTimeStamp = startTimeStamp;
+    public SearchBodyShrinkRequest setOptionListShrink(String optionListShrink) {
+        this.optionListShrink = optionListShrink;
         return this;
     }
-    public Long getStartTimeStamp() {
-        return this.startTimeStamp;
-    }
-
-    public SearchBodyShrinkRequest setEndTimeStamp(Long endTimeStamp) {
-        this.endTimeStamp = endTimeStamp;
-        return this;
-    }
-    public Long getEndTimeStamp() {
-        return this.endTimeStamp;
+    public String getOptionListShrink() {
+        return this.optionListShrink;
     }
 
     public SearchBodyShrinkRequest setPageNo(Integer pageNo) {
@@ -78,12 +78,12 @@ public class SearchBodyShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchBodyShrinkRequest setOptionListShrink(String optionListShrink) {
-        this.optionListShrink = optionListShrink;
+    public SearchBodyShrinkRequest setStartTimeStamp(Long startTimeStamp) {
+        this.startTimeStamp = startTimeStamp;
         return this;
     }
-    public String getOptionListShrink() {
-        return this.optionListShrink;
+    public Long getStartTimeStamp() {
+        return this.startTimeStamp;
     }
 
 }

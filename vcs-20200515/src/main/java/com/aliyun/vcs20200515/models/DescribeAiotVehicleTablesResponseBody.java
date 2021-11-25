@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAiotVehicleTablesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("VehicleTableList")
-    public java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> vehicleTableList;
 
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("VehicleTableList")
+    public java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> vehicleTableList;
+
     public static DescribeAiotVehicleTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAiotVehicleTablesResponseBody self = new DescribeAiotVehicleTablesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAiotVehicleTablesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAiotVehicleTablesResponseBody setCode(String code) {
@@ -38,20 +30,28 @@ public class DescribeAiotVehicleTablesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeAiotVehicleTablesResponseBody setVehicleTableList(java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> vehicleTableList) {
-        this.vehicleTableList = vehicleTableList;
-        return this;
-    }
-    public java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> getVehicleTableList() {
-        return this.vehicleTableList;
-    }
-
     public DescribeAiotVehicleTablesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeAiotVehicleTablesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAiotVehicleTablesResponseBody setVehicleTableList(java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> vehicleTableList) {
+        this.vehicleTableList = vehicleTableList;
+        return this;
+    }
+    public java.util.List<DescribeAiotVehicleTablesResponseBodyVehicleTableList> getVehicleTableList() {
+        return this.vehicleTableList;
     }
 
     public static class DescribeAiotVehicleTablesResponseBodyVehicleTableList extends TeaModel {

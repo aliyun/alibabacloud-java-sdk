@@ -4,24 +4,16 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class StopStreamsRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     // 全局编号,支持多个,英文逗号分隔
     @NameInMap("DeviceIdList")
     public String deviceIdList;
 
-    @NameInMap("Description")
-    public String description;
-
     public static StopStreamsRequest build(java.util.Map<String, ?> map) throws Exception {
         StopStreamsRequest self = new StopStreamsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StopStreamsRequest setDeviceIdList(String deviceIdList) {
-        this.deviceIdList = deviceIdList;
-        return this;
-    }
-    public String getDeviceIdList() {
-        return this.deviceIdList;
     }
 
     public StopStreamsRequest setDescription(String description) {
@@ -30,6 +22,14 @@ public class StopStreamsRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public StopStreamsRequest setDeviceIdList(String deviceIdList) {
+        this.deviceIdList = deviceIdList;
+        return this;
+    }
+    public String getDeviceIdList() {
+        return this.deviceIdList;
     }
 
 }

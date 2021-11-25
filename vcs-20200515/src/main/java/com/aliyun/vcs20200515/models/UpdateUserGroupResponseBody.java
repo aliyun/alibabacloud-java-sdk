@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateUserGroupResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UpdateUserGroupResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateUserGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateUserGroupResponseBody self = new UpdateUserGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateUserGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateUserGroupResponseBody setData(UpdateUserGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateUserGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateUserGroupResponseBody setMessage(String message) {
@@ -37,37 +53,21 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateUserGroupResponseBody setData(UpdateUserGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateUserGroupResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateUserGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class UpdateUserGroupResponseBodyData extends TeaModel {
         @NameInMap("IsvSubId")
         public String isvSubId;
+
+        @NameInMap("ParentUserGroupId")
+        public String parentUserGroupId;
+
+        @NameInMap("UserCount")
+        public Long userCount;
 
         @NameInMap("UserGroupId")
         public Long userGroupId;
 
         @NameInMap("UserGroupName")
         public String userGroupName;
-
-        @NameInMap("UserCount")
-        public Long userCount;
-
-        @NameInMap("ParentUserGroupId")
-        public String parentUserGroupId;
 
         public static UpdateUserGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateUserGroupResponseBodyData self = new UpdateUserGroupResponseBodyData();
@@ -80,6 +80,22 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         }
         public String getIsvSubId() {
             return this.isvSubId;
+        }
+
+        public UpdateUserGroupResponseBodyData setParentUserGroupId(String parentUserGroupId) {
+            this.parentUserGroupId = parentUserGroupId;
+            return this;
+        }
+        public String getParentUserGroupId() {
+            return this.parentUserGroupId;
+        }
+
+        public UpdateUserGroupResponseBodyData setUserCount(Long userCount) {
+            this.userCount = userCount;
+            return this;
+        }
+        public Long getUserCount() {
+            return this.userCount;
         }
 
         public UpdateUserGroupResponseBodyData setUserGroupId(Long userGroupId) {
@@ -96,22 +112,6 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         }
         public String getUserGroupName() {
             return this.userGroupName;
-        }
-
-        public UpdateUserGroupResponseBodyData setUserCount(Long userCount) {
-            this.userCount = userCount;
-            return this;
-        }
-        public Long getUserCount() {
-            return this.userCount;
-        }
-
-        public UpdateUserGroupResponseBodyData setParentUserGroupId(String parentUserGroupId) {
-            this.parentUserGroupId = parentUserGroupId;
-            return this;
-        }
-        public String getParentUserGroupId() {
-            return this.parentUserGroupId;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetCityCodeResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<GetCityCodeResponseBodyData> data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,14 +19,6 @@ public class GetCityCodeResponseBody extends TeaModel {
     public static GetCityCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCityCodeResponseBody self = new GetCityCodeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCityCodeResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetCityCodeResponseBody setCode(String code) {
@@ -43,6 +35,14 @@ public class GetCityCodeResponseBody extends TeaModel {
     }
     public java.util.List<GetCityCodeResponseBodyData> getData() {
         return this.data;
+    }
+
+    public GetCityCodeResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetCityCodeResponseBody setRequestId(String requestId) {

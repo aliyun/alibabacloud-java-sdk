@@ -4,29 +4,21 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeChannelsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public DescribeChannelsResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeChannelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelsResponseBody self = new DescribeChannelsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeChannelsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeChannelsResponseBody setCode(String code) {
@@ -37,14 +29,6 @@ public class DescribeChannelsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeChannelsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public DescribeChannelsResponseBody setData(DescribeChannelsResponseBodyData data) {
         this.data = data;
         return this;
@@ -53,51 +37,76 @@ public class DescribeChannelsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DescribeChannelsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeChannelsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeChannelsResponseBodyDataRecords extends TeaModel {
+        @NameInMap("AudioEnable")
+        public String audioEnable;
+
         @NameInMap("CorpId")
         public String corpId;
 
-        @NameInMap("ServerId")
-        public String serverId;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        @NameInMap("ServerIp")
-        public String serverIp;
-
-        @NameInMap("ServerRealm")
-        public String serverRealm;
-
-        @NameInMap("ServerPort")
-        public String serverPort;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("Password")
-        public String password;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
+        @NameInMap("DatasourceType")
+        public String datasourceType;
 
         @NameInMap("DeviceAddress")
         public String deviceAddress;
 
-        @NameInMap("Longitude")
-        public String longitude;
-
-        @NameInMap("Latitude")
-        public String latitude;
-
         @NameInMap("DeviceDirection")
         public String deviceDirection;
 
-        @NameInMap("DeviceSite")
-        public String deviceSite;
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("DeviceIp")
+        public String deviceIp;
+
+        @NameInMap("DeviceModel")
+        public String deviceModel;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DeviceRate")
+        public String deviceRate;
 
         @NameInMap("DeviceResolution")
         public String deviceResolution;
 
-        @NameInMap("DeviceRate")
-        public String deviceRate;
+        @NameInMap("DeviceSite")
+        public String deviceSite;
+
+        @NameInMap("DeviceSn")
+        public String deviceSn;
+
+        @NameInMap("DeviceStatus")
+        public String deviceStatus;
+
+        @NameInMap("DeviceSubType")
+        public String deviceSubType;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("EncodeFormat")
+        public String encodeFormat;
 
         @NameInMap("FrameRate")
         public String frameRate;
@@ -105,11 +114,17 @@ public class DescribeChannelsResponseBody extends TeaModel {
         @NameInMap("GovLength")
         public String govLength;
 
-        @NameInMap("EncodeFormat")
-        public String encodeFormat;
+        @NameInMap("InProtocol")
+        public String inProtocol;
 
-        @NameInMap("AudioEnable")
-        public String audioEnable;
+        @NameInMap("Latitude")
+        public String latitude;
+
+        @NameInMap("Longitude")
+        public String longitude;
+
+        @NameInMap("ModifyTime")
+        public String modifyTime;
 
         @NameInMap("OSDTimeEnable")
         public String OSDTimeEnable;
@@ -123,54 +138,47 @@ public class DescribeChannelsResponseBody extends TeaModel {
         @NameInMap("OSDTimeY")
         public String OSDTimeY;
 
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("ParentDeviceId")
+        public String parentDeviceId;
 
-        @NameInMap("DeviceType")
-        public String deviceType;
+        @NameInMap("Password")
+        public String password;
 
-        @NameInMap("DeviceModel")
-        public String deviceModel;
+        @NameInMap("ServerId")
+        public String serverId;
 
-        @NameInMap("InProtocol")
-        public String inProtocol;
+        @NameInMap("ServerIp")
+        public String serverIp;
 
-        @NameInMap("DeviceSn")
-        public String deviceSn;
+        @NameInMap("ServerPort")
+        public String serverPort;
 
-        @NameInMap("DatasourceType")
-        public String datasourceType;
-
-        @NameInMap("DeviceSubType")
-        public String deviceSubType;
-
-        @NameInMap("DeviceIp")
-        public String deviceIp;
-
-        @NameInMap("DeviceStatus")
-        public String deviceStatus;
-
-        @NameInMap("StreamStatus")
-        public String streamStatus;
+        @NameInMap("ServerRealm")
+        public String serverRealm;
 
         @NameInMap("StreamAction")
         public String streamAction;
 
-        @NameInMap("ParentDeviceId")
-        public String parentDeviceId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("ModifyTime")
-        public String modifyTime;
+        @NameInMap("StreamStatus")
+        public String streamStatus;
 
         @NameInMap("Vap")
         public String vap;
 
+        @NameInMap("Vendor")
+        public String vendor;
+
         public static DescribeChannelsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelsResponseBodyDataRecords self = new DescribeChannelsResponseBodyDataRecords();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setAudioEnable(String audioEnable) {
+            this.audioEnable = audioEnable;
+            return this;
+        }
+        public String getAudioEnable() {
+            return this.audioEnable;
         }
 
         public DescribeChannelsResponseBodyDataRecords setCorpId(String corpId) {
@@ -181,60 +189,20 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.corpId;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setServerId(String serverId) {
-            this.serverId = serverId;
+        public DescribeChannelsResponseBodyDataRecords setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getServerId() {
-            return this.serverId;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setServerIp(String serverIp) {
-            this.serverIp = serverIp;
+        public DescribeChannelsResponseBodyDataRecords setDatasourceType(String datasourceType) {
+            this.datasourceType = datasourceType;
             return this;
         }
-        public String getServerIp() {
-            return this.serverIp;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setServerRealm(String serverRealm) {
-            this.serverRealm = serverRealm;
-            return this;
-        }
-        public String getServerRealm() {
-            return this.serverRealm;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setServerPort(String serverPort) {
-            this.serverPort = serverPort;
-            return this;
-        }
-        public String getServerPort() {
-            return this.serverPort;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
+        public String getDatasourceType() {
+            return this.datasourceType;
         }
 
         public DescribeChannelsResponseBodyDataRecords setDeviceAddress(String deviceAddress) {
@@ -245,22 +213,6 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.deviceAddress;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setLongitude(String longitude) {
-            this.longitude = longitude;
-            return this;
-        }
-        public String getLongitude() {
-            return this.longitude;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setLatitude(String latitude) {
-            this.latitude = latitude;
-            return this;
-        }
-        public String getLatitude() {
-            return this.latitude;
-        }
-
         public DescribeChannelsResponseBodyDataRecords setDeviceDirection(String deviceDirection) {
             this.deviceDirection = deviceDirection;
             return this;
@@ -269,12 +221,44 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.deviceDirection;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDeviceSite(String deviceSite) {
-            this.deviceSite = deviceSite;
+        public DescribeChannelsResponseBodyDataRecords setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getDeviceSite() {
-            return this.deviceSite;
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceIp(String deviceIp) {
+            this.deviceIp = deviceIp;
+            return this;
+        }
+        public String getDeviceIp() {
+            return this.deviceIp;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceModel(String deviceModel) {
+            this.deviceModel = deviceModel;
+            return this;
+        }
+        public String getDeviceModel() {
+            return this.deviceModel;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceRate(String deviceRate) {
+            this.deviceRate = deviceRate;
+            return this;
+        }
+        public String getDeviceRate() {
+            return this.deviceRate;
         }
 
         public DescribeChannelsResponseBodyDataRecords setDeviceResolution(String deviceResolution) {
@@ -285,12 +269,52 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.deviceResolution;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDeviceRate(String deviceRate) {
-            this.deviceRate = deviceRate;
+        public DescribeChannelsResponseBodyDataRecords setDeviceSite(String deviceSite) {
+            this.deviceSite = deviceSite;
             return this;
         }
-        public String getDeviceRate() {
-            return this.deviceRate;
+        public String getDeviceSite() {
+            return this.deviceSite;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceSn(String deviceSn) {
+            this.deviceSn = deviceSn;
+            return this;
+        }
+        public String getDeviceSn() {
+            return this.deviceSn;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceStatus(String deviceStatus) {
+            this.deviceStatus = deviceStatus;
+            return this;
+        }
+        public String getDeviceStatus() {
+            return this.deviceStatus;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceSubType(String deviceSubType) {
+            this.deviceSubType = deviceSubType;
+            return this;
+        }
+        public String getDeviceSubType() {
+            return this.deviceSubType;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setEncodeFormat(String encodeFormat) {
+            this.encodeFormat = encodeFormat;
+            return this;
+        }
+        public String getEncodeFormat() {
+            return this.encodeFormat;
         }
 
         public DescribeChannelsResponseBodyDataRecords setFrameRate(String frameRate) {
@@ -309,20 +333,36 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.govLength;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setEncodeFormat(String encodeFormat) {
-            this.encodeFormat = encodeFormat;
+        public DescribeChannelsResponseBodyDataRecords setInProtocol(String inProtocol) {
+            this.inProtocol = inProtocol;
             return this;
         }
-        public String getEncodeFormat() {
-            return this.encodeFormat;
+        public String getInProtocol() {
+            return this.inProtocol;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setAudioEnable(String audioEnable) {
-            this.audioEnable = audioEnable;
+        public DescribeChannelsResponseBodyDataRecords setLatitude(String latitude) {
+            this.latitude = latitude;
             return this;
         }
-        public String getAudioEnable() {
-            return this.audioEnable;
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setLongitude(String longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        public DescribeChannelsResponseBodyDataRecords setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
         public DescribeChannelsResponseBodyDataRecords setOSDTimeEnable(String OSDTimeEnable) {
@@ -357,84 +397,52 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.OSDTimeY;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setVendor(String vendor) {
-            this.vendor = vendor;
+        public DescribeChannelsResponseBodyDataRecords setParentDeviceId(String parentDeviceId) {
+            this.parentDeviceId = parentDeviceId;
             return this;
         }
-        public String getVendor() {
-            return this.vendor;
+        public String getParentDeviceId() {
+            return this.parentDeviceId;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
+        public DescribeChannelsResponseBodyDataRecords setPassword(String password) {
+            this.password = password;
             return this;
         }
-        public String getDeviceType() {
-            return this.deviceType;
+        public String getPassword() {
+            return this.password;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDeviceModel(String deviceModel) {
-            this.deviceModel = deviceModel;
+        public DescribeChannelsResponseBodyDataRecords setServerId(String serverId) {
+            this.serverId = serverId;
             return this;
         }
-        public String getDeviceModel() {
-            return this.deviceModel;
+        public String getServerId() {
+            return this.serverId;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setInProtocol(String inProtocol) {
-            this.inProtocol = inProtocol;
+        public DescribeChannelsResponseBodyDataRecords setServerIp(String serverIp) {
+            this.serverIp = serverIp;
             return this;
         }
-        public String getInProtocol() {
-            return this.inProtocol;
+        public String getServerIp() {
+            return this.serverIp;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDeviceSn(String deviceSn) {
-            this.deviceSn = deviceSn;
+        public DescribeChannelsResponseBodyDataRecords setServerPort(String serverPort) {
+            this.serverPort = serverPort;
             return this;
         }
-        public String getDeviceSn() {
-            return this.deviceSn;
+        public String getServerPort() {
+            return this.serverPort;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setDatasourceType(String datasourceType) {
-            this.datasourceType = datasourceType;
+        public DescribeChannelsResponseBodyDataRecords setServerRealm(String serverRealm) {
+            this.serverRealm = serverRealm;
             return this;
         }
-        public String getDatasourceType() {
-            return this.datasourceType;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setDeviceSubType(String deviceSubType) {
-            this.deviceSubType = deviceSubType;
-            return this;
-        }
-        public String getDeviceSubType() {
-            return this.deviceSubType;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setDeviceIp(String deviceIp) {
-            this.deviceIp = deviceIp;
-            return this;
-        }
-        public String getDeviceIp() {
-            return this.deviceIp;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setDeviceStatus(String deviceStatus) {
-            this.deviceStatus = deviceStatus;
-            return this;
-        }
-        public String getDeviceStatus() {
-            return this.deviceStatus;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setStreamStatus(String streamStatus) {
-            this.streamStatus = streamStatus;
-            return this;
-        }
-        public String getStreamStatus() {
-            return this.streamStatus;
+        public String getServerRealm() {
+            return this.serverRealm;
         }
 
         public DescribeChannelsResponseBodyDataRecords setStreamAction(String streamAction) {
@@ -445,28 +453,12 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.streamAction;
         }
 
-        public DescribeChannelsResponseBodyDataRecords setParentDeviceId(String parentDeviceId) {
-            this.parentDeviceId = parentDeviceId;
+        public DescribeChannelsResponseBodyDataRecords setStreamStatus(String streamStatus) {
+            this.streamStatus = streamStatus;
             return this;
         }
-        public String getParentDeviceId() {
-            return this.parentDeviceId;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeChannelsResponseBodyDataRecords setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public String getStreamStatus() {
+            return this.streamStatus;
         }
 
         public DescribeChannelsResponseBodyDataRecords setVap(String vap) {
@@ -477,15 +469,17 @@ public class DescribeChannelsResponseBody extends TeaModel {
             return this.vap;
         }
 
+        public DescribeChannelsResponseBodyDataRecords setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
+        }
+
     }
 
     public static class DescribeChannelsResponseBodyData extends TeaModel {
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
-        @NameInMap("TotalPage")
-        public Long totalPage;
-
         @NameInMap("PageNum")
         public Long pageNum;
 
@@ -495,28 +489,18 @@ public class DescribeChannelsResponseBody extends TeaModel {
         @NameInMap("Records")
         public java.util.List<DescribeChannelsResponseBodyDataRecords> records;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
+        @NameInMap("TotalPage")
+        public Long totalPage;
+
         @NameInMap("UnConfigList")
         public java.util.List<String> unConfigList;
 
         public static DescribeChannelsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeChannelsResponseBodyData self = new DescribeChannelsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeChannelsResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
-        public DescribeChannelsResponseBodyData setTotalPage(Long totalPage) {
-            this.totalPage = totalPage;
-            return this;
-        }
-        public Long getTotalPage() {
-            return this.totalPage;
         }
 
         public DescribeChannelsResponseBodyData setPageNum(Long pageNum) {
@@ -541,6 +525,22 @@ public class DescribeChannelsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeChannelsResponseBodyDataRecords> getRecords() {
             return this.records;
+        }
+
+        public DescribeChannelsResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        public DescribeChannelsResponseBodyData setTotalPage(Long totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Long getTotalPage() {
+            return this.totalPage;
         }
 
         public DescribeChannelsResponseBodyData setUnConfigList(java.util.List<String> unConfigList) {

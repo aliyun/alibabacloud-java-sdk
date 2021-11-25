@@ -7,11 +7,11 @@ public class GetDeviceStatsRequest extends TeaModel {
     @NameInMap("CorpIdList")
     public String corpIdList;
 
-    @NameInMap("DeviceType")
-    public String deviceType;
-
     @NameInMap("DeviceStatus")
     public String deviceStatus;
+
+    @NameInMap("DeviceType")
+    public String deviceType;
 
     public static GetDeviceStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceStatsRequest self = new GetDeviceStatsRequest();
@@ -26,20 +26,20 @@ public class GetDeviceStatsRequest extends TeaModel {
         return this.corpIdList;
     }
 
-    public GetDeviceStatsRequest setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
-        return this;
-    }
-    public String getDeviceType() {
-        return this.deviceType;
-    }
-
     public GetDeviceStatsRequest setDeviceStatus(String deviceStatus) {
         this.deviceStatus = deviceStatus;
         return this;
     }
     public String getDeviceStatus() {
         return this.deviceStatus;
+    }
+
+    public GetDeviceStatsRequest setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+    public String getDeviceType() {
+        return this.deviceType;
     }
 
 }

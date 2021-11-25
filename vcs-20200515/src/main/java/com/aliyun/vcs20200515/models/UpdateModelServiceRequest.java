@@ -4,6 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelServiceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ModelServiceId")
     public String modelServiceId;
 
@@ -13,12 +16,17 @@ public class UpdateModelServiceRequest extends TeaModel {
     @NameInMap("QpsRequired")
     public Integer qpsRequired;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static UpdateModelServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelServiceRequest self = new UpdateModelServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateModelServiceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateModelServiceRequest setModelServiceId(String modelServiceId) {
@@ -43,14 +51,6 @@ public class UpdateModelServiceRequest extends TeaModel {
     }
     public Integer getQpsRequired() {
         return this.qpsRequired;
-    }
-
-    public UpdateModelServiceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetFaceModelResultRequest extends TeaModel {
-    @NameInMap("PictureId")
-    public String pictureId;
-
     @NameInMap("PictureContent")
     public String pictureContent;
+
+    @NameInMap("PictureId")
+    public String pictureId;
 
     @NameInMap("PictureUrl")
     public String pictureUrl;
@@ -18,20 +18,20 @@ public class GetFaceModelResultRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetFaceModelResultRequest setPictureId(String pictureId) {
-        this.pictureId = pictureId;
-        return this;
-    }
-    public String getPictureId() {
-        return this.pictureId;
-    }
-
     public GetFaceModelResultRequest setPictureContent(String pictureContent) {
         this.pictureContent = pictureContent;
         return this;
     }
     public String getPictureContent() {
         return this.pictureContent;
+    }
+
+    public GetFaceModelResultRequest setPictureId(String pictureId) {
+        this.pictureId = pictureId;
+        return this;
+    }
+    public String getPictureId() {
+        return this.pictureId;
     }
 
     public GetFaceModelResultRequest setPictureUrl(String pictureUrl) {

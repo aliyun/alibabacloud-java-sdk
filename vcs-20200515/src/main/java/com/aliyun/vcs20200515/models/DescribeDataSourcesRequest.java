@@ -7,6 +7,12 @@ public class DescribeDataSourcesRequest extends TeaModel {
     @NameInMap("CorpIdList")
     public String corpIdList;
 
+    @NameInMap("DataSourceCategory")
+    public String dataSourceCategory;
+
+    @NameInMap("DataSourceFilter")
+    public String dataSourceFilter;
+
     @NameInMap("DataSourceIdList")
     public String dataSourceIdList;
 
@@ -19,11 +25,8 @@ public class DescribeDataSourcesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("DataSourceCategory")
-    public String dataSourceCategory;
-
-    @NameInMap("DataSourceFilter")
-    public String dataSourceFilter;
+    @NameInMap("StreamStatus")
+    public String streamStatus;
 
     public static DescribeDataSourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataSourcesRequest self = new DescribeDataSourcesRequest();
@@ -36,6 +39,22 @@ public class DescribeDataSourcesRequest extends TeaModel {
     }
     public String getCorpIdList() {
         return this.corpIdList;
+    }
+
+    public DescribeDataSourcesRequest setDataSourceCategory(String dataSourceCategory) {
+        this.dataSourceCategory = dataSourceCategory;
+        return this;
+    }
+    public String getDataSourceCategory() {
+        return this.dataSourceCategory;
+    }
+
+    public DescribeDataSourcesRequest setDataSourceFilter(String dataSourceFilter) {
+        this.dataSourceFilter = dataSourceFilter;
+        return this;
+    }
+    public String getDataSourceFilter() {
+        return this.dataSourceFilter;
     }
 
     public DescribeDataSourcesRequest setDataSourceIdList(String dataSourceIdList) {
@@ -70,20 +89,12 @@ public class DescribeDataSourcesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDataSourcesRequest setDataSourceCategory(String dataSourceCategory) {
-        this.dataSourceCategory = dataSourceCategory;
+    public DescribeDataSourcesRequest setStreamStatus(String streamStatus) {
+        this.streamStatus = streamStatus;
         return this;
     }
-    public String getDataSourceCategory() {
-        return this.dataSourceCategory;
-    }
-
-    public DescribeDataSourcesRequest setDataSourceFilter(String dataSourceFilter) {
-        this.dataSourceFilter = dataSourceFilter;
-        return this;
-    }
-    public String getDataSourceFilter() {
-        return this.dataSourceFilter;
+    public String getStreamStatus() {
+        return this.streamStatus;
     }
 
 }

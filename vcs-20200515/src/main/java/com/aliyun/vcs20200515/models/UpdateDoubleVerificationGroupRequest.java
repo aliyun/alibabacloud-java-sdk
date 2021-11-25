@@ -4,23 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDoubleVerificationGroupRequest extends TeaModel {
-    @NameInMap("Id")
-    public String id;
-
     @NameInMap("DoubleVerificationGroup")
     public UpdateDoubleVerificationGroupRequestDoubleVerificationGroup doubleVerificationGroup;
+
+    @NameInMap("Id")
+    public String id;
 
     public static UpdateDoubleVerificationGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDoubleVerificationGroupRequest self = new UpdateDoubleVerificationGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDoubleVerificationGroupRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public UpdateDoubleVerificationGroupRequest setDoubleVerificationGroup(UpdateDoubleVerificationGroupRequestDoubleVerificationGroup doubleVerificationGroup) {
@@ -31,24 +23,24 @@ public class UpdateDoubleVerificationGroupRequest extends TeaModel {
         return this.doubleVerificationGroup;
     }
 
-    public static class UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList extends TeaModel {
-        @NameInMap("PersonTableId")
-        public String personTableId;
+    public UpdateDoubleVerificationGroupRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
+    }
 
+    public static class UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList extends TeaModel {
         @NameInMap("PersonId")
         public String personId;
+
+        @NameInMap("PersonTableId")
+        public String personTableId;
 
         public static UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList build(java.util.Map<String, ?> map) throws Exception {
             UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList self = new UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList setPersonTableId(String personTableId) {
-            this.personTableId = personTableId;
-            return this;
-        }
-        public String getPersonTableId() {
-            return this.personTableId;
         }
 
         public UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList setPersonId(String personId) {
@@ -57,6 +49,14 @@ public class UpdateDoubleVerificationGroupRequest extends TeaModel {
         }
         public String getPersonId() {
             return this.personId;
+        }
+
+        public UpdateDoubleVerificationGroupRequestDoubleVerificationGroupPersonIdList setPersonTableId(String personTableId) {
+            this.personTableId = personTableId;
+            return this;
+        }
+        public String getPersonTableId() {
+            return this.personTableId;
         }
 
     }

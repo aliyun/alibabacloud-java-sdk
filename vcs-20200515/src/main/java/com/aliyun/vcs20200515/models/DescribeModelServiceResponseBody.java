@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeModelServiceResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public DescribeModelServiceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeModelServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeModelServiceResponseBody self = new DescribeModelServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeModelServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeModelServiceResponseBody setCode(String code) {
@@ -38,6 +30,14 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeModelServiceResponseBody setData(DescribeModelServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeModelServiceResponseBodyData getData() {
+        return this.data;
+    }
+
     public DescribeModelServiceResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -46,12 +46,12 @@ public class DescribeModelServiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeModelServiceResponseBody setData(DescribeModelServiceResponseBodyData data) {
-        this.data = data;
+    public DescribeModelServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeModelServiceResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeModelServiceResponseBodyDataModelApiList extends TeaModel {
@@ -118,57 +118,33 @@ public class DescribeModelServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeModelServiceResponseBodyData extends TeaModel {
-        @NameInMap("ModelServiceInstanceId")
-        public String modelServiceInstanceId;
-
-        @NameInMap("ModelServiceStatus")
-        public String modelServiceStatus;
-
-        @NameInMap("ModelServiceInstanceName")
-        public String modelServiceInstanceName;
-
         @NameInMap("AlgorithmCode")
         public String algorithmCode;
-
-        @NameInMap("Qps")
-        public Long qps;
-
-        @NameInMap("CreateTime")
-        public String createTime;
 
         @NameInMap("AppCode")
         public String appCode;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("ModelApiList")
         public java.util.List<DescribeModelServiceResponseBodyDataModelApiList> modelApiList;
+
+        @NameInMap("ModelServiceInstanceId")
+        public String modelServiceInstanceId;
+
+        @NameInMap("ModelServiceInstanceName")
+        public String modelServiceInstanceName;
+
+        @NameInMap("ModelServiceStatus")
+        public String modelServiceStatus;
+
+        @NameInMap("Qps")
+        public Long qps;
 
         public static DescribeModelServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeModelServiceResponseBodyData self = new DescribeModelServiceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeModelServiceResponseBodyData setModelServiceInstanceId(String modelServiceInstanceId) {
-            this.modelServiceInstanceId = modelServiceInstanceId;
-            return this;
-        }
-        public String getModelServiceInstanceId() {
-            return this.modelServiceInstanceId;
-        }
-
-        public DescribeModelServiceResponseBodyData setModelServiceStatus(String modelServiceStatus) {
-            this.modelServiceStatus = modelServiceStatus;
-            return this;
-        }
-        public String getModelServiceStatus() {
-            return this.modelServiceStatus;
-        }
-
-        public DescribeModelServiceResponseBodyData setModelServiceInstanceName(String modelServiceInstanceName) {
-            this.modelServiceInstanceName = modelServiceInstanceName;
-            return this;
-        }
-        public String getModelServiceInstanceName() {
-            return this.modelServiceInstanceName;
         }
 
         public DescribeModelServiceResponseBodyData setAlgorithmCode(String algorithmCode) {
@@ -179,12 +155,12 @@ public class DescribeModelServiceResponseBody extends TeaModel {
             return this.algorithmCode;
         }
 
-        public DescribeModelServiceResponseBodyData setQps(Long qps) {
-            this.qps = qps;
+        public DescribeModelServiceResponseBodyData setAppCode(String appCode) {
+            this.appCode = appCode;
             return this;
         }
-        public Long getQps() {
-            return this.qps;
+        public String getAppCode() {
+            return this.appCode;
         }
 
         public DescribeModelServiceResponseBodyData setCreateTime(String createTime) {
@@ -195,20 +171,44 @@ public class DescribeModelServiceResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeModelServiceResponseBodyData setAppCode(String appCode) {
-            this.appCode = appCode;
-            return this;
-        }
-        public String getAppCode() {
-            return this.appCode;
-        }
-
         public DescribeModelServiceResponseBodyData setModelApiList(java.util.List<DescribeModelServiceResponseBodyDataModelApiList> modelApiList) {
             this.modelApiList = modelApiList;
             return this;
         }
         public java.util.List<DescribeModelServiceResponseBodyDataModelApiList> getModelApiList() {
             return this.modelApiList;
+        }
+
+        public DescribeModelServiceResponseBodyData setModelServiceInstanceId(String modelServiceInstanceId) {
+            this.modelServiceInstanceId = modelServiceInstanceId;
+            return this;
+        }
+        public String getModelServiceInstanceId() {
+            return this.modelServiceInstanceId;
+        }
+
+        public DescribeModelServiceResponseBodyData setModelServiceInstanceName(String modelServiceInstanceName) {
+            this.modelServiceInstanceName = modelServiceInstanceName;
+            return this;
+        }
+        public String getModelServiceInstanceName() {
+            return this.modelServiceInstanceName;
+        }
+
+        public DescribeModelServiceResponseBodyData setModelServiceStatus(String modelServiceStatus) {
+            this.modelServiceStatus = modelServiceStatus;
+            return this;
+        }
+        public String getModelServiceStatus() {
+            return this.modelServiceStatus;
+        }
+
+        public DescribeModelServiceResponseBodyData setQps(Long qps) {
+            this.qps = qps;
+            return this;
+        }
+        public Long getQps() {
+            return this.qps;
         }
 
     }

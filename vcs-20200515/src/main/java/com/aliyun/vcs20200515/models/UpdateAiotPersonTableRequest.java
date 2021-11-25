@@ -32,11 +32,11 @@ public class UpdateAiotPersonTableRequest extends TeaModel {
     }
 
     public static class UpdateAiotPersonTableRequestPersonTable extends TeaModel {
-        @NameInMap("PersonTableId")
-        public String personTableId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PersonTableId")
+        public String personTableId;
 
         @NameInMap("Type")
         public Long type;
@@ -49,20 +49,20 @@ public class UpdateAiotPersonTableRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateAiotPersonTableRequestPersonTable setPersonTableId(String personTableId) {
-            this.personTableId = personTableId;
-            return this;
-        }
-        public String getPersonTableId() {
-            return this.personTableId;
-        }
-
         public UpdateAiotPersonTableRequestPersonTable setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateAiotPersonTableRequestPersonTable setPersonTableId(String personTableId) {
+            this.personTableId = personTableId;
+            return this;
+        }
+        public String getPersonTableId() {
+            return this.personTableId;
         }
 
         public UpdateAiotPersonTableRequestPersonTable setType(Long type) {

@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SaveVideoSummaryTaskVideoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static SaveVideoSummaryTaskVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveVideoSummaryTaskVideoResponseBody self = new SaveVideoSummaryTaskVideoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SaveVideoSummaryTaskVideoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SaveVideoSummaryTaskVideoResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public SaveVideoSummaryTaskVideoResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class SaveVideoSummaryTaskVideoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SaveVideoSummaryTaskVideoResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public SaveVideoSummaryTaskVideoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

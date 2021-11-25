@@ -4,17 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListFaceAlgorithmResultsRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
     @NameInMap("AlgorithmType")
     public String algorithmType;
 
+    @NameInMap("CorpId")
+    public String corpId;
+
     @NameInMap("DataSourceId")
     public String dataSourceId;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +22,12 @@ public class ListFaceAlgorithmResultsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListFaceAlgorithmResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFaceAlgorithmResultsRequest self = new ListFaceAlgorithmResultsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListFaceAlgorithmResultsRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public ListFaceAlgorithmResultsRequest setAlgorithmType(String algorithmType) {
@@ -46,20 +38,20 @@ public class ListFaceAlgorithmResultsRequest extends TeaModel {
         return this.algorithmType;
     }
 
+    public ListFaceAlgorithmResultsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
     public ListFaceAlgorithmResultsRequest setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     public String getDataSourceId() {
         return this.dataSourceId;
-    }
-
-    public ListFaceAlgorithmResultsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListFaceAlgorithmResultsRequest setEndTime(String endTime) {
@@ -84,6 +76,14 @@ public class ListFaceAlgorithmResultsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListFaceAlgorithmResultsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

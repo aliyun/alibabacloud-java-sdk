@@ -43,8 +43,11 @@ public class UpdateAiotVehicleTableItemRequest extends TeaModel {
     }
 
     public static class UpdateAiotVehicleTableItemRequestVehicleTableItem extends TeaModel {
-        @NameInMap("VehicleTableItemId")
-        public String vehicleTableItemId;
+        @NameInMap("BeginTime")
+        public String beginTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("OwnerName")
         public String ownerName;
@@ -55,26 +58,31 @@ public class UpdateAiotVehicleTableItemRequest extends TeaModel {
         @NameInMap("PlateNo")
         public String plateNo;
 
-        @NameInMap("BeginTime")
-        public String beginTime;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
         @NameInMap("Remarks")
         public String remarks;
+
+        @NameInMap("VehicleTableItemId")
+        public String vehicleTableItemId;
 
         public static UpdateAiotVehicleTableItemRequestVehicleTableItem build(java.util.Map<String, ?> map) throws Exception {
             UpdateAiotVehicleTableItemRequestVehicleTableItem self = new UpdateAiotVehicleTableItemRequestVehicleTableItem();
             return TeaModel.build(map, self);
         }
 
-        public UpdateAiotVehicleTableItemRequestVehicleTableItem setVehicleTableItemId(String vehicleTableItemId) {
-            this.vehicleTableItemId = vehicleTableItemId;
+        public UpdateAiotVehicleTableItemRequestVehicleTableItem setBeginTime(String beginTime) {
+            this.beginTime = beginTime;
             return this;
         }
-        public String getVehicleTableItemId() {
-            return this.vehicleTableItemId;
+        public String getBeginTime() {
+            return this.beginTime;
+        }
+
+        public UpdateAiotVehicleTableItemRequestVehicleTableItem setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public UpdateAiotVehicleTableItemRequestVehicleTableItem setOwnerName(String ownerName) {
@@ -101,28 +109,20 @@ public class UpdateAiotVehicleTableItemRequest extends TeaModel {
             return this.plateNo;
         }
 
-        public UpdateAiotVehicleTableItemRequestVehicleTableItem setBeginTime(String beginTime) {
-            this.beginTime = beginTime;
-            return this;
-        }
-        public String getBeginTime() {
-            return this.beginTime;
-        }
-
-        public UpdateAiotVehicleTableItemRequestVehicleTableItem setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
         public UpdateAiotVehicleTableItemRequestVehicleTableItem setRemarks(String remarks) {
             this.remarks = remarks;
             return this;
         }
         public String getRemarks() {
             return this.remarks;
+        }
+
+        public UpdateAiotVehicleTableItemRequestVehicleTableItem setVehicleTableItemId(String vehicleTableItemId) {
+            this.vehicleTableItemId = vehicleTableItemId;
+            return this;
+        }
+        public String getVehicleTableItemId() {
+            return this.vehicleTableItemId;
         }
 
     }

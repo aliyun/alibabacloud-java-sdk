@@ -4,11 +4,17 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListPersonTraceRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("CorpId")
     public String corpId;
+
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -16,29 +22,15 @@ public class ListPersonTraceRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("DataSourceId")
-    public String dataSourceId;
-
     @NameInMap("PersonId")
     public String personId;
 
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ListPersonTraceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPersonTraceRequest self = new ListPersonTraceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPersonTraceRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListPersonTraceRequest setCorpId(String corpId) {
@@ -47,6 +39,30 @@ public class ListPersonTraceRequest extends TeaModel {
     }
     public String getCorpId() {
         return this.corpId;
+    }
+
+    public ListPersonTraceRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    public ListPersonTraceRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ListPersonTraceRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListPersonTraceRequest setPageNumber(String pageNumber) {
@@ -65,22 +81,6 @@ public class ListPersonTraceRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPersonTraceRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public ListPersonTraceRequest setDataSourceId(String dataSourceId) {
-        this.dataSourceId = dataSourceId;
-        return this;
-    }
-    public String getDataSourceId() {
-        return this.dataSourceId;
-    }
-
     public ListPersonTraceRequest setPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -89,12 +89,12 @@ public class ListPersonTraceRequest extends TeaModel {
         return this.personId;
     }
 
-    public ListPersonTraceRequest setGroupId(String groupId) {
-        this.groupId = groupId;
+    public ListPersonTraceRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -7,14 +7,17 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("PersonId")
     public String personId;
@@ -24,9 +27,6 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
 
     @NameInMap("SubId")
     public String subId;
-
-    @NameInMap("DataSourceId")
-    public String dataSourceId;
 
     public static ListPersonTraceDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPersonTraceDetailsRequest self = new ListPersonTraceDetailsRequest();
@@ -39,6 +39,22 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
     }
     public String getCorpId() {
         return this.corpId;
+    }
+
+    public ListPersonTraceDetailsRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    public ListPersonTraceDetailsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListPersonTraceDetailsRequest setPageNumber(Long pageNumber) {
@@ -55,14 +71,6 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListPersonTraceDetailsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public ListPersonTraceDetailsRequest setPersonId(String personId) {
@@ -87,14 +95,6 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
     }
     public String getSubId() {
         return this.subId;
-    }
-
-    public ListPersonTraceDetailsRequest setDataSourceId(String dataSourceId) {
-        this.dataSourceId = dataSourceId;
-        return this;
-    }
-    public String getDataSourceId() {
-        return this.dataSourceId;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteProfileCatalogRequest extends TeaModel {
+    @NameInMap("CatalogId")
+    public String catalogId;
+
     @NameInMap("CorpId")
     public String corpId;
 
     @NameInMap("IsvSubId")
     public String isvSubId;
 
-    @NameInMap("CatalogId")
-    public String catalogId;
-
     public static DeleteProfileCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProfileCatalogRequest self = new DeleteProfileCatalogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteProfileCatalogRequest setCatalogId(String catalogId) {
+        this.catalogId = catalogId;
+        return this;
+    }
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     public DeleteProfileCatalogRequest setCorpId(String corpId) {
@@ -32,14 +40,6 @@ public class DeleteProfileCatalogRequest extends TeaModel {
     }
     public String getIsvSubId() {
         return this.isvSubId;
-    }
-
-    public DeleteProfileCatalogRequest setCatalogId(String catalogId) {
-        this.catalogId = catalogId;
-        return this;
-    }
-    public String getCatalogId() {
-        return this.catalogId;
     }
 
 }

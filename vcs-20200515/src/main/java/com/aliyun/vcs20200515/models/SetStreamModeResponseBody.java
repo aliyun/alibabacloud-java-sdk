@@ -4,26 +4,18 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SetStreamModeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static SetStreamModeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetStreamModeResponseBody self = new SetStreamModeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SetStreamModeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SetStreamModeResponseBody setCode(String code) {
@@ -40,6 +32,14 @@ public class SetStreamModeResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SetStreamModeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

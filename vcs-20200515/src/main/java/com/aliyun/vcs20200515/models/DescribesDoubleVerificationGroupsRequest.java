@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribesDoubleVerificationGroupsRequest extends TeaModel {
-    @NameInMap("Id")
-    public String id;
-
     @NameInMap("DoubleVerificationGroupIds")
     public String doubleVerificationGroupIds;
+
+    @NameInMap("Id")
+    public String id;
 
     @NameInMap("PageNum")
     public Long pageNum;
@@ -21,20 +21,20 @@ public class DescribesDoubleVerificationGroupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribesDoubleVerificationGroupsRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
     public DescribesDoubleVerificationGroupsRequest setDoubleVerificationGroupIds(String doubleVerificationGroupIds) {
         this.doubleVerificationGroupIds = doubleVerificationGroupIds;
         return this;
     }
     public String getDoubleVerificationGroupIds() {
         return this.doubleVerificationGroupIds;
+    }
+
+    public DescribesDoubleVerificationGroupsRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public DescribesDoubleVerificationGroupsRequest setPageNum(Long pageNum) {

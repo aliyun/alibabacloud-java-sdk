@@ -13,11 +13,20 @@ public class CreateScanDeviceRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
     @NameInMap("DeviceAddress")
     public String deviceAddress;
 
     @NameInMap("DeviceDirection")
     public String deviceDirection;
+
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    @NameInMap("DeviceModel")
+    public String deviceModel;
 
     @NameInMap("DeviceName")
     public String deviceName;
@@ -43,11 +52,11 @@ public class CreateScanDeviceRequest extends TeaModel {
     @NameInMap("FrameRate")
     public String frameRate;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     @NameInMap("GovLength")
     public String govLength;
+
+    @NameInMap("InProtocol")
+    public String inProtocol;
 
     @NameInMap("Latitude")
     public String latitude;
@@ -67,20 +76,11 @@ public class CreateScanDeviceRequest extends TeaModel {
     @NameInMap("OSDTimeY")
     public String OSDTimeY;
 
-    @NameInMap("Vendor")
-    public String vendor;
-
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
-
     @NameInMap("SubDeviceCount")
     public Long subDeviceCount;
 
-    @NameInMap("DeviceModel")
-    public String deviceModel;
-
-    @NameInMap("InProtocol")
-    public String inProtocol;
+    @NameInMap("Vendor")
+    public String vendor;
 
     public static CreateScanDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScanDeviceRequest self = new CreateScanDeviceRequest();
@@ -111,6 +111,14 @@ public class CreateScanDeviceRequest extends TeaModel {
         return this.corpId;
     }
 
+    public CreateScanDeviceRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
     public CreateScanDeviceRequest setDeviceAddress(String deviceAddress) {
         this.deviceAddress = deviceAddress;
         return this;
@@ -125,6 +133,22 @@ public class CreateScanDeviceRequest extends TeaModel {
     }
     public String getDeviceDirection() {
         return this.deviceDirection;
+    }
+
+    public CreateScanDeviceRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public CreateScanDeviceRequest setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+        return this;
+    }
+    public String getDeviceModel() {
+        return this.deviceModel;
     }
 
     public CreateScanDeviceRequest setDeviceName(String deviceName) {
@@ -191,20 +215,20 @@ public class CreateScanDeviceRequest extends TeaModel {
         return this.frameRate;
     }
 
-    public CreateScanDeviceRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
     public CreateScanDeviceRequest setGovLength(String govLength) {
         this.govLength = govLength;
         return this;
     }
     public String getGovLength() {
         return this.govLength;
+    }
+
+    public CreateScanDeviceRequest setInProtocol(String inProtocol) {
+        this.inProtocol = inProtocol;
+        return this;
+    }
+    public String getInProtocol() {
+        return this.inProtocol;
     }
 
     public CreateScanDeviceRequest setLatitude(String latitude) {
@@ -255,22 +279,6 @@ public class CreateScanDeviceRequest extends TeaModel {
         return this.OSDTimeY;
     }
 
-    public CreateScanDeviceRequest setVendor(String vendor) {
-        this.vendor = vendor;
-        return this;
-    }
-    public String getVendor() {
-        return this.vendor;
-    }
-
-    public CreateScanDeviceRequest setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
-        return this;
-    }
-    public String getDataSourceType() {
-        return this.dataSourceType;
-    }
-
     public CreateScanDeviceRequest setSubDeviceCount(Long subDeviceCount) {
         this.subDeviceCount = subDeviceCount;
         return this;
@@ -279,20 +287,12 @@ public class CreateScanDeviceRequest extends TeaModel {
         return this.subDeviceCount;
     }
 
-    public CreateScanDeviceRequest setDeviceModel(String deviceModel) {
-        this.deviceModel = deviceModel;
+    public CreateScanDeviceRequest setVendor(String vendor) {
+        this.vendor = vendor;
         return this;
     }
-    public String getDeviceModel() {
-        return this.deviceModel;
-    }
-
-    public CreateScanDeviceRequest setInProtocol(String inProtocol) {
-        this.inProtocol = inProtocol;
-        return this;
-    }
-    public String getInProtocol() {
-        return this.inProtocol;
+    public String getVendor() {
+        return this.vendor;
     }
 
 }

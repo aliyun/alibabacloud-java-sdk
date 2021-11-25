@@ -10,11 +10,11 @@ public class GetUserDetailRequest extends TeaModel {
     @NameInMap("IsvSubId")
     public String isvSubId;
 
-    @NameInMap("UserId")
-    public Long userId;
-
     @NameInMap("NeedFaceDetail")
     public Boolean needFaceDetail;
+
+    @NameInMap("UserId")
+    public Long userId;
 
     public static GetUserDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserDetailRequest self = new GetUserDetailRequest();
@@ -37,20 +37,20 @@ public class GetUserDetailRequest extends TeaModel {
         return this.isvSubId;
     }
 
-    public GetUserDetailRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
-    }
-
     public GetUserDetailRequest setNeedFaceDetail(Boolean needFaceDetail) {
         this.needFaceDetail = needFaceDetail;
         return this;
     }
     public Boolean getNeedFaceDetail() {
         return this.needFaceDetail;
+    }
+
+    public GetUserDetailRequest setUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+    public Long getUserId() {
+        return this.userId;
     }
 
 }

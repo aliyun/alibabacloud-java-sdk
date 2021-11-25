@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UploadFileResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UploadFileResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UploadFileResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UploadFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadFileResponseBody self = new UploadFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UploadFileResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UploadFileResponseBody setData(UploadFileResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UploadFileResponseBodyData getData() {
+        return this.data;
     }
 
     public UploadFileResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class UploadFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UploadFileResponseBody setData(UploadFileResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UploadFileResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UploadFileResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class UploadFileResponseBodyDataRecords extends TeaModel {

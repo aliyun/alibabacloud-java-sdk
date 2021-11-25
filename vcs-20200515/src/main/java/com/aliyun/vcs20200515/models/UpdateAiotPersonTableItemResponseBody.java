@@ -4,38 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("PersonTableItem")
     public UpdateAiotPersonTableItemResponseBodyPersonTableItem personTableItem;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateAiotPersonTableItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAiotPersonTableItemResponseBody self = new UpdateAiotPersonTableItemResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAiotPersonTableItemResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public UpdateAiotPersonTableItemResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public UpdateAiotPersonTableItemResponseBody setCode(String code) {
@@ -46,6 +30,14 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
         return this.code;
     }
 
+    public UpdateAiotPersonTableItemResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public UpdateAiotPersonTableItemResponseBody setPersonTableItem(UpdateAiotPersonTableItemResponseBodyPersonTableItem personTableItem) {
         this.personTableItem = personTableItem;
         return this;
@@ -54,24 +46,24 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
         return this.personTableItem;
     }
 
-    public static class UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList extends TeaModel {
-        @NameInMap("Type")
-        public Long type;
+    public UpdateAiotPersonTableItemResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList extends TeaModel {
         @NameInMap("Number")
         public String number;
+
+        @NameInMap("Type")
+        public Long type;
 
         public static UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList build(java.util.Map<String, ?> map) throws Exception {
             UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList self = new UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList setType(Long type) {
-            this.type = type;
-            return this;
-        }
-        public Long getType() {
-            return this.type;
         }
 
         public UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList setNumber(String number) {
@@ -82,49 +74,41 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.number;
         }
 
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList setType(Long type) {
+            this.type = type;
+            return this;
+        }
+        public Long getType() {
+            return this.type;
+        }
+
     }
 
     public static class UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo extends TeaModel {
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("AlgorithmType")
+        public String algorithmType;
 
         @NameInMap("AlgorithmVersion")
         public String algorithmVersion;
 
-        @NameInMap("AlgorithmType")
-        public String algorithmType;
-
-        @NameInMap("TabIed")
-        public String tabIed;
-
-        @NameInMap("ObjectId")
-        public String objectId;
+        @NameInMap("FeatureData")
+        public String featureData;
 
         @NameInMap("ImageId")
         public String imageId;
 
-        @NameInMap("FeatureData")
-        public String featureData;
+        @NameInMap("ObjectId")
+        public String objectId;
+
+        @NameInMap("TabIed")
+        public String tabIed;
+
+        @NameInMap("Vendor")
+        public String vendor;
 
         public static UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo self = new UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setVendor(String vendor) {
-            this.vendor = vendor;
-            return this;
-        }
-        public String getVendor() {
-            return this.vendor;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setAlgorithmVersion(String algorithmVersion) {
-            this.algorithmVersion = algorithmVersion;
-            return this;
-        }
-        public String getAlgorithmVersion() {
-            return this.algorithmVersion;
         }
 
         public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setAlgorithmType(String algorithmType) {
@@ -135,28 +119,12 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.algorithmType;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setTabIed(String tabIed) {
-            this.tabIed = tabIed;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setAlgorithmVersion(String algorithmVersion) {
+            this.algorithmVersion = algorithmVersion;
             return this;
         }
-        public String getTabIed() {
-            return this.tabIed;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setObjectId(String objectId) {
-            this.objectId = objectId;
-            return this;
-        }
-        public String getObjectId() {
-            return this.objectId;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
+        public String getAlgorithmVersion() {
+            return this.algorithmVersion;
         }
 
         public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setFeatureData(String featureData) {
@@ -167,51 +135,7 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.featureData;
         }
 
-    }
-
-    public static class UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList extends TeaModel {
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("EventSort")
-        public String eventSort;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("StoragePath")
-        public String storagePath;
-
-        @NameInMap("Size")
-        public Long size;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("FileFormat")
-        public String fileFormat;
-
-        @NameInMap("ShotTime")
-        public String shotTime;
-
-        @NameInMap("Width")
-        public Long width;
-
-        @NameInMap("Height")
-        public Long height;
-
-        @NameInMap("Data")
-        public String data;
-
-        @NameInMap("FeatureInfo")
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo featureInfo;
-
-        public static UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList build(java.util.Map<String, ?> map) throws Exception {
-            UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList self = new UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setImageId(String imageId) {
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -219,76 +143,72 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setEventSort(String eventSort) {
-            this.eventSort = eventSort;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setObjectId(String objectId) {
+            this.objectId = objectId;
             return this;
         }
-        public String getEventSort() {
-            return this.eventSort;
+        public String getObjectId() {
+            return this.objectId;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setTabIed(String tabIed) {
+            this.tabIed = tabIed;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getTabIed() {
+            return this.tabIed;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setStoragePath(String storagePath) {
-            this.storagePath = storagePath;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo setVendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
-        public String getStoragePath() {
-            return this.storagePath;
+        public String getVendor() {
+            return this.vendor;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
-        }
+    }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
+    public static class UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList extends TeaModel {
+        @NameInMap("Data")
+        public String data;
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setFileFormat(String fileFormat) {
-            this.fileFormat = fileFormat;
-            return this;
-        }
-        public String getFileFormat() {
-            return this.fileFormat;
-        }
+        @NameInMap("DeviceId")
+        public String deviceId;
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setShotTime(String shotTime) {
-            this.shotTime = shotTime;
-            return this;
-        }
-        public String getShotTime() {
-            return this.shotTime;
-        }
+        @NameInMap("EventSort")
+        public String eventSort;
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setWidth(Long width) {
-            this.width = width;
-            return this;
-        }
-        public Long getWidth() {
-            return this.width;
-        }
+        @NameInMap("FeatureInfo")
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo featureInfo;
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setHeight(Long height) {
-            this.height = height;
-            return this;
-        }
-        public Long getHeight() {
-            return this.height;
+        @NameInMap("FileFormat")
+        public String fileFormat;
+
+        @NameInMap("Height")
+        public Long height;
+
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("ShotTime")
+        public String shotTime;
+
+        @NameInMap("Size")
+        public Long size;
+
+        @NameInMap("StoragePath")
+        public String storagePath;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Width")
+        public Long width;
+
+        public static UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList build(java.util.Map<String, ?> map) throws Exception {
+            UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList self = new UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList();
+            return TeaModel.build(map, self);
         }
 
         public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setData(String data) {
@@ -299,6 +219,22 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.data;
         }
 
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setEventSort(String eventSort) {
+            this.eventSort = eventSort;
+            return this;
+        }
+        public String getEventSort() {
+            return this.eventSort;
+        }
+
         public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setFeatureInfo(UpdateAiotPersonTableItemResponseBodyPersonTableItemImageListFeatureInfo featureInfo) {
             this.featureInfo = featureInfo;
             return this;
@@ -307,14 +243,84 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.featureInfo;
         }
 
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setFileFormat(String fileFormat) {
+            this.fileFormat = fileFormat;
+            return this;
+        }
+        public String getFileFormat() {
+            return this.fileFormat;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setShotTime(String shotTime) {
+            this.shotTime = shotTime;
+            return this;
+        }
+        public String getShotTime() {
+            return this.shotTime;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setStoragePath(String storagePath) {
+            this.storagePath = storagePath;
+            return this;
+        }
+        public String getStoragePath() {
+            return this.storagePath;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class UpdateAiotPersonTableItemResponseBodyPersonTableItem extends TeaModel {
-        @NameInMap("PersonTableId")
-        public String personTableId;
+        @NameInMap("IdentificationList")
+        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> identificationList;
 
-        @NameInMap("PersonId")
-        public String personId;
+        @NameInMap("IdentificationNum")
+        public Long identificationNum;
+
+        @NameInMap("ImageList")
+        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> imageList;
+
+        @NameInMap("ImageNum")
+        public Long imageNum;
 
         @NameInMap("LastChange")
         public String lastChange;
@@ -322,43 +328,53 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
         @NameInMap("PersonCode")
         public String personCode;
 
+        @NameInMap("PersonId")
+        public String personId;
+
         @NameInMap("PersonName")
         public String personName;
 
+        @NameInMap("PersonTableId")
+        public String personTableId;
+
         @NameInMap("Remarks")
         public String remarks;
-
-        @NameInMap("IdentificationNum")
-        public Long identificationNum;
-
-        @NameInMap("IdentificationList")
-        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> identificationList;
-
-        @NameInMap("ImageNum")
-        public Long imageNum;
-
-        @NameInMap("ImageList")
-        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> imageList;
 
         public static UpdateAiotPersonTableItemResponseBodyPersonTableItem build(java.util.Map<String, ?> map) throws Exception {
             UpdateAiotPersonTableItemResponseBodyPersonTableItem self = new UpdateAiotPersonTableItemResponseBodyPersonTableItem();
             return TeaModel.build(map, self);
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setPersonTableId(String personTableId) {
-            this.personTableId = personTableId;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setIdentificationList(java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> identificationList) {
+            this.identificationList = identificationList;
             return this;
         }
-        public String getPersonTableId() {
-            return this.personTableId;
+        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> getIdentificationList() {
+            return this.identificationList;
         }
 
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setPersonId(String personId) {
-            this.personId = personId;
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setIdentificationNum(Long identificationNum) {
+            this.identificationNum = identificationNum;
             return this;
         }
-        public String getPersonId() {
-            return this.personId;
+        public Long getIdentificationNum() {
+            return this.identificationNum;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setImageList(java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> imageList) {
+            this.imageList = imageList;
+            return this;
+        }
+        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> getImageList() {
+            return this.imageList;
+        }
+
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setImageNum(Long imageNum) {
+            this.imageNum = imageNum;
+            return this;
+        }
+        public Long getImageNum() {
+            return this.imageNum;
         }
 
         public UpdateAiotPersonTableItemResponseBodyPersonTableItem setLastChange(String lastChange) {
@@ -377,6 +393,14 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.personCode;
         }
 
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setPersonId(String personId) {
+            this.personId = personId;
+            return this;
+        }
+        public String getPersonId() {
+            return this.personId;
+        }
+
         public UpdateAiotPersonTableItemResponseBodyPersonTableItem setPersonName(String personName) {
             this.personName = personName;
             return this;
@@ -385,44 +409,20 @@ public class UpdateAiotPersonTableItemResponseBody extends TeaModel {
             return this.personName;
         }
 
+        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setPersonTableId(String personTableId) {
+            this.personTableId = personTableId;
+            return this;
+        }
+        public String getPersonTableId() {
+            return this.personTableId;
+        }
+
         public UpdateAiotPersonTableItemResponseBodyPersonTableItem setRemarks(String remarks) {
             this.remarks = remarks;
             return this;
         }
         public String getRemarks() {
             return this.remarks;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setIdentificationNum(Long identificationNum) {
-            this.identificationNum = identificationNum;
-            return this;
-        }
-        public Long getIdentificationNum() {
-            return this.identificationNum;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setIdentificationList(java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> identificationList) {
-            this.identificationList = identificationList;
-            return this;
-        }
-        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemIdentificationList> getIdentificationList() {
-            return this.identificationList;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setImageNum(Long imageNum) {
-            this.imageNum = imageNum;
-            return this;
-        }
-        public Long getImageNum() {
-            return this.imageNum;
-        }
-
-        public UpdateAiotPersonTableItemResponseBodyPersonTableItem setImageList(java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> imageList) {
-            this.imageList = imageList;
-            return this;
-        }
-        public java.util.List<UpdateAiotPersonTableItemResponseBodyPersonTableItemImageList> getImageList() {
-            return this.imageList;
         }
 
     }

@@ -10,11 +10,11 @@ public class CreateUserGroupRequest extends TeaModel {
     @NameInMap("IsvSubId")
     public String isvSubId;
 
-    @NameInMap("UserGroupName")
-    public String userGroupName;
-
     @NameInMap("ParentUserGroupId")
     public Long parentUserGroupId;
+
+    @NameInMap("UserGroupName")
+    public String userGroupName;
 
     public static CreateUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserGroupRequest self = new CreateUserGroupRequest();
@@ -37,20 +37,20 @@ public class CreateUserGroupRequest extends TeaModel {
         return this.isvSubId;
     }
 
-    public CreateUserGroupRequest setUserGroupName(String userGroupName) {
-        this.userGroupName = userGroupName;
-        return this;
-    }
-    public String getUserGroupName() {
-        return this.userGroupName;
-    }
-
     public CreateUserGroupRequest setParentUserGroupId(Long parentUserGroupId) {
         this.parentUserGroupId = parentUserGroupId;
         return this;
     }
     public Long getParentUserGroupId() {
         return this.parentUserGroupId;
+    }
+
+    public CreateUserGroupRequest setUserGroupName(String userGroupName) {
+        this.userGroupName = userGroupName;
+        return this;
+    }
+    public String getUserGroupName() {
+        return this.userGroupName;
     }
 
 }

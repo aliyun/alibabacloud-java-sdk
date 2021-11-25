@@ -7,11 +7,11 @@ public class SaveVideoSummaryTaskVideoRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("SaveVideo")
     public Boolean saveVideo;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static SaveVideoSummaryTaskVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveVideoSummaryTaskVideoRequest self = new SaveVideoSummaryTaskVideoRequest();
@@ -26,20 +26,20 @@ public class SaveVideoSummaryTaskVideoRequest extends TeaModel {
         return this.corpId;
     }
 
-    public SaveVideoSummaryTaskVideoRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public SaveVideoSummaryTaskVideoRequest setSaveVideo(Boolean saveVideo) {
         this.saveVideo = saveVideo;
         return this;
     }
     public Boolean getSaveVideo() {
         return this.saveVideo;
+    }
+
+    public SaveVideoSummaryTaskVideoRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

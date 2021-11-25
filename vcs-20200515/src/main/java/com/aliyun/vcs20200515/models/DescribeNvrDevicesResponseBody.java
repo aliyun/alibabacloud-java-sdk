@@ -7,14 +7,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public DescribeNvrDevicesResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DescribeNvrDevicesResponseBodyData data;
 
     public static DescribeNvrDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNvrDevicesResponseBody self = new DescribeNvrDevicesResponseBody();
@@ -27,6 +27,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeNvrDevicesResponseBody setData(DescribeNvrDevicesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeNvrDevicesResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeNvrDevicesResponseBody setMessage(String message) {
@@ -45,14 +53,6 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNvrDevicesResponseBody setData(DescribeNvrDevicesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeNvrDevicesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeNvrDevicesResponseBodyDataRecords extends TeaModel {
         @NameInMap("Channel")
         public String channel;
@@ -60,11 +60,17 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         @NameInMap("CorpId")
         public String corpId;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("DatasourceType")
         public String datasourceType;
 
         @NameInMap("DeviceId")
         public String deviceId;
+
+        @NameInMap("DeviceModel")
+        public String deviceModel;
 
         @NameInMap("DeviceName")
         public String deviceName;
@@ -78,14 +84,8 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
-
-        @NameInMap("DeviceModel")
-        public String deviceModel;
 
         @NameInMap("ProjectName")
         public String projectName;
@@ -114,6 +114,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
             return this.corpId;
         }
 
+        public DescribeNvrDevicesResponseBodyDataRecords setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
         public DescribeNvrDevicesResponseBodyDataRecords setDatasourceType(String datasourceType) {
             this.datasourceType = datasourceType;
             return this;
@@ -128,6 +136,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public DescribeNvrDevicesResponseBodyDataRecords setDeviceModel(String deviceModel) {
+            this.deviceModel = deviceModel;
+            return this;
+        }
+        public String getDeviceModel() {
+            return this.deviceModel;
         }
 
         public DescribeNvrDevicesResponseBodyDataRecords setDeviceName(String deviceName) {
@@ -162,28 +178,12 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public DescribeNvrDevicesResponseBodyDataRecords setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public DescribeNvrDevicesResponseBodyDataRecords setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public String getModifyTime() {
             return this.modifyTime;
-        }
-
-        public DescribeNvrDevicesResponseBodyDataRecords setDeviceModel(String deviceModel) {
-            this.deviceModel = deviceModel;
-            return this;
-        }
-        public String getDeviceModel() {
-            return this.deviceModel;
         }
 
         public DescribeNvrDevicesResponseBodyDataRecords setProjectName(String projectName) {
@@ -211,14 +211,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
+        @NameInMap("Records")
+        public java.util.List<DescribeNvrDevicesResponseBodyDataRecords> records;
+
         @NameInMap("TotalCount")
         public Long totalCount;
 
         @NameInMap("TotalPage")
         public Long totalPage;
-
-        @NameInMap("Records")
-        public java.util.List<DescribeNvrDevicesResponseBodyDataRecords> records;
 
         public static DescribeNvrDevicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNvrDevicesResponseBodyData self = new DescribeNvrDevicesResponseBodyData();
@@ -241,6 +241,14 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public DescribeNvrDevicesResponseBodyData setRecords(java.util.List<DescribeNvrDevicesResponseBodyDataRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<DescribeNvrDevicesResponseBodyDataRecords> getRecords() {
+            return this.records;
+        }
+
         public DescribeNvrDevicesResponseBodyData setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
@@ -255,14 +263,6 @@ public class DescribeNvrDevicesResponseBody extends TeaModel {
         }
         public Long getTotalPage() {
             return this.totalPage;
-        }
-
-        public DescribeNvrDevicesResponseBodyData setRecords(java.util.List<DescribeNvrDevicesResponseBodyDataRecords> records) {
-            this.records = records;
-            return this;
-        }
-        public java.util.List<DescribeNvrDevicesResponseBodyDataRecords> getRecords() {
-            return this.records;
         }
 
     }
