@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetMonitorResultResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetMonitorResultResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetMonitorResultResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetMonitorResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMonitorResultResponseBody self = new GetMonitorResultResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMonitorResultResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetMonitorResultResponseBody setData(GetMonitorResultResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMonitorResultResponseBodyData getData() {
+        return this.data;
     }
 
     public GetMonitorResultResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class GetMonitorResultResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetMonitorResultResponseBody setData(GetMonitorResultResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetMonitorResultResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetMonitorResultResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetMonitorResultResponseBodyDataRecordsExtendInfo extends TeaModel {
@@ -73,8 +73,26 @@ public class GetMonitorResultResponseBody extends TeaModel {
     }
 
     public static class GetMonitorResultResponseBodyDataRecords extends TeaModel {
+        @NameInMap("ExtendInfo")
+        public GetMonitorResultResponseBodyDataRecordsExtendInfo extendInfo;
+
+        @NameInMap("GbId")
+        public String gbId;
+
+        @NameInMap("LeftUpX")
+        public String leftUpX;
+
+        @NameInMap("LeftUpY")
+        public String leftUpY;
+
+        @NameInMap("MonitorPicUrl")
+        public String monitorPicUrl;
+
         @NameInMap("PicUrl")
         public String picUrl;
+
+        @NameInMap("RightBottomX")
+        public String rightBottomX;
 
         @NameInMap("RightBottomY")
         public String rightBottomY;
@@ -82,76 +100,18 @@ public class GetMonitorResultResponseBody extends TeaModel {
         @NameInMap("Score")
         public String score;
 
-        @NameInMap("MonitorPicUrl")
-        public String monitorPicUrl;
-
-        @NameInMap("RightBottomX")
-        public String rightBottomX;
-
-        @NameInMap("ExtendInfo")
-        public GetMonitorResultResponseBodyDataRecordsExtendInfo extendInfo;
-
-        @NameInMap("GbId")
-        public String gbId;
-
-        @NameInMap("LeftUpY")
-        public String leftUpY;
-
-        @NameInMap("LeftUpX")
-        public String leftUpX;
-
         @NameInMap("ShotTime")
         public String shotTime;
-
-        @NameInMap("TaskId")
-        public String taskId;
 
         @NameInMap("TargetPicUrl")
         public String targetPicUrl;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
         public static GetMonitorResultResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             GetMonitorResultResponseBodyDataRecords self = new GetMonitorResultResponseBodyDataRecords();
             return TeaModel.build(map, self);
-        }
-
-        public GetMonitorResultResponseBodyDataRecords setPicUrl(String picUrl) {
-            this.picUrl = picUrl;
-            return this;
-        }
-        public String getPicUrl() {
-            return this.picUrl;
-        }
-
-        public GetMonitorResultResponseBodyDataRecords setRightBottomY(String rightBottomY) {
-            this.rightBottomY = rightBottomY;
-            return this;
-        }
-        public String getRightBottomY() {
-            return this.rightBottomY;
-        }
-
-        public GetMonitorResultResponseBodyDataRecords setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetMonitorResultResponseBodyDataRecords setMonitorPicUrl(String monitorPicUrl) {
-            this.monitorPicUrl = monitorPicUrl;
-            return this;
-        }
-        public String getMonitorPicUrl() {
-            return this.monitorPicUrl;
-        }
-
-        public GetMonitorResultResponseBodyDataRecords setRightBottomX(String rightBottomX) {
-            this.rightBottomX = rightBottomX;
-            return this;
-        }
-        public String getRightBottomX() {
-            return this.rightBottomX;
         }
 
         public GetMonitorResultResponseBodyDataRecords setExtendInfo(GetMonitorResultResponseBodyDataRecordsExtendInfo extendInfo) {
@@ -170,6 +130,14 @@ public class GetMonitorResultResponseBody extends TeaModel {
             return this.gbId;
         }
 
+        public GetMonitorResultResponseBodyDataRecords setLeftUpX(String leftUpX) {
+            this.leftUpX = leftUpX;
+            return this;
+        }
+        public String getLeftUpX() {
+            return this.leftUpX;
+        }
+
         public GetMonitorResultResponseBodyDataRecords setLeftUpY(String leftUpY) {
             this.leftUpY = leftUpY;
             return this;
@@ -178,12 +146,44 @@ public class GetMonitorResultResponseBody extends TeaModel {
             return this.leftUpY;
         }
 
-        public GetMonitorResultResponseBodyDataRecords setLeftUpX(String leftUpX) {
-            this.leftUpX = leftUpX;
+        public GetMonitorResultResponseBodyDataRecords setMonitorPicUrl(String monitorPicUrl) {
+            this.monitorPicUrl = monitorPicUrl;
             return this;
         }
-        public String getLeftUpX() {
-            return this.leftUpX;
+        public String getMonitorPicUrl() {
+            return this.monitorPicUrl;
+        }
+
+        public GetMonitorResultResponseBodyDataRecords setPicUrl(String picUrl) {
+            this.picUrl = picUrl;
+            return this;
+        }
+        public String getPicUrl() {
+            return this.picUrl;
+        }
+
+        public GetMonitorResultResponseBodyDataRecords setRightBottomX(String rightBottomX) {
+            this.rightBottomX = rightBottomX;
+            return this;
+        }
+        public String getRightBottomX() {
+            return this.rightBottomX;
+        }
+
+        public GetMonitorResultResponseBodyDataRecords setRightBottomY(String rightBottomY) {
+            this.rightBottomY = rightBottomY;
+            return this;
+        }
+        public String getRightBottomY() {
+            return this.rightBottomY;
+        }
+
+        public GetMonitorResultResponseBodyDataRecords setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
         }
 
         public GetMonitorResultResponseBodyDataRecords setShotTime(String shotTime) {
@@ -194,20 +194,20 @@ public class GetMonitorResultResponseBody extends TeaModel {
             return this.shotTime;
         }
 
-        public GetMonitorResultResponseBodyDataRecords setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
         public GetMonitorResultResponseBodyDataRecords setTargetPicUrl(String targetPicUrl) {
             this.targetPicUrl = targetPicUrl;
             return this;
         }
         public String getTargetPicUrl() {
             return this.targetPicUrl;
+        }
+
+        public GetMonitorResultResponseBodyDataRecords setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

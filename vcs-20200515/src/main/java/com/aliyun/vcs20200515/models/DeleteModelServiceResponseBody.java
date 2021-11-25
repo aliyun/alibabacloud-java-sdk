@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteModelServiceResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public DeleteModelServiceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DeleteModelServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteModelServiceResponseBody self = new DeleteModelServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteModelServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteModelServiceResponseBody setCode(String code) {
@@ -38,14 +30,6 @@ public class DeleteModelServiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteModelServiceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public DeleteModelServiceResponseBody setData(DeleteModelServiceResponseBodyData data) {
         this.data = data;
         return this;
@@ -54,15 +38,31 @@ public class DeleteModelServiceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DeleteModelServiceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteModelServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DeleteModelServiceResponseBodyData extends TeaModel {
         @NameInMap("ModelServiceInstanceId")
         public String modelServiceInstanceId;
 
-        @NameInMap("ModelServiceStatus")
-        public String modelServiceStatus;
-
         @NameInMap("ModelServiceInstanceName")
         public Integer modelServiceInstanceName;
+
+        @NameInMap("ModelServiceStatus")
+        public String modelServiceStatus;
 
         public static DeleteModelServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteModelServiceResponseBodyData self = new DeleteModelServiceResponseBodyData();
@@ -77,20 +77,20 @@ public class DeleteModelServiceResponseBody extends TeaModel {
             return this.modelServiceInstanceId;
         }
 
-        public DeleteModelServiceResponseBodyData setModelServiceStatus(String modelServiceStatus) {
-            this.modelServiceStatus = modelServiceStatus;
-            return this;
-        }
-        public String getModelServiceStatus() {
-            return this.modelServiceStatus;
-        }
-
         public DeleteModelServiceResponseBodyData setModelServiceInstanceName(Integer modelServiceInstanceName) {
             this.modelServiceInstanceName = modelServiceInstanceName;
             return this;
         }
         public Integer getModelServiceInstanceName() {
             return this.modelServiceInstanceName;
+        }
+
+        public DeleteModelServiceResponseBodyData setModelServiceStatus(String modelServiceStatus) {
+            this.modelServiceStatus = modelServiceStatus;
+            return this;
+        }
+        public String getModelServiceStatus() {
+            return this.modelServiceStatus;
         }
 
     }

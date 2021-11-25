@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetCatalogListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<GetCatalogListResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetCatalogListResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetCatalogListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCatalogListResponseBody self = new GetCatalogListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCatalogListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetCatalogListResponseBody setData(java.util.List<GetCatalogListResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetCatalogListResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetCatalogListResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class GetCatalogListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetCatalogListResponseBody setData(java.util.List<GetCatalogListResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetCatalogListResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetCatalogListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetCatalogListResponseBodyData extends TeaModel {

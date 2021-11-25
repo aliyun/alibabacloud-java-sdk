@@ -4,8 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListPersonsRequest extends TeaModel {
+    @NameInMap("AlgorithmType")
+    public String algorithmType;
+
     @NameInMap("CorpId")
     public String corpId;
+
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("PageNo")
     public String pageNo;
@@ -16,15 +22,17 @@ public class ListPersonsRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("AlgorithmType")
-    public String algorithmType;
-
     public static ListPersonsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPersonsRequest self = new ListPersonsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPersonsRequest setAlgorithmType(String algorithmType) {
+        this.algorithmType = algorithmType;
+        return this;
+    }
+    public String getAlgorithmType() {
+        return this.algorithmType;
     }
 
     public ListPersonsRequest setCorpId(String corpId) {
@@ -33,6 +41,14 @@ public class ListPersonsRequest extends TeaModel {
     }
     public String getCorpId() {
         return this.corpId;
+    }
+
+    public ListPersonsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListPersonsRequest setPageNo(String pageNo) {
@@ -57,22 +73,6 @@ public class ListPersonsRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public ListPersonsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public ListPersonsRequest setAlgorithmType(String algorithmType) {
-        this.algorithmType = algorithmType;
-        return this;
-    }
-    public String getAlgorithmType() {
-        return this.algorithmType;
     }
 
 }

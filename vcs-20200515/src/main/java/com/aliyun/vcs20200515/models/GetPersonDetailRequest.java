@@ -4,18 +4,26 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetPersonDetailRequest extends TeaModel {
+    @NameInMap("AlgorithmType")
+    public String algorithmType;
+
     @NameInMap("CorpId")
     public String corpId;
 
     @NameInMap("PersonID")
     public String personID;
 
-    @NameInMap("AlgorithmType")
-    public String algorithmType;
-
     public static GetPersonDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPersonDetailRequest self = new GetPersonDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPersonDetailRequest setAlgorithmType(String algorithmType) {
+        this.algorithmType = algorithmType;
+        return this;
+    }
+    public String getAlgorithmType() {
+        return this.algorithmType;
     }
 
     public GetPersonDetailRequest setCorpId(String corpId) {
@@ -32,14 +40,6 @@ public class GetPersonDetailRequest extends TeaModel {
     }
     public String getPersonID() {
         return this.personID;
-    }
-
-    public GetPersonDetailRequest setAlgorithmType(String algorithmType) {
-        this.algorithmType = algorithmType;
-        return this;
-    }
-    public String getAlgorithmType() {
-        return this.algorithmType;
     }
 
 }

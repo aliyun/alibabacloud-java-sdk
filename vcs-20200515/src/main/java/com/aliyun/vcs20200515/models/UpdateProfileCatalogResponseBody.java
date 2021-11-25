@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateProfileCatalogResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateProfileCatalogResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public UpdateProfileCatalogResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static UpdateProfileCatalogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateProfileCatalogResponseBody self = new UpdateProfileCatalogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProfileCatalogResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateProfileCatalogResponseBody setData(UpdateProfileCatalogResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateProfileCatalogResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateProfileCatalogResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class UpdateProfileCatalogResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateProfileCatalogResponseBody setData(UpdateProfileCatalogResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateProfileCatalogResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateProfileCatalogResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class UpdateProfileCatalogResponseBodyData extends TeaModel {

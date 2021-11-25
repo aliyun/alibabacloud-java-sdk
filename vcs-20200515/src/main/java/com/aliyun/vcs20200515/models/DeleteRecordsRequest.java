@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteRecordsRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
     @NameInMap("AlgorithmType")
     public String algorithmType;
 
     @NameInMap("AttributeName")
     public String attributeName;
+
+    @NameInMap("CorpId")
+    public String corpId;
 
     @NameInMap("OperatorType")
     public String operatorType;
@@ -22,14 +22,6 @@ public class DeleteRecordsRequest extends TeaModel {
     public static DeleteRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRecordsRequest self = new DeleteRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteRecordsRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public DeleteRecordsRequest setAlgorithmType(String algorithmType) {
@@ -46,6 +38,14 @@ public class DeleteRecordsRequest extends TeaModel {
     }
     public String getAttributeName() {
         return this.attributeName;
+    }
+
+    public DeleteRecordsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
     }
 
     public DeleteRecordsRequest setOperatorType(String operatorType) {

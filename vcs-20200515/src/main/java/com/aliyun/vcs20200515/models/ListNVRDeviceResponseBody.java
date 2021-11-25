@@ -4,6 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListNVRDeviceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<ListNVRDeviceResponseBodyData> data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -14,12 +17,17 @@ public class ListNVRDeviceResponseBody extends TeaModel {
     @NameInMap("Total")
     public String total;
 
-    @NameInMap("Data")
-    public java.util.List<ListNVRDeviceResponseBodyData> data;
-
     public static ListNVRDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNVRDeviceResponseBody self = new ListNVRDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNVRDeviceResponseBody setData(java.util.List<ListNVRDeviceResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListNVRDeviceResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListNVRDeviceResponseBody setRequestId(String requestId) {
@@ -46,143 +54,55 @@ public class ListNVRDeviceResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListNVRDeviceResponseBody setData(java.util.List<ListNVRDeviceResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListNVRDeviceResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListNVRDeviceResponseBodyData extends TeaModel {
-        @NameInMap("DeviceCode")
-        public String deviceCode;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
-
-        @NameInMap("DeviceType")
-        public String deviceType;
-
-        @NameInMap("DatasourceType")
-        public String datasourceType;
-
-        @NameInMap("DeviceStatus")
-        public String deviceStatus;
-
-        @NameInMap("StreamStatus")
-        public String streamStatus;
-
-        @NameInMap("ComptureStatus")
-        public String comptureStatus;
-
-        @NameInMap("RegionName")
-        public String regionName;
-
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        @NameInMap("RegistrationTime")
-        public String registrationTime;
-
         @NameInMap("AccessQuota")
         public String accessQuota;
 
         @NameInMap("Channel")
         public String channel;
 
-        @NameInMap("DeviceSn")
-        public String deviceSn;
-
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("ComptureStatus")
+        public String comptureStatus;
 
         @NameInMap("CorpId")
         public String corpId;
 
+        @NameInMap("DatasourceType")
+        public String datasourceType;
+
+        @NameInMap("DeviceCode")
+        public String deviceCode;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DeviceSn")
+        public String deviceSn;
+
+        @NameInMap("DeviceStatus")
+        public String deviceStatus;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("RegistrationTime")
+        public String registrationTime;
+
+        @NameInMap("StreamStatus")
+        public String streamStatus;
+
+        @NameInMap("Type")
+        public String type;
+
         public static ListNVRDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNVRDeviceResponseBodyData self = new ListNVRDeviceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListNVRDeviceResponseBodyData setDeviceCode(String deviceCode) {
-            this.deviceCode = deviceCode;
-            return this;
-        }
-        public String getDeviceCode() {
-            return this.deviceCode;
-        }
-
-        public ListNVRDeviceResponseBodyData setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
-        }
-
-        public ListNVRDeviceResponseBodyData setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
-        }
-
-        public ListNVRDeviceResponseBodyData setDatasourceType(String datasourceType) {
-            this.datasourceType = datasourceType;
-            return this;
-        }
-        public String getDatasourceType() {
-            return this.datasourceType;
-        }
-
-        public ListNVRDeviceResponseBodyData setDeviceStatus(String deviceStatus) {
-            this.deviceStatus = deviceStatus;
-            return this;
-        }
-        public String getDeviceStatus() {
-            return this.deviceStatus;
-        }
-
-        public ListNVRDeviceResponseBodyData setStreamStatus(String streamStatus) {
-            this.streamStatus = streamStatus;
-            return this;
-        }
-        public String getStreamStatus() {
-            return this.streamStatus;
-        }
-
-        public ListNVRDeviceResponseBodyData setComptureStatus(String comptureStatus) {
-            this.comptureStatus = comptureStatus;
-            return this;
-        }
-        public String getComptureStatus() {
-            return this.comptureStatus;
-        }
-
-        public ListNVRDeviceResponseBodyData setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
-        }
-
-        public ListNVRDeviceResponseBodyData setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-        public ListNVRDeviceResponseBodyData setRegistrationTime(String registrationTime) {
-            this.registrationTime = registrationTime;
-            return this;
-        }
-        public String getRegistrationTime() {
-            return this.registrationTime;
         }
 
         public ListNVRDeviceResponseBodyData setAccessQuota(String accessQuota) {
@@ -201,20 +121,12 @@ public class ListNVRDeviceResponseBody extends TeaModel {
             return this.channel;
         }
 
-        public ListNVRDeviceResponseBodyData setDeviceSn(String deviceSn) {
-            this.deviceSn = deviceSn;
+        public ListNVRDeviceResponseBodyData setComptureStatus(String comptureStatus) {
+            this.comptureStatus = comptureStatus;
             return this;
         }
-        public String getDeviceSn() {
-            return this.deviceSn;
-        }
-
-        public ListNVRDeviceResponseBodyData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public String getComptureStatus() {
+            return this.comptureStatus;
         }
 
         public ListNVRDeviceResponseBodyData setCorpId(String corpId) {
@@ -223,6 +135,94 @@ public class ListNVRDeviceResponseBody extends TeaModel {
         }
         public String getCorpId() {
             return this.corpId;
+        }
+
+        public ListNVRDeviceResponseBodyData setDatasourceType(String datasourceType) {
+            this.datasourceType = datasourceType;
+            return this;
+        }
+        public String getDatasourceType() {
+            return this.datasourceType;
+        }
+
+        public ListNVRDeviceResponseBodyData setDeviceCode(String deviceCode) {
+            this.deviceCode = deviceCode;
+            return this;
+        }
+        public String getDeviceCode() {
+            return this.deviceCode;
+        }
+
+        public ListNVRDeviceResponseBodyData setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public ListNVRDeviceResponseBodyData setDeviceSn(String deviceSn) {
+            this.deviceSn = deviceSn;
+            return this;
+        }
+        public String getDeviceSn() {
+            return this.deviceSn;
+        }
+
+        public ListNVRDeviceResponseBodyData setDeviceStatus(String deviceStatus) {
+            this.deviceStatus = deviceStatus;
+            return this;
+        }
+        public String getDeviceStatus() {
+            return this.deviceStatus;
+        }
+
+        public ListNVRDeviceResponseBodyData setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public ListNVRDeviceResponseBodyData setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public ListNVRDeviceResponseBodyData setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public ListNVRDeviceResponseBodyData setRegistrationTime(String registrationTime) {
+            this.registrationTime = registrationTime;
+            return this;
+        }
+        public String getRegistrationTime() {
+            return this.registrationTime;
+        }
+
+        public ListNVRDeviceResponseBodyData setStreamStatus(String streamStatus) {
+            this.streamStatus = streamStatus;
+            return this;
+        }
+        public String getStreamStatus() {
+            return this.streamStatus;
+        }
+
+        public ListNVRDeviceResponseBodyData setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

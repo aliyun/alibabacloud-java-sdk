@@ -4,81 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListCorpGroupMetricsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<ListCorpGroupMetricsResponseBodyData> data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListCorpGroupMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCorpGroupMetricsResponseBody self = new ListCorpGroupMetricsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCorpGroupMetricsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListCorpGroupMetricsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListCorpGroupMetricsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListCorpGroupMetricsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListCorpGroupMetricsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListCorpGroupMetricsResponseBody setData(java.util.List<ListCorpGroupMetricsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListCorpGroupMetricsResponseBodyData> getData() {
-        return this.data;
     }
 
     public ListCorpGroupMetricsResponseBody setCode(String code) {
@@ -89,6 +41,46 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListCorpGroupMetricsResponseBody setData(java.util.List<ListCorpGroupMetricsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListCorpGroupMetricsResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListCorpGroupMetricsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListCorpGroupMetricsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListCorpGroupMetricsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListCorpGroupMetricsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListCorpGroupMetricsResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -97,27 +89,35 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListCorpGroupMetricsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListCorpGroupMetricsResponseBodyData extends TeaModel {
+        @NameInMap("CorpGroupId")
+        public String corpGroupId;
+
+        @NameInMap("CorpId")
+        public String corpId;
+
         @NameInMap("DateId")
         public String dateId;
 
         @NameInMap("DeviceGroupId")
         public String deviceGroupId;
 
-        @NameInMap("CorpGroupId")
-        public String corpGroupId;
-
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("UserGroupId")
-        public String userGroupId;
+        @NameInMap("PersonID")
+        public String personID;
 
         @NameInMap("TagCode")
         public String tagCode;
-
-        @NameInMap("CorpId")
-        public String corpId;
 
         @NameInMap("TagMetrics")
         public String tagMetrics;
@@ -125,12 +125,28 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
-        @NameInMap("PersonID")
-        public String personID;
+        @NameInMap("UserGroupId")
+        public String userGroupId;
 
         public static ListCorpGroupMetricsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCorpGroupMetricsResponseBodyData self = new ListCorpGroupMetricsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListCorpGroupMetricsResponseBodyData setCorpGroupId(String corpGroupId) {
+            this.corpGroupId = corpGroupId;
+            return this;
+        }
+        public String getCorpGroupId() {
+            return this.corpGroupId;
+        }
+
+        public ListCorpGroupMetricsResponseBodyData setCorpId(String corpId) {
+            this.corpId = corpId;
+            return this;
+        }
+        public String getCorpId() {
+            return this.corpId;
         }
 
         public ListCorpGroupMetricsResponseBodyData setDateId(String dateId) {
@@ -149,14 +165,6 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
             return this.deviceGroupId;
         }
 
-        public ListCorpGroupMetricsResponseBodyData setCorpGroupId(String corpGroupId) {
-            this.corpGroupId = corpGroupId;
-            return this;
-        }
-        public String getCorpGroupId() {
-            return this.corpGroupId;
-        }
-
         public ListCorpGroupMetricsResponseBodyData setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
@@ -165,12 +173,12 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
             return this.deviceId;
         }
 
-        public ListCorpGroupMetricsResponseBodyData setUserGroupId(String userGroupId) {
-            this.userGroupId = userGroupId;
+        public ListCorpGroupMetricsResponseBodyData setPersonID(String personID) {
+            this.personID = personID;
             return this;
         }
-        public String getUserGroupId() {
-            return this.userGroupId;
+        public String getPersonID() {
+            return this.personID;
         }
 
         public ListCorpGroupMetricsResponseBodyData setTagCode(String tagCode) {
@@ -179,14 +187,6 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
         }
         public String getTagCode() {
             return this.tagCode;
-        }
-
-        public ListCorpGroupMetricsResponseBodyData setCorpId(String corpId) {
-            this.corpId = corpId;
-            return this;
-        }
-        public String getCorpId() {
-            return this.corpId;
         }
 
         public ListCorpGroupMetricsResponseBodyData setTagMetrics(String tagMetrics) {
@@ -205,12 +205,12 @@ public class ListCorpGroupMetricsResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public ListCorpGroupMetricsResponseBodyData setPersonID(String personID) {
-            this.personID = personID;
+        public ListCorpGroupMetricsResponseBodyData setUserGroupId(String userGroupId) {
+            this.userGroupId = userGroupId;
             return this;
         }
-        public String getPersonID() {
-            return this.personID;
+        public String getUserGroupId() {
+            return this.userGroupId;
         }
 
     }

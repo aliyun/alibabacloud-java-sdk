@@ -4,8 +4,23 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchTargetRequest extends TeaModel {
+    @NameInMap("BeginTime")
+    public String beginTime;
+
     @NameInMap("CorpId")
     public String corpId;
+
+    @NameInMap("DeviceList")
+    public String deviceList;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("ModelId")
+    public String modelId;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -13,39 +28,32 @@ public class SearchTargetRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("TargetType")
-    public String targetType;
+    @NameInMap("SimilarityThreshold")
+    public Double similarityThreshold;
 
     @NameInMap("TargetAttributes")
     public String targetAttributes;
 
-    @NameInMap("TargetImageUrl")
-    public String targetImageUrl;
-
     @NameInMap("TargetImageData")
     public String targetImageData;
 
-    @NameInMap("OrderBy")
-    public String orderBy;
+    @NameInMap("TargetImageUrl")
+    public String targetImageUrl;
 
-    @NameInMap("DeviceList")
-    public String deviceList;
-
-    @NameInMap("ModelId")
-    public String modelId;
-
-    @NameInMap("BeginTime")
-    public String beginTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("SimilarityThreshold")
-    public Double similarityThreshold;
+    @NameInMap("TargetType")
+    public String targetType;
 
     public static SearchTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTargetRequest self = new SearchTargetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchTargetRequest setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
+        return this;
+    }
+    public String getBeginTime() {
+        return this.beginTime;
     }
 
     public SearchTargetRequest setCorpId(String corpId) {
@@ -54,6 +62,38 @@ public class SearchTargetRequest extends TeaModel {
     }
     public String getCorpId() {
         return this.corpId;
+    }
+
+    public SearchTargetRequest setDeviceList(String deviceList) {
+        this.deviceList = deviceList;
+        return this;
+    }
+    public String getDeviceList() {
+        return this.deviceList;
+    }
+
+    public SearchTargetRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public SearchTargetRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    public SearchTargetRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public SearchTargetRequest setPageNumber(Long pageNumber) {
@@ -72,12 +112,12 @@ public class SearchTargetRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchTargetRequest setTargetType(String targetType) {
-        this.targetType = targetType;
+    public SearchTargetRequest setSimilarityThreshold(Double similarityThreshold) {
+        this.similarityThreshold = similarityThreshold;
         return this;
     }
-    public String getTargetType() {
-        return this.targetType;
+    public Double getSimilarityThreshold() {
+        return this.similarityThreshold;
     }
 
     public SearchTargetRequest setTargetAttributes(String targetAttributes) {
@@ -88,14 +128,6 @@ public class SearchTargetRequest extends TeaModel {
         return this.targetAttributes;
     }
 
-    public SearchTargetRequest setTargetImageUrl(String targetImageUrl) {
-        this.targetImageUrl = targetImageUrl;
-        return this;
-    }
-    public String getTargetImageUrl() {
-        return this.targetImageUrl;
-    }
-
     public SearchTargetRequest setTargetImageData(String targetImageData) {
         this.targetImageData = targetImageData;
         return this;
@@ -104,52 +136,20 @@ public class SearchTargetRequest extends TeaModel {
         return this.targetImageData;
     }
 
-    public SearchTargetRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
+    public SearchTargetRequest setTargetImageUrl(String targetImageUrl) {
+        this.targetImageUrl = targetImageUrl;
         return this;
     }
-    public String getOrderBy() {
-        return this.orderBy;
+    public String getTargetImageUrl() {
+        return this.targetImageUrl;
     }
 
-    public SearchTargetRequest setDeviceList(String deviceList) {
-        this.deviceList = deviceList;
+    public SearchTargetRequest setTargetType(String targetType) {
+        this.targetType = targetType;
         return this;
     }
-    public String getDeviceList() {
-        return this.deviceList;
-    }
-
-    public SearchTargetRequest setModelId(String modelId) {
-        this.modelId = modelId;
-        return this;
-    }
-    public String getModelId() {
-        return this.modelId;
-    }
-
-    public SearchTargetRequest setBeginTime(String beginTime) {
-        this.beginTime = beginTime;
-        return this;
-    }
-    public String getBeginTime() {
-        return this.beginTime;
-    }
-
-    public SearchTargetRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public SearchTargetRequest setSimilarityThreshold(Double similarityThreshold) {
-        this.similarityThreshold = similarityThreshold;
-        return this;
-    }
-    public Double getSimilarityThreshold() {
-        return this.similarityThreshold;
+    public String getTargetType() {
+        return this.targetType;
     }
 
 }

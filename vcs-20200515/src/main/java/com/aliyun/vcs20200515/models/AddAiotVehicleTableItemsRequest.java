@@ -43,11 +43,11 @@ public class AddAiotVehicleTableItemsRequest extends TeaModel {
     }
 
     public static class AddAiotVehicleTableItemsRequestVehicleTableItem extends TeaModel {
-        @NameInMap("VehicleTableItemId")
-        public String vehicleTableItemId;
+        @NameInMap("BeginTime")
+        public String beginTime;
 
-        @NameInMap("PlateNo")
-        public String plateNo;
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("OwnerName")
         public String ownerName;
@@ -55,50 +55,18 @@ public class AddAiotVehicleTableItemsRequest extends TeaModel {
         @NameInMap("PhoneNo")
         public String phoneNo;
 
-        @NameInMap("BeginTime")
-        public String beginTime;
-
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("PlateNo")
+        public String plateNo;
 
         @NameInMap("Remarks")
         public String remarks;
 
+        @NameInMap("VehicleTableItemId")
+        public String vehicleTableItemId;
+
         public static AddAiotVehicleTableItemsRequestVehicleTableItem build(java.util.Map<String, ?> map) throws Exception {
             AddAiotVehicleTableItemsRequestVehicleTableItem self = new AddAiotVehicleTableItemsRequestVehicleTableItem();
             return TeaModel.build(map, self);
-        }
-
-        public AddAiotVehicleTableItemsRequestVehicleTableItem setVehicleTableItemId(String vehicleTableItemId) {
-            this.vehicleTableItemId = vehicleTableItemId;
-            return this;
-        }
-        public String getVehicleTableItemId() {
-            return this.vehicleTableItemId;
-        }
-
-        public AddAiotVehicleTableItemsRequestVehicleTableItem setPlateNo(String plateNo) {
-            this.plateNo = plateNo;
-            return this;
-        }
-        public String getPlateNo() {
-            return this.plateNo;
-        }
-
-        public AddAiotVehicleTableItemsRequestVehicleTableItem setOwnerName(String ownerName) {
-            this.ownerName = ownerName;
-            return this;
-        }
-        public String getOwnerName() {
-            return this.ownerName;
-        }
-
-        public AddAiotVehicleTableItemsRequestVehicleTableItem setPhoneNo(String phoneNo) {
-            this.phoneNo = phoneNo;
-            return this;
-        }
-        public String getPhoneNo() {
-            return this.phoneNo;
         }
 
         public AddAiotVehicleTableItemsRequestVehicleTableItem setBeginTime(String beginTime) {
@@ -117,12 +85,44 @@ public class AddAiotVehicleTableItemsRequest extends TeaModel {
             return this.endTime;
         }
 
+        public AddAiotVehicleTableItemsRequestVehicleTableItem setOwnerName(String ownerName) {
+            this.ownerName = ownerName;
+            return this;
+        }
+        public String getOwnerName() {
+            return this.ownerName;
+        }
+
+        public AddAiotVehicleTableItemsRequestVehicleTableItem setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
+            return this;
+        }
+        public String getPhoneNo() {
+            return this.phoneNo;
+        }
+
+        public AddAiotVehicleTableItemsRequestVehicleTableItem setPlateNo(String plateNo) {
+            this.plateNo = plateNo;
+            return this;
+        }
+        public String getPlateNo() {
+            return this.plateNo;
+        }
+
         public AddAiotVehicleTableItemsRequestVehicleTableItem setRemarks(String remarks) {
             this.remarks = remarks;
             return this;
         }
         public String getRemarks() {
             return this.remarks;
+        }
+
+        public AddAiotVehicleTableItemsRequestVehicleTableItem setVehicleTableItemId(String vehicleTableItemId) {
+            this.vehicleTableItemId = vehicleTableItemId;
+            return this;
+        }
+        public String getVehicleTableItemId() {
+            return this.vehicleTableItemId;
         }
 
     }

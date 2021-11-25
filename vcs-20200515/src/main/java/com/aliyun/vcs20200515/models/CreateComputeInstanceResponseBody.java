@@ -4,17 +4,17 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateComputeInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CreateComputeInstanceResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public CreateComputeInstanceResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
     public static CreateComputeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateComputeInstanceResponseBody self = new CreateComputeInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateComputeInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateComputeInstanceResponseBody setData(CreateComputeInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateComputeInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateComputeInstanceResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class CreateComputeInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateComputeInstanceResponseBody setData(CreateComputeInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateComputeInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateComputeInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateComputeInstanceResponseBody setSuccess(Boolean success) {

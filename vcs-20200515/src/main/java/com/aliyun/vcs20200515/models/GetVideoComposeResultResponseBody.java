@@ -4,8 +4,8 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetVideoComposeResultResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,8 +13,8 @@ public class GetVideoComposeResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("VideoUrl")
     public String videoUrl;
@@ -24,12 +24,12 @@ public class GetVideoComposeResultResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetVideoComposeResultResponseBody setStatus(String status) {
-        this.status = status;
+    public GetVideoComposeResultResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getCode() {
+        return this.code;
     }
 
     public GetVideoComposeResultResponseBody setMessage(String message) {
@@ -48,12 +48,12 @@ public class GetVideoComposeResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetVideoComposeResultResponseBody setCode(String code) {
-        this.code = code;
+    public GetVideoComposeResultResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getStatus() {
+        return this.status;
     }
 
     public GetVideoComposeResultResponseBody setVideoUrl(String videoUrl) {

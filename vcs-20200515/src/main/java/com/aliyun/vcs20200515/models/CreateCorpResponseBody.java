@@ -4,6 +4,9 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateCorpResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("CorpId")
     public String corpId;
 
@@ -13,12 +16,17 @@ public class CreateCorpResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CreateCorpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCorpResponseBody self = new CreateCorpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCorpResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateCorpResponseBody setCorpId(String corpId) {
@@ -43,14 +51,6 @@ public class CreateCorpResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateCorpResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

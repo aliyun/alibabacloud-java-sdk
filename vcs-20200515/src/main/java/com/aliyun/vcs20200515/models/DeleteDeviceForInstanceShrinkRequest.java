@@ -4,15 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceForInstanceShrinkRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Devices")
-    public String devicesShrink;
-
-    @NameInMap("ProjectId")
-    public String projectId;
-
     @NameInMap("AlgorithmId")
     public String algorithmId;
 
@@ -22,33 +13,18 @@ public class DeleteDeviceForInstanceShrinkRequest extends TeaModel {
     @NameInMap("DeviceCount")
     public String deviceCount;
 
+    @NameInMap("Devices")
+    public String devicesShrink;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("ProjectId")
+    public String projectId;
+
     public static DeleteDeviceForInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceForInstanceShrinkRequest self = new DeleteDeviceForInstanceShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDeviceForInstanceShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DeleteDeviceForInstanceShrinkRequest setDevicesShrink(String devicesShrink) {
-        this.devicesShrink = devicesShrink;
-        return this;
-    }
-    public String getDevicesShrink() {
-        return this.devicesShrink;
-    }
-
-    public DeleteDeviceForInstanceShrinkRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public DeleteDeviceForInstanceShrinkRequest setAlgorithmId(String algorithmId) {
@@ -73,6 +49,30 @@ public class DeleteDeviceForInstanceShrinkRequest extends TeaModel {
     }
     public String getDeviceCount() {
         return this.deviceCount;
+    }
+
+    public DeleteDeviceForInstanceShrinkRequest setDevicesShrink(String devicesShrink) {
+        this.devicesShrink = devicesShrink;
+        return this;
+    }
+    public String getDevicesShrink() {
+        return this.devicesShrink;
+    }
+
+    public DeleteDeviceForInstanceShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteDeviceForInstanceShrinkRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

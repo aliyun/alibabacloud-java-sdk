@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeNvrDevicesRequest extends TeaModel {
-    @NameInMap("NvrDeviceIdList")
-    public String nvrDeviceIdList;
-
     @NameInMap("CorpIdList")
     public String corpIdList;
 
     @NameInMap("DeviceFilter")
     public String deviceFilter;
+
+    @NameInMap("NvrDeviceIdList")
+    public String nvrDeviceIdList;
 
     @NameInMap("PageNum")
     public Long pageNum;
@@ -22,14 +22,6 @@ public class DescribeNvrDevicesRequest extends TeaModel {
     public static DescribeNvrDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNvrDevicesRequest self = new DescribeNvrDevicesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNvrDevicesRequest setNvrDeviceIdList(String nvrDeviceIdList) {
-        this.nvrDeviceIdList = nvrDeviceIdList;
-        return this;
-    }
-    public String getNvrDeviceIdList() {
-        return this.nvrDeviceIdList;
     }
 
     public DescribeNvrDevicesRequest setCorpIdList(String corpIdList) {
@@ -46,6 +38,14 @@ public class DescribeNvrDevicesRequest extends TeaModel {
     }
     public String getDeviceFilter() {
         return this.deviceFilter;
+    }
+
+    public DescribeNvrDevicesRequest setNvrDeviceIdList(String nvrDeviceIdList) {
+        this.nvrDeviceIdList = nvrDeviceIdList;
+        return this;
+    }
+    public String getNvrDeviceIdList() {
+        return this.nvrDeviceIdList;
     }
 
     public DescribeNvrDevicesRequest setPageNum(Long pageNum) {

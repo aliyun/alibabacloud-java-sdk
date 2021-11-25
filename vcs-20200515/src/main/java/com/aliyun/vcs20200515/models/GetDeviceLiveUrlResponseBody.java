@@ -4,9 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceLiveUrlResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
@@ -15,6 +12,9 @@ public class GetDeviceLiveUrlResponseBody extends TeaModel {
 
     @NameInMap("OutProtocol")
     public String outProtocol;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StreamType")
     public Long streamType;
@@ -25,14 +25,6 @@ public class GetDeviceLiveUrlResponseBody extends TeaModel {
     public static GetDeviceLiveUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceLiveUrlResponseBody self = new GetDeviceLiveUrlResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDeviceLiveUrlResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDeviceLiveUrlResponseBody setCode(String code) {
@@ -57,6 +49,14 @@ public class GetDeviceLiveUrlResponseBody extends TeaModel {
     }
     public String getOutProtocol() {
         return this.outProtocol;
+    }
+
+    public GetDeviceLiveUrlResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetDeviceLiveUrlResponseBody setStreamType(Long streamType) {

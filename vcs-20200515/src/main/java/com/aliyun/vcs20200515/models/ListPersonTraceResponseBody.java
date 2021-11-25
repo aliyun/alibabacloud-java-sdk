@@ -4,81 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListPersonTraceResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<ListPersonTraceResponseBodyData> data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListPersonTraceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPersonTraceResponseBody self = new ListPersonTraceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPersonTraceResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListPersonTraceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListPersonTraceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListPersonTraceResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListPersonTraceResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListPersonTraceResponseBody setData(java.util.List<ListPersonTraceResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListPersonTraceResponseBodyData> getData() {
-        return this.data;
     }
 
     public ListPersonTraceResponseBody setCode(String code) {
@@ -89,6 +41,46 @@ public class ListPersonTraceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListPersonTraceResponseBody setData(java.util.List<ListPersonTraceResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListPersonTraceResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListPersonTraceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListPersonTraceResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListPersonTraceResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListPersonTraceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListPersonTraceResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -97,18 +89,20 @@ public class ListPersonTraceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListPersonTraceResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListPersonTraceResponseBodyData extends TeaModel {
-        @NameInMap("EndTargetImage")
-        public String endTargetImage;
+        @NameInMap("CorpId")
+        public String corpId;
 
-        @NameInMap("LastTime")
-        public String lastTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("Date")
+        public String date;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -116,56 +110,46 @@ public class ListPersonTraceResponseBody extends TeaModel {
         @NameInMap("EndSourceImage")
         public String endSourceImage;
 
-        @NameInMap("CorpId")
-        public String corpId;
+        @NameInMap("EndTargetImage")
+        public String endTargetImage;
 
-        @NameInMap("StartSourceImage")
-        public String startSourceImage;
+        @NameInMap("GroupId")
+        public String groupId;
 
-        @NameInMap("Date")
-        public String date;
+        @NameInMap("LastTime")
+        public String lastTime;
 
         @NameInMap("PersonId")
         public String personId;
 
+        @NameInMap("StartSourceImage")
+        public String startSourceImage;
+
         @NameInMap("StartTargetImage")
         public String startTargetImage;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static ListPersonTraceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListPersonTraceResponseBodyData self = new ListPersonTraceResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListPersonTraceResponseBodyData setEndTargetImage(String endTargetImage) {
-            this.endTargetImage = endTargetImage;
+        public ListPersonTraceResponseBodyData setCorpId(String corpId) {
+            this.corpId = corpId;
             return this;
         }
-        public String getEndTargetImage() {
-            return this.endTargetImage;
+        public String getCorpId() {
+            return this.corpId;
         }
 
-        public ListPersonTraceResponseBodyData setLastTime(String lastTime) {
-            this.lastTime = lastTime;
+        public ListPersonTraceResponseBodyData setDate(String date) {
+            this.date = date;
             return this;
         }
-        public String getLastTime() {
-            return this.lastTime;
-        }
-
-        public ListPersonTraceResponseBodyData setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public ListPersonTraceResponseBodyData setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getDate() {
+            return this.date;
         }
 
         public ListPersonTraceResponseBodyData setDeviceId(String deviceId) {
@@ -184,28 +168,28 @@ public class ListPersonTraceResponseBody extends TeaModel {
             return this.endSourceImage;
         }
 
-        public ListPersonTraceResponseBodyData setCorpId(String corpId) {
-            this.corpId = corpId;
+        public ListPersonTraceResponseBodyData setEndTargetImage(String endTargetImage) {
+            this.endTargetImage = endTargetImage;
             return this;
         }
-        public String getCorpId() {
-            return this.corpId;
+        public String getEndTargetImage() {
+            return this.endTargetImage;
         }
 
-        public ListPersonTraceResponseBodyData setStartSourceImage(String startSourceImage) {
-            this.startSourceImage = startSourceImage;
+        public ListPersonTraceResponseBodyData setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getStartSourceImage() {
-            return this.startSourceImage;
+        public String getGroupId() {
+            return this.groupId;
         }
 
-        public ListPersonTraceResponseBodyData setDate(String date) {
-            this.date = date;
+        public ListPersonTraceResponseBodyData setLastTime(String lastTime) {
+            this.lastTime = lastTime;
             return this;
         }
-        public String getDate() {
-            return this.date;
+        public String getLastTime() {
+            return this.lastTime;
         }
 
         public ListPersonTraceResponseBodyData setPersonId(String personId) {
@@ -216,12 +200,28 @@ public class ListPersonTraceResponseBody extends TeaModel {
             return this.personId;
         }
 
+        public ListPersonTraceResponseBodyData setStartSourceImage(String startSourceImage) {
+            this.startSourceImage = startSourceImage;
+            return this;
+        }
+        public String getStartSourceImage() {
+            return this.startSourceImage;
+        }
+
         public ListPersonTraceResponseBodyData setStartTargetImage(String startTargetImage) {
             this.startTargetImage = startTargetImage;
             return this;
         }
         public String getStartTargetImage() {
             return this.startTargetImage;
+        }
+
+        public ListPersonTraceResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

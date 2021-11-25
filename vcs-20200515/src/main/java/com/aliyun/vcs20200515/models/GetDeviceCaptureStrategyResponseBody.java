@@ -8,13 +8,13 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
     // 响应数据内容
     @NameInMap("Data")
     public GetDeviceCaptureStrategyResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
 
     // RequestId
     @NameInMap("RequestId")
@@ -33,20 +33,20 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetDeviceCaptureStrategyResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetDeviceCaptureStrategyResponseBody setData(GetDeviceCaptureStrategyResponseBodyData data) {
         this.data = data;
         return this;
     }
     public GetDeviceCaptureStrategyResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetDeviceCaptureStrategyResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetDeviceCaptureStrategyResponseBody setRequestId(String requestId) {
@@ -58,33 +58,21 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
     }
 
     public static class GetDeviceCaptureStrategyResponseBodyData extends TeaModel {
-        // 设备类型
-        @NameInMap("DeviceType")
-        public String deviceType;
-
         // 设备通道
         @NameInMap("DeviceCode")
         public String deviceCode;
 
-        // 星期一抓取策略
-        @NameInMap("MondayCaptureStrategy")
-        public String mondayCaptureStrategy;
-
-        // 星期二抓取策略
-        @NameInMap("TuesdayCaptureStrategy")
-        public String tuesdayCaptureStrategy;
-
-        // 星期三抓取策略
-        @NameInMap("WednesdayCaptureStrategy")
-        public String wednesdayCaptureStrategy;
-
-        // 星期四抓取策略
-        @NameInMap("ThursdayCaptureStrategy")
-        public String thursdayCaptureStrategy;
+        // 设备类型
+        @NameInMap("DeviceType")
+        public String deviceType;
 
         // 星期五抓取策略
         @NameInMap("FridayCaptureStrategy")
         public String fridayCaptureStrategy;
+
+        // 星期一抓取策略
+        @NameInMap("MondayCaptureStrategy")
+        public String mondayCaptureStrategy;
 
         // 星期六抓取策略
         @NameInMap("SaturdayCaptureStrategy")
@@ -94,17 +82,21 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
         @NameInMap("SundayCaptureStrategy")
         public String sundayCaptureStrategy;
 
+        // 星期四抓取策略
+        @NameInMap("ThursdayCaptureStrategy")
+        public String thursdayCaptureStrategy;
+
+        // 星期二抓取策略
+        @NameInMap("TuesdayCaptureStrategy")
+        public String tuesdayCaptureStrategy;
+
+        // 星期三抓取策略
+        @NameInMap("WednesdayCaptureStrategy")
+        public String wednesdayCaptureStrategy;
+
         public static GetDeviceCaptureStrategyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceCaptureStrategyResponseBodyData self = new GetDeviceCaptureStrategyResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetDeviceCaptureStrategyResponseBodyData setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
         }
 
         public GetDeviceCaptureStrategyResponseBodyData setDeviceCode(String deviceCode) {
@@ -115,36 +107,12 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
             return this.deviceCode;
         }
 
-        public GetDeviceCaptureStrategyResponseBodyData setMondayCaptureStrategy(String mondayCaptureStrategy) {
-            this.mondayCaptureStrategy = mondayCaptureStrategy;
+        public GetDeviceCaptureStrategyResponseBodyData setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
             return this;
         }
-        public String getMondayCaptureStrategy() {
-            return this.mondayCaptureStrategy;
-        }
-
-        public GetDeviceCaptureStrategyResponseBodyData setTuesdayCaptureStrategy(String tuesdayCaptureStrategy) {
-            this.tuesdayCaptureStrategy = tuesdayCaptureStrategy;
-            return this;
-        }
-        public String getTuesdayCaptureStrategy() {
-            return this.tuesdayCaptureStrategy;
-        }
-
-        public GetDeviceCaptureStrategyResponseBodyData setWednesdayCaptureStrategy(String wednesdayCaptureStrategy) {
-            this.wednesdayCaptureStrategy = wednesdayCaptureStrategy;
-            return this;
-        }
-        public String getWednesdayCaptureStrategy() {
-            return this.wednesdayCaptureStrategy;
-        }
-
-        public GetDeviceCaptureStrategyResponseBodyData setThursdayCaptureStrategy(String thursdayCaptureStrategy) {
-            this.thursdayCaptureStrategy = thursdayCaptureStrategy;
-            return this;
-        }
-        public String getThursdayCaptureStrategy() {
-            return this.thursdayCaptureStrategy;
+        public String getDeviceType() {
+            return this.deviceType;
         }
 
         public GetDeviceCaptureStrategyResponseBodyData setFridayCaptureStrategy(String fridayCaptureStrategy) {
@@ -153,6 +121,14 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
         }
         public String getFridayCaptureStrategy() {
             return this.fridayCaptureStrategy;
+        }
+
+        public GetDeviceCaptureStrategyResponseBodyData setMondayCaptureStrategy(String mondayCaptureStrategy) {
+            this.mondayCaptureStrategy = mondayCaptureStrategy;
+            return this;
+        }
+        public String getMondayCaptureStrategy() {
+            return this.mondayCaptureStrategy;
         }
 
         public GetDeviceCaptureStrategyResponseBodyData setSaturdayCaptureStrategy(String saturdayCaptureStrategy) {
@@ -169,6 +145,30 @@ public class GetDeviceCaptureStrategyResponseBody extends TeaModel {
         }
         public String getSundayCaptureStrategy() {
             return this.sundayCaptureStrategy;
+        }
+
+        public GetDeviceCaptureStrategyResponseBodyData setThursdayCaptureStrategy(String thursdayCaptureStrategy) {
+            this.thursdayCaptureStrategy = thursdayCaptureStrategy;
+            return this;
+        }
+        public String getThursdayCaptureStrategy() {
+            return this.thursdayCaptureStrategy;
+        }
+
+        public GetDeviceCaptureStrategyResponseBodyData setTuesdayCaptureStrategy(String tuesdayCaptureStrategy) {
+            this.tuesdayCaptureStrategy = tuesdayCaptureStrategy;
+            return this;
+        }
+        public String getTuesdayCaptureStrategy() {
+            return this.tuesdayCaptureStrategy;
+        }
+
+        public GetDeviceCaptureStrategyResponseBodyData setWednesdayCaptureStrategy(String wednesdayCaptureStrategy) {
+            this.wednesdayCaptureStrategy = wednesdayCaptureStrategy;
+            return this;
+        }
+        public String getWednesdayCaptureStrategy() {
+            return this.wednesdayCaptureStrategy;
         }
 
     }

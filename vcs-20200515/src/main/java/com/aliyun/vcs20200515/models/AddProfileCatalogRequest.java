@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddProfileCatalogRequest extends TeaModel {
+    @NameInMap("CatalogName")
+    public String catalogName;
+
     @NameInMap("CorpId")
     public String corpId;
 
     @NameInMap("IsvSubId")
     public String isvSubId;
-
-    @NameInMap("CatalogName")
-    public String catalogName;
 
     @NameInMap("ParentCatalogId")
     public Long parentCatalogId;
@@ -19,6 +19,14 @@ public class AddProfileCatalogRequest extends TeaModel {
     public static AddProfileCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProfileCatalogRequest self = new AddProfileCatalogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddProfileCatalogRequest setCatalogName(String catalogName) {
+        this.catalogName = catalogName;
+        return this;
+    }
+    public String getCatalogName() {
+        return this.catalogName;
     }
 
     public AddProfileCatalogRequest setCorpId(String corpId) {
@@ -35,14 +43,6 @@ public class AddProfileCatalogRequest extends TeaModel {
     }
     public String getIsvSubId() {
         return this.isvSubId;
-    }
-
-    public AddProfileCatalogRequest setCatalogName(String catalogName) {
-        this.catalogName = catalogName;
-        return this;
-    }
-    public String getCatalogName() {
-        return this.catalogName;
     }
 
     public AddProfileCatalogRequest setParentCatalogId(Long parentCatalogId) {

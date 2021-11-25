@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetBodyOptionsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<GetBodyOptionsResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetBodyOptionsResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static GetBodyOptionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBodyOptionsResponseBody self = new GetBodyOptionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetBodyOptionsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetBodyOptionsResponseBody setData(java.util.List<GetBodyOptionsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetBodyOptionsResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetBodyOptionsResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class GetBodyOptionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetBodyOptionsResponseBody setData(java.util.List<GetBodyOptionsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetBodyOptionsResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetBodyOptionsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetBodyOptionsResponseBodyDataOptionList extends TeaModel {
@@ -87,11 +87,11 @@ public class GetBodyOptionsResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("OptionList")
-        public java.util.List<GetBodyOptionsResponseBodyDataOptionList> optionList;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("OptionList")
+        public java.util.List<GetBodyOptionsResponseBodyDataOptionList> optionList;
 
         public static GetBodyOptionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetBodyOptionsResponseBodyData self = new GetBodyOptionsResponseBodyData();
@@ -106,20 +106,20 @@ public class GetBodyOptionsResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetBodyOptionsResponseBodyData setOptionList(java.util.List<GetBodyOptionsResponseBodyDataOptionList> optionList) {
-            this.optionList = optionList;
-            return this;
-        }
-        public java.util.List<GetBodyOptionsResponseBodyDataOptionList> getOptionList() {
-            return this.optionList;
-        }
-
         public GetBodyOptionsResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetBodyOptionsResponseBodyData setOptionList(java.util.List<GetBodyOptionsResponseBodyDataOptionList> optionList) {
+            this.optionList = optionList;
+            return this;
+        }
+        public java.util.List<GetBodyOptionsResponseBodyDataOptionList> getOptionList() {
+            return this.optionList;
         }
 
     }

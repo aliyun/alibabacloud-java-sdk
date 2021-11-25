@@ -21,23 +21,15 @@ public class UpdateDevicesStorageRequest extends TeaModel {
     }
 
     public static class UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays extends TeaModel {
-        @NameInMap("StorageType")
-        public String storageType;
-
         @NameInMap("StorageDays")
         public Long storageDays;
+
+        @NameInMap("StorageType")
+        public String storageType;
 
         public static UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays build(java.util.Map<String, ?> map) throws Exception {
             UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays self = new UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
         }
 
         public UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays setStorageDays(Long storageDays) {
@@ -46,6 +38,14 @@ public class UpdateDevicesStorageRequest extends TeaModel {
         }
         public Long getStorageDays() {
             return this.storageDays;
+        }
+
+        public UpdateDevicesStorageRequestUpdateStorageRequestsStorageDays setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

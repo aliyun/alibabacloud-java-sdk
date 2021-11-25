@@ -4,29 +4,21 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceRequest extends TeaModel {
-    @NameInMap("DeviceSn")
-    public String deviceSn;
-
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("ServerId")
-    public String serverId;
+    @NameInMap("DeviceSn")
+    public String deviceSn;
 
     @NameInMap("DeviceTimeStamp")
     public String deviceTimeStamp;
 
+    @NameInMap("ServerId")
+    public String serverId;
+
     public static RegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterDeviceRequest self = new RegisterDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RegisterDeviceRequest setDeviceSn(String deviceSn) {
-        this.deviceSn = deviceSn;
-        return this;
-    }
-    public String getDeviceSn() {
-        return this.deviceSn;
     }
 
     public RegisterDeviceRequest setDeviceId(String deviceId) {
@@ -37,12 +29,12 @@ public class RegisterDeviceRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public RegisterDeviceRequest setServerId(String serverId) {
-        this.serverId = serverId;
+    public RegisterDeviceRequest setDeviceSn(String deviceSn) {
+        this.deviceSn = deviceSn;
         return this;
     }
-    public String getServerId() {
-        return this.serverId;
+    public String getDeviceSn() {
+        return this.deviceSn;
     }
 
     public RegisterDeviceRequest setDeviceTimeStamp(String deviceTimeStamp) {
@@ -51,6 +43,14 @@ public class RegisterDeviceRequest extends TeaModel {
     }
     public String getDeviceTimeStamp() {
         return this.deviceTimeStamp;
+    }
+
+    public RegisterDeviceRequest setServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+    public String getServerId() {
+        return this.serverId;
     }
 
 }

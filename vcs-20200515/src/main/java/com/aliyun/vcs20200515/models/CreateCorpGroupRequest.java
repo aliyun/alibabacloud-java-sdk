@@ -4,18 +4,26 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateCorpGroupRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("CorpId")
     public String corpId;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateCorpGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCorpGroupRequest self = new CreateCorpGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCorpGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateCorpGroupRequest setCorpId(String corpId) {
@@ -32,14 +40,6 @@ public class CreateCorpGroupRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
-    }
-
-    public CreateCorpGroupRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

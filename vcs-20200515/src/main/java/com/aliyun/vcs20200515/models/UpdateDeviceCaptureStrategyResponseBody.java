@@ -4,10 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceCaptureStrategyResponseBody extends TeaModel {
-    // RequestId
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 响应码
     @NameInMap("Code")
     public String code;
@@ -16,17 +12,13 @@ public class UpdateDeviceCaptureStrategyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // RequestId
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static UpdateDeviceCaptureStrategyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceCaptureStrategyResponseBody self = new UpdateDeviceCaptureStrategyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDeviceCaptureStrategyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateDeviceCaptureStrategyResponseBody setCode(String code) {
@@ -43,6 +35,14 @@ public class UpdateDeviceCaptureStrategyResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public UpdateDeviceCaptureStrategyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

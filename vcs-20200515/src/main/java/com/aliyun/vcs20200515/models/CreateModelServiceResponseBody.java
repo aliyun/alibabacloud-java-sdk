@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateModelServiceResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public CreateModelServiceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateModelServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateModelServiceResponseBody self = new CreateModelServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateModelServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateModelServiceResponseBody setCode(String code) {
@@ -38,6 +30,14 @@ public class CreateModelServiceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public CreateModelServiceResponseBody setData(CreateModelServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateModelServiceResponseBodyData getData() {
+        return this.data;
+    }
+
     public CreateModelServiceResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -46,12 +46,12 @@ public class CreateModelServiceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateModelServiceResponseBody setData(CreateModelServiceResponseBodyData data) {
-        this.data = data;
+    public CreateModelServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateModelServiceResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateModelServiceResponseBodyDataModelApiList extends TeaModel {
@@ -118,6 +118,12 @@ public class CreateModelServiceResponseBody extends TeaModel {
     }
 
     public static class CreateModelServiceResponseBodyData extends TeaModel {
+        @NameInMap("AppCode")
+        public String appCode;
+
+        @NameInMap("ModelApiList")
+        public java.util.List<CreateModelServiceResponseBodyDataModelApiList> modelApiList;
+
         @NameInMap("ModelServiceInstanceId")
         public String modelServiceInstanceId;
 
@@ -127,15 +133,25 @@ public class CreateModelServiceResponseBody extends TeaModel {
         @NameInMap("QpsRequired")
         public Integer qpsRequired;
 
-        @NameInMap("AppCode")
-        public String appCode;
-
-        @NameInMap("ModelApiList")
-        public java.util.List<CreateModelServiceResponseBodyDataModelApiList> modelApiList;
-
         public static CreateModelServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateModelServiceResponseBodyData self = new CreateModelServiceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateModelServiceResponseBodyData setAppCode(String appCode) {
+            this.appCode = appCode;
+            return this;
+        }
+        public String getAppCode() {
+            return this.appCode;
+        }
+
+        public CreateModelServiceResponseBodyData setModelApiList(java.util.List<CreateModelServiceResponseBodyDataModelApiList> modelApiList) {
+            this.modelApiList = modelApiList;
+            return this;
+        }
+        public java.util.List<CreateModelServiceResponseBodyDataModelApiList> getModelApiList() {
+            return this.modelApiList;
         }
 
         public CreateModelServiceResponseBodyData setModelServiceInstanceId(String modelServiceInstanceId) {
@@ -160,22 +176,6 @@ public class CreateModelServiceResponseBody extends TeaModel {
         }
         public Integer getQpsRequired() {
             return this.qpsRequired;
-        }
-
-        public CreateModelServiceResponseBodyData setAppCode(String appCode) {
-            this.appCode = appCode;
-            return this;
-        }
-        public String getAppCode() {
-            return this.appCode;
-        }
-
-        public CreateModelServiceResponseBodyData setModelApiList(java.util.List<CreateModelServiceResponseBodyDataModelApiList> modelApiList) {
-            this.modelApiList = modelApiList;
-            return this;
-        }
-        public java.util.List<CreateModelServiceResponseBodyDataModelApiList> getModelApiList() {
-            return this.modelApiList;
         }
 
     }

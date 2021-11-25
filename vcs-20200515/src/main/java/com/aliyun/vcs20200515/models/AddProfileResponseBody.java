@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddProfileResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public AddProfileResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public AddProfileResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static AddProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddProfileResponseBody self = new AddProfileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddProfileResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddProfileResponseBody setData(AddProfileResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AddProfileResponseBodyData getData() {
+        return this.data;
     }
 
     public AddProfileResponseBody setMessage(String message) {
@@ -37,49 +53,24 @@ public class AddProfileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddProfileResponseBody setData(AddProfileResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AddProfileResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AddProfileResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class AddProfileResponseBodyData extends TeaModel {
+        @NameInMap("BizId")
+        public String bizId;
+
         @NameInMap("CatalogId")
         public Integer catalogId;
 
-        @NameInMap("ProfileId")
-        public Integer profileId;
-
-        @NameInMap("IsvSubId")
-        public String isvSubId;
+        @NameInMap("FaceUrl")
+        public String faceUrl;
 
         @NameInMap("Gender")
         public String gender;
 
-        @NameInMap("BizId")
-        public String bizId;
-
         @NameInMap("IdNumber")
         public String idNumber;
 
-        @NameInMap("SceneType")
-        public String sceneType;
-
-        @NameInMap("PhoneNo")
-        public String phoneNo;
-
-        @NameInMap("FaceUrl")
-        public String faceUrl;
+        @NameInMap("IsvSubId")
+        public String isvSubId;
 
         @NameInMap("LiveAddress")
         public String liveAddress;
@@ -87,44 +78,21 @@ public class AddProfileResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PhoneNo")
+        public String phoneNo;
+
         @NameInMap("PlateNo")
         public String plateNo;
+
+        @NameInMap("ProfileId")
+        public Integer profileId;
+
+        @NameInMap("SceneType")
+        public String sceneType;
 
         public static AddProfileResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddProfileResponseBodyData self = new AddProfileResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public AddProfileResponseBodyData setCatalogId(Integer catalogId) {
-            this.catalogId = catalogId;
-            return this;
-        }
-        public Integer getCatalogId() {
-            return this.catalogId;
-        }
-
-        public AddProfileResponseBodyData setProfileId(Integer profileId) {
-            this.profileId = profileId;
-            return this;
-        }
-        public Integer getProfileId() {
-            return this.profileId;
-        }
-
-        public AddProfileResponseBodyData setIsvSubId(String isvSubId) {
-            this.isvSubId = isvSubId;
-            return this;
-        }
-        public String getIsvSubId() {
-            return this.isvSubId;
-        }
-
-        public AddProfileResponseBodyData setGender(String gender) {
-            this.gender = gender;
-            return this;
-        }
-        public String getGender() {
-            return this.gender;
         }
 
         public AddProfileResponseBodyData setBizId(String bizId) {
@@ -135,28 +103,12 @@ public class AddProfileResponseBody extends TeaModel {
             return this.bizId;
         }
 
-        public AddProfileResponseBodyData setIdNumber(String idNumber) {
-            this.idNumber = idNumber;
+        public AddProfileResponseBodyData setCatalogId(Integer catalogId) {
+            this.catalogId = catalogId;
             return this;
         }
-        public String getIdNumber() {
-            return this.idNumber;
-        }
-
-        public AddProfileResponseBodyData setSceneType(String sceneType) {
-            this.sceneType = sceneType;
-            return this;
-        }
-        public String getSceneType() {
-            return this.sceneType;
-        }
-
-        public AddProfileResponseBodyData setPhoneNo(String phoneNo) {
-            this.phoneNo = phoneNo;
-            return this;
-        }
-        public String getPhoneNo() {
-            return this.phoneNo;
+        public Integer getCatalogId() {
+            return this.catalogId;
         }
 
         public AddProfileResponseBodyData setFaceUrl(String faceUrl) {
@@ -165,6 +117,30 @@ public class AddProfileResponseBody extends TeaModel {
         }
         public String getFaceUrl() {
             return this.faceUrl;
+        }
+
+        public AddProfileResponseBodyData setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public String getGender() {
+            return this.gender;
+        }
+
+        public AddProfileResponseBodyData setIdNumber(String idNumber) {
+            this.idNumber = idNumber;
+            return this;
+        }
+        public String getIdNumber() {
+            return this.idNumber;
+        }
+
+        public AddProfileResponseBodyData setIsvSubId(String isvSubId) {
+            this.isvSubId = isvSubId;
+            return this;
+        }
+        public String getIsvSubId() {
+            return this.isvSubId;
         }
 
         public AddProfileResponseBodyData setLiveAddress(String liveAddress) {
@@ -183,12 +159,36 @@ public class AddProfileResponseBody extends TeaModel {
             return this.name;
         }
 
+        public AddProfileResponseBodyData setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
+            return this;
+        }
+        public String getPhoneNo() {
+            return this.phoneNo;
+        }
+
         public AddProfileResponseBodyData setPlateNo(String plateNo) {
             this.plateNo = plateNo;
             return this;
         }
         public String getPlateNo() {
             return this.plateNo;
+        }
+
+        public AddProfileResponseBodyData setProfileId(Integer profileId) {
+            this.profileId = profileId;
+            return this;
+        }
+        public Integer getProfileId() {
+            return this.profileId;
+        }
+
+        public AddProfileResponseBodyData setSceneType(String sceneType) {
+            this.sceneType = sceneType;
+            return this;
+        }
+        public String getSceneType() {
+            return this.sceneType;
         }
 
     }

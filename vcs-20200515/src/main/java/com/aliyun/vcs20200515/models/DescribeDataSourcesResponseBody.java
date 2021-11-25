@@ -54,11 +54,17 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourcesResponseBodyDataRecords extends TeaModel {
-        @NameInMap("DataSourceId")
-        public String dataSourceId;
+        @NameInMap("Action")
+        public String action;
 
         @NameInMap("CorpId")
         public String corpId;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("DataSourceId")
+        public String dataSourceId;
 
         @NameInMap("DataSourceName")
         public String dataSourceName;
@@ -66,11 +72,8 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("KafkaTopic")
         public String kafkaTopic;
@@ -78,26 +81,23 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         @NameInMap("OssPath")
         public String ossPath;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("StreamStatus")
         public String streamStatus;
 
-        @NameInMap("Action")
-        public String action;
+        @NameInMap("Url")
+        public String url;
 
         public static DescribeDataSourcesResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataSourcesResponseBodyDataRecords self = new DescribeDataSourcesResponseBodyDataRecords();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataSourcesResponseBodyDataRecords setDataSourceId(String dataSourceId) {
-            this.dataSourceId = dataSourceId;
+        public DescribeDataSourcesResponseBodyDataRecords setAction(String action) {
+            this.action = action;
             return this;
         }
-        public String getDataSourceId() {
-            return this.dataSourceId;
+        public String getAction() {
+            return this.action;
         }
 
         public DescribeDataSourcesResponseBodyDataRecords setCorpId(String corpId) {
@@ -106,6 +106,22 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
         public String getCorpId() {
             return this.corpId;
+        }
+
+        public DescribeDataSourcesResponseBodyDataRecords setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeDataSourcesResponseBodyDataRecords setDataSourceId(String dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public String getDataSourceId() {
+            return this.dataSourceId;
         }
 
         public DescribeDataSourcesResponseBodyDataRecords setDataSourceName(String dataSourceName) {
@@ -124,20 +140,12 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             return this.dataSourceType;
         }
 
-        public DescribeDataSourcesResponseBodyDataRecords setUrl(String url) {
-            this.url = url;
+        public DescribeDataSourcesResponseBodyDataRecords setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public DescribeDataSourcesResponseBodyDataRecords setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDataSourcesResponseBodyDataRecords setKafkaTopic(String kafkaTopic) {
@@ -156,14 +164,6 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             return this.ossPath;
         }
 
-        public DescribeDataSourcesResponseBodyDataRecords setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DescribeDataSourcesResponseBodyDataRecords setStreamStatus(String streamStatus) {
             this.streamStatus = streamStatus;
             return this;
@@ -172,12 +172,12 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             return this.streamStatus;
         }
 
-        public DescribeDataSourcesResponseBodyDataRecords setAction(String action) {
-            this.action = action;
+        public DescribeDataSourcesResponseBodyDataRecords setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getAction() {
-            return this.action;
+        public String getUrl() {
+            return this.url;
         }
 
     }
@@ -189,14 +189,14 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
+        @NameInMap("Records")
+        public java.util.List<DescribeDataSourcesResponseBodyDataRecords> records;
+
         @NameInMap("TotalCount")
         public Long totalCount;
 
         @NameInMap("TotalPage")
         public Long totalPage;
-
-        @NameInMap("Records")
-        public java.util.List<DescribeDataSourcesResponseBodyDataRecords> records;
 
         public static DescribeDataSourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataSourcesResponseBodyData self = new DescribeDataSourcesResponseBodyData();
@@ -219,6 +219,14 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public DescribeDataSourcesResponseBodyData setRecords(java.util.List<DescribeDataSourcesResponseBodyDataRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<DescribeDataSourcesResponseBodyDataRecords> getRecords() {
+            return this.records;
+        }
+
         public DescribeDataSourcesResponseBodyData setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
@@ -233,14 +241,6 @@ public class DescribeDataSourcesResponseBody extends TeaModel {
         }
         public Long getTotalPage() {
             return this.totalPage;
-        }
-
-        public DescribeDataSourcesResponseBodyData setRecords(java.util.List<DescribeDataSourcesResponseBodyDataRecords> records) {
-            this.records = records;
-            return this;
-        }
-        public java.util.List<DescribeDataSourcesResponseBodyDataRecords> getRecords() {
-            return this.records;
         }
 
     }

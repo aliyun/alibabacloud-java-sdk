@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddMonitorResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public AddMonitorResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public AddMonitorResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static AddMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddMonitorResponseBody self = new AddMonitorResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddMonitorResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddMonitorResponseBody setData(AddMonitorResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AddMonitorResponseBodyData getData() {
+        return this.data;
     }
 
     public AddMonitorResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class AddMonitorResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddMonitorResponseBody setData(AddMonitorResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AddMonitorResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AddMonitorResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class AddMonitorResponseBodyData extends TeaModel {

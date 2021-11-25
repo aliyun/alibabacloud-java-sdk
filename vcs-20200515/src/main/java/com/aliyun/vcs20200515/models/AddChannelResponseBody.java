@@ -4,38 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddChannelResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AddChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddChannelResponseBody self = new AddChannelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddChannelResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AddChannelResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public AddChannelResponseBody setCode(String code) {
@@ -52,6 +36,22 @@ public class AddChannelResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public AddChannelResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public AddChannelResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

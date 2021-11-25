@@ -4,26 +4,26 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
 
     public static DeleteDataSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataSourceResponseBody self = new DeleteDataSourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataSourceResponseBody setMessage(String message) {
-        this.message = message;
+    public DeleteDataSourceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteDataSourceResponseBody setData(String data) {
@@ -34,12 +34,12 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteDataSourceResponseBody setCode(String code) {
-        this.code = code;
+    public DeleteDataSourceResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
     }
 
 }

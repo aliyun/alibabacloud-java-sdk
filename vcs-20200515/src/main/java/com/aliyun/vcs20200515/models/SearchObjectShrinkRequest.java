@@ -4,17 +4,26 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SearchObjectShrinkRequest extends TeaModel {
+    @NameInMap("AlgorithmType")
+    public String algorithmType;
+
+    @NameInMap("Conditions")
+    public String conditionsShrink;
+
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("ObjectType")
-    public String objectType;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("DeviceList")
+    public String deviceListShrink;
 
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("ImagePath")
+    public String imagePathShrink;
+
+    @NameInMap("ObjectType")
+    public String objectType;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,24 +31,31 @@ public class SearchObjectShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("DeviceList")
-    public String deviceListShrink;
-
     @NameInMap("PicUrl")
     public String picUrl;
 
-    @NameInMap("Conditions")
-    public String conditionsShrink;
-
-    @NameInMap("AlgorithmType")
-    public String algorithmType;
-
-    @NameInMap("ImagePath")
-    public String imagePathShrink;
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static SearchObjectShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchObjectShrinkRequest self = new SearchObjectShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchObjectShrinkRequest setAlgorithmType(String algorithmType) {
+        this.algorithmType = algorithmType;
+        return this;
+    }
+    public String getAlgorithmType() {
+        return this.algorithmType;
+    }
+
+    public SearchObjectShrinkRequest setConditionsShrink(String conditionsShrink) {
+        this.conditionsShrink = conditionsShrink;
+        return this;
+    }
+    public String getConditionsShrink() {
+        return this.conditionsShrink;
     }
 
     public SearchObjectShrinkRequest setCorpId(String corpId) {
@@ -50,20 +66,12 @@ public class SearchObjectShrinkRequest extends TeaModel {
         return this.corpId;
     }
 
-    public SearchObjectShrinkRequest setObjectType(String objectType) {
-        this.objectType = objectType;
+    public SearchObjectShrinkRequest setDeviceListShrink(String deviceListShrink) {
+        this.deviceListShrink = deviceListShrink;
         return this;
     }
-    public String getObjectType() {
-        return this.objectType;
-    }
-
-    public SearchObjectShrinkRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getDeviceListShrink() {
+        return this.deviceListShrink;
     }
 
     public SearchObjectShrinkRequest setEndTime(Long endTime) {
@@ -72,6 +80,22 @@ public class SearchObjectShrinkRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public SearchObjectShrinkRequest setImagePathShrink(String imagePathShrink) {
+        this.imagePathShrink = imagePathShrink;
+        return this;
+    }
+    public String getImagePathShrink() {
+        return this.imagePathShrink;
+    }
+
+    public SearchObjectShrinkRequest setObjectType(String objectType) {
+        this.objectType = objectType;
+        return this;
+    }
+    public String getObjectType() {
+        return this.objectType;
     }
 
     public SearchObjectShrinkRequest setPageNumber(Integer pageNumber) {
@@ -90,14 +114,6 @@ public class SearchObjectShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public SearchObjectShrinkRequest setDeviceListShrink(String deviceListShrink) {
-        this.deviceListShrink = deviceListShrink;
-        return this;
-    }
-    public String getDeviceListShrink() {
-        return this.deviceListShrink;
-    }
-
     public SearchObjectShrinkRequest setPicUrl(String picUrl) {
         this.picUrl = picUrl;
         return this;
@@ -106,28 +122,12 @@ public class SearchObjectShrinkRequest extends TeaModel {
         return this.picUrl;
     }
 
-    public SearchObjectShrinkRequest setConditionsShrink(String conditionsShrink) {
-        this.conditionsShrink = conditionsShrink;
+    public SearchObjectShrinkRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getConditionsShrink() {
-        return this.conditionsShrink;
-    }
-
-    public SearchObjectShrinkRequest setAlgorithmType(String algorithmType) {
-        this.algorithmType = algorithmType;
-        return this;
-    }
-    public String getAlgorithmType() {
-        return this.algorithmType;
-    }
-
-    public SearchObjectShrinkRequest setImagePathShrink(String imagePathShrink) {
-        this.imagePathShrink = imagePathShrink;
-        return this;
-    }
-    public String getImagePathShrink() {
-        return this.imagePathShrink;
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -4,17 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListMotorAlgorithmResultsRequest extends TeaModel {
-    @NameInMap("CorpId")
-    public String corpId;
-
     @NameInMap("AlgorithmType")
     public String algorithmType;
 
+    @NameInMap("CorpId")
+    public String corpId;
+
     @NameInMap("DataSourceId")
     public String dataSourceId;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -28,17 +25,12 @@ public class ListMotorAlgorithmResultsRequest extends TeaModel {
     @NameInMap("PlateNumber")
     public String plateNumber;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListMotorAlgorithmResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMotorAlgorithmResultsRequest self = new ListMotorAlgorithmResultsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListMotorAlgorithmResultsRequest setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
     }
 
     public ListMotorAlgorithmResultsRequest setAlgorithmType(String algorithmType) {
@@ -49,20 +41,20 @@ public class ListMotorAlgorithmResultsRequest extends TeaModel {
         return this.algorithmType;
     }
 
+    public ListMotorAlgorithmResultsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
     public ListMotorAlgorithmResultsRequest setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     public String getDataSourceId() {
         return this.dataSourceId;
-    }
-
-    public ListMotorAlgorithmResultsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public ListMotorAlgorithmResultsRequest setEndTime(String endTime) {
@@ -95,6 +87,14 @@ public class ListMotorAlgorithmResultsRequest extends TeaModel {
     }
     public String getPlateNumber() {
         return this.plateNumber;
+    }
+
+    public ListMotorAlgorithmResultsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -4,15 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddDoubleVerificationGroupsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResultList")
     public java.util.List<AddDoubleVerificationGroupsResponseBodyResultList> resultList;
@@ -20,14 +20,6 @@ public class AddDoubleVerificationGroupsResponseBody extends TeaModel {
     public static AddDoubleVerificationGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddDoubleVerificationGroupsResponseBody self = new AddDoubleVerificationGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddDoubleVerificationGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddDoubleVerificationGroupsResponseBody setCode(String code) {
@@ -46,6 +38,14 @@ public class AddDoubleVerificationGroupsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public AddDoubleVerificationGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public AddDoubleVerificationGroupsResponseBody setResultList(java.util.List<AddDoubleVerificationGroupsResponseBodyResultList> resultList) {
         this.resultList = resultList;
         return this;
@@ -55,11 +55,11 @@ public class AddDoubleVerificationGroupsResponseBody extends TeaModel {
     }
 
     public static class AddDoubleVerificationGroupsResponseBodyResultList extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("GroupId")
+        public String groupId;
 
         @NameInMap("Message")
         public String message;
@@ -69,20 +69,20 @@ public class AddDoubleVerificationGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public AddDoubleVerificationGroupsResponseBodyResultList setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
         public AddDoubleVerificationGroupsResponseBodyResultList setCode(String code) {
             this.code = code;
             return this;
         }
         public String getCode() {
             return this.code;
+        }
+
+        public AddDoubleVerificationGroupsResponseBodyResultList setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public AddDoubleVerificationGroupsResponseBodyResultList setMessage(String message) {

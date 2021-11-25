@@ -4,14 +4,8 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetPersonListShrinkRequest extends TeaModel {
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("FaceUrl")
-    public String faceUrl;
+    @NameInMap("CorpId")
+    public String corpId;
 
     @NameInMap("CorpIdList")
     public String corpIdListShrink;
@@ -19,8 +13,14 @@ public class GetPersonListShrinkRequest extends TeaModel {
     @NameInMap("FaceMatchingRateThreshold")
     public String faceMatchingRateThreshold;
 
-    @NameInMap("CorpId")
-    public String corpId;
+    @NameInMap("FaceUrl")
+    public String faceUrl;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("PersonIdList")
     public String personIdListShrink;
@@ -30,28 +30,12 @@ public class GetPersonListShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetPersonListShrinkRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public GetPersonListShrinkRequest setCorpId(String corpId) {
+        this.corpId = corpId;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public GetPersonListShrinkRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public GetPersonListShrinkRequest setFaceUrl(String faceUrl) {
-        this.faceUrl = faceUrl;
-        return this;
-    }
-    public String getFaceUrl() {
-        return this.faceUrl;
+    public String getCorpId() {
+        return this.corpId;
     }
 
     public GetPersonListShrinkRequest setCorpIdListShrink(String corpIdListShrink) {
@@ -70,12 +54,28 @@ public class GetPersonListShrinkRequest extends TeaModel {
         return this.faceMatchingRateThreshold;
     }
 
-    public GetPersonListShrinkRequest setCorpId(String corpId) {
-        this.corpId = corpId;
+    public GetPersonListShrinkRequest setFaceUrl(String faceUrl) {
+        this.faceUrl = faceUrl;
         return this;
     }
-    public String getCorpId() {
-        return this.corpId;
+    public String getFaceUrl() {
+        return this.faceUrl;
+    }
+
+    public GetPersonListShrinkRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetPersonListShrinkRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public GetPersonListShrinkRequest setPersonIdListShrink(String personIdListShrink) {

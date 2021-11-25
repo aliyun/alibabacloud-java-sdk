@@ -4,23 +4,15 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateAiotDeviceShrinkRequest extends TeaModel {
-    @NameInMap("Id")
-    public String id;
-
     @NameInMap("AiotDevice")
     public String aiotDeviceShrink;
+
+    @NameInMap("Id")
+    public String id;
 
     public static UpdateAiotDeviceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAiotDeviceShrinkRequest self = new UpdateAiotDeviceShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAiotDeviceShrinkRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public UpdateAiotDeviceShrinkRequest setAiotDeviceShrink(String aiotDeviceShrink) {
@@ -29,6 +21,14 @@ public class UpdateAiotDeviceShrinkRequest extends TeaModel {
     }
     public String getAiotDeviceShrink() {
         return this.aiotDeviceShrink;
+    }
+
+    public UpdateAiotDeviceShrinkRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
 }

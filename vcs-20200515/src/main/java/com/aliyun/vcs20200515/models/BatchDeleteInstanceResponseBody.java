@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteInstanceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class BatchDeleteInstanceResponseBody extends TeaModel {
     public static BatchDeleteInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchDeleteInstanceResponseBody self = new BatchDeleteInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchDeleteInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public BatchDeleteInstanceResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class BatchDeleteInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public BatchDeleteInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public BatchDeleteInstanceResponseBody setSuccess(Boolean success) {

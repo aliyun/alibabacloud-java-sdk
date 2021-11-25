@@ -4,21 +4,37 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class BindPersonResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Boolean data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public Boolean data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static BindPersonResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindPersonResponseBody self = new BindPersonResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BindPersonResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BindPersonResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public BindPersonResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class BindPersonResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public BindPersonResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public BindPersonResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

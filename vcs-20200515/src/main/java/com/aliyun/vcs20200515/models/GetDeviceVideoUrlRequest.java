@@ -10,20 +10,20 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("StorageType")
-    public String storageType;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("GbId")
+    public String gbId;
 
     @NameInMap("OutProtocol")
     public String outProtocol;
 
-    @NameInMap("GbId")
-    public String gbId;
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     public static GetDeviceVideoUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceVideoUrlRequest self = new GetDeviceVideoUrlRequest();
@@ -46,28 +46,20 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public GetDeviceVideoUrlRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public GetDeviceVideoUrlRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
     public GetDeviceVideoUrlRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public GetDeviceVideoUrlRequest setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
     }
 
     public GetDeviceVideoUrlRequest setOutProtocol(String outProtocol) {
@@ -78,12 +70,20 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
         return this.outProtocol;
     }
 
-    public GetDeviceVideoUrlRequest setGbId(String gbId) {
-        this.gbId = gbId;
+    public GetDeviceVideoUrlRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public GetDeviceVideoUrlRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

@@ -4,17 +4,17 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListInstancesResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListInstancesResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListInstancesResponseBody extends TeaModel {
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListInstancesResponseBody setData(ListInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListInstancesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListInstancesResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstancesResponseBody setData(ListInstancesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListInstancesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListInstancesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListInstancesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,23 +65,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataItemsAlgorithms extends TeaModel {
-        @NameInMap("AlgorithmName")
-        public String algorithmName;
-
         @NameInMap("AlgorithmId")
         public String algorithmId;
+
+        @NameInMap("AlgorithmName")
+        public String algorithmName;
 
         public static ListInstancesResponseBodyDataItemsAlgorithms build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyDataItemsAlgorithms self = new ListInstancesResponseBodyDataItemsAlgorithms();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstancesResponseBodyDataItemsAlgorithms setAlgorithmName(String algorithmName) {
-            this.algorithmName = algorithmName;
-            return this;
-        }
-        public String getAlgorithmName() {
-            return this.algorithmName;
         }
 
         public ListInstancesResponseBodyDataItemsAlgorithms setAlgorithmId(String algorithmId) {
@@ -92,14 +84,22 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.algorithmId;
         }
 
+        public ListInstancesResponseBodyDataItemsAlgorithms setAlgorithmName(String algorithmName) {
+            this.algorithmName = algorithmName;
+            return this;
+        }
+        public String getAlgorithmName() {
+            return this.algorithmName;
+        }
+
     }
 
     public static class ListInstancesResponseBodyDataItems extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AcuUsed")
+        public Integer acuUsed;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("Algorithms")
+        public java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> algorithms;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -110,31 +110,31 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("AcuUsed")
-        public Integer acuUsed;
+        @NameInMap("InstanceName")
+        public String instanceName;
 
-        @NameInMap("Algorithms")
-        public java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> algorithms;
+        @NameInMap("Status")
+        public String status;
 
         public static ListInstancesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyDataItems self = new ListInstancesResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesResponseBodyDataItems setStatus(String status) {
-            this.status = status;
+        public ListInstancesResponseBodyDataItems setAcuUsed(Integer acuUsed) {
+            this.acuUsed = acuUsed;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public Integer getAcuUsed() {
+            return this.acuUsed;
         }
 
-        public ListInstancesResponseBodyDataItems setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public ListInstancesResponseBodyDataItems setAlgorithms(java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> algorithms) {
+            this.algorithms = algorithms;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> getAlgorithms() {
+            return this.algorithms;
         }
 
         public ListInstancesResponseBodyDataItems setCreateTime(Long createTime) {
@@ -161,30 +161,30 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListInstancesResponseBodyDataItems setAcuUsed(Integer acuUsed) {
-            this.acuUsed = acuUsed;
+        public ListInstancesResponseBodyDataItems setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
             return this;
         }
-        public Integer getAcuUsed() {
-            return this.acuUsed;
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
-        public ListInstancesResponseBodyDataItems setAlgorithms(java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> algorithms) {
-            this.algorithms = algorithms;
+        public ListInstancesResponseBodyDataItems setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public java.util.List<ListInstancesResponseBodyDataItemsAlgorithms> getAlgorithms() {
-            return this.algorithms;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<ListInstancesResponseBodyDataItems> items;
-
         @NameInMap("CurrentPage")
         public Integer currentPage;
+
+        @NameInMap("Items")
+        public java.util.List<ListInstancesResponseBodyDataItems> items;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -197,20 +197,20 @@ public class ListInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesResponseBodyData setItems(java.util.List<ListInstancesResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<ListInstancesResponseBodyDataItems> getItems() {
-            return this.items;
-        }
-
         public ListInstancesResponseBodyData setCurrentPage(Integer currentPage) {
             this.currentPage = currentPage;
             return this;
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public ListInstancesResponseBodyData setItems(java.util.List<ListInstancesResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
         public ListInstancesResponseBodyData setPageSize(Integer pageSize) {

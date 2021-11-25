@@ -7,17 +7,17 @@ public class DescribeAiotPersonTableItemsRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("PersonTableItemId")
-    public String personTableItemId;
-
-    @NameInMap("PersonTableId")
-    public String personTableId;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("PersonTableId")
+    public String personTableId;
+
+    @NameInMap("PersonTableItemId")
+    public String personTableItemId;
 
     public static DescribeAiotPersonTableItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAiotPersonTableItemsRequest self = new DescribeAiotPersonTableItemsRequest();
@@ -30,22 +30,6 @@ public class DescribeAiotPersonTableItemsRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
-    }
-
-    public DescribeAiotPersonTableItemsRequest setPersonTableItemId(String personTableItemId) {
-        this.personTableItemId = personTableItemId;
-        return this;
-    }
-    public String getPersonTableItemId() {
-        return this.personTableItemId;
-    }
-
-    public DescribeAiotPersonTableItemsRequest setPersonTableId(String personTableId) {
-        this.personTableId = personTableId;
-        return this;
-    }
-    public String getPersonTableId() {
-        return this.personTableId;
     }
 
     public DescribeAiotPersonTableItemsRequest setPageNum(Long pageNum) {
@@ -62,6 +46,22 @@ public class DescribeAiotPersonTableItemsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAiotPersonTableItemsRequest setPersonTableId(String personTableId) {
+        this.personTableId = personTableId;
+        return this;
+    }
+    public String getPersonTableId() {
+        return this.personTableId;
+    }
+
+    public DescribeAiotPersonTableItemsRequest setPersonTableItemId(String personTableItemId) {
+        this.personTableItemId = personTableItemId;
+        return this;
+    }
+    public String getPersonTableItemId() {
+        return this.personTableItemId;
     }
 
 }

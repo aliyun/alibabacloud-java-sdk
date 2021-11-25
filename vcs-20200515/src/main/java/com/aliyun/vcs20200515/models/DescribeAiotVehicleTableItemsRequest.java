@@ -7,17 +7,17 @@ public class DescribeAiotVehicleTableItemsRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("VehicleTableId")
-    public String vehicleTableId;
-
-    @NameInMap("VehicleTableItemId")
-    public String vehicleTableItemId;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("VehicleTableId")
+    public String vehicleTableId;
+
+    @NameInMap("VehicleTableItemId")
+    public String vehicleTableItemId;
 
     public static DescribeAiotVehicleTableItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAiotVehicleTableItemsRequest self = new DescribeAiotVehicleTableItemsRequest();
@@ -30,22 +30,6 @@ public class DescribeAiotVehicleTableItemsRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
-    }
-
-    public DescribeAiotVehicleTableItemsRequest setVehicleTableId(String vehicleTableId) {
-        this.vehicleTableId = vehicleTableId;
-        return this;
-    }
-    public String getVehicleTableId() {
-        return this.vehicleTableId;
-    }
-
-    public DescribeAiotVehicleTableItemsRequest setVehicleTableItemId(String vehicleTableItemId) {
-        this.vehicleTableItemId = vehicleTableItemId;
-        return this;
-    }
-    public String getVehicleTableItemId() {
-        return this.vehicleTableItemId;
     }
 
     public DescribeAiotVehicleTableItemsRequest setPageNum(Long pageNum) {
@@ -62,6 +46,22 @@ public class DescribeAiotVehicleTableItemsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAiotVehicleTableItemsRequest setVehicleTableId(String vehicleTableId) {
+        this.vehicleTableId = vehicleTableId;
+        return this;
+    }
+    public String getVehicleTableId() {
+        return this.vehicleTableId;
+    }
+
+    public DescribeAiotVehicleTableItemsRequest setVehicleTableItemId(String vehicleTableItemId) {
+        this.vehicleTableItemId = vehicleTableItemId;
+        return this;
+    }
+    public String getVehicleTableItemId() {
+        return this.vehicleTableItemId;
     }
 
 }

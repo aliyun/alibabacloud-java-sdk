@@ -4,11 +4,11 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListNVRDeviceRequest extends TeaModel {
-    @NameInMap("DeviceCode")
-    public String deviceCode;
-
     @NameInMap("CorpIdList")
     public String corpIdList;
+
+    @NameInMap("DeviceCode")
+    public String deviceCode;
 
     @NameInMap("IsPage")
     public Long isPage;
@@ -24,20 +24,20 @@ public class ListNVRDeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListNVRDeviceRequest setDeviceCode(String deviceCode) {
-        this.deviceCode = deviceCode;
-        return this;
-    }
-    public String getDeviceCode() {
-        return this.deviceCode;
-    }
-
     public ListNVRDeviceRequest setCorpIdList(String corpIdList) {
         this.corpIdList = corpIdList;
         return this;
     }
     public String getCorpIdList() {
         return this.corpIdList;
+    }
+
+    public ListNVRDeviceRequest setDeviceCode(String deviceCode) {
+        this.deviceCode = deviceCode;
+        return this;
+    }
+    public String getDeviceCode() {
+        return this.deviceCode;
     }
 
     public ListNVRDeviceRequest setIsPage(Long isPage) {

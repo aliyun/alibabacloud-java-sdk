@@ -10,17 +10,17 @@ public class CreateVideoSummaryTaskRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("StartTimeStamp")
-    public Long startTimeStamp;
-
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
+
+    @NameInMap("LiveVideoSummary")
+    public String liveVideoSummary;
 
     @NameInMap("OptionList")
     public String optionList;
 
-    @NameInMap("LiveVideoSummary")
-    public String liveVideoSummary;
+    @NameInMap("StartTimeStamp")
+    public Long startTimeStamp;
 
     public static CreateVideoSummaryTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVideoSummaryTaskRequest self = new CreateVideoSummaryTaskRequest();
@@ -43,20 +43,20 @@ public class CreateVideoSummaryTaskRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public CreateVideoSummaryTaskRequest setStartTimeStamp(Long startTimeStamp) {
-        this.startTimeStamp = startTimeStamp;
-        return this;
-    }
-    public Long getStartTimeStamp() {
-        return this.startTimeStamp;
-    }
-
     public CreateVideoSummaryTaskRequest setEndTimeStamp(Long endTimeStamp) {
         this.endTimeStamp = endTimeStamp;
         return this;
     }
     public Long getEndTimeStamp() {
         return this.endTimeStamp;
+    }
+
+    public CreateVideoSummaryTaskRequest setLiveVideoSummary(String liveVideoSummary) {
+        this.liveVideoSummary = liveVideoSummary;
+        return this;
+    }
+    public String getLiveVideoSummary() {
+        return this.liveVideoSummary;
     }
 
     public CreateVideoSummaryTaskRequest setOptionList(String optionList) {
@@ -67,12 +67,12 @@ public class CreateVideoSummaryTaskRequest extends TeaModel {
         return this.optionList;
     }
 
-    public CreateVideoSummaryTaskRequest setLiveVideoSummary(String liveVideoSummary) {
-        this.liveVideoSummary = liveVideoSummary;
+    public CreateVideoSummaryTaskRequest setStartTimeStamp(Long startTimeStamp) {
+        this.startTimeStamp = startTimeStamp;
         return this;
     }
-    public String getLiveVideoSummary() {
-        return this.liveVideoSummary;
+    public Long getStartTimeStamp() {
+        return this.startTimeStamp;
     }
 
 }

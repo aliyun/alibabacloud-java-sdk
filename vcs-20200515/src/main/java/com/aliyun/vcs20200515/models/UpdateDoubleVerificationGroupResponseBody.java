@@ -4,30 +4,22 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("DoubleVerificationGroup")
     public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup doubleVerificationGroup;
 
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static UpdateDoubleVerificationGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDoubleVerificationGroupResponseBody self = new UpdateDoubleVerificationGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDoubleVerificationGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateDoubleVerificationGroupResponseBody setCode(String code) {
@@ -38,14 +30,6 @@ public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateDoubleVerificationGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public UpdateDoubleVerificationGroupResponseBody setDoubleVerificationGroup(UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup doubleVerificationGroup) {
         this.doubleVerificationGroup = doubleVerificationGroup;
         return this;
@@ -54,24 +38,32 @@ public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
         return this.doubleVerificationGroup;
     }
 
-    public static class UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList extends TeaModel {
-        @NameInMap("PersonTableId")
-        public String personTableId;
+    public UpdateDoubleVerificationGroupResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
 
+    public UpdateDoubleVerificationGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList extends TeaModel {
         @NameInMap("PersonId")
         public String personId;
+
+        @NameInMap("PersonTableId")
+        public String personTableId;
 
         public static UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList build(java.util.Map<String, ?> map) throws Exception {
             UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList self = new UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList setPersonTableId(String personTableId) {
-            this.personTableId = personTableId;
-            return this;
-        }
-        public String getPersonTableId() {
-            return this.personTableId;
         }
 
         public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList setPersonId(String personId) {
@@ -82,9 +74,23 @@ public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
             return this.personId;
         }
 
+        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList setPersonTableId(String personTableId) {
+            this.personTableId = personTableId;
+            return this;
+        }
+        public String getPersonTableId() {
+            return this.personTableId;
+        }
+
     }
 
     public static class UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup extends TeaModel {
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("Enabled")
+        public String enabled;
+
         @NameInMap("GroupId")
         public String groupId;
 
@@ -100,15 +106,25 @@ public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
         @NameInMap("PersonIdList")
         public java.util.List<UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList> personIdList;
 
-        @NameInMap("Enabled")
-        public String enabled;
-
-        @NameInMap("DeviceId")
-        public String deviceId;
-
         public static UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup build(java.util.Map<String, ?> map) throws Exception {
             UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup self = new UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
         public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup setGroupId(String groupId) {
@@ -149,22 +165,6 @@ public class UpdateDoubleVerificationGroupResponseBody extends TeaModel {
         }
         public java.util.List<UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroupPersonIdList> getPersonIdList() {
             return this.personIdList;
-        }
-
-        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup setEnabled(String enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public String getEnabled() {
-            return this.enabled;
-        }
-
-        public UpdateDoubleVerificationGroupResponseBodyDoubleVerificationGroup setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
     }

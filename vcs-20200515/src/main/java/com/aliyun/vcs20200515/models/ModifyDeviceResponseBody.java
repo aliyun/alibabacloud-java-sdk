@@ -4,10 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 错误码
     @NameInMap("Code")
     public String code;
@@ -16,17 +12,13 @@ public class ModifyDeviceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ModifyDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceResponseBody self = new ModifyDeviceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDeviceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyDeviceResponseBody setCode(String code) {
@@ -43,6 +35,14 @@ public class ModifyDeviceResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ModifyDeviceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
