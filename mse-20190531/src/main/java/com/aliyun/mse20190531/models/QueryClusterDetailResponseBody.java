@@ -65,6 +65,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
     }
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
+        @NameInMap("CreationTimestamp")
+        public String creationTimestamp;
+
         @NameInMap("HealthStatus")
         public String healthStatus;
 
@@ -86,6 +89,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         public static QueryClusterDetailResponseBodyDataInstanceModels build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDetailResponseBodyDataInstanceModels self = new QueryClusterDetailResponseBodyDataInstanceModels();
             return TeaModel.build(map, self);
+        }
+
+        public QueryClusterDetailResponseBodyDataInstanceModels setCreationTimestamp(String creationTimestamp) {
+            this.creationTimestamp = creationTimestamp;
+            return this;
+        }
+        public String getCreationTimestamp() {
+            return this.creationTimestamp;
         }
 
         public QueryClusterDetailResponseBodyDataInstanceModels setHealthStatus(String healthStatus) {

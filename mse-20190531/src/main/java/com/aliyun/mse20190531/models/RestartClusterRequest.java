@@ -10,6 +10,9 @@ public class RestartClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("PodNameList")
+    public String podNameList;
+
     @NameInMap("RequestPars")
     public String requestPars;
 
@@ -32,6 +35,14 @@ public class RestartClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RestartClusterRequest setPodNameList(String podNameList) {
+        this.podNameList = podNameList;
+        return this;
+    }
+    public String getPodNameList() {
+        return this.podNameList;
     }
 
     public RestartClusterRequest setRequestPars(String requestPars) {
