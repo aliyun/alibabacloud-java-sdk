@@ -88,6 +88,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("Plugin")
+    public String plugin;
+
     @NameInMap("PostInstallScript")
     public java.util.List<CreateClusterRequestPostInstallScript> postInstallScript;
 
@@ -138,6 +141,9 @@ public class CreateClusterRequest extends TeaModel {
 
     @NameInMap("VpcId")
     public String vpcId;
+
+    @NameInMap("WithoutAgent")
+    public Boolean withoutAgent;
 
     @NameInMap("WithoutElasticIp")
     public Boolean withoutElasticIp;
@@ -374,6 +380,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.periodUnit;
     }
 
+    public CreateClusterRequest setPlugin(String plugin) {
+        this.plugin = plugin;
+        return this;
+    }
+    public String getPlugin() {
+        return this.plugin;
+    }
+
     public CreateClusterRequest setPostInstallScript(java.util.List<CreateClusterRequestPostInstallScript> postInstallScript) {
         this.postInstallScript = postInstallScript;
         return this;
@@ -508,6 +522,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public CreateClusterRequest setWithoutAgent(Boolean withoutAgent) {
+        this.withoutAgent = withoutAgent;
+        return this;
+    }
+    public Boolean getWithoutAgent() {
+        return this.withoutAgent;
     }
 
     public CreateClusterRequest setWithoutElasticIp(Boolean withoutElasticIp) {

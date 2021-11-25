@@ -80,6 +80,9 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("InputFileUrl")
+        public String inputFileUrl;
+
         @NameInMap("Mem")
         public String mem;
 
@@ -116,8 +119,14 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         @NameInMap("Thread")
         public Integer thread;
 
+        @NameInMap("UnzipCmd")
+        public String unzipCmd;
+
         @NameInMap("Variables")
         public String variables;
+
+        @NameInMap("WithUnzipCmd")
+        public Boolean withUnzipCmd;
 
         public static ListJobTemplatesResponseBodyTemplatesJobTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListJobTemplatesResponseBodyTemplatesJobTemplates self = new ListJobTemplatesResponseBodyTemplatesJobTemplates();
@@ -162,6 +171,14 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setInputFileUrl(String inputFileUrl) {
+            this.inputFileUrl = inputFileUrl;
+            return this;
+        }
+        public String getInputFileUrl() {
+            return this.inputFileUrl;
         }
 
         public ListJobTemplatesResponseBodyTemplatesJobTemplates setMem(String mem) {
@@ -260,12 +277,28 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.thread;
         }
 
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setUnzipCmd(String unzipCmd) {
+            this.unzipCmd = unzipCmd;
+            return this;
+        }
+        public String getUnzipCmd() {
+            return this.unzipCmd;
+        }
+
         public ListJobTemplatesResponseBodyTemplatesJobTemplates setVariables(String variables) {
             this.variables = variables;
             return this;
         }
         public String getVariables() {
             return this.variables;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setWithUnzipCmd(Boolean withUnzipCmd) {
+            this.withUnzipCmd = withUnzipCmd;
+            return this;
+        }
+        public Boolean getWithUnzipCmd() {
+            return this.withUnzipCmd;
         }
 
     }

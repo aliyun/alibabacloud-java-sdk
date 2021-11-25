@@ -16,6 +16,9 @@ public class CreateJobTemplateRequest extends TeaModel {
     @NameInMap("Gpu")
     public Integer gpu;
 
+    @NameInMap("InputFileUrl")
+    public String inputFileUrl;
+
     @NameInMap("Mem")
     public String mem;
 
@@ -52,8 +55,14 @@ public class CreateJobTemplateRequest extends TeaModel {
     @NameInMap("Thread")
     public Integer thread;
 
+    @NameInMap("UnzipCmd")
+    public String unzipCmd;
+
     @NameInMap("Variables")
     public String variables;
+
+    @NameInMap("WithUnzipCmd")
+    public Boolean withUnzipCmd;
 
     public static CreateJobTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobTemplateRequest self = new CreateJobTemplateRequest();
@@ -90,6 +99,14 @@ public class CreateJobTemplateRequest extends TeaModel {
     }
     public Integer getGpu() {
         return this.gpu;
+    }
+
+    public CreateJobTemplateRequest setInputFileUrl(String inputFileUrl) {
+        this.inputFileUrl = inputFileUrl;
+        return this;
+    }
+    public String getInputFileUrl() {
+        return this.inputFileUrl;
     }
 
     public CreateJobTemplateRequest setMem(String mem) {
@@ -188,12 +205,28 @@ public class CreateJobTemplateRequest extends TeaModel {
         return this.thread;
     }
 
+    public CreateJobTemplateRequest setUnzipCmd(String unzipCmd) {
+        this.unzipCmd = unzipCmd;
+        return this;
+    }
+    public String getUnzipCmd() {
+        return this.unzipCmd;
+    }
+
     public CreateJobTemplateRequest setVariables(String variables) {
         this.variables = variables;
         return this;
     }
     public String getVariables() {
         return this.variables;
+    }
+
+    public CreateJobTemplateRequest setWithUnzipCmd(Boolean withUnzipCmd) {
+        this.withUnzipCmd = withUnzipCmd;
+        return this;
+    }
+    public Boolean getWithUnzipCmd() {
+        return this.withUnzipCmd;
     }
 
 }
