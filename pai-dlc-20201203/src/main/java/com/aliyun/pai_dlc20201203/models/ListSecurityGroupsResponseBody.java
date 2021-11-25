@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupsResponseBody extends TeaModel {
+    // 请求Id
+    @NameInMap("RequestId")
+    public String requestId;
+
     // 代码源配置列表
     @NameInMap("SecurityGroups")
     public java.util.List<ListSecurityGroupsResponseBodySecurityGroups> securityGroups;
@@ -12,13 +16,17 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 请求Id
-    @NameInMap("RequestId")
-    public String requestId;
-
     public static ListSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecurityGroupsResponseBody self = new ListSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSecurityGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListSecurityGroupsResponseBody setSecurityGroups(java.util.List<ListSecurityGroupsResponseBodySecurityGroups> securityGroups) {
@@ -37,15 +45,11 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListSecurityGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static class ListSecurityGroupsResponseBodySecurityGroups extends TeaModel {
+        // 描述
+        @NameInMap("Description")
+        public String description;
+
         // 安全组Id
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -58,13 +62,17 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        // 描述
-        @NameInMap("Description")
-        public String description;
-
         public static ListSecurityGroupsResponseBodySecurityGroups build(java.util.Map<String, ?> map) throws Exception {
             ListSecurityGroupsResponseBodySecurityGroups self = new ListSecurityGroupsResponseBodySecurityGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListSecurityGroupsResponseBodySecurityGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListSecurityGroupsResponseBodySecurityGroups setSecurityGroupId(String securityGroupId) {
@@ -89,14 +97,6 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public ListSecurityGroupsResponseBodySecurityGroups setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
     }

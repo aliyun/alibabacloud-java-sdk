@@ -8,10 +8,6 @@ public class GetSecurityGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 所属vpc的id
-    @NameInMap("VpcId")
-    public String vpcId;
-
     // 安全组id
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -19,6 +15,10 @@ public class GetSecurityGroupResponseBody extends TeaModel {
     // 安全组名称
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
+
+    // 所属vpc的id
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static GetSecurityGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSecurityGroupResponseBody self = new GetSecurityGroupResponseBody();
@@ -31,14 +31,6 @@ public class GetSecurityGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetSecurityGroupResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public GetSecurityGroupResponseBody setSecurityGroupId(String securityGroupId) {
@@ -55,6 +47,14 @@ public class GetSecurityGroupResponseBody extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
+    }
+
+    public GetSecurityGroupResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

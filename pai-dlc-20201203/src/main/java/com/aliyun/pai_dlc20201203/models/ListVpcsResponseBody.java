@@ -4,29 +4,29 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListVpcsResponseBody extends TeaModel {
-    // 代码源配置列表
-    @NameInMap("Vpcs")
-    public java.util.List<ListVpcsResponseBodyVpcs> vpcs;
+    // 请求Id
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 符合过滤条件的代码源配置的总数量
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    // 请求Id
-    @NameInMap("RequestId")
-    public String requestId;
+    // 代码源配置列表
+    @NameInMap("Vpcs")
+    public java.util.List<ListVpcsResponseBodyVpcs> vpcs;
 
     public static ListVpcsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVpcsResponseBody self = new ListVpcsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListVpcsResponseBody setVpcs(java.util.List<ListVpcsResponseBodyVpcs> vpcs) {
-        this.vpcs = vpcs;
+    public ListVpcsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListVpcsResponseBodyVpcs> getVpcs() {
-        return this.vpcs;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListVpcsResponseBody setTotalCount(Long totalCount) {
@@ -37,12 +37,12 @@ public class ListVpcsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListVpcsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListVpcsResponseBody setVpcs(java.util.List<ListVpcsResponseBodyVpcs> vpcs) {
+        this.vpcs = vpcs;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<ListVpcsResponseBodyVpcs> getVpcs() {
+        return this.vpcs;
     }
 
     public static class ListVpcsResponseBodyVpcs extends TeaModel {

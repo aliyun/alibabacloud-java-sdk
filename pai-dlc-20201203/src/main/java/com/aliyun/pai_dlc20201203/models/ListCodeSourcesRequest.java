@@ -8,6 +8,10 @@ public class ListCodeSourcesRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    // 排序顺序, 枚举值 desc 或者 asc
+    @NameInMap("Order")
+    public String order;
+
     // 取第几页的数据
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -20,10 +24,6 @@ public class ListCodeSourcesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序顺序, 枚举值 desc 或者 asc
-    @NameInMap("Order")
-    public String order;
-
     public static ListCodeSourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCodeSourcesRequest self = new ListCodeSourcesRequest();
         return TeaModel.build(map, self);
@@ -35,6 +35,14 @@ public class ListCodeSourcesRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public ListCodeSourcesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListCodeSourcesRequest setPageNumber(Integer pageNumber) {
@@ -59,14 +67,6 @@ public class ListCodeSourcesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListCodeSourcesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
     }
 
 }

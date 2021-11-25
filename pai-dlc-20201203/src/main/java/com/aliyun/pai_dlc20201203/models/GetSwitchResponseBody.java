@@ -4,13 +4,13 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetSwitchResponseBody extends TeaModel {
+    // 网段
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
-
-    // 所属VPC的id
-    @NameInMap("VpcId")
-    public String vpcId;
 
     // 交换机的id
     @NameInMap("VSwitchId")
@@ -20,13 +20,21 @@ public class GetSwitchResponseBody extends TeaModel {
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
-    // 网段
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
+    // 所属VPC的id
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static GetSwitchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSwitchResponseBody self = new GetSwitchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSwitchResponseBody setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
     }
 
     public GetSwitchResponseBody setRequestId(String requestId) {
@@ -35,14 +43,6 @@ public class GetSwitchResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetSwitchResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public GetSwitchResponseBody setVSwitchId(String vSwitchId) {
@@ -61,12 +61,12 @@ public class GetSwitchResponseBody extends TeaModel {
         return this.vSwitchName;
     }
 
-    public GetSwitchResponseBody setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
+    public GetSwitchResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public String getCidrBlock() {
-        return this.cidrBlock;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

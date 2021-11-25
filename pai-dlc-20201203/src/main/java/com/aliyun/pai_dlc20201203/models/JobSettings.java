@@ -12,13 +12,13 @@ public class JobSettings extends TeaModel {
     @NameInMap("Caller")
     public String caller;
 
-    // 自定义标签
-    @NameInMap("Tags")
-    public java.util.Map<String, String> tags;
-
     // 工作流ID
     @NameInMap("PipelineId")
     public String pipelineId;
+
+    // 自定义标签
+    @NameInMap("Tags")
+    public java.util.Map<String, String> tags;
 
     public static JobSettings build(java.util.Map<String, ?> map) throws Exception {
         JobSettings self = new JobSettings();
@@ -41,20 +41,20 @@ public class JobSettings extends TeaModel {
         return this.caller;
     }
 
-    public JobSettings setTags(java.util.Map<String, String> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.Map<String, String> getTags() {
-        return this.tags;
-    }
-
     public JobSettings setPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public JobSettings setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
     }
 
 }

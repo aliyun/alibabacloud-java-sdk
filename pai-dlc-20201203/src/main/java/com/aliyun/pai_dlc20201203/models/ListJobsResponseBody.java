@@ -8,13 +8,13 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<JobItem> jobs;
 
-    // 符合过滤条件的总作业数
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 符合过滤条件的总作业数
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobsResponseBody self = new ListJobsResponseBody();
@@ -29,20 +29,20 @@ public class ListJobsResponseBody extends TeaModel {
         return this.jobs;
     }
 
-    public ListJobsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListJobsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListJobsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
 }

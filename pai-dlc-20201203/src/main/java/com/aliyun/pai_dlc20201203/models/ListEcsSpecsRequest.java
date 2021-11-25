@@ -4,10 +4,6 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
-    // 按返回字段排序
-    @NameInMap("SortBy")
-    public String sortBy;
-
     // 排序顺序
     @NameInMap("Order")
     public String order;
@@ -20,17 +16,13 @@ public class ListEcsSpecsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 按返回字段排序
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static ListEcsSpecsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEcsSpecsRequest self = new ListEcsSpecsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListEcsSpecsRequest setSortBy(String sortBy) {
-        this.sortBy = sortBy;
-        return this;
-    }
-    public String getSortBy() {
-        return this.sortBy;
     }
 
     public ListEcsSpecsRequest setOrder(String order) {
@@ -55,6 +47,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEcsSpecsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }

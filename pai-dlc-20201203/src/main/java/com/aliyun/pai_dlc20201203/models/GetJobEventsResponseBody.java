@@ -4,13 +4,13 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobEventsResponseBody extends TeaModel {
-    // 作业ID
-    @NameInMap("JobId")
-    public String jobId;
-
     // 事件
     @NameInMap("Events")
     public java.util.List<String> events;
+
+    // 作业ID
+    @NameInMap("JobId")
+    public String jobId;
 
     // 请求ID
     @NameInMap("RequestId")
@@ -21,20 +21,20 @@ public class GetJobEventsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetJobEventsResponseBody setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
     public GetJobEventsResponseBody setEvents(java.util.List<String> events) {
         this.events = events;
         return this;
     }
     public java.util.List<String> getEvents() {
         return this.events;
+    }
+
+    public GetJobEventsResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public GetJobEventsResponseBody setRequestId(Integer requestId) {

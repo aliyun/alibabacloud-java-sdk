@@ -4,10 +4,6 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupsRequest extends TeaModel {
-    // 所属Vpc
-    @NameInMap("VpcId")
-    public String vpcId;
-
     // 取第几页的数据
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,17 +12,13 @@ public class ListSecurityGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 所属Vpc
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ListSecurityGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecurityGroupsRequest self = new ListSecurityGroupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListSecurityGroupsRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public ListSecurityGroupsRequest setPageNumber(Integer pageNumber) {
@@ -43,6 +35,14 @@ public class ListSecurityGroupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSecurityGroupsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

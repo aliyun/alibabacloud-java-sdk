@@ -12,6 +12,10 @@ public class ListDataSourcesRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    // 排序顺序
+    @NameInMap("Order")
+    public String order;
+
     // 查询第几页数据
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,10 +27,6 @@ public class ListDataSourcesRequest extends TeaModel {
     // 按返回字段排序
     @NameInMap("SortBy")
     public String sortBy;
-
-    // 排序顺序
-    @NameInMap("Order")
-    public String order;
 
     public static ListDataSourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataSourcesRequest self = new ListDataSourcesRequest();
@@ -47,6 +47,14 @@ public class ListDataSourcesRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    public ListDataSourcesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListDataSourcesRequest setPageNumber(Integer pageNumber) {
@@ -71,14 +79,6 @@ public class ListDataSourcesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListDataSourcesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
     }
 
 }

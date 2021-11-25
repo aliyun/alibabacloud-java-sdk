@@ -8,6 +8,10 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("NeedDetail")
     public Boolean needDetail;
 
+    // 排列顺序: desc 或者 asc
+    @NameInMap("Order")
+    public String order;
+
     // 查询第几页数据,最小值为1
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -20,10 +24,6 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排列顺序: desc 或者 asc
-    @NameInMap("Order")
-    public String order;
-
     public static ListWorkspacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkspacesRequest self = new ListWorkspacesRequest();
         return TeaModel.build(map, self);
@@ -35,6 +35,14 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public Boolean getNeedDetail() {
         return this.needDetail;
+    }
+
+    public ListWorkspacesRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListWorkspacesRequest setPageNumber(Integer pageNumber) {
@@ -59,14 +67,6 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListWorkspacesRequest setOrder(String order) {
-        this.order = order;
-        return this;
-    }
-    public String getOrder() {
-        return this.order;
     }
 
 }

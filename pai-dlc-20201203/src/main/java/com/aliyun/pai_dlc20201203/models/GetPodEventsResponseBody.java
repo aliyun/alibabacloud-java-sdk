@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetPodEventsResponseBody extends TeaModel {
+    // 事件列表
+    @NameInMap("Events")
+    public java.util.List<String> events;
+
     // 作业ID
     @NameInMap("JobId")
     public String jobId;
@@ -12,10 +16,6 @@ public class GetPodEventsResponseBody extends TeaModel {
     @NameInMap("PodId")
     public String podId;
 
-    // 事件列表
-    @NameInMap("Events")
-    public java.util.List<String> events;
-
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
@@ -23,6 +23,14 @@ public class GetPodEventsResponseBody extends TeaModel {
     public static GetPodEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPodEventsResponseBody self = new GetPodEventsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPodEventsResponseBody setEvents(java.util.List<String> events) {
+        this.events = events;
+        return this;
+    }
+    public java.util.List<String> getEvents() {
+        return this.events;
     }
 
     public GetPodEventsResponseBody setJobId(String jobId) {
@@ -39,14 +47,6 @@ public class GetPodEventsResponseBody extends TeaModel {
     }
     public String getPodId() {
         return this.podId;
-    }
-
-    public GetPodEventsResponseBody setEvents(java.util.List<String> events) {
-        this.events = events;
-        return this;
-    }
-    public java.util.List<String> getEvents() {
-        return this.events;
     }
 
     public GetPodEventsResponseBody setRequestId(String requestId) {

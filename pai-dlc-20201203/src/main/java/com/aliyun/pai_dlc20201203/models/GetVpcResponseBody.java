@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetVpcResponseBody extends TeaModel {
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     // Vpc的ID
     @NameInMap("VpcId")
     public Integer vpcId;
@@ -12,13 +16,17 @@ public class GetVpcResponseBody extends TeaModel {
     @NameInMap("VpcName")
     public String vpcName;
 
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     public static GetVpcResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVpcResponseBody self = new GetVpcResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVpcResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetVpcResponseBody setVpcId(Integer vpcId) {
@@ -35,14 +43,6 @@ public class GetVpcResponseBody extends TeaModel {
     }
     public String getVpcName() {
         return this.vpcName;
-    }
-
-    public GetVpcResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

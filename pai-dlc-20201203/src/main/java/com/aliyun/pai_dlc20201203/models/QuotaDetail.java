@@ -8,13 +8,13 @@ public class QuotaDetail extends TeaModel {
     @NameInMap("CPU")
     public String CPU;
 
-    // 内存容量
-    @NameInMap("Memory")
-    public String memory;
-
     // GPU卡数
     @NameInMap("GPU")
     public String GPU;
+
+    // GPU详情
+    @NameInMap("GPUDetails")
+    public java.util.List<GPUDetail> GPUDetails;
 
     // GPU卡型
     @NameInMap("GPUType")
@@ -24,9 +24,9 @@ public class QuotaDetail extends TeaModel {
     @NameInMap("GPUTypeFullName")
     public String GPUTypeFullName;
 
-    // GPU详情
-    @NameInMap("GPUDetails")
-    public java.util.List<GPUDetail> GPUDetails;
+    // 内存容量
+    @NameInMap("Memory")
+    public String memory;
 
     public static QuotaDetail build(java.util.Map<String, ?> map) throws Exception {
         QuotaDetail self = new QuotaDetail();
@@ -41,20 +41,20 @@ public class QuotaDetail extends TeaModel {
         return this.CPU;
     }
 
-    public QuotaDetail setMemory(String memory) {
-        this.memory = memory;
-        return this;
-    }
-    public String getMemory() {
-        return this.memory;
-    }
-
     public QuotaDetail setGPU(String GPU) {
         this.GPU = GPU;
         return this;
     }
     public String getGPU() {
         return this.GPU;
+    }
+
+    public QuotaDetail setGPUDetails(java.util.List<GPUDetail> GPUDetails) {
+        this.GPUDetails = GPUDetails;
+        return this;
+    }
+    public java.util.List<GPUDetail> getGPUDetails() {
+        return this.GPUDetails;
     }
 
     public QuotaDetail setGPUType(String GPUType) {
@@ -73,12 +73,12 @@ public class QuotaDetail extends TeaModel {
         return this.GPUTypeFullName;
     }
 
-    public QuotaDetail setGPUDetails(java.util.List<GPUDetail> GPUDetails) {
-        this.GPUDetails = GPUDetails;
+    public QuotaDetail setMemory(String memory) {
+        this.memory = memory;
         return this;
     }
-    public java.util.List<GPUDetail> getGPUDetails() {
-        return this.GPUDetails;
+    public String getMemory() {
+        return this.memory;
     }
 
 }

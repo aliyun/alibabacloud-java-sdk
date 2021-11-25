@@ -8,13 +8,13 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     @NameInMap("CodeSources")
     public java.util.List<CodeSourceItem> codeSources;
 
-    // 符合过滤条件的代码源配置的总数量
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 符合过滤条件的代码源配置的总数量
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListCodeSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCodeSourcesResponseBody self = new ListCodeSourcesResponseBody();
@@ -29,20 +29,20 @@ public class ListCodeSourcesResponseBody extends TeaModel {
         return this.codeSources;
     }
 
-    public ListCodeSourcesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListCodeSourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListCodeSourcesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
 }

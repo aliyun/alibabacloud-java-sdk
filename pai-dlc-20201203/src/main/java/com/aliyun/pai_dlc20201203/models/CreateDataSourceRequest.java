@@ -8,33 +8,33 @@ public class CreateDataSourceRequest extends TeaModel {
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
-    // 数据源显示名称
-    @NameInMap("DisplayName")
-    public String displayName;
-
     // 数据源描述
     @NameInMap("Description")
     public String description;
 
-    // 阿里云NAS文件系统Id
-    @NameInMap("FileSystemId")
-    public String fileSystemId;
-
-    // 阿里云OSS文件系统路径
-    @NameInMap("Path")
-    public String path;
+    // 数据源显示名称
+    @NameInMap("DisplayName")
+    public String displayName;
 
     // 阿里云OSS文件系统服务端点
     @NameInMap("Endpoint")
     public String endpoint;
 
-    // 阿里云OSS文件系统配置选项
-    @NameInMap("Options")
-    public String options;
+    // 阿里云NAS文件系统Id
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
 
     // 本地挂载目录
     @NameInMap("MountPath")
     public String mountPath;
+
+    // 阿里云OSS文件系统配置选项
+    @NameInMap("Options")
+    public String options;
+
+    // 阿里云OSS文件系统路径
+    @NameInMap("Path")
+    public String path;
 
     public static CreateDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataSourceRequest self = new CreateDataSourceRequest();
@@ -49,14 +49,6 @@ public class CreateDataSourceRequest extends TeaModel {
         return this.dataSourceType;
     }
 
-    public CreateDataSourceRequest setDisplayName(String displayName) {
-        this.displayName = displayName;
-        return this;
-    }
-    public String getDisplayName() {
-        return this.displayName;
-    }
-
     public CreateDataSourceRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -65,20 +57,12 @@ public class CreateDataSourceRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateDataSourceRequest setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
+    public CreateDataSourceRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
         return this;
     }
-    public String getFileSystemId() {
-        return this.fileSystemId;
-    }
-
-    public CreateDataSourceRequest setPath(String path) {
-        this.path = path;
-        return this;
-    }
-    public String getPath() {
-        return this.path;
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public CreateDataSourceRequest setEndpoint(String endpoint) {
@@ -89,12 +73,12 @@ public class CreateDataSourceRequest extends TeaModel {
         return this.endpoint;
     }
 
-    public CreateDataSourceRequest setOptions(String options) {
-        this.options = options;
+    public CreateDataSourceRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
-    public String getOptions() {
-        return this.options;
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public CreateDataSourceRequest setMountPath(String mountPath) {
@@ -103,6 +87,22 @@ public class CreateDataSourceRequest extends TeaModel {
     }
     public String getMountPath() {
         return this.mountPath;
+    }
+
+    public CreateDataSourceRequest setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
+    }
+
+    public CreateDataSourceRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
 }

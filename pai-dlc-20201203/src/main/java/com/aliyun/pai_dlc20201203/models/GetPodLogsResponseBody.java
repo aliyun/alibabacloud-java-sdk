@@ -8,13 +8,13 @@ public class GetPodLogsResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // 实例ID
-    @NameInMap("PodId")
-    public String podId;
-
     // 日志列表
     @NameInMap("Logs")
     public java.util.List<String> logs;
+
+    // 实例ID
+    @NameInMap("PodId")
+    public String podId;
 
     // 请求ID
     @NameInMap("RequestId")
@@ -33,20 +33,20 @@ public class GetPodLogsResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public GetPodLogsResponseBody setPodId(String podId) {
-        this.podId = podId;
-        return this;
-    }
-    public String getPodId() {
-        return this.podId;
-    }
-
     public GetPodLogsResponseBody setLogs(java.util.List<String> logs) {
         this.logs = logs;
         return this;
     }
     public java.util.List<String> getLogs() {
         return this.logs;
+    }
+
+    public GetPodLogsResponseBody setPodId(String podId) {
+        this.podId = podId;
+        return this;
+    }
+    public String getPodId() {
+        return this.podId;
     }
 
     public GetPodLogsResponseBody setRequestId(String requestId) {

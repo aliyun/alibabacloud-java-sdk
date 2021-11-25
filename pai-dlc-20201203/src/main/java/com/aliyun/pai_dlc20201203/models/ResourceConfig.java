@@ -12,6 +12,10 @@ public class ResourceConfig extends TeaModel {
     @NameInMap("GPU")
     public String GPU;
 
+    // 显卡类型
+    @NameInMap("GPUType")
+    public String GPUType;
+
     // 内存容量
     @NameInMap("Memory")
     public String memory;
@@ -19,10 +23,6 @@ public class ResourceConfig extends TeaModel {
     // 共享内存容量
     @NameInMap("SharedMemory")
     public String sharedMemory;
-
-    // 显卡类型
-    @NameInMap("GPUType")
-    public String GPUType;
 
     public static ResourceConfig build(java.util.Map<String, ?> map) throws Exception {
         ResourceConfig self = new ResourceConfig();
@@ -45,6 +45,14 @@ public class ResourceConfig extends TeaModel {
         return this.GPU;
     }
 
+    public ResourceConfig setGPUType(String GPUType) {
+        this.GPUType = GPUType;
+        return this;
+    }
+    public String getGPUType() {
+        return this.GPUType;
+    }
+
     public ResourceConfig setMemory(String memory) {
         this.memory = memory;
         return this;
@@ -59,14 +67,6 @@ public class ResourceConfig extends TeaModel {
     }
     public String getSharedMemory() {
         return this.sharedMemory;
-    }
-
-    public ResourceConfig setGPUType(String GPUType) {
-        this.GPUType = GPUType;
-        return this;
-    }
-    public String getGPUType() {
-        return this.GPUType;
     }
 
 }

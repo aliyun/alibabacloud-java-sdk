@@ -4,25 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DeleteTensorboardResponseBody extends TeaModel {
-    // Tensorboad Id
-    @NameInMap("TensorboardId")
-    public String tensorboardId;
-
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
+    // Tensorboad Id
+    @NameInMap("TensorboardId")
+    public String tensorboardId;
+
     public static DeleteTensorboardResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteTensorboardResponseBody self = new DeleteTensorboardResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteTensorboardResponseBody setTensorboardId(String tensorboardId) {
-        this.tensorboardId = tensorboardId;
-        return this;
-    }
-    public String getTensorboardId() {
-        return this.tensorboardId;
     }
 
     public DeleteTensorboardResponseBody setRequestId(String requestId) {
@@ -31,6 +23,14 @@ public class DeleteTensorboardResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteTensorboardResponseBody setTensorboardId(String tensorboardId) {
+        this.tensorboardId = tensorboardId;
+        return this;
+    }
+    public String getTensorboardId() {
+        return this.tensorboardId;
     }
 
 }
