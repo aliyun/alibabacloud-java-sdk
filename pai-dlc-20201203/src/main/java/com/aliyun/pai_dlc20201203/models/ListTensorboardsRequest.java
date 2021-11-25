@@ -4,29 +4,21 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListTensorboardsRequest extends TeaModel {
-    // 是否显示详情
-    @NameInMap("Verbose")
-    public Boolean verbose;
-
-    // 工作空间ID
-    @NameInMap("WorkspaceId")
-    public String workspaceId;
-
     // 展示名称
     @NameInMap("DisplayName")
     public String displayName;
 
-    // 根据状态过滤
-    @NameInMap("Status")
-    public String status;
-
-    // 起始时间
-    @NameInMap("StartTime")
-    public String startTime;
-
     // 截止时间
     @NameInMap("EndTime")
     public String endTime;
+
+    // JobId
+    @NameInMap("JobId")
+    public String jobId;
+
+    // 排序顺序
+    @NameInMap("Order")
+    public String order;
 
     // 当前页
     @NameInMap("PageNumber")
@@ -40,37 +32,29 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 排序顺序
-    @NameInMap("Order")
-    public String order;
+    // 起始时间
+    @NameInMap("StartTime")
+    public String startTime;
 
-    // JobId
-    @NameInMap("JobId")
-    public String jobId;
+    // 根据状态过滤
+    @NameInMap("Status")
+    public String status;
 
     // TensorboardId
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
+    // 是否显示详情
+    @NameInMap("Verbose")
+    public Boolean verbose;
+
+    // 工作空间ID
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListTensorboardsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTensorboardsRequest self = new ListTensorboardsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTensorboardsRequest setVerbose(Boolean verbose) {
-        this.verbose = verbose;
-        return this;
-    }
-    public Boolean getVerbose() {
-        return this.verbose;
-    }
-
-    public ListTensorboardsRequest setWorkspaceId(String workspaceId) {
-        this.workspaceId = workspaceId;
-        return this;
-    }
-    public String getWorkspaceId() {
-        return this.workspaceId;
     }
 
     public ListTensorboardsRequest setDisplayName(String displayName) {
@@ -81,28 +65,28 @@ public class ListTensorboardsRequest extends TeaModel {
         return this.displayName;
     }
 
-    public ListTensorboardsRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public ListTensorboardsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public ListTensorboardsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListTensorboardsRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public ListTensorboardsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListTensorboardsRequest setPageNumber(Integer pageNumber) {
@@ -129,20 +113,20 @@ public class ListTensorboardsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListTensorboardsRequest setOrder(String order) {
-        this.order = order;
+    public ListTensorboardsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getOrder() {
-        return this.order;
+    public String getStartTime() {
+        return this.startTime;
     }
 
-    public ListTensorboardsRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public ListTensorboardsRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTensorboardsRequest setTensorboardId(String tensorboardId) {
@@ -151,6 +135,22 @@ public class ListTensorboardsRequest extends TeaModel {
     }
     public String getTensorboardId() {
         return this.tensorboardId;
+    }
+
+    public ListTensorboardsRequest setVerbose(Boolean verbose) {
+        this.verbose = verbose;
+        return this;
+    }
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
+    public ListTensorboardsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

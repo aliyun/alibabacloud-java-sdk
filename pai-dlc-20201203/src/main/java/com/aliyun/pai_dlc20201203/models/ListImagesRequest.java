@@ -4,10 +4,6 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
-    // 镜像类型
-    @NameInMap("ImageProviderType")
-    public String imageProviderType;
-
     // 加速器类型
     @NameInMap("AcceleratorType")
     public String acceleratorType;
@@ -16,25 +12,21 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("Framework")
     public String framework;
 
-    // 按返回字段排序
-    @NameInMap("SortBy")
-    public String sortBy;
+    // 镜像类型
+    @NameInMap("ImageProviderType")
+    public String imageProviderType;
 
     // 排序顺序
     @NameInMap("Order")
     public String order;
 
+    // 按返回字段排序
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListImagesRequest setImageProviderType(String imageProviderType) {
-        this.imageProviderType = imageProviderType;
-        return this;
-    }
-    public String getImageProviderType() {
-        return this.imageProviderType;
     }
 
     public ListImagesRequest setAcceleratorType(String acceleratorType) {
@@ -53,12 +45,12 @@ public class ListImagesRequest extends TeaModel {
         return this.framework;
     }
 
-    public ListImagesRequest setSortBy(String sortBy) {
-        this.sortBy = sortBy;
+    public ListImagesRequest setImageProviderType(String imageProviderType) {
+        this.imageProviderType = imageProviderType;
         return this;
     }
-    public String getSortBy() {
-        return this.sortBy;
+    public String getImageProviderType() {
+        return this.imageProviderType;
     }
 
     public ListImagesRequest setOrder(String order) {
@@ -67,6 +59,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListImagesRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }

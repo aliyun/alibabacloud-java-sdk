@@ -4,29 +4,29 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
-    // TargetType
-    @NameInMap("TargetType")
-    public String targetType;
+    // ExpireTime
+    @NameInMap("ExpireTime")
+    public Long expireTime;
 
     // TargetId
     @NameInMap("TargetId")
     public String targetId;
 
-    // ExpireTime
-    @NameInMap("ExpireTime")
-    public Long expireTime;
+    // TargetType
+    @NameInMap("TargetType")
+    public String targetType;
 
     public static GetTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTokenRequest self = new GetTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetTokenRequest setTargetType(String targetType) {
-        this.targetType = targetType;
+    public GetTokenRequest setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
-    public String getTargetType() {
-        return this.targetType;
+    public Long getExpireTime() {
+        return this.expireTime;
     }
 
     public GetTokenRequest setTargetId(String targetId) {
@@ -37,12 +37,12 @@ public class GetTokenRequest extends TeaModel {
         return this.targetId;
     }
 
-    public GetTokenRequest setExpireTime(Long expireTime) {
-        this.expireTime = expireTime;
+    public GetTokenRequest setTargetType(String targetType) {
+        this.targetType = targetType;
         return this;
     }
-    public Long getExpireTime() {
-        return this.expireTime;
+    public String getTargetType() {
+        return this.targetType;
     }
 
 }

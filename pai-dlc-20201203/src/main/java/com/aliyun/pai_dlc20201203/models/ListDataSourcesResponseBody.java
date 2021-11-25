@@ -8,13 +8,13 @@ public class ListDataSourcesResponseBody extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<DataSourceItem> dataSources;
 
-    // 符合条件的数据源总数量
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 符合条件的数据源总数量
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListDataSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataSourcesResponseBody self = new ListDataSourcesResponseBody();
@@ -29,20 +29,20 @@ public class ListDataSourcesResponseBody extends TeaModel {
         return this.dataSources;
     }
 
-    public ListDataSourcesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListDataSourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDataSourcesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
 }
