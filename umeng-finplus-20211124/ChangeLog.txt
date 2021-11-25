@@ -1,3 +1,6 @@
+2021-11-25 Version: 1.0.2
+- Stagint test2.
+
 2021-11-25 Version: 1.0.1
 - Stagint test2.
 
