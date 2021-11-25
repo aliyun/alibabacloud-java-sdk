@@ -16,9 +16,13 @@ public class RecognizeEduPaperOcrRequest extends TeaModel {
     @NameInMap("Subject")
     public String subject;
 
-    // 图片链接（长度不超 1014，不支持 base64）
+    // 图片链接（长度不超 2048，不支持 base64）
     @NameInMap("Url")
     public String url;
+
+    // 图片二进制字节流，最大10MB
+    @NameInMap("body")
+    public java.io.InputStream body;
 
     public static RecognizeEduPaperOcrRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeEduPaperOcrRequest self = new RecognizeEduPaperOcrRequest();
@@ -55,6 +59,14 @@ public class RecognizeEduPaperOcrRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public RecognizeEduPaperOcrRequest setBody(java.io.InputStream body) {
+        this.body = body;
+        return this;
+    }
+    public java.io.InputStream getBody() {
+        return this.body;
     }
 
 }
