@@ -203,6 +203,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAutoLiveStreamRuleWithOptions(request, runtime);
     }
 
+    public DeleteChannelResponse deleteChannelWithOptions(DeleteChannelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("ChannelId", request.channelId);
+        query.put("OwnerId", request.ownerId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteChannel"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChannelResponse());
+    }
+
+    public DeleteChannelResponse deleteChannel(DeleteChannelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteChannelWithOptions(request, runtime);
+    }
+
     public DeleteEventSubscribeResponse deleteEventSubscribeWithOptions(DeleteEventSubscribeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -288,6 +317,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRecordTemplateResponse deleteRecordTemplate(DeleteRecordTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteRecordTemplateWithOptions(request, runtime);
+    }
+
+    public DescribeAppsResponse describeAppsWithOptions(DescribeAppsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("Order", request.order);
+        query.put("OwnerId", request.ownerId);
+        query.put("PageNum", request.pageNum);
+        query.put("PageSize", request.pageSize);
+        query.put("Status", request.status);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApps"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppsResponse());
+    }
+
+    public DescribeAppsResponse describeApps(DescribeAppsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAppsWithOptions(request, runtime);
     }
 
     public DescribeAutoLiveStreamRuleResponse describeAutoLiveStreamRuleWithOptions(DescribeAutoLiveStreamRuleRequest request, RuntimeOptions runtime) throws Exception {
@@ -593,6 +654,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMPUTaskStatusWithOptions(request, runtime);
     }
 
+    public ModifyAppResponse modifyAppWithOptions(ModifyAppRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AppId", request.appId);
+        query.put("AppName", request.appName);
+        query.put("OwnerId", request.ownerId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyApp"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyAppResponse());
+    }
+
+    public ModifyAppResponse modifyApp(ModifyAppRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyAppWithOptions(request, runtime);
+    }
+
     public ModifyMPULayoutResponse modifyMPULayoutWithOptions(ModifyMPULayoutRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -754,36 +844,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartRecordTaskResponse startRecordTask(StartRecordTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startRecordTaskWithOptions(request, runtime);
-    }
-
-    public StopChannelUserPublishResponse stopChannelUserPublishWithOptions(StopChannelUserPublishRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AppId", request.appId);
-        query.put("ChannelId", request.channelId);
-        query.put("OwnerId", request.ownerId);
-        query.put("UserId", request.userId);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StopChannelUserPublish"),
-            new TeaPair("version", "2018-01-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopChannelUserPublishResponse());
-    }
-
-    public StopChannelUserPublishResponse stopChannelUserPublish(StopChannelUserPublishRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.stopChannelUserPublishWithOptions(request, runtime);
     }
 
     public StopMPUTaskResponse stopMPUTaskWithOptions(StopMPUTaskRequest request, RuntimeOptions runtime) throws Exception {
