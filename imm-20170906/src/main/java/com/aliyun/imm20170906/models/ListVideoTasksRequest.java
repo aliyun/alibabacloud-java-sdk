@@ -4,14 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListVideoTasksRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
     @NameInMap("Marker")
     public String marker;
 
     @NameInMap("MaxKeys")
     public Integer maxKeys;
+
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -19,14 +19,6 @@ public class ListVideoTasksRequest extends TeaModel {
     public static ListVideoTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVideoTasksRequest self = new ListVideoTasksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListVideoTasksRequest setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
     }
 
     public ListVideoTasksRequest setMarker(String marker) {
@@ -43,6 +35,14 @@ public class ListVideoTasksRequest extends TeaModel {
     }
     public Integer getMaxKeys() {
         return this.maxKeys;
+    }
+
+    public ListVideoTasksRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
     public ListVideoTasksRequest setTaskType(String taskType) {

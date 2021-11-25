@@ -4,20 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectResponseBody extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CU")
     public Integer CU;
 
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("ServiceRole")
-    public String serviceRole;
+    @NameInMap("ModifyTime")
+    public String modifyTime;
 
     @NameInMap("Project")
     public String project;
@@ -25,28 +19,18 @@ public class UpdateProjectResponseBody extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ModifyTime")
-    public String modifyTime;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ServiceRole")
+    public String serviceRole;
+
+    @NameInMap("Type")
+    public String type;
 
     public static UpdateProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectResponseBody self = new UpdateProjectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateProjectResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public UpdateProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateProjectResponseBody setCU(Integer CU) {
@@ -65,12 +49,12 @@ public class UpdateProjectResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public UpdateProjectResponseBody setServiceRole(String serviceRole) {
-        this.serviceRole = serviceRole;
+    public UpdateProjectResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
         return this;
     }
-    public String getServiceRole() {
-        return this.serviceRole;
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public UpdateProjectResponseBody setProject(String project) {
@@ -89,12 +73,28 @@ public class UpdateProjectResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateProjectResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
+    public UpdateProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getModifyTime() {
-        return this.modifyTime;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateProjectResponseBody setServiceRole(String serviceRole) {
+        this.serviceRole = serviceRole;
+        return this;
+    }
+    public String getServiceRole() {
+        return this.serviceRole;
+    }
+
+    public UpdateProjectResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
+    @NameInMap("CroppingSuggestions")
+    public java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions;
+
     @NameInMap("ImageUri")
     public String imageUri;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CroppingSuggestions")
-    public java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions;
-
     public static GetImageCroppingSuggestionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageCroppingSuggestionsResponseBody self = new GetImageCroppingSuggestionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetImageCroppingSuggestionsResponseBody setCroppingSuggestions(java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions) {
+        this.croppingSuggestions = croppingSuggestions;
+        return this;
+    }
+    public java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> getCroppingSuggestions() {
+        return this.croppingSuggestions;
     }
 
     public GetImageCroppingSuggestionsResponseBody setImageUri(String imageUri) {
@@ -34,15 +42,10 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetImageCroppingSuggestionsResponseBody setCroppingSuggestions(java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions) {
-        this.croppingSuggestions = croppingSuggestions;
-        return this;
-    }
-    public java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> getCroppingSuggestions() {
-        return this.croppingSuggestions;
-    }
-
     public static class GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("Left")
         public Integer left;
 
@@ -52,12 +55,17 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
-
         public static GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary build(java.util.Map<String, ?> map) throws Exception {
             GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary self = new GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
         }
 
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setLeft(Integer left) {
@@ -84,37 +92,21 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
             return this.width;
         }
 
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
     }
 
     public static class GetImageCroppingSuggestionsResponseBodyCroppingSuggestions extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
-
         @NameInMap("AspectRatio")
         public String aspectRatio;
 
         @NameInMap("CroppingBoundary")
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary croppingBoundary;
 
+        @NameInMap("Score")
+        public Float score;
+
         public static GetImageCroppingSuggestionsResponseBodyCroppingSuggestions build(java.util.Map<String, ?> map) throws Exception {
             GetImageCroppingSuggestionsResponseBodyCroppingSuggestions self = new GetImageCroppingSuggestionsResponseBodyCroppingSuggestions();
             return TeaModel.build(map, self);
-        }
-
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setAspectRatio(String aspectRatio) {
@@ -131,6 +123,14 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
         }
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary getCroppingBoundary() {
             return this.croppingBoundary;
+        }
+
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }

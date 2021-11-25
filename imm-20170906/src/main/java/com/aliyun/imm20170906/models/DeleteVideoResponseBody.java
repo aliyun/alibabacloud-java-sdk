@@ -7,11 +7,11 @@ public class DeleteVideoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("VideoUri")
-    public String videoUri;
-
     @NameInMap("SetId")
     public String setId;
+
+    @NameInMap("VideoUri")
+    public String videoUri;
 
     public static DeleteVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteVideoResponseBody self = new DeleteVideoResponseBody();
@@ -26,20 +26,20 @@ public class DeleteVideoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteVideoResponseBody setVideoUri(String videoUri) {
-        this.videoUri = videoUri;
-        return this;
-    }
-    public String getVideoUri() {
-        return this.videoUri;
-    }
-
     public DeleteVideoResponseBody setSetId(String setId) {
         this.setId = setId;
         return this;
     }
     public String getSetId() {
         return this.setId;
+    }
+
+    public DeleteVideoResponseBody setVideoUri(String videoUri) {
+        this.videoUri = videoUri;
+        return this;
+    }
+    public String getVideoUri() {
+        return this.videoUri;
     }
 
 }

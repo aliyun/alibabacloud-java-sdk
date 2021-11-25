@@ -4,17 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeEditURLRequest extends TeaModel {
+    @NameInMap("FileID")
+    public String fileID;
+
+    @NameInMap("FileName")
+    public String fileName;
+
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
     @NameInMap("Project")
     public String project;
-
-    @NameInMap("SrcUri")
-    public String srcUri;
 
     @NameInMap("SrcType")
     public String srcType;
 
-    @NameInMap("FileID")
-    public String fileID;
+    @NameInMap("SrcUri")
+    public String srcUri;
 
     @NameInMap("TgtUri")
     public String tgtUri;
@@ -25,18 +34,41 @@ public class GetOfficeEditURLRequest extends TeaModel {
     @NameInMap("UserName")
     public String userName;
 
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    @NameInMap("NotifyTopicName")
-    public String notifyTopicName;
-
-    @NameInMap("FileName")
-    public String fileName;
-
     public static GetOfficeEditURLRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeEditURLRequest self = new GetOfficeEditURLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetOfficeEditURLRequest setFileID(String fileID) {
+        this.fileID = fileID;
+        return this;
+    }
+    public String getFileID() {
+        return this.fileID;
+    }
+
+    public GetOfficeEditURLRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public GetOfficeEditURLRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public GetOfficeEditURLRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
     }
 
     public GetOfficeEditURLRequest setProject(String project) {
@@ -47,14 +79,6 @@ public class GetOfficeEditURLRequest extends TeaModel {
         return this.project;
     }
 
-    public GetOfficeEditURLRequest setSrcUri(String srcUri) {
-        this.srcUri = srcUri;
-        return this;
-    }
-    public String getSrcUri() {
-        return this.srcUri;
-    }
-
     public GetOfficeEditURLRequest setSrcType(String srcType) {
         this.srcType = srcType;
         return this;
@@ -63,12 +87,12 @@ public class GetOfficeEditURLRequest extends TeaModel {
         return this.srcType;
     }
 
-    public GetOfficeEditURLRequest setFileID(String fileID) {
-        this.fileID = fileID;
+    public GetOfficeEditURLRequest setSrcUri(String srcUri) {
+        this.srcUri = srcUri;
         return this;
     }
-    public String getFileID() {
-        return this.fileID;
+    public String getSrcUri() {
+        return this.srcUri;
     }
 
     public GetOfficeEditURLRequest setTgtUri(String tgtUri) {
@@ -93,30 +117,6 @@ public class GetOfficeEditURLRequest extends TeaModel {
     }
     public String getUserName() {
         return this.userName;
-    }
-
-    public GetOfficeEditURLRequest setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
-    }
-
-    public GetOfficeEditURLRequest setNotifyTopicName(String notifyTopicName) {
-        this.notifyTopicName = notifyTopicName;
-        return this;
-    }
-    public String getNotifyTopicName() {
-        return this.notifyTopicName;
-    }
-
-    public GetOfficeEditURLRequest setFileName(String fileName) {
-        this.fileName = fileName;
-        return this;
-    }
-    public String getFileName() {
-        return this.fileName;
     }
 
 }

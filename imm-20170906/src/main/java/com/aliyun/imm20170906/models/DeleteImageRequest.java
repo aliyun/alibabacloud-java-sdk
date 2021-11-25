@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
+    @NameInMap("ImageUri")
+    public String imageUri;
+
     @NameInMap("Project")
     public String project;
 
     @NameInMap("SetId")
     public String setId;
 
-    @NameInMap("ImageUri")
-    public String imageUri;
-
     public static DeleteImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageRequest self = new DeleteImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImageRequest setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+        return this;
+    }
+    public String getImageUri() {
+        return this.imageUri;
     }
 
     public DeleteImageRequest setProject(String project) {
@@ -32,14 +40,6 @@ public class DeleteImageRequest extends TeaModel {
     }
     public String getSetId() {
         return this.setId;
-    }
-
-    public DeleteImageRequest setImageUri(String imageUri) {
-        this.imageUri = imageUri;
-        return this;
-    }
-    public String getImageUri() {
-        return this.imageUri;
     }
 
 }

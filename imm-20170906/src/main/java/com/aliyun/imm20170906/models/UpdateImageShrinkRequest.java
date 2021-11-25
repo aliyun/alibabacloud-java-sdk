@@ -4,38 +4,20 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageShrinkRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
+    @NameInMap("ExternalId")
+    public String externalId;
 
-    @NameInMap("SetId")
-    public String setId;
+    @NameInMap("Faces")
+    public String facesShrink;
 
     @NameInMap("ImageUri")
     public String imageUri;
 
+    @NameInMap("Project")
+    public String project;
+
     @NameInMap("RemarksA")
     public String remarksA;
-
-    @NameInMap("RemarksB")
-    public String remarksB;
-
-    @NameInMap("SourceType")
-    public String sourceType;
-
-    @NameInMap("SourceUri")
-    public String sourceUri;
-
-    @NameInMap("SourcePosition")
-    public String sourcePosition;
-
-    @NameInMap("RemarksC")
-    public String remarksC;
-
-    @NameInMap("RemarksD")
-    public String remarksD;
-
-    @NameInMap("ExternalId")
-    public String externalId;
 
     @NameInMap("RemarksArrayA")
     public String remarksArrayA;
@@ -43,28 +25,46 @@ public class UpdateImageShrinkRequest extends TeaModel {
     @NameInMap("RemarksArrayB")
     public String remarksArrayB;
 
-    @NameInMap("Faces")
-    public String facesShrink;
+    @NameInMap("RemarksB")
+    public String remarksB;
+
+    @NameInMap("RemarksC")
+    public String remarksC;
+
+    @NameInMap("RemarksD")
+    public String remarksD;
+
+    @NameInMap("SetId")
+    public String setId;
+
+    @NameInMap("SourcePosition")
+    public String sourcePosition;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
+    @NameInMap("SourceUri")
+    public String sourceUri;
 
     public static UpdateImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateImageShrinkRequest self = new UpdateImageShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateImageShrinkRequest setProject(String project) {
-        this.project = project;
+    public UpdateImageShrinkRequest setExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
-    public String getProject() {
-        return this.project;
+    public String getExternalId() {
+        return this.externalId;
     }
 
-    public UpdateImageShrinkRequest setSetId(String setId) {
-        this.setId = setId;
+    public UpdateImageShrinkRequest setFacesShrink(String facesShrink) {
+        this.facesShrink = facesShrink;
         return this;
     }
-    public String getSetId() {
-        return this.setId;
+    public String getFacesShrink() {
+        return this.facesShrink;
     }
 
     public UpdateImageShrinkRequest setImageUri(String imageUri) {
@@ -75,68 +75,20 @@ public class UpdateImageShrinkRequest extends TeaModel {
         return this.imageUri;
     }
 
+    public UpdateImageShrinkRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
+    }
+
     public UpdateImageShrinkRequest setRemarksA(String remarksA) {
         this.remarksA = remarksA;
         return this;
     }
     public String getRemarksA() {
         return this.remarksA;
-    }
-
-    public UpdateImageShrinkRequest setRemarksB(String remarksB) {
-        this.remarksB = remarksB;
-        return this;
-    }
-    public String getRemarksB() {
-        return this.remarksB;
-    }
-
-    public UpdateImageShrinkRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
-    public UpdateImageShrinkRequest setSourceUri(String sourceUri) {
-        this.sourceUri = sourceUri;
-        return this;
-    }
-    public String getSourceUri() {
-        return this.sourceUri;
-    }
-
-    public UpdateImageShrinkRequest setSourcePosition(String sourcePosition) {
-        this.sourcePosition = sourcePosition;
-        return this;
-    }
-    public String getSourcePosition() {
-        return this.sourcePosition;
-    }
-
-    public UpdateImageShrinkRequest setRemarksC(String remarksC) {
-        this.remarksC = remarksC;
-        return this;
-    }
-    public String getRemarksC() {
-        return this.remarksC;
-    }
-
-    public UpdateImageShrinkRequest setRemarksD(String remarksD) {
-        this.remarksD = remarksD;
-        return this;
-    }
-    public String getRemarksD() {
-        return this.remarksD;
-    }
-
-    public UpdateImageShrinkRequest setExternalId(String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-    public String getExternalId() {
-        return this.externalId;
     }
 
     public UpdateImageShrinkRequest setRemarksArrayA(String remarksArrayA) {
@@ -155,12 +107,60 @@ public class UpdateImageShrinkRequest extends TeaModel {
         return this.remarksArrayB;
     }
 
-    public UpdateImageShrinkRequest setFacesShrink(String facesShrink) {
-        this.facesShrink = facesShrink;
+    public UpdateImageShrinkRequest setRemarksB(String remarksB) {
+        this.remarksB = remarksB;
         return this;
     }
-    public String getFacesShrink() {
-        return this.facesShrink;
+    public String getRemarksB() {
+        return this.remarksB;
+    }
+
+    public UpdateImageShrinkRequest setRemarksC(String remarksC) {
+        this.remarksC = remarksC;
+        return this;
+    }
+    public String getRemarksC() {
+        return this.remarksC;
+    }
+
+    public UpdateImageShrinkRequest setRemarksD(String remarksD) {
+        this.remarksD = remarksD;
+        return this;
+    }
+    public String getRemarksD() {
+        return this.remarksD;
+    }
+
+    public UpdateImageShrinkRequest setSetId(String setId) {
+        this.setId = setId;
+        return this;
+    }
+    public String getSetId() {
+        return this.setId;
+    }
+
+    public UpdateImageShrinkRequest setSourcePosition(String sourcePosition) {
+        this.sourcePosition = sourcePosition;
+        return this;
+    }
+    public String getSourcePosition() {
+        return this.sourcePosition;
+    }
+
+    public UpdateImageShrinkRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public UpdateImageShrinkRequest setSourceUri(String sourceUri) {
+        this.sourceUri = sourceUri;
+        return this;
+    }
+    public String getSourceUri() {
+        return this.sourceUri;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DetectQRCodesResponseBody extends TeaModel {
+    @NameInMap("FailDetails")
+    public java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SuccessDetails")
     public java.util.List<DetectQRCodesResponseBodySuccessDetails> successDetails;
 
-    @NameInMap("FailDetails")
-    public java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails;
-
     public static DetectQRCodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectQRCodesResponseBody self = new DetectQRCodesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DetectQRCodesResponseBody setFailDetails(java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails) {
+        this.failDetails = failDetails;
+        return this;
+    }
+    public java.util.List<DetectQRCodesResponseBodyFailDetails> getFailDetails() {
+        return this.failDetails;
     }
 
     public DetectQRCodesResponseBody setRequestId(String requestId) {
@@ -34,15 +42,51 @@ public class DetectQRCodesResponseBody extends TeaModel {
         return this.successDetails;
     }
 
-    public DetectQRCodesResponseBody setFailDetails(java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails) {
-        this.failDetails = failDetails;
-        return this;
-    }
-    public java.util.List<DetectQRCodesResponseBodyFailDetails> getFailDetails() {
-        return this.failDetails;
+    public static class DetectQRCodesResponseBodyFailDetails extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("SrcUri")
+        public String srcUri;
+
+        public static DetectQRCodesResponseBodyFailDetails build(java.util.Map<String, ?> map) throws Exception {
+            DetectQRCodesResponseBodyFailDetails self = new DetectQRCodesResponseBodyFailDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectQRCodesResponseBodyFailDetails setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DetectQRCodesResponseBodyFailDetails setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DetectQRCodesResponseBodyFailDetails setSrcUri(String srcUri) {
+            this.srcUri = srcUri;
+            return this;
+        }
+        public String getSrcUri() {
+            return this.srcUri;
+        }
+
     }
 
     public static class DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle extends TeaModel {
+        @NameInMap("Height")
+        public String height;
+
         @NameInMap("Left")
         public String left;
 
@@ -52,12 +96,17 @@ public class DetectQRCodesResponseBody extends TeaModel {
         @NameInMap("Width")
         public String width;
 
-        @NameInMap("Height")
-        public String height;
-
         public static DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle build(java.util.Map<String, ?> map) throws Exception {
             DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle self = new DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle();
             return TeaModel.build(map, self);
+        }
+
+        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setHeight(String height) {
+            this.height = height;
+            return this;
+        }
+        public String getHeight() {
+            return this.height;
         }
 
         public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setLeft(String left) {
@@ -82,14 +131,6 @@ public class DetectQRCodesResponseBody extends TeaModel {
         }
         public String getWidth() {
             return this.width;
-        }
-
-        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
         }
 
     }
@@ -125,23 +166,15 @@ public class DetectQRCodesResponseBody extends TeaModel {
     }
 
     public static class DetectQRCodesResponseBodySuccessDetails extends TeaModel {
-        @NameInMap("SrcUri")
-        public String srcUri;
-
         @NameInMap("QRCodes")
         public java.util.List<DetectQRCodesResponseBodySuccessDetailsQRCodes> QRCodes;
+
+        @NameInMap("SrcUri")
+        public String srcUri;
 
         public static DetectQRCodesResponseBodySuccessDetails build(java.util.Map<String, ?> map) throws Exception {
             DetectQRCodesResponseBodySuccessDetails self = new DetectQRCodesResponseBodySuccessDetails();
             return TeaModel.build(map, self);
-        }
-
-        public DetectQRCodesResponseBodySuccessDetails setSrcUri(String srcUri) {
-            this.srcUri = srcUri;
-            return this;
-        }
-        public String getSrcUri() {
-            return this.srcUri;
         }
 
         public DetectQRCodesResponseBodySuccessDetails setQRCodes(java.util.List<DetectQRCodesResponseBodySuccessDetailsQRCodes> QRCodes) {
@@ -152,45 +185,12 @@ public class DetectQRCodesResponseBody extends TeaModel {
             return this.QRCodes;
         }
 
-    }
-
-    public static class DetectQRCodesResponseBodyFailDetails extends TeaModel {
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("SrcUri")
-        public String srcUri;
-
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        public static DetectQRCodesResponseBodyFailDetails build(java.util.Map<String, ?> map) throws Exception {
-            DetectQRCodesResponseBodyFailDetails self = new DetectQRCodesResponseBodyFailDetails();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectQRCodesResponseBodyFailDetails setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DetectQRCodesResponseBodyFailDetails setSrcUri(String srcUri) {
+        public DetectQRCodesResponseBodySuccessDetails setSrcUri(String srcUri) {
             this.srcUri = srcUri;
             return this;
         }
         public String getSrcUri() {
             return this.srcUri;
-        }
-
-        public DetectQRCodesResponseBodyFailDetails setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
     }

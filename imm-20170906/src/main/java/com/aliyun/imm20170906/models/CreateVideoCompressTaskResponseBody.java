@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoCompressTaskResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -18,20 +18,20 @@ public class CreateVideoCompressTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateVideoCompressTaskResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public CreateVideoCompressTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateVideoCompressTaskResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public CreateVideoCompressTaskResponseBody setTaskType(String taskType) {

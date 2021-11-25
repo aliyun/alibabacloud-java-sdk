@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetImageQualityResponseBody extends TeaModel {
+    @NameInMap("ImageQuality")
+    public GetImageQualityResponseBodyImageQuality imageQuality;
+
     @NameInMap("ImageUri")
     public String imageUri;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ImageQuality")
-    public GetImageQualityResponseBodyImageQuality imageQuality;
-
     public static GetImageQualityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageQualityResponseBody self = new GetImageQualityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetImageQualityResponseBody setImageQuality(GetImageQualityResponseBodyImageQuality imageQuality) {
+        this.imageQuality = imageQuality;
+        return this;
+    }
+    public GetImageQualityResponseBodyImageQuality getImageQuality() {
+        return this.imageQuality;
     }
 
     public GetImageQualityResponseBody setImageUri(String imageUri) {
@@ -34,17 +42,12 @@ public class GetImageQualityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetImageQualityResponseBody setImageQuality(GetImageQualityResponseBodyImageQuality imageQuality) {
-        this.imageQuality = imageQuality;
-        return this;
-    }
-    public GetImageQualityResponseBodyImageQuality getImageQuality() {
-        return this.imageQuality;
-    }
-
     public static class GetImageQualityResponseBodyImageQuality extends TeaModel {
-        @NameInMap("OverallScore")
-        public Float overallScore;
+        @NameInMap("Clarity")
+        public Float clarity;
+
+        @NameInMap("ClarityScore")
+        public Float clarityScore;
 
         @NameInMap("Color")
         public Float color;
@@ -52,38 +55,43 @@ public class GetImageQualityResponseBody extends TeaModel {
         @NameInMap("ColorScore")
         public Float colorScore;
 
-        @NameInMap("ContrastScore")
-        public Float contrastScore;
+        @NameInMap("CompositionScore")
+        public Float compositionScore;
 
         @NameInMap("Contrast")
         public Float contrast;
 
-        @NameInMap("ExposureScore")
-        public Float exposureScore;
-
-        @NameInMap("ClarityScore")
-        public Float clarityScore;
-
-        @NameInMap("Clarity")
-        public Float clarity;
+        @NameInMap("ContrastScore")
+        public Float contrastScore;
 
         @NameInMap("Exposure")
         public Float exposure;
 
-        @NameInMap("CompositionScore")
-        public Float compositionScore;
+        @NameInMap("ExposureScore")
+        public Float exposureScore;
+
+        @NameInMap("OverallScore")
+        public Float overallScore;
 
         public static GetImageQualityResponseBodyImageQuality build(java.util.Map<String, ?> map) throws Exception {
             GetImageQualityResponseBodyImageQuality self = new GetImageQualityResponseBodyImageQuality();
             return TeaModel.build(map, self);
         }
 
-        public GetImageQualityResponseBodyImageQuality setOverallScore(Float overallScore) {
-            this.overallScore = overallScore;
+        public GetImageQualityResponseBodyImageQuality setClarity(Float clarity) {
+            this.clarity = clarity;
             return this;
         }
-        public Float getOverallScore() {
-            return this.overallScore;
+        public Float getClarity() {
+            return this.clarity;
+        }
+
+        public GetImageQualityResponseBodyImageQuality setClarityScore(Float clarityScore) {
+            this.clarityScore = clarityScore;
+            return this;
+        }
+        public Float getClarityScore() {
+            return this.clarityScore;
         }
 
         public GetImageQualityResponseBodyImageQuality setColor(Float color) {
@@ -102,12 +110,12 @@ public class GetImageQualityResponseBody extends TeaModel {
             return this.colorScore;
         }
 
-        public GetImageQualityResponseBodyImageQuality setContrastScore(Float contrastScore) {
-            this.contrastScore = contrastScore;
+        public GetImageQualityResponseBodyImageQuality setCompositionScore(Float compositionScore) {
+            this.compositionScore = compositionScore;
             return this;
         }
-        public Float getContrastScore() {
-            return this.contrastScore;
+        public Float getCompositionScore() {
+            return this.compositionScore;
         }
 
         public GetImageQualityResponseBodyImageQuality setContrast(Float contrast) {
@@ -118,28 +126,12 @@ public class GetImageQualityResponseBody extends TeaModel {
             return this.contrast;
         }
 
-        public GetImageQualityResponseBodyImageQuality setExposureScore(Float exposureScore) {
-            this.exposureScore = exposureScore;
+        public GetImageQualityResponseBodyImageQuality setContrastScore(Float contrastScore) {
+            this.contrastScore = contrastScore;
             return this;
         }
-        public Float getExposureScore() {
-            return this.exposureScore;
-        }
-
-        public GetImageQualityResponseBodyImageQuality setClarityScore(Float clarityScore) {
-            this.clarityScore = clarityScore;
-            return this;
-        }
-        public Float getClarityScore() {
-            return this.clarityScore;
-        }
-
-        public GetImageQualityResponseBodyImageQuality setClarity(Float clarity) {
-            this.clarity = clarity;
-            return this;
-        }
-        public Float getClarity() {
-            return this.clarity;
+        public Float getContrastScore() {
+            return this.contrastScore;
         }
 
         public GetImageQualityResponseBodyImageQuality setExposure(Float exposure) {
@@ -150,12 +142,20 @@ public class GetImageQualityResponseBody extends TeaModel {
             return this.exposure;
         }
 
-        public GetImageQualityResponseBodyImageQuality setCompositionScore(Float compositionScore) {
-            this.compositionScore = compositionScore;
+        public GetImageQualityResponseBodyImageQuality setExposureScore(Float exposureScore) {
+            this.exposureScore = exposureScore;
             return this;
         }
-        public Float getCompositionScore() {
-            return this.compositionScore;
+        public Float getExposureScore() {
+            return this.exposureScore;
+        }
+
+        public GetImageQualityResponseBodyImageQuality setOverallScore(Float overallScore) {
+            this.overallScore = overallScore;
+            return this;
+        }
+        public Float getOverallScore() {
+            return this.overallScore;
         }
 
     }

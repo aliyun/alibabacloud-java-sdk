@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceGroupRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
+    @NameInMap("ExternalId")
+    public String externalId;
 
-    @NameInMap("SetId")
-    public String setId;
+    @NameInMap("GroupCoverFaceId")
+    public String groupCoverFaceId;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -16,11 +16,17 @@ public class UpdateFaceGroupRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
-    @NameInMap("GroupCoverFaceId")
-    public String groupCoverFaceId;
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("RemarksA")
     public String remarksA;
+
+    @NameInMap("RemarksArrayA")
+    public String remarksArrayA;
+
+    @NameInMap("RemarksArrayB")
+    public String remarksArrayB;
 
     @NameInMap("RemarksB")
     public String remarksB;
@@ -31,37 +37,31 @@ public class UpdateFaceGroupRequest extends TeaModel {
     @NameInMap("RemarksD")
     public String remarksD;
 
-    @NameInMap("RemarksArrayA")
-    public String remarksArrayA;
-
-    @NameInMap("RemarksArrayB")
-    public String remarksArrayB;
-
-    @NameInMap("ExternalId")
-    public String externalId;
-
     @NameInMap("ResetItems")
     public String resetItems;
+
+    @NameInMap("SetId")
+    public String setId;
 
     public static UpdateFaceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceGroupRequest self = new UpdateFaceGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFaceGroupRequest setProject(String project) {
-        this.project = project;
+    public UpdateFaceGroupRequest setExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
-    public String getProject() {
-        return this.project;
+    public String getExternalId() {
+        return this.externalId;
     }
 
-    public UpdateFaceGroupRequest setSetId(String setId) {
-        this.setId = setId;
+    public UpdateFaceGroupRequest setGroupCoverFaceId(String groupCoverFaceId) {
+        this.groupCoverFaceId = groupCoverFaceId;
         return this;
     }
-    public String getSetId() {
-        return this.setId;
+    public String getGroupCoverFaceId() {
+        return this.groupCoverFaceId;
     }
 
     public UpdateFaceGroupRequest setGroupId(String groupId) {
@@ -80,12 +80,12 @@ public class UpdateFaceGroupRequest extends TeaModel {
         return this.groupName;
     }
 
-    public UpdateFaceGroupRequest setGroupCoverFaceId(String groupCoverFaceId) {
-        this.groupCoverFaceId = groupCoverFaceId;
+    public UpdateFaceGroupRequest setProject(String project) {
+        this.project = project;
         return this;
     }
-    public String getGroupCoverFaceId() {
-        return this.groupCoverFaceId;
+    public String getProject() {
+        return this.project;
     }
 
     public UpdateFaceGroupRequest setRemarksA(String remarksA) {
@@ -94,6 +94,22 @@ public class UpdateFaceGroupRequest extends TeaModel {
     }
     public String getRemarksA() {
         return this.remarksA;
+    }
+
+    public UpdateFaceGroupRequest setRemarksArrayA(String remarksArrayA) {
+        this.remarksArrayA = remarksArrayA;
+        return this;
+    }
+    public String getRemarksArrayA() {
+        return this.remarksArrayA;
+    }
+
+    public UpdateFaceGroupRequest setRemarksArrayB(String remarksArrayB) {
+        this.remarksArrayB = remarksArrayB;
+        return this;
+    }
+    public String getRemarksArrayB() {
+        return this.remarksArrayB;
     }
 
     public UpdateFaceGroupRequest setRemarksB(String remarksB) {
@@ -120,36 +136,20 @@ public class UpdateFaceGroupRequest extends TeaModel {
         return this.remarksD;
     }
 
-    public UpdateFaceGroupRequest setRemarksArrayA(String remarksArrayA) {
-        this.remarksArrayA = remarksArrayA;
-        return this;
-    }
-    public String getRemarksArrayA() {
-        return this.remarksArrayA;
-    }
-
-    public UpdateFaceGroupRequest setRemarksArrayB(String remarksArrayB) {
-        this.remarksArrayB = remarksArrayB;
-        return this;
-    }
-    public String getRemarksArrayB() {
-        return this.remarksArrayB;
-    }
-
-    public UpdateFaceGroupRequest setExternalId(String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-    public String getExternalId() {
-        return this.externalId;
-    }
-
     public UpdateFaceGroupRequest setResetItems(String resetItems) {
         this.resetItems = resetItems;
         return this;
     }
     public String getResetItems() {
         return this.resetItems;
+    }
+
+    public UpdateFaceGroupRequest setSetId(String setId) {
+        this.setId = setId;
+        return this;
+    }
+    public String getSetId() {
+        return this.setId;
     }
 
 }

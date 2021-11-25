@@ -4,26 +4,18 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeConversionTaskRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
     @NameInMap("Marker")
     public String marker;
 
     @NameInMap("MaxKeys")
     public Integer maxKeys;
 
+    @NameInMap("Project")
+    public String project;
+
     public static ListOfficeConversionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOfficeConversionTaskRequest self = new ListOfficeConversionTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListOfficeConversionTaskRequest setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
     }
 
     public ListOfficeConversionTaskRequest setMarker(String marker) {
@@ -40,6 +32,14 @@ public class ListOfficeConversionTaskRequest extends TeaModel {
     }
     public Integer getMaxKeys() {
         return this.maxKeys;
+    }
+
+    public ListOfficeConversionTaskRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
 }

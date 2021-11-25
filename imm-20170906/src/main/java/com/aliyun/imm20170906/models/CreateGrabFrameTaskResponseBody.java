@@ -4,26 +4,18 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class CreateGrabFrameTaskResponseBody extends TeaModel {
-    @NameInMap("TaskType")
-    public String taskType;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TaskType")
+    public String taskType;
+
     public static CreateGrabFrameTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateGrabFrameTaskResponseBody self = new CreateGrabFrameTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGrabFrameTaskResponseBody setTaskType(String taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public String getTaskType() {
-        return this.taskType;
     }
 
     public CreateGrabFrameTaskResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class CreateGrabFrameTaskResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public CreateGrabFrameTaskResponseBody setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

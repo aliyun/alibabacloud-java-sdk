@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DetectImageFacesResponseBody extends TeaModel {
+    @NameInMap("Faces")
+    public java.util.List<DetectImageFacesResponseBodyFaces> faces;
+
     @NameInMap("ImageUri")
     public String imageUri;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Faces")
-    public java.util.List<DetectImageFacesResponseBodyFaces> faces;
-
     public static DetectImageFacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectImageFacesResponseBody self = new DetectImageFacesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DetectImageFacesResponseBody setFaces(java.util.List<DetectImageFacesResponseBodyFaces> faces) {
+        this.faces = faces;
+        return this;
+    }
+    public java.util.List<DetectImageFacesResponseBodyFaces> getFaces() {
+        return this.faces;
     }
 
     public DetectImageFacesResponseBody setImageUri(String imageUri) {
@@ -34,15 +42,95 @@ public class DetectImageFacesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DetectImageFacesResponseBody setFaces(java.util.List<DetectImageFacesResponseBodyFaces> faces) {
-        this.faces = faces;
-        return this;
-    }
-    public java.util.List<DetectImageFacesResponseBodyFaces> getFaces() {
-        return this.faces;
+    public static class DetectImageFacesResponseBodyFacesEmotionDetails extends TeaModel {
+        @NameInMap("ANGRY")
+        public Float ANGRY;
+
+        @NameInMap("CALM")
+        public Float CALM;
+
+        @NameInMap("DISGUSTED")
+        public Float DISGUSTED;
+
+        @NameInMap("HAPPY")
+        public Float HAPPY;
+
+        @NameInMap("SAD")
+        public Float SAD;
+
+        @NameInMap("SCARED")
+        public Float SCARED;
+
+        @NameInMap("SURPRISED")
+        public Float SURPRISED;
+
+        public static DetectImageFacesResponseBodyFacesEmotionDetails build(java.util.Map<String, ?> map) throws Exception {
+            DetectImageFacesResponseBodyFacesEmotionDetails self = new DetectImageFacesResponseBodyFacesEmotionDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setANGRY(Float ANGRY) {
+            this.ANGRY = ANGRY;
+            return this;
+        }
+        public Float getANGRY() {
+            return this.ANGRY;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setCALM(Float CALM) {
+            this.CALM = CALM;
+            return this;
+        }
+        public Float getCALM() {
+            return this.CALM;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setDISGUSTED(Float DISGUSTED) {
+            this.DISGUSTED = DISGUSTED;
+            return this;
+        }
+        public Float getDISGUSTED() {
+            return this.DISGUSTED;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setHAPPY(Float HAPPY) {
+            this.HAPPY = HAPPY;
+            return this;
+        }
+        public Float getHAPPY() {
+            return this.HAPPY;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setSAD(Float SAD) {
+            this.SAD = SAD;
+            return this;
+        }
+        public Float getSAD() {
+            return this.SAD;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setSCARED(Float SCARED) {
+            this.SCARED = SCARED;
+            return this;
+        }
+        public Float getSCARED() {
+            return this.SCARED;
+        }
+
+        public DetectImageFacesResponseBodyFacesEmotionDetails setSURPRISED(Float SURPRISED) {
+            this.SURPRISED = SURPRISED;
+            return this;
+        }
+        public Float getSURPRISED() {
+            return this.SURPRISED;
+        }
+
     }
 
     public static class DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("Left")
         public Integer left;
 
@@ -52,12 +140,17 @@ public class DetectImageFacesResponseBody extends TeaModel {
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
-
         public static DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
             DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary self = new DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
         }
 
         public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary setLeft(Integer left) {
@@ -82,14 +175,6 @@ public class DetectImageFacesResponseBody extends TeaModel {
         }
         public Integer getWidth() {
             return this.width;
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
         }
 
     }
@@ -136,73 +221,33 @@ public class DetectImageFacesResponseBody extends TeaModel {
     }
 
     public static class DetectImageFacesResponseBodyFacesFaceAttributes extends TeaModel {
-        @NameInMap("GlassesConfidence")
-        public Float glassesConfidence;
-
-        @NameInMap("Glasses")
-        public String glasses;
-
-        @NameInMap("Mask")
-        public String mask;
+        @NameInMap("Beard")
+        public String beard;
 
         @NameInMap("BeardConfidence")
         public Float beardConfidence;
 
-        @NameInMap("MaskConfidence")
-        public Float maskConfidence;
-
-        @NameInMap("Beard")
-        public String beard;
-
         @NameInMap("FaceBoundary")
         public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary;
+
+        @NameInMap("Glasses")
+        public String glasses;
+
+        @NameInMap("GlassesConfidence")
+        public Float glassesConfidence;
 
         @NameInMap("HeadPose")
         public DetectImageFacesResponseBodyFacesFaceAttributesHeadPose headPose;
 
+        @NameInMap("Mask")
+        public String mask;
+
+        @NameInMap("MaskConfidence")
+        public Float maskConfidence;
+
         public static DetectImageFacesResponseBodyFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
             DetectImageFacesResponseBodyFacesFaceAttributes self = new DetectImageFacesResponseBodyFacesFaceAttributes();
             return TeaModel.build(map, self);
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
-            this.glassesConfidence = glassesConfidence;
-            return this;
-        }
-        public Float getGlassesConfidence() {
-            return this.glassesConfidence;
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributes setGlasses(String glasses) {
-            this.glasses = glasses;
-            return this;
-        }
-        public String getGlasses() {
-            return this.glasses;
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributes setMask(String mask) {
-            this.mask = mask;
-            return this;
-        }
-        public String getMask() {
-            return this.mask;
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
-            this.beardConfidence = beardConfidence;
-            return this;
-        }
-        public Float getBeardConfidence() {
-            return this.beardConfidence;
-        }
-
-        public DetectImageFacesResponseBodyFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
-            this.maskConfidence = maskConfidence;
-            return this;
-        }
-        public Float getMaskConfidence() {
-            return this.maskConfidence;
         }
 
         public DetectImageFacesResponseBodyFacesFaceAttributes setBeard(String beard) {
@@ -213,12 +258,36 @@ public class DetectImageFacesResponseBody extends TeaModel {
             return this.beard;
         }
 
+        public DetectImageFacesResponseBodyFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
+            this.beardConfidence = beardConfidence;
+            return this;
+        }
+        public Float getBeardConfidence() {
+            return this.beardConfidence;
+        }
+
         public DetectImageFacesResponseBodyFacesFaceAttributes setFaceBoundary(DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary) {
             this.faceBoundary = faceBoundary;
             return this;
         }
         public DetectImageFacesResponseBodyFacesFaceAttributesFaceBoundary getFaceBoundary() {
             return this.faceBoundary;
+        }
+
+        public DetectImageFacesResponseBodyFacesFaceAttributes setGlasses(String glasses) {
+            this.glasses = glasses;
+            return this;
+        }
+        public String getGlasses() {
+            return this.glasses;
+        }
+
+        public DetectImageFacesResponseBodyFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
+            this.glassesConfidence = glassesConfidence;
+            return this;
+        }
+        public Float getGlassesConfidence() {
+            return this.glassesConfidence;
         }
 
         public DetectImageFacesResponseBodyFacesFaceAttributes setHeadPose(DetectImageFacesResponseBodyFacesFaceAttributesHeadPose headPose) {
@@ -229,96 +298,30 @@ public class DetectImageFacesResponseBody extends TeaModel {
             return this.headPose;
         }
 
-    }
-
-    public static class DetectImageFacesResponseBodyFacesEmotionDetails extends TeaModel {
-        @NameInMap("HAPPY")
-        public Float HAPPY;
-
-        @NameInMap("CALM")
-        public Float CALM;
-
-        @NameInMap("SURPRISED")
-        public Float SURPRISED;
-
-        @NameInMap("DISGUSTED")
-        public Float DISGUSTED;
-
-        @NameInMap("ANGRY")
-        public Float ANGRY;
-
-        @NameInMap("SAD")
-        public Float SAD;
-
-        @NameInMap("SCARED")
-        public Float SCARED;
-
-        public static DetectImageFacesResponseBodyFacesEmotionDetails build(java.util.Map<String, ?> map) throws Exception {
-            DetectImageFacesResponseBodyFacesEmotionDetails self = new DetectImageFacesResponseBodyFacesEmotionDetails();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setHAPPY(Float HAPPY) {
-            this.HAPPY = HAPPY;
+        public DetectImageFacesResponseBodyFacesFaceAttributes setMask(String mask) {
+            this.mask = mask;
             return this;
         }
-        public Float getHAPPY() {
-            return this.HAPPY;
+        public String getMask() {
+            return this.mask;
         }
 
-        public DetectImageFacesResponseBodyFacesEmotionDetails setCALM(Float CALM) {
-            this.CALM = CALM;
+        public DetectImageFacesResponseBodyFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
+            this.maskConfidence = maskConfidence;
             return this;
         }
-        public Float getCALM() {
-            return this.CALM;
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setSURPRISED(Float SURPRISED) {
-            this.SURPRISED = SURPRISED;
-            return this;
-        }
-        public Float getSURPRISED() {
-            return this.SURPRISED;
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setDISGUSTED(Float DISGUSTED) {
-            this.DISGUSTED = DISGUSTED;
-            return this;
-        }
-        public Float getDISGUSTED() {
-            return this.DISGUSTED;
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setANGRY(Float ANGRY) {
-            this.ANGRY = ANGRY;
-            return this;
-        }
-        public Float getANGRY() {
-            return this.ANGRY;
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setSAD(Float SAD) {
-            this.SAD = SAD;
-            return this;
-        }
-        public Float getSAD() {
-            return this.SAD;
-        }
-
-        public DetectImageFacesResponseBodyFacesEmotionDetails setSCARED(Float SCARED) {
-            this.SCARED = SCARED;
-            return this;
-        }
-        public Float getSCARED() {
-            return this.SCARED;
+        public Float getMaskConfidence() {
+            return this.maskConfidence;
         }
 
     }
 
     public static class DetectImageFacesResponseBodyFaces extends TeaModel {
-        @NameInMap("EmotionConfidence")
-        public Float emotionConfidence;
+        @NameInMap("Age")
+        public Integer age;
+
+        @NameInMap("AgeConfidence")
+        public Float ageConfidence;
 
         @NameInMap("Attractive")
         public Float attractive;
@@ -326,14 +329,20 @@ public class DetectImageFacesResponseBody extends TeaModel {
         @NameInMap("AttractiveConfidence")
         public Float attractiveConfidence;
 
-        @NameInMap("Gender")
-        public String gender;
+        @NameInMap("Emotion")
+        public String emotion;
 
-        @NameInMap("AgeConfidence")
-        public Float ageConfidence;
+        @NameInMap("EmotionConfidence")
+        public Float emotionConfidence;
 
-        @NameInMap("GenderConfidence")
-        public Float genderConfidence;
+        @NameInMap("EmotionDetails")
+        public DetectImageFacesResponseBodyFacesEmotionDetails emotionDetails;
+
+        @NameInMap("FaceAttributes")
+        public DetectImageFacesResponseBodyFacesFaceAttributes faceAttributes;
+
+        @NameInMap("FaceConfidence")
+        public Float faceConfidence;
 
         @NameInMap("FaceId")
         public String faceId;
@@ -341,32 +350,31 @@ public class DetectImageFacesResponseBody extends TeaModel {
         @NameInMap("FaceQuality")
         public Float faceQuality;
 
-        @NameInMap("Emotion")
-        public String emotion;
+        @NameInMap("Gender")
+        public String gender;
 
-        @NameInMap("Age")
-        public Integer age;
-
-        @NameInMap("FaceConfidence")
-        public Float faceConfidence;
-
-        @NameInMap("FaceAttributes")
-        public DetectImageFacesResponseBodyFacesFaceAttributes faceAttributes;
-
-        @NameInMap("EmotionDetails")
-        public DetectImageFacesResponseBodyFacesEmotionDetails emotionDetails;
+        @NameInMap("GenderConfidence")
+        public Float genderConfidence;
 
         public static DetectImageFacesResponseBodyFaces build(java.util.Map<String, ?> map) throws Exception {
             DetectImageFacesResponseBodyFaces self = new DetectImageFacesResponseBodyFaces();
             return TeaModel.build(map, self);
         }
 
-        public DetectImageFacesResponseBodyFaces setEmotionConfidence(Float emotionConfidence) {
-            this.emotionConfidence = emotionConfidence;
+        public DetectImageFacesResponseBodyFaces setAge(Integer age) {
+            this.age = age;
             return this;
         }
-        public Float getEmotionConfidence() {
-            return this.emotionConfidence;
+        public Integer getAge() {
+            return this.age;
+        }
+
+        public DetectImageFacesResponseBodyFaces setAgeConfidence(Float ageConfidence) {
+            this.ageConfidence = ageConfidence;
+            return this;
+        }
+        public Float getAgeConfidence() {
+            return this.ageConfidence;
         }
 
         public DetectImageFacesResponseBodyFaces setAttractive(Float attractive) {
@@ -385,28 +393,44 @@ public class DetectImageFacesResponseBody extends TeaModel {
             return this.attractiveConfidence;
         }
 
-        public DetectImageFacesResponseBodyFaces setGender(String gender) {
-            this.gender = gender;
+        public DetectImageFacesResponseBodyFaces setEmotion(String emotion) {
+            this.emotion = emotion;
             return this;
         }
-        public String getGender() {
-            return this.gender;
+        public String getEmotion() {
+            return this.emotion;
         }
 
-        public DetectImageFacesResponseBodyFaces setAgeConfidence(Float ageConfidence) {
-            this.ageConfidence = ageConfidence;
+        public DetectImageFacesResponseBodyFaces setEmotionConfidence(Float emotionConfidence) {
+            this.emotionConfidence = emotionConfidence;
             return this;
         }
-        public Float getAgeConfidence() {
-            return this.ageConfidence;
+        public Float getEmotionConfidence() {
+            return this.emotionConfidence;
         }
 
-        public DetectImageFacesResponseBodyFaces setGenderConfidence(Float genderConfidence) {
-            this.genderConfidence = genderConfidence;
+        public DetectImageFacesResponseBodyFaces setEmotionDetails(DetectImageFacesResponseBodyFacesEmotionDetails emotionDetails) {
+            this.emotionDetails = emotionDetails;
             return this;
         }
-        public Float getGenderConfidence() {
-            return this.genderConfidence;
+        public DetectImageFacesResponseBodyFacesEmotionDetails getEmotionDetails() {
+            return this.emotionDetails;
+        }
+
+        public DetectImageFacesResponseBodyFaces setFaceAttributes(DetectImageFacesResponseBodyFacesFaceAttributes faceAttributes) {
+            this.faceAttributes = faceAttributes;
+            return this;
+        }
+        public DetectImageFacesResponseBodyFacesFaceAttributes getFaceAttributes() {
+            return this.faceAttributes;
+        }
+
+        public DetectImageFacesResponseBodyFaces setFaceConfidence(Float faceConfidence) {
+            this.faceConfidence = faceConfidence;
+            return this;
+        }
+        public Float getFaceConfidence() {
+            return this.faceConfidence;
         }
 
         public DetectImageFacesResponseBodyFaces setFaceId(String faceId) {
@@ -425,44 +449,20 @@ public class DetectImageFacesResponseBody extends TeaModel {
             return this.faceQuality;
         }
 
-        public DetectImageFacesResponseBodyFaces setEmotion(String emotion) {
-            this.emotion = emotion;
+        public DetectImageFacesResponseBodyFaces setGender(String gender) {
+            this.gender = gender;
             return this;
         }
-        public String getEmotion() {
-            return this.emotion;
+        public String getGender() {
+            return this.gender;
         }
 
-        public DetectImageFacesResponseBodyFaces setAge(Integer age) {
-            this.age = age;
+        public DetectImageFacesResponseBodyFaces setGenderConfidence(Float genderConfidence) {
+            this.genderConfidence = genderConfidence;
             return this;
         }
-        public Integer getAge() {
-            return this.age;
-        }
-
-        public DetectImageFacesResponseBodyFaces setFaceConfidence(Float faceConfidence) {
-            this.faceConfidence = faceConfidence;
-            return this;
-        }
-        public Float getFaceConfidence() {
-            return this.faceConfidence;
-        }
-
-        public DetectImageFacesResponseBodyFaces setFaceAttributes(DetectImageFacesResponseBodyFacesFaceAttributes faceAttributes) {
-            this.faceAttributes = faceAttributes;
-            return this;
-        }
-        public DetectImageFacesResponseBodyFacesFaceAttributes getFaceAttributes() {
-            return this.faceAttributes;
-        }
-
-        public DetectImageFacesResponseBodyFaces setEmotionDetails(DetectImageFacesResponseBodyFacesEmotionDetails emotionDetails) {
-            this.emotionDetails = emotionDetails;
-            return this;
-        }
-        public DetectImageFacesResponseBodyFacesEmotionDetails getEmotionDetails() {
-            return this.emotionDetails;
+        public Float getGenderConfidence() {
+            return this.genderConfidence;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenRequest extends TeaModel {
-    @NameInMap("Project")
-    public String project;
-
     @NameInMap("AccessToken")
     public String accessToken;
+
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("RefreshToken")
     public String refreshToken;
@@ -18,20 +18,20 @@ public class RefreshWebofficeTokenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RefreshWebofficeTokenRequest setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
-    }
-
     public RefreshWebofficeTokenRequest setAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public RefreshWebofficeTokenRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
     public RefreshWebofficeTokenRequest setRefreshToken(String refreshToken) {
