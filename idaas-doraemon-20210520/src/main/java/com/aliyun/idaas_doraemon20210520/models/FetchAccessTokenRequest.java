@@ -16,6 +16,9 @@ public class FetchAccessTokenRequest extends TeaModel {
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
+    @NameInMap("UserId")
+    public String userId;
+
     @NameInMap("XClientIp")
     public String XClientIp;
 
@@ -54,6 +57,14 @@ public class FetchAccessTokenRequest extends TeaModel {
     }
     public String getServerExtendParamsJson() {
         return this.serverExtendParamsJson;
+    }
+
+    public FetchAccessTokenRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public FetchAccessTokenRequest setXClientIp(String XClientIp) {
