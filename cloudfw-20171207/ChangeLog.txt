@@ -1,3 +1,6 @@
+2021-11-26 Version: 1.8.1
+- New SDK.
+
 2021-11-09 Version: 1.8.0
 - New SDK.
 

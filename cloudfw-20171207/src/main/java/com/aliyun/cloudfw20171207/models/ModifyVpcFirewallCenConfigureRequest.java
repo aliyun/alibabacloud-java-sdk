@@ -10,9 +10,6 @@ public class ModifyVpcFirewallCenConfigureRequest extends TeaModel {
     @NameInMap("MemberUid")
     public String memberUid;
 
-    @NameInMap("VpcCidrTableList")
-    public String vpcCidrTableList;
-
     @NameInMap("VpcFirewallId")
     public String vpcFirewallId;
 
@@ -38,14 +35,6 @@ public class ModifyVpcFirewallCenConfigureRequest extends TeaModel {
     }
     public String getMemberUid() {
         return this.memberUid;
-    }
-
-    public ModifyVpcFirewallCenConfigureRequest setVpcCidrTableList(String vpcCidrTableList) {
-        this.vpcCidrTableList = vpcCidrTableList;
-        return this;
-    }
-    public String getVpcCidrTableList() {
-        return this.vpcCidrTableList;
     }
 
     public ModifyVpcFirewallCenConfigureRequest setVpcFirewallId(String vpcFirewallId) {
