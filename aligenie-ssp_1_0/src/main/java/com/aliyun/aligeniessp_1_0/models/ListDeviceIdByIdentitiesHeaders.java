@@ -3,7 +3,7 @@ package com.aliyun.aligeniessp_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeviceIdByIdentitysHeaders extends TeaModel {
+public class ListDeviceIdByIdentitiesHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -13,12 +13,12 @@ public class ListDeviceIdByIdentitysHeaders extends TeaModel {
     @NameInMap("Authorization")
     public String authorization;
 
-    public static ListDeviceIdByIdentitysHeaders build(java.util.Map<String, ?> map) throws Exception {
-        ListDeviceIdByIdentitysHeaders self = new ListDeviceIdByIdentitysHeaders();
+    public static ListDeviceIdByIdentitiesHeaders build(java.util.Map<String, ?> map) throws Exception {
+        ListDeviceIdByIdentitiesHeaders self = new ListDeviceIdByIdentitiesHeaders();
         return TeaModel.build(map, self);
     }
 
-    public ListDeviceIdByIdentitysHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public ListDeviceIdByIdentitiesHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListDeviceIdByIdentitysHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public ListDeviceIdByIdentitysHeaders setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
+    public ListDeviceIdByIdentitiesHeaders setXAcsAligenieAccessToken(String xAcsAligenieAccessToken) {
         this.xAcsAligenieAccessToken = xAcsAligenieAccessToken;
         return this;
     }
@@ -34,7 +34,7 @@ public class ListDeviceIdByIdentitysHeaders extends TeaModel {
         return this.xAcsAligenieAccessToken;
     }
 
-    public ListDeviceIdByIdentitysHeaders setAuthorization(String authorization) {
+    public ListDeviceIdByIdentitiesHeaders setAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }

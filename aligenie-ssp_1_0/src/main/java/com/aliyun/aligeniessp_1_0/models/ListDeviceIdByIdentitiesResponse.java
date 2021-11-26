@@ -3,21 +3,21 @@ package com.aliyun.aligeniessp_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeviceIdByIdentitysResponse extends TeaModel {
+public class ListDeviceIdByIdentitiesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListDeviceIdByIdentitysResponseBody body;
+    public ListDeviceIdByIdentitiesResponseBody body;
 
-    public static ListDeviceIdByIdentitysResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListDeviceIdByIdentitysResponse self = new ListDeviceIdByIdentitysResponse();
+    public static ListDeviceIdByIdentitiesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDeviceIdByIdentitiesResponse self = new ListDeviceIdByIdentitiesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListDeviceIdByIdentitysResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDeviceIdByIdentitiesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListDeviceIdByIdentitysResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListDeviceIdByIdentitysResponse setBody(ListDeviceIdByIdentitysResponseBody body) {
+    public ListDeviceIdByIdentitiesResponse setBody(ListDeviceIdByIdentitiesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListDeviceIdByIdentitysResponseBody getBody() {
+    public ListDeviceIdByIdentitiesResponseBody getBody() {
         return this.body;
     }
 

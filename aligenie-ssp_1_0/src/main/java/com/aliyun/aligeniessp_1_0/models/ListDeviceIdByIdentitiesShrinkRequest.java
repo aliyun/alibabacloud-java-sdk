@@ -3,7 +3,7 @@ package com.aliyun.aligeniessp_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeviceIdByIdentitysRequest extends TeaModel {
+public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
     // 编码类型对应的值，此处填写天猫精灵AI平台中，该产品ProductKey所在项目的Project ID。
     @NameInMap("EncodeKey")
     public String encodeKey;
@@ -13,7 +13,7 @@ public class ListDeviceIdByIdentitysRequest extends TeaModel {
     public String encodeType;
 
     @NameInMap("IdentityIds")
-    public java.util.List<String> identityIds;
+    public String identityIdsShrink;
 
     // 填写设备认证类型，“MAC”或者“SN”
     @NameInMap("IdentityType")
@@ -23,12 +23,12 @@ public class ListDeviceIdByIdentitysRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    public static ListDeviceIdByIdentitysRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDeviceIdByIdentitysRequest self = new ListDeviceIdByIdentitysRequest();
+    public static ListDeviceIdByIdentitiesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDeviceIdByIdentitiesShrinkRequest self = new ListDeviceIdByIdentitiesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDeviceIdByIdentitysRequest setEncodeKey(String encodeKey) {
+    public ListDeviceIdByIdentitiesShrinkRequest setEncodeKey(String encodeKey) {
         this.encodeKey = encodeKey;
         return this;
     }
@@ -36,7 +36,7 @@ public class ListDeviceIdByIdentitysRequest extends TeaModel {
         return this.encodeKey;
     }
 
-    public ListDeviceIdByIdentitysRequest setEncodeType(String encodeType) {
+    public ListDeviceIdByIdentitiesShrinkRequest setEncodeType(String encodeType) {
         this.encodeType = encodeType;
         return this;
     }
@@ -44,15 +44,15 @@ public class ListDeviceIdByIdentitysRequest extends TeaModel {
         return this.encodeType;
     }
 
-    public ListDeviceIdByIdentitysRequest setIdentityIds(java.util.List<String> identityIds) {
-        this.identityIds = identityIds;
+    public ListDeviceIdByIdentitiesShrinkRequest setIdentityIdsShrink(String identityIdsShrink) {
+        this.identityIdsShrink = identityIdsShrink;
         return this;
     }
-    public java.util.List<String> getIdentityIds() {
-        return this.identityIds;
+    public String getIdentityIdsShrink() {
+        return this.identityIdsShrink;
     }
 
-    public ListDeviceIdByIdentitysRequest setIdentityType(String identityType) {
+    public ListDeviceIdByIdentitiesShrinkRequest setIdentityType(String identityType) {
         this.identityType = identityType;
         return this;
     }
@@ -60,7 +60,7 @@ public class ListDeviceIdByIdentitysRequest extends TeaModel {
         return this.identityType;
     }
 
-    public ListDeviceIdByIdentitysRequest setProductKey(String productKey) {
+    public ListDeviceIdByIdentitiesShrinkRequest setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
     }
