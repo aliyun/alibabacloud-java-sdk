@@ -33,6 +33,47 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAllPublicMediaTagsResponseBodyMediaTagListOptions extends TeaModel {
+        @NameInMap("OptionChineseName")
+        public String optionChineseName;
+
+        @NameInMap("OptionEnglishName")
+        public String optionEnglishName;
+
+        @NameInMap("OptionId")
+        public String optionId;
+
+        public static ListAllPublicMediaTagsResponseBodyMediaTagListOptions build(java.util.Map<String, ?> map) throws Exception {
+            ListAllPublicMediaTagsResponseBodyMediaTagListOptions self = new ListAllPublicMediaTagsResponseBodyMediaTagListOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagListOptions setOptionChineseName(String optionChineseName) {
+            this.optionChineseName = optionChineseName;
+            return this;
+        }
+        public String getOptionChineseName() {
+            return this.optionChineseName;
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagListOptions setOptionEnglishName(String optionEnglishName) {
+            this.optionEnglishName = optionEnglishName;
+            return this;
+        }
+        public String getOptionEnglishName() {
+            return this.optionEnglishName;
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagListOptions setOptionId(String optionId) {
+            this.optionId = optionId;
+            return this;
+        }
+        public String getOptionId() {
+            return this.optionId;
+        }
+
+    }
+
     public static class ListAllPublicMediaTagsResponseBodyMediaTagList extends TeaModel {
         // 素材标签id
         @NameInMap("MediaTagId")
@@ -45,6 +86,9 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         // 素材标签英文名
         @NameInMap("MediaTagNameEnglish")
         public String mediaTagNameEnglish;
+
+        @NameInMap("Options")
+        public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagListOptions> options;
 
         public static ListAllPublicMediaTagsResponseBodyMediaTagList build(java.util.Map<String, ?> map) throws Exception {
             ListAllPublicMediaTagsResponseBodyMediaTagList self = new ListAllPublicMediaTagsResponseBodyMediaTagList();
@@ -73,6 +117,14 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         }
         public String getMediaTagNameEnglish() {
             return this.mediaTagNameEnglish;
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagList setOptions(java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagListOptions> options) {
+            this.options = options;
+            return this;
+        }
+        public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagListOptions> getOptions() {
+            return this.options;
         }
 
     }

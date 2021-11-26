@@ -4,39 +4,33 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSmartHandleJobResponseBody extends TeaModel {
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
+    // 任务Id
     @NameInMap("JobId")
     public String jobId;
 
+    // 任务结果
     @NameInMap("Output")
     public String output;
 
-    // Id of the request
+    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
+    // 智能任务信息
     @NameInMap("SmartJobInfo")
     public GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo;
 
+    // 任务状态
     @NameInMap("State")
     public String state;
 
+    // 用户自定义信息
     @NameInMap("UserData")
     public String userData;
 
     public static GetSmartHandleJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmartHandleJobResponseBody self = new GetSmartHandleJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSmartHandleJobResponseBody setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
     }
 
     public GetSmartHandleJobResponseBody setJobId(String jobId) {
@@ -88,11 +82,9 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoInputConfig extends TeaModel {
+        // OSS地址 或 内容库素材ID
         @NameInMap("InputFile")
         public String inputFile;
-
-        @NameInMap("JobParameters")
-        public String jobParameters;
 
         public static GetSmartHandleJobResponseBodySmartJobInfoInputConfig build(java.util.Map<String, ?> map) throws Exception {
             GetSmartHandleJobResponseBodySmartJobInfoInputConfig self = new GetSmartHandleJobResponseBodySmartJobInfoInputConfig();
@@ -107,20 +99,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.inputFile;
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfoInputConfig setJobParameters(String jobParameters) {
-            this.jobParameters = jobParameters;
-            return this;
-        }
-        public String getJobParameters() {
-            return this.jobParameters;
-        }
-
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig extends TeaModel {
+        // OSS Bucket
         @NameInMap("Bucket")
         public String bucket;
 
+        // OSS Object
         @NameInMap("Object")
         public String object;
 
@@ -148,30 +134,35 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfo extends TeaModel {
+        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 任务描述
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("EditingConfig")
-        public String editingConfig;
-
+        // 输入参数
         @NameInMap("InputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoInputConfig inputConfig;
 
+        // 任务类型
         @NameInMap("JobType")
         public String jobType;
 
+        // 修改时间
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        // 输出配置
         @NameInMap("OutputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig;
 
+        // 任务标题
         @NameInMap("Title")
         public String title;
 
+        // userid
         @NameInMap("UserId")
         public String userId;
 
@@ -194,14 +185,6 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetSmartHandleJobResponseBodySmartJobInfo setEditingConfig(String editingConfig) {
-            this.editingConfig = editingConfig;
-            return this;
-        }
-        public String getEditingConfig() {
-            return this.editingConfig;
         }
 
         public GetSmartHandleJobResponseBodySmartJobInfo setInputConfig(GetSmartHandleJobResponseBodySmartJobInfoInputConfig inputConfig) {

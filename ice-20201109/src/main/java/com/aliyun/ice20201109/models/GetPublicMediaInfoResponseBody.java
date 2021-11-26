@@ -3,28 +3,28 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class GetMediaInfoResponseBody extends TeaModel {
+public class GetPublicMediaInfoResponseBody extends TeaModel {
     @NameInMap("MediaInfo")
-    public GetMediaInfoResponseBodyMediaInfo mediaInfo;
+    public GetPublicMediaInfoResponseBodyMediaInfo mediaInfo;
 
     // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetMediaInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetMediaInfoResponseBody self = new GetMediaInfoResponseBody();
+    public static GetPublicMediaInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetPublicMediaInfoResponseBody self = new GetPublicMediaInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMediaInfoResponseBody setMediaInfo(GetMediaInfoResponseBodyMediaInfo mediaInfo) {
+    public GetPublicMediaInfoResponseBody setMediaInfo(GetPublicMediaInfoResponseBodyMediaInfo mediaInfo) {
         this.mediaInfo = mediaInfo;
         return this;
     }
-    public GetMediaInfoResponseBodyMediaInfo getMediaInfo() {
+    public GetPublicMediaInfoResponseBodyMediaInfo getMediaInfo() {
         return this.mediaInfo;
     }
 
-    public GetMediaInfoResponseBody setRequestId(String requestId) {
+    public GetPublicMediaInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -32,39 +32,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataList extends TeaModel {
-        // AI原始结果
-        @NameInMap("Result")
-        public String result;
-
-        // AI类型
-        @NameInMap("Type")
-        public String type;
-
-        public static GetMediaInfoResponseBodyMediaInfoAiRoughDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoAiRoughDataList self = new GetMediaInfoResponseBodyMediaInfoAiRoughDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoAiRoughDataList setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoAiRoughDataList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class GetMediaInfoResponseBodyMediaInfoDynamicMetaData extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData extends TeaModel {
         // 元数据json
         @NameInMap("Data")
         public String data;
@@ -73,12 +41,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static GetMediaInfoResponseBodyMediaInfoDynamicMetaData build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoDynamicMetaData self = new GetMediaInfoResponseBodyMediaInfoDynamicMetaData();
+        public static GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData self = new GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData setData(String data) {
+        public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData setData(String data) {
             this.data = data;
             return this;
         }
@@ -86,7 +54,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData setType(String type) {
+        public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData setType(String type) {
             this.type = type;
             return this;
         }
@@ -96,7 +64,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
         // 码率
         @NameInMap("Bitrate")
         public String bitrate;
@@ -169,12 +137,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Timebase")
         public String timebase;
 
-        public static GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList self = new GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList();
+        public static GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList self = new GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setBitrate(String bitrate) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -182,7 +150,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setChannelLayout(String channelLayout) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setChannelLayout(String channelLayout) {
             this.channelLayout = channelLayout;
             return this;
         }
@@ -190,7 +158,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.channelLayout;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setChannels(String channels) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setChannels(String channels) {
             this.channels = channels;
             return this;
         }
@@ -198,7 +166,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.channels;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecLongName(String codecLongName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
             return this;
         }
@@ -206,7 +174,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecLongName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecName(String codecName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecName(String codecName) {
             this.codecName = codecName;
             return this;
         }
@@ -214,7 +182,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTag(String codecTag) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTag(String codecTag) {
             this.codecTag = codecTag;
             return this;
         }
@@ -222,7 +190,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTag;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTagString(String codecTagString) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
             return this;
         }
@@ -230,7 +198,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTagString;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTimeBase(String codecTimeBase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setCodecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
             return this;
         }
@@ -238,7 +206,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTimeBase;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setDuration(String duration) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setDuration(String duration) {
             this.duration = duration;
             return this;
         }
@@ -246,7 +214,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setFps(String fps) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setFps(String fps) {
             this.fps = fps;
             return this;
         }
@@ -254,7 +222,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fps;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setIndex(String index) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setIndex(String index) {
             this.index = index;
             return this;
         }
@@ -262,7 +230,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.index;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setLang(String lang) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setLang(String lang) {
             this.lang = lang;
             return this;
         }
@@ -270,7 +238,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.lang;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setNumFrames(String numFrames) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setNumFrames(String numFrames) {
             this.numFrames = numFrames;
             return this;
         }
@@ -278,7 +246,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.numFrames;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setProfile(String profile) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setProfile(String profile) {
             this.profile = profile;
             return this;
         }
@@ -286,7 +254,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.profile;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setSampleFmt(String sampleFmt) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setSampleFmt(String sampleFmt) {
             this.sampleFmt = sampleFmt;
             return this;
         }
@@ -294,7 +262,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.sampleFmt;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setSampleRate(String sampleRate) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setSampleRate(String sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
@@ -302,7 +270,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.sampleRate;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setStartTime(String startTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -310,7 +278,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setTimebase(String timebase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList setTimebase(String timebase) {
             this.timebase = timebase;
             return this;
         }
@@ -320,7 +288,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo extends TeaModel {
         // 码率
         @NameInMap("Bitrate")
         public String bitrate;
@@ -365,12 +333,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Width")
         public String width;
 
-        public static GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo self = new GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo();
+        public static GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo self = new GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setBitrate(String bitrate) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -378,7 +346,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setDuration(String duration) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setDuration(String duration) {
             this.duration = duration;
             return this;
         }
@@ -386,7 +354,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileName(String fileName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileName(String fileName) {
             this.fileName = fileName;
             return this;
         }
@@ -394,7 +362,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fileName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileSize(String fileSize) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileSize(String fileSize) {
             this.fileSize = fileSize;
             return this;
         }
@@ -402,7 +370,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fileSize;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileStatus(String fileStatus) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileStatus(String fileStatus) {
             this.fileStatus = fileStatus;
             return this;
         }
@@ -410,7 +378,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fileStatus;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileType(String fileType) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileType(String fileType) {
             this.fileType = fileType;
             return this;
         }
@@ -418,7 +386,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fileType;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileUrl(String fileUrl) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFileUrl(String fileUrl) {
             this.fileUrl = fileUrl;
             return this;
         }
@@ -426,7 +394,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fileUrl;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFormatName(String formatName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setFormatName(String formatName) {
             this.formatName = formatName;
             return this;
         }
@@ -434,7 +402,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.formatName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setHeight(String height) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setHeight(String height) {
             this.height = height;
             return this;
         }
@@ -442,7 +410,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.height;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setRegion(String region) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -450,7 +418,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.region;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setWidth(String width) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo setWidth(String width) {
             this.width = width;
             return this;
         }
@@ -460,7 +428,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList extends TeaModel {
         // 编码格式长述名
         @NameInMap("CodecLongName")
         public String codecLongName;
@@ -501,12 +469,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Timebase")
         public String timebase;
 
-        public static GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList self = new GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList();
+        public static GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList self = new GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecLongName(String codecLongName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
             return this;
         }
@@ -514,7 +482,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecLongName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecName(String codecName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecName(String codecName) {
             this.codecName = codecName;
             return this;
         }
@@ -522,7 +490,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTag(String codecTag) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTag(String codecTag) {
             this.codecTag = codecTag;
             return this;
         }
@@ -530,7 +498,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTag;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTagString(String codecTagString) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
             return this;
         }
@@ -538,7 +506,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTagString;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTimeBase(String codecTimeBase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setCodecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
             return this;
         }
@@ -546,7 +514,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTimeBase;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setDuration(String duration) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setDuration(String duration) {
             this.duration = duration;
             return this;
         }
@@ -554,7 +522,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setIndex(String index) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setIndex(String index) {
             this.index = index;
             return this;
         }
@@ -562,7 +530,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.index;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setLang(String lang) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setLang(String lang) {
             this.lang = lang;
             return this;
         }
@@ -570,7 +538,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.lang;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setStartTime(String startTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -578,7 +546,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setTimebase(String timebase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList setTimebase(String timebase) {
             this.timebase = timebase;
             return this;
         }
@@ -588,7 +556,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList extends TeaModel {
         // 平均帧率
         @NameInMap("AvgFPS")
         public String avgFPS;
@@ -685,12 +653,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("Width")
         public String width;
 
-        public static GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList self = new GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList();
+        public static GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList self = new GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setAvgFPS(String avgFPS) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setAvgFPS(String avgFPS) {
             this.avgFPS = avgFPS;
             return this;
         }
@@ -698,7 +666,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.avgFPS;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setBitrate(String bitrate) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
@@ -706,7 +674,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.bitrate;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecLongName(String codecLongName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
             return this;
         }
@@ -714,7 +682,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecLongName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecName(String codecName) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecName(String codecName) {
             this.codecName = codecName;
             return this;
         }
@@ -722,7 +690,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecName;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTag(String codecTag) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTag(String codecTag) {
             this.codecTag = codecTag;
             return this;
         }
@@ -730,7 +698,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTag;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTagString(String codecTagString) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
             return this;
         }
@@ -738,7 +706,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTagString;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTimeBase(String codecTimeBase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setCodecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
             return this;
         }
@@ -746,7 +714,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.codecTimeBase;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setDar(String dar) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setDar(String dar) {
             this.dar = dar;
             return this;
         }
@@ -754,7 +722,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.dar;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setDuration(String duration) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setDuration(String duration) {
             this.duration = duration;
             return this;
         }
@@ -762,7 +730,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setFps(String fps) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setFps(String fps) {
             this.fps = fps;
             return this;
         }
@@ -770,7 +738,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.fps;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setHasBFrames(String hasBFrames) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setHasBFrames(String hasBFrames) {
             this.hasBFrames = hasBFrames;
             return this;
         }
@@ -778,7 +746,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.hasBFrames;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setHeight(String height) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setHeight(String height) {
             this.height = height;
             return this;
         }
@@ -786,7 +754,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.height;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setIndex(String index) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setIndex(String index) {
             this.index = index;
             return this;
         }
@@ -794,7 +762,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.index;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setLang(String lang) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setLang(String lang) {
             this.lang = lang;
             return this;
         }
@@ -802,7 +770,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.lang;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setLevel(String level) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setLevel(String level) {
             this.level = level;
             return this;
         }
@@ -810,7 +778,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.level;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setNbFrames(String nbFrames) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setNbFrames(String nbFrames) {
             this.nbFrames = nbFrames;
             return this;
         }
@@ -818,7 +786,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.nbFrames;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setNumFrames(String numFrames) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setNumFrames(String numFrames) {
             this.numFrames = numFrames;
             return this;
         }
@@ -826,7 +794,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.numFrames;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setPixFmt(String pixFmt) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setPixFmt(String pixFmt) {
             this.pixFmt = pixFmt;
             return this;
         }
@@ -834,7 +802,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.pixFmt;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setProfile(String profile) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setProfile(String profile) {
             this.profile = profile;
             return this;
         }
@@ -842,7 +810,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.profile;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setRotate(String rotate) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setRotate(String rotate) {
             this.rotate = rotate;
             return this;
         }
@@ -850,7 +818,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.rotate;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setSar(String sar) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setSar(String sar) {
             this.sar = sar;
             return this;
         }
@@ -858,7 +826,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.sar;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setStartTime(String startTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -866,7 +834,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setTimebase(String timebase) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setTimebase(String timebase) {
             this.timebase = timebase;
             return this;
         }
@@ -874,7 +842,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.timebase;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setWidth(String width) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList setWidth(String width) {
             this.width = width;
             return this;
         }
@@ -884,63 +852,63 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoFileInfoList extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoList extends TeaModel {
         // 音频流信息，一个媒资可能有多条音频流
         @NameInMap("AudioStreamInfoList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList;
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList;
 
         // 文件基础信息，包含时长，大小等
         @NameInMap("FileBasicInfo")
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo;
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo;
 
         // 字幕流信息，一个媒资可能有多条字幕流
         @NameInMap("SubtitleStreamInfoList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList;
 
         // 视频流信息，一个媒资可能有多条视频流
         @NameInMap("VideoStreamInfoList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList;
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList;
 
-        public static GetMediaInfoResponseBodyMediaInfoFileInfoList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoFileInfoList self = new GetMediaInfoResponseBodyMediaInfoFileInfoList();
+        public static GetPublicMediaInfoResponseBodyMediaInfoFileInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoFileInfoList self = new GetPublicMediaInfoResponseBodyMediaInfoFileInfoList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoList setAudioStreamInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoList setAudioStreamInfoList(java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList) {
             this.audioStreamInfoList = audioStreamInfoList;
             return this;
         }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> getAudioStreamInfoList() {
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> getAudioStreamInfoList() {
             return this.audioStreamInfoList;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoList setFileBasicInfo(GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoList setFileBasicInfo(GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo) {
             this.fileBasicInfo = fileBasicInfo;
             return this;
         }
-        public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo getFileBasicInfo() {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo getFileBasicInfo() {
             return this.fileBasicInfo;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoList setSubtitleStreamInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoList setSubtitleStreamInfoList(java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> subtitleStreamInfoList) {
             this.subtitleStreamInfoList = subtitleStreamInfoList;
             return this;
         }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> getSubtitleStreamInfoList() {
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList> getSubtitleStreamInfoList() {
             return this.subtitleStreamInfoList;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoFileInfoList setVideoStreamInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList) {
+        public GetPublicMediaInfoResponseBodyMediaInfoFileInfoList setVideoStreamInfoList(java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> videoStreamInfoList) {
             this.videoStreamInfoList = videoStreamInfoList;
             return this;
         }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> getVideoStreamInfoList() {
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList> getVideoStreamInfoList() {
             return this.videoStreamInfoList;
         }
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
+    public static class GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
         // 媒资业务类型
         @NameInMap("BusinessType")
         public String businessType;
@@ -964,10 +932,6 @@ public class GetMediaInfoResponseBody extends TeaModel {
         // 内容描述
         @NameInMap("Description")
         public String description;
-
-        // 待注册的媒资在相应系统中的地址
-        @NameInMap("InputURL")
-        public String inputURL;
 
         // MediaId
         @NameInMap("MediaId")
@@ -1005,12 +969,12 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
-        public static GetMediaInfoResponseBodyMediaInfoMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfoMediaBasicInfo self = new GetMediaInfoResponseBodyMediaInfoMediaBasicInfo();
+        public static GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo self = new GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setBusinessType(String businessType) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setBusinessType(String businessType) {
             this.businessType = businessType;
             return this;
         }
@@ -1018,7 +982,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.businessType;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCategory(String category) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -1026,7 +990,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.category;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCoverURL(String coverURL) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setCoverURL(String coverURL) {
             this.coverURL = coverURL;
             return this;
         }
@@ -1034,7 +998,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.coverURL;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setCreateTime(String createTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -1042,7 +1006,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setDeletedTime(String deletedTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setDeletedTime(String deletedTime) {
             this.deletedTime = deletedTime;
             return this;
         }
@@ -1050,7 +1014,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.deletedTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setDescription(String description) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -1058,15 +1022,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setInputURL(String inputURL) {
-            this.inputURL = inputURL;
-            return this;
-        }
-        public String getInputURL() {
-            return this.inputURL;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaId(String mediaId) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaId(String mediaId) {
             this.mediaId = mediaId;
             return this;
         }
@@ -1074,7 +1030,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.mediaId;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaTags(String mediaTags) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaTags(String mediaTags) {
             this.mediaTags = mediaTags;
             return this;
         }
@@ -1082,7 +1038,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.mediaTags;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaType(String mediaType) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setMediaType(String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
@@ -1090,7 +1046,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.mediaType;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setModifiedTime(String modifiedTime) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setModifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
@@ -1098,7 +1054,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.modifiedTime;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setSource(String source) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setSource(String source) {
             this.source = source;
             return this;
         }
@@ -1106,7 +1062,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.source;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setSpriteImages(String spriteImages) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setSpriteImages(String spriteImages) {
             this.spriteImages = spriteImages;
             return this;
         }
@@ -1114,7 +1070,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.spriteImages;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setStatus(String status) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -1122,7 +1078,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setTitle(String title) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setTitle(String title) {
             this.title = title;
             return this;
         }
@@ -1130,7 +1086,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             return this.title;
         }
 
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo setUserData(String userData) {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo setUserData(String userData) {
             this.userData = userData;
             return this;
         }
@@ -1140,65 +1096,53 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaInfoResponseBodyMediaInfo extends TeaModel {
-        // AIMetadata
-        @NameInMap("AiRoughDataList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> aiRoughDataList;
-
-        // 其他元数据
+    public static class GetPublicMediaInfoResponseBodyMediaInfo extends TeaModel {
+        // 公共媒资动态元数据
         @NameInMap("DynamicMetaData")
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData;
+        public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData;
 
         // FileInfos
         @NameInMap("FileInfoList")
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;
 
         // BasicInfo
         @NameInMap("MediaBasicInfo")
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 
         // 媒资ID
         @NameInMap("MediaId")
         public String mediaId;
 
-        public static GetMediaInfoResponseBodyMediaInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaInfoResponseBodyMediaInfo self = new GetMediaInfoResponseBodyMediaInfo();
+        public static GetPublicMediaInfoResponseBodyMediaInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetPublicMediaInfoResponseBodyMediaInfo self = new GetPublicMediaInfoResponseBodyMediaInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaInfoResponseBodyMediaInfo setAiRoughDataList(java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> aiRoughDataList) {
-            this.aiRoughDataList = aiRoughDataList;
-            return this;
-        }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataList> getAiRoughDataList() {
-            return this.aiRoughDataList;
-        }
-
-        public GetMediaInfoResponseBodyMediaInfo setDynamicMetaData(GetMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData) {
+        public GetPublicMediaInfoResponseBodyMediaInfo setDynamicMetaData(GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData dynamicMetaData) {
             this.dynamicMetaData = dynamicMetaData;
             return this;
         }
-        public GetMediaInfoResponseBodyMediaInfoDynamicMetaData getDynamicMetaData() {
+        public GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData getDynamicMetaData() {
             return this.dynamicMetaData;
         }
 
-        public GetMediaInfoResponseBodyMediaInfo setFileInfoList(java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList) {
+        public GetPublicMediaInfoResponseBodyMediaInfo setFileInfoList(java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList) {
             this.fileInfoList = fileInfoList;
             return this;
         }
-        public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> getFileInfoList() {
+        public java.util.List<GetPublicMediaInfoResponseBodyMediaInfoFileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
-        public GetMediaInfoResponseBodyMediaInfo setMediaBasicInfo(GetMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo) {
+        public GetPublicMediaInfoResponseBodyMediaInfo setMediaBasicInfo(GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo) {
             this.mediaBasicInfo = mediaBasicInfo;
             return this;
         }
-        public GetMediaInfoResponseBodyMediaInfoMediaBasicInfo getMediaBasicInfo() {
+        public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo getMediaBasicInfo() {
             return this.mediaBasicInfo;
         }
 
-        public GetMediaInfoResponseBodyMediaInfo setMediaId(String mediaId) {
+        public GetPublicMediaInfoResponseBodyMediaInfo setMediaId(String mediaId) {
             this.mediaId = mediaId;
             return this;
         }

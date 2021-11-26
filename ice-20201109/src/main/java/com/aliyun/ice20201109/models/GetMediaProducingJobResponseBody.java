@@ -75,6 +75,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Timeline")
         public String timeline;
 
+        @NameInMap("VodMediaId")
+        public String vodMediaId;
+
         public static GetMediaProducingJobResponseBodyMediaProducingJob build(java.util.Map<String, ?> map) throws Exception {
             GetMediaProducingJobResponseBodyMediaProducingJob self = new GetMediaProducingJobResponseBodyMediaProducingJob();
             return TeaModel.build(map, self);
@@ -190,6 +193,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
         public String getTimeline() {
             return this.timeline;
+        }
+
+        public GetMediaProducingJobResponseBodyMediaProducingJob setVodMediaId(String vodMediaId) {
+            this.vodMediaId = vodMediaId;
+            return this;
+        }
+        public String getVodMediaId() {
+            return this.vodMediaId;
         }
 
     }
