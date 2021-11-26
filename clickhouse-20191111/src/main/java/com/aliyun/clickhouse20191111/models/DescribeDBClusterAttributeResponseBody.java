@@ -31,6 +31,36 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus extends TeaModel {
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Ratio")
+        public String ratio;
+
+        public static DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus self = new DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus setRatio(String ratio) {
+            this.ratio = ratio;
+            return this;
+        }
+        public String getRatio() {
+            return this.ratio;
+        }
+
+    }
+
     public static class DescribeDBClusterAttributeResponseBodyDBClusterTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -80,360 +110,127 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus extends TeaModel {
-        @NameInMap("Progress")
-        public String progress;
-
-        @NameInMap("Ratio")
-        public String ratio;
-
-        public static DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus self = new DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus setProgress(String progress) {
-            this.progress = progress;
-            return this;
-        }
-        public String getProgress() {
-            return this.progress;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus setRatio(String ratio) {
-            this.ratio = ratio;
-            return this;
-        }
-        public String getRatio() {
-            return this.ratio;
-        }
-
-    }
-
     public static class DescribeDBClusterAttributeResponseBodyDBCluster extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("SupportBackup")
-        public Integer supportBackup;
-
-        @NameInMap("EncryptionType")
-        public String encryptionType;
-
-        @NameInMap("DBNodeCount")
-        public Long DBNodeCount;
-
-        @NameInMap("MaintainTime")
-        public String maintainTime;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("Tags")
-        public DescribeDBClusterAttributeResponseBodyDBClusterTags tags;
-
-        @NameInMap("PublicConnectionString")
-        public String publicConnectionString;
-
-        @NameInMap("StorageType")
-        public String storageType;
-
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("LockMode")
-        public String lockMode;
+        @NameInMap("AliUid")
+        public String aliUid;
 
         @NameInMap("Bid")
         public String bid;
 
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("IsExpired")
-        public String isExpired;
-
-        @NameInMap("ScaleOutStatus")
-        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus;
-
-        @NameInMap("VpcCloudInstanceId")
-        public String vpcCloudInstanceId;
-
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
-
-        @NameInMap("ConnectionString")
-        public String connectionString;
-
-        @NameInMap("EncryptionKey")
-        public String encryptionKey;
-
-        @NameInMap("DBClusterType")
-        public String DBClusterType;
+        @NameInMap("Category")
+        public String category;
 
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        @NameInMap("ExpireTime")
-        public String expireTime;
+        @NameInMap("ConnectionString")
+        public String connectionString;
 
-        @NameInMap("DBNodeStorage")
-        public Long DBNodeStorage;
+        @NameInMap("ControlVersion")
+        public String controlVersion;
 
-        @NameInMap("DBNodeClass")
-        public String DBNodeClass;
-
-        @NameInMap("AliUid")
-        public String aliUid;
-
-        @NameInMap("LockReason")
-        public String lockReason;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("PublicPort")
-        public String publicPort;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("DBClusterStatus")
-        public String DBClusterStatus;
-
-        @NameInMap("DBClusterNetworkType")
-        public String DBClusterNetworkType;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
 
-        @NameInMap("Category")
-        public String category;
+        @NameInMap("DBClusterNetworkType")
+        public String DBClusterNetworkType;
+
+        @NameInMap("DBClusterStatus")
+        public String DBClusterStatus;
+
+        @NameInMap("DBClusterType")
+        public String DBClusterType;
+
+        @NameInMap("DBNodeClass")
+        public String DBNodeClass;
+
+        @NameInMap("DBNodeCount")
+        public Long DBNodeCount;
+
+        @NameInMap("DBNodeStorage")
+        public Long DBNodeStorage;
+
+        @NameInMap("EncryptionKey")
+        public String encryptionKey;
+
+        @NameInMap("EncryptionType")
+        public String encryptionType;
 
         @NameInMap("Engine")
         public String engine;
 
-        @NameInMap("SupportMysqlPort")
-        public String supportMysqlPort;
+        @NameInMap("EngineVersion")
+        public String engineVersion;
 
-        @NameInMap("IsSupportMysqlPort")
-        public String isSupportMysqlPort;
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("IsExpired")
+        public String isExpired;
+
+        @NameInMap("LockMode")
+        public String lockMode;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("MaintainTime")
+        public String maintainTime;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("PublicConnectionString")
+        public String publicConnectionString;
+
+        @NameInMap("PublicPort")
+        public String publicPort;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ScaleOutStatus")
+        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
+        @NameInMap("SupportBackup")
+        public Integer supportBackup;
 
         @NameInMap("SupportHttpsPort")
-        public String supportHttpsPort;
+        public Boolean supportHttpsPort;
 
-        @NameInMap("IsSupportHttpsPort")
-        public String isSupportHttpsPort;
+        @NameInMap("SupportMysqlPort")
+        public Boolean supportMysqlPort;
+
+        @NameInMap("Tags")
+        public DescribeDBClusterAttributeResponseBodyDBClusterTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcCloudInstanceId")
+        public String vpcCloudInstanceId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeDBClusterAttributeResponseBodyDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyDBCluster self = new DescribeDBClusterAttributeResponseBodyDBCluster();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportBackup(Integer supportBackup) {
-            this.supportBackup = supportBackup;
-            return this;
-        }
-        public Integer getSupportBackup() {
-            return this.supportBackup;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setEncryptionType(String encryptionType) {
-            this.encryptionType = encryptionType;
-            return this;
-        }
-        public String getEncryptionType() {
-            return this.encryptionType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeCount(Long DBNodeCount) {
-            this.DBNodeCount = DBNodeCount;
-            return this;
-        }
-        public Long getDBNodeCount() {
-            return this.DBNodeCount;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setMaintainTime(String maintainTime) {
-            this.maintainTime = maintainTime;
-            return this;
-        }
-        public String getMaintainTime() {
-            return this.maintainTime;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setTags(DescribeDBClusterAttributeResponseBodyDBClusterTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeDBClusterAttributeResponseBodyDBClusterTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setPublicConnectionString(String publicConnectionString) {
-            this.publicConnectionString = publicConnectionString;
-            return this;
-        }
-        public String getPublicConnectionString() {
-            return this.publicConnectionString;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setLockMode(String lockMode) {
-            this.lockMode = lockMode;
-            return this;
-        }
-        public String getLockMode() {
-            return this.lockMode;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setBid(String bid) {
-            this.bid = bid;
-            return this;
-        }
-        public String getBid() {
-            return this.bid;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setIsExpired(String isExpired) {
-            this.isExpired = isExpired;
-            return this;
-        }
-        public String getIsExpired() {
-            return this.isExpired;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setScaleOutStatus(DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus) {
-            this.scaleOutStatus = scaleOutStatus;
-            return this;
-        }
-        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus getScaleOutStatus() {
-            return this.scaleOutStatus;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setVpcCloudInstanceId(String vpcCloudInstanceId) {
-            this.vpcCloudInstanceId = vpcCloudInstanceId;
-            return this;
-        }
-        public String getVpcCloudInstanceId() {
-            return this.vpcCloudInstanceId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-        public String getDBClusterId() {
-            return this.DBClusterId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setConnectionString(String connectionString) {
-            this.connectionString = connectionString;
-            return this;
-        }
-        public String getConnectionString() {
-            return this.connectionString;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setEncryptionKey(String encryptionKey) {
-            this.encryptionKey = encryptionKey;
-            return this;
-        }
-        public String getEncryptionKey() {
-            return this.encryptionKey;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterType(String DBClusterType) {
-            this.DBClusterType = DBClusterType;
-            return this;
-        }
-        public String getDBClusterType() {
-            return this.DBClusterType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setCommodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
-            return this;
-        }
-        public String getCommodityCode() {
-            return this.commodityCode;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeStorage(Long DBNodeStorage) {
-            this.DBNodeStorage = DBNodeStorage;
-            return this;
-        }
-        public Long getDBNodeStorage() {
-            return this.DBNodeStorage;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeClass(String DBNodeClass) {
-            this.DBNodeClass = DBNodeClass;
-            return this;
-        }
-        public String getDBNodeClass() {
-            return this.DBNodeClass;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setAliUid(String aliUid) {
@@ -444,68 +241,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.aliUid;
         }
 
-        public DescribeDBClusterAttributeResponseBodyDBCluster setLockReason(String lockReason) {
-            this.lockReason = lockReason;
+        public DescribeDBClusterAttributeResponseBodyDBCluster setBid(String bid) {
+            this.bid = bid;
             return this;
         }
-        public String getLockReason() {
-            return this.lockReason;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setPublicPort(String publicPort) {
-            this.publicPort = publicPort;
-            return this;
-        }
-        public String getPublicPort() {
-            return this.publicPort;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterStatus(String DBClusterStatus) {
-            this.DBClusterStatus = DBClusterStatus;
-            return this;
-        }
-        public String getDBClusterStatus() {
-            return this.DBClusterStatus;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterNetworkType(String DBClusterNetworkType) {
-            this.DBClusterNetworkType = DBClusterNetworkType;
-            return this;
-        }
-        public String getDBClusterNetworkType() {
-            return this.DBClusterNetworkType;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterDescription(String DBClusterDescription) {
-            this.DBClusterDescription = DBClusterDescription;
-            return this;
-        }
-        public String getDBClusterDescription() {
-            return this.DBClusterDescription;
-        }
-
-        public DescribeDBClusterAttributeResponseBodyDBCluster setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
+        public String getBid() {
+            return this.bid;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setCategory(String category) {
@@ -516,6 +257,118 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.category;
         }
 
+        public DescribeDBClusterAttributeResponseBodyDBCluster setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setControlVersion(String controlVersion) {
+            this.controlVersion = controlVersion;
+            return this;
+        }
+        public String getControlVersion() {
+            return this.controlVersion;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterDescription(String DBClusterDescription) {
+            this.DBClusterDescription = DBClusterDescription;
+            return this;
+        }
+        public String getDBClusterDescription() {
+            return this.DBClusterDescription;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterNetworkType(String DBClusterNetworkType) {
+            this.DBClusterNetworkType = DBClusterNetworkType;
+            return this;
+        }
+        public String getDBClusterNetworkType() {
+            return this.DBClusterNetworkType;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterStatus(String DBClusterStatus) {
+            this.DBClusterStatus = DBClusterStatus;
+            return this;
+        }
+        public String getDBClusterStatus() {
+            return this.DBClusterStatus;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBClusterType(String DBClusterType) {
+            this.DBClusterType = DBClusterType;
+            return this;
+        }
+        public String getDBClusterType() {
+            return this.DBClusterType;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeClass(String DBNodeClass) {
+            this.DBNodeClass = DBNodeClass;
+            return this;
+        }
+        public String getDBNodeClass() {
+            return this.DBNodeClass;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeCount(Long DBNodeCount) {
+            this.DBNodeCount = DBNodeCount;
+            return this;
+        }
+        public Long getDBNodeCount() {
+            return this.DBNodeCount;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setDBNodeStorage(Long DBNodeStorage) {
+            this.DBNodeStorage = DBNodeStorage;
+            return this;
+        }
+        public Long getDBNodeStorage() {
+            return this.DBNodeStorage;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setEncryptionKey(String encryptionKey) {
+            this.encryptionKey = encryptionKey;
+            return this;
+        }
+        public String getEncryptionKey() {
+            return this.encryptionKey;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setEncryptionType(String encryptionType) {
+            this.encryptionType = encryptionType;
+            return this;
+        }
+        public String getEncryptionType() {
+            return this.encryptionType;
+        }
+
         public DescribeDBClusterAttributeResponseBodyDBCluster setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -524,36 +377,172 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportMysqlPort(String supportMysqlPort) {
-            this.supportMysqlPort = supportMysqlPort;
+        public DescribeDBClusterAttributeResponseBodyDBCluster setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
             return this;
         }
-        public String getSupportMysqlPort() {
-            return this.supportMysqlPort;
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
-        public DescribeDBClusterAttributeResponseBodyDBCluster setIsSupportMysqlPort(String isSupportMysqlPort) {
-            this.isSupportMysqlPort = isSupportMysqlPort;
+        public DescribeDBClusterAttributeResponseBodyDBCluster setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getIsSupportMysqlPort() {
-            return this.isSupportMysqlPort;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
-        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportHttpsPort(String supportHttpsPort) {
+        public DescribeDBClusterAttributeResponseBodyDBCluster setIsExpired(String isExpired) {
+            this.isExpired = isExpired;
+            return this;
+        }
+        public String getIsExpired() {
+            return this.isExpired;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setMaintainTime(String maintainTime) {
+            this.maintainTime = maintainTime;
+            return this;
+        }
+        public String getMaintainTime() {
+            return this.maintainTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setPublicConnectionString(String publicConnectionString) {
+            this.publicConnectionString = publicConnectionString;
+            return this;
+        }
+        public String getPublicConnectionString() {
+            return this.publicConnectionString;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setPublicPort(String publicPort) {
+            this.publicPort = publicPort;
+            return this;
+        }
+        public String getPublicPort() {
+            return this.publicPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setScaleOutStatus(DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus) {
+            this.scaleOutStatus = scaleOutStatus;
+            return this;
+        }
+        public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus getScaleOutStatus() {
+            return this.scaleOutStatus;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportBackup(Integer supportBackup) {
+            this.supportBackup = supportBackup;
+            return this;
+        }
+        public Integer getSupportBackup() {
+            return this.supportBackup;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportHttpsPort(Boolean supportHttpsPort) {
             this.supportHttpsPort = supportHttpsPort;
             return this;
         }
-        public String getSupportHttpsPort() {
+        public Boolean getSupportHttpsPort() {
             return this.supportHttpsPort;
         }
 
-        public DescribeDBClusterAttributeResponseBodyDBCluster setIsSupportHttpsPort(String isSupportHttpsPort) {
-            this.isSupportHttpsPort = isSupportHttpsPort;
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportMysqlPort(Boolean supportMysqlPort) {
+            this.supportMysqlPort = supportMysqlPort;
             return this;
         }
-        public String getIsSupportHttpsPort() {
-            return this.isSupportHttpsPort;
+        public Boolean getSupportMysqlPort() {
+            return this.supportMysqlPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setTags(DescribeDBClusterAttributeResponseBodyDBClusterTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDBClusterAttributeResponseBodyDBClusterTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setVpcCloudInstanceId(String vpcCloudInstanceId) {
+            this.vpcCloudInstanceId = vpcCloudInstanceId;
+            return this;
+        }
+        public String getVpcCloudInstanceId() {
+            return this.vpcCloudInstanceId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

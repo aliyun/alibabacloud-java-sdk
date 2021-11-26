@@ -4,6 +4,12 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -12,12 +18,6 @@ public class DescribeColumnsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
 
     @NameInMap("SchemaName")
     public String schemaName;
@@ -28,6 +28,22 @@ public class DescribeColumnsRequest extends TeaModel {
     public static DescribeColumnsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeColumnsRequest self = new DescribeColumnsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeColumnsRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeColumnsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeColumnsRequest setOwnerId(Long ownerId) {
@@ -52,22 +68,6 @@ public class DescribeColumnsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeColumnsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeColumnsRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
     }
 
     public DescribeColumnsRequest setSchemaName(String schemaName) {

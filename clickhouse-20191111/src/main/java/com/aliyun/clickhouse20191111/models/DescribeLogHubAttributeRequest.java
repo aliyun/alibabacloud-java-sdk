@@ -4,32 +4,32 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogHubAttributeRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("DeliverName")
+    public String deliverName;
+
+    @NameInMap("LogStoreName")
+    public String logStoreName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    @NameInMap("LogStoreName")
-    public String logStoreName;
-
-    @NameInMap("DeliverName")
-    public String deliverName;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -39,12 +39,60 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLogHubAttributeRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public DescribeLogHubAttributeRequest setDeliverName(String deliverName) {
+        this.deliverName = deliverName;
+        return this;
+    }
+    public String getDeliverName() {
+        return this.deliverName;
+    }
+
+    public DescribeLogHubAttributeRequest setLogStoreName(String logStoreName) {
+        this.logStoreName = logStoreName;
+        return this;
+    }
+    public String getLogStoreName() {
+        return this.logStoreName;
+    }
+
+    public DescribeLogHubAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeLogHubAttributeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeLogHubAttributeRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public DescribeLogHubAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLogHubAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -61,54 +109,6 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeLogHubAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeLogHubAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeLogHubAttributeRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public DescribeLogHubAttributeRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public DescribeLogHubAttributeRequest setLogStoreName(String logStoreName) {
-        this.logStoreName = logStoreName;
-        return this;
-    }
-    public String getLogStoreName() {
-        return this.logStoreName;
-    }
-
-    public DescribeLogHubAttributeRequest setDeliverName(String deliverName) {
-        this.deliverName = deliverName;
-        return this;
-    }
-    public String getDeliverName() {
-        return this.deliverName;
     }
 
     public DescribeLogHubAttributeRequest setTaskId(String taskId) {

@@ -31,58 +31,12 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         return this.slowLogTrend;
     }
 
-    public static class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet self = new DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema extends TeaModel {
-        @NameInMap("ResultSet")
-        public java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> resultSet;
-
-        public static DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema self = new DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema setResultSet(java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> resultSet) {
-            this.resultSet = resultSet;
-            return this;
-        }
-        public java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> getResultSet() {
-            return this.resultSet;
-        }
-
-    }
-
     public static class DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet extends TeaModel {
-        @NameInMap("QueryStartTime")
-        public String queryStartTime;
+        @NameInMap("AvgQueryDurationMs")
+        public String avgQueryDurationMs;
+
+        @NameInMap("Count")
+        public String count;
 
         @NameInMap("MaxQueryDurationMs")
         public String maxQueryDurationMs;
@@ -90,23 +44,28 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         @NameInMap("MinQueryDurationMs")
         public String minQueryDurationMs;
 
-        @NameInMap("Count")
-        public String count;
-
-        @NameInMap("AvgQueryDurationMs")
-        public String avgQueryDurationMs;
+        @NameInMap("QueryStartTime")
+        public String queryStartTime;
 
         public static DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet self = new DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setQueryStartTime(String queryStartTime) {
-            this.queryStartTime = queryStartTime;
+        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setAvgQueryDurationMs(String avgQueryDurationMs) {
+            this.avgQueryDurationMs = avgQueryDurationMs;
             return this;
         }
-        public String getQueryStartTime() {
-            return this.queryStartTime;
+        public String getAvgQueryDurationMs() {
+            return this.avgQueryDurationMs;
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
         }
 
         public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setMaxQueryDurationMs(String maxQueryDurationMs) {
@@ -125,20 +84,12 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             return this.minQueryDurationMs;
         }
 
-        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setCount(String count) {
-            this.count = count;
+        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setQueryStartTime(String queryStartTime) {
+            this.queryStartTime = queryStartTime;
             return this;
         }
-        public String getCount() {
-            return this.count;
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet setAvgQueryDurationMs(String avgQueryDurationMs) {
-            this.avgQueryDurationMs = avgQueryDurationMs;
-            return this;
-        }
-        public String getAvgQueryDurationMs() {
-            return this.avgQueryDurationMs;
+        public String getQueryStartTime() {
+            return this.queryStartTime;
         }
 
     }
@@ -163,34 +114,18 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodySlowLogTrendStatistics extends TeaModel {
-        @NameInMap("RowsRead")
-        public Integer rowsRead;
+        @NameInMap("BytesRead")
+        public Integer bytesRead;
 
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
-        @NameInMap("BytesRead")
-        public Integer bytesRead;
+        @NameInMap("RowsRead")
+        public Integer rowsRead;
 
         public static DescribeSlowLogTrendResponseBodySlowLogTrendStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogTrendResponseBodySlowLogTrendStatistics self = new DescribeSlowLogTrendResponseBodySlowLogTrendStatistics();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics setRowsRead(Integer rowsRead) {
-            this.rowsRead = rowsRead;
-            return this;
-        }
-        public Integer getRowsRead() {
-            return this.rowsRead;
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics setElapsedTime(Float elapsedTime) {
-            this.elapsedTime = elapsedTime;
-            return this;
-        }
-        public Float getElapsedTime() {
-            return this.elapsedTime;
         }
 
         public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics setBytesRead(Integer bytesRead) {
@@ -201,12 +136,74 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             return this.bytesRead;
         }
 
+        public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics setElapsedTime(Float elapsedTime) {
+            this.elapsedTime = elapsedTime;
+            return this;
+        }
+        public Float getElapsedTime() {
+            return this.elapsedTime;
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics setRowsRead(Integer rowsRead) {
+            this.rowsRead = rowsRead;
+            return this;
+        }
+        public Integer getRowsRead() {
+            return this.rowsRead;
+        }
+
+    }
+
+    public static class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet self = new DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema extends TeaModel {
+        @NameInMap("ResultSet")
+        public java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> resultSet;
+
+        public static DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema self = new DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema setResultSet(java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> resultSet) {
+            this.resultSet = resultSet;
+            return this;
+        }
+        public java.util.List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> getResultSet() {
+            return this.resultSet;
+        }
+
     }
 
     public static class DescribeSlowLogTrendResponseBodySlowLogTrend extends TeaModel {
-        @NameInMap("TableSchema")
-        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema tableSchema;
-
         @NameInMap("Data")
         public DescribeSlowLogTrendResponseBodySlowLogTrendData data;
 
@@ -219,17 +216,12 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         @NameInMap("Statistics")
         public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics statistics;
 
+        @NameInMap("TableSchema")
+        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema tableSchema;
+
         public static DescribeSlowLogTrendResponseBodySlowLogTrend build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogTrendResponseBodySlowLogTrend self = new DescribeSlowLogTrendResponseBodySlowLogTrend();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSlowLogTrendResponseBodySlowLogTrend setTableSchema(DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema tableSchema) {
-            this.tableSchema = tableSchema;
-            return this;
-        }
-        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema getTableSchema() {
-            return this.tableSchema;
         }
 
         public DescribeSlowLogTrendResponseBodySlowLogTrend setData(DescribeSlowLogTrendResponseBodySlowLogTrendData data) {
@@ -262,6 +254,14 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
         public DescribeSlowLogTrendResponseBodySlowLogTrendStatistics getStatistics() {
             return this.statistics;
+        }
+
+        public DescribeSlowLogTrendResponseBodySlowLogTrend setTableSchema(DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema tableSchema) {
+            this.tableSchema = tableSchema;
+            return this;
+        }
+        public DescribeSlowLogTrendResponseBodySlowLogTrendTableSchema getTableSchema() {
+            return this.tableSchema;
         }
 
     }

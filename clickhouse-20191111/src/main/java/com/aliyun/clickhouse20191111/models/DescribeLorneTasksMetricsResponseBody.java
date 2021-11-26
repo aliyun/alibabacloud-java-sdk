@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLorneTasksMetricsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeLorneTasksMetricsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLorneTasksMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLorneTasksMetricsResponseBody self = new DescribeLorneTasksMetricsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLorneTasksMetricsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLorneTasksMetricsResponseBody setData(DescribeLorneTasksMetricsResponseBodyData data) {
@@ -31,9 +23,17 @@ public class DescribeLorneTasksMetricsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DescribeLorneTasksMetricsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLorneTasksMetricsResponseBodyData extends TeaModel {
-        @NameInMap("Values")
-        public java.util.List<String> values;
+        @NameInMap("Columns")
+        public java.util.List<String> columns;
 
         @NameInMap("Name")
         public String name;
@@ -41,20 +41,20 @@ public class DescribeLorneTasksMetricsResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
-        @NameInMap("Columns")
-        public java.util.List<String> columns;
+        @NameInMap("Values")
+        public java.util.List<String> values;
 
         public static DescribeLorneTasksMetricsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLorneTasksMetricsResponseBodyData self = new DescribeLorneTasksMetricsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLorneTasksMetricsResponseBodyData setValues(java.util.List<String> values) {
-            this.values = values;
+        public DescribeLorneTasksMetricsResponseBodyData setColumns(java.util.List<String> columns) {
+            this.columns = columns;
             return this;
         }
-        public java.util.List<String> getValues() {
-            return this.values;
+        public java.util.List<String> getColumns() {
+            return this.columns;
         }
 
         public DescribeLorneTasksMetricsResponseBodyData setName(String name) {
@@ -73,12 +73,12 @@ public class DescribeLorneTasksMetricsResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public DescribeLorneTasksMetricsResponseBodyData setColumns(java.util.List<String> columns) {
-            this.columns = columns;
+        public DescribeLorneTasksMetricsResponseBodyData setValues(java.util.List<String> values) {
+            this.values = values;
             return this;
         }
-        public java.util.List<String> getColumns() {
-            return this.columns;
+        public java.util.List<String> getValues() {
+            return this.values;
         }
 
     }

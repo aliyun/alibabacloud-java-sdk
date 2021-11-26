@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeOSSStorageResponseBody extends TeaModel {
+    @NameInMap("ColdStorage")
+    public Boolean coldStorage;
+
     @NameInMap("Policy")
     public String policy;
 
@@ -13,15 +16,20 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
     @NameInMap("State")
     public String state;
 
-    @NameInMap("ColdStorage")
-    public Boolean coldStorage;
-
     @NameInMap("StorageUsage")
     public String storageUsage;
 
     public static DescribeOSSStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOSSStorageResponseBody self = new DescribeOSSStorageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOSSStorageResponseBody setColdStorage(Boolean coldStorage) {
+        this.coldStorage = coldStorage;
+        return this;
+    }
+    public Boolean getColdStorage() {
+        return this.coldStorage;
     }
 
     public DescribeOSSStorageResponseBody setPolicy(String policy) {
@@ -46,14 +54,6 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
     }
     public String getState() {
         return this.state;
-    }
-
-    public DescribeOSSStorageResponseBody setColdStorage(Boolean coldStorage) {
-        this.coldStorage = coldStorage;
-        return this;
-    }
-    public Boolean getColdStorage() {
-        return this.coldStorage;
     }
 
     public DescribeOSSStorageResponseBody setStorageUsage(String storageUsage) {

@@ -4,8 +4,11 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLorneLogResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Data")
+    public java.util.List<DescribeLorneLogResponseBodyData> data;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeLorneLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Data")
-    public java.util.List<DescribeLorneLogResponseBodyData> data;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeLorneLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLorneLogResponseBody self = new DescribeLorneLogResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLorneLogResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeLorneLogResponseBody setData(java.util.List<DescribeLorneLogResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<DescribeLorneLogResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public DescribeLorneLogResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeLorneLogResponseBody setPageSize(Integer pageSize) {
@@ -48,57 +56,33 @@ public class DescribeLorneLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLorneLogResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLorneLogResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeLorneLogResponseBody setData(java.util.List<DescribeLorneLogResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeLorneLogResponseBodyData> getData() {
-        return this.data;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeLorneLogResponseBodyData extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("Code")
         public String code;
-
-        @NameInMap("Message")
-        public String message;
 
         @NameInMap("Count")
         public String count;
 
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
         public static DescribeLorneLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLorneLogResponseBodyData self = new DescribeLorneLogResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLorneLogResponseBodyData setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeLorneLogResponseBodyData setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeLorneLogResponseBodyData setCode(String code) {
@@ -109,6 +93,22 @@ public class DescribeLorneLogResponseBody extends TeaModel {
             return this.code;
         }
 
+        public DescribeLorneLogResponseBodyData setCount(String count) {
+            this.count = count;
+            return this;
+        }
+        public String getCount() {
+            return this.count;
+        }
+
+        public DescribeLorneLogResponseBodyData setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeLorneLogResponseBodyData setMessage(String message) {
             this.message = message;
             return this;
@@ -117,12 +117,12 @@ public class DescribeLorneLogResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeLorneLogResponseBodyData setCount(String count) {
-            this.count = count;
+        public DescribeLorneLogResponseBodyData setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public String getCount() {
-            return this.count;
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

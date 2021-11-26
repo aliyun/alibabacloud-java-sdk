@@ -4,26 +4,18 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceResponseBody self = new CreateDBInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDBInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateDBInstanceResponseBody setDBClusterId(String DBClusterId) {
@@ -40,6 +32,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CreateDBInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

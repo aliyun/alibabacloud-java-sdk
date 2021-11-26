@@ -4,29 +4,17 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class OperateLogHubRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AccessKey")
+    public String accessKey;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("AccessSecret")
+    public String accessSecret;
 
     @NameInMap("Create")
     public Boolean create;
 
     @NameInMap("DBClusterId")
     public String DBClusterId;
-
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    @NameInMap("LogStoreName")
-    public String logStoreName;
 
     @NameInMap("DeliverName")
     public String deliverName;
@@ -40,71 +28,67 @@ public class OperateLogHubRequest extends TeaModel {
     @NameInMap("DomainUrl")
     public String domainUrl;
 
+    @NameInMap("FilterDirtyData")
+    public Boolean filterDirtyData;
+
+    @NameInMap("LogHubStores")
+    public java.util.List<OperateLogHubRequestLogHubStores> logHubStores;
+
+    @NameInMap("LogStoreName")
+    public String logStoreName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
     @NameInMap("TableName")
     public String tableName;
 
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("Password")
-    public String password;
-
-    @NameInMap("FilterDirtyData")
-    public Boolean filterDirtyData;
-
-    @NameInMap("AccessKey")
-    public String accessKey;
-
-    @NameInMap("AccessSecret")
-    public String accessSecret;
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("UseLorne")
     public Boolean useLorne;
 
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("LogHubStores")
-    public java.util.List<OperateLogHubRequestLogHubStores> logHubStores;
+    @NameInMap("UserName")
+    public String userName;
 
     public static OperateLogHubRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateLogHubRequest self = new OperateLogHubRequest();
         return TeaModel.build(map, self);
     }
 
-    public OperateLogHubRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public OperateLogHubRequest setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAccessKey() {
+        return this.accessKey;
     }
 
-    public OperateLogHubRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public OperateLogHubRequest setAccessSecret(String accessSecret) {
+        this.accessSecret = accessSecret;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public OperateLogHubRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public OperateLogHubRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getAccessSecret() {
+        return this.accessSecret;
     }
 
     public OperateLogHubRequest setCreate(Boolean create) {
@@ -121,22 +105,6 @@ public class OperateLogHubRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    public OperateLogHubRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public OperateLogHubRequest setLogStoreName(String logStoreName) {
-        this.logStoreName = logStoreName;
-        return this;
-    }
-    public String getLogStoreName() {
-        return this.logStoreName;
     }
 
     public OperateLogHubRequest setDeliverName(String deliverName) {
@@ -171,6 +139,78 @@ public class OperateLogHubRequest extends TeaModel {
         return this.domainUrl;
     }
 
+    public OperateLogHubRequest setFilterDirtyData(Boolean filterDirtyData) {
+        this.filterDirtyData = filterDirtyData;
+        return this;
+    }
+    public Boolean getFilterDirtyData() {
+        return this.filterDirtyData;
+    }
+
+    public OperateLogHubRequest setLogHubStores(java.util.List<OperateLogHubRequestLogHubStores> logHubStores) {
+        this.logHubStores = logHubStores;
+        return this;
+    }
+    public java.util.List<OperateLogHubRequestLogHubStores> getLogHubStores() {
+        return this.logHubStores;
+    }
+
+    public OperateLogHubRequest setLogStoreName(String logStoreName) {
+        this.logStoreName = logStoreName;
+        return this;
+    }
+    public String getLogStoreName() {
+        return this.logStoreName;
+    }
+
+    public OperateLogHubRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public OperateLogHubRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public OperateLogHubRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public OperateLogHubRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public OperateLogHubRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public OperateLogHubRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public OperateLogHubRequest setSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -187,44 +227,12 @@ public class OperateLogHubRequest extends TeaModel {
         return this.tableName;
     }
 
-    public OperateLogHubRequest setUserName(String userName) {
-        this.userName = userName;
+    public OperateLogHubRequest setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public OperateLogHubRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
-    public OperateLogHubRequest setFilterDirtyData(Boolean filterDirtyData) {
-        this.filterDirtyData = filterDirtyData;
-        return this;
-    }
-    public Boolean getFilterDirtyData() {
-        return this.filterDirtyData;
-    }
-
-    public OperateLogHubRequest setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
-        return this;
-    }
-    public String getAccessKey() {
-        return this.accessKey;
-    }
-
-    public OperateLogHubRequest setAccessSecret(String accessSecret) {
-        this.accessSecret = accessSecret;
-        return this;
-    }
-    public String getAccessSecret() {
-        return this.accessSecret;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public OperateLogHubRequest setUseLorne(Boolean useLorne) {
@@ -235,43 +243,35 @@ public class OperateLogHubRequest extends TeaModel {
         return this.useLorne;
     }
 
-    public OperateLogHubRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public OperateLogHubRequest setUserName(String userName) {
+        this.userName = userName;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public OperateLogHubRequest setLogHubStores(java.util.List<OperateLogHubRequestLogHubStores> logHubStores) {
-        this.logHubStores = logHubStores;
-        return this;
-    }
-    public java.util.List<OperateLogHubRequestLogHubStores> getLogHubStores() {
-        return this.logHubStores;
+    public String getUserName() {
+        return this.userName;
     }
 
     public static class OperateLogHubRequestLogHubStores extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("FieldKey")
+        public String fieldKey;
 
         @NameInMap("LogKey")
         public String logKey;
 
-        @NameInMap("FieldKey")
-        public String fieldKey;
+        @NameInMap("Type")
+        public String type;
 
         public static OperateLogHubRequestLogHubStores build(java.util.Map<String, ?> map) throws Exception {
             OperateLogHubRequestLogHubStores self = new OperateLogHubRequestLogHubStores();
             return TeaModel.build(map, self);
         }
 
-        public OperateLogHubRequestLogHubStores setType(String type) {
-            this.type = type;
+        public OperateLogHubRequestLogHubStores setFieldKey(String fieldKey) {
+            this.fieldKey = fieldKey;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getFieldKey() {
+            return this.fieldKey;
         }
 
         public OperateLogHubRequestLogHubStores setLogKey(String logKey) {
@@ -282,12 +282,12 @@ public class OperateLogHubRequest extends TeaModel {
             return this.logKey;
         }
 
-        public OperateLogHubRequestLogHubStores setFieldKey(String fieldKey) {
-            this.fieldKey = fieldKey;
+        public OperateLogHubRequestLogHubStores setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getFieldKey() {
-            return this.fieldKey;
+        public String getType() {
+            return this.type;
         }
 
     }

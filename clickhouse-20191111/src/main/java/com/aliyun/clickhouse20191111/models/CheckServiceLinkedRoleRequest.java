@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static CheckServiceLinkedRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckServiceLinkedRoleRequest self = new CheckServiceLinkedRoleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckServiceLinkedRoleRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CheckServiceLinkedRoleRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CheckServiceLinkedRoleRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

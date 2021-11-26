@@ -35,11 +35,11 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
-        @NameInMap("SecurityIPList")
-        public String securityIPList;
-
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
+
+        @NameInMap("SecurityIPList")
+        public String securityIPList;
 
         public static DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray self = new DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray();
@@ -54,20 +54,20 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             return this.DBClusterIPArrayAttribute;
         }
 
-        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setSecurityIPList(String securityIPList) {
-            this.securityIPList = securityIPList;
-            return this;
-        }
-        public String getSecurityIPList() {
-            return this.securityIPList;
-        }
-
         public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setDBClusterIPArrayName(String DBClusterIPArrayName) {
             this.DBClusterIPArrayName = DBClusterIPArrayName;
             return this;
         }
         public String getDBClusterIPArrayName() {
             return this.DBClusterIPArrayName;
+        }
+
+        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setSecurityIPList(String securityIPList) {
+            this.securityIPList = securityIPList;
+            return this;
+        }
+        public String getSecurityIPList() {
+            return this.securityIPList;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Items")
     public DescribeColumnsResponseBodyItems items;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeColumnsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeColumnsResponseBody self = new DescribeColumnsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeColumnsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeColumnsResponseBody setItems(DescribeColumnsResponseBodyItems items) {
@@ -31,18 +23,20 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return this.items;
     }
 
+    public DescribeColumnsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AutoIncrementColumn")
+        public Boolean autoIncrementColumn;
 
         @NameInMap("ColumnName")
         public String columnName;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("AutoIncrementColumn")
-        public Boolean autoIncrementColumn;
 
         @NameInMap("DBClusterId")
         public String DBClusterId;
@@ -53,33 +47,15 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("SchemaName")
         public String schemaName;
 
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeColumnsResponseBodyItemsColumn build(java.util.Map<String, ?> map) throws Exception {
             DescribeColumnsResponseBodyItemsColumn self = new DescribeColumnsResponseBodyItemsColumn();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeColumnsResponseBodyItemsColumn setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeColumnsResponseBodyItemsColumn setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
-        }
-
-        public DescribeColumnsResponseBodyItemsColumn setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public DescribeColumnsResponseBodyItemsColumn setAutoIncrementColumn(Boolean autoIncrementColumn) {
@@ -88,6 +64,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
         public Boolean getAutoIncrementColumn() {
             return this.autoIncrementColumn;
+        }
+
+        public DescribeColumnsResponseBodyItemsColumn setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
         }
 
         public DescribeColumnsResponseBodyItemsColumn setDBClusterId(String DBClusterId) {
@@ -112,6 +96,22 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
         public String getSchemaName() {
             return this.schemaName;
+        }
+
+        public DescribeColumnsResponseBodyItemsColumn setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public DescribeColumnsResponseBodyItemsColumn setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
