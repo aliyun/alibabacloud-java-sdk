@@ -149,6 +149,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkClickhouseToRDSWithOptions(request, runtime);
     }
 
+    public CheckMonitorAlertResponse checkMonitorAlertWithOptions(CheckMonitorAlertRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("DBClusterId", request.DBClusterId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckMonitorAlert"),
+            new TeaPair("version", "2019-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckMonitorAlertResponse());
+    }
+
+    public CheckMonitorAlertResponse checkMonitorAlert(CheckMonitorAlertRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkMonitorAlertWithOptions(request, runtime);
+    }
+
     public CheckScaleOutBalancedResponse checkScaleOutBalancedWithOptions(CheckScaleOutBalancedRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -408,6 +440,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBInstanceResponse createDBInstance(CreateDBInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createDBInstanceWithOptions(request, runtime);
+    }
+
+    public CreateMonitorDataReportResponse createMonitorDataReportWithOptions(CreateMonitorDataReportRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("DBClusterId", request.DBClusterId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMonitorDataReport"),
+            new TeaPair("version", "2019-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMonitorDataReportResponse());
+    }
+
+    public CreateMonitorDataReportResponse createMonitorDataReport(CreateMonitorDataReportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createMonitorDataReportWithOptions(request, runtime);
     }
 
     public CreateOSSStorageResponse createOSSStorageWithOptions(CreateOSSStorageRequest request, RuntimeOptions runtime) throws Exception {
