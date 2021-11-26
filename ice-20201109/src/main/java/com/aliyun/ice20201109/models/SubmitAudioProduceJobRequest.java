@@ -4,24 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitAudioProduceJobRequest extends TeaModel {
+    // 任务描述
     @NameInMap("Description")
     public String description;
 
+    // 音频生产配置
     @NameInMap("EditingConfig")
     public String editingConfig;
 
+    // 文本内容。  最大支持300个汉字
     @NameInMap("InputConfig")
     public String inputConfig;
 
+    // 音频输出配置
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    // 是否覆盖现有OSS文件
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    // 任务标题
     @NameInMap("Title")
     public String title;
 
+    // 自定义数据
     @NameInMap("UserData")
     public String userData;
 

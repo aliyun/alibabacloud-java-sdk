@@ -8,7 +8,7 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    // Id of the request
+    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 

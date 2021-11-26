@@ -15,7 +15,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     public String projectId;
 
     @NameInMap("ProjectMaterials")
-    public String projectMaterials;
+    public java.util.List<String> projectMaterials;
 
     // Id of the request
     @NameInMap("RequestId")
@@ -50,11 +50,11 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         return this.projectId;
     }
 
-    public GetEditingProjectMaterialsResponseBody setProjectMaterials(String projectMaterials) {
+    public GetEditingProjectMaterialsResponseBody setProjectMaterials(java.util.List<String> projectMaterials) {
         this.projectMaterials = projectMaterials;
         return this;
     }
-    public String getProjectMaterials() {
+    public java.util.List<String> getProjectMaterials() {
         return this.projectMaterials;
     }
 
