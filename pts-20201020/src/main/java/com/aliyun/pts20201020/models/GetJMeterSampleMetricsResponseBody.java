@@ -24,9 +24,6 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     public static GetJMeterSampleMetricsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJMeterSampleMetricsResponseBody self = new GetJMeterSampleMetricsResponseBody();
         return TeaModel.build(map, self);
@@ -78,14 +75,6 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetJMeterSampleMetricsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
 }
