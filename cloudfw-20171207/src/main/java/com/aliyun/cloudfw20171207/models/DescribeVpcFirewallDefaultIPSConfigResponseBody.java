@@ -10,9 +10,6 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     @NameInMap("EnableAllPatch")
     public Integer enableAllPatch;
 
-    @NameInMap("EnableDefault")
-    public Integer enableDefault;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,14 +35,6 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     }
     public Integer getEnableAllPatch() {
         return this.enableAllPatch;
-    }
-
-    public DescribeVpcFirewallDefaultIPSConfigResponseBody setEnableDefault(Integer enableDefault) {
-        this.enableDefault = enableDefault;
-        return this;
-    }
-    public Integer getEnableDefault() {
-        return this.enableDefault;
     }
 
     public DescribeVpcFirewallDefaultIPSConfigResponseBody setRequestId(String requestId) {

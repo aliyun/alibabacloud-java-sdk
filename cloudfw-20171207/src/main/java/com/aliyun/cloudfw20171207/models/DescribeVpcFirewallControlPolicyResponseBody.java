@@ -79,9 +79,6 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         public String destinationType;
 
-        @NameInMap("Direction")
-        public String direction;
-
         @NameInMap("HitTimes")
         public Integer hitTimes;
 
@@ -202,14 +199,6 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getDestinationType() {
             return this.destinationType;
-        }
-
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDirection(String direction) {
-            this.direction = direction;
-            return this;
-        }
-        public String getDirection() {
-            return this.direction;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setHitTimes(Integer hitTimes) {

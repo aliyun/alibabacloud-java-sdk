@@ -358,14 +358,8 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         @NameInMap("ConnectType")
         public String connectType;
 
-        @NameInMap("FirewallMode")
-        public String firewallMode;
-
         @NameInMap("FirewallSwitchStatus")
         public String firewallSwitchStatus;
-
-        @NameInMap("HealthCheckResult")
-        public String healthCheckResult;
 
         @NameInMap("IpsConfig")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig ipsConfig;
@@ -375,9 +369,6 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
         @NameInMap("MemberUid")
         public String memberUid;
-
-        @NameInMap("OperationResult")
-        public String operationResult;
 
         @NameInMap("PeerVpc")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc peerVpc;
@@ -412,28 +403,12 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
             return this.connectType;
         }
 
-        public DescribeVpcFirewallListResponseBodyVpcFirewalls setFirewallMode(String firewallMode) {
-            this.firewallMode = firewallMode;
-            return this;
-        }
-        public String getFirewallMode() {
-            return this.firewallMode;
-        }
-
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setFirewallSwitchStatus(String firewallSwitchStatus) {
             this.firewallSwitchStatus = firewallSwitchStatus;
             return this;
         }
         public String getFirewallSwitchStatus() {
             return this.firewallSwitchStatus;
-        }
-
-        public DescribeVpcFirewallListResponseBodyVpcFirewalls setHealthCheckResult(String healthCheckResult) {
-            this.healthCheckResult = healthCheckResult;
-            return this;
-        }
-        public String getHealthCheckResult() {
-            return this.healthCheckResult;
         }
 
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setIpsConfig(DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig ipsConfig) {
@@ -458,14 +433,6 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         }
         public String getMemberUid() {
             return this.memberUid;
-        }
-
-        public DescribeVpcFirewallListResponseBodyVpcFirewalls setOperationResult(String operationResult) {
-            this.operationResult = operationResult;
-            return this;
-        }
-        public String getOperationResult() {
-            return this.operationResult;
         }
 
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setPeerVpc(DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc peerVpc) {
