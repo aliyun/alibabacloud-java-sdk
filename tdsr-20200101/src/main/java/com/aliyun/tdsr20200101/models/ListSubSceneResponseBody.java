@@ -170,6 +170,10 @@ public class ListSubSceneResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        // 上传资源类型
+        @NameInMap("Type")
+        public String type;
+
         // 图片路径/视频路径
         @NameInMap("Url")
         public String url;
@@ -281,6 +285,14 @@ public class ListSubSceneResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public ListSubSceneResponseBodyList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListSubSceneResponseBodyList setUrl(String url) {

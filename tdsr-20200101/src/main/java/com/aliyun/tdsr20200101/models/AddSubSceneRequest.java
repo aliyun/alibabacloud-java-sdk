@@ -12,6 +12,10 @@ public class AddSubSceneRequest extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
+    // 类型 图片：IMAGE 视频：VIDEO
+    @NameInMap("UploadType")
+    public String uploadType;
+
     public static AddSubSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSubSceneRequest self = new AddSubSceneRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class AddSubSceneRequest extends TeaModel {
     }
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    public AddSubSceneRequest setUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    public String getUploadType() {
+        return this.uploadType;
     }
 
 }
