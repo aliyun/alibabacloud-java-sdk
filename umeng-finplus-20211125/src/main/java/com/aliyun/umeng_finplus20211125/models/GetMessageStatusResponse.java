@@ -3,21 +3,21 @@ package com.aliyun.umeng_finplus20211125.models;
 
 import com.aliyun.tea.*;
 
-public class MoZiStatusCallBackResponse extends TeaModel {
+public class GetMessageStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public GetMessageStatusResponseBody body;
 
-    public static MoZiStatusCallBackResponse build(java.util.Map<String, ?> map) throws Exception {
-        MoZiStatusCallBackResponse self = new MoZiStatusCallBackResponse();
+    public static GetMessageStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetMessageStatusResponse self = new GetMessageStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public MoZiStatusCallBackResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetMessageStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class MoZiStatusCallBackResponse extends TeaModel {
         return this.headers;
     }
 
-    public MoZiStatusCallBackResponse setBody(String body) {
+    public GetMessageStatusResponse setBody(GetMessageStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public GetMessageStatusResponseBody getBody() {
         return this.body;
     }
 
