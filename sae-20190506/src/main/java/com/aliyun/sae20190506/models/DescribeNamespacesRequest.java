@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeNamespacesQuery query;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespacesRequest self = new DescribeNamespacesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNamespacesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeNamespacesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
-    public DescribeNamespacesRequest setQuery(DescribeNamespacesQuery query) {
-        this.query = query;
+    public DescribeNamespacesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public DescribeNamespacesQuery getQuery() {
-        return this.query;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

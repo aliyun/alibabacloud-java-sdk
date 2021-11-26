@@ -5,31 +5,24 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
     @NameInMap("Data")
-    @Validation(required = true)
     public Boolean data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
 
     public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {

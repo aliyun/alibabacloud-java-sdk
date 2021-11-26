@@ -4,37 +4,54 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DescribeApplicationConfigResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeApplicationConfigResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeApplicationConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationConfigResponseBody self = new DescribeApplicationConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeApplicationConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DescribeApplicationConfigResponseBody setData(DescribeApplicationConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeApplicationConfigResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DescribeApplicationConfigResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DescribeApplicationConfigResponseBody setMessage(String message) {
@@ -53,30 +70,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeApplicationConfigResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    public DescribeApplicationConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DescribeApplicationConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeApplicationConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -85,106 +78,30 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeApplicationConfigResponseBody setData(DescribeApplicationConfigResponseBodyData data) {
-        this.data = data;
+    public DescribeApplicationConfigResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public DescribeApplicationConfigResponseBodyData getData() {
-        return this.data;
-    }
-
-    public static class DescribeApplicationConfigResponseBodyDataMountDesc extends TeaModel {
-        @NameInMap("MountPath")
-        @Validation(required = true)
-        public String mountPath;
-
-        @NameInMap("NasPath")
-        @Validation(required = true)
-        public String nasPath;
-
-        public static DescribeApplicationConfigResponseBodyDataMountDesc build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataMountDesc self = new DescribeApplicationConfigResponseBodyDataMountDesc();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeApplicationConfigResponseBodyDataMountDesc setMountPath(String mountPath) {
-            this.mountPath = mountPath;
-            return this;
-        }
-        public String getMountPath() {
-            return this.mountPath;
-        }
-
-        public DescribeApplicationConfigResponseBodyDataMountDesc setNasPath(String nasPath) {
-            this.nasPath = nasPath;
-            return this;
-        }
-        public String getNasPath() {
-            return this.nasPath;
-        }
-
-    }
-
-    public static class DescribeApplicationConfigResponseBodyDataTags extends TeaModel {
-        @NameInMap("Value")
-        @Validation(required = true)
-        public String value;
-
-        @NameInMap("Key")
-        @Validation(required = true)
-        public String key;
-
-        public static DescribeApplicationConfigResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationConfigResponseBodyDataTags self = new DescribeApplicationConfigResponseBodyDataTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeApplicationConfigResponseBodyDataTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeApplicationConfigResponseBodyDataTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DescribeApplicationConfigResponseBodyDataConfigMapMountDesc extends TeaModel {
-        @NameInMap("MountPath")
-        @Validation(required = true)
-        public String mountPath;
-
         @NameInMap("ConfigMapId")
-        @Validation(required = true)
         public Long configMapId;
 
         @NameInMap("ConfigMapName")
-        @Validation(required = true)
         public String configMapName;
 
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static DescribeApplicationConfigResponseBodyDataConfigMapMountDesc build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationConfigResponseBodyDataConfigMapMountDesc self = new DescribeApplicationConfigResponseBodyDataConfigMapMountDesc();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setMountPath(String mountPath) {
-            this.mountPath = mountPath;
-            return this;
-        }
-        public String getMountPath() {
-            return this.mountPath;
         }
 
         public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setConfigMapId(Long configMapId) {
@@ -211,200 +128,306 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.key;
         }
 
+        public DescribeApplicationConfigResponseBodyDataConfigMapMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataMountDesc extends TeaModel {
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("NasPath")
+        public String nasPath;
+
+        public static DescribeApplicationConfigResponseBodyDataMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataMountDesc self = new DescribeApplicationConfigResponseBodyDataMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataMountDesc setNasPath(String nasPath) {
+            this.nasPath = nasPath;
+            return this;
+        }
+        public String getNasPath() {
+            return this.nasPath;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataOssMountDescs extends TeaModel {
+        // Bucket名称
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        // Bucket中Oss Key名称
+        @NameInMap("bucketPath")
+        public String bucketPath;
+
+        // 挂载到容器的路径
+        @NameInMap("mountPath")
+        public String mountPath;
+
+        // 是否只读
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static DescribeApplicationConfigResponseBodyDataOssMountDescs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataOssMountDescs self = new DescribeApplicationConfigResponseBodyDataOssMountDescs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataOssMountDescs setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataOssMountDescs setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataOssMountDescs setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataOssMountDescs setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationConfigResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataTags self = new DescribeApplicationConfigResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeApplicationConfigResponseBodyData extends TeaModel {
-        @NameInMap("Timezone")
-        @Validation(required = true)
-        public String timezone;
+        @NameInMap("AcrAssumeRoleArn")
+        public String acrAssumeRoleArn;
 
         @NameInMap("AppDescription")
-        @Validation(required = true)
         public String appDescription;
 
-        @NameInMap("PhpConfig")
-        @Validation(required = true)
-        public String phpConfig;
+        @NameInMap("AppId")
+        public String appId;
 
-        @NameInMap("NasId")
-        @Validation(required = true)
-        public String nasId;
+        @NameInMap("AppName")
+        public String appName;
 
-        @NameInMap("WarStartOptions")
-        @Validation(required = true)
-        public String warStartOptions;
+        // 是否绑定EIP
+        @NameInMap("AssociateEip")
+        public Boolean associateEip;
+
+        @NameInMap("BatchWaitTime")
+        public Integer batchWaitTime;
+
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("CommandArgs")
+        public String commandArgs;
+
+        @NameInMap("ConfigMapMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("CustomHostAlias")
+        public String customHostAlias;
+
+        @NameInMap("EdasContainerVersion")
+        public String edasContainerVersion;
+
+        @NameInMap("EnableAhas")
+        public String enableAhas;
+
+        // 开启流量灰度
+        @NameInMap("EnableGreyTagRoute")
+        public Boolean enableGreyTagRoute;
+
+        @NameInMap("Envs")
+        public String envs;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("JarStartArgs")
+        public String jarStartArgs;
+
+        @NameInMap("JarStartOptions")
+        public String jarStartOptions;
+
+        @NameInMap("Jdk")
+        public String jdk;
 
         @NameInMap("Liveness")
-        @Validation(required = true)
         public String liveness;
 
         @NameInMap("Memory")
-        @Validation(required = true)
         public Integer memory;
 
-        @NameInMap("WebContainer")
-        @Validation(required = true)
-        public String webContainer;
-
-        @NameInMap("SlsConfigs")
-        @Validation(required = true)
-        public String slsConfigs;
-
-        @NameInMap("Cpu")
-        @Validation(required = true)
-        public Integer cpu;
-
-        @NameInMap("PackageVersion")
-        @Validation(required = true)
-        public String packageVersion;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        @NameInMap("Jdk")
-        @Validation(required = true)
-        public String jdk;
-
-        @NameInMap("JarStartArgs")
-        @Validation(required = true)
-        public String jarStartArgs;
-
         @NameInMap("MinReadyInstances")
-        @Validation(required = true)
         public Integer minReadyInstances;
 
+        @NameInMap("MountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc;
+
+        @NameInMap("MountHost")
+        public String mountHost;
+
+        // 对应MSE产品侧应用ID
+        @NameInMap("MseApplicationId")
+        public String mseApplicationId;
+
+        @NameInMap("NamespaceId")
+        public String namespaceId;
+
+        @NameInMap("NasId")
+        public String nasId;
+
+        // OSS读写的AK
+        @NameInMap("OssAkId")
+        public String ossAkId;
+
+        // OSS读写的secret
+        @NameInMap("OssAkSecret")
+        public String ossAkSecret;
+
+        // OSS挂载描述信息
+        @NameInMap("OssMountDescs")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> ossMountDescs;
+
+        @NameInMap("PackageType")
+        public String packageType;
+
+        @NameInMap("PackageUrl")
+        public String packageUrl;
+
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        @NameInMap("PhpArmsConfigLocation")
+        public String phpArmsConfigLocation;
+
+        @NameInMap("PhpConfig")
+        public String phpConfig;
+
+        @NameInMap("PhpConfigLocation")
+        public String phpConfigLocation;
+
+        @NameInMap("PostStart")
+        public String postStart;
+
         @NameInMap("PreStop")
-        @Validation(required = true)
         public String preStop;
 
         @NameInMap("Readiness")
-        @Validation(required = true)
         public String readiness;
 
-        @NameInMap("PhpArmsConfigLocation")
-        @Validation(required = true)
-        public String phpArmsConfigLocation;
-
-        @NameInMap("PackageType")
-        @Validation(required = true)
-        public String packageType;
-
-        @NameInMap("CommandArgs")
-        @Validation(required = true)
-        public String commandArgs;
-
-        @NameInMap("AcrAssumeRoleArn")
-        @Validation(required = true)
-        public String acrAssumeRoleArn;
-
-        @NameInMap("TerminationGracePeriodSeconds")
-        @Validation(required = true)
-        public Integer terminationGracePeriodSeconds;
-
-        @NameInMap("Envs")
-        @Validation(required = true)
-        public String envs;
-
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
-        public String vSwitchId;
-
-        @NameInMap("SecurityGroupId")
-        @Validation(required = true)
-        public String securityGroupId;
-
-        @NameInMap("PostStart")
-        @Validation(required = true)
-        public String postStart;
-
-        @NameInMap("ImageUrl")
-        @Validation(required = true)
-        public String imageUrl;
-
-        @NameInMap("MountHost")
-        @Validation(required = true)
-        public String mountHost;
-
-        @NameInMap("JarStartOptions")
-        @Validation(required = true)
-        public String jarStartOptions;
-
-        @NameInMap("Replicas")
-        @Validation(required = true)
-        public Integer replicas;
-
-        @NameInMap("CustomHostAlias")
-        @Validation(required = true)
-        public String customHostAlias;
-
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
-
-        @NameInMap("VpcId")
-        @Validation(required = true)
-        public String vpcId;
-
-        @NameInMap("EdasContainerVersion")
-        @Validation(required = true)
-        public String edasContainerVersion;
-
-        @NameInMap("Command")
-        @Validation(required = true)
-        public String command;
-
-        @NameInMap("PhpConfigLocation")
-        @Validation(required = true)
-        public String phpConfigLocation;
-
-        @NameInMap("PackageUrl")
-        @Validation(required = true)
-        public String packageUrl;
-
-        @NameInMap("BatchWaitTime")
-        @Validation(required = true)
-        public Integer batchWaitTime;
-
         @NameInMap("RegionId")
-        @Validation(required = true)
         public String regionId;
 
-        @NameInMap("NamespaceId")
-        @Validation(required = true)
-        public String namespaceId;
+        @NameInMap("Replicas")
+        public Integer replicas;
 
-        @NameInMap("EnableAhas")
-        @Validation(required = true)
-        public String enableAhas;
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
-        @NameInMap("TomcatConfig")
-        @Validation(required = true)
-        public String tomcatConfig;
-
-        @NameInMap("MountDesc")
-        @Validation(required = true)
-        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc;
+        @NameInMap("SlsConfigs")
+        public String slsConfigs;
 
         @NameInMap("Tags")
-        @Validation(required = true)
         public java.util.List<DescribeApplicationConfigResponseBodyDataTags> tags;
 
-        @NameInMap("ConfigMapMountDesc")
-        @Validation(required = true)
-        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc;
+        @NameInMap("TerminationGracePeriodSeconds")
+        public Integer terminationGracePeriodSeconds;
+
+        @NameInMap("Timezone")
+        public String timezone;
+
+        @NameInMap("TomcatConfig")
+        public String tomcatConfig;
+
+        @NameInMap("UpdateStrategy")
+        public String updateStrategy;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("WarStartOptions")
+        public String warStartOptions;
+
+        @NameInMap("WebContainer")
+        public String webContainer;
 
         public static DescribeApplicationConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationConfigResponseBodyData self = new DescribeApplicationConfigResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeApplicationConfigResponseBodyData setTimezone(String timezone) {
-            this.timezone = timezone;
+        public DescribeApplicationConfigResponseBodyData setAcrAssumeRoleArn(String acrAssumeRoleArn) {
+            this.acrAssumeRoleArn = acrAssumeRoleArn;
             return this;
         }
-        public String getTimezone() {
-            return this.timezone;
+        public String getAcrAssumeRoleArn() {
+            return this.acrAssumeRoleArn;
         }
 
         public DescribeApplicationConfigResponseBodyData setAppDescription(String appDescription) {
@@ -415,28 +438,140 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.appDescription;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPhpConfig(String phpConfig) {
-            this.phpConfig = phpConfig;
+        public DescribeApplicationConfigResponseBodyData setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getPhpConfig() {
-            return this.phpConfig;
+        public String getAppId() {
+            return this.appId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setNasId(String nasId) {
-            this.nasId = nasId;
+        public DescribeApplicationConfigResponseBodyData setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getNasId() {
-            return this.nasId;
+        public String getAppName() {
+            return this.appName;
         }
 
-        public DescribeApplicationConfigResponseBodyData setWarStartOptions(String warStartOptions) {
-            this.warStartOptions = warStartOptions;
+        public DescribeApplicationConfigResponseBodyData setAssociateEip(Boolean associateEip) {
+            this.associateEip = associateEip;
             return this;
         }
-        public String getWarStartOptions() {
-            return this.warStartOptions;
+        public Boolean getAssociateEip() {
+            return this.associateEip;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
+            this.batchWaitTime = batchWaitTime;
+            return this;
+        }
+        public Integer getBatchWaitTime() {
+            return this.batchWaitTime;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setCommandArgs(String commandArgs) {
+            this.commandArgs = commandArgs;
+            return this;
+        }
+        public String getCommandArgs() {
+            return this.commandArgs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setConfigMapMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc) {
+            this.configMapMountDesc = configMapMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> getConfigMapMountDesc() {
+            return this.configMapMountDesc;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setCustomHostAlias(String customHostAlias) {
+            this.customHostAlias = customHostAlias;
+            return this;
+        }
+        public String getCustomHostAlias() {
+            return this.customHostAlias;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEdasContainerVersion(String edasContainerVersion) {
+            this.edasContainerVersion = edasContainerVersion;
+            return this;
+        }
+        public String getEdasContainerVersion() {
+            return this.edasContainerVersion;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEnableAhas(String enableAhas) {
+            this.enableAhas = enableAhas;
+            return this;
+        }
+        public String getEnableAhas() {
+            return this.enableAhas;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEnableGreyTagRoute(Boolean enableGreyTagRoute) {
+            this.enableGreyTagRoute = enableGreyTagRoute;
+            return this;
+        }
+        public Boolean getEnableGreyTagRoute() {
+            return this.enableGreyTagRoute;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
+            this.envs = envs;
+            return this;
+        }
+        public String getEnvs() {
+            return this.envs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setJarStartArgs(String jarStartArgs) {
+            this.jarStartArgs = jarStartArgs;
+            return this;
+        }
+        public String getJarStartArgs() {
+            return this.jarStartArgs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setJarStartOptions(String jarStartOptions) {
+            this.jarStartOptions = jarStartOptions;
+            return this;
+        }
+        public String getJarStartOptions() {
+            return this.jarStartOptions;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setJdk(String jdk) {
+            this.jdk = jdk;
+            return this;
+        }
+        public String getJdk() {
+            return this.jdk;
         }
 
         public DescribeApplicationConfigResponseBodyData setLiveness(String liveness) {
@@ -455,28 +590,92 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeApplicationConfigResponseBodyData setWebContainer(String webContainer) {
-            this.webContainer = webContainer;
+        public DescribeApplicationConfigResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
+            this.minReadyInstances = minReadyInstances;
             return this;
         }
-        public String getWebContainer() {
-            return this.webContainer;
+        public Integer getMinReadyInstances() {
+            return this.minReadyInstances;
         }
 
-        public DescribeApplicationConfigResponseBodyData setSlsConfigs(String slsConfigs) {
-            this.slsConfigs = slsConfigs;
+        public DescribeApplicationConfigResponseBodyData setMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc) {
+            this.mountDesc = mountDesc;
             return this;
         }
-        public String getSlsConfigs() {
-            return this.slsConfigs;
+        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> getMountDesc() {
+            return this.mountDesc;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCpu(Integer cpu) {
-            this.cpu = cpu;
+        public DescribeApplicationConfigResponseBodyData setMountHost(String mountHost) {
+            this.mountHost = mountHost;
             return this;
         }
-        public Integer getCpu() {
-            return this.cpu;
+        public String getMountHost() {
+            return this.mountHost;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setMseApplicationId(String mseApplicationId) {
+            this.mseApplicationId = mseApplicationId;
+            return this;
+        }
+        public String getMseApplicationId() {
+            return this.mseApplicationId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setNasId(String nasId) {
+            this.nasId = nasId;
+            return this;
+        }
+        public String getNasId() {
+            return this.nasId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setOssAkId(String ossAkId) {
+            this.ossAkId = ossAkId;
+            return this;
+        }
+        public String getOssAkId() {
+            return this.ossAkId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setOssAkSecret(String ossAkSecret) {
+            this.ossAkSecret = ossAkSecret;
+            return this;
+        }
+        public String getOssAkSecret() {
+            return this.ossAkSecret;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setOssMountDescs(java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> ossMountDescs) {
+            this.ossMountDescs = ossMountDescs;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataOssMountDescs> getOssMountDescs() {
+            return this.ossMountDescs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setPackageType(String packageType) {
+            this.packageType = packageType;
+            return this;
+        }
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setPackageUrl(String packageUrl) {
+            this.packageUrl = packageUrl;
+            return this;
+        }
+        public String getPackageUrl() {
+            return this.packageUrl;
         }
 
         public DescribeApplicationConfigResponseBodyData setPackageVersion(String packageVersion) {
@@ -487,36 +686,36 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.packageVersion;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAppName(String appName) {
-            this.appName = appName;
+        public DescribeApplicationConfigResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {
+            this.phpArmsConfigLocation = phpArmsConfigLocation;
             return this;
         }
-        public String getAppName() {
-            return this.appName;
+        public String getPhpArmsConfigLocation() {
+            return this.phpArmsConfigLocation;
         }
 
-        public DescribeApplicationConfigResponseBodyData setJdk(String jdk) {
-            this.jdk = jdk;
+        public DescribeApplicationConfigResponseBodyData setPhpConfig(String phpConfig) {
+            this.phpConfig = phpConfig;
             return this;
         }
-        public String getJdk() {
-            return this.jdk;
+        public String getPhpConfig() {
+            return this.phpConfig;
         }
 
-        public DescribeApplicationConfigResponseBodyData setJarStartArgs(String jarStartArgs) {
-            this.jarStartArgs = jarStartArgs;
+        public DescribeApplicationConfigResponseBodyData setPhpConfigLocation(String phpConfigLocation) {
+            this.phpConfigLocation = phpConfigLocation;
             return this;
         }
-        public String getJarStartArgs() {
-            return this.jarStartArgs;
+        public String getPhpConfigLocation() {
+            return this.phpConfigLocation;
         }
 
-        public DescribeApplicationConfigResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
-            this.minReadyInstances = minReadyInstances;
+        public DescribeApplicationConfigResponseBodyData setPostStart(String postStart) {
+            this.postStart = postStart;
             return this;
         }
-        public Integer getMinReadyInstances() {
-            return this.minReadyInstances;
+        public String getPostStart() {
+            return this.postStart;
         }
 
         public DescribeApplicationConfigResponseBodyData setPreStop(String preStop) {
@@ -535,100 +734,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.readiness;
         }
 
-        public DescribeApplicationConfigResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {
-            this.phpArmsConfigLocation = phpArmsConfigLocation;
+        public DescribeApplicationConfigResponseBodyData setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getPhpArmsConfigLocation() {
-            return this.phpArmsConfigLocation;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setPackageType(String packageType) {
-            this.packageType = packageType;
-            return this;
-        }
-        public String getPackageType() {
-            return this.packageType;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setCommandArgs(String commandArgs) {
-            this.commandArgs = commandArgs;
-            return this;
-        }
-        public String getCommandArgs() {
-            return this.commandArgs;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setAcrAssumeRoleArn(String acrAssumeRoleArn) {
-            this.acrAssumeRoleArn = acrAssumeRoleArn;
-            return this;
-        }
-        public String getAcrAssumeRoleArn() {
-            return this.acrAssumeRoleArn;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
-            return this;
-        }
-        public Integer getTerminationGracePeriodSeconds() {
-            return this.terminationGracePeriodSeconds;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
-            this.envs = envs;
-            return this;
-        }
-        public String getEnvs() {
-            return this.envs;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setPostStart(String postStart) {
-            this.postStart = postStart;
-            return this;
-        }
-        public String getPostStart() {
-            return this.postStart;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-        public String getImageUrl() {
-            return this.imageUrl;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setMountHost(String mountHost) {
-            this.mountHost = mountHost;
-            return this;
-        }
-        public String getMountHost() {
-            return this.mountHost;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setJarStartOptions(String jarStartOptions) {
-            this.jarStartOptions = jarStartOptions;
-            return this;
-        }
-        public String getJarStartOptions() {
-            return this.jarStartOptions;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeApplicationConfigResponseBodyData setReplicas(Integer replicas) {
@@ -639,108 +750,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.replicas;
         }
 
-        public DescribeApplicationConfigResponseBodyData setCustomHostAlias(String customHostAlias) {
-            this.customHostAlias = customHostAlias;
+        public DescribeApplicationConfigResponseBodyData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
             return this;
         }
-        public String getCustomHostAlias() {
-            return this.customHostAlias;
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
-        public DescribeApplicationConfigResponseBodyData setAppId(String appId) {
-            this.appId = appId;
+        public DescribeApplicationConfigResponseBodyData setSlsConfigs(String slsConfigs) {
+            this.slsConfigs = slsConfigs;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setEdasContainerVersion(String edasContainerVersion) {
-            this.edasContainerVersion = edasContainerVersion;
-            return this;
-        }
-        public String getEdasContainerVersion() {
-            return this.edasContainerVersion;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setCommand(String command) {
-            this.command = command;
-            return this;
-        }
-        public String getCommand() {
-            return this.command;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setPhpConfigLocation(String phpConfigLocation) {
-            this.phpConfigLocation = phpConfigLocation;
-            return this;
-        }
-        public String getPhpConfigLocation() {
-            return this.phpConfigLocation;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setPackageUrl(String packageUrl) {
-            this.packageUrl = packageUrl;
-            return this;
-        }
-        public String getPackageUrl() {
-            return this.packageUrl;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
-            this.batchWaitTime = batchWaitTime;
-            return this;
-        }
-        public Integer getBatchWaitTime() {
-            return this.batchWaitTime;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setNamespaceId(String namespaceId) {
-            this.namespaceId = namespaceId;
-            return this;
-        }
-        public String getNamespaceId() {
-            return this.namespaceId;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setEnableAhas(String enableAhas) {
-            this.enableAhas = enableAhas;
-            return this;
-        }
-        public String getEnableAhas() {
-            return this.enableAhas;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setTomcatConfig(String tomcatConfig) {
-            this.tomcatConfig = tomcatConfig;
-            return this;
-        }
-        public String getTomcatConfig() {
-            return this.tomcatConfig;
-        }
-
-        public DescribeApplicationConfigResponseBodyData setMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> mountDesc) {
-            this.mountDesc = mountDesc;
-            return this;
-        }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataMountDesc> getMountDesc() {
-            return this.mountDesc;
+        public String getSlsConfigs() {
+            return this.slsConfigs;
         }
 
         public DescribeApplicationConfigResponseBodyData setTags(java.util.List<DescribeApplicationConfigResponseBodyDataTags> tags) {
@@ -751,12 +774,68 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public DescribeApplicationConfigResponseBodyData setConfigMapMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> configMapMountDesc) {
-            this.configMapMountDesc = configMapMountDesc;
+        public DescribeApplicationConfigResponseBodyData setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
+            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-        public java.util.List<DescribeApplicationConfigResponseBodyDataConfigMapMountDesc> getConfigMapMountDesc() {
-            return this.configMapMountDesc;
+        public Integer getTerminationGracePeriodSeconds() {
+            return this.terminationGracePeriodSeconds;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setTomcatConfig(String tomcatConfig) {
+            this.tomcatConfig = tomcatConfig;
+            return this;
+        }
+        public String getTomcatConfig() {
+            return this.tomcatConfig;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setUpdateStrategy(String updateStrategy) {
+            this.updateStrategy = updateStrategy;
+            return this;
+        }
+        public String getUpdateStrategy() {
+            return this.updateStrategy;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setWarStartOptions(String warStartOptions) {
+            this.warStartOptions = warStartOptions;
+            return this;
+        }
+        public String getWarStartOptions() {
+            return this.warStartOptions;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setWebContainer(String webContainer) {
+            this.webContainer = webContainer;
+            return this;
+        }
+        public String getWebContainer() {
+            return this.webContainer;
         }
 
     }

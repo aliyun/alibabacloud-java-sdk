@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppSecurityGroupRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public UpdateAppSecurityGroupQuery query;
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
 
     public static UpdateAppSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppSecurityGroupRequest self = new UpdateAppSecurityGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAppSecurityGroupRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateAppSecurityGroupRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public UpdateAppSecurityGroupRequest setQuery(UpdateAppSecurityGroupQuery query) {
-        this.query = query;
+    public UpdateAppSecurityGroupRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public UpdateAppSecurityGroupQuery getQuery() {
-        return this.query;
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }

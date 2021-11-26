@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeChangeOrderResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public DescribeChangeOrderResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeChangeOrderResponseBodyData data;
 
     public static DescribeChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChangeOrderResponseBody self = new DescribeChangeOrderResponseBody();
@@ -43,6 +36,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeChangeOrderResponseBody setData(DescribeChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeChangeOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeChangeOrderResponseBody setErrorCode(String errorCode) {
@@ -61,6 +62,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeChangeOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeChangeOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -77,49 +86,26 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeChangeOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeChangeOrderResponseBody setData(DescribeChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeChangeOrderResponseBodyDataPipelines extends TeaModel {
         @NameInMap("BatchType")
-        @Validation(required = true)
         public Integer batchType;
 
         @NameInMap("ParallelCount")
-        @Validation(required = true)
         public Integer parallelCount;
 
         @NameInMap("PipelineId")
-        @Validation(required = true)
         public String pipelineId;
 
         @NameInMap("PipelineName")
-        @Validation(required = true)
         public String pipelineName;
 
         @NameInMap("StartTime")
-        @Validation(required = true)
         public Long startTime;
 
         @NameInMap("Status")
-        @Validation(required = true)
         public Integer status;
 
         @NameInMap("UpdateTime")
-        @Validation(required = true)
         public Long updateTime;
 
         public static DescribeChangeOrderResponseBodyDataPipelines build(java.util.Map<String, ?> map) throws Exception {
@@ -187,64 +173,55 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
     public static class DescribeChangeOrderResponseBodyData extends TeaModel {
         @NameInMap("AppName")
-        @Validation(required = true)
         public String appName;
 
+        @NameInMap("ApprovalId")
+        public String approvalId;
+
         @NameInMap("Auto")
-        @Validation(required = true)
         public Boolean auto;
 
         @NameInMap("BatchCount")
-        @Validation(required = true)
         public Integer batchCount;
 
         @NameInMap("BatchType")
-        @Validation(required = true)
         public String batchType;
 
         @NameInMap("BatchWaitTime")
-        @Validation(required = true)
         public Integer batchWaitTime;
 
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         @NameInMap("CoType")
-        @Validation(required = true)
         public String coType;
 
         @NameInMap("CoTypeCode")
-        @Validation(required = true)
         public String coTypeCode;
 
         @NameInMap("CreateTime")
-        @Validation(required = true)
         public String createTime;
 
         @NameInMap("CurrentPipelineId")
-        @Validation(required = true)
         public String currentPipelineId;
 
         @NameInMap("Description")
-        @Validation(required = true)
         public String description;
 
-        @NameInMap("Status")
-        @Validation(required = true)
-        public Integer status;
-
-        @NameInMap("SupportRollback")
-        @Validation(required = true)
-        public Boolean supportRollback;
-
         @NameInMap("ErrorMessage")
-        @Validation(required = true)
         public String errorMessage;
 
         @NameInMap("Pipelines")
-        @Validation(required = true)
         public java.util.List<DescribeChangeOrderResponseBodyDataPipelines> pipelines;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("SubStatus")
+        public Integer subStatus;
+
+        @NameInMap("SupportRollback")
+        public Boolean supportRollback;
 
         public static DescribeChangeOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeChangeOrderResponseBodyData self = new DescribeChangeOrderResponseBodyData();
@@ -257,6 +234,14 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeChangeOrderResponseBodyData setApprovalId(String approvalId) {
+            this.approvalId = approvalId;
+            return this;
+        }
+        public String getApprovalId() {
+            return this.approvalId;
         }
 
         public DescribeChangeOrderResponseBodyData setAuto(Boolean auto) {
@@ -339,22 +324,6 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeChangeOrderResponseBodyData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeChangeOrderResponseBodyData setSupportRollback(Boolean supportRollback) {
-            this.supportRollback = supportRollback;
-            return this;
-        }
-        public Boolean getSupportRollback() {
-            return this.supportRollback;
-        }
-
         public DescribeChangeOrderResponseBodyData setErrorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
@@ -369,6 +338,30 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
         public java.util.List<DescribeChangeOrderResponseBodyDataPipelines> getPipelines() {
             return this.pipelines;
+        }
+
+        public DescribeChangeOrderResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeChangeOrderResponseBodyData setSubStatus(Integer subStatus) {
+            this.subStatus = subStatus;
+            return this;
+        }
+        public Integer getSubStatus() {
+            return this.subStatus;
+        }
+
+        public DescribeChangeOrderResponseBodyData setSupportRollback(Boolean supportRollback) {
+            this.supportRollback = supportRollback;
+            return this;
+        }
+        public Boolean getSupportRollback() {
+            return this.supportRollback;
         }
 
     }

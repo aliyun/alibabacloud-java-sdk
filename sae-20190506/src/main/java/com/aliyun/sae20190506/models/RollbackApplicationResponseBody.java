@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class RollbackApplicationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public RollbackApplicationResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public RollbackApplicationResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static RollbackApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RollbackApplicationResponseBody self = new RollbackApplicationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RollbackApplicationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RollbackApplicationResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class RollbackApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RollbackApplicationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public RollbackApplicationResponseBody setData(RollbackApplicationResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public RollbackApplicationResponseBodyData getData() {
+        return this.data;
     }
 
     public RollbackApplicationResponseBody setErrorCode(String errorCode) {
@@ -77,6 +62,22 @@ public class RollbackApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
+    public RollbackApplicationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RollbackApplicationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public RollbackApplicationResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,18 +86,12 @@ public class RollbackApplicationResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public RollbackApplicationResponseBody setData(RollbackApplicationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RollbackApplicationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RollbackApplicationResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
+
+        @NameInMap("IsNeedApproval")
+        public Boolean isNeedApproval;
 
         public static RollbackApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RollbackApplicationResponseBodyData self = new RollbackApplicationResponseBodyData();
@@ -109,6 +104,14 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
         public String getChangeOrderId() {
             return this.changeOrderId;
+        }
+
+        public RollbackApplicationResponseBodyData setIsNeedApproval(Boolean isNeedApproval) {
+            this.isNeedApproval = isNeedApproval;
+            return this;
+        }
+        public Boolean getIsNeedApproval() {
+            return this.isNeedApproval;
         }
 
     }

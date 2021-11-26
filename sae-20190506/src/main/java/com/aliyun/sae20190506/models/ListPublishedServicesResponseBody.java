@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPublishedServicesResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<ListPublishedServicesResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<ListPublishedServicesResponseBodyData> data;
 
     public static ListPublishedServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPublishedServicesResponseBody self = new ListPublishedServicesResponseBody();
@@ -43,6 +36,22 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListPublishedServicesResponseBody setData(java.util.List<ListPublishedServicesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListPublishedServicesResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListPublishedServicesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListPublishedServicesResponseBody setMessage(String message) {
@@ -69,14 +78,6 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListPublishedServicesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListPublishedServicesResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,42 +86,27 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public ListPublishedServicesResponseBody setData(java.util.List<ListPublishedServicesResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListPublishedServicesResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListPublishedServicesResponseBodyData extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("Group2Ip")
-        @Validation(required = true)
         public String group2Ip;
 
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("Version")
-        @Validation(required = true)
-        public String version;
-
         @NameInMap("Groups")
-        @Validation(required = true)
         public java.util.List<String> groups;
 
         @NameInMap("Ips")
-        @Validation(required = true)
         public java.util.List<String> ips;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Version")
+        public String version;
 
         public static ListPublishedServicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListPublishedServicesResponseBodyData self = new ListPublishedServicesResponseBodyData();
@@ -141,6 +127,22 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
         public String getGroup2Ip() {
             return this.group2Ip;
+        }
+
+        public ListPublishedServicesResponseBodyData setGroups(java.util.List<String> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<String> getGroups() {
+            return this.groups;
+        }
+
+        public ListPublishedServicesResponseBodyData setIps(java.util.List<String> ips) {
+            this.ips = ips;
+            return this;
+        }
+        public java.util.List<String> getIps() {
+            return this.ips;
         }
 
         public ListPublishedServicesResponseBodyData setName(String name) {
@@ -165,22 +167,6 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public ListPublishedServicesResponseBodyData setGroups(java.util.List<String> groups) {
-            this.groups = groups;
-            return this;
-        }
-        public java.util.List<String> getGroups() {
-            return this.groups;
-        }
-
-        public ListPublishedServicesResponseBodyData setIps(java.util.List<String> ips) {
-            this.ips = ips;
-            return this;
-        }
-        public java.util.List<String> getIps() {
-            return this.ips;
         }
 
     }

@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class RestartApplicationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public RestartApplicationResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public RestartApplicationResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static RestartApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RestartApplicationResponseBody self = new RestartApplicationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RestartApplicationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RestartApplicationResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class RestartApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RestartApplicationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public RestartApplicationResponseBody setData(RestartApplicationResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public RestartApplicationResponseBodyData getData() {
+        return this.data;
     }
 
     public RestartApplicationResponseBody setErrorCode(String errorCode) {
@@ -77,6 +62,22 @@ public class RestartApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
+    public RestartApplicationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RestartApplicationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public RestartApplicationResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,17 +86,8 @@ public class RestartApplicationResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public RestartApplicationResponseBody setData(RestartApplicationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RestartApplicationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RestartApplicationResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static RestartApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

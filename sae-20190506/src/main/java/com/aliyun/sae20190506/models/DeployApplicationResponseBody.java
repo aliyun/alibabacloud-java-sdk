@@ -4,37 +4,54 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeployApplicationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DeployApplicationResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DeployApplicationResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DeployApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeployApplicationResponseBody self = new DeployApplicationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeployApplicationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeployApplicationResponseBody setData(DeployApplicationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeployApplicationResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DeployApplicationResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public DeployApplicationResponseBody setMessage(String message) {
@@ -53,30 +70,6 @@ public class DeployApplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeployApplicationResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    public DeployApplicationResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DeployApplicationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DeployApplicationResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -85,22 +78,23 @@ public class DeployApplicationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeployApplicationResponseBody setData(DeployApplicationResponseBodyData data) {
-        this.data = data;
+    public DeployApplicationResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public DeployApplicationResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DeployApplicationResponseBodyData extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
+
+        @NameInMap("IsNeedApproval")
+        public Boolean isNeedApproval;
 
         public static DeployApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeployApplicationResponseBodyData self = new DeployApplicationResponseBodyData();
@@ -121,6 +115,14 @@ public class DeployApplicationResponseBody extends TeaModel {
         }
         public String getChangeOrderId() {
             return this.changeOrderId;
+        }
+
+        public DeployApplicationResponseBodyData setIsNeedApproval(Boolean isNeedApproval) {
+            this.isNeedApproval = isNeedApproval;
+            return this;
+        }
+        public Boolean getIsNeedApproval() {
+            return this.isNeedApproval;
         }
 
     }

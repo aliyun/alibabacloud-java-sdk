@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListIngressesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public ListIngressesResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public ListIngressesResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListIngressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIngressesResponseBody self = new ListIngressesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIngressesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListIngressesResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class ListIngressesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListIngressesResponseBody setMessage(String message) {
-        this.message = message;
+    public ListIngressesResponseBody setData(ListIngressesResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListIngressesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public ListIngressesResponseBodyData getData() {
+        return this.data;
     }
 
     public ListIngressesResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class ListIngressesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListIngressesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListIngressesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListIngressesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public ListIngressesResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,50 +86,50 @@ public class ListIngressesResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public ListIngressesResponseBody setData(ListIngressesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListIngressesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListIngressesResponseBodyDataIngressList extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public Long id;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("NamespaceId")
-        @Validation(required = true)
-        public String namespaceId;
-
-        @NameInMap("SlbId")
-        @Validation(required = true)
-        public String slbId;
-
-        @NameInMap("ListenerPort")
-        @Validation(required = true)
-        public String listenerPort;
-
         @NameInMap("CertId")
-        @Validation(required = true)
         public String certId;
 
         @NameInMap("Description")
-        @Validation(required = true)
         public String description;
 
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("ListenerPort")
+        public String listenerPort;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NamespaceId")
+        public String namespaceId;
+
+        @NameInMap("SlbId")
+        public String slbId;
+
         @NameInMap("SlbType")
-        @Validation(required = true)
         public String slbType;
 
         public static ListIngressesResponseBodyDataIngressList build(java.util.Map<String, ?> map) throws Exception {
             ListIngressesResponseBodyDataIngressList self = new ListIngressesResponseBodyDataIngressList();
             return TeaModel.build(map, self);
+        }
+
+        public ListIngressesResponseBodyDataIngressList setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
+        public ListIngressesResponseBodyDataIngressList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListIngressesResponseBodyDataIngressList setId(Long id) {
@@ -137,6 +138,14 @@ public class ListIngressesResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListIngressesResponseBodyDataIngressList setListenerPort(String listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public String getListenerPort() {
+            return this.listenerPort;
         }
 
         public ListIngressesResponseBodyDataIngressList setName(String name) {
@@ -163,30 +172,6 @@ public class ListIngressesResponseBody extends TeaModel {
             return this.slbId;
         }
 
-        public ListIngressesResponseBodyDataIngressList setListenerPort(String listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public String getListenerPort() {
-            return this.listenerPort;
-        }
-
-        public ListIngressesResponseBodyDataIngressList setCertId(String certId) {
-            this.certId = certId;
-            return this;
-        }
-        public String getCertId() {
-            return this.certId;
-        }
-
-        public ListIngressesResponseBodyDataIngressList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListIngressesResponseBodyDataIngressList setSlbType(String slbType) {
             this.slbType = slbType;
             return this;
@@ -199,7 +184,6 @@ public class ListIngressesResponseBody extends TeaModel {
 
     public static class ListIngressesResponseBodyData extends TeaModel {
         @NameInMap("IngressList")
-        @Validation(required = true)
         public java.util.List<ListIngressesResponseBodyDataIngressList> ingressList;
 
         public static ListIngressesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

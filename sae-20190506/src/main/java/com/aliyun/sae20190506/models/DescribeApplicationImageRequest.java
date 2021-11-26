@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationImageRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeApplicationImageQuery query;
+    @NameInMap("ImageUrl")
+    public String imageUrl;
 
     public static DescribeApplicationImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationImageRequest self = new DescribeApplicationImageRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationImageRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeApplicationImageRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public DescribeApplicationImageRequest setQuery(DescribeApplicationImageQuery query) {
-        this.query = query;
+    public DescribeApplicationImageRequest setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
         return this;
     }
-    public DescribeApplicationImageQuery getQuery() {
-        return this.query;
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 
 }

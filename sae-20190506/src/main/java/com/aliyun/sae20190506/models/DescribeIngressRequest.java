@@ -4,32 +4,20 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeIngressQuery query;
+    @NameInMap("IngressId")
+    public Long ingressId;
 
     public static DescribeIngressRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIngressRequest self = new DescribeIngressRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIngressRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeIngressRequest setIngressId(Long ingressId) {
+        this.ingressId = ingressId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DescribeIngressRequest setQuery(DescribeIngressQuery query) {
-        this.query = query;
-        return this;
-    }
-    public DescribeIngressQuery getQuery() {
-        return this.query;
+    public Long getIngressId() {
+        return this.ingressId;
     }
 
 }

@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListChangeOrdersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public ListChangeOrdersResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public ListChangeOrdersResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListChangeOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChangeOrdersResponseBody self = new ListChangeOrdersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListChangeOrdersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListChangeOrdersResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListChangeOrdersResponseBody setMessage(String message) {
-        this.message = message;
+    public ListChangeOrdersResponseBody setData(ListChangeOrdersResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListChangeOrdersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public ListChangeOrdersResponseBodyData getData() {
+        return this.data;
     }
 
     public ListChangeOrdersResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public ListChangeOrdersResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListChangeOrdersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListChangeOrdersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public ListChangeOrdersResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,70 +86,48 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public ListChangeOrdersResponseBody setData(ListChangeOrdersResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListChangeOrdersResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListChangeOrdersResponseBodyDataChangeOrderList extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("BatchCount")
-        @Validation(required = true)
         public Integer batchCount;
 
         @NameInMap("BatchType")
-        @Validation(required = true)
         public String batchType;
 
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         @NameInMap("CoType")
-        @Validation(required = true)
         public String coType;
 
         @NameInMap("CoTypeCode")
-        @Validation(required = true)
         public String coTypeCode;
 
         @NameInMap("CreateTime")
-        @Validation(required = true)
         public String createTime;
 
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
         @NameInMap("Description")
-        @Validation(required = true)
         public String description;
 
         @NameInMap("FinishTime")
-        @Validation(required = true)
         public String finishTime;
 
         @NameInMap("GroupId")
-        @Validation(required = true)
         public String groupId;
 
         @NameInMap("Source")
-        @Validation(required = true)
         public String source;
 
         @NameInMap("Status")
-        @Validation(required = true)
         public Integer status;
 
         @NameInMap("UserId")
-        @Validation(required = true)
         public String userId;
-
-        @NameInMap("CreateUserId")
-        @Validation(required = true)
-        public String createUserId;
 
         public static ListChangeOrdersResponseBodyDataChangeOrderList build(java.util.Map<String, ?> map) throws Exception {
             ListChangeOrdersResponseBodyDataChangeOrderList self = new ListChangeOrdersResponseBodyDataChangeOrderList();
@@ -211,6 +190,14 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListChangeOrdersResponseBodyDataChangeOrderList setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
         public ListChangeOrdersResponseBodyDataChangeOrderList setDescription(String description) {
             this.description = description;
             return this;
@@ -259,36 +246,32 @@ public class ListChangeOrdersResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListChangeOrdersResponseBodyDataChangeOrderList setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
-        }
-
     }
 
     public static class ListChangeOrdersResponseBodyData extends TeaModel {
+        @NameInMap("ChangeOrderList")
+        public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;
+
         @NameInMap("CurrentPage")
-        @Validation(required = true)
         public Integer currentPage;
 
         @NameInMap("PageSize")
-        @Validation(required = true)
         public Integer pageSize;
 
         @NameInMap("TotalSize")
-        @Validation(required = true)
         public Integer totalSize;
-
-        @NameInMap("ChangeOrderList")
-        @Validation(required = true)
-        public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;
 
         public static ListChangeOrdersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListChangeOrdersResponseBodyData self = new ListChangeOrdersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListChangeOrdersResponseBodyData setChangeOrderList(java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList) {
+            this.changeOrderList = changeOrderList;
+            return this;
+        }
+        public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> getChangeOrderList() {
+            return this.changeOrderList;
         }
 
         public ListChangeOrdersResponseBodyData setCurrentPage(Integer currentPage) {
@@ -313,14 +296,6 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         }
         public Integer getTotalSize() {
             return this.totalSize;
-        }
-
-        public ListChangeOrdersResponseBodyData setChangeOrderList(java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList) {
-            this.changeOrderList = changeOrderList;
-            return this;
-        }
-        public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> getChangeOrderList() {
-            return this.changeOrderList;
         }
 
     }

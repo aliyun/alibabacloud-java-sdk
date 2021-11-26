@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdasContainersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public java.util.List<DescribeEdasContainersResponseBodyData> data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<DescribeEdasContainersResponseBodyData> data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeEdasContainersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEdasContainersResponseBody self = new DescribeEdasContainersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEdasContainersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEdasContainersResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeEdasContainersResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeEdasContainersResponseBody setData(java.util.List<DescribeEdasContainersResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeEdasContainersResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<DescribeEdasContainersResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeEdasContainersResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public DescribeEdasContainersResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeEdasContainersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeEdasContainersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeEdasContainersResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,21 +86,11 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeEdasContainersResponseBody setData(java.util.List<DescribeEdasContainersResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeEdasContainersResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeEdasContainersResponseBodyData extends TeaModel {
         @NameInMap("Disabled")
-        @Validation(required = true)
         public Boolean disabled;
 
         @NameInMap("EdasContainerVersion")
-        @Validation(required = true)
         public String edasContainerVersion;
 
         public static DescribeEdasContainersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

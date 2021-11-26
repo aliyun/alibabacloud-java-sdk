@@ -4,53 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigMapResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public DeleteConfigMapResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DeleteConfigMapResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DeleteConfigMapResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteConfigMapResponseBody self = new DeleteConfigMapResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteConfigMapResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DeleteConfigMapResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public DeleteConfigMapResponseBody setCode(String code) {
@@ -61,6 +38,14 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DeleteConfigMapResponseBody setData(DeleteConfigMapResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteConfigMapResponseBodyData getData() {
+        return this.data;
+    }
+
     public DeleteConfigMapResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -69,12 +54,20 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteConfigMapResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public DeleteConfigMapResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteConfigMapResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteConfigMapResponseBody setSuccess(Boolean success) {
@@ -85,17 +78,16 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteConfigMapResponseBody setData(DeleteConfigMapResponseBodyData data) {
-        this.data = data;
+    public DeleteConfigMapResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public DeleteConfigMapResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DeleteConfigMapResponseBodyData extends TeaModel {
         @NameInMap("ConfigMapId")
-        @Validation(required = true)
         public Long configMapId;
 
         public static DeleteConfigMapResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacedConfigMapsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    @NameInMap("Data")
+    public ListNamespacedConfigMapsResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public ListNamespacedConfigMapsResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListNamespacedConfigMapsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNamespacedConfigMapsResponseBody self = new ListNamespacedConfigMapsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNamespacedConfigMapsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListNamespacedConfigMapsResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListNamespacedConfigMapsResponseBody setMessage(String message) {
-        this.message = message;
+    public ListNamespacedConfigMapsResponseBody setData(ListNamespacedConfigMapsResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public ListNamespacedConfigMapsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListNamespacedConfigMapsResponseBody setErrorCode(String errorCode) {
@@ -69,12 +54,20 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListNamespacedConfigMapsResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public ListNamespacedConfigMapsResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListNamespacedConfigMapsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListNamespacedConfigMapsResponseBody setSuccess(Boolean success) {
@@ -85,21 +78,19 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListNamespacedConfigMapsResponseBody setData(ListNamespacedConfigMapsResponseBodyData data) {
-        this.data = data;
+    public ListNamespacedConfigMapsResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public ListNamespacedConfigMapsResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("AppName")
-        @Validation(required = true)
         public String appName;
 
         public static ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps build(java.util.Map<String, ?> map) throws Exception {
@@ -127,36 +118,28 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMaps extends TeaModel {
         @NameInMap("ConfigMapId")
-        @Validation(required = true)
         public Long configMapId;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("Data")
+        public java.util.Map<String, ?> data;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("Name")
-        @Validation(required = true)
         public String name;
 
         @NameInMap("NamespaceId")
-        @Validation(required = true)
         public String namespaceId;
 
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("Data")
-        @Validation(required = true)
-        public java.util.Map<String, ?> data;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public Long createTime;
+        @NameInMap("RelateApps")
+        public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps;
 
         @NameInMap("UpdateTime")
-        @Validation(required = true)
         public Long updateTime;
-
-        @NameInMap("RelateApps")
-        @Validation(required = true)
-        public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps;
 
         public static ListNamespacedConfigMapsResponseBodyDataConfigMaps build(java.util.Map<String, ?> map) throws Exception {
             ListNamespacedConfigMapsResponseBodyDataConfigMaps self = new ListNamespacedConfigMapsResponseBodyDataConfigMaps();
@@ -169,6 +152,30 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         }
         public Long getConfigMapId() {
             return this.configMapId;
+        }
+
+        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setData(java.util.Map<String, ?> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.Map<String, ?> getData() {
+            return this.data;
+        }
+
+        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListNamespacedConfigMapsResponseBodyDataConfigMaps setName(String name) {
@@ -187,28 +194,12 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             return this.namespaceId;
         }
 
-        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setDescription(String description) {
-            this.description = description;
+        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setRelateApps(java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps) {
+            this.relateApps = relateApps;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setData(java.util.Map<String, ?> data) {
-            this.data = data;
-            return this;
-        }
-        public java.util.Map<String, ?> getData() {
-            return this.data;
-        }
-
-        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
+        public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> getRelateApps() {
+            return this.relateApps;
         }
 
         public ListNamespacedConfigMapsResponseBodyDataConfigMaps setUpdateTime(Long updateTime) {
@@ -219,19 +210,10 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public ListNamespacedConfigMapsResponseBodyDataConfigMaps setRelateApps(java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps) {
-            this.relateApps = relateApps;
-            return this;
-        }
-        public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> getRelateApps() {
-            return this.relateApps;
-        }
-
     }
 
     public static class ListNamespacedConfigMapsResponseBodyData extends TeaModel {
         @NameInMap("ConfigMaps")
-        @Validation(required = true)
         public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMaps> configMaps;
 
         public static ListNamespacedConfigMapsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

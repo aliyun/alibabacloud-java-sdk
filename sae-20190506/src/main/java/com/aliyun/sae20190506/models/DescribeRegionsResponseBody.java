@@ -4,33 +4,21 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public Integer code;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("Regions")
-    @Validation(required = true)
     public DescribeRegionsResponseBodyRegions regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setCode(Integer code) {
@@ -57,38 +45,49 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeRegionsResponseBodyRegionsRegionRecommendZones extends TeaModel {
+        @NameInMap("RecommendZone")
+        public java.util.List<String> recommendZone;
+
+        public static DescribeRegionsResponseBodyRegionsRegionRecommendZones build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyRegionsRegionRecommendZones self = new DescribeRegionsResponseBodyRegionsRegionRecommendZones();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegionRecommendZones setRecommendZone(java.util.List<String> recommendZone) {
+            this.recommendZone = recommendZone;
+            return this;
+        }
+        public java.util.List<String> getRecommendZone() {
+            return this.recommendZone;
+        }
+
+    }
+
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("RecommendZones")
+        public DescribeRegionsResponseBodyRegionsRegionRecommendZones recommendZones;
 
         @NameInMap("RegionEndpoint")
-        @Validation(required = true)
         public String regionEndpoint;
 
-        @NameInMap("LocalName")
-        @Validation(required = true)
-        public String localName;
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
@@ -99,11 +98,34 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.localName;
         }
 
+        public DescribeRegionsResponseBodyRegionsRegion setRecommendZones(DescribeRegionsResponseBodyRegionsRegionRecommendZones recommendZones) {
+            this.recommendZones = recommendZones;
+            return this;
+        }
+        public DescribeRegionsResponseBodyRegionsRegionRecommendZones getRecommendZones() {
+            return this.recommendZones;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         @NameInMap("Region")
-        @Validation(required = true)
         public java.util.List<DescribeRegionsResponseBodyRegionsRegion> region;
 
         public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {

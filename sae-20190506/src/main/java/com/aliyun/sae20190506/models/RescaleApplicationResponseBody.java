@@ -5,28 +5,22 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public RescaleApplicationResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public RescaleApplicationResponseBodyData data;
 
     public static RescaleApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RescaleApplicationResponseBody self = new RescaleApplicationResponseBody();
@@ -39,6 +33,22 @@ public class RescaleApplicationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public RescaleApplicationResponseBody setData(RescaleApplicationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RescaleApplicationResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RescaleApplicationResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RescaleApplicationResponseBody setMessage(String message) {
@@ -65,25 +75,8 @@ public class RescaleApplicationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RescaleApplicationResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RescaleApplicationResponseBody setData(RescaleApplicationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RescaleApplicationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RescaleApplicationResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static RescaleApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

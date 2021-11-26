@@ -4,32 +4,20 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("query")
-    @Validation(required = true)
-    public DeleteNamespaceQuery query;
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static DeleteNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNamespaceRequest self = new DeleteNamespaceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteNamespaceRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteNamespaceRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteNamespaceRequest setQuery(DeleteNamespaceQuery query) {
-        this.query = query;
-        return this;
-    }
-    public DeleteNamespaceQuery getQuery() {
-        return this.query;
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

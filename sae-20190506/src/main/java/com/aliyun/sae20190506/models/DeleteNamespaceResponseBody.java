@@ -4,41 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
 
     public static DeleteNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteNamespaceResponseBody self = new DeleteNamespaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteNamespaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteNamespaceResponseBody setCode(String code) {
@@ -63,6 +49,14 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DeleteNamespaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteNamespaceResponseBody setSuccess(Boolean success) {

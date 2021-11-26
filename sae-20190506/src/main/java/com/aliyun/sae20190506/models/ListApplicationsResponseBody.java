@@ -4,41 +4,36 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("Data")
-    @Validation(required = true)
     public ListApplicationsResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TotalSize")
+    public Integer totalSize;
 
     public static ListApplicationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationsResponseBody self = new ListApplicationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListApplicationsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListApplicationsResponseBody setCode(String code) {
@@ -49,28 +44,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListApplicationsResponseBody setMessage(String message) {
-        this.message = message;
+    public ListApplicationsResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListApplicationsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public ListApplicationsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public ListApplicationsResponseBody setData(ListApplicationsResponseBodyData data) {
@@ -81,13 +60,59 @@ public class ListApplicationsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListApplicationsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListApplicationsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListApplicationsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListApplicationsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListApplicationsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListApplicationsResponseBody setTotalSize(Integer totalSize) {
+        this.totalSize = totalSize;
+        return this;
+    }
+    public Integer getTotalSize() {
+        return this.totalSize;
+    }
+
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ListApplicationsResponseBodyDataApplicationsTags build(java.util.Map<String, ?> map) throws Exception {
@@ -115,35 +140,30 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplications extends TeaModel {
         @NameInMap("AppDeletingStatus")
-        @Validation(required = true)
         public Boolean appDeletingStatus;
 
+        @NameInMap("AppDescription")
+        public String appDescription;
+
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("AppName")
-        @Validation(required = true)
         public String appName;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        @NameInMap("RunningInstances")
-        @Validation(required = true)
-        public Integer runningInstances;
-
         @NameInMap("Instances")
-        @Validation(required = true)
         public Integer instances;
 
         @NameInMap("NamespaceId")
-        @Validation(required = true)
         public String namespaceId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RunningInstances")
+        public Integer runningInstances;
+
         @NameInMap("Tags")
-        @Validation(required = true)
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags;
 
         public static ListApplicationsResponseBodyDataApplications build(java.util.Map<String, ?> map) throws Exception {
@@ -157,6 +177,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Boolean getAppDeletingStatus() {
             return this.appDeletingStatus;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setAppDescription(String appDescription) {
+            this.appDescription = appDescription;
+            return this;
+        }
+        public String getAppDescription() {
+            return this.appDescription;
         }
 
         public ListApplicationsResponseBodyDataApplications setAppId(String appId) {
@@ -175,22 +203,6 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListApplicationsResponseBodyDataApplications setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListApplicationsResponseBodyDataApplications setRunningInstances(Integer runningInstances) {
-            this.runningInstances = runningInstances;
-            return this;
-        }
-        public Integer getRunningInstances() {
-            return this.runningInstances;
-        }
-
         public ListApplicationsResponseBodyDataApplications setInstances(Integer instances) {
             this.instances = instances;
             return this;
@@ -207,6 +219,22 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.namespaceId;
         }
 
+        public ListApplicationsResponseBodyDataApplications setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setRunningInstances(Integer runningInstances) {
+            this.runningInstances = runningInstances;
+            return this;
+        }
+        public Integer getRunningInstances() {
+            return this.runningInstances;
+        }
+
         public ListApplicationsResponseBodyDataApplications setTags(java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags) {
             this.tags = tags;
             return this;
@@ -218,25 +246,29 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
+        @NameInMap("Applications")
+        public java.util.List<ListApplicationsResponseBodyDataApplications> applications;
+
         @NameInMap("CurrentPage")
-        @Validation(required = true)
         public Integer currentPage;
 
         @NameInMap("PageSize")
-        @Validation(required = true)
         public Integer pageSize;
 
         @NameInMap("TotalSize")
-        @Validation(required = true)
         public Integer totalSize;
-
-        @NameInMap("Applications")
-        @Validation(required = true)
-        public java.util.List<ListApplicationsResponseBodyDataApplications> applications;
 
         public static ListApplicationsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationsResponseBodyData self = new ListApplicationsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsResponseBodyData setApplications(java.util.List<ListApplicationsResponseBodyDataApplications> applications) {
+            this.applications = applications;
+            return this;
+        }
+        public java.util.List<ListApplicationsResponseBodyDataApplications> getApplications() {
+            return this.applications;
         }
 
         public ListApplicationsResponseBodyData setCurrentPage(Integer currentPage) {
@@ -261,14 +293,6 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Integer getTotalSize() {
             return this.totalSize;
-        }
-
-        public ListApplicationsResponseBodyData setApplications(java.util.List<ListApplicationsResponseBodyDataApplications> applications) {
-            this.applications = applications;
-            return this;
-        }
-        public java.util.List<ListApplicationsResponseBodyDataApplications> getApplications() {
-            return this.applications;
         }
 
     }

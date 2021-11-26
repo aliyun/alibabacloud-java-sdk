@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class AbortChangeOrderResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public AbortChangeOrderResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public AbortChangeOrderResponseBodyData data;
 
     public static AbortChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbortChangeOrderResponseBody self = new AbortChangeOrderResponseBody();
@@ -43,6 +36,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AbortChangeOrderResponseBody setData(AbortChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AbortChangeOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public AbortChangeOrderResponseBody setErrorCode(String errorCode) {
@@ -61,6 +62,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         return this.message;
     }
 
+    public AbortChangeOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public AbortChangeOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -77,25 +86,8 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public AbortChangeOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AbortChangeOrderResponseBody setData(AbortChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AbortChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class AbortChangeOrderResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static AbortChangeOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

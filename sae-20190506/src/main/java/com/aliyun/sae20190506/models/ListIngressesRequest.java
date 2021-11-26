@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListIngressesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public ListIngressesQuery query;
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static ListIngressesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIngressesRequest self = new ListIngressesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListIngressesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListIngressesRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public ListIngressesRequest setQuery(ListIngressesQuery query) {
-        this.query = query;
+    public ListIngressesRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public ListIngressesQuery getQuery() {
-        return this.query;
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

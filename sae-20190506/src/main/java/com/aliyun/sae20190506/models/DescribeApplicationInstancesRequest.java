@@ -4,32 +4,64 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationInstancesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeApplicationInstancesQuery query;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Reverse")
+    public Boolean reverse;
 
     public static DescribeApplicationInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationInstancesRequest self = new DescribeApplicationInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationInstancesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeApplicationInstancesRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public DescribeApplicationInstancesRequest setQuery(DescribeApplicationInstancesQuery query) {
-        this.query = query;
+    public DescribeApplicationInstancesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public DescribeApplicationInstancesQuery getQuery() {
-        return this.query;
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeApplicationInstancesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeApplicationInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeApplicationInstancesRequest setReverse(Boolean reverse) {
+        this.reverse = reverse;
+        return this;
+    }
+    public Boolean getReverse() {
+        return this.reverse;
     }
 
 }

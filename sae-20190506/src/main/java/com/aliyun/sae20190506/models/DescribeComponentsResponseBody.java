@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<DescribeComponentsResponseBodyData> data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<DescribeComponentsResponseBodyData> data;
 
     public static DescribeComponentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeComponentsResponseBody self = new DescribeComponentsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeComponentsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeComponentsResponseBody setCode(String code) {
@@ -51,6 +36,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeComponentsResponseBody setData(java.util.List<DescribeComponentsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeComponentsResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeComponentsResponseBody setErrorCode(String errorCode) {
@@ -69,6 +62,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeComponentsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeComponentsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -85,42 +86,22 @@ public class DescribeComponentsResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeComponentsResponseBody setData(java.util.List<DescribeComponentsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeComponentsResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeComponentsResponseBodyData extends TeaModel {
-        @NameInMap("ComponentKey")
-        @Validation(required = true)
-        public String componentKey;
-
         @NameInMap("ComponentDescription")
-        @Validation(required = true)
         public String componentDescription;
 
+        @NameInMap("ComponentKey")
+        public String componentKey;
+
         @NameInMap("Expired")
-        @Validation(required = true)
         public Boolean expired;
 
         @NameInMap("Type")
-        @Validation(required = true)
         public String type;
 
         public static DescribeComponentsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeComponentsResponseBodyData self = new DescribeComponentsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeComponentsResponseBodyData setComponentKey(String componentKey) {
-            this.componentKey = componentKey;
-            return this;
-        }
-        public String getComponentKey() {
-            return this.componentKey;
         }
 
         public DescribeComponentsResponseBodyData setComponentDescription(String componentDescription) {
@@ -129,6 +110,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
         public String getComponentDescription() {
             return this.componentDescription;
+        }
+
+        public DescribeComponentsResponseBodyData setComponentKey(String componentKey) {
+            this.componentKey = componentKey;
+            return this;
+        }
+        public String getComponentKey() {
+            return this.componentKey;
         }
 
         public DescribeComponentsResponseBodyData setExpired(Boolean expired) {

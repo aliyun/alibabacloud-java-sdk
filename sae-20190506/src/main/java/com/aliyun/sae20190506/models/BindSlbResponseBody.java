@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class BindSlbResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    @NameInMap("Data")
+    public BindSlbResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public BindSlbResponseBodyData data;
 
     public static BindSlbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindSlbResponseBody self = new BindSlbResponseBody();
@@ -45,12 +38,12 @@ public class BindSlbResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BindSlbResponseBody setMessage(String message) {
-        this.message = message;
+    public BindSlbResponseBody setData(BindSlbResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public BindSlbResponseBodyData getData() {
+        return this.data;
     }
 
     public BindSlbResponseBody setErrorCode(String errorCode) {
@@ -59,6 +52,14 @@ public class BindSlbResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public BindSlbResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public BindSlbResponseBody setRequestId(String requestId) {
@@ -85,17 +86,8 @@ public class BindSlbResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public BindSlbResponseBody setData(BindSlbResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public BindSlbResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class BindSlbResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static BindSlbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

@@ -4,32 +4,64 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("DeleteAll")
+    public Boolean deleteAll;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public UntagResourcesQuery query;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceIds")
+    public String resourceIds;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("TagKeys")
+    public String tagKeys;
 
     public static UntagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesRequest self = new UntagResourcesRequest();
         return TeaModel.build(map, self);
     }
 
-    public UntagResourcesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UntagResourcesRequest setDeleteAll(Boolean deleteAll) {
+        this.deleteAll = deleteAll;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getDeleteAll() {
+        return this.deleteAll;
     }
 
-    public UntagResourcesRequest setQuery(UntagResourcesQuery query) {
-        this.query = query;
+    public UntagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public UntagResourcesQuery getQuery() {
-        return this.query;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UntagResourcesRequest setResourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public String getResourceIds() {
+        return this.resourceIds;
+    }
+
+    public UntagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public UntagResourcesRequest setTagKeys(String tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    public String getTagKeys() {
+        return this.tagKeys;
     }
 
 }

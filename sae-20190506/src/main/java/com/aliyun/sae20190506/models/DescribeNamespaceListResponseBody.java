@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public java.util.List<DescribeNamespaceListResponseBodyData> data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<DescribeNamespaceListResponseBodyData> data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeNamespaceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespaceListResponseBody self = new DescribeNamespaceListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNamespaceListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeNamespaceListResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeNamespaceListResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeNamespaceListResponseBody setData(java.util.List<DescribeNamespaceListResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeNamespaceListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<DescribeNamespaceListResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeNamespaceListResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public DescribeNamespaceListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeNamespaceListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeNamespaceListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeNamespaceListResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,74 +86,40 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeNamespaceListResponseBody setData(java.util.List<DescribeNamespaceListResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeNamespaceListResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeNamespaceListResponseBodyData extends TeaModel {
-        @NameInMap("NamespaceName")
-        @Validation(required = true)
-        public String namespaceName;
-
-        @NameInMap("NamespaceId")
-        @Validation(required = true)
-        public String namespaceId;
-
         @NameInMap("AgentInstall")
-        @Validation(required = true)
         public String agentInstall;
 
         @NameInMap("Current")
-        @Validation(required = true)
         public Boolean current;
 
         @NameInMap("Custom")
-        @Validation(required = true)
         public Boolean custom;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
         @NameInMap("HybridCloudEnable")
-        @Validation(required = true)
         public Boolean hybridCloudEnable;
 
-        @NameInMap("VpcId")
-        @Validation(required = true)
-        public String vpcId;
+        @NameInMap("NamespaceId")
+        public String namespaceId;
 
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
-        public String vSwitchId;
+        @NameInMap("NamespaceName")
+        public String namespaceName;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("SecurityGroupId")
-        @Validation(required = true)
         public String securityGroupId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeNamespaceListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceListResponseBodyData self = new DescribeNamespaceListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNamespaceListResponseBodyData setNamespaceName(String namespaceName) {
-            this.namespaceName = namespaceName;
-            return this;
-        }
-        public String getNamespaceName() {
-            return this.namespaceName;
-        }
-
-        public DescribeNamespaceListResponseBodyData setNamespaceId(String namespaceId) {
-            this.namespaceId = namespaceId;
-            return this;
-        }
-        public String getNamespaceId() {
-            return this.namespaceId;
         }
 
         public DescribeNamespaceListResponseBodyData setAgentInstall(String agentInstall) {
@@ -179,14 +146,6 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             return this.custom;
         }
 
-        public DescribeNamespaceListResponseBodyData setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
         public DescribeNamespaceListResponseBodyData setHybridCloudEnable(Boolean hybridCloudEnable) {
             this.hybridCloudEnable = hybridCloudEnable;
             return this;
@@ -195,12 +154,36 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             return this.hybridCloudEnable;
         }
 
-        public DescribeNamespaceListResponseBodyData setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeNamespaceListResponseBodyData setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        public DescribeNamespaceListResponseBodyData setNamespaceName(String namespaceName) {
+            this.namespaceName = namespaceName;
+            return this;
+        }
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        public DescribeNamespaceListResponseBodyData setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeNamespaceListResponseBodyData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         public DescribeNamespaceListResponseBodyData setVSwitchId(String vSwitchId) {
@@ -211,12 +194,12 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeNamespaceListResponseBodyData setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public DescribeNamespaceListResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class RestartInstancesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public RestartInstancesQuery query;
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     public static RestartInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartInstancesRequest self = new RestartInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public RestartInstancesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RestartInstancesRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public RestartInstancesRequest setQuery(RestartInstancesQuery query) {
-        this.query = query;
+    public RestartInstancesRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public RestartInstancesQuery getQuery() {
-        return this.query;
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
 }

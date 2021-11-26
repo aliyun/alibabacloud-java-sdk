@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentsRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeComponentsQuery query;
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeComponentsRequest self = new DescribeComponentsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeComponentsRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeComponentsRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public DescribeComponentsRequest setQuery(DescribeComponentsQuery query) {
-        this.query = query;
+    public DescribeComponentsRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public DescribeComponentsQuery getQuery() {
-        return this.query;
+    public String getType() {
+        return this.type;
     }
 
 }

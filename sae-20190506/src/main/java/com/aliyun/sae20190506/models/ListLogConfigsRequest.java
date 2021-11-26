@@ -4,32 +4,42 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListLogConfigsRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public ListLogConfigsQuery query;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static ListLogConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLogConfigsRequest self = new ListLogConfigsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListLogConfigsRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListLogConfigsRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public ListLogConfigsRequest setQuery(ListLogConfigsQuery query) {
-        this.query = query;
+    public ListLogConfigsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public ListLogConfigsQuery getQuery() {
-        return this.query;
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public ListLogConfigsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }
