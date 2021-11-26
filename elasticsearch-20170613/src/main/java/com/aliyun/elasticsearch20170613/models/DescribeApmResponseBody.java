@@ -59,9 +59,6 @@ public class DescribeApmResponseBody extends TeaModel {
         @NameInMap("outputESUserName")
         public String outputESUserName;
 
-        @NameInMap("outputEsDescription")
-        public String outputEsDescription;
-
         @NameInMap("ownerId")
         public String ownerId;
 
@@ -167,14 +164,6 @@ public class DescribeApmResponseBody extends TeaModel {
         }
         public String getOutputESUserName() {
             return this.outputESUserName;
-        }
-
-        public DescribeApmResponseBodyResult setOutputEsDescription(String outputEsDescription) {
-            this.outputEsDescription = outputEsDescription;
-            return this;
-        }
-        public String getOutputEsDescription() {
-            return this.outputEsDescription;
         }
 
         public DescribeApmResponseBodyResult setOwnerId(String ownerId) {

@@ -7,6 +7,14 @@ public class CreateVpcEndpointRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 终端节点服务ID
+    @NameInMap("serviceId")
+    public String serviceId;
+
+    // 可用区ID
+    @NameInMap("zoneId")
+    public String zoneId;
+
     @NameInMap("dryRun")
     public Boolean dryRun;
 
@@ -21,6 +29,22 @@ public class CreateVpcEndpointRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateVpcEndpointRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public CreateVpcEndpointRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public CreateVpcEndpointRequest setDryRun(Boolean dryRun) {
