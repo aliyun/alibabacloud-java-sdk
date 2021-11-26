@@ -4,29 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateWhiteIpsRequest extends TeaModel {
-    @NameInMap("clientToken")
-    public String clientToken;
-
     @NameInMap("esIPWhitelist")
     public java.util.List<String> esIPWhitelist;
-
-    @NameInMap("modifyMode")
-    public String modifyMode;
 
     @NameInMap("whiteIpGroup")
     public UpdateWhiteIpsRequestWhiteIpGroup whiteIpGroup;
 
+    @NameInMap("clientToken")
+    public String clientToken;
+
+    @NameInMap("modifyMode")
+    public String modifyMode;
+
     public static UpdateWhiteIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateWhiteIpsRequest self = new UpdateWhiteIpsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateWhiteIpsRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public UpdateWhiteIpsRequest setEsIPWhitelist(java.util.List<String> esIPWhitelist) {
@@ -37,20 +29,28 @@ public class UpdateWhiteIpsRequest extends TeaModel {
         return this.esIPWhitelist;
     }
 
-    public UpdateWhiteIpsRequest setModifyMode(String modifyMode) {
-        this.modifyMode = modifyMode;
-        return this;
-    }
-    public String getModifyMode() {
-        return this.modifyMode;
-    }
-
     public UpdateWhiteIpsRequest setWhiteIpGroup(UpdateWhiteIpsRequestWhiteIpGroup whiteIpGroup) {
         this.whiteIpGroup = whiteIpGroup;
         return this;
     }
     public UpdateWhiteIpsRequestWhiteIpGroup getWhiteIpGroup() {
         return this.whiteIpGroup;
+    }
+
+    public UpdateWhiteIpsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateWhiteIpsRequest setModifyMode(String modifyMode) {
+        this.modifyMode = modifyMode;
+        return this;
+    }
+    public String getModifyMode() {
+        return this.modifyMode;
     }
 
     public static class UpdateWhiteIpsRequestWhiteIpGroup extends TeaModel {
