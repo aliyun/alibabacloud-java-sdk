@@ -3,7 +3,7 @@ package com.aliyun.aligeniessp_1_0.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeviceIdByIdentitysResponseBody extends TeaModel {
+public class ListDeviceIdByIdentitiesResponseBody extends TeaModel {
     // 返回的错误码
     @NameInMap("Code")
     public Integer code;
@@ -20,12 +20,12 @@ public class ListDeviceIdByIdentitysResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.Map<String, ResultValue> result;
 
-    public static ListDeviceIdByIdentitysResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDeviceIdByIdentitysResponseBody self = new ListDeviceIdByIdentitysResponseBody();
+    public static ListDeviceIdByIdentitiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDeviceIdByIdentitiesResponseBody self = new ListDeviceIdByIdentitiesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDeviceIdByIdentitysResponseBody setCode(Integer code) {
+    public ListDeviceIdByIdentitiesResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -33,7 +33,7 @@ public class ListDeviceIdByIdentitysResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListDeviceIdByIdentitysResponseBody setMessage(String message) {
+    public ListDeviceIdByIdentitiesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListDeviceIdByIdentitysResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListDeviceIdByIdentitysResponseBody setRequestId(String requestId) {
+    public ListDeviceIdByIdentitiesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,7 +49,7 @@ public class ListDeviceIdByIdentitysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDeviceIdByIdentitysResponseBody setResult(java.util.Map<String, ResultValue> result) {
+    public ListDeviceIdByIdentitiesResponseBody setResult(java.util.Map<String, ResultValue> result) {
         this.result = result;
         return this;
     }

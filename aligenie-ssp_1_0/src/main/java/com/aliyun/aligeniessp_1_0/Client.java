@@ -342,15 +342,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceByUserIdResponse());
     }
 
-    public ListDeviceIdByIdentitysResponse listDeviceIdByIdentitys(ListDeviceIdByIdentitysRequest request) throws Exception {
+    public ListDeviceIdByIdentitiesResponse listDeviceIdByIdentities(ListDeviceIdByIdentitiesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        ListDeviceIdByIdentitysHeaders headers = new ListDeviceIdByIdentitysHeaders();
-        return this.listDeviceIdByIdentitysWithOptions(request, headers, runtime);
+        ListDeviceIdByIdentitiesHeaders headers = new ListDeviceIdByIdentitiesHeaders();
+        return this.listDeviceIdByIdentitiesWithOptions(request, headers, runtime);
     }
 
-    public ListDeviceIdByIdentitysResponse listDeviceIdByIdentitysWithOptions(ListDeviceIdByIdentitysRequest tmpReq, ListDeviceIdByIdentitysHeaders headers, RuntimeOptions runtime) throws Exception {
+    public ListDeviceIdByIdentitiesResponse listDeviceIdByIdentitiesWithOptions(ListDeviceIdByIdentitiesRequest tmpReq, ListDeviceIdByIdentitiesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListDeviceIdByIdentitysShrinkRequest request = new ListDeviceIdByIdentitysShrinkRequest();
+        ListDeviceIdByIdentitiesShrinkRequest request = new ListDeviceIdByIdentitiesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.identityIds)) {
             request.identityIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.identityIds, "IdentityIds", "json");
@@ -395,17 +395,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListDeviceIdByIdentitys"),
+            new TeaPair("action", "ListDeviceIdByIdentities"),
             new TeaPair("version", "ssp_1.0"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1.0/ssp/listDeviceIdByIdentitys"),
+            new TeaPair("pathname", "/v1.0/ssp/listDeviceIdByIdentities"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceIdByIdentitysResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceIdByIdentitiesResponse());
     }
 
     public UnbindDeviceResponse unbindDevice(UnbindDeviceRequest request) throws Exception {
