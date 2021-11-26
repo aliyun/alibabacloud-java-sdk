@@ -4,70 +4,30 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckScaleOutBalancedResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("TableDetails")
-    public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("CheckCode")
+    public String checkCode;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("CheckCode")
-    public String checkCode;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TableDetails")
+    public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
 
     @NameInMap("TimeDuration")
     public String timeDuration;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static CheckScaleOutBalancedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckScaleOutBalancedResponseBody self = new CheckScaleOutBalancedResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CheckScaleOutBalancedResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public CheckScaleOutBalancedResponseBody setTableDetails(CheckScaleOutBalancedResponseBodyTableDetails tableDetails) {
-        this.tableDetails = tableDetails;
-        return this;
-    }
-    public CheckScaleOutBalancedResponseBodyTableDetails getTableDetails() {
-        return this.tableDetails;
-    }
-
-    public CheckScaleOutBalancedResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CheckScaleOutBalancedResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public CheckScaleOutBalancedResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public CheckScaleOutBalancedResponseBody setCheckCode(String checkCode) {
@@ -78,6 +38,38 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         return this.checkCode;
     }
 
+    public CheckScaleOutBalancedResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public CheckScaleOutBalancedResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public CheckScaleOutBalancedResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CheckScaleOutBalancedResponseBody setTableDetails(CheckScaleOutBalancedResponseBodyTableDetails tableDetails) {
+        this.tableDetails = tableDetails;
+        return this;
+    }
+    public CheckScaleOutBalancedResponseBodyTableDetails getTableDetails() {
+        return this.tableDetails;
+    }
+
     public CheckScaleOutBalancedResponseBody setTimeDuration(String timeDuration) {
         this.timeDuration = timeDuration;
         return this;
@@ -86,10 +78,15 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         return this.timeDuration;
     }
 
-    public static class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
+    public CheckScaleOutBalancedResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail extends TeaModel {
         @NameInMap("Cluster")
         public String cluster;
 
@@ -99,17 +96,12 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         @NameInMap("Detail")
         public Integer detail;
 
+        @NameInMap("TableName")
+        public String tableName;
+
         public static CheckScaleOutBalancedResponseBodyTableDetailsTableDetail build(java.util.Map<String, ?> map) throws Exception {
             CheckScaleOutBalancedResponseBodyTableDetailsTableDetail self = new CheckScaleOutBalancedResponseBodyTableDetailsTableDetail();
             return TeaModel.build(map, self);
-        }
-
-        public CheckScaleOutBalancedResponseBodyTableDetailsTableDetail setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public CheckScaleOutBalancedResponseBodyTableDetailsTableDetail setCluster(String cluster) {
@@ -134,6 +126,14 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         }
         public Integer getDetail() {
             return this.detail;
+        }
+
+        public CheckScaleOutBalancedResponseBodyTableDetailsTableDetail setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

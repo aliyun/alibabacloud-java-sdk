@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogHubAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LoghubInfo")
     public DescribeLogHubAttributeResponseBodyLoghubInfo loghubInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLogHubAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogHubAttributeResponseBody self = new DescribeLogHubAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogHubAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLogHubAttributeResponseBody setLoghubInfo(DescribeLogHubAttributeResponseBodyLoghubInfo loghubInfo) {
@@ -31,27 +23,35 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         return this.loghubInfo;
     }
 
+    public DescribeLogHubAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("FieldKey")
+        public String fieldKey;
 
         @NameInMap("LogKey")
         public String logKey;
 
-        @NameInMap("FieldKey")
-        public String fieldKey;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore self = new DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore setType(String type) {
-            this.type = type;
+        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore setFieldKey(String fieldKey) {
+            this.fieldKey = fieldKey;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getFieldKey() {
+            return this.fieldKey;
         }
 
         public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore setLogKey(String logKey) {
@@ -62,12 +62,12 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             return this.logKey;
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore setFieldKey(String fieldKey) {
-            this.fieldKey = fieldKey;
+        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getFieldKey() {
-            return this.fieldKey;
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -92,17 +92,8 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLogHubAttributeResponseBodyLoghubInfo extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("LogHubStores")
-        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores logHubStores;
-
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        @NameInMap("SchemaName")
-        public String schemaName;
+        @NameInMap("DBClusterId")
+        public String DBClusterId;
 
         @NameInMap("DBType")
         public String DBType;
@@ -110,74 +101,59 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
         @NameInMap("DeliverName")
         public String deliverName;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("Password")
-        public String password;
-
-        @NameInMap("DBClusterId")
-        public String DBClusterId;
+        @NameInMap("DeliverTime")
+        public String deliverTime;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DomainUrl")
+        public String domainUrl;
+
         @NameInMap("FilterDirtyData")
         public String filterDirtyData;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("LogStoreName")
-        public String logStoreName;
-
-        @NameInMap("UserName")
-        public String userName;
 
         @NameInMap("Id")
         public String id;
 
-        @NameInMap("DomainUrl")
-        public String domainUrl;
+        @NameInMap("LogHubStores")
+        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores logHubStores;
 
-        @NameInMap("DeliverTime")
-        public String deliverTime;
+        @NameInMap("LogStoreName")
+        public String logStoreName;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeLogHubAttributeResponseBodyLoghubInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogHubAttributeResponseBodyLoghubInfo self = new DescribeLogHubAttributeResponseBodyLoghubInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setTableName(String tableName) {
-            this.tableName = tableName;
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setLogHubStores(DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores logHubStores) {
-            this.logHubStores = logHubStores;
-            return this;
-        }
-        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores getLogHubStores() {
-            return this.logHubStores;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setSchemaName(String schemaName) {
-            this.schemaName = schemaName;
-            return this;
-        }
-        public String getSchemaName() {
-            return this.schemaName;
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
         public DescribeLogHubAttributeResponseBodyLoghubInfo setDBType(String DBType) {
@@ -196,28 +172,12 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             return this.deliverName;
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setDeliverTime(String deliverTime) {
+            this.deliverTime = deliverTime;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setDBClusterId(String DBClusterId) {
-            this.DBClusterId = DBClusterId;
-            return this;
-        }
-        public String getDBClusterId() {
-            return this.DBClusterId;
+        public String getDeliverTime() {
+            return this.deliverTime;
         }
 
         public DescribeLogHubAttributeResponseBodyLoghubInfo setDescription(String description) {
@@ -228,36 +188,20 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setDomainUrl(String domainUrl) {
+            this.domainUrl = domainUrl;
+            return this;
+        }
+        public String getDomainUrl() {
+            return this.domainUrl;
+        }
+
         public DescribeLogHubAttributeResponseBodyLoghubInfo setFilterDirtyData(String filterDirtyData) {
             this.filterDirtyData = filterDirtyData;
             return this;
         }
         public String getFilterDirtyData() {
             return this.filterDirtyData;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setLogStoreName(String logStoreName) {
-            this.logStoreName = logStoreName;
-            return this;
-        }
-        public String getLogStoreName() {
-            return this.logStoreName;
-        }
-
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
         public DescribeLogHubAttributeResponseBodyLoghubInfo setId(String id) {
@@ -268,20 +212,76 @@ public class DescribeLogHubAttributeResponseBody extends TeaModel {
             return this.id;
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setDomainUrl(String domainUrl) {
-            this.domainUrl = domainUrl;
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setLogHubStores(DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores logHubStores) {
+            this.logHubStores = logHubStores;
             return this;
         }
-        public String getDomainUrl() {
-            return this.domainUrl;
+        public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores getLogHubStores() {
+            return this.logHubStores;
         }
 
-        public DescribeLogHubAttributeResponseBodyLoghubInfo setDeliverTime(String deliverTime) {
-            this.deliverTime = deliverTime;
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setLogStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
             return this;
         }
-        public String getDeliverTime() {
-            return this.deliverTime;
+        public String getLogStoreName() {
+            return this.logStoreName;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeLogHubAttributeResponseBodyLoghubInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

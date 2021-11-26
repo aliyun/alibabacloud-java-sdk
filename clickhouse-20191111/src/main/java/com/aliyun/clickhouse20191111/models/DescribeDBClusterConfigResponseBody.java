@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Config")
     public String config;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBClusterConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterConfigResponseBody self = new DescribeDBClusterConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBClusterConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBClusterConfigResponseBody setConfig(String config) {
@@ -29,6 +21,14 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public DescribeDBClusterConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

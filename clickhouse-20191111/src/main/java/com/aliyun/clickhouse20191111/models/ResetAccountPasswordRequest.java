@@ -4,6 +4,18 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("AccountPassword")
+    public String accountPassword;
+
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +25,41 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("DBClusterId")
-    public String DBClusterId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("AccountPassword")
-    public String accountPassword;
-
     public static ResetAccountPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetAccountPasswordRequest self = new ResetAccountPasswordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResetAccountPasswordRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public ResetAccountPasswordRequest setAccountPassword(String accountPassword) {
+        this.accountPassword = accountPassword;
+        return this;
+    }
+    public String getAccountPassword() {
+        return this.accountPassword;
+    }
+
+    public ResetAccountPasswordRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public ResetAccountPasswordRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ResetAccountPasswordRequest setOwnerId(Long ownerId) {
@@ -52,38 +84,6 @@ public class ResetAccountPasswordRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ResetAccountPasswordRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ResetAccountPasswordRequest setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
-        return this;
-    }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public ResetAccountPasswordRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public ResetAccountPasswordRequest setAccountPassword(String accountPassword) {
-        this.accountPassword = accountPassword;
-        return this;
-    }
-    public String getAccountPassword() {
-        return this.accountPassword;
     }
 
 }

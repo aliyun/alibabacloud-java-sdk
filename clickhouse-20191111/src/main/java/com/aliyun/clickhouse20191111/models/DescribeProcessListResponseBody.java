@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ProcessList")
     public DescribeProcessListResponseBodyProcessList processList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeProcessListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProcessListResponseBody self = new DescribeProcessListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProcessListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeProcessListResponseBody setProcessList(DescribeProcessListResponseBodyProcessList processList) {
@@ -31,62 +23,15 @@ public class DescribeProcessListResponseBody extends TeaModel {
         return this.processList;
     }
 
-    public static class DescribeProcessListResponseBodyProcessListTableSchemaResultSet extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static DescribeProcessListResponseBodyProcessListTableSchemaResultSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeProcessListResponseBodyProcessListTableSchemaResultSet self = new DescribeProcessListResponseBodyProcessListTableSchemaResultSet();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeProcessListResponseBodyProcessListTableSchemaResultSet setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeProcessListResponseBodyProcessListTableSchemaResultSet setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
+    public DescribeProcessListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
     }
-
-    public static class DescribeProcessListResponseBodyProcessListTableSchema extends TeaModel {
-        @NameInMap("ResultSet")
-        public java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> resultSet;
-
-        public static DescribeProcessListResponseBodyProcessListTableSchema build(java.util.Map<String, ?> map) throws Exception {
-            DescribeProcessListResponseBodyProcessListTableSchema self = new DescribeProcessListResponseBodyProcessListTableSchema();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeProcessListResponseBodyProcessListTableSchema setResultSet(java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> resultSet) {
-            this.resultSet = resultSet;
-            return this;
-        }
-        public java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> getResultSet() {
-            return this.resultSet;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeProcessListResponseBodyProcessListDataResultSet extends TeaModel {
-        @NameInMap("QueryStartTime")
-        public String queryStartTime;
-
-        @NameInMap("Query")
-        public String query;
-
         @NameInMap("InitialAddress")
         public String initialAddress;
 
@@ -96,28 +41,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
         @NameInMap("InitialUser")
         public String initialUser;
 
+        @NameInMap("Query")
+        public String query;
+
         @NameInMap("QueryDurationMs")
         public String queryDurationMs;
+
+        @NameInMap("QueryStartTime")
+        public String queryStartTime;
 
         public static DescribeProcessListResponseBodyProcessListDataResultSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessListResponseBodyProcessListDataResultSet self = new DescribeProcessListResponseBodyProcessListDataResultSet();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProcessListResponseBodyProcessListDataResultSet setQueryStartTime(String queryStartTime) {
-            this.queryStartTime = queryStartTime;
-            return this;
-        }
-        public String getQueryStartTime() {
-            return this.queryStartTime;
-        }
-
-        public DescribeProcessListResponseBodyProcessListDataResultSet setQuery(String query) {
-            this.query = query;
-            return this;
-        }
-        public String getQuery() {
-            return this.query;
         }
 
         public DescribeProcessListResponseBodyProcessListDataResultSet setInitialAddress(String initialAddress) {
@@ -144,12 +79,28 @@ public class DescribeProcessListResponseBody extends TeaModel {
             return this.initialUser;
         }
 
+        public DescribeProcessListResponseBodyProcessListDataResultSet setQuery(String query) {
+            this.query = query;
+            return this;
+        }
+        public String getQuery() {
+            return this.query;
+        }
+
         public DescribeProcessListResponseBodyProcessListDataResultSet setQueryDurationMs(String queryDurationMs) {
             this.queryDurationMs = queryDurationMs;
             return this;
         }
         public String getQueryDurationMs() {
             return this.queryDurationMs;
+        }
+
+        public DescribeProcessListResponseBodyProcessListDataResultSet setQueryStartTime(String queryStartTime) {
+            this.queryStartTime = queryStartTime;
+            return this;
+        }
+        public String getQueryStartTime() {
+            return this.queryStartTime;
         }
 
     }
@@ -174,34 +125,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyProcessListStatistics extends TeaModel {
-        @NameInMap("RowsRead")
-        public Integer rowsRead;
+        @NameInMap("BytesRead")
+        public Integer bytesRead;
 
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
-        @NameInMap("BytesRead")
-        public Integer bytesRead;
+        @NameInMap("RowsRead")
+        public Integer rowsRead;
 
         public static DescribeProcessListResponseBodyProcessListStatistics build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessListResponseBodyProcessListStatistics self = new DescribeProcessListResponseBodyProcessListStatistics();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProcessListResponseBodyProcessListStatistics setRowsRead(Integer rowsRead) {
-            this.rowsRead = rowsRead;
-            return this;
-        }
-        public Integer getRowsRead() {
-            return this.rowsRead;
-        }
-
-        public DescribeProcessListResponseBodyProcessListStatistics setElapsedTime(Float elapsedTime) {
-            this.elapsedTime = elapsedTime;
-            return this;
-        }
-        public Float getElapsedTime() {
-            return this.elapsedTime;
         }
 
         public DescribeProcessListResponseBodyProcessListStatistics setBytesRead(Integer bytesRead) {
@@ -212,12 +147,74 @@ public class DescribeProcessListResponseBody extends TeaModel {
             return this.bytesRead;
         }
 
+        public DescribeProcessListResponseBodyProcessListStatistics setElapsedTime(Float elapsedTime) {
+            this.elapsedTime = elapsedTime;
+            return this;
+        }
+        public Float getElapsedTime() {
+            return this.elapsedTime;
+        }
+
+        public DescribeProcessListResponseBodyProcessListStatistics setRowsRead(Integer rowsRead) {
+            this.rowsRead = rowsRead;
+            return this;
+        }
+        public Integer getRowsRead() {
+            return this.rowsRead;
+        }
+
+    }
+
+    public static class DescribeProcessListResponseBodyProcessListTableSchemaResultSet extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeProcessListResponseBodyProcessListTableSchemaResultSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProcessListResponseBodyProcessListTableSchemaResultSet self = new DescribeProcessListResponseBodyProcessListTableSchemaResultSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProcessListResponseBodyProcessListTableSchemaResultSet setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeProcessListResponseBodyProcessListTableSchemaResultSet setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeProcessListResponseBodyProcessListTableSchema extends TeaModel {
+        @NameInMap("ResultSet")
+        public java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> resultSet;
+
+        public static DescribeProcessListResponseBodyProcessListTableSchema build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProcessListResponseBodyProcessListTableSchema self = new DescribeProcessListResponseBodyProcessListTableSchema();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProcessListResponseBodyProcessListTableSchema setResultSet(java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> resultSet) {
+            this.resultSet = resultSet;
+            return this;
+        }
+        public java.util.List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> getResultSet() {
+            return this.resultSet;
+        }
+
     }
 
     public static class DescribeProcessListResponseBodyProcessList extends TeaModel {
-        @NameInMap("TableSchema")
-        public DescribeProcessListResponseBodyProcessListTableSchema tableSchema;
-
         @NameInMap("Data")
         public DescribeProcessListResponseBodyProcessListData data;
 
@@ -230,17 +227,12 @@ public class DescribeProcessListResponseBody extends TeaModel {
         @NameInMap("Statistics")
         public DescribeProcessListResponseBodyProcessListStatistics statistics;
 
+        @NameInMap("TableSchema")
+        public DescribeProcessListResponseBodyProcessListTableSchema tableSchema;
+
         public static DescribeProcessListResponseBodyProcessList build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessListResponseBodyProcessList self = new DescribeProcessListResponseBodyProcessList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProcessListResponseBodyProcessList setTableSchema(DescribeProcessListResponseBodyProcessListTableSchema tableSchema) {
-            this.tableSchema = tableSchema;
-            return this;
-        }
-        public DescribeProcessListResponseBodyProcessListTableSchema getTableSchema() {
-            return this.tableSchema;
         }
 
         public DescribeProcessListResponseBodyProcessList setData(DescribeProcessListResponseBodyProcessListData data) {
@@ -273,6 +265,14 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
         public DescribeProcessListResponseBodyProcessListStatistics getStatistics() {
             return this.statistics;
+        }
+
+        public DescribeProcessListResponseBodyProcessList setTableSchema(DescribeProcessListResponseBodyProcessListTableSchema tableSchema) {
+            this.tableSchema = tableSchema;
+            return this;
+        }
+        public DescribeProcessListResponseBodyProcessListTableSchema getTableSchema() {
+            return this.tableSchema;
         }
 
     }

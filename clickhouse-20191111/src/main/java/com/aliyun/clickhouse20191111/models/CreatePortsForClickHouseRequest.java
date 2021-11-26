@@ -7,23 +7,23 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("PortType")
-    public String portType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PortType")
+    public String portType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     public static CreatePortsForClickHouseRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePortsForClickHouseRequest self = new CreatePortsForClickHouseRequest();
@@ -38,12 +38,12 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public CreatePortsForClickHouseRequest setPortType(String portType) {
-        this.portType = portType;
+    public CreatePortsForClickHouseRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getPortType() {
-        return this.portType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreatePortsForClickHouseRequest setOwnerId(Long ownerId) {
@@ -52,6 +52,22 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreatePortsForClickHouseRequest setPortType(String portType) {
+        this.portType = portType;
+        return this;
+    }
+    public String getPortType() {
+        return this.portType;
+    }
+
+    public CreatePortsForClickHouseRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreatePortsForClickHouseRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -68,22 +84,6 @@ public class CreatePortsForClickHouseRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreatePortsForClickHouseRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreatePortsForClickHouseRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
-    @NameInMap("NetInfoItems")
-    public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems;
-
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
+
+    @NameInMap("NetInfoItems")
+    public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -18,20 +18,20 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClusterNetInfoItemsResponseBody setNetInfoItems(DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems) {
-        this.netInfoItems = netInfoItems;
-        return this;
-    }
-    public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems getNetInfoItems() {
-        return this.netInfoItems;
-    }
-
     public DescribeDBClusterNetInfoItemsResponseBody setClusterNetworkType(String clusterNetworkType) {
         this.clusterNetworkType = clusterNetworkType;
         return this;
     }
     public String getClusterNetworkType() {
         return this.clusterNetworkType;
+    }
+
+    public DescribeDBClusterNetInfoItemsResponseBody setNetInfoItems(DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems) {
+        this.netInfoItems = netInfoItems;
+        return this;
+    }
+    public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems getNetInfoItems() {
+        return this.netInfoItems;
     }
 
     public DescribeDBClusterNetInfoItemsResponseBody setRequestId(String requestId) {
@@ -43,20 +43,8 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
         @NameInMap("ConnectionString")
         public String connectionString;
-
-        @NameInMap("JdbcPort")
-        public String jdbcPort;
-
-        @NameInMap("NetType")
-        public String netType;
 
         @NameInMap("HttpPort")
         public String httpPort;
@@ -64,25 +52,21 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        @NameInMap("JdbcPort")
+        public String jdbcPort;
+
+        @NameInMap("NetType")
+        public String netType;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem self = new DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
         }
 
         public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setConnectionString(String connectionString) {
@@ -91,6 +75,22 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setHttpPort(String httpPort) {
+            this.httpPort = httpPort;
+            return this;
+        }
+        public String getHttpPort() {
+            return this.httpPort;
+        }
+
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setJdbcPort(String jdbcPort) {
@@ -109,20 +109,20 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             return this.netType;
         }
 
-        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setHttpPort(String httpPort) {
-            this.httpPort = httpPort;
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getHttpPort() {
-            return this.httpPort;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
-        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

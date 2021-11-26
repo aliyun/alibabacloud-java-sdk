@@ -4,23 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreKeysResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LogStoreKeys")
     public DescribeLogStoreKeysResponseBodyLogStoreKeys logStoreKeys;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLogStoreKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogStoreKeysResponseBody self = new DescribeLogStoreKeysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogStoreKeysResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLogStoreKeysResponseBody setLogStoreKeys(DescribeLogStoreKeysResponseBodyLogStoreKeys logStoreKeys) {
@@ -29,6 +21,14 @@ public class DescribeLogStoreKeysResponseBody extends TeaModel {
     }
     public DescribeLogStoreKeysResponseBodyLogStoreKeys getLogStoreKeys() {
         return this.logStoreKeys;
+    }
+
+    public DescribeLogStoreKeysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeLogStoreKeysResponseBodyLogStoreKeys extends TeaModel {

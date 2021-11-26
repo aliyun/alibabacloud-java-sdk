@@ -4,26 +4,11 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("QueryDurationMs")
-    public Integer queryDurationMs;
+    @NameInMap("InitialQueryId")
+    public String initialQueryId;
 
     @NameInMap("InitialUser")
     public String initialUser;
@@ -34,58 +19,33 @@ public class DescribeProcessListRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("InitialQueryId")
-    public String initialQueryId;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryDurationMs")
+    public Integer queryDurationMs;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeProcessListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProcessListRequest self = new DescribeProcessListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProcessListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeProcessListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeProcessListRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeProcessListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeProcessListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeProcessListRequest setDBClusterId(String DBClusterId) {
@@ -96,12 +56,12 @@ public class DescribeProcessListRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeProcessListRequest setQueryDurationMs(Integer queryDurationMs) {
-        this.queryDurationMs = queryDurationMs;
+    public DescribeProcessListRequest setInitialQueryId(String initialQueryId) {
+        this.initialQueryId = initialQueryId;
         return this;
     }
-    public Integer getQueryDurationMs() {
-        return this.queryDurationMs;
+    public String getInitialQueryId() {
+        return this.initialQueryId;
     }
 
     public DescribeProcessListRequest setInitialUser(String initialUser) {
@@ -128,12 +88,20 @@ public class DescribeProcessListRequest extends TeaModel {
         return this.order;
     }
 
-    public DescribeProcessListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeProcessListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeProcessListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeProcessListRequest setPageNumber(Integer pageNumber) {
@@ -144,12 +112,44 @@ public class DescribeProcessListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeProcessListRequest setInitialQueryId(String initialQueryId) {
-        this.initialQueryId = initialQueryId;
+    public DescribeProcessListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getInitialQueryId() {
-        return this.initialQueryId;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeProcessListRequest setQueryDurationMs(Integer queryDurationMs) {
+        this.queryDurationMs = queryDurationMs;
+        return this;
+    }
+    public Integer getQueryDurationMs() {
+        return this.queryDurationMs;
+    }
+
+    public DescribeProcessListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeProcessListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeProcessListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

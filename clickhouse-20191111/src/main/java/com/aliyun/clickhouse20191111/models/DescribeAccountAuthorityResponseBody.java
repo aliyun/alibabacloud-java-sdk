@@ -4,6 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("AllowDatabases")
+    public java.util.List<String> allowDatabases;
+
+    @NameInMap("AllowDictionaries")
+    public java.util.List<String> allowDictionaries;
+
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
 
@@ -19,18 +28,33 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     @NameInMap("TotalDictionaries")
     public java.util.List<String> totalDictionaries;
 
-    @NameInMap("AllowDictionaries")
-    public java.util.List<String> allowDictionaries;
-
-    @NameInMap("AllowDatabases")
-    public java.util.List<String> allowDatabases;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static DescribeAccountAuthorityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountAuthorityResponseBody self = new DescribeAccountAuthorityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccountAuthorityResponseBody setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public DescribeAccountAuthorityResponseBody setAllowDatabases(java.util.List<String> allowDatabases) {
+        this.allowDatabases = allowDatabases;
+        return this;
+    }
+    public java.util.List<String> getAllowDatabases() {
+        return this.allowDatabases;
+    }
+
+    public DescribeAccountAuthorityResponseBody setAllowDictionaries(java.util.List<String> allowDictionaries) {
+        this.allowDictionaries = allowDictionaries;
+        return this;
+    }
+    public java.util.List<String> getAllowDictionaries() {
+        return this.allowDictionaries;
     }
 
     public DescribeAccountAuthorityResponseBody setDdlAuthority(Boolean ddlAuthority) {
@@ -71,30 +95,6 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
     }
     public java.util.List<String> getTotalDictionaries() {
         return this.totalDictionaries;
-    }
-
-    public DescribeAccountAuthorityResponseBody setAllowDictionaries(java.util.List<String> allowDictionaries) {
-        this.allowDictionaries = allowDictionaries;
-        return this;
-    }
-    public java.util.List<String> getAllowDictionaries() {
-        return this.allowDictionaries;
-    }
-
-    public DescribeAccountAuthorityResponseBody setAllowDatabases(java.util.List<String> allowDatabases) {
-        this.allowDatabases = allowDatabases;
-        return this;
-    }
-    public java.util.List<String> getAllowDatabases() {
-        return this.allowDatabases;
-    }
-
-    public DescribeAccountAuthorityResponseBody setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

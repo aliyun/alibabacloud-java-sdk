@@ -4,34 +4,18 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AvailableZoneList")
+    public DescribeAvailableResourceResponseBodyAvailableZoneList availableZoneList;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("AvailableZoneList")
-    public DescribeAvailableResourceResponseBodyAvailableZoneList availableZoneList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAvailableResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableResourceResponseBody self = new DescribeAvailableResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAvailableResourceResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeAvailableResourceResponseBody setAvailableZoneList(DescribeAvailableResourceResponseBodyAvailableZoneList availableZoneList) {
@@ -42,27 +26,43 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return this.availableZoneList;
     }
 
+    public DescribeAvailableResourceResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeAvailableResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount extends TeaModel {
-        @NameInMap("Step")
-        public String step;
+        @NameInMap("MaxCount")
+        public String maxCount;
 
         @NameInMap("MinCount")
         public String minCount;
 
-        @NameInMap("MaxCount")
-        public String maxCount;
+        @NameInMap("Step")
+        public String step;
 
         public static DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount self = new DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount setStep(String step) {
-            this.step = step;
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount setMaxCount(String maxCount) {
+            this.maxCount = maxCount;
             return this;
         }
-        public String getStep() {
-            return this.step;
+        public String getMaxCount() {
+            return this.maxCount;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount setMinCount(String minCount) {
@@ -73,12 +73,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.minCount;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount setMaxCount(String maxCount) {
-            this.maxCount = maxCount;
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorListSupportedExecutorNodeCount setStep(String step) {
+            this.step = step;
             return this;
         }
-        public String getMaxCount() {
-            return this.maxCount;
+        public String getStep() {
+            return this.step;
         }
 
     }
@@ -122,26 +122,26 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount extends TeaModel {
-        @NameInMap("Step")
-        public String step;
+        @NameInMap("MaxCount")
+        public String maxCount;
 
         @NameInMap("MinCount")
         public String minCount;
 
-        @NameInMap("MaxCount")
-        public String maxCount;
+        @NameInMap("Step")
+        public String step;
 
         public static DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount self = new DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount setStep(String step) {
-            this.step = step;
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount setMaxCount(String maxCount) {
+            this.maxCount = maxCount;
             return this;
         }
-        public String getStep() {
-            return this.step;
+        public String getMaxCount() {
+            return this.maxCount;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount setMinCount(String minCount) {
@@ -152,12 +152,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.minCount;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount setMaxCount(String maxCount) {
-            this.maxCount = maxCount;
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountListSupportedNodeCountNodeCount setStep(String step) {
+            this.step = step;
             return this;
         }
-        public String getMaxCount() {
-            return this.maxCount;
+        public String getStep() {
+            return this.step;
         }
 
     }
@@ -231,11 +231,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClass extends TeaModel {
-        @NameInMap("SupportedExecutorList")
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList supportedExecutorList;
-
         @NameInMap("InstanceClass")
         public String instanceClass;
+
+        @NameInMap("SupportedExecutorList")
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList supportedExecutorList;
 
         @NameInMap("SupportedNodeCountList")
         public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountList supportedNodeCountList;
@@ -248,20 +248,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClass setSupportedExecutorList(DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList supportedExecutorList) {
-            this.supportedExecutorList = supportedExecutorList;
-            return this;
-        }
-        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList getSupportedExecutorList() {
-            return this.supportedExecutorList;
-        }
-
         public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClass setInstanceClass(String instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
         public String getInstanceClass() {
             return this.instanceClass;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClass setSupportedExecutorList(DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList supportedExecutorList) {
+            this.supportedExecutorList = supportedExecutorList;
+            return this;
+        }
+        public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedExecutorList getSupportedExecutorList() {
+            return this.supportedExecutorList;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClass setSupportedNodeCountList(DescribeAvailableResourceResponseBodyAvailableZoneListAvailableZoneSupportedSerialListSupportedSerialSupportedInstanceClassListSupportedInstanceClassSupportedNodeCountList supportedNodeCountList) {
