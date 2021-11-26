@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetCustomizationConfigListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetCustomizationConfigListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetCustomizationConfigListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     public static GetCustomizationConfigListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomizationConfigListResponseBody self = new GetCustomizationConfigListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCustomizationConfigListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetCustomizationConfigListResponseBody setData(GetCustomizationConfigListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetCustomizationConfigListResponseBodyData getData() {
+        return this.data;
     }
 
     public GetCustomizationConfigListResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCustomizationConfigListResponseBody setData(GetCustomizationConfigListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetCustomizationConfigListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetCustomizationConfigListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetCustomizationConfigListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,35 +65,27 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     }
 
     public static class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo extends TeaModel {
-        @NameInMap("TaskType")
-        public Integer taskType;
-
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("ModelStatus")
-        public Integer modelStatus;
-
-        @NameInMap("ModelName")
-        public String modelName;
-
-        @NameInMap("ModelId")
-        public Long modelId;
 
         @NameInMap("ModeCustomizationId")
         public String modeCustomizationId;
 
+        @NameInMap("ModelId")
+        public Long modelId;
+
+        @NameInMap("ModelName")
+        public String modelName;
+
+        @NameInMap("ModelStatus")
+        public Integer modelStatus;
+
+        @NameInMap("TaskType")
+        public Integer taskType;
+
         public static GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo build(java.util.Map<String, ?> map) throws Exception {
             GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo self = new GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo();
             return TeaModel.build(map, self);
-        }
-
-        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setTaskType(Integer taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public Integer getTaskType() {
-            return this.taskType;
         }
 
         public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setCreateTime(String createTime) {
@@ -104,20 +96,12 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModelStatus(Integer modelStatus) {
-            this.modelStatus = modelStatus;
+        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModeCustomizationId(String modeCustomizationId) {
+            this.modeCustomizationId = modeCustomizationId;
             return this;
         }
-        public Integer getModelStatus() {
-            return this.modelStatus;
-        }
-
-        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModelName(String modelName) {
-            this.modelName = modelName;
-            return this;
-        }
-        public String getModelName() {
-            return this.modelName;
+        public String getModeCustomizationId() {
+            return this.modeCustomizationId;
         }
 
         public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModelId(Long modelId) {
@@ -128,12 +112,28 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
             return this.modelId;
         }
 
-        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModeCustomizationId(String modeCustomizationId) {
-            this.modeCustomizationId = modeCustomizationId;
+        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModelName(String modelName) {
+            this.modelName = modelName;
             return this;
         }
-        public String getModeCustomizationId() {
-            return this.modeCustomizationId;
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setModelStatus(Integer modelStatus) {
+            this.modelStatus = modelStatus;
+            return this;
+        }
+        public Integer getModelStatus() {
+            return this.modelStatus;
+        }
+
+        public GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo setTaskType(Integer taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public Integer getTaskType() {
+            return this.taskType;
         }
 
     }

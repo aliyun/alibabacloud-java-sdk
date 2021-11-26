@@ -4,14 +4,14 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetResultCallbackResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class GetResultCallbackResponseBody extends TeaModel {
     public static GetResultCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResultCallbackResponseBody self = new GetResultCallbackResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetResultCallbackResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetResultCallbackResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class GetResultCallbackResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetResultCallbackResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetResultCallbackResponseBody setSuccess(Boolean success) {

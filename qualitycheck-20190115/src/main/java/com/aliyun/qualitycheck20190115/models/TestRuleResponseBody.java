@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class TestRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public TestRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public TestRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class TestRuleResponseBody extends TeaModel {
     public static TestRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TestRuleResponseBody self = new TestRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TestRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public TestRuleResponseBody setData(TestRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public TestRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public TestRuleResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class TestRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public TestRuleResponseBody setData(TestRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public TestRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public TestRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public TestRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,87 +64,21 @@ public class TestRuleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase extends TeaModel {
-        @NameInMap("Words")
-        public String words;
+    public static class TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid extends TeaModel {
+        @NameInMap("cid")
+        public java.util.List<String> cid;
 
-        @NameInMap("Begin")
-        public Long begin;
-
-        @NameInMap("Identity")
-        public String identity;
-
-        @NameInMap("Pid")
-        public Integer pid;
-
-        @NameInMap("EmotionValue")
-        public Integer emotionValue;
-
-        @NameInMap("End")
-        public Long end;
-
-        @NameInMap("Role")
-        public String role;
-
-        public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase build(java.util.Map<String, ?> map) throws Exception {
-            TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase();
+        public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid build(java.util.Map<String, ?> map) throws Exception {
+            TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid();
             return TeaModel.build(map, self);
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setWords(String words) {
-            this.words = words;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid setCid(java.util.List<String> cid) {
+            this.cid = cid;
             return this;
         }
-        public String getWords() {
-            return this.words;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setBegin(Long begin) {
-            this.begin = begin;
-            return this;
-        }
-        public Long getBegin() {
-            return this.begin;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setIdentity(String identity) {
-            this.identity = identity;
-            return this;
-        }
-        public String getIdentity() {
-            return this.identity;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setPid(Integer pid) {
-            this.pid = pid;
-            return this;
-        }
-        public Integer getPid() {
-            return this.pid;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setEmotionValue(Integer emotionValue) {
-            this.emotionValue = emotionValue;
-            return this;
-        }
-        public Integer getEmotionValue() {
-            return this.emotionValue;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setEnd(Long end) {
-            this.end = end;
-            return this;
-        }
-        public Long getEnd() {
-            return this.end;
-        }
-
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
+        public java.util.List<String> getCid() {
+            return this.cid;
         }
 
     }
@@ -153,17 +87,17 @@ public class TestRuleResponseBody extends TeaModel {
         @NameInMap("From")
         public Integer from;
 
-        @NameInMap("Val")
-        public String val;
+        @NameInMap("Pid")
+        public Integer pid;
 
         @NameInMap("Tid")
         public String tid;
 
-        @NameInMap("Pid")
-        public Integer pid;
-
         @NameInMap("To")
         public Integer to;
+
+        @NameInMap("Val")
+        public String val;
 
         public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord build(java.util.Map<String, ?> map) throws Exception {
             TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord();
@@ -178,12 +112,12 @@ public class TestRuleResponseBody extends TeaModel {
             return this.from;
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setVal(String val) {
-            this.val = val;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setPid(Integer pid) {
+            this.pid = pid;
             return this;
         }
-        public String getVal() {
-            return this.val;
+        public Integer getPid() {
+            return this.pid;
         }
 
         public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setTid(String tid) {
@@ -194,20 +128,20 @@ public class TestRuleResponseBody extends TeaModel {
             return this.tid;
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setPid(Integer pid) {
-            this.pid = pid;
-            return this;
-        }
-        public Integer getPid() {
-            return this.pid;
-        }
-
         public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setTo(Integer to) {
             this.to = to;
             return this;
         }
         public Integer getTo() {
             return this.to;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setVal(String val) {
+            this.val = val;
+            return this;
+        }
+        public String getVal() {
+            return this.val;
         }
 
     }
@@ -231,46 +165,112 @@ public class TestRuleResponseBody extends TeaModel {
 
     }
 
-    public static class TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid extends TeaModel {
-        @NameInMap("cid")
-        public java.util.List<String> cid;
+    public static class TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase extends TeaModel {
+        @NameInMap("Begin")
+        public Long begin;
 
-        public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid build(java.util.Map<String, ?> map) throws Exception {
-            TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid();
+        @NameInMap("EmotionValue")
+        public Integer emotionValue;
+
+        @NameInMap("End")
+        public Long end;
+
+        @NameInMap("Identity")
+        public String identity;
+
+        @NameInMap("Pid")
+        public Integer pid;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("Words")
+        public String words;
+
+        public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase build(java.util.Map<String, ?> map) throws Exception {
+            TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase();
             return TeaModel.build(map, self);
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid setCid(java.util.List<String> cid) {
-            this.cid = cid;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setBegin(Long begin) {
+            this.begin = begin;
             return this;
         }
-        public java.util.List<String> getCid() {
-            return this.cid;
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setEmotionValue(Integer emotionValue) {
+            this.emotionValue = emotionValue;
+            return this;
+        }
+        public Integer getEmotionValue() {
+            return this.emotionValue;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setEnd(Long end) {
+            this.end = end;
+            return this;
+        }
+        public Long getEnd() {
+            return this.end;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setIdentity(String identity) {
+            this.identity = identity;
+            return this;
+        }
+        public String getIdentity() {
+            return this.identity;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setPid(Integer pid) {
+            this.pid = pid;
+            return this;
+        }
+        public Integer getPid() {
+            return this.pid;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase setWords(String words) {
+            this.words = words;
+            return this;
+        }
+        public String getWords() {
+            return this.words;
         }
 
     }
 
     public static class TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo extends TeaModel {
-        @NameInMap("Phrase")
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase phrase;
+        @NameInMap("Cid")
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid cid;
 
         @NameInMap("KeyWords")
         public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWords keyWords;
 
-        @NameInMap("Cid")
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid cid;
+        @NameInMap("Phrase")
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase phrase;
 
         public static TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo build(java.util.Map<String, ?> map) throws Exception {
             TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo self = new TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo();
             return TeaModel.build(map, self);
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo setPhrase(TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase phrase) {
-            this.phrase = phrase;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo setCid(TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid cid) {
+            this.cid = cid;
             return this;
         }
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase getPhrase() {
-            return this.phrase;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid getCid() {
+            return this.cid;
         }
 
         public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo setKeyWords(TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWords keyWords) {
@@ -281,12 +281,12 @@ public class TestRuleResponseBody extends TeaModel {
             return this.keyWords;
         }
 
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo setCid(TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid cid) {
-            this.cid = cid;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfo setPhrase(TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase phrase) {
+            this.phrase = phrase;
             return this;
         }
-        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoCid getCid() {
-            return this.cid;
+        public TestRuleResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoPhrase getPhrase() {
+            return this.phrase;
         }
 
     }

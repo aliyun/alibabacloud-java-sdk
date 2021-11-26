@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetBusinessCategoryListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetBusinessCategoryListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetBusinessCategoryListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     public static GetBusinessCategoryListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBusinessCategoryListResponseBody self = new GetBusinessCategoryListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetBusinessCategoryListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetBusinessCategoryListResponseBody setData(GetBusinessCategoryListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetBusinessCategoryListResponseBodyData getData() {
+        return this.data;
     }
 
     public GetBusinessCategoryListResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetBusinessCategoryListResponseBody setData(GetBusinessCategoryListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetBusinessCategoryListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetBusinessCategoryListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetBusinessCategoryListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,18 +65,26 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     }
 
     public static class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo extends TeaModel {
+        @NameInMap("Bid")
+        public Integer bid;
+
         @NameInMap("BusinessName")
         public String businessName;
 
         @NameInMap("ServiceType")
         public Integer serviceType;
 
-        @NameInMap("Bid")
-        public Integer bid;
-
         public static GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo self = new GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo setBid(Integer bid) {
+            this.bid = bid;
+            return this;
+        }
+        public Integer getBid() {
+            return this.bid;
         }
 
         public GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo setBusinessName(String businessName) {
@@ -93,14 +101,6 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
         }
         public Integer getServiceType() {
             return this.serviceType;
-        }
-
-        public GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo setBid(Integer bid) {
-            this.bid = bid;
-            return this;
-        }
-        public Integer getBid() {
-            return this.bid;
         }
 
     }

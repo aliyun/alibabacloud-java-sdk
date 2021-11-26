@@ -4,23 +4,12 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class VerifySentenceRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("JsonStr")
     public String jsonStr;
 
     public static VerifySentenceRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifySentenceRequest self = new VerifySentenceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public VerifySentenceRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public VerifySentenceRequest setJsonStr(String jsonStr) {

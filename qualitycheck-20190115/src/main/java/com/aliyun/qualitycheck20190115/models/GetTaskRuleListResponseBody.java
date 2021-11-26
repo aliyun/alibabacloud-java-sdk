@@ -4,14 +4,20 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetTaskRuleListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("CompSubTaskCount")
     public Integer compSubTaskCount;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public GetTaskRuleListResponseBodyData data;
+
+    @NameInMap("DataSize")
+    public Integer dataSize;
 
     @NameInMap("Message")
     public String message;
@@ -19,23 +25,17 @@ public class GetTaskRuleListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ReviewStatus")
     public Integer reviewStatus;
 
-    @NameInMap("DataSize")
-    public Integer dataSize;
-
-    @NameInMap("Data")
-    public GetTaskRuleListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("TotalSubTaskCount")
     public Integer totalSubTaskCount;
@@ -43,6 +43,14 @@ public class GetTaskRuleListResponseBody extends TeaModel {
     public static GetTaskRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTaskRuleListResponseBody self = new GetTaskRuleListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTaskRuleListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetTaskRuleListResponseBody setCompSubTaskCount(Integer compSubTaskCount) {
@@ -53,20 +61,28 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         return this.compSubTaskCount;
     }
 
-    public GetTaskRuleListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public GetTaskRuleListResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
-    public GetTaskRuleListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetTaskRuleListResponseBody setData(GetTaskRuleListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetTaskRuleListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetTaskRuleListResponseBody setDataSize(Integer dataSize) {
+        this.dataSize = dataSize;
+        return this;
+    }
+    public Integer getDataSize() {
+        return this.dataSize;
     }
 
     public GetTaskRuleListResponseBody setMessage(String message) {
@@ -85,12 +101,12 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public GetTaskRuleListResponseBody setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public GetTaskRuleListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetTaskRuleListResponseBody setReviewStatus(Integer reviewStatus) {
@@ -101,36 +117,20 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         return this.reviewStatus;
     }
 
-    public GetTaskRuleListResponseBody setDataSize(Integer dataSize) {
-        this.dataSize = dataSize;
-        return this;
-    }
-    public Integer getDataSize() {
-        return this.dataSize;
-    }
-
-    public GetTaskRuleListResponseBody setData(GetTaskRuleListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTaskRuleListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTaskRuleListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetTaskRuleListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetTaskRuleListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public GetTaskRuleListResponseBody setTotalSubTaskCount(Integer totalSubTaskCount) {
@@ -142,20 +142,8 @@ public class GetTaskRuleListResponseBody extends TeaModel {
     }
 
     public static class GetTaskRuleListResponseBodyDataRuleCountInfo extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("PreReviewNumber")
-        public Integer preReviewNumber;
-
-        @NameInMap("HitNumber")
-        public Integer hitNumber;
-
-        @NameInMap("Select")
-        public Boolean select;
+        @NameInMap("CheckNumber")
+        public Integer checkNumber;
 
         @NameInMap("CreateEmpid")
         public String createEmpid;
@@ -163,26 +151,20 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("LastUpdateEmpid")
-        public String lastUpdateEmpid;
-
-        @NameInMap("RealViolationNumber")
-        public Integer realViolationNumber;
-
-        @NameInMap("IsDelete")
-        public Integer isDelete;
+        @NameInMap("HitNumber")
+        public Integer hitNumber;
 
         @NameInMap("HitRate")
         public Float hitRate;
 
-        @NameInMap("Rid")
-        public String rid;
+        @NameInMap("HitRealViolationRate")
+        public Float hitRealViolationRate;
 
-        @NameInMap("CheckNumber")
-        public Integer checkNumber;
+        @NameInMap("IsDelete")
+        public Integer isDelete;
 
-        @NameInMap("TypeName")
-        public String typeName;
+        @NameInMap("LastUpdateEmpid")
+        public String lastUpdateEmpid;
 
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
@@ -190,55 +172,41 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("HitRealViolationRate")
-        public Float hitRealViolationRate;
+        @NameInMap("PreReviewNumber")
+        public Integer preReviewNumber;
+
+        @NameInMap("RealViolationNumber")
+        public Integer realViolationNumber;
 
         @NameInMap("ReviewNumber")
         public Integer reviewNumber;
+
+        @NameInMap("Rid")
+        public String rid;
+
+        @NameInMap("Select")
+        public Boolean select;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("TypeName")
+        public String typeName;
 
         public static GetTaskRuleListResponseBodyDataRuleCountInfo build(java.util.Map<String, ?> map) throws Exception {
             GetTaskRuleListResponseBodyDataRuleCountInfo self = new GetTaskRuleListResponseBodyDataRuleCountInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setStatus(Integer status) {
-            this.status = status;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setCheckNumber(Integer checkNumber) {
+            this.checkNumber = checkNumber;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setPreReviewNumber(Integer preReviewNumber) {
-            this.preReviewNumber = preReviewNumber;
-            return this;
-        }
-        public Integer getPreReviewNumber() {
-            return this.preReviewNumber;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setHitNumber(Integer hitNumber) {
-            this.hitNumber = hitNumber;
-            return this;
-        }
-        public Integer getHitNumber() {
-            return this.hitNumber;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setSelect(Boolean select) {
-            this.select = select;
-            return this;
-        }
-        public Boolean getSelect() {
-            return this.select;
+        public Integer getCheckNumber() {
+            return this.checkNumber;
         }
 
         public GetTaskRuleListResponseBodyDataRuleCountInfo setCreateEmpid(String createEmpid) {
@@ -257,28 +225,12 @@ public class GetTaskRuleListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setLastUpdateEmpid(String lastUpdateEmpid) {
-            this.lastUpdateEmpid = lastUpdateEmpid;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setHitNumber(Integer hitNumber) {
+            this.hitNumber = hitNumber;
             return this;
         }
-        public String getLastUpdateEmpid() {
-            return this.lastUpdateEmpid;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setRealViolationNumber(Integer realViolationNumber) {
-            this.realViolationNumber = realViolationNumber;
-            return this;
-        }
-        public Integer getRealViolationNumber() {
-            return this.realViolationNumber;
-        }
-
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setIsDelete(Integer isDelete) {
-            this.isDelete = isDelete;
-            return this;
-        }
-        public Integer getIsDelete() {
-            return this.isDelete;
+        public Integer getHitNumber() {
+            return this.hitNumber;
         }
 
         public GetTaskRuleListResponseBodyDataRuleCountInfo setHitRate(Float hitRate) {
@@ -289,28 +241,28 @@ public class GetTaskRuleListResponseBody extends TeaModel {
             return this.hitRate;
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setRid(String rid) {
-            this.rid = rid;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setHitRealViolationRate(Float hitRealViolationRate) {
+            this.hitRealViolationRate = hitRealViolationRate;
             return this;
         }
-        public String getRid() {
-            return this.rid;
+        public Float getHitRealViolationRate() {
+            return this.hitRealViolationRate;
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setCheckNumber(Integer checkNumber) {
-            this.checkNumber = checkNumber;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setIsDelete(Integer isDelete) {
+            this.isDelete = isDelete;
             return this;
         }
-        public Integer getCheckNumber() {
-            return this.checkNumber;
+        public Integer getIsDelete() {
+            return this.isDelete;
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setTypeName(String typeName) {
-            this.typeName = typeName;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setLastUpdateEmpid(String lastUpdateEmpid) {
+            this.lastUpdateEmpid = lastUpdateEmpid;
             return this;
         }
-        public String getTypeName() {
-            return this.typeName;
+        public String getLastUpdateEmpid() {
+            return this.lastUpdateEmpid;
         }
 
         public GetTaskRuleListResponseBodyDataRuleCountInfo setLastUpdateTime(Long lastUpdateTime) {
@@ -329,12 +281,20 @@ public class GetTaskRuleListResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetTaskRuleListResponseBodyDataRuleCountInfo setHitRealViolationRate(Float hitRealViolationRate) {
-            this.hitRealViolationRate = hitRealViolationRate;
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setPreReviewNumber(Integer preReviewNumber) {
+            this.preReviewNumber = preReviewNumber;
             return this;
         }
-        public Float getHitRealViolationRate() {
-            return this.hitRealViolationRate;
+        public Integer getPreReviewNumber() {
+            return this.preReviewNumber;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setRealViolationNumber(Integer realViolationNumber) {
+            this.realViolationNumber = realViolationNumber;
+            return this;
+        }
+        public Integer getRealViolationNumber() {
+            return this.realViolationNumber;
         }
 
         public GetTaskRuleListResponseBodyDataRuleCountInfo setReviewNumber(Integer reviewNumber) {
@@ -343,6 +303,46 @@ public class GetTaskRuleListResponseBody extends TeaModel {
         }
         public Integer getReviewNumber() {
             return this.reviewNumber;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setRid(String rid) {
+            this.rid = rid;
+            return this;
+        }
+        public String getRid() {
+            return this.rid;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setSelect(Boolean select) {
+            this.select = select;
+            return this;
+        }
+        public Boolean getSelect() {
+            return this.select;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public GetTaskRuleListResponseBodyDataRuleCountInfo setTypeName(String typeName) {
+            this.typeName = typeName;
+            return this;
+        }
+        public String getTypeName() {
+            return this.typeName;
         }
 
     }

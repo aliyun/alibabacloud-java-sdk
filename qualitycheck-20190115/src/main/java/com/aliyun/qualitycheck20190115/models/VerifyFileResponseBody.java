@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class VerifyFileResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Float data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public Float data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class VerifyFileResponseBody extends TeaModel {
     public static VerifyFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyFileResponseBody self = new VerifyFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public VerifyFileResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public VerifyFileResponseBody setData(Float data) {
+        this.data = data;
+        return this;
+    }
+    public Float getData() {
+        return this.data;
     }
 
     public VerifyFileResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class VerifyFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public VerifyFileResponseBody setData(Float data) {
-        this.data = data;
-        return this;
-    }
-    public Float getData() {
-        return this.data;
-    }
-
-    public VerifyFileResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public VerifyFileResponseBody setSuccess(Boolean success) {

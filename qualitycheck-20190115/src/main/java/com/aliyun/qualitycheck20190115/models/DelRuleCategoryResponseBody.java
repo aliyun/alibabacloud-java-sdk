@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class DelRuleCategoryResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public DelRuleCategoryResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public DelRuleCategoryResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class DelRuleCategoryResponseBody extends TeaModel {
     public static DelRuleCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DelRuleCategoryResponseBody self = new DelRuleCategoryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DelRuleCategoryResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DelRuleCategoryResponseBody setData(DelRuleCategoryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DelRuleCategoryResponseBodyData getData() {
+        return this.data;
     }
 
     public DelRuleCategoryResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class DelRuleCategoryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DelRuleCategoryResponseBody setData(DelRuleCategoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DelRuleCategoryResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DelRuleCategoryResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DelRuleCategoryResponseBody setSuccess(Boolean success) {

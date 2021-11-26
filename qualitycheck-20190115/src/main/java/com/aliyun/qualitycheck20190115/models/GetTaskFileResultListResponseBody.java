@@ -4,11 +4,14 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetTaskFileResultListResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Code")
+    public String code;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Data")
+    public GetTaskFileResultListResponseBodyData data;
+
+    @NameInMap("DataSize")
+    public Integer dataSize;
 
     @NameInMap("Message")
     public String message;
@@ -16,37 +19,42 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("DataSize")
-    public Integer dataSize;
-
-    @NameInMap("Data")
-    public GetTaskFileResultListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static GetTaskFileResultListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTaskFileResultListResponseBody self = new GetTaskFileResultListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetTaskFileResultListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public GetTaskFileResultListResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getCode() {
+        return this.code;
     }
 
-    public GetTaskFileResultListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetTaskFileResultListResponseBody setData(GetTaskFileResultListResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetTaskFileResultListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetTaskFileResultListResponseBody setDataSize(Integer dataSize) {
+        this.dataSize = dataSize;
+        return this;
+    }
+    public Integer getDataSize() {
+        return this.dataSize;
     }
 
     public GetTaskFileResultListResponseBody setMessage(String message) {
@@ -65,28 +73,12 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public GetTaskFileResultListResponseBody setDataSize(Integer dataSize) {
-        this.dataSize = dataSize;
+    public GetTaskFileResultListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getDataSize() {
-        return this.dataSize;
-    }
-
-    public GetTaskFileResultListResponseBody setData(GetTaskFileResultListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetTaskFileResultListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetTaskFileResultListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetTaskFileResultListResponseBody setSuccess(Boolean success) {
@@ -95,6 +87,14 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetTaskFileResultListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet extends TeaModel {
@@ -117,26 +117,41 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
     }
 
     public static class GetTaskFileResultListResponseBodyDataTaskResultReviewInfo extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("BucketName")
+        public String bucketName;
 
-        @NameInMap("HitNumber")
-        public Integer hitNumber;
+        @NameInMap("CheckNumber")
+        public Integer checkNumber;
 
         @NameInMap("DataType")
         public Integer dataType;
 
-        @NameInMap("NextVid")
-        public String nextVid;
+        @NameInMap("FileMergeName")
+        public String fileMergeName;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("HandTaskFile")
+        public Boolean handTaskFile;
+
+        @NameInMap("HitNumber")
+        public Integer hitNumber;
 
         @NameInMap("HitRule")
         public Boolean hitRule;
 
-        @NameInMap("PreVid")
-        public String preVid;
+        @NameInMap("HitRuleSet")
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet hitRuleSet;
 
         @NameInMap("IsHitRule")
         public Boolean isHitRule;
+
+        @NameInMap("NextVid")
+        public String nextVid;
+
+        @NameInMap("PreVid")
+        public String preVid;
 
         @NameInMap("RealViolationNumber")
         public Integer realViolationNumber;
@@ -144,29 +159,14 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
         @NameInMap("ReviewAccuracyRate")
         public Float reviewAccuracyRate;
 
-        @NameInMap("FileName")
-        public String fileName;
-
-        @NameInMap("TotalScore")
-        public Integer totalScore;
-
-        @NameInMap("CheckNumber")
-        public Integer checkNumber;
-
-        @NameInMap("FileMergeName")
-        public String fileMergeName;
-
-        @NameInMap("BucketName")
-        public String bucketName;
-
-        @NameInMap("HandTaskFile")
-        public Boolean handTaskFile;
-
-        @NameInMap("HitRuleSet")
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet hitRuleSet;
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("TotalScore")
+        public Integer totalScore;
 
         @NameInMap("Vid")
         public String vid;
@@ -176,20 +176,20 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setStatus(Integer status) {
-            this.status = status;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setBucketName(String bucketName) {
+            this.bucketName = bucketName;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getBucketName() {
+            return this.bucketName;
         }
 
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHitNumber(Integer hitNumber) {
-            this.hitNumber = hitNumber;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setCheckNumber(Integer checkNumber) {
+            this.checkNumber = checkNumber;
             return this;
         }
-        public Integer getHitNumber() {
-            return this.hitNumber;
+        public Integer getCheckNumber() {
+            return this.checkNumber;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setDataType(Integer dataType) {
@@ -200,12 +200,36 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
             return this.dataType;
         }
 
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setNextVid(String nextVid) {
-            this.nextVid = nextVid;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setFileMergeName(String fileMergeName) {
+            this.fileMergeName = fileMergeName;
             return this;
         }
-        public String getNextVid() {
-            return this.nextVid;
+        public String getFileMergeName() {
+            return this.fileMergeName;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHandTaskFile(Boolean handTaskFile) {
+            this.handTaskFile = handTaskFile;
+            return this;
+        }
+        public Boolean getHandTaskFile() {
+            return this.handTaskFile;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHitNumber(Integer hitNumber) {
+            this.hitNumber = hitNumber;
+            return this;
+        }
+        public Integer getHitNumber() {
+            return this.hitNumber;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHitRule(Boolean hitRule) {
@@ -216,12 +240,12 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
             return this.hitRule;
         }
 
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setPreVid(String preVid) {
-            this.preVid = preVid;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHitRuleSet(GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet hitRuleSet) {
+            this.hitRuleSet = hitRuleSet;
             return this;
         }
-        public String getPreVid() {
-            return this.preVid;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet getHitRuleSet() {
+            return this.hitRuleSet;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setIsHitRule(Boolean isHitRule) {
@@ -230,6 +254,22 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
         }
         public Boolean getIsHitRule() {
             return this.isHitRule;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setNextVid(String nextVid) {
+            this.nextVid = nextVid;
+            return this;
+        }
+        public String getNextVid() {
+            return this.nextVid;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setPreVid(String preVid) {
+            this.preVid = preVid;
+            return this;
+        }
+        public String getPreVid() {
+            return this.preVid;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setRealViolationNumber(Integer realViolationNumber) {
@@ -248,60 +288,12 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
             return this.reviewAccuracyRate;
         }
 
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setFileName(String fileName) {
-            this.fileName = fileName;
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getFileName() {
-            return this.fileName;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setTotalScore(Integer totalScore) {
-            this.totalScore = totalScore;
-            return this;
-        }
-        public Integer getTotalScore() {
-            return this.totalScore;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setCheckNumber(Integer checkNumber) {
-            this.checkNumber = checkNumber;
-            return this;
-        }
-        public Integer getCheckNumber() {
-            return this.checkNumber;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setFileMergeName(String fileMergeName) {
-            this.fileMergeName = fileMergeName;
-            return this;
-        }
-        public String getFileMergeName() {
-            return this.fileMergeName;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setBucketName(String bucketName) {
-            this.bucketName = bucketName;
-            return this;
-        }
-        public String getBucketName() {
-            return this.bucketName;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHandTaskFile(Boolean handTaskFile) {
-            this.handTaskFile = handTaskFile;
-            return this;
-        }
-        public Boolean getHandTaskFile() {
-            return this.handTaskFile;
-        }
-
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setHitRuleSet(GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet hitRuleSet) {
-            this.hitRuleSet = hitRuleSet;
-            return this;
-        }
-        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfoHitRuleSet getHitRuleSet() {
-            return this.hitRuleSet;
+        public Integer getStatus() {
+            return this.status;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setTaskId(String taskId) {
@@ -310,6 +302,14 @@ public class GetTaskFileResultListResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setTotalScore(Integer totalScore) {
+            this.totalScore = totalScore;
+            return this;
+        }
+        public Integer getTotalScore() {
+            return this.totalScore;
         }
 
         public GetTaskFileResultListResponseBodyDataTaskResultReviewInfo setVid(String vid) {

@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetThesaurusBySynonymForApiResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetThesaurusBySynonymForApiResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetThesaurusBySynonymForApiResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetThesaurusBySynonymForApiResponseBody extends TeaModel {
     public static GetThesaurusBySynonymForApiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThesaurusBySynonymForApiResponseBody self = new GetThesaurusBySynonymForApiResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetThesaurusBySynonymForApiResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetThesaurusBySynonymForApiResponseBody setData(GetThesaurusBySynonymForApiResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetThesaurusBySynonymForApiResponseBodyData getData() {
+        return this.data;
     }
 
     public GetThesaurusBySynonymForApiResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class GetThesaurusBySynonymForApiResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetThesaurusBySynonymForApiResponseBody setData(GetThesaurusBySynonymForApiResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetThesaurusBySynonymForApiResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetThesaurusBySynonymForApiResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetThesaurusBySynonymForApiResponseBody setSuccess(Boolean success) {
@@ -87,11 +87,11 @@ public class GetThesaurusBySynonymForApiResponseBody extends TeaModel {
         @NameInMap("Business")
         public String business;
 
-        @NameInMap("SynonymList")
-        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList synonymList;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("SynonymList")
+        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList synonymList;
 
         public static GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo build(java.util.Map<String, ?> map) throws Exception {
             GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo self = new GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo();
@@ -106,20 +106,20 @@ public class GetThesaurusBySynonymForApiResponseBody extends TeaModel {
             return this.business;
         }
 
-        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo setSynonymList(GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList synonymList) {
-            this.synonymList = synonymList;
-            return this;
-        }
-        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList getSynonymList() {
-            return this.synonymList;
-        }
-
         public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPo setSynonymList(GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList synonymList) {
+            this.synonymList = synonymList;
+            return this;
+        }
+        public GetThesaurusBySynonymForApiResponseBodyDataThesaurusPoSynonymList getSynonymList() {
+            return this.synonymList;
         }
 
     }
