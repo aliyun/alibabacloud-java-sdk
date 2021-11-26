@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public UpdateSyncQualityCheckDataResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public UpdateSyncQualityCheckDataResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
     public static UpdateSyncQualityCheckDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSyncQualityCheckDataResponseBody self = new UpdateSyncQualityCheckDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSyncQualityCheckDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateSyncQualityCheckDataResponseBody setData(UpdateSyncQualityCheckDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateSyncQualityCheckDataResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateSyncQualityCheckDataResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateSyncQualityCheckDataResponseBody setData(UpdateSyncQualityCheckDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateSyncQualityCheckDataResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpdateSyncQualityCheckDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public UpdateSyncQualityCheckDataResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,23 +65,15 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
     }
 
     public static class UpdateSyncQualityCheckDataResponseBodyData extends TeaModel {
-        @NameInMap("Tid")
-        public String tid;
-
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("Tid")
+        public String tid;
 
         public static UpdateSyncQualityCheckDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpdateSyncQualityCheckDataResponseBodyData self = new UpdateSyncQualityCheckDataResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateSyncQualityCheckDataResponseBodyData setTid(String tid) {
-            this.tid = tid;
-            return this;
-        }
-        public String getTid() {
-            return this.tid;
         }
 
         public UpdateSyncQualityCheckDataResponseBodyData setTaskId(String taskId) {
@@ -90,6 +82,14 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public UpdateSyncQualityCheckDataResponseBodyData setTid(String tid) {
+            this.tid = tid;
+            return this;
+        }
+        public String getTid() {
+            return this.tid;
         }
 
     }

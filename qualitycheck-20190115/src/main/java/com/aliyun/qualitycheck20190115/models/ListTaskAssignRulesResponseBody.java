@@ -4,26 +4,26 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListTaskAssignRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Data")
-    public ListTaskAssignRulesResponseBodyData data;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Count")
     public Integer count;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Data")
+    public ListTaskAssignRulesResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -31,54 +31,6 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
     public static ListTaskAssignRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskAssignRulesResponseBody self = new ListTaskAssignRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTaskAssignRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTaskAssignRulesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListTaskAssignRulesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListTaskAssignRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListTaskAssignRulesResponseBody setData(ListTaskAssignRulesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListTaskAssignRulesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListTaskAssignRulesResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
     public ListTaskAssignRulesResponseBody setCode(String code) {
@@ -89,12 +41,158 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListTaskAssignRulesResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
+    public ListTaskAssignRulesResponseBody setData(ListTaskAssignRulesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTaskAssignRulesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListTaskAssignRulesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListTaskAssignRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListTaskAssignRulesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListTaskAssignRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListTaskAssignRulesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent extends TeaModel {
+        @NameInMap("AgentId")
+        public String agentId;
+
+        @NameInMap("AgentName")
+        public String agentName;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent setAgentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents extends TeaModel {
+        @NameInMap("Agent")
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> agent;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents setAgent(java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> agent) {
+            this.agent = agent;
+            return this;
+        }
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> getAgent() {
+            return this.agent;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer extends TeaModel {
+        @NameInMap("ReviewerId")
+        public String reviewerId;
+
+        @NameInMap("ReviewerName")
+        public String reviewerName;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer setReviewerId(String reviewerId) {
+            this.reviewerId = reviewerId;
+            return this;
+        }
+        public String getReviewerId() {
+            return this.reviewerId;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer setReviewerName(String reviewerName) {
+            this.reviewerName = reviewerName;
+            return this;
+        }
+        public String getReviewerName() {
+            return this.reviewerName;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers extends TeaModel {
+        @NameInMap("Reviewer")
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> reviewer;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers setReviewer(java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> reviewer) {
+            this.reviewer = reviewer;
+            return this;
+        }
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> getReviewer() {
+            return this.reviewer;
+        }
+
     }
 
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRulesRuleBasicInfo extends TeaModel {
@@ -142,6 +240,151 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
         public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRulesRuleBasicInfo> getRuleBasicInfo() {
             return this.ruleBasicInfo;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent extends TeaModel {
+        @NameInMap("AgentId")
+        public String agentId;
+
+        @NameInMap("AgentName")
+        public String agentName;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent setAgentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents extends TeaModel {
+        @NameInMap("SamplingModeAgent")
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent> samplingModeAgent;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents setSamplingModeAgent(java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent> samplingModeAgent) {
+            this.samplingModeAgent = samplingModeAgent;
+            return this;
+        }
+        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgentsSamplingModeAgent> getSamplingModeAgent() {
+            return this.samplingModeAgent;
+        }
+
+    }
+
+    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode extends TeaModel {
+        @NameInMap("AnyNumberOfDraws")
+        public Integer anyNumberOfDraws;
+
+        @NameInMap("Designated")
+        public Boolean designated;
+
+        @NameInMap("Dimension")
+        public Integer dimension;
+
+        @NameInMap("Limit")
+        public Integer limit;
+
+        @NameInMap("NumberOfDraws")
+        public Integer numberOfDraws;
+
+        @NameInMap("Proportion")
+        public Float proportion;
+
+        @NameInMap("RandomInspectionNumber")
+        public Integer randomInspectionNumber;
+
+        @NameInMap("SamplingModeAgents")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents samplingModeAgents;
+
+        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode build(java.util.Map<String, ?> map) throws Exception {
+            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setAnyNumberOfDraws(Integer anyNumberOfDraws) {
+            this.anyNumberOfDraws = anyNumberOfDraws;
+            return this;
+        }
+        public Integer getAnyNumberOfDraws() {
+            return this.anyNumberOfDraws;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setDesignated(Boolean designated) {
+            this.designated = designated;
+            return this;
+        }
+        public Boolean getDesignated() {
+            return this.designated;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setDimension(Integer dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+        public Integer getDimension() {
+            return this.dimension;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setLimit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+        public Integer getLimit() {
+            return this.limit;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setNumberOfDraws(Integer numberOfDraws) {
+            this.numberOfDraws = numberOfDraws;
+            return this;
+        }
+        public Integer getNumberOfDraws() {
+            return this.numberOfDraws;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setProportion(Float proportion) {
+            this.proportion = proportion;
+            return this;
+        }
+        public Float getProportion() {
+            return this.proportion;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setRandomInspectionNumber(Integer randomInspectionNumber) {
+            this.randomInspectionNumber = randomInspectionNumber;
+            return this;
+        }
+        public Integer getRandomInspectionNumber() {
+            return this.randomInspectionNumber;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode setSamplingModeAgents(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents samplingModeAgents) {
+            this.samplingModeAgents = samplingModeAgents;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingModeSamplingModeAgents getSamplingModeAgents() {
+            return this.samplingModeAgents;
         }
 
     }
@@ -195,150 +438,203 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
 
     }
 
-    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent extends TeaModel {
-        @NameInMap("AgentId")
-        public String agentId;
-
-        @NameInMap("AgentName")
-        public String agentName;
-
-        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent build(java.util.Map<String, ?> map) throws Exception {
-            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent setAgentId(String agentId) {
-            this.agentId = agentId;
-            return this;
-        }
-        public String getAgentId() {
-            return this.agentId;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent setAgentName(String agentName) {
-            this.agentName = agentName;
-            return this;
-        }
-        public String getAgentName() {
-            return this.agentName;
-        }
-
-    }
-
-    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents extends TeaModel {
-        @NameInMap("Agent")
-        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> agent;
-
-        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents build(java.util.Map<String, ?> map) throws Exception {
-            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents setAgent(java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> agent) {
-            this.agent = agent;
-            return this;
-        }
-        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgentsAgent> getAgent() {
-            return this.agent;
-        }
-
-    }
-
-    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer extends TeaModel {
-        @NameInMap("ReviewerName")
-        public String reviewerName;
-
-        @NameInMap("ReviewerId")
-        public String reviewerId;
-
-        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer build(java.util.Map<String, ?> map) throws Exception {
-            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer setReviewerName(String reviewerName) {
-            this.reviewerName = reviewerName;
-            return this;
-        }
-        public String getReviewerName() {
-            return this.reviewerName;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer setReviewerId(String reviewerId) {
-            this.reviewerId = reviewerId;
-            return this;
-        }
-        public String getReviewerId() {
-            return this.reviewerId;
-        }
-
-    }
-
-    public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers extends TeaModel {
-        @NameInMap("Reviewer")
-        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> reviewer;
-
-        public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers build(java.util.Map<String, ?> map) throws Exception {
-            ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers setReviewer(java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> reviewer) {
-            this.reviewer = reviewer;
-            return this;
-        }
-        public java.util.List<ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewersReviewer> getReviewer() {
-            return this.reviewer;
-        }
-
-    }
-
     public static class ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo extends TeaModel {
+        @NameInMap("Agents")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents agents;
+
+        @NameInMap("AgentsStr")
+        public String agentsStr;
+
+        @NameInMap("AssignmentType")
+        public Integer assignmentType;
+
+        @NameInMap("CallTimeEnd")
+        public Long callTimeEnd;
+
+        @NameInMap("CallTimeStart")
+        public Long callTimeStart;
+
+        @NameInMap("CallType")
+        public Integer callType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("DurationMax")
+        public Integer durationMax;
+
+        @NameInMap("DurationMin")
+        public Integer durationMin;
+
+        @NameInMap("Enabled")
+        public Integer enabled;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Reviewers")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers reviewers;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("Rules")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules rules;
+
+        @NameInMap("SamplingMode")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode samplingMode;
+
+        @NameInMap("SkillGroups")
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups skillGroups;
+
         @NameInMap("SkillGroupsStr")
         public String skillGroupsStr;
 
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        @NameInMap("DurationMax")
-        public Integer durationMax;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
-        @NameInMap("AgentsStr")
-        public String agentsStr;
-
-        @NameInMap("DurationMin")
-        public Integer durationMin;
-
-        @NameInMap("Rules")
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules rules;
-
-        @NameInMap("RuleId")
-        public Long ruleId;
-
-        @NameInMap("SkillGroups")
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups skillGroups;
-
-        @NameInMap("Agents")
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents agents;
-
-        @NameInMap("CallType")
-        public Integer callType;
-
-        @NameInMap("Enabled")
-        public Integer enabled;
-
-        @NameInMap("Reviewers")
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers reviewers;
-
         public static ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo build(java.util.Map<String, ?> map) throws Exception {
             ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo self = new ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setAgents(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents agents) {
+            this.agents = agents;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents getAgents() {
+            return this.agents;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setAgentsStr(String agentsStr) {
+            this.agentsStr = agentsStr;
+            return this;
+        }
+        public String getAgentsStr() {
+            return this.agentsStr;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setAssignmentType(Integer assignmentType) {
+            this.assignmentType = assignmentType;
+            return this;
+        }
+        public Integer getAssignmentType() {
+            return this.assignmentType;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCallTimeEnd(Long callTimeEnd) {
+            this.callTimeEnd = callTimeEnd;
+            return this;
+        }
+        public Long getCallTimeEnd() {
+            return this.callTimeEnd;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCallTimeStart(Long callTimeStart) {
+            this.callTimeStart = callTimeStart;
+            return this;
+        }
+        public Long getCallTimeStart() {
+            return this.callTimeStart;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCallType(Integer callType) {
+            this.callType = callType;
+            return this;
+        }
+        public Integer getCallType() {
+            return this.callType;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setDurationMax(Integer durationMax) {
+            this.durationMax = durationMax;
+            return this;
+        }
+        public Integer getDurationMax() {
+            return this.durationMax;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setDurationMin(Integer durationMin) {
+            this.durationMin = durationMin;
+            return this;
+        }
+        public Integer getDurationMin() {
+            return this.durationMin;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setEnabled(Integer enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Integer getEnabled() {
+            return this.enabled;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setReviewers(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers reviewers) {
+            this.reviewers = reviewers;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers getReviewers() {
+            return this.reviewers;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setRules(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules rules) {
+            this.rules = rules;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules getRules() {
+            return this.rules;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setSamplingMode(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode samplingMode) {
+            this.samplingMode = samplingMode;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSamplingMode getSamplingMode() {
+            return this.samplingMode;
+        }
+
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setSkillGroups(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups skillGroups) {
+            this.skillGroups = skillGroups;
+            return this;
+        }
+        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups getSkillGroups() {
+            return this.skillGroups;
         }
 
         public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setSkillGroupsStr(String skillGroupsStr) {
@@ -355,102 +651,6 @@ public class ListTaskAssignRulesResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setDurationMax(Integer durationMax) {
-            this.durationMax = durationMax;
-            return this;
-        }
-        public Integer getDurationMax() {
-            return this.durationMax;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setAgentsStr(String agentsStr) {
-            this.agentsStr = agentsStr;
-            return this;
-        }
-        public String getAgentsStr() {
-            return this.agentsStr;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setDurationMin(Integer durationMin) {
-            this.durationMin = durationMin;
-            return this;
-        }
-        public Integer getDurationMin() {
-            return this.durationMin;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setRules(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules rules) {
-            this.rules = rules;
-            return this;
-        }
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoRules getRules() {
-            return this.rules;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setSkillGroups(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups skillGroups) {
-            this.skillGroups = skillGroups;
-            return this;
-        }
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoSkillGroups getSkillGroups() {
-            return this.skillGroups;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setAgents(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents agents) {
-            this.agents = agents;
-            return this;
-        }
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoAgents getAgents() {
-            return this.agents;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setCallType(Integer callType) {
-            this.callType = callType;
-            return this;
-        }
-        public Integer getCallType() {
-            return this.callType;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setEnabled(Integer enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Integer getEnabled() {
-            return this.enabled;
-        }
-
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfo setReviewers(ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers reviewers) {
-            this.reviewers = reviewers;
-            return this;
-        }
-        public ListTaskAssignRulesResponseBodyDataTaskAssignRuleInfoReviewers getReviewers() {
-            return this.reviewers;
         }
 
     }

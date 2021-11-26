@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ConfigDataSetResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ConfigDataSetResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ConfigDataSetResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ConfigDataSetResponseBody extends TeaModel {
     public static ConfigDataSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfigDataSetResponseBody self = new ConfigDataSetResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ConfigDataSetResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ConfigDataSetResponseBody setData(ConfigDataSetResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ConfigDataSetResponseBodyData getData() {
+        return this.data;
     }
 
     public ConfigDataSetResponseBody setMessage(String message) {
@@ -40,58 +56,12 @@ public class ConfigDataSetResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ConfigDataSetResponseBody setData(ConfigDataSetResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ConfigDataSetResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ConfigDataSetResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ConfigDataSetResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange extends TeaModel {
-        @NameInMap("From")
-        public Integer from;
-
-        @NameInMap("To")
-        public Integer to;
-
-        public static ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange build(java.util.Map<String, ?> map) throws Exception {
-            ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange self = new ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange();
-            return TeaModel.build(map, self);
-        }
-
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange setFrom(Integer from) {
-            this.from = from;
-            return this;
-        }
-        public Integer getFrom() {
-            return this.from;
-        }
-
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange setTo(Integer to) {
-            this.to = to;
-            return this;
-        }
-        public Integer getTo() {
-            return this.to;
-        }
-
     }
 
     public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeAnchor extends TeaModel {
@@ -135,12 +105,42 @@ public class ConfigDataSetResponseBody extends TeaModel {
 
     }
 
-    public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange extends TeaModel {
-        @NameInMap("Range")
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange range;
+    public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange extends TeaModel {
+        @NameInMap("From")
+        public Integer from;
 
+        @NameInMap("To")
+        public Integer to;
+
+        public static ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange build(java.util.Map<String, ?> map) throws Exception {
+            ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange self = new ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange();
+            return TeaModel.build(map, self);
+        }
+
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange setTo(Integer to) {
+            this.to = to;
+            return this;
+        }
+        public Integer getTo() {
+            return this.to;
+        }
+
+    }
+
+    public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange extends TeaModel {
         @NameInMap("Anchor")
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeAnchor anchor;
+
+        @NameInMap("Range")
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange range;
 
         @NameInMap("Role")
         public String role;
@@ -153,20 +153,20 @@ public class ConfigDataSetResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange setRange(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange range) {
-            this.range = range;
-            return this;
-        }
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange getRange() {
-            return this.range;
-        }
-
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange setAnchor(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeAnchor anchor) {
             this.anchor = anchor;
             return this;
         }
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeAnchor getAnchor() {
             return this.anchor;
+        }
+
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange setRange(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange range) {
+            this.range = range;
+            return this;
+        }
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRangeRange getRange() {
+            return this.range;
         }
 
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoCheckRange setRole(String role) {
@@ -207,23 +207,15 @@ public class ConfigDataSetResponseBody extends TeaModel {
     }
 
     public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam extends TeaModel {
-        @NameInMap("Keywords")
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords keywords;
-
         @NameInMap("InSentence")
         public Boolean inSentence;
+
+        @NameInMap("Keywords")
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords keywords;
 
         public static ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam build(java.util.Map<String, ?> map) throws Exception {
             ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam self = new ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam();
             return TeaModel.build(map, self);
-        }
-
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywords(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords keywords) {
-            this.keywords = keywords;
-            return this;
-        }
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords getKeywords() {
-            return this.keywords;
         }
 
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setInSentence(Boolean inSentence) {
@@ -234,29 +226,29 @@ public class ConfigDataSetResponseBody extends TeaModel {
             return this.inSentence;
         }
 
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywords(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamKeywords getKeywords() {
+            return this.keywords;
+        }
+
     }
 
     public static class ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Oid")
         public String oid;
 
         @NameInMap("Param")
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam param;
 
+        @NameInMap("Type")
+        public String type;
+
         public static ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo self = new ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo setOid(String oid) {
@@ -273,6 +265,14 @@ public class ConfigDataSetResponseBody extends TeaModel {
         }
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam getParam() {
             return this.param;
+        }
+
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperatorsOperatorBasicInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -303,11 +303,11 @@ public class ConfigDataSetResponseBody extends TeaModel {
         @NameInMap("Cid")
         public String cid;
 
-        @NameInMap("Operators")
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators operators;
-
         @NameInMap("Lambda")
         public String lambda;
+
+        @NameInMap("Operators")
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators operators;
 
         public static ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo self = new ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo();
@@ -330,20 +330,20 @@ public class ConfigDataSetResponseBody extends TeaModel {
             return this.cid;
         }
 
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo setOperators(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators operators) {
-            this.operators = operators;
-            return this;
-        }
-        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators getOperators() {
-            return this.operators;
-        }
-
         public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo setLambda(String lambda) {
             this.lambda = lambda;
             return this;
         }
         public String getLambda() {
             return this.lambda;
+        }
+
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfo setOperators(ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators operators) {
+            this.operators = operators;
+            return this;
+        }
+        public ConfigDataSetResponseBodyDataRuleInfoConditionsConditionBasicInfoOperators getOperators() {
+            return this.operators;
         }
 
     }
@@ -458,32 +458,24 @@ public class ConfigDataSetResponseBody extends TeaModel {
     }
 
     public static class ConfigDataSetResponseBodyData extends TeaModel {
-        @NameInMap("RuleInfo")
-        public ConfigDataSetResponseBodyDataRuleInfo ruleInfo;
-
         @NameInMap("ChannelType")
         public Integer channelType;
-
-        @NameInMap("SetId")
-        public Long setId;
-
-        @NameInMap("RoleConfigStatus")
-        public Integer roleConfigStatus;
 
         @NameInMap("JudgeType")
         public Integer judgeType;
 
+        @NameInMap("RoleConfigStatus")
+        public Integer roleConfigStatus;
+
+        @NameInMap("RuleInfo")
+        public ConfigDataSetResponseBodyDataRuleInfo ruleInfo;
+
+        @NameInMap("SetId")
+        public Long setId;
+
         public static ConfigDataSetResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ConfigDataSetResponseBodyData self = new ConfigDataSetResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ConfigDataSetResponseBodyData setRuleInfo(ConfigDataSetResponseBodyDataRuleInfo ruleInfo) {
-            this.ruleInfo = ruleInfo;
-            return this;
-        }
-        public ConfigDataSetResponseBodyDataRuleInfo getRuleInfo() {
-            return this.ruleInfo;
         }
 
         public ConfigDataSetResponseBodyData setChannelType(Integer channelType) {
@@ -494,12 +486,12 @@ public class ConfigDataSetResponseBody extends TeaModel {
             return this.channelType;
         }
 
-        public ConfigDataSetResponseBodyData setSetId(Long setId) {
-            this.setId = setId;
+        public ConfigDataSetResponseBodyData setJudgeType(Integer judgeType) {
+            this.judgeType = judgeType;
             return this;
         }
-        public Long getSetId() {
-            return this.setId;
+        public Integer getJudgeType() {
+            return this.judgeType;
         }
 
         public ConfigDataSetResponseBodyData setRoleConfigStatus(Integer roleConfigStatus) {
@@ -510,12 +502,20 @@ public class ConfigDataSetResponseBody extends TeaModel {
             return this.roleConfigStatus;
         }
 
-        public ConfigDataSetResponseBodyData setJudgeType(Integer judgeType) {
-            this.judgeType = judgeType;
+        public ConfigDataSetResponseBodyData setRuleInfo(ConfigDataSetResponseBodyDataRuleInfo ruleInfo) {
+            this.ruleInfo = ruleInfo;
             return this;
         }
-        public Integer getJudgeType() {
-            return this.judgeType;
+        public ConfigDataSetResponseBodyDataRuleInfo getRuleInfo() {
+            return this.ruleInfo;
+        }
+
+        public ConfigDataSetResponseBodyData setSetId(Long setId) {
+            this.setId = setId;
+            return this;
+        }
+        public Long getSetId() {
+            return this.setId;
         }
 
     }

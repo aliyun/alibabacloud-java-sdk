@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class AddRuleCategoryResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public AddRuleCategoryResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public AddRuleCategoryResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class AddRuleCategoryResponseBody extends TeaModel {
     public static AddRuleCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddRuleCategoryResponseBody self = new AddRuleCategoryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddRuleCategoryResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddRuleCategoryResponseBody setData(AddRuleCategoryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AddRuleCategoryResponseBodyData getData() {
+        return this.data;
     }
 
     public AddRuleCategoryResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class AddRuleCategoryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddRuleCategoryResponseBody setData(AddRuleCategoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AddRuleCategoryResponseBodyData getData() {
-        return this.data;
-    }
-
-    public AddRuleCategoryResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public AddRuleCategoryResponseBody setSuccess(Boolean success) {

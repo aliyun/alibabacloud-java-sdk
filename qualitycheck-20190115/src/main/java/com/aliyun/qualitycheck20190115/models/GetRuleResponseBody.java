@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetRuleResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetRuleResponseBody extends TeaModel {
     public static GetRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRuleResponseBody self = new GetRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRuleResponseBody setData(GetRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public GetRuleResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class GetRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetRuleResponseBody setData(GetRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetRuleResponseBody setSuccess(Boolean success) {
@@ -84,20 +84,14 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyDataRulesRuleInfo extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("AutoReview")
+        public Integer autoReview;
 
         @NameInMap("BusinessCategoryNameList")
         public GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList businessCategoryNameList;
 
-        @NameInMap("IsOnline")
-        public Integer isOnline;
-
-        @NameInMap("ScoreSubId")
-        public Integer scoreSubId;
+        @NameInMap("Comments")
+        public String comments;
 
         @NameInMap("CreateEmpid")
         public String createEmpid;
@@ -105,70 +99,68 @@ public class GetRuleResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("LastUpdateEmpid")
-        public String lastUpdateEmpid;
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("IsDelete")
         public Integer isDelete;
 
-        @NameInMap("Rid")
-        public String rid;
+        @NameInMap("IsOnline")
+        public Integer isOnline;
 
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("RuleScoreType")
-        public Integer ruleScoreType;
-
-        @NameInMap("Weight")
-        public String weight;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("RuleLambda")
-        public String ruleLambda;
-
-        @NameInMap("ScoreSubName")
-        public String scoreSubName;
-
-        @NameInMap("AutoReview")
-        public Integer autoReview;
-
-        @NameInMap("Comments")
-        public String comments;
+        @NameInMap("LastUpdateEmpid")
+        public String lastUpdateEmpid;
 
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
 
-        @NameInMap("ScoreName")
-        public String scoreName;
-
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Rid")
+        public String rid;
+
+        @NameInMap("RuleLambda")
+        public String ruleLambda;
+
+        @NameInMap("RuleScoreType")
+        public Integer ruleScoreType;
+
         @NameInMap("ScoreId")
         public Integer scoreId;
+
+        @NameInMap("ScoreName")
+        public String scoreName;
+
+        @NameInMap("ScoreSubId")
+        public Integer scoreSubId;
+
+        @NameInMap("ScoreSubName")
+        public String scoreSubName;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("Weight")
+        public String weight;
 
         public static GetRuleResponseBodyDataRulesRuleInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleResponseBodyDataRulesRuleInfo self = new GetRuleResponseBodyDataRulesRuleInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setType(Integer type) {
-            this.type = type;
+        public GetRuleResponseBodyDataRulesRuleInfo setAutoReview(Integer autoReview) {
+            this.autoReview = autoReview;
             return this;
         }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
+        public Integer getAutoReview() {
+            return this.autoReview;
         }
 
         public GetRuleResponseBodyDataRulesRuleInfo setBusinessCategoryNameList(GetRuleResponseBodyDataRulesRuleInfoBusinessCategoryNameList businessCategoryNameList) {
@@ -179,20 +171,12 @@ public class GetRuleResponseBody extends TeaModel {
             return this.businessCategoryNameList;
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setIsOnline(Integer isOnline) {
-            this.isOnline = isOnline;
+        public GetRuleResponseBodyDataRulesRuleInfo setComments(String comments) {
+            this.comments = comments;
             return this;
         }
-        public Integer getIsOnline() {
-            return this.isOnline;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setScoreSubId(Integer scoreSubId) {
-            this.scoreSubId = scoreSubId;
-            return this;
-        }
-        public Integer getScoreSubId() {
-            return this.scoreSubId;
+        public String getComments() {
+            return this.comments;
         }
 
         public GetRuleResponseBodyDataRulesRuleInfo setCreateEmpid(String createEmpid) {
@@ -211,12 +195,12 @@ public class GetRuleResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setLastUpdateEmpid(String lastUpdateEmpid) {
-            this.lastUpdateEmpid = lastUpdateEmpid;
+        public GetRuleResponseBodyDataRulesRuleInfo setEndTime(String endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getLastUpdateEmpid() {
-            return this.lastUpdateEmpid;
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public GetRuleResponseBodyDataRulesRuleInfo setIsDelete(Integer isDelete) {
@@ -227,76 +211,20 @@ public class GetRuleResponseBody extends TeaModel {
             return this.isDelete;
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setRid(String rid) {
-            this.rid = rid;
+        public GetRuleResponseBodyDataRulesRuleInfo setIsOnline(Integer isOnline) {
+            this.isOnline = isOnline;
             return this;
         }
-        public String getRid() {
-            return this.rid;
+        public Integer getIsOnline() {
+            return this.isOnline;
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setEndTime(String endTime) {
-            this.endTime = endTime;
+        public GetRuleResponseBodyDataRulesRuleInfo setLastUpdateEmpid(String lastUpdateEmpid) {
+            this.lastUpdateEmpid = lastUpdateEmpid;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setRuleScoreType(Integer ruleScoreType) {
-            this.ruleScoreType = ruleScoreType;
-            return this;
-        }
-        public Integer getRuleScoreType() {
-            return this.ruleScoreType;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setWeight(String weight) {
-            this.weight = weight;
-            return this;
-        }
-        public String getWeight() {
-            return this.weight;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setRuleLambda(String ruleLambda) {
-            this.ruleLambda = ruleLambda;
-            return this;
-        }
-        public String getRuleLambda() {
-            return this.ruleLambda;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setScoreSubName(String scoreSubName) {
-            this.scoreSubName = scoreSubName;
-            return this;
-        }
-        public String getScoreSubName() {
-            return this.scoreSubName;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setAutoReview(Integer autoReview) {
-            this.autoReview = autoReview;
-            return this;
-        }
-        public Integer getAutoReview() {
-            return this.autoReview;
-        }
-
-        public GetRuleResponseBodyDataRulesRuleInfo setComments(String comments) {
-            this.comments = comments;
-            return this;
-        }
-        public String getComments() {
-            return this.comments;
+        public String getLastUpdateEmpid() {
+            return this.lastUpdateEmpid;
         }
 
         public GetRuleResponseBodyDataRulesRuleInfo setLastUpdateTime(String lastUpdateTime) {
@@ -307,14 +235,6 @@ public class GetRuleResponseBody extends TeaModel {
             return this.lastUpdateTime;
         }
 
-        public GetRuleResponseBodyDataRulesRuleInfo setScoreName(String scoreName) {
-            this.scoreName = scoreName;
-            return this;
-        }
-        public String getScoreName() {
-            return this.scoreName;
-        }
-
         public GetRuleResponseBodyDataRulesRuleInfo setName(String name) {
             this.name = name;
             return this;
@@ -323,12 +243,92 @@ public class GetRuleResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRuleResponseBodyDataRulesRuleInfo setRid(String rid) {
+            this.rid = rid;
+            return this;
+        }
+        public String getRid() {
+            return this.rid;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setRuleLambda(String ruleLambda) {
+            this.ruleLambda = ruleLambda;
+            return this;
+        }
+        public String getRuleLambda() {
+            return this.ruleLambda;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setRuleScoreType(Integer ruleScoreType) {
+            this.ruleScoreType = ruleScoreType;
+            return this;
+        }
+        public Integer getRuleScoreType() {
+            return this.ruleScoreType;
+        }
+
         public GetRuleResponseBodyDataRulesRuleInfo setScoreId(Integer scoreId) {
             this.scoreId = scoreId;
             return this;
         }
         public Integer getScoreId() {
             return this.scoreId;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setScoreName(String scoreName) {
+            this.scoreName = scoreName;
+            return this;
+        }
+        public String getScoreName() {
+            return this.scoreName;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setScoreSubId(Integer scoreSubId) {
+            this.scoreSubId = scoreSubId;
+            return this;
+        }
+        public Integer getScoreSubId() {
+            return this.scoreSubId;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setScoreSubName(String scoreSubName) {
+            this.scoreSubName = scoreSubName;
+            return this;
+        }
+        public String getScoreSubName() {
+            return this.scoreSubName;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public GetRuleResponseBodyDataRulesRuleInfo setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
         }
 
     }

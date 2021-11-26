@@ -4,14 +4,14 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class RemoveAndGetTaskRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class RemoveAndGetTaskRulesResponseBody extends TeaModel {
     public static RemoveAndGetTaskRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveAndGetTaskRulesResponseBody self = new RemoveAndGetTaskRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveAndGetTaskRulesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public RemoveAndGetTaskRulesResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class RemoveAndGetTaskRulesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RemoveAndGetTaskRulesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public RemoveAndGetTaskRulesResponseBody setSuccess(Boolean success) {

@@ -4,24 +4,48 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetRuleDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetRuleDetailResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public GetRuleDetailResponseBodyData data;
-
     public static GetRuleDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRuleDetailResponseBody self = new GetRuleDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetRuleDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRuleDetailResponseBody setData(GetRuleDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRuleDetailResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetRuleDetailResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetRuleDetailResponseBody setRequestId(String requestId) {
@@ -40,28 +64,165 @@ public class GetRuleDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetRuleDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor extends TeaModel {
+        @NameInMap("AnchorCid")
+        public String anchorCid;
+
+        @NameInMap("HitTime")
+        public Integer hitTime;
+
+        @NameInMap("Location")
+        public String location;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setAnchorCid(String anchorCid) {
+            this.anchorCid = anchorCid;
+            return this;
+        }
+        public String getAnchorCid() {
+            return this.anchorCid;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setHitTime(Integer hitTime) {
+            this.hitTime = hitTime;
+            return this;
+        }
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
     }
 
-    public GetRuleDetailResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange extends TeaModel {
+        @NameInMap("From")
+        public Integer from;
+
+        @NameInMap("To")
+        public Integer to;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange setTo(Integer to) {
+            this.to = to;
+            return this;
+        }
+        public Integer getTo() {
+            return this.to;
+        }
+
     }
 
-    public GetRuleDetailResponseBody setData(GetRuleDetailResponseBodyData data) {
-        this.data = data;
-        return this;
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange extends TeaModel {
+        @NameInMap("Absolute")
+        public Boolean absolute;
+
+        @NameInMap("Anchor")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor anchor;
+
+        @NameInMap("Range")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange range;
+
+        @NameInMap("Role")
+        public String role;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setAbsolute(Boolean absolute) {
+            this.absolute = absolute;
+            return this;
+        }
+        public Boolean getAbsolute() {
+            return this.absolute;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setAnchor(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor anchor) {
+            this.anchor = anchor;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor getAnchor() {
+            return this.anchor;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setRange(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange range) {
+            this.range = range;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange getRange() {
+            return this.range;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
     }
-    public GetRuleDetailResponseBodyData getData() {
-        return this.data;
+
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo extends TeaModel {
+        @NameInMap("AntModelInfo")
+        public java.util.List<String> antModelInfo;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo setAntModelInfo(java.util.List<String> antModelInfo) {
+            this.antModelInfo = antModelInfo;
+            return this;
+        }
+        public java.util.List<String> getAntModelInfo() {
+            return this.antModelInfo;
+        }
+
+    }
+
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes extends TeaModel {
+        @NameInMap("Excludes")
+        public java.util.List<String> excludes;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes setExcludes(java.util.List<String> excludes) {
+            this.excludes = excludes;
+            return this;
+        }
+        public java.util.List<String> getExcludes() {
+            return this.excludes;
+        }
+
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords extends TeaModel {
@@ -79,6 +240,25 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
         public java.util.List<String> getOperKeyWord() {
             return this.operKeyWord;
+        }
+
+    }
+
+    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues extends TeaModel {
+        @NameInMap("Pvalues")
+        public java.util.List<String> pvalues;
+
+        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues setPvalues(java.util.List<String> pvalues) {
+            this.pvalues = pvalues;
+            return this;
+        }
+        public java.util.List<String> getPvalues() {
+            return this.pvalues;
         }
 
     }
@@ -121,203 +301,111 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes extends TeaModel {
-        @NameInMap("Excludes")
-        public java.util.List<String> excludes;
-
-        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes setExcludes(java.util.List<String> excludes) {
-            this.excludes = excludes;
-            return this;
-        }
-        public java.util.List<String> getExcludes() {
-            return this.excludes;
-        }
-
-    }
-
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam extends TeaModel {
-        @NameInMap("Regex")
-        public String regex;
-
-        @NameInMap("Phrase")
-        public String phrase;
-
-        @NameInMap("Interval")
-        public Integer interval;
-
-        @NameInMap("Threshold")
-        public Float threshold;
-
-        @NameInMap("InSentence")
-        public Boolean inSentence;
-
-        @NameInMap("Target")
-        public Integer target;
-
-        @NameInMap("FromEnd")
-        public Boolean fromEnd;
-
-        @NameInMap("DifferentRole")
-        public Boolean differentRole;
-
-        @NameInMap("TargetRole")
-        public String targetRole;
-
-        @NameInMap("Score")
-        public Integer score;
-
-        @NameInMap("ContextChatMatch")
-        public Boolean contextChatMatch;
-
-        @NameInMap("KeywordMatchSize")
-        public Integer keywordMatchSize;
+        @NameInMap("AntModelInfo")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo antModelInfo;
 
         @NameInMap("Average")
         public Boolean average;
 
-        @NameInMap("VelocityInMint")
-        public Integer velocityInMint;
-
-        @NameInMap("MinWordSize")
-        public Integer minWordSize;
-
-        @NameInMap("KeywordExtension")
-        public Boolean keywordExtension;
-
-        @NameInMap("HitTime")
-        public Integer hitTime;
-
-        @NameInMap("From")
-        public Integer from;
-
         @NameInMap("BeginType")
         public String beginType;
-
-        @NameInMap("CompareOperator")
-        public String compareOperator;
 
         @NameInMap("CheckType")
         public Integer checkType;
 
+        @NameInMap("CompareOperator")
+        public String compareOperator;
+
+        @NameInMap("ContextChatMatch")
+        public Boolean contextChatMatch;
+
+        @NameInMap("DelayTime")
+        public Integer delayTime;
+
+        @NameInMap("DifferentRole")
+        public Boolean differentRole;
+
+        @NameInMap("Excludes")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes excludes;
+
+        @NameInMap("From")
+        public Integer from;
+
+        @NameInMap("FromEnd")
+        public Boolean fromEnd;
+
+        @NameInMap("HitTime")
+        public Integer hitTime;
+
+        @NameInMap("InSentence")
+        public Boolean inSentence;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("KeywordExtension")
+        public Boolean keywordExtension;
+
+        @NameInMap("KeywordMatchSize")
+        public Integer keywordMatchSize;
+
         @NameInMap("MaxEmotionChangeValue")
         public Integer maxEmotionChangeValue;
+
+        @NameInMap("MinWordSize")
+        public Integer minWordSize;
+
+        @NameInMap("NotRegex")
+        public String notRegex;
 
         @NameInMap("OperKeyWords")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords operKeyWords;
 
+        @NameInMap("Phrase")
+        public String phrase;
+
+        @NameInMap("Pvalues")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues pvalues;
+
         @NameInMap("References")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamReferences references;
+
+        @NameInMap("Regex")
+        public String regex;
+
+        @NameInMap("Score")
+        public Integer score;
+
+        @NameInMap("Similarity_threshold")
+        public Float similarityThreshold;
 
         @NameInMap("SimilarlySentences")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences similarlySentences;
 
-        @NameInMap("Excludes")
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes excludes;
+        @NameInMap("Target")
+        public Integer target;
+
+        @NameInMap("TargetRole")
+        public String targetRole;
+
+        @NameInMap("Threshold")
+        public Float threshold;
+
+        @NameInMap("VelocityInMint")
+        public Integer velocityInMint;
 
         public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam build(java.util.Map<String, ?> map) throws Exception {
             GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam();
             return TeaModel.build(map, self);
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setRegex(String regex) {
-            this.regex = regex;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setAntModelInfo(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo antModelInfo) {
+            this.antModelInfo = antModelInfo;
             return this;
         }
-        public String getRegex() {
-            return this.regex;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setPhrase(String phrase) {
-            this.phrase = phrase;
-            return this;
-        }
-        public String getPhrase() {
-            return this.phrase;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setInterval(Integer interval) {
-            this.interval = interval;
-            return this;
-        }
-        public Integer getInterval() {
-            return this.interval;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setThreshold(Float threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setInSentence(Boolean inSentence) {
-            this.inSentence = inSentence;
-            return this;
-        }
-        public Boolean getInSentence() {
-            return this.inSentence;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setTarget(Integer target) {
-            this.target = target;
-            return this;
-        }
-        public Integer getTarget() {
-            return this.target;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setFromEnd(Boolean fromEnd) {
-            this.fromEnd = fromEnd;
-            return this;
-        }
-        public Boolean getFromEnd() {
-            return this.fromEnd;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setDifferentRole(Boolean differentRole) {
-            this.differentRole = differentRole;
-            return this;
-        }
-        public Boolean getDifferentRole() {
-            return this.differentRole;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setTargetRole(String targetRole) {
-            this.targetRole = targetRole;
-            return this;
-        }
-        public String getTargetRole() {
-            return this.targetRole;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setScore(Integer score) {
-            this.score = score;
-            return this;
-        }
-        public Integer getScore() {
-            return this.score;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setContextChatMatch(Boolean contextChatMatch) {
-            this.contextChatMatch = contextChatMatch;
-            return this;
-        }
-        public Boolean getContextChatMatch() {
-            return this.contextChatMatch;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywordMatchSize(Integer keywordMatchSize) {
-            this.keywordMatchSize = keywordMatchSize;
-            return this;
-        }
-        public Integer getKeywordMatchSize() {
-            return this.keywordMatchSize;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamAntModelInfo getAntModelInfo() {
+            return this.antModelInfo;
         }
 
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setAverage(Boolean average) {
@@ -328,60 +416,12 @@ public class GetRuleDetailResponseBody extends TeaModel {
             return this.average;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setVelocityInMint(Integer velocityInMint) {
-            this.velocityInMint = velocityInMint;
-            return this;
-        }
-        public Integer getVelocityInMint() {
-            return this.velocityInMint;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setMinWordSize(Integer minWordSize) {
-            this.minWordSize = minWordSize;
-            return this;
-        }
-        public Integer getMinWordSize() {
-            return this.minWordSize;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywordExtension(Boolean keywordExtension) {
-            this.keywordExtension = keywordExtension;
-            return this;
-        }
-        public Boolean getKeywordExtension() {
-            return this.keywordExtension;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setHitTime(Integer hitTime) {
-            this.hitTime = hitTime;
-            return this;
-        }
-        public Integer getHitTime() {
-            return this.hitTime;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setFrom(Integer from) {
-            this.from = from;
-            return this;
-        }
-        public Integer getFrom() {
-            return this.from;
-        }
-
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setBeginType(String beginType) {
             this.beginType = beginType;
             return this;
         }
         public String getBeginType() {
             return this.beginType;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setCompareOperator(String compareOperator) {
-            this.compareOperator = compareOperator;
-            return this;
-        }
-        public String getCompareOperator() {
-            return this.compareOperator;
         }
 
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setCheckType(Integer checkType) {
@@ -392,36 +432,36 @@ public class GetRuleDetailResponseBody extends TeaModel {
             return this.checkType;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setMaxEmotionChangeValue(Integer maxEmotionChangeValue) {
-            this.maxEmotionChangeValue = maxEmotionChangeValue;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setCompareOperator(String compareOperator) {
+            this.compareOperator = compareOperator;
             return this;
         }
-        public Integer getMaxEmotionChangeValue() {
-            return this.maxEmotionChangeValue;
+        public String getCompareOperator() {
+            return this.compareOperator;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setOperKeyWords(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords operKeyWords) {
-            this.operKeyWords = operKeyWords;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setContextChatMatch(Boolean contextChatMatch) {
+            this.contextChatMatch = contextChatMatch;
             return this;
         }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords getOperKeyWords() {
-            return this.operKeyWords;
+        public Boolean getContextChatMatch() {
+            return this.contextChatMatch;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setReferences(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamReferences references) {
-            this.references = references;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setDelayTime(Integer delayTime) {
+            this.delayTime = delayTime;
             return this;
         }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamReferences getReferences() {
-            return this.references;
+        public Integer getDelayTime() {
+            return this.delayTime;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setSimilarlySentences(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences similarlySentences) {
-            this.similarlySentences = similarlySentences;
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setDifferentRole(Boolean differentRole) {
+            this.differentRole = differentRole;
             return this;
         }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences getSimilarlySentences() {
-            return this.similarlySentences;
+        public Boolean getDifferentRole() {
+            return this.differentRole;
         }
 
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setExcludes(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamExcludes excludes) {
@@ -432,20 +472,196 @@ public class GetRuleDetailResponseBody extends TeaModel {
             return this.excludes;
         }
 
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setFromEnd(Boolean fromEnd) {
+            this.fromEnd = fromEnd;
+            return this;
+        }
+        public Boolean getFromEnd() {
+            return this.fromEnd;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setHitTime(Integer hitTime) {
+            this.hitTime = hitTime;
+            return this;
+        }
+        public Integer getHitTime() {
+            return this.hitTime;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setInSentence(Boolean inSentence) {
+            this.inSentence = inSentence;
+            return this;
+        }
+        public Boolean getInSentence() {
+            return this.inSentence;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywordExtension(Boolean keywordExtension) {
+            this.keywordExtension = keywordExtension;
+            return this;
+        }
+        public Boolean getKeywordExtension() {
+            return this.keywordExtension;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setKeywordMatchSize(Integer keywordMatchSize) {
+            this.keywordMatchSize = keywordMatchSize;
+            return this;
+        }
+        public Integer getKeywordMatchSize() {
+            return this.keywordMatchSize;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setMaxEmotionChangeValue(Integer maxEmotionChangeValue) {
+            this.maxEmotionChangeValue = maxEmotionChangeValue;
+            return this;
+        }
+        public Integer getMaxEmotionChangeValue() {
+            return this.maxEmotionChangeValue;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setMinWordSize(Integer minWordSize) {
+            this.minWordSize = minWordSize;
+            return this;
+        }
+        public Integer getMinWordSize() {
+            return this.minWordSize;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setNotRegex(String notRegex) {
+            this.notRegex = notRegex;
+            return this;
+        }
+        public String getNotRegex() {
+            return this.notRegex;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setOperKeyWords(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords operKeyWords) {
+            this.operKeyWords = operKeyWords;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamOperKeyWords getOperKeyWords() {
+            return this.operKeyWords;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setPhrase(String phrase) {
+            this.phrase = phrase;
+            return this;
+        }
+        public String getPhrase() {
+            return this.phrase;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setPvalues(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues pvalues) {
+            this.pvalues = pvalues;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamPvalues getPvalues() {
+            return this.pvalues;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setReferences(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamReferences references) {
+            this.references = references;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamReferences getReferences() {
+            return this.references;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setRegex(String regex) {
+            this.regex = regex;
+            return this;
+        }
+        public String getRegex() {
+            return this.regex;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setScore(Integer score) {
+            this.score = score;
+            return this;
+        }
+        public Integer getScore() {
+            return this.score;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setSimilarityThreshold(Float similarityThreshold) {
+            this.similarityThreshold = similarityThreshold;
+            return this;
+        }
+        public Float getSimilarityThreshold() {
+            return this.similarityThreshold;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setSimilarlySentences(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences similarlySentences) {
+            this.similarlySentences = similarlySentences;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParamSimilarlySentences getSimilarlySentences() {
+            return this.similarlySentences;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setTarget(Integer target) {
+            this.target = target;
+            return this;
+        }
+        public Integer getTarget() {
+            return this.target;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setTargetRole(String targetRole) {
+            this.targetRole = targetRole;
+            return this;
+        }
+        public String getTargetRole() {
+            return this.targetRole;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam setVelocityInMint(Integer velocityInMint) {
+            this.velocityInMint = velocityInMint;
+            return this;
+        }
+        public Integer getVelocityInMint() {
+            return this.velocityInMint;
+        }
+
     }
 
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo extends TeaModel {
         @NameInMap("Oid")
         public String oid;
 
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("OperName")
         public String operName;
 
         @NameInMap("Param")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam param;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo();
@@ -458,14 +674,6 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
         public String getOid() {
             return this.oid;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo setOperName(String operName) {
@@ -482,6 +690,14 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfoParam getParam() {
             return this.param;
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperatorsOperatorBasicInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -505,130 +721,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor extends TeaModel {
-        @NameInMap("AnchorCid")
-        public String anchorCid;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("HitTime")
-        public Integer hitTime;
-
-        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setAnchorCid(String anchorCid) {
-            this.anchorCid = anchorCid;
-            return this;
-        }
-        public String getAnchorCid() {
-            return this.anchorCid;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor setHitTime(Integer hitTime) {
-            this.hitTime = hitTime;
-            return this;
-        }
-        public Integer getHitTime() {
-            return this.hitTime;
-        }
-
-    }
-
-    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange extends TeaModel {
-        @NameInMap("From")
-        public Integer from;
-
-        @NameInMap("To")
-        public Integer to;
-
-        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange setFrom(Integer from) {
-            this.from = from;
-            return this;
-        }
-        public Integer getFrom() {
-            return this.from;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange setTo(Integer to) {
-            this.to = to;
-            return this;
-        }
-        public Integer getTo() {
-            return this.to;
-        }
-
-    }
-
-    public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange extends TeaModel {
-        @NameInMap("Role")
-        public String role;
-
-        @NameInMap("Absolute")
-        public Boolean absolute;
-
-        @NameInMap("Anchor")
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor anchor;
-
-        @NameInMap("Range")
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange range;
-
-        public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setAbsolute(Boolean absolute) {
-            this.absolute = absolute;
-            return this;
-        }
-        public Boolean getAbsolute() {
-            return this.absolute;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setAnchor(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor anchor) {
-            this.anchor = anchor;
-            return this;
-        }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeAnchor getAnchor() {
-            return this.anchor;
-        }
-
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange setRange(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange range) {
-            this.range = range;
-            return this;
-        }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRangeRange getRange() {
-            return this.range;
-        }
-
-    }
-
     public static class GetRuleDetailResponseBodyDataConditionsConditionBasicInfo extends TeaModel {
+        @NameInMap("CheckRange")
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange checkRange;
+
         @NameInMap("ConditionInfoCid")
         public String conditionInfoCid;
 
@@ -638,12 +734,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("Operators")
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoOperators operators;
 
-        @NameInMap("CheckRange")
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange checkRange;
-
         public static GetRuleDetailResponseBodyDataConditionsConditionBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleDetailResponseBodyDataConditionsConditionBasicInfo self = new GetRuleDetailResponseBodyDataConditionsConditionBasicInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfo setCheckRange(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange checkRange) {
+            this.checkRange = checkRange;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange getCheckRange() {
+            return this.checkRange;
         }
 
         public GetRuleDetailResponseBodyDataConditionsConditionBasicInfo setConditionInfoCid(String conditionInfoCid) {
@@ -670,14 +771,6 @@ public class GetRuleDetailResponseBody extends TeaModel {
             return this.operators;
         }
 
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfo setCheckRange(GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange checkRange) {
-            this.checkRange = checkRange;
-            return this;
-        }
-        public GetRuleDetailResponseBodyDataConditionsConditionBasicInfoCheckRange getCheckRange() {
-            return this.checkRange;
-        }
-
     }
 
     public static class GetRuleDetailResponseBodyDataConditions extends TeaModel {
@@ -699,34 +792,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers extends TeaModel {
-        @NameInMap("Trigger")
-        public java.util.List<String> trigger;
-
-        public static GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers build(java.util.Map<String, ?> map) throws Exception {
-            GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers self = new GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers setTrigger(java.util.List<String> trigger) {
-            this.trigger = trigger;
-            return this;
-        }
-        public java.util.List<String> getTrigger() {
-            return this.trigger;
-        }
-
-    }
-
     public static class GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo extends TeaModel {
         @NameInMap("Bid")
         public Integer bid;
 
-        @NameInMap("ServiceType")
-        public Integer serviceType;
-
         @NameInMap("BusinessName")
         public String businessName;
+
+        @NameInMap("ServiceType")
+        public Integer serviceType;
 
         public static GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo self = new GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo();
@@ -741,20 +815,20 @@ public class GetRuleDetailResponseBody extends TeaModel {
             return this.bid;
         }
 
-        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo setServiceType(Integer serviceType) {
-            this.serviceType = serviceType;
-            return this;
-        }
-        public Integer getServiceType() {
-            return this.serviceType;
-        }
-
         public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo setBusinessName(String businessName) {
             this.businessName = businessName;
             return this;
         }
         public String getBusinessName() {
             return this.businessName;
+        }
+
+        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategoriesBusinessCategoryBasicInfo setServiceType(Integer serviceType) {
+            this.serviceType = serviceType;
+            return this;
+        }
+        public Integer getServiceType() {
+            return this.serviceType;
         }
 
     }
@@ -778,7 +852,29 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers extends TeaModel {
+        @NameInMap("Trigger")
+        public java.util.List<String> trigger;
+
+        public static GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers self = new GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers setTrigger(java.util.List<String> trigger) {
+            this.trigger = trigger;
+            return this;
+        }
+        public java.util.List<String> getTrigger() {
+            return this.trigger;
+        }
+
+    }
+
     public static class GetRuleDetailResponseBodyDataRulesRuleBasicInfo extends TeaModel {
+        @NameInMap("BusinessCategories")
+        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories businessCategories;
+
         @NameInMap("Rid")
         public String rid;
 
@@ -788,12 +884,17 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("Triggers")
         public GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers triggers;
 
-        @NameInMap("BusinessCategories")
-        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories businessCategories;
-
         public static GetRuleDetailResponseBodyDataRulesRuleBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleDetailResponseBodyDataRulesRuleBasicInfo self = new GetRuleDetailResponseBodyDataRulesRuleBasicInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetRuleDetailResponseBodyDataRulesRuleBasicInfo setBusinessCategories(GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories businessCategories) {
+            this.businessCategories = businessCategories;
+            return this;
+        }
+        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories getBusinessCategories() {
+            return this.businessCategories;
         }
 
         public GetRuleDetailResponseBodyDataRulesRuleBasicInfo setRid(String rid) {
@@ -818,14 +919,6 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
         public GetRuleDetailResponseBodyDataRulesRuleBasicInfoTriggers getTriggers() {
             return this.triggers;
-        }
-
-        public GetRuleDetailResponseBodyDataRulesRuleBasicInfo setBusinessCategories(GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories businessCategories) {
-            this.businessCategories = businessCategories;
-            return this;
-        }
-        public GetRuleDetailResponseBodyDataRulesRuleBasicInfoBusinessCategories getBusinessCategories() {
-            return this.businessCategories;
         }
 
     }
@@ -853,6 +946,15 @@ public class GetRuleDetailResponseBody extends TeaModel {
         @NameInMap("Conditions")
         public GetRuleDetailResponseBodyDataConditions conditions;
 
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         @NameInMap("Rules")
         public GetRuleDetailResponseBodyDataRules rules;
 
@@ -867,6 +969,30 @@ public class GetRuleDetailResponseBody extends TeaModel {
         }
         public GetRuleDetailResponseBodyDataConditions getConditions() {
             return this.conditions;
+        }
+
+        public GetRuleDetailResponseBodyData setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public GetRuleDetailResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public GetRuleDetailResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public GetRuleDetailResponseBodyData setRules(GetRuleDetailResponseBodyDataRules rules) {

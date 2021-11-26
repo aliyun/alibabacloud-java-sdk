@@ -4,23 +4,12 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UploadDataSyncRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("JsonStr")
     public String jsonStr;
 
     public static UploadDataSyncRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadDataSyncRequest self = new UploadDataSyncRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadDataSyncRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public UploadDataSyncRequest setJsonStr(String jsonStr) {

@@ -4,23 +4,12 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListRulesRequest extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("JsonStr")
     public String jsonStr;
 
     public static ListRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRulesRequest self = new ListRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListRulesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ListRulesRequest setJsonStr(String jsonStr) {

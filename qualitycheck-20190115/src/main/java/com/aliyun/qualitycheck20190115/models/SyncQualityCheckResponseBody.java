@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class SyncQualityCheckResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public SyncQualityCheckResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public SyncQualityCheckResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class SyncQualityCheckResponseBody extends TeaModel {
     public static SyncQualityCheckResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SyncQualityCheckResponseBody self = new SyncQualityCheckResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SyncQualityCheckResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SyncQualityCheckResponseBody setData(SyncQualityCheckResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SyncQualityCheckResponseBodyData getData() {
+        return this.data;
     }
 
     public SyncQualityCheckResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SyncQualityCheckResponseBody setData(SyncQualityCheckResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public SyncQualityCheckResponseBodyData getData() {
-        return this.data;
-    }
-
-    public SyncQualityCheckResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public SyncQualityCheckResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,13 +64,70 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class SyncQualityCheckResponseBodyDataRulesHitHitKeyWords extends TeaModel {
+        @NameInMap("Cid")
+        public Integer cid;
+
+        @NameInMap("From")
+        public Integer from;
+
+        @NameInMap("Pid")
+        public Integer pid;
+
+        @NameInMap("To")
+        public Integer to;
+
+        @NameInMap("Val")
+        public String val;
+
+        public static SyncQualityCheckResponseBodyDataRulesHitHitKeyWords build(java.util.Map<String, ?> map) throws Exception {
+            SyncQualityCheckResponseBodyDataRulesHitHitKeyWords self = new SyncQualityCheckResponseBodyDataRulesHitHitKeyWords();
+            return TeaModel.build(map, self);
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setCid(Integer cid) {
+            this.cid = cid;
+            return this;
+        }
+        public Integer getCid() {
+            return this.cid;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setFrom(Integer from) {
+            this.from = from;
+            return this;
+        }
+        public Integer getFrom() {
+            return this.from;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setPid(Integer pid) {
+            this.pid = pid;
+            return this;
+        }
+        public Integer getPid() {
+            return this.pid;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setTo(Integer to) {
+            this.to = to;
+            return this;
+        }
+        public Integer getTo() {
+            return this.to;
+        }
+
+        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setVal(String val) {
+            this.val = val;
+            return this;
+        }
+        public String getVal() {
+            return this.val;
+        }
+
+    }
+
     public static class SyncQualityCheckResponseBodyDataRulesHitPhrase extends TeaModel {
-        @NameInMap("Words")
-        public String words;
-
-        @NameInMap("Identity")
-        public String identity;
-
         @NameInMap("Begin")
         public Long begin;
 
@@ -80,8 +137,8 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         @NameInMap("End")
         public Long end;
 
-        @NameInMap("SpeechRate")
-        public Integer speechRate;
+        @NameInMap("Identity")
+        public String identity;
 
         @NameInMap("Role")
         public String role;
@@ -89,25 +146,15 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
+        @NameInMap("SpeechRate")
+        public Integer speechRate;
+
+        @NameInMap("Words")
+        public String words;
+
         public static SyncQualityCheckResponseBodyDataRulesHitPhrase build(java.util.Map<String, ?> map) throws Exception {
             SyncQualityCheckResponseBodyDataRulesHitPhrase self = new SyncQualityCheckResponseBodyDataRulesHitPhrase();
             return TeaModel.build(map, self);
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitPhrase setWords(String words) {
-            this.words = words;
-            return this;
-        }
-        public String getWords() {
-            return this.words;
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitPhrase setIdentity(String identity) {
-            this.identity = identity;
-            return this;
-        }
-        public String getIdentity() {
-            return this.identity;
         }
 
         public SyncQualityCheckResponseBodyDataRulesHitPhrase setBegin(Long begin) {
@@ -134,12 +181,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.end;
         }
 
-        public SyncQualityCheckResponseBodyDataRulesHitPhrase setSpeechRate(Integer speechRate) {
-            this.speechRate = speechRate;
+        public SyncQualityCheckResponseBodyDataRulesHitPhrase setIdentity(String identity) {
+            this.identity = identity;
             return this;
         }
-        public Integer getSpeechRate() {
-            return this.speechRate;
+        public String getIdentity() {
+            return this.identity;
         }
 
         public SyncQualityCheckResponseBodyDataRulesHitPhrase setRole(String role) {
@@ -158,89 +205,34 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.silenceDuration;
         }
 
-    }
-
-    public static class SyncQualityCheckResponseBodyDataRulesHitHitKeyWords extends TeaModel {
-        @NameInMap("From")
-        public Integer from;
-
-        @NameInMap("Val")
-        public String val;
-
-        @NameInMap("Cid")
-        public Integer cid;
-
-        @NameInMap("Pid")
-        public Integer pid;
-
-        @NameInMap("To")
-        public Integer to;
-
-        public static SyncQualityCheckResponseBodyDataRulesHitHitKeyWords build(java.util.Map<String, ?> map) throws Exception {
-            SyncQualityCheckResponseBodyDataRulesHitHitKeyWords self = new SyncQualityCheckResponseBodyDataRulesHitHitKeyWords();
-            return TeaModel.build(map, self);
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setFrom(Integer from) {
-            this.from = from;
+        public SyncQualityCheckResponseBodyDataRulesHitPhrase setSpeechRate(Integer speechRate) {
+            this.speechRate = speechRate;
             return this;
         }
-        public Integer getFrom() {
-            return this.from;
+        public Integer getSpeechRate() {
+            return this.speechRate;
         }
 
-        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setVal(String val) {
-            this.val = val;
+        public SyncQualityCheckResponseBodyDataRulesHitPhrase setWords(String words) {
+            this.words = words;
             return this;
         }
-        public String getVal() {
-            return this.val;
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setCid(Integer cid) {
-            this.cid = cid;
-            return this;
-        }
-        public Integer getCid() {
-            return this.cid;
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setPid(Integer pid) {
-            this.pid = pid;
-            return this;
-        }
-        public Integer getPid() {
-            return this.pid;
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHitHitKeyWords setTo(Integer to) {
-            this.to = to;
-            return this;
-        }
-        public Integer getTo() {
-            return this.to;
+        public String getWords() {
+            return this.words;
         }
 
     }
 
     public static class SyncQualityCheckResponseBodyDataRulesHit extends TeaModel {
-        @NameInMap("Phrase")
-        public SyncQualityCheckResponseBodyDataRulesHitPhrase phrase;
-
         @NameInMap("HitKeyWords")
         public java.util.List<SyncQualityCheckResponseBodyDataRulesHitHitKeyWords> hitKeyWords;
+
+        @NameInMap("Phrase")
+        public SyncQualityCheckResponseBodyDataRulesHitPhrase phrase;
 
         public static SyncQualityCheckResponseBodyDataRulesHit build(java.util.Map<String, ?> map) throws Exception {
             SyncQualityCheckResponseBodyDataRulesHit self = new SyncQualityCheckResponseBodyDataRulesHit();
             return TeaModel.build(map, self);
-        }
-
-        public SyncQualityCheckResponseBodyDataRulesHit setPhrase(SyncQualityCheckResponseBodyDataRulesHitPhrase phrase) {
-            this.phrase = phrase;
-            return this;
-        }
-        public SyncQualityCheckResponseBodyDataRulesHitPhrase getPhrase() {
-            return this.phrase;
         }
 
         public SyncQualityCheckResponseBodyDataRulesHit setHitKeyWords(java.util.List<SyncQualityCheckResponseBodyDataRulesHitHitKeyWords> hitKeyWords) {
@@ -251,17 +243,25 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.hitKeyWords;
         }
 
+        public SyncQualityCheckResponseBodyDataRulesHit setPhrase(SyncQualityCheckResponseBodyDataRulesHitPhrase phrase) {
+            this.phrase = phrase;
+            return this;
+        }
+        public SyncQualityCheckResponseBodyDataRulesHitPhrase getPhrase() {
+            return this.phrase;
+        }
+
     }
 
     public static class SyncQualityCheckResponseBodyDataRules extends TeaModel {
         @NameInMap("Hit")
         public java.util.List<SyncQualityCheckResponseBodyDataRulesHit> hit;
 
-        @NameInMap("RuleName")
-        public String ruleName;
-
         @NameInMap("Rid")
         public String rid;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         public static SyncQualityCheckResponseBodyDataRules build(java.util.Map<String, ?> map) throws Exception {
             SyncQualityCheckResponseBodyDataRules self = new SyncQualityCheckResponseBodyDataRules();
@@ -276,14 +276,6 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.hit;
         }
 
-        public SyncQualityCheckResponseBodyDataRules setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
         public SyncQualityCheckResponseBodyDataRules setRid(String rid) {
             this.rid = rid;
             return this;
@@ -292,14 +284,22 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.rid;
         }
 
+        public SyncQualityCheckResponseBodyDataRules setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
     }
 
     public static class SyncQualityCheckResponseBodyData extends TeaModel {
-        @NameInMap("Tid")
-        public String tid;
-
         @NameInMap("BeginTime")
         public Long beginTime;
+
+        @NameInMap("Rules")
+        public java.util.List<SyncQualityCheckResponseBodyDataRules> rules;
 
         @NameInMap("Score")
         public Integer score;
@@ -307,20 +307,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
-        @NameInMap("Rules")
-        public java.util.List<SyncQualityCheckResponseBodyDataRules> rules;
+        @NameInMap("Tid")
+        public String tid;
 
         public static SyncQualityCheckResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SyncQualityCheckResponseBodyData self = new SyncQualityCheckResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public SyncQualityCheckResponseBodyData setTid(String tid) {
-            this.tid = tid;
-            return this;
-        }
-        public String getTid() {
-            return this.tid;
         }
 
         public SyncQualityCheckResponseBodyData setBeginTime(Long beginTime) {
@@ -329,6 +321,14 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         }
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        public SyncQualityCheckResponseBodyData setRules(java.util.List<SyncQualityCheckResponseBodyDataRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<SyncQualityCheckResponseBodyDataRules> getRules() {
+            return this.rules;
         }
 
         public SyncQualityCheckResponseBodyData setScore(Integer score) {
@@ -347,12 +347,12 @@ public class SyncQualityCheckResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public SyncQualityCheckResponseBodyData setRules(java.util.List<SyncQualityCheckResponseBodyDataRules> rules) {
-            this.rules = rules;
+        public SyncQualityCheckResponseBodyData setTid(String tid) {
+            this.tid = tid;
             return this;
         }
-        public java.util.List<SyncQualityCheckResponseBodyDataRules> getRules() {
-            return this.rules;
+        public String getTid() {
+            return this.tid;
         }
 
     }

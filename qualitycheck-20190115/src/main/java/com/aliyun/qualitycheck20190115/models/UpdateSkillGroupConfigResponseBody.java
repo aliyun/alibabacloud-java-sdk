@@ -4,14 +4,14 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UpdateSkillGroupConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
     public static UpdateSkillGroupConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSkillGroupConfigResponseBody self = new UpdateSkillGroupConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSkillGroupConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UpdateSkillGroupConfigResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class UpdateSkillGroupConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateSkillGroupConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public UpdateSkillGroupConfigResponseBody setSuccess(Boolean success) {

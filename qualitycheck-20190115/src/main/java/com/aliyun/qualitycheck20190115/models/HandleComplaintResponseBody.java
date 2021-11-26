@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class HandleComplaintResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class HandleComplaintResponseBody extends TeaModel {
     public static HandleComplaintResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HandleComplaintResponseBody self = new HandleComplaintResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public HandleComplaintResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public HandleComplaintResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public HandleComplaintResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class HandleComplaintResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public HandleComplaintResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public HandleComplaintResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public HandleComplaintResponseBody setSuccess(Boolean success) {

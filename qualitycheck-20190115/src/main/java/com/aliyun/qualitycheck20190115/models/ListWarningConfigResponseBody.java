@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListWarningConfigResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ListWarningConfigResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListWarningConfigResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListWarningConfigResponseBody extends TeaModel {
     public static ListWarningConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListWarningConfigResponseBody self = new ListWarningConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListWarningConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListWarningConfigResponseBody setData(ListWarningConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListWarningConfigResponseBodyData getData() {
+        return this.data;
     }
 
     public ListWarningConfigResponseBody setMessage(String message) {
@@ -40,47 +56,12 @@ public class ListWarningConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListWarningConfigResponseBody setData(ListWarningConfigResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListWarningConfigResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListWarningConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListWarningConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListWarningConfigResponseBodyDataWarningConfigInfoRidList extends TeaModel {
-        @NameInMap("RidList")
-        public java.util.List<String> ridList;
-
-        public static ListWarningConfigResponseBodyDataWarningConfigInfoRidList build(java.util.Map<String, ?> map) throws Exception {
-            ListWarningConfigResponseBodyDataWarningConfigInfoRidList self = new ListWarningConfigResponseBodyDataWarningConfigInfoRidList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList setRidList(java.util.List<String> ridList) {
-            this.ridList = ridList;
-            return this;
-        }
-        public java.util.List<String> getRidList() {
-            return this.ridList;
-        }
-
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel extends TeaModel {
@@ -132,24 +113,35 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
 
-    public static class ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule extends TeaModel {
-        @NameInMap("RuleName")
-        public String ruleName;
+    public static class ListWarningConfigResponseBodyDataWarningConfigInfoRidList extends TeaModel {
+        @NameInMap("RidList")
+        public java.util.List<String> ridList;
 
+        public static ListWarningConfigResponseBodyDataWarningConfigInfoRidList build(java.util.Map<String, ?> map) throws Exception {
+            ListWarningConfigResponseBodyDataWarningConfigInfoRidList self = new ListWarningConfigResponseBodyDataWarningConfigInfoRidList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList setRidList(java.util.List<String> ridList) {
+            this.ridList = ridList;
+            return this;
+        }
+        public java.util.List<String> getRidList() {
+            return this.ridList;
+        }
+
+    }
+
+    public static class ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule extends TeaModel {
         @NameInMap("Rid")
         public Long rid;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         public static ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule build(java.util.Map<String, ?> map) throws Exception {
             ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule self = new ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule();
             return TeaModel.build(map, self);
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
         }
 
         public ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule setRid(Long rid) {
@@ -158,6 +150,14 @@ public class ListWarningConfigResponseBody extends TeaModel {
         }
         public Long getRid() {
             return this.rid;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
         }
 
     }
@@ -182,81 +182,33 @@ public class ListWarningConfigResponseBody extends TeaModel {
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfo extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("ConfigName")
-        public String configName;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("Channels")
+        public ListWarningConfigResponseBodyDataWarningConfigInfoChannels channels;
 
         @NameInMap("ConfigId")
         public Long configId;
 
-        @NameInMap("RidList")
-        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList ridList;
+        @NameInMap("ConfigName")
+        public String configName;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Channels")
-        public ListWarningConfigResponseBodyDataWarningConfigInfoChannels channels;
+        @NameInMap("RidList")
+        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList ridList;
 
         @NameInMap("RuleList")
         public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList ruleList;
 
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static ListWarningConfigResponseBodyDataWarningConfigInfo build(java.util.Map<String, ?> map) throws Exception {
             ListWarningConfigResponseBodyDataWarningConfigInfo self = new ListWarningConfigResponseBodyDataWarningConfigInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setConfigName(String configName) {
-            this.configName = configName;
-            return this;
-        }
-        public String getConfigName() {
-            return this.configName;
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setConfigId(Long configId) {
-            this.configId = configId;
-            return this;
-        }
-        public Long getConfigId() {
-            return this.configId;
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setRidList(ListWarningConfigResponseBodyDataWarningConfigInfoRidList ridList) {
-            this.ridList = ridList;
-            return this;
-        }
-        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList getRidList() {
-            return this.ridList;
-        }
-
-        public ListWarningConfigResponseBodyDataWarningConfigInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public ListWarningConfigResponseBodyDataWarningConfigInfo setChannels(ListWarningConfigResponseBodyDataWarningConfigInfoChannels channels) {
@@ -267,12 +219,60 @@ public class ListWarningConfigResponseBody extends TeaModel {
             return this.channels;
         }
 
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setConfigId(Long configId) {
+            this.configId = configId;
+            return this;
+        }
+        public Long getConfigId() {
+            return this.configId;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setConfigName(String configName) {
+            this.configName = configName;
+            return this;
+        }
+        public String getConfigName() {
+            return this.configName;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setRidList(ListWarningConfigResponseBodyDataWarningConfigInfoRidList ridList) {
+            this.ridList = ridList;
+            return this;
+        }
+        public ListWarningConfigResponseBodyDataWarningConfigInfoRidList getRidList() {
+            return this.ridList;
+        }
+
         public ListWarningConfigResponseBodyDataWarningConfigInfo setRuleList(ListWarningConfigResponseBodyDataWarningConfigInfoRuleList ruleList) {
             this.ruleList = ruleList;
             return this;
         }
         public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList getRuleList() {
             return this.ruleList;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListWarningConfigResponseBodyDataWarningConfigInfo setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

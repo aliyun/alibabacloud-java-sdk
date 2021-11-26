@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetScoreInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetScoreInfoResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetScoreInfoResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetScoreInfoResponseBody extends TeaModel {
     public static GetScoreInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScoreInfoResponseBody self = new GetScoreInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetScoreInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetScoreInfoResponseBody setData(GetScoreInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetScoreInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public GetScoreInfoResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class GetScoreInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetScoreInfoResponseBody setData(GetScoreInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetScoreInfoResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetScoreInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetScoreInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,14 +65,14 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam extends TeaModel {
-        @NameInMap("ScoreSubName")
-        public String scoreSubName;
-
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
         @NameInMap("ScoreSubId")
         public Integer scoreSubId;
+
+        @NameInMap("ScoreSubName")
+        public String scoreSubName;
 
         @NameInMap("ScoreType")
         public Integer scoreType;
@@ -80,14 +80,6 @@ public class GetScoreInfoResponseBody extends TeaModel {
         public static GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam build(java.util.Map<String, ?> map) throws Exception {
             GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam self = new GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam();
             return TeaModel.build(map, self);
-        }
-
-        public GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam setScoreSubName(String scoreSubName) {
-            this.scoreSubName = scoreSubName;
-            return this;
-        }
-        public String getScoreSubName() {
-            return this.scoreSubName;
         }
 
         public GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam setScoreNum(Integer scoreNum) {
@@ -104,6 +96,14 @@ public class GetScoreInfoResponseBody extends TeaModel {
         }
         public Integer getScoreSubId() {
             return this.scoreSubId;
+        }
+
+        public GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam setScoreSubName(String scoreSubName) {
+            this.scoreSubName = scoreSubName;
+            return this;
+        }
+        public String getScoreSubName() {
+            return this.scoreSubName;
         }
 
         public GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam setScoreType(Integer scoreType) {
@@ -136,18 +136,26 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePo extends TeaModel {
+        @NameInMap("ScoreId")
+        public Integer scoreId;
+
         @NameInMap("ScoreInfos")
         public GetScoreInfoResponseBodyDataScorePoScoreInfos scoreInfos;
 
         @NameInMap("ScoreName")
         public String scoreName;
 
-        @NameInMap("ScoreId")
-        public Integer scoreId;
-
         public static GetScoreInfoResponseBodyDataScorePo build(java.util.Map<String, ?> map) throws Exception {
             GetScoreInfoResponseBodyDataScorePo self = new GetScoreInfoResponseBodyDataScorePo();
             return TeaModel.build(map, self);
+        }
+
+        public GetScoreInfoResponseBodyDataScorePo setScoreId(Integer scoreId) {
+            this.scoreId = scoreId;
+            return this;
+        }
+        public Integer getScoreId() {
+            return this.scoreId;
         }
 
         public GetScoreInfoResponseBodyDataScorePo setScoreInfos(GetScoreInfoResponseBodyDataScorePoScoreInfos scoreInfos) {
@@ -164,14 +172,6 @@ public class GetScoreInfoResponseBody extends TeaModel {
         }
         public String getScoreName() {
             return this.scoreName;
-        }
-
-        public GetScoreInfoResponseBodyDataScorePo setScoreId(Integer scoreId) {
-            this.scoreId = scoreId;
-            return this;
-        }
-        public Integer getScoreId() {
-            return this.scoreId;
         }
 
     }

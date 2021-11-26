@@ -4,14 +4,14 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class AssignReviewerResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class AssignReviewerResponseBody extends TeaModel {
     public static AssignReviewerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignReviewerResponseBody self = new AssignReviewerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssignReviewerResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public AssignReviewerResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class AssignReviewerResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AssignReviewerResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public AssignReviewerResponseBody setSuccess(Boolean success) {

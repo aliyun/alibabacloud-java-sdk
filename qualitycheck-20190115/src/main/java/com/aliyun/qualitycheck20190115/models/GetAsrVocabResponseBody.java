@@ -4,17 +4,17 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetAsrVocabResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetAsrVocabResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetAsrVocabResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetAsrVocabResponseBody extends TeaModel {
     public static GetAsrVocabResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAsrVocabResponseBody self = new GetAsrVocabResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAsrVocabResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAsrVocabResponseBody setData(GetAsrVocabResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAsrVocabResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAsrVocabResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class GetAsrVocabResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAsrVocabResponseBody setData(GetAsrVocabResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAsrVocabResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAsrVocabResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAsrVocabResponseBody setSuccess(Boolean success) {
@@ -114,23 +114,15 @@ public class GetAsrVocabResponseBody extends TeaModel {
     }
 
     public static class GetAsrVocabResponseBodyData extends TeaModel {
-        @NameInMap("Words")
-        public GetAsrVocabResponseBodyDataWords words;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Words")
+        public GetAsrVocabResponseBodyDataWords words;
 
         public static GetAsrVocabResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAsrVocabResponseBodyData self = new GetAsrVocabResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetAsrVocabResponseBodyData setWords(GetAsrVocabResponseBodyDataWords words) {
-            this.words = words;
-            return this;
-        }
-        public GetAsrVocabResponseBodyDataWords getWords() {
-            return this.words;
         }
 
         public GetAsrVocabResponseBodyData setName(String name) {
@@ -139,6 +131,14 @@ public class GetAsrVocabResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetAsrVocabResponseBodyData setWords(GetAsrVocabResponseBodyDataWords words) {
+            this.words = words;
+            return this;
+        }
+        public GetAsrVocabResponseBodyDataWords getWords() {
+            return this.words;
         }
 
     }

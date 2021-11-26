@@ -4,81 +4,33 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class VerifySentenceResponseBody extends TeaModel {
-    @NameInMap("SourceRole")
-    public Integer sourceRole;
-
-    @NameInMap("IncorrectWords")
-    public Integer incorrectWords;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("TargetRole")
-    public Integer targetRole;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public VerifySentenceResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("IncorrectWords")
+    public Integer incorrectWords;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SourceRole")
+    public Integer sourceRole;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("TargetRole")
+    public Integer targetRole;
+
     public static VerifySentenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifySentenceResponseBody self = new VerifySentenceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public VerifySentenceResponseBody setSourceRole(Integer sourceRole) {
-        this.sourceRole = sourceRole;
-        return this;
-    }
-    public Integer getSourceRole() {
-        return this.sourceRole;
-    }
-
-    public VerifySentenceResponseBody setIncorrectWords(Integer incorrectWords) {
-        this.incorrectWords = incorrectWords;
-        return this;
-    }
-    public Integer getIncorrectWords() {
-        return this.incorrectWords;
-    }
-
-    public VerifySentenceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public VerifySentenceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public VerifySentenceResponseBody setTargetRole(Integer targetRole) {
-        this.targetRole = targetRole;
-        return this;
-    }
-    public Integer getTargetRole() {
-        return this.targetRole;
-    }
-
-    public VerifySentenceResponseBody setData(VerifySentenceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public VerifySentenceResponseBodyData getData() {
-        return this.data;
     }
 
     public VerifySentenceResponseBody setCode(String code) {
@@ -89,12 +41,60 @@ public class VerifySentenceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public VerifySentenceResponseBody setData(VerifySentenceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public VerifySentenceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public VerifySentenceResponseBody setIncorrectWords(Integer incorrectWords) {
+        this.incorrectWords = incorrectWords;
+        return this;
+    }
+    public Integer getIncorrectWords() {
+        return this.incorrectWords;
+    }
+
+    public VerifySentenceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public VerifySentenceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public VerifySentenceResponseBody setSourceRole(Integer sourceRole) {
+        this.sourceRole = sourceRole;
+        return this;
+    }
+    public Integer getSourceRole() {
+        return this.sourceRole;
+    }
+
     public VerifySentenceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public VerifySentenceResponseBody setTargetRole(Integer targetRole) {
+        this.targetRole = targetRole;
+        return this;
+    }
+    public Integer getTargetRole() {
+        return this.targetRole;
     }
 
     public static class VerifySentenceResponseBodyDataDeltaSourceLine extends TeaModel {
@@ -196,26 +196,18 @@ public class VerifySentenceResponseBody extends TeaModel {
     }
 
     public static class VerifySentenceResponseBodyDataDelta extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Source")
         public VerifySentenceResponseBodyDataDeltaSource source;
 
         @NameInMap("Target")
         public VerifySentenceResponseBodyDataDeltaTarget target;
 
+        @NameInMap("Type")
+        public String type;
+
         public static VerifySentenceResponseBodyDataDelta build(java.util.Map<String, ?> map) throws Exception {
             VerifySentenceResponseBodyDataDelta self = new VerifySentenceResponseBodyDataDelta();
             return TeaModel.build(map, self);
-        }
-
-        public VerifySentenceResponseBodyDataDelta setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public VerifySentenceResponseBodyDataDelta setSource(VerifySentenceResponseBodyDataDeltaSource source) {
@@ -232,6 +224,14 @@ public class VerifySentenceResponseBody extends TeaModel {
         }
         public VerifySentenceResponseBodyDataDeltaTarget getTarget() {
             return this.target;
+        }
+
+        public VerifySentenceResponseBodyDataDelta setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
