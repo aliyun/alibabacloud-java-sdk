@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>umeng_finplus20211125</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>umeng_finplus20211125</name>
   <description>Alibaba Cloud umeng-finplus (20211125) SDK for Java
