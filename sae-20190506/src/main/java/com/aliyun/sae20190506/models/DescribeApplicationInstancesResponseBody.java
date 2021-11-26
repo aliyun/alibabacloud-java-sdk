@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public DescribeApplicationInstancesResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
-
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeApplicationInstancesResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeApplicationInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationInstancesResponseBody self = new DescribeApplicationInstancesResponseBody();
@@ -45,20 +38,28 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeApplicationInstancesResponseBody setData(DescribeApplicationInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeApplicationInstancesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DescribeApplicationInstancesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public DescribeApplicationInstancesResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public DescribeApplicationInstancesResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
     }
 
     public DescribeApplicationInstancesResponseBody setRequestId(String requestId) {
@@ -77,86 +78,51 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeApplicationInstancesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DescribeApplicationInstancesResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DescribeApplicationInstancesResponseBody setData(DescribeApplicationInstancesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeApplicationInstancesResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DescribeApplicationInstancesResponseBodyDataInstances extends TeaModel {
-        @NameInMap("GroupId")
-        @Validation(required = true)
-        public String groupId;
-
-        @NameInMap("InstanceId")
-        @Validation(required = true)
-        public String instanceId;
-
-        @NameInMap("InstanceContainerStatus")
-        @Validation(required = true)
-        public String instanceContainerStatus;
-
-        @NameInMap("InstanceContainerIp")
-        @Validation(required = true)
-        public String instanceContainerIp;
-
         @NameInMap("CreateTimeStamp")
-        @Validation(required = true)
         public Long createTimeStamp;
 
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
-        public String vSwitchId;
+        @NameInMap("Eip")
+        public String eip;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("InstanceContainerIp")
+        public String instanceContainerIp;
 
         @NameInMap("InstanceContainerRestarts")
-        @Validation(required = true)
         public Long instanceContainerRestarts;
+
+        @NameInMap("InstanceContainerStatus")
+        public String instanceContainerStatus;
+
+        @NameInMap("InstanceHealthStatus")
+        public String instanceHealthStatus;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         public static DescribeApplicationInstancesResponseBodyDataInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationInstancesResponseBodyDataInstances self = new DescribeApplicationInstancesResponseBodyDataInstances();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApplicationInstancesResponseBodyDataInstances setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceContainerStatus(String instanceContainerStatus) {
-            this.instanceContainerStatus = instanceContainerStatus;
-            return this;
-        }
-        public String getInstanceContainerStatus() {
-            return this.instanceContainerStatus;
-        }
-
-        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceContainerIp(String instanceContainerIp) {
-            this.instanceContainerIp = instanceContainerIp;
-            return this;
-        }
-        public String getInstanceContainerIp() {
-            return this.instanceContainerIp;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setCreateTimeStamp(Long createTimeStamp) {
@@ -167,12 +133,36 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             return this.createTimeStamp;
         }
 
-        public DescribeApplicationInstancesResponseBodyDataInstances setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
+        public DescribeApplicationInstancesResponseBodyDataInstances setEip(String eip) {
+            this.eip = eip;
             return this;
         }
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public String getEip() {
+            return this.eip;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceContainerIp(String instanceContainerIp) {
+            this.instanceContainerIp = instanceContainerIp;
+            return this;
+        }
+        public String getInstanceContainerIp() {
+            return this.instanceContainerIp;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setInstanceContainerRestarts(Long instanceContainerRestarts) {
@@ -183,24 +173,60 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             return this.instanceContainerRestarts;
         }
 
+        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceContainerStatus(String instanceContainerStatus) {
+            this.instanceContainerStatus = instanceContainerStatus;
+            return this;
+        }
+        public String getInstanceContainerStatus() {
+            return this.instanceContainerStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceHealthStatus(String instanceHealthStatus) {
+            this.instanceHealthStatus = instanceHealthStatus;
+            return this;
+        }
+        public String getInstanceHealthStatus() {
+            return this.instanceHealthStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
     }
 
     public static class DescribeApplicationInstancesResponseBodyData extends TeaModel {
         @NameInMap("CurrentPage")
-        @Validation(required = true)
         public Integer currentPage;
 
+        @NameInMap("Instances")
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> instances;
+
         @NameInMap("PageSize")
-        @Validation(required = true)
         public Integer pageSize;
 
         @NameInMap("TotalSize")
-        @Validation(required = true)
         public Integer totalSize;
-
-        @NameInMap("Instances")
-        @Validation(required = true)
-        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> instances;
 
         public static DescribeApplicationInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationInstancesResponseBodyData self = new DescribeApplicationInstancesResponseBodyData();
@@ -213,6 +239,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
+        }
+
+        public DescribeApplicationInstancesResponseBodyData setInstances(java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> instances) {
+            this.instances = instances;
+            return this;
+        }
+        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> getInstances() {
+            return this.instances;
         }
 
         public DescribeApplicationInstancesResponseBodyData setPageSize(Integer pageSize) {
@@ -229,14 +263,6 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public Integer getTotalSize() {
             return this.totalSize;
-        }
-
-        public DescribeApplicationInstancesResponseBodyData setInstances(java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> instances) {
-            this.instances = instances;
-            return this;
-        }
-        public java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> getInstances() {
-            return this.instances;
         }
 
     }

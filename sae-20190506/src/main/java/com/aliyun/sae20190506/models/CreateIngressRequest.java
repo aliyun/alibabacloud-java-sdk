@@ -4,44 +4,86 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateIngressRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("CertId")
+    public String certId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public CreateIngressQuery query;
+    @NameInMap("DefaultRule")
+    public String defaultRule;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public CreateIngressBody body;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
+
+    @NameInMap("Rules")
+    public String rules;
+
+    @NameInMap("SlbId")
+    public String slbId;
 
     public static CreateIngressRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIngressRequest self = new CreateIngressRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateIngressRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateIngressRequest setCertId(String certId) {
+        this.certId = certId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCertId() {
+        return this.certId;
     }
 
-    public CreateIngressRequest setQuery(CreateIngressQuery query) {
-        this.query = query;
+    public CreateIngressRequest setDefaultRule(String defaultRule) {
+        this.defaultRule = defaultRule;
         return this;
     }
-    public CreateIngressQuery getQuery() {
-        return this.query;
+    public String getDefaultRule() {
+        return this.defaultRule;
     }
 
-    public CreateIngressRequest setBody(CreateIngressBody body) {
-        this.body = body;
+    public CreateIngressRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public CreateIngressBody getBody() {
-        return this.body;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateIngressRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public CreateIngressRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    public String getNamespaceId() {
+        return this.namespaceId;
+    }
+
+    public CreateIngressRequest setRules(String rules) {
+        this.rules = rules;
+        return this;
+    }
+    public String getRules() {
+        return this.rules;
+    }
+
+    public CreateIngressRequest setSlbId(String slbId) {
+        this.slbId = slbId;
+        return this;
+    }
+    public String getSlbId() {
+        return this.slbId;
     }
 
 }

@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    @NameInMap("Data")
+    public DescribeNamespaceResourcesResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeNamespaceResourcesResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeNamespaceResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespaceResourcesResponseBody self = new DescribeNamespaceResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNamespaceResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeNamespaceResourcesResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeNamespaceResourcesResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeNamespaceResourcesResponseBody setData(DescribeNamespaceResourcesResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public DescribeNamespaceResourcesResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeNamespaceResourcesResponseBody setErrorCode(String errorCode) {
@@ -69,12 +54,20 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeNamespaceResourcesResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public DescribeNamespaceResourcesResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeNamespaceResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeNamespaceResourcesResponseBody setSuccess(Boolean success) {
@@ -85,82 +78,114 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeNamespaceResourcesResponseBody setData(DescribeNamespaceResourcesResponseBodyData data) {
-        this.data = data;
+    public DescribeNamespaceResourcesResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public DescribeNamespaceResourcesResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DescribeNamespaceResourcesResponseBodyData extends TeaModel {
+        @NameInMap("AppCount")
+        public Long appCount;
+
+        @NameInMap("BelongRegion")
+        public String belongRegion;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("LastChangeOrderId")
+        public String lastChangeOrderId;
+
+        @NameInMap("LastChangeOrderRunning")
+        public Boolean lastChangeOrderRunning;
+
+        @NameInMap("LastChangeOrderStatus")
+        public String lastChangeOrderStatus;
+
         @NameInMap("NamespaceId")
-        @Validation(required = true)
         public String namespaceId;
 
         @NameInMap("NamespaceName")
-        @Validation(required = true)
         public String namespaceName;
 
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
-
-        @NameInMap("BelongRegion")
-        @Validation(required = true)
-        public String belongRegion;
-
-        @NameInMap("TenantId")
-        @Validation(required = true)
-        public String tenantId;
-
-        @NameInMap("VpcId")
-        @Validation(required = true)
-        public String vpcId;
-
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
-        public String vSwitchId;
+        @NameInMap("NotificationExpired")
+        public Boolean notificationExpired;
 
         @NameInMap("SecurityGroupId")
-        @Validation(required = true)
         public String securityGroupId;
 
-        @NameInMap("AppCount")
-        @Validation(required = true)
-        public Long appCount;
+        @NameInMap("TenantId")
+        public String tenantId;
 
-        @NameInMap("LastChangeOrderId")
-        @Validation(required = true)
-        public String lastChangeOrderId;
+        @NameInMap("UserId")
+        public String userId;
 
-        @NameInMap("LastChangeOrderStatus")
-        @Validation(required = true)
-        public String lastChangeOrderStatus;
-
-        @NameInMap("LastChangeOrderRunning")
-        @Validation(required = true)
-        public Boolean lastChangeOrderRunning;
-
-        @NameInMap("VpcName")
-        @Validation(required = true)
-        public String vpcName;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("VSwitchName")
-        @Validation(required = true)
         public String vSwitchName;
 
-        @NameInMap("NotificationExpired")
-        @Validation(required = true)
-        public Boolean notificationExpired;
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VpcName")
+        public String vpcName;
 
         public static DescribeNamespaceResourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespaceResourcesResponseBodyData self = new DescribeNamespaceResourcesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setAppCount(Long appCount) {
+            this.appCount = appCount;
+            return this;
+        }
+        public Long getAppCount() {
+            return this.appCount;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setBelongRegion(String belongRegion) {
+            this.belongRegion = belongRegion;
+            return this;
+        }
+        public String getBelongRegion() {
+            return this.belongRegion;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {
+            this.lastChangeOrderId = lastChangeOrderId;
+            return this;
+        }
+        public String getLastChangeOrderId() {
+            return this.lastChangeOrderId;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderRunning(Boolean lastChangeOrderRunning) {
+            this.lastChangeOrderRunning = lastChangeOrderRunning;
+            return this;
+        }
+        public Boolean getLastChangeOrderRunning() {
+            return this.lastChangeOrderRunning;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderStatus(String lastChangeOrderStatus) {
+            this.lastChangeOrderStatus = lastChangeOrderStatus;
+            return this;
+        }
+        public String getLastChangeOrderStatus() {
+            return this.lastChangeOrderStatus;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setNamespaceId(String namespaceId) {
@@ -179,52 +204,12 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             return this.namespaceName;
         }
 
-        public DescribeNamespaceResourcesResponseBodyData setDescription(String description) {
-            this.description = description;
+        public DescribeNamespaceResourcesResponseBodyData setNotificationExpired(Boolean notificationExpired) {
+            this.notificationExpired = notificationExpired;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setBelongRegion(String belongRegion) {
-            this.belongRegion = belongRegion;
-            return this;
-        }
-        public String getBelongRegion() {
-            return this.belongRegion;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public String getTenantId() {
-            return this.tenantId;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public Boolean getNotificationExpired() {
+            return this.notificationExpired;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setSecurityGroupId(String securityGroupId) {
@@ -235,44 +220,28 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
-        public DescribeNamespaceResourcesResponseBodyData setAppCount(Long appCount) {
-            this.appCount = appCount;
+        public DescribeNamespaceResourcesResponseBodyData setTenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
-        public Long getAppCount() {
-            return this.appCount;
+        public String getTenantId() {
+            return this.tenantId;
         }
 
-        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {
-            this.lastChangeOrderId = lastChangeOrderId;
+        public DescribeNamespaceResourcesResponseBodyData setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getLastChangeOrderId() {
-            return this.lastChangeOrderId;
+        public String getUserId() {
+            return this.userId;
         }
 
-        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderStatus(String lastChangeOrderStatus) {
-            this.lastChangeOrderStatus = lastChangeOrderStatus;
+        public DescribeNamespaceResourcesResponseBodyData setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getLastChangeOrderStatus() {
-            return this.lastChangeOrderStatus;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setLastChangeOrderRunning(Boolean lastChangeOrderRunning) {
-            this.lastChangeOrderRunning = lastChangeOrderRunning;
-            return this;
-        }
-        public Boolean getLastChangeOrderRunning() {
-            return this.lastChangeOrderRunning;
-        }
-
-        public DescribeNamespaceResourcesResponseBodyData setVpcName(String vpcName) {
-            this.vpcName = vpcName;
-            return this;
-        }
-        public String getVpcName() {
-            return this.vpcName;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeNamespaceResourcesResponseBodyData setVSwitchName(String vSwitchName) {
@@ -283,12 +252,20 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
             return this.vSwitchName;
         }
 
-        public DescribeNamespaceResourcesResponseBodyData setNotificationExpired(Boolean notificationExpired) {
-            this.notificationExpired = notificationExpired;
+        public DescribeNamespaceResourcesResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public Boolean getNotificationExpired() {
-            return this.notificationExpired;
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeNamespaceResourcesResponseBodyData setVpcName(String vpcName) {
+            this.vpcName = vpcName;
+            return this;
+        }
+        public String getVpcName() {
+            return this.vpcName;
         }
 
     }

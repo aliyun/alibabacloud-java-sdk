@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class StopApplicationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public StopApplicationResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public StopApplicationResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static StopApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopApplicationResponseBody self = new StopApplicationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StopApplicationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StopApplicationResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class StopApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public StopApplicationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public StopApplicationResponseBody setData(StopApplicationResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public StopApplicationResponseBodyData getData() {
+        return this.data;
     }
 
     public StopApplicationResponseBody setErrorCode(String errorCode) {
@@ -77,6 +62,22 @@ public class StopApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
+    public StopApplicationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public StopApplicationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public StopApplicationResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,17 +86,8 @@ public class StopApplicationResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public StopApplicationResponseBody setData(StopApplicationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public StopApplicationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class StopApplicationResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static StopApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

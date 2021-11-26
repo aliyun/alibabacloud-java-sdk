@@ -4,32 +4,42 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("NamespaceDescription")
+    public String namespaceDescription;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public UpdateNamespaceQuery query;
+    @NameInMap("NamespaceId")
+    public String namespaceId;
+
+    @NameInMap("NamespaceName")
+    public String namespaceName;
 
     public static UpdateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNamespaceRequest self = new UpdateNamespaceRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateNamespaceRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateNamespaceRequest setNamespaceDescription(String namespaceDescription) {
+        this.namespaceDescription = namespaceDescription;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getNamespaceDescription() {
+        return this.namespaceDescription;
     }
 
-    public UpdateNamespaceRequest setQuery(UpdateNamespaceQuery query) {
-        this.query = query;
+    public UpdateNamespaceRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public UpdateNamespaceQuery getQuery() {
-        return this.query;
+    public String getNamespaceId() {
+        return this.namespaceId;
+    }
+
+    public UpdateNamespaceRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
     }
 
 }

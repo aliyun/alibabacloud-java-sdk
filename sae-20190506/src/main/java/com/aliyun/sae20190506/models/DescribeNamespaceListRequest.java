@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceListRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("ContainCustom")
+    public Boolean containCustom;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeNamespaceListQuery query;
+    @NameInMap("HybridCloudExclude")
+    public Boolean hybridCloudExclude;
 
     public static DescribeNamespaceListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespaceListRequest self = new DescribeNamespaceListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNamespaceListRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeNamespaceListRequest setContainCustom(Boolean containCustom) {
+        this.containCustom = containCustom;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getContainCustom() {
+        return this.containCustom;
     }
 
-    public DescribeNamespaceListRequest setQuery(DescribeNamespaceListQuery query) {
-        this.query = query;
+    public DescribeNamespaceListRequest setHybridCloudExclude(Boolean hybridCloudExclude) {
+        this.hybridCloudExclude = hybridCloudExclude;
         return this;
     }
-    public DescribeNamespaceListQuery getQuery() {
-        return this.query;
+    public Boolean getHybridCloudExclude() {
+        return this.hybridCloudExclude;
     }
 
 }

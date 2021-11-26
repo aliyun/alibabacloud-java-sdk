@@ -4,44 +4,53 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigMapRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("Data")
+    public String data;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public CreateConfigMapQuery query;
+    @NameInMap("Description")
+    public String description;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public CreateConfigMapBody body;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static CreateConfigMapRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConfigMapRequest self = new CreateConfigMapRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateConfigMapRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateConfigMapRequest setData(String data) {
+        this.data = data;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getData() {
+        return this.data;
     }
 
-    public CreateConfigMapRequest setQuery(CreateConfigMapQuery query) {
-        this.query = query;
+    public CreateConfigMapRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public CreateConfigMapQuery getQuery() {
-        return this.query;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateConfigMapRequest setBody(CreateConfigMapBody body) {
-        this.body = body;
+    public CreateConfigMapRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public CreateConfigMapBody getBody() {
-        return this.body;
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateConfigMapRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

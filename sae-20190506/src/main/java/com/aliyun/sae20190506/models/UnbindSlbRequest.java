@@ -4,32 +4,42 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UnbindSlbRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public UnbindSlbQuery query;
+    @NameInMap("Internet")
+    public Boolean internet;
+
+    @NameInMap("Intranet")
+    public Boolean intranet;
 
     public static UnbindSlbRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindSlbRequest self = new UnbindSlbRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnbindSlbRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UnbindSlbRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public UnbindSlbRequest setQuery(UnbindSlbQuery query) {
-        this.query = query;
+    public UnbindSlbRequest setInternet(Boolean internet) {
+        this.internet = internet;
         return this;
     }
-    public UnbindSlbQuery getQuery() {
-        return this.query;
+    public Boolean getInternet() {
+        return this.internet;
+    }
+
+    public UnbindSlbRequest setIntranet(Boolean intranet) {
+        this.intranet = intranet;
+        return this;
+    }
+    public Boolean getIntranet() {
+        return this.intranet;
     }
 
 }

@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ConfirmPipelineBatchRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("Confirm")
+    public Boolean confirm;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public ConfirmPipelineBatchQuery query;
+    @NameInMap("PipelineId")
+    public String pipelineId;
 
     public static ConfirmPipelineBatchRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfirmPipelineBatchRequest self = new ConfirmPipelineBatchRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfirmPipelineBatchRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ConfirmPipelineBatchRequest setConfirm(Boolean confirm) {
+        this.confirm = confirm;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getConfirm() {
+        return this.confirm;
     }
 
-    public ConfirmPipelineBatchRequest setQuery(ConfirmPipelineBatchQuery query) {
-        this.query = query;
+    public ConfirmPipelineBatchRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
         return this;
     }
-    public ConfirmPipelineBatchQuery getQuery() {
-        return this.query;
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
 }

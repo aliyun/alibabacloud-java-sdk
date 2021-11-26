@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public AbortAndRollbackChangeOrderResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public AbortAndRollbackChangeOrderResponseBodyData data;
 
     public static AbortAndRollbackChangeOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AbortAndRollbackChangeOrderResponseBody self = new AbortAndRollbackChangeOrderResponseBody();
@@ -43,6 +36,14 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AbortAndRollbackChangeOrderResponseBody setData(AbortAndRollbackChangeOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AbortAndRollbackChangeOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public AbortAndRollbackChangeOrderResponseBody setErrorCode(String errorCode) {
@@ -61,6 +62,14 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         return this.message;
     }
 
+    public AbortAndRollbackChangeOrderResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public AbortAndRollbackChangeOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -77,25 +86,8 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public AbortAndRollbackChangeOrderResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AbortAndRollbackChangeOrderResponseBody setData(AbortAndRollbackChangeOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AbortAndRollbackChangeOrderResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class AbortAndRollbackChangeOrderResponseBodyData extends TeaModel {
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         public static AbortAndRollbackChangeOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

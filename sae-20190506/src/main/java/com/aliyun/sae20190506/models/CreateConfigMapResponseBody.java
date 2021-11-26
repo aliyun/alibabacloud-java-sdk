@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigMapResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    @NameInMap("Data")
+    public CreateConfigMapResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public CreateConfigMapResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static CreateConfigMapResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateConfigMapResponseBody self = new CreateConfigMapResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConfigMapResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateConfigMapResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class CreateConfigMapResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateConfigMapResponseBody setMessage(String message) {
-        this.message = message;
+    public CreateConfigMapResponseBody setData(CreateConfigMapResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public CreateConfigMapResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateConfigMapResponseBody setErrorCode(String errorCode) {
@@ -69,12 +54,20 @@ public class CreateConfigMapResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateConfigMapResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public CreateConfigMapResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateConfigMapResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateConfigMapResponseBody setSuccess(Boolean success) {
@@ -85,17 +78,16 @@ public class CreateConfigMapResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateConfigMapResponseBody setData(CreateConfigMapResponseBodyData data) {
-        this.data = data;
+    public CreateConfigMapResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public CreateConfigMapResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class CreateConfigMapResponseBodyData extends TeaModel {
         @NameInMap("ConfigMapId")
-        @Validation(required = true)
         public Long configMapId;
 
         public static CreateConfigMapResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

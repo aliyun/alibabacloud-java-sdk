@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationSlbsResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public DescribeApplicationSlbsResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeApplicationSlbsResponseBodyData data;
 
     public static DescribeApplicationSlbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationSlbsResponseBody self = new DescribeApplicationSlbsResponseBody();
@@ -43,6 +36,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeApplicationSlbsResponseBody setData(DescribeApplicationSlbsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeApplicationSlbsResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeApplicationSlbsResponseBody setErrorCode(String errorCode) {
@@ -61,6 +62,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeApplicationSlbsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeApplicationSlbsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -77,42 +86,30 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeApplicationSlbsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeApplicationSlbsResponseBody setData(DescribeApplicationSlbsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeApplicationSlbsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        @NameInMap("HttpsCertId")
+        public String httpsCertId;
+
         @NameInMap("Port")
-        @Validation(required = true)
         public Integer port;
 
         @NameInMap("Protocol")
-        @Validation(required = true)
         public String protocol;
 
         @NameInMap("TargetPort")
-        @Validation(required = true)
         public Integer targetPort;
-
-        @NameInMap("HttpsCertId")
-        @Validation(required = true)
-        public String httpsCertId;
 
         public static DescribeApplicationSlbsResponseBodyDataInternet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataInternet self = new DescribeApplicationSlbsResponseBodyDataInternet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCertId(String httpsCertId) {
+            this.httpsCertId = httpsCertId;
+            return this;
+        }
+        public String getHttpsCertId() {
+            return this.httpsCertId;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setPort(Integer port) {
@@ -139,36 +136,32 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.targetPort;
         }
 
-        public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCertId(String httpsCertId) {
+    }
+
+    public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        @NameInMap("HttpsCertId")
+        public String httpsCertId;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        @NameInMap("TargetPort")
+        public Integer targetPort;
+
+        public static DescribeApplicationSlbsResponseBodyDataIntranet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationSlbsResponseBodyDataIntranet self = new DescribeApplicationSlbsResponseBodyDataIntranet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCertId(String httpsCertId) {
             this.httpsCertId = httpsCertId;
             return this;
         }
         public String getHttpsCertId() {
             return this.httpsCertId;
-        }
-
-    }
-
-    public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
-        @NameInMap("Port")
-        @Validation(required = true)
-        public Integer port;
-
-        @NameInMap("Protocol")
-        @Validation(required = true)
-        public String protocol;
-
-        @NameInMap("TargetPort")
-        @Validation(required = true)
-        public Integer targetPort;
-
-        @NameInMap("HttpsCertId")
-        @Validation(required = true)
-        public String httpsCertId;
-
-        public static DescribeApplicationSlbsResponseBodyDataIntranet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApplicationSlbsResponseBodyDataIntranet self = new DescribeApplicationSlbsResponseBodyDataIntranet();
-            return TeaModel.build(map, self);
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setPort(Integer port) {
@@ -195,76 +188,30 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.targetPort;
         }
 
-        public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCertId(String httpsCertId) {
-            this.httpsCertId = httpsCertId;
-            return this;
-        }
-        public String getHttpsCertId() {
-            return this.httpsCertId;
-        }
-
     }
 
     public static class DescribeApplicationSlbsResponseBodyData extends TeaModel {
-        @NameInMap("InternetIp")
-        @Validation(required = true)
-        public String internetIp;
-
-        @NameInMap("IntranetIp")
-        @Validation(required = true)
-        public String intranetIp;
-
-        @NameInMap("InternetSlbId")
-        @Validation(required = true)
-        public String internetSlbId;
-
-        @NameInMap("IntranetSlbId")
-        @Validation(required = true)
-        public String intranetSlbId;
-
         @NameInMap("Internet")
-        @Validation(required = true)
         public java.util.List<DescribeApplicationSlbsResponseBodyDataInternet> internet;
 
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("InternetSlbId")
+        public String internetSlbId;
+
         @NameInMap("Intranet")
-        @Validation(required = true)
         public java.util.List<DescribeApplicationSlbsResponseBodyDataIntranet> intranet;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
+        @NameInMap("IntranetSlbId")
+        public String intranetSlbId;
 
         public static DescribeApplicationSlbsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyData self = new DescribeApplicationSlbsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApplicationSlbsResponseBodyData setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
-        }
-
-        public DescribeApplicationSlbsResponseBodyData setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
-            return this;
-        }
-        public String getIntranetIp() {
-            return this.intranetIp;
-        }
-
-        public DescribeApplicationSlbsResponseBodyData setInternetSlbId(String internetSlbId) {
-            this.internetSlbId = internetSlbId;
-            return this;
-        }
-        public String getInternetSlbId() {
-            return this.internetSlbId;
-        }
-
-        public DescribeApplicationSlbsResponseBodyData setIntranetSlbId(String intranetSlbId) {
-            this.intranetSlbId = intranetSlbId;
-            return this;
-        }
-        public String getIntranetSlbId() {
-            return this.intranetSlbId;
         }
 
         public DescribeApplicationSlbsResponseBodyData setInternet(java.util.List<DescribeApplicationSlbsResponseBodyDataInternet> internet) {
@@ -275,12 +222,44 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.internet;
         }
 
+        public DescribeApplicationSlbsResponseBodyData setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setInternetSlbId(String internetSlbId) {
+            this.internetSlbId = internetSlbId;
+            return this;
+        }
+        public String getInternetSlbId() {
+            return this.internetSlbId;
+        }
+
         public DescribeApplicationSlbsResponseBodyData setIntranet(java.util.List<DescribeApplicationSlbsResponseBodyDataIntranet> intranet) {
             this.intranet = intranet;
             return this;
         }
         public java.util.List<DescribeApplicationSlbsResponseBodyDataIntranet> getIntranet() {
             return this.intranet;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setIntranetSlbId(String intranetSlbId) {
+            this.intranetSlbId = intranetSlbId;
+            return this;
+        }
+        public String getIntranetSlbId() {
+            return this.intranetSlbId;
         }
 
     }

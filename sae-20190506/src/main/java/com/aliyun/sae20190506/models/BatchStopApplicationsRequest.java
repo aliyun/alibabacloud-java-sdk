@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class BatchStopApplicationsRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppIds")
+    public String appIds;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public BatchStopApplicationsQuery query;
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static BatchStopApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopApplicationsRequest self = new BatchStopApplicationsRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchStopApplicationsRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public BatchStopApplicationsRequest setAppIds(String appIds) {
+        this.appIds = appIds;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppIds() {
+        return this.appIds;
     }
 
-    public BatchStopApplicationsRequest setQuery(BatchStopApplicationsQuery query) {
-        this.query = query;
+    public BatchStopApplicationsRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public BatchStopApplicationsQuery getQuery() {
-        return this.query;
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

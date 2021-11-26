@@ -4,43 +4,75 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateIngressRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("CertId")
+    public String certId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public UpdateIngressQuery query;
+    @NameInMap("DefaultRule")
+    public String defaultRule;
 
-    @NameInMap("body")
-    public UpdateIngressBody body;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("IngressId")
+    public Long ingressId;
+
+    @NameInMap("ListenerPort")
+    public String listenerPort;
+
+    @NameInMap("Rules")
+    public String rules;
 
     public static UpdateIngressRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIngressRequest self = new UpdateIngressRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateIngressRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateIngressRequest setCertId(String certId) {
+        this.certId = certId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCertId() {
+        return this.certId;
     }
 
-    public UpdateIngressRequest setQuery(UpdateIngressQuery query) {
-        this.query = query;
+    public UpdateIngressRequest setDefaultRule(String defaultRule) {
+        this.defaultRule = defaultRule;
         return this;
     }
-    public UpdateIngressQuery getQuery() {
-        return this.query;
+    public String getDefaultRule() {
+        return this.defaultRule;
     }
 
-    public UpdateIngressRequest setBody(UpdateIngressBody body) {
-        this.body = body;
+    public UpdateIngressRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public UpdateIngressBody getBody() {
-        return this.body;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateIngressRequest setIngressId(Long ingressId) {
+        this.ingressId = ingressId;
+        return this;
+    }
+    public Long getIngressId() {
+        return this.ingressId;
+    }
+
+    public UpdateIngressRequest setListenerPort(String listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public String getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public UpdateIngressRequest setRules(String rules) {
+        this.rules = rules;
+        return this;
+    }
+    public String getRules() {
+        return this.rules;
     }
 
 }

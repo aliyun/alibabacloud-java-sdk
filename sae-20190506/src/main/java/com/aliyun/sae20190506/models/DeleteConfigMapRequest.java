@@ -4,32 +4,20 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigMapRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("query")
-    @Validation(required = true)
-    public DeleteConfigMapQuery query;
+    @NameInMap("ConfigMapId")
+    public Long configMapId;
 
     public static DeleteConfigMapRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConfigMapRequest self = new DeleteConfigMapRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteConfigMapRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteConfigMapRequest setConfigMapId(Long configMapId) {
+        this.configMapId = configMapId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteConfigMapRequest setQuery(DeleteConfigMapQuery query) {
-        this.query = query;
-        return this;
-    }
-    public DeleteConfigMapQuery getQuery() {
-        return this.query;
+    public Long getConfigMapId() {
+        return this.configMapId;
     }
 
 }

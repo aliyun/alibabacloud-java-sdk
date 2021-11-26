@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationConfigRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeApplicationConfigQuery query;
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static DescribeApplicationConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationConfigRequest self = new DescribeApplicationConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationConfigRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeApplicationConfigRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public DescribeApplicationConfigRequest setQuery(DescribeApplicationConfigQuery query) {
-        this.query = query;
+    public DescribeApplicationConfigRequest setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public DescribeApplicationConfigQuery getQuery() {
-        return this.query;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

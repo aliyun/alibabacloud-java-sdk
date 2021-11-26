@@ -4,32 +4,20 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListConsumedServicesRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("query")
-    @Validation(required = true)
-    public ListConsumedServicesQuery query;
+    @NameInMap("AppId")
+    public String appId;
 
     public static ListConsumedServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConsumedServicesRequest self = new ListConsumedServicesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListConsumedServicesRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListConsumedServicesRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ListConsumedServicesRequest setQuery(ListConsumedServicesQuery query) {
-        this.query = query;
-        return this;
-    }
-    public ListConsumedServicesQuery getQuery() {
-        return this.query;
+    public String getAppId() {
+        return this.appId;
     }
 
 }

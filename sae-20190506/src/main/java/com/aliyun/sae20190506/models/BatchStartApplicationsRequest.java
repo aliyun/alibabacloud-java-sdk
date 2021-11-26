@@ -4,32 +4,31 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class BatchStartApplicationsRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppIds")
+    public String appIds;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public BatchStartApplicationsQuery query;
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static BatchStartApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStartApplicationsRequest self = new BatchStartApplicationsRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchStartApplicationsRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public BatchStartApplicationsRequest setAppIds(String appIds) {
+        this.appIds = appIds;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppIds() {
+        return this.appIds;
     }
 
-    public BatchStartApplicationsRequest setQuery(BatchStartApplicationsQuery query) {
-        this.query = query;
+    public BatchStartApplicationsRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
-    public BatchStartApplicationsQuery getQuery() {
-        return this.query;
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

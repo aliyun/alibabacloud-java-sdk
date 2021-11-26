@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateIngressResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public UpdateIngressResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public UpdateIngressResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static UpdateIngressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateIngressResponseBody self = new UpdateIngressResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateIngressResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateIngressResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class UpdateIngressResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateIngressResponseBody setMessage(String message) {
-        this.message = message;
+    public UpdateIngressResponseBody setData(UpdateIngressResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpdateIngressResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public UpdateIngressResponseBodyData getData() {
+        return this.data;
     }
 
     public UpdateIngressResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class UpdateIngressResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public UpdateIngressResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpdateIngressResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateIngressResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public UpdateIngressResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,17 +86,8 @@ public class UpdateIngressResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public UpdateIngressResponseBody setData(UpdateIngressResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateIngressResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class UpdateIngressResponseBodyData extends TeaModel {
         @NameInMap("IngressId")
-        @Validation(required = true)
         public Long ingressId;
 
         public static UpdateIngressResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

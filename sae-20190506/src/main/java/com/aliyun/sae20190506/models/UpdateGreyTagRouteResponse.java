@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sae20190506.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateGreyTagRouteResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateGreyTagRouteResponseBody body;
+
+    public static UpdateGreyTagRouteResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateGreyTagRouteResponse self = new UpdateGreyTagRouteResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateGreyTagRouteResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateGreyTagRouteResponse setBody(UpdateGreyTagRouteResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateGreyTagRouteResponseBody getBody() {
+        return this.body;
+    }
+
+}

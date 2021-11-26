@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListConsumedServicesResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<ListConsumedServicesResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<ListConsumedServicesResponseBodyData> data;
 
     public static ListConsumedServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListConsumedServicesResponseBody self = new ListConsumedServicesResponseBody();
@@ -43,6 +36,22 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListConsumedServicesResponseBody setData(java.util.List<ListConsumedServicesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListConsumedServicesResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListConsumedServicesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListConsumedServicesResponseBody setMessage(String message) {
@@ -69,14 +78,6 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListConsumedServicesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListConsumedServicesResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,42 +86,27 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public ListConsumedServicesResponseBody setData(java.util.List<ListConsumedServicesResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListConsumedServicesResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListConsumedServicesResponseBodyData extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
         @NameInMap("Group2Ip")
-        @Validation(required = true)
         public String group2Ip;
 
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("Version")
-        @Validation(required = true)
-        public String version;
-
         @NameInMap("Groups")
-        @Validation(required = true)
         public java.util.List<String> groups;
 
         @NameInMap("Ips")
-        @Validation(required = true)
         public java.util.List<String> ips;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Version")
+        public String version;
 
         public static ListConsumedServicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListConsumedServicesResponseBodyData self = new ListConsumedServicesResponseBodyData();
@@ -141,6 +127,22 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
         public String getGroup2Ip() {
             return this.group2Ip;
+        }
+
+        public ListConsumedServicesResponseBodyData setGroups(java.util.List<String> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<String> getGroups() {
+            return this.groups;
+        }
+
+        public ListConsumedServicesResponseBodyData setIps(java.util.List<String> ips) {
+            this.ips = ips;
+            return this;
+        }
+        public java.util.List<String> getIps() {
+            return this.ips;
         }
 
         public ListConsumedServicesResponseBodyData setName(String name) {
@@ -165,22 +167,6 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public ListConsumedServicesResponseBodyData setGroups(java.util.List<String> groups) {
-            this.groups = groups;
-            return this;
-        }
-        public java.util.List<String> getGroups() {
-            return this.groups;
-        }
-
-        public ListConsumedServicesResponseBodyData setIps(java.util.List<String> ips) {
-            this.ips = ips;
-            return this;
-        }
-        public java.util.List<String> getIps() {
-            return this.ips;
         }
 
     }

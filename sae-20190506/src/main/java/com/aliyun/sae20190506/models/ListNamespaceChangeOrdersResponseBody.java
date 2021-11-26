@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    @NameInMap("Data")
+    public ListNamespaceChangeOrdersResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public ListNamespaceChangeOrdersResponseBodyData data;
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static ListNamespaceChangeOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNamespaceChangeOrdersResponseBody self = new ListNamespaceChangeOrdersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNamespaceChangeOrdersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListNamespaceChangeOrdersResponseBody setCode(String code) {
@@ -53,12 +38,12 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListNamespaceChangeOrdersResponseBody setMessage(String message) {
-        this.message = message;
+    public ListNamespaceChangeOrdersResponseBody setData(ListNamespaceChangeOrdersResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public ListNamespaceChangeOrdersResponseBodyData getData() {
+        return this.data;
     }
 
     public ListNamespaceChangeOrdersResponseBody setErrorCode(String errorCode) {
@@ -69,12 +54,20 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListNamespaceChangeOrdersResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public ListNamespaceChangeOrdersResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListNamespaceChangeOrdersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListNamespaceChangeOrdersResponseBody setSuccess(Boolean success) {
@@ -85,86 +78,63 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListNamespaceChangeOrdersResponseBody setData(ListNamespaceChangeOrdersResponseBodyData data) {
-        this.data = data;
+    public ListNamespaceChangeOrdersResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
         return this;
     }
-    public ListNamespaceChangeOrdersResponseBodyData getData() {
-        return this.data;
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class ListNamespaceChangeOrdersResponseBodyDataChangeOrderList extends TeaModel {
-        @NameInMap("NamespaceId")
-        @Validation(required = true)
-        public String namespaceId;
-
         @NameInMap("BatchCount")
-        @Validation(required = true)
         public Integer batchCount;
 
         @NameInMap("BatchType")
-        @Validation(required = true)
         public String batchType;
 
         @NameInMap("ChangeOrderId")
-        @Validation(required = true)
         public String changeOrderId;
 
         @NameInMap("CoType")
-        @Validation(required = true)
         public String coType;
 
         @NameInMap("CoTypeCode")
-        @Validation(required = true)
         public String coTypeCode;
 
         @NameInMap("CreateTime")
-        @Validation(required = true)
         public String createTime;
 
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
         @NameInMap("Description")
-        @Validation(required = true)
         public String description;
 
         @NameInMap("FinishTime")
-        @Validation(required = true)
         public String finishTime;
 
         @NameInMap("GroupId")
-        @Validation(required = true)
         public String groupId;
 
+        @NameInMap("NamespaceId")
+        public String namespaceId;
+
         @NameInMap("Pipelines")
-        @Validation(required = true)
         public String pipelines;
 
         @NameInMap("Source")
-        @Validation(required = true)
         public String source;
 
         @NameInMap("Status")
-        @Validation(required = true)
         public Integer status;
 
-        @NameInMap("CreateUserId")
-        @Validation(required = true)
-        public String createUserId;
-
         @NameInMap("UserId")
-        @Validation(required = true)
         public String userId;
 
         public static ListNamespaceChangeOrdersResponseBodyDataChangeOrderList build(java.util.Map<String, ?> map) throws Exception {
             ListNamespaceChangeOrdersResponseBodyDataChangeOrderList self = new ListNamespaceChangeOrdersResponseBodyDataChangeOrderList();
             return TeaModel.build(map, self);
-        }
-
-        public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setNamespaceId(String namespaceId) {
-            this.namespaceId = namespaceId;
-            return this;
-        }
-        public String getNamespaceId() {
-            return this.namespaceId;
         }
 
         public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setBatchCount(Integer batchCount) {
@@ -215,6 +185,14 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
         public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setDescription(String description) {
             this.description = description;
             return this;
@@ -237,6 +215,14 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setNamespaceId(String namespaceId) {
+            this.namespaceId = namespaceId;
+            return this;
+        }
+        public String getNamespaceId() {
+            return this.namespaceId;
         }
 
         public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setPipelines(String pipelines) {
@@ -263,14 +249,6 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
-        }
-
         public ListNamespaceChangeOrdersResponseBodyDataChangeOrderList setUserId(String userId) {
             this.userId = userId;
             return this;
@@ -282,25 +260,29 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
     }
 
     public static class ListNamespaceChangeOrdersResponseBodyData extends TeaModel {
+        @NameInMap("ChangeOrderList")
+        public java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;
+
         @NameInMap("CurrentPage")
-        @Validation(required = true)
         public Integer currentPage;
 
         @NameInMap("PageSize")
-        @Validation(required = true)
         public Integer pageSize;
 
         @NameInMap("TotalSize")
-        @Validation(required = true)
         public Integer totalSize;
-
-        @NameInMap("ChangeOrderList")
-        @Validation(required = true)
-        public java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;
 
         public static ListNamespaceChangeOrdersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNamespaceChangeOrdersResponseBodyData self = new ListNamespaceChangeOrdersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListNamespaceChangeOrdersResponseBodyData setChangeOrderList(java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> changeOrderList) {
+            this.changeOrderList = changeOrderList;
+            return this;
+        }
+        public java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> getChangeOrderList() {
+            return this.changeOrderList;
         }
 
         public ListNamespaceChangeOrdersResponseBodyData setCurrentPage(Integer currentPage) {
@@ -325,14 +307,6 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
         public Integer getTotalSize() {
             return this.totalSize;
-        }
-
-        public ListNamespaceChangeOrdersResponseBodyData setChangeOrderList(java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> changeOrderList) {
-            this.changeOrderList = changeOrderList;
-            return this;
-        }
-        public java.util.List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> getChangeOrderList() {
-            return this.changeOrderList;
         }
 
     }

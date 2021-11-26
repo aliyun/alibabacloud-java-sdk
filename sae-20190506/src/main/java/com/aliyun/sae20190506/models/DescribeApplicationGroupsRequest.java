@@ -4,32 +4,42 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationGroupsRequest extends TeaModel {
-    @NameInMap("headers")
-    public java.util.Map<String, String> headers;
+    @NameInMap("AppId")
+    public String appId;
 
-    @NameInMap("query")
-    @Validation(required = true)
-    public DescribeApplicationGroupsQuery query;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeApplicationGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationGroupsRequest self = new DescribeApplicationGroupsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationGroupsRequest setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeApplicationGroupsRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getAppId() {
+        return this.appId;
     }
 
-    public DescribeApplicationGroupsRequest setQuery(DescribeApplicationGroupsQuery query) {
-        this.query = query;
+    public DescribeApplicationGroupsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public DescribeApplicationGroupsQuery getQuery() {
-        return this.query;
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeApplicationGroupsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

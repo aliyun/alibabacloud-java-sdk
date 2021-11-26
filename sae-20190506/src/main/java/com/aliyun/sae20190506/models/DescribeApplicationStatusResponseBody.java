@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public DescribeApplicationStatusResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeApplicationStatusResponseBodyData data;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeApplicationStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationStatusResponseBody self = new DescribeApplicationStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeApplicationStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeApplicationStatusResponseBody setCode(String code) {
@@ -53,28 +38,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeApplicationStatusResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeApplicationStatusResponseBody setData(DescribeApplicationStatusResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeApplicationStatusResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
-        return this;
-    }
-    public String getTraceId() {
-        return this.traceId;
-    }
-
-    public DescribeApplicationStatusResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeApplicationStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeApplicationStatusResponseBody setErrorCode(String errorCode) {
@@ -85,50 +54,71 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DescribeApplicationStatusResponseBody setData(DescribeApplicationStatusResponseBodyData data) {
-        this.data = data;
+    public DescribeApplicationStatusResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public DescribeApplicationStatusResponseBodyData getData() {
-        return this.data;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeApplicationStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeApplicationStatusResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeApplicationStatusResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
     public static class DescribeApplicationStatusResponseBodyData extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
-        @NameInMap("LastChangeOrderId")
-        @Validation(required = true)
-        public String lastChangeOrderId;
-
-        @NameInMap("LastChangeOrderStatus")
-        @Validation(required = true)
-        public String lastChangeOrderStatus;
-
-        @NameInMap("LastChangeOrderRunning")
-        @Validation(required = true)
-        public Boolean lastChangeOrderRunning;
-
-        @NameInMap("CurrentStatus")
-        @Validation(required = true)
-        public String currentStatus;
-
-        @NameInMap("ArmsApmInfo")
-        @Validation(required = true)
-        public String armsApmInfo;
-
-        @NameInMap("RunningInstances")
-        @Validation(required = true)
-        public Integer runningInstances;
-
         @NameInMap("ArmsAdvancedEnabled")
-        @Validation(required = true)
         public String armsAdvancedEnabled;
 
+        @NameInMap("ArmsApmInfo")
+        public String armsApmInfo;
+
         @NameInMap("CreateTime")
-        @Validation(required = true)
         public String createTime;
+
+        @NameInMap("CurrentStatus")
+        public String currentStatus;
+
+        @NameInMap("EnableAgent")
+        public Boolean enableAgent;
+
+        @NameInMap("LastChangeOrderId")
+        public String lastChangeOrderId;
+
+        @NameInMap("LastChangeOrderRunning")
+        public Boolean lastChangeOrderRunning;
+
+        @NameInMap("LastChangeOrderStatus")
+        public String lastChangeOrderStatus;
+
+        @NameInMap("RunningInstances")
+        public Integer runningInstances;
+
+        @NameInMap("SubStatus")
+        public String subStatus;
 
         public static DescribeApplicationStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationStatusResponseBodyData self = new DescribeApplicationStatusResponseBodyData();
@@ -143,36 +133,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public DescribeApplicationStatusResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {
-            this.lastChangeOrderId = lastChangeOrderId;
+        public DescribeApplicationStatusResponseBodyData setArmsAdvancedEnabled(String armsAdvancedEnabled) {
+            this.armsAdvancedEnabled = armsAdvancedEnabled;
             return this;
         }
-        public String getLastChangeOrderId() {
-            return this.lastChangeOrderId;
-        }
-
-        public DescribeApplicationStatusResponseBodyData setLastChangeOrderStatus(String lastChangeOrderStatus) {
-            this.lastChangeOrderStatus = lastChangeOrderStatus;
-            return this;
-        }
-        public String getLastChangeOrderStatus() {
-            return this.lastChangeOrderStatus;
-        }
-
-        public DescribeApplicationStatusResponseBodyData setLastChangeOrderRunning(Boolean lastChangeOrderRunning) {
-            this.lastChangeOrderRunning = lastChangeOrderRunning;
-            return this;
-        }
-        public Boolean getLastChangeOrderRunning() {
-            return this.lastChangeOrderRunning;
-        }
-
-        public DescribeApplicationStatusResponseBodyData setCurrentStatus(String currentStatus) {
-            this.currentStatus = currentStatus;
-            return this;
-        }
-        public String getCurrentStatus() {
-            return this.currentStatus;
+        public String getArmsAdvancedEnabled() {
+            return this.armsAdvancedEnabled;
         }
 
         public DescribeApplicationStatusResponseBodyData setArmsApmInfo(String armsApmInfo) {
@@ -183,6 +149,54 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             return this.armsApmInfo;
         }
 
+        public DescribeApplicationStatusResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setCurrentStatus(String currentStatus) {
+            this.currentStatus = currentStatus;
+            return this;
+        }
+        public String getCurrentStatus() {
+            return this.currentStatus;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setEnableAgent(Boolean enableAgent) {
+            this.enableAgent = enableAgent;
+            return this;
+        }
+        public Boolean getEnableAgent() {
+            return this.enableAgent;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setLastChangeOrderId(String lastChangeOrderId) {
+            this.lastChangeOrderId = lastChangeOrderId;
+            return this;
+        }
+        public String getLastChangeOrderId() {
+            return this.lastChangeOrderId;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setLastChangeOrderRunning(Boolean lastChangeOrderRunning) {
+            this.lastChangeOrderRunning = lastChangeOrderRunning;
+            return this;
+        }
+        public Boolean getLastChangeOrderRunning() {
+            return this.lastChangeOrderRunning;
+        }
+
+        public DescribeApplicationStatusResponseBodyData setLastChangeOrderStatus(String lastChangeOrderStatus) {
+            this.lastChangeOrderStatus = lastChangeOrderStatus;
+            return this;
+        }
+        public String getLastChangeOrderStatus() {
+            return this.lastChangeOrderStatus;
+        }
+
         public DescribeApplicationStatusResponseBodyData setRunningInstances(Integer runningInstances) {
             this.runningInstances = runningInstances;
             return this;
@@ -191,20 +205,12 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
             return this.runningInstances;
         }
 
-        public DescribeApplicationStatusResponseBodyData setArmsAdvancedEnabled(String armsAdvancedEnabled) {
-            this.armsAdvancedEnabled = armsAdvancedEnabled;
+        public DescribeApplicationStatusResponseBodyData setSubStatus(String subStatus) {
+            this.subStatus = subStatus;
             return this;
         }
-        public String getArmsAdvancedEnabled() {
-            return this.armsAdvancedEnabled;
-        }
-
-        public DescribeApplicationStatusResponseBodyData setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
     }

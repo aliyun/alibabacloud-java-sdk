@@ -4,41 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public java.util.List<ListAppVersionsResponseBodyData> data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<ListAppVersionsResponseBodyData> data;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListAppVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAppVersionsResponseBody self = new ListAppVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAppVersionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAppVersionsResponseBody setCode(String code) {
@@ -49,20 +35,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListAppVersionsResponseBody setMessage(String message) {
-        this.message = message;
+    public ListAppVersionsResponseBody setData(java.util.List<ListAppVersionsResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListAppVersionsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<ListAppVersionsResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListAppVersionsResponseBody setErrorCode(String errorCode) {
@@ -73,46 +51,57 @@ public class ListAppVersionsResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListAppVersionsResponseBody setData(java.util.List<ListAppVersionsResponseBodyData> data) {
-        this.data = data;
+    public ListAppVersionsResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public java.util.List<ListAppVersionsResponseBodyData> getData() {
-        return this.data;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListAppVersionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListAppVersionsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ListAppVersionsResponseBodyData extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public String id;
+        @NameInMap("BuildPackageUrl")
+        public String buildPackageUrl;
 
         @NameInMap("CreateTime")
-        @Validation(required = true)
         public String createTime;
 
-        @NameInMap("WarUrl")
-        @Validation(required = true)
-        public String warUrl;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Type")
-        @Validation(required = true)
         public String type;
 
-        @NameInMap("BuildPackageUrl")
-        @Validation(required = true)
-        public String buildPackageUrl;
+        @NameInMap("WarUrl")
+        public String warUrl;
 
         public static ListAppVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAppVersionsResponseBodyData self = new ListAppVersionsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListAppVersionsResponseBodyData setId(String id) {
-            this.id = id;
+        public ListAppVersionsResponseBodyData setBuildPackageUrl(String buildPackageUrl) {
+            this.buildPackageUrl = buildPackageUrl;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getBuildPackageUrl() {
+            return this.buildPackageUrl;
         }
 
         public ListAppVersionsResponseBodyData setCreateTime(String createTime) {
@@ -123,12 +112,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListAppVersionsResponseBodyData setWarUrl(String warUrl) {
-            this.warUrl = warUrl;
+        public ListAppVersionsResponseBodyData setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getWarUrl() {
-            return this.warUrl;
+        public String getId() {
+            return this.id;
         }
 
         public ListAppVersionsResponseBodyData setType(String type) {
@@ -139,12 +128,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ListAppVersionsResponseBodyData setBuildPackageUrl(String buildPackageUrl) {
-            this.buildPackageUrl = buildPackageUrl;
+        public ListAppVersionsResponseBodyData setWarUrl(String warUrl) {
+            this.warUrl = warUrl;
             return this;
         }
-        public String getBuildPackageUrl() {
-            return this.buildPackageUrl;
+        public String getWarUrl() {
+            return this.warUrl;
         }
 
     }

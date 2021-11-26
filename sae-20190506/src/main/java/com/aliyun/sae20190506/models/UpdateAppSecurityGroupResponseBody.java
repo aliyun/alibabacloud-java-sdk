@@ -4,41 +4,27 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppSecurityGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static UpdateAppSecurityGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppSecurityGroupResponseBody self = new UpdateAppSecurityGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateAppSecurityGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateAppSecurityGroupResponseBody setCode(String code) {
@@ -49,14 +35,6 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateAppSecurityGroupResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public UpdateAppSecurityGroupResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -65,12 +43,20 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public UpdateAppSecurityGroupResponseBody setTraceId(String traceId) {
-        this.traceId = traceId;
+    public UpdateAppSecurityGroupResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getTraceId() {
-        return this.traceId;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpdateAppSecurityGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateAppSecurityGroupResponseBody setSuccess(Boolean success) {
@@ -79,6 +65,14 @@ public class UpdateAppSecurityGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateAppSecurityGroupResponseBody setTraceId(String traceId) {
+        this.traceId = traceId;
+        return this;
+    }
+    public String getTraceId() {
+        return this.traceId;
     }
 
 }

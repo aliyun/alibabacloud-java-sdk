@@ -4,45 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    @NameInMap("Data")
+    public DescribeIngressResponseBodyData data;
 
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
-    @NameInMap("TraceId")
-    @Validation(required = true)
-    public String traceId;
+    @NameInMap("Message")
+    public String message;
 
-    @NameInMap("Data")
-    @Validation(required = true)
-    public DescribeIngressResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TraceId")
+    public String traceId;
 
     public static DescribeIngressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIngressResponseBody self = new DescribeIngressResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeIngressResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeIngressResponseBody setCode(String code) {
@@ -53,20 +38,12 @@ public class DescribeIngressResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeIngressResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeIngressResponseBody setData(DescribeIngressResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeIngressResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeIngressResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeIngressResponseBody setErrorCode(String errorCode) {
@@ -77,6 +54,30 @@ public class DescribeIngressResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public DescribeIngressResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeIngressResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeIngressResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeIngressResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -85,34 +86,62 @@ public class DescribeIngressResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public DescribeIngressResponseBody setData(DescribeIngressResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeIngressResponseBodyData getData() {
-        return this.data;
+    public static class DescribeIngressResponseBodyDataDefaultRule extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("ContainerPort")
+        public Integer containerPort;
+
+        public static DescribeIngressResponseBodyDataDefaultRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIngressResponseBodyDataDefaultRule self = new DescribeIngressResponseBodyDataDefaultRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIngressResponseBodyDataDefaultRule setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public DescribeIngressResponseBodyDataDefaultRule setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public DescribeIngressResponseBodyDataDefaultRule setContainerPort(Integer containerPort) {
+            this.containerPort = containerPort;
+            return this;
+        }
+        public Integer getContainerPort() {
+            return this.containerPort;
+        }
+
     }
 
     public static class DescribeIngressResponseBodyDataRules extends TeaModel {
         @NameInMap("AppId")
-        @Validation(required = true)
         public String appId;
 
+        @NameInMap("AppName")
+        public String appName;
+
         @NameInMap("ContainerPort")
-        @Validation(required = true)
         public Integer containerPort;
 
         @NameInMap("Domain")
-        @Validation(required = true)
         public String domain;
 
         @NameInMap("Path")
-        @Validation(required = true)
         public String path;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
 
         public static DescribeIngressResponseBodyDataRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeIngressResponseBodyDataRules self = new DescribeIngressResponseBodyDataRules();
@@ -125,6 +154,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public DescribeIngressResponseBodyDataRules setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public DescribeIngressResponseBodyDataRules setContainerPort(Integer containerPort) {
@@ -151,104 +188,66 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.path;
         }
 
-        public DescribeIngressResponseBodyDataRules setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-    }
-
-    public static class DescribeIngressResponseBodyDataDefaultRule extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
-
-        @NameInMap("ContainerPort")
-        @Validation(required = true)
-        public Integer containerPort;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        public static DescribeIngressResponseBodyDataDefaultRule build(java.util.Map<String, ?> map) throws Exception {
-            DescribeIngressResponseBodyDataDefaultRule self = new DescribeIngressResponseBodyDataDefaultRule();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeIngressResponseBodyDataDefaultRule setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public DescribeIngressResponseBodyDataDefaultRule setContainerPort(Integer containerPort) {
-            this.containerPort = containerPort;
-            return this;
-        }
-        public Integer getContainerPort() {
-            return this.containerPort;
-        }
-
-        public DescribeIngressResponseBodyDataDefaultRule setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
     }
 
     public static class DescribeIngressResponseBodyData extends TeaModel {
+        @NameInMap("CertId")
+        public String certId;
+
+        @NameInMap("DefaultRule")
+        public DescribeIngressResponseBodyDataDefaultRule defaultRule;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("Id")
-        @Validation(required = true)
         public Long id;
 
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
+
         @NameInMap("Name")
-        @Validation(required = true)
         public String name;
 
         @NameInMap("NamespaceId")
-        @Validation(required = true)
         public String namespaceId;
 
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("SlbId")
-        @Validation(required = true)
-        public String slbId;
-
-        @NameInMap("ListenerPort")
-        @Validation(required = true)
-        public Integer listenerPort;
-
-        @NameInMap("CertId")
-        @Validation(required = true)
-        public String certId;
-
-        @NameInMap("SlbType")
-        @Validation(required = true)
-        public String slbType;
-
         @NameInMap("Rules")
-        @Validation(required = true)
         public java.util.List<DescribeIngressResponseBodyDataRules> rules;
 
-        @NameInMap("DefaultRule")
-        @Validation(required = true)
-        public DescribeIngressResponseBodyDataDefaultRule defaultRule;
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbType")
+        public String slbType;
 
         public static DescribeIngressResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeIngressResponseBodyData self = new DescribeIngressResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIngressResponseBodyData setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
+        public DescribeIngressResponseBodyData setDefaultRule(DescribeIngressResponseBodyDataDefaultRule defaultRule) {
+            this.defaultRule = defaultRule;
+            return this;
+        }
+        public DescribeIngressResponseBodyDataDefaultRule getDefaultRule() {
+            return this.defaultRule;
+        }
+
+        public DescribeIngressResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeIngressResponseBodyData setId(Long id) {
@@ -257,6 +256,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeIngressResponseBodyData setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public Integer getListenerPort() {
+            return this.listenerPort;
         }
 
         public DescribeIngressResponseBodyData setName(String name) {
@@ -275,12 +282,12 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.namespaceId;
         }
 
-        public DescribeIngressResponseBodyData setDescription(String description) {
-            this.description = description;
+        public DescribeIngressResponseBodyData setRules(java.util.List<DescribeIngressResponseBodyDataRules> rules) {
+            this.rules = rules;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public java.util.List<DescribeIngressResponseBodyDataRules> getRules() {
+            return this.rules;
         }
 
         public DescribeIngressResponseBodyData setSlbId(String slbId) {
@@ -291,44 +298,12 @@ public class DescribeIngressResponseBody extends TeaModel {
             return this.slbId;
         }
 
-        public DescribeIngressResponseBodyData setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public Integer getListenerPort() {
-            return this.listenerPort;
-        }
-
-        public DescribeIngressResponseBodyData setCertId(String certId) {
-            this.certId = certId;
-            return this;
-        }
-        public String getCertId() {
-            return this.certId;
-        }
-
         public DescribeIngressResponseBodyData setSlbType(String slbType) {
             this.slbType = slbType;
             return this;
         }
         public String getSlbType() {
             return this.slbType;
-        }
-
-        public DescribeIngressResponseBodyData setRules(java.util.List<DescribeIngressResponseBodyDataRules> rules) {
-            this.rules = rules;
-            return this;
-        }
-        public java.util.List<DescribeIngressResponseBodyDataRules> getRules() {
-            return this.rules;
-        }
-
-        public DescribeIngressResponseBodyData setDefaultRule(DescribeIngressResponseBodyDataDefaultRule defaultRule) {
-            this.defaultRule = defaultRule;
-            return this;
-        }
-        public DescribeIngressResponseBodyDataDefaultRule getDefaultRule() {
-            return this.defaultRule;
         }
 
     }

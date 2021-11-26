@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class QueryResourceStaticsResponseBody extends TeaModel {
     @NameInMap("Code")
-    @Validation(required = true)
     public String code;
 
+    @NameInMap("Data")
+    public QueryResourceStaticsResponseBodyData data;
+
     @NameInMap("ErrorCode")
-    @Validation(required = true)
     public String errorCode;
 
     @NameInMap("Message")
-    @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
-    @Validation(required = true)
     public Boolean success;
 
     @NameInMap("TraceId")
-    @Validation(required = true)
     public String traceId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public QueryResourceStaticsResponseBodyData data;
 
     public static QueryResourceStaticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryResourceStaticsResponseBody self = new QueryResourceStaticsResponseBody();
@@ -43,6 +36,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryResourceStaticsResponseBody setData(QueryResourceStaticsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryResourceStaticsResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryResourceStaticsResponseBody setErrorCode(String errorCode) {
@@ -61,6 +62,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public QueryResourceStaticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryResourceStaticsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -77,29 +86,11 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public QueryResourceStaticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryResourceStaticsResponseBody setData(QueryResourceStaticsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryResourceStaticsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryResourceStaticsResponseBodyDataRealTimeRes extends TeaModel {
         @NameInMap("Cpu")
-        @Validation(required = true)
         public Float cpu;
 
         @NameInMap("Memory")
-        @Validation(required = true)
         public Float memory;
 
         public static QueryResourceStaticsResponseBodyDataRealTimeRes build(java.util.Map<String, ?> map) throws Exception {
@@ -127,11 +118,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
         @NameInMap("Cpu")
-        @Validation(required = true)
         public Float cpu;
 
         @NameInMap("Memory")
-        @Validation(required = true)
         public Float memory;
 
         public static QueryResourceStaticsResponseBodyDataSummary build(java.util.Map<String, ?> map) throws Exception {
@@ -159,11 +148,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     public static class QueryResourceStaticsResponseBodyData extends TeaModel {
         @NameInMap("RealTimeRes")
-        @Validation(required = true)
         public QueryResourceStaticsResponseBodyDataRealTimeRes realTimeRes;
 
         @NameInMap("Summary")
-        @Validation(required = true)
         public QueryResourceStaticsResponseBodyDataSummary summary;
 
         public static QueryResourceStaticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
