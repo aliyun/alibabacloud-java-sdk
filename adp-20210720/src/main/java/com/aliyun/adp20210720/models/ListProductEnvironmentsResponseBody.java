@@ -7,11 +7,11 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("msg")
-    public String msg;
-
     @NameInMap("data")
     public java.util.List<ListProductEnvironmentsResponseBodyData> data;
+
+    @NameInMap("msg")
+    public String msg;
 
     public static ListProductEnvironmentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProductEnvironmentsResponseBody self = new ListProductEnvironmentsResponseBody();
@@ -26,14 +26,6 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListProductEnvironmentsResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public ListProductEnvironmentsResponseBody setData(java.util.List<ListProductEnvironmentsResponseBodyData> data) {
         this.data = data;
         return this;
@@ -42,15 +34,41 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListProductEnvironmentsResponseBodyData extends TeaModel {
-        @NameInMap("uid")
-        public String uid;
+    public ListProductEnvironmentsResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
 
-        @NameInMap("productUID")
-        public String productUID;
+    public static class ListProductEnvironmentsResponseBodyData extends TeaModel {
+        @NameInMap("envName")
+        public String envName;
+
+        @NameInMap("envType")
+        public String envType;
+
+        @NameInMap("envUID")
+        public String envUID;
+
+        @NameInMap("instanceStatus")
+        public String instanceStatus;
+
+        @NameInMap("oldProductVersion")
+        public String oldProductVersion;
+
+        @NameInMap("oldProductVersionUID")
+        public String oldProductVersionUID;
+
+        @NameInMap("platformStatus")
+        public String platformStatus;
 
         @NameInMap("productName")
         public String productName;
+
+        @NameInMap("productUID")
+        public String productUID;
 
         @NameInMap("productVersion")
         public String productVersion;
@@ -61,52 +79,74 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         @NameInMap("provider")
         public String provider;
 
-        @NameInMap("envUID")
-        public String envUID;
-
-        @NameInMap("envType")
-        public String envType;
-
-        @NameInMap("envName")
-        public String envName;
-
-        @NameInMap("oldProductVersion")
-        public String oldProductVersion;
-
-        @NameInMap("oldProductVersionUID")
-        public String oldProductVersionUID;
-
-        @NameInMap("vendorType")
-        public String vendorType;
-
-        @NameInMap("instanceStatus")
-        public String instanceStatus;
-
-        @NameInMap("platformStatus")
-        public String platformStatus;
+        @NameInMap("uid")
+        public String uid;
 
         @NameInMap("vendorConfig")
         public String vendorConfig;
+
+        @NameInMap("vendorType")
+        public String vendorType;
 
         public static ListProductEnvironmentsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListProductEnvironmentsResponseBodyData self = new ListProductEnvironmentsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListProductEnvironmentsResponseBodyData setUid(String uid) {
-            this.uid = uid;
+        public ListProductEnvironmentsResponseBodyData setEnvName(String envName) {
+            this.envName = envName;
             return this;
         }
-        public String getUid() {
-            return this.uid;
+        public String getEnvName() {
+            return this.envName;
         }
 
-        public ListProductEnvironmentsResponseBodyData setProductUID(String productUID) {
-            this.productUID = productUID;
+        public ListProductEnvironmentsResponseBodyData setEnvType(String envType) {
+            this.envType = envType;
             return this;
         }
-        public String getProductUID() {
-            return this.productUID;
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setEnvUID(String envUID) {
+            this.envUID = envUID;
+            return this;
+        }
+        public String getEnvUID() {
+            return this.envUID;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setOldProductVersion(String oldProductVersion) {
+            this.oldProductVersion = oldProductVersion;
+            return this;
+        }
+        public String getOldProductVersion() {
+            return this.oldProductVersion;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setOldProductVersionUID(String oldProductVersionUID) {
+            this.oldProductVersionUID = oldProductVersionUID;
+            return this;
+        }
+        public String getOldProductVersionUID() {
+            return this.oldProductVersionUID;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setPlatformStatus(String platformStatus) {
+            this.platformStatus = platformStatus;
+            return this;
+        }
+        public String getPlatformStatus() {
+            return this.platformStatus;
         }
 
         public ListProductEnvironmentsResponseBodyData setProductName(String productName) {
@@ -115,6 +155,14 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         }
         public String getProductName() {
             return this.productName;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setProductUID(String productUID) {
+            this.productUID = productUID;
+            return this;
+        }
+        public String getProductUID() {
+            return this.productUID;
         }
 
         public ListProductEnvironmentsResponseBodyData setProductVersion(String productVersion) {
@@ -141,68 +189,12 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
             return this.provider;
         }
 
-        public ListProductEnvironmentsResponseBodyData setEnvUID(String envUID) {
-            this.envUID = envUID;
+        public ListProductEnvironmentsResponseBodyData setUid(String uid) {
+            this.uid = uid;
             return this;
         }
-        public String getEnvUID() {
-            return this.envUID;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setEnvName(String envName) {
-            this.envName = envName;
-            return this;
-        }
-        public String getEnvName() {
-            return this.envName;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setOldProductVersion(String oldProductVersion) {
-            this.oldProductVersion = oldProductVersion;
-            return this;
-        }
-        public String getOldProductVersion() {
-            return this.oldProductVersion;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setOldProductVersionUID(String oldProductVersionUID) {
-            this.oldProductVersionUID = oldProductVersionUID;
-            return this;
-        }
-        public String getOldProductVersionUID() {
-            return this.oldProductVersionUID;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setVendorType(String vendorType) {
-            this.vendorType = vendorType;
-            return this;
-        }
-        public String getVendorType() {
-            return this.vendorType;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setInstanceStatus(String instanceStatus) {
-            this.instanceStatus = instanceStatus;
-            return this;
-        }
-        public String getInstanceStatus() {
-            return this.instanceStatus;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setPlatformStatus(String platformStatus) {
-            this.platformStatus = platformStatus;
-            return this;
-        }
-        public String getPlatformStatus() {
-            return this.platformStatus;
+        public String getUid() {
+            return this.uid;
         }
 
         public ListProductEnvironmentsResponseBodyData setVendorConfig(String vendorConfig) {
@@ -211,6 +203,14 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         }
         public String getVendorConfig() {
             return this.vendorConfig;
+        }
+
+        public ListProductEnvironmentsResponseBodyData setVendorType(String vendorType) {
+            this.vendorType = vendorType;
+            return this;
+        }
+        public String getVendorType() {
+            return this.vendorType;
         }
 
     }

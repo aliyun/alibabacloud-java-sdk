@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetWorkflowStatusResponseBody extends TeaModel {
-    @NameInMap("data")
-    public GetWorkflowStatusResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public GetWorkflowStatusResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetWorkflowStatusResponseBody setData(GetWorkflowStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetWorkflowStatusResponseBodyData getData() {
-        return this.data;
-    }
-
     public GetWorkflowStatusResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetWorkflowStatusResponseBody setData(GetWorkflowStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetWorkflowStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public GetWorkflowStatusResponseBody setMsg(String msg) {

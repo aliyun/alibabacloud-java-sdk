@@ -4,17 +4,23 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionsRequest extends TeaModel {
-    // 过滤参数，产品uid
-    @NameInMap("productUID")
-    public String productUID;
+    @NameInMap("pageNum")
+    public String pageNum;
+
+    @NameInMap("pageSize")
+    public String pageSize;
+
+    // 支持的platform，为空则不过滤
+    @NameInMap("platforms")
+    public java.util.List<ListProductVersionsRequestPlatforms> platforms;
 
     // 过滤参数，产品名称
     @NameInMap("productName")
     public String productName;
 
-    // 过滤参数，产品版本号
-    @NameInMap("version")
-    public String version;
+    // 过滤参数，产品uid
+    @NameInMap("productUID")
+    public String productUID;
 
     // 过滤参数，是否已发布
     @NameInMap("released")
@@ -24,27 +30,37 @@ public class ListProductVersionsRequest extends TeaModel {
     @NameInMap("supportedFoundationTypes")
     public java.util.List<String> supportedFoundationTypes;
 
-    // 支持的platform，为空则不过滤
-    @NameInMap("platforms")
-    public java.util.List<ListProductVersionsRequestPlatforms> platforms;
-
-    @NameInMap("pageNum")
-    public String pageNum;
-
-    @NameInMap("pageSize")
-    public String pageSize;
+    // 过滤参数，产品版本号
+    @NameInMap("version")
+    public String version;
 
     public static ListProductVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionsRequest self = new ListProductVersionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListProductVersionsRequest setProductUID(String productUID) {
-        this.productUID = productUID;
+    public ListProductVersionsRequest setPageNum(String pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getProductUID() {
-        return this.productUID;
+    public String getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListProductVersionsRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListProductVersionsRequest setPlatforms(java.util.List<ListProductVersionsRequestPlatforms> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<ListProductVersionsRequestPlatforms> getPlatforms() {
+        return this.platforms;
     }
 
     public ListProductVersionsRequest setProductName(String productName) {
@@ -55,12 +71,12 @@ public class ListProductVersionsRequest extends TeaModel {
         return this.productName;
     }
 
-    public ListProductVersionsRequest setVersion(String version) {
-        this.version = version;
+    public ListProductVersionsRequest setProductUID(String productUID) {
+        this.productUID = productUID;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getProductUID() {
+        return this.productUID;
     }
 
     public ListProductVersionsRequest setReleased(Boolean released) {
@@ -79,28 +95,12 @@ public class ListProductVersionsRequest extends TeaModel {
         return this.supportedFoundationTypes;
     }
 
-    public ListProductVersionsRequest setPlatforms(java.util.List<ListProductVersionsRequestPlatforms> platforms) {
-        this.platforms = platforms;
+    public ListProductVersionsRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public java.util.List<ListProductVersionsRequestPlatforms> getPlatforms() {
-        return this.platforms;
-    }
-
-    public ListProductVersionsRequest setPageNum(String pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public String getPageNum() {
-        return this.pageNum;
-    }
-
-    public ListProductVersionsRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
+    public String getVersion() {
+        return this.version;
     }
 
     public static class ListProductVersionsRequestPlatforms extends TeaModel {

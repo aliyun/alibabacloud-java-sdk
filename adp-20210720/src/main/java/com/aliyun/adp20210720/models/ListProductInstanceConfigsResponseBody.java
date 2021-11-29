@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductInstanceConfigsResponseBody extends TeaModel {
-    @NameInMap("data")
-    public ListProductInstanceConfigsResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public ListProductInstanceConfigsResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListProductInstanceConfigsResponseBody setData(ListProductInstanceConfigsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListProductInstanceConfigsResponseBodyData getData() {
-        return this.data;
-    }
-
     public ListProductInstanceConfigsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListProductInstanceConfigsResponseBody setData(ListProductInstanceConfigsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListProductInstanceConfigsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListProductInstanceConfigsResponseBody setMsg(String msg) {
@@ -43,14 +43,38 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListProductInstanceConfigsResponseBodyDataList extends TeaModel {
+        @NameInMap("componentName")
+        public String componentName;
+
+        @NameInMap("componentReleaseName")
+        public String componentReleaseName;
+
+        @NameInMap("componentUID")
+        public String componentUID;
+
+        @NameInMap("componentVersionUID")
+        public String componentVersionUID;
+
         @NameInMap("createdAt")
         public String createdAt;
 
         @NameInMap("description")
         public String description;
 
+        @NameInMap("envUID")
+        public String envUID;
+
         @NameInMap("name")
         public String name;
+
+        @NameInMap("parentComponentName")
+        public String parentComponentName;
+
+        @NameInMap("parentComponentReleaseName")
+        public String parentComponentReleaseName;
+
+        @NameInMap("parentComponentVersionUID")
+        public String parentComponentVersionUID;
 
         @NameInMap("productName")
         public String productName;
@@ -64,39 +88,47 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
         @NameInMap("uid")
         public String uid;
 
-        @NameInMap("vendorType")
-        public String vendorType;
-
         @NameInMap("value")
         public String value;
 
-        @NameInMap("componentUID")
-        public String componentUID;
-
-        @NameInMap("componentVersionUID")
-        public String componentVersionUID;
-
-        @NameInMap("componentName")
-        public String componentName;
-
-        @NameInMap("parentComponentName")
-        public String parentComponentName;
-
-        @NameInMap("componentReleaseName")
-        public String componentReleaseName;
-
-        @NameInMap("parentComponentReleaseName")
-        public String parentComponentReleaseName;
-
-        @NameInMap("parentComponentVersionUID")
-        public String parentComponentVersionUID;
-
-        @NameInMap("envUID")
-        public String envUID;
+        @NameInMap("vendorType")
+        public String vendorType;
 
         public static ListProductInstanceConfigsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListProductInstanceConfigsResponseBodyDataList self = new ListProductInstanceConfigsResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setComponentName(String componentName) {
+            this.componentName = componentName;
+            return this;
+        }
+        public String getComponentName() {
+            return this.componentName;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setComponentReleaseName(String componentReleaseName) {
+            this.componentReleaseName = componentReleaseName;
+            return this;
+        }
+        public String getComponentReleaseName() {
+            return this.componentReleaseName;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setComponentUID(String componentUID) {
+            this.componentUID = componentUID;
+            return this;
+        }
+        public String getComponentUID() {
+            return this.componentUID;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setComponentVersionUID(String componentVersionUID) {
+            this.componentVersionUID = componentVersionUID;
+            return this;
+        }
+        public String getComponentVersionUID() {
+            return this.componentVersionUID;
         }
 
         public ListProductInstanceConfigsResponseBodyDataList setCreatedAt(String createdAt) {
@@ -115,12 +147,44 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListProductInstanceConfigsResponseBodyDataList setEnvUID(String envUID) {
+            this.envUID = envUID;
+            return this;
+        }
+        public String getEnvUID() {
+            return this.envUID;
+        }
+
         public ListProductInstanceConfigsResponseBodyDataList setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setParentComponentName(String parentComponentName) {
+            this.parentComponentName = parentComponentName;
+            return this;
+        }
+        public String getParentComponentName() {
+            return this.parentComponentName;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setParentComponentReleaseName(String parentComponentReleaseName) {
+            this.parentComponentReleaseName = parentComponentReleaseName;
+            return this;
+        }
+        public String getParentComponentReleaseName() {
+            return this.parentComponentReleaseName;
+        }
+
+        public ListProductInstanceConfigsResponseBodyDataList setParentComponentVersionUID(String parentComponentVersionUID) {
+            this.parentComponentVersionUID = parentComponentVersionUID;
+            return this;
+        }
+        public String getParentComponentVersionUID() {
+            return this.parentComponentVersionUID;
         }
 
         public ListProductInstanceConfigsResponseBodyDataList setProductName(String productName) {
@@ -155,14 +219,6 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
             return this.uid;
         }
 
-        public ListProductInstanceConfigsResponseBodyDataList setVendorType(String vendorType) {
-            this.vendorType = vendorType;
-            return this;
-        }
-        public String getVendorType() {
-            return this.vendorType;
-        }
-
         public ListProductInstanceConfigsResponseBodyDataList setValue(String value) {
             this.value = value;
             return this;
@@ -171,68 +227,12 @@ public class ListProductInstanceConfigsResponseBody extends TeaModel {
             return this.value;
         }
 
-        public ListProductInstanceConfigsResponseBodyDataList setComponentUID(String componentUID) {
-            this.componentUID = componentUID;
+        public ListProductInstanceConfigsResponseBodyDataList setVendorType(String vendorType) {
+            this.vendorType = vendorType;
             return this;
         }
-        public String getComponentUID() {
-            return this.componentUID;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setComponentVersionUID(String componentVersionUID) {
-            this.componentVersionUID = componentVersionUID;
-            return this;
-        }
-        public String getComponentVersionUID() {
-            return this.componentVersionUID;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setComponentName(String componentName) {
-            this.componentName = componentName;
-            return this;
-        }
-        public String getComponentName() {
-            return this.componentName;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setParentComponentName(String parentComponentName) {
-            this.parentComponentName = parentComponentName;
-            return this;
-        }
-        public String getParentComponentName() {
-            return this.parentComponentName;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setComponentReleaseName(String componentReleaseName) {
-            this.componentReleaseName = componentReleaseName;
-            return this;
-        }
-        public String getComponentReleaseName() {
-            return this.componentReleaseName;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setParentComponentReleaseName(String parentComponentReleaseName) {
-            this.parentComponentReleaseName = parentComponentReleaseName;
-            return this;
-        }
-        public String getParentComponentReleaseName() {
-            return this.parentComponentReleaseName;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setParentComponentVersionUID(String parentComponentVersionUID) {
-            this.parentComponentVersionUID = parentComponentVersionUID;
-            return this;
-        }
-        public String getParentComponentVersionUID() {
-            return this.parentComponentVersionUID;
-        }
-
-        public ListProductInstanceConfigsResponseBodyDataList setEnvUID(String envUID) {
-            this.envUID = envUID;
-            return this;
-        }
-        public String getEnvUID() {
-            return this.envUID;
+        public String getVendorType() {
+            return this.vendorType;
         }
 
     }

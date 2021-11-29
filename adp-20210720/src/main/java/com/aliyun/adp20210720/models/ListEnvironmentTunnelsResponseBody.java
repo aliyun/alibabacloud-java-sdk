@@ -8,12 +8,12 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("data")
+    public ListEnvironmentTunnelsResponseBodyData data;
+
     // 错误信息
     @NameInMap("msg")
     public String msg;
-
-    @NameInMap("data")
-    public ListEnvironmentTunnelsResponseBodyData data;
 
     public static ListEnvironmentTunnelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentTunnelsResponseBody self = new ListEnvironmentTunnelsResponseBody();
@@ -28,14 +28,6 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListEnvironmentTunnelsResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public ListEnvironmentTunnelsResponseBody setData(ListEnvironmentTunnelsResponseBodyData data) {
         this.data = data;
         return this;
@@ -44,10 +36,26 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListEnvironmentTunnelsResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
     public static class ListEnvironmentTunnelsResponseBodyDataListTunnelConfig extends TeaModel {
         // 跳板机hostname
         @NameInMap("hostname")
         public String hostname;
+
+        // 跳板机密码
+        @NameInMap("password")
+        public String password;
+
+        // 直连regionId
+        @NameInMap("regionId")
+        public String regionId;
 
         // 跳板机ssh端口号
         @NameInMap("sshPort")
@@ -57,17 +65,9 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         @NameInMap("username")
         public String username;
 
-        // 跳板机密码
-        @NameInMap("password")
-        public String password;
-
         // 直连vpcId
         @NameInMap("vpcId")
         public String vpcId;
-
-        // 直连regionId
-        @NameInMap("regionId")
-        public String regionId;
 
         public static ListEnvironmentTunnelsResponseBodyDataListTunnelConfig build(java.util.Map<String, ?> map) throws Exception {
             ListEnvironmentTunnelsResponseBodyDataListTunnelConfig self = new ListEnvironmentTunnelsResponseBodyDataListTunnelConfig();
@@ -80,6 +80,22 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         }
         public String getHostname() {
             return this.hostname;
+        }
+
+        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setSshPort(Integer sshPort) {
@@ -98,14 +114,6 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
             return this.username;
         }
 
-        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
         public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
@@ -114,35 +122,19 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
     }
 
     public static class ListEnvironmentTunnelsResponseBodyDataList extends TeaModel {
+        @NameInMap("tunnelConfig")
+        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig tunnelConfig;
+
         // 通道类型
         @NameInMap("tunnelType")
         public String tunnelType;
 
-        @NameInMap("tunnelConfig")
-        public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig tunnelConfig;
-
         public static ListEnvironmentTunnelsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListEnvironmentTunnelsResponseBodyDataList self = new ListEnvironmentTunnelsResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListEnvironmentTunnelsResponseBodyDataList setTunnelType(String tunnelType) {
-            this.tunnelType = tunnelType;
-            return this;
-        }
-        public String getTunnelType() {
-            return this.tunnelType;
         }
 
         public ListEnvironmentTunnelsResponseBodyDataList setTunnelConfig(ListEnvironmentTunnelsResponseBodyDataListTunnelConfig tunnelConfig) {
@@ -151,6 +143,14 @@ public class ListEnvironmentTunnelsResponseBody extends TeaModel {
         }
         public ListEnvironmentTunnelsResponseBodyDataListTunnelConfig getTunnelConfig() {
             return this.tunnelConfig;
+        }
+
+        public ListEnvironmentTunnelsResponseBodyDataList setTunnelType(String tunnelType) {
+            this.tunnelType = tunnelType;
+            return this;
+        }
+        public String getTunnelType() {
+            return this.tunnelType;
         }
 
     }

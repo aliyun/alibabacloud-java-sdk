@@ -4,21 +4,37 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    @NameInMap("fuzzy")
+    public String fuzzy;
+
+    @NameInMap("name")
+    public String name;
+
     @NameInMap("pageNum")
     public Integer pageNum;
 
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("name")
-    public String name;
-
-    @NameInMap("fuzzy")
-    public String fuzzy;
-
     public static ListProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductsRequest self = new ListProductsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductsRequest setFuzzy(String fuzzy) {
+        this.fuzzy = fuzzy;
+        return this;
+    }
+    public String getFuzzy() {
+        return this.fuzzy;
+    }
+
+    public ListProductsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListProductsRequest setPageNum(Integer pageNum) {
@@ -35,22 +51,6 @@ public class ListProductsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListProductsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ListProductsRequest setFuzzy(String fuzzy) {
-        this.fuzzy = fuzzy;
-        return this;
-    }
-    public String getFuzzy() {
-        return this.fuzzy;
     }
 
 }

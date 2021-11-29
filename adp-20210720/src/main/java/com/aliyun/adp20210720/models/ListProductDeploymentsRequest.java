@@ -7,14 +7,14 @@ public class ListProductDeploymentsRequest extends TeaModel {
     @NameInMap("environmentUID")
     public String environmentUID;
 
-    @NameInMap("productVersionUID")
-    public String productVersionUID;
-
     @NameInMap("pageNum")
     public Integer pageNum;
 
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("productVersionUID")
+    public String productVersionUID;
 
     public static ListProductDeploymentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductDeploymentsRequest self = new ListProductDeploymentsRequest();
@@ -27,14 +27,6 @@ public class ListProductDeploymentsRequest extends TeaModel {
     }
     public String getEnvironmentUID() {
         return this.environmentUID;
-    }
-
-    public ListProductDeploymentsRequest setProductVersionUID(String productVersionUID) {
-        this.productVersionUID = productVersionUID;
-        return this;
-    }
-    public String getProductVersionUID() {
-        return this.productVersionUID;
     }
 
     public ListProductDeploymentsRequest setPageNum(Integer pageNum) {
@@ -51,6 +43,14 @@ public class ListProductDeploymentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListProductDeploymentsRequest setProductVersionUID(String productVersionUID) {
+        this.productVersionUID = productVersionUID;
+        return this;
+    }
+    public String getProductVersionUID() {
+        return this.productVersionUID;
     }
 
 }

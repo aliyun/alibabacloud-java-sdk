@@ -7,11 +7,11 @@ public class AddProductComponentVersionResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("msg")
-    public String msg;
-
     @NameInMap("data")
     public AddProductComponentVersionResponseBodyData data;
+
+    @NameInMap("msg")
+    public String msg;
 
     public static AddProductComponentVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddProductComponentVersionResponseBody self = new AddProductComponentVersionResponseBody();
@@ -26,20 +26,20 @@ public class AddProductComponentVersionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AddProductComponentVersionResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public AddProductComponentVersionResponseBody setData(AddProductComponentVersionResponseBodyData data) {
         this.data = data;
         return this;
     }
     public AddProductComponentVersionResponseBodyData getData() {
         return this.data;
+    }
+
+    public AddProductComponentVersionResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
     }
 
     public static class AddProductComponentVersionResponseBodyData extends TeaModel {

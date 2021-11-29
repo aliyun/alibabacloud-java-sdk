@@ -4,6 +4,14 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class UpdateEnvironmentNodeRequest extends TeaModel {
+    // 保留业务分区
+    @NameInMap("applicationDisk")
+    public String applicationDisk;
+
+    // etcd数据盘
+    @NameInMap("etcdDisk")
+    public String etcdDisk;
+
     @NameInMap("labels")
     public java.util.Map<String, ?> labels;
 
@@ -13,10 +21,6 @@ public class UpdateEnvironmentNodeRequest extends TeaModel {
     @NameInMap("taints")
     public java.util.List<UpdateEnvironmentNodeRequestTaints> taints;
 
-    // etcd数据盘
-    @NameInMap("etcdDisk")
-    public String etcdDisk;
-
     // k8s管控数据盘
     @NameInMap("tridentSystemDisk")
     public String tridentSystemDisk;
@@ -25,13 +29,25 @@ public class UpdateEnvironmentNodeRequest extends TeaModel {
     @NameInMap("tridentSystemSizeDisk")
     public Integer tridentSystemSizeDisk;
 
-    // 保留业务分区
-    @NameInMap("applicationDisk")
-    public String applicationDisk;
-
     public static UpdateEnvironmentNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEnvironmentNodeRequest self = new UpdateEnvironmentNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateEnvironmentNodeRequest setApplicationDisk(String applicationDisk) {
+        this.applicationDisk = applicationDisk;
+        return this;
+    }
+    public String getApplicationDisk() {
+        return this.applicationDisk;
+    }
+
+    public UpdateEnvironmentNodeRequest setEtcdDisk(String etcdDisk) {
+        this.etcdDisk = etcdDisk;
+        return this;
+    }
+    public String getEtcdDisk() {
+        return this.etcdDisk;
     }
 
     public UpdateEnvironmentNodeRequest setLabels(java.util.Map<String, ?> labels) {
@@ -58,14 +74,6 @@ public class UpdateEnvironmentNodeRequest extends TeaModel {
         return this.taints;
     }
 
-    public UpdateEnvironmentNodeRequest setEtcdDisk(String etcdDisk) {
-        this.etcdDisk = etcdDisk;
-        return this;
-    }
-    public String getEtcdDisk() {
-        return this.etcdDisk;
-    }
-
     public UpdateEnvironmentNodeRequest setTridentSystemDisk(String tridentSystemDisk) {
         this.tridentSystemDisk = tridentSystemDisk;
         return this;
@@ -80,14 +88,6 @@ public class UpdateEnvironmentNodeRequest extends TeaModel {
     }
     public Integer getTridentSystemSizeDisk() {
         return this.tridentSystemSizeDisk;
-    }
-
-    public UpdateEnvironmentNodeRequest setApplicationDisk(String applicationDisk) {
-        this.applicationDisk = applicationDisk;
-        return this;
-    }
-    public String getApplicationDisk() {
-        return this.applicationDisk;
     }
 
     public static class UpdateEnvironmentNodeRequestTaints extends TeaModel {

@@ -4,23 +4,32 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class PutProductInstanceConfigRequest extends TeaModel {
-    @NameInMap("environmentUID")
-    public String environmentUID;
-
-    @NameInMap("productVersionUID")
-    public String productVersionUID;
-
     @NameInMap("componentUID")
     public String componentUID;
 
     @NameInMap("componentVersionUID")
     public String componentVersionUID;
 
+    @NameInMap("configUID")
+    public String configUID;
+
+    @NameInMap("description")
+    public String description;
+
+    @NameInMap("environmentUID")
+    public String environmentUID;
+
     @NameInMap("name")
     public String name;
 
-    @NameInMap("configUID")
-    public String configUID;
+    @NameInMap("parentComponentName")
+    public String parentComponentName;
+
+    @NameInMap("parentComponentVersionUID")
+    public String parentComponentVersionUID;
+
+    @NameInMap("productVersionUID")
+    public String productVersionUID;
 
     @NameInMap("releaseName")
     public String releaseName;
@@ -31,34 +40,9 @@ public class PutProductInstanceConfigRequest extends TeaModel {
     @NameInMap("value")
     public String value;
 
-    @NameInMap("description")
-    public String description;
-
-    @NameInMap("parentComponentName")
-    public String parentComponentName;
-
-    @NameInMap("parentComponentVersionUID")
-    public String parentComponentVersionUID;
-
     public static PutProductInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         PutProductInstanceConfigRequest self = new PutProductInstanceConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PutProductInstanceConfigRequest setEnvironmentUID(String environmentUID) {
-        this.environmentUID = environmentUID;
-        return this;
-    }
-    public String getEnvironmentUID() {
-        return this.environmentUID;
-    }
-
-    public PutProductInstanceConfigRequest setProductVersionUID(String productVersionUID) {
-        this.productVersionUID = productVersionUID;
-        return this;
-    }
-    public String getProductVersionUID() {
-        return this.productVersionUID;
     }
 
     public PutProductInstanceConfigRequest setComponentUID(String componentUID) {
@@ -77,6 +61,30 @@ public class PutProductInstanceConfigRequest extends TeaModel {
         return this.componentVersionUID;
     }
 
+    public PutProductInstanceConfigRequest setConfigUID(String configUID) {
+        this.configUID = configUID;
+        return this;
+    }
+    public String getConfigUID() {
+        return this.configUID;
+    }
+
+    public PutProductInstanceConfigRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public PutProductInstanceConfigRequest setEnvironmentUID(String environmentUID) {
+        this.environmentUID = environmentUID;
+        return this;
+    }
+    public String getEnvironmentUID() {
+        return this.environmentUID;
+    }
+
     public PutProductInstanceConfigRequest setName(String name) {
         this.name = name;
         return this;
@@ -85,12 +93,28 @@ public class PutProductInstanceConfigRequest extends TeaModel {
         return this.name;
     }
 
-    public PutProductInstanceConfigRequest setConfigUID(String configUID) {
-        this.configUID = configUID;
+    public PutProductInstanceConfigRequest setParentComponentName(String parentComponentName) {
+        this.parentComponentName = parentComponentName;
         return this;
     }
-    public String getConfigUID() {
-        return this.configUID;
+    public String getParentComponentName() {
+        return this.parentComponentName;
+    }
+
+    public PutProductInstanceConfigRequest setParentComponentVersionUID(String parentComponentVersionUID) {
+        this.parentComponentVersionUID = parentComponentVersionUID;
+        return this;
+    }
+    public String getParentComponentVersionUID() {
+        return this.parentComponentVersionUID;
+    }
+
+    public PutProductInstanceConfigRequest setProductVersionUID(String productVersionUID) {
+        this.productVersionUID = productVersionUID;
+        return this;
+    }
+    public String getProductVersionUID() {
+        return this.productVersionUID;
     }
 
     public PutProductInstanceConfigRequest setReleaseName(String releaseName) {
@@ -115,30 +139,6 @@ public class PutProductInstanceConfigRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
-    }
-
-    public PutProductInstanceConfigRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public PutProductInstanceConfigRequest setParentComponentName(String parentComponentName) {
-        this.parentComponentName = parentComponentName;
-        return this;
-    }
-    public String getParentComponentName() {
-        return this.parentComponentName;
-    }
-
-    public PutProductInstanceConfigRequest setParentComponentVersionUID(String parentComponentVersionUID) {
-        this.parentComponentVersionUID = parentComponentVersionUID;
-        return this;
-    }
-    public String getParentComponentVersionUID() {
-        return this.parentComponentVersionUID;
     }
 
 }

@@ -8,13 +8,13 @@ public class CreateProductDeploymentResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    // 错误信息
-    @NameInMap("msg")
-    public String msg;
-
     // 数据
     @NameInMap("data")
     public CreateProductDeploymentResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("msg")
+    public String msg;
 
     public static CreateProductDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProductDeploymentResponseBody self = new CreateProductDeploymentResponseBody();
@@ -29,20 +29,20 @@ public class CreateProductDeploymentResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateProductDeploymentResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public CreateProductDeploymentResponseBody setData(CreateProductDeploymentResponseBodyData data) {
         this.data = data;
         return this;
     }
     public CreateProductDeploymentResponseBodyData getData() {
         return this.data;
+    }
+
+    public CreateProductDeploymentResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
     }
 
     public static class CreateProductDeploymentResponseBodyData extends TeaModel {

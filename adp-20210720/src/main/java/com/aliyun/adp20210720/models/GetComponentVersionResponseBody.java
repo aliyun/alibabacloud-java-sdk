@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetComponentVersionResponseBody extends TeaModel {
-    @NameInMap("data")
-    public java.util.List<GetComponentVersionResponseBodyData> data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public java.util.List<GetComponentVersionResponseBodyData> data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class GetComponentVersionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetComponentVersionResponseBody setData(java.util.List<GetComponentVersionResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetComponentVersionResponseBodyData> getData() {
-        return this.data;
-    }
-
     public GetComponentVersionResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetComponentVersionResponseBody setData(java.util.List<GetComponentVersionResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetComponentVersionResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetComponentVersionResponseBody setMsg(String msg) {

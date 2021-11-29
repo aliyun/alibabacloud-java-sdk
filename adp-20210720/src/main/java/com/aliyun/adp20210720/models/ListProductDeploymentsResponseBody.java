@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductDeploymentsResponseBody extends TeaModel {
-    @NameInMap("data")
-    public ListProductDeploymentsResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public ListProductDeploymentsResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class ListProductDeploymentsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListProductDeploymentsResponseBody setData(ListProductDeploymentsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListProductDeploymentsResponseBodyData getData() {
-        return this.data;
-    }
-
     public ListProductDeploymentsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListProductDeploymentsResponseBody setData(ListProductDeploymentsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListProductDeploymentsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListProductDeploymentsResponseBody setMsg(String msg) {
@@ -43,8 +43,29 @@ public class ListProductDeploymentsResponseBody extends TeaModel {
     }
 
     public static class ListProductDeploymentsResponseBodyDataList extends TeaModel {
+        @NameInMap("envParams")
+        public String envParams;
+
         @NameInMap("envUID")
         public String envUID;
+
+        @NameInMap("oldProductVersion")
+        public String oldProductVersion;
+
+        @NameInMap("packageContentType")
+        public String packageContentType;
+
+        @NameInMap("packageInfoUID")
+        public String packageInfoUID;
+
+        @NameInMap("packageType")
+        public String packageType;
+
+        @NameInMap("productName")
+        public String productName;
+
+        @NameInMap("productVersion")
+        public String productVersion;
 
         @NameInMap("status")
         public String status;
@@ -52,30 +73,17 @@ public class ListProductDeploymentsResponseBody extends TeaModel {
         @NameInMap("uid")
         public String uid;
 
-        @NameInMap("productVersion")
-        public String productVersion;
-
-        @NameInMap("oldProductVersion")
-        public String oldProductVersion;
-
-        @NameInMap("packageInfoUID")
-        public String packageInfoUID;
-
-        @NameInMap("envParams")
-        public String envParams;
-
-        @NameInMap("packageType")
-        public String packageType;
-
-        @NameInMap("packageContentType")
-        public String packageContentType;
-
-        @NameInMap("productName")
-        public String productName;
-
         public static ListProductDeploymentsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListProductDeploymentsResponseBodyDataList self = new ListProductDeploymentsResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setEnvParams(String envParams) {
+            this.envParams = envParams;
+            return this;
+        }
+        public String getEnvParams() {
+            return this.envParams;
         }
 
         public ListProductDeploymentsResponseBodyDataList setEnvUID(String envUID) {
@@ -84,6 +92,54 @@ public class ListProductDeploymentsResponseBody extends TeaModel {
         }
         public String getEnvUID() {
             return this.envUID;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setOldProductVersion(String oldProductVersion) {
+            this.oldProductVersion = oldProductVersion;
+            return this;
+        }
+        public String getOldProductVersion() {
+            return this.oldProductVersion;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setPackageContentType(String packageContentType) {
+            this.packageContentType = packageContentType;
+            return this;
+        }
+        public String getPackageContentType() {
+            return this.packageContentType;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setPackageInfoUID(String packageInfoUID) {
+            this.packageInfoUID = packageInfoUID;
+            return this;
+        }
+        public String getPackageInfoUID() {
+            return this.packageInfoUID;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setPackageType(String packageType) {
+            this.packageType = packageType;
+            return this;
+        }
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public ListProductDeploymentsResponseBodyDataList setProductVersion(String productVersion) {
+            this.productVersion = productVersion;
+            return this;
+        }
+        public String getProductVersion() {
+            return this.productVersion;
         }
 
         public ListProductDeploymentsResponseBodyDataList setStatus(String status) {
@@ -100,62 +156,6 @@ public class ListProductDeploymentsResponseBody extends TeaModel {
         }
         public String getUid() {
             return this.uid;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setProductVersion(String productVersion) {
-            this.productVersion = productVersion;
-            return this;
-        }
-        public String getProductVersion() {
-            return this.productVersion;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setOldProductVersion(String oldProductVersion) {
-            this.oldProductVersion = oldProductVersion;
-            return this;
-        }
-        public String getOldProductVersion() {
-            return this.oldProductVersion;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setPackageInfoUID(String packageInfoUID) {
-            this.packageInfoUID = packageInfoUID;
-            return this;
-        }
-        public String getPackageInfoUID() {
-            return this.packageInfoUID;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setEnvParams(String envParams) {
-            this.envParams = envParams;
-            return this;
-        }
-        public String getEnvParams() {
-            return this.envParams;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setPackageType(String packageType) {
-            this.packageType = packageType;
-            return this;
-        }
-        public String getPackageType() {
-            return this.packageType;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setPackageContentType(String packageContentType) {
-            this.packageContentType = packageContentType;
-            return this;
-        }
-        public String getPackageContentType() {
-            return this.packageContentType;
-        }
-
-        public ListProductDeploymentsResponseBodyDataList setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-        public String getProductName() {
-            return this.productName;
         }
 
     }

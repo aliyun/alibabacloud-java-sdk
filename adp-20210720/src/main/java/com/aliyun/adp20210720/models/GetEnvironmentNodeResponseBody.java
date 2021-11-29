@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetEnvironmentNodeResponseBody extends TeaModel {
-    @NameInMap("data")
-    public GetEnvironmentNodeResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public GetEnvironmentNodeResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetEnvironmentNodeResponseBody setData(GetEnvironmentNodeResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetEnvironmentNodeResponseBodyData getData() {
-        return this.data;
-    }
-
     public GetEnvironmentNodeResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetEnvironmentNodeResponseBody setData(GetEnvironmentNodeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetEnvironmentNodeResponseBodyData getData() {
+        return this.data;
     }
 
     public GetEnvironmentNodeResponseBody setMsg(String msg) {
@@ -43,25 +43,17 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentNodeResponseBodyDataNetworkCards extends TeaModel {
-        // name
-        @NameInMap("name")
-        public String name;
-
         // ip
         @NameInMap("ip")
         public String ip;
 
+        // name
+        @NameInMap("name")
+        public String name;
+
         public static GetEnvironmentNodeResponseBodyDataNetworkCards build(java.util.Map<String, ?> map) throws Exception {
             GetEnvironmentNodeResponseBodyDataNetworkCards self = new GetEnvironmentNodeResponseBodyDataNetworkCards();
             return TeaModel.build(map, self);
-        }
-
-        public GetEnvironmentNodeResponseBodyDataNetworkCards setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public GetEnvironmentNodeResponseBodyDataNetworkCards setIp(String ip) {
@@ -72,9 +64,21 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.ip;
         }
 
+        public GetEnvironmentNodeResponseBodyDataNetworkCards setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class GetEnvironmentNodeResponseBodyDataTaints extends TeaModel {
+        // effect
+        @NameInMap("effect")
+        public String effect;
+
         // key
         @NameInMap("key")
         public String key;
@@ -83,13 +87,17 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        // effect
-        @NameInMap("effect")
-        public String effect;
-
         public static GetEnvironmentNodeResponseBodyDataTaints build(java.util.Map<String, ?> map) throws Exception {
             GetEnvironmentNodeResponseBodyDataTaints self = new GetEnvironmentNodeResponseBodyDataTaints();
             return TeaModel.build(map, self);
+        }
+
+        public GetEnvironmentNodeResponseBodyDataTaints setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
         }
 
         public GetEnvironmentNodeResponseBodyDataTaints setKey(String key) {
@@ -108,85 +116,34 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.value;
         }
 
-        public GetEnvironmentNodeResponseBodyDataTaints setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
-        }
-
     }
 
     public static class GetEnvironmentNodeResponseBodyData extends TeaModel {
-        @NameInMap("uid")
-        public String uid;
-
-        @NameInMap("createdAt")
-        public String createdAt;
-
-        @NameInMap("clusterUID")
-        public String clusterUID;
-
-        // identifier
-        @NameInMap("identifier")
-        public String identifier;
-
-        // hostName
-        @NameInMap("hostName")
-        public String hostName;
-
-        // os
-        @NameInMap("os")
-        public String os;
-
-        // osVersion
-        @NameInMap("osVersion")
-        public String osVersion;
-
         // arch
         @NameInMap("arch")
         public String arch;
 
-        // kernel
-        @NameInMap("kernel")
-        public String kernel;
-
-        // macAddress
-        @NameInMap("macAddress")
-        public String macAddress;
+        @NameInMap("clusterUID")
+        public String clusterUID;
 
         // cpu
         @NameInMap("cpu")
         public String cpu;
 
-        // memory
-        @NameInMap("memory")
-        public String memory;
-
-        // systemDisk
-        @NameInMap("systemDisk")
-        public java.util.List<Disk> systemDisk;
+        @NameInMap("createdAt")
+        public String createdAt;
 
         // dataDisk
         @NameInMap("dataDisk")
         public java.util.List<Disk> dataDisk;
 
-        // privateIP
-        @NameInMap("privateIP")
-        public String privateIP;
+        // hostName
+        @NameInMap("hostName")
+        public String hostName;
 
-        // publicIP
-        @NameInMap("publicIP")
-        public String publicIP;
-
-        // internetBandwidth
-        @NameInMap("internetBandwidth")
-        public Integer internetBandwidth;
-
-        // networkCards
-        @NameInMap("networkCards")
-        public java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> networkCards;
+        // identifier
+        @NameInMap("identifier")
+        public String identifier;
 
         // imageID
         @NameInMap("imageID")
@@ -196,81 +153,68 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
         @NameInMap("instanceType")
         public String instanceType;
 
-        // systemInfo
-        @NameInMap("systemInfo")
-        public String systemInfo;
+        // internetBandwidth
+        @NameInMap("internetBandwidth")
+        public Integer internetBandwidth;
 
-        // rootPassword
-        @NameInMap("rootPassword")
-        public String rootPassword;
+        // kernel
+        @NameInMap("kernel")
+        public String kernel;
 
         // labels
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
+        // macAddress
+        @NameInMap("macAddress")
+        public String macAddress;
+
+        // memory
+        @NameInMap("memory")
+        public String memory;
+
+        // networkCards
+        @NameInMap("networkCards")
+        public java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> networkCards;
+
+        // os
+        @NameInMap("os")
+        public String os;
+
+        // osVersion
+        @NameInMap("osVersion")
+        public String osVersion;
+
+        // privateIP
+        @NameInMap("privateIP")
+        public String privateIP;
+
+        // publicIP
+        @NameInMap("publicIP")
+        public String publicIP;
+
+        // rootPassword
+        @NameInMap("rootPassword")
+        public String rootPassword;
+
+        // systemDisk
+        @NameInMap("systemDisk")
+        public java.util.List<Disk> systemDisk;
+
+        // systemInfo
+        @NameInMap("systemInfo")
+        public String systemInfo;
+
         // taints
         @NameInMap("taints")
         public java.util.List<GetEnvironmentNodeResponseBodyDataTaints> taints;
 
+        @NameInMap("uid")
+        public String uid;
+
         public static GetEnvironmentNodeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEnvironmentNodeResponseBodyData self = new GetEnvironmentNodeResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetEnvironmentNodeResponseBodyData setUid(String uid) {
-            this.uid = uid;
-            return this;
-        }
-        public String getUid() {
-            return this.uid;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setClusterUID(String clusterUID) {
-            this.clusterUID = clusterUID;
-            return this;
-        }
-        public String getClusterUID() {
-            return this.clusterUID;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setIdentifier(String identifier) {
-            this.identifier = identifier;
-            return this;
-        }
-        public String getIdentifier() {
-            return this.identifier;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setOs(String os) {
-            this.os = os;
-            return this;
-        }
-        public String getOs() {
-            return this.os;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setOsVersion(String osVersion) {
-            this.osVersion = osVersion;
-            return this;
-        }
-        public String getOsVersion() {
-            return this.osVersion;
         }
 
         public GetEnvironmentNodeResponseBodyData setArch(String arch) {
@@ -281,20 +225,12 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.arch;
         }
 
-        public GetEnvironmentNodeResponseBodyData setKernel(String kernel) {
-            this.kernel = kernel;
+        public GetEnvironmentNodeResponseBodyData setClusterUID(String clusterUID) {
+            this.clusterUID = clusterUID;
             return this;
         }
-        public String getKernel() {
-            return this.kernel;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setMacAddress(String macAddress) {
-            this.macAddress = macAddress;
-            return this;
-        }
-        public String getMacAddress() {
-            return this.macAddress;
+        public String getClusterUID() {
+            return this.clusterUID;
         }
 
         public GetEnvironmentNodeResponseBodyData setCpu(String cpu) {
@@ -305,20 +241,12 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public GetEnvironmentNodeResponseBodyData setMemory(String memory) {
-            this.memory = memory;
+        public GetEnvironmentNodeResponseBodyData setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
-        public String getMemory() {
-            return this.memory;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setSystemDisk(java.util.List<Disk> systemDisk) {
-            this.systemDisk = systemDisk;
-            return this;
-        }
-        public java.util.List<Disk> getSystemDisk() {
-            return this.systemDisk;
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public GetEnvironmentNodeResponseBodyData setDataDisk(java.util.List<Disk> dataDisk) {
@@ -329,36 +257,20 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.dataDisk;
         }
 
-        public GetEnvironmentNodeResponseBodyData setPrivateIP(String privateIP) {
-            this.privateIP = privateIP;
+        public GetEnvironmentNodeResponseBodyData setHostName(String hostName) {
+            this.hostName = hostName;
             return this;
         }
-        public String getPrivateIP() {
-            return this.privateIP;
+        public String getHostName() {
+            return this.hostName;
         }
 
-        public GetEnvironmentNodeResponseBodyData setPublicIP(String publicIP) {
-            this.publicIP = publicIP;
+        public GetEnvironmentNodeResponseBodyData setIdentifier(String identifier) {
+            this.identifier = identifier;
             return this;
         }
-        public String getPublicIP() {
-            return this.publicIP;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setInternetBandwidth(Integer internetBandwidth) {
-            this.internetBandwidth = internetBandwidth;
-            return this;
-        }
-        public Integer getInternetBandwidth() {
-            return this.internetBandwidth;
-        }
-
-        public GetEnvironmentNodeResponseBodyData setNetworkCards(java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> networkCards) {
-            this.networkCards = networkCards;
-            return this;
-        }
-        public java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> getNetworkCards() {
-            return this.networkCards;
+        public String getIdentifier() {
+            return this.identifier;
         }
 
         public GetEnvironmentNodeResponseBodyData setImageID(String imageID) {
@@ -377,20 +289,20 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public GetEnvironmentNodeResponseBodyData setSystemInfo(String systemInfo) {
-            this.systemInfo = systemInfo;
+        public GetEnvironmentNodeResponseBodyData setInternetBandwidth(Integer internetBandwidth) {
+            this.internetBandwidth = internetBandwidth;
             return this;
         }
-        public String getSystemInfo() {
-            return this.systemInfo;
+        public Integer getInternetBandwidth() {
+            return this.internetBandwidth;
         }
 
-        public GetEnvironmentNodeResponseBodyData setRootPassword(String rootPassword) {
-            this.rootPassword = rootPassword;
+        public GetEnvironmentNodeResponseBodyData setKernel(String kernel) {
+            this.kernel = kernel;
             return this;
         }
-        public String getRootPassword() {
-            return this.rootPassword;
+        public String getKernel() {
+            return this.kernel;
         }
 
         public GetEnvironmentNodeResponseBodyData setLabels(java.util.Map<String, String> labels) {
@@ -401,12 +313,100 @@ public class GetEnvironmentNodeResponseBody extends TeaModel {
             return this.labels;
         }
 
+        public GetEnvironmentNodeResponseBodyData setMacAddress(String macAddress) {
+            this.macAddress = macAddress;
+            return this;
+        }
+        public String getMacAddress() {
+            return this.macAddress;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setNetworkCards(java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> networkCards) {
+            this.networkCards = networkCards;
+            return this;
+        }
+        public java.util.List<GetEnvironmentNodeResponseBodyDataNetworkCards> getNetworkCards() {
+            return this.networkCards;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setOs(String os) {
+            this.os = os;
+            return this;
+        }
+        public String getOs() {
+            return this.os;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setOsVersion(String osVersion) {
+            this.osVersion = osVersion;
+            return this;
+        }
+        public String getOsVersion() {
+            return this.osVersion;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setPrivateIP(String privateIP) {
+            this.privateIP = privateIP;
+            return this;
+        }
+        public String getPrivateIP() {
+            return this.privateIP;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setPublicIP(String publicIP) {
+            this.publicIP = publicIP;
+            return this;
+        }
+        public String getPublicIP() {
+            return this.publicIP;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setRootPassword(String rootPassword) {
+            this.rootPassword = rootPassword;
+            return this;
+        }
+        public String getRootPassword() {
+            return this.rootPassword;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setSystemDisk(java.util.List<Disk> systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public java.util.List<Disk> getSystemDisk() {
+            return this.systemDisk;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setSystemInfo(String systemInfo) {
+            this.systemInfo = systemInfo;
+            return this;
+        }
+        public String getSystemInfo() {
+            return this.systemInfo;
+        }
+
         public GetEnvironmentNodeResponseBodyData setTaints(java.util.List<GetEnvironmentNodeResponseBodyDataTaints> taints) {
             this.taints = taints;
             return this;
         }
         public java.util.List<GetEnvironmentNodeResponseBodyDataTaints> getTaints() {
             return this.taints;
+        }
+
+        public GetEnvironmentNodeResponseBodyData setUid(String uid) {
+            this.uid = uid;
+            return this;
+        }
+        public String getUid() {
+            return this.uid;
         }
 
     }

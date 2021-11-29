@@ -10,12 +10,12 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     @NameInMap("enable")
     public Boolean enable;
 
-    @NameInMap("releaseName")
-    public String releaseName;
-
     // 如果该参数不为空，则代表更新组件版本
     @NameInMap("newComponentVersionUID")
     public String newComponentVersionUID;
+
+    @NameInMap("releaseName")
+    public String releaseName;
 
     public static UpdateProductComponentVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductComponentVersionRequest self = new UpdateProductComponentVersionRequest();
@@ -38,20 +38,20 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
         return this.enable;
     }
 
-    public UpdateProductComponentVersionRequest setReleaseName(String releaseName) {
-        this.releaseName = releaseName;
-        return this;
-    }
-    public String getReleaseName() {
-        return this.releaseName;
-    }
-
     public UpdateProductComponentVersionRequest setNewComponentVersionUID(String newComponentVersionUID) {
         this.newComponentVersionUID = newComponentVersionUID;
         return this;
     }
     public String getNewComponentVersionUID() {
         return this.newComponentVersionUID;
+    }
+
+    public UpdateProductComponentVersionRequest setReleaseName(String releaseName) {
+        this.releaseName = releaseName;
+        return this;
+    }
+    public String getReleaseName() {
+        return this.releaseName;
     }
 
 }

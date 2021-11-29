@@ -8,13 +8,13 @@ public class PutEnvironmentTunnelResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    // 错误信息
-    @NameInMap("msg")
-    public String msg;
-
     // 数据
     @NameInMap("data")
     public PutEnvironmentTunnelResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("msg")
+    public String msg;
 
     public static PutEnvironmentTunnelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutEnvironmentTunnelResponseBody self = new PutEnvironmentTunnelResponseBody();
@@ -29,20 +29,20 @@ public class PutEnvironmentTunnelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PutEnvironmentTunnelResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public PutEnvironmentTunnelResponseBody setData(PutEnvironmentTunnelResponseBodyData data) {
         this.data = data;
         return this;
     }
     public PutEnvironmentTunnelResponseBodyData getData() {
         return this.data;
+    }
+
+    public PutEnvironmentTunnelResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
     }
 
     public static class PutEnvironmentTunnelResponseBodyData extends TeaModel {

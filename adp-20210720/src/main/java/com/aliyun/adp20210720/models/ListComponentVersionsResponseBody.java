@@ -7,11 +7,11 @@ public class ListComponentVersionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("data")
-    public ListComponentVersionsResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public ListComponentVersionsResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -29,20 +29,20 @@ public class ListComponentVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListComponentVersionsResponseBody setData(ListComponentVersionsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListComponentVersionsResponseBodyData getData() {
-        return this.data;
-    }
-
     public ListComponentVersionsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListComponentVersionsResponseBody setData(ListComponentVersionsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListComponentVersionsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListComponentVersionsResponseBody setMsg(String msg) {
