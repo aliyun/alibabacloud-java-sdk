@@ -92,6 +92,9 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         @NameInMap("JobId")
         public Long jobId;
 
+        @NameInMap("Log")
+        public String log;
+
         @NameInMap("Logic")
         public Boolean logic;
 
@@ -147,6 +150,14 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         }
         public Long getJobId() {
             return this.jobId;
+        }
+
+        public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setLog(String log) {
+            this.log = log;
+            return this;
+        }
+        public String getLog() {
+            return this.log;
         }
 
         public ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList setLogic(Boolean logic) {
