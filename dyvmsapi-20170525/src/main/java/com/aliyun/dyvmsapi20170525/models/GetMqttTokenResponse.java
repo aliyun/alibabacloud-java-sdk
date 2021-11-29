@@ -3,21 +3,21 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class ListOutboundStrategiesResponse extends TeaModel {
+public class GetMqttTokenResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListOutboundStrategiesResponseBody body;
+    public GetMqttTokenResponseBody body;
 
-    public static ListOutboundStrategiesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListOutboundStrategiesResponse self = new ListOutboundStrategiesResponse();
+    public static GetMqttTokenResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetMqttTokenResponse self = new GetMqttTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListOutboundStrategiesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetMqttTokenResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListOutboundStrategiesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListOutboundStrategiesResponse setBody(ListOutboundStrategiesResponseBody body) {
+    public GetMqttTokenResponse setBody(GetMqttTokenResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListOutboundStrategiesResponseBody getBody() {
+    public GetMqttTokenResponseBody getBody() {
         return this.body;
     }
 

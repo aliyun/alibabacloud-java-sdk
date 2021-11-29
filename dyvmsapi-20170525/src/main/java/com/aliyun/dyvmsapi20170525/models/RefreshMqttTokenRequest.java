@@ -3,9 +3,9 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class VoipAddAccountRequest extends TeaModel {
-    @NameInMap("DeviceId")
-    public String deviceId;
+public class RefreshMqttTokenRequest extends TeaModel {
+    @NameInMap("ClientId")
+    public String clientId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -16,20 +16,20 @@ public class VoipAddAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static VoipAddAccountRequest build(java.util.Map<String, ?> map) throws Exception {
-        VoipAddAccountRequest self = new VoipAddAccountRequest();
+    public static RefreshMqttTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        RefreshMqttTokenRequest self = new RefreshMqttTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public VoipAddAccountRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public RefreshMqttTokenRequest setClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
-    public String getDeviceId() {
-        return this.deviceId;
+    public String getClientId() {
+        return this.clientId;
     }
 
-    public VoipAddAccountRequest setOwnerId(Long ownerId) {
+    public RefreshMqttTokenRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -37,7 +37,7 @@ public class VoipAddAccountRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public VoipAddAccountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public RefreshMqttTokenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -45,7 +45,7 @@ public class VoipAddAccountRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public VoipAddAccountRequest setResourceOwnerId(Long resourceOwnerId) {
+    public RefreshMqttTokenRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
