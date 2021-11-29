@@ -7,11 +7,11 @@ public class GetProductDeploymentResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("msg")
-    public String msg;
-
     @NameInMap("data")
     public GetProductDeploymentResponseBodyData data;
+
+    @NameInMap("msg")
+    public String msg;
 
     public static GetProductDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProductDeploymentResponseBody self = new GetProductDeploymentResponseBody();
@@ -26,14 +26,6 @@ public class GetProductDeploymentResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetProductDeploymentResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public GetProductDeploymentResponseBody setData(GetProductDeploymentResponseBodyData data) {
         this.data = data;
         return this;
@@ -42,7 +34,18 @@ public class GetProductDeploymentResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetProductDeploymentResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
     public static class GetProductDeploymentResponseBodyData extends TeaModel {
+        @NameInMap("envParams")
+        public String envParams;
+
         @NameInMap("envUID")
         public String envUID;
 
@@ -52,12 +55,17 @@ public class GetProductDeploymentResponseBody extends TeaModel {
         @NameInMap("uid")
         public String uid;
 
-        @NameInMap("envParams")
-        public String envParams;
-
         public static GetProductDeploymentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProductDeploymentResponseBodyData self = new GetProductDeploymentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetProductDeploymentResponseBodyData setEnvParams(String envParams) {
+            this.envParams = envParams;
+            return this;
+        }
+        public String getEnvParams() {
+            return this.envParams;
         }
 
         public GetProductDeploymentResponseBodyData setEnvUID(String envUID) {
@@ -82,14 +90,6 @@ public class GetProductDeploymentResponseBody extends TeaModel {
         }
         public String getUid() {
             return this.uid;
-        }
-
-        public GetProductDeploymentResponseBodyData setEnvParams(String envParams) {
-            this.envParams = envParams;
-            return this;
-        }
-        public String getEnvParams() {
-            return this.envParams;
         }
 
     }

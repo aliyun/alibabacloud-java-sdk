@@ -4,17 +4,23 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionsShrinkRequest extends TeaModel {
-    // 过滤参数，产品uid
-    @NameInMap("productUID")
-    public String productUID;
+    @NameInMap("pageNum")
+    public String pageNum;
+
+    @NameInMap("pageSize")
+    public String pageSize;
+
+    // 支持的platform，为空则不过滤
+    @NameInMap("platforms")
+    public String platformsShrink;
 
     // 过滤参数，产品名称
     @NameInMap("productName")
     public String productName;
 
-    // 过滤参数，产品版本号
-    @NameInMap("version")
-    public String version;
+    // 过滤参数，产品uid
+    @NameInMap("productUID")
+    public String productUID;
 
     // 过滤参数，是否已发布
     @NameInMap("released")
@@ -24,27 +30,37 @@ public class ListProductVersionsShrinkRequest extends TeaModel {
     @NameInMap("supportedFoundationTypes")
     public String supportedFoundationTypesShrink;
 
-    // 支持的platform，为空则不过滤
-    @NameInMap("platforms")
-    public String platformsShrink;
-
-    @NameInMap("pageNum")
-    public String pageNum;
-
-    @NameInMap("pageSize")
-    public String pageSize;
+    // 过滤参数，产品版本号
+    @NameInMap("version")
+    public String version;
 
     public static ListProductVersionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionsShrinkRequest self = new ListProductVersionsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListProductVersionsShrinkRequest setProductUID(String productUID) {
-        this.productUID = productUID;
+    public ListProductVersionsShrinkRequest setPageNum(String pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getProductUID() {
-        return this.productUID;
+    public String getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListProductVersionsShrinkRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListProductVersionsShrinkRequest setPlatformsShrink(String platformsShrink) {
+        this.platformsShrink = platformsShrink;
+        return this;
+    }
+    public String getPlatformsShrink() {
+        return this.platformsShrink;
     }
 
     public ListProductVersionsShrinkRequest setProductName(String productName) {
@@ -55,12 +71,12 @@ public class ListProductVersionsShrinkRequest extends TeaModel {
         return this.productName;
     }
 
-    public ListProductVersionsShrinkRequest setVersion(String version) {
-        this.version = version;
+    public ListProductVersionsShrinkRequest setProductUID(String productUID) {
+        this.productUID = productUID;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getProductUID() {
+        return this.productUID;
     }
 
     public ListProductVersionsShrinkRequest setReleased(Boolean released) {
@@ -79,28 +95,12 @@ public class ListProductVersionsShrinkRequest extends TeaModel {
         return this.supportedFoundationTypesShrink;
     }
 
-    public ListProductVersionsShrinkRequest setPlatformsShrink(String platformsShrink) {
-        this.platformsShrink = platformsShrink;
+    public ListProductVersionsShrinkRequest setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getPlatformsShrink() {
-        return this.platformsShrink;
-    }
-
-    public ListProductVersionsShrinkRequest setPageNum(String pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public String getPageNum() {
-        return this.pageNum;
-    }
-
-    public ListProductVersionsShrinkRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
+    public String getVersion() {
+        return this.version;
     }
 
 }

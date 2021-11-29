@@ -4,20 +4,20 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListComponentsRequest extends TeaModel {
-    @NameInMap("name")
-    public String name;
-
     @NameInMap("category")
     public String category;
+
+    @NameInMap("fuzzy")
+    public String fuzzy;
+
+    @NameInMap("name")
+    public String name;
 
     @NameInMap("pageNum")
     public Integer pageNum;
 
     @NameInMap("pageSize")
     public Integer pageSize;
-
-    @NameInMap("fuzzy")
-    public String fuzzy;
 
     @NameInMap("public")
     public Boolean _public;
@@ -27,20 +27,28 @@ public class ListComponentsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListComponentsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public ListComponentsRequest setCategory(String category) {
         this.category = category;
         return this;
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public ListComponentsRequest setFuzzy(String fuzzy) {
+        this.fuzzy = fuzzy;
+        return this;
+    }
+    public String getFuzzy() {
+        return this.fuzzy;
+    }
+
+    public ListComponentsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListComponentsRequest setPageNum(Integer pageNum) {
@@ -57,14 +65,6 @@ public class ListComponentsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListComponentsRequest setFuzzy(String fuzzy) {
-        this.fuzzy = fuzzy;
-        return this;
-    }
-    public String getFuzzy() {
-        return this.fuzzy;
     }
 
     public ListComponentsRequest set_public(Boolean _public) {

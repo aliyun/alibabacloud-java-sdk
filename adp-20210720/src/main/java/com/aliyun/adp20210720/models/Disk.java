@@ -4,17 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class Disk extends TeaModel {
-    // name
-    @NameInMap("name")
-    public String name;
-
     // capacity
     @NameInMap("capacity")
     public Integer capacity;
-
-    // remain
-    @NameInMap("remain")
-    public Integer remain;
 
     // fsType
     @NameInMap("fsType")
@@ -23,6 +15,14 @@ public class Disk extends TeaModel {
     // mountPoint
     @NameInMap("mountPoint")
     public String mountPoint;
+
+    // name
+    @NameInMap("name")
+    public String name;
+
+    // remain
+    @NameInMap("remain")
+    public Integer remain;
 
     // type
     @NameInMap("type")
@@ -33,28 +33,12 @@ public class Disk extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Disk setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
     public Disk setCapacity(Integer capacity) {
         this.capacity = capacity;
         return this;
     }
     public Integer getCapacity() {
         return this.capacity;
-    }
-
-    public Disk setRemain(Integer remain) {
-        this.remain = remain;
-        return this;
-    }
-    public Integer getRemain() {
-        return this.remain;
     }
 
     public Disk setFsType(String fsType) {
@@ -71,6 +55,22 @@ public class Disk extends TeaModel {
     }
     public String getMountPoint() {
         return this.mountPoint;
+    }
+
+    public Disk setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public Disk setRemain(Integer remain) {
+        this.remain = remain;
+        return this;
+    }
+    public Integer getRemain() {
+        return this.remain;
     }
 
     public Disk setType(String type) {

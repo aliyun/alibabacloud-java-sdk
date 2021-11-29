@@ -4,16 +4,16 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateProductVersionPackageRequest extends TeaModel {
-    // ENUM:["full","upgrade"]
-    @NameInMap("packageType")
-    public String packageType;
+    @NameInMap("oldProductVersionUID")
+    public String oldProductVersionUID;
 
     // ENUM:["all","base"."application"]
     @NameInMap("packageContentType")
     public String packageContentType;
 
-    @NameInMap("oldProductVersionUID")
-    public String oldProductVersionUID;
+    // ENUM:["full","upgrade"]
+    @NameInMap("packageType")
+    public String packageType;
 
     @NameInMap("platform")
     public String platform;
@@ -23,12 +23,12 @@ public class CreateProductVersionPackageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateProductVersionPackageRequest setPackageType(String packageType) {
-        this.packageType = packageType;
+    public CreateProductVersionPackageRequest setOldProductVersionUID(String oldProductVersionUID) {
+        this.oldProductVersionUID = oldProductVersionUID;
         return this;
     }
-    public String getPackageType() {
-        return this.packageType;
+    public String getOldProductVersionUID() {
+        return this.oldProductVersionUID;
     }
 
     public CreateProductVersionPackageRequest setPackageContentType(String packageContentType) {
@@ -39,12 +39,12 @@ public class CreateProductVersionPackageRequest extends TeaModel {
         return this.packageContentType;
     }
 
-    public CreateProductVersionPackageRequest setOldProductVersionUID(String oldProductVersionUID) {
-        this.oldProductVersionUID = oldProductVersionUID;
+    public CreateProductVersionPackageRequest setPackageType(String packageType) {
+        this.packageType = packageType;
         return this;
     }
-    public String getOldProductVersionUID() {
-        return this.oldProductVersionUID;
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public CreateProductVersionPackageRequest setPlatform(String platform) {

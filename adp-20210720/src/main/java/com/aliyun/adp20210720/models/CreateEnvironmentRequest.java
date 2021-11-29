@@ -16,15 +16,15 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("platform")
     public CreateEnvironmentRequestPlatform platform;
 
-    @NameInMap("vendorType")
-    public String vendorType;
-
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
     // 环境类型
     @NameInMap("type")
     public String type;
+
+    @NameInMap("vendorType")
+    public String vendorType;
 
     public static CreateEnvironmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnvironmentRequest self = new CreateEnvironmentRequest();
@@ -63,14 +63,6 @@ public class CreateEnvironmentRequest extends TeaModel {
         return this.platform;
     }
 
-    public CreateEnvironmentRequest setVendorType(String vendorType) {
-        this.vendorType = vendorType;
-        return this;
-    }
-    public String getVendorType() {
-        return this.vendorType;
-    }
-
     public CreateEnvironmentRequest setProductVersionUID(String productVersionUID) {
         this.productVersionUID = productVersionUID;
         return this;
@@ -85,6 +77,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public CreateEnvironmentRequest setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
     public static class CreateEnvironmentRequestPlatform extends TeaModel {

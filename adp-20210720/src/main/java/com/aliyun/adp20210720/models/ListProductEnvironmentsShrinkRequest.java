@@ -4,12 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductEnvironmentsShrinkRequest extends TeaModel {
-    @NameInMap("envType")
-    public String envType;
-
     // 兼容版本产品版本id
     @NameInMap("compatibleProductVersionUID")
     public String compatibleProductVersionUID;
+
+    @NameInMap("envType")
+    public String envType;
 
     @NameInMap("platforms")
     public String platformsShrink;
@@ -22,20 +22,20 @@ public class ListProductEnvironmentsShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListProductEnvironmentsShrinkRequest setEnvType(String envType) {
-        this.envType = envType;
-        return this;
-    }
-    public String getEnvType() {
-        return this.envType;
-    }
-
     public ListProductEnvironmentsShrinkRequest setCompatibleProductVersionUID(String compatibleProductVersionUID) {
         this.compatibleProductVersionUID = compatibleProductVersionUID;
         return this;
     }
     public String getCompatibleProductVersionUID() {
         return this.compatibleProductVersionUID;
+    }
+
+    public ListProductEnvironmentsShrinkRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
     }
 
     public ListProductEnvironmentsShrinkRequest setPlatformsShrink(String platformsShrink) {

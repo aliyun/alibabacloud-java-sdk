@@ -4,12 +4,12 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductEnvironmentsRequest extends TeaModel {
-    @NameInMap("envType")
-    public String envType;
-
     // 兼容版本产品版本id
     @NameInMap("compatibleProductVersionUID")
     public String compatibleProductVersionUID;
+
+    @NameInMap("envType")
+    public String envType;
 
     @NameInMap("platforms")
     public java.util.List<ListProductEnvironmentsRequestPlatforms> platforms;
@@ -22,20 +22,20 @@ public class ListProductEnvironmentsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListProductEnvironmentsRequest setEnvType(String envType) {
-        this.envType = envType;
-        return this;
-    }
-    public String getEnvType() {
-        return this.envType;
-    }
-
     public ListProductEnvironmentsRequest setCompatibleProductVersionUID(String compatibleProductVersionUID) {
         this.compatibleProductVersionUID = compatibleProductVersionUID;
         return this;
     }
     public String getCompatibleProductVersionUID() {
         return this.compatibleProductVersionUID;
+    }
+
+    public ListProductEnvironmentsRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
     }
 
     public ListProductEnvironmentsRequest setPlatforms(java.util.List<ListProductEnvironmentsRequestPlatforms> platforms) {

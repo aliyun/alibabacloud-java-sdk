@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class InitEnvironmentResourceResponseBody extends TeaModel {
-    @NameInMap("data")
-    public InitEnvironmentResourceResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public InitEnvironmentResourceResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class InitEnvironmentResourceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public InitEnvironmentResourceResponseBody setData(InitEnvironmentResourceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public InitEnvironmentResourceResponseBodyData getData() {
-        return this.data;
-    }
-
     public InitEnvironmentResourceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public InitEnvironmentResourceResponseBody setData(InitEnvironmentResourceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public InitEnvironmentResourceResponseBodyData getData() {
+        return this.data;
     }
 
     public InitEnvironmentResourceResponseBody setMsg(String msg) {

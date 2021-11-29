@@ -1,3 +1,6 @@
+2021-11-29 Version: v1.0.4
+- Add some fields.
+
 2021-10-15 Version: v1.0.3
 - Add workflow related APIs.
 

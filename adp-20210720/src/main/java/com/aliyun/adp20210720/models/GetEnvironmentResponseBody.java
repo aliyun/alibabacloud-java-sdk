@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetEnvironmentResponseBody extends TeaModel {
-    @NameInMap("data")
-    public GetEnvironmentResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public GetEnvironmentResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class GetEnvironmentResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetEnvironmentResponseBody setData(GetEnvironmentResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetEnvironmentResponseBodyData getData() {
-        return this.data;
-    }
-
     public GetEnvironmentResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetEnvironmentResponseBody setData(GetEnvironmentResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetEnvironmentResponseBodyData getData() {
+        return this.data;
     }
 
     public GetEnvironmentResponseBody setMsg(String msg) {
@@ -85,11 +85,20 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("instanceList")
         public java.util.List<InstanceInfo> instanceList;
 
+        @NameInMap("instanceStatus")
+        public String instanceStatus;
+
         @NameInMap("location")
         public String location;
 
         @NameInMap("name")
         public String name;
+
+        @NameInMap("oldProductVersion")
+        public String oldProductVersion;
+
+        @NameInMap("oldProductVersionUID")
+        public String oldProductVersionUID;
 
         @NameInMap("platform")
         public GetEnvironmentResponseBodyDataPlatform platform;
@@ -108,9 +117,6 @@ public class GetEnvironmentResponseBody extends TeaModel {
 
         @NameInMap("vendorType")
         public String vendorType;
-
-        @NameInMap("instanceStatus")
-        public String instanceStatus;
 
         public static GetEnvironmentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEnvironmentResponseBodyData self = new GetEnvironmentResponseBodyData();
@@ -149,6 +155,14 @@ public class GetEnvironmentResponseBody extends TeaModel {
             return this.instanceList;
         }
 
+        public GetEnvironmentResponseBodyData setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
         public GetEnvironmentResponseBodyData setLocation(String location) {
             this.location = location;
             return this;
@@ -163,6 +177,22 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetEnvironmentResponseBodyData setOldProductVersion(String oldProductVersion) {
+            this.oldProductVersion = oldProductVersion;
+            return this;
+        }
+        public String getOldProductVersion() {
+            return this.oldProductVersion;
+        }
+
+        public GetEnvironmentResponseBodyData setOldProductVersionUID(String oldProductVersionUID) {
+            this.oldProductVersionUID = oldProductVersionUID;
+            return this;
+        }
+        public String getOldProductVersionUID() {
+            return this.oldProductVersionUID;
         }
 
         public GetEnvironmentResponseBodyData setPlatform(GetEnvironmentResponseBodyDataPlatform platform) {
@@ -211,14 +241,6 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getVendorType() {
             return this.vendorType;
-        }
-
-        public GetEnvironmentResponseBodyData setInstanceStatus(String instanceStatus) {
-            this.instanceStatus = instanceStatus;
-            return this;
-        }
-        public String getInstanceStatus() {
-            return this.instanceStatus;
         }
 
     }

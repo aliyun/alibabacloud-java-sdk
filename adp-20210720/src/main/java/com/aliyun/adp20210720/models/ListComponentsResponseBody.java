@@ -4,11 +4,11 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListComponentsResponseBody extends TeaModel {
-    @NameInMap("data")
-    public ListComponentsResponseBodyData data;
-
     @NameInMap("code")
     public String code;
+
+    @NameInMap("data")
+    public ListComponentsResponseBodyData data;
 
     @NameInMap("msg")
     public String msg;
@@ -18,20 +18,20 @@ public class ListComponentsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListComponentsResponseBody setData(ListComponentsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListComponentsResponseBodyData getData() {
-        return this.data;
-    }
-
     public ListComponentsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListComponentsResponseBody setData(ListComponentsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListComponentsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListComponentsResponseBody setMsg(String msg) {

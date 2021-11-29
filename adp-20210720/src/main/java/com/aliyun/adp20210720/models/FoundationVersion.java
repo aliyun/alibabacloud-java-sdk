@@ -16,9 +16,17 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    // platforms
+    @NameInMap("platforms")
+    public java.util.List<Platform> platforms;
+
     // status，ENUM:["Testing","Published","Deprecated"] Published 后，则全平台所有用户可见，请谨慎操作
     @NameInMap("status")
     public String status;
+
+    // the type of foundation version,ENUM:["trident","ack"]
+    @NameInMap("type")
+    public String type;
 
     // uid
     @NameInMap("uid")
@@ -27,14 +35,6 @@ public class FoundationVersion extends TeaModel {
     // version
     @NameInMap("version")
     public String version;
-
-    // platforms
-    @NameInMap("platforms")
-    public java.util.List<Platform> platforms;
-
-    // the type of foundation version,ENUM:["trident","ack"]
-    @NameInMap("type")
-    public String type;
 
     public static FoundationVersion build(java.util.Map<String, ?> map) throws Exception {
         FoundationVersion self = new FoundationVersion();
@@ -65,12 +65,28 @@ public class FoundationVersion extends TeaModel {
         return this.name;
     }
 
+    public FoundationVersion setPlatforms(java.util.List<Platform> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<Platform> getPlatforms() {
+        return this.platforms;
+    }
+
     public FoundationVersion setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public FoundationVersion setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public FoundationVersion setUid(String uid) {
@@ -87,22 +103,6 @@ public class FoundationVersion extends TeaModel {
     }
     public String getVersion() {
         return this.version;
-    }
-
-    public FoundationVersion setPlatforms(java.util.List<Platform> platforms) {
-        this.platforms = platforms;
-        return this;
-    }
-    public java.util.List<Platform> getPlatforms() {
-        return this.platforms;
-    }
-
-    public FoundationVersion setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

@@ -7,11 +7,11 @@ public class PutProductInstanceConfigResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("msg")
-    public String msg;
-
     @NameInMap("data")
     public PutProductInstanceConfigResponseBodyData data;
+
+    @NameInMap("msg")
+    public String msg;
 
     public static PutProductInstanceConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutProductInstanceConfigResponseBody self = new PutProductInstanceConfigResponseBody();
@@ -26,20 +26,20 @@ public class PutProductInstanceConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PutProductInstanceConfigResponseBody setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
     public PutProductInstanceConfigResponseBody setData(PutProductInstanceConfigResponseBodyData data) {
         this.data = data;
         return this;
     }
     public PutProductInstanceConfigResponseBodyData getData() {
         return this.data;
+    }
+
+    public PutProductInstanceConfigResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
     }
 
     public static class PutProductInstanceConfigResponseBodyData extends TeaModel {

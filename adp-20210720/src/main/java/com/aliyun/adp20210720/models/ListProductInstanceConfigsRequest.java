@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductInstanceConfigsRequest extends TeaModel {
+    @NameInMap("environmentUID")
+    public String environmentUID;
+
     @NameInMap("pageNum")
     public Integer pageNum;
 
@@ -17,12 +20,17 @@ public class ListProductInstanceConfigsRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
-    @NameInMap("environmentUID")
-    public String environmentUID;
-
     public static ListProductInstanceConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductInstanceConfigsRequest self = new ListProductInstanceConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductInstanceConfigsRequest setEnvironmentUID(String environmentUID) {
+        this.environmentUID = environmentUID;
+        return this;
+    }
+    public String getEnvironmentUID() {
+        return this.environmentUID;
     }
 
     public ListProductInstanceConfigsRequest setPageNum(Integer pageNum) {
@@ -55,14 +63,6 @@ public class ListProductInstanceConfigsRequest extends TeaModel {
     }
     public String getProductVersionUID() {
         return this.productVersionUID;
-    }
-
-    public ListProductInstanceConfigsRequest setEnvironmentUID(String environmentUID) {
-        this.environmentUID = environmentUID;
-        return this;
-    }
-    public String getEnvironmentUID() {
-        return this.environmentUID;
     }
 
 }

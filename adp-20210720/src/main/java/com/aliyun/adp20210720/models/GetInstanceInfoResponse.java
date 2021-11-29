@@ -4,13 +4,61 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceInfoResponse extends TeaModel {
-    // identifier
-    @NameInMap("identifier")
-    public String identifier;
+    // annotations
+    @NameInMap("annotations")
+    public java.util.Map<String, String> annotations;
+
+    // arch
+    @NameInMap("arch")
+    public String arch;
+
+    // cpu
+    @NameInMap("cpu")
+    public String cpu;
+
+    // dataDisk
+    @NameInMap("dataDisk")
+    public java.util.List<Disk> dataDisk;
 
     // hostName
     @NameInMap("hostName")
     public String hostName;
+
+    // identifier
+    @NameInMap("identifier")
+    public String identifier;
+
+    // imageID
+    @NameInMap("imageID")
+    public String imageID;
+
+    // instanceType
+    @NameInMap("instanceType")
+    public String instanceType;
+
+    // internetBandwidth
+    @NameInMap("internetBandwidth")
+    public Integer internetBandwidth;
+
+    // kernel
+    @NameInMap("kernel")
+    public String kernel;
+
+    // labels
+    @NameInMap("labels")
+    public java.util.Map<String, String> labels;
+
+    // macAddress
+    @NameInMap("macAddress")
+    public String macAddress;
+
+    // memory
+    @NameInMap("memory")
+    public String memory;
+
+    // networkCards
+    @NameInMap("networkCards")
+    public java.util.List<GetInstanceInfoResponseNetworkCards> networkCards;
 
     // os
     @NameInMap("os")
@@ -20,34 +68,6 @@ public class GetInstanceInfoResponse extends TeaModel {
     @NameInMap("osVersion")
     public String osVersion;
 
-    // arch
-    @NameInMap("arch")
-    public String arch;
-
-    // kernel
-    @NameInMap("kernel")
-    public String kernel;
-
-    // macAddress
-    @NameInMap("macAddress")
-    public String macAddress;
-
-    // cpu
-    @NameInMap("cpu")
-    public String cpu;
-
-    // memory
-    @NameInMap("memory")
-    public String memory;
-
-    // systemDisk
-    @NameInMap("systemDisk")
-    public java.util.List<Disk> systemDisk;
-
-    // dataDisk
-    @NameInMap("dataDisk")
-    public java.util.List<Disk> dataDisk;
-
     // privateIP
     @NameInMap("privateIP")
     public String privateIP;
@@ -56,49 +76,69 @@ public class GetInstanceInfoResponse extends TeaModel {
     @NameInMap("publicIP")
     public String publicIP;
 
-    // internetBandwidth
-    @NameInMap("internetBandwidth")
-    public Integer internetBandwidth;
+    // rootPassword
+    @NameInMap("rootPassword")
+    public String rootPassword;
 
-    // networkCards
-    @NameInMap("networkCards")
-    public java.util.List<GetInstanceInfoResponseNetworkCards> networkCards;
-
-    // imageID
-    @NameInMap("imageID")
-    public String imageID;
-
-    // uid
-    @NameInMap("uid")
-    public String uid;
-
-    // instanceType
-    @NameInMap("instanceType")
-    public String instanceType;
+    // systemDisk
+    @NameInMap("systemDisk")
+    public java.util.List<Disk> systemDisk;
 
     // systemInfo
     @NameInMap("systemInfo")
     public String systemInfo;
 
-    // rootPassword
-    @NameInMap("rootPassword")
-    public String rootPassword;
-
-    // labels
-    @NameInMap("labels")
-    public java.util.Map<String, String> labels;
-
     // taints
     @NameInMap("taints")
     public java.util.List<GetInstanceInfoResponseTaints> taints;
 
-    // annotations
-    @NameInMap("annotations")
-    public java.util.Map<String, String> annotations;
+    // uid
+    @NameInMap("uid")
+    public String uid;
 
     public static GetInstanceInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceInfoResponse self = new GetInstanceInfoResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceInfoResponse setAnnotations(java.util.Map<String, String> annotations) {
+        this.annotations = annotations;
+        return this;
+    }
+    public java.util.Map<String, String> getAnnotations() {
+        return this.annotations;
+    }
+
+    public GetInstanceInfoResponse setArch(String arch) {
+        this.arch = arch;
+        return this;
+    }
+    public String getArch() {
+        return this.arch;
+    }
+
+    public GetInstanceInfoResponse setCpu(String cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public String getCpu() {
+        return this.cpu;
+    }
+
+    public GetInstanceInfoResponse setDataDisk(java.util.List<Disk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<Disk> getDataDisk() {
+        return this.dataDisk;
+    }
+
+    public GetInstanceInfoResponse setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
     }
 
     public GetInstanceInfoResponse setIdentifier(String identifier) {
@@ -109,12 +149,68 @@ public class GetInstanceInfoResponse extends TeaModel {
         return this.identifier;
     }
 
-    public GetInstanceInfoResponse setHostName(String hostName) {
-        this.hostName = hostName;
+    public GetInstanceInfoResponse setImageID(String imageID) {
+        this.imageID = imageID;
         return this;
     }
-    public String getHostName() {
-        return this.hostName;
+    public String getImageID() {
+        return this.imageID;
+    }
+
+    public GetInstanceInfoResponse setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public GetInstanceInfoResponse setInternetBandwidth(Integer internetBandwidth) {
+        this.internetBandwidth = internetBandwidth;
+        return this;
+    }
+    public Integer getInternetBandwidth() {
+        return this.internetBandwidth;
+    }
+
+    public GetInstanceInfoResponse setKernel(String kernel) {
+        this.kernel = kernel;
+        return this;
+    }
+    public String getKernel() {
+        return this.kernel;
+    }
+
+    public GetInstanceInfoResponse setLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
+    }
+
+    public GetInstanceInfoResponse setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    public String getMacAddress() {
+        return this.macAddress;
+    }
+
+    public GetInstanceInfoResponse setMemory(String memory) {
+        this.memory = memory;
+        return this;
+    }
+    public String getMemory() {
+        return this.memory;
+    }
+
+    public GetInstanceInfoResponse setNetworkCards(java.util.List<GetInstanceInfoResponseNetworkCards> networkCards) {
+        this.networkCards = networkCards;
+        return this;
+    }
+    public java.util.List<GetInstanceInfoResponseNetworkCards> getNetworkCards() {
+        return this.networkCards;
     }
 
     public GetInstanceInfoResponse setOs(String os) {
@@ -133,62 +229,6 @@ public class GetInstanceInfoResponse extends TeaModel {
         return this.osVersion;
     }
 
-    public GetInstanceInfoResponse setArch(String arch) {
-        this.arch = arch;
-        return this;
-    }
-    public String getArch() {
-        return this.arch;
-    }
-
-    public GetInstanceInfoResponse setKernel(String kernel) {
-        this.kernel = kernel;
-        return this;
-    }
-    public String getKernel() {
-        return this.kernel;
-    }
-
-    public GetInstanceInfoResponse setMacAddress(String macAddress) {
-        this.macAddress = macAddress;
-        return this;
-    }
-    public String getMacAddress() {
-        return this.macAddress;
-    }
-
-    public GetInstanceInfoResponse setCpu(String cpu) {
-        this.cpu = cpu;
-        return this;
-    }
-    public String getCpu() {
-        return this.cpu;
-    }
-
-    public GetInstanceInfoResponse setMemory(String memory) {
-        this.memory = memory;
-        return this;
-    }
-    public String getMemory() {
-        return this.memory;
-    }
-
-    public GetInstanceInfoResponse setSystemDisk(java.util.List<Disk> systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public java.util.List<Disk> getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public GetInstanceInfoResponse setDataDisk(java.util.List<Disk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<Disk> getDataDisk() {
-        return this.dataDisk;
-    }
-
     public GetInstanceInfoResponse setPrivateIP(String privateIP) {
         this.privateIP = privateIP;
         return this;
@@ -205,44 +245,20 @@ public class GetInstanceInfoResponse extends TeaModel {
         return this.publicIP;
     }
 
-    public GetInstanceInfoResponse setInternetBandwidth(Integer internetBandwidth) {
-        this.internetBandwidth = internetBandwidth;
+    public GetInstanceInfoResponse setRootPassword(String rootPassword) {
+        this.rootPassword = rootPassword;
         return this;
     }
-    public Integer getInternetBandwidth() {
-        return this.internetBandwidth;
+    public String getRootPassword() {
+        return this.rootPassword;
     }
 
-    public GetInstanceInfoResponse setNetworkCards(java.util.List<GetInstanceInfoResponseNetworkCards> networkCards) {
-        this.networkCards = networkCards;
+    public GetInstanceInfoResponse setSystemDisk(java.util.List<Disk> systemDisk) {
+        this.systemDisk = systemDisk;
         return this;
     }
-    public java.util.List<GetInstanceInfoResponseNetworkCards> getNetworkCards() {
-        return this.networkCards;
-    }
-
-    public GetInstanceInfoResponse setImageID(String imageID) {
-        this.imageID = imageID;
-        return this;
-    }
-    public String getImageID() {
-        return this.imageID;
-    }
-
-    public GetInstanceInfoResponse setUid(String uid) {
-        this.uid = uid;
-        return this;
-    }
-    public String getUid() {
-        return this.uid;
-    }
-
-    public GetInstanceInfoResponse setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
+    public java.util.List<Disk> getSystemDisk() {
+        return this.systemDisk;
     }
 
     public GetInstanceInfoResponse setSystemInfo(String systemInfo) {
@@ -253,22 +269,6 @@ public class GetInstanceInfoResponse extends TeaModel {
         return this.systemInfo;
     }
 
-    public GetInstanceInfoResponse setRootPassword(String rootPassword) {
-        this.rootPassword = rootPassword;
-        return this;
-    }
-    public String getRootPassword() {
-        return this.rootPassword;
-    }
-
-    public GetInstanceInfoResponse setLabels(java.util.Map<String, String> labels) {
-        this.labels = labels;
-        return this;
-    }
-    public java.util.Map<String, String> getLabels() {
-        return this.labels;
-    }
-
     public GetInstanceInfoResponse setTaints(java.util.List<GetInstanceInfoResponseTaints> taints) {
         this.taints = taints;
         return this;
@@ -277,34 +277,26 @@ public class GetInstanceInfoResponse extends TeaModel {
         return this.taints;
     }
 
-    public GetInstanceInfoResponse setAnnotations(java.util.Map<String, String> annotations) {
-        this.annotations = annotations;
+    public GetInstanceInfoResponse setUid(String uid) {
+        this.uid = uid;
         return this;
     }
-    public java.util.Map<String, String> getAnnotations() {
-        return this.annotations;
+    public String getUid() {
+        return this.uid;
     }
 
     public static class GetInstanceInfoResponseNetworkCards extends TeaModel {
-        // name
-        @NameInMap("name")
-        public String name;
-
         // ip
         @NameInMap("ip")
         public String ip;
 
+        // name
+        @NameInMap("name")
+        public String name;
+
         public static GetInstanceInfoResponseNetworkCards build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceInfoResponseNetworkCards self = new GetInstanceInfoResponseNetworkCards();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceInfoResponseNetworkCards setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public GetInstanceInfoResponseNetworkCards setIp(String ip) {
@@ -315,9 +307,21 @@ public class GetInstanceInfoResponse extends TeaModel {
             return this.ip;
         }
 
+        public GetInstanceInfoResponseNetworkCards setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
     public static class GetInstanceInfoResponseTaints extends TeaModel {
+        // effect
+        @NameInMap("effect")
+        public String effect;
+
         // key
         @NameInMap("key")
         public String key;
@@ -326,13 +330,17 @@ public class GetInstanceInfoResponse extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        // effect
-        @NameInMap("effect")
-        public String effect;
-
         public static GetInstanceInfoResponseTaints build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceInfoResponseTaints self = new GetInstanceInfoResponseTaints();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceInfoResponseTaints setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
         }
 
         public GetInstanceInfoResponseTaints setKey(String key) {
@@ -349,14 +357,6 @@ public class GetInstanceInfoResponse extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public GetInstanceInfoResponseTaints setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
         }
 
     }
