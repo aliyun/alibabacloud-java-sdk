@@ -4,26 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ModifyDomainCustomLogConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ConfigId")
+    public String configId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("ConfigId")
-    public String configId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static ModifyDomainCustomLogConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDomainCustomLogConfigRequest self = new ModifyDomainCustomLogConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDomainCustomLogConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyDomainCustomLogConfigRequest setConfigId(String configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getConfigId() {
+        return this.configId;
     }
 
     public ModifyDomainCustomLogConfigRequest setDomainName(String domainName) {
@@ -34,12 +34,12 @@ public class ModifyDomainCustomLogConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public ModifyDomainCustomLogConfigRequest setConfigId(String configId) {
-        this.configId = configId;
+    public ModifyDomainCustomLogConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getConfigId() {
-        return this.configId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

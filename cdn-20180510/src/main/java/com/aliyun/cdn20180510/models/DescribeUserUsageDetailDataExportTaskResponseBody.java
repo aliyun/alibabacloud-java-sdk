@@ -62,54 +62,30 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
     }
 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("TaskId")
-        public String taskId;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TaskConfig")
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
 
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
         public static DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem self = new DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
         }
 
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setCreateTime(String createTime) {
@@ -120,12 +96,28 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             return this.createTime;
         }
 
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskName(String taskName) {
-            this.taskName = taskName;
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
             return this;
         }
-        public String getTaskName() {
-            return this.taskName;
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskConfig(DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig) {
+            this.taskConfig = taskConfig;
+            return this;
+        }
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig getTaskConfig() {
+            return this.taskConfig;
         }
 
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskId(String taskId) {
@@ -136,12 +128,20 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             return this.taskId;
         }
 
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskConfig(DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig) {
-            this.taskConfig = taskConfig;
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskName(String taskName) {
+            this.taskName = taskName;
             return this;
         }
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig getTaskConfig() {
-            return this.taskConfig;
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }
@@ -166,29 +166,29 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
     }
 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage extends TeaModel {
-        @NameInMap("PageSize")
-        public Integer pageSize;
+        @NameInMap("Data")
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData data;
 
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         @NameInMap("TotalCount")
         public Integer totalCount;
-
-        @NameInMap("Data")
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData data;
 
         public static DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage self = new DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setData(DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData data) {
+            this.data = data;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData getData() {
+            return this.data;
         }
 
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setPageNumber(Integer pageNumber) {
@@ -199,20 +199,20 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             return this.pageNumber;
         }
 
+        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
         public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPage setData(DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData data) {
-            this.data = data;
-            return this;
-        }
-        public DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageData getData() {
-            return this.data;
         }
 
     }

@@ -4,26 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDeliverListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DeliverId")
     public Long deliverId;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeCdnDeliverListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDeliverListRequest self = new DescribeCdnDeliverListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnDeliverListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeCdnDeliverListRequest setDeliverId(Long deliverId) {
@@ -34,12 +23,12 @@ public class DescribeCdnDeliverListRequest extends TeaModel {
         return this.deliverId;
     }
 
-    public DescribeCdnDeliverListRequest setStatus(String status) {
-        this.status = status;
+    public DescribeCdnDeliverListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

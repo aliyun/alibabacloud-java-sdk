@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class StartCdnDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static StartCdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         StartCdnDomainRequest self = new StartCdnDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartCdnDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public StartCdnDomainRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class StartCdnDomainRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public StartCdnDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

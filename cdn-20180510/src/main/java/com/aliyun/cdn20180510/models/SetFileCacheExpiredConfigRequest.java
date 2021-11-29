@@ -4,17 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetFileCacheExpiredConfigRequest extends TeaModel {
+    @NameInMap("CacheContent")
+    public String cacheContent;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("CacheContent")
-    public String cacheContent;
 
     @NameInMap("TTL")
     public String TTL;
@@ -25,6 +25,22 @@ public class SetFileCacheExpiredConfigRequest extends TeaModel {
     public static SetFileCacheExpiredConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetFileCacheExpiredConfigRequest self = new SetFileCacheExpiredConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetFileCacheExpiredConfigRequest setCacheContent(String cacheContent) {
+        this.cacheContent = cacheContent;
+        return this;
+    }
+    public String getCacheContent() {
+        return this.cacheContent;
+    }
+
+    public SetFileCacheExpiredConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SetFileCacheExpiredConfigRequest setOwnerId(Long ownerId) {
@@ -41,22 +57,6 @@ public class SetFileCacheExpiredConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public SetFileCacheExpiredConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public SetFileCacheExpiredConfigRequest setCacheContent(String cacheContent) {
-        this.cacheContent = cacheContent;
-        return this;
-    }
-    public String getCacheContent() {
-        return this.cacheContent;
     }
 
     public SetFileCacheExpiredConfigRequest setTTL(String TTL) {

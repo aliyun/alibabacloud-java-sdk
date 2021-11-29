@@ -7,11 +7,11 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
     @NameInMap("ExpireWithin30DaysCount")
     public Integer expireWithin30DaysCount;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ExpiredCount")
     public Integer expiredCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeUserCertificateExpireCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserCertificateExpireCountResponseBody self = new DescribeUserCertificateExpireCountResponseBody();
@@ -26,20 +26,20 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         return this.expireWithin30DaysCount;
     }
 
-    public DescribeUserCertificateExpireCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeUserCertificateExpireCountResponseBody setExpiredCount(Integer expiredCount) {
         this.expiredCount = expiredCount;
         return this;
     }
     public Integer getExpiredCount() {
         return this.expiredCount;
+    }
+
+    public DescribeUserCertificateExpireCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

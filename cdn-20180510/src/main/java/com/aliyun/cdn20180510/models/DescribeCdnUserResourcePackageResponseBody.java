@@ -32,23 +32,17 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("CurrCapacity")
         public String currCapacity;
+
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("InitCapacity")
         public String initCapacity;
@@ -56,44 +50,18 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("TemplateName")
         public String templateName;
 
         public static DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo self = new DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setCommodityCode(String commodityCode) {
@@ -112,6 +80,22 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             return this.currCapacity;
         }
 
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInitCapacity(String initCapacity) {
             this.initCapacity = initCapacity;
             return this;
@@ -126,6 +110,22 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setTemplateName(String templateName) {

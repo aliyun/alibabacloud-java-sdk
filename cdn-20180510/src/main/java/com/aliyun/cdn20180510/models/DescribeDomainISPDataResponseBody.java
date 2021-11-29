@@ -4,20 +4,20 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainISPDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Value")
     public DescribeDomainISPDataResponseBodyValue value;
@@ -27,28 +27,12 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainISPDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDomainISPDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainISPDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainISPDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeDomainISPDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainISPDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeDomainISPDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainISPDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainISPDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainISPDataResponseBody setValue(DescribeDomainISPDataResponseBodyValue value) {
@@ -76,11 +76,8 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainISPDataResponseBodyValueISPProportionData extends TeaModel {
-        @NameInMap("TotalQuery")
-        public String totalQuery;
-
-        @NameInMap("TotalBytes")
-        public String totalBytes;
+        @NameInMap("AvgObjectSize")
+        public String avgObjectSize;
 
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
@@ -88,49 +85,44 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
-        @NameInMap("ReqErrRate")
-        public String reqErrRate;
-
-        @NameInMap("AvgObjectSize")
-        public String avgObjectSize;
-
         @NameInMap("Bps")
         public String bps;
 
-        @NameInMap("Qps")
-        public String qps;
-
-        @NameInMap("Proportion")
-        public String proportion;
-
-        @NameInMap("IspEname")
-        public String ispEname;
+        @NameInMap("BytesProportion")
+        public String bytesProportion;
 
         @NameInMap("ISP")
         public String ISP;
 
-        @NameInMap("BytesProportion")
-        public String bytesProportion;
+        @NameInMap("IspEname")
+        public String ispEname;
+
+        @NameInMap("Proportion")
+        public String proportion;
+
+        @NameInMap("Qps")
+        public String qps;
+
+        @NameInMap("ReqErrRate")
+        public String reqErrRate;
+
+        @NameInMap("TotalBytes")
+        public String totalBytes;
+
+        @NameInMap("TotalQuery")
+        public String totalQuery;
 
         public static DescribeDomainISPDataResponseBodyValueISPProportionData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainISPDataResponseBodyValueISPProportionData self = new DescribeDomainISPDataResponseBodyValueISPProportionData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setTotalQuery(String totalQuery) {
-            this.totalQuery = totalQuery;
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setAvgObjectSize(String avgObjectSize) {
+            this.avgObjectSize = avgObjectSize;
             return this;
         }
-        public String getTotalQuery() {
-            return this.totalQuery;
-        }
-
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setTotalBytes(String totalBytes) {
-            this.totalBytes = totalBytes;
-            return this;
-        }
-        public String getTotalBytes() {
-            return this.totalBytes;
+        public String getAvgObjectSize() {
+            return this.avgObjectSize;
         }
 
         public DescribeDomainISPDataResponseBodyValueISPProportionData setAvgResponseRate(String avgResponseRate) {
@@ -149,22 +141,6 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             return this.avgResponseTime;
         }
 
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setReqErrRate(String reqErrRate) {
-            this.reqErrRate = reqErrRate;
-            return this;
-        }
-        public String getReqErrRate() {
-            return this.reqErrRate;
-        }
-
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setAvgObjectSize(String avgObjectSize) {
-            this.avgObjectSize = avgObjectSize;
-            return this;
-        }
-        public String getAvgObjectSize() {
-            return this.avgObjectSize;
-        }
-
         public DescribeDomainISPDataResponseBodyValueISPProportionData setBps(String bps) {
             this.bps = bps;
             return this;
@@ -173,28 +149,12 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             return this.bps;
         }
 
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setQps(String qps) {
-            this.qps = qps;
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setBytesProportion(String bytesProportion) {
+            this.bytesProportion = bytesProportion;
             return this;
         }
-        public String getQps() {
-            return this.qps;
-        }
-
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setProportion(String proportion) {
-            this.proportion = proportion;
-            return this;
-        }
-        public String getProportion() {
-            return this.proportion;
-        }
-
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setIspEname(String ispEname) {
-            this.ispEname = ispEname;
-            return this;
-        }
-        public String getIspEname() {
-            return this.ispEname;
+        public String getBytesProportion() {
+            return this.bytesProportion;
         }
 
         public DescribeDomainISPDataResponseBodyValueISPProportionData setISP(String ISP) {
@@ -205,12 +165,52 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             return this.ISP;
         }
 
-        public DescribeDomainISPDataResponseBodyValueISPProportionData setBytesProportion(String bytesProportion) {
-            this.bytesProportion = bytesProportion;
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setIspEname(String ispEname) {
+            this.ispEname = ispEname;
             return this;
         }
-        public String getBytesProportion() {
-            return this.bytesProportion;
+        public String getIspEname() {
+            return this.ispEname;
+        }
+
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setProportion(String proportion) {
+            this.proportion = proportion;
+            return this;
+        }
+        public String getProportion() {
+            return this.proportion;
+        }
+
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setQps(String qps) {
+            this.qps = qps;
+            return this;
+        }
+        public String getQps() {
+            return this.qps;
+        }
+
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setReqErrRate(String reqErrRate) {
+            this.reqErrRate = reqErrRate;
+            return this;
+        }
+        public String getReqErrRate() {
+            return this.reqErrRate;
+        }
+
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setTotalBytes(String totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public String getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        public DescribeDomainISPDataResponseBodyValueISPProportionData setTotalQuery(String totalQuery) {
+            this.totalQuery = totalQuery;
+            return this;
+        }
+        public String getTotalQuery() {
+            return this.totalQuery;
         }
 
     }

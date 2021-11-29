@@ -4,14 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TopReferList")
     public DescribeDomainTopReferVisitResponseBodyTopReferList topReferList;
@@ -21,12 +21,12 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainTopReferVisitResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDomainTopReferVisitResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeDomainTopReferVisitResponseBody setRequestId(String requestId) {
@@ -37,12 +37,12 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainTopReferVisitResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeDomainTopReferVisitResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainTopReferVisitResponseBody setTopReferList(DescribeDomainTopReferVisitResponseBodyTopReferList topReferList) {
@@ -60,11 +60,11 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
-        @NameInMap("VisitData")
-        public String visitData;
-
         @NameInMap("ReferDetail")
         public String referDetail;
+
+        @NameInMap("VisitData")
+        public String visitData;
 
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -90,20 +90,20 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             return this.flowProportion;
         }
 
-        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setVisitData(String visitData) {
-            this.visitData = visitData;
-            return this;
-        }
-        public String getVisitData() {
-            return this.visitData;
-        }
-
         public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setReferDetail(String referDetail) {
             this.referDetail = referDetail;
             return this;
         }
         public String getReferDetail() {
             return this.referDetail;
+        }
+
+        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setVisitData(String visitData) {
+            this.visitData = visitData;
+            return this;
+        }
+        public String getVisitData() {
+            return this.visitData;
         }
 
         public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setVisitProportion(Float visitProportion) {

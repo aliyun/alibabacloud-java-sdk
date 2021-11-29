@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpInfoRequest extends TeaModel {
+    @NameInMap("IP")
+    public String IP;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("IP")
-    public String IP;
-
     public static DescribeIpInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpInfoRequest self = new DescribeIpInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeIpInfoRequest setIP(String IP) {
+        this.IP = IP;
+        return this;
+    }
+    public String getIP() {
+        return this.IP;
     }
 
     public DescribeIpInfoRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribeIpInfoRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DescribeIpInfoRequest setIP(String IP) {
-        this.IP = IP;
-        return this;
-    }
-    public String getIP() {
-        return this.IP;
     }
 
 }

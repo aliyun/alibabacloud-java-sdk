@@ -4,17 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetForwardSchemeConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ConfigId")
+    public Long configId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("ConfigId")
-    public Long configId;
-
     @NameInMap("Enable")
     public String enable;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SchemeOrigin")
     public String schemeOrigin;
@@ -27,12 +27,12 @@ public class SetForwardSchemeConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetForwardSchemeConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetForwardSchemeConfigRequest setConfigId(Long configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     public SetForwardSchemeConfigRequest setDomainName(String domainName) {
@@ -43,20 +43,20 @@ public class SetForwardSchemeConfigRequest extends TeaModel {
         return this.domainName;
     }
 
-    public SetForwardSchemeConfigRequest setConfigId(Long configId) {
-        this.configId = configId;
-        return this;
-    }
-    public Long getConfigId() {
-        return this.configId;
-    }
-
     public SetForwardSchemeConfigRequest setEnable(String enable) {
         this.enable = enable;
         return this;
     }
     public String getEnable() {
         return this.enable;
+    }
+
+    public SetForwardSchemeConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetForwardSchemeConfigRequest setSchemeOrigin(String schemeOrigin) {

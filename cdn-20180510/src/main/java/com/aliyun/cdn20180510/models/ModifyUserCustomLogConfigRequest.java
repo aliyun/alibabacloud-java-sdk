@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserCustomLogConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ConfigId")
     public String configId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Tag")
     public String tag;
@@ -18,20 +18,20 @@ public class ModifyUserCustomLogConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserCustomLogConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public ModifyUserCustomLogConfigRequest setConfigId(String configId) {
         this.configId = configId;
         return this;
     }
     public String getConfigId() {
         return this.configId;
+    }
+
+    public ModifyUserCustomLogConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyUserCustomLogConfigRequest setTag(String tag) {

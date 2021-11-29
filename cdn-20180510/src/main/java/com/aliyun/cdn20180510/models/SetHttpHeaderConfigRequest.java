@@ -4,11 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetHttpHeaderConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ConfigId")
+    public Long configId;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -19,28 +16,23 @@ public class SetHttpHeaderConfigRequest extends TeaModel {
     @NameInMap("HeaderValue")
     public String headerValue;
 
-    @NameInMap("ConfigId")
-    public Long configId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static SetHttpHeaderConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetHttpHeaderConfigRequest self = new SetHttpHeaderConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetHttpHeaderConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetHttpHeaderConfigRequest setConfigId(Long configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetHttpHeaderConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     public SetHttpHeaderConfigRequest setDomainName(String domainName) {
@@ -67,12 +59,20 @@ public class SetHttpHeaderConfigRequest extends TeaModel {
         return this.headerValue;
     }
 
-    public SetHttpHeaderConfigRequest setConfigId(Long configId) {
-        this.configId = configId;
+    public SetHttpHeaderConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Long getConfigId() {
-        return this.configId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetHttpHeaderConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,32 +4,32 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class AddCdnDomainRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("CdnType")
     public String cdnType;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Sources")
-    public String sources;
 
     @NameInMap("CheckUrl")
     public String checkUrl;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Scope")
     public String scope;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("Sources")
+    public String sources;
 
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -37,30 +37,6 @@ public class AddCdnDomainRequest extends TeaModel {
     public static AddCdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCdnDomainRequest self = new AddCdnDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddCdnDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddCdnDomainRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AddCdnDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public AddCdnDomainRequest setCdnType(String cdnType) {
@@ -71,12 +47,36 @@ public class AddCdnDomainRequest extends TeaModel {
         return this.cdnType;
     }
 
+    public AddCdnDomainRequest setCheckUrl(String checkUrl) {
+        this.checkUrl = checkUrl;
+        return this;
+    }
+    public String getCheckUrl() {
+        return this.checkUrl;
+    }
+
     public AddCdnDomainRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public AddCdnDomainRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public AddCdnDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCdnDomainRequest setResourceGroupId(String resourceGroupId) {
@@ -87,28 +87,28 @@ public class AddCdnDomainRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public AddCdnDomainRequest setSources(String sources) {
-        this.sources = sources;
-        return this;
-    }
-    public String getSources() {
-        return this.sources;
-    }
-
-    public AddCdnDomainRequest setCheckUrl(String checkUrl) {
-        this.checkUrl = checkUrl;
-        return this;
-    }
-    public String getCheckUrl() {
-        return this.checkUrl;
-    }
-
     public AddCdnDomainRequest setScope(String scope) {
         this.scope = scope;
         return this;
     }
     public String getScope() {
         return this.scope;
+    }
+
+    public AddCdnDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public AddCdnDomainRequest setSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    public String getSources() {
+        return this.sources;
     }
 
     public AddCdnDomainRequest setTopLevelDomain(String topLevelDomain) {

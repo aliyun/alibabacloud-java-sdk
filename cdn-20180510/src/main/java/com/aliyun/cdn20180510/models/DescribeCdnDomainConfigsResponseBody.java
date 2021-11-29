@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainConfigs")
     public DescribeCdnDomainConfigsResponseBodyDomainConfigs domainConfigs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCdnDomainConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainConfigsResponseBody self = new DescribeCdnDomainConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnDomainConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCdnDomainConfigsResponseBody setDomainConfigs(DescribeCdnDomainConfigsResponseBodyDomainConfigs domainConfigs) {
@@ -29,6 +21,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
     }
     public DescribeCdnDomainConfigsResponseBodyDomainConfigs getDomainConfigs() {
         return this.domainConfigs;
+    }
+
+    public DescribeCdnDomainConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
@@ -81,29 +81,21 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConfigId")
         public String configId;
-
-        @NameInMap("FunctionName")
-        public String functionName;
 
         @NameInMap("FunctionArgs")
         public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig self = new DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setConfigId(String configId) {
@@ -114,6 +106,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             return this.configId;
         }
 
+        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
+            this.functionArgs = functionArgs;
+            return this;
+        }
+        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
+            return this.functionArgs;
+        }
+
         public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
@@ -122,12 +122,12 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
-            this.functionArgs = functionArgs;
+        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
-            return this.functionArgs;
+        public String getStatus() {
+            return this.status;
         }
 
     }

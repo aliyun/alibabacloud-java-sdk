@@ -7,11 +7,11 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HttpCodeDataInterval")
     public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainHttpCodeDataByLayerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainHttpCodeDataByLayerResponseBody self = new DescribeDomainHttpCodeDataByLayerResponseBody();
@@ -26,14 +26,6 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
-    public DescribeDomainHttpCodeDataByLayerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDomainHttpCodeDataByLayerResponseBody setHttpCodeDataInterval(DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval) {
         this.httpCodeDataInterval = httpCodeDataInterval;
         return this;
@@ -42,27 +34,27 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         return this.httpCodeDataInterval;
     }
 
-    public static class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public DescribeDomainHttpCodeDataByLayerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         @NameInMap("TotalValue")
         public String totalValue;
 
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule self = new DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule setTimeStamp(String timeStamp) {
@@ -79,6 +71,14 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         }
         public String getTotalValue() {
             return this.totalValue;
+        }
+
+        public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

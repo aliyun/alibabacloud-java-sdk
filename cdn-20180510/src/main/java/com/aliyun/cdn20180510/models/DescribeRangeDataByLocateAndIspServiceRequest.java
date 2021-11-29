@@ -4,14 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainNames")
     public String domainNames;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,17 +16,15 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     @NameInMap("LocationNames")
     public String locationNames;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeRangeDataByLocateAndIspServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRangeDataByLocateAndIspServiceRequest self = new DescribeRangeDataByLocateAndIspServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRangeDataByLocateAndIspServiceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeRangeDataByLocateAndIspServiceRequest setDomainNames(String domainNames) {
@@ -41,14 +33,6 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     }
     public String getDomainNames() {
         return this.domainNames;
-    }
-
-    public DescribeRangeDataByLocateAndIspServiceRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeRangeDataByLocateAndIspServiceRequest setEndTime(String endTime) {
@@ -73,6 +57,22 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     }
     public String getLocationNames() {
         return this.locationNames;
+    }
+
+    public DescribeRangeDataByLocateAndIspServiceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeRangeDataByLocateAndIspServiceRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

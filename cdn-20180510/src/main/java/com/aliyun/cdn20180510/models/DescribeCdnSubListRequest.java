@@ -7,9 +7,6 @@ public class DescribeCdnSubListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("Status")
-    public String status;
-
     public static DescribeCdnSubListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnSubListRequest self = new DescribeCdnSubListRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DescribeCdnSubListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeCdnSubListRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
 }

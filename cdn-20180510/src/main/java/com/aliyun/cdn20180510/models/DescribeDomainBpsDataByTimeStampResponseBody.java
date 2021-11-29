@@ -4,45 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
-    @NameInMap("TimeStamp")
-    public String timeStamp;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BpsDataList")
+    public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("BpsDataList")
-    public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TimeStamp")
+    public String timeStamp;
 
     public static DescribeDomainBpsDataByTimeStampResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainBpsDataByTimeStampResponseBody self = new DescribeDomainBpsDataByTimeStampResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainBpsDataByTimeStampResponseBody setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
-        return this;
-    }
-    public String getTimeStamp() {
-        return this.timeStamp;
-    }
-
-    public DescribeDomainBpsDataByTimeStampResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainBpsDataByTimeStampResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDomainBpsDataByTimeStampResponseBody setBpsDataList(DescribeDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList) {
@@ -53,22 +29,62 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         return this.bpsDataList;
     }
 
+    public DescribeDomainBpsDataByTimeStampResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainBpsDataByTimeStampResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainBpsDataByTimeStampResponseBody setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+        return this;
+    }
+    public String getTimeStamp() {
+        return this.timeStamp;
+    }
+
     public static class DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
+        @NameInMap("Bps")
+        public Long bps;
+
+        @NameInMap("IspName")
+        public String ispName;
+
         @NameInMap("LocationName")
         public String locationName;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("IspName")
-        public String ispName;
-
-        @NameInMap("Bps")
-        public Long bps;
-
         public static DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel self = new DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setBps(Long bps) {
+            this.bps = bps;
+            return this;
+        }
+        public Long getBps() {
+            return this.bps;
+        }
+
+        public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setIspName(String ispName) {
+            this.ispName = ispName;
+            return this;
+        }
+        public String getIspName() {
+            return this.ispName;
         }
 
         public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setLocationName(String locationName) {
@@ -85,22 +101,6 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
-        }
-
-        public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setIspName(String ispName) {
-            this.ispName = ispName;
-            return this;
-        }
-        public String getIspName() {
-            return this.ispName;
-        }
-
-        public DescribeDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setBps(Long bps) {
-            this.bps = bps;
-            return this;
-        }
-        public Long getBps() {
-            return this.bps;
         }
 
     }

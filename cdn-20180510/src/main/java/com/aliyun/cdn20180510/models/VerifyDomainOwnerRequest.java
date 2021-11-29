@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class VerifyDomainOwnerRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("VerifyType")
     public String verifyType;
@@ -18,20 +18,20 @@ public class VerifyDomainOwnerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public VerifyDomainOwnerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public VerifyDomainOwnerRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public VerifyDomainOwnerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public VerifyDomainOwnerRequest setVerifyType(String verifyType) {

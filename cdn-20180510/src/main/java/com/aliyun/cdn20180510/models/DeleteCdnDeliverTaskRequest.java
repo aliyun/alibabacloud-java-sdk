@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DeleteCdnDeliverTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DeliverId")
     public Long deliverId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DeleteCdnDeliverTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCdnDeliverTaskRequest self = new DeleteCdnDeliverTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCdnDeliverTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteCdnDeliverTaskRequest setDeliverId(Long deliverId) {
@@ -29,6 +21,14 @@ public class DeleteCdnDeliverTaskRequest extends TeaModel {
     }
     public Long getDeliverId() {
         return this.deliverId;
+    }
+
+    public DeleteCdnDeliverTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

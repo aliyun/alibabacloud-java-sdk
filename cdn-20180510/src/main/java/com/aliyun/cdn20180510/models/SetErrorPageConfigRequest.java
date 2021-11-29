@@ -4,40 +4,32 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetErrorPageConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("CustomPageUrl")
+    public String customPageUrl;
 
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageType")
     public String pageType;
 
-    @NameInMap("CustomPageUrl")
-    public String customPageUrl;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static SetErrorPageConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetErrorPageConfigRequest self = new SetErrorPageConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetErrorPageConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetErrorPageConfigRequest setCustomPageUrl(String customPageUrl) {
+        this.customPageUrl = customPageUrl;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetErrorPageConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getCustomPageUrl() {
+        return this.customPageUrl;
     }
 
     public SetErrorPageConfigRequest setDomainName(String domainName) {
@@ -48,6 +40,14 @@ public class SetErrorPageConfigRequest extends TeaModel {
         return this.domainName;
     }
 
+    public SetErrorPageConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public SetErrorPageConfigRequest setPageType(String pageType) {
         this.pageType = pageType;
         return this;
@@ -56,12 +56,12 @@ public class SetErrorPageConfigRequest extends TeaModel {
         return this.pageType;
     }
 
-    public SetErrorPageConfigRequest setCustomPageUrl(String customPageUrl) {
-        this.customPageUrl = customPageUrl;
+    public SetErrorPageConfigRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getCustomPageUrl() {
-        return this.customPageUrl;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

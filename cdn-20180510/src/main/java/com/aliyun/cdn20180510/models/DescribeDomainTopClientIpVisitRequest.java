@@ -4,38 +4,30 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("LocationNameEn")
-    public String locationNameEn;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Limit")
+    public String limit;
+
+    @NameInMap("LocationNameEn")
+    public String locationNameEn;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SortBy")
     public String sortBy;
 
-    @NameInMap("Limit")
-    public String limit;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDomainTopClientIpVisitRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainTopClientIpVisitRequest self = new DescribeDomainTopClientIpVisitRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainTopClientIpVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainTopClientIpVisitRequest setDomainName(String domainName) {
@@ -46,6 +38,22 @@ public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
         return this.domainName;
     }
 
+    public DescribeDomainTopClientIpVisitRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainTopClientIpVisitRequest setLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    public String getLimit() {
+        return this.limit;
+    }
+
     public DescribeDomainTopClientIpVisitRequest setLocationNameEn(String locationNameEn) {
         this.locationNameEn = locationNameEn;
         return this;
@@ -54,20 +62,12 @@ public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
         return this.locationNameEn;
     }
 
-    public DescribeDomainTopClientIpVisitRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDomainTopClientIpVisitRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainTopClientIpVisitRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDomainTopClientIpVisitRequest setSortBy(String sortBy) {
@@ -78,12 +78,12 @@ public class DescribeDomainTopClientIpVisitRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public DescribeDomainTopClientIpVisitRequest setLimit(String limit) {
-        this.limit = limit;
+    public DescribeDomainTopClientIpVisitRequest setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getLimit() {
-        return this.limit;
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

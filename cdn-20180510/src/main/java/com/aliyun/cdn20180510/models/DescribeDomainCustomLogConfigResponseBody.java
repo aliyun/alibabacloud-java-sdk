@@ -7,17 +7,17 @@ public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
     @NameInMap("ConfigId")
     public String configId;
 
-    @NameInMap("Tag")
-    public String tag;
+    @NameInMap("Remark")
+    public String remark;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Remark")
-    public String remark;
-
     @NameInMap("Sample")
     public String sample;
+
+    @NameInMap("Tag")
+    public String tag;
 
     public static DescribeDomainCustomLogConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainCustomLogConfigResponseBody self = new DescribeDomainCustomLogConfigResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
         return this.configId;
     }
 
-    public DescribeDomainCustomLogConfigResponseBody setTag(String tag) {
-        this.tag = tag;
+    public DescribeDomainCustomLogConfigResponseBody setRemark(String remark) {
+        this.remark = remark;
         return this;
     }
-    public String getTag() {
-        return this.tag;
+    public String getRemark() {
+        return this.remark;
     }
 
     public DescribeDomainCustomLogConfigResponseBody setRequestId(String requestId) {
@@ -48,20 +48,20 @@ public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainCustomLogConfigResponseBody setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
-    }
-
     public DescribeDomainCustomLogConfigResponseBody setSample(String sample) {
         this.sample = sample;
         return this;
     }
     public String getSample() {
         return this.sample;
+    }
+
+    public DescribeDomainCustomLogConfigResponseBody setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }

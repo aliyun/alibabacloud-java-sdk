@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnCertificateListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertificateListModel")
     public DescribeCdnCertificateListResponseBodyCertificateListModel certificateListModel;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCdnCertificateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnCertificateListResponseBody self = new DescribeCdnCertificateListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnCertificateListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCdnCertificateListResponseBody setCertificateListModel(DescribeCdnCertificateListResponseBodyCertificateListModel certificateListModel) {
@@ -31,60 +23,36 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         return this.certificateListModel;
     }
 
-    public static class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
-        @NameInMap("LastTime")
-        public Long lastTime;
+    public DescribeCdnCertificateListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Fingerprint")
-        public String fingerprint;
+    public static class DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        @NameInMap("CertId")
+        public Long certId;
 
         @NameInMap("CertName")
         public String certName;
 
+        @NameInMap("Common")
+        public String common;
+
+        @NameInMap("Fingerprint")
+        public String fingerprint;
+
         @NameInMap("Issuer")
         public String issuer;
 
-        @NameInMap("CertId")
-        public Long certId;
-
-        @NameInMap("Common")
-        public String common;
+        @NameInMap("LastTime")
+        public Long lastTime;
 
         public static DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert self = new DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setLastTime(Long lastTime) {
-            this.lastTime = lastTime;
-            return this;
-        }
-        public Long getLastTime() {
-            return this.lastTime;
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setFingerprint(String fingerprint) {
-            this.fingerprint = fingerprint;
-            return this;
-        }
-        public String getFingerprint() {
-            return this.fingerprint;
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setCertName(String certName) {
-            this.certName = certName;
-            return this;
-        }
-        public String getCertName() {
-            return this.certName;
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setIssuer(String issuer) {
-            this.issuer = issuer;
-            return this;
-        }
-        public String getIssuer() {
-            return this.issuer;
         }
 
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setCertId(Long certId) {
@@ -95,12 +63,44 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
             return this.certId;
         }
 
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setCertName(String certName) {
+            this.certName = certName;
+            return this;
+        }
+        public String getCertName() {
+            return this.certName;
+        }
+
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setCommon(String common) {
             this.common = common;
             return this;
         }
         public String getCommon() {
             return this.common;
+        }
+
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setFingerprint(String fingerprint) {
+            this.fingerprint = fingerprint;
+            return this;
+        }
+        public String getFingerprint() {
+            return this.fingerprint;
+        }
+
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertListCert setLastTime(Long lastTime) {
+            this.lastTime = lastTime;
+            return this;
+        }
+        public Long getLastTime() {
+            return this.lastTime;
         }
 
     }
@@ -125,23 +125,15 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModel extends TeaModel {
-        @NameInMap("Count")
-        public Integer count;
-
         @NameInMap("CertList")
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
+
+        @NameInMap("Count")
+        public Integer count;
 
         public static DescribeCdnCertificateListResponseBodyCertificateListModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnCertificateListResponseBodyCertificateListModel self = new DescribeCdnCertificateListResponseBodyCertificateListModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModel setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
         }
 
         public DescribeCdnCertificateListResponseBodyCertificateListModel setCertList(DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList) {
@@ -150,6 +142,14 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         }
         public DescribeCdnCertificateListResponseBodyCertificateListModelCertList getCertList() {
             return this.certList;
+        }
+
+        public DescribeCdnCertificateListResponseBodyCertificateListModel setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
     }

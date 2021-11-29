@@ -4,34 +4,18 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnWafDomainResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("OutPutDomains")
+    public java.util.List<DescribeCdnWafDomainResponseBodyOutPutDomains> outPutDomains;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OutPutDomains")
-    public java.util.List<DescribeCdnWafDomainResponseBodyOutPutDomains> outPutDomains;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeCdnWafDomainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnWafDomainResponseBody self = new DescribeCdnWafDomainResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnWafDomainResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeCdnWafDomainResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCdnWafDomainResponseBody setOutPutDomains(java.util.List<DescribeCdnWafDomainResponseBodyOutPutDomains> outPutDomains) {
@@ -42,18 +26,34 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         return this.outPutDomains;
     }
 
+    public DescribeCdnWafDomainResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCdnWafDomainResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeCdnWafDomainResponseBodyOutPutDomains extends TeaModel {
         @NameInMap("AclStatus")
         public String aclStatus;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CcStatus")
+        public String ccStatus;
 
         @NameInMap("Domain")
         public String domain;
 
-        @NameInMap("CcStatus")
-        public String ccStatus;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("WafStatus")
         public String wafStatus;
@@ -71,12 +71,12 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             return this.aclStatus;
         }
 
-        public DescribeCdnWafDomainResponseBodyOutPutDomains setStatus(String status) {
-            this.status = status;
+        public DescribeCdnWafDomainResponseBodyOutPutDomains setCcStatus(String ccStatus) {
+            this.ccStatus = ccStatus;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCcStatus() {
+            return this.ccStatus;
         }
 
         public DescribeCdnWafDomainResponseBodyOutPutDomains setDomain(String domain) {
@@ -87,12 +87,12 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public DescribeCdnWafDomainResponseBodyOutPutDomains setCcStatus(String ccStatus) {
-            this.ccStatus = ccStatus;
+        public DescribeCdnWafDomainResponseBodyOutPutDomains setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getCcStatus() {
-            return this.ccStatus;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeCdnWafDomainResponseBodyOutPutDomains setWafStatus(String wafStatus) {

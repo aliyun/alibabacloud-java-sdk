@@ -4,11 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainConfigsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("ConfigId")
+    public String configId;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -16,25 +13,23 @@ public class DescribeCdnDomainConfigsRequest extends TeaModel {
     @NameInMap("FunctionNames")
     public String functionNames;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeCdnDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainConfigsRequest self = new DescribeCdnDomainConfigsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCdnDomainConfigsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeCdnDomainConfigsRequest setConfigId(String configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeCdnDomainConfigsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getConfigId() {
+        return this.configId;
     }
 
     public DescribeCdnDomainConfigsRequest setDomainName(String domainName) {
@@ -51,6 +46,22 @@ public class DescribeCdnDomainConfigsRequest extends TeaModel {
     }
     public String getFunctionNames() {
         return this.functionNames;
+    }
+
+    public DescribeCdnDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeCdnDomainConfigsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

@@ -4,14 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByLayerRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,23 +16,21 @@ public class DescribeDomainBpsDataByLayerRequest extends TeaModel {
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
+    @NameInMap("Layer")
+    public String layer;
+
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("Layer")
-    public String layer;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDomainBpsDataByLayerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainBpsDataByLayerRequest self = new DescribeDomainBpsDataByLayerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainBpsDataByLayerRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainBpsDataByLayerRequest setDomainName(String domainName) {
@@ -47,14 +39,6 @@ public class DescribeDomainBpsDataByLayerRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainBpsDataByLayerRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainBpsDataByLayerRequest setEndTime(String endTime) {
@@ -81,6 +65,14 @@ public class DescribeDomainBpsDataByLayerRequest extends TeaModel {
         return this.ispNameEn;
     }
 
+    public DescribeDomainBpsDataByLayerRequest setLayer(String layer) {
+        this.layer = layer;
+        return this;
+    }
+    public String getLayer() {
+        return this.layer;
+    }
+
     public DescribeDomainBpsDataByLayerRequest setLocationNameEn(String locationNameEn) {
         this.locationNameEn = locationNameEn;
         return this;
@@ -89,12 +81,20 @@ public class DescribeDomainBpsDataByLayerRequest extends TeaModel {
         return this.locationNameEn;
     }
 
-    public DescribeDomainBpsDataByLayerRequest setLayer(String layer) {
-        this.layer = layer;
+    public DescribeDomainBpsDataByLayerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getLayer() {
-        return this.layer;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDomainBpsDataByLayerRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

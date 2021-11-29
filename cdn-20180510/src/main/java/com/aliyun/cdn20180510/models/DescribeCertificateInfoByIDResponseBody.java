@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertInfos")
     public DescribeCertificateInfoByIDResponseBodyCertInfos certInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCertificateInfoByIDResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificateInfoByIDResponseBody self = new DescribeCertificateInfoByIDResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCertificateInfoByIDResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCertificateInfoByIDResponseBody setCertInfos(DescribeCertificateInfoByIDResponseBodyCertInfos certInfos) {
@@ -31,21 +23,29 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         return this.certInfos;
     }
 
+    public DescribeCertificateInfoByIDResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo extends TeaModel {
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("CertType")
-        public String certType;
+        @NameInMap("CertId")
+        public String certId;
 
         @NameInMap("CertName")
         public String certName;
 
-        @NameInMap("CertId")
-        public String certId;
+        @NameInMap("CertType")
+        public String certType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("DomainList")
         public String domainList;
@@ -66,20 +66,12 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
-        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCertId(String certId) {
+            this.certId = certId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCertType(String certType) {
-            this.certType = certType;
-            return this;
-        }
-        public String getCertType() {
-            return this.certType;
+        public String getCertId() {
+            return this.certId;
         }
 
         public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCertName(String certName) {
@@ -90,12 +82,20 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             return this.certName;
         }
 
-        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCertId(String certId) {
-            this.certId = certId;
+        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCertType(String certType) {
+            this.certType = certType;
             return this;
         }
-        public String getCertId() {
-            return this.certId;
+        public String getCertType() {
+            return this.certType;
+        }
+
+        public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeCertificateInfoByIDResponseBodyCertInfosCertInfo setDomainList(String domainList) {

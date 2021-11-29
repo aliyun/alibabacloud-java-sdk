@@ -4,14 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetIgnoreQueryStringConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ConfigId")
+    public Long configId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("ConfigId")
-    public Long configId;
 
     @NameInMap("Enable")
     public String enable;
@@ -22,25 +19,12 @@ public class SetIgnoreQueryStringConfigRequest extends TeaModel {
     @NameInMap("KeepOssArgs")
     public String keepOssArgs;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static SetIgnoreQueryStringConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetIgnoreQueryStringConfigRequest self = new SetIgnoreQueryStringConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetIgnoreQueryStringConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetIgnoreQueryStringConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetIgnoreQueryStringConfigRequest setConfigId(Long configId) {
@@ -49,6 +33,14 @@ public class SetIgnoreQueryStringConfigRequest extends TeaModel {
     }
     public Long getConfigId() {
         return this.configId;
+    }
+
+    public SetIgnoreQueryStringConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SetIgnoreQueryStringConfigRequest setEnable(String enable) {
@@ -73,6 +65,14 @@ public class SetIgnoreQueryStringConfigRequest extends TeaModel {
     }
     public String getKeepOssArgs() {
         return this.keepOssArgs;
+    }
+
+    public SetIgnoreQueryStringConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

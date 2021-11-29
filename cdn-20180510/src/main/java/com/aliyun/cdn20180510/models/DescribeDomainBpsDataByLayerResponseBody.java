@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
+    @NameInMap("BpsDataInterval")
+    public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
+
     @NameInMap("DataInterval")
     public String dataInterval;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BpsDataInterval")
-    public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
-
     public static DescribeDomainBpsDataByLayerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainBpsDataByLayerResponseBody self = new DescribeDomainBpsDataByLayerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainBpsDataByLayerResponseBody setBpsDataInterval(DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval) {
+        this.bpsDataInterval = bpsDataInterval;
+        return this;
+    }
+    public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval getBpsDataInterval() {
+        return this.bpsDataInterval;
     }
 
     public DescribeDomainBpsDataByLayerResponseBody setDataInterval(String dataInterval) {
@@ -34,35 +42,27 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainBpsDataByLayerResponseBody setBpsDataInterval(DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval) {
-        this.bpsDataInterval = bpsDataInterval;
-        return this;
-    }
-    public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval getBpsDataInterval() {
-        return this.bpsDataInterval;
-    }
-
     public static class DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         @NameInMap("TrafficValue")
         public String trafficValue;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule self = new DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setValue(String value) {
-            this.value = value;
+        public DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
         public DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setTrafficValue(String trafficValue) {
@@ -73,12 +73,12 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             return this.trafficValue;
         }
 
-        public DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
+        public DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public String getValue() {
+            return this.value;
         }
 
     }

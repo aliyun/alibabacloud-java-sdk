@@ -4,20 +4,20 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateCdnDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("Sources")
     public String sources;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -25,22 +25,6 @@ public class BatchUpdateCdnDomainRequest extends TeaModel {
     public static BatchUpdateCdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateCdnDomainRequest self = new BatchUpdateCdnDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchUpdateCdnDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public BatchUpdateCdnDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public BatchUpdateCdnDomainRequest setDomainName(String domainName) {
@@ -51,12 +35,12 @@ public class BatchUpdateCdnDomainRequest extends TeaModel {
         return this.domainName;
     }
 
-    public BatchUpdateCdnDomainRequest setSources(String sources) {
-        this.sources = sources;
+    public BatchUpdateCdnDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSources() {
-        return this.sources;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public BatchUpdateCdnDomainRequest setResourceGroupId(String resourceGroupId) {
@@ -65,6 +49,22 @@ public class BatchUpdateCdnDomainRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public BatchUpdateCdnDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public BatchUpdateCdnDomainRequest setSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    public String getSources() {
+        return this.sources;
     }
 
     public BatchUpdateCdnDomainRequest setTopLevelDomain(String topLevelDomain) {

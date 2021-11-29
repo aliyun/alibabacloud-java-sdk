@@ -4,32 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SortBy")
     public String sortBy;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDomainSrcTopUrlVisitRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSrcTopUrlVisitRequest self = new DescribeDomainSrcTopUrlVisitRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainSrcTopUrlVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainSrcTopUrlVisitRequest setDomainName(String domainName) {
@@ -40,14 +32,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainSrcTopUrlVisitRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainSrcTopUrlVisitRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -56,12 +40,28 @@ public class DescribeDomainSrcTopUrlVisitRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainSrcTopUrlVisitRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DescribeDomainSrcTopUrlVisitRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public DescribeDomainSrcTopUrlVisitRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

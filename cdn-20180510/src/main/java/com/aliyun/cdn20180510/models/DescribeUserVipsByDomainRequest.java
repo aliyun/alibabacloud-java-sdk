@@ -4,26 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Available")
+    public String available;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("Available")
-    public String available;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeUserVipsByDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserVipsByDomainRequest self = new DescribeUserVipsByDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserVipsByDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeUserVipsByDomainRequest setAvailable(String available) {
+        this.available = available;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAvailable() {
+        return this.available;
     }
 
     public DescribeUserVipsByDomainRequest setDomainName(String domainName) {
@@ -34,12 +34,12 @@ public class DescribeUserVipsByDomainRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeUserVipsByDomainRequest setAvailable(String available) {
-        this.available = available;
+    public DescribeUserVipsByDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAvailable() {
-        return this.available;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

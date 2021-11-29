@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BillHistoryData")
     public DescribeCdnUserBillHistoryResponseBodyBillHistoryData billHistoryData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCdnUserBillHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserBillHistoryResponseBody self = new DescribeCdnUserBillHistoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnUserBillHistoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCdnUserBillHistoryResponseBody setBillHistoryData(DescribeCdnUserBillHistoryResponseBodyBillHistoryData billHistoryData) {
@@ -31,15 +23,17 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         return this.billHistoryData;
     }
 
-    public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
-        @NameInMap("Flow")
-        public Float flow;
+    public DescribeCdnUserBillHistoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
         @NameInMap("Bandwidth")
         public Float bandwidth;
-
-        @NameInMap("Count")
-        public Float count;
 
         @NameInMap("CdnRegion")
         public String cdnRegion;
@@ -47,17 +41,15 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("Count")
+        public Float count;
+
+        @NameInMap("Flow")
+        public Float flow;
+
         public static DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem self = new DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setFlow(Float flow) {
-            this.flow = flow;
-            return this;
-        }
-        public Float getFlow() {
-            return this.flow;
         }
 
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setBandwidth(Float bandwidth) {
@@ -66,14 +58,6 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         }
         public Float getBandwidth() {
             return this.bandwidth;
-        }
-
-        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setCount(Float count) {
-            this.count = count;
-            return this;
-        }
-        public Float getCount() {
-            return this.count;
         }
 
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setCdnRegion(String cdnRegion) {
@@ -90,6 +74,22 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setCount(Float count) {
+            this.count = count;
+            return this;
+        }
+        public Float getCount() {
+            return this.count;
+        }
+
+        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setFlow(Float flow) {
+            this.flow = flow;
+            return this;
+        }
+        public Float getFlow() {
+            return this.flow;
         }
 
     }
@@ -114,37 +114,21 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
-        @NameInMap("Dimension")
-        public String dimension;
+        @NameInMap("BillTime")
+        public String billTime;
 
         @NameInMap("BillType")
         public String billType;
 
-        @NameInMap("BillTime")
-        public String billTime;
-
         @NameInMap("BillingData")
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
+
+        @NameInMap("Dimension")
+        public String dimension;
 
         public static DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem self = new DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setDimension(String dimension) {
-            this.dimension = dimension;
-            return this;
-        }
-        public String getDimension() {
-            return this.dimension;
-        }
-
-        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillType(String billType) {
-            this.billType = billType;
-            return this;
-        }
-        public String getBillType() {
-            return this.billType;
         }
 
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillTime(String billTime) {
@@ -155,12 +139,28 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             return this.billTime;
         }
 
+        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillType(String billType) {
+            this.billType = billType;
+            return this;
+        }
+        public String getBillType() {
+            return this.billType;
+        }
+
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillingData(DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData) {
             this.billingData = billingData;
             return this;
         }
         public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData getBillingData() {
             return this.billingData;
+        }
+
+        public DescribeCdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setDimension(String dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+        public String getDimension() {
+            return this.dimension;
         }
 
     }

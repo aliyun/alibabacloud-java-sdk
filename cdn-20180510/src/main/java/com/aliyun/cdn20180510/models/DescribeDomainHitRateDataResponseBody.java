@@ -4,59 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHitRateDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("HitRateInterval")
     public DescribeDomainHitRateDataResponseBodyHitRateInterval hitRateInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainHitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainHitRateDataResponseBody self = new DescribeDomainHitRateDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainHitRateDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainHitRateDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainHitRateDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainHitRateDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDomainHitRateDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainHitRateDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainHitRateDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeDomainHitRateDataResponseBody setHitRateInterval(DescribeDomainHitRateDataResponseBodyHitRateInterval hitRateInterval) {
         this.hitRateInterval = hitRateInterval;
         return this;
@@ -75,27 +59,43 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
         return this.hitRateInterval;
     }
 
+    public DescribeDomainHitRateDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainHitRateDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+        @NameInMap("HttpsValue")
+        public String httpsValue;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("HttpsValue")
-        public String httpsValue;
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule self = new DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule setValue(String value) {
-            this.value = value;
+        public DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule setHttpsValue(String httpsValue) {
+            this.httpsValue = httpsValue;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getHttpsValue() {
+            return this.httpsValue;
         }
 
         public DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule setTimeStamp(String timeStamp) {
@@ -106,12 +106,12 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule setHttpsValue(String httpsValue) {
-            this.httpsValue = httpsValue;
+        public DescribeDomainHitRateDataResponseBodyHitRateIntervalDataModule setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getHttpsValue() {
-            return this.httpsValue;
+        public String getValue() {
+            return this.value;
         }
 
     }

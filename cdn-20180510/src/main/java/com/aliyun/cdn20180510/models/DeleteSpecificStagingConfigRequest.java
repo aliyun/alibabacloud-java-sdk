@@ -4,21 +4,37 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DeleteSpecificStagingConfigRequest extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("ConfigId")
-    public String configId;
-
     public static DeleteSpecificStagingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSpecificStagingConfigRequest self = new DeleteSpecificStagingConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSpecificStagingConfigRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    public DeleteSpecificStagingConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteSpecificStagingConfigRequest setOwnerId(Long ownerId) {
@@ -35,22 +51,6 @@ public class DeleteSpecificStagingConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DeleteSpecificStagingConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DeleteSpecificStagingConfigRequest setConfigId(String configId) {
-        this.configId = configId;
-        return this;
-    }
-    public String getConfigId() {
-        return this.configId;
     }
 
 }
