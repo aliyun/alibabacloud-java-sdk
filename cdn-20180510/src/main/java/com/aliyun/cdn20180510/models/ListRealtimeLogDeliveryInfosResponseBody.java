@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListRealtimeLogDeliveryInfosResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListRealtimeLogDeliveryInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRealtimeLogDeliveryInfosResponseBody self = new ListRealtimeLogDeliveryInfosResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListRealtimeLogDeliveryInfosResponseBody setContent(ListRealtimeLogDeliveryInfosResponseBodyContent content) {
@@ -29,6 +21,14 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
     public ListRealtimeLogDeliveryInfosResponseBodyContent getContent() {
         return this.content;
+    }
+
+    public ListRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {

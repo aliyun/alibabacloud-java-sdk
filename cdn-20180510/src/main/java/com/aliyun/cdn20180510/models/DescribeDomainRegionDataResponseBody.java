@@ -4,20 +4,20 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRegionDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Value")
     public DescribeDomainRegionDataResponseBodyValue value;
@@ -27,28 +27,12 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainRegionDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDomainRegionDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainRegionDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainRegionDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeDomainRegionDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainRegionDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeDomainRegionDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainRegionDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainRegionDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainRegionDataResponseBody setValue(DescribeDomainRegionDataResponseBodyValue value) {
@@ -76,11 +76,8 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
-        @NameInMap("TotalQuery")
-        public String totalQuery;
-
-        @NameInMap("TotalBytes")
-        public String totalBytes;
+        @NameInMap("AvgObjectSize")
+        public String avgObjectSize;
 
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
@@ -88,49 +85,44 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
-        @NameInMap("ReqErrRate")
-        public String reqErrRate;
-
-        @NameInMap("AvgObjectSize")
-        public String avgObjectSize;
-
         @NameInMap("Bps")
         public String bps;
 
-        @NameInMap("Qps")
-        public String qps;
-
-        @NameInMap("RegionEname")
-        public String regionEname;
-
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("BytesProportion")
+        public String bytesProportion;
 
         @NameInMap("Proportion")
         public String proportion;
 
-        @NameInMap("BytesProportion")
-        public String bytesProportion;
+        @NameInMap("Qps")
+        public String qps;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("RegionEname")
+        public String regionEname;
+
+        @NameInMap("ReqErrRate")
+        public String reqErrRate;
+
+        @NameInMap("TotalBytes")
+        public String totalBytes;
+
+        @NameInMap("TotalQuery")
+        public String totalQuery;
 
         public static DescribeDomainRegionDataResponseBodyValueRegionProportionData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainRegionDataResponseBodyValueRegionProportionData self = new DescribeDomainRegionDataResponseBodyValueRegionProportionData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setTotalQuery(String totalQuery) {
-            this.totalQuery = totalQuery;
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setAvgObjectSize(String avgObjectSize) {
+            this.avgObjectSize = avgObjectSize;
             return this;
         }
-        public String getTotalQuery() {
-            return this.totalQuery;
-        }
-
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setTotalBytes(String totalBytes) {
-            this.totalBytes = totalBytes;
-            return this;
-        }
-        public String getTotalBytes() {
-            return this.totalBytes;
+        public String getAvgObjectSize() {
+            return this.avgObjectSize;
         }
 
         public DescribeDomainRegionDataResponseBodyValueRegionProportionData setAvgResponseRate(String avgResponseRate) {
@@ -149,22 +141,6 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             return this.avgResponseTime;
         }
 
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setReqErrRate(String reqErrRate) {
-            this.reqErrRate = reqErrRate;
-            return this;
-        }
-        public String getReqErrRate() {
-            return this.reqErrRate;
-        }
-
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setAvgObjectSize(String avgObjectSize) {
-            this.avgObjectSize = avgObjectSize;
-            return this;
-        }
-        public String getAvgObjectSize() {
-            return this.avgObjectSize;
-        }
-
         public DescribeDomainRegionDataResponseBodyValueRegionProportionData setBps(String bps) {
             this.bps = bps;
             return this;
@@ -173,28 +149,12 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             return this.bps;
         }
 
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setQps(String qps) {
-            this.qps = qps;
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setBytesProportion(String bytesProportion) {
+            this.bytesProportion = bytesProportion;
             return this;
         }
-        public String getQps() {
-            return this.qps;
-        }
-
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setRegionEname(String regionEname) {
-            this.regionEname = regionEname;
-            return this;
-        }
-        public String getRegionEname() {
-            return this.regionEname;
-        }
-
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public String getBytesProportion() {
+            return this.bytesProportion;
         }
 
         public DescribeDomainRegionDataResponseBodyValueRegionProportionData setProportion(String proportion) {
@@ -205,12 +165,52 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             return this.proportion;
         }
 
-        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setBytesProportion(String bytesProportion) {
-            this.bytesProportion = bytesProportion;
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setQps(String qps) {
+            this.qps = qps;
             return this;
         }
-        public String getBytesProportion() {
-            return this.bytesProportion;
+        public String getQps() {
+            return this.qps;
+        }
+
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setRegionEname(String regionEname) {
+            this.regionEname = regionEname;
+            return this;
+        }
+        public String getRegionEname() {
+            return this.regionEname;
+        }
+
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setReqErrRate(String reqErrRate) {
+            this.reqErrRate = reqErrRate;
+            return this;
+        }
+        public String getReqErrRate() {
+            return this.reqErrRate;
+        }
+
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setTotalBytes(String totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public String getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        public DescribeDomainRegionDataResponseBodyValueRegionProportionData setTotalQuery(String totalQuery) {
+            this.totalQuery = totalQuery;
+            return this;
+        }
+        public String getTotalQuery() {
+            return this.totalQuery;
         }
 
     }

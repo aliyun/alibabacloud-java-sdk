@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeDomainRealTimeBpsDataResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainRealTimeBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRealTimeBpsDataResponseBody self = new DescribeDomainRealTimeBpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainRealTimeBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainRealTimeBpsDataResponseBody setData(DescribeDomainRealTimeBpsDataResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     }
     public DescribeDomainRealTimeBpsDataResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeDomainRealTimeBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {

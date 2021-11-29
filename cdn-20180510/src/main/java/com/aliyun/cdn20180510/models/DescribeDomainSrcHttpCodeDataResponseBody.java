@@ -4,59 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("HttpCodeData")
     public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeData httpCodeData;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainSrcHttpCodeDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSrcHttpCodeDataResponseBody self = new DescribeDomainSrcHttpCodeDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainSrcHttpCodeDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainSrcHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainSrcHttpCodeDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainSrcHttpCodeDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDomainSrcHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainSrcHttpCodeDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainSrcHttpCodeDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeDomainSrcHttpCodeDataResponseBody setHttpCodeData(DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeData httpCodeData) {
         this.httpCodeData = httpCodeData;
         return this;
@@ -75,15 +59,31 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
         return this.httpCodeData;
     }
 
+    public DescribeDomainSrcHttpCodeDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainSrcHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Proportion")
-        public String proportion;
-
         @NameInMap("Count")
         public String count;
+
+        @NameInMap("Proportion")
+        public String proportion;
 
         public static DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData self = new DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData();
@@ -98,20 +98,20 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData setProportion(String proportion) {
-            this.proportion = proportion;
-            return this;
-        }
-        public String getProportion() {
-            return this.proportion;
-        }
-
         public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData setCount(String count) {
             this.count = count;
             return this;
         }
         public String getCount() {
             return this.count;
+        }
+
+        public DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData setProportion(String proportion) {
+            this.proportion = proportion;
+            return this;
+        }
+        public String getProportion() {
+            return this.proportion;
         }
 
     }

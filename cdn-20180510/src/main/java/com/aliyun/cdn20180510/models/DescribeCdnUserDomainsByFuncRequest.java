@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("FuncId")
     public Integer funcId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -24,20 +24,20 @@ public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribeCdnUserDomainsByFuncRequest setFuncId(Integer funcId) {
         this.funcId = funcId;
         return this;
     }
     public Integer getFuncId() {
         return this.funcId;
+    }
+
+    public DescribeCdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCdnUserDomainsByFuncRequest setPageNumber(Integer pageNumber) {

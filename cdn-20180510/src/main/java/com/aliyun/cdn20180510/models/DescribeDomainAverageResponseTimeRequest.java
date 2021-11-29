@@ -4,20 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("TimeMerge")
-    public String timeMerge;
-
-    @NameInMap("DomainType")
-    public String domainType;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainType")
+    public String domainType;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -31,33 +22,18 @@ public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("TimeMerge")
+    public String timeMerge;
+
     public static DescribeDomainAverageResponseTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainAverageResponseTimeRequest self = new DescribeDomainAverageResponseTimeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainAverageResponseTimeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDomainAverageResponseTimeRequest setTimeMerge(String timeMerge) {
-        this.timeMerge = timeMerge;
-        return this;
-    }
-    public String getTimeMerge() {
-        return this.timeMerge;
-    }
-
-    public DescribeDomainAverageResponseTimeRequest setDomainType(String domainType) {
-        this.domainType = domainType;
-        return this;
-    }
-    public String getDomainType() {
-        return this.domainType;
     }
 
     public DescribeDomainAverageResponseTimeRequest setDomainName(String domainName) {
@@ -68,12 +44,12 @@ public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainAverageResponseTimeRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDomainAverageResponseTimeRequest setDomainType(String domainType) {
+        this.domainType = domainType;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainType() {
+        return this.domainType;
     }
 
     public DescribeDomainAverageResponseTimeRequest setEndTime(String endTime) {
@@ -106,6 +82,30 @@ public class DescribeDomainAverageResponseTimeRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeDomainAverageResponseTimeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDomainAverageResponseTimeRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDomainAverageResponseTimeRequest setTimeMerge(String timeMerge) {
+        this.timeMerge = timeMerge;
+        return this;
+    }
+    public String getTimeMerge() {
+        return this.timeMerge;
     }
 
 }

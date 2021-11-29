@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ClientIpList")
     public java.util.List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> clientIpList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainTopClientIpVisitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainTopClientIpVisitResponseBody self = new DescribeDomainTopClientIpVisitResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainTopClientIpVisitResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainTopClientIpVisitResponseBody setClientIpList(java.util.List<DescribeDomainTopClientIpVisitResponseBodyClientIpList> clientIpList) {
@@ -31,15 +23,23 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         return this.clientIpList;
     }
 
+    public DescribeDomainTopClientIpVisitResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDomainTopClientIpVisitResponseBodyClientIpList extends TeaModel {
-        @NameInMap("Rank")
-        public Integer rank;
+        @NameInMap("Acc")
+        public Long acc;
 
         @NameInMap("ClientIp")
         public String clientIp;
 
-        @NameInMap("Acc")
-        public Long acc;
+        @NameInMap("Rank")
+        public Integer rank;
 
         @NameInMap("Traffic")
         public Long traffic;
@@ -49,12 +49,12 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setRank(Integer rank) {
-            this.rank = rank;
+        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setAcc(Long acc) {
+            this.acc = acc;
             return this;
         }
-        public Integer getRank() {
-            return this.rank;
+        public Long getAcc() {
+            return this.acc;
         }
 
         public DescribeDomainTopClientIpVisitResponseBodyClientIpList setClientIp(String clientIp) {
@@ -65,12 +65,12 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             return this.clientIp;
         }
 
-        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setAcc(Long acc) {
-            this.acc = acc;
+        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setRank(Integer rank) {
+            this.rank = rank;
             return this;
         }
-        public Long getAcc() {
-            return this.acc;
+        public Integer getRank() {
+            return this.rank;
         }
 
         public DescribeDomainTopClientIpVisitResponseBodyClientIpList setTraffic(Long traffic) {

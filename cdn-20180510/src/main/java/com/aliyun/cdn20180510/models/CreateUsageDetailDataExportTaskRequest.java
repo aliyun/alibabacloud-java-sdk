@@ -4,11 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainNames")
+    public String domainNames;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -16,37 +13,32 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
     @NameInMap("Group")
     public String group;
 
-    @NameInMap("DomainNames")
-    public String domainNames;
+    @NameInMap("Language")
+    public String language;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TaskName")
     public String taskName;
 
-    @NameInMap("Language")
-    public String language;
+    @NameInMap("Type")
+    public String type;
 
     public static CreateUsageDetailDataExportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUsageDetailDataExportTaskRequest self = new CreateUsageDetailDataExportTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateUsageDetailDataExportTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateUsageDetailDataExportTaskRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateUsageDetailDataExportTaskRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
     public CreateUsageDetailDataExportTaskRequest setEndTime(String endTime) {
@@ -65,20 +57,28 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
         return this.group;
     }
 
-    public CreateUsageDetailDataExportTaskRequest setDomainNames(String domainNames) {
-        this.domainNames = domainNames;
+    public CreateUsageDetailDataExportTaskRequest setLanguage(String language) {
+        this.language = language;
         return this;
     }
-    public String getDomainNames() {
-        return this.domainNames;
+    public String getLanguage() {
+        return this.language;
     }
 
-    public CreateUsageDetailDataExportTaskRequest setType(String type) {
-        this.type = type;
+    public CreateUsageDetailDataExportTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public CreateUsageDetailDataExportTaskRequest setTaskName(String taskName) {
@@ -89,12 +89,12 @@ public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
         return this.taskName;
     }
 
-    public CreateUsageDetailDataExportTaskRequest setLanguage(String language) {
-        this.language = language;
+    public CreateUsageDetailDataExportTaskRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public String getType() {
+        return this.type;
     }
 
 }

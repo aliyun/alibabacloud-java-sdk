@@ -4,6 +4,12 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,15 +25,25 @@ public class DescribeDomainPathDataRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static DescribeDomainPathDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainPathDataRequest self = new DescribeDomainPathDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainPathDataRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainPathDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDomainPathDataRequest setOwnerId(Long ownerId) {
@@ -68,22 +84,6 @@ public class DescribeDomainPathDataRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDomainPathDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainPathDataRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

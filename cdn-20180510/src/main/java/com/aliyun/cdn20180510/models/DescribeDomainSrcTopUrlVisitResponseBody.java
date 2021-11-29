@@ -4,17 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AllUrlList")
+    public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList allUrlList;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AllUrlList")
-    public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList allUrlList;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Url200List")
     public DescribeDomainSrcTopUrlVisitResponseBodyUrl200List url200List;
@@ -33,20 +33,12 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainSrcTopUrlVisitResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDomainSrcTopUrlVisitResponseBody setAllUrlList(DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList allUrlList) {
+        this.allUrlList = allUrlList;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainSrcTopUrlVisitResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList getAllUrlList() {
+        return this.allUrlList;
     }
 
     public DescribeDomainSrcTopUrlVisitResponseBody setDomainName(String domainName) {
@@ -57,12 +49,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainSrcTopUrlVisitResponseBody setAllUrlList(DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList allUrlList) {
-        this.allUrlList = allUrlList;
+    public DescribeDomainSrcTopUrlVisitResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlList getAllUrlList() {
-        return this.allUrlList;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainSrcTopUrlVisitResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainSrcTopUrlVisitResponseBody setUrl200List(DescribeDomainSrcTopUrlVisitResponseBodyUrl200List url200List) {
@@ -101,11 +101,11 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("Flow")
         public String flow;
 
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
         @NameInMap("FlowProportion")
         public Float flowProportion;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -126,20 +126,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
         public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
         }
 
         public DescribeDomainSrcTopUrlVisitResponseBodyAllUrlListUrlList setVisitData(String visitData) {
@@ -183,11 +183,11 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("Flow")
         public String flow;
 
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
         @NameInMap("FlowProportion")
         public Float flowProportion;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -208,20 +208,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
         }
 
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl200ListUrlList setVisitData(String visitData) {
@@ -265,11 +265,11 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("Flow")
         public String flow;
 
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
         @NameInMap("FlowProportion")
         public Float flowProportion;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -290,20 +290,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
         }
 
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl300ListUrlList setVisitData(String visitData) {
@@ -347,11 +347,11 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("Flow")
         public String flow;
 
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
         @NameInMap("FlowProportion")
         public Float flowProportion;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -372,20 +372,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
         }
 
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl400ListUrlList setVisitData(String visitData) {
@@ -429,11 +429,11 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("Flow")
         public String flow;
 
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
         @NameInMap("FlowProportion")
         public Float flowProportion;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -454,20 +454,20 @@ public class DescribeDomainSrcTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
         public Float getFlowProportion() {
             return this.flowProportion;
+        }
+
+        public DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
         }
 
         public DescribeDomainSrcTopUrlVisitResponseBodyUrl500ListUrlList setVisitData(String visitData) {

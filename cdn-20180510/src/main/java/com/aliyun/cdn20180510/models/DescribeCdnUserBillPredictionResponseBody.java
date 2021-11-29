@@ -4,56 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BillPredictionData")
+    public DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData;
 
     @NameInMap("BillType")
     public String billType;
 
-    @NameInMap("BillPredictionData")
-    public DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeCdnUserBillPredictionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserBillPredictionResponseBody self = new DescribeCdnUserBillPredictionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnUserBillPredictionResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeCdnUserBillPredictionResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeCdnUserBillPredictionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCdnUserBillPredictionResponseBody setBillType(String billType) {
-        this.billType = billType;
-        return this;
-    }
-    public String getBillType() {
-        return this.billType;
     }
 
     public DescribeCdnUserBillPredictionResponseBody setBillPredictionData(DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData) {
@@ -64,27 +32,59 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         return this.billPredictionData;
     }
 
+    public DescribeCdnUserBillPredictionResponseBody setBillType(String billType) {
+        this.billType = billType;
+        return this;
+    }
+    public String getBillType() {
+        return this.billType;
+    }
+
+    public DescribeCdnUserBillPredictionResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeCdnUserBillPredictionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCdnUserBillPredictionResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem extends TeaModel {
-        @NameInMap("Value")
-        public Float value;
+        @NameInMap("Area")
+        public String area;
 
         @NameInMap("TimeStp")
         public String timeStp;
 
-        @NameInMap("Area")
-        public String area;
+        @NameInMap("Value")
+        public Float value;
 
         public static DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem self = new DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem setValue(Float value) {
-            this.value = value;
+        public DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem setArea(String area) {
+            this.area = area;
             return this;
         }
-        public Float getValue() {
-            return this.value;
+        public String getArea() {
+            return this.area;
         }
 
         public DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem setTimeStp(String timeStp) {
@@ -95,12 +95,12 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
             return this.timeStp;
         }
 
-        public DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem setArea(String area) {
-            this.area = area;
+        public DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem setValue(Float value) {
+            this.value = value;
             return this;
         }
-        public String getArea() {
-            return this.area;
+        public Float getValue() {
+            return this.value;
         }
 
     }

@@ -7,11 +7,11 @@ public class CreateUserUsageDataExportTaskResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -29,20 +29,20 @@ public class CreateUserUsageDataExportTaskResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public CreateUserUsageDataExportTaskResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public CreateUserUsageDataExportTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateUserUsageDataExportTaskResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public CreateUserUsageDataExportTaskResponseBody setTaskId(String taskId) {

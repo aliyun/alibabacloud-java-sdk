@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertInfos")
     public DescribeDomainCertificateInfoResponseBodyCertInfos certInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDomainCertificateInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainCertificateInfoResponseBody self = new DescribeDomainCertificateInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainCertificateInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainCertificateInfoResponseBody setCertInfos(DescribeDomainCertificateInfoResponseBodyCertInfos certInfos) {
@@ -31,30 +23,29 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         return this.certInfos;
     }
 
+    public DescribeDomainCertificateInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
+        @NameInMap("CertDomainName")
+        public String certDomainName;
+
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         @NameInMap("CertLife")
         public String certLife;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CertUpdateTime")
-        public String certUpdateTime;
-
-        @NameInMap("CertDomainName")
-        public String certDomainName;
-
-        @NameInMap("ServerCertificateStatus")
-        public String serverCertificateStatus;
+        @NameInMap("CertName")
+        public String certName;
 
         @NameInMap("CertOrg")
         public String certOrg;
-
-        @NameInMap("DomainName")
-        public String domainName;
 
         @NameInMap("CertStartTime")
         public String certStartTime;
@@ -62,18 +53,35 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertType")
         public String certType;
 
-        @NameInMap("CertName")
-        public String certName;
+        @NameInMap("CertUpdateTime")
+        public String certUpdateTime;
 
         @NameInMap("DomainCnameStatus")
         public String domainCnameStatus;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("ServerCertificate")
         public String serverCertificate;
+
+        @NameInMap("ServerCertificateStatus")
+        public String serverCertificateStatus;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo self = new DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertDomainName(String certDomainName) {
+            this.certDomainName = certDomainName;
+            return this;
+        }
+        public String getCertDomainName() {
+            return this.certDomainName;
         }
 
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertExpireTime(String certExpireTime) {
@@ -92,36 +100,12 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             return this.certLife;
         }
 
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setStatus(String status) {
-            this.status = status;
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertName(String certName) {
+            this.certName = certName;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertUpdateTime(String certUpdateTime) {
-            this.certUpdateTime = certUpdateTime;
-            return this;
-        }
-        public String getCertUpdateTime() {
-            return this.certUpdateTime;
-        }
-
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertDomainName(String certDomainName) {
-            this.certDomainName = certDomainName;
-            return this;
-        }
-        public String getCertDomainName() {
-            return this.certDomainName;
-        }
-
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setServerCertificateStatus(String serverCertificateStatus) {
-            this.serverCertificateStatus = serverCertificateStatus;
-            return this;
-        }
-        public String getServerCertificateStatus() {
-            return this.serverCertificateStatus;
+        public String getCertName() {
+            return this.certName;
         }
 
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertOrg(String certOrg) {
@@ -130,14 +114,6 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         }
         public String getCertOrg() {
             return this.certOrg;
-        }
-
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertStartTime(String certStartTime) {
@@ -156,12 +132,12 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             return this.certType;
         }
 
-        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertName(String certName) {
-            this.certName = certName;
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setCertUpdateTime(String certUpdateTime) {
+            this.certUpdateTime = certUpdateTime;
             return this;
         }
-        public String getCertName() {
-            return this.certName;
+        public String getCertUpdateTime() {
+            return this.certUpdateTime;
         }
 
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainCnameStatus(String domainCnameStatus) {
@@ -172,12 +148,36 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             return this.domainCnameStatus;
         }
 
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
         public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setServerCertificate(String serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
         public String getServerCertificate() {
             return this.serverCertificate;
+        }
+
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setServerCertificateStatus(String serverCertificateStatus) {
+            this.serverCertificateStatus = serverCertificateStatus;
+            return this;
+        }
+        public String getServerCertificateStatus() {
+            return this.serverCertificateStatus;
+        }
+
+        public DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

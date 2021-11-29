@@ -4,8 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetHttpErrorPageConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ConfigId")
+    public Long configId;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -13,23 +13,23 @@ public class SetHttpErrorPageConfigRequest extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageUrl")
     public String pageUrl;
-
-    @NameInMap("ConfigId")
-    public Long configId;
 
     public static SetHttpErrorPageConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetHttpErrorPageConfigRequest self = new SetHttpErrorPageConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetHttpErrorPageConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetHttpErrorPageConfigRequest setConfigId(Long configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     public SetHttpErrorPageConfigRequest setDomainName(String domainName) {
@@ -48,20 +48,20 @@ public class SetHttpErrorPageConfigRequest extends TeaModel {
         return this.errorCode;
     }
 
+    public SetHttpErrorPageConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public SetHttpErrorPageConfigRequest setPageUrl(String pageUrl) {
         this.pageUrl = pageUrl;
         return this;
     }
     public String getPageUrl() {
         return this.pageUrl;
-    }
-
-    public SetHttpErrorPageConfigRequest setConfigId(Long configId) {
-        this.configId = configId;
-        return this;
-    }
-    public Long getConfigId() {
-        return this.configId;
     }
 
 }

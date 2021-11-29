@@ -4,70 +4,30 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Layer")
-    public String layer;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Layer")
+    public String layer;
 
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainQpsDataByLayerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainQpsDataByLayerResponseBody self = new DescribeDomainQpsDataByLayerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setLayer(String layer) {
-        this.layer = layer;
-        return this;
-    }
-    public String getLayer() {
-        return this.layer;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDomainQpsDataByLayerResponseBody setDataInterval(String dataInterval) {
@@ -78,6 +38,30 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainQpsDataByLayerResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainQpsDataByLayerResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainQpsDataByLayerResponseBody setLayer(String layer) {
+        this.layer = layer;
+        return this;
+    }
+    public String getLayer() {
+        return this.layer;
+    }
+
     public DescribeDomainQpsDataByLayerResponseBody setQpsDataInterval(DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval) {
         this.qpsDataInterval = qpsDataInterval;
         return this;
@@ -86,47 +70,47 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         return this.qpsDataInterval;
     }
 
+    public DescribeDomainQpsDataByLayerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainQpsDataByLayerResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("AccValue")
-        public String accValue;
-
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
-
-        @NameInMap("OverseasValue")
-        public String overseasValue;
 
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+        @NameInMap("AccValue")
+        public String accValue;
 
         @NameInMap("DomesticValue")
         public String domesticValue;
 
+        @NameInMap("OverseasValue")
+        public String overseasValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule self = new DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setAccValue(String accValue) {
-            this.accValue = accValue;
-            return this;
-        }
-        public String getAccValue() {
-            return this.accValue;
         }
 
         public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setAccDomesticValue(String accDomesticValue) {
@@ -137,20 +121,36 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             return this.accDomesticValue;
         }
 
-        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setOverseasValue(String overseasValue) {
-            this.overseasValue = overseasValue;
-            return this;
-        }
-        public String getOverseasValue() {
-            return this.overseasValue;
-        }
-
         public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setAccOverseasValue(String accOverseasValue) {
             this.accOverseasValue = accOverseasValue;
             return this;
         }
         public String getAccOverseasValue() {
             return this.accOverseasValue;
+        }
+
+        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setAccValue(String accValue) {
+            this.accValue = accValue;
+            return this;
+        }
+        public String getAccValue() {
+            return this.accValue;
+        }
+
+        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setDomesticValue(String domesticValue) {
+            this.domesticValue = domesticValue;
+            return this;
+        }
+        public String getDomesticValue() {
+            return this.domesticValue;
+        }
+
+        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setOverseasValue(String overseasValue) {
+            this.overseasValue = overseasValue;
+            return this;
+        }
+        public String getOverseasValue() {
+            return this.overseasValue;
         }
 
         public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setTimeStamp(String timeStamp) {
@@ -161,12 +161,12 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setDomesticValue(String domesticValue) {
-            this.domesticValue = domesticValue;
+        public DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getDomesticValue() {
-            return this.domesticValue;
+        public String getValue() {
+            return this.value;
         }
 
     }

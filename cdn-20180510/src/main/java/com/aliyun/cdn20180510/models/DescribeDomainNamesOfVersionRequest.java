@@ -7,14 +7,14 @@ public class DescribeDomainNamesOfVersionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("VersionId")
-    public String versionId;
-
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
     @NameInMap("PageSize")
     public String pageSize;
+
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static DescribeDomainNamesOfVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainNamesOfVersionRequest self = new DescribeDomainNamesOfVersionRequest();
@@ -27,14 +27,6 @@ public class DescribeDomainNamesOfVersionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeDomainNamesOfVersionRequest setVersionId(String versionId) {
-        this.versionId = versionId;
-        return this;
-    }
-    public String getVersionId() {
-        return this.versionId;
     }
 
     public DescribeDomainNamesOfVersionRequest setPageIndex(Integer pageIndex) {
@@ -51,6 +43,14 @@ public class DescribeDomainNamesOfVersionRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDomainNamesOfVersionRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

@@ -4,59 +4,27 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SrcQpsDataPerInterval")
     public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerInterval srcQpsDataPerInterval;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainSrcQpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSrcQpsDataResponseBody self = new DescribeDomainSrcQpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainSrcQpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainSrcQpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainSrcQpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainSrcQpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDomainSrcQpsDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,30 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainSrcQpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainSrcQpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainSrcQpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDomainSrcQpsDataResponseBody setSrcQpsDataPerInterval(DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerInterval srcQpsDataPerInterval) {
         this.srcQpsDataPerInterval = srcQpsDataPerInterval;
         return this;
@@ -75,24 +67,24 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         return this.srcQpsDataPerInterval;
     }
 
-    public static class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
+    public DescribeDomainSrcQpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
 
+    public static class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule extends TeaModel {
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule self = new DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

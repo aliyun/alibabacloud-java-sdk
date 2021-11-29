@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("GetDomainDetailModel")
     public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel getDomainDetailModel;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCdnDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainDetailResponseBody self = new DescribeCdnDomainDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnDomainDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCdnDomainDetailResponseBody setGetDomainDetailModel(DescribeCdnDomainDetailResponseBodyGetDomainDetailModel getDomainDetailModel) {
@@ -31,28 +23,68 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         return this.getDomainDetailModel;
     }
 
+    public DescribeCdnDomainDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Enabled")
+        public String enabled;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Priority")
+        public String priority;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("Weight")
         public String weight;
 
-        @NameInMap("Enabled")
-        public String enabled;
-
-        @NameInMap("Priority")
-        public String priority;
-
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("Content")
-        public String content;
-
         public static DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel self = new DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
         }
 
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setType(String type) {
@@ -69,38 +101,6 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         }
         public String getWeight() {
             return this.weight;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setEnabled(String enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public String getEnabled() {
-            return this.enabled;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setPriority(String priority) {
-            this.priority = priority;
-            return this;
-        }
-        public String getPriority() {
-            return this.priority;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModelsSourceModel setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
     }
@@ -125,11 +125,26 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnDomainDetailResponseBodyGetDomainDetailModel extends TeaModel {
-        @NameInMap("GmtCreated")
-        public String gmtCreated;
+        @NameInMap("CdnType")
+        public String cdnType;
+
+        @NameInMap("Cname")
+        public String cname;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("DomainStatus")
+        public String domainStatus;
+
+        @NameInMap("GmtCreated")
+        public String gmtCreated;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
 
         @NameInMap("HttpsCname")
         public String httpsCname;
@@ -137,26 +152,11 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("ServerCertificateStatus")
-        public String serverCertificateStatus;
-
         @NameInMap("Scope")
         public String scope;
 
-        @NameInMap("DomainStatus")
-        public String domainStatus;
-
-        @NameInMap("Cname")
-        public String cname;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("CdnType")
-        public String cdnType;
-
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("ServerCertificateStatus")
+        public String serverCertificateStatus;
 
         @NameInMap("SourceModels")
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModels sourceModels;
@@ -164,6 +164,46 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         public static DescribeCdnDomainDetailResponseBodyGetDomainDetailModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnDomainDetailResponseBodyGetDomainDetailModel self = new DescribeCdnDomainDetailResponseBodyGetDomainDetailModel();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setCdnType(String cdnType) {
+            this.cdnType = cdnType;
+            return this;
+        }
+        public String getCdnType() {
+            return this.cdnType;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setCname(String cname) {
+            this.cname = cname;
+            return this;
+        }
+        public String getCname() {
+            return this.cname;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDomainStatus(String domainStatus) {
+            this.domainStatus = domainStatus;
+            return this;
+        }
+        public String getDomainStatus() {
+            return this.domainStatus;
         }
 
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setGmtCreated(String gmtCreated) {
@@ -174,12 +214,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             return this.gmtCreated;
         }
 
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDescription(String description) {
-            this.description = description;
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setHttpsCname(String httpsCname) {
@@ -198,14 +238,6 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setServerCertificateStatus(String serverCertificateStatus) {
-            this.serverCertificateStatus = serverCertificateStatus;
-            return this;
-        }
-        public String getServerCertificateStatus() {
-            return this.serverCertificateStatus;
-        }
-
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setScope(String scope) {
             this.scope = scope;
             return this;
@@ -214,44 +246,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             return this.scope;
         }
 
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDomainStatus(String domainStatus) {
-            this.domainStatus = domainStatus;
+        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setServerCertificateStatus(String serverCertificateStatus) {
+            this.serverCertificateStatus = serverCertificateStatus;
             return this;
         }
-        public String getDomainStatus() {
-            return this.domainStatus;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setCname(String cname) {
-            this.cname = cname;
-            return this;
-        }
-        public String getCname() {
-            return this.cname;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setCdnType(String cdnType) {
-            this.cdnType = cdnType;
-            return this;
-        }
-        public String getCdnType() {
-            return this.cdnType;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
+        public String getServerCertificateStatus() {
+            return this.serverCertificateStatus;
         }
 
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setSourceModels(DescribeCdnDomainDetailResponseBodyGetDomainDetailModelSourceModels sourceModels) {

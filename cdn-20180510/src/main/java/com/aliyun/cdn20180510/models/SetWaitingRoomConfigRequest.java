@@ -4,23 +4,23 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetWaitingRoomConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AllowPct")
+    public Integer allowPct;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("WaitUri")
-    public String waitUri;
-
-    @NameInMap("AllowPct")
-    public Integer allowPct;
+    @NameInMap("GapTime")
+    public Integer gapTime;
 
     @NameInMap("MaxTimeWait")
     public Integer maxTimeWait;
 
-    @NameInMap("GapTime")
-    public Integer gapTime;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("WaitUri")
+    public String waitUri;
 
     @NameInMap("WaitUrl")
     public String waitUrl;
@@ -28,30 +28,6 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
     public static SetWaitingRoomConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetWaitingRoomConfigRequest self = new SetWaitingRoomConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetWaitingRoomConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetWaitingRoomConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public SetWaitingRoomConfigRequest setWaitUri(String waitUri) {
-        this.waitUri = waitUri;
-        return this;
-    }
-    public String getWaitUri() {
-        return this.waitUri;
     }
 
     public SetWaitingRoomConfigRequest setAllowPct(Integer allowPct) {
@@ -62,12 +38,12 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
         return this.allowPct;
     }
 
-    public SetWaitingRoomConfigRequest setMaxTimeWait(Integer maxTimeWait) {
-        this.maxTimeWait = maxTimeWait;
+    public SetWaitingRoomConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public Integer getMaxTimeWait() {
-        return this.maxTimeWait;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public SetWaitingRoomConfigRequest setGapTime(Integer gapTime) {
@@ -76,6 +52,30 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
     }
     public Integer getGapTime() {
         return this.gapTime;
+    }
+
+    public SetWaitingRoomConfigRequest setMaxTimeWait(Integer maxTimeWait) {
+        this.maxTimeWait = maxTimeWait;
+        return this;
+    }
+    public Integer getMaxTimeWait() {
+        return this.maxTimeWait;
+    }
+
+    public SetWaitingRoomConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetWaitingRoomConfigRequest setWaitUri(String waitUri) {
+        this.waitUri = waitUri;
+        return this;
+    }
+    public String getWaitUri() {
+        return this.waitUri;
     }
 
     public SetWaitingRoomConfigRequest setWaitUrl(String waitUrl) {

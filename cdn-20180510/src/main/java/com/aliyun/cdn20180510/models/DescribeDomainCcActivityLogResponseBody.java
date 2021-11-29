@@ -4,56 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
+    @NameInMap("ActivityLog")
+    public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
+
     @NameInMap("PageIndex")
     public Long pageIndex;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Total")
     public Long total;
-
-    @NameInMap("ActivityLog")
-    public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
     public static DescribeDomainCcActivityLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainCcActivityLogResponseBody self = new DescribeDomainCcActivityLogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainCcActivityLogResponseBody setPageIndex(Long pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Long getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public DescribeDomainCcActivityLogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDomainCcActivityLogResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDomainCcActivityLogResponseBody setTotal(Long total) {
-        this.total = total;
-        return this;
-    }
-    public Long getTotal() {
-        return this.total;
     }
 
     public DescribeDomainCcActivityLogResponseBody setActivityLog(java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog) {
@@ -64,21 +32,41 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         return this.activityLog;
     }
 
+    public DescribeDomainCcActivityLogResponseBody setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public Long getPageIndex() {
+        return this.pageIndex;
+    }
+
+    public DescribeDomainCcActivityLogResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDomainCcActivityLogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainCcActivityLogResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Ttl")
-        public Long ttl;
-
         @NameInMap("Action")
         public String action;
-
-        @NameInMap("TriggerObject")
-        public String triggerObject;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
 
         @NameInMap("DomainName")
         public String domainName;
@@ -86,25 +74,21 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("TriggerObject")
+        public String triggerObject;
+
+        @NameInMap("Ttl")
+        public Long ttl;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeDomainCcActivityLogResponseBodyActivityLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainCcActivityLogResponseBodyActivityLog self = new DescribeDomainCcActivityLogResponseBodyActivityLog();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainCcActivityLogResponseBodyActivityLog setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeDomainCcActivityLogResponseBodyActivityLog setTtl(Long ttl) {
-            this.ttl = ttl;
-            return this;
-        }
-        public Long getTtl() {
-            return this.ttl;
         }
 
         public DescribeDomainCcActivityLogResponseBodyActivityLog setAction(String action) {
@@ -113,22 +97,6 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
         public String getAction() {
             return this.action;
-        }
-
-        public DescribeDomainCcActivityLogResponseBodyActivityLog setTriggerObject(String triggerObject) {
-            this.triggerObject = triggerObject;
-            return this;
-        }
-        public String getTriggerObject() {
-            return this.triggerObject;
-        }
-
-        public DescribeDomainCcActivityLogResponseBodyActivityLog setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeDomainCcActivityLogResponseBodyActivityLog setDomainName(String domainName) {
@@ -145,6 +113,38 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeDomainCcActivityLogResponseBodyActivityLog setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeDomainCcActivityLogResponseBodyActivityLog setTriggerObject(String triggerObject) {
+            this.triggerObject = triggerObject;
+            return this;
+        }
+        public String getTriggerObject() {
+            return this.triggerObject;
+        }
+
+        public DescribeDomainCcActivityLogResponseBodyActivityLog setTtl(Long ttl) {
+            this.ttl = ttl;
+            return this;
+        }
+        public Long getTtl() {
+            return this.ttl;
+        }
+
+        public DescribeDomainCcActivityLogResponseBodyActivityLog setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

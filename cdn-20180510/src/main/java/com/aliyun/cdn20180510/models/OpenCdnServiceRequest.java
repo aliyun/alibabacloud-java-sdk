@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class OpenCdnServiceRequest extends TeaModel {
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
     public static OpenCdnServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenCdnServiceRequest self = new OpenCdnServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OpenCdnServiceRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
     }
 
     public OpenCdnServiceRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class OpenCdnServiceRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public OpenCdnServiceRequest setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
-        return this;
-    }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
     }
 
 }

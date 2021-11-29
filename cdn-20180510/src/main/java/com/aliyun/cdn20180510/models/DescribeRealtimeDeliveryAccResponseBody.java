@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ReatTimeDeliveryAccData")
     public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRealtimeDeliveryAccResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRealtimeDeliveryAccResponseBody self = new DescribeRealtimeDeliveryAccResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRealtimeDeliveryAccResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRealtimeDeliveryAccResponseBody setReatTimeDeliveryAccData(DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccData reatTimeDeliveryAccData) {
@@ -31,27 +23,27 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         return this.reatTimeDeliveryAccData;
     }
 
-    public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+    public DescribeRealtimeDeliveryAccResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
         @NameInMap("FailedNum")
         public Integer failedNum;
 
         @NameInMap("SuccessNum")
         public Integer successNum;
 
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
         public static DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData build(java.util.Map<String, ?> map) throws Exception {
             DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData self = new DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setFailedNum(Integer failedNum) {
@@ -68,6 +60,14 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         }
         public Integer getSuccessNum() {
             return this.successNum;
+        }
+
+        public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

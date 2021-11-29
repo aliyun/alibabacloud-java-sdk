@@ -4,40 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Area")
+    public String area;
 
     @NameInMap("Dimension")
     public String dimension;
 
-    @NameInMap("Area")
-    public String area;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static DescribeCdnUserBillPredictionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserBillPredictionRequest self = new DescribeCdnUserBillPredictionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnUserBillPredictionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeCdnUserBillPredictionRequest setDimension(String dimension) {
-        this.dimension = dimension;
-        return this;
-    }
-    public String getDimension() {
-        return this.dimension;
     }
 
     public DescribeCdnUserBillPredictionRequest setArea(String area) {
@@ -48,12 +32,12 @@ public class DescribeCdnUserBillPredictionRequest extends TeaModel {
         return this.area;
     }
 
-    public DescribeCdnUserBillPredictionRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeCdnUserBillPredictionRequest setDimension(String dimension) {
+        this.dimension = dimension;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDimension() {
+        return this.dimension;
     }
 
     public DescribeCdnUserBillPredictionRequest setEndTime(String endTime) {
@@ -62,6 +46,22 @@ public class DescribeCdnUserBillPredictionRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeCdnUserBillPredictionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeCdnUserBillPredictionRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

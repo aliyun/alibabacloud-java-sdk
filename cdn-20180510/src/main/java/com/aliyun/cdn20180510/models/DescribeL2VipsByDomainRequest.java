@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeL2VipsByDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static DescribeL2VipsByDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeL2VipsByDomainRequest self = new DescribeL2VipsByDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeL2VipsByDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeL2VipsByDomainRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribeL2VipsByDomainRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DescribeL2VipsByDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

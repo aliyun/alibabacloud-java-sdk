@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListUserCustomLogConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigIds")
     public ListUserCustomLogConfigResponseBodyConfigIds configIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListUserCustomLogConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUserCustomLogConfigResponseBody self = new ListUserCustomLogConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListUserCustomLogConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListUserCustomLogConfigResponseBody setConfigIds(ListUserCustomLogConfigResponseBodyConfigIds configIds) {
@@ -29,6 +21,14 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
     }
     public ListUserCustomLogConfigResponseBodyConfigIds getConfigIds() {
         return this.configIds;
+    }
+
+    public ListUserCustomLogConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListUserCustomLogConfigResponseBodyConfigIds extends TeaModel {

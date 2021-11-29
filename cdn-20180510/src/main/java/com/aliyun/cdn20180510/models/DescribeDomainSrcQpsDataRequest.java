@@ -4,14 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSrcQpsDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,17 +13,15 @@ public class DescribeDomainSrcQpsDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainSrcQpsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSrcQpsDataRequest self = new DescribeDomainSrcQpsDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainSrcQpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainSrcQpsDataRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class DescribeDomainSrcQpsDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainSrcQpsDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainSrcQpsDataRequest setEndTime(String endTime) {
@@ -62,6 +46,22 @@ public class DescribeDomainSrcQpsDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeDomainSrcQpsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDomainSrcQpsDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -4,18 +4,29 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnWafDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeCdnWafDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnWafDomainRequest self = new DescribeCdnWafDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCdnWafDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeCdnWafDomainRequest setOwnerId(Long ownerId) {
@@ -34,12 +45,12 @@ public class DescribeCdnWafDomainRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeCdnWafDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeCdnWafDomainRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

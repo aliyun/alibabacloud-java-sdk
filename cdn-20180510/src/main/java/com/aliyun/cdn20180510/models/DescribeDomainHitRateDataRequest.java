@@ -4,14 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHitRateDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,17 +13,15 @@ public class DescribeDomainHitRateDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDomainHitRateDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainHitRateDataRequest self = new DescribeDomainHitRateDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainHitRateDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDomainHitRateDataRequest setDomainName(String domainName) {
@@ -38,14 +30,6 @@ public class DescribeDomainHitRateDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainHitRateDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainHitRateDataRequest setEndTime(String endTime) {
@@ -62,6 +46,22 @@ public class DescribeDomainHitRateDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeDomainHitRateDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDomainHitRateDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

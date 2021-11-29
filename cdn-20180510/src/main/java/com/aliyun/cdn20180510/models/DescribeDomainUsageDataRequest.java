@@ -4,8 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Area")
+    public String area;
 
     @NameInMap("DataProtocol")
     public String dataProtocol;
@@ -13,14 +13,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("Area")
-    public String area;
 
     @NameInMap("Field")
     public String field;
@@ -28,17 +22,26 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeDomainUsageDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainUsageDataRequest self = new DescribeDomainUsageDataRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainUsageDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeDomainUsageDataRequest setArea(String area) {
+        this.area = area;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getArea() {
+        return this.area;
     }
 
     public DescribeDomainUsageDataRequest setDataProtocol(String dataProtocol) {
@@ -57,28 +60,12 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainUsageDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainUsageDataRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDomainUsageDataRequest setArea(String area) {
-        this.area = area;
-        return this;
-    }
-    public String getArea() {
-        return this.area;
     }
 
     public DescribeDomainUsageDataRequest setField(String field) {
@@ -95,6 +82,30 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeDomainUsageDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDomainUsageDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDomainUsageDataRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

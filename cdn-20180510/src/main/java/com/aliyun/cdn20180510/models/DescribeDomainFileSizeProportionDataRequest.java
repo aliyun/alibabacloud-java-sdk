@@ -4,24 +4,40 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainFileSizeProportionDataRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     public static DescribeDomainFileSizeProportionDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainFileSizeProportionDataRequest self = new DescribeDomainFileSizeProportionDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainFileSizeProportionDataRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDomainFileSizeProportionDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDomainFileSizeProportionDataRequest setOwnerId(Long ownerId) {
@@ -40,28 +56,12 @@ public class DescribeDomainFileSizeProportionDataRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public DescribeDomainFileSizeProportionDataRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
     public DescribeDomainFileSizeProportionDataRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDomainFileSizeProportionDataRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

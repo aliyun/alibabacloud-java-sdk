@@ -4,26 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Area")
     public String area;
+
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("UsageDataPerInterval")
     public DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
@@ -31,38 +31,6 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     public static DescribeDomainUsageDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainUsageDataResponseBody self = new DescribeDomainUsageDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainUsageDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDomainUsageDataResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeDomainUsageDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDomainUsageDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainUsageDataResponseBody setArea(String area) {
@@ -73,6 +41,14 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         return this.area;
     }
 
+    public DescribeDomainUsageDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
+    }
+
     public DescribeDomainUsageDataResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -81,12 +57,36 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainUsageDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeDomainUsageDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDomainUsageDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainUsageDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDomainUsageDataResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DescribeDomainUsageDataResponseBody setUsageDataPerInterval(DescribeDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval) {
@@ -98,37 +98,21 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("PeakTime")
         public String peakTime;
 
         @NameInMap("SpecialValue")
         public String specialValue;
 
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule self = new DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule setPeakTime(String peakTime) {
@@ -145,6 +129,22 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
         public String getSpecialValue() {
             return this.specialValue;
+        }
+
+        public DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeDomainUsageDataResponseBodyUsageDataPerIntervalDataModule setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

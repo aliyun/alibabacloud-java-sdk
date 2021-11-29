@@ -10,6 +10,9 @@ public class DescribeCdnUserResourcePackageRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeCdnUserResourcePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserResourcePackageRequest self = new DescribeCdnUserResourcePackageRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeCdnUserResourcePackageRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeCdnUserResourcePackageRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

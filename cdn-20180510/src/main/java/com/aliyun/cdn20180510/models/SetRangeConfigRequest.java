@@ -4,8 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetRangeConfigRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ConfigId")
+    public Long configId;
 
     @NameInMap("DomainName")
     public String domainName;
@@ -13,20 +13,20 @@ public class SetRangeConfigRequest extends TeaModel {
     @NameInMap("Enable")
     public String enable;
 
-    @NameInMap("ConfigId")
-    public Long configId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static SetRangeConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetRangeConfigRequest self = new SetRangeConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetRangeConfigRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public SetRangeConfigRequest setConfigId(Long configId) {
+        this.configId = configId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     public SetRangeConfigRequest setDomainName(String domainName) {
@@ -45,12 +45,12 @@ public class SetRangeConfigRequest extends TeaModel {
         return this.enable;
     }
 
-    public SetRangeConfigRequest setConfigId(Long configId) {
-        this.configId = configId;
+    public SetRangeConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Long getConfigId() {
-        return this.configId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

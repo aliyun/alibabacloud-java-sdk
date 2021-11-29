@@ -7,20 +7,20 @@ public class DescribeIpInfoResponseBody extends TeaModel {
     @NameInMap("CdnIp")
     public String cdnIp;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("RegionEname")
-    public String regionEname;
-
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("ISP")
+    public String ISP;
 
     @NameInMap("IspEname")
     public String ispEname;
 
-    @NameInMap("ISP")
-    public String ISP;
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("RegionEname")
+    public String regionEname;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeIpInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpInfoResponseBody self = new DescribeIpInfoResponseBody();
@@ -35,28 +35,12 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         return this.cdnIp;
     }
 
-    public DescribeIpInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeIpInfoResponseBody setISP(String ISP) {
+        this.ISP = ISP;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeIpInfoResponseBody setRegionEname(String regionEname) {
-        this.regionEname = regionEname;
-        return this;
-    }
-    public String getRegionEname() {
-        return this.regionEname;
-    }
-
-    public DescribeIpInfoResponseBody setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
+    public String getISP() {
+        return this.ISP;
     }
 
     public DescribeIpInfoResponseBody setIspEname(String ispEname) {
@@ -67,12 +51,28 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         return this.ispEname;
     }
 
-    public DescribeIpInfoResponseBody setISP(String ISP) {
-        this.ISP = ISP;
+    public DescribeIpInfoResponseBody setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getISP() {
-        return this.ISP;
+    public String getRegion() {
+        return this.region;
+    }
+
+    public DescribeIpInfoResponseBody setRegionEname(String regionEname) {
+        this.regionEname = regionEname;
+        return this;
+    }
+    public String getRegionEname() {
+        return this.regionEname;
+    }
+
+    public DescribeIpInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

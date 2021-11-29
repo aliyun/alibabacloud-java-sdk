@@ -4,60 +4,36 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class SetDomainServerCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("CertName")
     public String certName;
 
     @NameInMap("CertType")
     public String certType;
 
-    @NameInMap("ServerCertificateStatus")
-    public String serverCertificateStatus;
-
-    @NameInMap("ServerCertificate")
-    public String serverCertificate;
-
-    @NameInMap("PrivateKey")
-    public String privateKey;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("ForceSet")
     public String forceSet;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PrivateKey")
+    public String privateKey;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("ServerCertificate")
+    public String serverCertificate;
+
+    @NameInMap("ServerCertificateStatus")
+    public String serverCertificateStatus;
+
     public static SetDomainServerCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainServerCertificateRequest self = new SetDomainServerCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDomainServerCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SetDomainServerCertificateRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public SetDomainServerCertificateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public SetDomainServerCertificateRequest setCertName(String certName) {
@@ -76,20 +52,28 @@ public class SetDomainServerCertificateRequest extends TeaModel {
         return this.certType;
     }
 
-    public SetDomainServerCertificateRequest setServerCertificateStatus(String serverCertificateStatus) {
-        this.serverCertificateStatus = serverCertificateStatus;
+    public SetDomainServerCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getServerCertificateStatus() {
-        return this.serverCertificateStatus;
+    public String getDomainName() {
+        return this.domainName;
     }
 
-    public SetDomainServerCertificateRequest setServerCertificate(String serverCertificate) {
-        this.serverCertificate = serverCertificate;
+    public SetDomainServerCertificateRequest setForceSet(String forceSet) {
+        this.forceSet = forceSet;
         return this;
     }
-    public String getServerCertificate() {
-        return this.serverCertificate;
+    public String getForceSet() {
+        return this.forceSet;
+    }
+
+    public SetDomainServerCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetDomainServerCertificateRequest setPrivateKey(String privateKey) {
@@ -100,12 +84,28 @@ public class SetDomainServerCertificateRequest extends TeaModel {
         return this.privateKey;
     }
 
-    public SetDomainServerCertificateRequest setForceSet(String forceSet) {
-        this.forceSet = forceSet;
+    public SetDomainServerCertificateRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getForceSet() {
-        return this.forceSet;
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public SetDomainServerCertificateRequest setServerCertificate(String serverCertificate) {
+        this.serverCertificate = serverCertificate;
+        return this;
+    }
+    public String getServerCertificate() {
+        return this.serverCertificate;
+    }
+
+    public SetDomainServerCertificateRequest setServerCertificateStatus(String serverCertificateStatus) {
+        this.serverCertificateStatus = serverCertificateStatus;
+        return this;
+    }
+    public String getServerCertificateStatus() {
+        return this.serverCertificateStatus;
     }
 
 }
