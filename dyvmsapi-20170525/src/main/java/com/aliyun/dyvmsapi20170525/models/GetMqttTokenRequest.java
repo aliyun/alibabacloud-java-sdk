@@ -3,12 +3,9 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class ListOrderedNumbersRequest extends TeaModel {
+public class GetMqttTokenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ProdCode")
-    public String prodCode;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,12 +13,12 @@ public class ListOrderedNumbersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static ListOrderedNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListOrderedNumbersRequest self = new ListOrderedNumbersRequest();
+    public static GetMqttTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetMqttTokenRequest self = new GetMqttTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListOrderedNumbersRequest setOwnerId(Long ownerId) {
+    public GetMqttTokenRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -29,15 +26,7 @@ public class ListOrderedNumbersRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ListOrderedNumbersRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
-    }
-
-    public ListOrderedNumbersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetMqttTokenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -45,7 +34,7 @@ public class ListOrderedNumbersRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ListOrderedNumbersRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetMqttTokenRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
