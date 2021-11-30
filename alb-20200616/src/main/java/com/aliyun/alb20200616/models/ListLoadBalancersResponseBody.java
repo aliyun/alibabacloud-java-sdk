@@ -258,6 +258,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("AddressAllocatedMode")
         public String addressAllocatedMode;
 
+        // 协议版本
+        @NameInMap("AddressIpVersion")
+        public String addressIpVersion;
+
         // 地址类型
         @NameInMap("AddressType")
         public String addressType;
@@ -277,6 +281,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         // 负载均衡删除保护相关信息
         @NameInMap("DeletionProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig deletionProtectionConfig;
+
+        // IPV6地址类型
+        @NameInMap("Ipv6AddressType")
+        public String ipv6AddressType;
 
         // 计费相关属性
         @NameInMap("LoadBalancerBillingConfig")
@@ -343,6 +351,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             return this.addressAllocatedMode;
         }
 
+        public ListLoadBalancersResponseBodyLoadBalancers setAddressIpVersion(String addressIpVersion) {
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+        public String getAddressIpVersion() {
+            return this.addressIpVersion;
+        }
+
         public ListLoadBalancersResponseBodyLoadBalancers setAddressType(String addressType) {
             this.addressType = addressType;
             return this;
@@ -381,6 +397,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig getDeletionProtectionConfig() {
             return this.deletionProtectionConfig;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancers setIpv6AddressType(String ipv6AddressType) {
+            this.ipv6AddressType = ipv6AddressType;
+            return this;
+        }
+        public String getIpv6AddressType() {
+            return this.ipv6AddressType;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setLoadBalancerBillingConfig(ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig loadBalancerBillingConfig) {

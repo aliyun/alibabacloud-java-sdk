@@ -12,6 +12,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("AddressAllocatedMode")
     public String addressAllocatedMode;
 
+    // 协议版本
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     // 地址类型
     @NameInMap("AddressType")
     public String addressType;
@@ -31,6 +35,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     // 负载均衡删除保护相关信息
     @NameInMap("DeletionProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig;
+
+    // IPV6地址类型
+    @NameInMap("Ipv6AddressType")
+    public String ipv6AddressType;
 
     // 计费相关属性
     @NameInMap("LoadBalancerBillingConfig")
@@ -109,6 +117,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         return this.addressAllocatedMode;
     }
 
+    public GetLoadBalancerAttributeResponseBody setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
+    }
+
     public GetLoadBalancerAttributeResponseBody setAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -147,6 +163,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig getDeletionProtectionConfig() {
         return this.deletionProtectionConfig;
+    }
+
+    public GetLoadBalancerAttributeResponseBody setIpv6AddressType(String ipv6AddressType) {
+        this.ipv6AddressType = ipv6AddressType;
+        return this;
+    }
+    public String getIpv6AddressType() {
+        return this.ipv6AddressType;
     }
 
     public GetLoadBalancerAttributeResponseBody setLoadBalancerBillingConfig(GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig loadBalancerBillingConfig) {
@@ -446,6 +470,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        // Ipv6地址
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
         public static GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses build(java.util.Map<String, ?> map) throws Exception {
             GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses self = new GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses();
             return TeaModel.build(map, self);
@@ -457,6 +485,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
         }
 
     }
