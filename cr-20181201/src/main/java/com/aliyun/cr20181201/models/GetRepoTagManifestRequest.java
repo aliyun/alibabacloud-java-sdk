@@ -7,14 +7,14 @@ public class GetRepoTagManifestRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Tag")
-    public String tag;
+    @NameInMap("RepoId")
+    public String repoId;
 
     @NameInMap("SchemaVersion")
     public Integer schemaVersion;
 
-    @NameInMap("RepoId")
-    public String repoId;
+    @NameInMap("Tag")
+    public String tag;
 
     public static GetRepoTagManifestRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagManifestRequest self = new GetRepoTagManifestRequest();
@@ -29,12 +29,12 @@ public class GetRepoTagManifestRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetRepoTagManifestRequest setTag(String tag) {
-        this.tag = tag;
+    public GetRepoTagManifestRequest setRepoId(String repoId) {
+        this.repoId = repoId;
         return this;
     }
-    public String getTag() {
-        return this.tag;
+    public String getRepoId() {
+        return this.repoId;
     }
 
     public GetRepoTagManifestRequest setSchemaVersion(Integer schemaVersion) {
@@ -45,12 +45,12 @@ public class GetRepoTagManifestRequest extends TeaModel {
         return this.schemaVersion;
     }
 
-    public GetRepoTagManifestRequest setRepoId(String repoId) {
-        this.repoId = repoId;
+    public GetRepoTagManifestRequest setTag(String tag) {
+        this.tag = tag;
         return this;
     }
-    public String getRepoId() {
-        return this.repoId;
+    public String getTag() {
+        return this.tag;
     }
 
 }

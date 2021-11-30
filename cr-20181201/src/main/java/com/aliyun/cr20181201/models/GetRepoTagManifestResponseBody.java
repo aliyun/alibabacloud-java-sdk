@@ -10,11 +10,11 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Manifest")
     public GetRepoTagManifestResponseBodyManifest manifest;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetRepoTagManifestResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagManifestResponseBody self = new GetRepoTagManifestResponseBody();
@@ -37,6 +37,14 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public GetRepoTagManifestResponseBody setManifest(GetRepoTagManifestResponseBodyManifest manifest) {
+        this.manifest = manifest;
+        return this;
+    }
+    public GetRepoTagManifestResponseBodyManifest getManifest() {
+        return this.manifest;
+    }
+
     public GetRepoTagManifestResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -45,12 +53,45 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRepoTagManifestResponseBody setManifest(GetRepoTagManifestResponseBodyManifest manifest) {
-        this.manifest = manifest;
-        return this;
-    }
-    public GetRepoTagManifestResponseBodyManifest getManifest() {
-        return this.manifest;
+    public static class GetRepoTagManifestResponseBodyManifestConfig extends TeaModel {
+        @NameInMap("Digest")
+        public String digest;
+
+        @NameInMap("MediaType")
+        public String mediaType;
+
+        @NameInMap("Size")
+        public Long size;
+
+        public static GetRepoTagManifestResponseBodyManifestConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRepoTagManifestResponseBodyManifestConfig self = new GetRepoTagManifestResponseBodyManifestConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRepoTagManifestResponseBodyManifestConfig setDigest(String digest) {
+            this.digest = digest;
+            return this;
+        }
+        public String getDigest() {
+            return this.digest;
+        }
+
+        public GetRepoTagManifestResponseBodyManifestConfig setMediaType(String mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+        public String getMediaType() {
+            return this.mediaType;
+        }
+
+        public GetRepoTagManifestResponseBodyManifestConfig setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
     }
 
     public static class GetRepoTagManifestResponseBodyManifestFsLayers extends TeaModel {
@@ -87,47 +128,6 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getV1Compatibility() {
             return this.v1Compatibility;
-        }
-
-    }
-
-    public static class GetRepoTagManifestResponseBodyManifestSignatures extends TeaModel {
-        @NameInMap("Signature")
-        public String signature;
-
-        @NameInMap("Header")
-        public java.util.Map<String, ?> header;
-
-        @NameInMap("Protected")
-        public String _protected;
-
-        public static GetRepoTagManifestResponseBodyManifestSignatures build(java.util.Map<String, ?> map) throws Exception {
-            GetRepoTagManifestResponseBodyManifestSignatures self = new GetRepoTagManifestResponseBodyManifestSignatures();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRepoTagManifestResponseBodyManifestSignatures setSignature(String signature) {
-            this.signature = signature;
-            return this;
-        }
-        public String getSignature() {
-            return this.signature;
-        }
-
-        public GetRepoTagManifestResponseBodyManifestSignatures setHeader(java.util.Map<String, ?> header) {
-            this.header = header;
-            return this;
-        }
-        public java.util.Map<String, ?> getHeader() {
-            return this.header;
-        }
-
-        public GetRepoTagManifestResponseBodyManifestSignatures set_protected(String _protected) {
-            this._protected = _protected;
-            return this;
-        }
-        public String get_protected() {
-            return this._protected;
         }
 
     }
@@ -173,62 +173,53 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
 
     }
 
-    public static class GetRepoTagManifestResponseBodyManifestConfig extends TeaModel {
-        @NameInMap("Digest")
-        public String digest;
+    public static class GetRepoTagManifestResponseBodyManifestSignatures extends TeaModel {
+        @NameInMap("Header")
+        public java.util.Map<String, ?> header;
 
-        @NameInMap("MediaType")
-        public String mediaType;
+        @NameInMap("Protected")
+        public String _protected;
 
-        @NameInMap("Size")
-        public Long size;
+        @NameInMap("Signature")
+        public String signature;
 
-        public static GetRepoTagManifestResponseBodyManifestConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetRepoTagManifestResponseBodyManifestConfig self = new GetRepoTagManifestResponseBodyManifestConfig();
+        public static GetRepoTagManifestResponseBodyManifestSignatures build(java.util.Map<String, ?> map) throws Exception {
+            GetRepoTagManifestResponseBodyManifestSignatures self = new GetRepoTagManifestResponseBodyManifestSignatures();
             return TeaModel.build(map, self);
         }
 
-        public GetRepoTagManifestResponseBodyManifestConfig setDigest(String digest) {
-            this.digest = digest;
+        public GetRepoTagManifestResponseBodyManifestSignatures setHeader(java.util.Map<String, ?> header) {
+            this.header = header;
             return this;
         }
-        public String getDigest() {
-            return this.digest;
+        public java.util.Map<String, ?> getHeader() {
+            return this.header;
         }
 
-        public GetRepoTagManifestResponseBodyManifestConfig setMediaType(String mediaType) {
-            this.mediaType = mediaType;
+        public GetRepoTagManifestResponseBodyManifestSignatures set_protected(String _protected) {
+            this._protected = _protected;
             return this;
         }
-        public String getMediaType() {
-            return this.mediaType;
+        public String get_protected() {
+            return this._protected;
         }
 
-        public GetRepoTagManifestResponseBodyManifestConfig setSize(Long size) {
-            this.size = size;
+        public GetRepoTagManifestResponseBodyManifestSignatures setSignature(String signature) {
+            this.signature = signature;
             return this;
         }
-        public Long getSize() {
-            return this.size;
+        public String getSignature() {
+            return this.signature;
         }
 
     }
 
     public static class GetRepoTagManifestResponseBodyManifest extends TeaModel {
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("MediaType")
-        public String mediaType;
-
-        @NameInMap("SchemaVersion")
-        public Integer schemaVersion;
-
         @NameInMap("Architecture")
         public String architecture;
+
+        @NameInMap("Config")
+        public GetRepoTagManifestResponseBodyManifestConfig config;
 
         @NameInMap("FsLayers")
         public java.util.List<GetRepoTagManifestResponseBodyManifestFsLayers> fsLayers;
@@ -236,50 +227,27 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         @NameInMap("History")
         public java.util.List<GetRepoTagManifestResponseBodyManifestHistory> history;
 
-        @NameInMap("Signatures")
-        public java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> signatures;
-
         @NameInMap("Layers")
         public java.util.List<GetRepoTagManifestResponseBodyManifestLayers> layers;
 
-        @NameInMap("Config")
-        public GetRepoTagManifestResponseBodyManifestConfig config;
+        @NameInMap("MediaType")
+        public String mediaType;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("SchemaVersion")
+        public Integer schemaVersion;
+
+        @NameInMap("Signatures")
+        public java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> signatures;
+
+        @NameInMap("Tag")
+        public String tag;
 
         public static GetRepoTagManifestResponseBodyManifest build(java.util.Map<String, ?> map) throws Exception {
             GetRepoTagManifestResponseBodyManifest self = new GetRepoTagManifestResponseBodyManifest();
             return TeaModel.build(map, self);
-        }
-
-        public GetRepoTagManifestResponseBodyManifest setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public GetRepoTagManifestResponseBodyManifest setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetRepoTagManifestResponseBodyManifest setMediaType(String mediaType) {
-            this.mediaType = mediaType;
-            return this;
-        }
-        public String getMediaType() {
-            return this.mediaType;
-        }
-
-        public GetRepoTagManifestResponseBodyManifest setSchemaVersion(Integer schemaVersion) {
-            this.schemaVersion = schemaVersion;
-            return this;
-        }
-        public Integer getSchemaVersion() {
-            return this.schemaVersion;
         }
 
         public GetRepoTagManifestResponseBodyManifest setArchitecture(String architecture) {
@@ -288,6 +256,14 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
         }
         public String getArchitecture() {
             return this.architecture;
+        }
+
+        public GetRepoTagManifestResponseBodyManifest setConfig(GetRepoTagManifestResponseBodyManifestConfig config) {
+            this.config = config;
+            return this;
+        }
+        public GetRepoTagManifestResponseBodyManifestConfig getConfig() {
+            return this.config;
         }
 
         public GetRepoTagManifestResponseBodyManifest setFsLayers(java.util.List<GetRepoTagManifestResponseBodyManifestFsLayers> fsLayers) {
@@ -306,14 +282,6 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             return this.history;
         }
 
-        public GetRepoTagManifestResponseBodyManifest setSignatures(java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> signatures) {
-            this.signatures = signatures;
-            return this;
-        }
-        public java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> getSignatures() {
-            return this.signatures;
-        }
-
         public GetRepoTagManifestResponseBodyManifest setLayers(java.util.List<GetRepoTagManifestResponseBodyManifestLayers> layers) {
             this.layers = layers;
             return this;
@@ -322,12 +290,44 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
             return this.layers;
         }
 
-        public GetRepoTagManifestResponseBodyManifest setConfig(GetRepoTagManifestResponseBodyManifestConfig config) {
-            this.config = config;
+        public GetRepoTagManifestResponseBodyManifest setMediaType(String mediaType) {
+            this.mediaType = mediaType;
             return this;
         }
-        public GetRepoTagManifestResponseBodyManifestConfig getConfig() {
-            return this.config;
+        public String getMediaType() {
+            return this.mediaType;
+        }
+
+        public GetRepoTagManifestResponseBodyManifest setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetRepoTagManifestResponseBodyManifest setSchemaVersion(Integer schemaVersion) {
+            this.schemaVersion = schemaVersion;
+            return this;
+        }
+        public Integer getSchemaVersion() {
+            return this.schemaVersion;
+        }
+
+        public GetRepoTagManifestResponseBodyManifest setSignatures(java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> signatures) {
+            this.signatures = signatures;
+            return this;
+        }
+        public java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> getSignatures() {
+            return this.signatures;
+        }
+
+        public GetRepoTagManifestResponseBodyManifest setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }

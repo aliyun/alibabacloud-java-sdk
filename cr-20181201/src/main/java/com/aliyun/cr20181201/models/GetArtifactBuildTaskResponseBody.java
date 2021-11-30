@@ -4,20 +4,8 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactBuildTaskResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public Integer endTime;
-
-    @NameInMap("StartTime")
-    public Integer startTime;
-
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TaskStatus")
-    public String taskStatus;
 
     @NameInMap("BuildTaskId")
     public String buildTaskId;
@@ -25,37 +13,33 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
+    @NameInMap("EndTime")
+    public Integer endTime;
 
     @NameInMap("Instructions")
     public java.util.List<String> instructions;
 
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("SourceArtifact")
     public GetArtifactBuildTaskResponseBodySourceArtifact sourceArtifact;
+
+    @NameInMap("StartTime")
+    public Integer startTime;
 
     @NameInMap("TargetArtifact")
     public GetArtifactBuildTaskResponseBodyTargetArtifact targetArtifact;
 
+    @NameInMap("TaskStatus")
+    public String taskStatus;
+
     public static GetArtifactBuildTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetArtifactBuildTaskResponseBody self = new GetArtifactBuildTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetArtifactBuildTaskResponseBody setEndTime(Integer endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Integer getEndTime() {
-        return this.endTime;
-    }
-
-    public GetArtifactBuildTaskResponseBody setStartTime(Integer startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Integer getStartTime() {
-        return this.startTime;
     }
 
     public GetArtifactBuildTaskResponseBody setArtifactBuildType(String artifactBuildType) {
@@ -64,22 +48,6 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     }
     public String getArtifactBuildType() {
         return this.artifactBuildType;
-    }
-
-    public GetArtifactBuildTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetArtifactBuildTaskResponseBody setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
     }
 
     public GetArtifactBuildTaskResponseBody setBuildTaskId(String buildTaskId) {
@@ -98,12 +66,12 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetArtifactBuildTaskResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
+    public GetArtifactBuildTaskResponseBody setEndTime(Integer endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
+    public Integer getEndTime() {
+        return this.endTime;
     }
 
     public GetArtifactBuildTaskResponseBody setInstructions(java.util.List<String> instructions) {
@@ -114,12 +82,36 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         return this.instructions;
     }
 
+    public GetArtifactBuildTaskResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public GetArtifactBuildTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetArtifactBuildTaskResponseBody setSourceArtifact(GetArtifactBuildTaskResponseBodySourceArtifact sourceArtifact) {
         this.sourceArtifact = sourceArtifact;
         return this;
     }
     public GetArtifactBuildTaskResponseBodySourceArtifact getSourceArtifact() {
         return this.sourceArtifact;
+    }
+
+    public GetArtifactBuildTaskResponseBody setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
     public GetArtifactBuildTaskResponseBody setTargetArtifact(GetArtifactBuildTaskResponseBodyTargetArtifact targetArtifact) {
@@ -130,19 +122,35 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         return this.targetArtifact;
     }
 
+    public GetArtifactBuildTaskResponseBody setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
     public static class GetArtifactBuildTaskResponseBodySourceArtifact extends TeaModel {
+        @NameInMap("ArtifactType")
+        public String artifactType;
+
         @NameInMap("RepoId")
         public String repoId;
 
         @NameInMap("Version")
         public String version;
 
-        @NameInMap("ArtifactType")
-        public String artifactType;
-
         public static GetArtifactBuildTaskResponseBodySourceArtifact build(java.util.Map<String, ?> map) throws Exception {
             GetArtifactBuildTaskResponseBodySourceArtifact self = new GetArtifactBuildTaskResponseBodySourceArtifact();
             return TeaModel.build(map, self);
+        }
+
+        public GetArtifactBuildTaskResponseBodySourceArtifact setArtifactType(String artifactType) {
+            this.artifactType = artifactType;
+            return this;
+        }
+        public String getArtifactType() {
+            return this.artifactType;
         }
 
         public GetArtifactBuildTaskResponseBodySourceArtifact setRepoId(String repoId) {
@@ -161,29 +169,29 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
             return this.version;
         }
 
-        public GetArtifactBuildTaskResponseBodySourceArtifact setArtifactType(String artifactType) {
-            this.artifactType = artifactType;
-            return this;
-        }
-        public String getArtifactType() {
-            return this.artifactType;
-        }
-
     }
 
     public static class GetArtifactBuildTaskResponseBodyTargetArtifact extends TeaModel {
+        @NameInMap("ArtifactType")
+        public String artifactType;
+
         @NameInMap("RepoId")
         public String repoId;
 
         @NameInMap("Version")
         public String version;
 
-        @NameInMap("ArtifactType")
-        public String artifactType;
-
         public static GetArtifactBuildTaskResponseBodyTargetArtifact build(java.util.Map<String, ?> map) throws Exception {
             GetArtifactBuildTaskResponseBodyTargetArtifact self = new GetArtifactBuildTaskResponseBodyTargetArtifact();
             return TeaModel.build(map, self);
+        }
+
+        public GetArtifactBuildTaskResponseBodyTargetArtifact setArtifactType(String artifactType) {
+            this.artifactType = artifactType;
+            return this;
+        }
+        public String getArtifactType() {
+            return this.artifactType;
         }
 
         public GetArtifactBuildTaskResponseBodyTargetArtifact setRepoId(String repoId) {
@@ -200,14 +208,6 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public GetArtifactBuildTaskResponseBodyTargetArtifact setArtifactType(String artifactType) {
-            this.artifactType = artifactType;
-            return this;
-        }
-        public String getArtifactType() {
-            return this.artifactType;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryRequest extends TeaModel {
+    @NameInMap("Detail")
+    public String detail;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,15 +22,20 @@ public class CreateRepositoryRequest extends TeaModel {
     @NameInMap("Summary")
     public String summary;
 
-    @NameInMap("Detail")
-    public String detail;
-
     @NameInMap("TagImmutability")
     public Boolean tagImmutability;
 
     public static CreateRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepositoryRequest self = new CreateRepositoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepositoryRequest setDetail(String detail) {
+        this.detail = detail;
+        return this;
+    }
+    public String getDetail() {
+        return this.detail;
     }
 
     public CreateRepositoryRequest setInstanceId(String instanceId) {
@@ -68,14 +76,6 @@ public class CreateRepositoryRequest extends TeaModel {
     }
     public String getSummary() {
         return this.summary;
-    }
-
-    public CreateRepositoryRequest setDetail(String detail) {
-        this.detail = detail;
-        return this;
-    }
-    public String getDetail() {
-        return this.detail;
     }
 
     public CreateRepositoryRequest setTagImmutability(Boolean tagImmutability) {

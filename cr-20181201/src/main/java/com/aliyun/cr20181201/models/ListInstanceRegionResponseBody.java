@@ -10,11 +10,11 @@ public class ListInstanceRegionResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Regions")
     public java.util.List<ListInstanceRegionResponseBodyRegions> regions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListInstanceRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRegionResponseBody self = new ListInstanceRegionResponseBody();
@@ -37,20 +37,20 @@ public class ListInstanceRegionResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public ListInstanceRegionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListInstanceRegionResponseBody setRegions(java.util.List<ListInstanceRegionResponseBodyRegions> regions) {
         this.regions = regions;
         return this;
     }
     public java.util.List<ListInstanceRegionResponseBodyRegions> getRegions() {
         return this.regions;
+    }
+
+    public ListInstanceRegionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListInstanceRegionResponseBodyRegions extends TeaModel {

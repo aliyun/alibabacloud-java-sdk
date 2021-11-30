@@ -4,81 +4,33 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoBuildRecordResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("BuildRecordId")
+    public String buildRecordId;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("BuildRecordId")
-    public String buildRecordId;
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("Image")
     public GetRepoBuildRecordResponseBodyImage image;
 
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("Status")
+    public String status;
+
     public static GetRepoBuildRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoBuildRecordResponseBody self = new GetRepoBuildRecordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRepoBuildRecordResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public GetRepoBuildRecordResponseBody setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public GetRepoBuildRecordResponseBody setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public GetRepoBuildRecordResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetRepoBuildRecordResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
     }
 
     public GetRepoBuildRecordResponseBody setBuildRecordId(String buildRecordId) {
@@ -89,6 +41,22 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         return this.buildRecordId;
     }
 
+    public GetRepoBuildRecordResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRepoBuildRecordResponseBody setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public GetRepoBuildRecordResponseBody setImage(GetRepoBuildRecordResponseBodyImage image) {
         this.image = image;
         return this;
@@ -97,27 +65,51 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         return this.image;
     }
 
-    public static class GetRepoBuildRecordResponseBodyImage extends TeaModel {
-        @NameInMap("RepoNamespaceName")
-        public String repoNamespaceName;
+    public GetRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
 
+    public GetRepoBuildRecordResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetRepoBuildRecordResponseBody setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public GetRepoBuildRecordResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public static class GetRepoBuildRecordResponseBodyImage extends TeaModel {
         @NameInMap("ImageTag")
         public String imageTag;
 
         @NameInMap("RepoName")
         public String repoName;
 
+        @NameInMap("RepoNamespaceName")
+        public String repoNamespaceName;
+
         public static GetRepoBuildRecordResponseBodyImage build(java.util.Map<String, ?> map) throws Exception {
             GetRepoBuildRecordResponseBodyImage self = new GetRepoBuildRecordResponseBodyImage();
             return TeaModel.build(map, self);
-        }
-
-        public GetRepoBuildRecordResponseBodyImage setRepoNamespaceName(String repoNamespaceName) {
-            this.repoNamespaceName = repoNamespaceName;
-            return this;
-        }
-        public String getRepoNamespaceName() {
-            return this.repoNamespaceName;
         }
 
         public GetRepoBuildRecordResponseBodyImage setImageTag(String imageTag) {
@@ -134,6 +126,14 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         }
         public String getRepoName() {
             return this.repoName;
+        }
+
+        public GetRepoBuildRecordResponseBodyImage setRepoNamespaceName(String repoNamespaceName) {
+            this.repoNamespaceName = repoNamespaceName;
+            return this;
+        }
+        public String getRepoNamespaceName() {
+            return this.repoNamespaceName;
         }
 
     }

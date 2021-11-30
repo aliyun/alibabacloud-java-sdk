@@ -4,14 +4,11 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartReleaseRequest extends TeaModel {
+    @NameInMap("Chart")
+    public String chart;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("RepoName")
-    public String repoName;
-
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -19,12 +16,23 @@ public class ListChartReleaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Chart")
-    public String chart;
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
 
     public static ListChartReleaseRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChartReleaseRequest self = new ListChartReleaseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListChartReleaseRequest setChart(String chart) {
+        this.chart = chart;
+        return this;
+    }
+    public String getChart() {
+        return this.chart;
     }
 
     public ListChartReleaseRequest setInstanceId(String instanceId) {
@@ -33,22 +41,6 @@ public class ListChartReleaseRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListChartReleaseRequest setRepoName(String repoName) {
-        this.repoName = repoName;
-        return this;
-    }
-    public String getRepoName() {
-        return this.repoName;
-    }
-
-    public ListChartReleaseRequest setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
     }
 
     public ListChartReleaseRequest setPageNo(Integer pageNo) {
@@ -67,12 +59,20 @@ public class ListChartReleaseRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListChartReleaseRequest setChart(String chart) {
-        this.chart = chart;
+    public ListChartReleaseRequest setRepoName(String repoName) {
+        this.repoName = repoName;
         return this;
     }
-    public String getChart() {
-        return this.chart;
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    public ListChartReleaseRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepoBuildRuleResponseBody extends TeaModel {
+    @NameInMap("BuildRuleId")
+    public String buildRuleId;
+
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,17 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BuildRuleId")
-    public String buildRuleId;
-
     public static UpdateRepoBuildRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateRepoBuildRuleResponseBody self = new UpdateRepoBuildRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRepoBuildRuleResponseBody setBuildRuleId(String buildRuleId) {
+        this.buildRuleId = buildRuleId;
+        return this;
+    }
+    public String getBuildRuleId() {
+        return this.buildRuleId;
     }
 
     public UpdateRepoBuildRuleResponseBody setCode(String code) {
@@ -43,14 +51,6 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateRepoBuildRuleResponseBody setBuildRuleId(String buildRuleId) {
-        this.buildRuleId = buildRuleId;
-        return this;
-    }
-    public String getBuildRuleId() {
-        return this.buildRuleId;
     }
 
 }

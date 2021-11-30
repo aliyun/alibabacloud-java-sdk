@@ -10,11 +10,11 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Layers")
     public java.util.List<GetRepoTagLayersResponseBodyLayers> layers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetRepoTagLayersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagLayersResponseBody self = new GetRepoTagLayersResponseBody();
@@ -37,14 +37,6 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public GetRepoTagLayersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetRepoTagLayersResponseBody setLayers(java.util.List<GetRepoTagLayersResponseBodyLayers> layers) {
         this.layers = layers;
         return this;
@@ -53,21 +45,29 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         return this.layers;
     }
 
+    public GetRepoTagLayersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetRepoTagLayersResponseBodyLayers extends TeaModel {
         @NameInMap("BlobDigest")
         public String blobDigest;
+
+        @NameInMap("BlobSize")
+        public Long blobSize;
+
+        @NameInMap("LayerCMD")
+        public String layerCMD;
 
         @NameInMap("LayerIndex")
         public Integer layerIndex;
 
         @NameInMap("LayerInstruction")
         public String layerInstruction;
-
-        @NameInMap("LayerCMD")
-        public String layerCMD;
-
-        @NameInMap("BlobSize")
-        public Long blobSize;
 
         public static GetRepoTagLayersResponseBodyLayers build(java.util.Map<String, ?> map) throws Exception {
             GetRepoTagLayersResponseBodyLayers self = new GetRepoTagLayersResponseBodyLayers();
@@ -80,6 +80,22 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         }
         public String getBlobDigest() {
             return this.blobDigest;
+        }
+
+        public GetRepoTagLayersResponseBodyLayers setBlobSize(Long blobSize) {
+            this.blobSize = blobSize;
+            return this;
+        }
+        public Long getBlobSize() {
+            return this.blobSize;
+        }
+
+        public GetRepoTagLayersResponseBodyLayers setLayerCMD(String layerCMD) {
+            this.layerCMD = layerCMD;
+            return this;
+        }
+        public String getLayerCMD() {
+            return this.layerCMD;
         }
 
         public GetRepoTagLayersResponseBodyLayers setLayerIndex(Integer layerIndex) {
@@ -96,22 +112,6 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
         }
         public String getLayerInstruction() {
             return this.layerInstruction;
-        }
-
-        public GetRepoTagLayersResponseBodyLayers setLayerCMD(String layerCMD) {
-            this.layerCMD = layerCMD;
-            return this;
-        }
-        public String getLayerCMD() {
-            return this.layerCMD;
-        }
-
-        public GetRepoTagLayersResponseBodyLayers setBlobSize(Long blobSize) {
-            this.blobSize = blobSize;
-            return this;
-        }
-        public Long getBlobSize() {
-            return this.blobSize;
         }
 
     }

@@ -4,37 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("NamespaceName")
-    public String namespaceName;
-
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("NamespaceName")
+    public String namespaceName;
+
     public static CreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNamespaceRequest self = new CreateNamespaceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateNamespaceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateNamespaceRequest setNamespaceName(String namespaceName) {
-        this.namespaceName = namespaceName;
-        return this;
-    }
-    public String getNamespaceName() {
-        return this.namespaceName;
     }
 
     public CreateNamespaceRequest setAutoCreateRepo(Boolean autoCreateRepo) {
@@ -51,6 +35,22 @@ public class CreateNamespaceRequest extends TeaModel {
     }
     public String getDefaultRepoType() {
         return this.defaultRepoType;
+    }
+
+    public CreateNamespaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateNamespaceRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
     }
 
 }

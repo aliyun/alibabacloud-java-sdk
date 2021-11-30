@@ -7,11 +7,11 @@ public class ListNamespaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("NamespaceStatus")
-    public String namespaceStatus;
-
     @NameInMap("NamespaceName")
     public String namespaceName;
+
+    @NameInMap("NamespaceStatus")
+    public String namespaceStatus;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -32,20 +32,20 @@ public class ListNamespaceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListNamespaceRequest setNamespaceStatus(String namespaceStatus) {
-        this.namespaceStatus = namespaceStatus;
-        return this;
-    }
-    public String getNamespaceStatus() {
-        return this.namespaceStatus;
-    }
-
     public ListNamespaceRequest setNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public ListNamespaceRequest setNamespaceStatus(String namespaceStatus) {
+        this.namespaceStatus = namespaceStatus;
+        return this;
+    }
+    public String getNamespaceStatus() {
+        return this.namespaceStatus;
     }
 
     public ListNamespaceRequest setPageNo(Integer pageNo) {

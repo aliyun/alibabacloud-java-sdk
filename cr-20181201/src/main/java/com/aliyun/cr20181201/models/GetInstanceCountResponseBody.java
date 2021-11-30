@@ -7,14 +7,14 @@ public class GetInstanceCountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Count")
-    public Integer count;
 
     public static GetInstanceCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceCountResponseBody self = new GetInstanceCountResponseBody();
@@ -27,6 +27,14 @@ public class GetInstanceCountResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetInstanceCountResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public GetInstanceCountResponseBody setIsSuccess(Boolean isSuccess) {
@@ -43,14 +51,6 @@ public class GetInstanceCountResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetInstanceCountResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
 }

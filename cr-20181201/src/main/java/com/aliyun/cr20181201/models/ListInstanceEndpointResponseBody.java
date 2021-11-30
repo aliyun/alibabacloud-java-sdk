@@ -7,14 +7,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Endpoints")
+    public java.util.List<ListInstanceEndpointResponseBodyEndpoints> endpoints;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Endpoints")
-    public java.util.List<ListInstanceEndpointResponseBodyEndpoints> endpoints;
 
     public static ListInstanceEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceEndpointResponseBody self = new ListInstanceEndpointResponseBody();
@@ -27,6 +27,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListInstanceEndpointResponseBody setEndpoints(java.util.List<ListInstanceEndpointResponseBodyEndpoints> endpoints) {
+        this.endpoints = endpoints;
+        return this;
+    }
+    public java.util.List<ListInstanceEndpointResponseBodyEndpoints> getEndpoints() {
+        return this.endpoints;
     }
 
     public ListInstanceEndpointResponseBody setIsSuccess(Boolean isSuccess) {
@@ -45,32 +53,35 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstanceEndpointResponseBody setEndpoints(java.util.List<ListInstanceEndpointResponseBodyEndpoints> endpoints) {
-        this.endpoints = endpoints;
-        return this;
-    }
-    public java.util.List<ListInstanceEndpointResponseBodyEndpoints> getEndpoints() {
-        return this.endpoints;
+    public static class ListInstanceEndpointResponseBodyEndpointsAclEntries extends TeaModel {
+        @NameInMap("Entry")
+        public String entry;
+
+        public static ListInstanceEndpointResponseBodyEndpointsAclEntries build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceEndpointResponseBodyEndpointsAclEntries self = new ListInstanceEndpointResponseBodyEndpointsAclEntries();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceEndpointResponseBodyEndpointsAclEntries setEntry(String entry) {
+            this.entry = entry;
+            return this;
+        }
+        public String getEntry() {
+            return this.entry;
+        }
+
     }
 
     public static class ListInstanceEndpointResponseBodyEndpointsDomains extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("Domain")
         public String domain;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListInstanceEndpointResponseBodyEndpointsDomains build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceEndpointResponseBodyEndpointsDomains self = new ListInstanceEndpointResponseBodyEndpointsDomains();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceEndpointResponseBodyEndpointsDomains setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListInstanceEndpointResponseBodyEndpointsDomains setDomain(String domain) {
@@ -79,6 +90,14 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public ListInstanceEndpointResponseBodyEndpointsDomains setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -102,66 +121,31 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     }
 
-    public static class ListInstanceEndpointResponseBodyEndpointsAclEntries extends TeaModel {
-        @NameInMap("Entry")
-        public String entry;
-
-        public static ListInstanceEndpointResponseBodyEndpointsAclEntries build(java.util.Map<String, ?> map) throws Exception {
-            ListInstanceEndpointResponseBodyEndpointsAclEntries self = new ListInstanceEndpointResponseBodyEndpointsAclEntries();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstanceEndpointResponseBodyEndpointsAclEntries setEntry(String entry) {
-            this.entry = entry;
-            return this;
-        }
-        public String getEntry() {
-            return this.entry;
-        }
-
-    }
-
     public static class ListInstanceEndpointResponseBodyEndpoints extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("EndpointType")
-        public String endpointType;
-
         @NameInMap("AclEnable")
         public Boolean aclEnable;
-
-        @NameInMap("Enable")
-        public Boolean enable;
-
-        @NameInMap("Domains")
-        public java.util.List<ListInstanceEndpointResponseBodyEndpointsDomains> domains;
-
-        @NameInMap("LinkedVpcs")
-        public java.util.List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> linkedVpcs;
 
         @NameInMap("AclEntries")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> aclEntries;
 
+        @NameInMap("Domains")
+        public java.util.List<ListInstanceEndpointResponseBodyEndpointsDomains> domains;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("EndpointType")
+        public String endpointType;
+
+        @NameInMap("LinkedVpcs")
+        public java.util.List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> linkedVpcs;
+
+        @NameInMap("Status")
+        public String status;
+
         public static ListInstanceEndpointResponseBodyEndpoints build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceEndpointResponseBodyEndpoints self = new ListInstanceEndpointResponseBodyEndpoints();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceEndpointResponseBodyEndpoints setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListInstanceEndpointResponseBodyEndpoints setEndpointType(String endpointType) {
-            this.endpointType = endpointType;
-            return this;
-        }
-        public String getEndpointType() {
-            return this.endpointType;
         }
 
         public ListInstanceEndpointResponseBodyEndpoints setAclEnable(Boolean aclEnable) {
@@ -172,12 +156,12 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             return this.aclEnable;
         }
 
-        public ListInstanceEndpointResponseBodyEndpoints setEnable(Boolean enable) {
-            this.enable = enable;
+        public ListInstanceEndpointResponseBodyEndpoints setAclEntries(java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> aclEntries) {
+            this.aclEntries = aclEntries;
             return this;
         }
-        public Boolean getEnable() {
-            return this.enable;
+        public java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> getAclEntries() {
+            return this.aclEntries;
         }
 
         public ListInstanceEndpointResponseBodyEndpoints setDomains(java.util.List<ListInstanceEndpointResponseBodyEndpointsDomains> domains) {
@@ -188,6 +172,22 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             return this.domains;
         }
 
+        public ListInstanceEndpointResponseBodyEndpoints setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public ListInstanceEndpointResponseBodyEndpoints setEndpointType(String endpointType) {
+            this.endpointType = endpointType;
+            return this;
+        }
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
         public ListInstanceEndpointResponseBodyEndpoints setLinkedVpcs(java.util.List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> linkedVpcs) {
             this.linkedVpcs = linkedVpcs;
             return this;
@@ -196,12 +196,12 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
             return this.linkedVpcs;
         }
 
-        public ListInstanceEndpointResponseBodyEndpoints setAclEntries(java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> aclEntries) {
-            this.aclEntries = aclEntries;
+        public ListInstanceEndpointResponseBodyEndpoints setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> getAclEntries() {
-            return this.aclEntries;
+        public String getStatus() {
+            return this.status;
         }
 
     }

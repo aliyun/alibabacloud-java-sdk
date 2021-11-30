@@ -10,11 +10,11 @@ public class CreateRepoSyncTaskByRuleRequest extends TeaModel {
     @NameInMap("RepoId")
     public String repoId;
 
-    @NameInMap("Tag")
-    public String tag;
-
     @NameInMap("SyncRuleId")
     public String syncRuleId;
+
+    @NameInMap("Tag")
+    public String tag;
 
     public static CreateRepoSyncTaskByRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoSyncTaskByRuleRequest self = new CreateRepoSyncTaskByRuleRequest();
@@ -37,20 +37,20 @@ public class CreateRepoSyncTaskByRuleRequest extends TeaModel {
         return this.repoId;
     }
 
-    public CreateRepoSyncTaskByRuleRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
     public CreateRepoSyncTaskByRuleRequest setSyncRuleId(String syncRuleId) {
         this.syncRuleId = syncRuleId;
         return this;
     }
     public String getSyncRuleId() {
         return this.syncRuleId;
+    }
+
+    public CreateRepoSyncTaskByRuleRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }

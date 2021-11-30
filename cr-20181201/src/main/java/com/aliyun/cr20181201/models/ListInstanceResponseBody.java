@@ -4,38 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
 
     @NameInMap("Instances")
     public java.util.List<ListInstanceResponseBodyInstances> instances;
 
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceResponseBody self = new ListInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInstanceResponseBody setCode(String code) {
@@ -46,12 +38,12 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListInstanceResponseBody setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
+    public ListInstanceResponseBody setInstances(java.util.List<ListInstanceResponseBodyInstances> instances) {
+        this.instances = instances;
         return this;
     }
-    public Integer getPageNo() {
-        return this.pageNo;
+    public java.util.List<ListInstanceResponseBodyInstances> getInstances() {
+        return this.instances;
     }
 
     public ListInstanceResponseBody setIsSuccess(Boolean isSuccess) {
@@ -62,12 +54,28 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public ListInstanceResponseBody setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
     public ListInstanceResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListInstanceResponseBody setTotalCount(Integer totalCount) {
@@ -78,23 +86,15 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListInstanceResponseBody setInstances(java.util.List<ListInstanceResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<ListInstanceResponseBodyInstances> getInstances() {
-        return this.instances;
-    }
-
     public static class ListInstanceResponseBodyInstances extends TeaModel {
-        @NameInMap("ModifiedTime")
-        public String modifiedTime;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
-
-        @NameInMap("CreateTime")
-        public String createTime;
 
         @NameInMap("InstanceSpecification")
         public String instanceSpecification;
@@ -102,8 +102,8 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -113,12 +113,20 @@ public class ListInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListInstanceResponseBodyInstances setModifiedTime(String modifiedTime) {
-            this.modifiedTime = modifiedTime;
+        public ListInstanceResponseBodyInstances setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getModifiedTime() {
-            return this.modifiedTime;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListInstanceResponseBodyInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListInstanceResponseBodyInstances setInstanceName(String instanceName) {
@@ -127,14 +135,6 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
-        }
-
-        public ListInstanceResponseBodyInstances setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public ListInstanceResponseBodyInstances setInstanceSpecification(String instanceSpecification) {
@@ -153,12 +153,12 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
-        public ListInstanceResponseBodyInstances setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ListInstanceResponseBodyInstances setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public ListInstanceResponseBodyInstances setRegionId(String regionId) {

@@ -4,11 +4,11 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceEndpointRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("EndpointType")
     public String endpointType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ModuleName")
     public String moduleName;
@@ -18,20 +18,20 @@ public class GetInstanceEndpointRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceEndpointRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public GetInstanceEndpointRequest setEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
     }
     public String getEndpointType() {
         return this.endpointType;
+    }
+
+    public GetInstanceEndpointRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetInstanceEndpointRequest setModuleName(String moduleName) {

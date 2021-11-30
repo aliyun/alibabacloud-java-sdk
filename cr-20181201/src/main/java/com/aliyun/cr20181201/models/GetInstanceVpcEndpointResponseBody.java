@@ -7,20 +7,20 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Domains")
+    public java.util.List<String> domains;
 
     @NameInMap("Enable")
     public Boolean enable;
 
-    @NameInMap("Domains")
-    public java.util.List<String> domains;
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
     @NameInMap("LinkedVpcs")
     public java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetInstanceVpcEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceVpcEndpointResponseBody self = new GetInstanceVpcEndpointResponseBody();
@@ -35,20 +35,12 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetInstanceVpcEndpointResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
+    public GetInstanceVpcEndpointResponseBody setDomains(java.util.List<String> domains) {
+        this.domains = domains;
         return this;
     }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public GetInstanceVpcEndpointResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<String> getDomains() {
+        return this.domains;
     }
 
     public GetInstanceVpcEndpointResponseBody setEnable(Boolean enable) {
@@ -59,12 +51,12 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return this.enable;
     }
 
-    public GetInstanceVpcEndpointResponseBody setDomains(java.util.List<String> domains) {
-        this.domains = domains;
+    public GetInstanceVpcEndpointResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public java.util.List<String> getDomains() {
-        return this.domains;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
     }
 
     public GetInstanceVpcEndpointResponseBody setLinkedVpcs(java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs) {
@@ -75,18 +67,26 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return this.linkedVpcs;
     }
 
+    public GetInstanceVpcEndpointResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetInstanceVpcEndpointResponseBodyLinkedVpcs extends TeaModel {
+        @NameInMap("DefaultAccess")
+        public Boolean defaultAccess;
+
+        @NameInMap("Ip")
+        public String ip;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("VpcId")
         public String vpcId;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("DefaultAccess")
-        public Boolean defaultAccess;
 
         @NameInMap("VswitchId")
         public String vswitchId;
@@ -94,6 +94,22 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         public static GetInstanceVpcEndpointResponseBodyLinkedVpcs build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceVpcEndpointResponseBodyLinkedVpcs self = new GetInstanceVpcEndpointResponseBodyLinkedVpcs();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setDefaultAccess(Boolean defaultAccess) {
+            this.defaultAccess = defaultAccess;
+            return this;
+        }
+        public Boolean getDefaultAccess() {
+            return this.defaultAccess;
+        }
+
+        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public GetInstanceVpcEndpointResponseBodyLinkedVpcs setStatus(String status) {
@@ -110,22 +126,6 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
-        }
-
-        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setDefaultAccess(Boolean defaultAccess) {
-            this.defaultAccess = defaultAccess;
-            return this;
-        }
-        public Boolean getDefaultAccess() {
-            return this.defaultAccess;
         }
 
         public GetInstanceVpcEndpointResponseBodyLinkedVpcs setVswitchId(String vswitchId) {

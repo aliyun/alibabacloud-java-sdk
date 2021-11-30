@@ -4,24 +4,32 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusRequest extends TeaModel {
+    @NameInMap("Digest")
+    public String digest;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RepoId")
     public String repoId;
 
-    @NameInMap("Tag")
-    public String tag;
-
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
-    @NameInMap("Digest")
-    public String digest;
+    @NameInMap("Tag")
+    public String tag;
 
     public static GetRepoTagScanStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagScanStatusRequest self = new GetRepoTagScanStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRepoTagScanStatusRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
     public GetRepoTagScanStatusRequest setInstanceId(String instanceId) {
@@ -40,14 +48,6 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
         return this.repoId;
     }
 
-    public GetRepoTagScanStatusRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
     public GetRepoTagScanStatusRequest setScanTaskId(String scanTaskId) {
         this.scanTaskId = scanTaskId;
         return this;
@@ -56,12 +56,12 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
         return this.scanTaskId;
     }
 
-    public GetRepoTagScanStatusRequest setDigest(String digest) {
-        this.digest = digest;
+    public GetRepoTagScanStatusRequest setTag(String tag) {
+        this.tag = tag;
         return this;
     }
-    public String getDigest() {
-        return this.digest;
+    public String getTag() {
+        return this.tag;
     }
 
 }

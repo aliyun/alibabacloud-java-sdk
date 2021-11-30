@@ -7,14 +7,14 @@ public class ListRepoBuildRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoId")
-    public String repoId;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RepoId")
+    public String repoId;
 
     public static ListRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepoBuildRuleRequest self = new ListRepoBuildRuleRequest();
@@ -27,14 +27,6 @@ public class ListRepoBuildRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListRepoBuildRuleRequest setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
     }
 
     public ListRepoBuildRuleRequest setPageNo(Integer pageNo) {
@@ -51,6 +43,14 @@ public class ListRepoBuildRuleRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRepoBuildRuleRequest setRepoId(String repoId) {
+        this.repoId = repoId;
+        return this;
+    }
+    public String getRepoId() {
+        return this.repoId;
     }
 
 }

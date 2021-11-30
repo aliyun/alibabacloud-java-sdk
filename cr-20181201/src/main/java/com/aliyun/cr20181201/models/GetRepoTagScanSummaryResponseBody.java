@@ -4,8 +4,20 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagScanSummaryResponseBody extends TeaModel {
-    @NameInMap("UnknownSeverity")
-    public Integer unknownSeverity;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HighSeverity")
+    public Integer highSeverity;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("LowSeverity")
+    public Integer lowSeverity;
+
+    @NameInMap("MediumSeverity")
+    public Integer mediumSeverity;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,32 +25,52 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
     @NameInMap("TotalSeverity")
     public Integer totalSeverity;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("MediumSeverity")
-    public Integer mediumSeverity;
-
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("HighSeverity")
-    public Integer highSeverity;
-
-    @NameInMap("LowSeverity")
-    public Integer lowSeverity;
+    @NameInMap("UnknownSeverity")
+    public Integer unknownSeverity;
 
     public static GetRepoTagScanSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagScanSummaryResponseBody self = new GetRepoTagScanSummaryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagScanSummaryResponseBody setUnknownSeverity(Integer unknownSeverity) {
-        this.unknownSeverity = unknownSeverity;
+    public GetRepoTagScanSummaryResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getUnknownSeverity() {
-        return this.unknownSeverity;
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRepoTagScanSummaryResponseBody setHighSeverity(Integer highSeverity) {
+        this.highSeverity = highSeverity;
+        return this;
+    }
+    public Integer getHighSeverity() {
+        return this.highSeverity;
+    }
+
+    public GetRepoTagScanSummaryResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public GetRepoTagScanSummaryResponseBody setLowSeverity(Integer lowSeverity) {
+        this.lowSeverity = lowSeverity;
+        return this;
+    }
+    public Integer getLowSeverity() {
+        return this.lowSeverity;
+    }
+
+    public GetRepoTagScanSummaryResponseBody setMediumSeverity(Integer mediumSeverity) {
+        this.mediumSeverity = mediumSeverity;
+        return this;
+    }
+    public Integer getMediumSeverity() {
+        return this.mediumSeverity;
     }
 
     public GetRepoTagScanSummaryResponseBody setRequestId(String requestId) {
@@ -57,44 +89,12 @@ public class GetRepoTagScanSummaryResponseBody extends TeaModel {
         return this.totalSeverity;
     }
 
-    public GetRepoTagScanSummaryResponseBody setCode(String code) {
-        this.code = code;
+    public GetRepoTagScanSummaryResponseBody setUnknownSeverity(Integer unknownSeverity) {
+        this.unknownSeverity = unknownSeverity;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetRepoTagScanSummaryResponseBody setMediumSeverity(Integer mediumSeverity) {
-        this.mediumSeverity = mediumSeverity;
-        return this;
-    }
-    public Integer getMediumSeverity() {
-        return this.mediumSeverity;
-    }
-
-    public GetRepoTagScanSummaryResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public GetRepoTagScanSummaryResponseBody setHighSeverity(Integer highSeverity) {
-        this.highSeverity = highSeverity;
-        return this;
-    }
-    public Integer getHighSeverity() {
-        return this.highSeverity;
-    }
-
-    public GetRepoTagScanSummaryResponseBody setLowSeverity(Integer lowSeverity) {
-        this.lowSeverity = lowSeverity;
-        return this;
-    }
-    public Integer getLowSeverity() {
-        return this.lowSeverity;
+    public Integer getUnknownSeverity() {
+        return this.unknownSeverity;
     }
 
 }

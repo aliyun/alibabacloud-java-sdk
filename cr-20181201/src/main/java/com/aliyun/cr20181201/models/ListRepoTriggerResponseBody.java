@@ -54,35 +54,27 @@ public class ListRepoTriggerResponseBody extends TeaModel {
     }
 
     public static class ListRepoTriggerResponseBodyTriggers extends TeaModel {
-        @NameInMap("TriggerName")
-        public String triggerName;
-
         @NameInMap("RepoEvent")
         public String repoEvent;
 
         @NameInMap("TriggerId")
         public String triggerId;
 
-        @NameInMap("TriggerUrl")
-        public String triggerUrl;
-
-        @NameInMap("TriggerType")
-        public String triggerType;
+        @NameInMap("TriggerName")
+        public String triggerName;
 
         @NameInMap("TriggerTag")
         public String triggerTag;
 
+        @NameInMap("TriggerType")
+        public String triggerType;
+
+        @NameInMap("TriggerUrl")
+        public String triggerUrl;
+
         public static ListRepoTriggerResponseBodyTriggers build(java.util.Map<String, ?> map) throws Exception {
             ListRepoTriggerResponseBodyTriggers self = new ListRepoTriggerResponseBodyTriggers();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepoTriggerResponseBodyTriggers setTriggerName(String triggerName) {
-            this.triggerName = triggerName;
-            return this;
-        }
-        public String getTriggerName() {
-            return this.triggerName;
         }
 
         public ListRepoTriggerResponseBodyTriggers setRepoEvent(String repoEvent) {
@@ -101,12 +93,20 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             return this.triggerId;
         }
 
-        public ListRepoTriggerResponseBodyTriggers setTriggerUrl(String triggerUrl) {
-            this.triggerUrl = triggerUrl;
+        public ListRepoTriggerResponseBodyTriggers setTriggerName(String triggerName) {
+            this.triggerName = triggerName;
             return this;
         }
-        public String getTriggerUrl() {
-            return this.triggerUrl;
+        public String getTriggerName() {
+            return this.triggerName;
+        }
+
+        public ListRepoTriggerResponseBodyTriggers setTriggerTag(String triggerTag) {
+            this.triggerTag = triggerTag;
+            return this;
+        }
+        public String getTriggerTag() {
+            return this.triggerTag;
         }
 
         public ListRepoTriggerResponseBodyTriggers setTriggerType(String triggerType) {
@@ -117,12 +117,12 @@ public class ListRepoTriggerResponseBody extends TeaModel {
             return this.triggerType;
         }
 
-        public ListRepoTriggerResponseBodyTriggers setTriggerTag(String triggerTag) {
-            this.triggerTag = triggerTag;
+        public ListRepoTriggerResponseBodyTriggers setTriggerUrl(String triggerUrl) {
+            this.triggerUrl = triggerUrl;
             return this;
         }
-        public String getTriggerTag() {
-            return this.triggerTag;
+        public String getTriggerUrl() {
+            return this.triggerUrl;
         }
 
     }

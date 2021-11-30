@@ -7,11 +7,11 @@ public class CreateRepositoryResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("RepoId")
-    public String repoId;
-
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
+
+    @NameInMap("RepoId")
+    public String repoId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +29,20 @@ public class CreateRepositoryResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateRepositoryResponseBody setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
-    }
-
     public CreateRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
         return this;
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
+    }
+
+    public CreateRepositoryResponseBody setRepoId(String repoId) {
+        this.repoId = repoId;
+        return this;
+    }
+    public String getRepoId() {
+        return this.repoId;
     }
 
     public CreateRepositoryResponseBody setRequestId(String requestId) {

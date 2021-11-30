@@ -7,11 +7,11 @@ public class GetChartRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
-
     @NameInMap("RepoName")
     public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
 
     public static GetChartRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetChartRepositoryRequest self = new GetChartRepositoryRequest();
@@ -26,20 +26,20 @@ public class GetChartRepositoryRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetChartRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
-    }
-
     public GetChartRepositoryRequest setRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
     public String getRepoName() {
         return this.repoName;
+    }
+
+    public GetChartRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
 }

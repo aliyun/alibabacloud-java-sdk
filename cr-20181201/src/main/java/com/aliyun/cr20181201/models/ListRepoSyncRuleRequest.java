@@ -7,14 +7,14 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NamespaceName")
+    public String namespaceName;
+
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("NamespaceName")
-    public String namespaceName;
 
     @NameInMap("RepoName")
     public String repoName;
@@ -38,6 +38,14 @@ public class ListRepoSyncRuleRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListRepoSyncRuleRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
+    }
+
     public ListRepoSyncRuleRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -52,14 +60,6 @@ public class ListRepoSyncRuleRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListRepoSyncRuleRequest setNamespaceName(String namespaceName) {
-        this.namespaceName = namespaceName;
-        return this;
-    }
-    public String getNamespaceName() {
-        return this.namespaceName;
     }
 
     public ListRepoSyncRuleRequest setRepoName(String repoName) {
