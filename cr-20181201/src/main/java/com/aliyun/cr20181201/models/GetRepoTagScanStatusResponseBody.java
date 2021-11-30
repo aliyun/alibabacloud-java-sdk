@@ -4,9 +4,6 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,17 +16,12 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     @NameInMap("ScanService")
     public String scanService;
 
+    @NameInMap("Status")
+    public String status;
+
     public static GetRepoTagScanStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagScanStatusResponseBody self = new GetRepoTagScanStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRepoTagScanStatusResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public GetRepoTagScanStatusResponseBody setCode(String code) {
@@ -62,6 +54,14 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     }
     public String getScanService() {
         return this.scanService;
+    }
+
+    public GetRepoTagScanStatusResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

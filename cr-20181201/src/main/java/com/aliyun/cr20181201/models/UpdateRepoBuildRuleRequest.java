@@ -4,11 +4,8 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepoBuildRuleRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("RepoId")
-    public String repoId;
+    @NameInMap("BuildRuleId")
+    public String buildRuleId;
 
     @NameInMap("DockerfileLocation")
     public String dockerfileLocation;
@@ -16,40 +13,35 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     @NameInMap("DockerfileName")
     public String dockerfileName;
 
-    @NameInMap("PushType")
-    public String pushType;
+    @NameInMap("ImageTag")
+    public String imageTag;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Platforms")
+    public java.util.List<String> platforms;
 
     @NameInMap("PushName")
     public String pushName;
 
-    @NameInMap("ImageTag")
-    public String imageTag;
+    @NameInMap("PushType")
+    public String pushType;
 
-    @NameInMap("BuildRuleId")
-    public String buildRuleId;
-
-    @NameInMap("Platforms")
-    public java.util.List<String> platforms;
+    @NameInMap("RepoId")
+    public String repoId;
 
     public static UpdateRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRepoBuildRuleRequest self = new UpdateRepoBuildRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRepoBuildRuleRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateRepoBuildRuleRequest setBuildRuleId(String buildRuleId) {
+        this.buildRuleId = buildRuleId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public UpdateRepoBuildRuleRequest setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
+    public String getBuildRuleId() {
+        return this.buildRuleId;
     }
 
     public UpdateRepoBuildRuleRequest setDockerfileLocation(String dockerfileLocation) {
@@ -68,12 +60,28 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
         return this.dockerfileName;
     }
 
-    public UpdateRepoBuildRuleRequest setPushType(String pushType) {
-        this.pushType = pushType;
+    public UpdateRepoBuildRuleRequest setImageTag(String imageTag) {
+        this.imageTag = imageTag;
         return this;
     }
-    public String getPushType() {
-        return this.pushType;
+    public String getImageTag() {
+        return this.imageTag;
+    }
+
+    public UpdateRepoBuildRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public UpdateRepoBuildRuleRequest setPlatforms(java.util.List<String> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<String> getPlatforms() {
+        return this.platforms;
     }
 
     public UpdateRepoBuildRuleRequest setPushName(String pushName) {
@@ -84,28 +92,20 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
         return this.pushName;
     }
 
-    public UpdateRepoBuildRuleRequest setImageTag(String imageTag) {
-        this.imageTag = imageTag;
+    public UpdateRepoBuildRuleRequest setPushType(String pushType) {
+        this.pushType = pushType;
         return this;
     }
-    public String getImageTag() {
-        return this.imageTag;
+    public String getPushType() {
+        return this.pushType;
     }
 
-    public UpdateRepoBuildRuleRequest setBuildRuleId(String buildRuleId) {
-        this.buildRuleId = buildRuleId;
+    public UpdateRepoBuildRuleRequest setRepoId(String repoId) {
+        this.repoId = repoId;
         return this;
     }
-    public String getBuildRuleId() {
-        return this.buildRuleId;
-    }
-
-    public UpdateRepoBuildRuleRequest setPlatforms(java.util.List<String> platforms) {
-        this.platforms = platforms;
-        return this;
-    }
-    public java.util.List<String> getPlatforms() {
-        return this.platforms;
+    public String getRepoId() {
+        return this.repoId;
     }
 
 }

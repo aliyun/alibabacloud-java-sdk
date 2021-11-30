@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagLayersRequest extends TeaModel {
+    @NameInMap("Digest")
+    public String digest;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class GetRepoTagLayersRequest extends TeaModel {
     @NameInMap("Tag")
     public String tag;
 
-    @NameInMap("Digest")
-    public String digest;
-
     public static GetRepoTagLayersRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagLayersRequest self = new GetRepoTagLayersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRepoTagLayersRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
     public GetRepoTagLayersRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class GetRepoTagLayersRequest extends TeaModel {
     }
     public String getTag() {
         return this.tag;
-    }
-
-    public GetRepoTagLayersRequest setDigest(String digest) {
-        this.digest = digest;
-        return this;
-    }
-    public String getDigest() {
-        return this.digest;
     }
 
 }

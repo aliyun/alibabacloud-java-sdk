@@ -4,17 +4,11 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagScanResultRequest extends TeaModel {
+    @NameInMap("Digest")
+    public String digest;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("RepoId")
-    public String repoId;
-
-    @NameInMap("Tag")
-    public String tag;
-
-    @NameInMap("ScanTaskId")
-    public String scanTaskId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -22,15 +16,29 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RepoId")
+    public String repoId;
+
+    @NameInMap("ScanTaskId")
+    public String scanTaskId;
+
     @NameInMap("Severity")
     public String severity;
 
-    @NameInMap("Digest")
-    public String digest;
+    @NameInMap("Tag")
+    public String tag;
 
     public static ListRepoTagScanResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepoTagScanResultRequest self = new ListRepoTagScanResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepoTagScanResultRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
     public ListRepoTagScanResultRequest setInstanceId(String instanceId) {
@@ -39,30 +47,6 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListRepoTagScanResultRequest setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
-    }
-
-    public ListRepoTagScanResultRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
-    }
-
-    public ListRepoTagScanResultRequest setScanTaskId(String scanTaskId) {
-        this.scanTaskId = scanTaskId;
-        return this;
-    }
-    public String getScanTaskId() {
-        return this.scanTaskId;
     }
 
     public ListRepoTagScanResultRequest setPageNo(Integer pageNo) {
@@ -81,6 +65,22 @@ public class ListRepoTagScanResultRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListRepoTagScanResultRequest setRepoId(String repoId) {
+        this.repoId = repoId;
+        return this;
+    }
+    public String getRepoId() {
+        return this.repoId;
+    }
+
+    public ListRepoTagScanResultRequest setScanTaskId(String scanTaskId) {
+        this.scanTaskId = scanTaskId;
+        return this;
+    }
+    public String getScanTaskId() {
+        return this.scanTaskId;
+    }
+
     public ListRepoTagScanResultRequest setSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -89,12 +89,12 @@ public class ListRepoTagScanResultRequest extends TeaModel {
         return this.severity;
     }
 
-    public ListRepoTagScanResultRequest setDigest(String digest) {
-        this.digest = digest;
+    public ListRepoTagScanResultRequest setTag(String tag) {
+        this.tag = tag;
         return this;
     }
-    public String getDigest() {
-        return this.digest;
+    public String getTag() {
+        return this.tag;
     }
 
 }

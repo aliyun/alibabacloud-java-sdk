@@ -7,8 +7,11 @@ public class ListChartRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoStatus")
-    public String repoStatus;
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RepoName")
     public String repoName;
@@ -16,11 +19,8 @@ public class ListChartRepositoryRequest extends TeaModel {
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("RepoStatus")
+    public String repoStatus;
 
     public static ListChartRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChartRepositoryRequest self = new ListChartRepositoryRequest();
@@ -35,12 +35,20 @@ public class ListChartRepositoryRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListChartRepositoryRequest setRepoStatus(String repoStatus) {
-        this.repoStatus = repoStatus;
+    public ListChartRepositoryRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public String getRepoStatus() {
-        return this.repoStatus;
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public ListChartRepositoryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListChartRepositoryRequest setRepoName(String repoName) {
@@ -59,20 +67,12 @@ public class ListChartRepositoryRequest extends TeaModel {
         return this.repoNamespaceName;
     }
 
-    public ListChartRepositoryRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
+    public ListChartRepositoryRequest setRepoStatus(String repoStatus) {
+        this.repoStatus = repoStatus;
         return this;
     }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListChartRepositoryRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getRepoStatus() {
+        return this.repoStatus;
     }
 
 }

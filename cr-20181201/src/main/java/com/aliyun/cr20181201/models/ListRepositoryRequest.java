@@ -7,8 +7,11 @@ public class ListRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoStatus")
-    public String repoStatus;
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RepoName")
     public String repoName;
@@ -16,11 +19,8 @@ public class ListRepositoryRequest extends TeaModel {
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("RepoStatus")
+    public String repoStatus;
 
     public static ListRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryRequest self = new ListRepositoryRequest();
@@ -35,12 +35,20 @@ public class ListRepositoryRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListRepositoryRequest setRepoStatus(String repoStatus) {
-        this.repoStatus = repoStatus;
+    public ListRepositoryRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public String getRepoStatus() {
-        return this.repoStatus;
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public ListRepositoryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListRepositoryRequest setRepoName(String repoName) {
@@ -59,20 +67,12 @@ public class ListRepositoryRequest extends TeaModel {
         return this.repoNamespaceName;
     }
 
-    public ListRepositoryRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
+    public ListRepositoryRequest setRepoStatus(String repoStatus) {
+        this.repoStatus = repoStatus;
         return this;
     }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListRepositoryRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getRepoStatus() {
+        return this.repoStatus;
     }
 
 }

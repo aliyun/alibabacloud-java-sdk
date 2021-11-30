@@ -4,11 +4,11 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteChartReleaseRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Chart")
     public String chart;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Release")
     public String release;
@@ -24,20 +24,20 @@ public class DeleteChartReleaseRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteChartReleaseRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DeleteChartReleaseRequest setChart(String chart) {
         this.chart = chart;
         return this;
     }
     public String getChart() {
         return this.chart;
+    }
+
+    public DeleteChartReleaseRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DeleteChartReleaseRequest setRelease(String release) {

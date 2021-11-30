@@ -7,11 +7,11 @@ public class DeleteChartRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
-
     @NameInMap("RepoName")
     public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
 
     public static DeleteChartRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChartRepositoryRequest self = new DeleteChartRepositoryRequest();
@@ -26,20 +26,20 @@ public class DeleteChartRepositoryRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DeleteChartRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
-    }
-
     public DeleteChartRepositoryRequest setRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
     public String getRepoName() {
         return this.repoName;
+    }
+
+    public DeleteChartRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
 }

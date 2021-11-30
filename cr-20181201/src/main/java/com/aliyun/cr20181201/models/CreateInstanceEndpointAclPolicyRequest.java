@@ -4,8 +4,8 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Comment")
+    public String comment;
 
     @NameInMap("EndpointType")
     public String endpointType;
@@ -13,8 +13,8 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
     @NameInMap("Entry")
     public String entry;
 
-    @NameInMap("Comment")
-    public String comment;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ModuleName")
     public String moduleName;
@@ -24,12 +24,12 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateInstanceEndpointAclPolicyRequest setComment(String comment) {
+        this.comment = comment;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getComment() {
+        return this.comment;
     }
 
     public CreateInstanceEndpointAclPolicyRequest setEndpointType(String endpointType) {
@@ -48,12 +48,12 @@ public class CreateInstanceEndpointAclPolicyRequest extends TeaModel {
         return this.entry;
     }
 
-    public CreateInstanceEndpointAclPolicyRequest setComment(String comment) {
-        this.comment = comment;
+    public CreateInstanceEndpointAclPolicyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getComment() {
-        return this.comment;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateInstanceEndpointAclPolicyRequest setModuleName(String moduleName) {

@@ -7,23 +7,23 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
-
-    @NameInMap("RepoName")
-    public String repoName;
-
-    @NameInMap("Tag")
-    public String tag;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
+
     @NameInMap("SyncRecordId")
     public String syncRecordId;
+
+    @NameInMap("Tag")
+    public String tag;
 
     public static ListRepoSyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepoSyncTaskRequest self = new ListRepoSyncTaskRequest();
@@ -36,30 +36,6 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListRepoSyncTaskRequest setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
-    }
-
-    public ListRepoSyncTaskRequest setRepoName(String repoName) {
-        this.repoName = repoName;
-        return this;
-    }
-    public String getRepoName() {
-        return this.repoName;
-    }
-
-    public ListRepoSyncTaskRequest setTag(String tag) {
-        this.tag = tag;
-        return this;
-    }
-    public String getTag() {
-        return this.tag;
     }
 
     public ListRepoSyncTaskRequest setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListRepoSyncTaskRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListRepoSyncTaskRequest setRepoName(String repoName) {
+        this.repoName = repoName;
+        return this;
+    }
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    public ListRepoSyncTaskRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
+    }
+
     public ListRepoSyncTaskRequest setSyncRecordId(String syncRecordId) {
         this.syncRecordId = syncRecordId;
         return this;
     }
     public String getSyncRecordId() {
         return this.syncRecordId;
+    }
+
+    public ListRepoSyncTaskRequest setTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    public String getTag() {
+        return this.tag;
     }
 
 }

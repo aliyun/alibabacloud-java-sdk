@@ -13,14 +13,14 @@ public class CreateRepoTriggerRequest extends TeaModel {
     @NameInMap("TriggerName")
     public String triggerName;
 
-    @NameInMap("TriggerUrl")
-    public String triggerUrl;
+    @NameInMap("TriggerTag")
+    public String triggerTag;
 
     @NameInMap("TriggerType")
     public String triggerType;
 
-    @NameInMap("TriggerTag")
-    public String triggerTag;
+    @NameInMap("TriggerUrl")
+    public String triggerUrl;
 
     public static CreateRepoTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoTriggerRequest self = new CreateRepoTriggerRequest();
@@ -51,12 +51,12 @@ public class CreateRepoTriggerRequest extends TeaModel {
         return this.triggerName;
     }
 
-    public CreateRepoTriggerRequest setTriggerUrl(String triggerUrl) {
-        this.triggerUrl = triggerUrl;
+    public CreateRepoTriggerRequest setTriggerTag(String triggerTag) {
+        this.triggerTag = triggerTag;
         return this;
     }
-    public String getTriggerUrl() {
-        return this.triggerUrl;
+    public String getTriggerTag() {
+        return this.triggerTag;
     }
 
     public CreateRepoTriggerRequest setTriggerType(String triggerType) {
@@ -67,12 +67,12 @@ public class CreateRepoTriggerRequest extends TeaModel {
         return this.triggerType;
     }
 
-    public CreateRepoTriggerRequest setTriggerTag(String triggerTag) {
-        this.triggerTag = triggerTag;
+    public CreateRepoTriggerRequest setTriggerUrl(String triggerUrl) {
+        this.triggerUrl = triggerUrl;
         return this;
     }
-    public String getTriggerTag() {
-        return this.triggerTag;
+    public String getTriggerUrl() {
+        return this.triggerUrl;
     }
 
 }

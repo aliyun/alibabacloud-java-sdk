@@ -7,14 +7,14 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("SyncRuleId")
-    public String syncRuleId;
-
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SyncRuleId")
+    public String syncRuleId;
 
     public static CreateRepoSyncRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoSyncRuleResponseBody self = new CreateRepoSyncRuleResponseBody();
@@ -27,14 +27,6 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public CreateRepoSyncRuleResponseBody setSyncRuleId(String syncRuleId) {
-        this.syncRuleId = syncRuleId;
-        return this;
-    }
-    public String getSyncRuleId() {
-        return this.syncRuleId;
     }
 
     public CreateRepoSyncRuleResponseBody setIsSuccess(Boolean isSuccess) {
@@ -51,6 +43,14 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateRepoSyncRuleResponseBody setSyncRuleId(String syncRuleId) {
+        this.syncRuleId = syncRuleId;
+        return this;
+    }
+    public String getSyncRuleId() {
+        return this.syncRuleId;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagScanResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -30,28 +30,12 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRepoTagScanResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListRepoTagScanResultResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
-    }
-
-    public ListRepoTagScanResultResponseBody setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
     }
 
     public ListRepoTagScanResultResponseBody setIsSuccess(Boolean isSuccess) {
@@ -62,12 +46,28 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public ListRepoTagScanResultResponseBody setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
     public ListRepoTagScanResultResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRepoTagScanResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRepoTagScanResultResponseBody setTotalCount(Integer totalCount) {
@@ -87,11 +87,11 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
     }
 
     public static class ListRepoTagScanResultResponseBodyVulnerabilities extends TeaModel {
-        @NameInMap("Severity")
-        public String severity;
-
         @NameInMap("AddedBy")
         public String addedBy;
+
+        @NameInMap("CveLink")
+        public String cveLink;
 
         @NameInMap("CveName")
         public String cveName;
@@ -102,32 +102,24 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         @NameInMap("Feature")
         public String feature;
 
+        @NameInMap("FixCmd")
+        public String fixCmd;
+
+        @NameInMap("Severity")
+        public String severity;
+
         @NameInMap("Version")
         public String version;
-
-        @NameInMap("VersionFormat")
-        public String versionFormat;
-
-        @NameInMap("CveLink")
-        public String cveLink;
 
         @NameInMap("VersionFixed")
         public String versionFixed;
 
-        @NameInMap("FixCmd")
-        public String fixCmd;
+        @NameInMap("VersionFormat")
+        public String versionFormat;
 
         public static ListRepoTagScanResultResponseBodyVulnerabilities build(java.util.Map<String, ?> map) throws Exception {
             ListRepoTagScanResultResponseBodyVulnerabilities self = new ListRepoTagScanResultResponseBodyVulnerabilities();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepoTagScanResultResponseBodyVulnerabilities setSeverity(String severity) {
-            this.severity = severity;
-            return this;
-        }
-        public String getSeverity() {
-            return this.severity;
         }
 
         public ListRepoTagScanResultResponseBodyVulnerabilities setAddedBy(String addedBy) {
@@ -136,6 +128,14 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
         }
         public String getAddedBy() {
             return this.addedBy;
+        }
+
+        public ListRepoTagScanResultResponseBodyVulnerabilities setCveLink(String cveLink) {
+            this.cveLink = cveLink;
+            return this;
+        }
+        public String getCveLink() {
+            return this.cveLink;
         }
 
         public ListRepoTagScanResultResponseBodyVulnerabilities setCveName(String cveName) {
@@ -162,28 +162,28 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             return this.feature;
         }
 
+        public ListRepoTagScanResultResponseBodyVulnerabilities setFixCmd(String fixCmd) {
+            this.fixCmd = fixCmd;
+            return this;
+        }
+        public String getFixCmd() {
+            return this.fixCmd;
+        }
+
+        public ListRepoTagScanResultResponseBodyVulnerabilities setSeverity(String severity) {
+            this.severity = severity;
+            return this;
+        }
+        public String getSeverity() {
+            return this.severity;
+        }
+
         public ListRepoTagScanResultResponseBodyVulnerabilities setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
-        }
-
-        public ListRepoTagScanResultResponseBodyVulnerabilities setVersionFormat(String versionFormat) {
-            this.versionFormat = versionFormat;
-            return this;
-        }
-        public String getVersionFormat() {
-            return this.versionFormat;
-        }
-
-        public ListRepoTagScanResultResponseBodyVulnerabilities setCveLink(String cveLink) {
-            this.cveLink = cveLink;
-            return this;
-        }
-        public String getCveLink() {
-            return this.cveLink;
         }
 
         public ListRepoTagScanResultResponseBodyVulnerabilities setVersionFixed(String versionFixed) {
@@ -194,12 +194,12 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             return this.versionFixed;
         }
 
-        public ListRepoTagScanResultResponseBodyVulnerabilities setFixCmd(String fixCmd) {
-            this.fixCmd = fixCmd;
+        public ListRepoTagScanResultResponseBodyVulnerabilities setVersionFormat(String versionFormat) {
+            this.versionFormat = versionFormat;
             return this;
         }
-        public String getFixCmd() {
-            return this.fixCmd;
+        public String getVersionFormat() {
+            return this.versionFormat;
         }
 
     }

@@ -7,14 +7,14 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ModuleName")
+    public String moduleName;
+
     @NameInMap("VpcId")
     public String vpcId;
 
     @NameInMap("VswitchId")
     public String vswitchId;
-
-    @NameInMap("ModuleName")
-    public String moduleName;
 
     public static DeleteInstanceVpcEndpointLinkedVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceVpcEndpointLinkedVpcRequest self = new DeleteInstanceVpcEndpointLinkedVpcRequest();
@@ -27,6 +27,14 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteInstanceVpcEndpointLinkedVpcRequest setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
     }
 
     public DeleteInstanceVpcEndpointLinkedVpcRequest setVpcId(String vpcId) {
@@ -43,14 +51,6 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     }
     public String getVswitchId() {
         return this.vswitchId;
-    }
-
-    public DeleteInstanceVpcEndpointLinkedVpcRequest setModuleName(String moduleName) {
-        this.moduleName = moduleName;
-        return this;
-    }
-    public String getModuleName() {
-        return this.moduleName;
     }
 
 }

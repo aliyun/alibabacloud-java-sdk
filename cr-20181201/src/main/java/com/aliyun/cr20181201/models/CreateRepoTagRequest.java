@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoTagRequest extends TeaModel {
+    @NameInMap("FromTag")
+    public String fromTag;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,15 +16,20 @@ public class CreateRepoTagRequest extends TeaModel {
     @NameInMap("RepoName")
     public String repoName;
 
-    @NameInMap("FromTag")
-    public String fromTag;
-
     @NameInMap("ToTag")
     public String toTag;
 
     public static CreateRepoTagRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoTagRequest self = new CreateRepoTagRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepoTagRequest setFromTag(String fromTag) {
+        this.fromTag = fromTag;
+        return this;
+    }
+    public String getFromTag() {
+        return this.fromTag;
     }
 
     public CreateRepoTagRequest setInstanceId(String instanceId) {
@@ -46,14 +54,6 @@ public class CreateRepoTagRequest extends TeaModel {
     }
     public String getRepoName() {
         return this.repoName;
-    }
-
-    public CreateRepoTagRequest setFromTag(String fromTag) {
-        this.fromTag = fromTag;
-        return this;
-    }
-    public String getFromTag() {
-        return this.fromTag;
     }
 
     public CreateRepoTagRequest setToTag(String toTag) {

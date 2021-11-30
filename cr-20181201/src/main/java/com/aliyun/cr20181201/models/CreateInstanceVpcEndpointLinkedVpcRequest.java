@@ -7,14 +7,14 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ModuleName")
+    public String moduleName;
+
     @NameInMap("VpcId")
     public String vpcId;
 
     @NameInMap("VswitchId")
     public String vswitchId;
-
-    @NameInMap("ModuleName")
-    public String moduleName;
 
     public static CreateInstanceVpcEndpointLinkedVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceVpcEndpointLinkedVpcRequest self = new CreateInstanceVpcEndpointLinkedVpcRequest();
@@ -27,6 +27,14 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateInstanceVpcEndpointLinkedVpcRequest setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
     }
 
     public CreateInstanceVpcEndpointLinkedVpcRequest setVpcId(String vpcId) {
@@ -43,14 +51,6 @@ public class CreateInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     }
     public String getVswitchId() {
         return this.vswitchId;
-    }
-
-    public CreateInstanceVpcEndpointLinkedVpcRequest setModuleName(String moduleName) {
-        this.moduleName = moduleName;
-        return this;
-    }
-    public String getModuleName() {
-        return this.moduleName;
     }
 
 }

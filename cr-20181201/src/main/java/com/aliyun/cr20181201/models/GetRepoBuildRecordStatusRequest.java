@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoBuildRecordStatusRequest extends TeaModel {
+    @NameInMap("BuildRecordId")
+    public String buildRecordId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RepoId")
     public String repoId;
 
-    @NameInMap("BuildRecordId")
-    public String buildRecordId;
-
     public static GetRepoBuildRecordStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepoBuildRecordStatusRequest self = new GetRepoBuildRecordStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRepoBuildRecordStatusRequest setBuildRecordId(String buildRecordId) {
+        this.buildRecordId = buildRecordId;
+        return this;
+    }
+    public String getBuildRecordId() {
+        return this.buildRecordId;
     }
 
     public GetRepoBuildRecordStatusRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class GetRepoBuildRecordStatusRequest extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
-    }
-
-    public GetRepoBuildRecordStatusRequest setBuildRecordId(String buildRecordId) {
-        this.buildRecordId = buildRecordId;
-        return this;
-    }
-    public String getBuildRecordId() {
-        return this.buildRecordId;
     }
 
 }

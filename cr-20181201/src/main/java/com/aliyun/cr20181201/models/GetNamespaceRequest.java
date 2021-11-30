@@ -7,11 +7,11 @@ public class GetNamespaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("NamespaceName")
-    public String namespaceName;
-
     @NameInMap("NamespaceId")
     public String namespaceId;
+
+    @NameInMap("NamespaceName")
+    public String namespaceName;
 
     public static GetNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNamespaceRequest self = new GetNamespaceRequest();
@@ -26,20 +26,20 @@ public class GetNamespaceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetNamespaceRequest setNamespaceName(String namespaceName) {
-        this.namespaceName = namespaceName;
-        return this;
-    }
-    public String getNamespaceName() {
-        return this.namespaceName;
-    }
-
     public GetNamespaceRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public GetNamespaceRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
     }
 
 }

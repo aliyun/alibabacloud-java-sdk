@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepoBuildRuleRequest extends TeaModel {
+    @NameInMap("BuildRuleId")
+    public String buildRuleId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RepoId")
     public String repoId;
 
-    @NameInMap("BuildRuleId")
-    public String buildRuleId;
-
     public static DeleteRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepoBuildRuleRequest self = new DeleteRepoBuildRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepoBuildRuleRequest setBuildRuleId(String buildRuleId) {
+        this.buildRuleId = buildRuleId;
+        return this;
+    }
+    public String getBuildRuleId() {
+        return this.buildRuleId;
     }
 
     public DeleteRepoBuildRuleRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class DeleteRepoBuildRuleRequest extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
-    }
-
-    public DeleteRepoBuildRuleRequest setBuildRuleId(String buildRuleId) {
-        this.buildRuleId = buildRuleId;
-        return this;
-    }
-    public String getBuildRuleId() {
-        return this.buildRuleId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceEndpointStatusRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Enable")
+    public Boolean enable;
 
     @NameInMap("EndpointType")
     public String endpointType;
 
-    @NameInMap("Enable")
-    public Boolean enable;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ModuleName")
     public String moduleName;
@@ -21,12 +21,12 @@ public class UpdateInstanceEndpointStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceEndpointStatusRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateInstanceEndpointStatusRequest setEnable(Boolean enable) {
+        this.enable = enable;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getEnable() {
+        return this.enable;
     }
 
     public UpdateInstanceEndpointStatusRequest setEndpointType(String endpointType) {
@@ -37,12 +37,12 @@ public class UpdateInstanceEndpointStatusRequest extends TeaModel {
         return this.endpointType;
     }
 
-    public UpdateInstanceEndpointStatusRequest setEnable(Boolean enable) {
-        this.enable = enable;
+    public UpdateInstanceEndpointStatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Boolean getEnable() {
-        return this.enable;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public UpdateInstanceEndpointStatusRequest setModuleName(String moduleName) {

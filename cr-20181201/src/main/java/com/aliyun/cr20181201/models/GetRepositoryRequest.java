@@ -10,11 +10,11 @@ public class GetRepositoryRequest extends TeaModel {
     @NameInMap("RepoId")
     public String repoId;
 
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
-
     @NameInMap("RepoName")
     public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
 
     public static GetRepositoryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepositoryRequest self = new GetRepositoryRequest();
@@ -37,20 +37,20 @@ public class GetRepositoryRequest extends TeaModel {
         return this.repoId;
     }
 
-    public GetRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
-    }
-
     public GetRepositoryRequest setRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
     public String getRepoName() {
         return this.repoName;
+    }
+
+    public GetRepositoryRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
 }

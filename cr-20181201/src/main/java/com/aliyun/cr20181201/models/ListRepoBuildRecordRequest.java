@@ -7,14 +7,14 @@ public class ListRepoBuildRecordRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RepoId")
-    public String repoId;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RepoId")
+    public String repoId;
 
     public static ListRepoBuildRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepoBuildRecordRequest self = new ListRepoBuildRecordRequest();
@@ -27,14 +27,6 @@ public class ListRepoBuildRecordRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListRepoBuildRecordRequest setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
     }
 
     public ListRepoBuildRecordRequest setPageNo(Integer pageNo) {
@@ -51,6 +43,14 @@ public class ListRepoBuildRecordRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRepoBuildRecordRequest setRepoId(String repoId) {
+        this.repoId = repoId;
+        return this;
+    }
+    public String getRepoId() {
+        return this.repoId;
     }
 
 }
