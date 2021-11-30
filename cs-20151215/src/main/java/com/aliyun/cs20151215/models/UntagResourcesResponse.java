@@ -8,6 +8,10 @@ public class UntagResourcesResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public UntagResourcesResponseBody body;
+
     public static UntagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponse self = new UntagResourcesResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class UntagResourcesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public UntagResourcesResponse setBody(UntagResourcesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UntagResourcesResponseBody getBody() {
+        return this.body;
     }
 
 }

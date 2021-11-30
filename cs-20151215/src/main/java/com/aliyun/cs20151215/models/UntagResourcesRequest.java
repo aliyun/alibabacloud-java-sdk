@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    // 是否删除全部自定义标签，仅当tag_keys为空时生效，取值：[true,false]。
+    @NameInMap("all")
+    public Boolean all;
+
     // 资源所属的地域ID
     @NameInMap("region_id")
     public String regionId;
@@ -23,6 +27,14 @@ public class UntagResourcesRequest extends TeaModel {
     public static UntagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesRequest self = new UntagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UntagResourcesRequest setAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
+    public Boolean getAll() {
+        return this.all;
     }
 
     public UntagResourcesRequest setRegionId(String regionId) {
