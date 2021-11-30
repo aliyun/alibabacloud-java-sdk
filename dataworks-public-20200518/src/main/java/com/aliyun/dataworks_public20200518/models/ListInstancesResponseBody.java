@@ -100,6 +100,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("CreateUser")
+        public String createUser;
+
         @NameInMap("CycTime")
         public Long cycTime;
 
@@ -224,6 +227,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListInstancesResponseBodyDataInstances setCreateUser(String createUser) {
+            this.createUser = createUser;
+            return this;
+        }
+        public String getCreateUser() {
+            return this.createUser;
         }
 
         public ListInstancesResponseBodyDataInstances setCycTime(Long cycTime) {

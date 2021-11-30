@@ -7,11 +7,17 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
     @NameInMap("BizDate")
     public String bizDate;
 
+    @NameInMap("DagType")
+    public String dagType;
+
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     @NameInMap("ProjectId")
     public Long projectId;
+
+    @NameInMap("SchedulerType")
+    public String schedulerType;
 
     public static GetInstanceStatusStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceStatusStatisticRequest self = new GetInstanceStatusStatisticRequest();
@@ -24,6 +30,14 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
     }
     public String getBizDate() {
         return this.bizDate;
+    }
+
+    public GetInstanceStatusStatisticRequest setDagType(String dagType) {
+        this.dagType = dagType;
+        return this;
+    }
+    public String getDagType() {
+        return this.dagType;
     }
 
     public GetInstanceStatusStatisticRequest setProjectEnv(String projectEnv) {
@@ -40,6 +54,14 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public GetInstanceStatusStatisticRequest setSchedulerType(String schedulerType) {
+        this.schedulerType = schedulerType;
+        return this;
+    }
+    public String getSchedulerType() {
+        return this.schedulerType;
     }
 
 }
