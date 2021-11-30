@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ros20190910.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateTemplateScratchResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TemplateScratchId")
+    public String templateScratchId;
+
+    public static UpdateTemplateScratchResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTemplateScratchResponseBody self = new UpdateTemplateScratchResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateTemplateScratchResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateTemplateScratchResponseBody setTemplateScratchId(String templateScratchId) {
+        this.templateScratchId = templateScratchId;
+        return this;
+    }
+    public String getTemplateScratchId() {
+        return this.templateScratchId;
+    }
+
+}
