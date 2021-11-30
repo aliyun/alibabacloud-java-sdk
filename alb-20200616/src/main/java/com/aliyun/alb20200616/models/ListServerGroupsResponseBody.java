@@ -310,9 +310,17 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
+        // 是否开启配置管理
+        @NameInMap("ConfigManagedEnabled")
+        public Boolean configManagedEnabled;
+
         // 健康检查配置
         @NameInMap("HealthCheckConfig")
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
+
+        // 是否支持Ipv6
+        @NameInMap("Ipv6Enabled")
+        public Boolean ipv6Enabled;
 
         // 服务器组协议
         @NameInMap("Protocol")
@@ -354,6 +362,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
 
+        // 是否开启后端长链接
+        @NameInMap("UpstreamKeepaliveEnabled")
+        public Boolean upstreamKeepaliveEnabled;
+
         // 服务器组所在VpcId
         @NameInMap("VpcId")
         public String vpcId;
@@ -363,12 +375,28 @@ public class ListServerGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListServerGroupsResponseBodyServerGroups setConfigManagedEnabled(Boolean configManagedEnabled) {
+            this.configManagedEnabled = configManagedEnabled;
+            return this;
+        }
+        public Boolean getConfigManagedEnabled() {
+            return this.configManagedEnabled;
+        }
+
         public ListServerGroupsResponseBodyServerGroups setHealthCheckConfig(ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig getHealthCheckConfig() {
             return this.healthCheckConfig;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setIpv6Enabled(Boolean ipv6Enabled) {
+            this.ipv6Enabled = ipv6Enabled;
+            return this;
+        }
+        public Boolean getIpv6Enabled() {
+            return this.ipv6Enabled;
         }
 
         public ListServerGroupsResponseBodyServerGroups setProtocol(String protocol) {
@@ -449,6 +477,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setUpstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
+            this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
+            return this;
+        }
+        public Boolean getUpstreamKeepaliveEnabled() {
+            return this.upstreamKeepaliveEnabled;
         }
 
         public ListServerGroupsResponseBodyServerGroups setVpcId(String vpcId) {

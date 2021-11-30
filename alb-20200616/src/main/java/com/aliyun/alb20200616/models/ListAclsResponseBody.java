@@ -86,6 +86,10 @@ public class ListAclsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        // 配置管理
+        @NameInMap("ConfigManagedEnabled")
+        public Boolean configManagedEnabled;
+
         // 资源组ID
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -125,6 +129,14 @@ public class ListAclsResponseBody extends TeaModel {
         }
         public String getAddressIPVersion() {
             return this.addressIPVersion;
+        }
+
+        public ListAclsResponseBodyAcls setConfigManagedEnabled(Boolean configManagedEnabled) {
+            this.configManagedEnabled = configManagedEnabled;
+            return this;
+        }
+        public Boolean getConfigManagedEnabled() {
+            return this.configManagedEnabled;
         }
 
         public ListAclsResponseBodyAcls setResourceGroupId(String resourceGroupId) {
