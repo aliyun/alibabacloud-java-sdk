@@ -47,6 +47,9 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        @NameInMap("CreateUser")
+        public String createUser;
+
         @NameInMap("CycTime")
         public Long cycTime;
 
@@ -123,6 +126,14 @@ public class GetManualDagInstancesResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetManualDagInstancesResponseBodyInstances setCreateUser(String createUser) {
+            this.createUser = createUser;
+            return this;
+        }
+        public String getCreateUser() {
+            return this.createUser;
         }
 
         public GetManualDagInstancesResponseBodyInstances setCycTime(Long cycTime) {

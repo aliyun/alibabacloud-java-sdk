@@ -3,9 +3,9 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class GetDagResponseBody extends TeaModel {
+public class ListDagsResponseBody extends TeaModel {
     @NameInMap("Data")
-    public GetDagResponseBodyData data;
+    public ListDagsResponseBodyData data;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -22,20 +22,20 @@ public class GetDagResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetDagResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetDagResponseBody self = new GetDagResponseBody();
+    public static ListDagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDagsResponseBody self = new ListDagsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetDagResponseBody setData(GetDagResponseBodyData data) {
+    public ListDagsResponseBody setData(ListDagsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public GetDagResponseBodyData getData() {
+    public ListDagsResponseBodyData getData() {
         return this.data;
     }
 
-    public GetDagResponseBody setErrorCode(String errorCode) {
+    public ListDagsResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -43,7 +43,7 @@ public class GetDagResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetDagResponseBody setErrorMessage(String errorMessage) {
+    public ListDagsResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -51,7 +51,7 @@ public class GetDagResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetDagResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ListDagsResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -59,7 +59,7 @@ public class GetDagResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public GetDagResponseBody setRequestId(String requestId) {
+    public ListDagsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -67,7 +67,7 @@ public class GetDagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDagResponseBody setSuccess(Boolean success) {
+    public ListDagsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -75,7 +75,7 @@ public class GetDagResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetDagResponseBodyData extends TeaModel {
+    public static class ListDagsResponseBodyDataDags extends TeaModel {
         @NameInMap("Bizdate")
         public Long bizdate;
 
@@ -115,12 +115,12 @@ public class GetDagResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static GetDagResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetDagResponseBodyData self = new GetDagResponseBodyData();
+        public static ListDagsResponseBodyDataDags build(java.util.Map<String, ?> map) throws Exception {
+            ListDagsResponseBodyDataDags self = new ListDagsResponseBodyDataDags();
             return TeaModel.build(map, self);
         }
 
-        public GetDagResponseBodyData setBizdate(Long bizdate) {
+        public ListDagsResponseBodyDataDags setBizdate(Long bizdate) {
             this.bizdate = bizdate;
             return this;
         }
@@ -128,7 +128,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.bizdate;
         }
 
-        public GetDagResponseBodyData setCreateTime(Long createTime) {
+        public ListDagsResponseBodyDataDags setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -136,7 +136,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetDagResponseBodyData setCreateUser(String createUser) {
+        public ListDagsResponseBodyDataDags setCreateUser(String createUser) {
             this.createUser = createUser;
             return this;
         }
@@ -144,7 +144,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.createUser;
         }
 
-        public GetDagResponseBodyData setDagId(Long dagId) {
+        public ListDagsResponseBodyDataDags setDagId(Long dagId) {
             this.dagId = dagId;
             return this;
         }
@@ -152,7 +152,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.dagId;
         }
 
-        public GetDagResponseBodyData setFinishTime(Long finishTime) {
+        public ListDagsResponseBodyDataDags setFinishTime(Long finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -160,7 +160,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public GetDagResponseBodyData setGmtdate(Long gmtdate) {
+        public ListDagsResponseBodyDataDags setGmtdate(Long gmtdate) {
             this.gmtdate = gmtdate;
             return this;
         }
@@ -168,7 +168,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.gmtdate;
         }
 
-        public GetDagResponseBodyData setModifyTime(Long modifyTime) {
+        public ListDagsResponseBodyDataDags setModifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
@@ -176,7 +176,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public GetDagResponseBodyData setName(String name) {
+        public ListDagsResponseBodyDataDags setName(String name) {
             this.name = name;
             return this;
         }
@@ -184,7 +184,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetDagResponseBodyData setOpSeq(Long opSeq) {
+        public ListDagsResponseBodyDataDags setOpSeq(Long opSeq) {
             this.opSeq = opSeq;
             return this;
         }
@@ -192,7 +192,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.opSeq;
         }
 
-        public GetDagResponseBodyData setProjectId(Long projectId) {
+        public ListDagsResponseBodyDataDags setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
@@ -200,7 +200,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public GetDagResponseBodyData setStartTime(Long startTime) {
+        public ListDagsResponseBodyDataDags setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -208,7 +208,7 @@ public class GetDagResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public GetDagResponseBodyData setStatus(String status) {
+        public ListDagsResponseBodyDataDags setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -216,12 +216,31 @@ public class GetDagResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetDagResponseBodyData setType(String type) {
+        public ListDagsResponseBodyDataDags setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class ListDagsResponseBodyData extends TeaModel {
+        @NameInMap("Dags")
+        public java.util.List<ListDagsResponseBodyDataDags> dags;
+
+        public static ListDagsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListDagsResponseBodyData self = new ListDagsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDagsResponseBodyData setDags(java.util.List<ListDagsResponseBodyDataDags> dags) {
+            this.dags = dags;
+            return this;
+        }
+        public java.util.List<ListDagsResponseBodyDataDags> getDags() {
+            return this.dags;
         }
 
     }
