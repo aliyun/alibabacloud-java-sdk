@@ -394,6 +394,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         query.put("AutoPay", request.autoPay);
+        query.put("AutoRenew", request.autoRenew);
+        query.put("AutoRenewDuration", request.autoRenewDuration);
         query.put("AutoUseCoupon", request.autoUseCoupon);
         query.put("ClientToken", request.clientToken);
         query.put("Duration", request.duration);
@@ -1098,6 +1100,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAcceleratorResponse describeAccelerator(DescribeAcceleratorRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAcceleratorWithOptions(request, runtime);
+    }
+
+    public DescribeAcceleratorAutoRenewAttributeResponse describeAcceleratorAutoRenewAttributeWithOptions(DescribeAcceleratorAutoRenewAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AcceleratorId", request.acceleratorId);
+        query.put("RegionId", request.regionId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAcceleratorAutoRenewAttribute"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAcceleratorAutoRenewAttributeResponse());
+    }
+
+    public DescribeAcceleratorAutoRenewAttributeResponse describeAcceleratorAutoRenewAttribute(DescribeAcceleratorAutoRenewAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAcceleratorAutoRenewAttributeWithOptions(request, runtime);
     }
 
     public DescribeBandwidthPackageResponse describeBandwidthPackageWithOptions(DescribeBandwidthPackageRequest request, RuntimeOptions runtime) throws Exception {
@@ -2111,6 +2141,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAcceleratorResponse updateAccelerator(UpdateAcceleratorRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAcceleratorWithOptions(request, runtime);
+    }
+
+    public UpdateAcceleratorAutoRenewAttributeResponse updateAcceleratorAutoRenewAttributeWithOptions(UpdateAcceleratorAutoRenewAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AcceleratorId", request.acceleratorId);
+        query.put("AutoRenew", request.autoRenew);
+        query.put("AutoRenewDuration", request.autoRenewDuration);
+        query.put("ClientToken", request.clientToken);
+        query.put("Name", request.name);
+        query.put("RegionId", request.regionId);
+        query.put("RenewalStatus", request.renewalStatus);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAcceleratorAutoRenewAttribute"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAcceleratorAutoRenewAttributeResponse());
+    }
+
+    public UpdateAcceleratorAutoRenewAttributeResponse updateAcceleratorAutoRenewAttribute(UpdateAcceleratorAutoRenewAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateAcceleratorAutoRenewAttributeWithOptions(request, runtime);
     }
 
     public UpdateAcceleratorConfirmResponse updateAcceleratorConfirmWithOptions(UpdateAcceleratorConfirmRequest request, RuntimeOptions runtime) throws Exception {

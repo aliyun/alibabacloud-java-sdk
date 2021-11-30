@@ -8,6 +8,14 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    // 自动续费
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    // 续费周期
+    @NameInMap("AutoRenewDuration")
+    public Integer autoRenewDuration;
+
     // 自动使用优惠券
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
@@ -39,6 +47,22 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreateBasicAcceleratorRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateBasicAcceleratorRequest setAutoRenewDuration(Integer autoRenewDuration) {
+        this.autoRenewDuration = autoRenewDuration;
+        return this;
+    }
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
     }
 
     public CreateBasicAcceleratorRequest setAutoUseCoupon(String autoUseCoupon) {

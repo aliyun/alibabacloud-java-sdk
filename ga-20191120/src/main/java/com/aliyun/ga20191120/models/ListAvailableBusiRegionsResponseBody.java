@@ -35,6 +35,9 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        @NameInMap("Pop")
+        public Boolean pop;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -49,6 +52,14 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public ListAvailableBusiRegionsResponseBodyRegions setPop(Boolean pop) {
+            this.pop = pop;
+            return this;
+        }
+        public Boolean getPop() {
+            return this.pop;
         }
 
         public ListAvailableBusiRegionsResponseBodyRegions setRegionId(String regionId) {
