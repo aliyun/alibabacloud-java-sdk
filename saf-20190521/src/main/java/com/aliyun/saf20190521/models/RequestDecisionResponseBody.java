@@ -3,9 +3,9 @@ package com.aliyun.saf20190521.models;
 
 import com.aliyun.tea.*;
 
-public class ExecuteRequestMLResponseBody extends TeaModel {
+public class RequestDecisionResponseBody extends TeaModel {
     @NameInMap("Code")
-    public Integer code;
+    public Long code;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
@@ -13,23 +13,24 @@ public class ExecuteRequestMLResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ExecuteRequestMLResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ExecuteRequestMLResponseBody self = new ExecuteRequestMLResponseBody();
+    public static RequestDecisionResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RequestDecisionResponseBody self = new RequestDecisionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteRequestMLResponseBody setCode(Integer code) {
+    public RequestDecisionResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
-    public ExecuteRequestMLResponseBody setData(java.util.Map<String, ?> data) {
+    public RequestDecisionResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
@@ -37,7 +38,7 @@ public class ExecuteRequestMLResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ExecuteRequestMLResponseBody setMessage(String message) {
+    public RequestDecisionResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +46,7 @@ public class ExecuteRequestMLResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ExecuteRequestMLResponseBody setRequestId(String requestId) {
+    public RequestDecisionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
