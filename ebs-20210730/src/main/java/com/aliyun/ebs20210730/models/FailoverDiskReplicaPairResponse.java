@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ebs20210730.models;
+
+import com.aliyun.tea.*;
+
+public class FailoverDiskReplicaPairResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public FailoverDiskReplicaPairResponseBody body;
+
+    public static FailoverDiskReplicaPairResponse build(java.util.Map<String, ?> map) throws Exception {
+        FailoverDiskReplicaPairResponse self = new FailoverDiskReplicaPairResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public FailoverDiskReplicaPairResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public FailoverDiskReplicaPairResponse setBody(FailoverDiskReplicaPairResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public FailoverDiskReplicaPairResponseBody getBody() {
+        return this.body;
+    }
+
+}
