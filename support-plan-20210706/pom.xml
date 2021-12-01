@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>support_plan20210706</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>support_plan20210706</name>
   <description>Alibaba Cloud support-plan (20210706) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.1</version>
+      <version>0.2.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
