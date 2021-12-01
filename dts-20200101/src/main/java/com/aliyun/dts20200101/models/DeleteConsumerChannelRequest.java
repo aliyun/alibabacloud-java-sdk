@@ -4,8 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerChannelRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ConsumerGroupId")
+    public String consumerGroupId;
 
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
@@ -13,20 +13,20 @@ public class DeleteConsumerChannelRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
-    @NameInMap("ConsumerGroupId")
-    public String consumerGroupId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteConsumerChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerChannelRequest self = new DeleteConsumerChannelRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteConsumerChannelRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteConsumerChannelRequest setConsumerGroupId(String consumerGroupId) {
+        this.consumerGroupId = consumerGroupId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getConsumerGroupId() {
+        return this.consumerGroupId;
     }
 
     public DeleteConsumerChannelRequest setDtsInstanceId(String dtsInstanceId) {
@@ -45,12 +45,12 @@ public class DeleteConsumerChannelRequest extends TeaModel {
         return this.dtsJobId;
     }
 
-    public DeleteConsumerChannelRequest setConsumerGroupId(String consumerGroupId) {
-        this.consumerGroupId = consumerGroupId;
+    public DeleteConsumerChannelRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getConsumerGroupId() {
-        return this.consumerGroupId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

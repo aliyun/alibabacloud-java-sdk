@@ -4,6 +4,12 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifySubscriptionObjectRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public String accountId;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,15 +19,25 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     @NameInMap("SubscriptionObject")
     public String subscriptionObject;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("AccountId")
-    public String accountId;
-
     public static ModifySubscriptionObjectRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySubscriptionObjectRequest self = new ModifySubscriptionObjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySubscriptionObjectRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public ModifySubscriptionObjectRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifySubscriptionObjectRequest setRegionId(String regionId) {
@@ -46,22 +62,6 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     }
     public String getSubscriptionObject() {
         return this.subscriptionObject;
-    }
-
-    public ModifySubscriptionObjectRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifySubscriptionObjectRequest setAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    public String getAccountId() {
-        return this.accountId;
     }
 
 }

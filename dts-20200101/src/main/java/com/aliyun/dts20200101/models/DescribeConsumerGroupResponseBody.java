@@ -4,20 +4,11 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ConsumerChannels")
+    public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
 
     @NameInMap("ErrCode")
     public String errCode;
-
-    @NameInMap("Success")
-    public String success;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
 
     @NameInMap("ErrMessage")
     public String errMessage;
@@ -25,20 +16,29 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("ConsumerChannels")
-    public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeConsumerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeConsumerGroupResponseBody self = new DescribeConsumerGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeConsumerGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeConsumerGroupResponseBody setConsumerChannels(DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels) {
+        this.consumerChannels = consumerChannels;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeConsumerGroupResponseBodyConsumerChannels getConsumerChannels() {
+        return this.consumerChannels;
     }
 
     public DescribeConsumerGroupResponseBody setErrCode(String errCode) {
@@ -47,30 +47,6 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     }
     public String getErrCode() {
         return this.errCode;
-    }
-
-    public DescribeConsumerGroupResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
-    public DescribeConsumerGroupResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeConsumerGroupResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescribeConsumerGroupResponseBody setErrMessage(String errMessage) {
@@ -89,29 +65,53 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeConsumerGroupResponseBody setConsumerChannels(DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels) {
-        this.consumerChannels = consumerChannels;
+    public DescribeConsumerGroupResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public DescribeConsumerGroupResponseBodyConsumerChannels getConsumerChannels() {
-        return this.consumerChannels;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeConsumerGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeConsumerGroupResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public DescribeConsumerGroupResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public static class DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel extends TeaModel {
-        @NameInMap("ConsumerGroupUserName")
-        public String consumerGroupUserName;
-
         @NameInMap("ConsumerGroupID")
         public String consumerGroupID;
-
-        @NameInMap("MessageDelay")
-        public Long messageDelay;
 
         @NameInMap("ConsumerGroupName")
         public String consumerGroupName;
 
+        @NameInMap("ConsumerGroupUserName")
+        public String consumerGroupUserName;
+
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
+
+        @NameInMap("MessageDelay")
+        public Long messageDelay;
 
         @NameInMap("UnconsumedData")
         public Long unconsumedData;
@@ -119,14 +119,6 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         public static DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel build(java.util.Map<String, ?> map) throws Exception {
             DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel self = new DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setConsumerGroupUserName(String consumerGroupUserName) {
-            this.consumerGroupUserName = consumerGroupUserName;
-            return this;
-        }
-        public String getConsumerGroupUserName() {
-            return this.consumerGroupUserName;
         }
 
         public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setConsumerGroupID(String consumerGroupID) {
@@ -137,14 +129,6 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             return this.consumerGroupID;
         }
 
-        public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setMessageDelay(Long messageDelay) {
-            this.messageDelay = messageDelay;
-            return this;
-        }
-        public Long getMessageDelay() {
-            return this.messageDelay;
-        }
-
         public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setConsumerGroupName(String consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
@@ -153,12 +137,28 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             return this.consumerGroupName;
         }
 
+        public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setConsumerGroupUserName(String consumerGroupUserName) {
+            this.consumerGroupUserName = consumerGroupUserName;
+            return this;
+        }
+        public String getConsumerGroupUserName() {
+            return this.consumerGroupUserName;
+        }
+
         public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setConsumptionCheckpoint(String consumptionCheckpoint) {
             this.consumptionCheckpoint = consumptionCheckpoint;
             return this;
         }
         public String getConsumptionCheckpoint() {
             return this.consumptionCheckpoint;
+        }
+
+        public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setMessageDelay(Long messageDelay) {
+            this.messageDelay = messageDelay;
+            return this;
+        }
+        public Long getMessageDelay() {
+            return this.messageDelay;
         }
 
         public DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel setUnconsumedData(Long unconsumedData) {

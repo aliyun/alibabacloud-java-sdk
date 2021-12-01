@@ -4,29 +4,21 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ResetDtsJobRequest extends TeaModel {
-    @NameInMap("DtsJobId")
-    public String dtsJobId;
-
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
-    @NameInMap("SynchronizationDirection")
-    public String synchronizationDirection;
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SynchronizationDirection")
+    public String synchronizationDirection;
+
     public static ResetDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetDtsJobRequest self = new ResetDtsJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ResetDtsJobRequest setDtsJobId(String dtsJobId) {
-        this.dtsJobId = dtsJobId;
-        return this;
-    }
-    public String getDtsJobId() {
-        return this.dtsJobId;
     }
 
     public ResetDtsJobRequest setDtsInstanceId(String dtsInstanceId) {
@@ -37,12 +29,12 @@ public class ResetDtsJobRequest extends TeaModel {
         return this.dtsInstanceId;
     }
 
-    public ResetDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
-        this.synchronizationDirection = synchronizationDirection;
+    public ResetDtsJobRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
         return this;
     }
-    public String getSynchronizationDirection() {
-        return this.synchronizationDirection;
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public ResetDtsJobRequest setRegionId(String regionId) {
@@ -51,6 +43,14 @@ public class ResetDtsJobRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ResetDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
+        this.synchronizationDirection = synchronizationDirection;
+        return this;
+    }
+    public String getSynchronizationDirection() {
+        return this.synchronizationDirection;
     }
 
 }

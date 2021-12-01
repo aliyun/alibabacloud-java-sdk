@@ -4,35 +4,27 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerChannelRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ParentChannelId")
     public String parentChannelId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeConsumerChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConsumerChannelRequest self = new DescribeConsumerChannelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeConsumerChannelRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeConsumerChannelRequest setDtsInstanceId(String dtsInstanceId) {
@@ -51,14 +43,6 @@ public class DescribeConsumerChannelRequest extends TeaModel {
         return this.dtsJobId;
     }
 
-    public DescribeConsumerChannelRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeConsumerChannelRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -67,12 +51,28 @@ public class DescribeConsumerChannelRequest extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeConsumerChannelRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeConsumerChannelRequest setParentChannelId(String parentChannelId) {
         this.parentChannelId = parentChannelId;
         return this;
     }
     public String getParentChannelId() {
         return this.parentChannelId;
+    }
+
+    public DescribeConsumerChannelRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

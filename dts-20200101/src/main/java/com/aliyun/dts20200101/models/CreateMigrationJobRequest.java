@@ -4,11 +4,11 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateMigrationJobRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AccountId")
+    public String accountId;
 
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("MigrationJobClass")
     public String migrationJobClass;
@@ -16,31 +16,31 @@ public class CreateMigrationJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("Region")
+    public String region;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateMigrationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMigrationJobRequest self = new CreateMigrationJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateMigrationJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateMigrationJobRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
-    public CreateMigrationJobRequest setRegion(String region) {
-        this.region = region;
+    public CreateMigrationJobRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateMigrationJobRequest setMigrationJobClass(String migrationJobClass) {
@@ -59,20 +59,20 @@ public class CreateMigrationJobRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateMigrationJobRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateMigrationJobRequest setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegion() {
+        return this.region;
     }
 
-    public CreateMigrationJobRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public CreateMigrationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

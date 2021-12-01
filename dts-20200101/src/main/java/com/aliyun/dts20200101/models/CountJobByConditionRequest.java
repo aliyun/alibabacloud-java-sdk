@@ -4,8 +4,20 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CountJobByConditionRequest extends TeaModel {
-    @NameInMap("Type")
-    public String type;
+    // 目标端数据库类型
+    @NameInMap("DestDbType")
+    public String destDbType;
+
+    // 父任务id
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("JobType")
+    public String jobType;
+
+    // 查询的值，与Type对应
+    @NameInMap("Params")
+    public String params;
 
     @NameInMap("Region")
     public String region;
@@ -13,54 +25,36 @@ public class CountJobByConditionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("JobType")
-    public String jobType;
-
-    @NameInMap("Params")
-    public String params;
+    // 源端数据库类型
+    @NameInMap("SrcDbType")
+    public String srcDbType;
 
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("OrderDirection")
-    public String orderDirection;
-
-    @NameInMap("OrderColumn")
-    public String orderColumn;
-
-    @NameInMap("Tags")
-    public String tags;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    // 查询类型
+    @NameInMap("Type")
+    public String type;
 
     public static CountJobByConditionRequest build(java.util.Map<String, ?> map) throws Exception {
         CountJobByConditionRequest self = new CountJobByConditionRequest();
         return TeaModel.build(map, self);
     }
 
-    public CountJobByConditionRequest setType(String type) {
-        this.type = type;
+    public CountJobByConditionRequest setDestDbType(String destDbType) {
+        this.destDbType = destDbType;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getDestDbType() {
+        return this.destDbType;
     }
 
-    public CountJobByConditionRequest setRegion(String region) {
-        this.region = region;
+    public CountJobByConditionRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public CountJobByConditionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CountJobByConditionRequest setJobType(String jobType) {
@@ -79,6 +73,30 @@ public class CountJobByConditionRequest extends TeaModel {
         return this.params;
     }
 
+    public CountJobByConditionRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public CountJobByConditionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CountJobByConditionRequest setSrcDbType(String srcDbType) {
+        this.srcDbType = srcDbType;
+        return this;
+    }
+    public String getSrcDbType() {
+        return this.srcDbType;
+    }
+
     public CountJobByConditionRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -87,36 +105,12 @@ public class CountJobByConditionRequest extends TeaModel {
         return this.status;
     }
 
-    public CountJobByConditionRequest setOrderDirection(String orderDirection) {
-        this.orderDirection = orderDirection;
+    public CountJobByConditionRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getOrderDirection() {
-        return this.orderDirection;
-    }
-
-    public CountJobByConditionRequest setOrderColumn(String orderColumn) {
-        this.orderColumn = orderColumn;
-        return this;
-    }
-    public String getOrderColumn() {
-        return this.orderColumn;
-    }
-
-    public CountJobByConditionRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
-    public CountJobByConditionRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public String getType() {
+        return this.type;
     }
 
 }

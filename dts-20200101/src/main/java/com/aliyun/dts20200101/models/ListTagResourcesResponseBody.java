@@ -4,20 +4,20 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrCode")
-    public String errCode;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
 
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -25,6 +25,22 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public ListTagResourcesResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public ListTagResourcesResponseBody setNextToken(String nextToken) {
@@ -43,28 +59,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTagResourcesResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
     public ListTagResourcesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ListTagResourcesResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
     public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
@@ -76,37 +76,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
 
-        @NameInMap("ResourceId")
-        public String resourceId;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static ListTagResourcesResponseBodyTagResourcesTagResource build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResourcesTagResource self = new ListTagResourcesResponseBodyTagResourcesTagResource();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
         public ListTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
@@ -117,12 +101,28 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return this.resourceId;
         }
 
+        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public ListTagResourcesResponseBodyTagResourcesTagResource setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

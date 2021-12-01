@@ -4,8 +4,11 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -13,26 +16,31 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
 
     public static DescribeEndpointSwitchStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointSwitchStatusResponseBody self = new DescribeEndpointSwitchStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEndpointSwitchStatusResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeEndpointSwitchStatusResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeEndpointSwitchStatusResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DescribeEndpointSwitchStatusResponseBody setErrorMessage(String errorMessage) {
@@ -51,12 +59,12 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEndpointSwitchStatusResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeEndpointSwitchStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeEndpointSwitchStatusResponseBody setSuccess(String success) {
@@ -65,14 +73,6 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public DescribeEndpointSwitchStatusResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

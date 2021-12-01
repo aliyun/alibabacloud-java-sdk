@@ -4,8 +4,23 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobsRequest extends TeaModel {
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("JobType")
+    public String jobType;
+
+    @NameInMap("OrderColumn")
+    public String orderColumn;
+
+    @NameInMap("OrderDirection")
+    public String orderDirection;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Params")
     public String params;
@@ -13,44 +28,69 @@ public class DescribeDtsJobsRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Status")
     public String status;
-
-    @NameInMap("OrderDirection")
-    public String orderDirection;
-
-    @NameInMap("OrderColumn")
-    public String orderColumn;
 
     @NameInMap("Tags")
     public String tags;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("JobType")
-    public String jobType;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobsRequest self = new DescribeDtsJobsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDtsJobsRequest setType(String type) {
-        this.type = type;
+    public DescribeDtsJobsRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeDtsJobsRequest setJobType(String jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    public String getJobType() {
+        return this.jobType;
+    }
+
+    public DescribeDtsJobsRequest setOrderColumn(String orderColumn) {
+        this.orderColumn = orderColumn;
+        return this;
+    }
+    public String getOrderColumn() {
+        return this.orderColumn;
+    }
+
+    public DescribeDtsJobsRequest setOrderDirection(String orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    public String getOrderDirection() {
+        return this.orderDirection;
+    }
+
+    public DescribeDtsJobsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDtsJobsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDtsJobsRequest setParams(String params) {
@@ -69,28 +109,20 @@ public class DescribeDtsJobsRequest extends TeaModel {
         return this.region;
     }
 
+    public DescribeDtsJobsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeDtsJobsRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeDtsJobsRequest setOrderDirection(String orderDirection) {
-        this.orderDirection = orderDirection;
-        return this;
-    }
-    public String getOrderDirection() {
-        return this.orderDirection;
-    }
-
-    public DescribeDtsJobsRequest setOrderColumn(String orderColumn) {
-        this.orderColumn = orderColumn;
-        return this;
-    }
-    public String getOrderColumn() {
-        return this.orderColumn;
     }
 
     public DescribeDtsJobsRequest setTags(String tags) {
@@ -101,44 +133,12 @@ public class DescribeDtsJobsRequest extends TeaModel {
         return this.tags;
     }
 
-    public DescribeDtsJobsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeDtsJobsRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDtsJobsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDtsJobsRequest setJobType(String jobType) {
-        this.jobType = jobType;
-        return this;
-    }
-    public String getJobType() {
-        return this.jobType;
-    }
-
-    public DescribeDtsJobsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeDtsJobsRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public String getType() {
+        return this.type;
     }
 
 }

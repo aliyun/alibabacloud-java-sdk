@@ -13,6 +13,12 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SubscriptionInstance")
     public ConfigureSubscriptionInstanceRequestSubscriptionInstance subscriptionInstance;
 
+    @NameInMap("AccountId")
+    public String accountId;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,17 +28,11 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
-    @NameInMap("SubscriptionObject")
-    public String subscriptionObject;
-
     @NameInMap("SubscriptionInstanceNetworkType")
     public String subscriptionInstanceNetworkType;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("SubscriptionObject")
+    public String subscriptionObject;
 
     public static ConfigureSubscriptionInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSubscriptionInstanceRequest self = new ConfigureSubscriptionInstanceRequest();
@@ -63,6 +63,22 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         return this.subscriptionInstance;
     }
 
+    public ConfigureSubscriptionInstanceRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public ConfigureSubscriptionInstanceRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
     public ConfigureSubscriptionInstanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -87,14 +103,6 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         return this.subscriptionInstanceName;
     }
 
-    public ConfigureSubscriptionInstanceRequest setSubscriptionObject(String subscriptionObject) {
-        this.subscriptionObject = subscriptionObject;
-        return this;
-    }
-    public String getSubscriptionObject() {
-        return this.subscriptionObject;
-    }
-
     public ConfigureSubscriptionInstanceRequest setSubscriptionInstanceNetworkType(String subscriptionInstanceNetworkType) {
         this.subscriptionInstanceNetworkType = subscriptionInstanceNetworkType;
         return this;
@@ -103,112 +111,48 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         return this.subscriptionInstanceNetworkType;
     }
 
-    public ConfigureSubscriptionInstanceRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
+    public ConfigureSubscriptionInstanceRequest setSubscriptionObject(String subscriptionObject) {
+        this.subscriptionObject = subscriptionObject;
         return this;
     }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ConfigureSubscriptionInstanceRequest setAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    public String getAccountId() {
-        return this.accountId;
+    public String getSubscriptionObject() {
+        return this.subscriptionObject;
     }
 
     public static class ConfigureSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
+        @NameInMap("DatabaseName")
+        public String databaseName;
 
         @NameInMap("IP")
         public String IP;
 
-        @NameInMap("Port")
-        public String port;
+        @NameInMap("InstanceID")
+        public String instanceID;
 
-        @NameInMap("UserName")
-        public String userName;
-
-        @NameInMap("Password")
-        public String password;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("OracleSID")
         public String oracleSID;
 
-        @NameInMap("DatabaseName")
-        public String databaseName;
-
         @NameInMap("OwnerID")
         public String ownerID;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("Port")
+        public String port;
 
         @NameInMap("Role")
         public String role;
 
+        @NameInMap("UserName")
+        public String userName;
+
         public static ConfigureSubscriptionInstanceRequestSourceEndpoint build(java.util.Map<String, ?> map) throws Exception {
             ConfigureSubscriptionInstanceRequestSourceEndpoint self = new ConfigureSubscriptionInstanceRequestSourceEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setInstanceID(String instanceID) {
-            this.instanceID = instanceID;
-            return this;
-        }
-        public String getInstanceID() {
-            return this.instanceID;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setIP(String IP) {
-            this.IP = IP;
-            return this;
-        }
-        public String getIP() {
-            return this.IP;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
-        public ConfigureSubscriptionInstanceRequestSourceEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
         }
 
         public ConfigureSubscriptionInstanceRequestSourceEndpoint setDatabaseName(String databaseName) {
@@ -219,6 +163,38 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
             return this.databaseName;
         }
 
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setIP(String IP) {
+            this.IP = IP;
+            return this;
+        }
+        public String getIP() {
+            return this.IP;
+        }
+
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setInstanceID(String instanceID) {
+            this.instanceID = instanceID;
+            return this;
+        }
+        public String getInstanceID() {
+            return this.instanceID;
+        }
+
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
         public ConfigureSubscriptionInstanceRequestSourceEndpoint setOwnerID(String ownerID) {
             this.ownerID = ownerID;
             return this;
@@ -227,12 +203,36 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
             return this.ownerID;
         }
 
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
         public ConfigureSubscriptionInstanceRequestSourceEndpoint setRole(String role) {
             this.role = role;
             return this;
         }
         public String getRole() {
             return this.role;
+        }
+
+        public ConfigureSubscriptionInstanceRequestSourceEndpoint setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

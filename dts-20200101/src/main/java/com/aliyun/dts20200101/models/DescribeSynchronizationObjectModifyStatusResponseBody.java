@@ -4,87 +4,39 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Success")
-    public String success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
     @NameInMap("DataInitializationStatus")
     public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus dataInitializationStatus;
 
     @NameInMap("DataSynchronizationStatus")
     public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus dataSynchronizationStatus;
 
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("PrecheckStatus")
     public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus precheckStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("StructureInitializationStatus")
     public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus structureInitializationStatus;
 
+    @NameInMap("Success")
+    public String success;
+
     public static DescribeSynchronizationObjectModifyStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSynchronizationObjectModifyStatusResponseBody self = new DescribeSynchronizationObjectModifyStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
-    public DescribeSynchronizationObjectModifyStatusResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
     public DescribeSynchronizationObjectModifyStatusResponseBody setDataInitializationStatus(DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus dataInitializationStatus) {
@@ -103,12 +55,52 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         return this.dataSynchronizationStatus;
     }
 
+    public DescribeSynchronizationObjectModifyStatusResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeSynchronizationObjectModifyStatusResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeSynchronizationObjectModifyStatusResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public DescribeSynchronizationObjectModifyStatusResponseBody setPrecheckStatus(DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus precheckStatus) {
         this.precheckStatus = precheckStatus;
         return this;
     }
     public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus getPrecheckStatus() {
         return this.precheckStatus;
+    }
+
+    public DescribeSynchronizationObjectModifyStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSynchronizationObjectModifyStatusResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeSynchronizationObjectModifyStatusResponseBody setStructureInitializationStatus(DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus structureInitializationStatus) {
@@ -119,38 +111,30 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         return this.structureInitializationStatus;
     }
 
+    public DescribeSynchronizationObjectModifyStatusResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("Percent")
         public String percent;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("Progress")
         public String progress;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
         }
 
         public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setErrorMessage(String errorMessage) {
@@ -161,6 +145,14 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.errorMessage;
         }
 
+        public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -169,32 +161,32 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.progress;
         }
 
-    }
-
-    public static class DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Delay")
-        public String delay;
-
-        @NameInMap("Percent")
-        public String percent;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        public static DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setStatus(String status) {
+        public DescribeSynchronizationObjectModifyStatusResponseBodyDataInitializationStatus setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus extends TeaModel {
+        @NameInMap("Delay")
+        public String delay;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus();
+            return TeaModel.build(map, self);
         }
 
         public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setDelay(String delay) {
@@ -205,6 +197,14 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.delay;
         }
 
+        public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
         public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setPercent(String percent) {
             this.percent = percent;
             return this;
@@ -213,12 +213,12 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.percent;
         }
 
-        public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
+        public DescribeSynchronizationObjectModifyStatusResponseBodyDataSynchronizationStatus setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getErrorMessage() {
-            return this.errorMessage;
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -276,34 +276,18 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
     }
 
     public static class DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Detail")
+        public java.util.List<DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatusDetail> detail;
 
         @NameInMap("Percent")
         public String percent;
 
-        @NameInMap("Detail")
-        public java.util.List<DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatusDetail> detail;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
         }
 
         public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus setDetail(java.util.List<DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatusDetail> detail) {
@@ -314,27 +298,15 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.detail;
         }
 
-    }
-
-    public static class DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("Progress")
-        public String progress;
-
-        public static DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus();
-            return TeaModel.build(map, self);
+        public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
         }
 
-        public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setStatus(String status) {
+        public DescribeSynchronizationObjectModifyStatusResponseBodyPrecheckStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -342,12 +314,24 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.status;
         }
 
-        public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
+    }
+
+    public static class DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus self = new DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus();
+            return TeaModel.build(map, self);
         }
 
         public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setErrorMessage(String errorMessage) {
@@ -358,12 +342,28 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             return this.errorMessage;
         }
 
+        public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
         }
         public String getProgress() {
             return this.progress;
+        }
+
+        public DescribeSynchronizationObjectModifyStatusResponseBodyStructureInitializationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

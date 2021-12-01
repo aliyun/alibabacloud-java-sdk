@@ -4,11 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SubscriptionInstanceId")
-    public String subscriptionInstanceId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
@@ -16,28 +13,23 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SubscriptionInstanceId")
+    public String subscriptionInstanceId;
 
     public static DeleteConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerGroupRequest self = new DeleteConsumerGroupRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteConsumerGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteConsumerGroupRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteConsumerGroupRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
-        this.subscriptionInstanceId = subscriptionInstanceId;
-        return this;
-    }
-    public String getSubscriptionInstanceId() {
-        return this.subscriptionInstanceId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DeleteConsumerGroupRequest setConsumerGroupID(String consumerGroupID) {
@@ -56,12 +48,20 @@ public class DeleteConsumerGroupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteConsumerGroupRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DeleteConsumerGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteConsumerGroupRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
+        this.subscriptionInstanceId = subscriptionInstanceId;
+        return this;
+    }
+    public String getSubscriptionInstanceId() {
+        return this.subscriptionInstanceId;
     }
 
 }

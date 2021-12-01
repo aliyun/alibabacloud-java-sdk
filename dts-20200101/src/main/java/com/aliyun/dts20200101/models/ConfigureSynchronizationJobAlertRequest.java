@@ -4,71 +4,47 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigureSynchronizationJobAlertRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SynchronizationJobId")
-    public String synchronizationJobId;
-
-    @NameInMap("SynchronizationDirection")
-    public String synchronizationDirection;
-
-    @NameInMap("DelayAlertStatus")
-    public String delayAlertStatus;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
 
-    @NameInMap("ErrorAlertStatus")
-    public String errorAlertStatus;
-
-    @NameInMap("ErrorAlertPhone")
-    public String errorAlertPhone;
+    @NameInMap("DelayAlertStatus")
+    public String delayAlertStatus;
 
     @NameInMap("DelayOverSeconds")
     public String delayOverSeconds;
 
+    @NameInMap("ErrorAlertPhone")
+    public String errorAlertPhone;
+
+    @NameInMap("ErrorAlertStatus")
+    public String errorAlertStatus;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SynchronizationDirection")
+    public String synchronizationDirection;
+
+    @NameInMap("SynchronizationJobId")
+    public String synchronizationJobId;
 
     public static ConfigureSynchronizationJobAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSynchronizationJobAlertRequest self = new ConfigureSynchronizationJobAlertRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfigureSynchronizationJobAlertRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ConfigureSynchronizationJobAlertRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ConfigureSynchronizationJobAlertRequest setSynchronizationJobId(String synchronizationJobId) {
-        this.synchronizationJobId = synchronizationJobId;
-        return this;
-    }
-    public String getSynchronizationJobId() {
-        return this.synchronizationJobId;
-    }
-
-    public ConfigureSynchronizationJobAlertRequest setSynchronizationDirection(String synchronizationDirection) {
-        this.synchronizationDirection = synchronizationDirection;
-        return this;
-    }
-    public String getSynchronizationDirection() {
-        return this.synchronizationDirection;
-    }
-
-    public ConfigureSynchronizationJobAlertRequest setDelayAlertStatus(String delayAlertStatus) {
-        this.delayAlertStatus = delayAlertStatus;
-        return this;
-    }
-    public String getDelayAlertStatus() {
-        return this.delayAlertStatus;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public ConfigureSynchronizationJobAlertRequest setDelayAlertPhone(String delayAlertPhone) {
@@ -79,20 +55,12 @@ public class ConfigureSynchronizationJobAlertRequest extends TeaModel {
         return this.delayAlertPhone;
     }
 
-    public ConfigureSynchronizationJobAlertRequest setErrorAlertStatus(String errorAlertStatus) {
-        this.errorAlertStatus = errorAlertStatus;
+    public ConfigureSynchronizationJobAlertRequest setDelayAlertStatus(String delayAlertStatus) {
+        this.delayAlertStatus = delayAlertStatus;
         return this;
     }
-    public String getErrorAlertStatus() {
-        return this.errorAlertStatus;
-    }
-
-    public ConfigureSynchronizationJobAlertRequest setErrorAlertPhone(String errorAlertPhone) {
-        this.errorAlertPhone = errorAlertPhone;
-        return this;
-    }
-    public String getErrorAlertPhone() {
-        return this.errorAlertPhone;
+    public String getDelayAlertStatus() {
+        return this.delayAlertStatus;
     }
 
     public ConfigureSynchronizationJobAlertRequest setDelayOverSeconds(String delayOverSeconds) {
@@ -103,6 +71,22 @@ public class ConfigureSynchronizationJobAlertRequest extends TeaModel {
         return this.delayOverSeconds;
     }
 
+    public ConfigureSynchronizationJobAlertRequest setErrorAlertPhone(String errorAlertPhone) {
+        this.errorAlertPhone = errorAlertPhone;
+        return this;
+    }
+    public String getErrorAlertPhone() {
+        return this.errorAlertPhone;
+    }
+
+    public ConfigureSynchronizationJobAlertRequest setErrorAlertStatus(String errorAlertStatus) {
+        this.errorAlertStatus = errorAlertStatus;
+        return this;
+    }
+    public String getErrorAlertStatus() {
+        return this.errorAlertStatus;
+    }
+
     public ConfigureSynchronizationJobAlertRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -111,12 +95,28 @@ public class ConfigureSynchronizationJobAlertRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ConfigureSynchronizationJobAlertRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public ConfigureSynchronizationJobAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ConfigureSynchronizationJobAlertRequest setSynchronizationDirection(String synchronizationDirection) {
+        this.synchronizationDirection = synchronizationDirection;
+        return this;
+    }
+    public String getSynchronizationDirection() {
+        return this.synchronizationDirection;
+    }
+
+    public ConfigureSynchronizationJobAlertRequest setSynchronizationJobId(String synchronizationJobId) {
+        this.synchronizationJobId = synchronizationJobId;
+        return this;
+    }
+    public String getSynchronizationJobId() {
+        return this.synchronizationJobId;
     }
 
 }

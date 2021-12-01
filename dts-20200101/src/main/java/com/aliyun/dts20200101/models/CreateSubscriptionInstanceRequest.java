@@ -7,20 +7,8 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SourceEndpoint")
     public CreateSubscriptionInstanceRequestSourceEndpoint sourceEndpoint;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("PayType")
-    public String payType;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("UsedTime")
-    public Integer usedTime;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,8 +16,20 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("UsedTime")
+    public Integer usedTime;
 
     public static CreateSubscriptionInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscriptionInstanceRequest self = new CreateSubscriptionInstanceRequest();
@@ -44,44 +44,12 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
         return this.sourceEndpoint;
     }
 
-    public CreateSubscriptionInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateSubscriptionInstanceRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateSubscriptionInstanceRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public CreateSubscriptionInstanceRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
-    }
-
-    public CreateSubscriptionInstanceRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public CreateSubscriptionInstanceRequest setUsedTime(Integer usedTime) {
-        this.usedTime = usedTime;
-        return this;
-    }
-    public Integer getUsedTime() {
-        return this.usedTime;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public CreateSubscriptionInstanceRequest setClientToken(String clientToken) {
@@ -100,12 +68,44 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateSubscriptionInstanceRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public CreateSubscriptionInstanceRequest setPayType(String payType) {
+        this.payType = payType;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateSubscriptionInstanceRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateSubscriptionInstanceRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public CreateSubscriptionInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateSubscriptionInstanceRequest setUsedTime(Integer usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Integer getUsedTime() {
+        return this.usedTime;
     }
 
     public static class CreateSubscriptionInstanceRequestSourceEndpoint extends TeaModel {

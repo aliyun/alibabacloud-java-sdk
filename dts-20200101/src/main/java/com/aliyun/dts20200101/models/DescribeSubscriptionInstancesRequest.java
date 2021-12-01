@@ -4,17 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
-    @NameInMap("SubscriptionInstanceName")
-    public String subscriptionInstanceName;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,8 +13,17 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SubscriptionInstanceName")
+    public String subscriptionInstanceName;
 
     @NameInMap("Tag")
     public java.util.List<DescribeSubscriptionInstancesRequestTag> tag;
@@ -33,36 +33,12 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSubscriptionInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSubscriptionInstancesRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSubscriptionInstancesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSubscriptionInstancesRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeSubscriptionInstancesRequest setSubscriptionInstanceName(String subscriptionInstanceName) {
-        this.subscriptionInstanceName = subscriptionInstanceName;
-        return this;
-    }
-    public String getSubscriptionInstanceName() {
-        return this.subscriptionInstanceName;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeSubscriptionInstancesRequest setClientToken(String clientToken) {
@@ -81,12 +57,36 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSubscriptionInstancesRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeSubscriptionInstancesRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeSubscriptionInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSubscriptionInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSubscriptionInstancesRequest setSubscriptionInstanceName(String subscriptionInstanceName) {
+        this.subscriptionInstanceName = subscriptionInstanceName;
+        return this;
+    }
+    public String getSubscriptionInstanceName() {
+        return this.subscriptionInstanceName;
     }
 
     public DescribeSubscriptionInstancesRequest setTag(java.util.List<DescribeSubscriptionInstancesRequestTag> tag) {

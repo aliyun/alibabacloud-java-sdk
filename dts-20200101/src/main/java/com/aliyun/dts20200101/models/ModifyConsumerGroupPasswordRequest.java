@@ -4,11 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyConsumerGroupPasswordRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SubscriptionInstanceId")
-    public String subscriptionInstanceId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
@@ -16,40 +13,35 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
 
-    @NameInMap("ConsumerGroupUserName")
-    public String consumerGroupUserName;
-
     @NameInMap("ConsumerGroupPassword")
     public String consumerGroupPassword;
 
-    @NameInMap("consumerGroupNewPassword")
-    public String consumerGroupNewPassword;
+    @NameInMap("ConsumerGroupUserName")
+    public String consumerGroupUserName;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SubscriptionInstanceId")
+    public String subscriptionInstanceId;
+
+    @NameInMap("consumerGroupNewPassword")
+    public String consumerGroupNewPassword;
 
     public static ModifyConsumerGroupPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyConsumerGroupPasswordRequest self = new ModifyConsumerGroupPasswordRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyConsumerGroupPasswordRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyConsumerGroupPasswordRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyConsumerGroupPasswordRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
-        this.subscriptionInstanceId = subscriptionInstanceId;
-        return this;
-    }
-    public String getSubscriptionInstanceId() {
-        return this.subscriptionInstanceId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public ModifyConsumerGroupPasswordRequest setConsumerGroupID(String consumerGroupID) {
@@ -68,14 +60,6 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
         return this.consumerGroupName;
     }
 
-    public ModifyConsumerGroupPasswordRequest setConsumerGroupUserName(String consumerGroupUserName) {
-        this.consumerGroupUserName = consumerGroupUserName;
-        return this;
-    }
-    public String getConsumerGroupUserName() {
-        return this.consumerGroupUserName;
-    }
-
     public ModifyConsumerGroupPasswordRequest setConsumerGroupPassword(String consumerGroupPassword) {
         this.consumerGroupPassword = consumerGroupPassword;
         return this;
@@ -84,12 +68,12 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
         return this.consumerGroupPassword;
     }
 
-    public ModifyConsumerGroupPasswordRequest setConsumerGroupNewPassword(String consumerGroupNewPassword) {
-        this.consumerGroupNewPassword = consumerGroupNewPassword;
+    public ModifyConsumerGroupPasswordRequest setConsumerGroupUserName(String consumerGroupUserName) {
+        this.consumerGroupUserName = consumerGroupUserName;
         return this;
     }
-    public String getConsumerGroupNewPassword() {
-        return this.consumerGroupNewPassword;
+    public String getConsumerGroupUserName() {
+        return this.consumerGroupUserName;
     }
 
     public ModifyConsumerGroupPasswordRequest setOwnerId(String ownerId) {
@@ -100,12 +84,28 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyConsumerGroupPasswordRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public ModifyConsumerGroupPasswordRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyConsumerGroupPasswordRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
+        this.subscriptionInstanceId = subscriptionInstanceId;
+        return this;
+    }
+    public String getSubscriptionInstanceId() {
+        return this.subscriptionInstanceId;
+    }
+
+    public ModifyConsumerGroupPasswordRequest setConsumerGroupNewPassword(String consumerGroupNewPassword) {
+        this.consumerGroupNewPassword = consumerGroupNewPassword;
+        return this;
+    }
+    public String getConsumerGroupNewPassword() {
+        return this.consumerGroupNewPassword;
     }
 
 }

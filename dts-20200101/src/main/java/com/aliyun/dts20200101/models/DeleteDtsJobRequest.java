@@ -4,29 +4,21 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteDtsJobRequest extends TeaModel {
-    @NameInMap("DtsJobId")
-    public String dtsJobId;
-
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
-    @NameInMap("SynchronizationDirection")
-    public String synchronizationDirection;
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SynchronizationDirection")
+    public String synchronizationDirection;
+
     public static DeleteDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDtsJobRequest self = new DeleteDtsJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteDtsJobRequest setDtsJobId(String dtsJobId) {
-        this.dtsJobId = dtsJobId;
-        return this;
-    }
-    public String getDtsJobId() {
-        return this.dtsJobId;
     }
 
     public DeleteDtsJobRequest setDtsInstanceId(String dtsInstanceId) {
@@ -37,12 +29,12 @@ public class DeleteDtsJobRequest extends TeaModel {
         return this.dtsInstanceId;
     }
 
-    public DeleteDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
-        this.synchronizationDirection = synchronizationDirection;
+    public DeleteDtsJobRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
         return this;
     }
-    public String getSynchronizationDirection() {
-        return this.synchronizationDirection;
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public DeleteDtsJobRequest setRegionId(String regionId) {
@@ -51,6 +43,14 @@ public class DeleteDtsJobRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
+        this.synchronizationDirection = synchronizationDirection;
+        return this;
+    }
+    public String getSynchronizationDirection() {
+        return this.synchronizationDirection;
     }
 
 }

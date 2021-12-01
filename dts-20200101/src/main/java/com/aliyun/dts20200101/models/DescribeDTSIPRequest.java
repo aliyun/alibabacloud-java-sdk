@@ -4,18 +4,26 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTSIPRequest extends TeaModel {
+    @NameInMap("DestinationEndpointRegion")
+    public String destinationEndpointRegion;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 
-    @NameInMap("DestinationEndpointRegion")
-    public String destinationEndpointRegion;
-
     public static DescribeDTSIPRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDTSIPRequest self = new DescribeDTSIPRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDTSIPRequest setDestinationEndpointRegion(String destinationEndpointRegion) {
+        this.destinationEndpointRegion = destinationEndpointRegion;
+        return this;
+    }
+    public String getDestinationEndpointRegion() {
+        return this.destinationEndpointRegion;
     }
 
     public DescribeDTSIPRequest setRegionId(String regionId) {
@@ -32,14 +40,6 @@ public class DescribeDTSIPRequest extends TeaModel {
     }
     public String getSourceEndpointRegion() {
         return this.sourceEndpointRegion;
-    }
-
-    public DescribeDTSIPRequest setDestinationEndpointRegion(String destinationEndpointRegion) {
-        this.destinationEndpointRegion = destinationEndpointRegion;
-        return this;
-    }
-    public String getDestinationEndpointRegion() {
-        return this.destinationEndpointRegion;
     }
 
 }

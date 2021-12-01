@@ -4,21 +4,37 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StartSubscriptionInstanceRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public String accountId;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("AccountId")
-    public String accountId;
-
     public static StartSubscriptionInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartSubscriptionInstanceRequest self = new StartSubscriptionInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartSubscriptionInstanceRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public StartSubscriptionInstanceRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public StartSubscriptionInstanceRequest setRegionId(String regionId) {
@@ -35,22 +51,6 @@ public class StartSubscriptionInstanceRequest extends TeaModel {
     }
     public String getSubscriptionInstanceId() {
         return this.subscriptionInstanceId;
-    }
-
-    public StartSubscriptionInstanceRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public StartSubscriptionInstanceRequest setAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    public String getAccountId() {
-        return this.accountId;
     }
 
 }

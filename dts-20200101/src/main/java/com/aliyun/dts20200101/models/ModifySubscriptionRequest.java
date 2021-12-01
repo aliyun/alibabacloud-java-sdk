@@ -4,17 +4,17 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifySubscriptionRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DbList")
+    public String dbList;
 
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
-    @NameInMap("DbList")
-    public String dbList;
-
     @NameInMap("DtsJobId")
     public String dtsJobId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SubscriptionDataTypeDDL")
     public Boolean subscriptionDataTypeDDL;
@@ -27,12 +27,12 @@ public class ModifySubscriptionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifySubscriptionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifySubscriptionRequest setDbList(String dbList) {
+        this.dbList = dbList;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDbList() {
+        return this.dbList;
     }
 
     public ModifySubscriptionRequest setDtsInstanceId(String dtsInstanceId) {
@@ -43,20 +43,20 @@ public class ModifySubscriptionRequest extends TeaModel {
         return this.dtsInstanceId;
     }
 
-    public ModifySubscriptionRequest setDbList(String dbList) {
-        this.dbList = dbList;
-        return this;
-    }
-    public String getDbList() {
-        return this.dbList;
-    }
-
     public ModifySubscriptionRequest setDtsJobId(String dtsJobId) {
         this.dtsJobId = dtsJobId;
         return this;
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public ModifySubscriptionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifySubscriptionRequest setSubscriptionDataTypeDDL(Boolean subscriptionDataTypeDDL) {
