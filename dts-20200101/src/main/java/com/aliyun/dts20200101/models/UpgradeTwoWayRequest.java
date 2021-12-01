@@ -4,11 +4,11 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class UpgradeTwoWayRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("InstanceClass")
     public String instanceClass;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -18,20 +18,20 @@ public class UpgradeTwoWayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeTwoWayRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public UpgradeTwoWayRequest setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
     }
     public String getInstanceClass() {
         return this.instanceClass;
+    }
+
+    public UpgradeTwoWayRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public UpgradeTwoWayRequest setRegionId(String regionId) {

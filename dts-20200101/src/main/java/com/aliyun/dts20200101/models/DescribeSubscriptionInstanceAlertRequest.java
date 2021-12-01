@@ -4,11 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SubscriptionInstanceId")
-    public String subscriptionInstanceId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,28 +13,23 @@ public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SubscriptionInstanceId")
+    public String subscriptionInstanceId;
 
     public static DescribeSubscriptionInstanceAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubscriptionInstanceAlertRequest self = new DescribeSubscriptionInstanceAlertRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSubscriptionInstanceAlertRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSubscriptionInstanceAlertRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSubscriptionInstanceAlertRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
-        this.subscriptionInstanceId = subscriptionInstanceId;
-        return this;
-    }
-    public String getSubscriptionInstanceId() {
-        return this.subscriptionInstanceId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeSubscriptionInstanceAlertRequest setClientToken(String clientToken) {
@@ -56,12 +48,20 @@ public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSubscriptionInstanceAlertRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeSubscriptionInstanceAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSubscriptionInstanceAlertRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
+        this.subscriptionInstanceId = subscriptionInstanceId;
+        return this;
+    }
+    public String getSubscriptionInstanceId() {
+        return this.subscriptionInstanceId;
     }
 
 }

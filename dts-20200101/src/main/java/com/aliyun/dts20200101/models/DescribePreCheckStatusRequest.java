@@ -7,17 +7,17 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("JobCode")
+    public String jobCode;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PageNo")
     public String pageNo;
 
     @NameInMap("PageSize")
     public String pageSize;
-
-    @NameInMap("JobCode")
-    public String jobCode;
-
-    @NameInMap("StructType")
-    public String structType;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -25,8 +25,8 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     @NameInMap("StructPhase")
     public String structPhase;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("StructType")
+    public String structType;
 
     public static DescribePreCheckStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePreCheckStatusRequest self = new DescribePreCheckStatusRequest();
@@ -39,6 +39,22 @@ public class DescribePreCheckStatusRequest extends TeaModel {
     }
     public String getDtsJobId() {
         return this.dtsJobId;
+    }
+
+    public DescribePreCheckStatusRequest setJobCode(String jobCode) {
+        this.jobCode = jobCode;
+        return this;
+    }
+    public String getJobCode() {
+        return this.jobCode;
+    }
+
+    public DescribePreCheckStatusRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribePreCheckStatusRequest setPageNo(String pageNo) {
@@ -57,22 +73,6 @@ public class DescribePreCheckStatusRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribePreCheckStatusRequest setJobCode(String jobCode) {
-        this.jobCode = jobCode;
-        return this;
-    }
-    public String getJobCode() {
-        return this.jobCode;
-    }
-
-    public DescribePreCheckStatusRequest setStructType(String structType) {
-        this.structType = structType;
-        return this;
-    }
-    public String getStructType() {
-        return this.structType;
-    }
-
     public DescribePreCheckStatusRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -89,12 +89,12 @@ public class DescribePreCheckStatusRequest extends TeaModel {
         return this.structPhase;
     }
 
-    public DescribePreCheckStatusRequest setName(String name) {
-        this.name = name;
+    public DescribePreCheckStatusRequest setStructType(String structType) {
+        this.structType = structType;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getStructType() {
+        return this.structType;
     }
 
 }

@@ -4,27 +4,43 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionMetaResponseBody extends TeaModel {
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("SubscriptionMetaList")
+    public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("SubscriptionMetaList")
-    public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList;
-
     public static DescribeSubscriptionMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubscriptionMetaResponseBody self = new DescribeSubscriptionMetaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSubscriptionMetaResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeSubscriptionMetaResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DescribeSubscriptionMetaResponseBody setHttpStatusCode(String httpStatusCode) {
@@ -43,12 +59,12 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSubscriptionMetaResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeSubscriptionMetaResponseBody setSubscriptionMetaList(java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList) {
+        this.subscriptionMetaList = subscriptionMetaList;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> getSubscriptionMetaList() {
+        return this.subscriptionMetaList;
     }
 
     public DescribeSubscriptionMetaResponseBody setSuccess(String success) {
@@ -59,34 +75,18 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeSubscriptionMetaResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeSubscriptionMetaResponseBody setSubscriptionMetaList(java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList) {
-        this.subscriptionMetaList = subscriptionMetaList;
-        return this;
-    }
-    public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> getSubscriptionMetaList() {
-        return this.subscriptionMetaList;
-    }
-
     public static class DescribeSubscriptionMetaResponseBodySubscriptionMetaList extends TeaModel {
-        @NameInMap("Sid")
-        public String sid;
-
         @NameInMap("Checkpoint")
         public Long checkpoint;
+
+        @NameInMap("DBList")
+        public String DBList;
 
         @NameInMap("DProxyUrl")
         public String DProxyUrl;
 
-        @NameInMap("DBList")
-        public String DBList;
+        @NameInMap("Sid")
+        public String sid;
 
         @NameInMap("Topic")
         public String topic;
@@ -94,14 +94,6 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         public static DescribeSubscriptionMetaResponseBodySubscriptionMetaList build(java.util.Map<String, ?> map) throws Exception {
             DescribeSubscriptionMetaResponseBodySubscriptionMetaList self = new DescribeSubscriptionMetaResponseBodySubscriptionMetaList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setSid(String sid) {
-            this.sid = sid;
-            return this;
-        }
-        public String getSid() {
-            return this.sid;
         }
 
         public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setCheckpoint(Long checkpoint) {
@@ -112,6 +104,14 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             return this.checkpoint;
         }
 
+        public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setDBList(String DBList) {
+            this.DBList = DBList;
+            return this;
+        }
+        public String getDBList() {
+            return this.DBList;
+        }
+
         public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setDProxyUrl(String DProxyUrl) {
             this.DProxyUrl = DProxyUrl;
             return this;
@@ -120,12 +120,12 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             return this.DProxyUrl;
         }
 
-        public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setDBList(String DBList) {
-            this.DBList = DBList;
+        public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setSid(String sid) {
+            this.sid = sid;
             return this;
         }
-        public String getDBList() {
-            return this.DBList;
+        public String getSid() {
+            return this.sid;
         }
 
         public DescribeSubscriptionMetaResponseBodySubscriptionMetaList setTopic(String topic) {

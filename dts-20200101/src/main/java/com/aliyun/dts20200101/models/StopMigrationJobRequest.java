@@ -4,40 +4,32 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StopMigrationJobRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("MigrationJobId")
-    public String migrationJobId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("MigrationJobId")
+    public String migrationJobId;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static StopMigrationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         StopMigrationJobRequest self = new StopMigrationJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public StopMigrationJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public StopMigrationJobRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public StopMigrationJobRequest setMigrationJobId(String migrationJobId) {
-        this.migrationJobId = migrationJobId;
-        return this;
-    }
-    public String getMigrationJobId() {
-        return this.migrationJobId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public StopMigrationJobRequest setClientToken(String clientToken) {
@@ -48,6 +40,14 @@ public class StopMigrationJobRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public StopMigrationJobRequest setMigrationJobId(String migrationJobId) {
+        this.migrationJobId = migrationJobId;
+        return this;
+    }
+    public String getMigrationJobId() {
+        return this.migrationJobId;
+    }
+
     public StopMigrationJobRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -56,12 +56,12 @@ public class StopMigrationJobRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public StopMigrationJobRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public StopMigrationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

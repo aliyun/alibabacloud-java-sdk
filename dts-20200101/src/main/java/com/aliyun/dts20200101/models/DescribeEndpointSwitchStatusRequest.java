@@ -4,11 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,28 +13,23 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static DescribeEndpointSwitchStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointSwitchStatusRequest self = new DescribeEndpointSwitchStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEndpointSwitchStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeEndpointSwitchStatusRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeEndpointSwitchStatusRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeEndpointSwitchStatusRequest setClientToken(String clientToken) {
@@ -56,12 +48,20 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeEndpointSwitchStatusRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeEndpointSwitchStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeEndpointSwitchStatusRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

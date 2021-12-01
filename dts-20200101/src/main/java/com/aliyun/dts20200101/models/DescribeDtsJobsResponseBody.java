@@ -4,122 +4,42 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobsResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("DtsJobList")
+    public java.util.List<DescribeDtsJobsResponseBodyDtsJobList> dtsJobList;
 
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    @NameInMap("DtsJobList")
-    public java.util.List<DescribeDtsJobsResponseBodyDtsJobList> dtsJobList;
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     public static DescribeDtsJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobsResponseBody self = new DescribeDtsJobsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDtsJobsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public DescribeDtsJobsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDtsJobsResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public DescribeDtsJobsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeDtsJobsResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeDtsJobsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeDtsJobsResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeDtsJobsResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public DescribeDtsJobsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDtsJobsResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
-        return this;
-    }
-    public String getDynamicCode() {
-        return this.dynamicCode;
     }
 
     public DescribeDtsJobsResponseBody setDtsJobList(java.util.List<DescribeDtsJobsResponseBodyDtsJobList> dtsJobList) {
@@ -130,55 +50,129 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         return this.dtsJobList;
     }
 
-    public static class DescribeDtsJobsResponseBodyDtsJobListTagList extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        public static DescribeDtsJobsResponseBodyDtsJobListTagList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobListTagList self = new DescribeDtsJobsResponseBodyDtsJobListTagList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListTagList setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListTagList setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
+    public DescribeDtsJobsResponseBody setDynamicCode(String dynamicCode) {
+        this.dynamicCode = dynamicCode;
+        return this;
+    }
+    public String getDynamicCode() {
+        return this.dynamicCode;
     }
 
-    public static class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeDtsJobsResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public DescribeDtsJobsResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeDtsJobsResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeDtsJobsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DescribeDtsJobsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDtsJobsResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeDtsJobsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDtsJobsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeDtsJobsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("Percent")
         public String percent;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("Progress")
         public String progress;
 
-        public static DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus();
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setStatus(String status) {
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -186,12 +180,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus();
+            return TeaModel.build(map, self);
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setErrorMessage(String errorMessage) {
@@ -202,6 +208,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -210,11 +224,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -225,20 +247,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Progress")
         public String progress;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus setStatus(String status) {
-            this.status = status;
+        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus setNeedUpgrade(Boolean needUpgrade) {
@@ -265,35 +287,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-    }
-
-    public static class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("Progress")
-        public String progress;
-
-        public static DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus self = new DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setStatus(String status) {
+        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -301,90 +295,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus setProgress(String progress) {
-            this.progress = progress;
-            return this;
-        }
-        public String getProgress() {
-            return this.progress;
-        }
-
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint extends TeaModel {
-        @NameInMap("SslSolutionEnum")
-        public String sslSolutionEnum;
-
-        @NameInMap("OracleSID")
-        public String oracleSID;
-
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("DatabaseName")
         public String databaseName;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("UserName")
-        public String userName;
 
         @NameInMap("EngineName")
         public String engineName;
 
+        @NameInMap("InstanceID")
+        public String instanceID;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("OracleSID")
+        public String oracleSID;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SslSolutionEnum")
+        public String sslSolutionEnum;
+
+        @NameInMap("UserName")
+        public String userName;
+
         public static DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint self = new DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setSslSolutionEnum(String sslSolutionEnum) {
-            this.sslSolutionEnum = sslSolutionEnum;
-            return this;
-        }
-        public String getSslSolutionEnum() {
-            return this.sslSolutionEnum;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setDatabaseName(String databaseName) {
@@ -395,12 +341,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.databaseName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setIp(String ip) {
-            this.ip = ip;
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setEngineName(String engineName) {
+            this.engineName = engineName;
             return this;
         }
-        public String getIp() {
-            return this.ip;
+        public String getEngineName() {
+            return this.engineName;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setInstanceID(String instanceID) {
@@ -411,14 +357,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceID;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -427,20 +365,52 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setSslSolutionEnum(String sslSolutionEnum) {
+            this.sslSolutionEnum = sslSolutionEnum;
+            return this;
+        }
+        public String getSslSolutionEnum() {
+            return this.sslSolutionEnum;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setUserName(String userName) {
             this.userName = userName;
             return this;
         }
         public String getUserName() {
             return this.userName;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint setEngineName(String engineName) {
-            this.engineName = engineName;
-            return this;
-        }
-        public String getEngineName() {
-            return this.engineName;
         }
 
     }
@@ -487,23 +457,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPerformance extends TeaModel {
-        @NameInMap("Rps")
-        public String rps;
-
         @NameInMap("Flow")
         public String flow;
+
+        @NameInMap("Rps")
+        public String rps;
 
         public static DescribeDtsJobsResponseBodyDtsJobListPerformance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListPerformance self = new DescribeDtsJobsResponseBodyDtsJobListPerformance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPerformance setRps(String rps) {
-            this.rps = rps;
-            return this;
-        }
-        public String getRps() {
-            return this.rps;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListPerformance setFlow(String flow) {
@@ -514,43 +476,35 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.flow;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListPerformance setRps(String rps) {
+            this.rps = rps;
+            return this;
+        }
+        public String getRps() {
+            return this.rps;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail extends TeaModel {
-        @NameInMap("CheckResult")
-        public String checkResult;
+        @NameInMap("CheckItem")
+        public String checkItem;
 
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        @NameInMap("CheckItem")
-        public String checkItem;
-
-        @NameInMap("RepairMethod")
-        public String repairMethod;
+        @NameInMap("CheckResult")
+        public String checkResult;
 
         @NameInMap("FailedReason")
         public String failedReason;
 
+        @NameInMap("RepairMethod")
+        public String repairMethod;
+
         public static DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail self = new DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setCheckResult(String checkResult) {
-            this.checkResult = checkResult;
-            return this;
-        }
-        public String getCheckResult() {
-            return this.checkResult;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setCheckItemDescription(String checkItemDescription) {
-            this.checkItemDescription = checkItemDescription;
-            return this;
-        }
-        public String getCheckItemDescription() {
-            return this.checkItemDescription;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setCheckItem(String checkItem) {
@@ -561,12 +515,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.checkItem;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setRepairMethod(String repairMethod) {
-            this.repairMethod = repairMethod;
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setCheckItemDescription(String checkItemDescription) {
+            this.checkItemDescription = checkItemDescription;
             return this;
         }
-        public String getRepairMethod() {
-            return this.repairMethod;
+        public String getCheckItemDescription() {
+            return this.checkItemDescription;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setCheckResult(String checkResult) {
+            this.checkResult = checkResult;
+            return this;
+        }
+        public String getCheckResult() {
+            return this.checkResult;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setFailedReason(String failedReason) {
@@ -577,48 +539,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.failedReason;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail setRepairMethod(String repairMethod) {
+            this.repairMethod = repairMethod;
+            return this;
+        }
+        public String getRepairMethod() {
+            return this.repairMethod;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
+        @NameInMap("Detail")
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail> detail;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("Detail")
-        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail> detail;
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setDetail(java.util.List<DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail> detail) {
@@ -629,27 +575,23 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.detail;
         }
 
-    }
-
-    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("Progress")
-        public String progress;
-
-        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus();
-            return TeaModel.build(map, self);
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setStatus(String status) {
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -657,12 +599,87 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setPercent(String percent) {
-            this.percent = percent;
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListRetryState extends TeaModel {
+        @NameInMap("ErrMessage")
+        public String errMessage;
+
+        @NameInMap("MaxRetryTime")
+        public Integer maxRetryTime;
+
+        @NameInMap("RetryCount")
+        public Integer retryCount;
+
+        @NameInMap("RetryTarget")
+        public String retryTarget;
+
+        @NameInMap("RetryTime")
+        public Integer retryTime;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListRetryState build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListRetryState self = new DescribeDtsJobsResponseBodyDtsJobListRetryState();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setErrMessage(String errMessage) {
+            this.errMessage = errMessage;
             return this;
         }
-        public String getPercent() {
-            return this.percent;
+        public String getErrMessage() {
+            return this.errMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMaxRetryTime(Integer maxRetryTime) {
+            this.maxRetryTime = maxRetryTime;
+            return this;
+        }
+        public Integer getMaxRetryTime() {
+            return this.maxRetryTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryTarget(String retryTarget) {
+            this.retryTarget = retryTarget;
+            return this;
+        }
+        public String getRetryTarget() {
+            return this.retryTarget;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryTime(Integer retryTime) {
+            this.retryTime = retryTime;
+            return this;
+        }
+        public Integer getRetryTime() {
+            return this.retryTime;
+        }
+
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus();
+            return TeaModel.build(map, self);
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setErrorMessage(String errorMessage) {
@@ -673,6 +690,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -681,11 +706,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
@@ -696,20 +729,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Progress")
         public String progress;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus setStatus(String status) {
-            this.status = status;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus setNeedUpgrade(Boolean needUpgrade) {
@@ -736,74 +769,50 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getErrorMessage() {
-            return this.errorMessage;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint extends TeaModel {
-        @NameInMap("SslSolutionEnum")
-        public String sslSolutionEnum;
-
-        @NameInMap("OracleSID")
-        public String oracleSID;
-
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("DatabaseName")
         public String databaseName;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("UserName")
-        public String userName;
 
         @NameInMap("EngineName")
         public String engineName;
 
+        @NameInMap("InstanceID")
+        public String instanceID;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("OracleSID")
+        public String oracleSID;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SslSolutionEnum")
+        public String sslSolutionEnum;
+
+        @NameInMap("UserName")
+        public String userName;
+
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setSslSolutionEnum(String sslSolutionEnum) {
-            this.sslSolutionEnum = sslSolutionEnum;
-            return this;
-        }
-        public String getSslSolutionEnum() {
-            return this.sslSolutionEnum;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setDatabaseName(String databaseName) {
@@ -814,12 +823,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.databaseName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setIp(String ip) {
-            this.ip = ip;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setEngineName(String engineName) {
+            this.engineName = engineName;
             return this;
         }
-        public String getIp() {
-            return this.ip;
+        public String getEngineName() {
+            return this.engineName;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setInstanceID(String instanceID) {
@@ -830,14 +839,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceID;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -846,20 +847,52 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setSslSolutionEnum(String sslSolutionEnum) {
+            this.sslSolutionEnum = sslSolutionEnum;
+            return this;
+        }
+        public String getSslSolutionEnum() {
+            return this.sslSolutionEnum;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setUserName(String userName) {
             this.userName = userName;
             return this;
         }
         public String getUserName() {
             return this.userName;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint setEngineName(String engineName) {
-            this.engineName = engineName;
-            return this;
-        }
-        public String getEngineName() {
-            return this.engineName;
         }
 
     }
@@ -906,23 +939,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance extends TeaModel {
-        @NameInMap("Rps")
-        public String rps;
-
         @NameInMap("Flow")
         public String flow;
+
+        @NameInMap("Rps")
+        public String rps;
 
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance setRps(String rps) {
-            this.rps = rps;
-            return this;
-        }
-        public String getRps() {
-            return this.rps;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance setFlow(String flow) {
@@ -933,43 +958,35 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.flow;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance setRps(String rps) {
+            this.rps = rps;
+            return this;
+        }
+        public String getRps() {
+            return this.rps;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail extends TeaModel {
-        @NameInMap("CheckResult")
-        public String checkResult;
+        @NameInMap("CheckItem")
+        public String checkItem;
 
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
-        @NameInMap("CheckItem")
-        public String checkItem;
-
-        @NameInMap("RepairMethod")
-        public String repairMethod;
+        @NameInMap("CheckResult")
+        public String checkResult;
 
         @NameInMap("FailedReason")
         public String failedReason;
 
+        @NameInMap("RepairMethod")
+        public String repairMethod;
+
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setCheckResult(String checkResult) {
-            this.checkResult = checkResult;
-            return this;
-        }
-        public String getCheckResult() {
-            return this.checkResult;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setCheckItemDescription(String checkItemDescription) {
-            this.checkItemDescription = checkItemDescription;
-            return this;
-        }
-        public String getCheckItemDescription() {
-            return this.checkItemDescription;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setCheckItem(String checkItem) {
@@ -980,12 +997,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.checkItem;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setRepairMethod(String repairMethod) {
-            this.repairMethod = repairMethod;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setCheckItemDescription(String checkItemDescription) {
+            this.checkItemDescription = checkItemDescription;
             return this;
         }
-        public String getRepairMethod() {
-            return this.repairMethod;
+        public String getCheckItemDescription() {
+            return this.checkItemDescription;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setCheckResult(String checkResult) {
+            this.checkResult = checkResult;
+            return this;
+        }
+        public String getCheckResult() {
+            return this.checkResult;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setFailedReason(String failedReason) {
@@ -996,48 +1021,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.failedReason;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail setRepairMethod(String repairMethod) {
+            this.repairMethod = repairMethod;
+            return this;
+        }
+        public String getRepairMethod() {
+            return this.repairMethod;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
+        @NameInMap("Detail")
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail> detail;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("Detail")
-        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail> detail;
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setDetail(java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail> detail) {
@@ -1048,66 +1057,66 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.detail;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint extends TeaModel {
-        @NameInMap("SslSolutionEnum")
-        public String sslSolutionEnum;
-
-        @NameInMap("OracleSID")
-        public String oracleSID;
-
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("DatabaseName")
         public String databaseName;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("UserName")
-        public String userName;
 
         @NameInMap("EngineName")
         public String engineName;
 
+        @NameInMap("InstanceID")
+        public String instanceID;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("OracleSID")
+        public String oracleSID;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SslSolutionEnum")
+        public String sslSolutionEnum;
+
+        @NameInMap("UserName")
+        public String userName;
+
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setSslSolutionEnum(String sslSolutionEnum) {
-            this.sslSolutionEnum = sslSolutionEnum;
-            return this;
-        }
-        public String getSslSolutionEnum() {
-            return this.sslSolutionEnum;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setDatabaseName(String databaseName) {
@@ -1118,12 +1127,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.databaseName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setIp(String ip) {
-            this.ip = ip;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setEngineName(String engineName) {
+            this.engineName = engineName;
             return this;
         }
-        public String getIp() {
-            return this.ip;
+        public String getEngineName() {
+            return this.engineName;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setInstanceID(String instanceID) {
@@ -1134,6 +1143,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceID;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setPort(String port) {
             this.port = port;
             return this;
@@ -1142,12 +1175,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setSslSolutionEnum(String sslSolutionEnum) {
+            this.sslSolutionEnum = sslSolutionEnum;
+            return this;
+        }
+        public String getSslSolutionEnum() {
+            return this.sslSolutionEnum;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setUserName(String userName) {
@@ -1158,48 +1199,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint setEngineName(String engineName) {
-            this.engineName = engineName;
-            return this;
-        }
-        public String getEngineName() {
-            return this.engineName;
-        }
-
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("Percent")
         public String percent;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("Progress")
         public String progress;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setErrorMessage(String errorMessage) {
@@ -1210,6 +1227,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -1218,50 +1243,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJob extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DtsJobName")
-        public String dtsJobName;
-
-        @NameInMap("Delay")
-        public Integer delay;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("DtsJobId")
-        public String dtsJobId;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
+        @NameInMap("Checkpoint")
+        public String checkpoint;
 
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("Reserved")
-        public String reserved;
-
-        @NameInMap("DbObject")
-        public String dbObject;
-
-        @NameInMap("DtsJobClass")
-        public String dtsJobClass;
-
-        @NameInMap("DtsInstanceID")
-        public String dtsInstanceID;
-
-        @NameInMap("DtsJobDirection")
-        public String dtsJobDirection;
-
-        @NameInMap("Checkpoint")
-        public String checkpoint;
 
         @NameInMap("DataInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus dataInitializationStatus;
@@ -1269,11 +1266,41 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("DataSynchronizationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus dataSynchronizationStatus;
 
+        @NameInMap("DbObject")
+        public String dbObject;
+
+        @NameInMap("Delay")
+        public Long delay;
+
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint destinationEndpoint;
 
+        @NameInMap("DtsInstanceID")
+        public String dtsInstanceID;
+
+        @NameInMap("DtsJobClass")
+        public String dtsJobClass;
+
+        @NameInMap("DtsJobDirection")
+        public String dtsJobDirection;
+
+        @NameInMap("DtsJobId")
+        public String dtsJobId;
+
+        @NameInMap("DtsJobName")
+        public String dtsJobName;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode;
+
+        @NameInMap("PayType")
+        public String payType;
 
         @NameInMap("Performance")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance performance;
@@ -1281,8 +1308,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("PrecheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus precheckStatus;
 
+        @NameInMap("Reserved")
+        public String reserved;
+
         @NameInMap("SourceEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint sourceEndpoint;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("StructureInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus structureInitializationStatus;
@@ -1292,52 +1325,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setStatus(String status) {
-            this.status = status;
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setCheckpoint(String checkpoint) {
+            this.checkpoint = checkpoint;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobName(String dtsJobName) {
-            this.dtsJobName = dtsJobName;
-            return this;
-        }
-        public String getDtsJobName() {
-            return this.dtsJobName;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDelay(Integer delay) {
-            this.delay = delay;
-            return this;
-        }
-        public Integer getDelay() {
-            return this.delay;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobId(String dtsJobId) {
-            this.dtsJobId = dtsJobId;
-            return this;
-        }
-        public String getDtsJobId() {
-            return this.dtsJobId;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
+        public String getCheckpoint() {
+            return this.checkpoint;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setCreateTime(String createTime) {
@@ -1346,62 +1339,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setReserved(String reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public String getReserved() {
-            return this.reserved;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDbObject(String dbObject) {
-            this.dbObject = dbObject;
-            return this;
-        }
-        public String getDbObject() {
-            return this.dbObject;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobClass(String dtsJobClass) {
-            this.dtsJobClass = dtsJobClass;
-            return this;
-        }
-        public String getDtsJobClass() {
-            return this.dtsJobClass;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsInstanceID(String dtsInstanceID) {
-            this.dtsInstanceID = dtsInstanceID;
-            return this;
-        }
-        public String getDtsInstanceID() {
-            return this.dtsInstanceID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobDirection(String dtsJobDirection) {
-            this.dtsJobDirection = dtsJobDirection;
-            return this;
-        }
-        public String getDtsJobDirection() {
-            return this.dtsJobDirection;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setCheckpoint(String checkpoint) {
-            this.checkpoint = checkpoint;
-            return this;
-        }
-        public String getCheckpoint() {
-            return this.checkpoint;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDataInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus dataInitializationStatus) {
@@ -1420,6 +1357,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.dataSynchronizationStatus;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDbObject(String dbObject) {
+            this.dbObject = dbObject;
+            return this;
+        }
+        public String getDbObject() {
+            return this.dbObject;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDelay(Long delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Long getDelay() {
+            return this.delay;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDestinationEndpoint(DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint destinationEndpoint) {
             this.destinationEndpoint = destinationEndpoint;
             return this;
@@ -1428,12 +1381,76 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.destinationEndpoint;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsInstanceID(String dtsInstanceID) {
+            this.dtsInstanceID = dtsInstanceID;
+            return this;
+        }
+        public String getDtsInstanceID() {
+            return this.dtsInstanceID;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobClass(String dtsJobClass) {
+            this.dtsJobClass = dtsJobClass;
+            return this;
+        }
+        public String getDtsJobClass() {
+            return this.dtsJobClass;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobDirection(String dtsJobDirection) {
+            this.dtsJobDirection = dtsJobDirection;
+            return this;
+        }
+        public String getDtsJobDirection() {
+            return this.dtsJobDirection;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobId(String dtsJobId) {
+            this.dtsJobId = dtsJobId;
+            return this;
+        }
+        public String getDtsJobId() {
+            return this.dtsJobId;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setDtsJobName(String dtsJobName) {
+            this.dtsJobName = dtsJobName;
+            return this;
+        }
+        public String getDtsJobName() {
+            return this.dtsJobName;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode) {
             this.migrationMode = migrationMode;
             return this;
         }
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setPerformance(DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance performance) {
@@ -1452,12 +1469,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.precheckStatus;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setReserved(String reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public String getReserved() {
+            return this.reserved;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setSourceEndpoint(DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint getSourceEndpoint() {
             return this.sourceEndpoint;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setStructureInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus structureInitializationStatus) {
@@ -1471,63 +1504,39 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint extends TeaModel {
-        @NameInMap("SslSolutionEnum")
-        public String sslSolutionEnum;
-
-        @NameInMap("OracleSID")
-        public String oracleSID;
-
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("DatabaseName")
         public String databaseName;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("UserName")
-        public String userName;
 
         @NameInMap("EngineName")
         public String engineName;
 
+        @NameInMap("InstanceID")
+        public String instanceID;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("OracleSID")
+        public String oracleSID;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("SslSolutionEnum")
+        public String sslSolutionEnum;
+
+        @NameInMap("UserName")
+        public String userName;
+
         public static DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint self = new DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setSslSolutionEnum(String sslSolutionEnum) {
-            this.sslSolutionEnum = sslSolutionEnum;
-            return this;
-        }
-        public String getSslSolutionEnum() {
-            return this.sslSolutionEnum;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setDatabaseName(String databaseName) {
@@ -1538,12 +1547,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.databaseName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setIp(String ip) {
-            this.ip = ip;
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setEngineName(String engineName) {
+            this.engineName = engineName;
             return this;
         }
-        public String getIp() {
-            return this.ip;
+        public String getEngineName() {
+            return this.engineName;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setInstanceID(String instanceID) {
@@ -1554,6 +1563,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.instanceID;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setPort(String port) {
             this.port = port;
             return this;
@@ -1562,12 +1595,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setSslSolutionEnum(String sslSolutionEnum) {
+            this.sslSolutionEnum = sslSolutionEnum;
+            return this;
+        }
+        public String getSslSolutionEnum() {
+            return this.sslSolutionEnum;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setUserName(String userName) {
@@ -1578,48 +1619,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint setEngineName(String engineName) {
-            this.engineName = engineName;
-            return this;
-        }
-        public String getEngineName() {
-            return this.engineName;
-        }
-
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("Percent")
         public String percent;
 
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
         @NameInMap("Progress")
         public String progress;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus self = new DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setErrorMessage(String errorMessage) {
@@ -1630,6 +1647,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setProgress(String progress) {
             this.progress = progress;
             return this;
@@ -1638,171 +1663,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.progress;
         }
 
-    }
-
-    public static class DescribeDtsJobsResponseBodyDtsJobListRetryState extends TeaModel {
-        @NameInMap("RetryCount")
-        public Integer retryCount;
-
-        @NameInMap("MaxRetryTime")
-        public Integer maxRetryTime;
-
-        @NameInMap("ErrMessage")
-        public String errMessage;
-
-        @NameInMap("RetryTarget")
-        public String retryTarget;
-
-        @NameInMap("RetryTime")
-        public Integer retryTime;
-
-        public static DescribeDtsJobsResponseBodyDtsJobListRetryState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobListRetryState self = new DescribeDtsJobsResponseBodyDtsJobListRetryState();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryCount(Integer retryCount) {
-            this.retryCount = retryCount;
-            return this;
-        }
-        public Integer getRetryCount() {
-            return this.retryCount;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMaxRetryTime(Integer maxRetryTime) {
-            this.maxRetryTime = maxRetryTime;
-            return this;
-        }
-        public Integer getMaxRetryTime() {
-            return this.maxRetryTime;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState setErrMessage(String errMessage) {
-            this.errMessage = errMessage;
-            return this;
-        }
-        public String getErrMessage() {
-            return this.errMessage;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryTarget(String retryTarget) {
-            this.retryTarget = retryTarget;
-            return this;
-        }
-        public String getRetryTarget() {
-            return this.retryTarget;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState setRetryTime(Integer retryTime) {
-            this.retryTime = retryTime;
-            return this;
-        }
-        public Integer getRetryTime() {
-            return this.retryTime;
-        }
-
-    }
-
-    public static class DescribeDtsJobsResponseBodyDtsJobList extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DtsJobName")
-        public String dtsJobName;
-
-        @NameInMap("Delay")
-        public Integer delay;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("DtsJobId")
-        public String dtsJobId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("Reserved")
-        public String reserved;
-
-        @NameInMap("ConsumptionClient")
-        public String consumptionClient;
-
-        @NameInMap("DbObject")
-        public String dbObject;
-
-        @NameInMap("DtsJobClass")
-        public String dtsJobClass;
-
-        @NameInMap("ConsumptionCheckpoint")
-        public String consumptionCheckpoint;
-
-        @NameInMap("EndTimestamp")
-        public String endTimestamp;
-
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("BeginTimestamp")
-        public String beginTimestamp;
-
-        @NameInMap("DtsInstanceID")
-        public String dtsInstanceID;
-
-        @NameInMap("DtsJobDirection")
-        public String dtsJobDirection;
-
-        @NameInMap("Checkpoint")
-        public String checkpoint;
-
-        @NameInMap("TagList")
-        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> tagList;
-
-        @NameInMap("DataInitializationStatus")
-        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus dataInitializationStatus;
-
-        @NameInMap("DataSynchronizationStatus")
-        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus dataSynchronizationStatus;
-
-        @NameInMap("DataEtlStatus")
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus;
-
-        @NameInMap("DestinationEndpoint")
-        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint destinationEndpoint;
-
-        @NameInMap("MigrationMode")
-        public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
-
-        @NameInMap("Performance")
-        public DescribeDtsJobsResponseBodyDtsJobListPerformance performance;
-
-        @NameInMap("PrecheckStatus")
-        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus precheckStatus;
-
-        @NameInMap("ReverseJob")
-        public DescribeDtsJobsResponseBodyDtsJobListReverseJob reverseJob;
-
-        @NameInMap("SourceEndpoint")
-        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint sourceEndpoint;
-
-        @NameInMap("StructureInitializationStatus")
-        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus structureInitializationStatus;
-
-        @NameInMap("RetryState")
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState retryState;
-
-        public static DescribeDtsJobsResponseBodyDtsJobList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDtsJobsResponseBodyDtsJobList self = new DescribeDtsJobsResponseBodyDtsJobList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobList setStatus(String status) {
+        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -1810,108 +1671,138 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobName(String dtsJobName) {
-            this.dtsJobName = dtsJobName;
-            return this;
-        }
-        public String getDtsJobName() {
-            return this.dtsJobName;
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListTagList extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListTagList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListTagList self = new DescribeDtsJobsResponseBodyDtsJobListTagList();
+            return TeaModel.build(map, self);
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDelay(Integer delay) {
-            this.delay = delay;
+        public DescribeDtsJobsResponseBodyDtsJobListTagList setTagKey(String tagKey) {
+            this.tagKey = tagKey;
             return this;
         }
-        public Integer getDelay() {
-            return this.delay;
+        public String getTagKey() {
+            return this.tagKey;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
+        public DescribeDtsJobsResponseBodyDtsJobListTagList setTagValue(String tagValue) {
+            this.tagValue = tagValue;
             return this;
         }
-        public String getErrorMessage() {
-            return this.errorMessage;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
+    }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobId(String dtsJobId) {
-            this.dtsJobId = dtsJobId;
-            return this;
-        }
-        public String getDtsJobId() {
-            return this.dtsJobId;
-        }
+    public static class DescribeDtsJobsResponseBodyDtsJobList extends TeaModel {
+        @NameInMap("AppName")
+        public String appName;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
+        @NameInMap("BeginTimestamp")
+        public String beginTimestamp;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
+        @NameInMap("Checkpoint")
+        public String checkpoint;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setReserved(String reserved) {
-            this.reserved = reserved;
-            return this;
-        }
-        public String getReserved() {
-            return this.reserved;
-        }
+        @NameInMap("ConsumptionCheckpoint")
+        public String consumptionCheckpoint;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setConsumptionClient(String consumptionClient) {
-            this.consumptionClient = consumptionClient;
-            return this;
-        }
-        public String getConsumptionClient() {
-            return this.consumptionClient;
-        }
+        @NameInMap("ConsumptionClient")
+        public String consumptionClient;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDbObject(String dbObject) {
-            this.dbObject = dbObject;
-            return this;
-        }
-        public String getDbObject() {
-            return this.dbObject;
-        }
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobClass(String dtsJobClass) {
-            this.dtsJobClass = dtsJobClass;
-            return this;
-        }
-        public String getDtsJobClass() {
-            return this.dtsJobClass;
-        }
+        @NameInMap("DataEtlStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setConsumptionCheckpoint(String consumptionCheckpoint) {
-            this.consumptionCheckpoint = consumptionCheckpoint;
-            return this;
-        }
-        public String getConsumptionCheckpoint() {
-            return this.consumptionCheckpoint;
-        }
+        @NameInMap("DataInitializationStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus dataInitializationStatus;
 
-        public DescribeDtsJobsResponseBodyDtsJobList setEndTimestamp(String endTimestamp) {
-            this.endTimestamp = endTimestamp;
-            return this;
-        }
-        public String getEndTimestamp() {
-            return this.endTimestamp;
+        @NameInMap("DataSynchronizationStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus dataSynchronizationStatus;
+
+        @NameInMap("DbObject")
+        public String dbObject;
+
+        @NameInMap("Delay")
+        public Long delay;
+
+        @NameInMap("DestinationEndpoint")
+        public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint destinationEndpoint;
+
+        @NameInMap("DtsInstanceID")
+        public String dtsInstanceID;
+
+        @NameInMap("DtsJobClass")
+        public String dtsJobClass;
+
+        @NameInMap("DtsJobDirection")
+        public String dtsJobDirection;
+
+        @NameInMap("DtsJobId")
+        public String dtsJobId;
+
+        @NameInMap("DtsJobName")
+        public String dtsJobName;
+
+        @NameInMap("EndTimestamp")
+        public String endTimestamp;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("MigrationMode")
+        public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
+
+        @NameInMap("OriginType")
+        public String originType;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Performance")
+        public DescribeDtsJobsResponseBodyDtsJobListPerformance performance;
+
+        @NameInMap("PrecheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus precheckStatus;
+
+        @NameInMap("Reserved")
+        public String reserved;
+
+        @NameInMap("RetryState")
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState retryState;
+
+        @NameInMap("ReverseJob")
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob reverseJob;
+
+        @NameInMap("SourceEndpoint")
+        public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint sourceEndpoint;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StructureInitializationStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus structureInitializationStatus;
+
+        @NameInMap("TagList")
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> tagList;
+
+        public static DescribeDtsJobsResponseBodyDtsJobList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobList self = new DescribeDtsJobsResponseBodyDtsJobList();
+            return TeaModel.build(map, self);
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setAppName(String appName) {
@@ -1930,22 +1821,6 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.beginTimestamp;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDtsInstanceID(String dtsInstanceID) {
-            this.dtsInstanceID = dtsInstanceID;
-            return this;
-        }
-        public String getDtsInstanceID() {
-            return this.dtsInstanceID;
-        }
-
-        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobDirection(String dtsJobDirection) {
-            this.dtsJobDirection = dtsJobDirection;
-            return this;
-        }
-        public String getDtsJobDirection() {
-            return this.dtsJobDirection;
-        }
-
         public DescribeDtsJobsResponseBodyDtsJobList setCheckpoint(String checkpoint) {
             this.checkpoint = checkpoint;
             return this;
@@ -1954,12 +1829,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.checkpoint;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setTagList(java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> tagList) {
-            this.tagList = tagList;
+        public DescribeDtsJobsResponseBodyDtsJobList setConsumptionCheckpoint(String consumptionCheckpoint) {
+            this.consumptionCheckpoint = consumptionCheckpoint;
             return this;
         }
-        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> getTagList() {
-            return this.tagList;
+        public String getConsumptionCheckpoint() {
+            return this.consumptionCheckpoint;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setConsumptionClient(String consumptionClient) {
+            this.consumptionClient = consumptionClient;
+            return this;
+        }
+        public String getConsumptionClient() {
+            return this.consumptionClient;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDataEtlStatus(DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus) {
+            this.dataEtlStatus = dataEtlStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus getDataEtlStatus() {
+            return this.dataEtlStatus;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setDataInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus dataInitializationStatus) {
@@ -1978,12 +1877,20 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.dataSynchronizationStatus;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setDataEtlStatus(DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus) {
-            this.dataEtlStatus = dataEtlStatus;
+        public DescribeDtsJobsResponseBodyDtsJobList setDbObject(String dbObject) {
+            this.dbObject = dbObject;
             return this;
         }
-        public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus getDataEtlStatus() {
-            return this.dataEtlStatus;
+        public String getDbObject() {
+            return this.dbObject;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDelay(Long delay) {
+            this.delay = delay;
+            return this;
+        }
+        public Long getDelay() {
+            return this.delay;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setDestinationEndpoint(DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint destinationEndpoint) {
@@ -1994,12 +1901,92 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.destinationEndpoint;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsInstanceID(String dtsInstanceID) {
+            this.dtsInstanceID = dtsInstanceID;
+            return this;
+        }
+        public String getDtsInstanceID() {
+            return this.dtsInstanceID;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobClass(String dtsJobClass) {
+            this.dtsJobClass = dtsJobClass;
+            return this;
+        }
+        public String getDtsJobClass() {
+            return this.dtsJobClass;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobDirection(String dtsJobDirection) {
+            this.dtsJobDirection = dtsJobDirection;
+            return this;
+        }
+        public String getDtsJobDirection() {
+            return this.dtsJobDirection;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobId(String dtsJobId) {
+            this.dtsJobId = dtsJobId;
+            return this;
+        }
+        public String getDtsJobId() {
+            return this.dtsJobId;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsJobName(String dtsJobName) {
+            this.dtsJobName = dtsJobName;
+            return this;
+        }
+        public String getDtsJobName() {
+            return this.dtsJobName;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setEndTimestamp(String endTimestamp) {
+            this.endTimestamp = endTimestamp;
+            return this;
+        }
+        public String getEndTimestamp() {
+            return this.endTimestamp;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setMigrationMode(DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode) {
             this.migrationMode = migrationMode;
             return this;
         }
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setOriginType(String originType) {
+            this.originType = originType;
+            return this;
+        }
+        public String getOriginType() {
+            return this.originType;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setPerformance(DescribeDtsJobsResponseBodyDtsJobListPerformance performance) {
@@ -2018,6 +2005,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.precheckStatus;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setReserved(String reserved) {
+            this.reserved = reserved;
+            return this;
+        }
+        public String getReserved() {
+            return this.reserved;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setRetryState(DescribeDtsJobsResponseBodyDtsJobListRetryState retryState) {
+            this.retryState = retryState;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState getRetryState() {
+            return this.retryState;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setReverseJob(DescribeDtsJobsResponseBodyDtsJobListReverseJob reverseJob) {
             this.reverseJob = reverseJob;
             return this;
@@ -2034,6 +2037,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.sourceEndpoint;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setStructureInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
             return this;
@@ -2042,12 +2053,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.structureInitializationStatus;
         }
 
-        public DescribeDtsJobsResponseBodyDtsJobList setRetryState(DescribeDtsJobsResponseBodyDtsJobListRetryState retryState) {
-            this.retryState = retryState;
+        public DescribeDtsJobsResponseBodyDtsJobList setTagList(java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> tagList) {
+            this.tagList = tagList;
             return this;
         }
-        public DescribeDtsJobsResponseBodyDtsJobListRetryState getRetryState() {
-            return this.retryState;
+        public java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> getTagList() {
+            return this.tagList;
         }
 
     }

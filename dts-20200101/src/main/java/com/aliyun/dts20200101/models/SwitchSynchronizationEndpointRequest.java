@@ -10,20 +10,20 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     @NameInMap("SourceEndpoint")
     public SwitchSynchronizationEndpointRequestSourceEndpoint sourceEndpoint;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SynchronizationJobId")
-    public String synchronizationJobId;
-
-    @NameInMap("SynchronizationDirection")
-    public String synchronizationDirection;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SynchronizationDirection")
+    public String synchronizationDirection;
+
+    @NameInMap("SynchronizationJobId")
+    public String synchronizationJobId;
 
     public static SwitchSynchronizationEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         SwitchSynchronizationEndpointRequest self = new SwitchSynchronizationEndpointRequest();
@@ -46,28 +46,12 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         return this.sourceEndpoint;
     }
 
-    public SwitchSynchronizationEndpointRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SwitchSynchronizationEndpointRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public SwitchSynchronizationEndpointRequest setSynchronizationJobId(String synchronizationJobId) {
-        this.synchronizationJobId = synchronizationJobId;
-        return this;
-    }
-    public String getSynchronizationJobId() {
-        return this.synchronizationJobId;
-    }
-
-    public SwitchSynchronizationEndpointRequest setSynchronizationDirection(String synchronizationDirection) {
-        this.synchronizationDirection = synchronizationDirection;
-        return this;
-    }
-    public String getSynchronizationDirection() {
-        return this.synchronizationDirection;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public SwitchSynchronizationEndpointRequest setOwnerId(String ownerId) {
@@ -78,57 +62,49 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public SwitchSynchronizationEndpointRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public SwitchSynchronizationEndpointRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SwitchSynchronizationEndpointRequest setSynchronizationDirection(String synchronizationDirection) {
+        this.synchronizationDirection = synchronizationDirection;
+        return this;
+    }
+    public String getSynchronizationDirection() {
+        return this.synchronizationDirection;
+    }
+
+    public SwitchSynchronizationEndpointRequest setSynchronizationJobId(String synchronizationJobId) {
+        this.synchronizationJobId = synchronizationJobId;
+        return this;
+    }
+    public String getSynchronizationJobId() {
+        return this.synchronizationJobId;
     }
 
     public static class SwitchSynchronizationEndpointRequestEndpoint extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
+        @NameInMap("IP")
+        public String IP;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("IP")
-        public String IP;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("Type")
+        public String type;
+
         public static SwitchSynchronizationEndpointRequestEndpoint build(java.util.Map<String, ?> map) throws Exception {
             SwitchSynchronizationEndpointRequestEndpoint self = new SwitchSynchronizationEndpointRequestEndpoint();
             return TeaModel.build(map, self);
-        }
-
-        public SwitchSynchronizationEndpointRequestEndpoint setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public SwitchSynchronizationEndpointRequestEndpoint setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public SwitchSynchronizationEndpointRequestEndpoint setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public SwitchSynchronizationEndpointRequestEndpoint setIP(String IP) {
@@ -139,12 +115,36 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
             return this.IP;
         }
 
+        public SwitchSynchronizationEndpointRequestEndpoint setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public SwitchSynchronizationEndpointRequestEndpoint setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public SwitchSynchronizationEndpointRequestEndpoint setPort(String port) {
             this.port = port;
             return this;
         }
         public String getPort() {
             return this.port;
+        }
+
+        public SwitchSynchronizationEndpointRequestEndpoint setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

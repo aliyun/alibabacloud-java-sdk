@@ -7,26 +7,26 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     @NameInMap("MigrationMode")
     public DescribeMigrationJobDetailRequestMigrationMode migrationMode;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
-    @NameInMap("MigrationJobId")
-    public String migrationJobId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("MigrationJobId")
+    public String migrationJobId;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeMigrationJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobDetailRequest self = new DescribeMigrationJobDetailRequest();
@@ -41,36 +41,12 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         return this.migrationMode;
     }
 
-    public DescribeMigrationJobDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeMigrationJobDetailRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMigrationJobDetailRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeMigrationJobDetailRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeMigrationJobDetailRequest setMigrationJobId(String migrationJobId) {
-        this.migrationJobId = migrationJobId;
-        return this;
-    }
-    public String getMigrationJobId() {
-        return this.migrationJobId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeMigrationJobDetailRequest setClientToken(String clientToken) {
@@ -81,6 +57,14 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DescribeMigrationJobDetailRequest setMigrationJobId(String migrationJobId) {
+        this.migrationJobId = migrationJobId;
+        return this;
+    }
+    public String getMigrationJobId() {
+        return this.migrationJobId;
+    }
+
     public DescribeMigrationJobDetailRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -89,35 +73,43 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeMigrationJobDetailRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeMigrationJobDetailRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeMigrationJobDetailRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeMigrationJobDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class DescribeMigrationJobDetailRequestMigrationMode extends TeaModel {
-        @NameInMap("StructureInitialization")
-        public Boolean structureInitialization;
-
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        @NameInMap("StructureInitialization")
+        public Boolean structureInitialization;
+
         public static DescribeMigrationJobDetailRequestMigrationMode build(java.util.Map<String, ?> map) throws Exception {
             DescribeMigrationJobDetailRequestMigrationMode self = new DescribeMigrationJobDetailRequestMigrationMode();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMigrationJobDetailRequestMigrationMode setStructureInitialization(Boolean structureInitialization) {
-            this.structureInitialization = structureInitialization;
-            return this;
-        }
-        public Boolean getStructureInitialization() {
-            return this.structureInitialization;
         }
 
         public DescribeMigrationJobDetailRequestMigrationMode setDataInitialization(Boolean dataInitialization) {
@@ -134,6 +126,14 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
         }
         public Boolean getDataSynchronization() {
             return this.dataSynchronization;
+        }
+
+        public DescribeMigrationJobDetailRequestMigrationMode setStructureInitialization(Boolean structureInitialization) {
+            this.structureInitialization = structureInitialization;
+            return this;
+        }
+        public Boolean getStructureInitialization() {
+            return this.structureInitialization;
         }
 
     }

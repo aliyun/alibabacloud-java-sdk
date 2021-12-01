@@ -4,11 +4,14 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionMetaRequest extends TeaModel {
-    @NameInMap("Sid")
-    public String sid;
-
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Sid")
+    public String sid;
 
     @NameInMap("SubMigrationJobIds")
     public java.util.Map<String, ?> subMigrationJobIds;
@@ -16,20 +19,9 @@ public class DescribeSubscriptionMetaRequest extends TeaModel {
     @NameInMap("Topics")
     public java.util.Map<String, ?> topics;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DescribeSubscriptionMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubscriptionMetaRequest self = new DescribeSubscriptionMetaRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSubscriptionMetaRequest setSid(String sid) {
-        this.sid = sid;
-        return this;
-    }
-    public String getSid() {
-        return this.sid;
     }
 
     public DescribeSubscriptionMetaRequest setDtsInstanceId(String dtsInstanceId) {
@@ -38,6 +30,22 @@ public class DescribeSubscriptionMetaRequest extends TeaModel {
     }
     public String getDtsInstanceId() {
         return this.dtsInstanceId;
+    }
+
+    public DescribeSubscriptionMetaRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSubscriptionMetaRequest setSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
+    public String getSid() {
+        return this.sid;
     }
 
     public DescribeSubscriptionMetaRequest setSubMigrationJobIds(java.util.Map<String, ?> subMigrationJobIds) {
@@ -54,14 +62,6 @@ public class DescribeSubscriptionMetaRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getTopics() {
         return this.topics;
-    }
-
-    public DescribeSubscriptionMetaRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

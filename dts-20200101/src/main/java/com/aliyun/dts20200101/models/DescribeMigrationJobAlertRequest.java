@@ -4,40 +4,32 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobAlertRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("MigrationJobId")
-    public String migrationJobId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("MigrationJobId")
+    public String migrationJobId;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeMigrationJobAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobAlertRequest self = new DescribeMigrationJobAlertRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMigrationJobAlertRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeMigrationJobAlertRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMigrationJobAlertRequest setMigrationJobId(String migrationJobId) {
-        this.migrationJobId = migrationJobId;
-        return this;
-    }
-    public String getMigrationJobId() {
-        return this.migrationJobId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeMigrationJobAlertRequest setClientToken(String clientToken) {
@@ -48,6 +40,14 @@ public class DescribeMigrationJobAlertRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DescribeMigrationJobAlertRequest setMigrationJobId(String migrationJobId) {
+        this.migrationJobId = migrationJobId;
+        return this;
+    }
+    public String getMigrationJobId() {
+        return this.migrationJobId;
+    }
+
     public DescribeMigrationJobAlertRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -56,12 +56,12 @@ public class DescribeMigrationJobAlertRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeMigrationJobAlertRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeMigrationJobAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

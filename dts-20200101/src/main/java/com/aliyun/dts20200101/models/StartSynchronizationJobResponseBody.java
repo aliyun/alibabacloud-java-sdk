@@ -4,29 +4,21 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StartSynchronizationJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrCode")
     public String errCode;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public String success;
+
     public static StartSynchronizationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartSynchronizationJobResponseBody self = new StartSynchronizationJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartSynchronizationJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StartSynchronizationJobResponseBody setErrCode(String errCode) {
@@ -37,20 +29,28 @@ public class StartSynchronizationJobResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public StartSynchronizationJobResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public StartSynchronizationJobResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
     public String getErrMessage() {
         return this.errMessage;
+    }
+
+    public StartSynchronizationJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public StartSynchronizationJobResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

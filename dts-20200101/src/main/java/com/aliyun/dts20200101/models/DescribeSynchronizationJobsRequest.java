@@ -4,17 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNum")
-    public Integer pageNum;
-
-    @NameInMap("SynchronizationJobName")
-    public String synchronizationJobName;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,8 +13,17 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SynchronizationJobName")
+    public String synchronizationJobName;
 
     @NameInMap("Tag")
     public java.util.List<DescribeSynchronizationJobsRequestTag> tag;
@@ -33,36 +33,12 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSynchronizationJobsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeSynchronizationJobsRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSynchronizationJobsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSynchronizationJobsRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeSynchronizationJobsRequest setSynchronizationJobName(String synchronizationJobName) {
-        this.synchronizationJobName = synchronizationJobName;
-        return this;
-    }
-    public String getSynchronizationJobName() {
-        return this.synchronizationJobName;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DescribeSynchronizationJobsRequest setClientToken(String clientToken) {
@@ -81,12 +57,36 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSynchronizationJobsRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DescribeSynchronizationJobsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeSynchronizationJobsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSynchronizationJobsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSynchronizationJobsRequest setSynchronizationJobName(String synchronizationJobName) {
+        this.synchronizationJobName = synchronizationJobName;
+        return this;
+    }
+    public String getSynchronizationJobName() {
+        return this.synchronizationJobName;
     }
 
     public DescribeSynchronizationJobsRequest setTag(java.util.List<DescribeSynchronizationJobsRequestTag> tag) {

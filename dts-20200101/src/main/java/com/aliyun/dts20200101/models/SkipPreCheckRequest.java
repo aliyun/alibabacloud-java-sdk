@@ -4,8 +4,14 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class SkipPreCheckRequest extends TeaModel {
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
+
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Skip")
     public Boolean skip;
@@ -16,15 +22,17 @@ public class SkipPreCheckRequest extends TeaModel {
     @NameInMap("SkipPreCheckNames")
     public String skipPreCheckNames;
 
-    @NameInMap("DtsJobId")
-    public String dtsJobId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static SkipPreCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         SkipPreCheckRequest self = new SkipPreCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SkipPreCheckRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
+        return this;
+    }
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public SkipPreCheckRequest setJobId(String jobId) {
@@ -33,6 +41,14 @@ public class SkipPreCheckRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SkipPreCheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SkipPreCheckRequest setSkip(Boolean skip) {
@@ -57,22 +73,6 @@ public class SkipPreCheckRequest extends TeaModel {
     }
     public String getSkipPreCheckNames() {
         return this.skipPreCheckNames;
-    }
-
-    public SkipPreCheckRequest setDtsJobId(String dtsJobId) {
-        this.dtsJobId = dtsJobId;
-        return this;
-    }
-    public String getDtsJobId() {
-        return this.dtsJobId;
-    }
-
-    public SkipPreCheckRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

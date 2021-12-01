@@ -4,8 +4,8 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMigrationJobRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AccountId")
+    public String accountId;
 
     @NameInMap("MigrationJobId")
     public String migrationJobId;
@@ -13,20 +13,20 @@ public class DeleteMigrationJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
-    @NameInMap("AccountId")
-    public String accountId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteMigrationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMigrationJobRequest self = new DeleteMigrationJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMigrationJobRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteMigrationJobRequest setAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public DeleteMigrationJobRequest setMigrationJobId(String migrationJobId) {
@@ -45,12 +45,12 @@ public class DeleteMigrationJobRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteMigrationJobRequest setAccountId(String accountId) {
-        this.accountId = accountId;
+    public DeleteMigrationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getAccountId() {
-        return this.accountId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -7,17 +7,17 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
-    @NameInMap("UserName")
-    public String userName;
+    @NameInMap("Endpoint")
+    public String endpoint;
 
     @NameInMap("Password")
     public String password;
 
-    @NameInMap("Endpoint")
-    public String endpoint;
-
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("UserName")
+    public String userName;
 
     public static ModifyDtsJobPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobPasswordRequest self = new ModifyDtsJobPasswordRequest();
@@ -32,12 +32,12 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
         return this.dtsJobId;
     }
 
-    public ModifyDtsJobPasswordRequest setUserName(String userName) {
-        this.userName = userName;
+    public ModifyDtsJobPasswordRequest setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     public ModifyDtsJobPasswordRequest setPassword(String password) {
@@ -48,20 +48,20 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
         return this.password;
     }
 
-    public ModifyDtsJobPasswordRequest setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
     public ModifyDtsJobPasswordRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDtsJobPasswordRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }
