@@ -4,20 +4,20 @@ package com.aliyun.saf20190521.models;
 import com.aliyun.tea.*;
 
 public class ExecuteExtendServiceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public ExecuteExtendServiceResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
-
-    @NameInMap("Data")
-    public ExecuteExtendServiceResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -25,6 +25,30 @@ public class ExecuteExtendServiceResponseBody extends TeaModel {
     public static ExecuteExtendServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExecuteExtendServiceResponseBody self = new ExecuteExtendServiceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteExtendServiceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ExecuteExtendServiceResponseBody setData(ExecuteExtendServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ExecuteExtendServiceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ExecuteExtendServiceResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ExecuteExtendServiceResponseBody setMessage(String message) {
@@ -41,30 +65,6 @@ public class ExecuteExtendServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ExecuteExtendServiceResponseBody setHttpStatusCode(String httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public String getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ExecuteExtendServiceResponseBody setData(ExecuteExtendServiceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ExecuteExtendServiceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ExecuteExtendServiceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ExecuteExtendServiceResponseBody setSuccess(Boolean success) {
