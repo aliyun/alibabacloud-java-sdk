@@ -194,8 +194,8 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         public Integer concurrency;
 
         // constantThroughputTimerType
-        @NameInMap("ConstantThroughputTimers")
-        public String constantThroughputTimers;
+        @NameInMap("ConstantThroughputTimerType")
+        public String constantThroughputTimerType;
 
         // DNS配置
         @NameInMap("DnsCacheConfig")
@@ -246,8 +246,8 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         public Integer steps;
 
         // synchronizing timer 类型
-        @NameInMap("SyncTimers")
-        public String syncTimers;
+        @NameInMap("SyncTimerType")
+        public String syncTimerType;
 
         // 测试文件
         @NameInMap("TestFile")
@@ -282,12 +282,12 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
             return this.concurrency;
         }
 
-        public SaveOpenJMeterSceneRequestOpenJMeterScene setConstantThroughputTimers(String constantThroughputTimers) {
-            this.constantThroughputTimers = constantThroughputTimers;
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setConstantThroughputTimerType(String constantThroughputTimerType) {
+            this.constantThroughputTimerType = constantThroughputTimerType;
             return this;
         }
-        public String getConstantThroughputTimers() {
-            return this.constantThroughputTimers;
+        public String getConstantThroughputTimerType() {
+            return this.constantThroughputTimerType;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setDnsCacheConfig(SaveOpenJMeterSceneRequestOpenJMeterSceneDnsCacheConfig dnsCacheConfig) {
@@ -386,12 +386,12 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
             return this.steps;
         }
 
-        public SaveOpenJMeterSceneRequestOpenJMeterScene setSyncTimers(String syncTimers) {
-            this.syncTimers = syncTimers;
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setSyncTimerType(String syncTimerType) {
+            this.syncTimerType = syncTimerType;
             return this;
         }
-        public String getSyncTimers() {
-            return this.syncTimers;
+        public String getSyncTimerType() {
+            return this.syncTimerType;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setTestFile(String testFile) {
