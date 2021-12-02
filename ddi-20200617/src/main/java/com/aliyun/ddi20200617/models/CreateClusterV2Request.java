@@ -4,35 +4,8 @@ package com.aliyun.ddi20200617.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterV2Request extends TeaModel {
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("LogPath")
-    public String logPath;
-
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
-
-    @NameInMap("IsOpenPublicIp")
-    public Boolean isOpenPublicIp;
-
-    @NameInMap("SecurityGroupName")
-    public String securityGroupName;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
-
-    @NameInMap("Period")
-    public Integer period;
+    @NameInMap("AuthorizeContent")
+    public String authorizeContent;
 
     @NameInMap("Auto")
     public Boolean auto;
@@ -40,194 +13,149 @@ public class CreateClusterV2Request extends TeaModel {
     @NameInMap("AutoPayOrder")
     public Boolean autoPayOrder;
 
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("BootstrapAction")
+    public java.util.List<CreateClusterV2RequestBootstrapAction> bootstrapAction;
 
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("NetType")
-    public String netType;
-
-    @NameInMap("UserDefinedEmrEcsRole")
-    public String userDefinedEmrEcsRole;
-
-    @NameInMap("EmrVer")
-    public String emrVer;
-
-    @NameInMap("ClusterType")
-    public String clusterType;
-
-    @NameInMap("EnableHighAvailability")
-    public Boolean enableHighAvailability;
-
-    @NameInMap("UseLocalMetaDb")
-    public Boolean useLocalMetaDb;
-
-    @NameInMap("EnableSsh")
-    public Boolean enableSsh;
-
-    @NameInMap("InstanceGeneration")
-    public String instanceGeneration;
-
-    @NameInMap("MasterPwd")
-    public String masterPwd;
-
-    @NameInMap("KeyPairName")
-    public String keyPairName;
-
-    @NameInMap("MetaStoreType")
-    public String metaStoreType;
-
-    @NameInMap("MetaStoreConf")
-    public String metaStoreConf;
+    @NameInMap("ChargeType")
+    public String chargeType;
 
     @NameInMap("ClickHouseConf")
     public String clickHouseConf;
 
-    @NameInMap("ExtraAttributes")
-    public String extraAttributes;
-
-    @NameInMap("DepositType")
-    public String depositType;
-
-    @NameInMap("MachineType")
-    public String machineType;
-
-    @NameInMap("UseCustomHiveMetaDB")
-    public Boolean useCustomHiveMetaDB;
-
-    @NameInMap("InitCustomHiveMetaDB")
-    public Boolean initCustomHiveMetaDB;
-
-    @NameInMap("Configurations")
-    public String configurations;
-
-    @NameInMap("EnableEas")
-    public Boolean enableEas;
-
-    @NameInMap("RelatedClusterId")
-    public String relatedClusterId;
-
-    @NameInMap("WhiteListType")
-    public String whiteListType;
-
-    @NameInMap("AuthorizeContent")
-    public String authorizeContent;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("UserInfo")
-    public java.util.List<CreateClusterV2RequestUserInfo> userInfo;
-
-    @NameInMap("HostComponentInfo")
-    public java.util.List<CreateClusterV2RequestHostComponentInfo> hostComponentInfo;
-
-    @NameInMap("ServiceInfo")
-    public java.util.List<CreateClusterV2RequestServiceInfo> serviceInfo;
-
-    @NameInMap("PromotionInfo")
-    public java.util.List<CreateClusterV2RequestPromotionInfo> promotionInfo;
-
-    @NameInMap("HostGroup")
-    public java.util.List<CreateClusterV2RequestHostGroup> hostGroup;
-
-    @NameInMap("BootstrapAction")
-    public java.util.List<CreateClusterV2RequestBootstrapAction> bootstrapAction;
+    @NameInMap("ClusterType")
+    public String clusterType;
 
     @NameInMap("Config")
     public java.util.List<CreateClusterV2RequestConfig> config;
 
+    @NameInMap("Configurations")
+    public String configurations;
+
+    @NameInMap("DepositType")
+    public String depositType;
+
+    @NameInMap("EmrVer")
+    public String emrVer;
+
+    @NameInMap("EnableEas")
+    public Boolean enableEas;
+
+    @NameInMap("EnableHighAvailability")
+    public Boolean enableHighAvailability;
+
+    @NameInMap("EnableSsh")
+    public Boolean enableSsh;
+
+    @NameInMap("ExtraAttributes")
+    public String extraAttributes;
+
+    @NameInMap("HostComponentInfo")
+    public java.util.List<CreateClusterV2RequestHostComponentInfo> hostComponentInfo;
+
+    @NameInMap("HostGroup")
+    public java.util.List<CreateClusterV2RequestHostGroup> hostGroup;
+
+    @NameInMap("InitCustomHiveMetaDB")
+    public Boolean initCustomHiveMetaDB;
+
+    @NameInMap("InstanceGeneration")
+    public String instanceGeneration;
+
+    @NameInMap("IsOpenPublicIp")
+    public Boolean isOpenPublicIp;
+
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
+    @NameInMap("LogPath")
+    public String logPath;
+
+    @NameInMap("MachineType")
+    public String machineType;
+
+    @NameInMap("MasterPwd")
+    public String masterPwd;
+
+    @NameInMap("MetaStoreConf")
+    public String metaStoreConf;
+
+    @NameInMap("MetaStoreType")
+    public String metaStoreType;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NetType")
+    public String netType;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PromotionInfo")
+    public java.util.List<CreateClusterV2RequestPromotionInfo> promotionInfo;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RelatedClusterId")
+    public String relatedClusterId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    @NameInMap("SecurityGroupName")
+    public String securityGroupName;
+
+    @NameInMap("ServiceInfo")
+    public java.util.List<CreateClusterV2RequestServiceInfo> serviceInfo;
+
     @NameInMap("Tag")
     public java.util.List<CreateClusterV2RequestTag> tag;
+
+    @NameInMap("UseCustomHiveMetaDB")
+    public Boolean useCustomHiveMetaDB;
+
+    @NameInMap("UseLocalMetaDb")
+    public Boolean useLocalMetaDb;
+
+    @NameInMap("UserDefinedEmrEcsRole")
+    public String userDefinedEmrEcsRole;
+
+    @NameInMap("UserInfo")
+    public java.util.List<CreateClusterV2RequestUserInfo> userInfo;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("WhiteListType")
+    public String whiteListType;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateClusterV2Request build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterV2Request self = new CreateClusterV2Request();
         return TeaModel.build(map, self);
     }
 
-    public CreateClusterV2Request setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public CreateClusterV2Request setAuthorizeContent(String authorizeContent) {
+        this.authorizeContent = authorizeContent;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateClusterV2Request setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateClusterV2Request setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateClusterV2Request setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateClusterV2Request setLogPath(String logPath) {
-        this.logPath = logPath;
-        return this;
-    }
-    public String getLogPath() {
-        return this.logPath;
-    }
-
-    public CreateClusterV2Request setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
-    public CreateClusterV2Request setIsOpenPublicIp(Boolean isOpenPublicIp) {
-        this.isOpenPublicIp = isOpenPublicIp;
-        return this;
-    }
-    public Boolean getIsOpenPublicIp() {
-        return this.isOpenPublicIp;
-    }
-
-    public CreateClusterV2Request setSecurityGroupName(String securityGroupName) {
-        this.securityGroupName = securityGroupName;
-        return this;
-    }
-    public String getSecurityGroupName() {
-        return this.securityGroupName;
-    }
-
-    public CreateClusterV2Request setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
-    }
-
-    public CreateClusterV2Request setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
+    public String getAuthorizeContent() {
+        return this.authorizeContent;
     }
 
     public CreateClusterV2Request setAuto(Boolean auto) {
@@ -246,116 +174,20 @@ public class CreateClusterV2Request extends TeaModel {
         return this.autoPayOrder;
     }
 
-    public CreateClusterV2Request setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public CreateClusterV2Request setBootstrapAction(java.util.List<CreateClusterV2RequestBootstrapAction> bootstrapAction) {
+        this.bootstrapAction = bootstrapAction;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
+    public java.util.List<CreateClusterV2RequestBootstrapAction> getBootstrapAction() {
+        return this.bootstrapAction;
     }
 
-    public CreateClusterV2Request setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
+    public CreateClusterV2Request setChargeType(String chargeType) {
+        this.chargeType = chargeType;
         return this;
     }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateClusterV2Request setNetType(String netType) {
-        this.netType = netType;
-        return this;
-    }
-    public String getNetType() {
-        return this.netType;
-    }
-
-    public CreateClusterV2Request setUserDefinedEmrEcsRole(String userDefinedEmrEcsRole) {
-        this.userDefinedEmrEcsRole = userDefinedEmrEcsRole;
-        return this;
-    }
-    public String getUserDefinedEmrEcsRole() {
-        return this.userDefinedEmrEcsRole;
-    }
-
-    public CreateClusterV2Request setEmrVer(String emrVer) {
-        this.emrVer = emrVer;
-        return this;
-    }
-    public String getEmrVer() {
-        return this.emrVer;
-    }
-
-    public CreateClusterV2Request setClusterType(String clusterType) {
-        this.clusterType = clusterType;
-        return this;
-    }
-    public String getClusterType() {
-        return this.clusterType;
-    }
-
-    public CreateClusterV2Request setEnableHighAvailability(Boolean enableHighAvailability) {
-        this.enableHighAvailability = enableHighAvailability;
-        return this;
-    }
-    public Boolean getEnableHighAvailability() {
-        return this.enableHighAvailability;
-    }
-
-    public CreateClusterV2Request setUseLocalMetaDb(Boolean useLocalMetaDb) {
-        this.useLocalMetaDb = useLocalMetaDb;
-        return this;
-    }
-    public Boolean getUseLocalMetaDb() {
-        return this.useLocalMetaDb;
-    }
-
-    public CreateClusterV2Request setEnableSsh(Boolean enableSsh) {
-        this.enableSsh = enableSsh;
-        return this;
-    }
-    public Boolean getEnableSsh() {
-        return this.enableSsh;
-    }
-
-    public CreateClusterV2Request setInstanceGeneration(String instanceGeneration) {
-        this.instanceGeneration = instanceGeneration;
-        return this;
-    }
-    public String getInstanceGeneration() {
-        return this.instanceGeneration;
-    }
-
-    public CreateClusterV2Request setMasterPwd(String masterPwd) {
-        this.masterPwd = masterPwd;
-        return this;
-    }
-    public String getMasterPwd() {
-        return this.masterPwd;
-    }
-
-    public CreateClusterV2Request setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
-        return this;
-    }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public CreateClusterV2Request setMetaStoreType(String metaStoreType) {
-        this.metaStoreType = metaStoreType;
-        return this;
-    }
-    public String getMetaStoreType() {
-        return this.metaStoreType;
-    }
-
-    public CreateClusterV2Request setMetaStoreConf(String metaStoreConf) {
-        this.metaStoreConf = metaStoreConf;
-        return this;
-    }
-    public String getMetaStoreConf() {
-        return this.metaStoreConf;
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public CreateClusterV2Request setClickHouseConf(String clickHouseConf) {
@@ -366,94 +198,6 @@ public class CreateClusterV2Request extends TeaModel {
         return this.clickHouseConf;
     }
 
-    public CreateClusterV2Request setExtraAttributes(String extraAttributes) {
-        this.extraAttributes = extraAttributes;
-        return this;
-    }
-    public String getExtraAttributes() {
-        return this.extraAttributes;
-    }
-
-    public CreateClusterV2Request setDepositType(String depositType) {
-        this.depositType = depositType;
-        return this;
-    }
-    public String getDepositType() {
-        return this.depositType;
-    }
-
-    public CreateClusterV2Request setMachineType(String machineType) {
-        this.machineType = machineType;
-        return this;
-    }
-    public String getMachineType() {
-        return this.machineType;
-    }
-
-    public CreateClusterV2Request setUseCustomHiveMetaDB(Boolean useCustomHiveMetaDB) {
-        this.useCustomHiveMetaDB = useCustomHiveMetaDB;
-        return this;
-    }
-    public Boolean getUseCustomHiveMetaDB() {
-        return this.useCustomHiveMetaDB;
-    }
-
-    public CreateClusterV2Request setInitCustomHiveMetaDB(Boolean initCustomHiveMetaDB) {
-        this.initCustomHiveMetaDB = initCustomHiveMetaDB;
-        return this;
-    }
-    public Boolean getInitCustomHiveMetaDB() {
-        return this.initCustomHiveMetaDB;
-    }
-
-    public CreateClusterV2Request setConfigurations(String configurations) {
-        this.configurations = configurations;
-        return this;
-    }
-    public String getConfigurations() {
-        return this.configurations;
-    }
-
-    public CreateClusterV2Request setEnableEas(Boolean enableEas) {
-        this.enableEas = enableEas;
-        return this;
-    }
-    public Boolean getEnableEas() {
-        return this.enableEas;
-    }
-
-    public CreateClusterV2Request setRelatedClusterId(String relatedClusterId) {
-        this.relatedClusterId = relatedClusterId;
-        return this;
-    }
-    public String getRelatedClusterId() {
-        return this.relatedClusterId;
-    }
-
-    public CreateClusterV2Request setWhiteListType(String whiteListType) {
-        this.whiteListType = whiteListType;
-        return this;
-    }
-    public String getWhiteListType() {
-        return this.whiteListType;
-    }
-
-    public CreateClusterV2Request setAuthorizeContent(String authorizeContent) {
-        this.authorizeContent = authorizeContent;
-        return this;
-    }
-    public String getAuthorizeContent() {
-        return this.authorizeContent;
-    }
-
-    public CreateClusterV2Request setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public CreateClusterV2Request setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -462,52 +206,12 @@ public class CreateClusterV2Request extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateClusterV2Request setUserInfo(java.util.List<CreateClusterV2RequestUserInfo> userInfo) {
-        this.userInfo = userInfo;
+    public CreateClusterV2Request setClusterType(String clusterType) {
+        this.clusterType = clusterType;
         return this;
     }
-    public java.util.List<CreateClusterV2RequestUserInfo> getUserInfo() {
-        return this.userInfo;
-    }
-
-    public CreateClusterV2Request setHostComponentInfo(java.util.List<CreateClusterV2RequestHostComponentInfo> hostComponentInfo) {
-        this.hostComponentInfo = hostComponentInfo;
-        return this;
-    }
-    public java.util.List<CreateClusterV2RequestHostComponentInfo> getHostComponentInfo() {
-        return this.hostComponentInfo;
-    }
-
-    public CreateClusterV2Request setServiceInfo(java.util.List<CreateClusterV2RequestServiceInfo> serviceInfo) {
-        this.serviceInfo = serviceInfo;
-        return this;
-    }
-    public java.util.List<CreateClusterV2RequestServiceInfo> getServiceInfo() {
-        return this.serviceInfo;
-    }
-
-    public CreateClusterV2Request setPromotionInfo(java.util.List<CreateClusterV2RequestPromotionInfo> promotionInfo) {
-        this.promotionInfo = promotionInfo;
-        return this;
-    }
-    public java.util.List<CreateClusterV2RequestPromotionInfo> getPromotionInfo() {
-        return this.promotionInfo;
-    }
-
-    public CreateClusterV2Request setHostGroup(java.util.List<CreateClusterV2RequestHostGroup> hostGroup) {
-        this.hostGroup = hostGroup;
-        return this;
-    }
-    public java.util.List<CreateClusterV2RequestHostGroup> getHostGroup() {
-        return this.hostGroup;
-    }
-
-    public CreateClusterV2Request setBootstrapAction(java.util.List<CreateClusterV2RequestBootstrapAction> bootstrapAction) {
-        this.bootstrapAction = bootstrapAction;
-        return this;
-    }
-    public java.util.List<CreateClusterV2RequestBootstrapAction> getBootstrapAction() {
-        return this.bootstrapAction;
+    public String getClusterType() {
+        return this.clusterType;
     }
 
     public CreateClusterV2Request setConfig(java.util.List<CreateClusterV2RequestConfig> config) {
@@ -518,6 +222,238 @@ public class CreateClusterV2Request extends TeaModel {
         return this.config;
     }
 
+    public CreateClusterV2Request setConfigurations(String configurations) {
+        this.configurations = configurations;
+        return this;
+    }
+    public String getConfigurations() {
+        return this.configurations;
+    }
+
+    public CreateClusterV2Request setDepositType(String depositType) {
+        this.depositType = depositType;
+        return this;
+    }
+    public String getDepositType() {
+        return this.depositType;
+    }
+
+    public CreateClusterV2Request setEmrVer(String emrVer) {
+        this.emrVer = emrVer;
+        return this;
+    }
+    public String getEmrVer() {
+        return this.emrVer;
+    }
+
+    public CreateClusterV2Request setEnableEas(Boolean enableEas) {
+        this.enableEas = enableEas;
+        return this;
+    }
+    public Boolean getEnableEas() {
+        return this.enableEas;
+    }
+
+    public CreateClusterV2Request setEnableHighAvailability(Boolean enableHighAvailability) {
+        this.enableHighAvailability = enableHighAvailability;
+        return this;
+    }
+    public Boolean getEnableHighAvailability() {
+        return this.enableHighAvailability;
+    }
+
+    public CreateClusterV2Request setEnableSsh(Boolean enableSsh) {
+        this.enableSsh = enableSsh;
+        return this;
+    }
+    public Boolean getEnableSsh() {
+        return this.enableSsh;
+    }
+
+    public CreateClusterV2Request setExtraAttributes(String extraAttributes) {
+        this.extraAttributes = extraAttributes;
+        return this;
+    }
+    public String getExtraAttributes() {
+        return this.extraAttributes;
+    }
+
+    public CreateClusterV2Request setHostComponentInfo(java.util.List<CreateClusterV2RequestHostComponentInfo> hostComponentInfo) {
+        this.hostComponentInfo = hostComponentInfo;
+        return this;
+    }
+    public java.util.List<CreateClusterV2RequestHostComponentInfo> getHostComponentInfo() {
+        return this.hostComponentInfo;
+    }
+
+    public CreateClusterV2Request setHostGroup(java.util.List<CreateClusterV2RequestHostGroup> hostGroup) {
+        this.hostGroup = hostGroup;
+        return this;
+    }
+    public java.util.List<CreateClusterV2RequestHostGroup> getHostGroup() {
+        return this.hostGroup;
+    }
+
+    public CreateClusterV2Request setInitCustomHiveMetaDB(Boolean initCustomHiveMetaDB) {
+        this.initCustomHiveMetaDB = initCustomHiveMetaDB;
+        return this;
+    }
+    public Boolean getInitCustomHiveMetaDB() {
+        return this.initCustomHiveMetaDB;
+    }
+
+    public CreateClusterV2Request setInstanceGeneration(String instanceGeneration) {
+        this.instanceGeneration = instanceGeneration;
+        return this;
+    }
+    public String getInstanceGeneration() {
+        return this.instanceGeneration;
+    }
+
+    public CreateClusterV2Request setIsOpenPublicIp(Boolean isOpenPublicIp) {
+        this.isOpenPublicIp = isOpenPublicIp;
+        return this;
+    }
+    public Boolean getIsOpenPublicIp() {
+        return this.isOpenPublicIp;
+    }
+
+    public CreateClusterV2Request setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public CreateClusterV2Request setLogPath(String logPath) {
+        this.logPath = logPath;
+        return this;
+    }
+    public String getLogPath() {
+        return this.logPath;
+    }
+
+    public CreateClusterV2Request setMachineType(String machineType) {
+        this.machineType = machineType;
+        return this;
+    }
+    public String getMachineType() {
+        return this.machineType;
+    }
+
+    public CreateClusterV2Request setMasterPwd(String masterPwd) {
+        this.masterPwd = masterPwd;
+        return this;
+    }
+    public String getMasterPwd() {
+        return this.masterPwd;
+    }
+
+    public CreateClusterV2Request setMetaStoreConf(String metaStoreConf) {
+        this.metaStoreConf = metaStoreConf;
+        return this;
+    }
+    public String getMetaStoreConf() {
+        return this.metaStoreConf;
+    }
+
+    public CreateClusterV2Request setMetaStoreType(String metaStoreType) {
+        this.metaStoreType = metaStoreType;
+        return this;
+    }
+    public String getMetaStoreType() {
+        return this.metaStoreType;
+    }
+
+    public CreateClusterV2Request setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateClusterV2Request setNetType(String netType) {
+        this.netType = netType;
+        return this;
+    }
+    public String getNetType() {
+        return this.netType;
+    }
+
+    public CreateClusterV2Request setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateClusterV2Request setPromotionInfo(java.util.List<CreateClusterV2RequestPromotionInfo> promotionInfo) {
+        this.promotionInfo = promotionInfo;
+        return this;
+    }
+    public java.util.List<CreateClusterV2RequestPromotionInfo> getPromotionInfo() {
+        return this.promotionInfo;
+    }
+
+    public CreateClusterV2Request setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateClusterV2Request setRelatedClusterId(String relatedClusterId) {
+        this.relatedClusterId = relatedClusterId;
+        return this;
+    }
+    public String getRelatedClusterId() {
+        return this.relatedClusterId;
+    }
+
+    public CreateClusterV2Request setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateClusterV2Request setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateClusterV2Request setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public CreateClusterV2Request setSecurityGroupName(String securityGroupName) {
+        this.securityGroupName = securityGroupName;
+        return this;
+    }
+    public String getSecurityGroupName() {
+        return this.securityGroupName;
+    }
+
+    public CreateClusterV2Request setServiceInfo(java.util.List<CreateClusterV2RequestServiceInfo> serviceInfo) {
+        this.serviceInfo = serviceInfo;
+        return this;
+    }
+    public java.util.List<CreateClusterV2RequestServiceInfo> getServiceInfo() {
+        return this.serviceInfo;
+    }
+
     public CreateClusterV2Request setTag(java.util.List<CreateClusterV2RequestTag> tag) {
         this.tag = tag;
         return this;
@@ -526,43 +462,181 @@ public class CreateClusterV2Request extends TeaModel {
         return this.tag;
     }
 
-    public static class CreateClusterV2RequestUserInfo extends TeaModel {
-        @NameInMap("Password")
-        public String password;
+    public CreateClusterV2Request setUseCustomHiveMetaDB(Boolean useCustomHiveMetaDB) {
+        this.useCustomHiveMetaDB = useCustomHiveMetaDB;
+        return this;
+    }
+    public Boolean getUseCustomHiveMetaDB() {
+        return this.useCustomHiveMetaDB;
+    }
 
-        @NameInMap("UserId")
-        public String userId;
+    public CreateClusterV2Request setUseLocalMetaDb(Boolean useLocalMetaDb) {
+        this.useLocalMetaDb = useLocalMetaDb;
+        return this;
+    }
+    public Boolean getUseLocalMetaDb() {
+        return this.useLocalMetaDb;
+    }
 
-        @NameInMap("UserName")
-        public String userName;
+    public CreateClusterV2Request setUserDefinedEmrEcsRole(String userDefinedEmrEcsRole) {
+        this.userDefinedEmrEcsRole = userDefinedEmrEcsRole;
+        return this;
+    }
+    public String getUserDefinedEmrEcsRole() {
+        return this.userDefinedEmrEcsRole;
+    }
 
-        public static CreateClusterV2RequestUserInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterV2RequestUserInfo self = new CreateClusterV2RequestUserInfo();
+    public CreateClusterV2Request setUserInfo(java.util.List<CreateClusterV2RequestUserInfo> userInfo) {
+        this.userInfo = userInfo;
+        return this;
+    }
+    public java.util.List<CreateClusterV2RequestUserInfo> getUserInfo() {
+        return this.userInfo;
+    }
+
+    public CreateClusterV2Request setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateClusterV2Request setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateClusterV2Request setWhiteListType(String whiteListType) {
+        this.whiteListType = whiteListType;
+        return this;
+    }
+    public String getWhiteListType() {
+        return this.whiteListType;
+    }
+
+    public CreateClusterV2Request setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static class CreateClusterV2RequestBootstrapAction extends TeaModel {
+        @NameInMap("Arg")
+        public String arg;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Path")
+        public String path;
+
+        public static CreateClusterV2RequestBootstrapAction build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterV2RequestBootstrapAction self = new CreateClusterV2RequestBootstrapAction();
             return TeaModel.build(map, self);
         }
 
-        public CreateClusterV2RequestUserInfo setPassword(String password) {
-            this.password = password;
+        public CreateClusterV2RequestBootstrapAction setArg(String arg) {
+            this.arg = arg;
             return this;
         }
-        public String getPassword() {
-            return this.password;
+        public String getArg() {
+            return this.arg;
         }
 
-        public CreateClusterV2RequestUserInfo setUserId(String userId) {
-            this.userId = userId;
+        public CreateClusterV2RequestBootstrapAction setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getName() {
+            return this.name;
         }
 
-        public CreateClusterV2RequestUserInfo setUserName(String userName) {
-            this.userName = userName;
+        public CreateClusterV2RequestBootstrapAction setPath(String path) {
+            this.path = path;
             return this;
         }
-        public String getUserName() {
-            return this.userName;
+        public String getPath() {
+            return this.path;
+        }
+
+    }
+
+    public static class CreateClusterV2RequestConfig extends TeaModel {
+        @NameInMap("ConfigKey")
+        public String configKey;
+
+        @NameInMap("ConfigValue")
+        public String configValue;
+
+        @NameInMap("Encrypt")
+        public String encrypt;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Replace")
+        public String replace;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        public static CreateClusterV2RequestConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterV2RequestConfig self = new CreateClusterV2RequestConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterV2RequestConfig setConfigKey(String configKey) {
+            this.configKey = configKey;
+            return this;
+        }
+        public String getConfigKey() {
+            return this.configKey;
+        }
+
+        public CreateClusterV2RequestConfig setConfigValue(String configValue) {
+            this.configValue = configValue;
+            return this;
+        }
+        public String getConfigValue() {
+            return this.configValue;
+        }
+
+        public CreateClusterV2RequestConfig setEncrypt(String encrypt) {
+            this.encrypt = encrypt;
+            return this;
+        }
+        public String getEncrypt() {
+            return this.encrypt;
+        }
+
+        public CreateClusterV2RequestConfig setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public CreateClusterV2RequestConfig setReplace(String replace) {
+            this.replace = replace;
+            return this;
+        }
+        public String getReplace() {
+            return this.replace;
+        }
+
+        public CreateClusterV2RequestConfig setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
         }
 
     }
@@ -604,77 +678,6 @@ public class CreateClusterV2Request extends TeaModel {
         }
         public String getServiceName() {
             return this.serviceName;
-        }
-
-    }
-
-    public static class CreateClusterV2RequestServiceInfo extends TeaModel {
-        @NameInMap("ServiceName")
-        public String serviceName;
-
-        @NameInMap("ServiceVersion")
-        public String serviceVersion;
-
-        public static CreateClusterV2RequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterV2RequestServiceInfo self = new CreateClusterV2RequestServiceInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterV2RequestServiceInfo setServiceName(String serviceName) {
-            this.serviceName = serviceName;
-            return this;
-        }
-        public String getServiceName() {
-            return this.serviceName;
-        }
-
-        public CreateClusterV2RequestServiceInfo setServiceVersion(String serviceVersion) {
-            this.serviceVersion = serviceVersion;
-            return this;
-        }
-        public String getServiceVersion() {
-            return this.serviceVersion;
-        }
-
-    }
-
-    public static class CreateClusterV2RequestPromotionInfo extends TeaModel {
-        @NameInMap("ProductCode")
-        public String productCode;
-
-        @NameInMap("PromotionOptionCode")
-        public String promotionOptionCode;
-
-        @NameInMap("PromotionOptionNo")
-        public String promotionOptionNo;
-
-        public static CreateClusterV2RequestPromotionInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterV2RequestPromotionInfo self = new CreateClusterV2RequestPromotionInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterV2RequestPromotionInfo setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
-        }
-
-        public CreateClusterV2RequestPromotionInfo setPromotionOptionCode(String promotionOptionCode) {
-            this.promotionOptionCode = promotionOptionCode;
-            return this;
-        }
-        public String getPromotionOptionCode() {
-            return this.promotionOptionCode;
-        }
-
-        public CreateClusterV2RequestPromotionInfo setPromotionOptionNo(String promotionOptionNo) {
-            this.promotionOptionNo = promotionOptionNo;
-            return this;
-        }
-        public String getPromotionOptionNo() {
-            return this.promotionOptionNo;
         }
 
     }
@@ -885,117 +888,73 @@ public class CreateClusterV2Request extends TeaModel {
 
     }
 
-    public static class CreateClusterV2RequestBootstrapAction extends TeaModel {
-        @NameInMap("Arg")
-        public String arg;
+    public static class CreateClusterV2RequestPromotionInfo extends TeaModel {
+        @NameInMap("ProductCode")
+        public String productCode;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("PromotionOptionCode")
+        public String promotionOptionCode;
 
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("PromotionOptionNo")
+        public String promotionOptionNo;
 
-        public static CreateClusterV2RequestBootstrapAction build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterV2RequestBootstrapAction self = new CreateClusterV2RequestBootstrapAction();
+        public static CreateClusterV2RequestPromotionInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterV2RequestPromotionInfo self = new CreateClusterV2RequestPromotionInfo();
             return TeaModel.build(map, self);
         }
 
-        public CreateClusterV2RequestBootstrapAction setArg(String arg) {
-            this.arg = arg;
+        public CreateClusterV2RequestPromotionInfo setProductCode(String productCode) {
+            this.productCode = productCode;
             return this;
         }
-        public String getArg() {
-            return this.arg;
+        public String getProductCode() {
+            return this.productCode;
         }
 
-        public CreateClusterV2RequestBootstrapAction setName(String name) {
-            this.name = name;
+        public CreateClusterV2RequestPromotionInfo setPromotionOptionCode(String promotionOptionCode) {
+            this.promotionOptionCode = promotionOptionCode;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getPromotionOptionCode() {
+            return this.promotionOptionCode;
         }
 
-        public CreateClusterV2RequestBootstrapAction setPath(String path) {
-            this.path = path;
+        public CreateClusterV2RequestPromotionInfo setPromotionOptionNo(String promotionOptionNo) {
+            this.promotionOptionNo = promotionOptionNo;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
         }
 
     }
 
-    public static class CreateClusterV2RequestConfig extends TeaModel {
-        @NameInMap("ConfigKey")
-        public String configKey;
-
-        @NameInMap("ConfigValue")
-        public String configValue;
-
-        @NameInMap("Encrypt")
-        public String encrypt;
-
-        @NameInMap("FileName")
-        public String fileName;
-
-        @NameInMap("Replace")
-        public String replace;
-
+    public static class CreateClusterV2RequestServiceInfo extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
-        public static CreateClusterV2RequestConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterV2RequestConfig self = new CreateClusterV2RequestConfig();
+        @NameInMap("ServiceVersion")
+        public String serviceVersion;
+
+        public static CreateClusterV2RequestServiceInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterV2RequestServiceInfo self = new CreateClusterV2RequestServiceInfo();
             return TeaModel.build(map, self);
         }
 
-        public CreateClusterV2RequestConfig setConfigKey(String configKey) {
-            this.configKey = configKey;
-            return this;
-        }
-        public String getConfigKey() {
-            return this.configKey;
-        }
-
-        public CreateClusterV2RequestConfig setConfigValue(String configValue) {
-            this.configValue = configValue;
-            return this;
-        }
-        public String getConfigValue() {
-            return this.configValue;
-        }
-
-        public CreateClusterV2RequestConfig setEncrypt(String encrypt) {
-            this.encrypt = encrypt;
-            return this;
-        }
-        public String getEncrypt() {
-            return this.encrypt;
-        }
-
-        public CreateClusterV2RequestConfig setFileName(String fileName) {
-            this.fileName = fileName;
-            return this;
-        }
-        public String getFileName() {
-            return this.fileName;
-        }
-
-        public CreateClusterV2RequestConfig setReplace(String replace) {
-            this.replace = replace;
-            return this;
-        }
-        public String getReplace() {
-            return this.replace;
-        }
-
-        public CreateClusterV2RequestConfig setServiceName(String serviceName) {
+        public CreateClusterV2RequestServiceInfo setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public CreateClusterV2RequestServiceInfo setServiceVersion(String serviceVersion) {
+            this.serviceVersion = serviceVersion;
+            return this;
+        }
+        public String getServiceVersion() {
+            return this.serviceVersion;
         }
 
     }
@@ -1026,6 +985,47 @@ public class CreateClusterV2Request extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateClusterV2RequestUserInfo extends TeaModel {
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        public static CreateClusterV2RequestUserInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterV2RequestUserInfo self = new CreateClusterV2RequestUserInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterV2RequestUserInfo setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public CreateClusterV2RequestUserInfo setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public CreateClusterV2RequestUserInfo setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }
