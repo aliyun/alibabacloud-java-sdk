@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    @NameInMap("ResourceType")
-    public String resourceType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,11 +22,8 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -33,12 +33,20 @@ public class TagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public TagResourcesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public TagResourcesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public TagResourcesRequest setRegionId(String regionId) {
@@ -49,12 +57,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public TagResourcesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public TagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -73,20 +81,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public TagResourcesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public TagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
@@ -153,14 +153,6 @@ public class TagResourcesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-    }
-
-    public static class UnTagResourcesRequestTag extends TeaModel {
-        public static UnTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            UnTagResourcesRequestTag self = new UnTagResourcesRequestTag();
-            return TeaModel.build(map, self);
         }
 
     }

@@ -4,41 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VSwitchName")
-    public String vSwitchName;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
-    @NameInMap("RouteTableId")
-    public String routeTableId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -46,82 +22,39 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RouteTableId")
+    public String routeTableId;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VSwitchName")
+    public String vSwitchName;
 
     @NameInMap("VSwitchOwnerId")
     public Long vSwitchOwnerId;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeVSwitchesRequestTag> tag;
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeVSwitchesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesRequest self = new DescribeVSwitchesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVSwitchesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVSwitchesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeVSwitchesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeVSwitchesRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public DescribeVSwitchesRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public DescribeVSwitchesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {
-        this.vSwitchName = vSwitchName;
-        return this;
-    }
-    public String getVSwitchName() {
-        return this.vSwitchName;
     }
 
     public DescribeVSwitchesRequest setDryRun(Boolean dryRun) {
@@ -140,20 +73,20 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.isDefault;
     }
 
-    public DescribeVSwitchesRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
+    public DescribeVSwitchesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRouteTableId() {
-        return this.routeTableId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public DescribeVSwitchesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public DescribeVSwitchesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
@@ -172,12 +105,60 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVSwitchesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeVSwitchesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVSwitchesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeVSwitchesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVSwitchesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeVSwitchesRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {
+        this.vSwitchName = vSwitchName;
+        return this;
+    }
+    public String getVSwitchName() {
+        return this.vSwitchName;
     }
 
     public DescribeVSwitchesRequest setVSwitchOwnerId(Long vSwitchOwnerId) {
@@ -188,20 +169,20 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.vSwitchOwnerId;
     }
 
-    public DescribeVSwitchesRequest setTag(java.util.List<DescribeVSwitchesRequestTag> tag) {
-        this.tag = tag;
+    public DescribeVSwitchesRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public java.util.List<DescribeVSwitchesRequestTag> getTag() {
-        return this.tag;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
-    public static class DescribeVSwitchesRequestTag extends TeaModel {
-        public static DescribeVSwitchesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVSwitchesRequestTag self = new DescribeVSwitchesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVSwitchesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

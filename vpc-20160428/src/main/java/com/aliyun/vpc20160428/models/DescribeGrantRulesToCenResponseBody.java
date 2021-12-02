@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("CenGrantRules")
+    public DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("CenGrantRules")
-    public DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeGrantRulesToCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesToCenResponseBody self = new DescribeGrantRulesToCenResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGrantRulesToCenResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeGrantRulesToCenResponseBody setCenGrantRules(DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules) {
+        this.cenGrantRules = cenGrantRules;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeGrantRulesToCenResponseBodyCenGrantRules getCenGrantRules() {
+        return this.cenGrantRules;
+    }
+
+    public DescribeGrantRulesToCenResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGrantRulesToCenResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +56,12 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGrantRulesToCenResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeGrantRulesToCenResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeGrantRulesToCenResponseBody setCenGrantRules(DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules) {
-        this.cenGrantRules = cenGrantRules;
-        return this;
-    }
-    public DescribeGrantRulesToCenResponseBodyCenGrantRules getCenGrantRules() {
-        return this.cenGrantRules;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule extends TeaModel {

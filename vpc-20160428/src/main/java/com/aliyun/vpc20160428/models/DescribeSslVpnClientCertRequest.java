@@ -10,14 +10,14 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
@@ -43,6 +43,14 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeSslVpnClientCertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeSslVpnClientCertRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,14 +65,6 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSslVpnClientCertRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeSslVpnClientCertRequest setSslVpnClientCertId(String sslVpnClientCertId) {

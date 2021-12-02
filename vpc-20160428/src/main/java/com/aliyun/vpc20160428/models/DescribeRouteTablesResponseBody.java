@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTablesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("RouteTables")
     public DescribeRouteTablesResponseBodyRouteTables routeTables;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeRouteTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteTablesResponseBody self = new DescribeRouteTablesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRouteTablesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeRouteTablesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRouteTablesResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRouteTablesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeRouteTablesResponseBody setRouteTables(DescribeRouteTablesResponseBodyRouteTables routeTables) {
         this.routeTables = routeTables;
         return this;
@@ -64,22 +56,38 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         return this.routeTables;
     }
 
+    public DescribeRouteTablesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop extends TeaModel {
+        @NameInMap("Enabled")
+        public Integer enabled;
+
         @NameInMap("NextHopId")
         public String nextHopId;
-
-        @NameInMap("Weight")
-        public Integer weight;
 
         @NameInMap("NextHopType")
         public String nextHopType;
 
-        @NameInMap("Enabled")
-        public Integer enabled;
+        @NameInMap("Weight")
+        public Integer weight;
 
         public static DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop self = new DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setEnabled(Integer enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Integer getEnabled() {
+            return this.enabled;
         }
 
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setNextHopId(String nextHopId) {
@@ -90,14 +98,6 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.nextHopId;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setNextHopType(String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
@@ -106,12 +106,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.nextHopType;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setEnabled(Integer enabled) {
-            this.enabled = enabled;
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setWeight(Integer weight) {
+            this.weight = weight;
             return this;
         }
-        public Integer getEnabled() {
-            return this.enabled;
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
@@ -136,95 +136,39 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("NextHopType")
-        public String nextHopType;
-
-        @NameInMap("RouteEntryName")
-        public String routeEntryName;
-
-        @NameInMap("RouteEntryId")
-        public String routeEntryId;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("RouteTableId")
-        public String routeTableId;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("NextHopType")
+        public String nextHopType;
+
         @NameInMap("NextHops")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops;
+
+        @NameInMap("RouteEntryId")
+        public String routeEntryId;
+
+        @NameInMap("RouteEntryName")
+        public String routeEntryName;
+
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry self = new DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setNextHopType(String nextHopType) {
-            this.nextHopType = nextHopType;
-            return this;
-        }
-        public String getNextHopType() {
-            return this.nextHopType;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteEntryName(String routeEntryName) {
-            this.routeEntryName = routeEntryName;
-            return this;
-        }
-        public String getRouteEntryName() {
-            return this.routeEntryName;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteEntryId(String routeEntryId) {
-            this.routeEntryId = routeEntryId;
-            return this;
-        }
-        public String getRouteEntryId() {
-            return this.routeEntryId;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
-            return this;
-        }
-        public String getRouteTableId() {
-            return this.routeTableId;
         }
 
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setDescription(String description) {
@@ -243,12 +187,68 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.destinationCidrBlock;
         }
 
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setNextHops(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops) {
             this.nextHops = nextHops;
             return this;
         }
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops getNextHops() {
             return this.nextHops;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteEntryId(String routeEntryId) {
+            this.routeEntryId = routeEntryId;
+            return this;
+        }
+        public String getRouteEntryId() {
+            return this.routeEntryId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteEntryName(String routeEntryName) {
+            this.routeEntryName = routeEntryName;
+            return this;
+        }
+        public String getRouteEntryName() {
+            return this.routeEntryName;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -295,26 +295,26 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("RouteEntrys")
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
+
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        @NameInMap("RouteTableType")
+        public String routeTableType;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("VRouterId")
         public String VRouterId;
 
-        @NameInMap("RouteEntrys")
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
-
-        @NameInMap("RouteTableType")
-        public String routeTableType;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("VSwitchIds")
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableVSwitchIds vSwitchIds;
-
-        @NameInMap("RouteTableId")
-        public String routeTableId;
 
         public static DescribeRouteTablesResponseBodyRouteTablesRouteTable build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseBodyRouteTablesRouteTable self = new DescribeRouteTablesResponseBodyRouteTablesRouteTable();
@@ -327,6 +327,38 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteEntrys(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys) {
+            this.routeEntrys = routeEntrys;
+            return this;
+        }
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys getRouteEntrys() {
+            return this.routeEntrys;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableType(String routeTableType) {
+            this.routeTableType = routeTableType;
+            return this;
+        }
+        public String getRouteTableType() {
+            return this.routeTableType;
         }
 
         public DescribeRouteTablesResponseBodyRouteTablesRouteTable setStatus(String status) {
@@ -345,44 +377,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.VRouterId;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteEntrys(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys) {
-            this.routeEntrys = routeEntrys;
-            return this;
-        }
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys getRouteEntrys() {
-            return this.routeEntrys;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableType(String routeTableType) {
-            this.routeTableType = routeTableType;
-            return this;
-        }
-        public String getRouteTableType() {
-            return this.routeTableType;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public DescribeRouteTablesResponseBodyRouteTablesRouteTable setVSwitchIds(DescribeRouteTablesResponseBodyRouteTablesRouteTableVSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableVSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
-        }
-
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
-            return this;
-        }
-        public String getRouteTableId() {
-            return this.routeTableId;
         }
 
     }

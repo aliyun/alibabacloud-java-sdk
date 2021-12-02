@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CopyNetworkAclEntriesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
-    @NameInMap("SourceNetworkAclId")
-    public String sourceNetworkAclId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,23 +22,20 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("SourceNetworkAclId")
+    public String sourceNetworkAclId;
 
     public static CopyNetworkAclEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyNetworkAclEntriesRequest self = new CopyNetworkAclEntriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public CopyNetworkAclEntriesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CopyNetworkAclEntriesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CopyNetworkAclEntriesRequest setNetworkAclId(String networkAclId) {
@@ -46,12 +46,20 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
         return this.networkAclId;
     }
 
-    public CopyNetworkAclEntriesRequest setSourceNetworkAclId(String sourceNetworkAclId) {
-        this.sourceNetworkAclId = sourceNetworkAclId;
+    public CopyNetworkAclEntriesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSourceNetworkAclId() {
-        return this.sourceNetworkAclId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CopyNetworkAclEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CopyNetworkAclEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -70,20 +78,12 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CopyNetworkAclEntriesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CopyNetworkAclEntriesRequest setSourceNetworkAclId(String sourceNetworkAclId) {
+        this.sourceNetworkAclId = sourceNetworkAclId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CopyNetworkAclEntriesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSourceNetworkAclId() {
+        return this.sourceNetworkAclId;
     }
 
 }

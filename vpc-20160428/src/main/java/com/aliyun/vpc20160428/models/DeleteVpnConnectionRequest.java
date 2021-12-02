@@ -4,11 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpnConnectionRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +22,20 @@ public class DeleteVpnConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
     public static DeleteVpnConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVpnConnectionRequest self = new DeleteVpnConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVpnConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteVpnConnectionRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +54,14 @@ public class DeleteVpnConnectionRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteVpnConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteVpnConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,22 +76,6 @@ public class DeleteVpnConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteVpnConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteVpnConnectionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public DeleteVpnConnectionRequest setVpnConnectionId(String vpnConnectionId) {

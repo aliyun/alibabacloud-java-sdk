@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("SslVpnServers")
     public DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeSslVpnServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSslVpnServersResponseBody self = new DescribeSslVpnServersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSslVpnServersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeSslVpnServersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSslVpnServersResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +48,6 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSslVpnServersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeSslVpnServersResponseBody setSslVpnServers(DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers) {
         this.sslVpnServers = sslVpnServers;
         return this;
@@ -64,39 +56,44 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         return this.sslVpnServers;
     }
 
+    public DescribeSslVpnServersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer extends TeaModel {
-        @NameInMap("InternetIp")
-        public String internetIp;
+        @NameInMap("Cipher")
+        public String cipher;
 
-        @NameInMap("IDaaSInstanceId")
-        public String IDaaSInstanceId;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("VpnGatewayId")
-        public String vpnGatewayId;
+        @NameInMap("ClientIpPool")
+        public String clientIpPool;
 
         @NameInMap("Compress")
         public Boolean compress;
 
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("LocalSubnet")
-        public String localSubnet;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("Cipher")
-        public String cipher;
-
         @NameInMap("Connections")
         public Integer connections;
 
-        @NameInMap("SslVpnServerId")
-        public String sslVpnServerId;
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("EnableMultiFactorAuth")
+        public Boolean enableMultiFactorAuth;
+
+        @NameInMap("IDaaSInstanceId")
+        public String IDaaSInstanceId;
+
+        @NameInMap("IDaaSRegionId")
+        public String IDaaSRegionId;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("LocalSubnet")
+        public String localSubnet;
 
         @NameInMap("MaxConnections")
         public Integer maxConnections;
@@ -104,82 +101,24 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("EnableMultiFactorAuth")
-        public Boolean enableMultiFactorAuth;
-
-        @NameInMap("ClientIpPool")
-        public String clientIpPool;
+        @NameInMap("Port")
+        public Integer port;
 
         @NameInMap("Proto")
         public String proto;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SslVpnServerId")
+        public String sslVpnServerId;
+
+        @NameInMap("VpnGatewayId")
+        public String vpnGatewayId;
+
         public static DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer self = new DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setIDaaSInstanceId(String IDaaSInstanceId) {
-            this.IDaaSInstanceId = IDaaSInstanceId;
-            return this;
-        }
-        public String getIDaaSInstanceId() {
-            return this.IDaaSInstanceId;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setVpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = vpnGatewayId;
-            return this;
-        }
-        public String getVpnGatewayId() {
-            return this.vpnGatewayId;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setCompress(Boolean compress) {
-            this.compress = compress;
-            return this;
-        }
-        public Boolean getCompress() {
-            return this.compress;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setLocalSubnet(String localSubnet) {
-            this.localSubnet = localSubnet;
-            return this;
-        }
-        public String getLocalSubnet() {
-            return this.localSubnet;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setCipher(String cipher) {
@@ -190,6 +129,22 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             return this.cipher;
         }
 
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setClientIpPool(String clientIpPool) {
+            this.clientIpPool = clientIpPool;
+            return this;
+        }
+        public String getClientIpPool() {
+            return this.clientIpPool;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setCompress(Boolean compress) {
+            this.compress = compress;
+            return this;
+        }
+        public Boolean getCompress() {
+            return this.compress;
+        }
+
         public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setConnections(Integer connections) {
             this.connections = connections;
             return this;
@@ -198,12 +153,52 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             return this.connections;
         }
 
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setSslVpnServerId(String sslVpnServerId) {
-            this.sslVpnServerId = sslVpnServerId;
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getSslVpnServerId() {
-            return this.sslVpnServerId;
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setEnableMultiFactorAuth(Boolean enableMultiFactorAuth) {
+            this.enableMultiFactorAuth = enableMultiFactorAuth;
+            return this;
+        }
+        public Boolean getEnableMultiFactorAuth() {
+            return this.enableMultiFactorAuth;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setIDaaSInstanceId(String IDaaSInstanceId) {
+            this.IDaaSInstanceId = IDaaSInstanceId;
+            return this;
+        }
+        public String getIDaaSInstanceId() {
+            return this.IDaaSInstanceId;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setIDaaSRegionId(String IDaaSRegionId) {
+            this.IDaaSRegionId = IDaaSRegionId;
+            return this;
+        }
+        public String getIDaaSRegionId() {
+            return this.IDaaSRegionId;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setLocalSubnet(String localSubnet) {
+            this.localSubnet = localSubnet;
+            return this;
+        }
+        public String getLocalSubnet() {
+            return this.localSubnet;
         }
 
         public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setMaxConnections(Integer maxConnections) {
@@ -222,20 +217,12 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setEnableMultiFactorAuth(Boolean enableMultiFactorAuth) {
-            this.enableMultiFactorAuth = enableMultiFactorAuth;
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setPort(Integer port) {
+            this.port = port;
             return this;
         }
-        public Boolean getEnableMultiFactorAuth() {
-            return this.enableMultiFactorAuth;
-        }
-
-        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setClientIpPool(String clientIpPool) {
-            this.clientIpPool = clientIpPool;
-            return this;
-        }
-        public String getClientIpPool() {
-            return this.clientIpPool;
+        public Integer getPort() {
+            return this.port;
         }
 
         public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setProto(String proto) {
@@ -244,6 +231,30 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
         public String getProto() {
             return this.proto;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setSslVpnServerId(String sslVpnServerId) {
+            this.sslVpnServerId = sslVpnServerId;
+            return this;
+        }
+        public String getSslVpnServerId() {
+            return this.sslVpnServerId;
+        }
+
+        public DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer setVpnGatewayId(String vpnGatewayId) {
+            this.vpnGatewayId = vpnGatewayId;
+            return this;
+        }
+        public String getVpnGatewayId() {
+            return this.vpnGatewayId;
         }
 
     }

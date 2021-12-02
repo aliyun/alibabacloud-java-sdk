@@ -4,37 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ConvertSteps")
+    public java.util.List<GetNatGatewayConvertStatusResponseBodyConvertSteps> convertSteps;
 
     @NameInMap("DstNatType")
     public String dstNatType;
 
-    @NameInMap("ConvertSteps")
-    public java.util.List<GetNatGatewayConvertStatusResponseBodyConvertSteps> convertSteps;
-
     @NameInMap("NatGatewayId")
     public String natGatewayId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetNatGatewayConvertStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNatGatewayConvertStatusResponseBody self = new GetNatGatewayConvertStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetNatGatewayConvertStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetNatGatewayConvertStatusResponseBody setDstNatType(String dstNatType) {
-        this.dstNatType = dstNatType;
-        return this;
-    }
-    public String getDstNatType() {
-        return this.dstNatType;
     }
 
     public GetNatGatewayConvertStatusResponseBody setConvertSteps(java.util.List<GetNatGatewayConvertStatusResponseBodyConvertSteps> convertSteps) {
@@ -45,6 +29,14 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         return this.convertSteps;
     }
 
+    public GetNatGatewayConvertStatusResponseBody setDstNatType(String dstNatType) {
+        this.dstNatType = dstNatType;
+        return this;
+    }
+    public String getDstNatType() {
+        return this.dstNatType;
+    }
+
     public GetNatGatewayConvertStatusResponseBody setNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -53,19 +45,35 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         return this.natGatewayId;
     }
 
+    public GetNatGatewayConvertStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetNatGatewayConvertStatusResponseBodyConvertSteps extends TeaModel {
+        @NameInMap("StepName")
+        public String stepName;
+
         @NameInMap("StepStartTime")
         public String stepStartTime;
 
         @NameInMap("StepStatus")
         public String stepStatus;
 
-        @NameInMap("StepName")
-        public String stepName;
-
         public static GetNatGatewayConvertStatusResponseBodyConvertSteps build(java.util.Map<String, ?> map) throws Exception {
             GetNatGatewayConvertStatusResponseBodyConvertSteps self = new GetNatGatewayConvertStatusResponseBodyConvertSteps();
             return TeaModel.build(map, self);
+        }
+
+        public GetNatGatewayConvertStatusResponseBodyConvertSteps setStepName(String stepName) {
+            this.stepName = stepName;
+            return this;
+        }
+        public String getStepName() {
+            return this.stepName;
         }
 
         public GetNatGatewayConvertStatusResponseBodyConvertSteps setStepStartTime(String stepStartTime) {
@@ -82,14 +90,6 @@ public class GetNatGatewayConvertStatusResponseBody extends TeaModel {
         }
         public String getStepStatus() {
             return this.stepStatus;
-        }
-
-        public GetNatGatewayConvertStatusResponseBodyConvertSteps setStepName(String stepName) {
-            this.stepName = stepName;
-            return this;
-        }
-        public String getStepName() {
-            return this.stepName;
         }
 
     }

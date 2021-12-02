@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("CommonBandwidthPackages")
+    public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("CommonBandwidthPackages")
-    public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeCommonBandwidthPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCommonBandwidthPackagesResponseBody self = new DescribeCommonBandwidthPackagesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCommonBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeCommonBandwidthPackagesResponseBody setCommonBandwidthPackages(DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages) {
+        this.commonBandwidthPackages = commonBandwidthPackages;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages getCommonBandwidthPackages() {
+        return this.commonBandwidthPackages;
+    }
+
+    public DescribeCommonBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCommonBandwidthPackagesResponseBody setPageSize(Integer pageSize) {
@@ -48,43 +56,27 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCommonBandwidthPackagesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeCommonBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeCommonBandwidthPackagesResponseBody setCommonBandwidthPackages(DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages) {
-        this.commonBandwidthPackages = commonBandwidthPackages;
-        return this;
-    }
-    public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages getCommonBandwidthPackages() {
-        return this.commonBandwidthPackages;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse extends TeaModel {
-        @NameInMap("IpAddress")
-        public String ipAddress;
-
         @NameInMap("AllocationId")
         public String allocationId;
 
         @NameInMap("BandwidthPackageIpRelationStatus")
         public String bandwidthPackageIpRelationStatus;
 
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
         public static DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse self = new DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
         }
 
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setAllocationId(String allocationId) {
@@ -101,6 +93,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getBandwidthPackageIpRelationStatus() {
             return this.bandwidthPackageIpRelationStatus;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
         }
 
     }
@@ -124,45 +124,40 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes extends TeaModel {
+        @NameInMap("SecurityProtectionType")
+        public java.util.List<String> securityProtectionType;
+
+        public static DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes self = new DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes setSecurityProtectionType(java.util.List<String> securityProtectionType) {
+            this.securityProtectionType = securityProtectionType;
+            return this;
+        }
+        public java.util.List<String> getSecurityProtectionType() {
+            return this.securityProtectionType;
+        }
+
+    }
+
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage extends TeaModel {
-        @NameInMap("PublicIpAddresses")
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("ReservationActiveTime")
-        public String reservationActiveTime;
-
-        @NameInMap("ReservationOrderType")
-        public String reservationOrderType;
-
-        @NameInMap("DeletionProtection")
-        public Boolean deletionProtection;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
-
-        @NameInMap("Ratio")
-        public Integer ratio;
-
-        @NameInMap("ReservationInternetChargeType")
-        public String reservationInternetChargeType;
+        @NameInMap("Bandwidth")
+        public String bandwidth;
 
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
-        @NameInMap("ServiceManaged")
-        public Integer serviceManaged;
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
 
-        @NameInMap("Bandwidth")
-        public String bandwidth;
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
 
         @NameInMap("Description")
         public String description;
@@ -170,110 +165,65 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("ReservationBandwidth")
-        public String reservationBandwidth;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("HasReservationData")
+        public String hasReservationData;
 
         @NameInMap("ISP")
         public String ISP;
 
-        @NameInMap("HasReservationData")
-        public String hasReservationData;
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PublicIpAddresses")
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses;
+
+        @NameInMap("Ratio")
+        public Integer ratio;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ReservationActiveTime")
+        public String reservationActiveTime;
+
+        @NameInMap("ReservationBandwidth")
+        public String reservationBandwidth;
+
+        @NameInMap("ReservationInternetChargeType")
+        public String reservationInternetChargeType;
+
+        @NameInMap("ReservationOrderType")
+        public String reservationOrderType;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("SecurityProtectionTypes")
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes securityProtectionTypes;
+
+        @NameInMap("ServiceManaged")
+        public Integer serviceManaged;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage self = new DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setPublicIpAddresses(DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses) {
-            this.publicIpAddresses = publicIpAddresses;
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
             return this;
         }
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses getPublicIpAddresses() {
-            return this.publicIpAddresses;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationActiveTime(String reservationActiveTime) {
-            this.reservationActiveTime = reservationActiveTime;
-            return this;
-        }
-        public String getReservationActiveTime() {
-            return this.reservationActiveTime;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationOrderType(String reservationOrderType) {
-            this.reservationOrderType = reservationOrderType;
-            return this;
-        }
-        public String getReservationOrderType() {
-            return this.reservationOrderType;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setDeletionProtection(Boolean deletionProtection) {
-            this.deletionProtection = deletionProtection;
-            return this;
-        }
-        public Boolean getDeletionProtection() {
-            return this.deletionProtection;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setRatio(Integer ratio) {
-            this.ratio = ratio;
-            return this;
-        }
-        public Integer getRatio() {
-            return this.ratio;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationInternetChargeType(String reservationInternetChargeType) {
-            this.reservationInternetChargeType = reservationInternetChargeType;
-            return this;
-        }
-        public String getReservationInternetChargeType() {
-            return this.reservationInternetChargeType;
+        public String getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBandwidthPackageId(String bandwidthPackageId) {
@@ -284,20 +234,28 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             return this.bandwidthPackageId;
         }
 
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setServiceManaged(Integer serviceManaged) {
-            this.serviceManaged = serviceManaged;
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
             return this;
         }
-        public Integer getServiceManaged() {
-            return this.serviceManaged;
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBandwidth(String bandwidth) {
-            this.bandwidth = bandwidth;
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getBandwidth() {
-            return this.bandwidth;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setDescription(String description) {
@@ -316,44 +274,12 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationBandwidth(String reservationBandwidth) {
-            this.reservationBandwidth = reservationBandwidth;
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setHasReservationData(String hasReservationData) {
+            this.hasReservationData = hasReservationData;
             return this;
         }
-        public String getReservationBandwidth() {
-            return this.reservationBandwidth;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBusinessStatus(String businessStatus) {
-            this.businessStatus = businessStatus;
-            return this;
-        }
-        public String getBusinessStatus() {
-            return this.businessStatus;
-        }
-
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getHasReservationData() {
+            return this.hasReservationData;
         }
 
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setISP(String ISP) {
@@ -364,12 +290,116 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             return this.ISP;
         }
 
-        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setHasReservationData(String hasReservationData) {
-            this.hasReservationData = hasReservationData;
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
             return this;
         }
-        public String getHasReservationData() {
-            return this.hasReservationData;
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setPublicIpAddresses(DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses) {
+            this.publicIpAddresses = publicIpAddresses;
+            return this;
+        }
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses getPublicIpAddresses() {
+            return this.publicIpAddresses;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setRatio(Integer ratio) {
+            this.ratio = ratio;
+            return this;
+        }
+        public Integer getRatio() {
+            return this.ratio;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationActiveTime(String reservationActiveTime) {
+            this.reservationActiveTime = reservationActiveTime;
+            return this;
+        }
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationBandwidth(String reservationBandwidth) {
+            this.reservationBandwidth = reservationBandwidth;
+            return this;
+        }
+        public String getReservationBandwidth() {
+            return this.reservationBandwidth;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationInternetChargeType(String reservationInternetChargeType) {
+            this.reservationInternetChargeType = reservationInternetChargeType;
+            return this;
+        }
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setReservationOrderType(String reservationOrderType) {
+            this.reservationOrderType = reservationOrderType;
+            return this;
+        }
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setSecurityProtectionTypes(DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes securityProtectionTypes) {
+            this.securityProtectionTypes = securityProtectionTypes;
+            return this;
+        }
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes getSecurityProtectionTypes() {
+            return this.securityProtectionTypes;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setServiceManaged(Integer serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Integer getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

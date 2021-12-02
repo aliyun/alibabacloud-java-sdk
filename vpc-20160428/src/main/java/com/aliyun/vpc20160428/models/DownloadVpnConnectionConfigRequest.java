@@ -10,14 +10,14 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
@@ -43,6 +43,14 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DownloadVpnConnectionConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DownloadVpnConnectionConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,14 +65,6 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DownloadVpnConnectionConfigRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DownloadVpnConnectionConfigRequest setVpnConnectionId(String vpnConnectionId) {

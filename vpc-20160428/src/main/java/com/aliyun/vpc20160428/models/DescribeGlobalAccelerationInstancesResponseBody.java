@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("GlobalAccelerationInstances")
+    public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,39 +16,12 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GlobalAccelerationInstances")
-    public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeGlobalAccelerationInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalAccelerationInstancesResponseBody self = new DescribeGlobalAccelerationInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGlobalAccelerationInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeGlobalAccelerationInstancesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeGlobalAccelerationInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeGlobalAccelerationInstancesResponseBody setGlobalAccelerationInstances(DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances) {
@@ -64,79 +40,54 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
-        public String ipAddress;
-
-        @NameInMap("AllocationId")
-        public String allocationId;
-
-        public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress setAllocationId(String allocationId) {
-            this.allocationId = allocationId;
-            return this;
-        }
-        public String getAllocationId() {
-            return this.allocationId;
-        }
-
+    public DescribeGlobalAccelerationInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
-    public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddress")
-        public java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> publicIpAddress;
+    public DescribeGlobalAccelerationInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses setPublicIpAddress(java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
-            return this;
-        }
-        public java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> getPublicIpAddress() {
-            return this.publicIpAddress;
-        }
-
+    public DescribeGlobalAccelerationInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer extends TeaModel {
-        @NameInMap("ServerIpAddress")
-        public String serverIpAddress;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("ServerId")
         public String serverId;
 
+        @NameInMap("ServerIpAddress")
+        public String serverIpAddress;
+
         @NameInMap("ServerType")
         public String serverType;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setServerIpAddress(String serverIpAddress) {
-            this.serverIpAddress = serverIpAddress;
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getServerIpAddress() {
-            return this.serverIpAddress;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setServerId(String serverId) {
@@ -147,20 +98,20 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             return this.serverId;
         }
 
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setServerIpAddress(String serverIpAddress) {
+            this.serverIpAddress = serverIpAddress;
+            return this;
+        }
+        public String getServerIpAddress() {
+            return this.serverIpAddress;
+        }
+
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setServerType(String serverType) {
             this.serverType = serverType;
             return this;
         }
         public String getServerType() {
             return this.serverType;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServersBackendServer setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }
@@ -184,18 +135,64 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress extends TeaModel {
+        @NameInMap("AllocationId")
+        public String allocationId;
+
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
+        public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses extends TeaModel {
+        @NameInMap("PublicIpAddress")
+        public java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> publicIpAddress;
+
+        public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses setPublicIpAddress(java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public java.util.List<DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddressesPublicIpAddress> getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+    }
+
     public static class DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
-        @NameInMap("PublicIpAddresses")
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses publicIpAddresses;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("AccelerationLocation")
+        public String accelerationLocation;
 
         @NameInMap("BackendServers")
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers backendServers;
+
+        @NameInMap("Bandwidth")
+        public String bandwidth;
 
         @NameInMap("BandwidthType")
         public String bandwidthType;
@@ -203,63 +200,50 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("GlobalAccelerationInstanceId")
-        public String globalAccelerationInstanceId;
-
-        @NameInMap("ServiceLocation")
-        public String serviceLocation;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("AccelerationLocation")
-        public String accelerationLocation;
-
-        @NameInMap("IpAddress")
-        public String ipAddress;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Bandwidth")
-        public String bandwidth;
-
         @NameInMap("ExpiredTime")
         public String expiredTime;
+
+        @NameInMap("GlobalAccelerationInstanceId")
+        public String globalAccelerationInstanceId;
 
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PublicIpAddresses")
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses publicIpAddresses;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ServiceLocation")
+        public String serviceLocation;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance self = new DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setPublicIpAddresses(DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses publicIpAddresses) {
-            this.publicIpAddresses = publicIpAddresses;
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setAccelerationLocation(String accelerationLocation) {
+            this.accelerationLocation = accelerationLocation;
             return this;
         }
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses getPublicIpAddresses() {
-            return this.publicIpAddresses;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getAccelerationLocation() {
+            return this.accelerationLocation;
         }
 
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setBackendServers(DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers backendServers) {
@@ -268,6 +252,14 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
         }
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstanceBackendServers getBackendServers() {
             return this.backendServers;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setBandwidthType(String bandwidthType) {
@@ -286,44 +278,12 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
-            this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getGlobalAccelerationInstanceId() {
-            return this.globalAccelerationInstanceId;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setServiceLocation(String serviceLocation) {
-            this.serviceLocation = serviceLocation;
-            return this;
-        }
-        public String getServiceLocation() {
-            return this.serviceLocation;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setAccelerationLocation(String accelerationLocation) {
-            this.accelerationLocation = accelerationLocation;
-            return this;
-        }
-        public String getAccelerationLocation() {
-            return this.accelerationLocation;
-        }
-
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setDescription(String description) {
@@ -334,20 +294,20 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setBandwidth(String bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public String getBandwidth() {
-            return this.bandwidth;
-        }
-
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
+            this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+            return this;
+        }
+        public String getGlobalAccelerationInstanceId() {
+            return this.globalAccelerationInstanceId;
         }
 
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setInternetChargeType(String internetChargeType) {
@@ -358,12 +318,52 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
         public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setPublicIpAddresses(DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses publicIpAddresses) {
+            this.publicIpAddresses = publicIpAddresses;
+            return this;
+        }
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstancePublicIpAddresses getPublicIpAddresses() {
+            return this.publicIpAddresses;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setServiceLocation(String serviceLocation) {
+            this.serviceLocation = serviceLocation;
+            return this;
+        }
+        public String getServiceLocation() {
+            return this.serviceLocation;
+        }
+
+        public DescribeGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

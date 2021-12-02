@@ -4,20 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VpnGatewayId")
-    public String vpnGatewayId;
-
-    @NameInMap("CertificateType")
-    public String certificateType;
-
     @NameInMap("CertificateId")
     public String certificateId;
 
-    @NameInMap("callerBid")
-    public String callerBid;
+    @NameInMap("CertificateType")
+    public String certificateType;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,36 +16,15 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("VpnGatewayId")
+    public String vpnGatewayId;
 
     public static DissociateVpnGatewayWithCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DissociateVpnGatewayWithCertificateRequest self = new DissociateVpnGatewayWithCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DissociateVpnGatewayWithCertificateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DissociateVpnGatewayWithCertificateRequest setVpnGatewayId(String vpnGatewayId) {
-        this.vpnGatewayId = vpnGatewayId;
-        return this;
-    }
-    public String getVpnGatewayId() {
-        return this.vpnGatewayId;
-    }
-
-    public DissociateVpnGatewayWithCertificateRequest setCertificateType(String certificateType) {
-        this.certificateType = certificateType;
-        return this;
-    }
-    public String getCertificateType() {
-        return this.certificateType;
     }
 
     public DissociateVpnGatewayWithCertificateRequest setCertificateId(String certificateId) {
@@ -65,12 +35,12 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
         return this.certificateId;
     }
 
-    public DissociateVpnGatewayWithCertificateRequest setCallerBid(String callerBid) {
-        this.callerBid = callerBid;
+    public DissociateVpnGatewayWithCertificateRequest setCertificateType(String certificateType) {
+        this.certificateType = certificateType;
         return this;
     }
-    public String getCallerBid() {
-        return this.callerBid;
+    public String getCertificateType() {
+        return this.certificateType;
     }
 
     public DissociateVpnGatewayWithCertificateRequest setClientToken(String clientToken) {
@@ -89,12 +59,20 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public DissociateVpnGatewayWithCertificateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public DissociateVpnGatewayWithCertificateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DissociateVpnGatewayWithCertificateRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
     }
 
 }

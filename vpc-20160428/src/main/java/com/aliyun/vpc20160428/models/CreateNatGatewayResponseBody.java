@@ -4,21 +4,48 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
+    @NameInMap("ForwardTableIds")
+    public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
+
+    @NameInMap("FullNatTableIds")
+    public CreateNatGatewayResponseBodyFullNatTableIds fullNatTableIds;
+
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnatTableIds")
     public CreateNatGatewayResponseBodySnatTableIds snatTableIds;
 
-    @NameInMap("ForwardTableIds")
-    public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
-
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
     public static CreateNatGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNatGatewayResponseBody self = new CreateNatGatewayResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNatGatewayResponseBody setForwardTableIds(CreateNatGatewayResponseBodyForwardTableIds forwardTableIds) {
+        this.forwardTableIds = forwardTableIds;
+        return this;
+    }
+    public CreateNatGatewayResponseBodyForwardTableIds getForwardTableIds() {
+        return this.forwardTableIds;
+    }
+
+    public CreateNatGatewayResponseBody setFullNatTableIds(CreateNatGatewayResponseBodyFullNatTableIds fullNatTableIds) {
+        this.fullNatTableIds = fullNatTableIds;
+        return this;
+    }
+    public CreateNatGatewayResponseBodyFullNatTableIds getFullNatTableIds() {
+        return this.fullNatTableIds;
+    }
+
+    public CreateNatGatewayResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public CreateNatGatewayResponseBody setRequestId(String requestId) {
@@ -37,20 +64,42 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         return this.snatTableIds;
     }
 
-    public CreateNatGatewayResponseBody setForwardTableIds(CreateNatGatewayResponseBodyForwardTableIds forwardTableIds) {
-        this.forwardTableIds = forwardTableIds;
-        return this;
-    }
-    public CreateNatGatewayResponseBodyForwardTableIds getForwardTableIds() {
-        return this.forwardTableIds;
+    public static class CreateNatGatewayResponseBodyForwardTableIds extends TeaModel {
+        @NameInMap("ForwardTableId")
+        public java.util.List<String> forwardTableId;
+
+        public static CreateNatGatewayResponseBodyForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayResponseBodyForwardTableIds self = new CreateNatGatewayResponseBodyForwardTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayResponseBodyForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
+            this.forwardTableId = forwardTableId;
+            return this;
+        }
+        public java.util.List<String> getForwardTableId() {
+            return this.forwardTableId;
+        }
+
     }
 
-    public CreateNatGatewayResponseBody setNatGatewayId(String natGatewayId) {
-        this.natGatewayId = natGatewayId;
-        return this;
-    }
-    public String getNatGatewayId() {
-        return this.natGatewayId;
+    public static class CreateNatGatewayResponseBodyFullNatTableIds extends TeaModel {
+        @NameInMap("FullNatTableId")
+        public java.util.List<String> fullNatTableId;
+
+        public static CreateNatGatewayResponseBodyFullNatTableIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayResponseBodyFullNatTableIds self = new CreateNatGatewayResponseBodyFullNatTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayResponseBodyFullNatTableIds setFullNatTableId(java.util.List<String> fullNatTableId) {
+            this.fullNatTableId = fullNatTableId;
+            return this;
+        }
+        public java.util.List<String> getFullNatTableId() {
+            return this.fullNatTableId;
+        }
+
     }
 
     public static class CreateNatGatewayResponseBodySnatTableIds extends TeaModel {
@@ -68,25 +117,6 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
         public java.util.List<String> getSnatTableId() {
             return this.snatTableId;
-        }
-
-    }
-
-    public static class CreateNatGatewayResponseBodyForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
-        public java.util.List<String> forwardTableId;
-
-        public static CreateNatGatewayResponseBodyForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
-            CreateNatGatewayResponseBodyForwardTableIds self = new CreateNatGatewayResponseBodyForwardTableIds();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateNatGatewayResponseBodyForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
-            this.forwardTableId = forwardTableId;
-            return this;
-        }
-        public java.util.List<String> getForwardTableId() {
-            return this.forwardTableId;
         }
 
     }

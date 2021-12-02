@@ -4,23 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewaysRequest extends TeaModel {
+    @NameInMap("CustomerGatewayId")
+    public String customerGatewayId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CustomerGatewayId")
-    public String customerGatewayId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,9 +19,26 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeCustomerGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomerGatewaysRequest self = new DescribeCustomerGatewaysRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomerGatewaysRequest setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
     }
 
     public DescribeCustomerGatewaysRequest setOwnerAccount(String ownerAccount) {
@@ -49,38 +57,6 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeCustomerGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeCustomerGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeCustomerGatewaysRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCustomerGatewaysRequest setCustomerGatewayId(String customerGatewayId) {
-        this.customerGatewayId = customerGatewayId;
-        return this;
-    }
-    public String getCustomerGatewayId() {
-        return this.customerGatewayId;
-    }
-
     public DescribeCustomerGatewaysRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -95,6 +71,30 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCustomerGatewaysRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCustomerGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeCustomerGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,8 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateNetworkAclRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,15 +25,17 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static UnassociateNetworkAclRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassociateNetworkAclRequest self = new UnassociateNetworkAclRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnassociateNetworkAclRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UnassociateNetworkAclRequest setNetworkAclId(String networkAclId) {
@@ -36,6 +44,14 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public UnassociateNetworkAclRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UnassociateNetworkAclRequest setRegionId(String regionId) {
@@ -70,40 +86,16 @@ public class UnassociateNetworkAclRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnassociateNetworkAclRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UnassociateNetworkAclRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public static class UnassociateNetworkAclRequestResource extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
-
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         public static UnassociateNetworkAclRequestResource build(java.util.Map<String, ?> map) throws Exception {
             UnassociateNetworkAclRequestResource self = new UnassociateNetworkAclRequestResource();
             return TeaModel.build(map, self);
-        }
-
-        public UnassociateNetworkAclRequestResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
         }
 
         public UnassociateNetworkAclRequestResource setResourceId(String resourceId) {
@@ -112,6 +104,14 @@ public class UnassociateNetworkAclRequest extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public UnassociateNetworkAclRequestResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
     }

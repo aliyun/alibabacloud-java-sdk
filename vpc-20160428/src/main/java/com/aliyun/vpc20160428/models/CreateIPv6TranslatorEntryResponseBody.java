@@ -4,23 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateIPv6TranslatorEntryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIPv6TranslatorEntryResponseBody self = new CreateIPv6TranslatorEntryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateIPv6TranslatorEntryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateIPv6TranslatorEntryResponseBody setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
@@ -29,6 +21,14 @@ public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
     }
     public String getIpv6TranslatorEntryId() {
         return this.ipv6TranslatorEntryId;
+    }
+
+    public CreateIPv6TranslatorEntryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

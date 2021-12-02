@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("VpnPbrRouteEntries")
     public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntries vpnPbrRouteEntries;
@@ -24,12 +24,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpnPbrRouteEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVpnPbrRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVpnPbrRouteEntriesResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVpnPbrRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeVpnPbrRouteEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVpnPbrRouteEntriesResponseBody setVpnPbrRouteEntries(DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntries vpnPbrRouteEntries) {
@@ -65,62 +65,30 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry extends TeaModel {
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         @NameInMap("NextHop")
         public String nextHop;
-
-        @NameInMap("Weight")
-        public Integer weight;
 
         @NameInMap("RouteDest")
         public String routeDest;
 
+        @NameInMap("RouteSource")
+        public String routeSource;
+
         @NameInMap("State")
         public String state;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
 
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
-        @NameInMap("RouteSource")
-        public String routeSource;
+        @NameInMap("Weight")
+        public Integer weight;
 
         public static DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry self = new DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setNextHop(String nextHop) {
-            this.nextHop = nextHop;
-            return this;
-        }
-        public String getNextHop() {
-            return this.nextHop;
-        }
-
-        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setRouteDest(String routeDest) {
-            this.routeDest = routeDest;
-            return this;
-        }
-        public String getRouteDest() {
-            return this.routeDest;
-        }
-
-        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setCreateTime(Long createTime) {
@@ -131,12 +99,20 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setVpnInstanceId(String vpnInstanceId) {
-            this.vpnInstanceId = vpnInstanceId;
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setNextHop(String nextHop) {
+            this.nextHop = nextHop;
             return this;
         }
-        public String getVpnInstanceId() {
-            return this.vpnInstanceId;
+        public String getNextHop() {
+            return this.nextHop;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setRouteDest(String routeDest) {
+            this.routeDest = routeDest;
+            return this;
+        }
+        public String getRouteDest() {
+            return this.routeDest;
         }
 
         public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setRouteSource(String routeSource) {
@@ -145,6 +121,30 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         }
         public String getRouteSource() {
             return this.routeSource;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setVpnInstanceId(String vpnInstanceId) {
+            this.vpnInstanceId = vpnInstanceId;
+            return this;
+        }
+        public String getVpnInstanceId() {
+            return this.vpnInstanceId;
+        }
+
+        public DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

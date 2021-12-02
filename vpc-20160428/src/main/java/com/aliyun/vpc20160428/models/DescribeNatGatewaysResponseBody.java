@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("NatGateways")
+    public DescribeNatGatewaysResponseBodyNatGateways natGateways;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("NatGateways")
-    public DescribeNatGatewaysResponseBodyNatGateways natGateways;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeNatGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNatGatewaysResponseBody self = new DescribeNatGatewaysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeNatGatewaysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeNatGatewaysResponseBody setNatGateways(DescribeNatGatewaysResponseBodyNatGateways natGateways) {
+        this.natGateways = natGateways;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeNatGatewaysResponseBodyNatGateways getNatGateways() {
+        return this.natGateways;
+    }
+
+    public DescribeNatGatewaysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeNatGatewaysResponseBody setPageSize(Integer pageSize) {
@@ -48,25 +56,58 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNatGatewaysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeNatGatewaysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
-    public DescribeNatGatewaysResponseBody setNatGateways(DescribeNatGatewaysResponseBodyNatGateways natGateways) {
-        this.natGateways = natGateways;
-        return this;
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds extends TeaModel {
+        @NameInMap("ForwardTableId")
+        public java.util.List<String> forwardTableId;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
+            this.forwardTableId = forwardTableId;
+            return this;
+        }
+        public java.util.List<String> getForwardTableId() {
+            return this.forwardTableId;
+        }
+
     }
-    public DescribeNatGatewaysResponseBodyNatGateways getNatGateways() {
-        return this.natGateways;
+
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds extends TeaModel {
+        @NameInMap("FullNatTableId")
+        public java.util.List<String> fullNatTableId;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds setFullNatTableId(java.util.List<String> fullNatTableId) {
+            this.fullNatTableId = fullNatTableId;
+            return this;
+        }
+        public java.util.List<String> getFullNatTableId() {
+            return this.fullNatTableId;
+        }
+
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList extends TeaModel {
         @NameInMap("IpAddress")
         public String ipAddress;
+
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
 
         @NameInMap("SnatEntryEnabled")
         public Boolean snatEntryEnabled;
@@ -82,6 +123,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getIpAddress() {
             return this.ipAddress;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpListsIpList setSnatEntryEnabled(Boolean snatEntryEnabled) {
@@ -114,11 +163,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo extends TeaModel {
-        @NameInMap("VswitchId")
-        public String vswitchId;
-
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
+
+        @NameInMap("EniType")
+        public String eniType;
+
+        @NameInMap("IzNo")
+        public String izNo;
 
         @NameInMap("MaxBandwidth")
         public Integer maxBandwidth;
@@ -126,20 +178,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        @NameInMap("IzNo")
-        public String izNo;
+        @NameInMap("VswitchId")
+        public String vswitchId;
 
         public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setEniInstanceId(String eniInstanceId) {
@@ -148,6 +192,22 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getEniInstanceId() {
             return this.eniInstanceId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setEniType(String eniType) {
+            this.eniType = eniType;
+            return this;
+        }
+        public String getEniType() {
+            return this.eniType;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setIzNo(String izNo) {
+            this.izNo = izNo;
+            return this;
+        }
+        public String getIzNo() {
+            return this.izNo;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setMaxBandwidth(Integer maxBandwidth) {
@@ -166,31 +226,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.privateIpAddress;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setIzNo(String izNo) {
-            this.izNo = izNo;
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
             return this;
         }
-        public String getIzNo() {
-            return this.izNo;
-        }
-
-    }
-
-    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
-        public java.util.List<String> forwardTableId;
-
-        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
-            this.forwardTableId = forwardTableId;
-            return this;
-        }
-        public java.util.List<String> getForwardTableId() {
-            return this.forwardTableId;
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
@@ -215,197 +256,89 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("NatType")
-        public String natType;
-
-        @NameInMap("Spec")
-        public String spec;
-
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
-
-        @NameInMap("EcsMetricEnabled")
-        public Boolean ecsMetricEnabled;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EcsMetricEnabled")
+        public Boolean ecsMetricEnabled;
+
         @NameInMap("ExpiredTime")
         public String expiredTime;
-
-        @NameInMap("IpLists")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists;
-
-        @NameInMap("NatGatewayPrivateInfo")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo natGatewayPrivateInfo;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("NatGatewayId")
-        public String natGatewayId;
-
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
 
         @NameInMap("ForwardTableIds")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds;
 
-        @NameInMap("SnatTableIds")
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds snatTableIds;
+        @NameInMap("FullNatTableIds")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds fullNatTableIds;
+
+        @NameInMap("IcmpReplyEnabled")
+        public Boolean icmpReplyEnabled;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("IpLists")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NatGatewayId")
+        public String natGatewayId;
+
+        @NameInMap("NatGatewayPrivateInfo")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo natGatewayPrivateInfo;
+
+        @NameInMap("NatType")
+        public String natType;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        // 默认不支持私网链接。设置为1则意味着支持私网链接
+        @NameInMap("PrivateLinkEnabled")
+        public Boolean privateLinkEnabled;
+
+        // Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
+        @NameInMap("PrivateLinkMode")
+        public String privateLinkMode;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("SecurityProtectionEnabled")
+        public Boolean securityProtectionEnabled;
+
+        @NameInMap("SnatTableIds")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds snatTableIds;
+
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static DescribeNatGatewaysResponseBodyNatGatewaysNatGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysNatGateway self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGateway();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatType(String natType) {
-            this.natType = natType;
-            return this;
-        }
-        public String getNatType() {
-            return this.natType;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setDeletionProtection(Boolean deletionProtection) {
-            this.deletionProtection = deletionProtection;
-            return this;
-        }
-        public Boolean getDeletionProtection() {
-            return this.deletionProtection;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setEcsMetricEnabled(Boolean ecsMetricEnabled) {
-            this.ecsMetricEnabled = ecsMetricEnabled;
-            return this;
-        }
-        public Boolean getEcsMetricEnabled() {
-            return this.ecsMetricEnabled;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setIpLists(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists) {
-            this.ipLists = ipLists;
-            return this;
-        }
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists getIpLists() {
-            return this.ipLists;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatGatewayPrivateInfo(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo natGatewayPrivateInfo) {
-            this.natGatewayPrivateInfo = natGatewayPrivateInfo;
-            return this;
-        }
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo getNatGatewayPrivateInfo() {
-            return this.natGatewayPrivateInfo;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatGatewayId(String natGatewayId) {
-            this.natGatewayId = natGatewayId;
-            return this;
-        }
-        public String getNatGatewayId() {
-            return this.natGatewayId;
-        }
-
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setBusinessStatus(String businessStatus) {
@@ -416,12 +349,172 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.businessStatus;
         }
 
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setEcsMetricEnabled(Boolean ecsMetricEnabled) {
+            this.ecsMetricEnabled = ecsMetricEnabled;
+            return this;
+        }
+        public Boolean getEcsMetricEnabled() {
+            return this.ecsMetricEnabled;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setForwardTableIds(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds) {
             this.forwardTableIds = forwardTableIds;
             return this;
         }
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds getForwardTableIds() {
             return this.forwardTableIds;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setFullNatTableIds(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds fullNatTableIds) {
+            this.fullNatTableIds = fullNatTableIds;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayFullNatTableIds getFullNatTableIds() {
+            return this.fullNatTableIds;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setIcmpReplyEnabled(Boolean icmpReplyEnabled) {
+            this.icmpReplyEnabled = icmpReplyEnabled;
+            return this;
+        }
+        public Boolean getIcmpReplyEnabled() {
+            return this.icmpReplyEnabled;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setIpLists(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists) {
+            this.ipLists = ipLists;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists getIpLists() {
+            return this.ipLists;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+        public String getNatGatewayId() {
+            return this.natGatewayId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatGatewayPrivateInfo(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo natGatewayPrivateInfo) {
+            this.natGatewayPrivateInfo = natGatewayPrivateInfo;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo getNatGatewayPrivateInfo() {
+            return this.natGatewayPrivateInfo;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatType(String natType) {
+            this.natType = natType;
+            return this;
+        }
+        public String getNatType() {
+            return this.natType;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setPrivateLinkEnabled(Boolean privateLinkEnabled) {
+            this.privateLinkEnabled = privateLinkEnabled;
+            return this;
+        }
+        public Boolean getPrivateLinkEnabled() {
+            return this.privateLinkEnabled;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setPrivateLinkMode(String privateLinkMode) {
+            this.privateLinkMode = privateLinkMode;
+            return this;
+        }
+        public String getPrivateLinkMode() {
+            return this.privateLinkMode;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setSecurityProtectionEnabled(Boolean securityProtectionEnabled) {
+            this.securityProtectionEnabled = securityProtectionEnabled;
+            return this;
+        }
+        public Boolean getSecurityProtectionEnabled() {
+            return this.securityProtectionEnabled;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setSnatTableIds(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewaySnatTableIds snatTableIds) {
@@ -432,12 +525,28 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.snatTableIds;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setName(String name) {
-            this.name = name;
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setSpec(String spec) {
+            this.spec = spec;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

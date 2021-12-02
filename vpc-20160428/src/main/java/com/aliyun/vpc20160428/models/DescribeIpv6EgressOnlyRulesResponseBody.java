@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Ipv6EgressOnlyRules")
+    public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Ipv6EgressOnlyRules")
-    public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeIpv6EgressOnlyRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpv6EgressOnlyRulesResponseBody self = new DescribeIpv6EgressOnlyRulesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIpv6EgressOnlyRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeIpv6EgressOnlyRulesResponseBody setIpv6EgressOnlyRules(DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules) {
+        this.ipv6EgressOnlyRules = ipv6EgressOnlyRules;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules getIpv6EgressOnlyRules() {
+        return this.ipv6EgressOnlyRules;
+    }
+
+    public DescribeIpv6EgressOnlyRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeIpv6EgressOnlyRulesResponseBody setPageSize(Integer pageSize) {
@@ -48,31 +56,17 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeIpv6EgressOnlyRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeIpv6EgressOnlyRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeIpv6EgressOnlyRulesResponseBody setIpv6EgressOnlyRules(DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules ipv6EgressOnlyRules) {
-        this.ipv6EgressOnlyRules = ipv6EgressOnlyRules;
-        return this;
-    }
-    public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRules getIpv6EgressOnlyRules() {
-        return this.ipv6EgressOnlyRules;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Ipv6EgressOnlyRuleId")
-        public String ipv6EgressOnlyRuleId;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -80,20 +74,18 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("Ipv6EgressOnlyRuleId")
+        public String ipv6EgressOnlyRuleId;
+
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule self = new DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setDescription(String description) {
@@ -102,14 +94,6 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setIpv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
-            this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
-            return this;
-        }
-        public String getIpv6EgressOnlyRuleId() {
-            return this.ipv6EgressOnlyRuleId;
         }
 
         public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setInstanceId(String instanceId) {
@@ -128,12 +112,28 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setIpv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
+            this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
+            return this;
+        }
+        public String getIpv6EgressOnlyRuleId() {
+            return this.ipv6EgressOnlyRuleId;
+        }
+
         public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeIpv6EgressOnlyRulesResponseBodyIpv6EgressOnlyRulesIpv6EgressOnlyRule setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

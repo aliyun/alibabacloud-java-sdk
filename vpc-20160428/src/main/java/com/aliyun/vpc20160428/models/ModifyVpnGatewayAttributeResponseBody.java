@@ -4,8 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("AutoPropagate")
+    public Boolean autoPropagate;
+
+    @NameInMap("BusinessStatus")
+    public String businessStatus;
+
+    @NameInMap("CreateTime")
+    public Long createTime;
 
     @NameInMap("Description")
     public String description;
@@ -16,50 +22,60 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("CreateTime")
-    public Long createTime;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("AutoPropagate")
-    public Boolean autoPropagate;
+    @NameInMap("InternetIp")
+    public String internetIp;
 
     @NameInMap("IntranetIp")
     public String intranetIp;
 
-    @NameInMap("BusinessStatus")
-    public String businessStatus;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Spec")
+    public String spec;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     @NameInMap("VpcId")
     public String vpcId;
 
-    @NameInMap("InternetIp")
-    public String internetIp;
-
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
-
-    @NameInMap("Spec")
-    public String spec;
 
     public static ModifyVpnGatewayAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpnGatewayAttributeResponseBody self = new ModifyVpnGatewayAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyVpnGatewayAttributeResponseBody setStatus(String status) {
-        this.status = status;
+    public ModifyVpnGatewayAttributeResponseBody setAutoPropagate(Boolean autoPropagate) {
+        this.autoPropagate = autoPropagate;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Boolean getAutoPropagate() {
+        return this.autoPropagate;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setBusinessStatus(String businessStatus) {
+        this.businessStatus = businessStatus;
+        return this;
+    }
+    public String getBusinessStatus() {
+        return this.businessStatus;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
     }
 
     public ModifyVpnGatewayAttributeResponseBody setDescription(String description) {
@@ -86,36 +102,12 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public ModifyVpnGatewayAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyVpnGatewayAttributeResponseBody setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ModifyVpnGatewayAttributeResponseBody setCreateTime(Long createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public Long getCreateTime() {
-        return this.createTime;
-    }
-
-    public ModifyVpnGatewayAttributeResponseBody setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public ModifyVpnGatewayAttributeResponseBody setAutoPropagate(Boolean autoPropagate) {
-        this.autoPropagate = autoPropagate;
-        return this;
-    }
-    public Boolean getAutoPropagate() {
-        return this.autoPropagate;
+    public String getInternetIp() {
+        return this.internetIp;
     }
 
     public ModifyVpnGatewayAttributeResponseBody setIntranetIp(String intranetIp) {
@@ -126,20 +118,44 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         return this.intranetIp;
     }
 
-    public ModifyVpnGatewayAttributeResponseBody setBusinessStatus(String businessStatus) {
-        this.businessStatus = businessStatus;
-        return this;
-    }
-    public String getBusinessStatus() {
-        return this.businessStatus;
-    }
-
     public ModifyVpnGatewayAttributeResponseBody setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ModifyVpnGatewayAttributeResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public ModifyVpnGatewayAttributeResponseBody setVpcId(String vpcId) {
@@ -150,28 +166,12 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         return this.vpcId;
     }
 
-    public ModifyVpnGatewayAttributeResponseBody setInternetIp(String internetIp) {
-        this.internetIp = internetIp;
-        return this;
-    }
-    public String getInternetIp() {
-        return this.internetIp;
-    }
-
     public ModifyVpnGatewayAttributeResponseBody setVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
-    }
-
-    public ModifyVpnGatewayAttributeResponseBody setSpec(String spec) {
-        this.spec = spec;
-        return this;
-    }
-    public String getSpec() {
-        return this.spec;
     }
 
 }

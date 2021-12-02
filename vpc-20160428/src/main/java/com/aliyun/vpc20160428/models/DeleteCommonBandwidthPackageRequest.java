@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteCommonBandwidthPackageRequest extends TeaModel {
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
+    @NameInMap("Force")
+    public String force;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,33 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Force")
-    public String force;
-
-    @NameInMap("BandwidthPackageId")
-    public String bandwidthPackageId;
-
     public static DeleteCommonBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCommonBandwidthPackageRequest self = new DeleteCommonBandwidthPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCommonBandwidthPackageRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public DeleteCommonBandwidthPackageRequest setForce(String force) {
+        this.force = force;
+        return this;
+    }
+    public String getForce() {
+        return this.force;
+    }
+
+    public DeleteCommonBandwidthPackageRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteCommonBandwidthPackageRequest setOwnerId(Long ownerId) {
@@ -36,6 +60,14 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteCommonBandwidthPackageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteCommonBandwidthPackageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteCommonBandwidthPackageRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DeleteCommonBandwidthPackageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteCommonBandwidthPackageRequest setForce(String force) {
-        this.force = force;
-        return this;
-    }
-    public String getForce() {
-        return this.force;
-    }
-
-    public DeleteCommonBandwidthPackageRequest setBandwidthPackageId(String bandwidthPackageId) {
-        this.bandwidthPackageId = bandwidthPackageId;
-        return this;
-    }
-    public String getBandwidthPackageId() {
-        return this.bandwidthPackageId;
     }
 
 }

@@ -4,11 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public String bandwidth;
+
+    @NameInMap("EccId")
+    public String eccId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,18 +25,25 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Bandwidth")
-    public String bandwidth;
-
-    @NameInMap("EccId")
-    public String eccId;
-
     public static ModifyExpressCloudConnectionBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressCloudConnectionBandwidthRequest self = new ModifyExpressCloudConnectionBandwidthRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyExpressCloudConnectionBandwidthRequest setBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public String getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyExpressCloudConnectionBandwidthRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
     }
 
     public ModifyExpressCloudConnectionBandwidthRequest setOwnerAccount(String ownerAccount) {
@@ -46,6 +62,14 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyExpressCloudConnectionBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyExpressCloudConnectionBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -60,30 +84,6 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyExpressCloudConnectionBandwidthRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyExpressCloudConnectionBandwidthRequest setBandwidth(String bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public String getBandwidth() {
-        return this.bandwidth;
-    }
-
-    public ModifyExpressCloudConnectionBandwidthRequest setEccId(String eccId) {
-        this.eccId = eccId;
-        return this;
-    }
-    public String getEccId() {
-        return this.eccId;
     }
 
 }

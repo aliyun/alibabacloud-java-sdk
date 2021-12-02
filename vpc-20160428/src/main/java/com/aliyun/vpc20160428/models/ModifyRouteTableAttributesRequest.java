@@ -4,17 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouteTableAttributesRequest extends TeaModel {
-    @NameInMap("RouteTableId")
-    public String routeTableId;
-
-    @NameInMap("RouteTableName")
-    public String routeTableName;
-
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -22,43 +22,15 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Bandwidth")
-    public String bandwidth;
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
-    @NameInMap("KbpsBandwidth")
-    public String kbpsBandwidth;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceBid")
-    public String resourceBid;
-
-    @NameInMap("ResourceUid")
-    public Long resourceUid;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RouteTableName")
+    public String routeTableName;
 
     public static ModifyRouteTableAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouteTableAttributesRequest self = new ModifyRouteTableAttributesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyRouteTableAttributesRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
-    }
-
-    public ModifyRouteTableAttributesRequest setRouteTableName(String routeTableName) {
-        this.routeTableName = routeTableName;
-        return this;
-    }
-    public String getRouteTableName() {
-        return this.routeTableName;
     }
 
     public ModifyRouteTableAttributesRequest setDescription(String description) {
@@ -69,12 +41,28 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
         return this.description;
     }
 
+    public ModifyRouteTableAttributesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ModifyRouteTableAttributesRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyRouteTableAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyRouteTableAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -93,52 +81,20 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyRouteTableAttributesRequest setBandwidth(String bandwidth) {
-        this.bandwidth = bandwidth;
+    public ModifyRouteTableAttributesRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
         return this;
     }
-    public String getBandwidth() {
-        return this.bandwidth;
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
-    public ModifyRouteTableAttributesRequest setKbpsBandwidth(String kbpsBandwidth) {
-        this.kbpsBandwidth = kbpsBandwidth;
+    public ModifyRouteTableAttributesRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
         return this;
     }
-    public String getKbpsBandwidth() {
-        return this.kbpsBandwidth;
-    }
-
-    public ModifyRouteTableAttributesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyRouteTableAttributesRequest setResourceBid(String resourceBid) {
-        this.resourceBid = resourceBid;
-        return this;
-    }
-    public String getResourceBid() {
-        return this.resourceBid;
-    }
-
-    public ModifyRouteTableAttributesRequest setResourceUid(Long resourceUid) {
-        this.resourceUid = resourceUid;
-        return this;
-    }
-    public Long getResourceUid() {
-        return this.resourceUid;
-    }
-
-    public ModifyRouteTableAttributesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRouteTableName() {
+        return this.routeTableName;
     }
 
 }

@@ -4,11 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CancelExpressCloudConnectionRequest extends TeaModel {
+    @NameInMap("EccId")
+    public String eccId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class CancelExpressCloudConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("EccId")
-    public String eccId;
-
     public static CancelExpressCloudConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelExpressCloudConnectionRequest self = new CancelExpressCloudConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelExpressCloudConnectionRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
     }
 
     public CancelExpressCloudConnectionRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class CancelExpressCloudConnectionRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public CancelExpressCloudConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CancelExpressCloudConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class CancelExpressCloudConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CancelExpressCloudConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CancelExpressCloudConnectionRequest setEccId(String eccId) {
-        this.eccId = eccId;
-        return this;
-    }
-    public String getEccId() {
-        return this.eccId;
     }
 
 }

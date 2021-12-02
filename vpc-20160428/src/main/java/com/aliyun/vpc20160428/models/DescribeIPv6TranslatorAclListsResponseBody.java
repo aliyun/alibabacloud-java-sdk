@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Ipv6TranslatorAcls")
+    public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Ipv6TranslatorAcls")
-    public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeIPv6TranslatorAclListsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIPv6TranslatorAclListsResponseBody self = new DescribeIPv6TranslatorAclListsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIPv6TranslatorAclListsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeIPv6TranslatorAclListsResponseBody setIpv6TranslatorAcls(DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls) {
+        this.ipv6TranslatorAcls = ipv6TranslatorAcls;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls getIpv6TranslatorAcls() {
+        return this.ipv6TranslatorAcls;
+    }
+
+    public DescribeIPv6TranslatorAclListsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeIPv6TranslatorAclListsResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +56,12 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeIPv6TranslatorAclListsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeIPv6TranslatorAclListsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeIPv6TranslatorAclListsResponseBody setIpv6TranslatorAcls(DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls) {
-        this.ipv6TranslatorAcls = ipv6TranslatorAcls;
-        return this;
-    }
-    public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls getIpv6TranslatorAcls() {
-        return this.ipv6TranslatorAcls;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAclsIPv6TranslatorAcl extends TeaModel {

@@ -4,29 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyForwardEntryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ForwardTableId")
-    public String forwardTableId;
-
-    @NameInMap("ForwardEntryId")
-    public String forwardEntryId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ExternalIp")
     public String externalIp;
 
     @NameInMap("ExternalPort")
     public String externalPort;
+
+    @NameInMap("ForwardEntryId")
+    public String forwardEntryId;
+
+    @NameInMap("ForwardEntryName")
+    public String forwardEntryName;
+
+    @NameInMap("ForwardTableId")
+    public String forwardTableId;
 
     @NameInMap("InternalIp")
     public String internalIp;
@@ -37,69 +31,35 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    @NameInMap("ForwardEntryName")
-    public String forwardEntryName;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PortBreak")
+    public Boolean portBreak;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("PortBreak")
-    public Boolean portBreak;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyForwardEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyForwardEntryRequest self = new ModifyForwardEntryRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyForwardEntryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyForwardEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyForwardEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyForwardEntryRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyForwardEntryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyForwardEntryRequest setForwardTableId(String forwardTableId) {
-        this.forwardTableId = forwardTableId;
-        return this;
-    }
-    public String getForwardTableId() {
-        return this.forwardTableId;
-    }
-
-    public ModifyForwardEntryRequest setForwardEntryId(String forwardEntryId) {
-        this.forwardEntryId = forwardEntryId;
-        return this;
-    }
-    public String getForwardEntryId() {
-        return this.forwardEntryId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyForwardEntryRequest setExternalIp(String externalIp) {
@@ -116,6 +76,30 @@ public class ModifyForwardEntryRequest extends TeaModel {
     }
     public String getExternalPort() {
         return this.externalPort;
+    }
+
+    public ModifyForwardEntryRequest setForwardEntryId(String forwardEntryId) {
+        this.forwardEntryId = forwardEntryId;
+        return this;
+    }
+    public String getForwardEntryId() {
+        return this.forwardEntryId;
+    }
+
+    public ModifyForwardEntryRequest setForwardEntryName(String forwardEntryName) {
+        this.forwardEntryName = forwardEntryName;
+        return this;
+    }
+    public String getForwardEntryName() {
+        return this.forwardEntryName;
+    }
+
+    public ModifyForwardEntryRequest setForwardTableId(String forwardTableId) {
+        this.forwardTableId = forwardTableId;
+        return this;
+    }
+    public String getForwardTableId() {
+        return this.forwardTableId;
     }
 
     public ModifyForwardEntryRequest setInternalIp(String internalIp) {
@@ -142,12 +126,28 @@ public class ModifyForwardEntryRequest extends TeaModel {
         return this.ipProtocol;
     }
 
-    public ModifyForwardEntryRequest setForwardEntryName(String forwardEntryName) {
-        this.forwardEntryName = forwardEntryName;
+    public ModifyForwardEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getForwardEntryName() {
-        return this.forwardEntryName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyForwardEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyForwardEntryRequest setPortBreak(Boolean portBreak) {
+        this.portBreak = portBreak;
+        return this;
+    }
+    public Boolean getPortBreak() {
+        return this.portBreak;
     }
 
     public ModifyForwardEntryRequest setRegionId(String regionId) {
@@ -158,20 +158,20 @@ public class ModifyForwardEntryRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyForwardEntryRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifyForwardEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public ModifyForwardEntryRequest setPortBreak(Boolean portBreak) {
-        this.portBreak = portBreak;
+    public ModifyForwardEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Boolean getPortBreak() {
-        return this.portBreak;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

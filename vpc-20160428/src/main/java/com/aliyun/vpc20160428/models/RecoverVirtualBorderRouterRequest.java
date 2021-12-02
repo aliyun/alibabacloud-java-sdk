@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RecoverVirtualBorderRouterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("VbrId")
-    public String vbrId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,31 +22,28 @@ public class RecoverVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("VbrId")
+    public String vbrId;
 
     public static RecoverVirtualBorderRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         RecoverVirtualBorderRouterRequest self = new RecoverVirtualBorderRouterRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecoverVirtualBorderRouterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public RecoverVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public RecoverVirtualBorderRouterRequest setVbrId(String vbrId) {
-        this.vbrId = vbrId;
+    public RecoverVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getVbrId() {
-        return this.vbrId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RecoverVirtualBorderRouterRequest setOwnerId(Long ownerId) {
@@ -52,6 +52,14 @@ public class RecoverVirtualBorderRouterRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RecoverVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RecoverVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -70,20 +78,12 @@ public class RecoverVirtualBorderRouterRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RecoverVirtualBorderRouterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public RecoverVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public RecoverVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVbrId() {
+        return this.vbrId;
     }
 
 }

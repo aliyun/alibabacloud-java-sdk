@@ -4,20 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateRouteTableRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RouteTableId")
-    public String routeTableId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -25,36 +22,15 @@ public class UnassociateRouteTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouteTableId")
+    public String routeTableId;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     public static UnassociateRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassociateRouteTableRequest self = new UnassociateRouteTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UnassociateRouteTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UnassociateRouteTableRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
-    }
-
-    public UnassociateRouteTableRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
     }
 
     public UnassociateRouteTableRequest setClientToken(String clientToken) {
@@ -65,12 +41,28 @@ public class UnassociateRouteTableRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UnassociateRouteTableRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public UnassociateRouteTableRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UnassociateRouteTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UnassociateRouteTableRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -89,12 +81,20 @@ public class UnassociateRouteTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UnassociateRouteTableRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UnassociateRouteTableRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public UnassociateRouteTableRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

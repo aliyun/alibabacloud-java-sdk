@@ -4,35 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowLogRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("FlowLogName")
-    public String flowLogName;
-
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("ResourceId")
-    public String resourceId;
-
-    @NameInMap("TrafficType")
-    public String trafficType;
-
-    @NameInMap("ProjectName")
-    public String projectName;
+    @NameInMap("FlowLogName")
+    public String flowLogName;
 
     @NameInMap("LogStoreName")
     public String logStoreName;
@@ -40,9 +16,65 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("TrafficType")
+    public String trafficType;
+
     public static CreateFlowLogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowLogRequest self = new CreateFlowLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFlowLogRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateFlowLogRequest setFlowLogName(String flowLogName) {
+        this.flowLogName = flowLogName;
+        return this;
+    }
+    public String getFlowLogName() {
+        return this.flowLogName;
+    }
+
+    public CreateFlowLogRequest setLogStoreName(String logStoreName) {
+        this.logStoreName = logStoreName;
+        return this;
+    }
+    public String getLogStoreName() {
+        return this.logStoreName;
+    }
+
+    public CreateFlowLogRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateFlowLogRequest setOwnerId(Long ownerId) {
@@ -51,6 +83,30 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateFlowLogRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public CreateFlowLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateFlowLogRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public CreateFlowLogRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -69,30 +125,6 @@ public class CreateFlowLogRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateFlowLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateFlowLogRequest setFlowLogName(String flowLogName) {
-        this.flowLogName = flowLogName;
-        return this;
-    }
-    public String getFlowLogName() {
-        return this.flowLogName;
-    }
-
-    public CreateFlowLogRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public CreateFlowLogRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -101,44 +133,12 @@ public class CreateFlowLogRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public CreateFlowLogRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
-    }
-
     public CreateFlowLogRequest setTrafficType(String trafficType) {
         this.trafficType = trafficType;
         return this;
     }
     public String getTrafficType() {
         return this.trafficType;
-    }
-
-    public CreateFlowLogRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public CreateFlowLogRequest setLogStoreName(String logStoreName) {
-        this.logStoreName = logStoreName;
-        return this;
-    }
-    public String getLogStoreName() {
-        return this.logStoreName;
-    }
-
-    public CreateFlowLogRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

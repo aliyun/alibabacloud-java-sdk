@@ -4,20 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("AssociatedCens")
+    public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
-    @NameInMap("IsDefault")
-    public Boolean isDefault;
+    @NameInMap("CidrBlock")
+    public String cidrBlock;
 
-    @NameInMap("DhcpOptionsSetStatus")
-    public String dhcpOptionsSetStatus;
+    @NameInMap("ClassicLinkEnabled")
+    public Boolean classicLinkEnabled;
+
+    @NameInMap("CloudResources")
+    public DescribeVpcAttributeResponseBodyCloudResources cloudResources;
+
+    @NameInMap("CreationTime")
+    public String creationTime;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("ClassicLinkEnabled")
-    public Boolean classicLinkEnabled;
+    @NameInMap("DhcpOptionsSetId")
+    public String dhcpOptionsSetId;
+
+    @NameInMap("DhcpOptionsSetStatus")
+    public String dhcpOptionsSetStatus;
+
+    @NameInMap("Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+
+    @NameInMap("Ipv6CidrBlocks")
+    public DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks;
+
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -25,14 +49,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("VSwitchIds")
-    public DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds;
-
     @NameInMap("SecondaryCidrBlocks")
     public DescribeVpcAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks;
 
-    @NameInMap("CidrBlock")
-    public String cidrBlock;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("UserCidrs")
     public DescribeVpcAttributeResponseBodyUserCidrs userCidrs;
@@ -40,60 +61,58 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("VRouterId")
     public String VRouterId;
 
-    @NameInMap("DhcpOptionsSetId")
-    public String dhcpOptionsSetId;
+    @NameInMap("VSwitchIds")
+    public DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds;
 
     @NameInMap("VpcId")
     public String vpcId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("AssociatedCens")
-    public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
-
-    @NameInMap("CreationTime")
-    public String creationTime;
-
     @NameInMap("VpcName")
     public String vpcName;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Ipv6CidrBlock")
-    public String ipv6CidrBlock;
-
-    @NameInMap("CloudResources")
-    public DescribeVpcAttributeResponseBodyCloudResources cloudResources;
 
     public static DescribeVpcAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcAttributeResponseBody self = new DescribeVpcAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcAttributeResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeVpcAttributeResponseBody setAssociatedCens(DescribeVpcAttributeResponseBodyAssociatedCens associatedCens) {
+        this.associatedCens = associatedCens;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public DescribeVpcAttributeResponseBodyAssociatedCens getAssociatedCens() {
+        return this.associatedCens;
     }
 
-    public DescribeVpcAttributeResponseBody setIsDefault(Boolean isDefault) {
-        this.isDefault = isDefault;
+    public DescribeVpcAttributeResponseBody setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
         return this;
     }
-    public Boolean getIsDefault() {
-        return this.isDefault;
+    public String getCidrBlock() {
+        return this.cidrBlock;
     }
 
-    public DescribeVpcAttributeResponseBody setDhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
-        this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+    public DescribeVpcAttributeResponseBody setClassicLinkEnabled(Boolean classicLinkEnabled) {
+        this.classicLinkEnabled = classicLinkEnabled;
         return this;
     }
-    public String getDhcpOptionsSetStatus() {
-        return this.dhcpOptionsSetStatus;
+    public Boolean getClassicLinkEnabled() {
+        return this.classicLinkEnabled;
+    }
+
+    public DescribeVpcAttributeResponseBody setCloudResources(DescribeVpcAttributeResponseBodyCloudResources cloudResources) {
+        this.cloudResources = cloudResources;
+        return this;
+    }
+    public DescribeVpcAttributeResponseBodyCloudResources getCloudResources() {
+        return this.cloudResources;
+    }
+
+    public DescribeVpcAttributeResponseBody setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    public String getCreationTime() {
+        return this.creationTime;
     }
 
     public DescribeVpcAttributeResponseBody setDescription(String description) {
@@ -104,12 +123,60 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.description;
     }
 
-    public DescribeVpcAttributeResponseBody setClassicLinkEnabled(Boolean classicLinkEnabled) {
-        this.classicLinkEnabled = classicLinkEnabled;
+    public DescribeVpcAttributeResponseBody setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
         return this;
     }
-    public Boolean getClassicLinkEnabled() {
-        return this.classicLinkEnabled;
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public DescribeVpcAttributeResponseBody setDhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
+        this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+        return this;
+    }
+    public String getDhcpOptionsSetStatus() {
+        return this.dhcpOptionsSetStatus;
+    }
+
+    public DescribeVpcAttributeResponseBody setIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
+    }
+
+    public DescribeVpcAttributeResponseBody setIpv6CidrBlocks(DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks) {
+        this.ipv6CidrBlocks = ipv6CidrBlocks;
+        return this;
+    }
+    public DescribeVpcAttributeResponseBodyIpv6CidrBlocks getIpv6CidrBlocks() {
+        return this.ipv6CidrBlocks;
+    }
+
+    public DescribeVpcAttributeResponseBody setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public DescribeVpcAttributeResponseBody setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVpcAttributeResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeVpcAttributeResponseBody setRequestId(String requestId) {
@@ -128,14 +195,6 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeVpcAttributeResponseBody setVSwitchIds(DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds) {
-        this.vSwitchIds = vSwitchIds;
-        return this;
-    }
-    public DescribeVpcAttributeResponseBodyVSwitchIds getVSwitchIds() {
-        return this.vSwitchIds;
-    }
-
     public DescribeVpcAttributeResponseBody setSecondaryCidrBlocks(DescribeVpcAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks) {
         this.secondaryCidrBlocks = secondaryCidrBlocks;
         return this;
@@ -144,12 +203,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.secondaryCidrBlocks;
     }
 
-    public DescribeVpcAttributeResponseBody setCidrBlock(String cidrBlock) {
-        this.cidrBlock = cidrBlock;
+    public DescribeVpcAttributeResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getCidrBlock() {
-        return this.cidrBlock;
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeVpcAttributeResponseBody setUserCidrs(DescribeVpcAttributeResponseBodyUserCidrs userCidrs) {
@@ -168,12 +227,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.VRouterId;
     }
 
-    public DescribeVpcAttributeResponseBody setDhcpOptionsSetId(String dhcpOptionsSetId) {
-        this.dhcpOptionsSetId = dhcpOptionsSetId;
+    public DescribeVpcAttributeResponseBody setVSwitchIds(DescribeVpcAttributeResponseBodyVSwitchIds vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
         return this;
     }
-    public String getDhcpOptionsSetId() {
-        return this.dhcpOptionsSetId;
+    public DescribeVpcAttributeResponseBodyVSwitchIds getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
     public DescribeVpcAttributeResponseBody setVpcId(String vpcId) {
@@ -184,30 +243,6 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.vpcId;
     }
 
-    public DescribeVpcAttributeResponseBody setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVpcAttributeResponseBody setAssociatedCens(DescribeVpcAttributeResponseBodyAssociatedCens associatedCens) {
-        this.associatedCens = associatedCens;
-        return this;
-    }
-    public DescribeVpcAttributeResponseBodyAssociatedCens getAssociatedCens() {
-        return this.associatedCens;
-    }
-
-    public DescribeVpcAttributeResponseBody setCreationTime(String creationTime) {
-        this.creationTime = creationTime;
-        return this;
-    }
-    public String getCreationTime() {
-        return this.creationTime;
-    }
-
     public DescribeVpcAttributeResponseBody setVpcName(String vpcName) {
         this.vpcName = vpcName;
         return this;
@@ -216,93 +251,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         return this.vpcName;
     }
 
-    public DescribeVpcAttributeResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeVpcAttributeResponseBody setIpv6CidrBlock(String ipv6CidrBlock) {
-        this.ipv6CidrBlock = ipv6CidrBlock;
-        return this;
-    }
-    public String getIpv6CidrBlock() {
-        return this.ipv6CidrBlock;
-    }
-
-    public DescribeVpcAttributeResponseBody setCloudResources(DescribeVpcAttributeResponseBodyCloudResources cloudResources) {
-        this.cloudResources = cloudResources;
-        return this;
-    }
-    public DescribeVpcAttributeResponseBodyCloudResources getCloudResources() {
-        return this.cloudResources;
-    }
-
-    public static class DescribeVpcAttributeResponseBodyVSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
-        public java.util.List<String> vSwitchId;
-
-        public static DescribeVpcAttributeResponseBodyVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVpcAttributeResponseBodyVSwitchIds self = new DescribeVpcAttributeResponseBodyVSwitchIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVpcAttributeResponseBodyVSwitchIds setVSwitchId(java.util.List<String> vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public java.util.List<String> getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-    }
-
-    public static class DescribeVpcAttributeResponseBodySecondaryCidrBlocks extends TeaModel {
-        @NameInMap("SecondaryCidrBlock")
-        public java.util.List<String> secondaryCidrBlock;
-
-        public static DescribeVpcAttributeResponseBodySecondaryCidrBlocks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVpcAttributeResponseBodySecondaryCidrBlocks self = new DescribeVpcAttributeResponseBodySecondaryCidrBlocks();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVpcAttributeResponseBodySecondaryCidrBlocks setSecondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
-            this.secondaryCidrBlock = secondaryCidrBlock;
-            return this;
-        }
-        public java.util.List<String> getSecondaryCidrBlock() {
-            return this.secondaryCidrBlock;
-        }
-
-    }
-
-    public static class DescribeVpcAttributeResponseBodyUserCidrs extends TeaModel {
-        @NameInMap("UserCidr")
-        public java.util.List<String> userCidr;
-
-        public static DescribeVpcAttributeResponseBodyUserCidrs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVpcAttributeResponseBodyUserCidrs self = new DescribeVpcAttributeResponseBodyUserCidrs();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVpcAttributeResponseBodyUserCidrs setUserCidr(java.util.List<String> userCidr) {
-            this.userCidr = userCidr;
-            return this;
-        }
-        public java.util.List<String> getUserCidr() {
-            return this.userCidr;
-        }
-
-    }
-
     public static class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen extends TeaModel {
-        @NameInMap("CenOwnerId")
-        public Long cenOwnerId;
-
         @NameInMap("CenId")
         public String cenId;
+
+        @NameInMap("CenOwnerId")
+        public Long cenOwnerId;
 
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -312,20 +266,20 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen setCenOwnerId(Long cenOwnerId) {
-            this.cenOwnerId = cenOwnerId;
-            return this;
-        }
-        public Long getCenOwnerId() {
-            return this.cenOwnerId;
-        }
-
         public DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen setCenOwnerId(Long cenOwnerId) {
+            this.cenOwnerId = cenOwnerId;
+            return this;
+        }
+        public Long getCenOwnerId() {
+            return this.cenOwnerId;
         }
 
         public DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen setCenStatus(String cenStatus) {
@@ -402,6 +356,112 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType> getCloudResourceSetType() {
             return this.cloudResourceSetType;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
+        @NameInMap("Ipv6CidrBlock")
+        public String ipv6CidrBlock;
+
+        @NameInMap("Ipv6Isp")
+        public String ipv6Isp;
+
+        public static DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock self = new DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock setIpv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock setIpv6Isp(String ipv6Isp) {
+            this.ipv6Isp = ipv6Isp;
+            return this;
+        }
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyIpv6CidrBlocks extends TeaModel {
+        @NameInMap("Ipv6CidrBlock")
+        public java.util.List<DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> ipv6CidrBlock;
+
+        public static DescribeVpcAttributeResponseBodyIpv6CidrBlocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyIpv6CidrBlocks self = new DescribeVpcAttributeResponseBodyIpv6CidrBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyIpv6CidrBlocks setIpv6CidrBlock(java.util.List<DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public java.util.List<DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodySecondaryCidrBlocks extends TeaModel {
+        @NameInMap("SecondaryCidrBlock")
+        public java.util.List<String> secondaryCidrBlock;
+
+        public static DescribeVpcAttributeResponseBodySecondaryCidrBlocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodySecondaryCidrBlocks self = new DescribeVpcAttributeResponseBodySecondaryCidrBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodySecondaryCidrBlocks setSecondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
+            this.secondaryCidrBlock = secondaryCidrBlock;
+            return this;
+        }
+        public java.util.List<String> getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyUserCidrs extends TeaModel {
+        @NameInMap("UserCidr")
+        public java.util.List<String> userCidr;
+
+        public static DescribeVpcAttributeResponseBodyUserCidrs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyUserCidrs self = new DescribeVpcAttributeResponseBodyUserCidrs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyUserCidrs setUserCidr(java.util.List<String> userCidr) {
+            this.userCidr = userCidr;
+            return this;
+        }
+        public java.util.List<String> getUserCidr() {
+            return this.userCidr;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyVSwitchIds extends TeaModel {
+        @NameInMap("VSwitchId")
+        public java.util.List<String> vSwitchId;
+
+        public static DescribeVpcAttributeResponseBodyVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyVSwitchIds self = new DescribeVpcAttributeResponseBodyVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyVSwitchIds setVSwitchId(java.util.List<String> vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public java.util.List<String> getVSwitchId() {
+            return this.vSwitchId;
         }
 
     }

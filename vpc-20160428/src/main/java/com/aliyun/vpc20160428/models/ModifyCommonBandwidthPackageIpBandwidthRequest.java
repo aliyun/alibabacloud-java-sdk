@@ -4,20 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Bandwidth")
+    public String bandwidth;
 
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -25,52 +13,32 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     @NameInMap("EipId")
     public String eipId;
 
-    @NameInMap("Bandwidth")
-    public String bandwidth;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyCommonBandwidthPackageIpBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCommonBandwidthPackageIpBandwidthRequest self = new ModifyCommonBandwidthPackageIpBandwidthRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getBandwidth() {
+        return this.bandwidth;
     }
 
     public ModifyCommonBandwidthPackageIpBandwidthRequest setBandwidthPackageId(String bandwidthPackageId) {
@@ -89,12 +57,44 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
         return this.eipId;
     }
 
-    public ModifyCommonBandwidthPackageIpBandwidthRequest setBandwidth(String bandwidth) {
-        this.bandwidth = bandwidth;
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getBandwidth() {
-        return this.bandwidth;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -7,23 +7,23 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     @NameInMap("AclEntries")
     public DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntries aclEntries;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("AclId")
     public String aclId;
 
     @NameInMap("AclName")
     public String aclName;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeIPv6TranslatorAclListAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIPv6TranslatorAclListAttributesResponseBody self = new DescribeIPv6TranslatorAclListAttributesResponseBody();
@@ -36,38 +36,6 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     }
     public DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntries getAclEntries() {
         return this.aclEntries;
-    }
-
-    public DescribeIPv6TranslatorAclListAttributesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeIPv6TranslatorAclListAttributesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeIPv6TranslatorAclListAttributesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeIPv6TranslatorAclListAttributesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeIPv6TranslatorAclListAttributesResponseBody setAclId(String aclId) {
@@ -84,6 +52,38 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     }
     public String getAclName() {
         return this.aclName;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry extends TeaModel {

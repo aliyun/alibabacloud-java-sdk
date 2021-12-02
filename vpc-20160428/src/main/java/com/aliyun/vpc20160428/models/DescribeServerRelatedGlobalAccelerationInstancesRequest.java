@@ -4,8 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +19,23 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ServerId")
     public String serverId;
 
     @NameInMap("ServerType")
     public String serverType;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeServerRelatedGlobalAccelerationInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerRelatedGlobalAccelerationInstancesRequest self = new DescribeServerRelatedGlobalAccelerationInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServerRelatedGlobalAccelerationInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeServerRelatedGlobalAccelerationInstancesRequest setOwnerId(Long ownerId) {
@@ -36,6 +44,14 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeServerRelatedGlobalAccelerationInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeServerRelatedGlobalAccelerationInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,14 +70,6 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
         return this.resourceOwnerId;
     }
 
-    public DescribeServerRelatedGlobalAccelerationInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeServerRelatedGlobalAccelerationInstancesRequest setServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -76,14 +84,6 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     }
     public String getServerType() {
         return this.serverType;
-    }
-
-    public DescribeServerRelatedGlobalAccelerationInstancesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

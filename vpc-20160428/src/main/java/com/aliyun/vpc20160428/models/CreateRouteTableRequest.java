@@ -4,20 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteTableRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AssociateType")
+    public String associateType;
 
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("RouteTableName")
-    public String routeTableName;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -25,39 +28,31 @@ public class CreateRouteTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouteTableName")
+    public String routeTableName;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteTableRequest self = new CreateRouteTableRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateRouteTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateRouteTableRequest setAssociateType(String associateType) {
+        this.associateType = associateType;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAssociateType() {
+        return this.associateType;
     }
 
-    public CreateRouteTableRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public CreateRouteTableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateRouteTableRequest setRouteTableName(String routeTableName) {
-        this.routeTableName = routeTableName;
-        return this;
-    }
-    public String getRouteTableName() {
-        return this.routeTableName;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateRouteTableRequest setDescription(String description) {
@@ -68,12 +63,28 @@ public class CreateRouteTableRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateRouteTableRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public CreateRouteTableRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateRouteTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRouteTableRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -92,20 +103,20 @@ public class CreateRouteTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateRouteTableRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateRouteTableRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouteTableName() {
+        return this.routeTableName;
     }
 
-    public CreateRouteTableRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateRouteTableRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

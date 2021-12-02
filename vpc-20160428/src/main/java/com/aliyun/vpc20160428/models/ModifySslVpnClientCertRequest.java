@@ -4,11 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifySslVpnClientCertRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +25,28 @@ public class ModifySslVpnClientCertRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
-
-    @NameInMap("Name")
-    public String name;
 
     public static ModifySslVpnClientCertRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySslVpnClientCertRequest self = new ModifySslVpnClientCertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySslVpnClientCertRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifySslVpnClientCertRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifySslVpnClientCertRequest setOwnerAccount(String ownerAccount) {
@@ -49,6 +65,14 @@ public class ModifySslVpnClientCertRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifySslVpnClientCertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifySslVpnClientCertRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,36 +89,12 @@ public class ModifySslVpnClientCertRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySslVpnClientCertRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifySslVpnClientCertRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public ModifySslVpnClientCertRequest setSslVpnClientCertId(String sslVpnClientCertId) {
         this.sslVpnClientCertId = sslVpnClientCertId;
         return this;
     }
     public String getSslVpnClientCertId() {
         return this.sslVpnClientCertId;
-    }
-
-    public ModifySslVpnClientCertRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
 }

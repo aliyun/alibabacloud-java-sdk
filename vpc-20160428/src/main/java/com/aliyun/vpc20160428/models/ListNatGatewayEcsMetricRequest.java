@@ -4,17 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListNatGatewayEcsMetricRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("MaxResults")
+    public String maxResults;
 
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
-    @NameInMap("TimePoint")
-    public Long timePoint;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OrderKey")
     public String orderKey;
@@ -25,23 +25,15 @@ public class ListNatGatewayEcsMetricRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("MaxResults")
-    public String maxResults;
+    @NameInMap("TimePoint")
+    public Long timePoint;
 
     public static ListNatGatewayEcsMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNatGatewayEcsMetricRequest self = new ListNatGatewayEcsMetricRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListNatGatewayEcsMetricRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListNatGatewayEcsMetricRequest setDryRun(Boolean dryRun) {
@@ -52,6 +44,14 @@ public class ListNatGatewayEcsMetricRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public ListNatGatewayEcsMetricRequest setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
     public ListNatGatewayEcsMetricRequest setNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -60,12 +60,12 @@ public class ListNatGatewayEcsMetricRequest extends TeaModel {
         return this.natGatewayId;
     }
 
-    public ListNatGatewayEcsMetricRequest setTimePoint(Long timePoint) {
-        this.timePoint = timePoint;
+    public ListNatGatewayEcsMetricRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public Long getTimePoint() {
-        return this.timePoint;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListNatGatewayEcsMetricRequest setOrderKey(String orderKey) {
@@ -92,20 +92,20 @@ public class ListNatGatewayEcsMetricRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
-    public ListNatGatewayEcsMetricRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListNatGatewayEcsMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public ListNatGatewayEcsMetricRequest setMaxResults(String maxResults) {
-        this.maxResults = maxResults;
+    public ListNatGatewayEcsMetricRequest setTimePoint(Long timePoint) {
+        this.timePoint = timePoint;
         return this;
     }
-    public String getMaxResults() {
-        return this.maxResults;
+    public Long getTimePoint() {
+        return this.timePoint;
     }
 
 }

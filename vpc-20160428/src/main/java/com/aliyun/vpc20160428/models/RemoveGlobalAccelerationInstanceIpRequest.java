@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
+    @NameInMap("GlobalAccelerationInstanceId")
+    public String globalAccelerationInstanceId;
+
+    @NameInMap("IpInstanceId")
+    public String ipInstanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,61 +25,9 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("GlobalAccelerationInstanceId")
-    public String globalAccelerationInstanceId;
-
-    @NameInMap("IpInstanceId")
-    public String ipInstanceId;
-
     public static RemoveGlobalAccelerationInstanceIpRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveGlobalAccelerationInstanceIpRequest self = new RemoveGlobalAccelerationInstanceIpRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveGlobalAccelerationInstanceIpRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public RemoveGlobalAccelerationInstanceIpRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public RemoveGlobalAccelerationInstanceIpRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public RemoveGlobalAccelerationInstanceIpRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public RemoveGlobalAccelerationInstanceIpRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public RemoveGlobalAccelerationInstanceIpRequest setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
@@ -84,6 +44,46 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     }
     public String getIpInstanceId() {
         return this.ipInstanceId;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

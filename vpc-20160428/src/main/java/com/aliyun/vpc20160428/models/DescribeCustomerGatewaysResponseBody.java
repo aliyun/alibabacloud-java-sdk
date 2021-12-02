@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewaysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("CustomerGateways")
+    public DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("CustomerGateways")
-    public DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeCustomerGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomerGatewaysResponseBody self = new DescribeCustomerGatewaysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomerGatewaysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeCustomerGatewaysResponseBody setCustomerGateways(DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways) {
+        this.customerGateways = customerGateways;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeCustomerGatewaysResponseBodyCustomerGateways getCustomerGateways() {
+        return this.customerGateways;
+    }
+
+    public DescribeCustomerGatewaysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeCustomerGatewaysResponseBody setPageSize(Integer pageSize) {
@@ -48,37 +56,32 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCustomerGatewaysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeCustomerGatewaysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeCustomerGatewaysResponseBody setCustomerGateways(DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways) {
-        this.customerGateways = customerGateways;
-        return this;
-    }
-    public DescribeCustomerGatewaysResponseBodyCustomerGateways getCustomerGateways() {
-        return this.customerGateways;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway extends TeaModel {
-        @NameInMap("IpAddress")
-        public String ipAddress;
-
         @NameInMap("Asn")
-        public Integer asn;
+        public Long asn;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("AuthKey")
+        public String authKey;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("IpAddress")
+        public String ipAddress;
 
         @NameInMap("Name")
         public String name;
@@ -88,28 +91,28 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setAsn(Integer asn) {
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setAsn(Long asn) {
             this.asn = asn;
             return this;
         }
-        public Integer getAsn() {
+        public Long getAsn() {
             return this.asn;
         }
 
-        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setDescription(String description) {
-            this.description = description;
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setAuthKey(String authKey) {
+            this.authKey = authKey;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getAuthKey() {
+            return this.authKey;
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setCustomerGatewayId(String customerGatewayId) {
@@ -120,12 +123,20 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             return this.customerGatewayId;
         }
 
-        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
         }
 
         public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setName(String name) {

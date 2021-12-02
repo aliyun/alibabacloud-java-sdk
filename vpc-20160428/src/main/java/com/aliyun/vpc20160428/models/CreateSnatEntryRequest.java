@@ -4,8 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,33 +22,40 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("SnatTableId")
-    public String snatTableId;
-
-    @NameInMap("SourceVSwitchId")
-    public String sourceVSwitchId;
-
-    @NameInMap("SourceCIDR")
-    public String sourceCIDR;
+    @NameInMap("SnatEntryName")
+    public String snatEntryName;
 
     @NameInMap("SnatIp")
     public String snatIp;
 
-    @NameInMap("SnatEntryName")
-    public String snatEntryName;
+    @NameInMap("SnatTableId")
+    public String snatTableId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("SourceCIDR")
+    public String sourceCIDR;
+
+    @NameInMap("SourceVSwitchId")
+    public String sourceVSwitchId;
 
     public static CreateSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryRequest self = new CreateSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSnatEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateSnatEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateSnatEntryRequest setOwnerId(Long ownerId) {
@@ -48,6 +64,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateSnatEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSnatEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,44 +90,12 @@ public class CreateSnatEntryRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateSnatEntryRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateSnatEntryRequest setSnatEntryName(String snatEntryName) {
+        this.snatEntryName = snatEntryName;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateSnatEntryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateSnatEntryRequest setSnatTableId(String snatTableId) {
-        this.snatTableId = snatTableId;
-        return this;
-    }
-    public String getSnatTableId() {
-        return this.snatTableId;
-    }
-
-    public CreateSnatEntryRequest setSourceVSwitchId(String sourceVSwitchId) {
-        this.sourceVSwitchId = sourceVSwitchId;
-        return this;
-    }
-    public String getSourceVSwitchId() {
-        return this.sourceVSwitchId;
-    }
-
-    public CreateSnatEntryRequest setSourceCIDR(String sourceCIDR) {
-        this.sourceCIDR = sourceCIDR;
-        return this;
-    }
-    public String getSourceCIDR() {
-        return this.sourceCIDR;
+    public String getSnatEntryName() {
+        return this.snatEntryName;
     }
 
     public CreateSnatEntryRequest setSnatIp(String snatIp) {
@@ -114,20 +106,28 @@ public class CreateSnatEntryRequest extends TeaModel {
         return this.snatIp;
     }
 
-    public CreateSnatEntryRequest setSnatEntryName(String snatEntryName) {
-        this.snatEntryName = snatEntryName;
+    public CreateSnatEntryRequest setSnatTableId(String snatTableId) {
+        this.snatTableId = snatTableId;
         return this;
     }
-    public String getSnatEntryName() {
-        return this.snatEntryName;
+    public String getSnatTableId() {
+        return this.snatTableId;
     }
 
-    public CreateSnatEntryRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateSnatEntryRequest setSourceCIDR(String sourceCIDR) {
+        this.sourceCIDR = sourceCIDR;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getSourceCIDR() {
+        return this.sourceCIDR;
+    }
+
+    public CreateSnatEntryRequest setSourceVSwitchId(String sourceVSwitchId) {
+        this.sourceVSwitchId = sourceVSwitchId;
+        return this;
+    }
+    public String getSourceVSwitchId() {
+        return this.sourceVSwitchId;
     }
 
 }

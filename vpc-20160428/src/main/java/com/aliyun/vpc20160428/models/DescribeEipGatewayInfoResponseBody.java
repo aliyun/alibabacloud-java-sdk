@@ -4,37 +4,21 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipGatewayInfoResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("EipInfos")
     public DescribeEipGatewayInfoResponseBodyEipInfos eipInfos;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeEipGatewayInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipGatewayInfoResponseBody self = new DescribeEipGatewayInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEipGatewayInfoResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeEipGatewayInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEipGatewayInfoResponseBody setCode(String code) {
@@ -53,19 +37,43 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         return this.eipInfos;
     }
 
+    public DescribeEipGatewayInfoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeEipGatewayInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeEipGatewayInfoResponseBodyEipInfosEipInfo extends TeaModel {
+        @NameInMap("Ip")
+        public String ip;
+
         @NameInMap("IpGw")
         public String ipGw;
 
         @NameInMap("IpMask")
         public String ipMask;
 
-        @NameInMap("Ip")
-        public String ip;
-
         public static DescribeEipGatewayInfoResponseBodyEipInfosEipInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipGatewayInfoResponseBodyEipInfosEipInfo self = new DescribeEipGatewayInfoResponseBodyEipInfosEipInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEipGatewayInfoResponseBodyEipInfosEipInfo setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
         public DescribeEipGatewayInfoResponseBodyEipInfosEipInfo setIpGw(String ipGw) {
@@ -82,14 +90,6 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
         }
         public String getIpMask() {
             return this.ipMask;
-        }
-
-        public DescribeEipGatewayInfoResponseBodyEipInfosEipInfo setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
         }
 
     }

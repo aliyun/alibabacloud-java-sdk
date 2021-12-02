@@ -4,23 +4,32 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientCertResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("CaCert")
+    public String caCert;
 
     @NameInMap("ClientCert")
     public String clientCert;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("ClientConfig")
+    public String clientConfig;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ClientKey")
+    public String clientKey;
 
     @NameInMap("CreateTime")
     public Long createTime;
 
-    @NameInMap("ClientKey")
-    public String clientKey;
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
@@ -28,29 +37,20 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 
-    @NameInMap("CaCert")
-    public String caCert;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientConfig")
-    public String clientConfig;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeSslVpnClientCertResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSslVpnClientCertResponseBody self = new DescribeSslVpnClientCertResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSslVpnClientCertResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeSslVpnClientCertResponseBody setCaCert(String caCert) {
+        this.caCert = caCert;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getCaCert() {
+        return this.caCert;
     }
 
     public DescribeSslVpnClientCertResponseBody setClientCert(String clientCert) {
@@ -61,20 +61,20 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         return this.clientCert;
     }
 
-    public DescribeSslVpnClientCertResponseBody setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public DescribeSslVpnClientCertResponseBody setClientConfig(String clientConfig) {
+        this.clientConfig = clientConfig;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public String getClientConfig() {
+        return this.clientConfig;
     }
 
-    public DescribeSslVpnClientCertResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSslVpnClientCertResponseBody setClientKey(String clientKey) {
+        this.clientKey = clientKey;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getClientKey() {
+        return this.clientKey;
     }
 
     public DescribeSslVpnClientCertResponseBody setCreateTime(Long createTime) {
@@ -85,12 +85,36 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public DescribeSslVpnClientCertResponseBody setClientKey(String clientKey) {
-        this.clientKey = clientKey;
+    public DescribeSslVpnClientCertResponseBody setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getClientKey() {
-        return this.clientKey;
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeSslVpnClientCertResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeSslVpnClientCertResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSslVpnClientCertResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSslVpnClientCertResponseBody setSslVpnClientCertId(String sslVpnClientCertId) {
@@ -109,36 +133,12 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         return this.sslVpnServerId;
     }
 
-    public DescribeSslVpnClientCertResponseBody setCaCert(String caCert) {
-        this.caCert = caCert;
+    public DescribeSslVpnClientCertResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getCaCert() {
-        return this.caCert;
-    }
-
-    public DescribeSslVpnClientCertResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeSslVpnClientCertResponseBody setClientConfig(String clientConfig) {
-        this.clientConfig = clientConfig;
-        return this;
-    }
-    public String getClientConfig() {
-        return this.clientConfig;
-    }
-
-    public DescribeSslVpnClientCertResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getStatus() {
+        return this.status;
     }
 
 }

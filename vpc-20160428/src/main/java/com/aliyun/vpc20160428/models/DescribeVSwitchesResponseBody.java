@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("VSwitches")
     public DescribeVSwitchesResponseBodyVSwitches vSwitches;
@@ -24,12 +24,12 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVSwitchesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVSwitchesResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVSwitchesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVSwitchesResponseBody setVSwitches(DescribeVSwitchesResponseBodyVSwitches vSwitches) {
@@ -62,6 +62,36 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
     public DescribeVSwitchesResponseBodyVSwitches getVSwitches() {
         return this.vSwitches;
+    }
+
+    public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable extends TeaModel {
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        @NameInMap("RouteTableType")
+        public String routeTableType;
+
+        public static DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable self = new DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable setRouteTableType(String routeTableType) {
+            this.routeTableType = routeTableType;
+            return this;
+        }
+        public String getRouteTableType() {
+            return this.routeTableType;
+        }
+
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
@@ -113,57 +143,24 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable extends TeaModel {
-        @NameInMap("RouteTableType")
-        public String routeTableType;
-
-        @NameInMap("RouteTableId")
-        public String routeTableId;
-
-        public static DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable self = new DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable setRouteTableType(String routeTableType) {
-            this.routeTableType = routeTableType;
-            return this;
-        }
-        public String getRouteTableType() {
-            return this.routeTableType;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
-            return this;
-        }
-        public String getRouteTableId() {
-            return this.routeTableId;
-        }
-
-    }
-
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitch extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("IsDefault")
-        public Boolean isDefault;
-
         @NameInMap("AvailableIpAddressCount")
         public Long availableIpAddressCount;
 
-        @NameInMap("Tags")
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags;
+        @NameInMap("CidrBlock")
+        public String cidrBlock;
 
-        @NameInMap("RouteTable")
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable;
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Ipv6CidrBlock")
+        public String ipv6CidrBlock;
+
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
 
         @NameInMap("NetworkAclId")
         public String networkAclId;
@@ -171,62 +168,33 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("CidrBlock")
-        public String cidrBlock;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
+        @NameInMap("RouteTable")
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable;
 
-        @NameInMap("Ipv6CidrBlock")
-        public String ipv6CidrBlock;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeVSwitchesResponseBodyVSwitchesVSwitch build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitchesVSwitch self = new DescribeVSwitchesResponseBodyVSwitchesVSwitch();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIsDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public Boolean getIsDefault() {
-            return this.isDefault;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setAvailableIpAddressCount(Long availableIpAddressCount) {
@@ -237,20 +205,44 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.availableIpAddressCount;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setTags(DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags) {
-            this.tags = tags;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
             return this;
         }
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags getTags() {
-            return this.tags;
+        public String getCidrBlock() {
+            return this.cidrBlock;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setRouteTable(DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable) {
-            this.routeTable = routeTable;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable getRouteTable() {
-            return this.routeTable;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIpv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+        public String getIpv6CidrBlock() {
+            return this.ipv6CidrBlock;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setNetworkAclId(String networkAclId) {
@@ -269,30 +261,6 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -301,20 +269,36 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setRouteTable(DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable) {
+            this.routeTable = routeTable;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable getRouteTable() {
+            return this.routeTable;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIpv6CidrBlock(String ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getIpv6CidrBlock() {
-            return this.ipv6CidrBlock;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setTags(DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchName(String vSwitchName) {
@@ -323,6 +307,22 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getVSwitchName() {
             return this.vSwitchName;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

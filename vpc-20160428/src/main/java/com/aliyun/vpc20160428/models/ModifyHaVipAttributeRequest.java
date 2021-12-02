@@ -4,8 +4,26 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyHaVipAttributeRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("HaVipId")
+    public String haVipId;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +31,49 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("HaVipId")
-    public String haVipId;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Name")
-    public String name;
-
     public static ModifyHaVipAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHaVipAttributeRequest self = new ModifyHaVipAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyHaVipAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyHaVipAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyHaVipAttributeRequest setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
+        return this;
+    }
+    public String getHaVipId() {
+        return this.haVipId;
+    }
+
+    public ModifyHaVipAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyHaVipAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyHaVipAttributeRequest setOwnerId(Long ownerId) {
@@ -42,6 +82,14 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyHaVipAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyHaVipAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -58,54 +106,6 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyHaVipAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyHaVipAttributeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public ModifyHaVipAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyHaVipAttributeRequest setHaVipId(String haVipId) {
-        this.haVipId = haVipId;
-        return this;
-    }
-    public String getHaVipId() {
-        return this.haVipId;
-    }
-
-    public ModifyHaVipAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyHaVipAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
 }

@@ -4,11 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewayRequest extends TeaModel {
+    @NameInMap("CustomerGatewayId")
+    public String customerGatewayId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("CustomerGatewayId")
-    public String customerGatewayId;
-
     public static DescribeCustomerGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomerGatewayRequest self = new DescribeCustomerGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomerGatewayRequest setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
     }
 
     public DescribeCustomerGatewayRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeCustomerGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeCustomerGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeCustomerGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeCustomerGatewayRequest setCustomerGatewayId(String customerGatewayId) {
-        this.customerGatewayId = customerGatewayId;
-        return this;
-    }
-    public String getCustomerGatewayId() {
-        return this.customerGatewayId;
     }
 
 }

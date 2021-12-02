@@ -4,8 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkAclAttributesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -16,15 +22,17 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static DescribeNetworkAclAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkAclAttributesRequest self = new DescribeNetworkAclAttributesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworkAclAttributesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribeNetworkAclAttributesRequest setNetworkAclId(String networkAclId) {
@@ -33,6 +41,14 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public DescribeNetworkAclAttributesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeNetworkAclAttributesRequest setRegionId(String regionId) {
@@ -57,22 +73,6 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeNetworkAclAttributesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeNetworkAclAttributesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

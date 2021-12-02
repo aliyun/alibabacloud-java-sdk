@@ -4,11 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    @NameInMap("ProductType")
-    public String productType;
-
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -19,20 +19,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsRequest setProductType(String productType) {
-        this.productType = productType;
-        return this;
-    }
-    public String getProductType() {
-        return this.productType;
     }
 
     public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
@@ -41,6 +30,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeRegionsRequest setOwnerId(Long ownerId) {
@@ -65,14 +62,6 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

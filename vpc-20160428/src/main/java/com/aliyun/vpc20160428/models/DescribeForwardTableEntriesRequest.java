@@ -4,32 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ForwardTableId")
-    public String forwardTableId;
-
-    @NameInMap("ForwardEntryId")
-    public String forwardEntryId;
-
     @NameInMap("ExternalIp")
     public String externalIp;
 
     @NameInMap("ExternalPort")
     public String externalPort;
+
+    @NameInMap("ForwardEntryId")
+    public String forwardEntryId;
+
+    @NameInMap("ForwardEntryName")
+    public String forwardEntryName;
+
+    @NameInMap("ForwardTableId")
+    public String forwardTableId;
 
     @NameInMap("InternalIp")
     public String internalIp;
@@ -40,8 +28,11 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
-    @NameInMap("ForwardEntryName")
-    public String forwardEntryName;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -49,65 +40,18 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DescribeForwardTableEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeForwardTableEntriesRequest self = new DescribeForwardTableEntriesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeForwardTableEntriesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeForwardTableEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeForwardTableEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeForwardTableEntriesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeForwardTableEntriesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeForwardTableEntriesRequest setForwardTableId(String forwardTableId) {
-        this.forwardTableId = forwardTableId;
-        return this;
-    }
-    public String getForwardTableId() {
-        return this.forwardTableId;
-    }
-
-    public DescribeForwardTableEntriesRequest setForwardEntryId(String forwardEntryId) {
-        this.forwardEntryId = forwardEntryId;
-        return this;
-    }
-    public String getForwardEntryId() {
-        return this.forwardEntryId;
     }
 
     public DescribeForwardTableEntriesRequest setExternalIp(String externalIp) {
@@ -124,6 +68,30 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     }
     public String getExternalPort() {
         return this.externalPort;
+    }
+
+    public DescribeForwardTableEntriesRequest setForwardEntryId(String forwardEntryId) {
+        this.forwardEntryId = forwardEntryId;
+        return this;
+    }
+    public String getForwardEntryId() {
+        return this.forwardEntryId;
+    }
+
+    public DescribeForwardTableEntriesRequest setForwardEntryName(String forwardEntryName) {
+        this.forwardEntryName = forwardEntryName;
+        return this;
+    }
+    public String getForwardEntryName() {
+        return this.forwardEntryName;
+    }
+
+    public DescribeForwardTableEntriesRequest setForwardTableId(String forwardTableId) {
+        this.forwardTableId = forwardTableId;
+        return this;
+    }
+    public String getForwardTableId() {
+        return this.forwardTableId;
     }
 
     public DescribeForwardTableEntriesRequest setInternalIp(String internalIp) {
@@ -150,12 +118,20 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
         return this.ipProtocol;
     }
 
-    public DescribeForwardTableEntriesRequest setForwardEntryName(String forwardEntryName) {
-        this.forwardEntryName = forwardEntryName;
+    public DescribeForwardTableEntriesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getForwardEntryName() {
-        return this.forwardEntryName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeForwardTableEntriesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeForwardTableEntriesRequest setPageNumber(Integer pageNumber) {
@@ -172,6 +148,30 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeForwardTableEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeForwardTableEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeForwardTableEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

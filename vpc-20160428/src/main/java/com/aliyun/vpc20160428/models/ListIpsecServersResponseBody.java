@@ -4,11 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListIpsecServersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("IpsecServers")
     public java.util.List<ListIpsecServersResponseBodyIpsecServers> ipsecServers;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -16,20 +16,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListIpsecServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpsecServersResponseBody self = new ListIpsecServersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListIpsecServersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListIpsecServersResponseBody setIpsecServers(java.util.List<ListIpsecServersResponseBodyIpsecServers> ipsecServers) {
@@ -38,6 +30,14 @@ public class ListIpsecServersResponseBody extends TeaModel {
     }
     public java.util.List<ListIpsecServersResponseBodyIpsecServers> getIpsecServers() {
         return this.ipsecServers;
+    }
+
+    public ListIpsecServersResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListIpsecServersResponseBody setNextToken(String nextToken) {
@@ -56,98 +56,42 @@ public class ListIpsecServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListIpsecServersResponseBody setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListIpsecServersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListIpsecServersResponseBodyIpsecServersIkeConfig extends TeaModel {
-        @NameInMap("RemoteId")
-        public String remoteId;
-
-        @NameInMap("IkeLifetime")
-        public Long ikeLifetime;
+        @NameInMap("IkeAuthAlg")
+        public String ikeAuthAlg;
 
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
-        @NameInMap("LocalId")
-        public String localId;
+        @NameInMap("IkeLifetime")
+        public Long ikeLifetime;
 
         @NameInMap("IkeMode")
         public String ikeMode;
 
-        @NameInMap("IkeVersion")
-        public String ikeVersion;
-
         @NameInMap("IkePfs")
         public String ikePfs;
 
-        @NameInMap("IkeAuthAlg")
-        public String ikeAuthAlg;
+        @NameInMap("IkeVersion")
+        public String ikeVersion;
+
+        @NameInMap("LocalId")
+        public String localId;
+
+        @NameInMap("RemoteId")
+        public String remoteId;
 
         public static ListIpsecServersResponseBodyIpsecServersIkeConfig build(java.util.Map<String, ?> map) throws Exception {
             ListIpsecServersResponseBodyIpsecServersIkeConfig self = new ListIpsecServersResponseBodyIpsecServersIkeConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setRemoteId(String remoteId) {
-            this.remoteId = remoteId;
-            return this;
-        }
-        public String getRemoteId() {
-            return this.remoteId;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeLifetime(Long ikeLifetime) {
-            this.ikeLifetime = ikeLifetime;
-            return this;
-        }
-        public Long getIkeLifetime() {
-            return this.ikeLifetime;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeEncAlg(String ikeEncAlg) {
-            this.ikeEncAlg = ikeEncAlg;
-            return this;
-        }
-        public String getIkeEncAlg() {
-            return this.ikeEncAlg;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setLocalId(String localId) {
-            this.localId = localId;
-            return this;
-        }
-        public String getLocalId() {
-            return this.localId;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeMode(String ikeMode) {
-            this.ikeMode = ikeMode;
-            return this;
-        }
-        public String getIkeMode() {
-            return this.ikeMode;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeVersion(String ikeVersion) {
-            this.ikeVersion = ikeVersion;
-            return this;
-        }
-        public String getIkeVersion() {
-            return this.ikeVersion;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkePfs(String ikePfs) {
-            this.ikePfs = ikePfs;
-            return this;
-        }
-        public String getIkePfs() {
-            return this.ikePfs;
         }
 
         public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeAuthAlg(String ikeAuthAlg) {
@@ -158,48 +102,80 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.ikeAuthAlg;
         }
 
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeEncAlg(String ikeEncAlg) {
+            this.ikeEncAlg = ikeEncAlg;
+            return this;
+        }
+        public String getIkeEncAlg() {
+            return this.ikeEncAlg;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeLifetime(Long ikeLifetime) {
+            this.ikeLifetime = ikeLifetime;
+            return this;
+        }
+        public Long getIkeLifetime() {
+            return this.ikeLifetime;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeMode(String ikeMode) {
+            this.ikeMode = ikeMode;
+            return this;
+        }
+        public String getIkeMode() {
+            return this.ikeMode;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkePfs(String ikePfs) {
+            this.ikePfs = ikePfs;
+            return this;
+        }
+        public String getIkePfs() {
+            return this.ikePfs;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setIkeVersion(String ikeVersion) {
+            this.ikeVersion = ikeVersion;
+            return this;
+        }
+        public String getIkeVersion() {
+            return this.ikeVersion;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setLocalId(String localId) {
+            this.localId = localId;
+            return this;
+        }
+        public String getLocalId() {
+            return this.localId;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIkeConfig setRemoteId(String remoteId) {
+            this.remoteId = remoteId;
+            return this;
+        }
+        public String getRemoteId() {
+            return this.remoteId;
+        }
+
     }
 
     public static class ListIpsecServersResponseBodyIpsecServersIpsecConfig extends TeaModel {
-        @NameInMap("IpsecLifetime")
-        public Long ipsecLifetime;
+        @NameInMap("IpsecAuthAlg")
+        public String ipsecAuthAlg;
 
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        @NameInMap("IpsecLifetime")
+        public Long ipsecLifetime;
+
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
-
-        @NameInMap("IpsecAuthAlg")
-        public String ipsecAuthAlg;
 
         public static ListIpsecServersResponseBodyIpsecServersIpsecConfig build(java.util.Map<String, ?> map) throws Exception {
             ListIpsecServersResponseBodyIpsecServersIpsecConfig self = new ListIpsecServersResponseBodyIpsecServersIpsecConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecLifetime(Long ipsecLifetime) {
-            this.ipsecLifetime = ipsecLifetime;
-            return this;
-        }
-        public Long getIpsecLifetime() {
-            return this.ipsecLifetime;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecEncAlg(String ipsecEncAlg) {
-            this.ipsecEncAlg = ipsecEncAlg;
-            return this;
-        }
-        public String getIpsecEncAlg() {
-            return this.ipsecEncAlg;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecPfs(String ipsecPfs) {
-            this.ipsecPfs = ipsecPfs;
-            return this;
-        }
-        public String getIpsecPfs() {
-            return this.ipsecPfs;
         }
 
         public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecAuthAlg(String ipsecAuthAlg) {
@@ -210,63 +186,95 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.ipsecAuthAlg;
         }
 
+        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecEncAlg(String ipsecEncAlg) {
+            this.ipsecEncAlg = ipsecEncAlg;
+            return this;
+        }
+        public String getIpsecEncAlg() {
+            return this.ipsecEncAlg;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecLifetime(Long ipsecLifetime) {
+            this.ipsecLifetime = ipsecLifetime;
+            return this;
+        }
+        public Long getIpsecLifetime() {
+            return this.ipsecLifetime;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServersIpsecConfig setIpsecPfs(String ipsecPfs) {
+            this.ipsecPfs = ipsecPfs;
+            return this;
+        }
+        public String getIpsecPfs() {
+            return this.ipsecPfs;
+        }
+
     }
 
     public static class ListIpsecServersResponseBodyIpsecServers extends TeaModel {
+        @NameInMap("ClientIpPool")
+        public String clientIpPool;
+
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("OnlineClientCount")
-        public Integer onlineClientCount;
-
-        @NameInMap("InternetIp")
-        public String internetIp;
-
-        @NameInMap("IDaaSInstanceId")
-        public String IDaaSInstanceId;
-
-        @NameInMap("IpsecServerName")
-        public String ipsecServerName;
 
         @NameInMap("EffectImmediately")
         public Boolean effectImmediately;
 
-        @NameInMap("VpnGatewayId")
-        public String vpnGatewayId;
+        @NameInMap("IDaaSInstanceId")
+        public String IDaaSInstanceId;
 
         @NameInMap("IkeConfig")
         public ListIpsecServersResponseBodyIpsecServersIkeConfig ikeConfig;
 
+        @NameInMap("InternetIp")
+        public String internetIp;
+
         @NameInMap("IpsecConfig")
         public ListIpsecServersResponseBodyIpsecServersIpsecConfig ipsecConfig;
-
-        @NameInMap("Psk")
-        public String psk;
-
-        @NameInMap("LocalSubnet")
-        public String localSubnet;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("PskEnabled")
-        public Boolean pskEnabled;
 
         @NameInMap("IpsecServerId")
         public String ipsecServerId;
 
-        @NameInMap("MultiFactorAuthEnabled")
-        public Boolean multiFactorAuthEnabled;
+        @NameInMap("IpsecServerName")
+        public String ipsecServerName;
+
+        @NameInMap("LocalSubnet")
+        public String localSubnet;
 
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
-        @NameInMap("ClientIpPool")
-        public String clientIpPool;
+        @NameInMap("MultiFactorAuthEnabled")
+        public Boolean multiFactorAuthEnabled;
+
+        @NameInMap("OnlineClientCount")
+        public Integer onlineClientCount;
+
+        @NameInMap("Psk")
+        public String psk;
+
+        @NameInMap("PskEnabled")
+        public Boolean pskEnabled;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("VpnGatewayId")
+        public String vpnGatewayId;
 
         public static ListIpsecServersResponseBodyIpsecServers build(java.util.Map<String, ?> map) throws Exception {
             ListIpsecServersResponseBodyIpsecServers self = new ListIpsecServersResponseBodyIpsecServers();
             return TeaModel.build(map, self);
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setClientIpPool(String clientIpPool) {
+            this.clientIpPool = clientIpPool;
+            return this;
+        }
+        public String getClientIpPool() {
+            return this.clientIpPool;
         }
 
         public ListIpsecServersResponseBodyIpsecServers setCreationTime(String creationTime) {
@@ -277,20 +285,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setOnlineClientCount(Integer onlineClientCount) {
-            this.onlineClientCount = onlineClientCount;
+        public ListIpsecServersResponseBodyIpsecServers setEffectImmediately(Boolean effectImmediately) {
+            this.effectImmediately = effectImmediately;
             return this;
         }
-        public Integer getOnlineClientCount() {
-            return this.onlineClientCount;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServers setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
+        public Boolean getEffectImmediately() {
+            return this.effectImmediately;
         }
 
         public ListIpsecServersResponseBodyIpsecServers setIDaaSInstanceId(String IDaaSInstanceId) {
@@ -301,36 +301,20 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.IDaaSInstanceId;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setIpsecServerName(String ipsecServerName) {
-            this.ipsecServerName = ipsecServerName;
-            return this;
-        }
-        public String getIpsecServerName() {
-            return this.ipsecServerName;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServers setEffectImmediately(Boolean effectImmediately) {
-            this.effectImmediately = effectImmediately;
-            return this;
-        }
-        public Boolean getEffectImmediately() {
-            return this.effectImmediately;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServers setVpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = vpnGatewayId;
-            return this;
-        }
-        public String getVpnGatewayId() {
-            return this.vpnGatewayId;
-        }
-
         public ListIpsecServersResponseBodyIpsecServers setIkeConfig(ListIpsecServersResponseBodyIpsecServersIkeConfig ikeConfig) {
             this.ikeConfig = ikeConfig;
             return this;
         }
         public ListIpsecServersResponseBodyIpsecServersIkeConfig getIkeConfig() {
             return this.ikeConfig;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         public ListIpsecServersResponseBodyIpsecServers setIpsecConfig(ListIpsecServersResponseBodyIpsecServersIpsecConfig ipsecConfig) {
@@ -341,12 +325,20 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.ipsecConfig;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setPsk(String psk) {
-            this.psk = psk;
+        public ListIpsecServersResponseBodyIpsecServers setIpsecServerId(String ipsecServerId) {
+            this.ipsecServerId = ipsecServerId;
             return this;
         }
-        public String getPsk() {
-            return this.psk;
+        public String getIpsecServerId() {
+            return this.ipsecServerId;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setIpsecServerName(String ipsecServerName) {
+            this.ipsecServerName = ipsecServerName;
+            return this;
+        }
+        public String getIpsecServerName() {
+            return this.ipsecServerName;
         }
 
         public ListIpsecServersResponseBodyIpsecServers setLocalSubnet(String localSubnet) {
@@ -357,28 +349,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.localSubnet;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setRegionId(String regionId) {
-            this.regionId = regionId;
+        public ListIpsecServersResponseBodyIpsecServers setMaxConnections(Integer maxConnections) {
+            this.maxConnections = maxConnections;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServers setPskEnabled(Boolean pskEnabled) {
-            this.pskEnabled = pskEnabled;
-            return this;
-        }
-        public Boolean getPskEnabled() {
-            return this.pskEnabled;
-        }
-
-        public ListIpsecServersResponseBodyIpsecServers setIpsecServerId(String ipsecServerId) {
-            this.ipsecServerId = ipsecServerId;
-            return this;
-        }
-        public String getIpsecServerId() {
-            return this.ipsecServerId;
+        public Integer getMaxConnections() {
+            return this.maxConnections;
         }
 
         public ListIpsecServersResponseBodyIpsecServers setMultiFactorAuthEnabled(Boolean multiFactorAuthEnabled) {
@@ -389,20 +365,44 @@ public class ListIpsecServersResponseBody extends TeaModel {
             return this.multiFactorAuthEnabled;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setMaxConnections(Integer maxConnections) {
-            this.maxConnections = maxConnections;
+        public ListIpsecServersResponseBodyIpsecServers setOnlineClientCount(Integer onlineClientCount) {
+            this.onlineClientCount = onlineClientCount;
             return this;
         }
-        public Integer getMaxConnections() {
-            return this.maxConnections;
+        public Integer getOnlineClientCount() {
+            return this.onlineClientCount;
         }
 
-        public ListIpsecServersResponseBodyIpsecServers setClientIpPool(String clientIpPool) {
-            this.clientIpPool = clientIpPool;
+        public ListIpsecServersResponseBodyIpsecServers setPsk(String psk) {
+            this.psk = psk;
             return this;
         }
-        public String getClientIpPool() {
-            return this.clientIpPool;
+        public String getPsk() {
+            return this.psk;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setPskEnabled(Boolean pskEnabled) {
+            this.pskEnabled = pskEnabled;
+            return this;
+        }
+        public Boolean getPskEnabled() {
+            return this.pskEnabled;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListIpsecServersResponseBodyIpsecServers setVpnGatewayId(String vpnGatewayId) {
+            this.vpnGatewayId = vpnGatewayId;
+            return this;
+        }
+        public String getVpnGatewayId() {
+            return this.vpnGatewayId;
         }
 
     }

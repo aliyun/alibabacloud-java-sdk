@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpc20160428.models;
+
+import com.aliyun.tea.*;
+
+public class CreateVpconnFromVbrResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateVpconnFromVbrResponseBody body;
+
+    public static CreateVpconnFromVbrResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateVpconnFromVbrResponse self = new CreateVpconnFromVbrResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateVpconnFromVbrResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateVpconnFromVbrResponse setBody(CreateVpconnFromVbrResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateVpconnFromVbrResponseBody getBody() {
+        return this.body;
+    }
+
+}

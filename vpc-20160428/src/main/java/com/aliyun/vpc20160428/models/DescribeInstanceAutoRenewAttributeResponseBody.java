@@ -4,32 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("InstanceRenewAttributes")
     public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public String pageSize;
 
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static DescribeInstanceAutoRenewAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewAttributeResponseBody self = new DescribeInstanceAutoRenewAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceAutoRenewAttributeResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeInstanceAutoRenewAttributeResponseBody setInstanceRenewAttributes(DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes) {
@@ -40,12 +32,12 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return this.instanceRenewAttributes;
     }
 
-    public DescribeInstanceAutoRenewAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceAutoRenewAttributeResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeInstanceAutoRenewAttributeResponseBody setPageSize(String pageSize) {
@@ -56,12 +48,20 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeInstanceAutoRenewAttributeResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeInstanceAutoRenewAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute extends TeaModel {
@@ -71,11 +71,11 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("RenewalStatus")
-        public String renewalStatus;
-
         @NameInMap("PricingCycle")
         public String pricingCycle;
+
+        @NameInMap("RenewalStatus")
+        public String renewalStatus;
 
         public static DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute self = new DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute();
@@ -98,20 +98,20 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setRenewalStatus(String renewalStatus) {
-            this.renewalStatus = renewalStatus;
-            return this;
-        }
-        public String getRenewalStatus() {
-            return this.renewalStatus;
-        }
-
         public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setPricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;
             return this;
         }
         public String getPricingCycle() {
             return this.pricingCycle;
+        }
+
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setRenewalStatus(String renewalStatus) {
+            this.renewalStatus = renewalStatus;
+            return this;
+        }
+        public String getRenewalStatus() {
+            return this.renewalStatus;
         }
 
     }

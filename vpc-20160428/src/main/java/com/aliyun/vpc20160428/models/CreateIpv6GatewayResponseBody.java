@@ -4,23 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpv6GatewayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateIpv6GatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateIpv6GatewayResponseBody self = new CreateIpv6GatewayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateIpv6GatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateIpv6GatewayResponseBody setIpv6GatewayId(String ipv6GatewayId) {
@@ -29,6 +21,14 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
     }
     public String getIpv6GatewayId() {
         return this.ipv6GatewayId;
+    }
+
+    public CreateIpv6GatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

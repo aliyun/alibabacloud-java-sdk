@@ -4,11 +4,26 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("NewWeight")
+    public Integer newWeight;
+
+    @NameInMap("NextHop")
+    public String nextHop;
+
+    @NameInMap("OverlayMode")
+    public String overlayMode;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,33 +31,50 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RouteDest")
+    public String routeDest;
 
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
-    @NameInMap("RouteDest")
-    public String routeDest;
-
-    @NameInMap("NextHop")
-    public String nextHop;
-
     @NameInMap("Weight")
     public Integer weight;
-
-    @NameInMap("NewWeight")
-    public Integer newWeight;
-
-    @NameInMap("OverlayMode")
-    public String overlayMode;
 
     public static ModifyVpnRouteEntryWeightRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpnRouteEntryWeightRequest self = new ModifyVpnRouteEntryWeightRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVpnRouteEntryWeightRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyVpnRouteEntryWeightRequest setNewWeight(Integer newWeight) {
+        this.newWeight = newWeight;
+        return this;
+    }
+    public Integer getNewWeight() {
+        return this.newWeight;
+    }
+
+    public ModifyVpnRouteEntryWeightRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    public ModifyVpnRouteEntryWeightRequest setOverlayMode(String overlayMode) {
+        this.overlayMode = overlayMode;
+        return this;
+    }
+    public String getOverlayMode() {
+        return this.overlayMode;
     }
 
     public ModifyVpnRouteEntryWeightRequest setOwnerAccount(String ownerAccount) {
@@ -61,6 +93,14 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyVpnRouteEntryWeightRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyVpnRouteEntryWeightRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -77,20 +117,12 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyVpnRouteEntryWeightRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyVpnRouteEntryWeightRequest setRouteDest(String routeDest) {
+        this.routeDest = routeDest;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyVpnRouteEntryWeightRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRouteDest() {
+        return this.routeDest;
     }
 
     public ModifyVpnRouteEntryWeightRequest setVpnGatewayId(String vpnGatewayId) {
@@ -101,44 +133,12 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
         return this.vpnGatewayId;
     }
 
-    public ModifyVpnRouteEntryWeightRequest setRouteDest(String routeDest) {
-        this.routeDest = routeDest;
-        return this;
-    }
-    public String getRouteDest() {
-        return this.routeDest;
-    }
-
-    public ModifyVpnRouteEntryWeightRequest setNextHop(String nextHop) {
-        this.nextHop = nextHop;
-        return this;
-    }
-    public String getNextHop() {
-        return this.nextHop;
-    }
-
     public ModifyVpnRouteEntryWeightRequest setWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     public Integer getWeight() {
         return this.weight;
-    }
-
-    public ModifyVpnRouteEntryWeightRequest setNewWeight(Integer newWeight) {
-        this.newWeight = newWeight;
-        return this;
-    }
-    public Integer getNewWeight() {
-        return this.newWeight;
-    }
-
-    public ModifyVpnRouteEntryWeightRequest setOverlayMode(String overlayMode) {
-        this.overlayMode = overlayMode;
-        return this;
-    }
-    public String getOverlayMode() {
-        return this.overlayMode;
     }
 
 }

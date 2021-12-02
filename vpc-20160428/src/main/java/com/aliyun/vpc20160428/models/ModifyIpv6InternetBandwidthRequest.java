@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Bandwidth")
+    public Long bandwidth;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
@@ -13,14 +16,14 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
 
-    @NameInMap("Bandwidth")
-    public Long bandwidth;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,36 +31,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyIpv6InternetBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpv6InternetBandwidthRequest self = new ModifyIpv6InternetBandwidthRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyIpv6InternetBandwidthRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {
-        this.ipv6AddressId = ipv6AddressId;
-        return this;
-    }
-    public String getIpv6AddressId() {
-        return this.ipv6AddressId;
-    }
-
-    public ModifyIpv6InternetBandwidthRequest setIpv6InternetBandwidthId(String ipv6InternetBandwidthId) {
-        this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
-        return this;
-    }
-    public String getIpv6InternetBandwidthId() {
-        return this.ipv6InternetBandwidthId;
     }
 
     public ModifyIpv6InternetBandwidthRequest setBandwidth(Long bandwidth) {
@@ -76,12 +52,44 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ModifyIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setIpv6InternetBandwidthId(String ipv6InternetBandwidthId) {
+        this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
+        return this;
+    }
+    public String getIpv6InternetBandwidthId() {
+        return this.ipv6InternetBandwidthId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ModifyIpv6InternetBandwidthRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyIpv6InternetBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -98,14 +106,6 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyIpv6InternetBandwidthRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }
