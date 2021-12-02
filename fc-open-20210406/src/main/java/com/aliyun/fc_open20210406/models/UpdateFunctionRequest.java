@@ -17,6 +17,14 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
+    // 函数自定义DNS配置
+    @NameInMap("customDNS")
+    public CustomDNS customDNS;
+
+    // Custom Runtime函数详细配置
+    @NameInMap("customRuntimeConfig")
+    public CustomRuntimeConfig customRuntimeConfig;
+
     // 函数描述
     @NameInMap("description")
     public String description;
@@ -93,6 +101,22 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public CustomContainerConfig getCustomContainerConfig() {
         return this.customContainerConfig;
+    }
+
+    public UpdateFunctionRequest setCustomDNS(CustomDNS customDNS) {
+        this.customDNS = customDNS;
+        return this;
+    }
+    public CustomDNS getCustomDNS() {
+        return this.customDNS;
+    }
+
+    public UpdateFunctionRequest setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
+        this.customRuntimeConfig = customRuntimeConfig;
+        return this;
+    }
+    public CustomRuntimeConfig getCustomRuntimeConfig() {
+        return this.customRuntimeConfig;
     }
 
     public UpdateFunctionRequest setDescription(String description) {

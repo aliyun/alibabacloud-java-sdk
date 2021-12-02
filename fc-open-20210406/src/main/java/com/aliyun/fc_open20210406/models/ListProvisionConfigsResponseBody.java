@@ -38,6 +38,10 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         @NameInMap("current")
         public Long current;
 
+        // 预留实例创建失败时的错误信息
+        @NameInMap("currentError")
+        public String currentError;
+
         // 资源描述
         @NameInMap("resource")
         public String resource;
@@ -65,6 +69,14 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
         }
         public Long getCurrent() {
             return this.current;
+        }
+
+        public ListProvisionConfigsResponseBodyProvisionConfigs setCurrentError(String currentError) {
+            this.currentError = currentError;
+            return this;
+        }
+        public String getCurrentError() {
+            return this.currentError;
         }
 
         public ListProvisionConfigsResponseBodyProvisionConfigs setResource(String resource) {

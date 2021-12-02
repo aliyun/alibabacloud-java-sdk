@@ -11,6 +11,10 @@ public class UpdateTriggerResponseBody extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    // 域名名称，使用域名名称拼接上函数计算域名，可以采用HTTP协议调用到触发器对应版本的函数。例如{domainName}.cn-shanghai.fc.aliyuncs.com
+    @NameInMap("domainName")
+    public String domainName;
+
     // 调用函数使用的RAM角色的ARN
     @NameInMap("invocationRole")
     public String invocationRole;
@@ -61,6 +65,14 @@ public class UpdateTriggerResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateTriggerResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public UpdateTriggerResponseBody setInvocationRole(String invocationRole) {
