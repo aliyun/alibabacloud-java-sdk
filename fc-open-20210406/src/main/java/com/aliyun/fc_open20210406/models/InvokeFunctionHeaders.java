@@ -7,7 +7,6 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    // 用户 uid
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 

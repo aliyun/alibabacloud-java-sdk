@@ -23,6 +23,14 @@ public class GetFunctionResponseBody extends TeaModel {
     @NameInMap("customContainerConfig")
     public CustomContainerConfigInfo customContainerConfig;
 
+    // 函数自定义DNS配置
+    @NameInMap("customDNS")
+    public CustomDNS customDNS;
+
+    // Custom Runtime函数详细配置
+    @NameInMap("customRuntimeConfig")
+    public CustomRuntimeConfig customRuntimeConfig;
+
     // 函数描述
     @NameInMap("description")
     public String description;
@@ -122,6 +130,22 @@ public class GetFunctionResponseBody extends TeaModel {
     }
     public CustomContainerConfigInfo getCustomContainerConfig() {
         return this.customContainerConfig;
+    }
+
+    public GetFunctionResponseBody setCustomDNS(CustomDNS customDNS) {
+        this.customDNS = customDNS;
+        return this;
+    }
+    public CustomDNS getCustomDNS() {
+        return this.customDNS;
+    }
+
+    public GetFunctionResponseBody setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
+        this.customRuntimeConfig = customRuntimeConfig;
+        return this;
+    }
+    public CustomRuntimeConfig getCustomRuntimeConfig() {
+        return this.customRuntimeConfig;
     }
 
     public GetFunctionResponseBody setDescription(String description) {

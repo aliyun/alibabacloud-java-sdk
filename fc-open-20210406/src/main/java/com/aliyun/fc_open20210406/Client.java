@@ -85,7 +85,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateAlias", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/aliases", "json", req, runtime), new CreateAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAliasResponse());
     }
 
     public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
@@ -117,7 +128,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateCustomDomain", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/custom-domains", "json", req, runtime), new CreateCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
     }
 
     public CreateFunctionResponse createFunction(String serviceName, CreateFunctionRequest request) throws Exception {
@@ -140,6 +162,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
             body.put("customContainerConfig", request.customContainerConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customDNS))) {
+            body.put("customDNS", request.customDNS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customRuntimeConfig))) {
+            body.put("customRuntimeConfig", request.customRuntimeConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -200,14 +230,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("x-fc-code-checksum", headers.xFcCodeChecksum);
+            realHeaders.put("x-fc-code-checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateFunction", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions", "json", req, runtime), new CreateFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionResponse());
     }
 
     public CreateLayerVersionResponse createLayerVersion(String layerName, CreateLayerVersionRequest request) throws Exception {
@@ -236,7 +277,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateLayerVersion", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/layers/" + layerName + "/versions", "json", req, runtime), new CreateLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLayerVersionResponse());
     }
 
     public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
@@ -284,7 +336,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateService", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services", "json", req, runtime), new CreateServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceResponse());
     }
 
     public CreateTriggerResponse createTrigger(String serviceName, String functionName, CreateTriggerRequest request) throws Exception {
@@ -330,7 +393,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateTrigger", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers", "json", req, runtime), new CreateTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
     }
 
     public CreateVpcBindingResponse createVpcBinding(String serviceName, CreateVpcBindingRequest request) throws Exception {
@@ -351,7 +425,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateVpcBinding", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/bindings", "none", req, runtime), new CreateVpcBindingResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVpcBinding"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcBindingResponse());
     }
 
     public DeleteAliasResponse deleteAlias(String serviceName, String aliasName) throws Exception {
@@ -369,13 +454,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteAlias", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "none", req, runtime), new DeleteAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAliasResponse());
     }
 
     public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
@@ -389,7 +485,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteCustomDomain", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/custom-domains/" + domainName + "", "none", req, runtime), new DeleteCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
     }
 
     public DeleteFunctionResponse deleteFunction(String serviceName, String functionName) throws Exception {
@@ -407,13 +514,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunction", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "none", req, runtime), new DeleteFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionResponse());
     }
 
     public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfig(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -435,7 +553,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "none", req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
     }
 
     public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfig(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request) throws Exception {
@@ -459,14 +588,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunctionOnDemandConfig", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "none", req, runtime), new DeleteFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionOnDemandConfigResponse());
     }
 
     public DeleteLayerVersionResponse deleteLayerVersion(String layerName, String version) throws Exception {
@@ -481,7 +621,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteLayerVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "none", req, runtime), new DeleteLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLayerVersionResponse());
     }
 
     public DeleteServiceResponse deleteService(String serviceName) throws Exception {
@@ -498,13 +649,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteService", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "", "none", req, runtime), new DeleteServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceResponse());
     }
 
     public DeleteServiceVersionResponse deleteServiceVersion(String serviceName, String versionId) throws Exception {
@@ -519,7 +681,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteServiceVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/versions/" + versionId + "", "none", req, runtime), new DeleteServiceVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions/" + versionId + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceVersionResponse());
     }
 
     public DeleteTriggerResponse deleteTrigger(String serviceName, String functionName, String triggerName) throws Exception {
@@ -538,13 +711,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteTrigger", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "none", req, runtime), new DeleteTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTriggerResponse());
     }
 
     public DeleteVpcBindingResponse deleteVpcBinding(String serviceName, String vpcId) throws Exception {
@@ -559,7 +743,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteVpcBinding", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId + "", "none", req, runtime), new DeleteVpcBindingResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVpcBinding"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcBindingResponse());
     }
 
     public DeregisterEventSourceResponse deregisterEventSource(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request) throws Exception {
@@ -582,7 +777,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeregisterEventSource", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn + "", "none", req, runtime), new DeregisterEventSourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeregisterEventSource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterEventSourceResponse());
     }
 
     public GetAccountSettingsResponse getAccountSettings() throws Exception {
@@ -595,7 +801,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetAccountSettings", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/account-settings", "json", req, runtime), new GetAccountSettingsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAccountSettings"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/account-settings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountSettingsResponse());
     }
 
     public GetAliasResponse getAlias(String serviceName, String aliasName) throws Exception {
@@ -610,7 +827,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetAlias", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "json", req, runtime), new GetAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliasResponse());
     }
 
     public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
@@ -624,7 +852,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetCustomDomain", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/custom-domains/" + domainName + "", "json", req, runtime), new GetCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
     }
 
     public GetFunctionResponse getFunction(String serviceName, String functionName, GetFunctionRequest request) throws Exception {
@@ -646,7 +885,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunction", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "json", req, runtime), new GetFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionResponse());
     }
 
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -668,7 +918,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "json", req, runtime), new GetFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
     public GetFunctionCodeResponse getFunctionCode(String serviceName, String functionName, GetFunctionCodeRequest request) throws Exception {
@@ -690,7 +951,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionCode", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code", "json", req, runtime), new GetFunctionCodeResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionCode"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionCodeResponse());
     }
 
     public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfig(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request) throws Exception {
@@ -712,7 +984,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionOnDemandConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "json", req, runtime), new GetFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionOnDemandConfigResponse());
     }
 
     public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
@@ -727,7 +1010,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetLayerVersion", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "json", req, runtime), new GetLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionResponse());
     }
 
     public GetLayerVersionByArnResponse getLayerVersionByArn(String arn) throws Exception {
@@ -741,7 +1035,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetLayerVersionByArn", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layerarn/" + arn + "", "json", req, runtime), new GetLayerVersionByArnResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLayerVersionByArn"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layerarn/" + arn + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionByArnResponse());
     }
 
     public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
@@ -769,7 +1074,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("GetProvisionConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config", "json", req, runtime), new GetProvisionConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProvisionConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProvisionConfigResponse());
     }
 
     public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
@@ -789,7 +1105,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetResourceTags", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/tag", "json", req, runtime), new GetResourceTagsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceTags"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTagsResponse());
     }
 
     public GetServiceResponse getService(String serviceName, GetServiceRequest request) throws Exception {
@@ -810,7 +1137,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetService", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "", "json", req, runtime), new GetServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
     }
 
     public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request) throws Exception {
@@ -833,7 +1171,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetStatefulAsyncInvocation", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + "", "json", req, runtime), new GetStatefulAsyncInvocationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStatefulAsyncInvocation"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatefulAsyncInvocationResponse());
     }
 
     public GetTriggerResponse getTrigger(String serviceName, String functionName, String triggerName) throws Exception {
@@ -849,7 +1198,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetTrigger", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "json", req, runtime), new GetTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTriggerResponse());
     }
 
     public InvokeFunctionResponse invokeFunction(String serviceName, String functionName, InvokeFunctionRequest request) throws Exception {
@@ -873,19 +1233,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", headers.xFcAccountId);
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("x-fc-invocation-type", headers.xFcInvocationType);
+            realHeaders.put("x-fc-invocation-type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("x-fc-log-type", headers.xFcLogType);
+            realHeaders.put("x-fc-log-type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcStatefulAsyncInvocationId)) {
-            realHeaders.put("x-fc-stateful-async-invocation-id", headers.xFcStatefulAsyncInvocationId);
+            realHeaders.put("x-fc-stateful-async-invocation-id", com.aliyun.teautil.Common.toJSONString(headers.xFcStatefulAsyncInvocationId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -893,7 +1253,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body)
         ));
-        return TeaModel.toModel(this.doROARequest("InvokeFunction", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations", "byte", req, runtime), new InvokeFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvokeFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "byte")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeFunctionResponse());
     }
 
     public ListAliasesResponse listAliases(String serviceName, ListAliasesRequest request) throws Exception {
@@ -926,7 +1297,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListAliases", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/aliases", "json", req, runtime), new ListAliasesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAliases"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliasesResponse());
     }
 
     public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
@@ -958,7 +1340,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListCustomDomains", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/custom-domains", "json", req, runtime), new ListCustomDomainsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomDomains"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
     }
 
     public ListEventSourcesResponse listEventSources(String serviceName, String functionName, ListEventSourcesRequest request) throws Exception {
@@ -980,7 +1373,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListEventSources", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources", "json", req, runtime), new ListEventSourcesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEventSources"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventSourcesResponse());
     }
 
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
@@ -1006,7 +1410,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListFunctionAsyncInvokeConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs", "json", req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFunctionAsyncInvokeConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
     public ListFunctionsResponse listFunctions(String serviceName, ListFunctionsRequest request) throws Exception {
@@ -1043,7 +1458,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListFunctions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions", "json", req, runtime), new ListFunctionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFunctions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
+    }
+
+    public ListInstancesResponse listInstances(String serviceName, String functionName, ListInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        ListInstancesHeaders headers = new ListInstancesHeaders();
+        return this.listInstancesWithOptions(serviceName, functionName, request, headers, runtime);
+    }
+
+    public ListInstancesResponse listInstancesWithOptions(String serviceName, String functionName, ListInstancesRequest request, ListInstancesHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
+        functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualifier)) {
+            query.put("qualifier", request.qualifier);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstances"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
     public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
@@ -1068,7 +1544,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListLayerVersions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers/" + layerName + "/versions", "json", req, runtime), new ListLayerVersionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLayerVersions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayerVersionsResponse());
     }
 
     public ListLayersResponse listLayers(ListLayersRequest request) throws Exception {
@@ -1100,7 +1587,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListLayers", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers", "json", req, runtime), new ListLayersResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLayers"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayersResponse());
     }
 
     public ListOnDemandConfigsResponse listOnDemandConfigs(ListOnDemandConfigsRequest request) throws Exception {
@@ -1132,7 +1630,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListOnDemandConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/on-demand-configs", "json", req, runtime), new ListOnDemandConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOnDemandConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/on-demand-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOnDemandConfigsResponse());
     }
 
     public ListProvisionConfigsResponse listProvisionConfigs(ListProvisionConfigsRequest request) throws Exception {
@@ -1164,7 +1673,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListProvisionConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/provision-configs", "json", req, runtime), new ListProvisionConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProvisionConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/provision-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProvisionConfigsResponse());
     }
 
     public ListReservedCapacitiesResponse listReservedCapacities(ListReservedCapacitiesRequest request) throws Exception {
@@ -1188,7 +1708,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListReservedCapacities", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/reserved-capacities", "json", req, runtime), new ListReservedCapacitiesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReservedCapacities"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/reserved-capacities"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReservedCapacitiesResponse());
     }
 
     public ListServiceVersionsResponse listServiceVersions(String serviceName, ListServiceVersionsRequest request) throws Exception {
@@ -1221,7 +1752,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListServiceVersions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/versions", "json", req, runtime), new ListServiceVersionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceVersions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceVersionsResponse());
     }
 
     public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
@@ -1253,7 +1795,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListServices", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services", "json", req, runtime), new ListServicesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServices"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
     }
 
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
@@ -1307,7 +1860,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListStatefulAsyncInvocations", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations", "json", req, runtime), new ListStatefulAsyncInvocationsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStatefulAsyncInvocations"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationsResponse());
     }
 
     public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
@@ -1331,7 +1895,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListTaggedResources", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/tags", "json", req, runtime), new ListTaggedResourcesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTaggedResources"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tags"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaggedResourcesResponse());
     }
 
     public ListTriggersResponse listTriggers(String serviceName, String functionName, ListTriggersRequest request) throws Exception {
@@ -1365,7 +1940,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListTriggers", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers", "json", req, runtime), new ListTriggersResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTriggers"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTriggersResponse());
     }
 
     public ListVpcBindingsResponse listVpcBindings(String serviceName) throws Exception {
@@ -1379,7 +1965,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("ListVpcBindings", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/bindings", "json", req, runtime), new ListVpcBindingsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcBindings"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
     }
 
     public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersion(String userID, String layerName, String version) throws Exception {
@@ -1395,7 +1992,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("PermanentDeleteLayerVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/adminlayers/" + userID + "/" + layerName + "/versions/" + version + "", "none", req, runtime), new PermanentDeleteLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PermanentDeleteLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/adminlayers/" + userID + "/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PermanentDeleteLayerVersionResponse());
     }
 
     public PublishLayerAsPublicResponse publishLayerAsPublic(String layerName, String version) throws Exception {
@@ -1410,7 +2018,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("PublishLayerAsPublic", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "none", req, runtime), new PublishLayerAsPublicResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishLayerAsPublic"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishLayerAsPublicResponse());
     }
 
     public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
@@ -1433,14 +2052,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PublishServiceVersion", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/versions", "json", req, runtime), new PublishServiceVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishServiceVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishServiceVersionResponse());
     }
 
     public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfig(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request) throws Exception {
@@ -1480,7 +2110,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "json", req, runtime), new PutFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionAsyncInvokeConfigResponse());
     }
 
     public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfig(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request) throws Exception {
@@ -1509,7 +2150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1517,7 +2158,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutFunctionOnDemandConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "json", req, runtime), new PutFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionOnDemandConfigResponse());
     }
 
     public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
@@ -1553,7 +2205,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutProvisionConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config", "json", req, runtime), new PutProvisionConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutProvisionConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutProvisionConfigResponse());
     }
 
     public RegisterEventSourceResponse registerEventSource(String serviceName, String functionName, RegisterEventSourceRequest request) throws Exception {
@@ -1581,7 +2244,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("RegisterEventSource", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources", "json", req, runtime), new RegisterEventSourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterEventSource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterEventSourceResponse());
     }
 
     public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request) throws Exception {
@@ -1604,7 +2278,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("StopStatefulAsyncInvocation", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + "", "none", req, runtime), new StopStatefulAsyncInvocationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopStatefulAsyncInvocation"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopStatefulAsyncInvocationResponse());
     }
 
     public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
@@ -1628,7 +2313,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("TagResource", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/tag", "none", req, runtime), new TagResourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
     }
 
     public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
@@ -1656,7 +2352,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UntagResource", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/tag", "none", req, runtime), new UntagResourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourceResponse());
     }
 
     public UpdateAliasResponse updateAlias(String serviceName, String aliasName, UpdateAliasRequest request) throws Exception {
@@ -1688,14 +2395,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateAlias", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "json", req, runtime), new UpdateAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAliasResponse());
     }
 
     public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
@@ -1724,7 +2442,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateCustomDomain", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/custom-domains/" + domainName + "", "json", req, runtime), new UpdateCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
     }
 
     public UpdateFunctionResponse updateFunction(String serviceName, String functionName, UpdateFunctionRequest request) throws Exception {
@@ -1752,6 +2481,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customContainerConfig))) {
             body.put("customContainerConfig", request.customContainerConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customDNS))) {
+            body.put("customDNS", request.customDNS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customRuntimeConfig))) {
+            body.put("customRuntimeConfig", request.customRuntimeConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -1804,22 +2541,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", headers.xFcAccountId);
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("x-fc-code-checksum", headers.xFcCodeChecksum);
+            realHeaders.put("x-fc-code-checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateFunction", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "json", req, runtime), new UpdateFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionResponse());
     }
 
     public UpdateServiceResponse updateService(String serviceName, UpdateServiceRequest request) throws Exception {
@@ -1866,18 +2614,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", headers.xFcAccountId);
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateService", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "", "json", req, runtime), new UpdateServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceResponse());
     }
 
     public UpdateTriggerResponse updateTrigger(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request) throws Exception {
@@ -1914,17 +2673,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.ifMatch)) {
-            realHeaders.put("If-Match", headers.ifMatch);
+            realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
-            realHeaders.put("X-Fc-Account-Id", headers.xFcAccountId);
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateTrigger", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "json", req, runtime), new UpdateTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTriggerResponse());
     }
 }
