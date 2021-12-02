@@ -1,3 +1,6 @@
+2021-12-02 Version: 1.0.4
+- Support Gourp online API Init.
+
 2021-12-01 Version: 1.0.2
 - Support Gourp pre API Init.
 

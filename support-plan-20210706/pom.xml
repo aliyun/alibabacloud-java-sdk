@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>support_plan20210706</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>support_plan20210706</name>
   <description>Alibaba Cloud support-plan (20210706) SDK for Java
