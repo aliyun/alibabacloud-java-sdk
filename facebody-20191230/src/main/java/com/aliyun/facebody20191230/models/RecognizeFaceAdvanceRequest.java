@@ -11,29 +11,29 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
     @NameInMap("Age")
     public Boolean age;
 
-    @NameInMap("Gender")
-    public Boolean gender;
-
-    @NameInMap("Hat")
-    public Boolean hat;
-
-    @NameInMap("Glass")
-    public Boolean glass;
-
     @NameInMap("Beauty")
     public Boolean beauty;
 
     @NameInMap("Expression")
     public Boolean expression;
 
+    @NameInMap("Gender")
+    public Boolean gender;
+
+    @NameInMap("Glass")
+    public Boolean glass;
+
+    @NameInMap("Hat")
+    public Boolean hat;
+
     @NameInMap("Mask")
     public Boolean mask;
 
-    @NameInMap("Quality")
-    public Boolean quality;
-
     @NameInMap("MaxFaceNumber")
     public Long maxFaceNumber;
+
+    @NameInMap("Quality")
+    public Boolean quality;
 
     public static RecognizeFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFaceAdvanceRequest self = new RecognizeFaceAdvanceRequest();
@@ -56,30 +56,6 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
         return this.age;
     }
 
-    public RecognizeFaceAdvanceRequest setGender(Boolean gender) {
-        this.gender = gender;
-        return this;
-    }
-    public Boolean getGender() {
-        return this.gender;
-    }
-
-    public RecognizeFaceAdvanceRequest setHat(Boolean hat) {
-        this.hat = hat;
-        return this;
-    }
-    public Boolean getHat() {
-        return this.hat;
-    }
-
-    public RecognizeFaceAdvanceRequest setGlass(Boolean glass) {
-        this.glass = glass;
-        return this;
-    }
-    public Boolean getGlass() {
-        return this.glass;
-    }
-
     public RecognizeFaceAdvanceRequest setBeauty(Boolean beauty) {
         this.beauty = beauty;
         return this;
@@ -96,6 +72,30 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
         return this.expression;
     }
 
+    public RecognizeFaceAdvanceRequest setGender(Boolean gender) {
+        this.gender = gender;
+        return this;
+    }
+    public Boolean getGender() {
+        return this.gender;
+    }
+
+    public RecognizeFaceAdvanceRequest setGlass(Boolean glass) {
+        this.glass = glass;
+        return this;
+    }
+    public Boolean getGlass() {
+        return this.glass;
+    }
+
+    public RecognizeFaceAdvanceRequest setHat(Boolean hat) {
+        this.hat = hat;
+        return this;
+    }
+    public Boolean getHat() {
+        return this.hat;
+    }
+
     public RecognizeFaceAdvanceRequest setMask(Boolean mask) {
         this.mask = mask;
         return this;
@@ -104,20 +104,20 @@ public class RecognizeFaceAdvanceRequest extends TeaModel {
         return this.mask;
     }
 
-    public RecognizeFaceAdvanceRequest setQuality(Boolean quality) {
-        this.quality = quality;
-        return this;
-    }
-    public Boolean getQuality() {
-        return this.quality;
-    }
-
     public RecognizeFaceAdvanceRequest setMaxFaceNumber(Long maxFaceNumber) {
         this.maxFaceNumber = maxFaceNumber;
         return this;
     }
     public Long getMaxFaceNumber() {
         return this.maxFaceNumber;
+    }
+
+    public RecognizeFaceAdvanceRequest setQuality(Boolean quality) {
+        this.quality = quality;
+        return this;
+    }
+    public Boolean getQuality() {
+        return this.quality;
     }
 
 }

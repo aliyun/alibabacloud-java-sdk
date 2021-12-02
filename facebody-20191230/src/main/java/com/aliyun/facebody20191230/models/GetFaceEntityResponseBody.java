@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GetFaceEntityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GetFaceEntityResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetFaceEntityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFaceEntityResponseBody self = new GetFaceEntityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetFaceEntityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetFaceEntityResponseBody setData(GetFaceEntityResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GetFaceEntityResponseBody extends TeaModel {
     }
     public GetFaceEntityResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetFaceEntityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetFaceEntityResponseBodyDataFaces extends TeaModel {
@@ -57,11 +57,11 @@ public class GetFaceEntityResponseBody extends TeaModel {
         @NameInMap("EntityId")
         public String entityId;
 
-        @NameInMap("Labels")
-        public String labels;
-
         @NameInMap("Faces")
         public java.util.List<GetFaceEntityResponseBodyDataFaces> faces;
+
+        @NameInMap("Labels")
+        public String labels;
 
         public static GetFaceEntityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetFaceEntityResponseBodyData self = new GetFaceEntityResponseBodyData();
@@ -84,20 +84,20 @@ public class GetFaceEntityResponseBody extends TeaModel {
             return this.entityId;
         }
 
-        public GetFaceEntityResponseBodyData setLabels(String labels) {
-            this.labels = labels;
-            return this;
-        }
-        public String getLabels() {
-            return this.labels;
-        }
-
         public GetFaceEntityResponseBodyData setFaces(java.util.List<GetFaceEntityResponseBodyDataFaces> faces) {
             this.faces = faces;
             return this;
         }
         public java.util.List<GetFaceEntityResponseBodyDataFaces> getFaces() {
             return this.faces;
+        }
+
+        public GetFaceEntityResponseBodyData setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
         }
 
     }

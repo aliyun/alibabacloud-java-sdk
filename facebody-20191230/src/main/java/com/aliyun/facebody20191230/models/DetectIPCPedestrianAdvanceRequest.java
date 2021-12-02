@@ -8,14 +8,14 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("Height")
+    public Integer height;
+
     @NameInMap("ImageData")
     public String imageData;
 
     @NameInMap("Width")
     public Integer width;
-
-    @NameInMap("Height")
-    public Integer height;
 
     public static DetectIPCPedestrianAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectIPCPedestrianAdvanceRequest self = new DetectIPCPedestrianAdvanceRequest();
@@ -28,6 +28,14 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public DetectIPCPedestrianAdvanceRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
     }
 
     public DetectIPCPedestrianAdvanceRequest setImageData(String imageData) {
@@ -44,14 +52,6 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     }
     public Integer getWidth() {
         return this.width;
-    }
-
-    public DetectIPCPedestrianAdvanceRequest setHeight(Integer height) {
-        this.height = height;
-        return this;
-    }
-    public Integer getHeight() {
-        return this.height;
     }
 
 }

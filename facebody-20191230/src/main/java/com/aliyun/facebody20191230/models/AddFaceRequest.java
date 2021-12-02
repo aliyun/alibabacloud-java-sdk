@@ -7,23 +7,23 @@ public class AddFaceRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("ImageUrl")
-    public String imageUrl;
-
     @NameInMap("EntityId")
     public String entityId;
 
     @NameInMap("ExtraData")
     public String extraData;
 
+    @NameInMap("ImageUrl")
+    public String imageUrl;
+
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 
-    @NameInMap("SimilarityScoreThresholdInEntity")
-    public Float similarityScoreThresholdInEntity;
-
     @NameInMap("SimilarityScoreThresholdBetweenEntity")
     public Float similarityScoreThresholdBetweenEntity;
+
+    @NameInMap("SimilarityScoreThresholdInEntity")
+    public Float similarityScoreThresholdInEntity;
 
     public static AddFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceRequest self = new AddFaceRequest();
@@ -36,14 +36,6 @@ public class AddFaceRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
-    }
-
-    public AddFaceRequest setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-    public String getImageUrl() {
-        return this.imageUrl;
     }
 
     public AddFaceRequest setEntityId(String entityId) {
@@ -62,6 +54,14 @@ public class AddFaceRequest extends TeaModel {
         return this.extraData;
     }
 
+    public AddFaceRequest setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+
     public AddFaceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
         this.qualityScoreThreshold = qualityScoreThreshold;
         return this;
@@ -70,20 +70,20 @@ public class AddFaceRequest extends TeaModel {
         return this.qualityScoreThreshold;
     }
 
-    public AddFaceRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
-        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
-        return this;
-    }
-    public Float getSimilarityScoreThresholdInEntity() {
-        return this.similarityScoreThresholdInEntity;
-    }
-
     public AddFaceRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
         this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
         return this;
     }
     public Float getSimilarityScoreThresholdBetweenEntity() {
         return this.similarityScoreThresholdBetweenEntity;
+    }
+
+    public AddFaceRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
+        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdInEntity() {
+        return this.similarityScoreThresholdInEntity;
     }
 
 }

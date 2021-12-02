@@ -8,17 +8,17 @@ public class AddBodyTraceShrinkRequest extends TeaModel {
     @NameInMap("DbId")
     public Long dbId;
 
-    // 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
-    @NameInMap("PersonId")
-    public Long personId;
+    // 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
+    @NameInMap("ExtraData")
+    public String extraData;
 
     // Trace图片信息列表
     @NameInMap("Images")
     public String imagesShrink;
 
-    // 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
-    @NameInMap("ExtraData")
-    public String extraData;
+    // 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
+    @NameInMap("PersonId")
+    public Long personId;
 
     public static AddBodyTraceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBodyTraceShrinkRequest self = new AddBodyTraceShrinkRequest();
@@ -33,12 +33,12 @@ public class AddBodyTraceShrinkRequest extends TeaModel {
         return this.dbId;
     }
 
-    public AddBodyTraceShrinkRequest setPersonId(Long personId) {
-        this.personId = personId;
+    public AddBodyTraceShrinkRequest setExtraData(String extraData) {
+        this.extraData = extraData;
         return this;
     }
-    public Long getPersonId() {
-        return this.personId;
+    public String getExtraData() {
+        return this.extraData;
     }
 
     public AddBodyTraceShrinkRequest setImagesShrink(String imagesShrink) {
@@ -49,12 +49,12 @@ public class AddBodyTraceShrinkRequest extends TeaModel {
         return this.imagesShrink;
     }
 
-    public AddBodyTraceShrinkRequest setExtraData(String extraData) {
-        this.extraData = extraData;
+    public AddBodyTraceShrinkRequest setPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
-    public String getExtraData() {
-        return this.extraData;
+    public Long getPersonId() {
+        return this.personId;
     }
 
 }

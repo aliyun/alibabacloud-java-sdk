@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectChefCapResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectChefCapResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectChefCapResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectChefCapResponseBody self = new DetectChefCapResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectChefCapResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectChefCapResponseBody setData(DetectChefCapResponseBodyData data) {
@@ -31,27 +23,35 @@ public class DetectChefCapResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectChefCapResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectChefCapResponseBodyDataElements extends TeaModel {
-        @NameInMap("Confidence")
-        public Float confidence;
+        @NameInMap("Box")
+        public java.util.List<Float> box;
 
         @NameInMap("Category")
         public String category;
 
-        @NameInMap("Box")
-        public java.util.List<Float> box;
+        @NameInMap("Confidence")
+        public Float confidence;
 
         public static DetectChefCapResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectChefCapResponseBodyDataElements self = new DetectChefCapResponseBodyDataElements();
             return TeaModel.build(map, self);
         }
 
-        public DetectChefCapResponseBodyDataElements setConfidence(Float confidence) {
-            this.confidence = confidence;
+        public DetectChefCapResponseBodyDataElements setBox(java.util.List<Float> box) {
+            this.box = box;
             return this;
         }
-        public Float getConfidence() {
-            return this.confidence;
+        public java.util.List<Float> getBox() {
+            return this.box;
         }
 
         public DetectChefCapResponseBodyDataElements setCategory(String category) {
@@ -62,12 +62,12 @@ public class DetectChefCapResponseBody extends TeaModel {
             return this.category;
         }
 
-        public DetectChefCapResponseBodyDataElements setBox(java.util.List<Float> box) {
-            this.box = box;
+        public DetectChefCapResponseBodyDataElements setConfidence(Float confidence) {
+            this.confidence = confidence;
             return this;
         }
-        public java.util.List<Float> getBox() {
-            return this.box;
+        public Float getConfidence() {
+            return this.confidence;
         }
 
     }

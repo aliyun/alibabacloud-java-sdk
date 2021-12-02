@@ -7,11 +7,11 @@ public class RetouchBodyRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("SlimDegree")
-    public Float slimDegree;
-
     @NameInMap("LengthenDegree")
     public Float lengthenDegree;
+
+    @NameInMap("SlimDegree")
+    public Float slimDegree;
 
     public static RetouchBodyRequest build(java.util.Map<String, ?> map) throws Exception {
         RetouchBodyRequest self = new RetouchBodyRequest();
@@ -26,20 +26,20 @@ public class RetouchBodyRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public RetouchBodyRequest setSlimDegree(Float slimDegree) {
-        this.slimDegree = slimDegree;
-        return this;
-    }
-    public Float getSlimDegree() {
-        return this.slimDegree;
-    }
-
     public RetouchBodyRequest setLengthenDegree(Float lengthenDegree) {
         this.lengthenDegree = lengthenDegree;
         return this;
     }
     public Float getLengthenDegree() {
         return this.lengthenDegree;
+    }
+
+    public RetouchBodyRequest setSlimDegree(Float slimDegree) {
+        this.slimDegree = slimDegree;
+        return this;
+    }
+    public Float getSlimDegree() {
+        return this.slimDegree;
     }
 
 }

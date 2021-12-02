@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeActionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeActionResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeActionResponseBody self = new RecognizeActionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeActionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeActionResponseBody setData(RecognizeActionResponseBodyData data) {
@@ -29,6 +21,14 @@ public class RecognizeActionResponseBody extends TeaModel {
     }
     public RecognizeActionResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeActionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RecognizeActionResponseBodyDataElementsBoxes extends TeaModel {
@@ -51,14 +51,14 @@ public class RecognizeActionResponseBody extends TeaModel {
     }
 
     public static class RecognizeActionResponseBodyDataElements extends TeaModel {
-        @NameInMap("Scores")
-        public java.util.List<Float> scores;
+        @NameInMap("Boxes")
+        public java.util.List<RecognizeActionResponseBodyDataElementsBoxes> boxes;
 
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
-        @NameInMap("Boxes")
-        public java.util.List<RecognizeActionResponseBodyDataElementsBoxes> boxes;
+        @NameInMap("Scores")
+        public java.util.List<Float> scores;
 
         @NameInMap("Timestamp")
         public Integer timestamp;
@@ -68,12 +68,12 @@ public class RecognizeActionResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RecognizeActionResponseBodyDataElements setScores(java.util.List<Float> scores) {
-            this.scores = scores;
+        public RecognizeActionResponseBodyDataElements setBoxes(java.util.List<RecognizeActionResponseBodyDataElementsBoxes> boxes) {
+            this.boxes = boxes;
             return this;
         }
-        public java.util.List<Float> getScores() {
-            return this.scores;
+        public java.util.List<RecognizeActionResponseBodyDataElementsBoxes> getBoxes() {
+            return this.boxes;
         }
 
         public RecognizeActionResponseBodyDataElements setLabels(java.util.List<String> labels) {
@@ -84,12 +84,12 @@ public class RecognizeActionResponseBody extends TeaModel {
             return this.labels;
         }
 
-        public RecognizeActionResponseBodyDataElements setBoxes(java.util.List<RecognizeActionResponseBodyDataElementsBoxes> boxes) {
-            this.boxes = boxes;
+        public RecognizeActionResponseBodyDataElements setScores(java.util.List<Float> scores) {
+            this.scores = scores;
             return this;
         }
-        public java.util.List<RecognizeActionResponseBodyDataElementsBoxes> getBoxes() {
-            return this.boxes;
+        public java.util.List<Float> getScores() {
+            return this.scores;
         }
 
         public RecognizeActionResponseBodyDataElements setTimestamp(Integer timestamp) {

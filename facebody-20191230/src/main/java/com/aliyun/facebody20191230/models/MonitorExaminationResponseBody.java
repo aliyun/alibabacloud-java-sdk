@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class MonitorExaminationResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public MonitorExaminationResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public MonitorExaminationResponseBodyData data;
-
     public static MonitorExaminationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MonitorExaminationResponseBody self = new MonitorExaminationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public MonitorExaminationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public MonitorExaminationResponseBody setData(MonitorExaminationResponseBodyData data) {
@@ -30,6 +22,14 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
     public MonitorExaminationResponseBodyData getData() {
         return this.data;
+    }
+
+    public MonitorExaminationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class MonitorExaminationResponseBodyDataFaceInfoPose extends TeaModel {
@@ -216,14 +216,14 @@ public class MonitorExaminationResponseBody extends TeaModel {
     }
 
     public static class MonitorExaminationResponseBodyData extends TeaModel {
+        @NameInMap("ChatScore")
+        public Float chatScore;
+
         @NameInMap("FaceInfo")
         public MonitorExaminationResponseBodyDataFaceInfo faceInfo;
 
         @NameInMap("PersonInfo")
         public MonitorExaminationResponseBodyDataPersonInfo personInfo;
-
-        @NameInMap("ChatScore")
-        public Float chatScore;
 
         @NameInMap("Threshold")
         public Float threshold;
@@ -231,6 +231,14 @@ public class MonitorExaminationResponseBody extends TeaModel {
         public static MonitorExaminationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             MonitorExaminationResponseBodyData self = new MonitorExaminationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public MonitorExaminationResponseBodyData setChatScore(Float chatScore) {
+            this.chatScore = chatScore;
+            return this;
+        }
+        public Float getChatScore() {
+            return this.chatScore;
         }
 
         public MonitorExaminationResponseBodyData setFaceInfo(MonitorExaminationResponseBodyDataFaceInfo faceInfo) {
@@ -247,14 +255,6 @@ public class MonitorExaminationResponseBody extends TeaModel {
         }
         public MonitorExaminationResponseBodyDataPersonInfo getPersonInfo() {
             return this.personInfo;
-        }
-
-        public MonitorExaminationResponseBodyData setChatScore(Float chatScore) {
-            this.chatScore = chatScore;
-            return this;
-        }
-        public Float getChatScore() {
-            return this.chatScore;
         }
 
         public MonitorExaminationResponseBodyData setThreshold(Float threshold) {

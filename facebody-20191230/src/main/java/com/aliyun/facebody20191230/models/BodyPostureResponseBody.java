@@ -4,15 +4,23 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BodyPostureResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public BodyPostureResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BodyPostureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BodyPostureResponseBody self = new BodyPostureResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BodyPostureResponseBody setData(BodyPostureResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BodyPostureResponseBodyData getData() {
+        return this.data;
     }
 
     public BodyPostureResponseBody setRequestId(String requestId) {
@@ -23,12 +31,34 @@ public class BodyPostureResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BodyPostureResponseBody setData(BodyPostureResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public BodyPostureResponseBodyData getData() {
-        return this.data;
+    public static class BodyPostureResponseBodyDataMetaObject extends TeaModel {
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        public static BodyPostureResponseBodyDataMetaObject build(java.util.Map<String, ?> map) throws Exception {
+            BodyPostureResponseBodyDataMetaObject self = new BodyPostureResponseBodyDataMetaObject();
+            return TeaModel.build(map, self);
+        }
+
+        public BodyPostureResponseBodyDataMetaObject setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public BodyPostureResponseBodyDataMetaObject setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class BodyPostureResponseBodyDataOutputsResultsBodiesPositions extends TeaModel {
@@ -51,26 +81,18 @@ public class BodyPostureResponseBody extends TeaModel {
     }
 
     public static class BodyPostureResponseBodyDataOutputsResultsBodies extends TeaModel {
-        @NameInMap("Positions")
-        public java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> positions;
-
         @NameInMap("Confident")
         public Float confident;
 
         @NameInMap("Label")
         public String label;
 
+        @NameInMap("Positions")
+        public java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> positions;
+
         public static BodyPostureResponseBodyDataOutputsResultsBodies build(java.util.Map<String, ?> map) throws Exception {
             BodyPostureResponseBodyDataOutputsResultsBodies self = new BodyPostureResponseBodyDataOutputsResultsBodies();
             return TeaModel.build(map, self);
-        }
-
-        public BodyPostureResponseBodyDataOutputsResultsBodies setPositions(java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> positions) {
-            this.positions = positions;
-            return this;
-        }
-        public java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> getPositions() {
-            return this.positions;
         }
 
         public BodyPostureResponseBodyDataOutputsResultsBodies setConfident(Float confident) {
@@ -87,6 +109,14 @@ public class BodyPostureResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public BodyPostureResponseBodyDataOutputsResultsBodies setPositions(java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> positions) {
+            this.positions = positions;
+            return this;
+        }
+        public java.util.List<BodyPostureResponseBodyDataOutputsResultsBodiesPositions> getPositions() {
+            return this.positions;
         }
 
     }
@@ -140,54 +170,16 @@ public class BodyPostureResponseBody extends TeaModel {
 
     }
 
-    public static class BodyPostureResponseBodyDataMetaObject extends TeaModel {
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        public static BodyPostureResponseBodyDataMetaObject build(java.util.Map<String, ?> map) throws Exception {
-            BodyPostureResponseBodyDataMetaObject self = new BodyPostureResponseBodyDataMetaObject();
-            return TeaModel.build(map, self);
-        }
-
-        public BodyPostureResponseBodyDataMetaObject setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public BodyPostureResponseBodyDataMetaObject setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-    }
-
     public static class BodyPostureResponseBodyData extends TeaModel {
-        @NameInMap("Outputs")
-        public java.util.List<BodyPostureResponseBodyDataOutputs> outputs;
-
         @NameInMap("MetaObject")
         public BodyPostureResponseBodyDataMetaObject metaObject;
+
+        @NameInMap("Outputs")
+        public java.util.List<BodyPostureResponseBodyDataOutputs> outputs;
 
         public static BodyPostureResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BodyPostureResponseBodyData self = new BodyPostureResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public BodyPostureResponseBodyData setOutputs(java.util.List<BodyPostureResponseBodyDataOutputs> outputs) {
-            this.outputs = outputs;
-            return this;
-        }
-        public java.util.List<BodyPostureResponseBodyDataOutputs> getOutputs() {
-            return this.outputs;
         }
 
         public BodyPostureResponseBodyData setMetaObject(BodyPostureResponseBodyDataMetaObject metaObject) {
@@ -196,6 +188,14 @@ public class BodyPostureResponseBody extends TeaModel {
         }
         public BodyPostureResponseBodyDataMetaObject getMetaObject() {
             return this.metaObject;
+        }
+
+        public BodyPostureResponseBodyData setOutputs(java.util.List<BodyPostureResponseBodyDataOutputs> outputs) {
+            this.outputs = outputs;
+            return this;
+        }
+        public java.util.List<BodyPostureResponseBodyDataOutputs> getOutputs() {
+            return this.outputs;
         }
 
     }

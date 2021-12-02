@@ -4,11 +4,11 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectPedestrianIntrusionShrinkRequest extends TeaModel {
-    @NameInMap("ImageURL")
-    public String imageURL;
-
     @NameInMap("DetectRegion")
     public String detectRegionShrink;
+
+    @NameInMap("ImageURL")
+    public String imageURL;
 
     @NameInMap("RegionType")
     public String regionType;
@@ -18,20 +18,20 @@ public class DetectPedestrianIntrusionShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectPedestrianIntrusionShrinkRequest setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-        return this;
-    }
-    public String getImageURL() {
-        return this.imageURL;
-    }
-
     public DetectPedestrianIntrusionShrinkRequest setDetectRegionShrink(String detectRegionShrink) {
         this.detectRegionShrink = detectRegionShrink;
         return this;
     }
     public String getDetectRegionShrink() {
         return this.detectRegionShrink;
+    }
+
+    public DetectPedestrianIntrusionShrinkRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
     public DetectPedestrianIntrusionShrinkRequest setRegionType(String regionType) {

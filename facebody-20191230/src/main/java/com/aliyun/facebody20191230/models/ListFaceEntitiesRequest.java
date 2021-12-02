@@ -7,23 +7,23 @@ public class ListFaceEntitiesRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Offset")
-    public Integer offset;
-
-    @NameInMap("Limit")
-    public Integer limit;
-
-    @NameInMap("Token")
-    public String token;
+    @NameInMap("EntityIdPrefix")
+    public String entityIdPrefix;
 
     @NameInMap("Labels")
     public String labels;
 
-    @NameInMap("EntityIdPrefix")
-    public String entityIdPrefix;
+    @NameInMap("Limit")
+    public Integer limit;
+
+    @NameInMap("Offset")
+    public Integer offset;
 
     @NameInMap("Order")
     public String order;
+
+    @NameInMap("Token")
+    public String token;
 
     public static ListFaceEntitiesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFaceEntitiesRequest self = new ListFaceEntitiesRequest();
@@ -38,28 +38,12 @@ public class ListFaceEntitiesRequest extends TeaModel {
         return this.dbName;
     }
 
-    public ListFaceEntitiesRequest setOffset(Integer offset) {
-        this.offset = offset;
+    public ListFaceEntitiesRequest setEntityIdPrefix(String entityIdPrefix) {
+        this.entityIdPrefix = entityIdPrefix;
         return this;
     }
-    public Integer getOffset() {
-        return this.offset;
-    }
-
-    public ListFaceEntitiesRequest setLimit(Integer limit) {
-        this.limit = limit;
-        return this;
-    }
-    public Integer getLimit() {
-        return this.limit;
-    }
-
-    public ListFaceEntitiesRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
+    public String getEntityIdPrefix() {
+        return this.entityIdPrefix;
     }
 
     public ListFaceEntitiesRequest setLabels(String labels) {
@@ -70,12 +54,20 @@ public class ListFaceEntitiesRequest extends TeaModel {
         return this.labels;
     }
 
-    public ListFaceEntitiesRequest setEntityIdPrefix(String entityIdPrefix) {
-        this.entityIdPrefix = entityIdPrefix;
+    public ListFaceEntitiesRequest setLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
-    public String getEntityIdPrefix() {
-        return this.entityIdPrefix;
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    public ListFaceEntitiesRequest setOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Integer getOffset() {
+        return this.offset;
     }
 
     public ListFaceEntitiesRequest setOrder(String order) {
@@ -84,6 +76,14 @@ public class ListFaceEntitiesRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
+    }
+
+    public ListFaceEntitiesRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

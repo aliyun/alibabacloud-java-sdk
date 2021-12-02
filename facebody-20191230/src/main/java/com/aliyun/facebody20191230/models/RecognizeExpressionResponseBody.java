@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeExpressionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeExpressionResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeExpressionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeExpressionResponseBody self = new RecognizeExpressionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeExpressionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeExpressionResponseBody setData(RecognizeExpressionResponseBodyData data) {
@@ -31,38 +23,30 @@ public class RecognizeExpressionResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeExpressionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeExpressionResponseBodyDataElementsFaceRectangle extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
         @NameInMap("Height")
         public Integer height;
 
         @NameInMap("Left")
         public Integer left;
 
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
         public static RecognizeExpressionResponseBodyDataElementsFaceRectangle build(java.util.Map<String, ?> map) throws Exception {
             RecognizeExpressionResponseBodyDataElementsFaceRectangle self = new RecognizeExpressionResponseBodyDataElementsFaceRectangle();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeExpressionResponseBodyDataElementsFaceRectangle setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public RecognizeExpressionResponseBodyDataElementsFaceRectangle setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
         }
 
         public RecognizeExpressionResponseBodyDataElementsFaceRectangle setHeight(Integer height) {
@@ -81,29 +65,37 @@ public class RecognizeExpressionResponseBody extends TeaModel {
             return this.left;
         }
 
+        public RecognizeExpressionResponseBodyDataElementsFaceRectangle setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public RecognizeExpressionResponseBodyDataElementsFaceRectangle setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class RecognizeExpressionResponseBodyDataElements extends TeaModel {
-        @NameInMap("FaceRectangle")
-        public RecognizeExpressionResponseBodyDataElementsFaceRectangle faceRectangle;
-
         @NameInMap("Expression")
         public String expression;
 
         @NameInMap("FaceProbability")
         public Float faceProbability;
 
+        @NameInMap("FaceRectangle")
+        public RecognizeExpressionResponseBodyDataElementsFaceRectangle faceRectangle;
+
         public static RecognizeExpressionResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeExpressionResponseBodyDataElements self = new RecognizeExpressionResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeExpressionResponseBodyDataElements setFaceRectangle(RecognizeExpressionResponseBodyDataElementsFaceRectangle faceRectangle) {
-            this.faceRectangle = faceRectangle;
-            return this;
-        }
-        public RecognizeExpressionResponseBodyDataElementsFaceRectangle getFaceRectangle() {
-            return this.faceRectangle;
         }
 
         public RecognizeExpressionResponseBodyDataElements setExpression(String expression) {
@@ -120,6 +112,14 @@ public class RecognizeExpressionResponseBody extends TeaModel {
         }
         public Float getFaceProbability() {
             return this.faceProbability;
+        }
+
+        public RecognizeExpressionResponseBodyDataElements setFaceRectangle(RecognizeExpressionResponseBodyDataElementsFaceRectangle faceRectangle) {
+            this.faceRectangle = faceRectangle;
+            return this;
+        }
+        public RecognizeExpressionResponseBodyDataElementsFaceRectangle getFaceRectangle() {
+            return this.faceRectangle;
         }
 
     }

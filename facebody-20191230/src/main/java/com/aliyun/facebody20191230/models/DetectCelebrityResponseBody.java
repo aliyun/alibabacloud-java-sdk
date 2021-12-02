@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectCelebrityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectCelebrityResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectCelebrityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectCelebrityResponseBody self = new DetectCelebrityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectCelebrityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectCelebrityResponseBody setData(DetectCelebrityResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectCelebrityResponseBody extends TeaModel {
     }
     public DetectCelebrityResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectCelebrityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectCelebrityResponseBodyDataFaceRecognizeResults extends TeaModel {
@@ -65,11 +65,11 @@ public class DetectCelebrityResponseBody extends TeaModel {
         @NameInMap("FaceRecognizeResults")
         public java.util.List<DetectCelebrityResponseBodyDataFaceRecognizeResults> faceRecognizeResults;
 
-        @NameInMap("Width")
-        public Integer width;
-
         @NameInMap("Height")
         public Integer height;
+
+        @NameInMap("Width")
+        public Integer width;
 
         public static DetectCelebrityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DetectCelebrityResponseBodyData self = new DetectCelebrityResponseBodyData();
@@ -84,20 +84,20 @@ public class DetectCelebrityResponseBody extends TeaModel {
             return this.faceRecognizeResults;
         }
 
-        public DetectCelebrityResponseBodyData setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
         public DetectCelebrityResponseBodyData setHeight(Integer height) {
             this.height = height;
             return this;
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public DetectCelebrityResponseBodyData setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }

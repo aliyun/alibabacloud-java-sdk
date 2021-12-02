@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public GenRealPersonVerificationTokenResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GenRealPersonVerificationTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenRealPersonVerificationTokenResponseBody self = new GenRealPersonVerificationTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenRealPersonVerificationTokenResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenRealPersonVerificationTokenResponseBody setData(GenRealPersonVerificationTokenResponseBodyData data) {
@@ -29,6 +21,14 @@ public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
     }
     public GenRealPersonVerificationTokenResponseBodyData getData() {
         return this.data;
+    }
+
+    public GenRealPersonVerificationTokenResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GenRealPersonVerificationTokenResponseBodyData extends TeaModel {

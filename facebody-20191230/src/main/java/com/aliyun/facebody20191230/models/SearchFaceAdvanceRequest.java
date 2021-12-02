@@ -11,17 +11,17 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Limit")
-    public Integer limit;
-
     @NameInMap("DbNames")
     public String dbNames;
 
-    @NameInMap("QualityScoreThreshold")
-    public Float qualityScoreThreshold;
+    @NameInMap("Limit")
+    public Integer limit;
 
     @NameInMap("MaxFaceNum")
     public Long maxFaceNum;
+
+    @NameInMap("QualityScoreThreshold")
+    public Float qualityScoreThreshold;
 
     public static SearchFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceAdvanceRequest self = new SearchFaceAdvanceRequest();
@@ -44,14 +44,6 @@ public class SearchFaceAdvanceRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SearchFaceAdvanceRequest setLimit(Integer limit) {
-        this.limit = limit;
-        return this;
-    }
-    public Integer getLimit() {
-        return this.limit;
-    }
-
     public SearchFaceAdvanceRequest setDbNames(String dbNames) {
         this.dbNames = dbNames;
         return this;
@@ -60,12 +52,12 @@ public class SearchFaceAdvanceRequest extends TeaModel {
         return this.dbNames;
     }
 
-    public SearchFaceAdvanceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
-        this.qualityScoreThreshold = qualityScoreThreshold;
+    public SearchFaceAdvanceRequest setLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
-    public Float getQualityScoreThreshold() {
-        return this.qualityScoreThreshold;
+    public Integer getLimit() {
+        return this.limit;
     }
 
     public SearchFaceAdvanceRequest setMaxFaceNum(Long maxFaceNum) {
@@ -74,6 +66,14 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     }
     public Long getMaxFaceNum() {
         return this.maxFaceNum;
+    }
+
+    public SearchFaceAdvanceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
+        this.qualityScoreThreshold = qualityScoreThreshold;
+        return this;
+    }
+    public Float getQualityScoreThreshold() {
+        return this.qualityScoreThreshold;
     }
 
 }

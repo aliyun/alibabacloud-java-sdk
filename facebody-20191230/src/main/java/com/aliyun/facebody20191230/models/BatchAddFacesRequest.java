@@ -10,17 +10,17 @@ public class BatchAddFacesRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
-    @NameInMap("SimilarityScoreThresholdInEntity")
-    public Float similarityScoreThresholdInEntity;
-
-    @NameInMap("SimilarityScoreThresholdBetweenEntity")
-    public Float similarityScoreThresholdBetweenEntity;
-
     @NameInMap("Faces")
     public java.util.List<BatchAddFacesRequestFaces> faces;
 
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
+
+    @NameInMap("SimilarityScoreThresholdBetweenEntity")
+    public Float similarityScoreThresholdBetweenEntity;
+
+    @NameInMap("SimilarityScoreThresholdInEntity")
+    public Float similarityScoreThresholdInEntity;
 
     public static BatchAddFacesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddFacesRequest self = new BatchAddFacesRequest();
@@ -43,22 +43,6 @@ public class BatchAddFacesRequest extends TeaModel {
         return this.entityId;
     }
 
-    public BatchAddFacesRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
-        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
-        return this;
-    }
-    public Float getSimilarityScoreThresholdInEntity() {
-        return this.similarityScoreThresholdInEntity;
-    }
-
-    public BatchAddFacesRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
-        this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
-        return this;
-    }
-    public Float getSimilarityScoreThresholdBetweenEntity() {
-        return this.similarityScoreThresholdBetweenEntity;
-    }
-
     public BatchAddFacesRequest setFaces(java.util.List<BatchAddFacesRequestFaces> faces) {
         this.faces = faces;
         return this;
@@ -73,6 +57,22 @@ public class BatchAddFacesRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
+    }
+
+    public BatchAddFacesRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
+        this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdBetweenEntity() {
+        return this.similarityScoreThresholdBetweenEntity;
+    }
+
+    public BatchAddFacesRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
+        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdInEntity() {
+        return this.similarityScoreThresholdInEntity;
     }
 
     public static class BatchAddFacesRequestFaces extends TeaModel {

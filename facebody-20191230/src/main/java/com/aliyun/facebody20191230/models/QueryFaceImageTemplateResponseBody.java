@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceImageTemplateResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public QueryFaceImageTemplateResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public QueryFaceImageTemplateResponseBodyData data;
-
     public static QueryFaceImageTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceImageTemplateResponseBody self = new QueryFaceImageTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFaceImageTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryFaceImageTemplateResponseBody setData(QueryFaceImageTemplateResponseBodyData data) {
@@ -32,21 +24,29 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         return this.data;
     }
 
+    public QueryFaceImageTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryFaceImageTemplateResponseBodyDataElements extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("TemplateId")
         public String templateId;
 
         @NameInMap("TemplateURL")
         public String templateURL;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static QueryFaceImageTemplateResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             QueryFaceImageTemplateResponseBodyDataElements self = new QueryFaceImageTemplateResponseBodyDataElements();
@@ -59,22 +59,6 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public QueryFaceImageTemplateResponseBodyDataElements setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        public QueryFaceImageTemplateResponseBodyDataElements setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public QueryFaceImageTemplateResponseBodyDataElements setTemplateId(String templateId) {
@@ -91,6 +75,22 @@ public class QueryFaceImageTemplateResponseBody extends TeaModel {
         }
         public String getTemplateURL() {
             return this.templateURL;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElements setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public QueryFaceImageTemplateResponseBodyDataElements setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
