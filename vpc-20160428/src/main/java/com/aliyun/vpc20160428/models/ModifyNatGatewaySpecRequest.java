@@ -4,8 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyNatGatewaySpecRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,27 +28,44 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
     @NameInMap("Spec")
     public String spec;
-
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static ModifyNatGatewaySpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNatGatewaySpecRequest self = new ModifyNatGatewaySpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNatGatewaySpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyNatGatewaySpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyNatGatewaySpecRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public ModifyNatGatewaySpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyNatGatewaySpecRequest setOwnerId(Long ownerId) {
@@ -42,6 +74,14 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyNatGatewaySpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyNatGatewaySpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -60,52 +100,12 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyNatGatewaySpecRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyNatGatewaySpecRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyNatGatewaySpecRequest setNatGatewayId(String natGatewayId) {
-        this.natGatewayId = natGatewayId;
-        return this;
-    }
-    public String getNatGatewayId() {
-        return this.natGatewayId;
-    }
-
     public ModifyNatGatewaySpecRequest setSpec(String spec) {
         this.spec = spec;
         return this;
     }
     public String getSpec() {
         return this.spec;
-    }
-
-    public ModifyNatGatewaySpecRequest setAutoPay(Boolean autoPay) {
-        this.autoPay = autoPay;
-        return this;
-    }
-    public Boolean getAutoPay() {
-        return this.autoPay;
-    }
-
-    public ModifyNatGatewaySpecRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

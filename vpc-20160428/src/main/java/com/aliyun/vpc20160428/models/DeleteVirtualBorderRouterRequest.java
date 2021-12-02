@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVirtualBorderRouterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("VbrId")
-    public String vbrId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,31 +22,28 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("VbrId")
+    public String vbrId;
 
     public static DeleteVirtualBorderRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVirtualBorderRouterRequest self = new DeleteVirtualBorderRouterRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVirtualBorderRouterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public DeleteVirtualBorderRouterRequest setVbrId(String vbrId) {
-        this.vbrId = vbrId;
+    public DeleteVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getVbrId() {
-        return this.vbrId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteVirtualBorderRouterRequest setOwnerId(Long ownerId) {
@@ -52,6 +52,14 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -70,20 +78,12 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteVirtualBorderRouterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DeleteVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVbrId() {
+        return this.vbrId;
     }
 
 }

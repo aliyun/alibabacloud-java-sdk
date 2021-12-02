@@ -4,17 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("VbrId")
-    public String vbrId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -22,31 +25,36 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("VbrId")
+    public String vbrId;
 
     public static UnassociatePhysicalConnectionFromVirtualBorderRouterRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassociatePhysicalConnectionFromVirtualBorderRouterRequest self = new UnassociatePhysicalConnectionFromVirtualBorderRouterRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setVbrId(String vbrId) {
-        this.vbrId = vbrId;
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getVbrId() {
-        return this.vbrId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setPhysicalConnectionId(String physicalConnectionId) {
@@ -57,12 +65,12 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         return this.physicalConnectionId;
     }
 
-    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -81,20 +89,12 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         return this.resourceOwnerId;
     }
 
-    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVbrId() {
+        return this.vbrId;
     }
 
 }

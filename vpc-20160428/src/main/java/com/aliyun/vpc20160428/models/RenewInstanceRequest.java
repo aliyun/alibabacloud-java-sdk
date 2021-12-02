@@ -4,23 +4,23 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Duration")
+    public Integer duration;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
-
-    @NameInMap("Duration")
-    public Integer duration;
 
     @NameInMap("InstanceType")
     public String instanceType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -33,12 +33,12 @@ public class RenewInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public RenewInstanceRequest setDuration(Integer duration) {
+        this.duration = duration;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getDuration() {
+        return this.duration;
     }
 
     public RenewInstanceRequest setInstanceId(String instanceId) {
@@ -47,22 +47,6 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public RenewInstanceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
-    }
-
-    public RenewInstanceRequest setDuration(Integer duration) {
-        this.duration = duration;
-        return this;
-    }
-    public Integer getDuration() {
-        return this.duration;
     }
 
     public RenewInstanceRequest setInstanceType(String instanceType) {
@@ -79,6 +63,22 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public RenewInstanceRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public RenewInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RenewInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

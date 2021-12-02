@@ -4,23 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -28,52 +16,24 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyIPv6TranslatorAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIPv6TranslatorAttributeRequest self = new ModifyIPv6TranslatorAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyIPv6TranslatorAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyIPv6TranslatorAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyIPv6TranslatorAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyIPv6TranslatorAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyIPv6TranslatorAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyIPv6TranslatorAttributeRequest setClientToken(String clientToken) {
@@ -82,6 +42,14 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyIPv6TranslatorAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyIPv6TranslatorAttributeRequest setIpv6TranslatorId(String ipv6TranslatorId) {
@@ -100,12 +68,44 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyIPv6TranslatorAttributeRequest setDescription(String description) {
-        this.description = description;
+    public ModifyIPv6TranslatorAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyIPv6TranslatorAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyIPv6TranslatorAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIPv6TranslatorAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyIPv6TranslatorAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

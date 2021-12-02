@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpc20160428.models;
+
+import com.aliyun.tea.*;
+
+public class CreateNatIpResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateNatIpResponseBody body;
+
+    public static CreateNatIpResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateNatIpResponse self = new CreateNatIpResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateNatIpResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateNatIpResponse setBody(CreateNatIpResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateNatIpResponseBody getBody() {
+        return this.body;
+    }
+
+}

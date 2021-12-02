@@ -4,20 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTableListRequest extends TeaModel {
-    @NameInMap("RouterType")
-    public String routerType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
-    @NameInMap("RouterId")
-    public String routerId;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("RouteTableId")
-    public String routeTableId;
-
-    @NameInMap("RouteTableName")
-    public String routeTableName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,11 +16,11 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -37,58 +28,40 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RouteTableName")
+    public String routeTableName;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeRouteTableListRequestTag> tag;
+    @NameInMap("RouterId")
+    public String routerId;
+
+    @NameInMap("RouterType")
+    public String routerType;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static DescribeRouteTableListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteTableListRequest self = new DescribeRouteTableListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRouteTableListRequest setRouterType(String routerType) {
-        this.routerType = routerType;
+    public DescribeRouteTableListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRouterType() {
-        return this.routerType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public DescribeRouteTableListRequest setRouterId(String routerId) {
-        this.routerId = routerId;
+    public DescribeRouteTableListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getRouterId() {
-        return this.routerId;
-    }
-
-    public DescribeRouteTableListRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public DescribeRouteTableListRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
-    }
-
-    public DescribeRouteTableListRequest setRouteTableName(String routeTableName) {
-        this.routeTableName = routeTableName;
-        return this;
-    }
-    public String getRouteTableName() {
-        return this.routeTableName;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRouteTableListRequest setPageNumber(Integer pageNumber) {
@@ -107,20 +80,20 @@ public class DescribeRouteTableListRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeRouteTableListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeRouteTableListRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeRouteTableListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeRouteTableListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -139,36 +112,44 @@ public class DescribeRouteTableListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeRouteTableListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeRouteTableListRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
-    public DescribeRouteTableListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeRouteTableListRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRouteTableName() {
+        return this.routeTableName;
     }
 
-    public DescribeRouteTableListRequest setTag(java.util.List<DescribeRouteTableListRequestTag> tag) {
-        this.tag = tag;
+    public DescribeRouteTableListRequest setRouterId(String routerId) {
+        this.routerId = routerId;
         return this;
     }
-    public java.util.List<DescribeRouteTableListRequestTag> getTag() {
-        return this.tag;
+    public String getRouterId() {
+        return this.routerId;
     }
 
-    public static class DescribeRouteTableListRequestTag extends TeaModel {
-        public static DescribeRouteTableListRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRouteTableListRequestTag self = new DescribeRouteTableListRequestTag();
-            return TeaModel.build(map, self);
-        }
+    public DescribeRouteTableListRequest setRouterType(String routerType) {
+        this.routerType = routerType;
+        return this;
+    }
+    public String getRouterType() {
+        return this.routerType;
+    }
 
+    public DescribeRouteTableListRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

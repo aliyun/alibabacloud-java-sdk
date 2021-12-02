@@ -4,48 +4,24 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTableListResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RouterTableList")
     public DescribeRouteTableListResponseBodyRouterTableList routerTableList;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeRouteTableListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteTableListResponseBody self = new DescribeRouteTableListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouteTableListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeRouteTableListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeRouteTableListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeRouteTableListResponseBody setPageNumber(Integer pageNumber) {
@@ -56,12 +32,55 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeRouteTableListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeRouteTableListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeRouteTableListResponseBody setRouterTableList(DescribeRouteTableListResponseBodyRouterTableList routerTableList) {
         this.routerTableList = routerTableList;
         return this;
     }
     public DescribeRouteTableListResponseBodyRouterTableList getRouterTableList() {
         return this.routerTableList;
+    }
+
+    public DescribeRouteTableListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds extends TeaModel {
+        @NameInMap("GatewayIds")
+        public java.util.List<String> gatewayIds;
+
+        public static DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds self = new DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds setGatewayIds(java.util.List<String> gatewayIds) {
+            this.gatewayIds = gatewayIds;
+            return this;
+        }
+        public java.util.List<String> getGatewayIds() {
+            return this.gatewayIds;
+        }
+
     }
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
@@ -133,56 +152,62 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AssociateType")
+        public String associateType;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("RouterId")
-        public String routerId;
-
-        @NameInMap("Tags")
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags;
-
-        @NameInMap("RouteTableId")
-        public String routeTableId;
+        @NameInMap("GatewayIds")
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds;
 
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        @NameInMap("RouteTableName")
+        public String routeTableName;
 
         @NameInMap("RouteTableType")
         public String routeTableType;
 
-        @NameInMap("VSwitchIds")
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;
+        @NameInMap("RouterId")
+        public String routerId;
 
         @NameInMap("RouterType")
         public String routerType;
 
-        @NameInMap("RouteTableName")
-        public String routeTableName;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tags")
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags;
+
+        @NameInMap("VSwitchIds")
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static DescribeRouteTableListResponseBodyRouterTableListRouterTableListType build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTableListResponseBodyRouterTableListRouterTableListType self = new DescribeRouteTableListResponseBodyRouterTableListRouterTableListType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setStatus(String status) {
-            this.status = status;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setAssociateType(String associateType) {
+            this.associateType = associateType;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAssociateType() {
+            return this.associateType;
         }
 
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setCreationTime(String creationTime) {
@@ -193,36 +218,20 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getDescription() {
+            return this.description;
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouterId(String routerId) {
-            this.routerId = routerId;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setGatewayIds(DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds) {
+            this.gatewayIds = gatewayIds;
             return this;
         }
-        public String getRouterId() {
-            return this.routerId;
-        }
-
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setTags(DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
-            return this;
-        }
-        public String getRouteTableId() {
-            return this.routeTableId;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds getGatewayIds() {
+            return this.gatewayIds;
         }
 
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setOwnerId(Long ownerId) {
@@ -233,20 +242,28 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableName(String routeTableName) {
+            this.routeTableName = routeTableName;
+            return this;
+        }
+        public String getRouteTableName() {
+            return this.routeTableName;
         }
 
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableType(String routeTableType) {
@@ -257,12 +274,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             return this.routeTableType;
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setVSwitchIds(DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds) {
-            this.vSwitchIds = vSwitchIds;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouterId(String routerId) {
+            this.routerId = routerId;
             return this;
         }
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds getVSwitchIds() {
-            return this.vSwitchIds;
+        public String getRouterId() {
+            return this.routerId;
         }
 
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouterType(String routerType) {
@@ -273,12 +290,36 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             return this.routerType;
         }
 
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableName(String routeTableName) {
-            this.routeTableName = routeTableName;
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getRouteTableName() {
-            return this.routeTableName;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setTags(DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setVSwitchIds(DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

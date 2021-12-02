@@ -7,14 +7,14 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
@@ -32,6 +32,14 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ConnectRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ConnectRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ConnectRouterInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ConnectRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {

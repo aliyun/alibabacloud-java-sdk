@@ -4,23 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("GlobalAccelerationInstances")
     public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeServerRelatedGlobalAccelerationInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerRelatedGlobalAccelerationInstancesResponseBody self = new DescribeServerRelatedGlobalAccelerationInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeServerRelatedGlobalAccelerationInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeServerRelatedGlobalAccelerationInstancesResponseBody setGlobalAccelerationInstances(DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstances globalAccelerationInstances) {
@@ -31,38 +23,30 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
         return this.globalAccelerationInstances;
     }
 
+    public DescribeServerRelatedGlobalAccelerationInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
-        @NameInMap("ServerIpAddress")
-        public String serverIpAddress;
+        @NameInMap("GlobalAccelerationInstanceId")
+        public String globalAccelerationInstanceId;
 
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        @NameInMap("GlobalAccelerationInstanceId")
-        public String globalAccelerationInstanceId;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ServerIpAddress")
+        public String serverIpAddress;
 
         public static DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance self = new DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setServerIpAddress(String serverIpAddress) {
-            this.serverIpAddress = serverIpAddress;
-            return this;
-        }
-        public String getServerIpAddress() {
-            return this.serverIpAddress;
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
         }
 
         public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
@@ -73,12 +57,28 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
             return this.globalAccelerationInstanceId;
         }
 
+        public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
         public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance setServerIpAddress(String serverIpAddress) {
+            this.serverIpAddress = serverIpAddress;
+            return this;
+        }
+        public String getServerIpAddress() {
+            return this.serverIpAddress;
         }
 
     }

@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,61 +28,9 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    @NameInMap("IsDefault")
-    public Boolean isDefault;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeVpcAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcAttributeRequest self = new DescribeVpcAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVpcAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVpcAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeVpcAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeVpcAttributeRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public DescribeVpcAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeVpcAttributeRequest setDryRun(Boolean dryRun) {
@@ -95,6 +55,46 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeVpcAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVpcAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpcAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVpcAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeVpcAttributeRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

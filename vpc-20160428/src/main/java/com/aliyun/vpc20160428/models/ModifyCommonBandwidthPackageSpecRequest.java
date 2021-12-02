@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
+    @NameInMap("Bandwidth")
+    public String bandwidth;
+
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,33 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("BandwidthPackageId")
-    public String bandwidthPackageId;
-
-    @NameInMap("Bandwidth")
-    public String bandwidth;
-
     public static ModifyCommonBandwidthPackageSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCommonBandwidthPackageSpecRequest self = new ModifyCommonBandwidthPackageSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCommonBandwidthPackageSpecRequest setBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public String getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyCommonBandwidthPackageSpecRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public ModifyCommonBandwidthPackageSpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyCommonBandwidthPackageSpecRequest setOwnerId(Long ownerId) {
@@ -36,6 +60,14 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyCommonBandwidthPackageSpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyCommonBandwidthPackageSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyCommonBandwidthPackageSpecRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyCommonBandwidthPackageSpecRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyCommonBandwidthPackageSpecRequest setBandwidthPackageId(String bandwidthPackageId) {
-        this.bandwidthPackageId = bandwidthPackageId;
-        return this;
-    }
-    public String getBandwidthPackageId() {
-        return this.bandwidthPackageId;
-    }
-
-    public ModifyCommonBandwidthPackageSpecRequest setBandwidth(String bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public String getBandwidth() {
-        return this.bandwidth;
     }
 
 }

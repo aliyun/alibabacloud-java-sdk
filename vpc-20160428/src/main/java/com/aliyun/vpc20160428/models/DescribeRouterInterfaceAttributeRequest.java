@@ -4,8 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static DescribeRouterInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouterInterfaceAttributeRequest self = new DescribeRouterInterfaceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRouterInterfaceAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeRouterInterfaceAttributeRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRouterInterfaceAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRouterInterfaceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRouterInterfaceAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeRouterInterfaceAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

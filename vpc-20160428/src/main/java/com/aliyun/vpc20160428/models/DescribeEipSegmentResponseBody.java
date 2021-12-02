@@ -7,8 +7,8 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     @NameInMap("EipSegments")
     public DescribeEipSegmentResponseBodyEipSegments eipSegments;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,8 +16,8 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeEipSegmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipSegmentResponseBody self = new DescribeEipSegmentResponseBody();
@@ -32,12 +32,12 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         return this.eipSegments;
     }
 
-    public DescribeEipSegmentResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeEipSegmentResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeEipSegmentResponseBody setPageSize(Integer pageSize) {
@@ -56,20 +56,17 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEipSegmentResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeEipSegmentResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeEipSegmentResponseBodyEipSegmentsEipSegment extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
 
         @NameInMap("Descritpion")
         public String descritpion;
@@ -83,11 +80,14 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("Segment")
         public String segment;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeEipSegmentResponseBodyEipSegmentsEipSegment build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipSegmentResponseBodyEipSegmentsEipSegment self = new DescribeEipSegmentResponseBodyEipSegmentsEipSegment();
@@ -100,14 +100,6 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setDescritpion(String descritpion) {
@@ -142,6 +134,14 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setSegment(String segment) {
             this.segment = segment;
             return this;
@@ -150,12 +150,12 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
             return this.segment;
         }
 
-        public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeEipSegmentResponseBodyEipSegmentsEipSegment setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getStatus() {
+            return this.status;
         }
 
     }

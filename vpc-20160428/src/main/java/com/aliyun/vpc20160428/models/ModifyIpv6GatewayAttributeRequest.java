@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
@@ -13,11 +13,14 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -25,20 +28,17 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyIpv6GatewayAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpv6GatewayAttributeRequest self = new ModifyIpv6GatewayAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyIpv6GatewayAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyIpv6GatewayAttributeRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyIpv6GatewayAttributeRequest setIpv6GatewayId(String ipv6GatewayId) {
@@ -57,12 +57,12 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyIpv6GatewayAttributeRequest setDescription(String description) {
-        this.description = description;
+    public ModifyIpv6GatewayAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyIpv6GatewayAttributeRequest setOwnerId(Long ownerId) {
@@ -71,6 +71,14 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyIpv6GatewayAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyIpv6GatewayAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -87,14 +95,6 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyIpv6GatewayAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

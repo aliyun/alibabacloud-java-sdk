@@ -4,11 +4,26 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnGatewayAttributeRequest extends TeaModel {
+    @NameInMap("AutoPropagate")
+    public Boolean autoPropagate;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,27 +31,44 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("AutoPropagate")
-    public Boolean autoPropagate;
 
     public static ModifyVpnGatewayAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpnGatewayAttributeRequest self = new ModifyVpnGatewayAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVpnGatewayAttributeRequest setAutoPropagate(Boolean autoPropagate) {
+        this.autoPropagate = autoPropagate;
+        return this;
+    }
+    public Boolean getAutoPropagate() {
+        return this.autoPropagate;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyVpnGatewayAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -55,6 +87,14 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyVpnGatewayAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyVpnGatewayAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -71,52 +111,12 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyVpnGatewayAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyVpnGatewayAttributeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public ModifyVpnGatewayAttributeRequest setVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
-    }
-
-    public ModifyVpnGatewayAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyVpnGatewayAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyVpnGatewayAttributeRequest setAutoPropagate(Boolean autoPropagate) {
-        this.autoPropagate = autoPropagate;
-        return this;
-    }
-    public Boolean getAutoPropagate() {
-        return this.autoPropagate;
     }
 
 }

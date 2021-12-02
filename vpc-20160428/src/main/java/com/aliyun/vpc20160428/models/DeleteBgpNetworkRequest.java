@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteBgpNetworkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DstCidrBlock")
+    public String dstCidrBlock;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +25,36 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DstCidrBlock")
-    public String dstCidrBlock;
-
     @NameInMap("RouterId")
     public String routerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     public static DeleteBgpNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBgpNetworkRequest self = new DeleteBgpNetworkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteBgpNetworkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteBgpNetworkRequest setDstCidrBlock(String dstCidrBlock) {
+        this.dstCidrBlock = dstCidrBlock;
+        return this;
+    }
+    public String getDstCidrBlock() {
+        return this.dstCidrBlock;
+    }
+
+    public DeleteBgpNetworkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteBgpNetworkRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,14 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteBgpNetworkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteBgpNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,44 +89,12 @@ public class DeleteBgpNetworkRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteBgpNetworkRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteBgpNetworkRequest setDstCidrBlock(String dstCidrBlock) {
-        this.dstCidrBlock = dstCidrBlock;
-        return this;
-    }
-    public String getDstCidrBlock() {
-        return this.dstCidrBlock;
-    }
-
     public DeleteBgpNetworkRequest setRouterId(String routerId) {
         this.routerId = routerId;
         return this;
     }
     public String getRouterId() {
         return this.routerId;
-    }
-
-    public DeleteBgpNetworkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteBgpNetworkRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

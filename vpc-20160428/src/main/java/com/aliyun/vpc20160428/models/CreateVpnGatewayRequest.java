@@ -4,38 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnGatewayRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    @NameInMap("Period")
-    public Integer period;
-
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     @NameInMap("Bandwidth")
     public Integer bandwidth;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("EnableIpsec")
     public Boolean enableIpsec;
@@ -43,93 +19,45 @@ public class CreateVpnGatewayRequest extends TeaModel {
     @NameInMap("EnableSsl")
     public Boolean enableSsl;
 
+    @NameInMap("InstanceChargeType")
+    public String instanceChargeType;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("SslConnections")
     public Integer sslConnections;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     @NameInMap("VpnType")
     public String vpnType;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static CreateVpnGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpnGatewayRequest self = new CreateVpnGatewayRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVpnGatewayRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateVpnGatewayRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateVpnGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateVpnGatewayRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateVpnGatewayRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateVpnGatewayRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateVpnGatewayRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateVpnGatewayRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    public CreateVpnGatewayRequest setPeriod(Integer period) {
-        this.period = period;
-        return this;
-    }
-    public Integer getPeriod() {
-        return this.period;
     }
 
     public CreateVpnGatewayRequest setAutoPay(Boolean autoPay) {
@@ -148,6 +76,14 @@ public class CreateVpnGatewayRequest extends TeaModel {
         return this.bandwidth;
     }
 
+    public CreateVpnGatewayRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CreateVpnGatewayRequest setEnableIpsec(Boolean enableIpsec) {
         this.enableIpsec = enableIpsec;
         return this;
@@ -162,6 +98,70 @@ public class CreateVpnGatewayRequest extends TeaModel {
     }
     public Boolean getEnableSsl() {
         return this.enableSsl;
+    }
+
+    public CreateVpnGatewayRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public CreateVpnGatewayRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateVpnGatewayRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateVpnGatewayRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateVpnGatewayRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateVpnGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateVpnGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateVpnGatewayRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateVpnGatewayRequest setSslConnections(Integer sslConnections) {
@@ -180,20 +180,20 @@ public class CreateVpnGatewayRequest extends TeaModel {
         return this.vSwitchId;
     }
 
+    public CreateVpnGatewayRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public CreateVpnGatewayRequest setVpnType(String vpnType) {
         this.vpnType = vpnType;
         return this;
     }
     public String getVpnType() {
         return this.vpnType;
-    }
-
-    public CreateVpnGatewayRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

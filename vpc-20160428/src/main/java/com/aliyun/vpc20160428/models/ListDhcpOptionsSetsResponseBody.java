@@ -43,23 +43,15 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     }
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions extends TeaModel {
-        @NameInMap("DomainNameServers")
-        public String domainNameServers;
-
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("DomainNameServers")
+        public String domainNameServers;
 
         public static ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions build(java.util.Map<String, ?> map) throws Exception {
             ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions self = new ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions();
             return TeaModel.build(map, self);
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions setDomainNameServers(String domainNameServers) {
-            this.domainNameServers = domainNameServers;
-            return this;
-        }
-        public String getDomainNameServers() {
-            return this.domainNameServers;
         }
 
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions setDomainName(String domainName) {
@@ -70,73 +62,41 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             return this.domainName;
         }
 
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions setDomainNameServers(String domainNameServers) {
+            this.domainNameServers = domainNameServers;
+            return this;
+        }
+        public String getDomainNameServers() {
+            return this.domainNameServers;
+        }
+
     }
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSets extends TeaModel {
-        @NameInMap("DhcpOptionsSetDescription")
-        public String dhcpOptionsSetDescription;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DhcpOptionsSetId")
-        public String dhcpOptionsSetId;
+        @NameInMap("AssociateVpcCount")
+        public Integer associateVpcCount;
 
         @NameInMap("DhcpOptions")
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions;
 
+        @NameInMap("DhcpOptionsSetDescription")
+        public String dhcpOptionsSetDescription;
+
+        @NameInMap("DhcpOptionsSetId")
+        public String dhcpOptionsSetId;
+
         @NameInMap("DhcpOptionsSetName")
         public String dhcpOptionsSetName;
-
-        @NameInMap("AssociateVpcCount")
-        public Integer associateVpcCount;
 
         @NameInMap("OwnerId")
         public Long ownerId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListDhcpOptionsSetsResponseBodyDhcpOptionsSets build(java.util.Map<String, ?> map) throws Exception {
             ListDhcpOptionsSetsResponseBodyDhcpOptionsSets self = new ListDhcpOptionsSetsResponseBodyDhcpOptionsSets();
             return TeaModel.build(map, self);
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
-            this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
-            return this;
-        }
-        public String getDhcpOptionsSetDescription() {
-            return this.dhcpOptionsSetDescription;
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetId(String dhcpOptionsSetId) {
-            this.dhcpOptionsSetId = dhcpOptionsSetId;
-            return this;
-        }
-        public String getDhcpOptionsSetId() {
-            return this.dhcpOptionsSetId;
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptions(ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions) {
-            this.dhcpOptions = dhcpOptions;
-            return this;
-        }
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions getDhcpOptions() {
-            return this.dhcpOptions;
-        }
-
-        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetName(String dhcpOptionsSetName) {
-            this.dhcpOptionsSetName = dhcpOptionsSetName;
-            return this;
-        }
-        public String getDhcpOptionsSetName() {
-            return this.dhcpOptionsSetName;
         }
 
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setAssociateVpcCount(Integer associateVpcCount) {
@@ -147,12 +107,52 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             return this.associateVpcCount;
         }
 
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptions(ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions) {
+            this.dhcpOptions = dhcpOptions;
+            return this;
+        }
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions getDhcpOptions() {
+            return this.dhcpOptions;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
+            this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
+            return this;
+        }
+        public String getDhcpOptionsSetDescription() {
+            return this.dhcpOptionsSetDescription;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetId(String dhcpOptionsSetId) {
+            this.dhcpOptionsSetId = dhcpOptionsSetId;
+            return this;
+        }
+        public String getDhcpOptionsSetId() {
+            return this.dhcpOptionsSetId;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptionsSetName(String dhcpOptionsSetName) {
+            this.dhcpOptionsSetName = dhcpOptionsSetName;
+            return this;
+        }
+        public String getDhcpOptionsSetName() {
+            return this.dhcpOptionsSetName;
+        }
+
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setOwnerId(Long ownerId) {
             this.ownerId = ownerId;
             return this;
         }
         public Long getOwnerId() {
             return this.ownerId;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

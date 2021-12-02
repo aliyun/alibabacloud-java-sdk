@@ -4,81 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetDhcpOptionsSetResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("DhcpOptionsSetId")
-    public String dhcpOptionsSetId;
+    @NameInMap("AssociateVpcs")
+    public java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> associateVpcs;
 
     @NameInMap("DhcpOptions")
     public GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DhcpOptionsSetDescription")
+    public String dhcpOptionsSetDescription;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DhcpOptionsSetId")
+    public String dhcpOptionsSetId;
 
     @NameInMap("DhcpOptionsSetName")
     public String dhcpOptionsSetName;
 
-    @NameInMap("AssociateVpcs")
-    public java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> associateVpcs;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("DhcpOptionsSetDescription")
-    public String dhcpOptionsSetDescription;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
 
     public static GetDhcpOptionsSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDhcpOptionsSetResponseBody self = new GetDhcpOptionsSetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDhcpOptionsSetResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public GetDhcpOptionsSetResponseBody setDhcpOptionsSetId(String dhcpOptionsSetId) {
-        this.dhcpOptionsSetId = dhcpOptionsSetId;
-        return this;
-    }
-    public String getDhcpOptionsSetId() {
-        return this.dhcpOptionsSetId;
-    }
-
-    public GetDhcpOptionsSetResponseBody setDhcpOptions(GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions) {
-        this.dhcpOptions = dhcpOptions;
-        return this;
-    }
-    public GetDhcpOptionsSetResponseBodyDhcpOptions getDhcpOptions() {
-        return this.dhcpOptions;
-    }
-
-    public GetDhcpOptionsSetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetDhcpOptionsSetResponseBody setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GetDhcpOptionsSetResponseBody setDhcpOptionsSetName(String dhcpOptionsSetName) {
-        this.dhcpOptionsSetName = dhcpOptionsSetName;
-        return this;
-    }
-    public String getDhcpOptionsSetName() {
-        return this.dhcpOptionsSetName;
     }
 
     public GetDhcpOptionsSetResponseBody setAssociateVpcs(java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> associateVpcs) {
@@ -89,6 +41,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         return this.associateVpcs;
     }
 
+    public GetDhcpOptionsSetResponseBody setDhcpOptions(GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions) {
+        this.dhcpOptions = dhcpOptions;
+        return this;
+    }
+    public GetDhcpOptionsSetResponseBodyDhcpOptions getDhcpOptions() {
+        return this.dhcpOptions;
+    }
+
     public GetDhcpOptionsSetResponseBody setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
         this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
         return this;
@@ -97,34 +57,44 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         return this.dhcpOptionsSetDescription;
     }
 
-    public static class GetDhcpOptionsSetResponseBodyDhcpOptions extends TeaModel {
-        @NameInMap("DomainNameServers")
-        public String domainNameServers;
+    public GetDhcpOptionsSetResponseBody setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
 
-        @NameInMap("DomainName")
-        public String domainName;
+    public GetDhcpOptionsSetResponseBody setDhcpOptionsSetName(String dhcpOptionsSetName) {
+        this.dhcpOptionsSetName = dhcpOptionsSetName;
+        return this;
+    }
+    public String getDhcpOptionsSetName() {
+        return this.dhcpOptionsSetName;
+    }
 
-        public static GetDhcpOptionsSetResponseBodyDhcpOptions build(java.util.Map<String, ?> map) throws Exception {
-            GetDhcpOptionsSetResponseBodyDhcpOptions self = new GetDhcpOptionsSetResponseBodyDhcpOptions();
-            return TeaModel.build(map, self);
-        }
+    public GetDhcpOptionsSetResponseBody setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
 
-        public GetDhcpOptionsSetResponseBodyDhcpOptions setDomainNameServers(String domainNameServers) {
-            this.domainNameServers = domainNameServers;
-            return this;
-        }
-        public String getDomainNameServers() {
-            return this.domainNameServers;
-        }
+    public GetDhcpOptionsSetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        public GetDhcpOptionsSetResponseBodyDhcpOptions setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
+    public GetDhcpOptionsSetResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public static class GetDhcpOptionsSetResponseBodyAssociateVpcs extends TeaModel {
@@ -153,6 +123,58 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+    }
+
+    public static class GetDhcpOptionsSetResponseBodyDhcpOptions extends TeaModel {
+        @NameInMap("BootFileName")
+        public String bootFileName;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("DomainNameServers")
+        public String domainNameServers;
+
+        @NameInMap("TFTPServerName")
+        public String TFTPServerName;
+
+        public static GetDhcpOptionsSetResponseBodyDhcpOptions build(java.util.Map<String, ?> map) throws Exception {
+            GetDhcpOptionsSetResponseBodyDhcpOptions self = new GetDhcpOptionsSetResponseBodyDhcpOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setBootFileName(String bootFileName) {
+            this.bootFileName = bootFileName;
+            return this;
+        }
+        public String getBootFileName() {
+            return this.bootFileName;
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setDomainNameServers(String domainNameServers) {
+            this.domainNameServers = domainNameServers;
+            return this;
+        }
+        public String getDomainNameServers() {
+            return this.domainNameServers;
+        }
+
+        public GetDhcpOptionsSetResponseBodyDhcpOptions setTFTPServerName(String TFTPServerName) {
+            this.TFTPServerName = TFTPServerName;
+            return this;
+        }
+        public String getTFTPServerName() {
+            return this.TFTPServerName;
         }
 
     }

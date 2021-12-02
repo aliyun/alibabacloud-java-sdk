@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("VpnGateways")
     public DescribeVpnGatewaysResponseBodyVpnGateways vpnGateways;
@@ -24,12 +24,12 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpnGatewaysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVpnGatewaysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVpnGatewaysResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVpnGatewaysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeVpnGatewaysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVpnGatewaysResponseBody setVpnGateways(DescribeVpnGatewaysResponseBodyVpnGateways vpnGateways) {
@@ -62,6 +62,91 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
     }
     public DescribeVpnGatewaysResponseBodyVpnGateways getVpnGateways() {
         return this.vpnGateways;
+    }
+
+    public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData extends TeaModel {
+        @NameInMap("ReservationEndTime")
+        public String reservationEndTime;
+
+        @NameInMap("ReservationIpsec")
+        public String reservationIpsec;
+
+        @NameInMap("ReservationMaxConnections")
+        public Integer reservationMaxConnections;
+
+        @NameInMap("ReservationOrderType")
+        public String reservationOrderType;
+
+        @NameInMap("ReservationSpec")
+        public String reservationSpec;
+
+        @NameInMap("ReservationSsl")
+        public String reservationSsl;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData self = new DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationEndTime(String reservationEndTime) {
+            this.reservationEndTime = reservationEndTime;
+            return this;
+        }
+        public String getReservationEndTime() {
+            return this.reservationEndTime;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationIpsec(String reservationIpsec) {
+            this.reservationIpsec = reservationIpsec;
+            return this;
+        }
+        public String getReservationIpsec() {
+            return this.reservationIpsec;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationMaxConnections(Integer reservationMaxConnections) {
+            this.reservationMaxConnections = reservationMaxConnections;
+            return this;
+        }
+        public Integer getReservationMaxConnections() {
+            return this.reservationMaxConnections;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationOrderType(String reservationOrderType) {
+            this.reservationOrderType = reservationOrderType;
+            return this;
+        }
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationSpec(String reservationSpec) {
+            this.reservationSpec = reservationSpec;
+            return this;
+        }
+        public String getReservationSpec() {
+            return this.reservationSpec;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationSsl(String reservationSsl) {
+            this.reservationSsl = reservationSsl;
+            return this;
+        }
+        public String getReservationSsl() {
+            return this.reservationSsl;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag extends TeaModel {
@@ -113,136 +198,18 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("ReservationOrderType")
-        public String reservationOrderType;
-
-        @NameInMap("ReservationIpsec")
-        public String reservationIpsec;
-
-        @NameInMap("ReservationSpec")
-        public String reservationSpec;
-
-        @NameInMap("ReservationSsl")
-        public String reservationSsl;
-
-        @NameInMap("ReservationMaxConnections")
-        public Integer reservationMaxConnections;
-
-        @NameInMap("ReservationEndTime")
-        public String reservationEndTime;
-
-        public static DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData self = new DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationOrderType(String reservationOrderType) {
-            this.reservationOrderType = reservationOrderType;
-            return this;
-        }
-        public String getReservationOrderType() {
-            return this.reservationOrderType;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationIpsec(String reservationIpsec) {
-            this.reservationIpsec = reservationIpsec;
-            return this;
-        }
-        public String getReservationIpsec() {
-            return this.reservationIpsec;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationSpec(String reservationSpec) {
-            this.reservationSpec = reservationSpec;
-            return this;
-        }
-        public String getReservationSpec() {
-            return this.reservationSpec;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationSsl(String reservationSsl) {
-            this.reservationSsl = reservationSsl;
-            return this;
-        }
-        public String getReservationSsl() {
-            return this.reservationSsl;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationMaxConnections(Integer reservationMaxConnections) {
-            this.reservationMaxConnections = reservationMaxConnections;
-            return this;
-        }
-        public Integer getReservationMaxConnections() {
-            return this.reservationMaxConnections;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData setReservationEndTime(String reservationEndTime) {
-            this.reservationEndTime = reservationEndTime;
-            return this;
-        }
-        public String getReservationEndTime() {
-            return this.reservationEndTime;
-        }
-
-    }
-
     public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("AutoPropagate")
+        public Boolean autoPropagate;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("VpnType")
-        public String vpnType;
-
-        @NameInMap("SslMaxConnections")
-        public Long sslMaxConnections;
-
-        @NameInMap("InternetIp")
-        public String internetIp;
-
-        @NameInMap("Spec")
-        public String spec;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
 
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("AutoPropagate")
-        public Boolean autoPropagate;
-
-        @NameInMap("VpnGatewayId")
-        public String vpnGatewayId;
-
-        @NameInMap("Tags")
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags tags;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("IpsecVpn")
-        public String ipsecVpn;
-
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("Description")
         public String description;
@@ -250,11 +217,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("EnableBgp")
         public Boolean enableBgp;
 
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
+        @NameInMap("EndTime")
+        public Long endTime;
 
-        @NameInMap("SslVpn")
-        public String sslVpn;
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IpsecVpn")
+        public String ipsecVpn;
 
         @NameInMap("Name")
         public String name;
@@ -262,73 +232,39 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("ReservationData")
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData reservationData;
 
+        @NameInMap("Spec")
+        public String spec;
+
+        @NameInMap("SslMaxConnections")
+        public Long sslMaxConnections;
+
+        @NameInMap("SslVpn")
+        public String sslVpn;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Tags")
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags tags;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VpnGatewayId")
+        public String vpnGatewayId;
+
+        @NameInMap("VpnType")
+        public String vpnType;
+
         public static DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway self = new DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpnType(String vpnType) {
-            this.vpnType = vpnType;
-            return this;
-        }
-        public String getVpnType() {
-            return this.vpnType;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSslMaxConnections(Long sslMaxConnections) {
-            this.sslMaxConnections = sslMaxConnections;
-            return this;
-        }
-        public Long getSslMaxConnections() {
-            return this.sslMaxConnections;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setAutoPropagate(Boolean autoPropagate) {
@@ -339,52 +275,28 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             return this.autoPropagate;
         }
 
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpnGatewayId(String vpnGatewayId) {
-            this.vpnGatewayId = vpnGatewayId;
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
             return this;
         }
-        public String getVpnGatewayId() {
-            return this.vpnGatewayId;
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setTags(DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags tags) {
-            this.tags = tags;
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setChargeType(String chargeType) {
+            this.chargeType = chargeType;
             return this;
         }
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags getTags() {
-            return this.tags;
+        public String getChargeType() {
+            return this.chargeType;
         }
 
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setTag(String tag) {
-            this.tag = tag;
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setIpsecVpn(String ipsecVpn) {
-            this.ipsecVpn = ipsecVpn;
-            return this;
-        }
-        public String getIpsecVpn() {
-            return this.ipsecVpn;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setDescription(String description) {
@@ -403,20 +315,28 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             return this.enableBgp;
         }
 
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setBusinessStatus(String businessStatus) {
-            this.businessStatus = businessStatus;
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setEndTime(Long endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getBusinessStatus() {
-            return this.businessStatus;
+        public Long getEndTime() {
+            return this.endTime;
         }
 
-        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSslVpn(String sslVpn) {
-            this.sslVpn = sslVpn;
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
             return this;
         }
-        public String getSslVpn() {
-            return this.sslVpn;
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setIpsecVpn(String ipsecVpn) {
+            this.ipsecVpn = ipsecVpn;
+            return this;
+        }
+        public String getIpsecVpn() {
+            return this.ipsecVpn;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setName(String name) {
@@ -433,6 +353,86 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData getReservationData() {
             return this.reservationData;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSslMaxConnections(Long sslMaxConnections) {
+            this.sslMaxConnections = sslMaxConnections;
+            return this;
+        }
+        public Long getSslMaxConnections() {
+            return this.sslMaxConnections;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSslVpn(String sslVpn) {
+            this.sslVpn = sslVpn;
+            return this;
+        }
+        public String getSslVpn() {
+            return this.sslVpn;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setTags(DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpnGatewayId(String vpnGatewayId) {
+            this.vpnGatewayId = vpnGatewayId;
+            return this;
+        }
+        public String getVpnGatewayId() {
+            return this.vpnGatewayId;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setVpnType(String vpnType) {
+            this.vpnType = vpnType;
+            return this;
+        }
+        public String getVpnType() {
+            return this.vpnType;
         }
 
     }

@@ -4,27 +4,59 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
+    @NameInMap("Data")
+    public DescribeVpnSslServerLogsResponseBodyData data;
+
+    @NameInMap("IsCompleted")
+    public Boolean isCompleted;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("IsCompleted")
-    public Boolean isCompleted;
-
-    @NameInMap("Data")
-    public DescribeVpnSslServerLogsResponseBodyData data;
-
-    @NameInMap("Count")
-    public Integer count;
-
     public static DescribeVpnSslServerLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpnSslServerLogsResponseBody self = new DescribeVpnSslServerLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpnSslServerLogsResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
+    public DescribeVpnSslServerLogsResponseBody setData(DescribeVpnSslServerLogsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeVpnSslServerLogsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DescribeVpnSslServerLogsResponseBody setIsCompleted(Boolean isCompleted) {
+        this.isCompleted = isCompleted;
+        return this;
+    }
+    public Boolean getIsCompleted() {
+        return this.isCompleted;
+    }
+
+    public DescribeVpnSslServerLogsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVpnSslServerLogsResponseBody setPageSize(Integer pageSize) {
@@ -41,38 +73,6 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVpnSslServerLogsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeVpnSslServerLogsResponseBody setIsCompleted(Boolean isCompleted) {
-        this.isCompleted = isCompleted;
-        return this;
-    }
-    public Boolean getIsCompleted() {
-        return this.isCompleted;
-    }
-
-    public DescribeVpnSslServerLogsResponseBody setData(DescribeVpnSslServerLogsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeVpnSslServerLogsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DescribeVpnSslServerLogsResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
     }
 
     public static class DescribeVpnSslServerLogsResponseBodyData extends TeaModel {

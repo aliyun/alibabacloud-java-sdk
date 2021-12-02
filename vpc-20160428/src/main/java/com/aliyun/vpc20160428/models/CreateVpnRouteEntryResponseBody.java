@@ -4,29 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnRouteEntryResponseBody extends TeaModel {
-    @NameInMap("RouteDest")
-    public String routeDest;
+    @NameInMap("CreateTime")
+    public Long createTime;
 
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("VpnInstanceId")
-    public String vpnInstanceId;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("NextHop")
+    public String nextHop;
 
     @NameInMap("OverlayMode")
     public String overlayMode;
 
-    @NameInMap("NextHop")
-    public String nextHop;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RouteDest")
+    public String routeDest;
 
     @NameInMap("State")
     public String state;
 
-    @NameInMap("CreateTime")
-    public Long createTime;
+    @NameInMap("VpnInstanceId")
+    public String vpnInstanceId;
 
     @NameInMap("Weight")
     public Integer weight;
@@ -36,12 +36,12 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateVpnRouteEntryResponseBody setRouteDest(String routeDest) {
-        this.routeDest = routeDest;
+    public CreateVpnRouteEntryResponseBody setCreateTime(Long createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getRouteDest() {
-        return this.routeDest;
+    public Long getCreateTime() {
+        return this.createTime;
     }
 
     public CreateVpnRouteEntryResponseBody setDescription(String description) {
@@ -52,20 +52,12 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         return this.description;
     }
 
-    public CreateVpnRouteEntryResponseBody setVpnInstanceId(String vpnInstanceId) {
-        this.vpnInstanceId = vpnInstanceId;
+    public CreateVpnRouteEntryResponseBody setNextHop(String nextHop) {
+        this.nextHop = nextHop;
         return this;
     }
-    public String getVpnInstanceId() {
-        return this.vpnInstanceId;
-    }
-
-    public CreateVpnRouteEntryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getNextHop() {
+        return this.nextHop;
     }
 
     public CreateVpnRouteEntryResponseBody setOverlayMode(String overlayMode) {
@@ -76,12 +68,20 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         return this.overlayMode;
     }
 
-    public CreateVpnRouteEntryResponseBody setNextHop(String nextHop) {
-        this.nextHop = nextHop;
+    public CreateVpnRouteEntryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getNextHop() {
-        return this.nextHop;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateVpnRouteEntryResponseBody setRouteDest(String routeDest) {
+        this.routeDest = routeDest;
+        return this;
+    }
+    public String getRouteDest() {
+        return this.routeDest;
     }
 
     public CreateVpnRouteEntryResponseBody setState(String state) {
@@ -92,12 +92,12 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
         return this.state;
     }
 
-    public CreateVpnRouteEntryResponseBody setCreateTime(Long createTime) {
-        this.createTime = createTime;
+    public CreateVpnRouteEntryResponseBody setVpnInstanceId(String vpnInstanceId) {
+        this.vpnInstanceId = vpnInstanceId;
         return this;
     }
-    public Long getCreateTime() {
-        return this.createTime;
+    public String getVpnInstanceId() {
+        return this.vpnInstanceId;
     }
 
     public CreateVpnRouteEntryResponseBody setWeight(Integer weight) {

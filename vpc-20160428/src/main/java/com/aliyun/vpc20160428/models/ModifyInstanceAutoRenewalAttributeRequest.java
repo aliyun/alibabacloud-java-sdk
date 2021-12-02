@@ -4,29 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RenewalStatus")
     public String renewalStatus;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -39,28 +39,12 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceAutoRenewalAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyInstanceAutoRenewalAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyInstanceAutoRenewalAttributeRequest setDuration(Integer duration) {
@@ -71,6 +55,14 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
         return this.duration;
     }
 
+    public ModifyInstanceAutoRenewalAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ModifyInstanceAutoRenewalAttributeRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -79,12 +71,28 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public ModifyInstanceAutoRenewalAttributeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifyInstanceAutoRenewalAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyInstanceAutoRenewalAttributeRequest setRenewalStatus(String renewalStatus) {
@@ -93,14 +101,6 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     }
     public String getRenewalStatus() {
         return this.renewalStatus;
-    }
-
-    public ModifyInstanceAutoRenewalAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public ModifyInstanceAutoRenewalAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

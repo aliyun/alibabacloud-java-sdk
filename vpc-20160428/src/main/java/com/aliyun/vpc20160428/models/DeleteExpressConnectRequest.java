@@ -4,17 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressConnectRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RouterInterfaceId")
-    public String routerInterfaceId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("Force")
     public Boolean force;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -22,31 +25,20 @@ public class DeleteExpressConnectRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouterInterfaceId")
+    public String routerInterfaceId;
 
     public static DeleteExpressConnectRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteExpressConnectRequest self = new DeleteExpressConnectRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteExpressConnectRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteExpressConnectRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteExpressConnectRequest setRouterInterfaceId(String routerInterfaceId) {
-        this.routerInterfaceId = routerInterfaceId;
-        return this;
-    }
-    public String getRouterInterfaceId() {
-        return this.routerInterfaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteExpressConnectRequest setForce(Boolean force) {
@@ -57,12 +49,28 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.force;
     }
 
+    public DeleteExpressConnectRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DeleteExpressConnectRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteExpressConnectRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteExpressConnectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -81,20 +89,12 @@ public class DeleteExpressConnectRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteExpressConnectRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DeleteExpressConnectRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteExpressConnectRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
     }
 
 }

@@ -4,17 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomerGatewayResponseBody extends TeaModel {
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CreateTime")
+    public Long createTime;
 
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
-    @NameInMap("CreateTime")
-    public Long createTime;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -22,25 +19,20 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateCustomerGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomerGatewayResponseBody self = new CreateCustomerGatewayResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateCustomerGatewayResponseBody setDescription(String description) {
-        this.description = description;
+    public CreateCustomerGatewayResponseBody setCreateTime(Long createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateCustomerGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getCreateTime() {
+        return this.createTime;
     }
 
     public CreateCustomerGatewayResponseBody setCustomerGatewayId(String customerGatewayId) {
@@ -51,12 +43,12 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         return this.customerGatewayId;
     }
 
-    public CreateCustomerGatewayResponseBody setCreateTime(Long createTime) {
-        this.createTime = createTime;
+    public CreateCustomerGatewayResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public Long getCreateTime() {
-        return this.createTime;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateCustomerGatewayResponseBody setIpAddress(String ipAddress) {
@@ -73,6 +65,14 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCustomerGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,11 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressCloudConnectionRequest extends TeaModel {
+    @NameInMap("EccId")
+    public String eccId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class DeleteExpressCloudConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("EccId")
-    public String eccId;
-
     public static DeleteExpressCloudConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteExpressCloudConnectionRequest self = new DeleteExpressCloudConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteExpressCloudConnectionRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
     }
 
     public DeleteExpressCloudConnectionRequest setOwnerAccount(String ownerAccount) {
@@ -43,6 +51,14 @@ public class DeleteExpressCloudConnectionRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeleteExpressCloudConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeleteExpressCloudConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -57,22 +73,6 @@ public class DeleteExpressCloudConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteExpressCloudConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteExpressCloudConnectionRequest setEccId(String eccId) {
-        this.eccId = eccId;
-        return this;
-    }
-    public String getEccId() {
-        return this.eccId;
     }
 
 }

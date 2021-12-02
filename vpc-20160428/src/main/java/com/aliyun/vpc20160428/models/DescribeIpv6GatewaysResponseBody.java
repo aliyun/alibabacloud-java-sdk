@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpv6GatewaysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Ipv6Gateways")
+    public DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Ipv6Gateways")
-    public DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeIpv6GatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpv6GatewaysResponseBody self = new DescribeIpv6GatewaysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIpv6GatewaysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeIpv6GatewaysResponseBody setIpv6Gateways(DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways) {
+        this.ipv6Gateways = ipv6Gateways;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeIpv6GatewaysResponseBodyIpv6Gateways getIpv6Gateways() {
+        return this.ipv6Gateways;
+    }
+
+    public DescribeIpv6GatewaysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeIpv6GatewaysResponseBody setPageSize(Integer pageSize) {
@@ -48,25 +56,41 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeIpv6GatewaysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeIpv6GatewaysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeIpv6GatewaysResponseBody setIpv6Gateways(DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways) {
-        this.ipv6Gateways = ipv6Gateways;
-        return this;
-    }
-    public DescribeIpv6GatewaysResponseBodyIpv6Gateways getIpv6Gateways() {
-        return this.ipv6Gateways;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway extends TeaModel {
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("Ipv6GatewayId")
+        public String ipv6GatewayId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Spec")
+        public String spec;
 
         @NameInMap("Status")
         public String status;
@@ -74,33 +98,17 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("Spec")
-        public String spec;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Ipv6GatewayId")
-        public String ipv6GatewayId;
-
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
-
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         public static DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway self = new DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setCreationTime(String creationTime) {
@@ -109,6 +117,62 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setIpv6GatewayId(String ipv6GatewayId) {
+            this.ipv6GatewayId = ipv6GatewayId;
+            return this;
+        }
+        public String getIpv6GatewayId() {
+            return this.ipv6GatewayId;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
         }
 
         public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setStatus(String status) {
@@ -125,70 +189,6 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setIpv6GatewayId(String ipv6GatewayId) {
-            this.ipv6GatewayId = ipv6GatewayId;
-            return this;
-        }
-        public String getIpv6GatewayId() {
-            return this.ipv6GatewayId;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setBusinessStatus(String businessStatus) {
-            this.businessStatus = businessStatus;
-            return this;
-        }
-        public String getBusinessStatus() {
-            return this.businessStatus;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

@@ -4,23 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("IpVersion")
+    public String ipVersion;
 
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("Ipv6Isp")
+    public String ipv6Isp;
 
-    @NameInMap("SecondaryCidrBlock")
-    public String secondaryCidrBlock;
-
-    @NameInMap("IPv6CidrBlock")
-    public String IPv6CidrBlock;
-
-    @NameInMap("IPv6CidrType")
-    public String IPv6CidrType;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,52 +25,39 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SecondaryCidrBlock")
+    public String secondaryCidrBlock;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static AssociateVpcCidrBlockRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateVpcCidrBlockRequest self = new AssociateVpcCidrBlockRequest();
         return TeaModel.build(map, self);
     }
 
-    public AssociateVpcCidrBlockRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public AssociateVpcCidrBlockRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
-    public AssociateVpcCidrBlockRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public AssociateVpcCidrBlockRequest setIpv6Isp(String ipv6Isp) {
+        this.ipv6Isp = ipv6Isp;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
     }
 
-    public AssociateVpcCidrBlockRequest setSecondaryCidrBlock(String secondaryCidrBlock) {
-        this.secondaryCidrBlock = secondaryCidrBlock;
+    public AssociateVpcCidrBlockRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecondaryCidrBlock() {
-        return this.secondaryCidrBlock;
-    }
-
-    public AssociateVpcCidrBlockRequest setIPv6CidrBlock(String IPv6CidrBlock) {
-        this.IPv6CidrBlock = IPv6CidrBlock;
-        return this;
-    }
-    public String getIPv6CidrBlock() {
-        return this.IPv6CidrBlock;
-    }
-
-    public AssociateVpcCidrBlockRequest setIPv6CidrType(String IPv6CidrType) {
-        this.IPv6CidrType = IPv6CidrType;
-        return this;
-    }
-    public String getIPv6CidrType() {
-        return this.IPv6CidrType;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AssociateVpcCidrBlockRequest setOwnerId(Long ownerId) {
@@ -82,6 +66,14 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AssociateVpcCidrBlockRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AssociateVpcCidrBlockRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -100,12 +92,20 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AssociateVpcCidrBlockRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public AssociateVpcCidrBlockRequest setSecondaryCidrBlock(String secondaryCidrBlock) {
+        this.secondaryCidrBlock = secondaryCidrBlock;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSecondaryCidrBlock() {
+        return this.secondaryCidrBlock;
+    }
+
+    public AssociateVpcCidrBlockRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

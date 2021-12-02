@@ -4,11 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("FlowLogs")
     public DescribeFlowLogsResponseBodyFlowLogs flowLogs;
+
+    @NameInMap("PageNumber")
+    public String pageNumber;
 
     @NameInMap("PageSize")
     public String pageSize;
@@ -16,23 +16,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public String pageNumber;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeFlowLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowLogsResponseBody self = new DescribeFlowLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFlowLogsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeFlowLogsResponseBody setFlowLogs(DescribeFlowLogsResponseBodyFlowLogs flowLogs) {
@@ -41,6 +33,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     }
     public DescribeFlowLogsResponseBodyFlowLogs getFlowLogs() {
         return this.flowLogs;
+    }
+
+    public DescribeFlowLogsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeFlowLogsResponseBody setPageSize(String pageSize) {
@@ -59,14 +59,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeFlowLogsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public String getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeFlowLogsResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -75,51 +67,51 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeFlowLogsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("FlowLogName")
-        public String flowLogName;
-
-        @NameInMap("TrafficType")
-        public String trafficType;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("ProjectName")
-        public String projectName;
+        @NameInMap("FlowLogId")
+        public String flowLogId;
+
+        @NameInMap("FlowLogName")
+        public String flowLogName;
 
         @NameInMap("LogStoreName")
         public String logStoreName;
 
-        @NameInMap("ResourceId")
-        public String resourceId;
+        @NameInMap("ProjectName")
+        public String projectName;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("FlowLogId")
-        public String flowLogId;
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TrafficType")
+        public String trafficType;
 
         public static DescribeFlowLogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowLogsResponseBodyFlowLogsFlowLog self = new DescribeFlowLogsResponseBodyFlowLogsFlowLog();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setCreationTime(String creationTime) {
@@ -130,30 +122,6 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogName(String flowLogName) {
-            this.flowLogName = flowLogName;
-            return this;
-        }
-        public String getFlowLogName() {
-            return this.flowLogName;
-        }
-
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTrafficType(String trafficType) {
-            this.trafficType = trafficType;
-            return this;
-        }
-        public String getTrafficType() {
-            return this.trafficType;
-        }
-
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setDescription(String description) {
             this.description = description;
             return this;
@@ -162,12 +130,20 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setProjectName(String projectName) {
-            this.projectName = projectName;
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogId(String flowLogId) {
+            this.flowLogId = flowLogId;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
+        public String getFlowLogId() {
+            return this.flowLogId;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogName(String flowLogName) {
+            this.flowLogName = flowLogName;
+            return this;
+        }
+        public String getFlowLogName() {
+            return this.flowLogName;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {
@@ -178,12 +154,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.logStoreName;
         }
 
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceId(String resourceId) {
-            this.resourceId = resourceId;
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public String getResourceId() {
-            return this.resourceId;
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setRegionId(String regionId) {
@@ -194,12 +170,36 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogId(String flowLogId) {
-            this.flowLogId = flowLogId;
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceId(String resourceId) {
+            this.resourceId = resourceId;
             return this;
         }
-        public String getFlowLogId() {
-            return this.flowLogId;
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setTrafficType(String trafficType) {
+            this.trafficType = trafficType;
+            return this;
+        }
+        public String getTrafficType() {
+            return this.trafficType;
         }
 
     }

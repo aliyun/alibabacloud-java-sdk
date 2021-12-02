@@ -4,8 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpNetworksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("BgpNetworks")
+    public DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +16,28 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("BgpNetworks")
-    public DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeBgpNetworksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBgpNetworksResponseBody self = new DescribeBgpNetworksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBgpNetworksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeBgpNetworksResponseBody setBgpNetworks(DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks) {
+        this.bgpNetworks = bgpNetworks;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public DescribeBgpNetworksResponseBodyBgpNetworks getBgpNetworks() {
+        return this.bgpNetworks;
+    }
+
+    public DescribeBgpNetworksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBgpNetworksResponseBody setPageSize(Integer pageSize) {
@@ -48,38 +56,46 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBgpNetworksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBgpNetworksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBgpNetworksResponseBody setBgpNetworks(DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks) {
-        this.bgpNetworks = bgpNetworks;
-        return this;
-    }
-    public DescribeBgpNetworksResponseBodyBgpNetworks getBgpNetworks() {
-        return this.bgpNetworks;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork extends TeaModel {
+        @NameInMap("DstCidrBlock")
+        public String dstCidrBlock;
+
+        @NameInMap("RouterId")
+        public String routerId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("RouterId")
-        public String routerId;
-
-        @NameInMap("DstCidrBlock")
-        public String dstCidrBlock;
-
         public static DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork self = new DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork setDstCidrBlock(String dstCidrBlock) {
+            this.dstCidrBlock = dstCidrBlock;
+            return this;
+        }
+        public String getDstCidrBlock() {
+            return this.dstCidrBlock;
+        }
+
+        public DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork setRouterId(String routerId) {
+            this.routerId = routerId;
+            return this;
+        }
+        public String getRouterId() {
+            return this.routerId;
         }
 
         public DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork setStatus(String status) {
@@ -96,22 +112,6 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork setRouterId(String routerId) {
-            this.routerId = routerId;
-            return this;
-        }
-        public String getRouterId() {
-            return this.routerId;
-        }
-
-        public DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork setDstCidrBlock(String dstCidrBlock) {
-            this.dstCidrBlock = dstCidrBlock;
-            return this;
-        }
-        public String getDstCidrBlock() {
-            return this.dstCidrBlock;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UpdateNatGatewayNatTypeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("NatType")
-    public String natType;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    @NameInMap("NatType")
+    public String natType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -31,52 +31,12 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
     public static UpdateNatGatewayNatTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNatGatewayNatTypeRequest self = new UpdateNatGatewayNatTypeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateNatGatewayNatTypeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpdateNatGatewayNatTypeRequest setNatGatewayId(String natGatewayId) {
-        this.natGatewayId = natGatewayId;
-        return this;
-    }
-    public String getNatGatewayId() {
-        return this.natGatewayId;
-    }
-
-    public UpdateNatGatewayNatTypeRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public UpdateNatGatewayNatTypeRequest setNatType(String natType) {
-        this.natType = natType;
-        return this;
-    }
-    public String getNatType() {
-        return this.natType;
-    }
-
-    public UpdateNatGatewayNatTypeRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     public UpdateNatGatewayNatTypeRequest setClientToken(String clientToken) {
@@ -87,12 +47,52 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateNatGatewayNatTypeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public UpdateNatGatewayNatTypeRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public UpdateNatGatewayNatTypeRequest setNatType(String natType) {
+        this.natType = natType;
+        return this;
+    }
+    public String getNatType() {
+        return this.natType;
+    }
+
+    public UpdateNatGatewayNatTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public UpdateNatGatewayNatTypeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpdateNatGatewayNatTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateNatGatewayNatTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -111,12 +111,12 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdateNatGatewayNatTypeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public UpdateNatGatewayNatTypeRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }

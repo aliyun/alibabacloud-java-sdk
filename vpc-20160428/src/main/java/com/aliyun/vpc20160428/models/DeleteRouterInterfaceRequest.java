@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouterInterfaceRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("RouterInterfaceId")
-    public String routerInterfaceId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,31 +22,28 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouterInterfaceId")
+    public String routerInterfaceId;
 
     public static DeleteRouterInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouterInterfaceRequest self = new DeleteRouterInterfaceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRouterInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteRouterInterfaceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public DeleteRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {
-        this.routerInterfaceId = routerInterfaceId;
+    public DeleteRouterInterfaceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRouterInterfaceId() {
-        return this.routerInterfaceId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteRouterInterfaceRequest setOwnerId(Long ownerId) {
@@ -52,6 +52,14 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -70,20 +78,12 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteRouterInterfaceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DeleteRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public DeleteRouterInterfaceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
     }
 
 }

@@ -4,20 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpsecServerRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("VpnGatewayId")
-    public String vpnGatewayId;
-
-    @NameInMap("LocalSubnet")
-    public String localSubnet;
-
     @NameInMap("ClientIpPool")
     public String clientIpPool;
 
-    @NameInMap("IpSecServerName")
-    public String ipSecServerName;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public String dryRun;
 
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
@@ -25,60 +19,30 @@ public class CreateIpsecServerRequest extends TeaModel {
     @NameInMap("IkeConfig")
     public String ikeConfig;
 
+    @NameInMap("IpSecServerName")
+    public String ipSecServerName;
+
     @NameInMap("IpsecConfig")
     public String ipsecConfig;
 
-    @NameInMap("PskEnabled")
-    public Boolean pskEnabled;
+    @NameInMap("LocalSubnet")
+    public String localSubnet;
 
     @NameInMap("Psk")
     public String psk;
 
-    @NameInMap("MultiFactorAuthEnabled")
-    public Boolean multiFactorAuthEnabled;
+    @NameInMap("PskEnabled")
+    public Boolean pskEnabled;
 
-    @NameInMap("IDaaSInstanceId")
-    public String IDaaSInstanceId;
+    @NameInMap("RegionId")
+    public String regionId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("callerBid")
-    public String callerBid;
-
-    @NameInMap("DryRun")
-    public String dryRun;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("VpnGatewayId")
+    public String vpnGatewayId;
 
     public static CreateIpsecServerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIpsecServerRequest self = new CreateIpsecServerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateIpsecServerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateIpsecServerRequest setVpnGatewayId(String vpnGatewayId) {
-        this.vpnGatewayId = vpnGatewayId;
-        return this;
-    }
-    public String getVpnGatewayId() {
-        return this.vpnGatewayId;
-    }
-
-    public CreateIpsecServerRequest setLocalSubnet(String localSubnet) {
-        this.localSubnet = localSubnet;
-        return this;
-    }
-    public String getLocalSubnet() {
-        return this.localSubnet;
     }
 
     public CreateIpsecServerRequest setClientIpPool(String clientIpPool) {
@@ -89,12 +53,20 @@ public class CreateIpsecServerRequest extends TeaModel {
         return this.clientIpPool;
     }
 
-    public CreateIpsecServerRequest setIpSecServerName(String ipSecServerName) {
-        this.ipSecServerName = ipSecServerName;
+    public CreateIpsecServerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getIpSecServerName() {
-        return this.ipSecServerName;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateIpsecServerRequest setDryRun(String dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     public CreateIpsecServerRequest setEffectImmediately(Boolean effectImmediately) {
@@ -113,6 +85,14 @@ public class CreateIpsecServerRequest extends TeaModel {
         return this.ikeConfig;
     }
 
+    public CreateIpsecServerRequest setIpSecServerName(String ipSecServerName) {
+        this.ipSecServerName = ipSecServerName;
+        return this;
+    }
+    public String getIpSecServerName() {
+        return this.ipSecServerName;
+    }
+
     public CreateIpsecServerRequest setIpsecConfig(String ipsecConfig) {
         this.ipsecConfig = ipsecConfig;
         return this;
@@ -121,12 +101,12 @@ public class CreateIpsecServerRequest extends TeaModel {
         return this.ipsecConfig;
     }
 
-    public CreateIpsecServerRequest setPskEnabled(Boolean pskEnabled) {
-        this.pskEnabled = pskEnabled;
+    public CreateIpsecServerRequest setLocalSubnet(String localSubnet) {
+        this.localSubnet = localSubnet;
         return this;
     }
-    public Boolean getPskEnabled() {
-        return this.pskEnabled;
+    public String getLocalSubnet() {
+        return this.localSubnet;
     }
 
     public CreateIpsecServerRequest setPsk(String psk) {
@@ -137,52 +117,28 @@ public class CreateIpsecServerRequest extends TeaModel {
         return this.psk;
     }
 
-    public CreateIpsecServerRequest setMultiFactorAuthEnabled(Boolean multiFactorAuthEnabled) {
-        this.multiFactorAuthEnabled = multiFactorAuthEnabled;
+    public CreateIpsecServerRequest setPskEnabled(Boolean pskEnabled) {
+        this.pskEnabled = pskEnabled;
         return this;
     }
-    public Boolean getMultiFactorAuthEnabled() {
-        return this.multiFactorAuthEnabled;
+    public Boolean getPskEnabled() {
+        return this.pskEnabled;
     }
 
-    public CreateIpsecServerRequest setIDaaSInstanceId(String IDaaSInstanceId) {
-        this.IDaaSInstanceId = IDaaSInstanceId;
+    public CreateIpsecServerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getIDaaSInstanceId() {
-        return this.IDaaSInstanceId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public CreateIpsecServerRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateIpsecServerRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateIpsecServerRequest setCallerBid(String callerBid) {
-        this.callerBid = callerBid;
-        return this;
-    }
-    public String getCallerBid() {
-        return this.callerBid;
-    }
-
-    public CreateIpsecServerRequest setDryRun(String dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public String getDryRun() {
-        return this.dryRun;
-    }
-
-    public CreateIpsecServerRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
     }
 
 }

@@ -4,11 +4,32 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
+    @NameInMap("BgpAs")
+    public String bgpAs;
+
+    @NameInMap("CeIp")
+    public String ceIp;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("EccId")
+    public String eccId;
+
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PeIp")
+    public String peIp;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,30 +37,49 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("EccId")
-    public String eccId;
-
-    @NameInMap("BgpAs")
-    public String bgpAs;
-
-    @NameInMap("PeIp")
-    public String peIp;
-
-    @NameInMap("CeIp")
-    public String ceIp;
-
     public static ModifyExpressCloudConnectionAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyExpressCloudConnectionAttributeRequest self = new ModifyExpressCloudConnectionAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setBgpAs(String bgpAs) {
+        this.bgpAs = bgpAs;
+        return this;
+    }
+    public String getBgpAs() {
+        return this.bgpAs;
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setCeIp(String ceIp) {
+        this.ceIp = ceIp;
+        return this;
+    }
+    public String getCeIp() {
+        return this.ceIp;
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyExpressCloudConnectionAttributeRequest setOwnerAccount(String ownerAccount) {
@@ -58,6 +98,22 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyExpressCloudConnectionAttributeRequest setPeIp(String peIp) {
+        this.peIp = peIp;
+        return this;
+    }
+    public String getPeIp() {
+        return this.peIp;
+    }
+
+    public ModifyExpressCloudConnectionAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ModifyExpressCloudConnectionAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -72,62 +128,6 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setEccId(String eccId) {
-        this.eccId = eccId;
-        return this;
-    }
-    public String getEccId() {
-        return this.eccId;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setBgpAs(String bgpAs) {
-        this.bgpAs = bgpAs;
-        return this;
-    }
-    public String getBgpAs() {
-        return this.bgpAs;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setPeIp(String peIp) {
-        this.peIp = peIp;
-        return this;
-    }
-    public String getPeIp() {
-        return this.peIp;
-    }
-
-    public ModifyExpressCloudConnectionAttributeRequest setCeIp(String ceIp) {
-        this.ceIp = ceIp;
-        return this;
-    }
-    public String getCeIp() {
-        return this.ceIp;
     }
 
 }

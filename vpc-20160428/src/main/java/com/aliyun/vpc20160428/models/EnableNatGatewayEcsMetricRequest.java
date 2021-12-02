@@ -4,26 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class EnableNatGatewayEcsMetricRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static EnableNatGatewayEcsMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableNatGatewayEcsMetricRequest self = new EnableNatGatewayEcsMetricRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableNatGatewayEcsMetricRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public EnableNatGatewayEcsMetricRequest setDryRun(Boolean dryRun) {
@@ -40,6 +32,14 @@ public class EnableNatGatewayEcsMetricRequest extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public EnableNatGatewayEcsMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

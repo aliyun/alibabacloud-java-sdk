@@ -4,11 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpPeersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("BgpPeers")
     public DescribeBgpPeersResponseBodyBgpPeers bgpPeers;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,20 +16,12 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeBgpPeersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBgpPeersResponseBody self = new DescribeBgpPeersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBgpPeersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeBgpPeersResponseBody setBgpPeers(DescribeBgpPeersResponseBodyBgpPeers bgpPeers) {
@@ -38,6 +30,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     }
     public DescribeBgpPeersResponseBodyBgpPeers getBgpPeers() {
         return this.bgpPeers;
+    }
+
+    public DescribeBgpPeersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeBgpPeersResponseBody setPageSize(Integer pageSize) {
@@ -56,44 +56,32 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBgpPeersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeBgpPeersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeBgpPeersResponseBodyBgpPeersBgpPeer extends TeaModel {
-        @NameInMap("PeerIpAddress")
-        public String peerIpAddress;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("BgpGroupId")
-        public String bgpGroupId;
-
-        @NameInMap("RouterId")
-        public String routerId;
-
-        @NameInMap("BgpStatus")
-        public String bgpStatus;
-
-        @NameInMap("PeerAsn")
-        public String peerAsn;
+        @NameInMap("AuthKey")
+        public String authKey;
 
         @NameInMap("BfdMultiHop")
         public Integer bfdMultiHop;
 
-        @NameInMap("LocalAsn")
-        public String localAsn;
-
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("BgpGroupId")
+        public String bgpGroupId;
 
         @NameInMap("BgpPeerId")
         public String bgpPeerId;
+
+        @NameInMap("BgpStatus")
+        public String bgpStatus;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("EnableBfd")
         public Boolean enableBfd;
@@ -104,75 +92,47 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("IsFake")
+        public String isFake;
+
         @NameInMap("Keepalive")
         public String keepalive;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("LocalAsn")
+        public String localAsn;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PeerAsn")
+        public String peerAsn;
+
+        @NameInMap("PeerIpAddress")
+        public String peerIpAddress;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("RouteLimit")
         public String routeLimit;
 
-        @NameInMap("IsFake")
-        public String isFake;
+        @NameInMap("RouterId")
+        public String routerId;
 
-        @NameInMap("AuthKey")
-        public String authKey;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeBgpPeersResponseBodyBgpPeersBgpPeer build(java.util.Map<String, ?> map) throws Exception {
             DescribeBgpPeersResponseBodyBgpPeersBgpPeer self = new DescribeBgpPeersResponseBodyBgpPeersBgpPeer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setPeerIpAddress(String peerIpAddress) {
-            this.peerIpAddress = peerIpAddress;
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setAuthKey(String authKey) {
+            this.authKey = authKey;
             return this;
         }
-        public String getPeerIpAddress() {
-            return this.peerIpAddress;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBgpGroupId(String bgpGroupId) {
-            this.bgpGroupId = bgpGroupId;
-            return this;
-        }
-        public String getBgpGroupId() {
-            return this.bgpGroupId;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRouterId(String routerId) {
-            this.routerId = routerId;
-            return this;
-        }
-        public String getRouterId() {
-            return this.routerId;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBgpStatus(String bgpStatus) {
-            this.bgpStatus = bgpStatus;
-            return this;
-        }
-        public String getBgpStatus() {
-            return this.bgpStatus;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setPeerAsn(String peerAsn) {
-            this.peerAsn = peerAsn;
-            return this;
-        }
-        public String getPeerAsn() {
-            return this.peerAsn;
+        public String getAuthKey() {
+            return this.authKey;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBfdMultiHop(Integer bfdMultiHop) {
@@ -183,20 +143,12 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.bfdMultiHop;
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setLocalAsn(String localAsn) {
-            this.localAsn = localAsn;
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBgpGroupId(String bgpGroupId) {
+            this.bgpGroupId = bgpGroupId;
             return this;
         }
-        public String getLocalAsn() {
-            return this.localAsn;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
+        public String getBgpGroupId() {
+            return this.bgpGroupId;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBgpPeerId(String bgpPeerId) {
@@ -205,6 +157,22 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         }
         public String getBgpPeerId() {
             return this.bgpPeerId;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setBgpStatus(String bgpStatus) {
+            this.bgpStatus = bgpStatus;
+            return this;
+        }
+        public String getBgpStatus() {
+            return this.bgpStatus;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setEnableBfd(Boolean enableBfd) {
@@ -231,6 +199,14 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.ipVersion;
         }
 
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setIsFake(String isFake) {
+            this.isFake = isFake;
+            return this;
+        }
+        public String getIsFake() {
+            return this.isFake;
+        }
+
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setKeepalive(String keepalive) {
             this.keepalive = keepalive;
             return this;
@@ -239,12 +215,44 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.keepalive;
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setDescription(String description) {
-            this.description = description;
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setLocalAsn(String localAsn) {
+            this.localAsn = localAsn;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getLocalAsn() {
+            return this.localAsn;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setPeerAsn(String peerAsn) {
+            this.peerAsn = peerAsn;
+            return this;
+        }
+        public String getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setPeerIpAddress(String peerIpAddress) {
+            this.peerIpAddress = peerIpAddress;
+            return this;
+        }
+        public String getPeerIpAddress() {
+            return this.peerIpAddress;
+        }
+
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRouteLimit(String routeLimit) {
@@ -255,28 +263,20 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
             return this.routeLimit;
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setIsFake(String isFake) {
-            this.isFake = isFake;
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setRouterId(String routerId) {
+            this.routerId = routerId;
             return this;
         }
-        public String getIsFake() {
-            return this.isFake;
+        public String getRouterId() {
+            return this.routerId;
         }
 
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setAuthKey(String authKey) {
-            this.authKey = authKey;
+        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getAuthKey() {
-            return this.authKey;
-        }
-
-        public DescribeBgpPeersResponseBodyBgpPeersBgpPeer setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getStatus() {
+            return this.status;
         }
 
     }

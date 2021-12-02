@@ -10,23 +10,23 @@ public class DescribeVpnPbrRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     public static DescribeVpnPbrRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpnPbrRouteEntriesRequest self = new DescribeVpnPbrRouteEntriesRequest();
@@ -49,6 +49,30 @@ public class DescribeVpnPbrRouteEntriesRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeVpnPbrRouteEntriesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVpnPbrRouteEntriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVpnPbrRouteEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeVpnPbrRouteEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -65,36 +89,12 @@ public class DescribeVpnPbrRouteEntriesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeVpnPbrRouteEntriesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribeVpnPbrRouteEntriesRequest setVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     public String getVpnGatewayId() {
         return this.vpnGatewayId;
-    }
-
-    public DescribeVpnPbrRouteEntriesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeVpnPbrRouteEntriesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

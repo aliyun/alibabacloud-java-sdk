@@ -4,26 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RouteTableId")
-    public String routeTableId;
-
-    @NameInMap("RouteEntryId")
-    public String routeEntryId;
-
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
-
-    @NameInMap("RouteEntryName")
-    public String routeEntryName;
 
     @NameInMap("IpVersion")
     public String ipVersion;
 
-    @NameInMap("RouteEntryType")
-    public String routeEntryType;
+    @NameInMap("MaxResult")
+    public Integer maxResult;
 
     @NameInMap("NextHopId")
     public String nextHopId;
@@ -31,14 +19,17 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("NextHopType")
     public String nextHopType;
 
-    @NameInMap("MaxResult")
-    public Integer maxResult;
-
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -46,36 +37,21 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouteEntryId")
+    public String routeEntryId;
+
+    @NameInMap("RouteEntryName")
+    public String routeEntryName;
+
+    @NameInMap("RouteEntryType")
+    public String routeEntryType;
+
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
     public static DescribeRouteEntryListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteEntryListRequest self = new DescribeRouteEntryListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouteEntryListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeRouteEntryListRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
-    }
-
-    public DescribeRouteEntryListRequest setRouteEntryId(String routeEntryId) {
-        this.routeEntryId = routeEntryId;
-        return this;
-    }
-    public String getRouteEntryId() {
-        return this.routeEntryId;
     }
 
     public DescribeRouteEntryListRequest setDestinationCidrBlock(String destinationCidrBlock) {
@@ -86,14 +62,6 @@ public class DescribeRouteEntryListRequest extends TeaModel {
         return this.destinationCidrBlock;
     }
 
-    public DescribeRouteEntryListRequest setRouteEntryName(String routeEntryName) {
-        this.routeEntryName = routeEntryName;
-        return this;
-    }
-    public String getRouteEntryName() {
-        return this.routeEntryName;
-    }
-
     public DescribeRouteEntryListRequest setIpVersion(String ipVersion) {
         this.ipVersion = ipVersion;
         return this;
@@ -102,12 +70,12 @@ public class DescribeRouteEntryListRequest extends TeaModel {
         return this.ipVersion;
     }
 
-    public DescribeRouteEntryListRequest setRouteEntryType(String routeEntryType) {
-        this.routeEntryType = routeEntryType;
+    public DescribeRouteEntryListRequest setMaxResult(Integer maxResult) {
+        this.maxResult = maxResult;
         return this;
     }
-    public String getRouteEntryType() {
-        return this.routeEntryType;
+    public Integer getMaxResult() {
+        return this.maxResult;
     }
 
     public DescribeRouteEntryListRequest setNextHopId(String nextHopId) {
@@ -126,14 +94,6 @@ public class DescribeRouteEntryListRequest extends TeaModel {
         return this.nextHopType;
     }
 
-    public DescribeRouteEntryListRequest setMaxResult(Integer maxResult) {
-        this.maxResult = maxResult;
-        return this;
-    }
-    public Integer getMaxResult() {
-        return this.maxResult;
-    }
-
     public DescribeRouteEntryListRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -142,12 +102,28 @@ public class DescribeRouteEntryListRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeRouteEntryListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeRouteEntryListRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRouteEntryListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRouteEntryListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -166,12 +142,36 @@ public class DescribeRouteEntryListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeRouteEntryListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeRouteEntryListRequest setRouteEntryId(String routeEntryId) {
+        this.routeEntryId = routeEntryId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouteEntryId() {
+        return this.routeEntryId;
+    }
+
+    public DescribeRouteEntryListRequest setRouteEntryName(String routeEntryName) {
+        this.routeEntryName = routeEntryName;
+        return this;
+    }
+    public String getRouteEntryName() {
+        return this.routeEntryName;
+    }
+
+    public DescribeRouteEntryListRequest setRouteEntryType(String routeEntryType) {
+        this.routeEntryType = routeEntryType;
+        return this;
+    }
+    public String getRouteEntryType() {
+        return this.routeEntryType;
+    }
+
+    public DescribeRouteEntryListRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
 }

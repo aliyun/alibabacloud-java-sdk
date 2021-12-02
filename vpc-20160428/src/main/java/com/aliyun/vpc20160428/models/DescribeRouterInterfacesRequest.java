@@ -4,20 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouterInterfacesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Filter")
+    public java.util.List<DescribeRouterInterfacesRequestFilter> filter;
 
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,44 +19,26 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeRouterInterfacesRequestFilter> filter;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeRouterInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouterInterfacesRequest self = new DescribeRouterInterfacesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRouterInterfacesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeRouterInterfacesRequest setFilter(java.util.List<DescribeRouterInterfacesRequestFilter> filter) {
+        this.filter = filter;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeRouterInterfacesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeRouterInterfacesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeRouterInterfacesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<DescribeRouterInterfacesRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeRouterInterfacesRequest setIncludeReservationData(Boolean includeReservationData) {
@@ -71,6 +47,14 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     }
     public Boolean getIncludeReservationData() {
         return this.includeReservationData;
+    }
+
+    public DescribeRouterInterfacesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRouterInterfacesRequest setPageNumber(Integer pageNumber) {
@@ -89,12 +73,28 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRouterInterfacesRequest setFilter(java.util.List<DescribeRouterInterfacesRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeRouterInterfacesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<DescribeRouterInterfacesRequestFilter> getFilter() {
-        return this.filter;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeRouterInterfacesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeRouterInterfacesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public static class DescribeRouterInterfacesRequestFilter extends TeaModel {

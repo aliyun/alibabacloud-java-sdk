@@ -4,14 +4,61 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("BillingConfig")
+    public GetNatGatewayAttributeResponseBodyBillingConfig billingConfig;
+
+    @NameInMap("BusinessStatus")
+    public String businessStatus;
+
+    @NameInMap("CreationTime")
+    public String creationTime;
+
+    @NameInMap("DeletionProtectionInfo")
+    public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("EcsMetricEnabled")
+    public Boolean ecsMetricEnabled;
+
+    @NameInMap("ExpiredTime")
+    public String expiredTime;
 
     @NameInMap("ForwardTable")
     public GetNatGatewayAttributeResponseBodyForwardTable forwardTable;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("FullNatTable")
+    public GetNatGatewayAttributeResponseBodyFullNatTable fullNatTable;
+
+    @NameInMap("IpList")
+    public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    @NameInMap("NatType")
+    public String natType;
+
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("PrivateInfo")
+    public GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo;
+
+    // 默认不支持私网链接。设置为1则意味着支持私网链接
+    @NameInMap("PrivateLinkEnabled")
+    public Boolean privateLinkEnabled;
+
+    // Fullnat：使用FullNat模式 Geneve：使用Geneve模式。 预估大部分场景都是非Geneve模式的。
+    @NameInMap("PrivateLinkMode")
+    public String privateLinkMode;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,59 +66,74 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("IpList")
-    public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
-
-    @NameInMap("DeletionProtectionInfo")
-    public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo;
-
-    @NameInMap("BillingConfig")
-    public GetNatGatewayAttributeResponseBodyBillingConfig billingConfig;
-
-    @NameInMap("NatType")
-    public String natType;
-
-    @NameInMap("BusinessStatus")
-    public String businessStatus;
-
     @NameInMap("SnatTable")
     public GetNatGatewayAttributeResponseBodySnatTable snatTable;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("EcsMetricEnabled")
-    public Boolean ecsMetricEnabled;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("VpcId")
     public String vpcId;
-
-    @NameInMap("ExpiredTime")
-    public String expiredTime;
-
-    @NameInMap("CreationTime")
-    public String creationTime;
-
-    @NameInMap("PrivateInfo")
-    public GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
 
     public static GetNatGatewayAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNatGatewayAttributeResponseBody self = new GetNatGatewayAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetNatGatewayAttributeResponseBody setStatus(String status) {
-        this.status = status;
+    public GetNatGatewayAttributeResponseBody setBillingConfig(GetNatGatewayAttributeResponseBodyBillingConfig billingConfig) {
+        this.billingConfig = billingConfig;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public GetNatGatewayAttributeResponseBodyBillingConfig getBillingConfig() {
+        return this.billingConfig;
+    }
+
+    public GetNatGatewayAttributeResponseBody setBusinessStatus(String businessStatus) {
+        this.businessStatus = businessStatus;
+        return this;
+    }
+    public String getBusinessStatus() {
+        return this.businessStatus;
+    }
+
+    public GetNatGatewayAttributeResponseBody setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    public String getCreationTime() {
+        return this.creationTime;
+    }
+
+    public GetNatGatewayAttributeResponseBody setDeletionProtectionInfo(GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo) {
+        this.deletionProtectionInfo = deletionProtectionInfo;
+        return this;
+    }
+    public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo getDeletionProtectionInfo() {
+        return this.deletionProtectionInfo;
+    }
+
+    public GetNatGatewayAttributeResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public GetNatGatewayAttributeResponseBody setEcsMetricEnabled(Boolean ecsMetricEnabled) {
+        this.ecsMetricEnabled = ecsMetricEnabled;
+        return this;
+    }
+    public Boolean getEcsMetricEnabled() {
+        return this.ecsMetricEnabled;
+    }
+
+    public GetNatGatewayAttributeResponseBody setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public String getExpiredTime() {
+        return this.expiredTime;
     }
 
     public GetNatGatewayAttributeResponseBody setForwardTable(GetNatGatewayAttributeResponseBodyForwardTable forwardTable) {
@@ -82,12 +144,84 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return this.forwardTable;
     }
 
-    public GetNatGatewayAttributeResponseBody setDescription(String description) {
-        this.description = description;
+    public GetNatGatewayAttributeResponseBody setFullNatTable(GetNatGatewayAttributeResponseBodyFullNatTable fullNatTable) {
+        this.fullNatTable = fullNatTable;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public GetNatGatewayAttributeResponseBodyFullNatTable getFullNatTable() {
+        return this.fullNatTable;
+    }
+
+    public GetNatGatewayAttributeResponseBody setIpList(java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList) {
+        this.ipList = ipList;
+        return this;
+    }
+    public java.util.List<GetNatGatewayAttributeResponseBodyIpList> getIpList() {
+        return this.ipList;
+    }
+
+    public GetNatGatewayAttributeResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public GetNatGatewayAttributeResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public GetNatGatewayAttributeResponseBody setNatType(String natType) {
+        this.natType = natType;
+        return this;
+    }
+    public String getNatType() {
+        return this.natType;
+    }
+
+    public GetNatGatewayAttributeResponseBody setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public GetNatGatewayAttributeResponseBody setPrivateInfo(GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo) {
+        this.privateInfo = privateInfo;
+        return this;
+    }
+    public GetNatGatewayAttributeResponseBodyPrivateInfo getPrivateInfo() {
+        return this.privateInfo;
+    }
+
+    public GetNatGatewayAttributeResponseBody setPrivateLinkEnabled(Boolean privateLinkEnabled) {
+        this.privateLinkEnabled = privateLinkEnabled;
+        return this;
+    }
+    public Boolean getPrivateLinkEnabled() {
+        return this.privateLinkEnabled;
+    }
+
+    public GetNatGatewayAttributeResponseBody setPrivateLinkMode(String privateLinkMode) {
+        this.privateLinkMode = privateLinkMode;
+        return this;
+    }
+    public String getPrivateLinkMode() {
+        return this.privateLinkMode;
+    }
+
+    public GetNatGatewayAttributeResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetNatGatewayAttributeResponseBody setRequestId(String requestId) {
@@ -106,46 +240,6 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public GetNatGatewayAttributeResponseBody setIpList(java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList) {
-        this.ipList = ipList;
-        return this;
-    }
-    public java.util.List<GetNatGatewayAttributeResponseBodyIpList> getIpList() {
-        return this.ipList;
-    }
-
-    public GetNatGatewayAttributeResponseBody setDeletionProtectionInfo(GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo) {
-        this.deletionProtectionInfo = deletionProtectionInfo;
-        return this;
-    }
-    public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo getDeletionProtectionInfo() {
-        return this.deletionProtectionInfo;
-    }
-
-    public GetNatGatewayAttributeResponseBody setBillingConfig(GetNatGatewayAttributeResponseBodyBillingConfig billingConfig) {
-        this.billingConfig = billingConfig;
-        return this;
-    }
-    public GetNatGatewayAttributeResponseBodyBillingConfig getBillingConfig() {
-        return this.billingConfig;
-    }
-
-    public GetNatGatewayAttributeResponseBody setNatType(String natType) {
-        this.natType = natType;
-        return this;
-    }
-    public String getNatType() {
-        return this.natType;
-    }
-
-    public GetNatGatewayAttributeResponseBody setBusinessStatus(String businessStatus) {
-        this.businessStatus = businessStatus;
-        return this;
-    }
-    public String getBusinessStatus() {
-        return this.businessStatus;
-    }
-
     public GetNatGatewayAttributeResponseBody setSnatTable(GetNatGatewayAttributeResponseBodySnatTable snatTable) {
         this.snatTable = snatTable;
         return this;
@@ -154,20 +248,12 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return this.snatTable;
     }
 
-    public GetNatGatewayAttributeResponseBody setName(String name) {
-        this.name = name;
+    public GetNatGatewayAttributeResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public GetNatGatewayAttributeResponseBody setEcsMetricEnabled(Boolean ecsMetricEnabled) {
-        this.ecsMetricEnabled = ecsMetricEnabled;
-        return this;
-    }
-    public Boolean getEcsMetricEnabled() {
-        return this.ecsMetricEnabled;
+    public String getStatus() {
+        return this.status;
     }
 
     public GetNatGatewayAttributeResponseBody setVpcId(String vpcId) {
@@ -178,44 +264,75 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         return this.vpcId;
     }
 
-    public GetNatGatewayAttributeResponseBody setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
-        return this;
-    }
-    public String getExpiredTime() {
-        return this.expiredTime;
+    public static class GetNatGatewayAttributeResponseBodyBillingConfig extends TeaModel {
+        @NameInMap("AutoPay")
+        public String autoPay;
+
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("Spec")
+        public String spec;
+
+        public static GetNatGatewayAttributeResponseBodyBillingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyBillingConfig self = new GetNatGatewayAttributeResponseBodyBillingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNatGatewayAttributeResponseBodyBillingConfig setAutoPay(String autoPay) {
+            this.autoPay = autoPay;
+            return this;
+        }
+        public String getAutoPay() {
+            return this.autoPay;
+        }
+
+        public GetNatGatewayAttributeResponseBodyBillingConfig setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public GetNatGatewayAttributeResponseBodyBillingConfig setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public GetNatGatewayAttributeResponseBodyBillingConfig setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
     }
 
-    public GetNatGatewayAttributeResponseBody setCreationTime(String creationTime) {
-        this.creationTime = creationTime;
-        return this;
-    }
-    public String getCreationTime() {
-        return this.creationTime;
-    }
+    public static class GetNatGatewayAttributeResponseBodyDeletionProtectionInfo extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
 
-    public GetNatGatewayAttributeResponseBody setPrivateInfo(GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo) {
-        this.privateInfo = privateInfo;
-        return this;
-    }
-    public GetNatGatewayAttributeResponseBodyPrivateInfo getPrivateInfo() {
-        return this.privateInfo;
-    }
+        public static GetNatGatewayAttributeResponseBodyDeletionProtectionInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyDeletionProtectionInfo self = new GetNatGatewayAttributeResponseBodyDeletionProtectionInfo();
+            return TeaModel.build(map, self);
+        }
 
-    public GetNatGatewayAttributeResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
+        public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
 
-    public GetNatGatewayAttributeResponseBody setNatGatewayId(String natGatewayId) {
-        this.natGatewayId = natGatewayId;
-        return this;
-    }
-    public String getNatGatewayId() {
-        return this.natGatewayId;
     }
 
     public static class GetNatGatewayAttributeResponseBodyForwardTable extends TeaModel {
@@ -248,35 +365,49 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class GetNatGatewayAttributeResponseBodyFullNatTable extends TeaModel {
+        @NameInMap("FullNatEntryCount")
+        public Long fullNatEntryCount;
+
+        @NameInMap("FullNatTableId")
+        public String fullNatTableId;
+
+        public static GetNatGatewayAttributeResponseBodyFullNatTable build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyFullNatTable self = new GetNatGatewayAttributeResponseBodyFullNatTable();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNatGatewayAttributeResponseBodyFullNatTable setFullNatEntryCount(Long fullNatEntryCount) {
+            this.fullNatEntryCount = fullNatEntryCount;
+            return this;
+        }
+        public Long getFullNatEntryCount() {
+            return this.fullNatEntryCount;
+        }
+
+        public GetNatGatewayAttributeResponseBodyFullNatTable setFullNatTableId(String fullNatTableId) {
+            this.fullNatTableId = fullNatTableId;
+            return this;
+        }
+        public String getFullNatTableId() {
+            return this.fullNatTableId;
+        }
+
+    }
+
     public static class GetNatGatewayAttributeResponseBodyIpList extends TeaModel {
-        @NameInMap("UsingStatus")
-        public String usingStatus;
+        @NameInMap("AllocationId")
+        public String allocationId;
 
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        @NameInMap("AllocationId")
-        public String allocationId;
+        @NameInMap("UsingStatus")
+        public String usingStatus;
 
         public static GetNatGatewayAttributeResponseBodyIpList build(java.util.Map<String, ?> map) throws Exception {
             GetNatGatewayAttributeResponseBodyIpList self = new GetNatGatewayAttributeResponseBodyIpList();
             return TeaModel.build(map, self);
-        }
-
-        public GetNatGatewayAttributeResponseBodyIpList setUsingStatus(String usingStatus) {
-            this.usingStatus = usingStatus;
-            return this;
-        }
-        public String getUsingStatus() {
-            return this.usingStatus;
-        }
-
-        public GetNatGatewayAttributeResponseBodyIpList setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
         }
 
         public GetNatGatewayAttributeResponseBodyIpList setAllocationId(String allocationId) {
@@ -287,75 +418,83 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             return this.allocationId;
         }
 
-    }
-
-    public static class GetNatGatewayAttributeResponseBodyDeletionProtectionInfo extends TeaModel {
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        public static GetNatGatewayAttributeResponseBodyDeletionProtectionInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetNatGatewayAttributeResponseBodyDeletionProtectionInfo self = new GetNatGatewayAttributeResponseBodyDeletionProtectionInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo setEnabled(Boolean enabled) {
-            this.enabled = enabled;
+        public GetNatGatewayAttributeResponseBodyIpList setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
             return this;
         }
-        public Boolean getEnabled() {
-            return this.enabled;
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public GetNatGatewayAttributeResponseBodyIpList setUsingStatus(String usingStatus) {
+            this.usingStatus = usingStatus;
+            return this;
+        }
+        public String getUsingStatus() {
+            return this.usingStatus;
         }
 
     }
 
-    public static class GetNatGatewayAttributeResponseBodyBillingConfig extends TeaModel {
-        @NameInMap("AutoPay")
-        public String autoPay;
+    public static class GetNatGatewayAttributeResponseBodyPrivateInfo extends TeaModel {
+        @NameInMap("EniInstanceId")
+        public String eniInstanceId;
 
-        @NameInMap("Spec")
-        public String spec;
+        @NameInMap("IzNo")
+        public String izNo;
 
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
+        @NameInMap("MaxBandwidth")
+        public Integer maxBandwidth;
 
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
 
-        public static GetNatGatewayAttributeResponseBodyBillingConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetNatGatewayAttributeResponseBodyBillingConfig self = new GetNatGatewayAttributeResponseBodyBillingConfig();
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        public static GetNatGatewayAttributeResponseBodyPrivateInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetNatGatewayAttributeResponseBodyPrivateInfo self = new GetNatGatewayAttributeResponseBodyPrivateInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetNatGatewayAttributeResponseBodyBillingConfig setAutoPay(String autoPay) {
-            this.autoPay = autoPay;
+        public GetNatGatewayAttributeResponseBodyPrivateInfo setEniInstanceId(String eniInstanceId) {
+            this.eniInstanceId = eniInstanceId;
             return this;
         }
-        public String getAutoPay() {
-            return this.autoPay;
+        public String getEniInstanceId() {
+            return this.eniInstanceId;
         }
 
-        public GetNatGatewayAttributeResponseBodyBillingConfig setSpec(String spec) {
-            this.spec = spec;
+        public GetNatGatewayAttributeResponseBodyPrivateInfo setIzNo(String izNo) {
+            this.izNo = izNo;
             return this;
         }
-        public String getSpec() {
-            return this.spec;
+        public String getIzNo() {
+            return this.izNo;
         }
 
-        public GetNatGatewayAttributeResponseBodyBillingConfig setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
+        public GetNatGatewayAttributeResponseBodyPrivateInfo setMaxBandwidth(Integer maxBandwidth) {
+            this.maxBandwidth = maxBandwidth;
             return this;
         }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
+        public Integer getMaxBandwidth() {
+            return this.maxBandwidth;
         }
 
-        public GetNatGatewayAttributeResponseBodyBillingConfig setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
+        public GetNatGatewayAttributeResponseBodyPrivateInfo setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
             return this;
         }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public GetNatGatewayAttributeResponseBodyPrivateInfo setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
@@ -386,69 +525,6 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         }
         public String getSnatTableId() {
             return this.snatTableId;
-        }
-
-    }
-
-    public static class GetNatGatewayAttributeResponseBodyPrivateInfo extends TeaModel {
-        @NameInMap("VswitchId")
-        public String vswitchId;
-
-        @NameInMap("EniInstanceId")
-        public String eniInstanceId;
-
-        @NameInMap("MaxBandwidth")
-        public Integer maxBandwidth;
-
-        @NameInMap("PrivateIpAddress")
-        public String privateIpAddress;
-
-        @NameInMap("IzNo")
-        public String izNo;
-
-        public static GetNatGatewayAttributeResponseBodyPrivateInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetNatGatewayAttributeResponseBodyPrivateInfo self = new GetNatGatewayAttributeResponseBodyPrivateInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetNatGatewayAttributeResponseBodyPrivateInfo setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
-        }
-
-        public GetNatGatewayAttributeResponseBodyPrivateInfo setEniInstanceId(String eniInstanceId) {
-            this.eniInstanceId = eniInstanceId;
-            return this;
-        }
-        public String getEniInstanceId() {
-            return this.eniInstanceId;
-        }
-
-        public GetNatGatewayAttributeResponseBodyPrivateInfo setMaxBandwidth(Integer maxBandwidth) {
-            this.maxBandwidth = maxBandwidth;
-            return this;
-        }
-        public Integer getMaxBandwidth() {
-            return this.maxBandwidth;
-        }
-
-        public GetNatGatewayAttributeResponseBodyPrivateInfo setPrivateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
-            return this;
-        }
-        public String getPrivateIpAddress() {
-            return this.privateIpAddress;
-        }
-
-        public GetNatGatewayAttributeResponseBodyPrivateInfo setIzNo(String izNo) {
-            this.izNo = izNo;
-            return this;
-        }
-        public String getIzNo() {
-            return this.izNo;
         }
 
     }

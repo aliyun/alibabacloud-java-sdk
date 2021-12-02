@@ -4,23 +4,35 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDhcpOptionsSetRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("BootFileName")
+    public String bootFileName;
 
-    @NameInMap("DomainNameServers")
-    public String domainNameServers;
-
-    @NameInMap("DhcpOptionsSetName")
-    public String dhcpOptionsSetName;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DhcpOptionsSetDescription")
     public String dhcpOptionsSetDescription;
 
+    @NameInMap("DhcpOptionsSetName")
+    public String dhcpOptionsSetName;
+
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("DomainNameServers")
+    public String domainNameServers;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -28,42 +40,28 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("DryRun")
-    public Boolean dryRun;
+    @NameInMap("TFTPServerName")
+    public String TFTPServerName;
 
     public static CreateDhcpOptionsSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDhcpOptionsSetRequest self = new CreateDhcpOptionsSetRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDhcpOptionsSetRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateDhcpOptionsSetRequest setBootFileName(String bootFileName) {
+        this.bootFileName = bootFileName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getBootFileName() {
+        return this.bootFileName;
     }
 
-    public CreateDhcpOptionsSetRequest setDomainNameServers(String domainNameServers) {
-        this.domainNameServers = domainNameServers;
+    public CreateDhcpOptionsSetRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getDomainNameServers() {
-        return this.domainNameServers;
-    }
-
-    public CreateDhcpOptionsSetRequest setDhcpOptionsSetName(String dhcpOptionsSetName) {
-        this.dhcpOptionsSetName = dhcpOptionsSetName;
-        return this;
-    }
-    public String getDhcpOptionsSetName() {
-        return this.dhcpOptionsSetName;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDhcpOptionsSetRequest setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
@@ -74,6 +72,14 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
         return this.dhcpOptionsSetDescription;
     }
 
+    public CreateDhcpOptionsSetRequest setDhcpOptionsSetName(String dhcpOptionsSetName) {
+        this.dhcpOptionsSetName = dhcpOptionsSetName;
+        return this;
+    }
+    public String getDhcpOptionsSetName() {
+        return this.dhcpOptionsSetName;
+    }
+
     public CreateDhcpOptionsSetRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -82,12 +88,44 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
         return this.domainName;
     }
 
+    public CreateDhcpOptionsSetRequest setDomainNameServers(String domainNameServers) {
+        this.domainNameServers = domainNameServers;
+        return this;
+    }
+    public String getDomainNameServers() {
+        return this.domainNameServers;
+    }
+
+    public CreateDhcpOptionsSetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateDhcpOptionsSetRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public CreateDhcpOptionsSetRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateDhcpOptionsSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDhcpOptionsSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -106,28 +144,12 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateDhcpOptionsSetRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public CreateDhcpOptionsSetRequest setTFTPServerName(String TFTPServerName) {
+        this.TFTPServerName = TFTPServerName;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CreateDhcpOptionsSetRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateDhcpOptionsSetRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getTFTPServerName() {
+        return this.TFTPServerName;
     }
 
 }

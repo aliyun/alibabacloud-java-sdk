@@ -7,14 +7,14 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
@@ -32,6 +32,14 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DeactivateRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DeactivateRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeactivateRouterInterfaceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeactivateRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {

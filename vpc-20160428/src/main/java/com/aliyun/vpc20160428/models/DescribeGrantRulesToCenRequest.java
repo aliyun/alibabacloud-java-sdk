@@ -4,17 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToCenRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,50 +13,35 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static DescribeGrantRulesToCenRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesToCenRequest self = new DescribeGrantRulesToCenRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGrantRulesToCenRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeGrantRulesToCenRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeGrantRulesToCenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeGrantRulesToCenRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeGrantRulesToCenRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DescribeGrantRulesToCenRequest setInstanceId(String instanceId) {
@@ -84,6 +60,30 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
         return this.instanceType;
     }
 
+    public DescribeGrantRulesToCenRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeGrantRulesToCenRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeGrantRulesToCenRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeGrantRulesToCenRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -92,20 +92,20 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeGrantRulesToCenRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeGrantRulesToCenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public DescribeGrantRulesToCenRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeGrantRulesToCenRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

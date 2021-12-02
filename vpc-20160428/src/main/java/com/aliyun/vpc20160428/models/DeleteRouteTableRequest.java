@@ -4,14 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteTableRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("RouteTableId")
-    public String routeTableId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,28 +19,20 @@ public class DeleteRouteTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("RouteTableId")
+    public String routeTableId;
 
     public static DeleteRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouteTableRequest self = new DeleteRouteTableRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRouteTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DeleteRouteTableRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DeleteRouteTableRequest setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteRouteTableRequest setOwnerId(Long ownerId) {
@@ -49,6 +41,14 @@ public class DeleteRouteTableRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteRouteTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteRouteTableRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -67,12 +67,12 @@ public class DeleteRouteTableRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteRouteTableRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DeleteRouteTableRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
 }

@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkAclRequest extends TeaModel {
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("NetworkAclName")
     public String networkAclName;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -22,23 +25,28 @@ public class CreateNetworkAclRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static CreateNetworkAclRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkAclRequest self = new CreateNetworkAclRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateNetworkAclRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public CreateNetworkAclRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateNetworkAclRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateNetworkAclRequest setNetworkAclName(String networkAclName) {
@@ -49,12 +57,12 @@ public class CreateNetworkAclRequest extends TeaModel {
         return this.networkAclName;
     }
 
-    public CreateNetworkAclRequest setDescription(String description) {
-        this.description = description;
+    public CreateNetworkAclRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateNetworkAclRequest setRegionId(String regionId) {
@@ -81,20 +89,12 @@ public class CreateNetworkAclRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateNetworkAclRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateNetworkAclRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateNetworkAclRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

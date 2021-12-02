@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetNatGatewayConvertStatusRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,20 +22,9 @@ public class GetNatGatewayConvertStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static GetNatGatewayConvertStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNatGatewayConvertStatusRequest self = new GetNatGatewayConvertStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetNatGatewayConvertStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetNatGatewayConvertStatusRequest setNatGatewayId(String natGatewayId) {
@@ -43,12 +35,28 @@ public class GetNatGatewayConvertStatusRequest extends TeaModel {
         return this.natGatewayId;
     }
 
+    public GetNatGatewayConvertStatusRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public GetNatGatewayConvertStatusRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetNatGatewayConvertStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetNatGatewayConvertStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -65,14 +73,6 @@ public class GetNatGatewayConvertStatusRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public GetNatGatewayConvertStatusRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

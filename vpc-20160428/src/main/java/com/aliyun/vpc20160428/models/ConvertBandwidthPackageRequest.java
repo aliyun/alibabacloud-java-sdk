@@ -7,6 +7,12 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -15,12 +21,6 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static ConvertBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         ConvertBandwidthPackageRequest self = new ConvertBandwidthPackageRequest();
@@ -33,6 +33,22 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
     }
     public String getBandwidthPackageId() {
         return this.bandwidthPackageId;
+    }
+
+    public ConvertBandwidthPackageRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ConvertBandwidthPackageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ConvertBandwidthPackageRequest setRegionId(String regionId) {
@@ -57,22 +73,6 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ConvertBandwidthPackageRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ConvertBandwidthPackageRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

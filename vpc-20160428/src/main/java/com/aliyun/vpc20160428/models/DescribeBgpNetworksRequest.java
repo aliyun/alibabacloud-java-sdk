@@ -4,8 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeBgpNetworksRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,21 +28,17 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     @NameInMap("RouterId")
     public String routerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeBgpNetworksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBgpNetworksRequest self = new DescribeBgpNetworksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBgpNetworksRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeBgpNetworksRequest setOwnerId(Long ownerId) {
@@ -39,6 +47,30 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeBgpNetworksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeBgpNetworksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeBgpNetworksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeBgpNetworksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,38 +95,6 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     }
     public String getRouterId() {
         return this.routerId;
-    }
-
-    public DescribeBgpNetworksRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeBgpNetworksRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeBgpNetworksRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeBgpNetworksRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

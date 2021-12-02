@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpc20160428.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteTrafficMirrorFilterRulesResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteTrafficMirrorFilterRulesResponseBody body;
+
+    public static DeleteTrafficMirrorFilterRulesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteTrafficMirrorFilterRulesResponse self = new DeleteTrafficMirrorFilterRulesResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteTrafficMirrorFilterRulesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteTrafficMirrorFilterRulesResponse setBody(DeleteTrafficMirrorFilterRulesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteTrafficMirrorFilterRulesResponseBody getBody() {
+        return this.body;
+    }
+
+}

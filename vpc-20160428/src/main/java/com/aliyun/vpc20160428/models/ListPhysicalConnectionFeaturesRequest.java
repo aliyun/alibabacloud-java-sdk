@@ -4,11 +4,20 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListPhysicalConnectionFeaturesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PhysicalConnectionId")
+    public String physicalConnectionId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,50 +25,9 @@ public class ListPhysicalConnectionFeaturesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("PhysicalConnectionId")
-    public String physicalConnectionId;
-
     public static ListPhysicalConnectionFeaturesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPhysicalConnectionFeaturesRequest self = new ListPhysicalConnectionFeaturesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPhysicalConnectionFeaturesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListPhysicalConnectionFeaturesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ListPhysicalConnectionFeaturesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListPhysicalConnectionFeaturesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public ListPhysicalConnectionFeaturesRequest setClientToken(String clientToken) {
@@ -78,12 +46,44 @@ public class ListPhysicalConnectionFeaturesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public ListPhysicalConnectionFeaturesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListPhysicalConnectionFeaturesRequest setPhysicalConnectionId(String physicalConnectionId) {
         this.physicalConnectionId = physicalConnectionId;
         return this;
     }
     public String getPhysicalConnectionId() {
         return this.physicalConnectionId;
+    }
+
+    public ListPhysicalConnectionFeaturesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListPhysicalConnectionFeaturesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListPhysicalConnectionFeaturesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

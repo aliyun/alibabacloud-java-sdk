@@ -38,6 +38,9 @@ public class DescribeZonesResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        @NameInMap("ZoneType")
+        public String zoneType;
+
         public static DescribeZonesResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZone self = new DescribeZonesResponseBodyZonesZone();
             return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setZoneType(String zoneType) {
+            this.zoneType = zoneType;
+            return this;
+        }
+        public String getZoneType() {
+            return this.zoneType;
         }
 
     }

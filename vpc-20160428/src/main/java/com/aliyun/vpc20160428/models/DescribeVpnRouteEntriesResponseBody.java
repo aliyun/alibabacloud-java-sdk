@@ -4,8 +4,8 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,23 +13,23 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("VpnRouteEntries")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static DescribeVpnRouteEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpnRouteEntriesResponseBody self = new DescribeVpnRouteEntriesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpnRouteEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVpnRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeVpnRouteEntriesResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVpnRouteEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeVpnRouteEntriesResponseBody setVpnRouteEntries(DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries) {
         this.vpnRouteEntries = vpnRouteEntries;
         return this;
@@ -56,80 +64,40 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         return this.vpnRouteEntries;
     }
 
-    public DescribeVpnRouteEntriesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry extends TeaModel {
-        @NameInMap("RouteEntryType")
-        public String routeEntryType;
-
-        @NameInMap("NextHop")
-        public String nextHop;
-
-        @NameInMap("Weight")
-        public Integer weight;
-
-        @NameInMap("RouteDest")
-        public String routeDest;
-
         @NameInMap("AsPath")
         public String asPath;
-
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreateTime")
-        public Long createTime;
 
         @NameInMap("Community")
         public String community;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("NextHop")
+        public String nextHop;
+
+        @NameInMap("RouteDest")
+        public String routeDest;
+
+        @NameInMap("RouteEntryType")
+        public String routeEntryType;
+
         @NameInMap("Source")
         public String source;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry self = new DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteEntryType(String routeEntryType) {
-            this.routeEntryType = routeEntryType;
-            return this;
-        }
-        public String getRouteEntryType() {
-            return this.routeEntryType;
-        }
-
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setNextHop(String nextHop) {
-            this.nextHop = nextHop;
-            return this;
-        }
-        public String getNextHop() {
-            return this.nextHop;
-        }
-
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setWeight(Integer weight) {
-            this.weight = weight;
-            return this;
-        }
-        public Integer getWeight() {
-            return this.weight;
-        }
-
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteDest(String routeDest) {
-            this.routeDest = routeDest;
-            return this;
-        }
-        public String getRouteDest() {
-            return this.routeDest;
         }
 
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setAsPath(String asPath) {
@@ -140,12 +108,12 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             return this.asPath;
         }
 
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setState(String state) {
-            this.state = state;
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setCommunity(String community) {
+            this.community = community;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getCommunity() {
+            return this.community;
         }
 
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setCreateTime(Long createTime) {
@@ -156,12 +124,28 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setCommunity(String community) {
-            this.community = community;
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setNextHop(String nextHop) {
+            this.nextHop = nextHop;
             return this;
         }
-        public String getCommunity() {
-            return this.community;
+        public String getNextHop() {
+            return this.nextHop;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteDest(String routeDest) {
+            this.routeDest = routeDest;
+            return this;
+        }
+        public String getRouteDest() {
+            return this.routeDest;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteEntryType(String routeEntryType) {
+            this.routeEntryType = routeEntryType;
+            return this;
+        }
+        public String getRouteEntryType() {
+            return this.routeEntryType;
         }
 
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setSource(String source) {
@@ -172,12 +156,28 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             return this.source;
         }
 
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setVpnInstanceId(String vpnInstanceId) {
             this.vpnInstanceId = vpnInstanceId;
             return this;
         }
         public String getVpnInstanceId() {
             return this.vpnInstanceId;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

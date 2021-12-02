@@ -4,29 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("AclId")
+    public String aclId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AclStatus")
+    public String aclStatus;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("Ipv6TranslatorId")
-    public String ipv6TranslatorId;
-
-    @NameInMap("Ipv6TranslatorEntryId")
-    public String ipv6TranslatorEntryId;
-
-    @NameInMap("EntryName")
-    public String entryName;
+    @NameInMap("AclType")
+    public String aclType;
 
     @NameInMap("AllocateIpv6Addr")
     public String allocateIpv6Addr;
@@ -40,17 +25,23 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     @NameInMap("BackendIpv4Port")
     public Integer backendIpv4Port;
 
-    @NameInMap("TransProtocol")
-    public String transProtocol;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
-    @NameInMap("AclStatus")
-    public String aclStatus;
+    @NameInMap("EntryName")
+    public String entryName;
 
-    @NameInMap("AclType")
-    public String aclType;
+    @NameInMap("Ipv6TranslatorEntryId")
+    public String ipv6TranslatorEntryId;
 
-    @NameInMap("AclId")
-    public String aclId;
+    @NameInMap("Ipv6TranslatorId")
+    public String ipv6TranslatorId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -58,76 +49,45 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("TransProtocol")
+    public String transProtocol;
 
     public static DescribeIPv6TranslatorEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIPv6TranslatorEntriesRequest self = new DescribeIPv6TranslatorEntriesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeIPv6TranslatorEntriesRequest setAclId(String aclId) {
+        this.aclId = aclId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getAclId() {
+        return this.aclId;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeIPv6TranslatorEntriesRequest setAclStatus(String aclStatus) {
+        this.aclStatus = aclStatus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAclStatus() {
+        return this.aclStatus;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public DescribeIPv6TranslatorEntriesRequest setAclType(String aclType) {
+        this.aclType = aclType;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeIPv6TranslatorEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeIPv6TranslatorEntriesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorId(String ipv6TranslatorId) {
-        this.ipv6TranslatorId = ipv6TranslatorId;
-        return this;
-    }
-    public String getIpv6TranslatorId() {
-        return this.ipv6TranslatorId;
-    }
-
-    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
-        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
-        return this;
-    }
-    public String getIpv6TranslatorEntryId() {
-        return this.ipv6TranslatorEntryId;
-    }
-
-    public DescribeIPv6TranslatorEntriesRequest setEntryName(String entryName) {
-        this.entryName = entryName;
-        return this;
-    }
-    public String getEntryName() {
-        return this.entryName;
+    public String getAclType() {
+        return this.aclType;
     }
 
     public DescribeIPv6TranslatorEntriesRequest setAllocateIpv6Addr(String allocateIpv6Addr) {
@@ -162,36 +122,52 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
         return this.backendIpv4Port;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setTransProtocol(String transProtocol) {
-        this.transProtocol = transProtocol;
+    public DescribeIPv6TranslatorEntriesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getTransProtocol() {
-        return this.transProtocol;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setAclStatus(String aclStatus) {
-        this.aclStatus = aclStatus;
+    public DescribeIPv6TranslatorEntriesRequest setEntryName(String entryName) {
+        this.entryName = entryName;
         return this;
     }
-    public String getAclStatus() {
-        return this.aclStatus;
+    public String getEntryName() {
+        return this.entryName;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setAclType(String aclType) {
-        this.aclType = aclType;
+    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
+        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
         return this;
     }
-    public String getAclType() {
-        return this.aclType;
+    public String getIpv6TranslatorEntryId() {
+        return this.ipv6TranslatorEntryId;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setAclId(String aclId) {
-        this.aclId = aclId;
+    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorId(String ipv6TranslatorId) {
+        this.ipv6TranslatorId = ipv6TranslatorId;
         return this;
     }
-    public String getAclId() {
-        return this.aclId;
+    public String getIpv6TranslatorId() {
+        return this.ipv6TranslatorId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeIPv6TranslatorEntriesRequest setPageNumber(Integer pageNumber) {
@@ -210,12 +186,36 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeIPv6TranslatorEntriesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public DescribeIPv6TranslatorEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setTransProtocol(String transProtocol) {
+        this.transProtocol = transProtocol;
+        return this;
+    }
+    public String getTransProtocol() {
+        return this.transProtocol;
     }
 
 }

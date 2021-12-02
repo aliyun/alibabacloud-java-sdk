@@ -4,12 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressProResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("AllocationId")
     public String allocationId;
 
@@ -19,25 +13,15 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static AllocateEipAddressProResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipAddressProResponseBody self = new AllocateEipAddressProResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateEipAddressProResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AllocateEipAddressProResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public AllocateEipAddressProResponseBody setAllocationId(String allocationId) {
@@ -62,6 +46,22 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public AllocateEipAddressProResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AllocateEipAddressProResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

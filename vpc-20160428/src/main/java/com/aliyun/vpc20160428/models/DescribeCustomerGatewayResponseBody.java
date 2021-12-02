@@ -4,54 +4,49 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewayResponseBody extends TeaModel {
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Asn")
+    public Long asn;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("CustomerGatewayId")
-    public String customerGatewayId;
+    @NameInMap("AuthKey")
+    public String authKey;
 
     @NameInMap("CreateTime")
     public Long createTime;
 
+    @NameInMap("CustomerGatewayId")
+    public String customerGatewayId;
+
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("IpAddress")
     public String ipAddress;
 
-    @NameInMap("Asn")
-    public Integer asn;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCustomerGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomerGatewayResponseBody self = new DescribeCustomerGatewayResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomerGatewayResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribeCustomerGatewayResponseBody setAsn(Long asn) {
+        this.asn = asn;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public Long getAsn() {
+        return this.asn;
     }
 
-    public DescribeCustomerGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCustomerGatewayResponseBody setAuthKey(String authKey) {
+        this.authKey = authKey;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeCustomerGatewayResponseBody setCustomerGatewayId(String customerGatewayId) {
-        this.customerGatewayId = customerGatewayId;
-        return this;
-    }
-    public String getCustomerGatewayId() {
-        return this.customerGatewayId;
+    public String getAuthKey() {
+        return this.authKey;
     }
 
     public DescribeCustomerGatewayResponseBody setCreateTime(Long createTime) {
@@ -62,6 +57,22 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public DescribeCustomerGatewayResponseBody setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
+    }
+
+    public DescribeCustomerGatewayResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public DescribeCustomerGatewayResponseBody setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -70,20 +81,20 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         return this.ipAddress;
     }
 
-    public DescribeCustomerGatewayResponseBody setAsn(Integer asn) {
-        this.asn = asn;
-        return this;
-    }
-    public Integer getAsn() {
-        return this.asn;
-    }
-
     public DescribeCustomerGatewayResponseBody setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeCustomerGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
