@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.retailcloud20180313.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteAppGroupResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAppGroupResponseBody body;
+
+    public static DeleteAppGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAppGroupResponse self = new DeleteAppGroupResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteAppGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAppGroupResponse setBody(DeleteAppGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAppGroupResponseBody getBody() {
+        return this.body;
+    }
+
+}
