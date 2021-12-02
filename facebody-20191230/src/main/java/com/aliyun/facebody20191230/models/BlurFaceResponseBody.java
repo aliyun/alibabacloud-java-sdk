@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BlurFaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public BlurFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static BlurFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BlurFaceResponseBody self = new BlurFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BlurFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BlurFaceResponseBody setData(BlurFaceResponseBodyData data) {
@@ -29,6 +21,14 @@ public class BlurFaceResponseBody extends TeaModel {
     }
     public BlurFaceResponseBodyData getData() {
         return this.data;
+    }
+
+    public BlurFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class BlurFaceResponseBodyData extends TeaModel {

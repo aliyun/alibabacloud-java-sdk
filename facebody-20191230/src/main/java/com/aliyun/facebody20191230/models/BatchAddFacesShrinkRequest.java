@@ -10,17 +10,17 @@ public class BatchAddFacesShrinkRequest extends TeaModel {
     @NameInMap("EntityId")
     public String entityId;
 
-    @NameInMap("SimilarityScoreThresholdInEntity")
-    public Float similarityScoreThresholdInEntity;
-
-    @NameInMap("SimilarityScoreThresholdBetweenEntity")
-    public Float similarityScoreThresholdBetweenEntity;
-
     @NameInMap("Faces")
     public String facesShrink;
 
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
+
+    @NameInMap("SimilarityScoreThresholdBetweenEntity")
+    public Float similarityScoreThresholdBetweenEntity;
+
+    @NameInMap("SimilarityScoreThresholdInEntity")
+    public Float similarityScoreThresholdInEntity;
 
     public static BatchAddFacesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddFacesShrinkRequest self = new BatchAddFacesShrinkRequest();
@@ -43,22 +43,6 @@ public class BatchAddFacesShrinkRequest extends TeaModel {
         return this.entityId;
     }
 
-    public BatchAddFacesShrinkRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
-        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
-        return this;
-    }
-    public Float getSimilarityScoreThresholdInEntity() {
-        return this.similarityScoreThresholdInEntity;
-    }
-
-    public BatchAddFacesShrinkRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
-        this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
-        return this;
-    }
-    public Float getSimilarityScoreThresholdBetweenEntity() {
-        return this.similarityScoreThresholdBetweenEntity;
-    }
-
     public BatchAddFacesShrinkRequest setFacesShrink(String facesShrink) {
         this.facesShrink = facesShrink;
         return this;
@@ -73,6 +57,22 @@ public class BatchAddFacesShrinkRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
+    }
+
+    public BatchAddFacesShrinkRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
+        this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdBetweenEntity() {
+        return this.similarityScoreThresholdBetweenEntity;
+    }
+
+    public BatchAddFacesShrinkRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
+        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdInEntity() {
+        return this.similarityScoreThresholdInEntity;
     }
 
 }

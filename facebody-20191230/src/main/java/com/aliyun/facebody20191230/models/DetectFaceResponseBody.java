@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectFaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceResponseBody self = new DetectFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectFaceResponseBody setData(DetectFaceResponseBodyData data) {
@@ -31,10 +23,15 @@ public class DetectFaceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DetectFaceResponseBodyDataQualities extends TeaModel {
-        @NameInMap("ScoreList")
-        public java.util.List<Float> scoreList;
+    public DetectFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DetectFaceResponseBodyDataQualities extends TeaModel {
         @NameInMap("BlurList")
         public java.util.List<Float> blurList;
 
@@ -56,17 +53,12 @@ public class DetectFaceResponseBody extends TeaModel {
         @NameInMap("PoseList")
         public java.util.List<Float> poseList;
 
+        @NameInMap("ScoreList")
+        public java.util.List<Float> scoreList;
+
         public static DetectFaceResponseBodyDataQualities build(java.util.Map<String, ?> map) throws Exception {
             DetectFaceResponseBodyDataQualities self = new DetectFaceResponseBodyDataQualities();
             return TeaModel.build(map, self);
-        }
-
-        public DetectFaceResponseBodyDataQualities setScoreList(java.util.List<Float> scoreList) {
-            this.scoreList = scoreList;
-            return this;
-        }
-        public java.util.List<Float> getScoreList() {
-            return this.scoreList;
         }
 
         public DetectFaceResponseBodyDataQualities setBlurList(java.util.List<Float> blurList) {
@@ -125,29 +117,37 @@ public class DetectFaceResponseBody extends TeaModel {
             return this.poseList;
         }
 
+        public DetectFaceResponseBodyDataQualities setScoreList(java.util.List<Float> scoreList) {
+            this.scoreList = scoreList;
+            return this;
+        }
+        public java.util.List<Float> getScoreList() {
+            return this.scoreList;
+        }
+
     }
 
     public static class DetectFaceResponseBodyData extends TeaModel {
+        @NameInMap("FaceCount")
+        public Integer faceCount;
+
         @NameInMap("FaceProbabilityList")
         public java.util.List<Float> faceProbabilityList;
-
-        @NameInMap("Pupils")
-        public java.util.List<Float> pupils;
 
         @NameInMap("FaceRectangles")
         public java.util.List<Integer> faceRectangles;
 
-        @NameInMap("FaceCount")
-        public Integer faceCount;
-
-        @NameInMap("PoseList")
-        public java.util.List<Float> poseList;
+        @NameInMap("LandmarkCount")
+        public Integer landmarkCount;
 
         @NameInMap("Landmarks")
         public java.util.List<Float> landmarks;
 
-        @NameInMap("LandmarkCount")
-        public Integer landmarkCount;
+        @NameInMap("PoseList")
+        public java.util.List<Float> poseList;
+
+        @NameInMap("Pupils")
+        public java.util.List<Float> pupils;
 
         @NameInMap("Qualities")
         public DetectFaceResponseBodyDataQualities qualities;
@@ -155,30 +155,6 @@ public class DetectFaceResponseBody extends TeaModel {
         public static DetectFaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DetectFaceResponseBodyData self = new DetectFaceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DetectFaceResponseBodyData setFaceProbabilityList(java.util.List<Float> faceProbabilityList) {
-            this.faceProbabilityList = faceProbabilityList;
-            return this;
-        }
-        public java.util.List<Float> getFaceProbabilityList() {
-            return this.faceProbabilityList;
-        }
-
-        public DetectFaceResponseBodyData setPupils(java.util.List<Float> pupils) {
-            this.pupils = pupils;
-            return this;
-        }
-        public java.util.List<Float> getPupils() {
-            return this.pupils;
-        }
-
-        public DetectFaceResponseBodyData setFaceRectangles(java.util.List<Integer> faceRectangles) {
-            this.faceRectangles = faceRectangles;
-            return this;
-        }
-        public java.util.List<Integer> getFaceRectangles() {
-            return this.faceRectangles;
         }
 
         public DetectFaceResponseBodyData setFaceCount(Integer faceCount) {
@@ -189,12 +165,28 @@ public class DetectFaceResponseBody extends TeaModel {
             return this.faceCount;
         }
 
-        public DetectFaceResponseBodyData setPoseList(java.util.List<Float> poseList) {
-            this.poseList = poseList;
+        public DetectFaceResponseBodyData setFaceProbabilityList(java.util.List<Float> faceProbabilityList) {
+            this.faceProbabilityList = faceProbabilityList;
             return this;
         }
-        public java.util.List<Float> getPoseList() {
-            return this.poseList;
+        public java.util.List<Float> getFaceProbabilityList() {
+            return this.faceProbabilityList;
+        }
+
+        public DetectFaceResponseBodyData setFaceRectangles(java.util.List<Integer> faceRectangles) {
+            this.faceRectangles = faceRectangles;
+            return this;
+        }
+        public java.util.List<Integer> getFaceRectangles() {
+            return this.faceRectangles;
+        }
+
+        public DetectFaceResponseBodyData setLandmarkCount(Integer landmarkCount) {
+            this.landmarkCount = landmarkCount;
+            return this;
+        }
+        public Integer getLandmarkCount() {
+            return this.landmarkCount;
         }
 
         public DetectFaceResponseBodyData setLandmarks(java.util.List<Float> landmarks) {
@@ -205,12 +197,20 @@ public class DetectFaceResponseBody extends TeaModel {
             return this.landmarks;
         }
 
-        public DetectFaceResponseBodyData setLandmarkCount(Integer landmarkCount) {
-            this.landmarkCount = landmarkCount;
+        public DetectFaceResponseBodyData setPoseList(java.util.List<Float> poseList) {
+            this.poseList = poseList;
             return this;
         }
-        public Integer getLandmarkCount() {
-            return this.landmarkCount;
+        public java.util.List<Float> getPoseList() {
+            return this.poseList;
+        }
+
+        public DetectFaceResponseBodyData setPupils(java.util.List<Float> pupils) {
+            this.pupils = pupils;
+            return this;
+        }
+        public java.util.List<Float> getPupils() {
+            return this.pupils;
         }
 
         public DetectFaceResponseBodyData setQualities(DetectFaceResponseBodyDataQualities qualities) {

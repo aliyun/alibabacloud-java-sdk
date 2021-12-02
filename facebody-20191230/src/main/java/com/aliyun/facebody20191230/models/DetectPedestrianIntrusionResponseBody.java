@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectPedestrianIntrusionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectPedestrianIntrusionResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectPedestrianIntrusionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectPedestrianIntrusionResponseBody self = new DetectPedestrianIntrusionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectPedestrianIntrusionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectPedestrianIntrusionResponseBody setData(DetectPedestrianIntrusionResponseBodyData data) {
@@ -31,46 +23,30 @@ public class DetectPedestrianIntrusionResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectPedestrianIntrusionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectPedestrianIntrusionResponseBodyDataElementsBox extends TeaModel {
+        @NameInMap("Bottom")
+        public Long bottom;
+
         @NameInMap("Left")
         public Long left;
-
-        @NameInMap("Top")
-        public Long top;
 
         @NameInMap("Right")
         public Long right;
 
-        @NameInMap("Bottom")
-        public Long bottom;
+        @NameInMap("Top")
+        public Long top;
 
         public static DetectPedestrianIntrusionResponseBodyDataElementsBox build(java.util.Map<String, ?> map) throws Exception {
             DetectPedestrianIntrusionResponseBodyDataElementsBox self = new DetectPedestrianIntrusionResponseBodyDataElementsBox();
             return TeaModel.build(map, self);
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElementsBox setLeft(Long left) {
-            this.left = left;
-            return this;
-        }
-        public Long getLeft() {
-            return this.left;
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElementsBox setTop(Long top) {
-            this.top = top;
-            return this;
-        }
-        public Long getTop() {
-            return this.top;
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElementsBox setRight(Long right) {
-            this.right = right;
-            return this;
-        }
-        public Long getRight() {
-            return this.right;
         }
 
         public DetectPedestrianIntrusionResponseBodyDataElementsBox setBottom(Long bottom) {
@@ -81,51 +57,51 @@ public class DetectPedestrianIntrusionResponseBody extends TeaModel {
             return this.bottom;
         }
 
+        public DetectPedestrianIntrusionResponseBodyDataElementsBox setLeft(Long left) {
+            this.left = left;
+            return this;
+        }
+        public Long getLeft() {
+            return this.left;
+        }
+
+        public DetectPedestrianIntrusionResponseBodyDataElementsBox setRight(Long right) {
+            this.right = right;
+            return this;
+        }
+        public Long getRight() {
+            return this.right;
+        }
+
+        public DetectPedestrianIntrusionResponseBodyDataElementsBox setTop(Long top) {
+            this.top = top;
+            return this;
+        }
+        public Long getTop() {
+            return this.top;
+        }
+
     }
 
     public static class DetectPedestrianIntrusionResponseBodyDataElements extends TeaModel {
-        @NameInMap("Score")
-        public Long score;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("IsIntrude")
-        public Boolean isIntrude;
-
         @NameInMap("Box")
         public DetectPedestrianIntrusionResponseBodyDataElementsBox box;
 
         @NameInMap("BoxId")
         public Long boxId;
 
+        @NameInMap("IsIntrude")
+        public Boolean isIntrude;
+
+        @NameInMap("Score")
+        public Long score;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DetectPedestrianIntrusionResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectPedestrianIntrusionResponseBodyDataElements self = new DetectPedestrianIntrusionResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElements setScore(Long score) {
-            this.score = score;
-            return this;
-        }
-        public Long getScore() {
-            return this.score;
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElements setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DetectPedestrianIntrusionResponseBodyDataElements setIsIntrude(Boolean isIntrude) {
-            this.isIntrude = isIntrude;
-            return this;
-        }
-        public Boolean getIsIntrude() {
-            return this.isIntrude;
         }
 
         public DetectPedestrianIntrusionResponseBodyDataElements setBox(DetectPedestrianIntrusionResponseBodyDataElementsBox box) {
@@ -144,29 +120,53 @@ public class DetectPedestrianIntrusionResponseBody extends TeaModel {
             return this.boxId;
         }
 
+        public DetectPedestrianIntrusionResponseBodyDataElements setIsIntrude(Boolean isIntrude) {
+            this.isIntrude = isIntrude;
+            return this;
+        }
+        public Boolean getIsIntrude() {
+            return this.isIntrude;
+        }
+
+        public DetectPedestrianIntrusionResponseBodyDataElements setScore(Long score) {
+            this.score = score;
+            return this;
+        }
+        public Long getScore() {
+            return this.score;
+        }
+
+        public DetectPedestrianIntrusionResponseBodyDataElements setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class DetectPedestrianIntrusionResponseBodyData extends TeaModel {
-        @NameInMap("ImageWidth")
-        public Long imageWidth;
+        @NameInMap("Elements")
+        public java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> elements;
 
         @NameInMap("ImageHeight")
         public Long imageHeight;
 
-        @NameInMap("Elements")
-        public java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> elements;
+        @NameInMap("ImageWidth")
+        public Long imageWidth;
 
         public static DetectPedestrianIntrusionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DetectPedestrianIntrusionResponseBodyData self = new DetectPedestrianIntrusionResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionResponseBodyData setImageWidth(Long imageWidth) {
-            this.imageWidth = imageWidth;
+        public DetectPedestrianIntrusionResponseBodyData setElements(java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> elements) {
+            this.elements = elements;
             return this;
         }
-        public Long getImageWidth() {
-            return this.imageWidth;
+        public java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> getElements() {
+            return this.elements;
         }
 
         public DetectPedestrianIntrusionResponseBodyData setImageHeight(Long imageHeight) {
@@ -177,12 +177,12 @@ public class DetectPedestrianIntrusionResponseBody extends TeaModel {
             return this.imageHeight;
         }
 
-        public DetectPedestrianIntrusionResponseBodyData setElements(java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> elements) {
-            this.elements = elements;
+        public DetectPedestrianIntrusionResponseBodyData setImageWidth(Long imageWidth) {
+            this.imageWidth = imageWidth;
             return this;
         }
-        public java.util.List<DetectPedestrianIntrusionResponseBodyDataElements> getElements() {
-            return this.elements;
+        public Long getImageWidth() {
+            return this.imageWidth;
         }
 
     }

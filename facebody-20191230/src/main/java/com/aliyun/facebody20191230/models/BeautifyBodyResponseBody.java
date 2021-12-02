@@ -33,18 +33,26 @@ public class BeautifyBodyResponseBody extends TeaModel {
     }
 
     public static class BeautifyBodyResponseBodyData extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
         @NameInMap("XFlowURL")
         public String XFlowURL;
 
         @NameInMap("YFlowURL")
         public String YFlowURL;
 
-        @NameInMap("Action")
-        public String action;
-
         public static BeautifyBodyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BeautifyBodyResponseBodyData self = new BeautifyBodyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public BeautifyBodyResponseBodyData setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
         public BeautifyBodyResponseBodyData setXFlowURL(String XFlowURL) {
@@ -61,14 +69,6 @@ public class BeautifyBodyResponseBody extends TeaModel {
         }
         public String getYFlowURL() {
             return this.YFlowURL;
-        }
-
-        public BeautifyBodyResponseBodyData setAction(String action) {
-            this.action = action;
-            return this;
-        }
-        public String getAction() {
-            return this.action;
         }
 
     }

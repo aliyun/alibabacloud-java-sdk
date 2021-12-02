@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListBodyDbsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public ListBodyDbsResponseBodyData data;
+
     // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public ListBodyDbsResponseBodyData data;
-
     public static ListBodyDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBodyDbsResponseBody self = new ListBodyDbsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListBodyDbsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListBodyDbsResponseBody setData(ListBodyDbsResponseBodyData data) {
@@ -30,6 +22,14 @@ public class ListBodyDbsResponseBody extends TeaModel {
     }
     public ListBodyDbsResponseBodyData getData() {
         return this.data;
+    }
+
+    public ListBodyDbsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListBodyDbsResponseBodyDataDbList extends TeaModel {
@@ -65,24 +65,16 @@ public class ListBodyDbsResponseBody extends TeaModel {
     }
 
     public static class ListBodyDbsResponseBodyData extends TeaModel {
+        @NameInMap("DbList")
+        public java.util.List<ListBodyDbsResponseBodyDataDbList> dbList;
+
         // 数据库ID
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("DbList")
-        public java.util.List<ListBodyDbsResponseBodyDataDbList> dbList;
-
         public static ListBodyDbsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListBodyDbsResponseBodyData self = new ListBodyDbsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListBodyDbsResponseBodyData setTotal(Long total) {
-            this.total = total;
-            return this;
-        }
-        public Long getTotal() {
-            return this.total;
         }
 
         public ListBodyDbsResponseBodyData setDbList(java.util.List<ListBodyDbsResponseBodyDataDbList> dbList) {
@@ -91,6 +83,14 @@ public class ListBodyDbsResponseBody extends TeaModel {
         }
         public java.util.List<ListBodyDbsResponseBodyDataDbList> getDbList() {
             return this.dbList;
+        }
+
+        public ListBodyDbsResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

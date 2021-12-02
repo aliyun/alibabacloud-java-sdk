@@ -8,17 +8,17 @@ public class AddBodyTraceRequest extends TeaModel {
     @NameInMap("DbId")
     public Long dbId;
 
-    // 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
-    @NameInMap("PersonId")
-    public Long personId;
+    // 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
+    @NameInMap("ExtraData")
+    public String extraData;
 
     // Trace图片信息列表
     @NameInMap("Images")
     public java.util.List<AddBodyTraceRequestImages> images;
 
-    // 自定义信息。支持字母、数字、标点符号和汉字。不超过4096个字符。
-    @NameInMap("ExtraData")
-    public String extraData;
+    // 实体ID，可以包含数字、字母和下划线，相同db下不可以重复，长度1-64。
+    @NameInMap("PersonId")
+    public Long personId;
 
     public static AddBodyTraceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBodyTraceRequest self = new AddBodyTraceRequest();
@@ -33,12 +33,12 @@ public class AddBodyTraceRequest extends TeaModel {
         return this.dbId;
     }
 
-    public AddBodyTraceRequest setPersonId(Long personId) {
-        this.personId = personId;
+    public AddBodyTraceRequest setExtraData(String extraData) {
+        this.extraData = extraData;
         return this;
     }
-    public Long getPersonId() {
-        return this.personId;
+    public String getExtraData() {
+        return this.extraData;
     }
 
     public AddBodyTraceRequest setImages(java.util.List<AddBodyTraceRequestImages> images) {
@@ -49,33 +49,25 @@ public class AddBodyTraceRequest extends TeaModel {
         return this.images;
     }
 
-    public AddBodyTraceRequest setExtraData(String extraData) {
-        this.extraData = extraData;
+    public AddBodyTraceRequest setPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
-    public String getExtraData() {
-        return this.extraData;
+    public Long getPersonId() {
+        return this.personId;
     }
 
     public static class AddBodyTraceRequestImages extends TeaModel {
+        @NameInMap("ImageData")
+        public byte[] imageData;
+
         // Trace图片URL
         @NameInMap("ImageURL")
         public String imageURL;
 
-        @NameInMap("ImageData")
-        public byte[] imageData;
-
         public static AddBodyTraceRequestImages build(java.util.Map<String, ?> map) throws Exception {
             AddBodyTraceRequestImages self = new AddBodyTraceRequestImages();
             return TeaModel.build(map, self);
-        }
-
-        public AddBodyTraceRequestImages setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
         }
 
         public AddBodyTraceRequestImages setImageData(byte[] imageData) {
@@ -84,6 +76,14 @@ public class AddBodyTraceRequest extends TeaModel {
         }
         public byte[] getImageData() {
             return this.imageData;
+        }
+
+        public AddBodyTraceRequestImages setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

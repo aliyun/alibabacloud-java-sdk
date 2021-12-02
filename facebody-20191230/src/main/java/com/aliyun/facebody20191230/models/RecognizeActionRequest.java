@@ -7,14 +7,14 @@ public class RecognizeActionRequest extends TeaModel {
     @NameInMap("Type")
     public Integer type;
 
-    @NameInMap("VideoUrl")
-    public String videoUrl;
-
     @NameInMap("URLList")
     public java.util.List<RecognizeActionRequestURLList> URLList;
 
     @NameInMap("VideoData")
     public byte[] videoData;
+
+    @NameInMap("VideoUrl")
+    public String videoUrl;
 
     public static RecognizeActionRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeActionRequest self = new RecognizeActionRequest();
@@ -27,14 +27,6 @@ public class RecognizeActionRequest extends TeaModel {
     }
     public Integer getType() {
         return this.type;
-    }
-
-    public RecognizeActionRequest setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
-        return this;
-    }
-    public String getVideoUrl() {
-        return this.videoUrl;
     }
 
     public RecognizeActionRequest setURLList(java.util.List<RecognizeActionRequestURLList> URLList) {
@@ -51,6 +43,14 @@ public class RecognizeActionRequest extends TeaModel {
     }
     public byte[] getVideoData() {
         return this.videoData;
+    }
+
+    public RecognizeActionRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
     }
 
     public static class RecognizeActionRequestURLList extends TeaModel {

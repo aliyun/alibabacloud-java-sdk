@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GenerateHumanSketchStyleResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GenerateHumanSketchStyleResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GenerateHumanSketchStyleResponseBodyData data;
-
     public static GenerateHumanSketchStyleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateHumanSketchStyleResponseBody self = new GenerateHumanSketchStyleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateHumanSketchStyleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GenerateHumanSketchStyleResponseBody setData(GenerateHumanSketchStyleResponseBodyData data) {
@@ -30,6 +22,14 @@ public class GenerateHumanSketchStyleResponseBody extends TeaModel {
     }
     public GenerateHumanSketchStyleResponseBodyData getData() {
         return this.data;
+    }
+
+    public GenerateHumanSketchStyleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GenerateHumanSketchStyleResponseBodyData extends TeaModel {

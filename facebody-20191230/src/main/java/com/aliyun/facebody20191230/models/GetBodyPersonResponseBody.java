@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GetBodyPersonResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetBodyPersonResponseBodyData data;
+
     // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetBodyPersonResponseBodyData data;
-
     public static GetBodyPersonResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBodyPersonResponseBody self = new GetBodyPersonResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetBodyPersonResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetBodyPersonResponseBody setData(GetBodyPersonResponseBodyData data) {
@@ -32,26 +24,26 @@ public class GetBodyPersonResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class GetBodyPersonResponseBodyDataTraceList extends TeaModel {
-        // TraceId
-        @NameInMap("Id")
-        public Long id;
+    public GetBodyPersonResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class GetBodyPersonResponseBodyDataTraceList extends TeaModel {
         // 自定义Trace信息
         @NameInMap("ExtraData")
         public String extraData;
 
+        // TraceId
+        @NameInMap("Id")
+        public Long id;
+
         public static GetBodyPersonResponseBodyDataTraceList build(java.util.Map<String, ?> map) throws Exception {
             GetBodyPersonResponseBodyDataTraceList self = new GetBodyPersonResponseBodyDataTraceList();
             return TeaModel.build(map, self);
-        }
-
-        public GetBodyPersonResponseBodyDataTraceList setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
         public GetBodyPersonResponseBodyDataTraceList setExtraData(String extraData) {
@@ -60,6 +52,14 @@ public class GetBodyPersonResponseBody extends TeaModel {
         }
         public String getExtraData() {
             return this.extraData;
+        }
+
+        public GetBodyPersonResponseBodyDataTraceList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
     }

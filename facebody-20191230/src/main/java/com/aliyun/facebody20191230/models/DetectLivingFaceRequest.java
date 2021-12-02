@@ -21,23 +21,15 @@ public class DetectLivingFaceRequest extends TeaModel {
     }
 
     public static class DetectLivingFaceRequestTasks extends TeaModel {
-        @NameInMap("ImageURL")
-        public String imageURL;
-
         @NameInMap("ImageData")
         public byte[] imageData;
+
+        @NameInMap("ImageURL")
+        public String imageURL;
 
         public static DetectLivingFaceRequestTasks build(java.util.Map<String, ?> map) throws Exception {
             DetectLivingFaceRequestTasks self = new DetectLivingFaceRequestTasks();
             return TeaModel.build(map, self);
-        }
-
-        public DetectLivingFaceRequestTasks setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
         }
 
         public DetectLivingFaceRequestTasks setImageData(byte[] imageData) {
@@ -46,6 +38,14 @@ public class DetectLivingFaceRequest extends TeaModel {
         }
         public byte[] getImageData() {
             return this.imageData;
+        }
+
+        public DetectLivingFaceRequestTasks setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GetRealPersonVerificationResultRequest extends TeaModel {
-    @NameInMap("VerificationToken")
-    public String verificationToken;
-
     @NameInMap("MaterialHash")
     public String materialHash;
+
+    @NameInMap("VerificationToken")
+    public String verificationToken;
 
     public static GetRealPersonVerificationResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRealPersonVerificationResultRequest self = new GetRealPersonVerificationResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetRealPersonVerificationResultRequest setVerificationToken(String verificationToken) {
-        this.verificationToken = verificationToken;
-        return this;
-    }
-    public String getVerificationToken() {
-        return this.verificationToken;
     }
 
     public GetRealPersonVerificationResultRequest setMaterialHash(String materialHash) {
@@ -29,6 +21,14 @@ public class GetRealPersonVerificationResultRequest extends TeaModel {
     }
     public String getMaterialHash() {
         return this.materialHash;
+    }
+
+    public GetRealPersonVerificationResultRequest setVerificationToken(String verificationToken) {
+        this.verificationToken = verificationToken;
+        return this;
+    }
+    public String getVerificationToken() {
+        return this.verificationToken;
     }
 
 }

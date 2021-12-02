@@ -58,25 +58,17 @@ public class SearchBodyTraceRequest extends TeaModel {
     }
 
     public static class SearchBodyTraceRequestImages extends TeaModel {
-        // Trace图片URL
-        @NameInMap("ImageURL")
-        public String imageURL;
-
         // 图片Base64数据
         @NameInMap("ImageData")
         public byte[] imageData;
 
+        // Trace图片URL
+        @NameInMap("ImageURL")
+        public String imageURL;
+
         public static SearchBodyTraceRequestImages build(java.util.Map<String, ?> map) throws Exception {
             SearchBodyTraceRequestImages self = new SearchBodyTraceRequestImages();
             return TeaModel.build(map, self);
-        }
-
-        public SearchBodyTraceRequestImages setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
         }
 
         public SearchBodyTraceRequestImages setImageData(byte[] imageData) {
@@ -85,6 +77,14 @@ public class SearchBodyTraceRequest extends TeaModel {
         }
         public byte[] getImageData() {
             return this.imageData;
+        }
+
+        public SearchBodyTraceRequestImages setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

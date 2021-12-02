@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class LiquifyFaceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public LiquifyFaceResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public LiquifyFaceResponseBodyData data;
-
     public static LiquifyFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LiquifyFaceResponseBody self = new LiquifyFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public LiquifyFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public LiquifyFaceResponseBody setData(LiquifyFaceResponseBodyData data) {
@@ -30,6 +22,14 @@ public class LiquifyFaceResponseBody extends TeaModel {
     }
     public LiquifyFaceResponseBodyData getData() {
         return this.data;
+    }
+
+    public LiquifyFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class LiquifyFaceResponseBodyData extends TeaModel {

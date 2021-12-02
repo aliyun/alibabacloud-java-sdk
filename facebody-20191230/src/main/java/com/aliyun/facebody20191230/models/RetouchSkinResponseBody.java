@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class RetouchSkinResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RetouchSkinResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public RetouchSkinResponseBodyData data;
-
     public static RetouchSkinResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RetouchSkinResponseBody self = new RetouchSkinResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RetouchSkinResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RetouchSkinResponseBody setData(RetouchSkinResponseBodyData data) {
@@ -30,6 +22,14 @@ public class RetouchSkinResponseBody extends TeaModel {
     }
     public RetouchSkinResponseBodyData getData() {
         return this.data;
+    }
+
+    public RetouchSkinResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class RetouchSkinResponseBodyData extends TeaModel {

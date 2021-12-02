@@ -8,11 +8,11 @@ public class RetouchBodyAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("SlimDegree")
-    public Float slimDegree;
-
     @NameInMap("LengthenDegree")
     public Float lengthenDegree;
+
+    @NameInMap("SlimDegree")
+    public Float slimDegree;
 
     public static RetouchBodyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RetouchBodyAdvanceRequest self = new RetouchBodyAdvanceRequest();
@@ -27,20 +27,20 @@ public class RetouchBodyAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public RetouchBodyAdvanceRequest setSlimDegree(Float slimDegree) {
-        this.slimDegree = slimDegree;
-        return this;
-    }
-    public Float getSlimDegree() {
-        return this.slimDegree;
-    }
-
     public RetouchBodyAdvanceRequest setLengthenDegree(Float lengthenDegree) {
         this.lengthenDegree = lengthenDegree;
         return this;
     }
     public Float getLengthenDegree() {
         return this.lengthenDegree;
+    }
+
+    public RetouchBodyAdvanceRequest setSlimDegree(Float slimDegree) {
+        this.slimDegree = slimDegree;
+        return this;
+    }
+    public Float getSlimDegree() {
+        return this.slimDegree;
     }
 
 }

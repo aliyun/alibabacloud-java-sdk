@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SearchFaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public SearchFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SearchFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceResponseBody self = new SearchFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SearchFaceResponseBody setData(SearchFaceResponseBodyData data) {
@@ -31,9 +23,26 @@ public class SearchFaceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public SearchFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class SearchFaceResponseBodyDataMatchListFaceItems extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("DbName")
+        public String dbName;
+
         @NameInMap("EntityId")
         public String entityId;
+
+        @NameInMap("ExtraData")
+        public String extraData;
 
         @NameInMap("FaceId")
         public String faceId;
@@ -41,18 +50,25 @@ public class SearchFaceResponseBody extends TeaModel {
         @NameInMap("Score")
         public Float score;
 
-        @NameInMap("ExtraData")
-        public String extraData;
-
-        @NameInMap("DbName")
-        public String dbName;
-
-        @NameInMap("Confidence")
-        public Float confidence;
-
         public static SearchFaceResponseBodyDataMatchListFaceItems build(java.util.Map<String, ?> map) throws Exception {
             SearchFaceResponseBodyDataMatchListFaceItems self = new SearchFaceResponseBodyDataMatchListFaceItems();
             return TeaModel.build(map, self);
+        }
+
+        public SearchFaceResponseBodyDataMatchListFaceItems setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public SearchFaceResponseBodyDataMatchListFaceItems setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
         }
 
         public SearchFaceResponseBodyDataMatchListFaceItems setEntityId(String entityId) {
@@ -61,6 +77,14 @@ public class SearchFaceResponseBody extends TeaModel {
         }
         public String getEntityId() {
             return this.entityId;
+        }
+
+        public SearchFaceResponseBodyDataMatchListFaceItems setExtraData(String extraData) {
+            this.extraData = extraData;
+            return this;
+        }
+        public String getExtraData() {
+            return this.extraData;
         }
 
         public SearchFaceResponseBodyDataMatchListFaceItems setFaceId(String faceId) {
@@ -79,56 +103,24 @@ public class SearchFaceResponseBody extends TeaModel {
             return this.score;
         }
 
-        public SearchFaceResponseBodyDataMatchListFaceItems setExtraData(String extraData) {
-            this.extraData = extraData;
-            return this;
-        }
-        public String getExtraData() {
-            return this.extraData;
-        }
-
-        public SearchFaceResponseBodyDataMatchListFaceItems setDbName(String dbName) {
-            this.dbName = dbName;
-            return this;
-        }
-        public String getDbName() {
-            return this.dbName;
-        }
-
-        public SearchFaceResponseBodyDataMatchListFaceItems setConfidence(Float confidence) {
-            this.confidence = confidence;
-            return this;
-        }
-        public Float getConfidence() {
-            return this.confidence;
-        }
-
     }
 
     public static class SearchFaceResponseBodyDataMatchListLocation extends TeaModel {
-        @NameInMap("Width")
-        public Integer width;
-
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Y")
-        public Integer y;
+        @NameInMap("Width")
+        public Integer width;
 
         @NameInMap("X")
         public Integer x;
 
+        @NameInMap("Y")
+        public Integer y;
+
         public static SearchFaceResponseBodyDataMatchListLocation build(java.util.Map<String, ?> map) throws Exception {
             SearchFaceResponseBodyDataMatchListLocation self = new SearchFaceResponseBodyDataMatchListLocation();
             return TeaModel.build(map, self);
-        }
-
-        public SearchFaceResponseBodyDataMatchListLocation setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
         }
 
         public SearchFaceResponseBodyDataMatchListLocation setHeight(Integer height) {
@@ -139,12 +131,12 @@ public class SearchFaceResponseBody extends TeaModel {
             return this.height;
         }
 
-        public SearchFaceResponseBodyDataMatchListLocation setY(Integer y) {
-            this.y = y;
+        public SearchFaceResponseBodyDataMatchListLocation setWidth(Integer width) {
+            this.width = width;
             return this;
         }
-        public Integer getY() {
-            return this.y;
+        public Integer getWidth() {
+            return this.width;
         }
 
         public SearchFaceResponseBodyDataMatchListLocation setX(Integer x) {
@@ -153,6 +145,14 @@ public class SearchFaceResponseBody extends TeaModel {
         }
         public Integer getX() {
             return this.x;
+        }
+
+        public SearchFaceResponseBodyDataMatchListLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
         }
 
     }

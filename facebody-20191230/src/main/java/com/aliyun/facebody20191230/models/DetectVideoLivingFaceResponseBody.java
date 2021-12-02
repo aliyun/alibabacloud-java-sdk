@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoLivingFaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectVideoLivingFaceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectVideoLivingFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectVideoLivingFaceResponseBody self = new DetectVideoLivingFaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectVideoLivingFaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectVideoLivingFaceResponseBody setData(DetectVideoLivingFaceResponseBodyData data) {
@@ -31,27 +23,35 @@ public class DetectVideoLivingFaceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectVideoLivingFaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectVideoLivingFaceResponseBodyDataElements extends TeaModel {
-        @NameInMap("Rect")
-        public java.util.List<Integer> rect;
+        @NameInMap("FaceConfidence")
+        public Float faceConfidence;
 
         @NameInMap("LiveConfidence")
         public Float liveConfidence;
 
-        @NameInMap("FaceConfidence")
-        public Float faceConfidence;
+        @NameInMap("Rect")
+        public java.util.List<Integer> rect;
 
         public static DetectVideoLivingFaceResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectVideoLivingFaceResponseBodyDataElements self = new DetectVideoLivingFaceResponseBodyDataElements();
             return TeaModel.build(map, self);
         }
 
-        public DetectVideoLivingFaceResponseBodyDataElements setRect(java.util.List<Integer> rect) {
-            this.rect = rect;
+        public DetectVideoLivingFaceResponseBodyDataElements setFaceConfidence(Float faceConfidence) {
+            this.faceConfidence = faceConfidence;
             return this;
         }
-        public java.util.List<Integer> getRect() {
-            return this.rect;
+        public Float getFaceConfidence() {
+            return this.faceConfidence;
         }
 
         public DetectVideoLivingFaceResponseBodyDataElements setLiveConfidence(Float liveConfidence) {
@@ -62,12 +62,12 @@ public class DetectVideoLivingFaceResponseBody extends TeaModel {
             return this.liveConfidence;
         }
 
-        public DetectVideoLivingFaceResponseBodyDataElements setFaceConfidence(Float faceConfidence) {
-            this.faceConfidence = faceConfidence;
+        public DetectVideoLivingFaceResponseBodyDataElements setRect(java.util.List<Integer> rect) {
+            this.rect = rect;
             return this;
         }
-        public Float getFaceConfidence() {
-            return this.faceConfidence;
+        public java.util.List<Integer> getRect() {
+            return this.rect;
         }
 
     }

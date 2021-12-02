@@ -8,38 +8,38 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("OriginalWidth")
-    public Long originalWidth;
-
-    @NameInMap("OriginalHeight")
-    public Long originalHeight;
-
-    @NameInMap("Custom")
-    public Long custom;
-
-    @NameInMap("MaleLiquifyDegree")
-    public Float maleLiquifyDegree;
-
-    @NameInMap("FemaleLiquifyDegree")
-    public Float femaleLiquifyDegree;
-
-    @NameInMap("LengthenDegree")
-    public Float lengthenDegree;
-
     @NameInMap("AgeRange")
     public BeautifyBodyAdvanceRequestAgeRange ageRange;
 
     @NameInMap("BodyBoxes")
     public java.util.List<BeautifyBodyAdvanceRequestBodyBoxes> bodyBoxes;
 
+    @NameInMap("Custom")
+    public Long custom;
+
     @NameInMap("FaceList")
     public java.util.List<BeautifyBodyAdvanceRequestFaceList> faceList;
 
-    @NameInMap("PoseList")
-    public java.util.List<BeautifyBodyAdvanceRequestPoseList> poseList;
+    @NameInMap("FemaleLiquifyDegree")
+    public Float femaleLiquifyDegree;
 
     @NameInMap("IsPregnant")
     public Boolean isPregnant;
+
+    @NameInMap("LengthenDegree")
+    public Float lengthenDegree;
+
+    @NameInMap("MaleLiquifyDegree")
+    public Float maleLiquifyDegree;
+
+    @NameInMap("OriginalHeight")
+    public Long originalHeight;
+
+    @NameInMap("OriginalWidth")
+    public Long originalWidth;
+
+    @NameInMap("PoseList")
+    public java.util.List<BeautifyBodyAdvanceRequestPoseList> poseList;
 
     public static BeautifyBodyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         BeautifyBodyAdvanceRequest self = new BeautifyBodyAdvanceRequest();
@@ -52,54 +52,6 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public BeautifyBodyAdvanceRequest setOriginalWidth(Long originalWidth) {
-        this.originalWidth = originalWidth;
-        return this;
-    }
-    public Long getOriginalWidth() {
-        return this.originalWidth;
-    }
-
-    public BeautifyBodyAdvanceRequest setOriginalHeight(Long originalHeight) {
-        this.originalHeight = originalHeight;
-        return this;
-    }
-    public Long getOriginalHeight() {
-        return this.originalHeight;
-    }
-
-    public BeautifyBodyAdvanceRequest setCustom(Long custom) {
-        this.custom = custom;
-        return this;
-    }
-    public Long getCustom() {
-        return this.custom;
-    }
-
-    public BeautifyBodyAdvanceRequest setMaleLiquifyDegree(Float maleLiquifyDegree) {
-        this.maleLiquifyDegree = maleLiquifyDegree;
-        return this;
-    }
-    public Float getMaleLiquifyDegree() {
-        return this.maleLiquifyDegree;
-    }
-
-    public BeautifyBodyAdvanceRequest setFemaleLiquifyDegree(Float femaleLiquifyDegree) {
-        this.femaleLiquifyDegree = femaleLiquifyDegree;
-        return this;
-    }
-    public Float getFemaleLiquifyDegree() {
-        return this.femaleLiquifyDegree;
-    }
-
-    public BeautifyBodyAdvanceRequest setLengthenDegree(Float lengthenDegree) {
-        this.lengthenDegree = lengthenDegree;
-        return this;
-    }
-    public Float getLengthenDegree() {
-        return this.lengthenDegree;
     }
 
     public BeautifyBodyAdvanceRequest setAgeRange(BeautifyBodyAdvanceRequestAgeRange ageRange) {
@@ -118,6 +70,14 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
         return this.bodyBoxes;
     }
 
+    public BeautifyBodyAdvanceRequest setCustom(Long custom) {
+        this.custom = custom;
+        return this;
+    }
+    public Long getCustom() {
+        return this.custom;
+    }
+
     public BeautifyBodyAdvanceRequest setFaceList(java.util.List<BeautifyBodyAdvanceRequestFaceList> faceList) {
         this.faceList = faceList;
         return this;
@@ -126,12 +86,12 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
         return this.faceList;
     }
 
-    public BeautifyBodyAdvanceRequest setPoseList(java.util.List<BeautifyBodyAdvanceRequestPoseList> poseList) {
-        this.poseList = poseList;
+    public BeautifyBodyAdvanceRequest setFemaleLiquifyDegree(Float femaleLiquifyDegree) {
+        this.femaleLiquifyDegree = femaleLiquifyDegree;
         return this;
     }
-    public java.util.List<BeautifyBodyAdvanceRequestPoseList> getPoseList() {
-        return this.poseList;
+    public Float getFemaleLiquifyDegree() {
+        return this.femaleLiquifyDegree;
     }
 
     public BeautifyBodyAdvanceRequest setIsPregnant(Boolean isPregnant) {
@@ -142,24 +102,56 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
         return this.isPregnant;
     }
 
-    public static class BeautifyBodyAdvanceRequestAgeRange extends TeaModel {
-        @NameInMap("AgeMinimum")
-        public Long ageMinimum;
+    public BeautifyBodyAdvanceRequest setLengthenDegree(Float lengthenDegree) {
+        this.lengthenDegree = lengthenDegree;
+        return this;
+    }
+    public Float getLengthenDegree() {
+        return this.lengthenDegree;
+    }
 
+    public BeautifyBodyAdvanceRequest setMaleLiquifyDegree(Float maleLiquifyDegree) {
+        this.maleLiquifyDegree = maleLiquifyDegree;
+        return this;
+    }
+    public Float getMaleLiquifyDegree() {
+        return this.maleLiquifyDegree;
+    }
+
+    public BeautifyBodyAdvanceRequest setOriginalHeight(Long originalHeight) {
+        this.originalHeight = originalHeight;
+        return this;
+    }
+    public Long getOriginalHeight() {
+        return this.originalHeight;
+    }
+
+    public BeautifyBodyAdvanceRequest setOriginalWidth(Long originalWidth) {
+        this.originalWidth = originalWidth;
+        return this;
+    }
+    public Long getOriginalWidth() {
+        return this.originalWidth;
+    }
+
+    public BeautifyBodyAdvanceRequest setPoseList(java.util.List<BeautifyBodyAdvanceRequestPoseList> poseList) {
+        this.poseList = poseList;
+        return this;
+    }
+    public java.util.List<BeautifyBodyAdvanceRequestPoseList> getPoseList() {
+        return this.poseList;
+    }
+
+    public static class BeautifyBodyAdvanceRequestAgeRange extends TeaModel {
         @NameInMap("AgeMax")
         public Long ageMax;
+
+        @NameInMap("AgeMinimum")
+        public Long ageMinimum;
 
         public static BeautifyBodyAdvanceRequestAgeRange build(java.util.Map<String, ?> map) throws Exception {
             BeautifyBodyAdvanceRequestAgeRange self = new BeautifyBodyAdvanceRequestAgeRange();
             return TeaModel.build(map, self);
-        }
-
-        public BeautifyBodyAdvanceRequestAgeRange setAgeMinimum(Long ageMinimum) {
-            this.ageMinimum = ageMinimum;
-            return this;
-        }
-        public Long getAgeMinimum() {
-            return this.ageMinimum;
         }
 
         public BeautifyBodyAdvanceRequestAgeRange setAgeMax(Long ageMax) {
@@ -170,24 +162,48 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
             return this.ageMax;
         }
 
+        public BeautifyBodyAdvanceRequestAgeRange setAgeMinimum(Long ageMinimum) {
+            this.ageMinimum = ageMinimum;
+            return this;
+        }
+        public Long getAgeMinimum() {
+            return this.ageMinimum;
+        }
+
     }
 
     public static class BeautifyBodyAdvanceRequestBodyBoxes extends TeaModel {
+        @NameInMap("Height")
+        public Float height;
+
+        @NameInMap("Width")
+        public Float width;
+
         @NameInMap("X")
         public Float x;
 
         @NameInMap("Y")
         public Float y;
 
-        @NameInMap("Width")
-        public Float width;
-
-        @NameInMap("Height")
-        public Float height;
-
         public static BeautifyBodyAdvanceRequestBodyBoxes build(java.util.Map<String, ?> map) throws Exception {
             BeautifyBodyAdvanceRequestBodyBoxes self = new BeautifyBodyAdvanceRequestBodyBoxes();
             return TeaModel.build(map, self);
+        }
+
+        public BeautifyBodyAdvanceRequestBodyBoxes setHeight(Float height) {
+            this.height = height;
+            return this;
+        }
+        public Float getHeight() {
+            return this.height;
+        }
+
+        public BeautifyBodyAdvanceRequestBodyBoxes setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
         }
 
         public BeautifyBodyAdvanceRequestBodyBoxes setX(Float x) {
@@ -206,15 +222,27 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
             return this.y;
         }
 
-        public BeautifyBodyAdvanceRequestBodyBoxes setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
+    }
+
+    public static class BeautifyBodyAdvanceRequestFaceListFaceBox extends TeaModel {
+        @NameInMap("Height")
+        public Float height;
+
+        @NameInMap("Width")
+        public Float width;
+
+        @NameInMap("X")
+        public Float x;
+
+        @NameInMap("Y")
+        public Float y;
+
+        public static BeautifyBodyAdvanceRequestFaceListFaceBox build(java.util.Map<String, ?> map) throws Exception {
+            BeautifyBodyAdvanceRequestFaceListFaceBox self = new BeautifyBodyAdvanceRequestFaceListFaceBox();
+            return TeaModel.build(map, self);
         }
 
-        public BeautifyBodyAdvanceRequestBodyBoxes setHeight(Float height) {
+        public BeautifyBodyAdvanceRequestFaceListFaceBox setHeight(Float height) {
             this.height = height;
             return this;
         }
@@ -222,24 +250,12 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
             return this.height;
         }
 
-    }
-
-    public static class BeautifyBodyAdvanceRequestFaceListFaceBox extends TeaModel {
-        @NameInMap("X")
-        public Float x;
-
-        @NameInMap("Y")
-        public Float y;
-
-        @NameInMap("Width")
-        public Float width;
-
-        @NameInMap("Height")
-        public Float height;
-
-        public static BeautifyBodyAdvanceRequestFaceListFaceBox build(java.util.Map<String, ?> map) throws Exception {
-            BeautifyBodyAdvanceRequestFaceListFaceBox self = new BeautifyBodyAdvanceRequestFaceListFaceBox();
-            return TeaModel.build(map, self);
+        public BeautifyBodyAdvanceRequestFaceListFaceBox setWidth(Float width) {
+            this.width = width;
+            return this;
+        }
+        public Float getWidth() {
+            return this.width;
         }
 
         public BeautifyBodyAdvanceRequestFaceListFaceBox setX(Float x) {
@@ -258,30 +274,14 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
             return this.y;
         }
 
-        public BeautifyBodyAdvanceRequestFaceListFaceBox setWidth(Float width) {
-            this.width = width;
-            return this;
-        }
-        public Float getWidth() {
-            return this.width;
-        }
-
-        public BeautifyBodyAdvanceRequestFaceListFaceBox setHeight(Float height) {
-            this.height = height;
-            return this;
-        }
-        public Float getHeight() {
-            return this.height;
-        }
-
     }
 
     public static class BeautifyBodyAdvanceRequestFaceList extends TeaModel {
-        @NameInMap("FaceBox")
-        public BeautifyBodyAdvanceRequestFaceListFaceBox faceBox;
-
         @NameInMap("Age")
         public Long age;
+
+        @NameInMap("FaceBox")
+        public BeautifyBodyAdvanceRequestFaceListFaceBox faceBox;
 
         @NameInMap("Gender")
         public Long gender;
@@ -291,20 +291,20 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BeautifyBodyAdvanceRequestFaceList setFaceBox(BeautifyBodyAdvanceRequestFaceListFaceBox faceBox) {
-            this.faceBox = faceBox;
-            return this;
-        }
-        public BeautifyBodyAdvanceRequestFaceListFaceBox getFaceBox() {
-            return this.faceBox;
-        }
-
         public BeautifyBodyAdvanceRequestFaceList setAge(Long age) {
             this.age = age;
             return this;
         }
         public Long getAge() {
             return this.age;
+        }
+
+        public BeautifyBodyAdvanceRequestFaceList setFaceBox(BeautifyBodyAdvanceRequestFaceListFaceBox faceBox) {
+            this.faceBox = faceBox;
+            return this;
+        }
+        public BeautifyBodyAdvanceRequestFaceListFaceBox getFaceBox() {
+            return this.faceBox;
         }
 
         public BeautifyBodyAdvanceRequestFaceList setGender(Long gender) {
@@ -318,18 +318,26 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
     }
 
     public static class BeautifyBodyAdvanceRequestPoseListPose extends TeaModel {
+        @NameInMap("Score")
+        public Float score;
+
         @NameInMap("X")
         public Long x;
 
         @NameInMap("Y")
         public Long y;
 
-        @NameInMap("Score")
-        public Float score;
-
         public static BeautifyBodyAdvanceRequestPoseListPose build(java.util.Map<String, ?> map) throws Exception {
             BeautifyBodyAdvanceRequestPoseListPose self = new BeautifyBodyAdvanceRequestPoseListPose();
             return TeaModel.build(map, self);
+        }
+
+        public BeautifyBodyAdvanceRequestPoseListPose setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
         public BeautifyBodyAdvanceRequestPoseListPose setX(Long x) {
@@ -346,14 +354,6 @@ public class BeautifyBodyAdvanceRequest extends TeaModel {
         }
         public Long getY() {
             return this.y;
-        }
-
-        public BeautifyBodyAdvanceRequestPoseListPose setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
     }

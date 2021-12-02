@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class VerifyFaceMaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public VerifyFaceMaskResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static VerifyFaceMaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyFaceMaskResponseBody self = new VerifyFaceMaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public VerifyFaceMaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public VerifyFaceMaskResponseBody setData(VerifyFaceMaskResponseBodyData data) {
@@ -31,15 +23,23 @@ public class VerifyFaceMaskResponseBody extends TeaModel {
         return this.data;
     }
 
+    public VerifyFaceMaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class VerifyFaceMaskResponseBodyData extends TeaModel {
-        @NameInMap("Thresholds")
-        public java.util.List<Float> thresholds;
+        @NameInMap("Confidence")
+        public Float confidence;
 
         @NameInMap("Mask")
         public Integer mask;
 
-        @NameInMap("Confidence")
-        public Float confidence;
+        @NameInMap("MaskRef")
+        public Integer maskRef;
 
         @NameInMap("Rectangle")
         public java.util.List<Integer> rectangle;
@@ -47,20 +47,20 @@ public class VerifyFaceMaskResponseBody extends TeaModel {
         @NameInMap("RectangleRef")
         public java.util.List<Integer> rectangleRef;
 
-        @NameInMap("MaskRef")
-        public Integer maskRef;
+        @NameInMap("Thresholds")
+        public java.util.List<Float> thresholds;
 
         public static VerifyFaceMaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             VerifyFaceMaskResponseBodyData self = new VerifyFaceMaskResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public VerifyFaceMaskResponseBodyData setThresholds(java.util.List<Float> thresholds) {
-            this.thresholds = thresholds;
+        public VerifyFaceMaskResponseBodyData setConfidence(Float confidence) {
+            this.confidence = confidence;
             return this;
         }
-        public java.util.List<Float> getThresholds() {
-            return this.thresholds;
+        public Float getConfidence() {
+            return this.confidence;
         }
 
         public VerifyFaceMaskResponseBodyData setMask(Integer mask) {
@@ -71,12 +71,12 @@ public class VerifyFaceMaskResponseBody extends TeaModel {
             return this.mask;
         }
 
-        public VerifyFaceMaskResponseBodyData setConfidence(Float confidence) {
-            this.confidence = confidence;
+        public VerifyFaceMaskResponseBodyData setMaskRef(Integer maskRef) {
+            this.maskRef = maskRef;
             return this;
         }
-        public Float getConfidence() {
-            return this.confidence;
+        public Integer getMaskRef() {
+            return this.maskRef;
         }
 
         public VerifyFaceMaskResponseBodyData setRectangle(java.util.List<Integer> rectangle) {
@@ -95,12 +95,12 @@ public class VerifyFaceMaskResponseBody extends TeaModel {
             return this.rectangleRef;
         }
 
-        public VerifyFaceMaskResponseBodyData setMaskRef(Integer maskRef) {
-            this.maskRef = maskRef;
+        public VerifyFaceMaskResponseBodyData setThresholds(java.util.List<Float> thresholds) {
+            this.thresholds = thresholds;
             return this;
         }
-        public Integer getMaskRef() {
-            return this.maskRef;
+        public java.util.List<Float> getThresholds() {
+            return this.thresholds;
         }
 
     }

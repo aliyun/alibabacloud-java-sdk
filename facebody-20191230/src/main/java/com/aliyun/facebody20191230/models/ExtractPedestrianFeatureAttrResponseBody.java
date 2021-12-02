@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ExtractPedestrianFeatureAttrResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ExtractPedestrianFeatureAttrResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExtractPedestrianFeatureAttrResponseBody self = new ExtractPedestrianFeatureAttrResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ExtractPedestrianFeatureAttrResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ExtractPedestrianFeatureAttrResponseBody setData(ExtractPedestrianFeatureAttrResponseBodyData data) {
@@ -31,12 +23,20 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ExtractPedestrianFeatureAttrResponseBodyData extends TeaModel {
-        @NameInMap("QualityScore")
-        public Float qualityScore;
+    public ExtractPedestrianFeatureAttrResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("ObjType")
-        public String objType;
+    public static class ExtractPedestrianFeatureAttrResponseBodyData extends TeaModel {
+        @NameInMap("Age")
+        public String age;
+
+        @NameInMap("AgeScore")
+        public Float ageScore;
 
         @NameInMap("Feature")
         public String feature;
@@ -44,47 +44,32 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         @NameInMap("Gender")
         public String gender;
 
-        @NameInMap("LowerColorScore")
-        public Float lowerColorScore;
-
-        @NameInMap("ObjTypeScore")
-        public Float objTypeScore;
-
-        @NameInMap("Age")
-        public String age;
-
-        @NameInMap("AgeScore")
-        public Float ageScore;
-
-        @NameInMap("UpperTypeScore")
-        public Float upperTypeScore;
-
-        @NameInMap("LowerTypeScore")
-        public Float lowerTypeScore;
-
-        @NameInMap("LowerColor")
-        public String lowerColor;
+        @NameInMap("GenderScore")
+        public Float genderScore;
 
         @NameInMap("Hair")
         public String hair;
 
-        @NameInMap("UpperColor")
-        public String upperColor;
-
-        @NameInMap("GenderScore")
-        public Float genderScore;
-
-        @NameInMap("UpperType")
-        public String upperType;
-
         @NameInMap("HairScore")
         public Float hairScore;
+
+        @NameInMap("LowerColor")
+        public String lowerColor;
+
+        @NameInMap("LowerColorScore")
+        public Float lowerColorScore;
 
         @NameInMap("LowerType")
         public String lowerType;
 
-        @NameInMap("UpperColorScore")
-        public Float upperColorScore;
+        @NameInMap("LowerTypeScore")
+        public Float lowerTypeScore;
+
+        @NameInMap("ObjType")
+        public String objType;
+
+        @NameInMap("ObjTypeScore")
+        public Float objTypeScore;
 
         @NameInMap("Orientation")
         public String orientation;
@@ -92,57 +77,24 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         @NameInMap("OrientationScore")
         public Float orientationScore;
 
+        @NameInMap("QualityScore")
+        public Float qualityScore;
+
+        @NameInMap("UpperColor")
+        public String upperColor;
+
+        @NameInMap("UpperColorScore")
+        public Float upperColorScore;
+
+        @NameInMap("UpperType")
+        public String upperType;
+
+        @NameInMap("UpperTypeScore")
+        public Float upperTypeScore;
+
         public static ExtractPedestrianFeatureAttrResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExtractPedestrianFeatureAttrResponseBodyData self = new ExtractPedestrianFeatureAttrResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setQualityScore(Float qualityScore) {
-            this.qualityScore = qualityScore;
-            return this;
-        }
-        public Float getQualityScore() {
-            return this.qualityScore;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setObjType(String objType) {
-            this.objType = objType;
-            return this;
-        }
-        public String getObjType() {
-            return this.objType;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setFeature(String feature) {
-            this.feature = feature;
-            return this;
-        }
-        public String getFeature() {
-            return this.feature;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setGender(String gender) {
-            this.gender = gender;
-            return this;
-        }
-        public String getGender() {
-            return this.gender;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setLowerColorScore(Float lowerColorScore) {
-            this.lowerColorScore = lowerColorScore;
-            return this;
-        }
-        public Float getLowerColorScore() {
-            return this.lowerColorScore;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setObjTypeScore(Float objTypeScore) {
-            this.objTypeScore = objTypeScore;
-            return this;
-        }
-        public Float getObjTypeScore() {
-            return this.objTypeScore;
         }
 
         public ExtractPedestrianFeatureAttrResponseBodyData setAge(String age) {
@@ -161,44 +113,20 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
             return this.ageScore;
         }
 
-        public ExtractPedestrianFeatureAttrResponseBodyData setUpperTypeScore(Float upperTypeScore) {
-            this.upperTypeScore = upperTypeScore;
+        public ExtractPedestrianFeatureAttrResponseBodyData setFeature(String feature) {
+            this.feature = feature;
             return this;
         }
-        public Float getUpperTypeScore() {
-            return this.upperTypeScore;
+        public String getFeature() {
+            return this.feature;
         }
 
-        public ExtractPedestrianFeatureAttrResponseBodyData setLowerTypeScore(Float lowerTypeScore) {
-            this.lowerTypeScore = lowerTypeScore;
+        public ExtractPedestrianFeatureAttrResponseBodyData setGender(String gender) {
+            this.gender = gender;
             return this;
         }
-        public Float getLowerTypeScore() {
-            return this.lowerTypeScore;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setLowerColor(String lowerColor) {
-            this.lowerColor = lowerColor;
-            return this;
-        }
-        public String getLowerColor() {
-            return this.lowerColor;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setHair(String hair) {
-            this.hair = hair;
-            return this;
-        }
-        public String getHair() {
-            return this.hair;
-        }
-
-        public ExtractPedestrianFeatureAttrResponseBodyData setUpperColor(String upperColor) {
-            this.upperColor = upperColor;
-            return this;
-        }
-        public String getUpperColor() {
-            return this.upperColor;
+        public String getGender() {
+            return this.gender;
         }
 
         public ExtractPedestrianFeatureAttrResponseBodyData setGenderScore(Float genderScore) {
@@ -209,12 +137,12 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
             return this.genderScore;
         }
 
-        public ExtractPedestrianFeatureAttrResponseBodyData setUpperType(String upperType) {
-            this.upperType = upperType;
+        public ExtractPedestrianFeatureAttrResponseBodyData setHair(String hair) {
+            this.hair = hair;
             return this;
         }
-        public String getUpperType() {
-            return this.upperType;
+        public String getHair() {
+            return this.hair;
         }
 
         public ExtractPedestrianFeatureAttrResponseBodyData setHairScore(Float hairScore) {
@@ -225,6 +153,22 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
             return this.hairScore;
         }
 
+        public ExtractPedestrianFeatureAttrResponseBodyData setLowerColor(String lowerColor) {
+            this.lowerColor = lowerColor;
+            return this;
+        }
+        public String getLowerColor() {
+            return this.lowerColor;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setLowerColorScore(Float lowerColorScore) {
+            this.lowerColorScore = lowerColorScore;
+            return this;
+        }
+        public Float getLowerColorScore() {
+            return this.lowerColorScore;
+        }
+
         public ExtractPedestrianFeatureAttrResponseBodyData setLowerType(String lowerType) {
             this.lowerType = lowerType;
             return this;
@@ -233,12 +177,28 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
             return this.lowerType;
         }
 
-        public ExtractPedestrianFeatureAttrResponseBodyData setUpperColorScore(Float upperColorScore) {
-            this.upperColorScore = upperColorScore;
+        public ExtractPedestrianFeatureAttrResponseBodyData setLowerTypeScore(Float lowerTypeScore) {
+            this.lowerTypeScore = lowerTypeScore;
             return this;
         }
-        public Float getUpperColorScore() {
-            return this.upperColorScore;
+        public Float getLowerTypeScore() {
+            return this.lowerTypeScore;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setObjType(String objType) {
+            this.objType = objType;
+            return this;
+        }
+        public String getObjType() {
+            return this.objType;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setObjTypeScore(Float objTypeScore) {
+            this.objTypeScore = objTypeScore;
+            return this;
+        }
+        public Float getObjTypeScore() {
+            return this.objTypeScore;
         }
 
         public ExtractPedestrianFeatureAttrResponseBodyData setOrientation(String orientation) {
@@ -255,6 +215,46 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         }
         public Float getOrientationScore() {
             return this.orientationScore;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setQualityScore(Float qualityScore) {
+            this.qualityScore = qualityScore;
+            return this;
+        }
+        public Float getQualityScore() {
+            return this.qualityScore;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setUpperColor(String upperColor) {
+            this.upperColor = upperColor;
+            return this;
+        }
+        public String getUpperColor() {
+            return this.upperColor;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setUpperColorScore(Float upperColorScore) {
+            this.upperColorScore = upperColorScore;
+            return this;
+        }
+        public Float getUpperColorScore() {
+            return this.upperColorScore;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setUpperType(String upperType) {
+            this.upperType = upperType;
+            return this;
+        }
+        public String getUpperType() {
+            return this.upperType;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setUpperTypeScore(Float upperTypeScore) {
+            this.upperTypeScore = upperTypeScore;
+            return this;
+        }
+        public Float getUpperTypeScore() {
+            return this.upperTypeScore;
         }
 
     }

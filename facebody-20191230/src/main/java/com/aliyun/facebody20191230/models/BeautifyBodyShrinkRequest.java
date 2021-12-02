@@ -4,101 +4,45 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BeautifyBodyShrinkRequest extends TeaModel {
-    @NameInMap("ImageURL")
-    public String imageURL;
-
-    @NameInMap("OriginalWidth")
-    public Long originalWidth;
-
-    @NameInMap("OriginalHeight")
-    public Long originalHeight;
-
-    @NameInMap("Custom")
-    public Long custom;
-
-    @NameInMap("MaleLiquifyDegree")
-    public Float maleLiquifyDegree;
-
-    @NameInMap("FemaleLiquifyDegree")
-    public Float femaleLiquifyDegree;
-
-    @NameInMap("LengthenDegree")
-    public Float lengthenDegree;
-
     @NameInMap("AgeRange")
     public String ageRangeShrink;
 
     @NameInMap("BodyBoxes")
     public String bodyBoxesShrink;
 
+    @NameInMap("Custom")
+    public Long custom;
+
     @NameInMap("FaceList")
     public String faceListShrink;
 
-    @NameInMap("PoseList")
-    public String poseListShrink;
+    @NameInMap("FemaleLiquifyDegree")
+    public Float femaleLiquifyDegree;
+
+    @NameInMap("ImageURL")
+    public String imageURL;
 
     @NameInMap("IsPregnant")
     public Boolean isPregnant;
 
+    @NameInMap("LengthenDegree")
+    public Float lengthenDegree;
+
+    @NameInMap("MaleLiquifyDegree")
+    public Float maleLiquifyDegree;
+
+    @NameInMap("OriginalHeight")
+    public Long originalHeight;
+
+    @NameInMap("OriginalWidth")
+    public Long originalWidth;
+
+    @NameInMap("PoseList")
+    public String poseListShrink;
+
     public static BeautifyBodyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BeautifyBodyShrinkRequest self = new BeautifyBodyShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BeautifyBodyShrinkRequest setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-        return this;
-    }
-    public String getImageURL() {
-        return this.imageURL;
-    }
-
-    public BeautifyBodyShrinkRequest setOriginalWidth(Long originalWidth) {
-        this.originalWidth = originalWidth;
-        return this;
-    }
-    public Long getOriginalWidth() {
-        return this.originalWidth;
-    }
-
-    public BeautifyBodyShrinkRequest setOriginalHeight(Long originalHeight) {
-        this.originalHeight = originalHeight;
-        return this;
-    }
-    public Long getOriginalHeight() {
-        return this.originalHeight;
-    }
-
-    public BeautifyBodyShrinkRequest setCustom(Long custom) {
-        this.custom = custom;
-        return this;
-    }
-    public Long getCustom() {
-        return this.custom;
-    }
-
-    public BeautifyBodyShrinkRequest setMaleLiquifyDegree(Float maleLiquifyDegree) {
-        this.maleLiquifyDegree = maleLiquifyDegree;
-        return this;
-    }
-    public Float getMaleLiquifyDegree() {
-        return this.maleLiquifyDegree;
-    }
-
-    public BeautifyBodyShrinkRequest setFemaleLiquifyDegree(Float femaleLiquifyDegree) {
-        this.femaleLiquifyDegree = femaleLiquifyDegree;
-        return this;
-    }
-    public Float getFemaleLiquifyDegree() {
-        return this.femaleLiquifyDegree;
-    }
-
-    public BeautifyBodyShrinkRequest setLengthenDegree(Float lengthenDegree) {
-        this.lengthenDegree = lengthenDegree;
-        return this;
-    }
-    public Float getLengthenDegree() {
-        return this.lengthenDegree;
     }
 
     public BeautifyBodyShrinkRequest setAgeRangeShrink(String ageRangeShrink) {
@@ -117,6 +61,14 @@ public class BeautifyBodyShrinkRequest extends TeaModel {
         return this.bodyBoxesShrink;
     }
 
+    public BeautifyBodyShrinkRequest setCustom(Long custom) {
+        this.custom = custom;
+        return this;
+    }
+    public Long getCustom() {
+        return this.custom;
+    }
+
     public BeautifyBodyShrinkRequest setFaceListShrink(String faceListShrink) {
         this.faceListShrink = faceListShrink;
         return this;
@@ -125,12 +77,20 @@ public class BeautifyBodyShrinkRequest extends TeaModel {
         return this.faceListShrink;
     }
 
-    public BeautifyBodyShrinkRequest setPoseListShrink(String poseListShrink) {
-        this.poseListShrink = poseListShrink;
+    public BeautifyBodyShrinkRequest setFemaleLiquifyDegree(Float femaleLiquifyDegree) {
+        this.femaleLiquifyDegree = femaleLiquifyDegree;
         return this;
     }
-    public String getPoseListShrink() {
-        return this.poseListShrink;
+    public Float getFemaleLiquifyDegree() {
+        return this.femaleLiquifyDegree;
+    }
+
+    public BeautifyBodyShrinkRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
     public BeautifyBodyShrinkRequest setIsPregnant(Boolean isPregnant) {
@@ -139,6 +99,46 @@ public class BeautifyBodyShrinkRequest extends TeaModel {
     }
     public Boolean getIsPregnant() {
         return this.isPregnant;
+    }
+
+    public BeautifyBodyShrinkRequest setLengthenDegree(Float lengthenDegree) {
+        this.lengthenDegree = lengthenDegree;
+        return this;
+    }
+    public Float getLengthenDegree() {
+        return this.lengthenDegree;
+    }
+
+    public BeautifyBodyShrinkRequest setMaleLiquifyDegree(Float maleLiquifyDegree) {
+        this.maleLiquifyDegree = maleLiquifyDegree;
+        return this;
+    }
+    public Float getMaleLiquifyDegree() {
+        return this.maleLiquifyDegree;
+    }
+
+    public BeautifyBodyShrinkRequest setOriginalHeight(Long originalHeight) {
+        this.originalHeight = originalHeight;
+        return this;
+    }
+    public Long getOriginalHeight() {
+        return this.originalHeight;
+    }
+
+    public BeautifyBodyShrinkRequest setOriginalWidth(Long originalWidth) {
+        this.originalWidth = originalWidth;
+        return this;
+    }
+    public Long getOriginalWidth() {
+        return this.originalWidth;
+    }
+
+    public BeautifyBodyShrinkRequest setPoseListShrink(String poseListShrink) {
+        this.poseListShrink = poseListShrink;
+        return this;
+    }
+    public String getPoseListShrink() {
+        return this.poseListShrink;
     }
 
 }

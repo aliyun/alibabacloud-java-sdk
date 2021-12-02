@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectIPCPedestrianResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectIPCPedestrianResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectIPCPedestrianResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectIPCPedestrianResponseBody self = new DetectIPCPedestrianResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectIPCPedestrianResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectIPCPedestrianResponseBody setData(DetectIPCPedestrianResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectIPCPedestrianResponseBody extends TeaModel {
     }
     public DetectIPCPedestrianResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectIPCPedestrianResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectIPCPedestrianResponseBodyDataImageInfoListElements extends TeaModel {

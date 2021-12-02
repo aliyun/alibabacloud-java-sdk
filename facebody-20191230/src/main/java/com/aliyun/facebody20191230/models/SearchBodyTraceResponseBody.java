@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SearchBodyTraceResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public SearchBodyTraceResponseBodyData data;
+
     // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public SearchBodyTraceResponseBodyData data;
-
     public static SearchBodyTraceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchBodyTraceResponseBody self = new SearchBodyTraceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchBodyTraceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SearchBodyTraceResponseBody setData(SearchBodyTraceResponseBodyData data) {
@@ -32,26 +24,34 @@ public class SearchBodyTraceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public SearchBodyTraceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class SearchBodyTraceResponseBodyDataMatchList extends TeaModel {
         // 数据库ID
         @NameInMap("DbId")
         public Long dbId;
 
+        // 自定义数据信息
+        @NameInMap("ExtraData")
+        public String extraData;
+
         // 人员ID
         @NameInMap("PersonId")
         public Long personId;
-
-        // TraceId
-        @NameInMap("TraceId")
-        public Long traceId;
 
         // 匹配度分值，越大越相似，取值范围[-1.0, 1.0]
         @NameInMap("Score")
         public Float score;
 
-        // 自定义数据信息
-        @NameInMap("ExtraData")
-        public String extraData;
+        // TraceId
+        @NameInMap("TraceId")
+        public Long traceId;
 
         public static SearchBodyTraceResponseBodyDataMatchList build(java.util.Map<String, ?> map) throws Exception {
             SearchBodyTraceResponseBodyDataMatchList self = new SearchBodyTraceResponseBodyDataMatchList();
@@ -66,20 +66,20 @@ public class SearchBodyTraceResponseBody extends TeaModel {
             return this.dbId;
         }
 
+        public SearchBodyTraceResponseBodyDataMatchList setExtraData(String extraData) {
+            this.extraData = extraData;
+            return this;
+        }
+        public String getExtraData() {
+            return this.extraData;
+        }
+
         public SearchBodyTraceResponseBodyDataMatchList setPersonId(Long personId) {
             this.personId = personId;
             return this;
         }
         public Long getPersonId() {
             return this.personId;
-        }
-
-        public SearchBodyTraceResponseBodyDataMatchList setTraceId(Long traceId) {
-            this.traceId = traceId;
-            return this;
-        }
-        public Long getTraceId() {
-            return this.traceId;
         }
 
         public SearchBodyTraceResponseBodyDataMatchList setScore(Float score) {
@@ -90,12 +90,12 @@ public class SearchBodyTraceResponseBody extends TeaModel {
             return this.score;
         }
 
-        public SearchBodyTraceResponseBodyDataMatchList setExtraData(String extraData) {
-            this.extraData = extraData;
+        public SearchBodyTraceResponseBodyDataMatchList setTraceId(Long traceId) {
+            this.traceId = traceId;
             return this;
         }
-        public String getExtraData() {
-            return this.extraData;
+        public Long getTraceId() {
+            return this.traceId;
         }
 
     }

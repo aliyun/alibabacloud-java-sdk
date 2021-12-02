@@ -4,24 +4,16 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BatchAddFacesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public BatchAddFacesResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public BatchAddFacesResponseBodyData data;
-
     public static BatchAddFacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchAddFacesResponseBody self = new BatchAddFacesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BatchAddFacesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BatchAddFacesResponseBody setData(BatchAddFacesResponseBodyData data) {
@@ -32,53 +24,20 @@ public class BatchAddFacesResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class BatchAddFacesResponseBodyDataInsertedFaces extends TeaModel {
-        @NameInMap("ImageURL")
-        public String imageURL;
-
-        @NameInMap("FaceId")
-        public String faceId;
-
-        @NameInMap("QualitieScore")
-        public Float qualitieScore;
-
-        public static BatchAddFacesResponseBodyDataInsertedFaces build(java.util.Map<String, ?> map) throws Exception {
-            BatchAddFacesResponseBodyDataInsertedFaces self = new BatchAddFacesResponseBodyDataInsertedFaces();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchAddFacesResponseBodyDataInsertedFaces setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
-        public BatchAddFacesResponseBodyDataInsertedFaces setFaceId(String faceId) {
-            this.faceId = faceId;
-            return this;
-        }
-        public String getFaceId() {
-            return this.faceId;
-        }
-
-        public BatchAddFacesResponseBodyDataInsertedFaces setQualitieScore(Float qualitieScore) {
-            this.qualitieScore = qualitieScore;
-            return this;
-        }
-        public Float getQualitieScore() {
-            return this.qualitieScore;
-        }
-
+    public BatchAddFacesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class BatchAddFacesResponseBodyDataFailedFaces extends TeaModel {
-        @NameInMap("ImageURL")
-        public String imageURL;
-
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("ImageURL")
+        public String imageURL;
 
         @NameInMap("Message")
         public String message;
@@ -88,20 +47,20 @@ public class BatchAddFacesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchAddFacesResponseBodyDataFailedFaces setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
         public BatchAddFacesResponseBodyDataFailedFaces setCode(String code) {
             this.code = code;
             return this;
         }
         public String getCode() {
             return this.code;
+        }
+
+        public BatchAddFacesResponseBodyDataFailedFaces setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
         public BatchAddFacesResponseBodyDataFailedFaces setMessage(String message) {
@@ -114,24 +73,57 @@ public class BatchAddFacesResponseBody extends TeaModel {
 
     }
 
-    public static class BatchAddFacesResponseBodyData extends TeaModel {
-        @NameInMap("InsertedFaces")
-        public java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> insertedFaces;
+    public static class BatchAddFacesResponseBodyDataInsertedFaces extends TeaModel {
+        @NameInMap("FaceId")
+        public String faceId;
 
+        @NameInMap("ImageURL")
+        public String imageURL;
+
+        @NameInMap("QualitieScore")
+        public Float qualitieScore;
+
+        public static BatchAddFacesResponseBodyDataInsertedFaces build(java.util.Map<String, ?> map) throws Exception {
+            BatchAddFacesResponseBodyDataInsertedFaces self = new BatchAddFacesResponseBodyDataInsertedFaces();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchAddFacesResponseBodyDataInsertedFaces setFaceId(String faceId) {
+            this.faceId = faceId;
+            return this;
+        }
+        public String getFaceId() {
+            return this.faceId;
+        }
+
+        public BatchAddFacesResponseBodyDataInsertedFaces setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
+        }
+
+        public BatchAddFacesResponseBodyDataInsertedFaces setQualitieScore(Float qualitieScore) {
+            this.qualitieScore = qualitieScore;
+            return this;
+        }
+        public Float getQualitieScore() {
+            return this.qualitieScore;
+        }
+
+    }
+
+    public static class BatchAddFacesResponseBodyData extends TeaModel {
         @NameInMap("FailedFaces")
         public java.util.List<BatchAddFacesResponseBodyDataFailedFaces> failedFaces;
+
+        @NameInMap("InsertedFaces")
+        public java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> insertedFaces;
 
         public static BatchAddFacesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BatchAddFacesResponseBodyData self = new BatchAddFacesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public BatchAddFacesResponseBodyData setInsertedFaces(java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> insertedFaces) {
-            this.insertedFaces = insertedFaces;
-            return this;
-        }
-        public java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> getInsertedFaces() {
-            return this.insertedFaces;
         }
 
         public BatchAddFacesResponseBodyData setFailedFaces(java.util.List<BatchAddFacesResponseBodyDataFailedFaces> failedFaces) {
@@ -140,6 +132,14 @@ public class BatchAddFacesResponseBody extends TeaModel {
         }
         public java.util.List<BatchAddFacesResponseBodyDataFailedFaces> getFailedFaces() {
             return this.failedFaces;
+        }
+
+        public BatchAddFacesResponseBodyData setInsertedFaces(java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> insertedFaces) {
+            this.insertedFaces = insertedFaces;
+            return this;
+        }
+        public java.util.List<BatchAddFacesResponseBodyDataInsertedFaces> getInsertedFaces() {
+            return this.insertedFaces;
         }
 
     }

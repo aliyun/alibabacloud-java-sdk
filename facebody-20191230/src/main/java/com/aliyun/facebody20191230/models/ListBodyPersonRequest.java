@@ -8,13 +8,13 @@ public class ListBodyPersonRequest extends TeaModel {
     @NameInMap("DbId")
     public Long dbId;
 
-    // 起始位置(不含)
-    @NameInMap("Offset")
-    public Long offset;
-
     // 分页数量
     @NameInMap("Limit")
     public Long limit;
+
+    // 起始位置(不含)
+    @NameInMap("Offset")
+    public Long offset;
 
     public static ListBodyPersonRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBodyPersonRequest self = new ListBodyPersonRequest();
@@ -29,20 +29,20 @@ public class ListBodyPersonRequest extends TeaModel {
         return this.dbId;
     }
 
-    public ListBodyPersonRequest setOffset(Long offset) {
-        this.offset = offset;
-        return this;
-    }
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public ListBodyPersonRequest setLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     public Long getLimit() {
         return this.limit;
+    }
+
+    public ListBodyPersonRequest setOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    public Long getOffset() {
+        return this.offset;
     }
 
 }

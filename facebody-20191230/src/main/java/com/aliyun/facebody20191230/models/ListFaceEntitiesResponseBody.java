@@ -4,23 +4,15 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListFaceEntitiesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListFaceEntitiesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListFaceEntitiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFaceEntitiesResponseBody self = new ListFaceEntitiesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFaceEntitiesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListFaceEntitiesResponseBody setData(ListFaceEntitiesResponseBodyData data) {
@@ -31,21 +23,29 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListFaceEntitiesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListFaceEntitiesResponseBodyDataEntities extends TeaModel {
+        @NameInMap("CreatedAt")
+        public Long createdAt;
+
         @NameInMap("DbName")
         public String dbName;
 
         @NameInMap("EntityId")
         public String entityId;
 
-        @NameInMap("Labels")
-        public String labels;
-
-        @NameInMap("CreatedAt")
-        public Long createdAt;
-
         @NameInMap("FaceCount")
         public Integer faceCount;
+
+        @NameInMap("Labels")
+        public String labels;
 
         @NameInMap("UpdatedAt")
         public Long updatedAt;
@@ -53,6 +53,14 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         public static ListFaceEntitiesResponseBodyDataEntities build(java.util.Map<String, ?> map) throws Exception {
             ListFaceEntitiesResponseBodyDataEntities self = new ListFaceEntitiesResponseBodyDataEntities();
             return TeaModel.build(map, self);
+        }
+
+        public ListFaceEntitiesResponseBodyDataEntities setCreatedAt(Long createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public Long getCreatedAt() {
+            return this.createdAt;
         }
 
         public ListFaceEntitiesResponseBodyDataEntities setDbName(String dbName) {
@@ -71,28 +79,20 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
             return this.entityId;
         }
 
-        public ListFaceEntitiesResponseBodyDataEntities setLabels(String labels) {
-            this.labels = labels;
-            return this;
-        }
-        public String getLabels() {
-            return this.labels;
-        }
-
-        public ListFaceEntitiesResponseBodyDataEntities setCreatedAt(Long createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public Long getCreatedAt() {
-            return this.createdAt;
-        }
-
         public ListFaceEntitiesResponseBodyDataEntities setFaceCount(Integer faceCount) {
             this.faceCount = faceCount;
             return this;
         }
         public Integer getFaceCount() {
             return this.faceCount;
+        }
+
+        public ListFaceEntitiesResponseBodyDataEntities setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
         }
 
         public ListFaceEntitiesResponseBodyDataEntities setUpdatedAt(Long updatedAt) {
@@ -106,18 +106,26 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
     }
 
     public static class ListFaceEntitiesResponseBodyData extends TeaModel {
+        @NameInMap("Entities")
+        public java.util.List<ListFaceEntitiesResponseBodyDataEntities> entities;
+
         @NameInMap("Token")
         public String token;
 
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Entities")
-        public java.util.List<ListFaceEntitiesResponseBodyDataEntities> entities;
-
         public static ListFaceEntitiesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListFaceEntitiesResponseBodyData self = new ListFaceEntitiesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListFaceEntitiesResponseBodyData setEntities(java.util.List<ListFaceEntitiesResponseBodyDataEntities> entities) {
+            this.entities = entities;
+            return this;
+        }
+        public java.util.List<ListFaceEntitiesResponseBodyDataEntities> getEntities() {
+            return this.entities;
         }
 
         public ListFaceEntitiesResponseBodyData setToken(String token) {
@@ -134,14 +142,6 @@ public class ListFaceEntitiesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListFaceEntitiesResponseBodyData setEntities(java.util.List<ListFaceEntitiesResponseBodyDataEntities> entities) {
-            this.entities = entities;
-            return this;
-        }
-        public java.util.List<ListFaceEntitiesResponseBodyDataEntities> getEntities() {
-            return this.entities;
         }
 
     }

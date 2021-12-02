@@ -7,20 +7,20 @@ public class SearchFaceRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    @NameInMap("DbNames")
+    public String dbNames;
+
     @NameInMap("ImageUrl")
     public String imageUrl;
 
     @NameInMap("Limit")
     public Integer limit;
 
-    @NameInMap("DbNames")
-    public String dbNames;
+    @NameInMap("MaxFaceNum")
+    public Long maxFaceNum;
 
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
-
-    @NameInMap("MaxFaceNum")
-    public Long maxFaceNum;
 
     public static SearchFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceRequest self = new SearchFaceRequest();
@@ -33,6 +33,14 @@ public class SearchFaceRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public SearchFaceRequest setDbNames(String dbNames) {
+        this.dbNames = dbNames;
+        return this;
+    }
+    public String getDbNames() {
+        return this.dbNames;
     }
 
     public SearchFaceRequest setImageUrl(String imageUrl) {
@@ -51,12 +59,12 @@ public class SearchFaceRequest extends TeaModel {
         return this.limit;
     }
 
-    public SearchFaceRequest setDbNames(String dbNames) {
-        this.dbNames = dbNames;
+    public SearchFaceRequest setMaxFaceNum(Long maxFaceNum) {
+        this.maxFaceNum = maxFaceNum;
         return this;
     }
-    public String getDbNames() {
-        return this.dbNames;
+    public Long getMaxFaceNum() {
+        return this.maxFaceNum;
     }
 
     public SearchFaceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
@@ -65,14 +73,6 @@ public class SearchFaceRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
-    }
-
-    public SearchFaceRequest setMaxFaceNum(Long maxFaceNum) {
-        this.maxFaceNum = maxFaceNum;
-        return this;
-    }
-    public Long getMaxFaceNum() {
-        return this.maxFaceNum;
     }
 
 }

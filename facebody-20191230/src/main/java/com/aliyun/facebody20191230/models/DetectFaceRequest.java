@@ -10,14 +10,14 @@ public class DetectFaceRequest extends TeaModel {
     @NameInMap("Landmark")
     public Boolean landmark;
 
-    @NameInMap("Quality")
-    public Boolean quality;
+    @NameInMap("MaxFaceNumber")
+    public Long maxFaceNumber;
 
     @NameInMap("Pose")
     public Boolean pose;
 
-    @NameInMap("MaxFaceNumber")
-    public Long maxFaceNumber;
+    @NameInMap("Quality")
+    public Boolean quality;
 
     public static DetectFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceRequest self = new DetectFaceRequest();
@@ -40,12 +40,12 @@ public class DetectFaceRequest extends TeaModel {
         return this.landmark;
     }
 
-    public DetectFaceRequest setQuality(Boolean quality) {
-        this.quality = quality;
+    public DetectFaceRequest setMaxFaceNumber(Long maxFaceNumber) {
+        this.maxFaceNumber = maxFaceNumber;
         return this;
     }
-    public Boolean getQuality() {
-        return this.quality;
+    public Long getMaxFaceNumber() {
+        return this.maxFaceNumber;
     }
 
     public DetectFaceRequest setPose(Boolean pose) {
@@ -56,12 +56,12 @@ public class DetectFaceRequest extends TeaModel {
         return this.pose;
     }
 
-    public DetectFaceRequest setMaxFaceNumber(Long maxFaceNumber) {
-        this.maxFaceNumber = maxFaceNumber;
+    public DetectFaceRequest setQuality(Boolean quality) {
+        this.quality = quality;
         return this;
     }
-    public Long getMaxFaceNumber() {
-        return this.maxFaceNumber;
+    public Boolean getQuality() {
+        return this.quality;
     }
 
 }
