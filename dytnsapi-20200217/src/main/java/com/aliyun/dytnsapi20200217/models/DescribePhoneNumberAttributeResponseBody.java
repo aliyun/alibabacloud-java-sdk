@@ -10,11 +10,11 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PhoneNumberAttribute")
     public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePhoneNumberAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberAttributeResponseBody self = new DescribePhoneNumberAttributeResponseBody();
@@ -37,20 +37,20 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribePhoneNumberAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePhoneNumberAttributeResponseBody setPhoneNumberAttribute(DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute) {
         this.phoneNumberAttribute = phoneNumberAttribute;
         return this;
     }
     public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute getPhoneNumberAttribute() {
         return this.phoneNumberAttribute;
+    }
+
+    public DescribePhoneNumberAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute extends TeaModel {
@@ -60,14 +60,14 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         @NameInMap("Carrier")
         public String carrier;
 
+        @NameInMap("City")
+        public String city;
+
         @NameInMap("IsNumberPortability")
         public Boolean isNumberPortability;
 
         @NameInMap("NumberSegment")
         public Long numberSegment;
-
-        @NameInMap("City")
-        public String city;
 
         @NameInMap("Province")
         public String province;
@@ -93,6 +93,14 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             return this.carrier;
         }
 
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
         public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setIsNumberPortability(Boolean isNumberPortability) {
             this.isNumberPortability = isNumberPortability;
             return this;
@@ -107,14 +115,6 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         }
         public Long getNumberSegment() {
             return this.numberSegment;
-        }
-
-        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setCity(String city) {
-            this.city = city;
-            return this;
-        }
-        public String getCity() {
-            return this.city;
         }
 
         public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setProvince(String province) {
