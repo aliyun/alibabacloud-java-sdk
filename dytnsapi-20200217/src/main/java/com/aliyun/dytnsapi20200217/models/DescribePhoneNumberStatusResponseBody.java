@@ -10,11 +10,11 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PhoneStatus")
     public DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePhoneNumberStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberStatusResponseBody self = new DescribePhoneNumberStatusResponseBody();
@@ -37,14 +37,6 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribePhoneNumberStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribePhoneNumberStatusResponseBody setPhoneStatus(DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus) {
         this.phoneStatus = phoneStatus;
         return this;
@@ -53,27 +45,35 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
         return this.phoneStatus;
     }
 
+    public DescribePhoneNumberStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribePhoneNumberStatusResponseBodyPhoneStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Carrier")
+        public String carrier;
 
         @NameInMap("SerialId")
         public String serialId;
 
-        @NameInMap("Carrier")
-        public String carrier;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribePhoneNumberStatusResponseBodyPhoneStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribePhoneNumberStatusResponseBodyPhoneStatus self = new DescribePhoneNumberStatusResponseBodyPhoneStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribePhoneNumberStatusResponseBodyPhoneStatus setStatus(String status) {
-            this.status = status;
+        public DescribePhoneNumberStatusResponseBodyPhoneStatus setCarrier(String carrier) {
+            this.carrier = carrier;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCarrier() {
+            return this.carrier;
         }
 
         public DescribePhoneNumberStatusResponseBodyPhoneStatus setSerialId(String serialId) {
@@ -84,12 +84,12 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
             return this.serialId;
         }
 
-        public DescribePhoneNumberStatusResponseBodyPhoneStatus setCarrier(String carrier) {
-            this.carrier = carrier;
+        public DescribePhoneNumberStatusResponseBodyPhoneStatus setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getCarrier() {
-            return this.carrier;
+        public String getStatus() {
+            return this.status;
         }
 
     }

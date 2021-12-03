@@ -7,14 +7,14 @@ public class DescribePhoneNumberAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     public static DescribePhoneNumberAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberAttributeRequest self = new DescribePhoneNumberAttributeRequest();
@@ -27,6 +27,14 @@ public class DescribePhoneNumberAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribePhoneNumberAttributeRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
 
     public DescribePhoneNumberAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class DescribePhoneNumberAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribePhoneNumberAttributeRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
 }

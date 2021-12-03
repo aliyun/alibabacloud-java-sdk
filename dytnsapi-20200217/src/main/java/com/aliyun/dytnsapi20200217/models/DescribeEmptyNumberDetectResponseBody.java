@@ -4,29 +4,21 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmptyNumberDetectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public java.util.List<DescribeEmptyNumberDetectResponseBodyData> data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeEmptyNumberDetectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEmptyNumberDetectResponseBody self = new DescribeEmptyNumberDetectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEmptyNumberDetectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEmptyNumberDetectResponseBody setCode(String code) {
@@ -37,6 +29,14 @@ public class DescribeEmptyNumberDetectResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeEmptyNumberDetectResponseBody setData(java.util.List<DescribeEmptyNumberDetectResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeEmptyNumberDetectResponseBodyData> getData() {
+        return this.data;
+    }
+
     public DescribeEmptyNumberDetectResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -45,12 +45,12 @@ public class DescribeEmptyNumberDetectResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeEmptyNumberDetectResponseBody setData(java.util.List<DescribeEmptyNumberDetectResponseBodyData> data) {
-        this.data = data;
+    public DescribeEmptyNumberDetectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeEmptyNumberDetectResponseBodyData> getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeEmptyNumberDetectResponseBodyData extends TeaModel {

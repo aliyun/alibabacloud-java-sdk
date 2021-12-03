@@ -7,14 +7,14 @@ public class DescribePhoneNumberResaleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     @NameInMap("Since")
     public String since;
@@ -32,6 +32,14 @@ public class DescribePhoneNumberResaleRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribePhoneNumberResaleRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
     public DescribePhoneNumberResaleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class DescribePhoneNumberResaleRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribePhoneNumberResaleRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     public DescribePhoneNumberResaleRequest setSince(String since) {
