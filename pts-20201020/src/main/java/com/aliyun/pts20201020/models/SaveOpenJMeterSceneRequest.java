@@ -206,8 +206,8 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         public Integer duration;
 
         // 关联的环境id
-        @NameInMap("EnviromentId")
-        public String enviromentId;
+        @NameInMap("EnvironmentId")
+        public String environmentId;
 
         // 文件列表
         @NameInMap("FileList")
@@ -306,12 +306,12 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
             return this.duration;
         }
 
-        public SaveOpenJMeterSceneRequestOpenJMeterScene setEnviromentId(String enviromentId) {
-            this.enviromentId = enviromentId;
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setEnvironmentId(String environmentId) {
+            this.environmentId = environmentId;
             return this;
         }
-        public String getEnviromentId() {
-            return this.enviromentId;
+        public String getEnvironmentId() {
+            return this.environmentId;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setFileList(java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneFileList> fileList) {
