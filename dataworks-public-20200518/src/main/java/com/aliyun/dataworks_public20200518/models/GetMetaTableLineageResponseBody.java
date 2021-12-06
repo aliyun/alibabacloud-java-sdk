@@ -76,6 +76,9 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableLineageResponseBodyDataDataEntityList extends TeaModel {
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
         @NameInMap("TableGuid")
         public String tableGuid;
 
@@ -85,6 +88,14 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         public static GetMetaTableLineageResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableLineageResponseBodyDataDataEntityList self = new GetMetaTableLineageResponseBodyDataDataEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaTableLineageResponseBodyDataDataEntityList setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public GetMetaTableLineageResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
