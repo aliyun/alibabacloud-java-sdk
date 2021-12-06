@@ -103,6 +103,9 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         @NameInMap("Position")
         public Integer position;
 
+        @NameInMap("RelationCount")
+        public Long relationCount;
+
         public static GetMetaTableColumnResponseBodyDataColumnList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableColumnResponseBodyDataColumnList self = new GetMetaTableColumnResponseBodyDataColumnList();
             return TeaModel.build(map, self);
@@ -178,6 +181,14 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         }
         public Integer getPosition() {
             return this.position;
+        }
+
+        public GetMetaTableColumnResponseBodyDataColumnList setRelationCount(Long relationCount) {
+            this.relationCount = relationCount;
+            return this;
+        }
+        public Long getRelationCount() {
+            return this.relationCount;
         }
 
     }
