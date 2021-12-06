@@ -4,23 +4,17 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeDdosEventListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -30,20 +24,12 @@ public class DescribeDdosEventListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDdosEventListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeDdosEventListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeDdosEventListRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeDdosEventListRequest setDdosRegionId(String ddosRegionId) {
@@ -54,14 +40,6 @@ public class DescribeDdosEventListRequest extends TeaModel {
         return this.ddosRegionId;
     }
 
-    public DescribeDdosEventListRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
     public DescribeDdosEventListRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -70,12 +48,12 @@ public class DescribeDdosEventListRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeDdosEventListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeDdosEventListRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeDdosEventListRequest setPageSize(Integer pageSize) {

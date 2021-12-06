@@ -32,48 +32,24 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
     }
 
     public static class DescribeBgpPackByIpResponseBodyDdosbgpInfo extends TeaModel {
-        @NameInMap("ExpireTime")
-        public Long expireTime;
-
-        @NameInMap("ElasticThreshold")
-        public Integer elasticThreshold;
-
-        @NameInMap("Ip")
-        public String ip;
-
         @NameInMap("BaseThreshold")
         public Integer baseThreshold;
 
         @NameInMap("DdosbgpInstanceId")
         public String ddosbgpInstanceId;
 
+        @NameInMap("ElasticThreshold")
+        public Integer elasticThreshold;
+
+        @NameInMap("ExpireTime")
+        public Long expireTime;
+
+        @NameInMap("Ip")
+        public String ip;
+
         public static DescribeBgpPackByIpResponseBodyDdosbgpInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeBgpPackByIpResponseBodyDdosbgpInfo self = new DescribeBgpPackByIpResponseBodyDdosbgpInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setExpireTime(Long expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public Long getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setElasticThreshold(Integer elasticThreshold) {
-            this.elasticThreshold = elasticThreshold;
-            return this;
-        }
-        public Integer getElasticThreshold() {
-            return this.elasticThreshold;
-        }
-
-        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
         }
 
         public DescribeBgpPackByIpResponseBodyDdosbgpInfo setBaseThreshold(Integer baseThreshold) {
@@ -90,6 +66,30 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
         }
         public String getDdosbgpInstanceId() {
             return this.ddosbgpInstanceId;
+        }
+
+        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setElasticThreshold(Integer elasticThreshold) {
+            this.elasticThreshold = elasticThreshold;
+            return this;
+        }
+        public Integer getElasticThreshold() {
+            return this.elasticThreshold;
+        }
+
+        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeBgpPackByIpResponseBodyDdosbgpInfo setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
         }
 
     }
