@@ -1,3 +1,6 @@
+2021-12-06 Version: 1.8.2
+- Add new error code.
+
 2021-11-26 Version: 1.8.1
 - New SDK.
 
