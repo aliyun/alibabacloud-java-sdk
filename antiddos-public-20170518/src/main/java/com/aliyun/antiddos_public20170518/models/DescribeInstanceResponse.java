@@ -3,21 +3,21 @@ package com.aliyun.antiddos_public20170518.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeCreditInfoResponse extends TeaModel {
+public class DescribeInstanceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeCreditInfoResponseBody body;
+    public DescribeInstanceResponseBody body;
 
-    public static DescribeCreditInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeCreditInfoResponse self = new DescribeCreditInfoResponse();
+    public static DescribeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceResponse self = new DescribeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCreditInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeCreditInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeCreditInfoResponse setBody(DescribeCreditInfoResponseBody body) {
+    public DescribeInstanceResponse setBody(DescribeInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeCreditInfoResponseBody getBody() {
+    public DescribeInstanceResponseBody getBody() {
         return this.body;
     }
 

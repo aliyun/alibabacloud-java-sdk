@@ -32,11 +32,11 @@ public class DescribeDdosCountResponseBody extends TeaModel {
     }
 
     public static class DescribeDdosCountResponseBodyDdosCount extends TeaModel {
-        @NameInMap("DefenseCount")
-        public Integer defenseCount;
-
         @NameInMap("BlackholeCount")
         public Integer blackholeCount;
+
+        @NameInMap("DefenseCount")
+        public Integer defenseCount;
 
         @NameInMap("InstacenCount")
         public Integer instacenCount;
@@ -46,20 +46,20 @@ public class DescribeDdosCountResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDdosCountResponseBodyDdosCount setDefenseCount(Integer defenseCount) {
-            this.defenseCount = defenseCount;
-            return this;
-        }
-        public Integer getDefenseCount() {
-            return this.defenseCount;
-        }
-
         public DescribeDdosCountResponseBodyDdosCount setBlackholeCount(Integer blackholeCount) {
             this.blackholeCount = blackholeCount;
             return this;
         }
         public Integer getBlackholeCount() {
             return this.blackholeCount;
+        }
+
+        public DescribeDdosCountResponseBodyDdosCount setDefenseCount(Integer defenseCount) {
+            this.defenseCount = defenseCount;
+            return this;
+        }
+        public Integer getDefenseCount() {
+            return this.defenseCount;
         }
 
         public DescribeDdosCountResponseBodyDdosCount setInstacenCount(Integer instacenCount) {

@@ -4,43 +4,29 @@ package com.aliyun.antiddos_public20170518.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("BegTime")
+    public Long begTime;
 
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("BegTime")
-    public Long begTime;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     public static DescribeCapRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapRequest self = new DescribeCapRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCapRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeCapRequest setBegTime(Long begTime) {
+        this.begTime = begTime;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeCapRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
+    public Long getBegTime() {
+        return this.begTime;
     }
 
     public DescribeCapRequest setDdosRegionId(String ddosRegionId) {
@@ -51,14 +37,6 @@ public class DescribeCapRequest extends TeaModel {
         return this.ddosRegionId;
     }
 
-    public DescribeCapRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
     public DescribeCapRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -67,12 +45,12 @@ public class DescribeCapRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeCapRequest setBegTime(Long begTime) {
-        this.begTime = begTime;
+    public DescribeCapRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public Long getBegTime() {
-        return this.begTime;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
 }
