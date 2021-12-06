@@ -10,6 +10,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     @NameInMap("AttackType")
     public String attackType;
 
+    @NameInMap("BuyVersion")
+    public Long buyVersion;
+
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -77,6 +80,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     }
     public String getAttackType() {
         return this.attackType;
+    }
+
+    public DescribeRiskEventGroupRequest setBuyVersion(Long buyVersion) {
+        this.buyVersion = buyVersion;
+        return this;
+    }
+    public Long getBuyVersion() {
+        return this.buyVersion;
     }
 
     public DescribeRiskEventGroupRequest setCurrentPage(String currentPage) {
