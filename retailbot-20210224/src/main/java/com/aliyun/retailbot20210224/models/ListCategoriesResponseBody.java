@@ -4,17 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 知识类目集合
     @NameInMap("Categories")
     public java.util.List<ListCategoriesResponseBodyCategories> categories;
-
-    // 是否成功标示
-    @NameInMap("Success")
-    public Boolean success;
 
     // 返回code
     @NameInMap("Code")
@@ -24,17 +16,17 @@ public class ListCategoriesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ListCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCategoriesResponseBody self = new ListCategoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCategoriesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListCategoriesResponseBody setCategories(java.util.List<ListCategoriesResponseBodyCategories> categories) {
@@ -43,14 +35,6 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
     public java.util.List<ListCategoriesResponseBodyCategories> getCategories() {
         return this.categories;
-    }
-
-    public ListCategoriesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListCategoriesResponseBody setCode(String code) {
@@ -69,18 +53,34 @@ public class ListCategoriesResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListCategoriesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListCategoriesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class ListCategoriesResponseBodyCategoriesChildren extends TeaModel {
         // 类目id
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 父类目id
-        @NameInMap("ParentCategoryId")
-        public Long parentCategoryId;
-
         // 类目名称
         @NameInMap("CategoryName")
         public String categoryName;
+
+        // 父类目id
+        @NameInMap("ParentCategoryId")
+        public Long parentCategoryId;
 
         public static ListCategoriesResponseBodyCategoriesChildren build(java.util.Map<String, ?> map) throws Exception {
             ListCategoriesResponseBodyCategoriesChildren self = new ListCategoriesResponseBodyCategoriesChildren();
@@ -95,20 +95,20 @@ public class ListCategoriesResponseBody extends TeaModel {
             return this.categoryId;
         }
 
-        public ListCategoriesResponseBodyCategoriesChildren setParentCategoryId(Long parentCategoryId) {
-            this.parentCategoryId = parentCategoryId;
-            return this;
-        }
-        public Long getParentCategoryId() {
-            return this.parentCategoryId;
-        }
-
         public ListCategoriesResponseBodyCategoriesChildren setCategoryName(String categoryName) {
             this.categoryName = categoryName;
             return this;
         }
         public String getCategoryName() {
             return this.categoryName;
+        }
+
+        public ListCategoriesResponseBodyCategoriesChildren setParentCategoryId(Long parentCategoryId) {
+            this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+        public Long getParentCategoryId() {
+            return this.parentCategoryId;
         }
 
     }
@@ -118,10 +118,6 @@ public class ListCategoriesResponseBody extends TeaModel {
         @NameInMap("CategoryId")
         public Long categoryId;
 
-        // 父类目id
-        @NameInMap("ParentCategoryId")
-        public Long parentCategoryId;
-
         // 类目名称
         @NameInMap("CategoryName")
         public String categoryName;
@@ -129,6 +125,10 @@ public class ListCategoriesResponseBody extends TeaModel {
         // 子级类目集合
         @NameInMap("Children")
         public java.util.List<ListCategoriesResponseBodyCategoriesChildren> children;
+
+        // 父类目id
+        @NameInMap("ParentCategoryId")
+        public Long parentCategoryId;
 
         public static ListCategoriesResponseBodyCategories build(java.util.Map<String, ?> map) throws Exception {
             ListCategoriesResponseBodyCategories self = new ListCategoriesResponseBodyCategories();
@@ -141,14 +141,6 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
         public Long getCategoryId() {
             return this.categoryId;
-        }
-
-        public ListCategoriesResponseBodyCategories setParentCategoryId(Long parentCategoryId) {
-            this.parentCategoryId = parentCategoryId;
-            return this;
-        }
-        public Long getParentCategoryId() {
-            return this.parentCategoryId;
         }
 
         public ListCategoriesResponseBodyCategories setCategoryName(String categoryName) {
@@ -165,6 +157,14 @@ public class ListCategoriesResponseBody extends TeaModel {
         }
         public java.util.List<ListCategoriesResponseBodyCategoriesChildren> getChildren() {
             return this.children;
+        }
+
+        public ListCategoriesResponseBodyCategories setParentCategoryId(Long parentCategoryId) {
+            this.parentCategoryId = parentCategoryId;
+            return this;
+        }
+        public Long getParentCategoryId() {
+            return this.parentCategoryId;
         }
 
     }

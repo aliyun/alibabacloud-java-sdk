@@ -4,18 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListPackageVersionsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 包集合
-    @NameInMap("Packages")
-    public java.util.List<ListPackageVersionsResponseBodyPackages> packages;
-
-    // 是否成功标示
-    @NameInMap("Success")
-    public Boolean success;
-
     // 返回code
     @NameInMap("Code")
     public String code;
@@ -24,33 +12,21 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // 包集合
+    @NameInMap("Packages")
+    public java.util.List<ListPackageVersionsResponseBodyPackages> packages;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ListPackageVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPackageVersionsResponseBody self = new ListPackageVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPackageVersionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListPackageVersionsResponseBody setPackages(java.util.List<ListPackageVersionsResponseBodyPackages> packages) {
-        this.packages = packages;
-        return this;
-    }
-    public java.util.List<ListPackageVersionsResponseBodyPackages> getPackages() {
-        return this.packages;
-    }
-
-    public ListPackageVersionsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ListPackageVersionsResponseBody setCode(String code) {
@@ -69,30 +45,54 @@ public class ListPackageVersionsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListPackageVersionsResponseBody setPackages(java.util.List<ListPackageVersionsResponseBodyPackages> packages) {
+        this.packages = packages;
+        return this;
+    }
+    public java.util.List<ListPackageVersionsResponseBodyPackages> getPackages() {
+        return this.packages;
+    }
+
+    public ListPackageVersionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListPackageVersionsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class ListPackageVersionsResponseBodyPackagesPackageDetails extends TeaModel {
-        // 包版本
-        @NameInMap("PackageVersion")
-        public String packageVersion;
-
-        // 包详细描述
-        @NameInMap("PackageDetailDescription")
-        public String packageDetailDescription;
-
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
-
-        // 修改时间
-        @NameInMap("ModifyTime")
-        public String modifyTime;
 
         // 创建人id
         @NameInMap("CreateUserId")
         public String createUserId;
 
+        // 修改时间
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
         // 修改人id
         @NameInMap("ModifyUserId")
         public String modifyUserId;
+
+        // 包详细描述
+        @NameInMap("PackageDetailDescription")
+        public String packageDetailDescription;
+
+        // 包版本
+        @NameInMap("PackageVersion")
+        public String packageVersion;
 
         // 发布时间
         @NameInMap("PublishTime")
@@ -103,36 +103,12 @@ public class ListPackageVersionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListPackageVersionsResponseBodyPackagesPackageDetails setPackageVersion(String packageVersion) {
-            this.packageVersion = packageVersion;
-            return this;
-        }
-        public String getPackageVersion() {
-            return this.packageVersion;
-        }
-
-        public ListPackageVersionsResponseBodyPackagesPackageDetails setPackageDetailDescription(String packageDetailDescription) {
-            this.packageDetailDescription = packageDetailDescription;
-            return this;
-        }
-        public String getPackageDetailDescription() {
-            return this.packageDetailDescription;
-        }
-
         public ListPackageVersionsResponseBodyPackagesPackageDetails setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public ListPackageVersionsResponseBodyPackagesPackageDetails setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
         }
 
         public ListPackageVersionsResponseBodyPackagesPackageDetails setCreateUserId(String createUserId) {
@@ -143,12 +119,36 @@ public class ListPackageVersionsResponseBody extends TeaModel {
             return this.createUserId;
         }
 
+        public ListPackageVersionsResponseBodyPackagesPackageDetails setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
         public ListPackageVersionsResponseBodyPackagesPackageDetails setModifyUserId(String modifyUserId) {
             this.modifyUserId = modifyUserId;
             return this;
         }
         public String getModifyUserId() {
             return this.modifyUserId;
+        }
+
+        public ListPackageVersionsResponseBodyPackagesPackageDetails setPackageDetailDescription(String packageDetailDescription) {
+            this.packageDetailDescription = packageDetailDescription;
+            return this;
+        }
+        public String getPackageDetailDescription() {
+            return this.packageDetailDescription;
+        }
+
+        public ListPackageVersionsResponseBodyPackagesPackageDetails setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
         }
 
         public ListPackageVersionsResponseBodyPackagesPackageDetails setPublishTime(String publishTime) {
@@ -162,10 +162,6 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPackageVersionsResponseBodyPackages extends TeaModel {
-        // 包名
-        @NameInMap("PackageName")
-        public String packageName;
-
         // 包code
         @NameInMap("PackageCode")
         public String packageCode;
@@ -174,17 +170,13 @@ public class ListPackageVersionsResponseBody extends TeaModel {
         @NameInMap("PackageDetails")
         public java.util.List<ListPackageVersionsResponseBodyPackagesPackageDetails> packageDetails;
 
+        // 包名
+        @NameInMap("PackageName")
+        public String packageName;
+
         public static ListPackageVersionsResponseBodyPackages build(java.util.Map<String, ?> map) throws Exception {
             ListPackageVersionsResponseBodyPackages self = new ListPackageVersionsResponseBodyPackages();
             return TeaModel.build(map, self);
-        }
-
-        public ListPackageVersionsResponseBodyPackages setPackageName(String packageName) {
-            this.packageName = packageName;
-            return this;
-        }
-        public String getPackageName() {
-            return this.packageName;
         }
 
         public ListPackageVersionsResponseBodyPackages setPackageCode(String packageCode) {
@@ -201,6 +193,14 @@ public class ListPackageVersionsResponseBody extends TeaModel {
         }
         public java.util.List<ListPackageVersionsResponseBodyPackagesPackageDetails> getPackageDetails() {
             return this.packageDetails;
+        }
+
+        public ListPackageVersionsResponseBodyPackages setPackageName(String packageName) {
+            this.packageName = packageName;
+            return this;
+        }
+        public String getPackageName() {
+            return this.packageName;
         }
 
     }

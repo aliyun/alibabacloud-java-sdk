@@ -4,53 +4,29 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMessageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("Code")
+    public String code;
 
     // 问答返回结果
     @NameInMap("Data")
     public RecognizeMessageResponseBodyData data;
 
-    // 是否成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
     // 错误信息
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
     public static RecognizeMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageResponseBody self = new RecognizeMessageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RecognizeMessageResponseBody setData(RecognizeMessageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RecognizeMessageResponseBodyData getData() {
-        return this.data;
-    }
-
-    public RecognizeMessageResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public RecognizeMessageResponseBody setCode(String code) {
@@ -61,6 +37,14 @@ public class RecognizeMessageResponseBody extends TeaModel {
         return this.code;
     }
 
+    public RecognizeMessageResponseBody setData(RecognizeMessageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RecognizeMessageResponseBodyData getData() {
+        return this.data;
+    }
+
     public RecognizeMessageResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -69,92 +53,20 @@ public class RecognizeMessageResponseBody extends TeaModel {
         return this.message;
     }
 
-    public static class RecognizeMessageResponseBodyDataSceneSceneDTOs extends TeaModel {
-        // 场景key
-        @NameInMap("SceneKey")
-        public String sceneKey;
-
-        public static RecognizeMessageResponseBodyDataSceneSceneDTOs build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageResponseBodyDataSceneSceneDTOs self = new RecognizeMessageResponseBodyDataSceneSceneDTOs();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageResponseBodyDataSceneSceneDTOs setSceneKey(String sceneKey) {
-            this.sceneKey = sceneKey;
-            return this;
-        }
-        public String getSceneKey() {
-            return this.sceneKey;
-        }
-
+    public RecognizeMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static class RecognizeMessageResponseBodyDataScene extends TeaModel {
-        // 场景识别
-        @NameInMap("SceneDTOs")
-        public java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> sceneDTOs;
-
-        // 情绪识别
-        @NameInMap("EmotionTag")
-        public String emotionTag;
-
-        // 语义完整性识别
-        @NameInMap("SemanticComplete")
-        public String semanticComplete;
-
-        // 定位场景使用的商品id
-        @NameInMap("ItemId")
-        public String itemId;
-
-        // 定位场景使用的订单id
-        @NameInMap("OrderId")
-        public String orderId;
-
-        public static RecognizeMessageResponseBodyDataScene build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageResponseBodyDataScene self = new RecognizeMessageResponseBodyDataScene();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageResponseBodyDataScene setSceneDTOs(java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> sceneDTOs) {
-            this.sceneDTOs = sceneDTOs;
-            return this;
-        }
-        public java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> getSceneDTOs() {
-            return this.sceneDTOs;
-        }
-
-        public RecognizeMessageResponseBodyDataScene setEmotionTag(String emotionTag) {
-            this.emotionTag = emotionTag;
-            return this;
-        }
-        public String getEmotionTag() {
-            return this.emotionTag;
-        }
-
-        public RecognizeMessageResponseBodyDataScene setSemanticComplete(String semanticComplete) {
-            this.semanticComplete = semanticComplete;
-            return this;
-        }
-        public String getSemanticComplete() {
-            return this.semanticComplete;
-        }
-
-        public RecognizeMessageResponseBodyDataScene setItemId(String itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public String getItemId() {
-            return this.itemId;
-        }
-
-        public RecognizeMessageResponseBodyDataScene setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
+    public RecognizeMessageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledgesSolutionsConditions extends TeaModel {
@@ -222,26 +134,6 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataKnowledgesSolutions extends TeaModel {
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案类型
-        @NameInMap("SolutionType")
-        public String solutionType;
-
-        // 答案来源
-        @NameInMap("SolutionSource")
-        public String solutionSource;
-
-        // 答案内容
-        @NameInMap("SolutionContent")
-        public String solutionContent;
-
         // 答案限定条件
         @NameInMap("Conditions")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsConditions> conditions;
@@ -250,6 +142,26 @@ public class RecognizeMessageResponseBody extends TeaModel {
         @NameInMap("ExtraContent")
         public String extraContent;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案内容
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 答案来源
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案类型
+        @NameInMap("SolutionType")
+        public String solutionType;
+
         // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsSolutionVariables> solutionVariables;
@@ -257,46 +169,6 @@ public class RecognizeMessageResponseBody extends TeaModel {
         public static RecognizeMessageResponseBodyDataKnowledgesSolutions build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageResponseBodyDataKnowledgesSolutions self = new RecognizeMessageResponseBodyDataKnowledgesSolutions();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
-        }
-
-        public RecognizeMessageResponseBodyDataKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionType(String solutionType) {
-            this.solutionType = solutionType;
-            return this;
-        }
-        public String getSolutionType() {
-            return this.solutionType;
-        }
-
-        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionSource(String solutionSource) {
-            this.solutionSource = solutionSource;
-            return this;
-        }
-        public String getSolutionSource() {
-            return this.solutionSource;
-        }
-
-        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionContent(String solutionContent) {
-            this.solutionContent = solutionContent;
-            return this;
-        }
-        public String getSolutionContent() {
-            return this.solutionContent;
         }
 
         public RecognizeMessageResponseBodyDataKnowledgesSolutions setConditions(java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsConditions> conditions) {
@@ -313,6 +185,46 @@ public class RecognizeMessageResponseBody extends TeaModel {
         }
         public String getExtraContent() {
             return this.extraContent;
+        }
+
+        public RecognizeMessageResponseBodyDataKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
         }
 
         public RecognizeMessageResponseBodyDataKnowledgesSolutions setSolutionVariables(java.util.List<RecognizeMessageResponseBodyDataKnowledgesSolutionsSolutionVariables> solutionVariables) {
@@ -382,25 +294,17 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageResponseBodyDataOutputMessages extends TeaModel {
-        // 回复类型
-        @NameInMap("OutputContentType")
-        public String outputContentType;
-
         // 回复内容
         @NameInMap("OutputContent")
         public java.util.Map<String, ?> outputContent;
 
+        // 回复类型
+        @NameInMap("OutputContentType")
+        public String outputContentType;
+
         public static RecognizeMessageResponseBodyDataOutputMessages build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageResponseBodyDataOutputMessages self = new RecognizeMessageResponseBodyDataOutputMessages();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageResponseBodyDataOutputMessages setOutputContentType(String outputContentType) {
-            this.outputContentType = outputContentType;
-            return this;
-        }
-        public String getOutputContentType() {
-            return this.outputContentType;
         }
 
         public RecognizeMessageResponseBodyDataOutputMessages setOutputContent(java.util.Map<String, ?> outputContent) {
@@ -411,13 +315,105 @@ public class RecognizeMessageResponseBody extends TeaModel {
             return this.outputContent;
         }
 
+        public RecognizeMessageResponseBodyDataOutputMessages setOutputContentType(String outputContentType) {
+            this.outputContentType = outputContentType;
+            return this;
+        }
+        public String getOutputContentType() {
+            return this.outputContentType;
+        }
+
+    }
+
+    public static class RecognizeMessageResponseBodyDataSceneSceneDTOs extends TeaModel {
+        // 场景key
+        @NameInMap("SceneKey")
+        public String sceneKey;
+
+        public static RecognizeMessageResponseBodyDataSceneSceneDTOs build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageResponseBodyDataSceneSceneDTOs self = new RecognizeMessageResponseBodyDataSceneSceneDTOs();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageResponseBodyDataSceneSceneDTOs setSceneKey(String sceneKey) {
+            this.sceneKey = sceneKey;
+            return this;
+        }
+        public String getSceneKey() {
+            return this.sceneKey;
+        }
+
+    }
+
+    public static class RecognizeMessageResponseBodyDataScene extends TeaModel {
+        // 情绪识别
+        @NameInMap("EmotionTag")
+        public String emotionTag;
+
+        // 定位场景使用的商品id
+        @NameInMap("ItemId")
+        public String itemId;
+
+        // 定位场景使用的订单id
+        @NameInMap("OrderId")
+        public String orderId;
+
+        // 场景识别
+        @NameInMap("SceneDTOs")
+        public java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> sceneDTOs;
+
+        // 语义完整性识别
+        @NameInMap("SemanticComplete")
+        public String semanticComplete;
+
+        public static RecognizeMessageResponseBodyDataScene build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageResponseBodyDataScene self = new RecognizeMessageResponseBodyDataScene();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageResponseBodyDataScene setEmotionTag(String emotionTag) {
+            this.emotionTag = emotionTag;
+            return this;
+        }
+        public String getEmotionTag() {
+            return this.emotionTag;
+        }
+
+        public RecognizeMessageResponseBodyDataScene setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        public RecognizeMessageResponseBodyDataScene setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        public RecognizeMessageResponseBodyDataScene setSceneDTOs(java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> sceneDTOs) {
+            this.sceneDTOs = sceneDTOs;
+            return this;
+        }
+        public java.util.List<RecognizeMessageResponseBodyDataSceneSceneDTOs> getSceneDTOs() {
+            return this.sceneDTOs;
+        }
+
+        public RecognizeMessageResponseBodyDataScene setSemanticComplete(String semanticComplete) {
+            this.semanticComplete = semanticComplete;
+            return this;
+        }
+        public String getSemanticComplete() {
+            return this.semanticComplete;
+        }
+
     }
 
     public static class RecognizeMessageResponseBodyData extends TeaModel {
-        // 定位到的场景
-        @NameInMap("Scene")
-        public RecognizeMessageResponseBodyDataScene scene;
-
         // 定位到的知识
         @NameInMap("Knowledges")
         public java.util.List<RecognizeMessageResponseBodyDataKnowledges> knowledges;
@@ -426,6 +422,10 @@ public class RecognizeMessageResponseBody extends TeaModel {
         @NameInMap("OutputMessages")
         public java.util.List<RecognizeMessageResponseBodyDataOutputMessages> outputMessages;
 
+        // 定位到的场景
+        @NameInMap("Scene")
+        public RecognizeMessageResponseBodyDataScene scene;
+
         // 扩展的输出
         @NameInMap("extOutput")
         public java.util.Map<String, ?> extOutput;
@@ -433,14 +433,6 @@ public class RecognizeMessageResponseBody extends TeaModel {
         public static RecognizeMessageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageResponseBodyData self = new RecognizeMessageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageResponseBodyData setScene(RecognizeMessageResponseBodyDataScene scene) {
-            this.scene = scene;
-            return this;
-        }
-        public RecognizeMessageResponseBodyDataScene getScene() {
-            return this.scene;
         }
 
         public RecognizeMessageResponseBodyData setKnowledges(java.util.List<RecognizeMessageResponseBodyDataKnowledges> knowledges) {
@@ -457,6 +449,14 @@ public class RecognizeMessageResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeMessageResponseBodyDataOutputMessages> getOutputMessages() {
             return this.outputMessages;
+        }
+
+        public RecognizeMessageResponseBodyData setScene(RecognizeMessageResponseBodyDataScene scene) {
+            this.scene = scene;
+            return this;
+        }
+        public RecognizeMessageResponseBodyDataScene getScene() {
+            return this.scene;
         }
 
         public RecognizeMessageResponseBodyData setExtOutput(java.util.Map<String, ?> extOutput) {

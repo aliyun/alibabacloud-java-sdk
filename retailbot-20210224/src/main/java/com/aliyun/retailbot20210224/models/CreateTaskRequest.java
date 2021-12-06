@@ -21,24 +21,48 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestDigTaskInfoParam extends TeaModel {
+        @NameInMap("OperatorId")
+        public String operatorId;
+
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        @NameInMap("ParamConfig")
+        public String paramConfig;
+
         @NameInMap("RobotCode")
         public String robotCode;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("OperatorName")
-        public String operatorName;
-
-        @NameInMap("OperatorId")
-        public String operatorId;
-
-        @NameInMap("ParamConfig")
-        public String paramConfig;
-
         public static CreateTaskRequestDigTaskInfoParam build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestDigTaskInfoParam self = new CreateTaskRequestDigTaskInfoParam();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestDigTaskInfoParam setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public String getOperatorId() {
+            return this.operatorId;
+        }
+
+        public CreateTaskRequestDigTaskInfoParam setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
+        }
+
+        public CreateTaskRequestDigTaskInfoParam setParamConfig(String paramConfig) {
+            this.paramConfig = paramConfig;
+            return this;
+        }
+        public String getParamConfig() {
+            return this.paramConfig;
         }
 
         public CreateTaskRequestDigTaskInfoParam setRobotCode(String robotCode) {
@@ -55,30 +79,6 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public CreateTaskRequestDigTaskInfoParam setOperatorName(String operatorName) {
-            this.operatorName = operatorName;
-            return this;
-        }
-        public String getOperatorName() {
-            return this.operatorName;
-        }
-
-        public CreateTaskRequestDigTaskInfoParam setOperatorId(String operatorId) {
-            this.operatorId = operatorId;
-            return this;
-        }
-        public String getOperatorId() {
-            return this.operatorId;
-        }
-
-        public CreateTaskRequestDigTaskInfoParam setParamConfig(String paramConfig) {
-            this.paramConfig = paramConfig;
-            return this;
-        }
-        public String getParamConfig() {
-            return this.paramConfig;
         }
 
     }

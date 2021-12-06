@@ -4,6 +4,14 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSolutionResponseBody extends TeaModel {
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -16,17 +24,25 @@ public class AddSolutionResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 返回code
-    @NameInMap("Code")
-    public String code;
-
-    // 返回信息
-    @NameInMap("Message")
-    public String message;
-
     public static AddSolutionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSolutionResponseBody self = new AddSolutionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddSolutionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddSolutionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AddSolutionResponseBody setRequestId(String requestId) {
@@ -51,22 +67,6 @@ public class AddSolutionResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public AddSolutionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddSolutionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

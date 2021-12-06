@@ -4,17 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteSolutionRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 知识id
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
-
-    // 答案id集合
-    @NameInMap("SolutionIds")
-    public java.util.List<Long> solutionIds;
 
     // 操作用户id
     @NameInMap("OperatorId")
@@ -24,17 +16,17 @@ public class DeleteSolutionRequest extends TeaModel {
     @NameInMap("OperatorName")
     public String operatorName;
 
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
+
+    // 答案id集合
+    @NameInMap("SolutionIds")
+    public java.util.List<Long> solutionIds;
+
     public static DeleteSolutionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSolutionRequest self = new DeleteSolutionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSolutionRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public DeleteSolutionRequest setKnowledgeId(Long knowledgeId) {
@@ -43,14 +35,6 @@ public class DeleteSolutionRequest extends TeaModel {
     }
     public Long getKnowledgeId() {
         return this.knowledgeId;
-    }
-
-    public DeleteSolutionRequest setSolutionIds(java.util.List<Long> solutionIds) {
-        this.solutionIds = solutionIds;
-        return this;
-    }
-    public java.util.List<Long> getSolutionIds() {
-        return this.solutionIds;
     }
 
     public DeleteSolutionRequest setOperatorId(String operatorId) {
@@ -67,6 +51,22 @@ public class DeleteSolutionRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public DeleteSolutionRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
+    }
+
+    public DeleteSolutionRequest setSolutionIds(java.util.List<Long> solutionIds) {
+        this.solutionIds = solutionIds;
+        return this;
+    }
+    public java.util.List<Long> getSolutionIds() {
+        return this.solutionIds;
     }
 
 }

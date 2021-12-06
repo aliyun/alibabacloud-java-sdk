@@ -4,17 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AddSolutionRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 知识id
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
-
-    // 答案
-    @NameInMap("Solution")
-    public AddSolutionRequestSolution solution;
 
     // 操作人id
     @NameInMap("OperatorId")
@@ -24,17 +16,17 @@ public class AddSolutionRequest extends TeaModel {
     @NameInMap("OperatorName")
     public String operatorName;
 
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
+
+    // 答案
+    @NameInMap("Solution")
+    public AddSolutionRequestSolution solution;
+
     public static AddSolutionRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSolutionRequest self = new AddSolutionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddSolutionRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public AddSolutionRequest setKnowledgeId(Long knowledgeId) {
@@ -43,14 +35,6 @@ public class AddSolutionRequest extends TeaModel {
     }
     public Long getKnowledgeId() {
         return this.knowledgeId;
-    }
-
-    public AddSolutionRequest setSolution(AddSolutionRequestSolution solution) {
-        this.solution = solution;
-        return this;
-    }
-    public AddSolutionRequestSolution getSolution() {
-        return this.solution;
     }
 
     public AddSolutionRequest setOperatorId(String operatorId) {
@@ -69,11 +53,23 @@ public class AddSolutionRequest extends TeaModel {
         return this.operatorName;
     }
 
-    public static class AddSolutionRequestSolutionConditions extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
+    public AddSolutionRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
+    }
 
+    public AddSolutionRequest setSolution(AddSolutionRequestSolution solution) {
+        this.solution = solution;
+        return this;
+    }
+    public AddSolutionRequestSolution getSolution() {
+        return this.solution;
+    }
+
+    public static class AddSolutionRequestSolutionConditions extends TeaModel {
         // 生效模式：EffectiveMode  分支：BranchId
         @NameInMap("ConditionType")
         public String conditionType;
@@ -82,17 +78,13 @@ public class AddSolutionRequest extends TeaModel {
         @NameInMap("ConditionValue")
         public String conditionValue;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
         public static AddSolutionRequestSolutionConditions build(java.util.Map<String, ?> map) throws Exception {
             AddSolutionRequestSolutionConditions self = new AddSolutionRequestSolutionConditions();
             return TeaModel.build(map, self);
-        }
-
-        public AddSolutionRequestSolutionConditions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
         }
 
         public AddSolutionRequestSolutionConditions setConditionType(String conditionType) {
@@ -109,6 +101,14 @@ public class AddSolutionRequest extends TeaModel {
         }
         public String getConditionValue() {
             return this.conditionValue;
+        }
+
+        public AddSolutionRequestSolutionConditions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
         }
 
     }
@@ -170,22 +170,6 @@ public class AddSolutionRequest extends TeaModel {
     }
 
     public static class AddSolutionRequestSolution extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案类型, "text":文本知识
-        @NameInMap("SolutionType")
-        public String solutionType;
-
-        // 答案来源,乐言不需要填
-        @NameInMap("SolutionSource")
-        public String solutionSource;
-
-        // 答案正文
-        @NameInMap("SolutionContent")
-        public String solutionContent;
-
         // 答案约束
         @NameInMap("Conditions")
         public java.util.List<AddSolutionRequestSolutionConditions> conditions;
@@ -194,6 +178,22 @@ public class AddSolutionRequest extends TeaModel {
         @NameInMap("ExtraContent")
         public String extraContent;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案正文
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案来源,乐言不需要填
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案类型, "text":文本知识
+        @NameInMap("SolutionType")
+        public String solutionType;
+
         // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<AddSolutionRequestSolutionSolutionVariables> solutionVariables;
@@ -201,38 +201,6 @@ public class AddSolutionRequest extends TeaModel {
         public static AddSolutionRequestSolution build(java.util.Map<String, ?> map) throws Exception {
             AddSolutionRequestSolution self = new AddSolutionRequestSolution();
             return TeaModel.build(map, self);
-        }
-
-        public AddSolutionRequestSolution setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public AddSolutionRequestSolution setSolutionType(String solutionType) {
-            this.solutionType = solutionType;
-            return this;
-        }
-        public String getSolutionType() {
-            return this.solutionType;
-        }
-
-        public AddSolutionRequestSolution setSolutionSource(String solutionSource) {
-            this.solutionSource = solutionSource;
-            return this;
-        }
-        public String getSolutionSource() {
-            return this.solutionSource;
-        }
-
-        public AddSolutionRequestSolution setSolutionContent(String solutionContent) {
-            this.solutionContent = solutionContent;
-            return this;
-        }
-        public String getSolutionContent() {
-            return this.solutionContent;
         }
 
         public AddSolutionRequestSolution setConditions(java.util.List<AddSolutionRequestSolutionConditions> conditions) {
@@ -249,6 +217,38 @@ public class AddSolutionRequest extends TeaModel {
         }
         public String getExtraContent() {
             return this.extraContent;
+        }
+
+        public AddSolutionRequestSolution setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public AddSolutionRequestSolution setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public AddSolutionRequestSolution setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public AddSolutionRequestSolution setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
         }
 
         public AddSolutionRequestSolution setSolutionVariables(java.util.List<AddSolutionRequestSolutionSolutionVariables> solutionVariables) {

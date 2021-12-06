@@ -4,9 +4,9 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetKnowledgeRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
+    // 知识id
+    @NameInMap("KnowledgeId")
+    public Long knowledgeId;
 
     // 操作人id
     @NameInMap("OperatorId")
@@ -16,21 +16,21 @@ public class GetKnowledgeRequest extends TeaModel {
     @NameInMap("OperatorName")
     public String operatorName;
 
-    // 知识id
-    @NameInMap("KnowledgeId")
-    public Long knowledgeId;
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static GetKnowledgeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKnowledgeRequest self = new GetKnowledgeRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetKnowledgeRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
+    public GetKnowledgeRequest setKnowledgeId(Long knowledgeId) {
+        this.knowledgeId = knowledgeId;
         return this;
     }
-    public String getRobotCode() {
-        return this.robotCode;
+    public Long getKnowledgeId() {
+        return this.knowledgeId;
     }
 
     public GetKnowledgeRequest setOperatorId(String operatorId) {
@@ -49,12 +49,12 @@ public class GetKnowledgeRequest extends TeaModel {
         return this.operatorName;
     }
 
-    public GetKnowledgeRequest setKnowledgeId(Long knowledgeId) {
-        this.knowledgeId = knowledgeId;
+    public GetKnowledgeRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
         return this;
     }
-    public Long getKnowledgeId() {
-        return this.knowledgeId;
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

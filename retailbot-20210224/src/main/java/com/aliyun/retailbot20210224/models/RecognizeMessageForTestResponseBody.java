@@ -4,53 +4,29 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMessageForTestResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("Code")
+    public String code;
 
     // 问答返回结果
     @NameInMap("Data")
     public RecognizeMessageForTestResponseBodyData data;
 
-    // 是否成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
     // 错误信息
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
     public static RecognizeMessageForTestResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageForTestResponseBody self = new RecognizeMessageForTestResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeMessageForTestResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RecognizeMessageForTestResponseBody setData(RecognizeMessageForTestResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RecognizeMessageForTestResponseBodyData getData() {
-        return this.data;
-    }
-
-    public RecognizeMessageForTestResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public RecognizeMessageForTestResponseBody setCode(String code) {
@@ -61,6 +37,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         return this.code;
     }
 
+    public RecognizeMessageForTestResponseBody setData(RecognizeMessageForTestResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RecognizeMessageForTestResponseBodyData getData() {
+        return this.data;
+    }
+
     public RecognizeMessageForTestResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -69,92 +53,20 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         return this.message;
     }
 
-    public static class RecognizeMessageForTestResponseBodyDataSceneSceneDTOs extends TeaModel {
-        // 场景key
-        @NameInMap("SceneKey")
-        public String sceneKey;
-
-        public static RecognizeMessageForTestResponseBodyDataSceneSceneDTOs build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageForTestResponseBodyDataSceneSceneDTOs self = new RecognizeMessageForTestResponseBodyDataSceneSceneDTOs();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageForTestResponseBodyDataSceneSceneDTOs setSceneKey(String sceneKey) {
-            this.sceneKey = sceneKey;
-            return this;
-        }
-        public String getSceneKey() {
-            return this.sceneKey;
-        }
-
+    public RecognizeMessageForTestResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static class RecognizeMessageForTestResponseBodyDataScene extends TeaModel {
-        // 场景识别
-        @NameInMap("SceneDTOs")
-        public java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> sceneDTOs;
-
-        // 情绪识别
-        @NameInMap("EmotionTag")
-        public String emotionTag;
-
-        // 语义完整性识别
-        @NameInMap("SemanticComplete")
-        public String semanticComplete;
-
-        // 定位场景使用的商品id
-        @NameInMap("ItemId")
-        public String itemId;
-
-        // 定位场景使用的订单id
-        @NameInMap("OrderId")
-        public String orderId;
-
-        public static RecognizeMessageForTestResponseBodyDataScene build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageForTestResponseBodyDataScene self = new RecognizeMessageForTestResponseBodyDataScene();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageForTestResponseBodyDataScene setSceneDTOs(java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> sceneDTOs) {
-            this.sceneDTOs = sceneDTOs;
-            return this;
-        }
-        public java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> getSceneDTOs() {
-            return this.sceneDTOs;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataScene setEmotionTag(String emotionTag) {
-            this.emotionTag = emotionTag;
-            return this;
-        }
-        public String getEmotionTag() {
-            return this.emotionTag;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataScene setSemanticComplete(String semanticComplete) {
-            this.semanticComplete = semanticComplete;
-            return this;
-        }
-        public String getSemanticComplete() {
-            return this.semanticComplete;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataScene setItemId(String itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public String getItemId() {
-            return this.itemId;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataScene setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
+    public RecognizeMessageForTestResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class RecognizeMessageForTestResponseBodyDataKnowledgesSolutionsConditions extends TeaModel {
@@ -222,26 +134,6 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageForTestResponseBodyDataKnowledgesSolutions extends TeaModel {
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案类型
-        @NameInMap("SolutionType")
-        public String solutionType;
-
-        // 答案来源
-        @NameInMap("SolutionSource")
-        public String solutionSource;
-
-        // 答案内容
-        @NameInMap("SolutionContent")
-        public String solutionContent;
-
         // 答案限定条件
         @NameInMap("Conditions")
         public java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutionsConditions> conditions;
@@ -250,6 +142,26 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         @NameInMap("ExtraContent")
         public String extraContent;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案内容
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 答案来源
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案类型
+        @NameInMap("SolutionType")
+        public String solutionType;
+
         // 答案变量
         @NameInMap("SolutionVariables")
         public java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutionsSolutionVariables> solutionVariables;
@@ -257,46 +169,6 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         public static RecognizeMessageForTestResponseBodyDataKnowledgesSolutions build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyDataKnowledgesSolutions self = new RecognizeMessageForTestResponseBodyDataKnowledgesSolutions();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionType(String solutionType) {
-            this.solutionType = solutionType;
-            return this;
-        }
-        public String getSolutionType() {
-            return this.solutionType;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionSource(String solutionSource) {
-            this.solutionSource = solutionSource;
-            return this;
-        }
-        public String getSolutionSource() {
-            return this.solutionSource;
-        }
-
-        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionContent(String solutionContent) {
-            this.solutionContent = solutionContent;
-            return this;
-        }
-        public String getSolutionContent() {
-            return this.solutionContent;
         }
 
         public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setConditions(java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutionsConditions> conditions) {
@@ -313,6 +185,46 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public String getExtraContent() {
             return this.extraContent;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
         }
 
         public RecognizeMessageForTestResponseBodyDataKnowledgesSolutions setSolutionVariables(java.util.List<RecognizeMessageForTestResponseBodyDataKnowledgesSolutionsSolutionVariables> solutionVariables) {
@@ -382,25 +294,17 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
     }
 
     public static class RecognizeMessageForTestResponseBodyDataOutputMessages extends TeaModel {
-        // 回复类型
-        @NameInMap("OutputContentType")
-        public String outputContentType;
-
         // 回复内容
         @NameInMap("OutputContent")
         public java.util.Map<String, ?> outputContent;
 
+        // 回复类型
+        @NameInMap("OutputContentType")
+        public String outputContentType;
+
         public static RecognizeMessageForTestResponseBodyDataOutputMessages build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyDataOutputMessages self = new RecognizeMessageForTestResponseBodyDataOutputMessages();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageForTestResponseBodyDataOutputMessages setOutputContentType(String outputContentType) {
-            this.outputContentType = outputContentType;
-            return this;
-        }
-        public String getOutputContentType() {
-            return this.outputContentType;
         }
 
         public RecognizeMessageForTestResponseBodyDataOutputMessages setOutputContent(java.util.Map<String, ?> outputContent) {
@@ -411,13 +315,105 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
             return this.outputContent;
         }
 
+        public RecognizeMessageForTestResponseBodyDataOutputMessages setOutputContentType(String outputContentType) {
+            this.outputContentType = outputContentType;
+            return this;
+        }
+        public String getOutputContentType() {
+            return this.outputContentType;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestResponseBodyDataSceneSceneDTOs extends TeaModel {
+        // 场景key
+        @NameInMap("SceneKey")
+        public String sceneKey;
+
+        public static RecognizeMessageForTestResponseBodyDataSceneSceneDTOs build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataSceneSceneDTOs self = new RecognizeMessageForTestResponseBodyDataSceneSceneDTOs();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataSceneSceneDTOs setSceneKey(String sceneKey) {
+            this.sceneKey = sceneKey;
+            return this;
+        }
+        public String getSceneKey() {
+            return this.sceneKey;
+        }
+
+    }
+
+    public static class RecognizeMessageForTestResponseBodyDataScene extends TeaModel {
+        // 情绪识别
+        @NameInMap("EmotionTag")
+        public String emotionTag;
+
+        // 定位场景使用的商品id
+        @NameInMap("ItemId")
+        public String itemId;
+
+        // 定位场景使用的订单id
+        @NameInMap("OrderId")
+        public String orderId;
+
+        // 场景识别
+        @NameInMap("SceneDTOs")
+        public java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> sceneDTOs;
+
+        // 语义完整性识别
+        @NameInMap("SemanticComplete")
+        public String semanticComplete;
+
+        public static RecognizeMessageForTestResponseBodyDataScene build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestResponseBodyDataScene self = new RecognizeMessageForTestResponseBodyDataScene();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeMessageForTestResponseBodyDataScene setEmotionTag(String emotionTag) {
+            this.emotionTag = emotionTag;
+            return this;
+        }
+        public String getEmotionTag() {
+            return this.emotionTag;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataScene setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataScene setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataScene setSceneDTOs(java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> sceneDTOs) {
+            this.sceneDTOs = sceneDTOs;
+            return this;
+        }
+        public java.util.List<RecognizeMessageForTestResponseBodyDataSceneSceneDTOs> getSceneDTOs() {
+            return this.sceneDTOs;
+        }
+
+        public RecognizeMessageForTestResponseBodyDataScene setSemanticComplete(String semanticComplete) {
+            this.semanticComplete = semanticComplete;
+            return this;
+        }
+        public String getSemanticComplete() {
+            return this.semanticComplete;
+        }
+
     }
 
     public static class RecognizeMessageForTestResponseBodyData extends TeaModel {
-        // 定位到的场景
-        @NameInMap("Scene")
-        public RecognizeMessageForTestResponseBodyDataScene scene;
-
         // 定位到的知识
         @NameInMap("Knowledges")
         public java.util.List<RecognizeMessageForTestResponseBodyDataKnowledges> knowledges;
@@ -426,6 +422,10 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         @NameInMap("OutputMessages")
         public java.util.List<RecognizeMessageForTestResponseBodyDataOutputMessages> outputMessages;
 
+        // 定位到的场景
+        @NameInMap("Scene")
+        public RecognizeMessageForTestResponseBodyDataScene scene;
+
         // 扩展的输出
         @NameInMap("extOutput")
         public java.util.Map<String, ?> extOutput;
@@ -433,14 +433,6 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         public static RecognizeMessageForTestResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyData self = new RecognizeMessageForTestResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageForTestResponseBodyData setScene(RecognizeMessageForTestResponseBodyDataScene scene) {
-            this.scene = scene;
-            return this;
-        }
-        public RecognizeMessageForTestResponseBodyDataScene getScene() {
-            return this.scene;
         }
 
         public RecognizeMessageForTestResponseBodyData setKnowledges(java.util.List<RecognizeMessageForTestResponseBodyDataKnowledges> knowledges) {
@@ -457,6 +449,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeMessageForTestResponseBodyDataOutputMessages> getOutputMessages() {
             return this.outputMessages;
+        }
+
+        public RecognizeMessageForTestResponseBodyData setScene(RecognizeMessageForTestResponseBodyDataScene scene) {
+            this.scene = scene;
+            return this;
+        }
+        public RecognizeMessageForTestResponseBodyDataScene getScene() {
+            return this.scene;
         }
 
         public RecognizeMessageForTestResponseBodyData setExtOutput(java.util.Map<String, ?> extOutput) {

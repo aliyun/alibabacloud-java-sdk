@@ -21,48 +21,32 @@ public class DeleteTaskRequest extends TeaModel {
     }
 
     public static class DeleteTaskRequestDigDeleteParam extends TeaModel {
-        @NameInMap("TaskId")
-        public Long taskId;
-
-        @NameInMap("RobotCode")
-        public String robotCode;
-
-        @NameInMap("OperatorName")
-        public String operatorName;
+        @NameInMap("DelMessage")
+        public String delMessage;
 
         @NameInMap("OperatorId")
         public String operatorId;
 
-        @NameInMap("DelMessage")
-        public String delMessage;
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        @NameInMap("RobotCode")
+        public String robotCode;
+
+        @NameInMap("TaskId")
+        public Long taskId;
 
         public static DeleteTaskRequestDigDeleteParam build(java.util.Map<String, ?> map) throws Exception {
             DeleteTaskRequestDigDeleteParam self = new DeleteTaskRequestDigDeleteParam();
             return TeaModel.build(map, self);
         }
 
-        public DeleteTaskRequestDigDeleteParam setTaskId(Long taskId) {
-            this.taskId = taskId;
+        public DeleteTaskRequestDigDeleteParam setDelMessage(String delMessage) {
+            this.delMessage = delMessage;
             return this;
         }
-        public Long getTaskId() {
-            return this.taskId;
-        }
-
-        public DeleteTaskRequestDigDeleteParam setRobotCode(String robotCode) {
-            this.robotCode = robotCode;
-            return this;
-        }
-        public String getRobotCode() {
-            return this.robotCode;
-        }
-
-        public DeleteTaskRequestDigDeleteParam setOperatorName(String operatorName) {
-            this.operatorName = operatorName;
-            return this;
-        }
-        public String getOperatorName() {
-            return this.operatorName;
+        public String getDelMessage() {
+            return this.delMessage;
         }
 
         public DeleteTaskRequestDigDeleteParam setOperatorId(String operatorId) {
@@ -73,12 +57,28 @@ public class DeleteTaskRequest extends TeaModel {
             return this.operatorId;
         }
 
-        public DeleteTaskRequestDigDeleteParam setDelMessage(String delMessage) {
-            this.delMessage = delMessage;
+        public DeleteTaskRequestDigDeleteParam setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
             return this;
         }
-        public String getDelMessage() {
-            return this.delMessage;
+        public String getOperatorName() {
+            return this.operatorName;
+        }
+
+        public DeleteTaskRequestDigDeleteParam setRobotCode(String robotCode) {
+            this.robotCode = robotCode;
+            return this;
+        }
+        public String getRobotCode() {
+            return this.robotCode;
+        }
+
+        public DeleteTaskRequestDigDeleteParam setTaskId(Long taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public Long getTaskId() {
+            return this.taskId;
         }
 
     }

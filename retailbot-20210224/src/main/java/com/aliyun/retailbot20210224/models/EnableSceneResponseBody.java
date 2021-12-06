@@ -4,14 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class EnableSceneResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 是否成功标示
-    @NameInMap("Success")
-    public Boolean success;
-
     // 返回code
     @NameInMap("Code")
     public String code;
@@ -20,25 +12,17 @@ public class EnableSceneResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
     public static EnableSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableSceneResponseBody self = new EnableSceneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EnableSceneResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public EnableSceneResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public EnableSceneResponseBody setCode(String code) {
@@ -55,6 +39,22 @@ public class EnableSceneResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public EnableSceneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public EnableSceneResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

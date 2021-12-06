@@ -8,10 +8,6 @@ public class DisableSceneRequest extends TeaModel {
     @NameInMap("KnowledgeIds")
     public java.util.List<Long> knowledgeIds;
 
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
@@ -19,6 +15,10 @@ public class DisableSceneRequest extends TeaModel {
     // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
+
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static DisableSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableSceneRequest self = new DisableSceneRequest();
@@ -31,14 +31,6 @@ public class DisableSceneRequest extends TeaModel {
     }
     public java.util.List<Long> getKnowledgeIds() {
         return this.knowledgeIds;
-    }
-
-    public DisableSceneRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public DisableSceneRequest setOperatorId(String operatorId) {
@@ -55,6 +47,14 @@ public class DisableSceneRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public DisableSceneRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

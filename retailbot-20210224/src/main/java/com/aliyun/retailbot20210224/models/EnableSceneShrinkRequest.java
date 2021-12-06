@@ -8,10 +8,6 @@ public class EnableSceneShrinkRequest extends TeaModel {
     @NameInMap("KnowledgeIds")
     public String knowledgeIdsShrink;
 
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
@@ -19,6 +15,10 @@ public class EnableSceneShrinkRequest extends TeaModel {
     // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
+
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static EnableSceneShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableSceneShrinkRequest self = new EnableSceneShrinkRequest();
@@ -31,14 +31,6 @@ public class EnableSceneShrinkRequest extends TeaModel {
     }
     public String getKnowledgeIdsShrink() {
         return this.knowledgeIdsShrink;
-    }
-
-    public EnableSceneShrinkRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public EnableSceneShrinkRequest setOperatorId(String operatorId) {
@@ -55,6 +47,14 @@ public class EnableSceneShrinkRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public EnableSceneShrinkRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }
