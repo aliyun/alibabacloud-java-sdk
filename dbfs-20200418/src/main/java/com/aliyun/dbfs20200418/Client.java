@@ -291,6 +291,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDbfsWithOptions(request, runtime);
     }
 
+    public ListDbfsAttachableEcsInstancesResponse listDbfsAttachableEcsInstancesWithOptions(ListDbfsAttachableEcsInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDbfsAttachableEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListDbfsAttachableEcsInstancesResponse());
+    }
+
+    public ListDbfsAttachableEcsInstancesResponse listDbfsAttachableEcsInstances(ListDbfsAttachableEcsInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDbfsAttachableEcsInstancesWithOptions(request, runtime);
+    }
+
+    public ListDbfsAttachedEcsInstancesResponse listDbfsAttachedEcsInstancesWithOptions(ListDbfsAttachedEcsInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDbfsAttachedEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListDbfsAttachedEcsInstancesResponse());
+    }
+
+    public ListDbfsAttachedEcsInstancesResponse listDbfsAttachedEcsInstances(ListDbfsAttachedEcsInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDbfsAttachedEcsInstancesWithOptions(request, runtime);
+    }
+
     public ListSnapshotResponse listSnapshotWithOptions(ListSnapshotRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
