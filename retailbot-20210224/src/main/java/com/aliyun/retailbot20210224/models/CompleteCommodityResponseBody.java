@@ -3,7 +3,7 @@ package com.aliyun.retailbot20210224.models;
 
 import com.aliyun.tea.*;
 
-public class RefundResponseBody extends TeaModel {
+public class CompleteCommodityResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
@@ -20,12 +20,15 @@ public class RefundResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static RefundResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RefundResponseBody self = new RefundResponseBody();
+    @NameInMap("synchro")
+    public String synchro;
+
+    public static CompleteCommodityResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CompleteCommodityResponseBody self = new CompleteCommodityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RefundResponseBody setCode(String code) {
+    public CompleteCommodityResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -33,7 +36,7 @@ public class RefundResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RefundResponseBody setData(String data) {
+    public CompleteCommodityResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -41,7 +44,7 @@ public class RefundResponseBody extends TeaModel {
         return this.data;
     }
 
-    public RefundResponseBody setMessage(String message) {
+    public CompleteCommodityResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +52,7 @@ public class RefundResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RefundResponseBody setRequestId(String requestId) {
+    public CompleteCommodityResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,12 +60,20 @@ public class RefundResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RefundResponseBody setSuccess(Boolean success) {
+    public CompleteCommodityResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CompleteCommodityResponseBody setSynchro(String synchro) {
+        this.synchro = synchro;
+        return this;
+    }
+    public String getSynchro() {
+        return this.synchro;
     }
 
 }

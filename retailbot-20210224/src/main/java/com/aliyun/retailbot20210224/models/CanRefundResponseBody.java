@@ -3,12 +3,13 @@ package com.aliyun.retailbot20210224.models;
 
 import com.aliyun.tea.*;
 
-public class DisableSceneResponseBody extends TeaModel {
-    // 返回code
+public class CanRefundResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    // 返回信息
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
@@ -16,16 +17,15 @@ public class DisableSceneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
 
-    public static DisableSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DisableSceneResponseBody self = new DisableSceneResponseBody();
+    public static CanRefundResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CanRefundResponseBody self = new CanRefundResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DisableSceneResponseBody setCode(String code) {
+    public CanRefundResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -33,7 +33,15 @@ public class DisableSceneResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DisableSceneResponseBody setMessage(String message) {
+    public CanRefundResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public CanRefundResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -41,7 +49,7 @@ public class DisableSceneResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DisableSceneResponseBody setRequestId(String requestId) {
+    public CanRefundResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,7 +57,7 @@ public class DisableSceneResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DisableSceneResponseBody setSuccess(Boolean success) {
+    public CanRefundResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

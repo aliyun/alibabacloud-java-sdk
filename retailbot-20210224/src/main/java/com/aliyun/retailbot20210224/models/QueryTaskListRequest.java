@@ -32,21 +32,29 @@ public class QueryTaskListRequest extends TeaModel {
     }
 
     public static class QueryTaskListRequestDigTaskPageQuery extends TeaModel {
+        @NameInMap("EndDate")
+        public String endDate;
+
         @NameInMap("RobotCode")
         public String robotCode;
-
-        @NameInMap("Type")
-        public String type;
 
         @NameInMap("StartDate")
         public String startDate;
 
-        @NameInMap("EndDate")
-        public String endDate;
+        @NameInMap("Type")
+        public String type;
 
         public static QueryTaskListRequestDigTaskPageQuery build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskListRequestDigTaskPageQuery self = new QueryTaskListRequestDigTaskPageQuery();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTaskListRequestDigTaskPageQuery setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
         }
 
         public QueryTaskListRequestDigTaskPageQuery setRobotCode(String robotCode) {
@@ -57,14 +65,6 @@ public class QueryTaskListRequest extends TeaModel {
             return this.robotCode;
         }
 
-        public QueryTaskListRequestDigTaskPageQuery setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
         public QueryTaskListRequestDigTaskPageQuery setStartDate(String startDate) {
             this.startDate = startDate;
             return this;
@@ -73,12 +73,12 @@ public class QueryTaskListRequest extends TeaModel {
             return this.startDate;
         }
 
-        public QueryTaskListRequestDigTaskPageQuery setEndDate(String endDate) {
-            this.endDate = endDate;
+        public QueryTaskListRequestDigTaskPageQuery setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getEndDate() {
-            return this.endDate;
+        public String getType() {
+            return this.type;
         }
 
     }

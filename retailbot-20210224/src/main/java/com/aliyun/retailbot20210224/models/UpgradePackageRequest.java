@@ -4,37 +4,21 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpgradePackageRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCodes")
-    public java.util.List<String> robotCodes;
+    // 操作人信息
+    @NameInMap("Operator")
+    public UpgradePackageRequestOperator operator;
 
     // 需要升级的行业包
     @NameInMap("PackageDTO")
     public UpgradePackageRequestPackageDTO packageDTO;
 
-    // 操作人信息
-    @NameInMap("Operator")
-    public UpgradePackageRequestOperator operator;
+    // 机器人code
+    @NameInMap("RobotCodes")
+    public java.util.List<String> robotCodes;
 
     public static UpgradePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradePackageRequest self = new UpgradePackageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradePackageRequest setRobotCodes(java.util.List<String> robotCodes) {
-        this.robotCodes = robotCodes;
-        return this;
-    }
-    public java.util.List<String> getRobotCodes() {
-        return this.robotCodes;
-    }
-
-    public UpgradePackageRequest setPackageDTO(UpgradePackageRequestPackageDTO packageDTO) {
-        this.packageDTO = packageDTO;
-        return this;
-    }
-    public UpgradePackageRequestPackageDTO getPackageDTO() {
-        return this.packageDTO;
     }
 
     public UpgradePackageRequest setOperator(UpgradePackageRequestOperator operator) {
@@ -45,36 +29,20 @@ public class UpgradePackageRequest extends TeaModel {
         return this.operator;
     }
 
-    public static class UpgradePackageRequestPackageDTO extends TeaModel {
-        // 行业包code
-        @NameInMap("PackageCode")
-        public String packageCode;
+    public UpgradePackageRequest setPackageDTO(UpgradePackageRequestPackageDTO packageDTO) {
+        this.packageDTO = packageDTO;
+        return this;
+    }
+    public UpgradePackageRequestPackageDTO getPackageDTO() {
+        return this.packageDTO;
+    }
 
-        // 行业包版本
-        @NameInMap("PackageVersion")
-        public String packageVersion;
-
-        public static UpgradePackageRequestPackageDTO build(java.util.Map<String, ?> map) throws Exception {
-            UpgradePackageRequestPackageDTO self = new UpgradePackageRequestPackageDTO();
-            return TeaModel.build(map, self);
-        }
-
-        public UpgradePackageRequestPackageDTO setPackageCode(String packageCode) {
-            this.packageCode = packageCode;
-            return this;
-        }
-        public String getPackageCode() {
-            return this.packageCode;
-        }
-
-        public UpgradePackageRequestPackageDTO setPackageVersion(String packageVersion) {
-            this.packageVersion = packageVersion;
-            return this;
-        }
-        public String getPackageVersion() {
-            return this.packageVersion;
-        }
-
+    public UpgradePackageRequest setRobotCodes(java.util.List<String> robotCodes) {
+        this.robotCodes = robotCodes;
+        return this;
+    }
+    public java.util.List<String> getRobotCodes() {
+        return this.robotCodes;
     }
 
     public static class UpgradePackageRequestOperator extends TeaModel {
@@ -105,6 +73,38 @@ public class UpgradePackageRequest extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+    }
+
+    public static class UpgradePackageRequestPackageDTO extends TeaModel {
+        // 行业包code
+        @NameInMap("PackageCode")
+        public String packageCode;
+
+        // 行业包版本
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        public static UpgradePackageRequestPackageDTO build(java.util.Map<String, ?> map) throws Exception {
+            UpgradePackageRequestPackageDTO self = new UpgradePackageRequestPackageDTO();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradePackageRequestPackageDTO setPackageCode(String packageCode) {
+            this.packageCode = packageCode;
+            return this;
+        }
+        public String getPackageCode() {
+            return this.packageCode;
+        }
+
+        public UpgradePackageRequestPackageDTO setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
         }
 
     }

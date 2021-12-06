@@ -4,14 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListPackageKnowledgesRequest extends TeaModel {
-    // 包code
-    @NameInMap("PackageCode")
-    public String packageCode;
-
-    // 包version
-    @NameInMap("PackageVersion")
-    public String packageVersion;
-
     // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
@@ -20,25 +12,17 @@ public class ListPackageKnowledgesRequest extends TeaModel {
     @NameInMap("OperatorName")
     public String operatorName;
 
+    // 包code
+    @NameInMap("PackageCode")
+    public String packageCode;
+
+    // 包version
+    @NameInMap("PackageVersion")
+    public String packageVersion;
+
     public static ListPackageKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPackageKnowledgesRequest self = new ListPackageKnowledgesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPackageKnowledgesRequest setPackageCode(String packageCode) {
-        this.packageCode = packageCode;
-        return this;
-    }
-    public String getPackageCode() {
-        return this.packageCode;
-    }
-
-    public ListPackageKnowledgesRequest setPackageVersion(String packageVersion) {
-        this.packageVersion = packageVersion;
-        return this;
-    }
-    public String getPackageVersion() {
-        return this.packageVersion;
     }
 
     public ListPackageKnowledgesRequest setOperatorId(String operatorId) {
@@ -55,6 +39,22 @@ public class ListPackageKnowledgesRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public ListPackageKnowledgesRequest setPackageCode(String packageCode) {
+        this.packageCode = packageCode;
+        return this;
+    }
+    public String getPackageCode() {
+        return this.packageCode;
+    }
+
+    public ListPackageKnowledgesRequest setPackageVersion(String packageVersion) {
+        this.packageVersion = packageVersion;
+        return this;
+    }
+    public String getPackageVersion() {
+        return this.packageVersion;
     }
 
 }

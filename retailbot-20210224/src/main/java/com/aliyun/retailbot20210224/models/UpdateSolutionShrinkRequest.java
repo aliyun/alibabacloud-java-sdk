@@ -4,10 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpdateSolutionShrinkRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 知识id
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
@@ -20,6 +16,10 @@ public class UpdateSolutionShrinkRequest extends TeaModel {
     @NameInMap("OperatorName")
     public String operatorName;
 
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
+
     // 答案数据
     @NameInMap("Solution")
     public String solutionShrink;
@@ -27,14 +27,6 @@ public class UpdateSolutionShrinkRequest extends TeaModel {
     public static UpdateSolutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSolutionShrinkRequest self = new UpdateSolutionShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSolutionShrinkRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public UpdateSolutionShrinkRequest setKnowledgeId(Long knowledgeId) {
@@ -59,6 +51,14 @@ public class UpdateSolutionShrinkRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public UpdateSolutionShrinkRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
     public UpdateSolutionShrinkRequest setSolutionShrink(String solutionShrink) {

@@ -1,3 +1,6 @@
+2021-12-06 Version: 1.9.0
+- Add CreateUserAccessToken for RetailSaaS.
+
 2021-08-13 Version: 1.8.8
 - Retailbot knoweldge and robot sdk.
 

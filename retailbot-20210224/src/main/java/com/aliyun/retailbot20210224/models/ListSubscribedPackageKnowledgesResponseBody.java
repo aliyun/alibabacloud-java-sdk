@@ -4,9 +4,17 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
     // 知识集合
     @NameInMap("Knowledges")
     public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledges> knowledges;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
 
     // 请求id
     @NameInMap("RequestId")
@@ -16,17 +24,17 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 返回code
-    @NameInMap("Code")
-    public String code;
-
-    // 返回信息
-    @NameInMap("Message")
-    public String message;
-
     public static ListSubscribedPackageKnowledgesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubscribedPackageKnowledgesResponseBody self = new ListSubscribedPackageKnowledgesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSubscribedPackageKnowledgesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListSubscribedPackageKnowledgesResponseBody setKnowledges(java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledges> knowledges) {
@@ -35,6 +43,14 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
     public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledges> getKnowledges() {
         return this.knowledges;
+    }
+
+    public ListSubscribedPackageKnowledgesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListSubscribedPackageKnowledgesResponseBody setRequestId(String requestId) {
@@ -53,23 +69,27 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListSubscribedPackageKnowledgesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListSubscribedPackageKnowledgesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions extends TeaModel {
+        // 创建时间格式：yyyy-MM-dd HH:mm:ss
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        // 创建用户id
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
+        // 修改时间格式：yyyy-MM-dd HH:mm:ss
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
+        // 修改用户id
+        @NameInMap("ModifyUserId")
+        public String modifyUserId;
+
+        // "positive":正向，"negative":负向
+        @NameInMap("SimilarQuestionEffectType")
+        public String similarQuestionEffectType;
+
         // 问法id
         @NameInMap("SimilarQuestionId")
         public Long similarQuestionId;
@@ -82,29 +102,49 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("SimilarQuestionType")
         public String similarQuestionType;
 
-        // "positive":正向，"negative":负向
-        @NameInMap("SimilarQuestionEffectType")
-        public String similarQuestionEffectType;
-
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // 修改时间格式：yyyy-MM-dd HH:mm:ss
-        @NameInMap("ModifyTime")
-        public String modifyTime;
-
-        // 创建用户id
-        @NameInMap("CreateUserId")
-        public String createUserId;
-
-        // 修改用户id
-        @NameInMap("ModifyUserId")
-        public String modifyUserId;
-
         public static ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions build(java.util.Map<String, ?> map) throws Exception {
             ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions self = new ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions();
             return TeaModel.build(map, self);
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setModifyUserId(String modifyUserId) {
+            this.modifyUserId = modifyUserId;
+            return this;
+        }
+        public String getModifyUserId() {
+            return this.modifyUserId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setSimilarQuestionEffectType(String similarQuestionEffectType) {
+            this.similarQuestionEffectType = similarQuestionEffectType;
+            return this;
+        }
+        public String getSimilarQuestionEffectType() {
+            return this.similarQuestionEffectType;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setSimilarQuestionId(Long similarQuestionId) {
@@ -131,57 +171,9 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
             return this.similarQuestionType;
         }
 
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setSimilarQuestionEffectType(String similarQuestionEffectType) {
-            this.similarQuestionEffectType = similarQuestionEffectType;
-            return this;
-        }
-        public String getSimilarQuestionEffectType() {
-            return this.similarQuestionEffectType;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions setModifyUserId(String modifyUserId) {
-            this.modifyUserId = modifyUserId;
-            return this;
-        }
-        public String getModifyUserId() {
-            return this.modifyUserId;
-        }
-
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
         // 生效模式：EffectiveMode
         @NameInMap("ConditionType")
         public String conditionType;
@@ -190,25 +182,17 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("ConditionValue")
         public String conditionValue;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
         public static ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions build(java.util.Map<String, ?> map) throws Exception {
             ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions self = new ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions();
             return TeaModel.build(map, self);
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setConditionType(String conditionType) {
@@ -227,29 +211,25 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
             return this.conditionValue;
         }
 
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions extends TeaModel {
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
-        // 场景id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案类型,"text":文本答案
-        @NameInMap("SolutionType")
-        public String solutionType;
-
-        // 答案来源
-        @NameInMap("SolutionSource")
-        public String solutionSource;
-
-        // 答案正文
-        @NameInMap("SolutionContent")
-        public String solutionContent;
-
         // 答案约束
         @NameInMap("Conditions")
         public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions;
@@ -258,49 +238,29 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("ExtraContent")
         public String extraContent;
 
+        // 场景id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案正文
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 答案来源
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案类型,"text":文本答案
+        @NameInMap("SolutionType")
+        public String solutionType;
+
         public static ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions build(java.util.Map<String, ?> map) throws Exception {
             ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions self = new ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions();
             return TeaModel.build(map, self);
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionType(String solutionType) {
-            this.solutionType = solutionType;
-            return this;
-        }
-        public String getSolutionType() {
-            return this.solutionType;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionSource(String solutionSource) {
-            this.solutionSource = solutionSource;
-            return this;
-        }
-        public String getSolutionSource() {
-            return this.solutionSource;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionContent(String solutionContent) {
-            this.solutionContent = solutionContent;
-            return this;
-        }
-        public String getSolutionContent() {
-            return this.solutionContent;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setConditions(java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions) {
@@ -319,36 +279,76 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
             return this.extraContent;
         }
 
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
+        }
+
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledges extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
+        // 创建时间格式：yyyy-MM-dd HH:mm:ss
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        // 知识标题
-        @NameInMap("KnowledgeTitle")
-        public String knowledgeTitle;
-
-        // "online":在用，"disabled":禁用
-        @NameInMap("KnowledgeStatus")
-        public String knowledgeStatus;
+        // 创建用户id
+        @NameInMap("CreateUserId")
+        public String createUserId;
 
         // 知识描述
         @NameInMap("KnowledgeDescription")
         public String knowledgeDescription;
 
-        // 创建时间格式：yyyy-MM-dd HH:mm:ss
-        @NameInMap("CreateTime")
-        public String createTime;
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // "online":在用，"disabled":禁用
+        @NameInMap("KnowledgeStatus")
+        public String knowledgeStatus;
+
+        // 知识标题
+        @NameInMap("KnowledgeTitle")
+        public String knowledgeTitle;
 
         // 修改时间格式：yyyy-MM-dd HH:mm:ss
         @NameInMap("ModifyTime")
         public String modifyTime;
-
-        // 创建用户id
-        @NameInMap("CreateUserId")
-        public String createUserId;
 
         // 修改用户id
         @NameInMap("ModifyUserId")
@@ -370,28 +370,20 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeTitle(String knowledgeTitle) {
-            this.knowledgeTitle = knowledgeTitle;
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
             return this;
         }
-        public String getKnowledgeTitle() {
-            return this.knowledgeTitle;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeStatus(String knowledgeStatus) {
-            this.knowledgeStatus = knowledgeStatus;
-            return this;
-        }
-        public String getKnowledgeStatus() {
-            return this.knowledgeStatus;
+        public String getCreateUserId() {
+            return this.createUserId;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeDescription(String knowledgeDescription) {
@@ -402,12 +394,28 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
             return this.knowledgeDescription;
         }
 
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeStatus(String knowledgeStatus) {
+            this.knowledgeStatus = knowledgeStatus;
+            return this;
+        }
+        public String getKnowledgeStatus() {
+            return this.knowledgeStatus;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setKnowledgeTitle(String knowledgeTitle) {
+            this.knowledgeTitle = knowledgeTitle;
+            return this;
+        }
+        public String getKnowledgeTitle() {
+            return this.knowledgeTitle;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledges setModifyTime(String modifyTime) {
@@ -416,14 +424,6 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
-        }
-
-        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledges setModifyUserId(String modifyUserId) {

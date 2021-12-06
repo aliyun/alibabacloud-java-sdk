@@ -4,53 +4,29 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class GetKnowledgeResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // 返回code
+    @NameInMap("Code")
+    public String code;
 
     // 知识
     @NameInMap("Knowledge")
     public GetKnowledgeResponseBodyKnowledge knowledge;
 
-    // 是否成功标示
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 返回code
-    @NameInMap("Code")
-    public String code;
-
     // 返回信息
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetKnowledgeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetKnowledgeResponseBody self = new GetKnowledgeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetKnowledgeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetKnowledgeResponseBody setKnowledge(GetKnowledgeResponseBodyKnowledge knowledge) {
-        this.knowledge = knowledge;
-        return this;
-    }
-    public GetKnowledgeResponseBodyKnowledge getKnowledge() {
-        return this.knowledge;
-    }
-
-    public GetKnowledgeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetKnowledgeResponseBody setCode(String code) {
@@ -61,6 +37,14 @@ public class GetKnowledgeResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetKnowledgeResponseBody setKnowledge(GetKnowledgeResponseBodyKnowledge knowledge) {
+        this.knowledge = knowledge;
+        return this;
+    }
+    public GetKnowledgeResponseBodyKnowledge getKnowledge() {
+        return this.knowledge;
+    }
+
     public GetKnowledgeResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -69,7 +53,43 @@ public class GetKnowledgeResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetKnowledgeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetKnowledgeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetKnowledgeResponseBodyKnowledgeSimilarQuestions extends TeaModel {
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        // 创建用户id
+        @NameInMap("CreateUserId")
+        public String createUserId;
+
+        // 修改时间
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
+        // 修改用户id
+        @NameInMap("ModifyUserId")
+        public String modifyUserId;
+
+        // 问法影响类型
+        @NameInMap("SimilarQuestionEffectType")
+        public String similarQuestionEffectType;
+
         // 问法id
         @NameInMap("SimilarQuestionId")
         public Long similarQuestionId;
@@ -82,29 +102,49 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("SimilarQuestionType")
         public String similarQuestionType;
 
-        // 问法影响类型
-        @NameInMap("SimilarQuestionEffectType")
-        public String similarQuestionEffectType;
-
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // 修改时间
-        @NameInMap("ModifyTime")
-        public String modifyTime;
-
-        // 创建用户id
-        @NameInMap("CreateUserId")
-        public String createUserId;
-
-        // 修改用户id
-        @NameInMap("ModifyUserId")
-        public String modifyUserId;
-
         public static GetKnowledgeResponseBodyKnowledgeSimilarQuestions build(java.util.Map<String, ?> map) throws Exception {
             GetKnowledgeResponseBodyKnowledgeSimilarQuestions self = new GetKnowledgeResponseBodyKnowledgeSimilarQuestions();
             return TeaModel.build(map, self);
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
+            return this;
+        }
+        public String getCreateUserId() {
+            return this.createUserId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setModifyUserId(String modifyUserId) {
+            this.modifyUserId = modifyUserId;
+            return this;
+        }
+        public String getModifyUserId() {
+            return this.modifyUserId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setSimilarQuestionEffectType(String similarQuestionEffectType) {
+            this.similarQuestionEffectType = similarQuestionEffectType;
+            return this;
+        }
+        public String getSimilarQuestionEffectType() {
+            return this.similarQuestionEffectType;
         }
 
         public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setSimilarQuestionId(Long similarQuestionId) {
@@ -131,57 +171,9 @@ public class GetKnowledgeResponseBody extends TeaModel {
             return this.similarQuestionType;
         }
 
-        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setSimilarQuestionEffectType(String similarQuestionEffectType) {
-            this.similarQuestionEffectType = similarQuestionEffectType;
-            return this;
-        }
-        public String getSimilarQuestionEffectType() {
-            return this.similarQuestionEffectType;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSimilarQuestions setModifyUserId(String modifyUserId) {
-            this.modifyUserId = modifyUserId;
-            return this;
-        }
-        public String getModifyUserId() {
-            return this.modifyUserId;
-        }
-
     }
 
     public static class GetKnowledgeResponseBodyKnowledgeSolutionsConditions extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
         // 生效模式
         @NameInMap("ConditionType")
         public String conditionType;
@@ -190,25 +182,17 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("ConditionValue")
         public String conditionValue;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
         public static GetKnowledgeResponseBodyKnowledgeSolutionsConditions build(java.util.Map<String, ?> map) throws Exception {
             GetKnowledgeResponseBodyKnowledgeSolutionsConditions self = new GetKnowledgeResponseBodyKnowledgeSolutionsConditions();
             return TeaModel.build(map, self);
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutionsConditions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutionsConditions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
         }
 
         public GetKnowledgeResponseBodyKnowledgeSolutionsConditions setConditionType(String conditionType) {
@@ -225,6 +209,22 @@ public class GetKnowledgeResponseBody extends TeaModel {
         }
         public String getConditionValue() {
             return this.conditionValue;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutionsConditions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutionsConditions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
         }
 
     }
@@ -286,26 +286,6 @@ public class GetKnowledgeResponseBody extends TeaModel {
     }
 
     public static class GetKnowledgeResponseBodyKnowledgeSolutions extends TeaModel {
-        // 答案id
-        @NameInMap("SolutionId")
-        public Long solutionId;
-
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 答案类型,
-        @NameInMap("SolutionType")
-        public String solutionType;
-
-        // 答案来源
-        @NameInMap("SolutionSource")
-        public String solutionSource;
-
-        // 答案正文
-        @NameInMap("SolutionContent")
-        public String solutionContent;
-
         // 答案约束集合
         @NameInMap("Conditions")
         public java.util.List<GetKnowledgeResponseBodyKnowledgeSolutionsConditions> conditions;
@@ -314,6 +294,26 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("ExtraContent")
         public String extraContent;
 
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案正文
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 答案来源
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案类型,
+        @NameInMap("SolutionType")
+        public String solutionType;
+
         // 变量集合
         @NameInMap("SolutionVariables")
         public java.util.List<GetKnowledgeResponseBodyKnowledgeSolutionsSolutionVariables> solutionVariables;
@@ -321,46 +321,6 @@ public class GetKnowledgeResponseBody extends TeaModel {
         public static GetKnowledgeResponseBodyKnowledgeSolutions build(java.util.Map<String, ?> map) throws Exception {
             GetKnowledgeResponseBodyKnowledgeSolutions self = new GetKnowledgeResponseBodyKnowledgeSolutions();
             return TeaModel.build(map, self);
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionId(Long solutionId) {
-            this.solutionId = solutionId;
-            return this;
-        }
-        public Long getSolutionId() {
-            return this.solutionId;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutions setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionType(String solutionType) {
-            this.solutionType = solutionType;
-            return this;
-        }
-        public String getSolutionType() {
-            return this.solutionType;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionSource(String solutionSource) {
-            this.solutionSource = solutionSource;
-            return this;
-        }
-        public String getSolutionSource() {
-            return this.solutionSource;
-        }
-
-        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionContent(String solutionContent) {
-            this.solutionContent = solutionContent;
-            return this;
-        }
-        public String getSolutionContent() {
-            return this.solutionContent;
         }
 
         public GetKnowledgeResponseBodyKnowledgeSolutions setConditions(java.util.List<GetKnowledgeResponseBodyKnowledgeSolutionsConditions> conditions) {
@@ -379,6 +339,46 @@ public class GetKnowledgeResponseBody extends TeaModel {
             return this.extraContent;
         }
 
+        public GetKnowledgeResponseBodyKnowledgeSolutions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
+        }
+
         public GetKnowledgeResponseBodyKnowledgeSolutions setSolutionVariables(java.util.List<GetKnowledgeResponseBodyKnowledgeSolutionsSolutionVariables> solutionVariables) {
             this.solutionVariables = solutionVariables;
             return this;
@@ -390,26 +390,6 @@ public class GetKnowledgeResponseBody extends TeaModel {
     }
 
     public static class GetKnowledgeResponseBodyKnowledge extends TeaModel {
-        // 知识id
-        @NameInMap("KnowledgeId")
-        public Long knowledgeId;
-
-        // 知识标题
-        @NameInMap("KnowledgeTitle")
-        public String knowledgeTitle;
-
-        // 知识状态
-        @NameInMap("KnowledgeStatus")
-        public String knowledgeStatus;
-
-        // 场景key
-        @NameInMap("SceneKey")
-        public String sceneKey;
-
-        // 场景描述
-        @NameInMap("KnowledgeDescription")
-        public String knowledgeDescription;
-
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
@@ -418,13 +398,33 @@ public class GetKnowledgeResponseBody extends TeaModel {
         @NameInMap("CreateUserId")
         public String createUserId;
 
-        // 修改用户id
-        @NameInMap("ModifyUserId")
-        public String modifyUserId;
+        // 场景描述
+        @NameInMap("KnowledgeDescription")
+        public String knowledgeDescription;
+
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 知识状态
+        @NameInMap("KnowledgeStatus")
+        public String knowledgeStatus;
+
+        // 知识标题
+        @NameInMap("KnowledgeTitle")
+        public String knowledgeTitle;
 
         // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        // 修改用户id
+        @NameInMap("ModifyUserId")
+        public String modifyUserId;
+
+        // 场景key
+        @NameInMap("SceneKey")
+        public String sceneKey;
 
         // 示例问法集合
         @NameInMap("SimilarQuestions")
@@ -437,46 +437,6 @@ public class GetKnowledgeResponseBody extends TeaModel {
         public static GetKnowledgeResponseBodyKnowledge build(java.util.Map<String, ?> map) throws Exception {
             GetKnowledgeResponseBodyKnowledge self = new GetKnowledgeResponseBodyKnowledge();
             return TeaModel.build(map, self);
-        }
-
-        public GetKnowledgeResponseBodyKnowledge setKnowledgeId(Long knowledgeId) {
-            this.knowledgeId = knowledgeId;
-            return this;
-        }
-        public Long getKnowledgeId() {
-            return this.knowledgeId;
-        }
-
-        public GetKnowledgeResponseBodyKnowledge setKnowledgeTitle(String knowledgeTitle) {
-            this.knowledgeTitle = knowledgeTitle;
-            return this;
-        }
-        public String getKnowledgeTitle() {
-            return this.knowledgeTitle;
-        }
-
-        public GetKnowledgeResponseBodyKnowledge setKnowledgeStatus(String knowledgeStatus) {
-            this.knowledgeStatus = knowledgeStatus;
-            return this;
-        }
-        public String getKnowledgeStatus() {
-            return this.knowledgeStatus;
-        }
-
-        public GetKnowledgeResponseBodyKnowledge setSceneKey(String sceneKey) {
-            this.sceneKey = sceneKey;
-            return this;
-        }
-        public String getSceneKey() {
-            return this.sceneKey;
-        }
-
-        public GetKnowledgeResponseBodyKnowledge setKnowledgeDescription(String knowledgeDescription) {
-            this.knowledgeDescription = knowledgeDescription;
-            return this;
-        }
-        public String getKnowledgeDescription() {
-            return this.knowledgeDescription;
         }
 
         public GetKnowledgeResponseBodyKnowledge setCreateTime(String createTime) {
@@ -495,12 +455,36 @@ public class GetKnowledgeResponseBody extends TeaModel {
             return this.createUserId;
         }
 
-        public GetKnowledgeResponseBodyKnowledge setModifyUserId(String modifyUserId) {
-            this.modifyUserId = modifyUserId;
+        public GetKnowledgeResponseBodyKnowledge setKnowledgeDescription(String knowledgeDescription) {
+            this.knowledgeDescription = knowledgeDescription;
             return this;
         }
-        public String getModifyUserId() {
-            return this.modifyUserId;
+        public String getKnowledgeDescription() {
+            return this.knowledgeDescription;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setKnowledgeStatus(String knowledgeStatus) {
+            this.knowledgeStatus = knowledgeStatus;
+            return this;
+        }
+        public String getKnowledgeStatus() {
+            return this.knowledgeStatus;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setKnowledgeTitle(String knowledgeTitle) {
+            this.knowledgeTitle = knowledgeTitle;
+            return this;
+        }
+        public String getKnowledgeTitle() {
+            return this.knowledgeTitle;
         }
 
         public GetKnowledgeResponseBodyKnowledge setModifyTime(String modifyTime) {
@@ -509,6 +493,22 @@ public class GetKnowledgeResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setModifyUserId(String modifyUserId) {
+            this.modifyUserId = modifyUserId;
+            return this;
+        }
+        public String getModifyUserId() {
+            return this.modifyUserId;
+        }
+
+        public GetKnowledgeResponseBodyKnowledge setSceneKey(String sceneKey) {
+            this.sceneKey = sceneKey;
+            return this;
+        }
+        public String getSceneKey() {
+            return this.sceneKey;
         }
 
         public GetKnowledgeResponseBodyKnowledge setSimilarQuestions(java.util.List<GetKnowledgeResponseBodyKnowledgeSimilarQuestions> similarQuestions) {

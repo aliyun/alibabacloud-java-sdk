@@ -4,6 +4,14 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByPackageResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("PageData")
     public ListSubscriptionByPackageResponseBodyPageData pageData;
@@ -15,17 +23,25 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
     public static ListSubscriptionByPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubscriptionByPackageResponseBody self = new ListSubscriptionByPackageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSubscriptionByPackageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSubscriptionByPackageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ListSubscriptionByPackageResponseBody setPageData(ListSubscriptionByPackageResponseBodyPageData pageData) {
@@ -52,27 +68,7 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListSubscriptionByPackageResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListSubscriptionByPackageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public static class ListSubscriptionByPackageResponseBodyPageDataData extends TeaModel {
-        // 机器人code
-        @NameInMap("RobotCode")
-        public String robotCode;
-
         // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
@@ -81,17 +77,13 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        // 机器人code
+        @NameInMap("RobotCode")
+        public String robotCode;
+
         public static ListSubscriptionByPackageResponseBodyPageDataData build(java.util.Map<String, ?> map) throws Exception {
             ListSubscriptionByPackageResponseBodyPageDataData self = new ListSubscriptionByPackageResponseBodyPageDataData();
             return TeaModel.build(map, self);
-        }
-
-        public ListSubscriptionByPackageResponseBodyPageDataData setRobotCode(String robotCode) {
-            this.robotCode = robotCode;
-            return this;
-        }
-        public String getRobotCode() {
-            return this.robotCode;
         }
 
         public ListSubscriptionByPackageResponseBodyPageDataData setPackageCode(String packageCode) {
@@ -110,9 +102,21 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
             return this.packageVersion;
         }
 
+        public ListSubscriptionByPackageResponseBodyPageDataData setRobotCode(String robotCode) {
+            this.robotCode = robotCode;
+            return this;
+        }
+        public String getRobotCode() {
+            return this.robotCode;
+        }
+
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageData extends TeaModel {
+        // 订阅的行业包
+        @NameInMap("Data")
+        public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data;
+
         // 返回的最大记录数
         @NameInMap("MaxResults")
         public Integer maxResults;
@@ -121,10 +125,6 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
         @NameInMap("NextToken")
         public String nextToken;
 
-        // 订阅的行业包
-        @NameInMap("Data")
-        public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data;
-
         // 总数据量
         @NameInMap("TotalCount")
         public Integer totalCount;
@@ -132,6 +132,14 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
         public static ListSubscriptionByPackageResponseBodyPageData build(java.util.Map<String, ?> map) throws Exception {
             ListSubscriptionByPackageResponseBodyPageData self = new ListSubscriptionByPackageResponseBodyPageData();
             return TeaModel.build(map, self);
+        }
+
+        public ListSubscriptionByPackageResponseBodyPageData setData(java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> getData() {
+            return this.data;
         }
 
         public ListSubscriptionByPackageResponseBodyPageData setMaxResults(Integer maxResults) {
@@ -148,14 +156,6 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
         }
         public String getNextToken() {
             return this.nextToken;
-        }
-
-        public ListSubscriptionByPackageResponseBodyPageData setData(java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data) {
-            this.data = data;
-            return this;
-        }
-        public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> getData() {
-            return this.data;
         }
 
         public ListSubscriptionByPackageResponseBodyPageData setTotalCount(Integer totalCount) {

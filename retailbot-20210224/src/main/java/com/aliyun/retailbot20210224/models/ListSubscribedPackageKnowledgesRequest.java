@@ -8,14 +8,6 @@ public class ListSubscribedPackageKnowledgesRequest extends TeaModel {
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    // 查询指定包的场景
-    @NameInMap("PackageCodes")
-    public java.util.List<String> packageCodes;
-
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 操作用户id
     @NameInMap("OperatorId")
     public String operatorId;
@@ -23,6 +15,14 @@ public class ListSubscribedPackageKnowledgesRequest extends TeaModel {
     // 操作用户名称
     @NameInMap("OperatorName")
     public String operatorName;
+
+    // 查询指定包的场景
+    @NameInMap("PackageCodes")
+    public java.util.List<String> packageCodes;
+
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static ListSubscribedPackageKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSubscribedPackageKnowledgesRequest self = new ListSubscribedPackageKnowledgesRequest();
@@ -35,22 +35,6 @@ public class ListSubscribedPackageKnowledgesRequest extends TeaModel {
     }
     public Long getCategoryId() {
         return this.categoryId;
-    }
-
-    public ListSubscribedPackageKnowledgesRequest setPackageCodes(java.util.List<String> packageCodes) {
-        this.packageCodes = packageCodes;
-        return this;
-    }
-    public java.util.List<String> getPackageCodes() {
-        return this.packageCodes;
-    }
-
-    public ListSubscribedPackageKnowledgesRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public ListSubscribedPackageKnowledgesRequest setOperatorId(String operatorId) {
@@ -67,6 +51,22 @@ public class ListSubscribedPackageKnowledgesRequest extends TeaModel {
     }
     public String getOperatorName() {
         return this.operatorName;
+    }
+
+    public ListSubscribedPackageKnowledgesRequest setPackageCodes(java.util.List<String> packageCodes) {
+        this.packageCodes = packageCodes;
+        return this;
+    }
+    public java.util.List<String> getPackageCodes() {
+        return this.packageCodes;
+    }
+
+    public ListSubscribedPackageKnowledgesRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

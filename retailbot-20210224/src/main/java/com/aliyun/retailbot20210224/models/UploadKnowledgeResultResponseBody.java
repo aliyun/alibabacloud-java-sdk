@@ -4,14 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UploadKnowledgeResultResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 是否成功
-    @NameInMap("Success")
-    public Boolean success;
-
     // 错误码
     @NameInMap("Code")
     public String code;
@@ -20,25 +12,17 @@ public class UploadKnowledgeResultResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
     public static UploadKnowledgeResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadKnowledgeResultResponseBody self = new UploadKnowledgeResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UploadKnowledgeResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public UploadKnowledgeResultResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public UploadKnowledgeResultResponseBody setCode(String code) {
@@ -55,6 +39,22 @@ public class UploadKnowledgeResultResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public UploadKnowledgeResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UploadKnowledgeResultResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

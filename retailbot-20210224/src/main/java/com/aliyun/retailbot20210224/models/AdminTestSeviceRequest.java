@@ -4,23 +4,15 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class AdminTestSeviceRequest extends TeaModel {
-    @NameInMap("VersionId")
-    public Long versionId;
-
     @NameInMap("AliyunAccountDTO")
     public AdminTestSeviceRequestAliyunAccountDTO aliyunAccountDTO;
+
+    @NameInMap("VersionId")
+    public Long versionId;
 
     public static AdminTestSeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         AdminTestSeviceRequest self = new AdminTestSeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AdminTestSeviceRequest setVersionId(Long versionId) {
-        this.versionId = versionId;
-        return this;
-    }
-    public Long getVersionId() {
-        return this.versionId;
     }
 
     public AdminTestSeviceRequest setAliyunAccountDTO(AdminTestSeviceRequestAliyunAccountDTO aliyunAccountDTO) {
@@ -29,6 +21,14 @@ public class AdminTestSeviceRequest extends TeaModel {
     }
     public AdminTestSeviceRequestAliyunAccountDTO getAliyunAccountDTO() {
         return this.aliyunAccountDTO;
+    }
+
+    public AdminTestSeviceRequest setVersionId(Long versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public Long getVersionId() {
+        return this.versionId;
     }
 
     public static class AdminTestSeviceRequestAliyunAccountDTO extends TeaModel {

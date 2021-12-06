@@ -4,10 +4,6 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteRobotShrinkRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
-
     // 备注信息
     @NameInMap("Memo")
     public String memo;
@@ -16,17 +12,13 @@ public class DeleteRobotShrinkRequest extends TeaModel {
     @NameInMap("Operator")
     public String operatorShrink;
 
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
+
     public static DeleteRobotShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRobotShrinkRequest self = new DeleteRobotShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteRobotShrinkRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
     }
 
     public DeleteRobotShrinkRequest setMemo(String memo) {
@@ -43,6 +35,14 @@ public class DeleteRobotShrinkRequest extends TeaModel {
     }
     public String getOperatorShrink() {
         return this.operatorShrink;
+    }
+
+    public DeleteRobotShrinkRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
 }

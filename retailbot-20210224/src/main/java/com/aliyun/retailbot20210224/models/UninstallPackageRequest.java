@@ -4,37 +4,21 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UninstallPackageRequest extends TeaModel {
-    // 机器人code
-    @NameInMap("RobotCode")
-    public String robotCode;
+    // 操作人信息
+    @NameInMap("Operator")
+    public UninstallPackageRequestOperator operator;
 
     // 取消订阅的行业包
     @NameInMap("Packages")
     public java.util.List<UninstallPackageRequestPackages> packages;
 
-    // 操作人信息
-    @NameInMap("Operator")
-    public UninstallPackageRequestOperator operator;
+    // 机器人code
+    @NameInMap("RobotCode")
+    public String robotCode;
 
     public static UninstallPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UninstallPackageRequest self = new UninstallPackageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UninstallPackageRequest setRobotCode(String robotCode) {
-        this.robotCode = robotCode;
-        return this;
-    }
-    public String getRobotCode() {
-        return this.robotCode;
-    }
-
-    public UninstallPackageRequest setPackages(java.util.List<UninstallPackageRequestPackages> packages) {
-        this.packages = packages;
-        return this;
-    }
-    public java.util.List<UninstallPackageRequestPackages> getPackages() {
-        return this.packages;
     }
 
     public UninstallPackageRequest setOperator(UninstallPackageRequestOperator operator) {
@@ -45,36 +29,20 @@ public class UninstallPackageRequest extends TeaModel {
         return this.operator;
     }
 
-    public static class UninstallPackageRequestPackages extends TeaModel {
-        // 行业包code
-        @NameInMap("PackageCode")
-        public String packageCode;
+    public UninstallPackageRequest setPackages(java.util.List<UninstallPackageRequestPackages> packages) {
+        this.packages = packages;
+        return this;
+    }
+    public java.util.List<UninstallPackageRequestPackages> getPackages() {
+        return this.packages;
+    }
 
-        // 行业包版本
-        @NameInMap("PackageVersion")
-        public String packageVersion;
-
-        public static UninstallPackageRequestPackages build(java.util.Map<String, ?> map) throws Exception {
-            UninstallPackageRequestPackages self = new UninstallPackageRequestPackages();
-            return TeaModel.build(map, self);
-        }
-
-        public UninstallPackageRequestPackages setPackageCode(String packageCode) {
-            this.packageCode = packageCode;
-            return this;
-        }
-        public String getPackageCode() {
-            return this.packageCode;
-        }
-
-        public UninstallPackageRequestPackages setPackageVersion(String packageVersion) {
-            this.packageVersion = packageVersion;
-            return this;
-        }
-        public String getPackageVersion() {
-            return this.packageVersion;
-        }
-
+    public UninstallPackageRequest setRobotCode(String robotCode) {
+        this.robotCode = robotCode;
+        return this;
+    }
+    public String getRobotCode() {
+        return this.robotCode;
     }
 
     public static class UninstallPackageRequestOperator extends TeaModel {
@@ -105,6 +73,38 @@ public class UninstallPackageRequest extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+    }
+
+    public static class UninstallPackageRequestPackages extends TeaModel {
+        // 行业包code
+        @NameInMap("PackageCode")
+        public String packageCode;
+
+        // 行业包版本
+        @NameInMap("PackageVersion")
+        public String packageVersion;
+
+        public static UninstallPackageRequestPackages build(java.util.Map<String, ?> map) throws Exception {
+            UninstallPackageRequestPackages self = new UninstallPackageRequestPackages();
+            return TeaModel.build(map, self);
+        }
+
+        public UninstallPackageRequestPackages setPackageCode(String packageCode) {
+            this.packageCode = packageCode;
+            return this;
+        }
+        public String getPackageCode() {
+            return this.packageCode;
+        }
+
+        public UninstallPackageRequestPackages setPackageVersion(String packageVersion) {
+            this.packageVersion = packageVersion;
+            return this;
+        }
+        public String getPackageVersion() {
+            return this.packageVersion;
         }
 
     }
