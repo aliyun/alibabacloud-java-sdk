@@ -7,6 +7,9 @@ public class GetUnionTaskStatusRequest extends TeaModel {
     @NameInMap("AlipayOpenId")
     public Long alipayOpenId;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
     @NameInMap("Sign")
     public String sign;
 
@@ -30,6 +33,14 @@ public class GetUnionTaskStatusRequest extends TeaModel {
     }
     public Long getAlipayOpenId() {
         return this.alipayOpenId;
+    }
+
+    public GetUnionTaskStatusRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public GetUnionTaskStatusRequest setSign(String sign) {
