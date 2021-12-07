@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>drds20190123</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>drds20190123</name>
   <description>Alibaba Cloud Distributed Relational Database Service (20190123) SDK for Java
@@ -71,7 +71,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.13</version>
+      <version>0.1.14</version>
     </dependency>
   </dependencies>
   <build>
