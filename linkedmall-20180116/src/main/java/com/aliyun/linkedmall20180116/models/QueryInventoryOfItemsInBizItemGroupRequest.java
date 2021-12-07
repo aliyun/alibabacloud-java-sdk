@@ -11,10 +11,10 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends TeaModel {
     public String divisionCode;
 
     @NameInMap("ItemIds")
-    public java.util.Map<String, ?> itemIds;
+    public java.util.List<Long> itemIds;
 
     @NameInMap("LmItemIds")
-    public java.util.Map<String, ?> lmItemIds;
+    public java.util.List<String> lmItemIds;
 
     @NameInMap("SubBizId")
     public String subBizId;
@@ -40,19 +40,19 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends TeaModel {
         return this.divisionCode;
     }
 
-    public QueryInventoryOfItemsInBizItemGroupRequest setItemIds(java.util.Map<String, ?> itemIds) {
+    public QueryInventoryOfItemsInBizItemGroupRequest setItemIds(java.util.List<Long> itemIds) {
         this.itemIds = itemIds;
         return this;
     }
-    public java.util.Map<String, ?> getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
-    public QueryInventoryOfItemsInBizItemGroupRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
+    public QueryInventoryOfItemsInBizItemGroupRequest setLmItemIds(java.util.List<String> lmItemIds) {
         this.lmItemIds = lmItemIds;
         return this;
     }
-    public java.util.Map<String, ?> getLmItemIds() {
+    public java.util.List<String> getLmItemIds() {
         return this.lmItemIds;
     }
 
