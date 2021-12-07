@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadFileRequest extends TeaModel {
     @NameInMap("file")
-    public String file;
+    public java.io.InputStream file;
 
     @NameInMap("data")
     public String data;
@@ -15,11 +15,11 @@ public class UploadFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UploadFileRequest setFile(String file) {
+    public UploadFileRequest setFile(java.io.InputStream file) {
         this.file = file;
         return this;
     }
-    public String getFile() {
+    public java.io.InputStream getFile() {
         return this.file;
     }
 
