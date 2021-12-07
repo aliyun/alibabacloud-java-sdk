@@ -19,6 +19,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
+    @NameInMap("Log")
+    public GetStackResponseBodyLog log;
+
     @NameInMap("NotificationURLs")
     public java.util.List<String> notificationURLs;
 
@@ -122,6 +125,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public String getDriftDetectionTime() {
         return this.driftDetectionTime;
+    }
+
+    public GetStackResponseBody setLog(GetStackResponseBodyLog log) {
+        this.log = log;
+        return this;
+    }
+    public GetStackResponseBodyLog getLog() {
+        return this.log;
     }
 
     public GetStackResponseBody setNotificationURLs(java.util.List<String> notificationURLs) {
@@ -282,6 +293,66 @@ public class GetStackResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public static class GetStackResponseBodyLogTerraformLogs extends TeaModel {
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Stream")
+        public String stream;
+
+        public static GetStackResponseBodyLogTerraformLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyLogTerraformLogs self = new GetStackResponseBodyLogTerraformLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyLogTerraformLogs setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public GetStackResponseBodyLogTerraformLogs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetStackResponseBodyLogTerraformLogs setStream(String stream) {
+            this.stream = stream;
+            return this;
+        }
+        public String getStream() {
+            return this.stream;
+        }
+
+    }
+
+    public static class GetStackResponseBodyLog extends TeaModel {
+        @NameInMap("TerraformLogs")
+        public java.util.List<GetStackResponseBodyLogTerraformLogs> terraformLogs;
+
+        public static GetStackResponseBodyLog build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyLog self = new GetStackResponseBodyLog();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyLog setTerraformLogs(java.util.List<GetStackResponseBodyLogTerraformLogs> terraformLogs) {
+            this.terraformLogs = terraformLogs;
+            return this;
+        }
+        public java.util.List<GetStackResponseBodyLogTerraformLogs> getTerraformLogs() {
+            return this.terraformLogs;
+        }
+
     }
 
     public static class GetStackResponseBodyParameters extends TeaModel {

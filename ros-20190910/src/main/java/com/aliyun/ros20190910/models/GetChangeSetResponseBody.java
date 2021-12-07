@@ -28,6 +28,9 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("ExecutionStatus")
     public String executionStatus;
 
+    @NameInMap("Log")
+    public GetChangeSetResponseBodyLog log;
+
     @NameInMap("Parameters")
     public java.util.List<GetChangeSetResponseBodyParameters> parameters;
 
@@ -124,6 +127,14 @@ public class GetChangeSetResponseBody extends TeaModel {
         return this.executionStatus;
     }
 
+    public GetChangeSetResponseBody setLog(GetChangeSetResponseBodyLog log) {
+        this.log = log;
+        return this;
+    }
+    public GetChangeSetResponseBodyLog getLog() {
+        return this.log;
+    }
+
     public GetChangeSetResponseBody setParameters(java.util.List<GetChangeSetResponseBodyParameters> parameters) {
         this.parameters = parameters;
         return this;
@@ -194,6 +205,66 @@ public class GetChangeSetResponseBody extends TeaModel {
     }
     public Integer getTimeoutInMinutes() {
         return this.timeoutInMinutes;
+    }
+
+    public static class GetChangeSetResponseBodyLogTerraformLogs extends TeaModel {
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Stream")
+        public String stream;
+
+        public static GetChangeSetResponseBodyLogTerraformLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeSetResponseBodyLogTerraformLogs self = new GetChangeSetResponseBodyLogTerraformLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeSetResponseBodyLogTerraformLogs setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public GetChangeSetResponseBodyLogTerraformLogs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetChangeSetResponseBodyLogTerraformLogs setStream(String stream) {
+            this.stream = stream;
+            return this;
+        }
+        public String getStream() {
+            return this.stream;
+        }
+
+    }
+
+    public static class GetChangeSetResponseBodyLog extends TeaModel {
+        @NameInMap("TerraformLogs")
+        public java.util.List<GetChangeSetResponseBodyLogTerraformLogs> terraformLogs;
+
+        public static GetChangeSetResponseBodyLog build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeSetResponseBodyLog self = new GetChangeSetResponseBodyLog();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeSetResponseBodyLog setTerraformLogs(java.util.List<GetChangeSetResponseBodyLogTerraformLogs> terraformLogs) {
+            this.terraformLogs = terraformLogs;
+            return this;
+        }
+        public java.util.List<GetChangeSetResponseBodyLogTerraformLogs> getTerraformLogs() {
+            return this.terraformLogs;
+        }
+
     }
 
     public static class GetChangeSetResponseBodyParameters extends TeaModel {

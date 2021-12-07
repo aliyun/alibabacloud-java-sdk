@@ -31,6 +31,66 @@ public class PreviewStackResponseBody extends TeaModel {
         return this.stack;
     }
 
+    public static class PreviewStackResponseBodyStackLogTerraformLogs extends TeaModel {
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Stream")
+        public String stream;
+
+        public static PreviewStackResponseBodyStackLogTerraformLogs build(java.util.Map<String, ?> map) throws Exception {
+            PreviewStackResponseBodyStackLogTerraformLogs self = new PreviewStackResponseBodyStackLogTerraformLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public PreviewStackResponseBodyStackLogTerraformLogs setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public PreviewStackResponseBodyStackLogTerraformLogs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public PreviewStackResponseBodyStackLogTerraformLogs setStream(String stream) {
+            this.stream = stream;
+            return this;
+        }
+        public String getStream() {
+            return this.stream;
+        }
+
+    }
+
+    public static class PreviewStackResponseBodyStackLog extends TeaModel {
+        @NameInMap("TerraformLogs")
+        public java.util.List<PreviewStackResponseBodyStackLogTerraformLogs> terraformLogs;
+
+        public static PreviewStackResponseBodyStackLog build(java.util.Map<String, ?> map) throws Exception {
+            PreviewStackResponseBodyStackLog self = new PreviewStackResponseBodyStackLog();
+            return TeaModel.build(map, self);
+        }
+
+        public PreviewStackResponseBodyStackLog setTerraformLogs(java.util.List<PreviewStackResponseBodyStackLogTerraformLogs> terraformLogs) {
+            this.terraformLogs = terraformLogs;
+            return this;
+        }
+        public java.util.List<PreviewStackResponseBodyStackLogTerraformLogs> getTerraformLogs() {
+            return this.terraformLogs;
+        }
+
+    }
+
     public static class PreviewStackResponseBodyStackParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -142,6 +202,9 @@ public class PreviewStackResponseBody extends TeaModel {
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
 
+        @NameInMap("Log")
+        public PreviewStackResponseBodyStackLog log;
+
         @NameInMap("Parameters")
         public java.util.List<PreviewStackResponseBodyStackParameters> parameters;
 
@@ -182,6 +245,14 @@ public class PreviewStackResponseBody extends TeaModel {
         }
         public Boolean getDisableRollback() {
             return this.disableRollback;
+        }
+
+        public PreviewStackResponseBodyStack setLog(PreviewStackResponseBodyStackLog log) {
+            this.log = log;
+            return this;
+        }
+        public PreviewStackResponseBodyStackLog getLog() {
+            return this.log;
         }
 
         public PreviewStackResponseBodyStack setParameters(java.util.List<PreviewStackResponseBodyStackParameters> parameters) {
