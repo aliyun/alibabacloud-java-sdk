@@ -1,3 +1,6 @@
+2021-12-07 Version: 2.0.0
+- Add Retailbot saas api,12-07.
+
 2021-12-06 Version: 1.9.0
 - Add CreateUserAccessToken for RetailSaaS.
 
