@@ -7,20 +7,20 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PoolKey")
+    public String poolKey;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PoolKey")
-    public String poolKey;
+    @NameInMap("SecretNo")
+    public String secretNo;
 
     @NameInMap("SubsId")
     public Long subsId;
-
-    @NameInMap("SecretNo")
-    public String secretNo;
 
     @NameInMap("SwitchStatus")
     public Integer switchStatus;
@@ -36,6 +36,14 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UpdatePhoneSwitchRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     public UpdatePhoneSwitchRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,12 +62,12 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdatePhoneSwitchRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
+    public UpdatePhoneSwitchRequest setSecretNo(String secretNo) {
+        this.secretNo = secretNo;
         return this;
     }
-    public String getPoolKey() {
-        return this.poolKey;
+    public String getSecretNo() {
+        return this.secretNo;
     }
 
     public UpdatePhoneSwitchRequest setSubsId(Long subsId) {
@@ -68,14 +76,6 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     }
     public Long getSubsId() {
         return this.subsId;
-    }
-
-    public UpdatePhoneSwitchRequest setSecretNo(String secretNo) {
-        this.secretNo = secretNo;
-        return this;
-    }
-    public String getSecretNo() {
-        return this.secretNo;
     }
 
     public UpdatePhoneSwitchRequest setSwitchStatus(Integer switchStatus) {

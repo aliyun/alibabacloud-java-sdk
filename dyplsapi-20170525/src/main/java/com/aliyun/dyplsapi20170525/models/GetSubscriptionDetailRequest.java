@@ -7,20 +7,20 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PoolKey")
+    public String poolKey;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PoolKey")
-    public String poolKey;
+    @NameInMap("SecretNo")
+    public String secretNo;
 
     @NameInMap("SubsId")
     public Long subsId;
-
-    @NameInMap("SecretNo")
-    public String secretNo;
 
     public static GetSubscriptionDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionDetailRequest self = new GetSubscriptionDetailRequest();
@@ -33,6 +33,14 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetSubscriptionDetailRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     public GetSubscriptionDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -51,12 +59,12 @@ public class GetSubscriptionDetailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetSubscriptionDetailRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
+    public GetSubscriptionDetailRequest setSecretNo(String secretNo) {
+        this.secretNo = secretNo;
         return this;
     }
-    public String getPoolKey() {
-        return this.poolKey;
+    public String getSecretNo() {
+        return this.secretNo;
     }
 
     public GetSubscriptionDetailRequest setSubsId(Long subsId) {
@@ -65,14 +73,6 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     }
     public Long getSubsId() {
         return this.subsId;
-    }
-
-    public GetSubscriptionDetailRequest setSecretNo(String secretNo) {
-        this.secretNo = secretNo;
-        return this;
-    }
-    public String getSecretNo() {
-        return this.secretNo;
     }
 
 }

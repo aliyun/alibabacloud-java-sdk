@@ -7,14 +7,14 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public InitFaceVerifyResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public InitFaceVerifyResponseBodyData data;
 
     public static InitFaceVerifyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyResponseBody self = new InitFaceVerifyResponseBody();
@@ -27,6 +27,14 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public InitFaceVerifyResponseBody setData(InitFaceVerifyResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public InitFaceVerifyResponseBodyData getData() {
+        return this.data;
     }
 
     public InitFaceVerifyResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public InitFaceVerifyResponseBody setData(InitFaceVerifyResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public InitFaceVerifyResponseBodyData getData() {
-        return this.data;
     }
 
     public static class InitFaceVerifyResponseBodyData extends TeaModel {

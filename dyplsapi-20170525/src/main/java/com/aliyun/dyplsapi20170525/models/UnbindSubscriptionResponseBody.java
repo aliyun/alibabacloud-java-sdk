@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UnbindSubscriptionResponseBody extends TeaModel {
+    @NameInMap("ChargeId")
+    public String chargeId;
+
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,17 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ChargeId")
-    public String chargeId;
-
     public static UnbindSubscriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnbindSubscriptionResponseBody self = new UnbindSubscriptionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindSubscriptionResponseBody setChargeId(String chargeId) {
+        this.chargeId = chargeId;
+        return this;
+    }
+    public String getChargeId() {
+        return this.chargeId;
     }
 
     public UnbindSubscriptionResponseBody setCode(String code) {
@@ -43,14 +51,6 @@ public class UnbindSubscriptionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UnbindSubscriptionResponseBody setChargeId(String chargeId) {
-        this.chargeId = chargeId;
-        return this;
-    }
-    public String getChargeId() {
-        return this.chargeId;
     }
 
 }

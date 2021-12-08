@@ -57,6 +57,9 @@ public class QueryCallStatusResponseBody extends TeaModel {
         @NameInMap("CalledNo")
         public String calledNo;
 
+        @NameInMap("Extension")
+        public String extension;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -71,6 +74,14 @@ public class QueryCallStatusResponseBody extends TeaModel {
         }
         public String getCalledNo() {
             return this.calledNo;
+        }
+
+        public QueryCallStatusResponseBodySecretCallStatusDTO setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
         }
 
         public QueryCallStatusResponseBodySecretCallStatusDTO setStatus(Integer status) {

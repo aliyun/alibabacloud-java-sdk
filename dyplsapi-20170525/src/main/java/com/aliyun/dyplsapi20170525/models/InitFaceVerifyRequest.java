@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class InitFaceVerifyRequest extends TeaModel {
+    @NameInMap("MetaInfo")
+    public String metaInfo;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("MetaInfo")
-    public String metaInfo;
-
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitFaceVerifyRequest setMetaInfo(String metaInfo) {
+        this.metaInfo = metaInfo;
+        return this;
+    }
+    public String getMetaInfo() {
+        return this.metaInfo;
     }
 
     public InitFaceVerifyRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public InitFaceVerifyRequest setMetaInfo(String metaInfo) {
-        this.metaInfo = metaInfo;
-        return this;
-    }
-    public String getMetaInfo() {
-        return this.metaInfo;
     }
 
 }

@@ -7,23 +7,23 @@ public class UnbindSubscriptionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PoolKey")
     public String poolKey;
 
     @NameInMap("ProductType")
     public String productType;
 
-    @NameInMap("SubsId")
-    public String subsId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("SecretNo")
     public String secretNo;
+
+    @NameInMap("SubsId")
+    public String subsId;
 
     public static UnbindSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindSubscriptionRequest self = new UnbindSubscriptionRequest();
@@ -36,22 +36,6 @@ public class UnbindSubscriptionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UnbindSubscriptionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public UnbindSubscriptionRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public UnbindSubscriptionRequest setPoolKey(String poolKey) {
@@ -70,12 +54,20 @@ public class UnbindSubscriptionRequest extends TeaModel {
         return this.productType;
     }
 
-    public UnbindSubscriptionRequest setSubsId(String subsId) {
-        this.subsId = subsId;
+    public UnbindSubscriptionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getSubsId() {
-        return this.subsId;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UnbindSubscriptionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public UnbindSubscriptionRequest setSecretNo(String secretNo) {
@@ -84,6 +76,14 @@ public class UnbindSubscriptionRequest extends TeaModel {
     }
     public String getSecretNo() {
         return this.secretNo;
+    }
+
+    public UnbindSubscriptionRequest setSubsId(String subsId) {
+        this.subsId = subsId;
+        return this;
+    }
+    public String getSubsId() {
+        return this.subsId;
     }
 
 }

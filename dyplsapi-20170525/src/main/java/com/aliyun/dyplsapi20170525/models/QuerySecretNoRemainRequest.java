@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySecretNoRemainRequest extends TeaModel {
+    @NameInMap("City")
+    public String city;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +16,23 @@ public class QuerySecretNoRemainRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SpecId")
-    public Long specId;
-
-    @NameInMap("City")
-    public String city;
-
     @NameInMap("SecretNo")
     public String secretNo;
+
+    @NameInMap("SpecId")
+    public Long specId;
 
     public static QuerySecretNoRemainRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySecretNoRemainRequest self = new QuerySecretNoRemainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySecretNoRemainRequest setCity(String city) {
+        this.city = city;
+        return this;
+    }
+    public String getCity() {
+        return this.city;
     }
 
     public QuerySecretNoRemainRequest setOwnerId(Long ownerId) {
@@ -51,28 +59,20 @@ public class QuerySecretNoRemainRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public QuerySecretNoRemainRequest setSpecId(Long specId) {
-        this.specId = specId;
-        return this;
-    }
-    public Long getSpecId() {
-        return this.specId;
-    }
-
-    public QuerySecretNoRemainRequest setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
-    }
-
     public QuerySecretNoRemainRequest setSecretNo(String secretNo) {
         this.secretNo = secretNo;
         return this;
     }
     public String getSecretNo() {
         return this.secretNo;
+    }
+
+    public QuerySecretNoRemainRequest setSpecId(Long specId) {
+        this.specId = specId;
+        return this;
+    }
+    public Long getSpecId() {
+        return this.specId;
     }
 
 }

@@ -10,11 +10,11 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Module")
     public java.util.List<QueryPhoneNoAByTrackNoResponseBodyModule> module;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryPhoneNoAByTrackNoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPhoneNoAByTrackNoResponseBody self = new QueryPhoneNoAByTrackNoResponseBody();
@@ -37,14 +37,6 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryPhoneNoAByTrackNoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryPhoneNoAByTrackNoResponseBody setModule(java.util.List<QueryPhoneNoAByTrackNoResponseBodyModule> module) {
         this.module = module;
         return this;
@@ -53,15 +45,23 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
         return this.module;
     }
 
+    public QueryPhoneNoAByTrackNoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class QueryPhoneNoAByTrackNoResponseBodyModule extends TeaModel {
         @NameInMap("Extension")
         public String extension;
 
-        @NameInMap("PhoneNoX")
-        public String phoneNoX;
-
         @NameInMap("PhoneNoA")
         public String phoneNoA;
+
+        @NameInMap("PhoneNoX")
+        public String phoneNoX;
 
         public static QueryPhoneNoAByTrackNoResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             QueryPhoneNoAByTrackNoResponseBodyModule self = new QueryPhoneNoAByTrackNoResponseBodyModule();
@@ -76,20 +76,20 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
             return this.extension;
         }
 
-        public QueryPhoneNoAByTrackNoResponseBodyModule setPhoneNoX(String phoneNoX) {
-            this.phoneNoX = phoneNoX;
-            return this;
-        }
-        public String getPhoneNoX() {
-            return this.phoneNoX;
-        }
-
         public QueryPhoneNoAByTrackNoResponseBodyModule setPhoneNoA(String phoneNoA) {
             this.phoneNoA = phoneNoA;
             return this;
         }
         public String getPhoneNoA() {
             return this.phoneNoA;
+        }
+
+        public QueryPhoneNoAByTrackNoResponseBodyModule setPhoneNoX(String phoneNoX) {
+            this.phoneNoX = phoneNoX;
+            return this;
+        }
+        public String getPhoneNoX() {
+            return this.phoneNoX;
         }
 
     }

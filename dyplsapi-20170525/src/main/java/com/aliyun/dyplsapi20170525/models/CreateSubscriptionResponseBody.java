@@ -7,14 +7,14 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateSubscriptionResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public CreateSubscriptionResponseBodyData data;
 
     public static CreateSubscriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscriptionResponseBody self = new CreateSubscriptionResponseBody();
@@ -27,6 +27,14 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateSubscriptionResponseBody setData(CreateSubscriptionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateSubscriptionResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateSubscriptionResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateSubscriptionResponseBody setData(CreateSubscriptionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateSubscriptionResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateSubscriptionResponseBodyData extends TeaModel {

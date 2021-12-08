@@ -7,17 +7,17 @@ public class QuerySubsIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
+
+    @NameInMap("PoolKey")
+    public String poolKey;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PoolKey")
-    public String poolKey;
-
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
 
     public static QuerySubsIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySubsIdRequest self = new QuerySubsIdRequest();
@@ -30,6 +30,22 @@ public class QuerySubsIdRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QuerySubsIdRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
+        return this;
+    }
+    public String getPhoneNoX() {
+        return this.phoneNoX;
+    }
+
+    public QuerySubsIdRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     public QuerySubsIdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class QuerySubsIdRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QuerySubsIdRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
-        return this;
-    }
-    public String getPoolKey() {
-        return this.poolKey;
-    }
-
-    public QuerySubsIdRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
     }
 
 }

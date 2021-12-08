@@ -54,14 +54,23 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
     }
 
     public static class QuerySubscriptionDetailResponseBodySecretBindDetailDTO extends TeaModel {
-        @NameInMap("Status")
-        public Long status;
+        @NameInMap("ASRModelId")
+        public String ASRModelId;
+
+        @NameInMap("ASRStatus")
+        public Boolean ASRStatus;
+
+        @NameInMap("CallRestrict")
+        public String callRestrict;
+
+        @NameInMap("ExpireDate")
+        public String expireDate;
 
         @NameInMap("Extension")
         public String extension;
 
-        @NameInMap("PhoneNoB")
-        public String phoneNoB;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
 
         @NameInMap("GroupId")
         public Long groupId;
@@ -69,41 +78,56 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
         @NameInMap("NeedRecord")
         public Boolean needRecord;
 
-        @NameInMap("ASRStatus")
-        public Boolean ASRStatus;
+        @NameInMap("PhoneNoA")
+        public String phoneNoA;
 
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("ExpireDate")
-        public String expireDate;
-
-        @NameInMap("SubsId")
-        public String subsId;
+        @NameInMap("PhoneNoB")
+        public String phoneNoB;
 
         @NameInMap("PhoneNoX")
         public String phoneNoX;
 
-        @NameInMap("CallRestrict")
-        public String callRestrict;
+        @NameInMap("Status")
+        public Long status;
 
-        @NameInMap("ASRModelId")
-        public String ASRModelId;
-
-        @NameInMap("PhoneNoA")
-        public String phoneNoA;
+        @NameInMap("SubsId")
+        public String subsId;
 
         public static QuerySubscriptionDetailResponseBodySecretBindDetailDTO build(java.util.Map<String, ?> map) throws Exception {
             QuerySubscriptionDetailResponseBodySecretBindDetailDTO self = new QuerySubscriptionDetailResponseBodySecretBindDetailDTO();
             return TeaModel.build(map, self);
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setStatus(Long status) {
-            this.status = status;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setASRModelId(String ASRModelId) {
+            this.ASRModelId = ASRModelId;
             return this;
         }
-        public Long getStatus() {
-            return this.status;
+        public String getASRModelId() {
+            return this.ASRModelId;
+        }
+
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setASRStatus(Boolean ASRStatus) {
+            this.ASRStatus = ASRStatus;
+            return this;
+        }
+        public Boolean getASRStatus() {
+            return this.ASRStatus;
+        }
+
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setCallRestrict(String callRestrict) {
+            this.callRestrict = callRestrict;
+            return this;
+        }
+        public String getCallRestrict() {
+            return this.callRestrict;
+        }
+
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setExpireDate(String expireDate) {
+            this.expireDate = expireDate;
+            return this;
+        }
+        public String getExpireDate() {
+            return this.expireDate;
         }
 
         public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setExtension(String extension) {
@@ -114,12 +138,12 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             return this.extension;
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setPhoneNoB(String phoneNoB) {
-            this.phoneNoB = phoneNoB;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getPhoneNoB() {
-            return this.phoneNoB;
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setGroupId(Long groupId) {
@@ -138,36 +162,20 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             return this.needRecord;
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setASRStatus(Boolean ASRStatus) {
-            this.ASRStatus = ASRStatus;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setPhoneNoA(String phoneNoA) {
+            this.phoneNoA = phoneNoA;
             return this;
         }
-        public Boolean getASRStatus() {
-            return this.ASRStatus;
+        public String getPhoneNoA() {
+            return this.phoneNoA;
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setPhoneNoB(String phoneNoB) {
+            this.phoneNoB = phoneNoB;
             return this;
         }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setExpireDate(String expireDate) {
-            this.expireDate = expireDate;
-            return this;
-        }
-        public String getExpireDate() {
-            return this.expireDate;
-        }
-
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setSubsId(String subsId) {
-            this.subsId = subsId;
-            return this;
-        }
-        public String getSubsId() {
-            return this.subsId;
+        public String getPhoneNoB() {
+            return this.phoneNoB;
         }
 
         public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setPhoneNoX(String phoneNoX) {
@@ -178,28 +186,20 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
             return this.phoneNoX;
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setCallRestrict(String callRestrict) {
-            this.callRestrict = callRestrict;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setStatus(Long status) {
+            this.status = status;
             return this;
         }
-        public String getCallRestrict() {
-            return this.callRestrict;
+        public Long getStatus() {
+            return this.status;
         }
 
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setASRModelId(String ASRModelId) {
-            this.ASRModelId = ASRModelId;
+        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setSubsId(String subsId) {
+            this.subsId = subsId;
             return this;
         }
-        public String getASRModelId() {
-            return this.ASRModelId;
-        }
-
-        public QuerySubscriptionDetailResponseBodySecretBindDetailDTO setPhoneNoA(String phoneNoA) {
-            this.phoneNoA = phoneNoA;
-            return this;
-        }
-        public String getPhoneNoA() {
-            return this.phoneNoA;
+        public String getSubsId() {
+            return this.subsId;
         }
 
     }

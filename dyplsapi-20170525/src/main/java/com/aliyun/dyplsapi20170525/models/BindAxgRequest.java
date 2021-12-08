@@ -4,35 +4,26 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BindAxgRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ASRModelId")
+    public String ASRModelId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("ASRStatus")
+    public Boolean ASRStatus;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("CallDisplayType")
+    public Integer callDisplayType;
 
-    @NameInMap("PoolKey")
-    public String poolKey;
+    @NameInMap("CallRestrict")
+    public String callRestrict;
 
-    @NameInMap("PhoneNoA")
-    public String phoneNoA;
-
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("PhoneNoB")
-    public String phoneNoB;
-
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
+    @NameInMap("ExpectCity")
+    public String expectCity;
 
     @NameInMap("Expiration")
     public String expiration;
 
-    @NameInMap("ExpectCity")
-    public String expectCity;
+    @NameInMap("GroupId")
+    public String groupId;
 
     @NameInMap("IsRecordingEnabled")
     public Boolean isRecordingEnabled;
@@ -43,88 +34,73 @@ public class BindAxgRequest extends TeaModel {
     @NameInMap("OutOrderId")
     public String outOrderId;
 
-    @NameInMap("CallDisplayType")
-    public Integer callDisplayType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PhoneNoA")
+    public String phoneNoA;
+
+    @NameInMap("PhoneNoB")
+    public String phoneNoB;
+
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
+
+    @NameInMap("PoolKey")
+    public String poolKey;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RingConfig")
     public String ringConfig;
-
-    @NameInMap("ASRStatus")
-    public Boolean ASRStatus;
-
-    @NameInMap("ASRModelId")
-    public String ASRModelId;
-
-    @NameInMap("CallRestrict")
-    public String callRestrict;
 
     public static BindAxgRequest build(java.util.Map<String, ?> map) throws Exception {
         BindAxgRequest self = new BindAxgRequest();
         return TeaModel.build(map, self);
     }
 
-    public BindAxgRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public BindAxgRequest setASRModelId(String ASRModelId) {
+        this.ASRModelId = ASRModelId;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getASRModelId() {
+        return this.ASRModelId;
     }
 
-    public BindAxgRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public BindAxgRequest setASRStatus(Boolean ASRStatus) {
+        this.ASRStatus = ASRStatus;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
+    public Boolean getASRStatus() {
+        return this.ASRStatus;
     }
 
-    public BindAxgRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
+    public BindAxgRequest setCallDisplayType(Integer callDisplayType) {
+        this.callDisplayType = callDisplayType;
         return this;
     }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getCallDisplayType() {
+        return this.callDisplayType;
     }
 
-    public BindAxgRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
+    public BindAxgRequest setCallRestrict(String callRestrict) {
+        this.callRestrict = callRestrict;
         return this;
     }
-    public String getPoolKey() {
-        return this.poolKey;
+    public String getCallRestrict() {
+        return this.callRestrict;
     }
 
-    public BindAxgRequest setPhoneNoA(String phoneNoA) {
-        this.phoneNoA = phoneNoA;
+    public BindAxgRequest setExpectCity(String expectCity) {
+        this.expectCity = expectCity;
         return this;
     }
-    public String getPhoneNoA() {
-        return this.phoneNoA;
-    }
-
-    public BindAxgRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
-    public BindAxgRequest setPhoneNoB(String phoneNoB) {
-        this.phoneNoB = phoneNoB;
-        return this;
-    }
-    public String getPhoneNoB() {
-        return this.phoneNoB;
-    }
-
-    public BindAxgRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
+    public String getExpectCity() {
+        return this.expectCity;
     }
 
     public BindAxgRequest setExpiration(String expiration) {
@@ -135,12 +111,12 @@ public class BindAxgRequest extends TeaModel {
         return this.expiration;
     }
 
-    public BindAxgRequest setExpectCity(String expectCity) {
-        this.expectCity = expectCity;
+    public BindAxgRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getExpectCity() {
-        return this.expectCity;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public BindAxgRequest setIsRecordingEnabled(Boolean isRecordingEnabled) {
@@ -167,12 +143,60 @@ public class BindAxgRequest extends TeaModel {
         return this.outOrderId;
     }
 
-    public BindAxgRequest setCallDisplayType(Integer callDisplayType) {
-        this.callDisplayType = callDisplayType;
+    public BindAxgRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getCallDisplayType() {
-        return this.callDisplayType;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BindAxgRequest setPhoneNoA(String phoneNoA) {
+        this.phoneNoA = phoneNoA;
+        return this;
+    }
+    public String getPhoneNoA() {
+        return this.phoneNoA;
+    }
+
+    public BindAxgRequest setPhoneNoB(String phoneNoB) {
+        this.phoneNoB = phoneNoB;
+        return this;
+    }
+    public String getPhoneNoB() {
+        return this.phoneNoB;
+    }
+
+    public BindAxgRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
+        return this;
+    }
+    public String getPhoneNoX() {
+        return this.phoneNoX;
+    }
+
+    public BindAxgRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
+    }
+
+    public BindAxgRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public BindAxgRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public BindAxgRequest setRingConfig(String ringConfig) {
@@ -181,30 +205,6 @@ public class BindAxgRequest extends TeaModel {
     }
     public String getRingConfig() {
         return this.ringConfig;
-    }
-
-    public BindAxgRequest setASRStatus(Boolean ASRStatus) {
-        this.ASRStatus = ASRStatus;
-        return this;
-    }
-    public Boolean getASRStatus() {
-        return this.ASRStatus;
-    }
-
-    public BindAxgRequest setASRModelId(String ASRModelId) {
-        this.ASRModelId = ASRModelId;
-        return this;
-    }
-    public String getASRModelId() {
-        return this.ASRModelId;
-    }
-
-    public BindAxgRequest setCallRestrict(String callRestrict) {
-        this.callRestrict = callRestrict;
-        return this;
-    }
-    public String getCallRestrict() {
-        return this.callRestrict;
     }
 
 }
