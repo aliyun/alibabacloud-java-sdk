@@ -65,24 +65,35 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute extends TeaModel {
+        // VPC授权的创建时间
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        // VPC授权的描述
         @NameInMap("Description")
         public String description;
 
+        // VPC中的后端服务信息
         @NameInMap("InstanceId")
         public String instanceId;
 
+        // VPC授权名称
         @NameInMap("Name")
         public String name;
 
+        // VPC中的后端服务端口
         @NameInMap("Port")
         public Integer port;
 
+        // 地域id
         @NameInMap("RegionId")
         public String regionId;
 
+        // vpc授权ID
+        @NameInMap("VpcAccessId")
+        public String vpcAccessId;
+
+        // VPC的ID
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -137,6 +148,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcAccessId(String vpcAccessId) {
+            this.vpcAccessId = vpcAccessId;
+            return this;
+        }
+        public String getVpcAccessId() {
+            return this.vpcAccessId;
         }
 
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcId(String vpcId) {

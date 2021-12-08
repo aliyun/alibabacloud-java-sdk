@@ -22,6 +22,9 @@ public class ImportSwaggerShrinkRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static ImportSwaggerShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportSwaggerShrinkRequest self = new ImportSwaggerShrinkRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ImportSwaggerShrinkRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public ImportSwaggerShrinkRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

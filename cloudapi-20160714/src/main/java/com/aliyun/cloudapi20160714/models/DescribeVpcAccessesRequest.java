@@ -4,32 +4,28 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesRequest extends TeaModel {
-    @NameInMap("AccurateQuery")
-    public Boolean accurateQuery;
-
+    // VPC授权名称
     @NameInMap("Name")
     public String name;
 
+    // 当前页码
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    // 每页展示条目
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    // Vpc授权ID
+    @NameInMap("VpcAccessId")
+    public String vpcAccessId;
+
     public static DescribeVpcAccessesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcAccessesRequest self = new DescribeVpcAccessesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVpcAccessesRequest setAccurateQuery(Boolean accurateQuery) {
-        this.accurateQuery = accurateQuery;
-        return this;
-    }
-    public Boolean getAccurateQuery() {
-        return this.accurateQuery;
     }
 
     public DescribeVpcAccessesRequest setName(String name) {
@@ -62,6 +58,14 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeVpcAccessesRequest setVpcAccessId(String vpcAccessId) {
+        this.vpcAccessId = vpcAccessId;
+        return this;
+    }
+    public String getVpcAccessId() {
+        return this.vpcAccessId;
     }
 
 }

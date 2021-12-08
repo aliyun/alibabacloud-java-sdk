@@ -19,6 +19,9 @@ public class DryRunSwaggerRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DryRunSwaggerRequest build(java.util.Map<String, ?> map) throws Exception {
         DryRunSwaggerRequest self = new DryRunSwaggerRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DryRunSwaggerRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public DryRunSwaggerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
