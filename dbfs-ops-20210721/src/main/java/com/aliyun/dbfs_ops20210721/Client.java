@@ -99,7 +99,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         query.put("data", request.data);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request)),
+            new TeaPair("stream", request.body)
         ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UploadFile"),

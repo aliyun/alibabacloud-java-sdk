@@ -4,8 +4,8 @@ package com.aliyun.dbfs_ops20210721.models;
 import com.aliyun.tea.*;
 
 public class UploadFileRequest extends TeaModel {
-    @NameInMap("file")
-    public java.io.InputStream file;
+    @NameInMap("body")
+    public java.io.InputStream body;
 
     @NameInMap("data")
     public String data;
@@ -15,12 +15,12 @@ public class UploadFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UploadFileRequest setFile(java.io.InputStream file) {
-        this.file = file;
+    public UploadFileRequest setBody(java.io.InputStream body) {
+        this.body = body;
         return this;
     }
-    public java.io.InputStream getFile() {
-        return this.file;
+    public java.io.InputStream getBody() {
+        return this.body;
     }
 
     public UploadFileRequest setData(String data) {
