@@ -25,6 +25,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    // 用于区分基础/专业版本
+    @NameInMap("MseVersion")
+    public String mseVersion;
+
     @NameInMap("NetType")
     public String netType;
 
@@ -108,6 +112,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public CreateClusterRequest setMseVersion(String mseVersion) {
+        this.mseVersion = mseVersion;
+        return this;
+    }
+    public String getMseVersion() {
+        return this.mseVersion;
     }
 
     public CreateClusterRequest setNetType(String netType) {
