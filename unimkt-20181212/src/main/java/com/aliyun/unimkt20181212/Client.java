@@ -884,8 +884,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUnionTaskStatusWithOptions(request, runtime);
     }
 
-    public InnerCallServiceResponse innerCallServiceWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public InnerCallServiceResponse innerCallServiceWithOptions(InnerCallServiceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         Params params = Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InnerCallService"),
             new TeaPair("version", "2018-12-12"),
@@ -900,9 +903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InnerCallServiceResponse());
     }
 
-    public InnerCallServiceResponse innerCallService() throws Exception {
+    public InnerCallServiceResponse innerCallService(InnerCallServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.innerCallServiceWithOptions(runtime);
+        return this.innerCallServiceWithOptions(request, runtime);
     }
 
     public KeepAliveResponse keepAliveWithOptions(KeepAliveRequest request, RuntimeOptions runtime) throws Exception {
