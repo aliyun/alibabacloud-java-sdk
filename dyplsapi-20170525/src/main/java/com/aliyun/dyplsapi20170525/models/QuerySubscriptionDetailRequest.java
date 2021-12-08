@@ -7,11 +7,8 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
 
     @NameInMap("PoolKey")
     public String poolKey;
@@ -19,11 +16,14 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("SubsId")
     public String subsId;
-
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
 
     public static QuerySubscriptionDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySubscriptionDetailRequest self = new QuerySubscriptionDetailRequest();
@@ -38,20 +38,12 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QuerySubscriptionDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public QuerySubscriptionDetailRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QuerySubscriptionDetailRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getPhoneNoX() {
+        return this.phoneNoX;
     }
 
     public QuerySubscriptionDetailRequest setPoolKey(String poolKey) {
@@ -70,20 +62,28 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
         return this.productType;
     }
 
+    public QuerySubscriptionDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QuerySubscriptionDetailRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public QuerySubscriptionDetailRequest setSubsId(String subsId) {
         this.subsId = subsId;
         return this;
     }
     public String getSubsId() {
         return this.subsId;
-    }
-
-    public QuerySubscriptionDetailRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
     }
 
 }

@@ -57,11 +57,11 @@ public class BindAxnResponseBody extends TeaModel {
         @NameInMap("Extension")
         public String extension;
 
-        @NameInMap("SubsId")
-        public String subsId;
-
         @NameInMap("SecretNo")
         public String secretNo;
+
+        @NameInMap("SubsId")
+        public String subsId;
 
         public static BindAxnResponseBodySecretBindDTO build(java.util.Map<String, ?> map) throws Exception {
             BindAxnResponseBodySecretBindDTO self = new BindAxnResponseBodySecretBindDTO();
@@ -76,20 +76,20 @@ public class BindAxnResponseBody extends TeaModel {
             return this.extension;
         }
 
-        public BindAxnResponseBodySecretBindDTO setSubsId(String subsId) {
-            this.subsId = subsId;
-            return this;
-        }
-        public String getSubsId() {
-            return this.subsId;
-        }
-
         public BindAxnResponseBodySecretBindDTO setSecretNo(String secretNo) {
             this.secretNo = secretNo;
             return this;
         }
         public String getSecretNo() {
             return this.secretNo;
+        }
+
+        public BindAxnResponseBodySecretBindDTO setSubsId(String subsId) {
+            this.subsId = subsId;
+            return this;
+        }
+        public String getSubsId() {
+            return this.subsId;
         }
 
     }

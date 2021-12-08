@@ -4,8 +4,17 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BuySecretNoRequest extends TeaModel {
+    @NameInMap("City")
+    public String city;
+
+    @NameInMap("DisplayPool")
+    public Boolean displayPool;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PoolKey")
+    public String poolKey;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +22,31 @@ public class BuySecretNoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PoolKey")
-    public String poolKey;
+    @NameInMap("SecretNo")
+    public String secretNo;
 
     @NameInMap("SpecId")
     public Long specId;
 
-    @NameInMap("City")
-    public String city;
-
-    @NameInMap("SecretNo")
-    public String secretNo;
-
-    @NameInMap("DisplayPool")
-    public Boolean displayPool;
-
     public static BuySecretNoRequest build(java.util.Map<String, ?> map) throws Exception {
         BuySecretNoRequest self = new BuySecretNoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BuySecretNoRequest setCity(String city) {
+        this.city = city;
+        return this;
+    }
+    public String getCity() {
+        return this.city;
+    }
+
+    public BuySecretNoRequest setDisplayPool(Boolean displayPool) {
+        this.displayPool = displayPool;
+        return this;
+    }
+    public Boolean getDisplayPool() {
+        return this.displayPool;
     }
 
     public BuySecretNoRequest setOwnerId(Long ownerId) {
@@ -39,6 +55,14 @@ public class BuySecretNoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public BuySecretNoRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     public BuySecretNoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,30 +81,6 @@ public class BuySecretNoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BuySecretNoRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
-        return this;
-    }
-    public String getPoolKey() {
-        return this.poolKey;
-    }
-
-    public BuySecretNoRequest setSpecId(Long specId) {
-        this.specId = specId;
-        return this;
-    }
-    public Long getSpecId() {
-        return this.specId;
-    }
-
-    public BuySecretNoRequest setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
-    }
-
     public BuySecretNoRequest setSecretNo(String secretNo) {
         this.secretNo = secretNo;
         return this;
@@ -89,12 +89,12 @@ public class BuySecretNoRequest extends TeaModel {
         return this.secretNo;
     }
 
-    public BuySecretNoRequest setDisplayPool(Boolean displayPool) {
-        this.displayPool = displayPool;
+    public BuySecretNoRequest setSpecId(Long specId) {
+        this.specId = specId;
         return this;
     }
-    public Boolean getDisplayPool() {
-        return this.displayPool;
+    public Long getSpecId() {
+        return this.specId;
     }
 
 }

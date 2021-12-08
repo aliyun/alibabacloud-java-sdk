@@ -7,14 +7,14 @@ public class QueryRecordFileDownloadUrlResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("DownloadUrl")
+    public String downloadUrl;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("DownloadUrl")
-    public String downloadUrl;
 
     public static QueryRecordFileDownloadUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRecordFileDownloadUrlResponseBody self = new QueryRecordFileDownloadUrlResponseBody();
@@ -27,6 +27,14 @@ public class QueryRecordFileDownloadUrlResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryRecordFileDownloadUrlResponseBody setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+        return this;
+    }
+    public String getDownloadUrl() {
+        return this.downloadUrl;
     }
 
     public QueryRecordFileDownloadUrlResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class QueryRecordFileDownloadUrlResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QueryRecordFileDownloadUrlResponseBody setDownloadUrl(String downloadUrl) {
-        this.downloadUrl = downloadUrl;
-        return this;
-    }
-    public String getDownloadUrl() {
-        return this.downloadUrl;
     }
 
 }

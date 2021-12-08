@@ -4,8 +4,14 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
+    @NameInMap("CabinetNo")
+    public String cabinetNo;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     @NameInMap("trackNo")
     public String trackNo;
 
-    @NameInMap("CabinetNo")
-    public String cabinetNo;
-
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
-
     public static QueryPhoneNoAByTrackNoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPhoneNoAByTrackNoRequest self = new QueryPhoneNoAByTrackNoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPhoneNoAByTrackNoRequest setCabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+        return this;
+    }
+    public String getCabinetNo() {
+        return this.cabinetNo;
     }
 
     public QueryPhoneNoAByTrackNoRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryPhoneNoAByTrackNoRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
+        return this;
+    }
+    public String getPhoneNoX() {
+        return this.phoneNoX;
     }
 
     public QueryPhoneNoAByTrackNoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,22 +73,6 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     }
     public String getTrackNo() {
         return this.trackNo;
-    }
-
-    public QueryPhoneNoAByTrackNoRequest setCabinetNo(String cabinetNo) {
-        this.cabinetNo = cabinetNo;
-        return this;
-    }
-    public String getCabinetNo() {
-        return this.cabinetNo;
-    }
-
-    public QueryPhoneNoAByTrackNoRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
     }
 
 }

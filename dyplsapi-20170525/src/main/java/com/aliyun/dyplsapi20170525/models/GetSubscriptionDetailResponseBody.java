@@ -7,14 +7,14 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetSubscriptionDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetSubscriptionDetailResponseBodyData data;
 
     public static GetSubscriptionDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionDetailResponseBody self = new GetSubscriptionDetailResponseBody();
@@ -27,6 +27,14 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetSubscriptionDetailResponseBody setData(GetSubscriptionDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetSubscriptionDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public GetSubscriptionDetailResponseBody setMessage(String message) {
@@ -45,47 +53,31 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSubscriptionDetailResponseBody setData(GetSubscriptionDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetSubscriptionDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetSubscriptionDetailResponseBodyData extends TeaModel {
-        @NameInMap("PhoneNo")
-        public String phoneNo;
-
         @NameInMap("City")
         public String city;
 
-        @NameInMap("SwitchStatus")
-        public Integer switchStatus;
-
-        @NameInMap("SubsId")
-        public Long subsId;
-
-        @NameInMap("SecretNo")
-        public String secretNo;
-
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("PhoneNo")
+        public String phoneNo;
 
         @NameInMap("Province")
         public String province;
 
+        @NameInMap("SecretNo")
+        public String secretNo;
+
+        @NameInMap("SubsId")
+        public Long subsId;
+
+        @NameInMap("SwitchStatus")
+        public Integer switchStatus;
+
+        @NameInMap("Vendor")
+        public String vendor;
+
         public static GetSubscriptionDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionDetailResponseBodyData self = new GetSubscriptionDetailResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetSubscriptionDetailResponseBodyData setPhoneNo(String phoneNo) {
-            this.phoneNo = phoneNo;
-            return this;
-        }
-        public String getPhoneNo() {
-            return this.phoneNo;
         }
 
         public GetSubscriptionDetailResponseBodyData setCity(String city) {
@@ -96,20 +88,20 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
             return this.city;
         }
 
-        public GetSubscriptionDetailResponseBodyData setSwitchStatus(Integer switchStatus) {
-            this.switchStatus = switchStatus;
+        public GetSubscriptionDetailResponseBodyData setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
             return this;
         }
-        public Integer getSwitchStatus() {
-            return this.switchStatus;
+        public String getPhoneNo() {
+            return this.phoneNo;
         }
 
-        public GetSubscriptionDetailResponseBodyData setSubsId(Long subsId) {
-            this.subsId = subsId;
+        public GetSubscriptionDetailResponseBodyData setProvince(String province) {
+            this.province = province;
             return this;
         }
-        public Long getSubsId() {
-            return this.subsId;
+        public String getProvince() {
+            return this.province;
         }
 
         public GetSubscriptionDetailResponseBodyData setSecretNo(String secretNo) {
@@ -120,20 +112,28 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
             return this.secretNo;
         }
 
+        public GetSubscriptionDetailResponseBodyData setSubsId(Long subsId) {
+            this.subsId = subsId;
+            return this;
+        }
+        public Long getSubsId() {
+            return this.subsId;
+        }
+
+        public GetSubscriptionDetailResponseBodyData setSwitchStatus(Integer switchStatus) {
+            this.switchStatus = switchStatus;
+            return this;
+        }
+        public Integer getSwitchStatus() {
+            return this.switchStatus;
+        }
+
         public GetSubscriptionDetailResponseBodyData setVendor(String vendor) {
             this.vendor = vendor;
             return this;
         }
         public String getVendor() {
             return this.vendor;
-        }
-
-        public GetSubscriptionDetailResponseBodyData setProvince(String province) {
-            this.province = province;
-            return this;
-        }
-        public String getProvince() {
-            return this.province;
         }
 
     }

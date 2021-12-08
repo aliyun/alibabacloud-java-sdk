@@ -7,23 +7,23 @@ public class AddAxnTrackNoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
+
+    @NameInMap("PoolKey")
+    public String poolKey;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PoolKey")
-    public String poolKey;
-
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
+    @NameInMap("SubsId")
+    public String subsId;
 
     @NameInMap("trackNo")
     public String trackNo;
-
-    @NameInMap("SubsId")
-    public String subsId;
 
     public static AddAxnTrackNoRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAxnTrackNoRequest self = new AddAxnTrackNoRequest();
@@ -36,6 +36,22 @@ public class AddAxnTrackNoRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddAxnTrackNoRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
+        return this;
+    }
+    public String getPhoneNoX() {
+        return this.phoneNoX;
+    }
+
+    public AddAxnTrackNoRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
     }
 
     public AddAxnTrackNoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,20 +70,12 @@ public class AddAxnTrackNoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddAxnTrackNoRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
+    public AddAxnTrackNoRequest setSubsId(String subsId) {
+        this.subsId = subsId;
         return this;
     }
-    public String getPoolKey() {
-        return this.poolKey;
-    }
-
-    public AddAxnTrackNoRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
+    public String getSubsId() {
+        return this.subsId;
     }
 
     public AddAxnTrackNoRequest setTrackNo(String trackNo) {
@@ -76,14 +84,6 @@ public class AddAxnTrackNoRequest extends TeaModel {
     }
     public String getTrackNo() {
         return this.trackNo;
-    }
-
-    public AddAxnTrackNoRequest setSubsId(String subsId) {
-        this.subsId = subsId;
-        return this;
-    }
-    public String getSubsId() {
-        return this.subsId;
     }
 
 }

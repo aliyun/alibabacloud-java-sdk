@@ -7,14 +7,14 @@ public class LockSecretNoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PoolKey")
+    public String poolKey;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PoolKey")
-    public String poolKey;
 
     @NameInMap("SecretNo")
     public String secretNo;
@@ -32,6 +32,14 @@ public class LockSecretNoRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public LockSecretNoRequest setPoolKey(String poolKey) {
+        this.poolKey = poolKey;
+        return this;
+    }
+    public String getPoolKey() {
+        return this.poolKey;
+    }
+
     public LockSecretNoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class LockSecretNoRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public LockSecretNoRequest setPoolKey(String poolKey) {
-        this.poolKey = poolKey;
-        return this;
-    }
-    public String getPoolKey() {
-        return this.poolKey;
     }
 
     public LockSecretNoRequest setSecretNo(String secretNo) {
