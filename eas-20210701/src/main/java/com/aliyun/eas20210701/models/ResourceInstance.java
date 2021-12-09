@@ -38,7 +38,7 @@ public class ResourceInstance extends TeaModel {
 
     // 实例的内存大小
     @NameInMap("InstanceMemory")
-    public Integer instanceMemory;
+    public String instanceMemory;
 
     // 实例名称
     @NameInMap("InstanceName")
@@ -51,6 +51,18 @@ public class ResourceInstance extends TeaModel {
     // 实例的机型
     @NameInMap("InstanceType")
     public String instanceType;
+
+    // 实例被使用的CPU数量
+    @NameInMap("InstanceUsedCpu")
+    public Float instanceUsedCpu;
+
+    // 实例被使用的GPU数量
+    @NameInMap("InstanceUsedGpu")
+    public Integer instanceUsedGpu;
+
+    // 实例被使用的内存大小
+    @NameInMap("InstanceUsedMemory")
+    public String instanceUsedMemory;
 
     public static ResourceInstance build(java.util.Map<String, ?> map) throws Exception {
         ResourceInstance self = new ResourceInstance();
@@ -121,11 +133,11 @@ public class ResourceInstance extends TeaModel {
         return this.instanceIp;
     }
 
-    public ResourceInstance setInstanceMemory(Integer instanceMemory) {
+    public ResourceInstance setInstanceMemory(String instanceMemory) {
         this.instanceMemory = instanceMemory;
         return this;
     }
-    public Integer getInstanceMemory() {
+    public String getInstanceMemory() {
         return this.instanceMemory;
     }
 
@@ -151,6 +163,30 @@ public class ResourceInstance extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ResourceInstance setInstanceUsedCpu(Float instanceUsedCpu) {
+        this.instanceUsedCpu = instanceUsedCpu;
+        return this;
+    }
+    public Float getInstanceUsedCpu() {
+        return this.instanceUsedCpu;
+    }
+
+    public ResourceInstance setInstanceUsedGpu(Integer instanceUsedGpu) {
+        this.instanceUsedGpu = instanceUsedGpu;
+        return this;
+    }
+    public Integer getInstanceUsedGpu() {
+        return this.instanceUsedGpu;
+    }
+
+    public ResourceInstance setInstanceUsedMemory(String instanceUsedMemory) {
+        this.instanceUsedMemory = instanceUsedMemory;
+        return this;
+    }
+    public String getInstanceUsedMemory() {
+        return this.instanceUsedMemory;
     }
 
 }
