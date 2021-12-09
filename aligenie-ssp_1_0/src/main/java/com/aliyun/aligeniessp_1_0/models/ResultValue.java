@@ -20,6 +20,14 @@ public class ResultValue extends TeaModel {
     @NameInMap("FirmwareVersion")
     public String firmwareVersion;
 
+    // 设备MAC地址
+    @NameInMap("Mac")
+    public String mac;
+
+    // 设备SN
+    @NameInMap("Sn")
+    public String sn;
+
     public static ResultValue build(java.util.Map<String, ?> map) throws Exception {
         ResultValue self = new ResultValue();
         return TeaModel.build(map, self);
@@ -55,6 +63,22 @@ public class ResultValue extends TeaModel {
     }
     public String getFirmwareVersion() {
         return this.firmwareVersion;
+    }
+
+    public ResultValue setMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    public String getMac() {
+        return this.mac;
+    }
+
+    public ResultValue setSn(String sn) {
+        this.sn = sn;
+        return this;
+    }
+    public String getSn() {
+        return this.sn;
     }
 
     public static class ResultValueDeviceUnionIds extends TeaModel {

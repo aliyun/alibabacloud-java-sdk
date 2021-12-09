@@ -62,9 +62,17 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
         @NameInMap("FirmwareVersion")
         public String firmwareVersion;
 
+        // 设备MAC地址
+        @NameInMap("Mac")
+        public String mac;
+
         // 设备名称
         @NameInMap("Name")
         public String name;
+
+        // 设备SN
+        @NameInMap("Sn")
+        public String sn;
 
         public static GetDeviceBasicInfoResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceBasicInfoResponseBodyResult self = new GetDeviceBasicInfoResponseBodyResult();
@@ -79,12 +87,28 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
             return this.firmwareVersion;
         }
 
+        public GetDeviceBasicInfoResponseBodyResult setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
+        }
+
         public GetDeviceBasicInfoResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetDeviceBasicInfoResponseBodyResult setSn(String sn) {
+            this.sn = sn;
+            return this;
+        }
+        public String getSn() {
+            return this.sn;
         }
 
     }
