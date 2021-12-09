@@ -47,18 +47,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CommodityTitle"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CommodityTitleResponse());
+        return TeaModel.toModel(this.doRPCRequest("CommodityTitle", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new CommodityTitleResponse());
     }
 
     public CommodityTitleResponse commodityTitle(CommodityTitleRequest request) throws Exception {
@@ -145,18 +134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GeneralRecognition"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GeneralRecognitionResponse());
+        return TeaModel.toModel(this.doRPCRequest("GeneralRecognition", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new GeneralRecognitionResponse());
     }
 
     public GeneralRecognitionResponse generalRecognition(GeneralRecognitionRequest request) throws Exception {
@@ -243,18 +221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImageAmazon"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageAmazonResponse());
+        return TeaModel.toModel(this.doRPCRequest("ImageAmazon", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImageAmazonResponse());
     }
 
     public ImageAmazonResponse imageAmazon(ImageAmazonRequest request) throws Exception {
@@ -267,18 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImageCategory"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageCategoryResponse());
+        return TeaModel.toModel(this.doRPCRequest("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImageCategoryResponse());
     }
 
     public ImageCategoryResponse imageCategory(ImageCategoryRequest request) throws Exception {
@@ -291,18 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImageDuplication"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageDuplicationResponse());
+        return TeaModel.toModel(this.doRPCRequest("ImageDuplication", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImageDuplicationResponse());
     }
 
     public ImageDuplicationResponse imageDuplication(ImageDuplicationRequest request) throws Exception {
@@ -315,18 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImageProperty"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImagePropertyResponse());
+        return TeaModel.toModel(this.doRPCRequest("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImagePropertyResponse());
     }
 
     public ImagePropertyResponse imageProperty(ImagePropertyRequest request) throws Exception {
@@ -339,18 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ImageSegmentation"),
-            new TeaPair("version", "2021-01-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageSegmentationResponse());
+        return TeaModel.toModel(this.doRPCRequest("ImageSegmentation", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImageSegmentationResponse());
     }
 
     public ImageSegmentationResponse imageSegmentation(ImageSegmentationRequest request) throws Exception {
