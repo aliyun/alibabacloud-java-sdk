@@ -16,6 +16,18 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    @NameInMap("KeywordConfig")
+    public String keywordConfig;
+
+    @NameInMap("KnowledgeConfig")
+    public String knowledgeConfig;
+
+    @NameInMap("LabelType")
+    public String labelType;
+
+    @NameInMap("LabelVersion")
+    public String labelVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -69,6 +81,38 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     }
     public Boolean getIsDefault() {
         return this.isDefault;
+    }
+
+    public AddSmarttagTemplateRequest setKeywordConfig(String keywordConfig) {
+        this.keywordConfig = keywordConfig;
+        return this;
+    }
+    public String getKeywordConfig() {
+        return this.keywordConfig;
+    }
+
+    public AddSmarttagTemplateRequest setKnowledgeConfig(String knowledgeConfig) {
+        this.knowledgeConfig = knowledgeConfig;
+        return this;
+    }
+    public String getKnowledgeConfig() {
+        return this.knowledgeConfig;
+    }
+
+    public AddSmarttagTemplateRequest setLabelType(String labelType) {
+        this.labelType = labelType;
+        return this;
+    }
+    public String getLabelType() {
+        return this.labelType;
+    }
+
+    public AddSmarttagTemplateRequest setLabelVersion(String labelVersion) {
+        this.labelVersion = labelVersion;
+        return this;
+    }
+    public String getLabelVersion() {
+        return this.labelVersion;
     }
 
     public AddSmarttagTemplateRequest setOwnerAccount(String ownerAccount) {

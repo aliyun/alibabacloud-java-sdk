@@ -13,6 +13,9 @@ public class QuerySmarttagJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -46,6 +49,14 @@ public class QuerySmarttagJobRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QuerySmarttagJobRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public QuerySmarttagJobRequest setResourceOwnerAccount(String resourceOwnerAccount) {
