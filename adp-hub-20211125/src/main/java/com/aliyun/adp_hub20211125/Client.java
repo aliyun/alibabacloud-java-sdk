@@ -57,18 +57,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateProductVersion"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/product-versions"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProductVersionResponse());
+        return TeaModel.toModel(this.doROARequest("CreateProductVersion", "2021-11-25", "HTTPS", "POST", "AK", "/api/v2/hub/product-versions", "json", req, runtime), new CreateProductVersionResponse());
     }
 
     public CreateVersionPackageInstallConfigResponse createVersionPackageInstallConfig(CreateVersionPackageInstallConfigRequest request) throws Exception {
@@ -88,18 +77,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateVersionPackageInstallConfig"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/version-packages/install-configs"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVersionPackageInstallConfigResponse());
+        return TeaModel.toModel(this.doROARequest("CreateVersionPackageInstallConfig", "2021-11-25", "HTTPS", "POST", "AK", "/api/v2/hub/version-packages/install-configs", "json", req, runtime), new CreateVersionPackageInstallConfigResponse());
     }
 
     public CreateVersionPackageLicenseResponse createVersionPackageLicense(CreateVersionPackageLicenseRequest request) throws Exception {
@@ -135,18 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateVersionPackageLicense"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/version-packages/product-licenses"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVersionPackageLicenseResponse());
+        return TeaModel.toModel(this.doROARequest("CreateVersionPackageLicense", "2021-11-25", "HTTPS", "POST", "AK", "/api/v2/hub/version-packages/product-licenses", "json", req, runtime), new CreateVersionPackageLicenseResponse());
     }
 
     public DeleteProductResponse deleteProduct(String uid) throws Exception {
@@ -160,18 +127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteProduct"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/products/" + uid + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductResponse());
+        return TeaModel.toModel(this.doROARequest("DeleteProduct", "2021-11-25", "HTTPS", "DELETE", "AK", "/api/v2/hub/products/" + uid + "", "json", req, runtime), new DeleteProductResponse());
     }
 
     public DeleteProductVersionResponse deleteProductVersion(String uid) throws Exception {
@@ -185,18 +141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteProductVersion"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/product-versions/" + uid + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProductVersionResponse());
+        return TeaModel.toModel(this.doROARequest("DeleteProductVersion", "2021-11-25", "HTTPS", "DELETE", "AK", "/api/v2/hub/product-versions/" + uid + "", "json", req, runtime), new DeleteProductVersionResponse());
     }
 
     public GetProductVersionResponse getProductVersion(String uid) throws Exception {
@@ -210,18 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProductVersion"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/product-versions/" + uid + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductVersionResponse());
+        return TeaModel.toModel(this.doROARequest("GetProductVersion", "2021-11-25", "HTTPS", "GET", "AK", "/api/v2/hub/product-versions/" + uid + "", "json", req, runtime), new GetProductVersionResponse());
     }
 
     public ListProductVersionsResponse listProductVersions(ListProductVersionsRequest request) throws Exception {
@@ -249,18 +183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProductVersions"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/product-versions"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductVersionsResponse());
+        return TeaModel.toModel(this.doROARequest("ListProductVersions", "2021-11-25", "HTTPS", "GET", "AK", "/api/v2/hub/product-versions", "json", req, runtime), new ListProductVersionsResponse());
     }
 
     public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
@@ -288,18 +211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProducts"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/products"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
+        return TeaModel.toModel(this.doROARequest("ListProducts", "2021-11-25", "HTTPS", "GET", "AK", "/api/v2/hub/products", "json", req, runtime), new ListProductsResponse());
     }
 
     public ListVersionPackagesResponse listVersionPackages(ListVersionPackagesRequest request) throws Exception {
@@ -319,18 +231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListVersionPackages"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/version-packages"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVersionPackagesResponse());
+        return TeaModel.toModel(this.doROARequest("ListVersionPackages", "2021-11-25", "HTTPS", "GET", "AK", "/api/v2/hub/version-packages", "json", req, runtime), new ListVersionPackagesResponse());
     }
 
     public UpdateProductResponse updateProduct(String uid, UpdateProductRequest request) throws Exception {
@@ -359,18 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateProduct"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/products/" + uid + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductResponse());
+        return TeaModel.toModel(this.doROARequest("UpdateProduct", "2021-11-25", "HTTPS", "PUT", "AK", "/api/v2/hub/products/" + uid + "", "json", req, runtime), new UpdateProductResponse());
     }
 
     public UpdateProductVersionResponse updateProductVersion(String uid, UpdateProductVersionRequest request) throws Exception {
@@ -395,17 +285,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateProductVersion"),
-            new TeaPair("version", "2021-11-25"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v2/hub/product-versions/" + uid + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateProductVersionResponse());
+        return TeaModel.toModel(this.doROARequest("UpdateProductVersion", "2021-11-25", "HTTPS", "PUT", "AK", "/api/v2/hub/product-versions/" + uid + "", "json", req, runtime), new UpdateProductVersionResponse());
     }
 }
