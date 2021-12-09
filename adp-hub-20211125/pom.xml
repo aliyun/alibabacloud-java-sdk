@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>adp_hub20211125</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>adp_hub20211125</name>
   <description>Alibaba Cloud adp-hub (20211125) SDK for Java
