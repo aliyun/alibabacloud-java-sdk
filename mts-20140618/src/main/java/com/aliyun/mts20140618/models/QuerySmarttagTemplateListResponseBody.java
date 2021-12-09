@@ -44,6 +44,18 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        @NameInMap("KeywordConfig")
+        public String keywordConfig;
+
+        @NameInMap("KnowledgeConfig")
+        public String knowledgeConfig;
+
+        @NameInMap("LabelType")
+        public String labelType;
+
+        @NameInMap("LabelVersion")
+        public String labelVersion;
+
         @NameInMap("Scene")
         public String scene;
 
@@ -88,6 +100,38 @@ public class QuerySmarttagTemplateListResponseBody extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setKeywordConfig(String keywordConfig) {
+            this.keywordConfig = keywordConfig;
+            return this;
+        }
+        public String getKeywordConfig() {
+            return this.keywordConfig;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setKnowledgeConfig(String knowledgeConfig) {
+            this.knowledgeConfig = knowledgeConfig;
+            return this;
+        }
+        public String getKnowledgeConfig() {
+            return this.knowledgeConfig;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setLabelType(String labelType) {
+            this.labelType = labelType;
+            return this;
+        }
+        public String getLabelType() {
+            return this.labelType;
+        }
+
+        public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setLabelVersion(String labelVersion) {
+            this.labelVersion = labelVersion;
+            return this;
+        }
+        public String getLabelVersion() {
+            return this.labelVersion;
         }
 
         public QuerySmarttagTemplateListResponseBodyTemplatesTemplate setScene(String scene) {
