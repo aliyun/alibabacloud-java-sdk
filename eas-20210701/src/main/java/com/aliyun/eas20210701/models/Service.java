@@ -4,6 +4,10 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
+    // 服务的请求Token
+    @NameInMap("AccessToken")
+    public String accessToken;
+
     // 服务创建账号的UID
     @NameInMap("CallerUid")
     public String callerUid;
@@ -84,13 +88,13 @@ public class Service extends TeaModel {
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
+    // 服务ID
+    @NameInMap("ServiceId")
+    public String serviceId;
+
     // 服务的名字
     @NameInMap("ServiceName")
     public String serviceName;
-
-    // 服务ID
-    @NameInMap("ServiceUid")
-    public String serviceUid;
 
     // 服务的状态
     @NameInMap("Status")
@@ -111,6 +115,14 @@ public class Service extends TeaModel {
     public static Service build(java.util.Map<String, ?> map) throws Exception {
         Service self = new Service();
         return TeaModel.build(map, self);
+    }
+
+    public Service setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    public String getAccessToken() {
+        return this.accessToken;
     }
 
     public Service setCallerUid(String callerUid) {
@@ -273,20 +285,20 @@ public class Service extends TeaModel {
         return this.serviceConfig;
     }
 
+    public Service setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public Service setServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     public String getServiceName() {
         return this.serviceName;
-    }
-
-    public Service setServiceUid(String serviceUid) {
-        this.serviceUid = serviceUid;
-        return this;
-    }
-    public String getServiceUid() {
-        return this.serviceUid;
     }
 
     public Service setStatus(String status) {
