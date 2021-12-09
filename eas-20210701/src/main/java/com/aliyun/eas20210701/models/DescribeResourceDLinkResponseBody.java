@@ -16,6 +16,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 已打通直连的安全组
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     // 已打通直连的主VSwitch ID
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -51,6 +55,14 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeResourceDLinkResponseBody setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public DescribeResourceDLinkResponseBody setVSwitchId(String vSwitchId) {
