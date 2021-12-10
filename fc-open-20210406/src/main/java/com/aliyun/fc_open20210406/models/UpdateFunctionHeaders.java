@@ -14,9 +14,20 @@ public class UpdateFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
-    // 代码校验
-    @NameInMap("x-fc-code-checksum")
+    @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
+
+    @NameInMap("X-Fc-Date")
+    public String xFcDate;
+
+    @NameInMap("X-Fc-Invocation-Type")
+    public String xFcInvocationType;
+
+    @NameInMap("X-Fc-Log-Type")
+    public String xFcLogType;
+
+    @NameInMap("X-Fc-Trace-Id")
+    public String xFcTraceId;
 
     public static UpdateFunctionHeaders build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionHeaders self = new UpdateFunctionHeaders();
@@ -53,6 +64,38 @@ public class UpdateFunctionHeaders extends TeaModel {
     }
     public String getXFcCodeChecksum() {
         return this.xFcCodeChecksum;
+    }
+
+    public UpdateFunctionHeaders setXFcDate(String xFcDate) {
+        this.xFcDate = xFcDate;
+        return this;
+    }
+    public String getXFcDate() {
+        return this.xFcDate;
+    }
+
+    public UpdateFunctionHeaders setXFcInvocationType(String xFcInvocationType) {
+        this.xFcInvocationType = xFcInvocationType;
+        return this;
+    }
+    public String getXFcInvocationType() {
+        return this.xFcInvocationType;
+    }
+
+    public UpdateFunctionHeaders setXFcLogType(String xFcLogType) {
+        this.xFcLogType = xFcLogType;
+        return this;
+    }
+    public String getXFcLogType() {
+        return this.xFcLogType;
+    }
+
+    public UpdateFunctionHeaders setXFcTraceId(String xFcTraceId) {
+        this.xFcTraceId = xFcTraceId;
+        return this;
+    }
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
     }
 
 }

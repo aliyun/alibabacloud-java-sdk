@@ -3,7 +3,7 @@ package com.aliyun.fc_open20210406.models;
 
 import com.aliyun.tea.*;
 
-public class CreateFunctionHeaders extends TeaModel {
+public class DeleteLayerVersionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -25,12 +25,12 @@ public class CreateFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 
-    public static CreateFunctionHeaders build(java.util.Map<String, ?> map) throws Exception {
-        CreateFunctionHeaders self = new CreateFunctionHeaders();
+    public static DeleteLayerVersionHeaders build(java.util.Map<String, ?> map) throws Exception {
+        DeleteLayerVersionHeaders self = new DeleteLayerVersionHeaders();
         return TeaModel.build(map, self);
     }
 
-    public CreateFunctionHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public DeleteLayerVersionHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -38,7 +38,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public CreateFunctionHeaders setXFcAccountId(String xFcAccountId) {
+    public DeleteLayerVersionHeaders setXFcAccountId(String xFcAccountId) {
         this.xFcAccountId = xFcAccountId;
         return this;
     }
@@ -46,7 +46,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.xFcAccountId;
     }
 
-    public CreateFunctionHeaders setXFcCodeChecksum(String xFcCodeChecksum) {
+    public DeleteLayerVersionHeaders setXFcCodeChecksum(String xFcCodeChecksum) {
         this.xFcCodeChecksum = xFcCodeChecksum;
         return this;
     }
@@ -54,7 +54,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.xFcCodeChecksum;
     }
 
-    public CreateFunctionHeaders setXFcDate(String xFcDate) {
+    public DeleteLayerVersionHeaders setXFcDate(String xFcDate) {
         this.xFcDate = xFcDate;
         return this;
     }
@@ -62,7 +62,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.xFcDate;
     }
 
-    public CreateFunctionHeaders setXFcInvocationType(String xFcInvocationType) {
+    public DeleteLayerVersionHeaders setXFcInvocationType(String xFcInvocationType) {
         this.xFcInvocationType = xFcInvocationType;
         return this;
     }
@@ -70,7 +70,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.xFcInvocationType;
     }
 
-    public CreateFunctionHeaders setXFcLogType(String xFcLogType) {
+    public DeleteLayerVersionHeaders setXFcLogType(String xFcLogType) {
         this.xFcLogType = xFcLogType;
         return this;
     }
@@ -78,7 +78,7 @@ public class CreateFunctionHeaders extends TeaModel {
         return this.xFcLogType;
     }
 
-    public CreateFunctionHeaders setXFcTraceId(String xFcTraceId) {
+    public DeleteLayerVersionHeaders setXFcTraceId(String xFcTraceId) {
         this.xFcTraceId = xFcTraceId;
         return this;
     }
