@@ -4,20 +4,8 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DispatchGameSlotRequest extends TeaModel {
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
-
     @NameInMap("AccessKey")
-    @Validation(required = true)
     public String accessKey;
-
-    @NameInMap("RegionName")
-    public String regionName;
-
-    @NameInMap("UserId")
-    @Validation(required = true)
-    public String userId;
 
     @NameInMap("BizParam")
     public String bizParam;
@@ -25,26 +13,35 @@ public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("Cancel")
     public Boolean cancel;
 
+    @NameInMap("ClientIp")
+    public String clientIp;
+
+    @NameInMap("GameCommand")
+    public String gameCommand;
+
+    @NameInMap("GameId")
+    public String gameId;
+
     @NameInMap("GameSession")
     public String gameSession;
 
     @NameInMap("GameStartParam")
     public String gameStartParam;
 
-    @NameInMap("GameCommand")
-    public String gameCommand;
+    @NameInMap("Reconnect")
+    public Boolean reconnect;
+
+    @NameInMap("RegionName")
+    public String regionName;
 
     @NameInMap("SystemInfo")
     public String systemInfo;
 
-    @NameInMap("ClientIp")
-    public String clientIp;
-
-    @NameInMap("Reconnect")
-    public Boolean reconnect;
-
     @NameInMap("Tags")
     public String tags;
+
+    @NameInMap("UserId")
+    public String userId;
 
     @NameInMap("UserLevel")
     public Integer userLevel;
@@ -54,36 +51,12 @@ public class DispatchGameSlotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DispatchGameSlotRequest setGameId(String gameId) {
-        this.gameId = gameId;
-        return this;
-    }
-    public String getGameId() {
-        return this.gameId;
-    }
-
     public DispatchGameSlotRequest setAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
     public String getAccessKey() {
         return this.accessKey;
-    }
-
-    public DispatchGameSlotRequest setRegionName(String regionName) {
-        this.regionName = regionName;
-        return this;
-    }
-    public String getRegionName() {
-        return this.regionName;
-    }
-
-    public DispatchGameSlotRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public DispatchGameSlotRequest setBizParam(String bizParam) {
@@ -102,6 +75,30 @@ public class DispatchGameSlotRequest extends TeaModel {
         return this.cancel;
     }
 
+    public DispatchGameSlotRequest setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+        return this;
+    }
+    public String getClientIp() {
+        return this.clientIp;
+    }
+
+    public DispatchGameSlotRequest setGameCommand(String gameCommand) {
+        this.gameCommand = gameCommand;
+        return this;
+    }
+    public String getGameCommand() {
+        return this.gameCommand;
+    }
+
+    public DispatchGameSlotRequest setGameId(String gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    public String getGameId() {
+        return this.gameId;
+    }
+
     public DispatchGameSlotRequest setGameSession(String gameSession) {
         this.gameSession = gameSession;
         return this;
@@ -118,12 +115,20 @@ public class DispatchGameSlotRequest extends TeaModel {
         return this.gameStartParam;
     }
 
-    public DispatchGameSlotRequest setGameCommand(String gameCommand) {
-        this.gameCommand = gameCommand;
+    public DispatchGameSlotRequest setReconnect(Boolean reconnect) {
+        this.reconnect = reconnect;
         return this;
     }
-    public String getGameCommand() {
-        return this.gameCommand;
+    public Boolean getReconnect() {
+        return this.reconnect;
+    }
+
+    public DispatchGameSlotRequest setRegionName(String regionName) {
+        this.regionName = regionName;
+        return this;
+    }
+    public String getRegionName() {
+        return this.regionName;
     }
 
     public DispatchGameSlotRequest setSystemInfo(String systemInfo) {
@@ -134,28 +139,20 @@ public class DispatchGameSlotRequest extends TeaModel {
         return this.systemInfo;
     }
 
-    public DispatchGameSlotRequest setClientIp(String clientIp) {
-        this.clientIp = clientIp;
-        return this;
-    }
-    public String getClientIp() {
-        return this.clientIp;
-    }
-
-    public DispatchGameSlotRequest setReconnect(Boolean reconnect) {
-        this.reconnect = reconnect;
-        return this;
-    }
-    public Boolean getReconnect() {
-        return this.reconnect;
-    }
-
     public DispatchGameSlotRequest setTags(String tags) {
         this.tags = tags;
         return this;
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public DispatchGameSlotRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public DispatchGameSlotRequest setUserLevel(Integer userLevel) {

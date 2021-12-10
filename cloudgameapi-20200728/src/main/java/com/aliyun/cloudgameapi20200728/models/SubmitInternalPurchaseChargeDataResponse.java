@@ -4,65 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseChargeDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SubmitInternalPurchaseChargeDataResponseData data;
+    public SubmitInternalPurchaseChargeDataResponseBody body;
 
     public static SubmitInternalPurchaseChargeDataResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseChargeDataResponse self = new SubmitInternalPurchaseChargeDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInternalPurchaseChargeDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitInternalPurchaseChargeDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitInternalPurchaseChargeDataResponse setData(SubmitInternalPurchaseChargeDataResponseData data) {
-        this.data = data;
+    public SubmitInternalPurchaseChargeDataResponse setBody(SubmitInternalPurchaseChargeDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SubmitInternalPurchaseChargeDataResponseData getData() {
-        return this.data;
-    }
-
-    public static class SubmitInternalPurchaseChargeDataResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public Integer status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static SubmitInternalPurchaseChargeDataResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SubmitInternalPurchaseChargeDataResponseData self = new SubmitInternalPurchaseChargeDataResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitInternalPurchaseChargeDataResponseData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public SubmitInternalPurchaseChargeDataResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public SubmitInternalPurchaseChargeDataResponseBody getBody() {
+        return this.body;
     }
 
 }

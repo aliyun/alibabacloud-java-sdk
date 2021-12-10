@@ -4,36 +4,27 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class BatchStopGameSessionsRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    @Validation(required = true)
-    public String projectId;
-
     @NameInMap("GameId")
     public String gameId;
 
-    @NameInMap("Token")
-    public String token;
+    @NameInMap("ProjectId")
+    public String projectId;
 
     @NameInMap("Reason")
     public String reason;
 
-    @NameInMap("TrackInfo")
-    public String trackInfo;
-
     @NameInMap("Tags")
     public String tags;
+
+    @NameInMap("Token")
+    public String token;
+
+    @NameInMap("TrackInfo")
+    public String trackInfo;
 
     public static BatchStopGameSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopGameSessionsRequest self = new BatchStopGameSessionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchStopGameSessionsRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public BatchStopGameSessionsRequest setGameId(String gameId) {
@@ -44,12 +35,12 @@ public class BatchStopGameSessionsRequest extends TeaModel {
         return this.gameId;
     }
 
-    public BatchStopGameSessionsRequest setToken(String token) {
-        this.token = token;
+    public BatchStopGameSessionsRequest setProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public String getToken() {
-        return this.token;
+    public String getProjectId() {
+        return this.projectId;
     }
 
     public BatchStopGameSessionsRequest setReason(String reason) {
@@ -60,20 +51,28 @@ public class BatchStopGameSessionsRequest extends TeaModel {
         return this.reason;
     }
 
-    public BatchStopGameSessionsRequest setTrackInfo(String trackInfo) {
-        this.trackInfo = trackInfo;
-        return this;
-    }
-    public String getTrackInfo() {
-        return this.trackInfo;
-    }
-
     public BatchStopGameSessionsRequest setTags(String tags) {
         this.tags = tags;
         return this;
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public BatchStopGameSessionsRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
+    }
+
+    public BatchStopGameSessionsRequest setTrackInfo(String trackInfo) {
+        this.trackInfo = trackInfo;
+        return this;
+    }
+    public String getTrackInfo() {
+        return this.trackInfo;
     }
 
 }

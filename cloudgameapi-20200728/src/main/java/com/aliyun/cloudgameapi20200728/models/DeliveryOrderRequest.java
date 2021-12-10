@@ -4,20 +4,26 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeliveryOrderRequest extends TeaModel {
+    @NameInMap("AccountDomain")
+    public String accountDomain;
+
     @NameInMap("BuyerAccountId")
-    @Validation(required = true)
     public String buyerAccountId;
 
     @NameInMap("OrderId")
-    @Validation(required = true)
     public String orderId;
-
-    @NameInMap("AccountDomain")
-    public String accountDomain;
 
     public static DeliveryOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         DeliveryOrderRequest self = new DeliveryOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeliveryOrderRequest setAccountDomain(String accountDomain) {
+        this.accountDomain = accountDomain;
+        return this;
+    }
+    public String getAccountDomain() {
+        return this.accountDomain;
     }
 
     public DeliveryOrderRequest setBuyerAccountId(String buyerAccountId) {
@@ -34,14 +40,6 @@ public class DeliveryOrderRequest extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
-    }
-
-    public DeliveryOrderRequest setAccountDomain(String accountDomain) {
-        this.accountDomain = accountDomain;
-        return this;
-    }
-    public String getAccountDomain() {
-        return this.accountDomain;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitDeploymentResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String taskId;
+    public SubmitDeploymentResponseBody body;
 
     public static SubmitDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitDeploymentResponse self = new SubmitDeploymentResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitDeploymentResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitDeploymentResponse setTaskId(String taskId) {
-        this.taskId = taskId;
+    public SubmitDeploymentResponse setBody(SubmitDeploymentResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public SubmitDeploymentResponseBody getBody() {
+        return this.body;
     }
 
 }

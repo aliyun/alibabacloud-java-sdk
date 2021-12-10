@@ -4,47 +4,27 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class UploadGameVersionByDownloadRequest extends TeaModel {
-    @NameInMap("Hash")
-    @Validation(required = true)
-    public String hash;
-
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
-
     @NameInMap("DownloadType")
-    @Validation(required = true)
     public String downloadType;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
-    @NameInMap("VersionName")
-    public String versionName;
+    @NameInMap("GameId")
+    public String gameId;
 
     @NameInMap("GameVersion")
     public String gameVersion;
 
+    @NameInMap("Hash")
+    public String hash;
+
+    @NameInMap("VersionName")
+    public String versionName;
+
     public static UploadGameVersionByDownloadRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadGameVersionByDownloadRequest self = new UploadGameVersionByDownloadRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UploadGameVersionByDownloadRequest setHash(String hash) {
-        this.hash = hash;
-        return this;
-    }
-    public String getHash() {
-        return this.hash;
-    }
-
-    public UploadGameVersionByDownloadRequest setGameId(String gameId) {
-        this.gameId = gameId;
-        return this;
-    }
-    public String getGameId() {
-        return this.gameId;
     }
 
     public UploadGameVersionByDownloadRequest setDownloadType(String downloadType) {
@@ -63,12 +43,12 @@ public class UploadGameVersionByDownloadRequest extends TeaModel {
         return this.fileType;
     }
 
-    public UploadGameVersionByDownloadRequest setVersionName(String versionName) {
-        this.versionName = versionName;
+    public UploadGameVersionByDownloadRequest setGameId(String gameId) {
+        this.gameId = gameId;
         return this;
     }
-    public String getVersionName() {
-        return this.versionName;
+    public String getGameId() {
+        return this.gameId;
     }
 
     public UploadGameVersionByDownloadRequest setGameVersion(String gameVersion) {
@@ -77,6 +57,22 @@ public class UploadGameVersionByDownloadRequest extends TeaModel {
     }
     public String getGameVersion() {
         return this.gameVersion;
+    }
+
+    public UploadGameVersionByDownloadRequest setHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    public String getHash() {
+        return this.hash;
+    }
+
+    public UploadGameVersionByDownloadRequest setVersionName(String versionName) {
+        this.versionName = versionName;
+        return this;
+    }
+    public String getVersionName() {
+        return this.versionName;
     }
 
 }

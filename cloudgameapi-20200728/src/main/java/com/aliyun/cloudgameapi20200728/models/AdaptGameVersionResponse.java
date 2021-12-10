@@ -4,33 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AdaptGameVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String taskId;
+    public AdaptGameVersionResponseBody body;
 
     public static AdaptGameVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         AdaptGameVersionResponse self = new AdaptGameVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public AdaptGameVersionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AdaptGameVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AdaptGameVersionResponse setTaskId(String taskId) {
-        this.taskId = taskId;
+    public AdaptGameVersionResponse setBody(AdaptGameVersionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public AdaptGameVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

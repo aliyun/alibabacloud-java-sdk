@@ -4,100 +4,66 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
-    @NameInMap("UserActivationRate")
-    public Float userActivationRate;
-
-    @NameInMap("NewUserRetentionRateOneDay")
-    @Validation(required = true)
-    public Float newUserRetentionRateOneDay;
-
     @NameInMap("ActiveUserRetentionRateOneDay")
-    @Validation(required = true)
     public Float activeUserRetentionRateOneDay;
 
-    @NameInMap("NewUserRetentionRateSevenDay")
-    @Validation(required = true)
-    public Float newUserRetentionRateSevenDay;
-
     @NameInMap("ActiveUserRetentionRateSevenDay")
-    @Validation(required = true)
     public Float activeUserRetentionRateSevenDay;
 
-    @NameInMap("PaymentConversionRate")
-    @Validation(required = true)
-    public Float paymentConversionRate;
-
-    @NameInMap("Dau")
-    @Validation(required = true)
-    public Long dau;
-
-    @NameInMap("Mau")
-    @Validation(required = true)
-    public Long mau;
-
-    @NameInMap("PlayTimeRangeOneDay")
-    @Validation(required = true)
-    public String playTimeRangeOneDay;
-
-    @NameInMap("PlayTimeRangeThirtyDay")
-    @Validation(required = true)
-    public String playTimeRangeThirtyDay;
-
-    @NameInMap("Arpu")
-    @Validation(required = true)
-    public Float arpu;
-
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
-
-    @NameInMap("ChargeDate")
-    @Validation(required = true)
-    public String chargeDate;
-
-    @NameInMap("NewUserRetentionRateThirtyDay")
-    @Validation(required = true)
-    public Float newUserRetentionRateThirtyDay;
-
     @NameInMap("ActiveUserRetentionRateThirtyDay")
-    @Validation(required = true)
     public Float activeUserRetentionRateThirtyDay;
 
+    @NameInMap("Arpu")
+    public Float arpu;
+
+    @NameInMap("ChargeDate")
+    public String chargeDate;
+
+    @NameInMap("Dau")
+    public Long dau;
+
+    @NameInMap("GameId")
+    public String gameId;
+
+    @NameInMap("Mau")
+    public Long mau;
+
+    @NameInMap("NewUserRetentionRateOneDay")
+    public Float newUserRetentionRateOneDay;
+
+    @NameInMap("NewUserRetentionRateSevenDay")
+    public Float newUserRetentionRateSevenDay;
+
+    @NameInMap("NewUserRetentionRateThirtyDay")
+    public Float newUserRetentionRateThirtyDay;
+
+    @NameInMap("PaymentConversionRate")
+    public Float paymentConversionRate;
+
     @NameInMap("PlayTimeAverageOneDay")
-    @Validation(required = true)
     public Float playTimeAverageOneDay;
 
     @NameInMap("PlayTimeAverageThirtyDay")
-    @Validation(required = true)
     public Float playTimeAverageThirtyDay;
 
     @NameInMap("PlayTimeNinetyPointsOneDay")
-    @Validation(required = true)
     public Float playTimeNinetyPointsOneDay;
 
     @NameInMap("PlayTimeNinetyPointsThirtyDay")
-    @Validation(required = true)
     public Float playTimeNinetyPointsThirtyDay;
+
+    @NameInMap("PlayTimeRangeOneDay")
+    public String playTimeRangeOneDay;
+
+    @NameInMap("PlayTimeRangeThirtyDay")
+    public String playTimeRangeThirtyDay;
+
+    @NameInMap("UserActivationRate")
+    public Float userActivationRate;
 
     public static SubmitInternalPurchaseChargeDataRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseChargeDataRequest self = new SubmitInternalPurchaseChargeDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setUserActivationRate(Float userActivationRate) {
-        this.userActivationRate = userActivationRate;
-        return this;
-    }
-    public Float getUserActivationRate() {
-        return this.userActivationRate;
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setNewUserRetentionRateOneDay(Float newUserRetentionRateOneDay) {
-        this.newUserRetentionRateOneDay = newUserRetentionRateOneDay;
-        return this;
-    }
-    public Float getNewUserRetentionRateOneDay() {
-        return this.newUserRetentionRateOneDay;
     }
 
     public SubmitInternalPurchaseChargeDataRequest setActiveUserRetentionRateOneDay(Float activeUserRetentionRateOneDay) {
@@ -108,14 +74,6 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
         return this.activeUserRetentionRateOneDay;
     }
 
-    public SubmitInternalPurchaseChargeDataRequest setNewUserRetentionRateSevenDay(Float newUserRetentionRateSevenDay) {
-        this.newUserRetentionRateSevenDay = newUserRetentionRateSevenDay;
-        return this;
-    }
-    public Float getNewUserRetentionRateSevenDay() {
-        return this.newUserRetentionRateSevenDay;
-    }
-
     public SubmitInternalPurchaseChargeDataRequest setActiveUserRetentionRateSevenDay(Float activeUserRetentionRateSevenDay) {
         this.activeUserRetentionRateSevenDay = activeUserRetentionRateSevenDay;
         return this;
@@ -124,44 +82,12 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
         return this.activeUserRetentionRateSevenDay;
     }
 
-    public SubmitInternalPurchaseChargeDataRequest setPaymentConversionRate(Float paymentConversionRate) {
-        this.paymentConversionRate = paymentConversionRate;
+    public SubmitInternalPurchaseChargeDataRequest setActiveUserRetentionRateThirtyDay(Float activeUserRetentionRateThirtyDay) {
+        this.activeUserRetentionRateThirtyDay = activeUserRetentionRateThirtyDay;
         return this;
     }
-    public Float getPaymentConversionRate() {
-        return this.paymentConversionRate;
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setDau(Long dau) {
-        this.dau = dau;
-        return this;
-    }
-    public Long getDau() {
-        return this.dau;
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setMau(Long mau) {
-        this.mau = mau;
-        return this;
-    }
-    public Long getMau() {
-        return this.mau;
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setPlayTimeRangeOneDay(String playTimeRangeOneDay) {
-        this.playTimeRangeOneDay = playTimeRangeOneDay;
-        return this;
-    }
-    public String getPlayTimeRangeOneDay() {
-        return this.playTimeRangeOneDay;
-    }
-
-    public SubmitInternalPurchaseChargeDataRequest setPlayTimeRangeThirtyDay(String playTimeRangeThirtyDay) {
-        this.playTimeRangeThirtyDay = playTimeRangeThirtyDay;
-        return this;
-    }
-    public String getPlayTimeRangeThirtyDay() {
-        return this.playTimeRangeThirtyDay;
+    public Float getActiveUserRetentionRateThirtyDay() {
+        return this.activeUserRetentionRateThirtyDay;
     }
 
     public SubmitInternalPurchaseChargeDataRequest setArpu(Float arpu) {
@@ -172,6 +98,22 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
         return this.arpu;
     }
 
+    public SubmitInternalPurchaseChargeDataRequest setChargeDate(String chargeDate) {
+        this.chargeDate = chargeDate;
+        return this;
+    }
+    public String getChargeDate() {
+        return this.chargeDate;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setDau(Long dau) {
+        this.dau = dau;
+        return this;
+    }
+    public Long getDau() {
+        return this.dau;
+    }
+
     public SubmitInternalPurchaseChargeDataRequest setGameId(String gameId) {
         this.gameId = gameId;
         return this;
@@ -180,12 +122,28 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
         return this.gameId;
     }
 
-    public SubmitInternalPurchaseChargeDataRequest setChargeDate(String chargeDate) {
-        this.chargeDate = chargeDate;
+    public SubmitInternalPurchaseChargeDataRequest setMau(Long mau) {
+        this.mau = mau;
         return this;
     }
-    public String getChargeDate() {
-        return this.chargeDate;
+    public Long getMau() {
+        return this.mau;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setNewUserRetentionRateOneDay(Float newUserRetentionRateOneDay) {
+        this.newUserRetentionRateOneDay = newUserRetentionRateOneDay;
+        return this;
+    }
+    public Float getNewUserRetentionRateOneDay() {
+        return this.newUserRetentionRateOneDay;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setNewUserRetentionRateSevenDay(Float newUserRetentionRateSevenDay) {
+        this.newUserRetentionRateSevenDay = newUserRetentionRateSevenDay;
+        return this;
+    }
+    public Float getNewUserRetentionRateSevenDay() {
+        return this.newUserRetentionRateSevenDay;
     }
 
     public SubmitInternalPurchaseChargeDataRequest setNewUserRetentionRateThirtyDay(Float newUserRetentionRateThirtyDay) {
@@ -196,12 +154,12 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
         return this.newUserRetentionRateThirtyDay;
     }
 
-    public SubmitInternalPurchaseChargeDataRequest setActiveUserRetentionRateThirtyDay(Float activeUserRetentionRateThirtyDay) {
-        this.activeUserRetentionRateThirtyDay = activeUserRetentionRateThirtyDay;
+    public SubmitInternalPurchaseChargeDataRequest setPaymentConversionRate(Float paymentConversionRate) {
+        this.paymentConversionRate = paymentConversionRate;
         return this;
     }
-    public Float getActiveUserRetentionRateThirtyDay() {
-        return this.activeUserRetentionRateThirtyDay;
+    public Float getPaymentConversionRate() {
+        return this.paymentConversionRate;
     }
 
     public SubmitInternalPurchaseChargeDataRequest setPlayTimeAverageOneDay(Float playTimeAverageOneDay) {
@@ -234,6 +192,30 @@ public class SubmitInternalPurchaseChargeDataRequest extends TeaModel {
     }
     public Float getPlayTimeNinetyPointsThirtyDay() {
         return this.playTimeNinetyPointsThirtyDay;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setPlayTimeRangeOneDay(String playTimeRangeOneDay) {
+        this.playTimeRangeOneDay = playTimeRangeOneDay;
+        return this;
+    }
+    public String getPlayTimeRangeOneDay() {
+        return this.playTimeRangeOneDay;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setPlayTimeRangeThirtyDay(String playTimeRangeThirtyDay) {
+        this.playTimeRangeThirtyDay = playTimeRangeThirtyDay;
+        return this;
+    }
+    public String getPlayTimeRangeThirtyDay() {
+        return this.playTimeRangeThirtyDay;
+    }
+
+    public SubmitInternalPurchaseChargeDataRequest setUserActivationRate(Float userActivationRate) {
+        this.userActivationRate = userActivationRate;
+        return this;
+    }
+    public Float getUserActivationRate() {
+        return this.userActivationRate;
     }
 
 }

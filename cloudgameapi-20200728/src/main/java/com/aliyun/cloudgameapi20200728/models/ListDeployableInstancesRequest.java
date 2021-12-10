@@ -4,39 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListDeployableInstancesRequest extends TeaModel {
-    @NameInMap("VersionId")
-    @Validation(required = true)
-    public String versionId;
+    // 页码
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
-    @NameInMap("ProjectId")
-    @Validation(required = true)
-    public String projectId;
-
+    // 每页大小
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("PageNumber")
-    public Long pageNumber;
+    // 项目ID
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    // 游戏版本ID
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static ListDeployableInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeployableInstancesRequest self = new ListDeployableInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDeployableInstancesRequest setVersionId(String versionId) {
-        this.versionId = versionId;
+    public ListDeployableInstancesRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
-    }
-
-    public ListDeployableInstancesRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListDeployableInstancesRequest setPageSize(Long pageSize) {
@@ -47,12 +41,20 @@ public class ListDeployableInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDeployableInstancesRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListDeployableInstancesRequest setProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public ListDeployableInstancesRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }
