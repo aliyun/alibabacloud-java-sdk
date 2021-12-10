@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -72,10 +73,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddTagsBatchResponse addTagsBatchWithOptions(AddTagsBatchRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ClientToken", request.clientToken);
+        query.put("DbfsList", request.dbfsList);
+        query.put("RegionId", request.regionId);
+        query.put("Tags", request.tags);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("AddTagsBatch", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new AddTagsBatchResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddTagsBatch"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddTagsBatchResponse());
     }
 
     public AddTagsBatchResponse addTagsBatch(AddTagsBatchRequest request) throws Exception {
@@ -85,10 +103,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AttachDbfsResponse attachDbfsWithOptions(AttachDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AttachMode", request.attachMode);
+        query.put("AttachPoint", request.attachPoint);
+        query.put("ECSInstanceId", request.ECSInstanceId);
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
+        query.put("ServerUrl", request.serverUrl);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("AttachDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new AttachDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachDbfsResponse());
     }
 
     public AttachDbfsResponse attachDbfs(AttachDbfsRequest request) throws Exception {
@@ -96,25 +133,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachDbfsWithOptions(request, runtime);
     }
 
-    public CreateConstantsResponse createConstantsWithOptions(CreateConstantsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateConstants", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new CreateConstantsResponse());
-    }
-
-    public CreateConstantsResponse createConstants(CreateConstantsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createConstantsWithOptions(request, runtime);
-    }
-
     public CreateDbfsResponse createDbfsWithOptions(CreateDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Category", request.category);
+        query.put("ClientToken", request.clientToken);
+        query.put("DeleteSnapshot", request.deleteSnapshot);
+        query.put("EnableRaid", request.enableRaid);
+        query.put("Encryption", request.encryption);
+        query.put("FsName", request.fsName);
+        query.put("InstanceType", request.instanceType);
+        query.put("KMSKeyId", request.KMSKeyId);
+        query.put("PerformanceLevel", request.performanceLevel);
+        query.put("RaidStripeUnitNumber", request.raidStripeUnitNumber);
+        query.put("RegionId", request.regionId);
+        query.put("SizeG", request.sizeG);
+        query.put("SnapshotId", request.snapshotId);
+        query.put("UsedScene", request.usedScene);
+        query.put("ZoneId", request.zoneId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDbfsResponse());
     }
 
     public CreateDbfsResponse createDbfs(CreateDbfsRequest request) throws Exception {
@@ -124,10 +176,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ClientToken", request.clientToken);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateServiceLinkedRole", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new CreateServiceLinkedRoleResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceLinkedRole"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceLinkedRoleResponse());
     }
 
     public CreateServiceLinkedRoleResponse createServiceLinkedRole(CreateServiceLinkedRoleRequest request) throws Exception {
@@ -137,10 +204,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateSnapshotResponse createSnapshotWithOptions(CreateSnapshotRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ClientToken", request.clientToken);
+        query.put("Description", request.description);
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
+        query.put("RetentionDays", request.retentionDays);
+        query.put("SnapshotName", request.snapshotName);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateSnapshot", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new CreateSnapshotResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSnapshot"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSnapshotResponse());
     }
 
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) throws Exception {
@@ -148,25 +234,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSnapshotWithOptions(request, runtime);
     }
 
-    public DeleteConstantsResponse deleteConstantsWithOptions(DeleteConstantsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteConstants", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteConstantsResponse());
-    }
-
-    public DeleteConstantsResponse deleteConstants(DeleteConstantsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteConstantsWithOptions(request, runtime);
-    }
-
     public DeleteDbfsResponse deleteDbfsWithOptions(DeleteDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDbfsResponse());
     }
 
     public DeleteDbfsResponse deleteDbfs(DeleteDbfsRequest request) throws Exception {
@@ -176,10 +264,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteSnapshotResponse deleteSnapshotWithOptions(DeleteSnapshotRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Force", request.force);
+        query.put("RegionId", request.regionId);
+        query.put("SnapshotId", request.snapshotId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteSnapshot", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteSnapshotResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSnapshot"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnapshotResponse());
     }
 
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws Exception {
@@ -189,10 +293,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteTagsBatchResponse deleteTagsBatchWithOptions(DeleteTagsBatchRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("DbfsList", request.dbfsList);
+        query.put("RegionId", request.regionId);
+        query.put("Tags", request.tags);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteTagsBatch", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTagsBatchResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTagsBatch"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTagsBatchResponse());
     }
 
     public DeleteTagsBatchResponse deleteTagsBatch(DeleteTagsBatchRequest request) throws Exception {
@@ -202,10 +322,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeDbfsSpecificationsResponse describeDbfsSpecificationsWithOptions(DescribeDbfsSpecificationsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("Category", request.category);
+        query.put("EcsInstanceType", request.ecsInstanceType);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeDbfsSpecifications", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeDbfsSpecificationsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDbfsSpecifications"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDbfsSpecificationsResponse());
     }
 
     public DescribeDbfsSpecificationsResponse describeDbfsSpecifications(DescribeDbfsSpecificationsRequest request) throws Exception {
@@ -215,10 +351,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeInstanceTypes", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeInstanceTypesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceTypes"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceTypesResponse());
     }
 
     public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws Exception {
@@ -228,10 +378,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DetachDbfsResponse detachDbfsWithOptions(DetachDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ECSInstanceId", request.ECSInstanceId);
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DetachDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new DetachDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachDbfsResponse());
     }
 
     public DetachDbfsResponse detachDbfs(DetachDbfsRequest request) throws Exception {
@@ -241,10 +407,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetDbfsResponse getDbfsWithOptions(GetDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new GetDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDbfsResponse());
     }
 
     public GetDbfsResponse getDbfs(GetDbfsRequest request) throws Exception {
@@ -254,10 +435,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetServiceLinkedRoleResponse getServiceLinkedRoleWithOptions(GetServiceLinkedRoleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetServiceLinkedRole", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new GetServiceLinkedRoleResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceLinkedRole"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceLinkedRoleResponse());
     }
 
     public GetServiceLinkedRoleResponse getServiceLinkedRole(GetServiceLinkedRoleRequest request) throws Exception {
@@ -265,25 +460,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getServiceLinkedRoleWithOptions(request, runtime);
     }
 
-    public ListConstantsResponse listConstantsWithOptions(ListConstantsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListConstants", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListConstantsResponse());
-    }
-
-    public ListConstantsResponse listConstants(ListConstantsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listConstantsWithOptions(request, runtime);
-    }
-
     public ListDbfsResponse listDbfsWithOptions(ListDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FilterKey", request.filterKey);
+        query.put("FilterValue", request.filterValue);
+        query.put("PageNumber", request.pageNumber);
+        query.put("PageSize", request.pageSize);
+        query.put("RegionId", request.regionId);
+        query.put("SortKey", request.sortKey);
+        query.put("SortType", request.sortType);
+        query.put("Tags", request.tags);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDbfsResponse());
     }
 
     public ListDbfsResponse listDbfs(ListDbfsRequest request) throws Exception {
@@ -293,10 +496,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListDbfsAttachableEcsInstancesResponse listDbfsAttachableEcsInstancesWithOptions(ListDbfsAttachableEcsInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListDbfsAttachableEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListDbfsAttachableEcsInstancesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDbfsAttachableEcsInstances"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDbfsAttachableEcsInstancesResponse());
     }
 
     public ListDbfsAttachableEcsInstancesResponse listDbfsAttachableEcsInstances(ListDbfsAttachableEcsInstancesRequest request) throws Exception {
@@ -306,10 +523,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListDbfsAttachedEcsInstancesResponse listDbfsAttachedEcsInstancesWithOptions(ListDbfsAttachedEcsInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListDbfsAttachedEcsInstances", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListDbfsAttachedEcsInstancesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDbfsAttachedEcsInstances"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDbfsAttachedEcsInstancesResponse());
     }
 
     public ListDbfsAttachedEcsInstancesResponse listDbfsAttachedEcsInstances(ListDbfsAttachedEcsInstancesRequest request) throws Exception {
@@ -319,10 +551,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListSnapshotResponse listSnapshotWithOptions(ListSnapshotRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FilterKey", request.filterKey);
+        query.put("FilterValue", request.filterValue);
+        query.put("FsId", request.fsId);
+        query.put("PageNumber", request.pageNumber);
+        query.put("PageSize", request.pageSize);
+        query.put("RegionId", request.regionId);
+        query.put("SnapshotIds", request.snapshotIds);
+        query.put("SnapshotName", request.snapshotName);
+        query.put("SnapshotType", request.snapshotType);
+        query.put("SortKey", request.sortKey);
+        query.put("SortType", request.sortType);
+        query.put("Status", request.status);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListSnapshot", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListSnapshotResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshot"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotResponse());
     }
 
     public ListSnapshotResponse listSnapshot(ListSnapshotRequest request) throws Exception {
@@ -332,10 +589,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListTagKeysResponse listTagKeysWithOptions(ListTagKeysRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListTagKeys", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListTagKeysResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagKeys"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
     }
 
     public ListTagKeysResponse listTagKeys(ListTagKeysRequest request) throws Exception {
@@ -345,10 +616,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListTagValuesResponse listTagValuesWithOptions(ListTagValuesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
+        query.put("TagKey", request.tagKey);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListTagValues", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListTagValuesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagValues"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
     }
 
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
@@ -358,10 +644,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListTaskResponse listTaskWithOptions(ListTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FilterKey", request.filterKey);
+        query.put("FilterValue", request.filterValue);
+        query.put("PageNumber", request.pageNumber);
+        query.put("PageSize", request.pageSize);
+        query.put("RegionId", request.regionId);
+        query.put("SortKey", request.sortKey);
+        query.put("SortType", request.sortType);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ListTask", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListTaskResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTask"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaskResponse());
     }
 
     public ListTaskResponse listTask(ListTaskRequest request) throws Exception {
@@ -369,25 +675,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTaskWithOptions(request, runtime);
     }
 
-    public OpreateConstantsResponse opreateConstantsWithOptions(OpreateConstantsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("OpreateConstants", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new OpreateConstantsResponse());
-    }
-
-    public OpreateConstantsResponse opreateConstants(OpreateConstantsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.opreateConstantsWithOptions(request, runtime);
-    }
-
     public RenameDbfsResponse renameDbfsWithOptions(RenameDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("FsName", request.fsName);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("RenameDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new RenameDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenameDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenameDbfsResponse());
     }
 
     public RenameDbfsResponse renameDbfs(RenameDbfsRequest request) throws Exception {
@@ -397,10 +706,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ResetDbfsResponse resetDbfsWithOptions(ResetDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("RegionId", request.regionId);
+        query.put("SnapshotId", request.snapshotId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ResetDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ResetDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetDbfsResponse());
     }
 
     public ResetDbfsResponse resetDbfs(ResetDbfsRequest request) throws Exception {
@@ -410,10 +735,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ResizeDbfsResponse resizeDbfsWithOptions(ResizeDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("FsId", request.fsId);
+        query.put("NewSizeG", request.newSizeG);
+        query.put("RegionId", request.regionId);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ResizeDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new ResizeDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResizeDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResizeDbfsResponse());
     }
 
     public ResizeDbfsResponse resizeDbfs(ResizeDbfsRequest request) throws Exception {
@@ -423,10 +764,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public TagDbfsResponse tagDbfsWithOptions(TagDbfsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("DbfsId", request.dbfsId);
+        query.put("RegionId", request.regionId);
+        query.put("Tags", request.tags);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("TagDbfs", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new TagDbfsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagDbfs"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagDbfsResponse());
     }
 
     public TagDbfsResponse tagDbfs(TagDbfsRequest request) throws Exception {
@@ -434,25 +791,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.tagDbfsWithOptions(request, runtime);
     }
 
-    public UpdateConstantsResponse updateConstantsWithOptions(UpdateConstantsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateConstants", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateConstantsResponse());
-    }
-
-    public UpdateConstantsResponse updateConstants(UpdateConstantsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateConstantsWithOptions(request, runtime);
-    }
-
     public UpdateTaskResponse updateTaskWithOptions(UpdateTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("RegionId", request.regionId);
+        query.put("TaskIds", request.taskIds);
+        query.put("TaskProgress", request.taskProgress);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateTask", "2020-04-18", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateTaskResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTask"),
+            new TeaPair("version", "2020-04-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskResponse());
     }
 
     public UpdateTaskResponse updateTask(UpdateTaskRequest request) throws Exception {
