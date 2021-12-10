@@ -57,11 +57,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateAliasResponse createAlias(String serviceName, CreateAliasRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateAliasHeaders headers = new CreateAliasHeaders();
         return this.createAliasWithOptions(serviceName, request, headers, runtime);
     }
 
-    public CreateAliasResponse createAliasWithOptions(String serviceName, CreateAliasRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateAliasResponse createAliasWithOptions(String serviceName, CreateAliasRequest request, CreateAliasHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -81,20 +81,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("versionId", request.versionId);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateAlias", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/aliases", "json", req, runtime), new CreateAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAliasResponse());
     }
 
     public CreateCustomDomainResponse createCustomDomain(CreateCustomDomainRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateCustomDomainHeaders headers = new CreateCustomDomainHeaders();
         return this.createCustomDomainWithOptions(request, headers, runtime);
     }
 
-    public CreateCustomDomainResponse createCustomDomainWithOptions(CreateCustomDomainRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateCustomDomainResponse createCustomDomainWithOptions(CreateCustomDomainRequest request, CreateCustomDomainHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.certConfig))) {
@@ -113,11 +153,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("routeConfig", request.routeConfig);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateCustomDomain", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/custom-domains", "json", req, runtime), new CreateCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomDomainResponse());
     }
 
     public CreateFunctionResponse createFunction(String serviceName, CreateFunctionRequest request) throws Exception {
@@ -207,24 +287,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders = headers.commonHeaders;
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("x-fc-code-checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateFunction", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions", "json", req, runtime), new CreateFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFunctionResponse());
     }
 
     public CreateLayerVersionResponse createLayerVersion(String layerName, CreateLayerVersionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateLayerVersionHeaders headers = new CreateLayerVersionHeaders();
         return this.createLayerVersionWithOptions(layerName, request, headers, runtime);
     }
 
-    public CreateLayerVersionResponse createLayerVersionWithOptions(String layerName, CreateLayerVersionRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateLayerVersionResponse createLayerVersionWithOptions(String layerName, CreateLayerVersionRequest request, CreateLayerVersionHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -240,20 +351,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("description", request.description);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateLayerVersion", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/layers/" + layerName + "/versions", "json", req, runtime), new CreateLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLayerVersionResponse());
     }
 
     public CreateServiceResponse createService(CreateServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateServiceHeaders headers = new CreateServiceHeaders();
         return this.createServiceWithOptions(request, headers, runtime);
     }
 
-    public CreateServiceResponse createServiceWithOptions(CreateServiceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateServiceResponse createServiceWithOptions(CreateServiceRequest request, CreateServiceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -288,20 +439,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("vpcConfig", request.vpcConfig);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateService", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services", "json", req, runtime), new CreateServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceResponse());
     }
 
     public CreateTriggerResponse createTrigger(String serviceName, String functionName, CreateTriggerRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateTriggerHeaders headers = new CreateTriggerHeaders();
         return this.createTriggerWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public CreateTriggerResponse createTriggerWithOptions(String serviceName, String functionName, CreateTriggerRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateTriggerResponse createTriggerWithOptions(String serviceName, String functionName, CreateTriggerRequest request, CreateTriggerHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -334,20 +525,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("triggerType", request.triggerType);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateTrigger", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers", "json", req, runtime), new CreateTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTriggerResponse());
     }
 
     public CreateVpcBindingResponse createVpcBinding(String serviceName, CreateVpcBindingRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        CreateVpcBindingHeaders headers = new CreateVpcBindingHeaders();
         return this.createVpcBindingWithOptions(serviceName, request, headers, runtime);
     }
 
-    public CreateVpcBindingResponse createVpcBindingWithOptions(String serviceName, CreateVpcBindingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateVpcBindingResponse createVpcBindingWithOptions(String serviceName, CreateVpcBindingRequest request, CreateVpcBindingHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -355,11 +586,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("vpcId", request.vpcId);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateVpcBinding", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/bindings", "none", req, runtime), new CreateVpcBindingResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVpcBinding"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcBindingResponse());
     }
 
     public DeleteAliasResponse deleteAlias(String serviceName, String aliasName) throws Exception {
@@ -380,24 +651,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteAlias", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "none", req, runtime), new DeleteAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAliasResponse());
     }
 
     public DeleteCustomDomainResponse deleteCustomDomain(String domainName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeleteCustomDomainHeaders headers = new DeleteCustomDomainHeaders();
         return this.deleteCustomDomainWithOptions(domainName, headers, runtime);
     }
 
-    public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteCustomDomainResponse deleteCustomDomainWithOptions(String domainName, DeleteCustomDomainHeaders headers, RuntimeOptions runtime) throws Exception {
         domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteCustomDomain", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/custom-domains/" + domainName + "", "none", req, runtime), new DeleteCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomDomainResponse());
     }
 
     public DeleteFunctionResponse deleteFunction(String serviceName, String functionName) throws Exception {
@@ -418,19 +764,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunction", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "none", req, runtime), new DeleteFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionResponse());
     }
 
     public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfig(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeleteFunctionAsyncInvokeConfigHeaders headers = new DeleteFunctionAsyncInvokeConfigHeaders();
         return this.deleteFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteFunctionAsyncInvokeConfigResponse deleteFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, DeleteFunctionAsyncInvokeConfigRequest request, DeleteFunctionAsyncInvokeConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -439,11 +820,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "none", req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionAsyncInvokeConfigResponse());
     }
 
     public DeleteFunctionOnDemandConfigResponse deleteFunctionOnDemandConfig(String serviceName, String functionName, DeleteFunctionOnDemandConfigRequest request) throws Exception {
@@ -470,26 +891,101 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteFunctionOnDemandConfig", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "none", req, runtime), new DeleteFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFunctionOnDemandConfigResponse());
     }
 
     public DeleteLayerVersionResponse deleteLayerVersion(String layerName, String version) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeleteLayerVersionHeaders headers = new DeleteLayerVersionHeaders();
         return this.deleteLayerVersionWithOptions(layerName, version, headers, runtime);
     }
 
-    public DeleteLayerVersionResponse deleteLayerVersionWithOptions(String layerName, String version, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteLayerVersionResponse deleteLayerVersionWithOptions(String layerName, String version, DeleteLayerVersionHeaders headers, RuntimeOptions runtime) throws Exception {
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         version = com.aliyun.openapiutil.Client.getEncodeParam(version);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteLayerVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "none", req, runtime), new DeleteLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLayerVersionResponse());
     }
 
     public DeleteServiceResponse deleteService(String serviceName) throws Exception {
@@ -509,25 +1005,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteService", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "", "none", req, runtime), new DeleteServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceResponse());
     }
 
     public DeleteServiceVersionResponse deleteServiceVersion(String serviceName, String versionId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeleteServiceVersionHeaders headers = new DeleteServiceVersionHeaders();
         return this.deleteServiceVersionWithOptions(serviceName, versionId, headers, runtime);
     }
 
-    public DeleteServiceVersionResponse deleteServiceVersionWithOptions(String serviceName, String versionId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteServiceVersionResponse deleteServiceVersionWithOptions(String serviceName, String versionId, DeleteServiceVersionHeaders headers, RuntimeOptions runtime) throws Exception {
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         versionId = com.aliyun.openapiutil.Client.getEncodeParam(versionId);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteServiceVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/versions/" + versionId + "", "none", req, runtime), new DeleteServiceVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions/" + versionId + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceVersionResponse());
     }
 
     public DeleteTriggerResponse deleteTrigger(String serviceName, String functionName, String triggerName) throws Exception {
@@ -549,34 +1120,109 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteTrigger", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "none", req, runtime), new DeleteTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTriggerResponse());
     }
 
     public DeleteVpcBindingResponse deleteVpcBinding(String serviceName, String vpcId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeleteVpcBindingHeaders headers = new DeleteVpcBindingHeaders();
         return this.deleteVpcBindingWithOptions(serviceName, vpcId, headers, runtime);
     }
 
-    public DeleteVpcBindingResponse deleteVpcBindingWithOptions(String serviceName, String vpcId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteVpcBindingResponse deleteVpcBindingWithOptions(String serviceName, String vpcId, DeleteVpcBindingHeaders headers, RuntimeOptions runtime) throws Exception {
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         vpcId = com.aliyun.openapiutil.Client.getEncodeParam(vpcId);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteVpcBinding", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId + "", "none", req, runtime), new DeleteVpcBindingResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVpcBinding"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings/" + vpcId + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcBindingResponse());
     }
 
     public DeregisterEventSourceResponse deregisterEventSource(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        DeregisterEventSourceHeaders headers = new DeregisterEventSourceHeaders();
         return this.deregisterEventSourceWithOptions(serviceName, functionName, sourceArn, request, headers, runtime);
     }
 
-    public DeregisterEventSourceResponse deregisterEventSourceWithOptions(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeregisterEventSourceResponse deregisterEventSourceWithOptions(String serviceName, String functionName, String sourceArn, DeregisterEventSourceRequest request, DeregisterEventSourceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -586,62 +1232,222 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeregisterEventSource", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn + "", "none", req, runtime), new DeregisterEventSourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeregisterEventSource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources/" + sourceArn + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterEventSourceResponse());
     }
 
     public GetAccountSettingsResponse getAccountSettings() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetAccountSettingsHeaders headers = new GetAccountSettingsHeaders();
         return this.getAccountSettingsWithOptions(headers, runtime);
     }
 
-    public GetAccountSettingsResponse getAccountSettingsWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetAccountSettingsResponse getAccountSettingsWithOptions(GetAccountSettingsHeaders headers, RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetAccountSettings", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/account-settings", "json", req, runtime), new GetAccountSettingsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAccountSettings"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/account-settings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountSettingsResponse());
     }
 
     public GetAliasResponse getAlias(String serviceName, String aliasName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetAliasHeaders headers = new GetAliasHeaders();
         return this.getAliasWithOptions(serviceName, aliasName, headers, runtime);
     }
 
-    public GetAliasResponse getAliasWithOptions(String serviceName, String aliasName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetAliasResponse getAliasWithOptions(String serviceName, String aliasName, GetAliasHeaders headers, RuntimeOptions runtime) throws Exception {
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         aliasName = com.aliyun.openapiutil.Client.getEncodeParam(aliasName);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetAlias", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "json", req, runtime), new GetAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAliasResponse());
     }
 
     public GetCustomDomainResponse getCustomDomain(String domainName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetCustomDomainHeaders headers = new GetCustomDomainHeaders();
         return this.getCustomDomainWithOptions(domainName, headers, runtime);
     }
 
-    public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetCustomDomainResponse getCustomDomainWithOptions(String domainName, GetCustomDomainHeaders headers, RuntimeOptions runtime) throws Exception {
         domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetCustomDomain", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/custom-domains/" + domainName + "", "json", req, runtime), new GetCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomDomainResponse());
     }
 
     public GetFunctionResponse getFunction(String serviceName, String functionName, GetFunctionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetFunctionHeaders headers = new GetFunctionHeaders();
         return this.getFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public GetFunctionResponse getFunctionWithOptions(String serviceName, String functionName, GetFunctionRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetFunctionResponse getFunctionWithOptions(String serviceName, String functionName, GetFunctionRequest request, GetFunctionHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -650,20 +1456,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunction", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "json", req, runtime), new GetFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionResponse());
     }
 
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetFunctionAsyncInvokeConfigHeaders headers = new GetFunctionAsyncInvokeConfigHeaders();
         return this.getFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -672,20 +1518,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "json", req, runtime), new GetFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
     public GetFunctionCodeResponse getFunctionCode(String serviceName, String functionName, GetFunctionCodeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetFunctionCodeHeaders headers = new GetFunctionCodeHeaders();
         return this.getFunctionCodeWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public GetFunctionCodeResponse getFunctionCodeWithOptions(String serviceName, String functionName, GetFunctionCodeRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetFunctionCodeResponse getFunctionCodeWithOptions(String serviceName, String functionName, GetFunctionCodeRequest request, GetFunctionCodeHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -694,20 +1580,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionCode", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code", "json", req, runtime), new GetFunctionCodeResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionCode"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/code"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionCodeResponse());
     }
 
     public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfig(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetFunctionOnDemandConfigHeaders headers = new GetFunctionOnDemandConfigHeaders();
         return this.getFunctionOnDemandConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfigWithOptions(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetFunctionOnDemandConfigResponse getFunctionOnDemandConfigWithOptions(String serviceName, String functionName, GetFunctionOnDemandConfigRequest request, GetFunctionOnDemandConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -716,49 +1642,169 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetFunctionOnDemandConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "json", req, runtime), new GetFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionOnDemandConfigResponse());
     }
 
     public GetLayerVersionResponse getLayerVersion(String layerName, String version) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetLayerVersionHeaders headers = new GetLayerVersionHeaders();
         return this.getLayerVersionWithOptions(layerName, version, headers, runtime);
     }
 
-    public GetLayerVersionResponse getLayerVersionWithOptions(String layerName, String version, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetLayerVersionResponse getLayerVersionWithOptions(String layerName, String version, GetLayerVersionHeaders headers, RuntimeOptions runtime) throws Exception {
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         version = com.aliyun.openapiutil.Client.getEncodeParam(version);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetLayerVersion", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "json", req, runtime), new GetLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionResponse());
     }
 
     public GetLayerVersionByArnResponse getLayerVersionByArn(String arn) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetLayerVersionByArnHeaders headers = new GetLayerVersionByArnHeaders();
         return this.getLayerVersionByArnWithOptions(arn, headers, runtime);
     }
 
-    public GetLayerVersionByArnResponse getLayerVersionByArnWithOptions(String arn, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetLayerVersionByArnResponse getLayerVersionByArnWithOptions(String arn, GetLayerVersionByArnHeaders headers, RuntimeOptions runtime) throws Exception {
         arn = com.aliyun.openapiutil.Client.getEncodeParam(arn);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetLayerVersionByArn", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layerarn/" + arn + "", "json", req, runtime), new GetLayerVersionByArnResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLayerVersionByArn"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layerarn/" + arn + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLayerVersionByArnResponse());
     }
 
     public GetProvisionConfigResponse getProvisionConfig(String serviceName, String functionName, GetProvisionConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetProvisionConfigHeaders headers = new GetProvisionConfigHeaders();
         return this.getProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public GetProvisionConfigResponse getProvisionConfigWithOptions(String serviceName, String functionName, GetProvisionConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetProvisionConfigResponse getProvisionConfigWithOptions(String serviceName, String functionName, GetProvisionConfigRequest request, GetProvisionConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -767,40 +1813,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetProvisionConfig", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config", "json", req, runtime), new GetProvisionConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProvisionConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProvisionConfigResponse());
     }
 
     public GetResourceTagsResponse getResourceTags(GetResourceTagsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetResourceTagsHeaders headers = new GetResourceTagsHeaders();
         return this.getResourceTagsWithOptions(request, headers, runtime);
     }
 
-    public GetResourceTagsResponse getResourceTagsWithOptions(GetResourceTagsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetResourceTagsResponse getResourceTagsWithOptions(GetResourceTagsRequest request, GetResourceTagsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.resourceArn)) {
             query.put("resourceArn", request.resourceArn);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetResourceTags", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/tag", "json", req, runtime), new GetResourceTagsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetResourceTags"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceTagsResponse());
     }
 
     public GetServiceResponse getService(String serviceName, GetServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetServiceHeaders headers = new GetServiceHeaders();
         return this.getServiceWithOptions(serviceName, request, headers, runtime);
     }
 
-    public GetServiceResponse getServiceWithOptions(String serviceName, GetServiceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetServiceResponse getServiceWithOptions(String serviceName, GetServiceRequest request, GetServiceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -808,20 +1934,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetService", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "", "json", req, runtime), new GetServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceResponse());
     }
 
     public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetStatefulAsyncInvocationHeaders headers = new GetStatefulAsyncInvocationHeaders();
         return this.getStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
     }
 
-    public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetStatefulAsyncInvocationResponse getStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, GetStatefulAsyncInvocationRequest request, GetStatefulAsyncInvocationHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -831,27 +1997,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetStatefulAsyncInvocation", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + "", "json", req, runtime), new GetStatefulAsyncInvocationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStatefulAsyncInvocation"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStatefulAsyncInvocationResponse());
     }
 
     public GetTriggerResponse getTrigger(String serviceName, String functionName, String triggerName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        GetTriggerHeaders headers = new GetTriggerHeaders();
         return this.getTriggerWithOptions(serviceName, functionName, triggerName, headers, runtime);
     }
 
-    public GetTriggerResponse getTriggerWithOptions(String serviceName, String functionName, String triggerName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetTriggerResponse getTriggerWithOptions(String serviceName, String functionName, String triggerName, GetTriggerHeaders headers, RuntimeOptions runtime) throws Exception {
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
         triggerName = com.aliyun.openapiutil.Client.getEncodeParam(triggerName);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("GetTrigger", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "json", req, runtime), new GetTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTriggerResponse());
     }
 
     public InvokeFunctionResponse invokeFunction(String serviceName, String functionName, InvokeFunctionRequest request) throws Exception {
@@ -878,16 +2124,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
-            realHeaders.put("x-fc-invocation-type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
-            realHeaders.put("x-fc-log-type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcStatefulAsyncInvocationId)) {
-            realHeaders.put("x-fc-stateful-async-invocation-id", com.aliyun.teautil.Common.toJSONString(headers.xFcStatefulAsyncInvocationId));
+            realHeaders.put("X-Fc-Stateful-Async-Invocation-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcStatefulAsyncInvocationId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -895,16 +2153,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body)
         ));
-        return TeaModel.toModel(this.doROARequest("InvokeFunction", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations", "byte", req, runtime), new InvokeFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InvokeFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/invocations"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "byte")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeFunctionResponse());
     }
 
     public ListAliasesResponse listAliases(String serviceName, ListAliasesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListAliasesHeaders headers = new ListAliasesHeaders();
         return this.listAliasesWithOptions(serviceName, request, headers, runtime);
     }
 
-    public ListAliasesResponse listAliasesWithOptions(String serviceName, ListAliasesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListAliasesResponse listAliasesWithOptions(String serviceName, ListAliasesRequest request, ListAliasesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -924,20 +2193,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListAliases", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/aliases", "json", req, runtime), new ListAliasesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAliases"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAliasesResponse());
     }
 
     public ListCustomDomainsResponse listCustomDomains(ListCustomDomainsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListCustomDomainsHeaders headers = new ListCustomDomainsHeaders();
         return this.listCustomDomainsWithOptions(request, headers, runtime);
     }
 
-    public ListCustomDomainsResponse listCustomDomainsWithOptions(ListCustomDomainsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListCustomDomainsResponse listCustomDomainsWithOptions(ListCustomDomainsRequest request, ListCustomDomainsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -956,20 +2265,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListCustomDomains", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/custom-domains", "json", req, runtime), new ListCustomDomainsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomDomains"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomDomainsResponse());
     }
 
     public ListEventSourcesResponse listEventSources(String serviceName, String functionName, ListEventSourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListEventSourcesHeaders headers = new ListEventSourcesHeaders();
         return this.listEventSourcesWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public ListEventSourcesResponse listEventSourcesWithOptions(String serviceName, String functionName, ListEventSourcesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListEventSourcesResponse listEventSourcesWithOptions(String serviceName, String functionName, ListEventSourcesRequest request, ListEventSourcesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -978,20 +2327,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListEventSources", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources", "json", req, runtime), new ListEventSourcesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEventSources"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventSourcesResponse());
     }
 
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListFunctionAsyncInvokeConfigsHeaders headers = new ListFunctionAsyncInvokeConfigsHeaders();
         return this.listFunctionAsyncInvokeConfigsWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1004,20 +2393,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListFunctionAsyncInvokeConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs", "json", req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFunctionAsyncInvokeConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
     public ListFunctionsResponse listFunctions(String serviceName, ListFunctionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListFunctionsHeaders headers = new ListFunctionsHeaders();
         return this.listFunctionsWithOptions(serviceName, request, headers, runtime);
     }
 
-    public ListFunctionsResponse listFunctionsWithOptions(String serviceName, ListFunctionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListFunctionsResponse listFunctionsWithOptions(String serviceName, ListFunctionsRequest request, ListFunctionsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1041,11 +2470,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListFunctions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions", "json", req, runtime), new ListFunctionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFunctions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionsResponse());
     }
 
     public ListInstancesResponse listInstances(String serviceName, String functionName, ListInstancesRequest request) throws Exception {
@@ -1084,16 +2553,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListInstances", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances", "json", req, runtime), new ListInstancesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstances"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
     public ListLayerVersionsResponse listLayerVersions(String layerName, ListLayerVersionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListLayerVersionsHeaders headers = new ListLayerVersionsHeaders();
         return this.listLayerVersionsWithOptions(layerName, request, headers, runtime);
     }
 
-    public ListLayerVersionsResponse listLayerVersionsWithOptions(String layerName, ListLayerVersionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListLayerVersionsResponse listLayerVersionsWithOptions(String layerName, ListLayerVersionsRequest request, ListLayerVersionsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1105,20 +2585,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startVersion", request.startVersion);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListLayerVersions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers/" + layerName + "/versions", "json", req, runtime), new ListLayerVersionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLayerVersions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayerVersionsResponse());
     }
 
     public ListLayersResponse listLayers(ListLayersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListLayersHeaders headers = new ListLayersHeaders();
         return this.listLayersWithOptions(request, headers, runtime);
     }
 
-    public ListLayersResponse listLayersWithOptions(ListLayersRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListLayersResponse listLayersWithOptions(ListLayersRequest request, ListLayersHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1137,20 +2657,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListLayers", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/layers", "json", req, runtime), new ListLayersResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLayers"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLayersResponse());
     }
 
     public ListOnDemandConfigsResponse listOnDemandConfigs(ListOnDemandConfigsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListOnDemandConfigsHeaders headers = new ListOnDemandConfigsHeaders();
         return this.listOnDemandConfigsWithOptions(request, headers, runtime);
     }
 
-    public ListOnDemandConfigsResponse listOnDemandConfigsWithOptions(ListOnDemandConfigsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListOnDemandConfigsResponse listOnDemandConfigsWithOptions(ListOnDemandConfigsRequest request, ListOnDemandConfigsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1169,20 +2729,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListOnDemandConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/on-demand-configs", "json", req, runtime), new ListOnDemandConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOnDemandConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/on-demand-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOnDemandConfigsResponse());
     }
 
     public ListProvisionConfigsResponse listProvisionConfigs(ListProvisionConfigsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListProvisionConfigsHeaders headers = new ListProvisionConfigsHeaders();
         return this.listProvisionConfigsWithOptions(request, headers, runtime);
     }
 
-    public ListProvisionConfigsResponse listProvisionConfigsWithOptions(ListProvisionConfigsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListProvisionConfigsResponse listProvisionConfigsWithOptions(ListProvisionConfigsRequest request, ListProvisionConfigsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1201,20 +2801,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("serviceName", request.serviceName);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListProvisionConfigs", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/provision-configs", "json", req, runtime), new ListProvisionConfigsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProvisionConfigs"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/provision-configs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProvisionConfigsResponse());
     }
 
     public ListReservedCapacitiesResponse listReservedCapacities(ListReservedCapacitiesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListReservedCapacitiesHeaders headers = new ListReservedCapacitiesHeaders();
         return this.listReservedCapacitiesWithOptions(request, headers, runtime);
     }
 
-    public ListReservedCapacitiesResponse listReservedCapacitiesWithOptions(ListReservedCapacitiesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListReservedCapacitiesResponse listReservedCapacitiesWithOptions(ListReservedCapacitiesRequest request, ListReservedCapacitiesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1225,20 +2865,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListReservedCapacities", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/reserved-capacities", "json", req, runtime), new ListReservedCapacitiesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReservedCapacities"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/reserved-capacities"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReservedCapacitiesResponse());
     }
 
     public ListServiceVersionsResponse listServiceVersions(String serviceName, ListServiceVersionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListServiceVersionsHeaders headers = new ListServiceVersionsHeaders();
         return this.listServiceVersionsWithOptions(serviceName, request, headers, runtime);
     }
 
-    public ListServiceVersionsResponse listServiceVersionsWithOptions(String serviceName, ListServiceVersionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListServiceVersionsResponse listServiceVersionsWithOptions(String serviceName, ListServiceVersionsRequest request, ListServiceVersionsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1258,20 +2938,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListServiceVersions", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/versions", "json", req, runtime), new ListServiceVersionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceVersions"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceVersionsResponse());
     }
 
     public ListServicesResponse listServices(ListServicesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListServicesHeaders headers = new ListServicesHeaders();
         return this.listServicesWithOptions(request, headers, runtime);
     }
 
-    public ListServicesResponse listServicesWithOptions(ListServicesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListServicesResponse listServicesWithOptions(ListServicesRequest request, ListServicesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1290,20 +3010,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListServices", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services", "json", req, runtime), new ListServicesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServices"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServicesResponse());
     }
 
     public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocations(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListStatefulAsyncInvocationsHeaders headers = new ListStatefulAsyncInvocationsHeaders();
         return this.listStatefulAsyncInvocationsWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocationsWithOptions(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListStatefulAsyncInvocationsResponse listStatefulAsyncInvocationsWithOptions(String serviceName, String functionName, ListStatefulAsyncInvocationsRequest request, ListStatefulAsyncInvocationsHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1344,20 +3104,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("status", request.status);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListStatefulAsyncInvocations", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations", "json", req, runtime), new ListStatefulAsyncInvocationsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListStatefulAsyncInvocations"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListStatefulAsyncInvocationsResponse());
     }
 
     public ListTaggedResourcesResponse listTaggedResources(ListTaggedResourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListTaggedResourcesHeaders headers = new ListTaggedResourcesHeaders();
         return this.listTaggedResourcesWithOptions(request, headers, runtime);
     }
 
-    public ListTaggedResourcesResponse listTaggedResourcesWithOptions(ListTaggedResourcesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListTaggedResourcesResponse listTaggedResourcesWithOptions(ListTaggedResourcesRequest request, ListTaggedResourcesHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1368,20 +3168,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListTaggedResources", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/tags", "json", req, runtime), new ListTaggedResourcesResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTaggedResources"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tags"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTaggedResourcesResponse());
     }
 
     public ListTriggersResponse listTriggers(String serviceName, String functionName, ListTriggersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListTriggersHeaders headers = new ListTriggersHeaders();
         return this.listTriggersWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public ListTriggersResponse listTriggersWithOptions(String serviceName, String functionName, ListTriggersRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListTriggersResponse listTriggersWithOptions(String serviceName, String functionName, ListTriggersRequest request, ListTriggersHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1402,56 +3242,216 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startKey", request.startKey);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListTriggers", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers", "json", req, runtime), new ListTriggersResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTriggers"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTriggersResponse());
     }
 
     public ListVpcBindingsResponse listVpcBindings(String serviceName) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        ListVpcBindingsHeaders headers = new ListVpcBindingsHeaders();
         return this.listVpcBindingsWithOptions(serviceName, headers, runtime);
     }
 
-    public ListVpcBindingsResponse listVpcBindingsWithOptions(String serviceName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListVpcBindingsResponse listVpcBindingsWithOptions(String serviceName, ListVpcBindingsHeaders headers, RuntimeOptions runtime) throws Exception {
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("ListVpcBindings", "2021-04-06", "HTTPS", "GET", "AK", "/2021-04-06/services/" + serviceName + "/bindings", "json", req, runtime), new ListVpcBindingsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcBindings"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/bindings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
     }
 
     public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersion(String userID, String layerName, String version) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        PermanentDeleteLayerVersionHeaders headers = new PermanentDeleteLayerVersionHeaders();
         return this.permanentDeleteLayerVersionWithOptions(userID, layerName, version, headers, runtime);
     }
 
-    public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersionWithOptions(String userID, String layerName, String version, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PermanentDeleteLayerVersionResponse permanentDeleteLayerVersionWithOptions(String userID, String layerName, String version, PermanentDeleteLayerVersionHeaders headers, RuntimeOptions runtime) throws Exception {
         userID = com.aliyun.openapiutil.Client.getEncodeParam(userID);
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         version = com.aliyun.openapiutil.Client.getEncodeParam(version);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("PermanentDeleteLayerVersion", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/adminlayers/" + userID + "/" + layerName + "/versions/" + version + "", "none", req, runtime), new PermanentDeleteLayerVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PermanentDeleteLayerVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/adminlayers/" + userID + "/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PermanentDeleteLayerVersionResponse());
     }
 
     public PublishLayerAsPublicResponse publishLayerAsPublic(String layerName, String version) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        PublishLayerAsPublicHeaders headers = new PublishLayerAsPublicHeaders();
         return this.publishLayerAsPublicWithOptions(layerName, version, headers, runtime);
     }
 
-    public PublishLayerAsPublicResponse publishLayerAsPublicWithOptions(String layerName, String version, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PublishLayerAsPublicResponse publishLayerAsPublicWithOptions(String layerName, String version, PublishLayerAsPublicHeaders headers, RuntimeOptions runtime) throws Exception {
         layerName = com.aliyun.openapiutil.Client.getEncodeParam(layerName);
         version = com.aliyun.openapiutil.Client.getEncodeParam(version);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", realHeaders)
         ));
-        return TeaModel.toModel(this.doROARequest("PublishLayerAsPublic", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/layers/" + layerName + "/versions/" + version + "", "none", req, runtime), new PublishLayerAsPublicResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishLayerAsPublic"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/layers/" + layerName + "/versions/" + version + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishLayerAsPublicResponse());
     }
 
     public PublishServiceVersionResponse publishServiceVersion(String serviceName, PublishServiceVersionRequest request) throws Exception {
@@ -1477,20 +3477,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PublishServiceVersion", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/versions", "json", req, runtime), new PublishServiceVersionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishServiceVersion"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/versions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishServiceVersionResponse());
     }
 
     public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfig(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        PutFunctionAsyncInvokeConfigHeaders headers = new PutFunctionAsyncInvokeConfigHeaders();
         return this.putFunctionAsyncInvokeConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutFunctionAsyncInvokeConfigResponse putFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, PutFunctionAsyncInvokeConfigRequest request, PutFunctionAsyncInvokeConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1516,12 +3551,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("statefulInvocation", request.statefulInvocation);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutFunctionAsyncInvokeConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config", "json", req, runtime), new PutFunctionAsyncInvokeConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutFunctionAsyncInvokeConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/async-invoke-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionAsyncInvokeConfigResponse());
     }
 
     public PutFunctionOnDemandConfigResponse putFunctionOnDemandConfig(String serviceName, String functionName, PutFunctionOnDemandConfigRequest request) throws Exception {
@@ -1553,21 +3628,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutFunctionOnDemandConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config", "json", req, runtime), new PutFunctionOnDemandConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutFunctionOnDemandConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/on-demand-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutFunctionOnDemandConfigResponse());
     }
 
     public PutProvisionConfigResponse putProvisionConfig(String serviceName, String functionName, PutProvisionConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        PutProvisionConfigHeaders headers = new PutProvisionConfigHeaders();
         return this.putProvisionConfigWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public PutProvisionConfigResponse putProvisionConfigWithOptions(String serviceName, String functionName, PutProvisionConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutProvisionConfigResponse putProvisionConfigWithOptions(String serviceName, String functionName, PutProvisionConfigRequest request, PutProvisionConfigHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1589,21 +3699,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("targetTrackingPolicies", request.targetTrackingPolicies);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("PutProvisionConfig", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config", "json", req, runtime), new PutProvisionConfigResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutProvisionConfig"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/provision-config"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutProvisionConfigResponse());
     }
 
     public RegisterEventSourceResponse registerEventSource(String serviceName, String functionName, RegisterEventSourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        RegisterEventSourceHeaders headers = new RegisterEventSourceHeaders();
         return this.registerEventSourceWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
-    public RegisterEventSourceResponse registerEventSourceWithOptions(String serviceName, String functionName, RegisterEventSourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public RegisterEventSourceResponse registerEventSourceWithOptions(String serviceName, String functionName, RegisterEventSourceRequest request, RegisterEventSourceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1617,21 +3767,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("sourceArn", request.sourceArn);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("RegisterEventSource", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources", "json", req, runtime), new RegisterEventSourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RegisterEventSource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/event-sources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterEventSourceResponse());
     }
 
     public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocation(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        StopStatefulAsyncInvocationHeaders headers = new StopStatefulAsyncInvocationHeaders();
         return this.stopStatefulAsyncInvocationWithOptions(serviceName, functionName, invocationId, request, headers, runtime);
     }
 
-    public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public StopStatefulAsyncInvocationResponse stopStatefulAsyncInvocationWithOptions(String serviceName, String functionName, String invocationId, StopStatefulAsyncInvocationRequest request, StopStatefulAsyncInvocationHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         serviceName = com.aliyun.openapiutil.Client.getEncodeParam(serviceName);
         functionName = com.aliyun.openapiutil.Client.getEncodeParam(functionName);
@@ -1641,20 +3831,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("StopStatefulAsyncInvocation", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + "", "none", req, runtime), new StopStatefulAsyncInvocationResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopStatefulAsyncInvocation"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/stateful-async-invocations/" + invocationId + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopStatefulAsyncInvocationResponse());
     }
 
     public TagResourceResponse tagResource(TagResourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        TagResourceHeaders headers = new TagResourceHeaders();
         return this.tagResourceWithOptions(request, headers, runtime);
     }
 
-    public TagResourceResponse tagResourceWithOptions(TagResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public TagResourceResponse tagResourceWithOptions(TagResourceRequest request, TagResourceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.resourceArn)) {
@@ -1665,20 +3895,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("tags", request.tags);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("TagResource", "2021-04-06", "HTTPS", "POST", "AK", "/2021-04-06/tag", "none", req, runtime), new TagResourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
     }
 
     public UntagResourceResponse untagResource(UntagResourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        UntagResourceHeaders headers = new UntagResourceHeaders();
         return this.untagResourceWithOptions(request, headers, runtime);
     }
 
-    public UntagResourceResponse untagResourceWithOptions(UntagResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UntagResourceResponse untagResourceWithOptions(UntagResourceRequest request, UntagResourceHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.all)) {
@@ -1693,11 +3963,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("tagKeys", request.tagKeys);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UntagResource", "2021-04-06", "HTTPS", "DELETE", "AK", "/2021-04-06/tag", "none", req, runtime), new UntagResourceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResource"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/tag"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourceResponse());
     }
 
     public UpdateAliasResponse updateAlias(String serviceName, String aliasName, UpdateAliasRequest request) throws Exception {
@@ -1732,20 +4042,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Match", com.aliyun.teautil.Common.toJSONString(headers.ifMatch));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateAlias", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + "", "json", req, runtime), new UpdateAliasResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlias"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/aliases/" + aliasName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAliasResponse());
     }
 
     public UpdateCustomDomainResponse updateCustomDomain(String domainName, UpdateCustomDomainRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        UpdateCustomDomainHeaders headers = new UpdateCustomDomainHeaders();
         return this.updateCustomDomainWithOptions(domainName, request, headers, runtime);
     }
 
-    public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UpdateCustomDomainResponse updateCustomDomainWithOptions(String domainName, UpdateCustomDomainRequest request, UpdateCustomDomainHeaders headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         domainName = com.aliyun.openapiutil.Client.getEncodeParam(domainName);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1761,11 +4106,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("routeConfig", request.routeConfig);
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcAccountId)) {
+            realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateCustomDomain", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/custom-domains/" + domainName + "", "json", req, runtime), new UpdateCustomDomainResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomDomain"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/custom-domains/" + domainName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomDomainResponse());
     }
 
     public UpdateFunctionResponse updateFunction(String serviceName, String functionName, UpdateFunctionRequest request) throws Exception {
@@ -1861,14 +4246,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
-            realHeaders.put("x-fc-code-checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateFunction", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "", "json", req, runtime), new UpdateFunctionResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFunction"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFunctionResponse());
     }
 
     public UpdateServiceResponse updateService(String serviceName, UpdateServiceRequest request) throws Exception {
@@ -1922,11 +4334,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateService", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "", "json", req, runtime), new UpdateServiceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateService"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceResponse());
     }
 
     public UpdateTriggerResponse updateTrigger(String serviceName, String functionName, String triggerName, UpdateTriggerRequest request) throws Exception {
@@ -1970,10 +4413,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("X-Fc-Account-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcAccountId));
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcCodeChecksum)) {
+            realHeaders.put("X-Fc-Code-Checksum", com.aliyun.teautil.Common.toJSONString(headers.xFcCodeChecksum));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcDate)) {
+            realHeaders.put("X-Fc-Date", com.aliyun.teautil.Common.toJSONString(headers.xFcDate));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcInvocationType)) {
+            realHeaders.put("X-Fc-Invocation-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcInvocationType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcLogType)) {
+            realHeaders.put("X-Fc-Log-Type", com.aliyun.teautil.Common.toJSONString(headers.xFcLogType));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xFcTraceId)) {
+            realHeaders.put("X-Fc-Trace-Id", com.aliyun.teautil.Common.toJSONString(headers.xFcTraceId));
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdateTrigger", "2021-04-06", "HTTPS", "PUT", "AK", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + "", "json", req, runtime), new UpdateTriggerResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTrigger"),
+            new TeaPair("version", "2021-04-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2021-04-06/services/" + serviceName + "/functions/" + functionName + "/triggers/" + triggerName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTriggerResponse());
     }
 }

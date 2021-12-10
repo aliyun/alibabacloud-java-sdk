@@ -10,16 +10,25 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    @NameInMap("X-Fc-Code-Checksum")
+    public String xFcCodeChecksum;
+
+    @NameInMap("X-Fc-Date")
+    public String xFcDate;
+
     // 调用方式:Sync或者Async，默认值：Sync
-    @NameInMap("x-fc-invocation-type")
+    @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     // 请求返回日志类型, Tail 为返回函数日志最后 4KB 数据，None 或空值则返回不带有日志，默认为 None
-    @NameInMap("x-fc-log-type")
+    @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
-    @NameInMap("x-fc-stateful-async-invocation-id")
+    @NameInMap("X-Fc-Stateful-Async-Invocation-Id")
     public String xFcStatefulAsyncInvocationId;
+
+    @NameInMap("X-Fc-Trace-Id")
+    public String xFcTraceId;
 
     public static InvokeFunctionHeaders build(java.util.Map<String, ?> map) throws Exception {
         InvokeFunctionHeaders self = new InvokeFunctionHeaders();
@@ -40,6 +49,22 @@ public class InvokeFunctionHeaders extends TeaModel {
     }
     public String getXFcAccountId() {
         return this.xFcAccountId;
+    }
+
+    public InvokeFunctionHeaders setXFcCodeChecksum(String xFcCodeChecksum) {
+        this.xFcCodeChecksum = xFcCodeChecksum;
+        return this;
+    }
+    public String getXFcCodeChecksum() {
+        return this.xFcCodeChecksum;
+    }
+
+    public InvokeFunctionHeaders setXFcDate(String xFcDate) {
+        this.xFcDate = xFcDate;
+        return this;
+    }
+    public String getXFcDate() {
+        return this.xFcDate;
     }
 
     public InvokeFunctionHeaders setXFcInvocationType(String xFcInvocationType) {
@@ -64,6 +89,14 @@ public class InvokeFunctionHeaders extends TeaModel {
     }
     public String getXFcStatefulAsyncInvocationId() {
         return this.xFcStatefulAsyncInvocationId;
+    }
+
+    public InvokeFunctionHeaders setXFcTraceId(String xFcTraceId) {
+        this.xFcTraceId = xFcTraceId;
+        return this;
+    }
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
     }
 
 }
