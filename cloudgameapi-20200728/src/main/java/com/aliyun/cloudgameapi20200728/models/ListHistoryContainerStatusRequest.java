@@ -4,44 +4,29 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class ListHistoryContainerStatusRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    @Validation(required = true)
-    public String projectId;
-
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    public Long startTime;
-
+    // 结束时间（Linux时间戳，单位毫秒）
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
+    // 上一个游戏会话ID
     @NameInMap("LastGameSessionId")
     public String lastGameSessionId;
 
+    // 每页数量
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
+
+    // 项目ID
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    // 开始时间（Linux时间戳，单位毫秒）
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static ListHistoryContainerStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHistoryContainerStatusRequest self = new ListHistoryContainerStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListHistoryContainerStatusRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    public ListHistoryContainerStatusRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public ListHistoryContainerStatusRequest setEndTime(Long endTime) {
@@ -66,6 +51,22 @@ public class ListHistoryContainerStatusRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHistoryContainerStatusRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public ListHistoryContainerStatusRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

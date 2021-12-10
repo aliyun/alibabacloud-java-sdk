@@ -4,93 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class BatchStopGameSessionsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("QueueState")
-    @Validation(required = true)
-    public Integer queueState;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
-
-    @NameInMap("ProjectId")
-    @Validation(required = true)
-    public String projectId;
-
-    @NameInMap("TrackInfo")
-    @Validation(required = true)
-    public String trackInfo;
+    public BatchStopGameSessionsResponseBody body;
 
     public static BatchStopGameSessionsResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchStopGameSessionsResponse self = new BatchStopGameSessionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchStopGameSessionsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BatchStopGameSessionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BatchStopGameSessionsResponse setSuccess(Boolean success) {
-        this.success = success;
+    public BatchStopGameSessionsResponse setBody(BatchStopGameSessionsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public BatchStopGameSessionsResponse setQueueState(Integer queueState) {
-        this.queueState = queueState;
-        return this;
-    }
-    public Integer getQueueState() {
-        return this.queueState;
-    }
-
-    public BatchStopGameSessionsResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public BatchStopGameSessionsResponse setGameId(String gameId) {
-        this.gameId = gameId;
-        return this;
-    }
-    public String getGameId() {
-        return this.gameId;
-    }
-
-    public BatchStopGameSessionsResponse setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
-    }
-
-    public BatchStopGameSessionsResponse setTrackInfo(String trackInfo) {
-        this.trackInfo = trackInfo;
-        return this;
-    }
-    public String getTrackInfo() {
-        return this.trackInfo;
+    public BatchStopGameSessionsResponseBody getBody() {
+        return this.body;
     }
 
 }

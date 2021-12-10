@@ -4,77 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameCcuResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DataList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<GetGameCcuResponseDataList> dataList;
+    public GetGameCcuResponseBody body;
 
     public static GetGameCcuResponse build(java.util.Map<String, ?> map) throws Exception {
         GetGameCcuResponse self = new GetGameCcuResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetGameCcuResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetGameCcuResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetGameCcuResponse setDataList(java.util.List<GetGameCcuResponseDataList> dataList) {
-        this.dataList = dataList;
+    public GetGameCcuResponse setBody(GetGameCcuResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<GetGameCcuResponseDataList> getDataList() {
-        return this.dataList;
-    }
-
-    public static class GetGameCcuResponseDataList extends TeaModel {
-        @NameInMap("Ccu")
-        @Validation(required = true)
-        public Long ccu;
-
-        @NameInMap("GameId")
-        @Validation(required = true)
-        public String gameId;
-
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        public static GetGameCcuResponseDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetGameCcuResponseDataList self = new GetGameCcuResponseDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetGameCcuResponseDataList setCcu(Long ccu) {
-            this.ccu = ccu;
-            return this;
-        }
-        public Long getCcu() {
-            return this.ccu;
-        }
-
-        public GetGameCcuResponseDataList setGameId(String gameId) {
-            this.gameId = gameId;
-            return this;
-        }
-        public String getGameId() {
-            return this.gameId;
-        }
-
-        public GetGameCcuResponseDataList setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
+    public GetGameCcuResponseBody getBody() {
+        return this.body;
     }
 
 }

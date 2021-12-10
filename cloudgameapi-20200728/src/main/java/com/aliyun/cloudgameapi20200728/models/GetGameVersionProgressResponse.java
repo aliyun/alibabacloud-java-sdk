@@ -4,69 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameVersionProgressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Event")
+    @NameInMap("body")
     @Validation(required = true)
-    public String event;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public String status;
-
-    @NameInMap("Description")
-    @Validation(required = true)
-    public String description;
-
-    @NameInMap("Extra")
-    @Validation(required = true)
-    public java.util.Map<String, ?> extra;
+    public GetGameVersionProgressResponseBody body;
 
     public static GetGameVersionProgressResponse build(java.util.Map<String, ?> map) throws Exception {
         GetGameVersionProgressResponse self = new GetGameVersionProgressResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetGameVersionProgressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetGameVersionProgressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetGameVersionProgressResponse setEvent(String event) {
-        this.event = event;
+    public GetGameVersionProgressResponse setBody(GetGameVersionProgressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getEvent() {
-        return this.event;
-    }
-
-    public GetGameVersionProgressResponse setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public GetGameVersionProgressResponse setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public GetGameVersionProgressResponse setExtra(java.util.Map<String, ?> extra) {
-        this.extra = extra;
-        return this;
-    }
-    public java.util.Map<String, ?> getExtra() {
-        return this.extra;
+    public GetGameVersionProgressResponseBody getBody() {
+        return this.body;
     }
 
 }

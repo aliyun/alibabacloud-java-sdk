@@ -4,61 +4,24 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseReadyFlagRequest extends TeaModel {
-    @NameInMap("Status")
-    @Validation(required = true)
-    public Integer status;
-
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
+    @NameInMap("BatchInfoList")
+    public java.util.List<SubmitInternalPurchaseReadyFlagRequestBatchInfoList> batchInfoList;
 
     @NameInMap("ChargeDate")
-    @Validation(required = true)
     public String chargeDate;
 
+    @NameInMap("GameId")
+    public String gameId;
+
     @NameInMap("OrderTotalCount")
-    @Validation(required = true)
     public Integer orderTotalCount;
 
-    @NameInMap("BatchInfoList")
-    @Validation(required = true)
-    public java.util.List<SubmitInternalPurchaseReadyFlagRequestBatchInfoList> batchInfoList;
+    @NameInMap("Status")
+    public Integer status;
 
     public static SubmitInternalPurchaseReadyFlagRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseReadyFlagRequest self = new SubmitInternalPurchaseReadyFlagRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitInternalPurchaseReadyFlagRequest setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public SubmitInternalPurchaseReadyFlagRequest setGameId(String gameId) {
-        this.gameId = gameId;
-        return this;
-    }
-    public String getGameId() {
-        return this.gameId;
-    }
-
-    public SubmitInternalPurchaseReadyFlagRequest setChargeDate(String chargeDate) {
-        this.chargeDate = chargeDate;
-        return this;
-    }
-    public String getChargeDate() {
-        return this.chargeDate;
-    }
-
-    public SubmitInternalPurchaseReadyFlagRequest setOrderTotalCount(Integer orderTotalCount) {
-        this.orderTotalCount = orderTotalCount;
-        return this;
-    }
-    public Integer getOrderTotalCount() {
-        return this.orderTotalCount;
     }
 
     public SubmitInternalPurchaseReadyFlagRequest setBatchInfoList(java.util.List<SubmitInternalPurchaseReadyFlagRequestBatchInfoList> batchInfoList) {
@@ -69,13 +32,43 @@ public class SubmitInternalPurchaseReadyFlagRequest extends TeaModel {
         return this.batchInfoList;
     }
 
+    public SubmitInternalPurchaseReadyFlagRequest setChargeDate(String chargeDate) {
+        this.chargeDate = chargeDate;
+        return this;
+    }
+    public String getChargeDate() {
+        return this.chargeDate;
+    }
+
+    public SubmitInternalPurchaseReadyFlagRequest setGameId(String gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    public String getGameId() {
+        return this.gameId;
+    }
+
+    public SubmitInternalPurchaseReadyFlagRequest setOrderTotalCount(Integer orderTotalCount) {
+        this.orderTotalCount = orderTotalCount;
+        return this;
+    }
+    public Integer getOrderTotalCount() {
+        return this.orderTotalCount;
+    }
+
+    public SubmitInternalPurchaseReadyFlagRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static class SubmitInternalPurchaseReadyFlagRequestBatchInfoList extends TeaModel {
         @NameInMap("BatchNumbers")
-        @Validation(required = true)
         public String batchNumbers;
 
         @NameInMap("BatchSize")
-        @Validation(required = true)
         public Integer batchSize;
 
         public static SubmitInternalPurchaseReadyFlagRequestBatchInfoList build(java.util.Map<String, ?> map) throws Exception {

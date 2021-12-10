@@ -4,8 +4,8 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameVersionRequest extends TeaModel {
+    // 版本ID
     @NameInMap("VersionId")
-    @Validation(required = true)
     public String versionId;
 
     public static GetGameVersionRequest build(java.util.Map<String, ?> map) throws Exception {

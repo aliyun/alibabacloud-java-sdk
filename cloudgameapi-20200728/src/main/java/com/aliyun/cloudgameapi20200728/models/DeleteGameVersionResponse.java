@@ -4,21 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeleteGameVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteGameVersionResponseBody body;
 
     public static DeleteGameVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteGameVersionResponse self = new DeleteGameVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteGameVersionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteGameVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteGameVersionResponse setBody(DeleteGameVersionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteGameVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

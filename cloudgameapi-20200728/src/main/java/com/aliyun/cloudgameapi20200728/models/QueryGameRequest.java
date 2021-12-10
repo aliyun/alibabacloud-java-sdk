@@ -4,16 +4,14 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class QueryGameRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    public Long projectId;
-
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
 
     @NameInMap("TenantId")
     public Long tenantId;
@@ -21,14 +19,6 @@ public class QueryGameRequest extends TeaModel {
     public static QueryGameRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryGameRequest self = new QueryGameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryGameRequest setProjectId(Long projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public Long getProjectId() {
-        return this.projectId;
     }
 
     public QueryGameRequest setPageNo(Integer pageNo) {
@@ -45,6 +35,14 @@ public class QueryGameRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryGameRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     public QueryGameRequest setTenantId(Long tenantId) {

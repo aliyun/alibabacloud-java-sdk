@@ -4,20 +4,26 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameCcuRequest extends TeaModel {
+    @NameInMap("AccessKey")
+    public String accessKey;
+
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
     @NameInMap("RegionName")
     public String regionName;
 
-    @NameInMap("AccessKey")
-    @Validation(required = true)
-    public String accessKey;
-
     public static GetGameCcuRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGameCcuRequest self = new GetGameCcuRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetGameCcuRequest setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    public String getAccessKey() {
+        return this.accessKey;
     }
 
     public GetGameCcuRequest setGameId(String gameId) {
@@ -34,14 +40,6 @@ public class GetGameCcuRequest extends TeaModel {
     }
     public String getRegionName() {
         return this.regionName;
-    }
-
-    public GetGameCcuRequest setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
-        return this;
-    }
-    public String getAccessKey() {
-        return this.accessKey;
     }
 
 }

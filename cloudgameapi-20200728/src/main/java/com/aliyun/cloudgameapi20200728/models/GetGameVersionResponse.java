@@ -4,57 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VersionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String versionId;
-
-    @NameInMap("VersionName")
-    @Validation(required = true)
-    public String versionName;
-
-    @NameInMap("VersionNumber")
-    @Validation(required = true)
-    public String versionNumber;
+    public GetGameVersionResponseBody body;
 
     public static GetGameVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         GetGameVersionResponse self = new GetGameVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetGameVersionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetGameVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetGameVersionResponse setVersionId(String versionId) {
-        this.versionId = versionId;
+    public GetGameVersionResponse setBody(GetGameVersionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
-    }
-
-    public GetGameVersionResponse setVersionName(String versionName) {
-        this.versionName = versionName;
-        return this;
-    }
-    public String getVersionName() {
-        return this.versionName;
-    }
-
-    public GetGameVersionResponse setVersionNumber(String versionNumber) {
-        this.versionNumber = versionNumber;
-        return this;
-    }
-    public String getVersionNumber() {
-        return this.versionNumber;
+    public GetGameVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

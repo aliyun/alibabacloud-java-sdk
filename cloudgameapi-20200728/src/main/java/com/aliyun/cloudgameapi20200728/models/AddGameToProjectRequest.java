@@ -4,25 +4,17 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AddGameToProjectRequest extends TeaModel {
-    @NameInMap("ProjectId")
-    @Validation(required = true)
-    public String projectId;
-
+    // 游戏iD
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
+
+    // 项目ID
+    @NameInMap("ProjectId")
+    public String projectId;
 
     public static AddGameToProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         AddGameToProjectRequest self = new AddGameToProjectRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddGameToProjectRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public AddGameToProjectRequest setGameId(String gameId) {
@@ -31,6 +23,14 @@ public class AddGameToProjectRequest extends TeaModel {
     }
     public String getGameId() {
         return this.gameId;
+    }
+
+    public AddGameToProjectRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

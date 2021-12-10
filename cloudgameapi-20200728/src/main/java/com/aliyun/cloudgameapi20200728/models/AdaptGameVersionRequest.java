@@ -4,27 +4,29 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AdaptGameVersionRequest extends TeaModel {
-    @NameInMap("VersionId")
-    @Validation(required = true)
-    public String versionId;
+    // 帧率
+    @NameInMap("FrameRate")
+    public String frameRate;
 
+    // 分辨率
     @NameInMap("Resolution")
     public String resolution;
 
-    @NameInMap("FrameRate")
-    public String frameRate;
+    // 游戏版本ID
+    @NameInMap("VersionId")
+    public String versionId;
 
     public static AdaptGameVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         AdaptGameVersionRequest self = new AdaptGameVersionRequest();
         return TeaModel.build(map, self);
     }
 
-    public AdaptGameVersionRequest setVersionId(String versionId) {
-        this.versionId = versionId;
+    public AdaptGameVersionRequest setFrameRate(String frameRate) {
+        this.frameRate = frameRate;
         return this;
     }
-    public String getVersionId() {
-        return this.versionId;
+    public String getFrameRate() {
+        return this.frameRate;
     }
 
     public AdaptGameVersionRequest setResolution(String resolution) {
@@ -35,12 +37,12 @@ public class AdaptGameVersionRequest extends TeaModel {
         return this.resolution;
     }
 
-    public AdaptGameVersionRequest setFrameRate(String frameRate) {
-        this.frameRate = frameRate;
+    public AdaptGameVersionRequest setVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
-    public String getFrameRate() {
-        return this.frameRate;
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

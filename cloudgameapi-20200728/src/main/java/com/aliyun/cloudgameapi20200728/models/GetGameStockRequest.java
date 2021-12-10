@@ -4,13 +4,11 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetGameStockRequest extends TeaModel {
-    @NameInMap("GameId")
-    @Validation(required = true)
-    public String gameId;
-
     @NameInMap("AccessKey")
-    @Validation(required = true)
     public String accessKey;
+
+    @NameInMap("GameId")
+    public String gameId;
 
     @NameInMap("UserLevel")
     public Long userLevel;
@@ -20,20 +18,20 @@ public class GetGameStockRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetGameStockRequest setGameId(String gameId) {
-        this.gameId = gameId;
-        return this;
-    }
-    public String getGameId() {
-        return this.gameId;
-    }
-
     public GetGameStockRequest setAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
     public String getAccessKey() {
         return this.accessKey;
+    }
+
+    public GetGameStockRequest setGameId(String gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    public String getGameId() {
+        return this.gameId;
     }
 
     public GetGameStockRequest setUserLevel(Long userLevel) {
