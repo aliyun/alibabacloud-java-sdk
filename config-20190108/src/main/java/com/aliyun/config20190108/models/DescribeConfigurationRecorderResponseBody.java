@@ -38,6 +38,12 @@ public class DescribeConfigurationRecorderResponseBody extends TeaModel {
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;
 
+        @NameInMap("OrganizationEnableStatus")
+        public String organizationEnableStatus;
+
+        @NameInMap("OrganizationMasterId")
+        public Long organizationMasterId;
+
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 
@@ -60,6 +66,22 @@ public class DescribeConfigurationRecorderResponseBody extends TeaModel {
         }
         public String getConfigurationRecorderStatus() {
             return this.configurationRecorderStatus;
+        }
+
+        public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setOrganizationEnableStatus(String organizationEnableStatus) {
+            this.organizationEnableStatus = organizationEnableStatus;
+            return this;
+        }
+        public String getOrganizationEnableStatus() {
+            return this.organizationEnableStatus;
+        }
+
+        public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setOrganizationMasterId(Long organizationMasterId) {
+            this.organizationMasterId = organizationMasterId;
+            return this;
+        }
+        public Long getOrganizationMasterId() {
+            return this.organizationMasterId;
         }
 
         public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setResourceTypes(java.util.List<String> resourceTypes) {
