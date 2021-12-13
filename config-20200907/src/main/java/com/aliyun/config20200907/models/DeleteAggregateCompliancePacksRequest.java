@@ -13,6 +13,9 @@ public class DeleteAggregateCompliancePacksRequest extends TeaModel {
     @NameInMap("CompliancePackIds")
     public String compliancePackIds;
 
+    @NameInMap("DeleteRule")
+    public Boolean deleteRule;
+
     public static DeleteAggregateCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAggregateCompliancePacksRequest self = new DeleteAggregateCompliancePacksRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteAggregateCompliancePacksRequest extends TeaModel {
     }
     public String getCompliancePackIds() {
         return this.compliancePackIds;
+    }
+
+    public DeleteAggregateCompliancePacksRequest setDeleteRule(Boolean deleteRule) {
+        this.deleteRule = deleteRule;
+        return this;
+    }
+    public Boolean getDeleteRule() {
+        return this.deleteRule;
     }
 
 }
