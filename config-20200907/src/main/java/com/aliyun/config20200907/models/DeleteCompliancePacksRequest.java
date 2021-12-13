@@ -10,6 +10,9 @@ public class DeleteCompliancePacksRequest extends TeaModel {
     @NameInMap("CompliancePackIds")
     public String compliancePackIds;
 
+    @NameInMap("DeleteRule")
+    public Boolean deleteRule;
+
     public static DeleteCompliancePacksRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCompliancePacksRequest self = new DeleteCompliancePacksRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteCompliancePacksRequest extends TeaModel {
     }
     public String getCompliancePackIds() {
         return this.compliancePackIds;
+    }
+
+    public DeleteCompliancePacksRequest setDeleteRule(Boolean deleteRule) {
+        this.deleteRule = deleteRule;
+        return this;
+    }
+    public Boolean getDeleteRule() {
+        return this.deleteRule;
     }
 
 }

@@ -3,16 +3,16 @@ package com.aliyun.config20200907.models;
 
 import com.aliyun.tea.*;
 
-public class GenerateResourceInventoryResponseBody extends TeaModel {
+public class IgnoreEvaluationResultsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GenerateResourceInventoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GenerateResourceInventoryResponseBody self = new GenerateResourceInventoryResponseBody();
+    public static IgnoreEvaluationResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        IgnoreEvaluationResultsResponseBody self = new IgnoreEvaluationResultsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GenerateResourceInventoryResponseBody setRequestId(String requestId) {
+    public IgnoreEvaluationResultsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
