@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetOtsServiceStatusResponseBody extends TeaModel {
     // data
     @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    public Boolean data;
 
     // dynamicCode
     @NameInMap("DynamicCode")
@@ -41,11 +41,11 @@ public class GetOtsServiceStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetOtsServiceStatusResponseBody setData(java.util.Map<String, ?> data) {
+    public GetOtsServiceStatusResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
+    public Boolean getData() {
         return this.data;
     }
 
