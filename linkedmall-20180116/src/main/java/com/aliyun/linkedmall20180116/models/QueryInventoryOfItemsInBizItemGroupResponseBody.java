@@ -96,6 +96,9 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         @NameInMap("SkuList")
         public java.util.List<QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList> skuList;
 
+        @NameInMap("TotalSoldQuantity")
+        public Long totalSoldQuantity;
+
         public static QueryInventoryOfItemsInBizItemGroupResponseBodyItemList build(java.util.Map<String, ?> map) throws Exception {
             QueryInventoryOfItemsInBizItemGroupResponseBodyItemList self = new QueryInventoryOfItemsInBizItemGroupResponseBodyItemList();
             return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         }
         public java.util.List<QueryInventoryOfItemsInBizItemGroupResponseBodyItemListSkuList> getSkuList() {
             return this.skuList;
+        }
+
+        public QueryInventoryOfItemsInBizItemGroupResponseBodyItemList setTotalSoldQuantity(Long totalSoldQuantity) {
+            this.totalSoldQuantity = totalSoldQuantity;
+            return this;
+        }
+        public Long getTotalSoldQuantity() {
+            return this.totalSoldQuantity;
         }
 
     }

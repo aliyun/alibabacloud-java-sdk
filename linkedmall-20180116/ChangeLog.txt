@@ -1,3 +1,6 @@
+2021-12-13 Version: 1.0.8
+- Add TotalSoldQuantity to QueryInventoryOfItemsInBizItemGroup.
+
 2021-12-07 Version: 1.0.7
 - Add register settle account API.
 
