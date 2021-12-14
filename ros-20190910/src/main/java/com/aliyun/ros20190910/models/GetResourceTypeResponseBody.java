@@ -19,6 +19,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("SupportDriftDetection")
     public Boolean supportDriftDetection;
 
+    @NameInMap("SupportScratchDetection")
+    public Boolean supportScratchDetection;
+
     public static GetResourceTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceTypeResponseBody self = new GetResourceTypeResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
     }
     public Boolean getSupportDriftDetection() {
         return this.supportDriftDetection;
+    }
+
+    public GetResourceTypeResponseBody setSupportScratchDetection(Boolean supportScratchDetection) {
+        this.supportScratchDetection = supportScratchDetection;
+        return this;
+    }
+    public Boolean getSupportScratchDetection() {
+        return this.supportScratchDetection;
     }
 
 }
