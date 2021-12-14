@@ -38,6 +38,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("EstimateCost")
         public java.util.List<String> estimateCost;
 
+        @NameInMap("ResourceGroup")
+        public java.util.List<String> resourceGroup;
+
         @NameInMap("SystemTag")
         public java.util.List<String> systemTag;
 
@@ -60,6 +63,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
         public java.util.List<String> getEstimateCost() {
             return this.estimateCost;
+        }
+
+        public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes setResourceGroup(java.util.List<String> resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public java.util.List<String> getResourceGroup() {
+            return this.resourceGroup;
         }
 
         public GetFeatureDetailsResponseBodyTerraformSupportedResourceTypes setSystemTag(java.util.List<String> systemTag) {

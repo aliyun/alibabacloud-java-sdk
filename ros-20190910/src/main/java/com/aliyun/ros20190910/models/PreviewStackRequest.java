@@ -34,6 +34,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("TemplateScratchId")
+    public String templateScratchId;
+
     @NameInMap("TemplateURL")
     public String templateURL;
 
@@ -126,6 +129,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public PreviewStackRequest setTemplateScratchId(String templateScratchId) {
+        this.templateScratchId = templateScratchId;
+        return this;
+    }
+    public String getTemplateScratchId() {
+        return this.templateScratchId;
     }
 
     public PreviewStackRequest setTemplateURL(String templateURL) {
