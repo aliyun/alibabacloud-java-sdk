@@ -1,3 +1,6 @@
+2021-12-14 Version: 0.0.7
+- Init dbfs ops.
+
 2021-12-08 Version: 0.0.6
 - Init dbfs ops.
 

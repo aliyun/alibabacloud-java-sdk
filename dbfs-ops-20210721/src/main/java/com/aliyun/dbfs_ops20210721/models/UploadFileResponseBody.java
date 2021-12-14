@@ -9,7 +9,7 @@ public class UploadFileResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("result")
-    public byte[] result;
+    public java.io.InputStream result;
 
     public static UploadFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadFileResponseBody self = new UploadFileResponseBody();
@@ -24,11 +24,11 @@ public class UploadFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UploadFileResponseBody setResult(byte[] result) {
+    public UploadFileResponseBody setResult(java.io.InputStream result) {
         this.result = result;
         return this;
     }
-    public byte[] getResult() {
+    public java.io.InputStream getResult() {
         return this.result;
     }
 
