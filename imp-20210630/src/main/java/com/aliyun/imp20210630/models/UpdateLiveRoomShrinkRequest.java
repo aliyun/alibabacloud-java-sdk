@@ -32,6 +32,9 @@ public class UpdateLiveRoomShrinkRequest extends TeaModel {
     @NameInMap("Notice")
     public String notice;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 标题，支持中英文，最大长度32位。
     @NameInMap("Title")
     public String title;
@@ -99,6 +102,14 @@ public class UpdateLiveRoomShrinkRequest extends TeaModel {
     }
     public String getNotice() {
         return this.notice;
+    }
+
+    public UpdateLiveRoomShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateLiveRoomShrinkRequest setTitle(String title) {

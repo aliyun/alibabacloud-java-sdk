@@ -16,6 +16,10 @@ public class ListAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 应用状态
     @NameInMap("Status")
     public String status;
@@ -47,6 +51,14 @@ public class ListAppsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListAppsRequest setStatus(String status) {

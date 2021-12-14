@@ -8,6 +8,9 @@ public class GetRoomRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 房间唯一标识，由字母、数字、符号.和-组成，最大长度36位。
     @NameInMap("RoomId")
     public String roomId;
@@ -23,6 +26,14 @@ public class GetRoomRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetRoomRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetRoomRequest setRoomId(String roomId) {

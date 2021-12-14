@@ -12,6 +12,9 @@ public class SendCustomMessageToAllRequest extends TeaModel {
     @NameInMap("Body")
     public String body;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -35,6 +38,14 @@ public class SendCustomMessageToAllRequest extends TeaModel {
     }
     public String getBody() {
         return this.body;
+    }
+
+    public SendCustomMessageToAllRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SendCustomMessageToAllRequest setRoomId(String roomId) {

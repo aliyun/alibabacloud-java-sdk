@@ -16,6 +16,10 @@ public class UpdateAppTemplateShrinkRequest extends TeaModel {
     @NameInMap("ComponentList")
     public String componentListShrink;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateAppTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppTemplateShrinkRequest self = new UpdateAppTemplateShrinkRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class UpdateAppTemplateShrinkRequest extends TeaModel {
     }
     public String getComponentListShrink() {
         return this.componentListShrink;
+    }
+
+    public UpdateAppTemplateShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
