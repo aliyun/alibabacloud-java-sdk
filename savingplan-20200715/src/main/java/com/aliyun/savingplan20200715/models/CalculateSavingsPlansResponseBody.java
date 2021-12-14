@@ -7,6 +7,9 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<CalculateSavingsPlansResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<CalculateSavingsPlansResponseBodyData> data;
 
     public static CalculateSavingsPlansResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CalculateSavingsPlansResponseBody self = new CalculateSavingsPlansResponseBody();
@@ -30,6 +30,14 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CalculateSavingsPlansResponseBody setData(java.util.List<CalculateSavingsPlansResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<CalculateSavingsPlansResponseBodyData> getData() {
+        return this.data;
     }
 
     public CalculateSavingsPlansResponseBody setMessage(String message) {
@@ -56,41 +64,33 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CalculateSavingsPlansResponseBody setData(java.util.List<CalculateSavingsPlansResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<CalculateSavingsPlansResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class CalculateSavingsPlansResponseBodyData extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        @NameInMap("InstanceFamily")
-        public String instanceFamily;
-
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("Cycle")
         public String cycle;
 
-        @NameInMap("UserId")
-        public Long userId;
+        @NameInMap("InstanceFamily")
+        public String instanceFamily;
 
-        @NameInMap("SpnType")
-        public String spnType;
+        @NameInMap("PayMode")
+        public String payMode;
 
         @NameInMap("PoolValue")
         public Float poolValue;
 
-        @NameInMap("Currency")
-        public String currency;
+        @NameInMap("Region")
+        public String region;
 
-        @NameInMap("PayMode")
-        public String payMode;
+        @NameInMap("SpnType")
+        public String spnType;
+
+        @NameInMap("UserId")
+        public Long userId;
 
         public static CalculateSavingsPlansResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CalculateSavingsPlansResponseBodyData self = new CalculateSavingsPlansResponseBodyData();
@@ -105,20 +105,12 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
             return this.commodityCode;
         }
 
-        public CalculateSavingsPlansResponseBodyData setInstanceFamily(String instanceFamily) {
-            this.instanceFamily = instanceFamily;
+        public CalculateSavingsPlansResponseBodyData setCurrency(String currency) {
+            this.currency = currency;
             return this;
         }
-        public String getInstanceFamily() {
-            return this.instanceFamily;
-        }
-
-        public CalculateSavingsPlansResponseBodyData setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public String getCurrency() {
+            return this.currency;
         }
 
         public CalculateSavingsPlansResponseBodyData setCycle(String cycle) {
@@ -129,20 +121,20 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
             return this.cycle;
         }
 
-        public CalculateSavingsPlansResponseBodyData setUserId(Long userId) {
-            this.userId = userId;
+        public CalculateSavingsPlansResponseBodyData setInstanceFamily(String instanceFamily) {
+            this.instanceFamily = instanceFamily;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
+        public String getInstanceFamily() {
+            return this.instanceFamily;
         }
 
-        public CalculateSavingsPlansResponseBodyData setSpnType(String spnType) {
-            this.spnType = spnType;
+        public CalculateSavingsPlansResponseBodyData setPayMode(String payMode) {
+            this.payMode = payMode;
             return this;
         }
-        public String getSpnType() {
-            return this.spnType;
+        public String getPayMode() {
+            return this.payMode;
         }
 
         public CalculateSavingsPlansResponseBodyData setPoolValue(Float poolValue) {
@@ -153,20 +145,28 @@ public class CalculateSavingsPlansResponseBody extends TeaModel {
             return this.poolValue;
         }
 
-        public CalculateSavingsPlansResponseBodyData setCurrency(String currency) {
-            this.currency = currency;
+        public CalculateSavingsPlansResponseBodyData setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getCurrency() {
-            return this.currency;
+        public String getRegion() {
+            return this.region;
         }
 
-        public CalculateSavingsPlansResponseBodyData setPayMode(String payMode) {
-            this.payMode = payMode;
+        public CalculateSavingsPlansResponseBodyData setSpnType(String spnType) {
+            this.spnType = spnType;
             return this;
         }
-        public String getPayMode() {
-            return this.payMode;
+        public String getSpnType() {
+            return this.spnType;
+        }
+
+        public CalculateSavingsPlansResponseBodyData setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }

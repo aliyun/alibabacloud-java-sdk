@@ -4,20 +4,41 @@ package com.aliyun.savingplan20200715.models;
 import com.aliyun.tea.*;
 
 public class CheckResourceActionRequest extends TeaModel {
+    @NameInMap("Bid")
+    public String bid;
+
     @NameInMap("Country")
     public String country;
+
+    @NameInMap("GmtWakeup")
+    public String gmtWakeup;
 
     @NameInMap("Hid")
     public Long hid;
 
-    @NameInMap("Level")
-    public Long level;
+    @NameInMap("Interrupt")
+    public Boolean interrupt;
 
     @NameInMap("Invoker")
     public String invoker;
 
+    @NameInMap("Level")
+    public Long level;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Pk")
+    public String pk;
+
+    @NameInMap("Prompt")
+    public String prompt;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("TaskExtraData")
+    public String taskExtraData;
 
     @NameInMap("TaskIdentifier")
     public String taskIdentifier;
@@ -25,30 +46,17 @@ public class CheckResourceActionRequest extends TeaModel {
     @NameInMap("Url")
     public String url;
 
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("GmtWakeup")
-    public String gmtWakeup;
-
-    @NameInMap("Interrupt")
-    public Boolean interrupt;
-
-    @NameInMap("Pk")
-    public String pk;
-
-    @NameInMap("TaskExtraData")
-    public String taskExtraData;
-
-    @NameInMap("Bid")
-    public String bid;
-
-    @NameInMap("Prompt")
-    public String prompt;
-
     public static CheckResourceActionRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckResourceActionRequest self = new CheckResourceActionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckResourceActionRequest setBid(String bid) {
+        this.bid = bid;
+        return this;
+    }
+    public String getBid() {
+        return this.bid;
     }
 
     public CheckResourceActionRequest setCountry(String country) {
@@ -59,6 +67,14 @@ public class CheckResourceActionRequest extends TeaModel {
         return this.country;
     }
 
+    public CheckResourceActionRequest setGmtWakeup(String gmtWakeup) {
+        this.gmtWakeup = gmtWakeup;
+        return this;
+    }
+    public String getGmtWakeup() {
+        return this.gmtWakeup;
+    }
+
     public CheckResourceActionRequest setHid(Long hid) {
         this.hid = hid;
         return this;
@@ -67,12 +83,12 @@ public class CheckResourceActionRequest extends TeaModel {
         return this.hid;
     }
 
-    public CheckResourceActionRequest setLevel(Long level) {
-        this.level = level;
+    public CheckResourceActionRequest setInterrupt(Boolean interrupt) {
+        this.interrupt = interrupt;
         return this;
     }
-    public Long getLevel() {
-        return this.level;
+    public Boolean getInterrupt() {
+        return this.interrupt;
     }
 
     public CheckResourceActionRequest setInvoker(String invoker) {
@@ -83,12 +99,52 @@ public class CheckResourceActionRequest extends TeaModel {
         return this.invoker;
     }
 
+    public CheckResourceActionRequest setLevel(Long level) {
+        this.level = level;
+        return this;
+    }
+    public Long getLevel() {
+        return this.level;
+    }
+
     public CheckResourceActionRequest setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public CheckResourceActionRequest setPk(String pk) {
+        this.pk = pk;
+        return this;
+    }
+    public String getPk() {
+        return this.pk;
+    }
+
+    public CheckResourceActionRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    public CheckResourceActionRequest setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CheckResourceActionRequest setTaskExtraData(String taskExtraData) {
+        this.taskExtraData = taskExtraData;
+        return this;
+    }
+    public String getTaskExtraData() {
+        return this.taskExtraData;
     }
 
     public CheckResourceActionRequest setTaskIdentifier(String taskIdentifier) {
@@ -105,62 +161,6 @@ public class CheckResourceActionRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
-    }
-
-    public CheckResourceActionRequest setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CheckResourceActionRequest setGmtWakeup(String gmtWakeup) {
-        this.gmtWakeup = gmtWakeup;
-        return this;
-    }
-    public String getGmtWakeup() {
-        return this.gmtWakeup;
-    }
-
-    public CheckResourceActionRequest setInterrupt(Boolean interrupt) {
-        this.interrupt = interrupt;
-        return this;
-    }
-    public Boolean getInterrupt() {
-        return this.interrupt;
-    }
-
-    public CheckResourceActionRequest setPk(String pk) {
-        this.pk = pk;
-        return this;
-    }
-    public String getPk() {
-        return this.pk;
-    }
-
-    public CheckResourceActionRequest setTaskExtraData(String taskExtraData) {
-        this.taskExtraData = taskExtraData;
-        return this;
-    }
-    public String getTaskExtraData() {
-        return this.taskExtraData;
-    }
-
-    public CheckResourceActionRequest setBid(String bid) {
-        this.bid = bid;
-        return this;
-    }
-    public String getBid() {
-        return this.bid;
-    }
-
-    public CheckResourceActionRequest setPrompt(String prompt) {
-        this.prompt = prompt;
-        return this;
-    }
-    public String getPrompt() {
-        return this.prompt;
     }
 
 }
