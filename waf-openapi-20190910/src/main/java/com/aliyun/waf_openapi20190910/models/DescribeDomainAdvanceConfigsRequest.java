@@ -4,11 +4,11 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAdvanceConfigsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("DomainList")
     public String domainList;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -18,20 +18,20 @@ public class DescribeDomainAdvanceConfigsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainAdvanceConfigsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public DescribeDomainAdvanceConfigsRequest setDomainList(String domainList) {
         this.domainList = domainList;
         return this;
     }
     public String getDomainList() {
         return this.domainList;
+    }
+
+    public DescribeDomainAdvanceConfigsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeDomainAdvanceConfigsRequest setResourceGroupId(String resourceGroupId) {

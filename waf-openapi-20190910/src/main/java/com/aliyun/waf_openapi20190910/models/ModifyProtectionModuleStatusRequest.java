@@ -4,29 +4,21 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionModuleStatusRequest extends TeaModel {
-    @NameInMap("Domain")
-    public String domain;
-
     @NameInMap("DefenseType")
     public String defenseType;
 
-    @NameInMap("ModuleStatus")
-    public Integer moduleStatus;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ModuleStatus")
+    public Integer moduleStatus;
+
     public static ModifyProtectionModuleStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProtectionModuleStatusRequest self = new ModifyProtectionModuleStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyProtectionModuleStatusRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public ModifyProtectionModuleStatusRequest setDefenseType(String defenseType) {
@@ -37,12 +29,12 @@ public class ModifyProtectionModuleStatusRequest extends TeaModel {
         return this.defenseType;
     }
 
-    public ModifyProtectionModuleStatusRequest setModuleStatus(Integer moduleStatus) {
-        this.moduleStatus = moduleStatus;
+    public ModifyProtectionModuleStatusRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public Integer getModuleStatus() {
-        return this.moduleStatus;
+    public String getDomain() {
+        return this.domain;
     }
 
     public ModifyProtectionModuleStatusRequest setInstanceId(String instanceId) {
@@ -51,6 +43,14 @@ public class ModifyProtectionModuleStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyProtectionModuleStatusRequest setModuleStatus(Integer moduleStatus) {
+        this.moduleStatus = moduleStatus;
+        return this;
+    }
+    public Integer getModuleStatus() {
+        return this.moduleStatus;
     }
 
 }

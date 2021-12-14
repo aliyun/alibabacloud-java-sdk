@@ -4,26 +4,18 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IpV6s")
     public String ipV6s;
 
     @NameInMap("Ips")
     public String ips;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeWafSourceIpSegmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWafSourceIpSegmentResponseBody self = new DescribeWafSourceIpSegmentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWafSourceIpSegmentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeWafSourceIpSegmentResponseBody setIpV6s(String ipV6s) {
@@ -40,6 +32,14 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     }
     public String getIps() {
         return this.ips;
+    }
+
+    public DescribeWafSourceIpSegmentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

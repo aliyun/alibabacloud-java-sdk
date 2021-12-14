@@ -4,29 +4,21 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteProtectionModuleRuleRequest extends TeaModel {
-    @NameInMap("Domain")
-    public String domain;
-
     @NameInMap("DefenseType")
     public String defenseType;
 
-    @NameInMap("RuleId")
-    public Long ruleId;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RuleId")
+    public Long ruleId;
+
     public static DeleteProtectionModuleRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProtectionModuleRuleRequest self = new DeleteProtectionModuleRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteProtectionModuleRuleRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public DeleteProtectionModuleRuleRequest setDefenseType(String defenseType) {
@@ -37,12 +29,12 @@ public class DeleteProtectionModuleRuleRequest extends TeaModel {
         return this.defenseType;
     }
 
-    public DeleteProtectionModuleRuleRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
+    public DeleteProtectionModuleRuleRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public Long getRuleId() {
-        return this.ruleId;
+    public String getDomain() {
+        return this.domain;
     }
 
     public DeleteProtectionModuleRuleRequest setInstanceId(String instanceId) {
@@ -51,6 +43,14 @@ public class DeleteProtectionModuleRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteProtectionModuleRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainListResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DomainNames")
+    public java.util.List<String> domainNames;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainNames")
-    public java.util.List<String> domainNames;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeDomainListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainListResponseBody self = new DescribeDomainListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDomainListResponseBody setDomainNames(java.util.List<String> domainNames) {
+        this.domainNames = domainNames;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<String> getDomainNames() {
+        return this.domainNames;
     }
 
     public DescribeDomainListResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDomainListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainListResponseBody setDomainNames(java.util.List<String> domainNames) {
-        this.domainNames = domainNames;
+    public DescribeDomainListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public java.util.List<String> getDomainNames() {
-        return this.domainNames;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }

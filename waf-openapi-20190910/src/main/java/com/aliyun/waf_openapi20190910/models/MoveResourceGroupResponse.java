@@ -3,21 +3,21 @@ package com.aliyun.waf_openapi20190910.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceInfosResponse extends TeaModel {
+public class MoveResourceGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeInstanceInfosResponseBody body;
+    public MoveResourceGroupResponseBody body;
 
-    public static DescribeInstanceInfosResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceInfosResponse self = new DescribeInstanceInfosResponse();
+    public static MoveResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        MoveResourceGroupResponse self = new MoveResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceInfosResponse setHeaders(java.util.Map<String, String> headers) {
+    public MoveResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeInstanceInfosResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeInstanceInfosResponse setBody(DescribeInstanceInfosResponseBody body) {
+    public MoveResourceGroupResponse setBody(MoveResourceGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeInstanceInfosResponseBody getBody() {
+    public MoveResourceGroupResponseBody getBody() {
         return this.body;
     }
 

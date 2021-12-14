@@ -4,26 +4,18 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyDomainIpv6StatusRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Domain")
     public String domain;
 
     @NameInMap("Enabled")
     public String enabled;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ModifyDomainIpv6StatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDomainIpv6StatusRequest self = new ModifyDomainIpv6StatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDomainIpv6StatusRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ModifyDomainIpv6StatusRequest setDomain(String domain) {
@@ -40,6 +32,14 @@ public class ModifyDomainIpv6StatusRequest extends TeaModel {
     }
     public String getEnabled() {
         return this.enabled;
+    }
+
+    public ModifyDomainIpv6StatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

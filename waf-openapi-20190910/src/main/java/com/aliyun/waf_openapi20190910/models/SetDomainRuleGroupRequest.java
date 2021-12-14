@@ -7,17 +7,17 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     @NameInMap("Domains")
     public String domains;
 
-    @NameInMap("RuleGroupId")
-    public Long ruleGroupId;
-
-    @NameInMap("WafVersion")
-    public Long wafVersion;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("RuleGroupId")
+    public Long ruleGroupId;
+
+    @NameInMap("WafVersion")
+    public Long wafVersion;
 
     public static SetDomainRuleGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRuleGroupRequest self = new SetDomainRuleGroupRequest();
@@ -30,22 +30,6 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     }
     public String getDomains() {
         return this.domains;
-    }
-
-    public SetDomainRuleGroupRequest setRuleGroupId(Long ruleGroupId) {
-        this.ruleGroupId = ruleGroupId;
-        return this;
-    }
-    public Long getRuleGroupId() {
-        return this.ruleGroupId;
-    }
-
-    public SetDomainRuleGroupRequest setWafVersion(Long wafVersion) {
-        this.wafVersion = wafVersion;
-        return this;
-    }
-    public Long getWafVersion() {
-        return this.wafVersion;
     }
 
     public SetDomainRuleGroupRequest setInstanceId(String instanceId) {
@@ -62,6 +46,22 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public SetDomainRuleGroupRequest setRuleGroupId(Long ruleGroupId) {
+        this.ruleGroupId = ruleGroupId;
+        return this;
+    }
+    public Long getRuleGroupId() {
+        return this.ruleGroupId;
+    }
+
+    public SetDomainRuleGroupRequest setWafVersion(Long wafVersion) {
+        this.wafVersion = wafVersion;
+        return this;
+    }
+    public Long getWafVersion() {
+        return this.wafVersion;
     }
 
 }

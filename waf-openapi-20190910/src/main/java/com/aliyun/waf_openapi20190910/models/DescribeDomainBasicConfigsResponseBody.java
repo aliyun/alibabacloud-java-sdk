@@ -4,34 +4,18 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DomainConfigs")
+    public java.util.List<DescribeDomainBasicConfigsResponseBodyDomainConfigs> domainConfigs;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainConfigs")
-    public java.util.List<DescribeDomainBasicConfigsResponseBodyDomainConfigs> domainConfigs;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeDomainBasicConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainBasicConfigsResponseBody self = new DescribeDomainBasicConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainBasicConfigsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeDomainBasicConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDomainBasicConfigsResponseBody setDomainConfigs(java.util.List<DescribeDomainBasicConfigsResponseBodyDomainConfigs> domainConfigs) {
@@ -42,15 +26,28 @@ public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
         return this.domainConfigs;
     }
 
+    public DescribeDomainBasicConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDomainBasicConfigsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeDomainBasicConfigsResponseBodyDomainConfigs extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("AccessType")
+        public String accessType;
 
-        @NameInMap("Domain")
-        public String domain;
-
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("AclStatus")
+        public Integer aclStatus;
 
         @NameInMap("CcMode")
         public Integer ccMode;
@@ -58,48 +55,43 @@ public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
         @NameInMap("CcStatus")
         public Integer ccStatus;
 
-        @NameInMap("AccessType")
-        public String accessType;
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("Version")
         public Long version;
 
-        @NameInMap("AclStatus")
-        public Integer aclStatus;
+        @NameInMap("WafMode")
+        public Integer wafMode;
 
         @NameInMap("WafStatus")
         public Integer wafStatus;
-
-        @NameInMap("WafMode")
-        public Integer wafMode;
 
         public static DescribeDomainBasicConfigsResponseBodyDomainConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainBasicConfigsResponseBodyDomainConfigs self = new DescribeDomainBasicConfigsResponseBodyDomainConfigs();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setStatus(Integer status) {
-            this.status = status;
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setAccessType(String accessType) {
+            this.accessType = accessType;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getAccessType() {
+            return this.accessType;
         }
 
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setDomain(String domain) {
-            this.domain = domain;
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setAclStatus(Integer aclStatus) {
+            this.aclStatus = aclStatus;
             return this;
         }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
+        public Integer getAclStatus() {
+            return this.aclStatus;
         }
 
         public DescribeDomainBasicConfigsResponseBodyDomainConfigs setCcMode(Integer ccMode) {
@@ -118,12 +110,28 @@ public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
             return this.ccStatus;
         }
 
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setAccessType(String accessType) {
-            this.accessType = accessType;
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public String getAccessType() {
-            return this.accessType;
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public DescribeDomainBasicConfigsResponseBodyDomainConfigs setVersion(Long version) {
@@ -134,12 +142,12 @@ public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
             return this.version;
         }
 
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setAclStatus(Integer aclStatus) {
-            this.aclStatus = aclStatus;
+        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setWafMode(Integer wafMode) {
+            this.wafMode = wafMode;
             return this;
         }
-        public Integer getAclStatus() {
-            return this.aclStatus;
+        public Integer getWafMode() {
+            return this.wafMode;
         }
 
         public DescribeDomainBasicConfigsResponseBodyDomainConfigs setWafStatus(Integer wafStatus) {
@@ -148,14 +156,6 @@ public class DescribeDomainBasicConfigsResponseBody extends TeaModel {
         }
         public Integer getWafStatus() {
             return this.wafStatus;
-        }
-
-        public DescribeDomainBasicConfigsResponseBodyDomainConfigs setWafMode(Integer wafMode) {
-            this.wafMode = wafMode;
-            return this;
-        }
-        public Integer getWafMode() {
-            return this.wafMode;
         }
 
     }

@@ -4,11 +4,17 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionModuleRuleRequest extends TeaModel {
+    @NameInMap("DefenseType")
+    public String defenseType;
+
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("DefenseType")
-    public String defenseType;
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("LockVersion")
+    public Long lockVersion;
 
     @NameInMap("Rule")
     public String rule;
@@ -16,15 +22,17 @@ public class ModifyProtectionModuleRuleRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
-    @NameInMap("LockVersion")
-    public Long lockVersion;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     public static ModifyProtectionModuleRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProtectionModuleRuleRequest self = new ModifyProtectionModuleRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyProtectionModuleRuleRequest setDefenseType(String defenseType) {
+        this.defenseType = defenseType;
+        return this;
+    }
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     public ModifyProtectionModuleRuleRequest setDomain(String domain) {
@@ -35,12 +43,20 @@ public class ModifyProtectionModuleRuleRequest extends TeaModel {
         return this.domain;
     }
 
-    public ModifyProtectionModuleRuleRequest setDefenseType(String defenseType) {
-        this.defenseType = defenseType;
+    public ModifyProtectionModuleRuleRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getDefenseType() {
-        return this.defenseType;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyProtectionModuleRuleRequest setLockVersion(Long lockVersion) {
+        this.lockVersion = lockVersion;
+        return this;
+    }
+    public Long getLockVersion() {
+        return this.lockVersion;
     }
 
     public ModifyProtectionModuleRuleRequest setRule(String rule) {
@@ -57,22 +73,6 @@ public class ModifyProtectionModuleRuleRequest extends TeaModel {
     }
     public Long getRuleId() {
         return this.ruleId;
-    }
-
-    public ModifyProtectionModuleRuleRequest setLockVersion(Long lockVersion) {
-        this.lockVersion = lockVersion;
-        return this;
-    }
-    public Long getLockVersion() {
-        return this.lockVersion;
-    }
-
-    public ModifyProtectionModuleRuleRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

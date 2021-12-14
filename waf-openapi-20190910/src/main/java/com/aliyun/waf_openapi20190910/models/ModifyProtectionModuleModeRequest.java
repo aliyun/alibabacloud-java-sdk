@@ -4,29 +4,21 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionModuleModeRequest extends TeaModel {
-    @NameInMap("Domain")
-    public String domain;
-
     @NameInMap("DefenseType")
     public String defenseType;
 
-    @NameInMap("Mode")
-    public Integer mode;
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Mode")
+    public Integer mode;
+
     public static ModifyProtectionModuleModeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProtectionModuleModeRequest self = new ModifyProtectionModuleModeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyProtectionModuleModeRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
     public ModifyProtectionModuleModeRequest setDefenseType(String defenseType) {
@@ -37,12 +29,12 @@ public class ModifyProtectionModuleModeRequest extends TeaModel {
         return this.defenseType;
     }
 
-    public ModifyProtectionModuleModeRequest setMode(Integer mode) {
-        this.mode = mode;
+    public ModifyProtectionModuleModeRequest setDomain(String domain) {
+        this.domain = domain;
         return this;
     }
-    public Integer getMode() {
-        return this.mode;
+    public String getDomain() {
+        return this.domain;
     }
 
     public ModifyProtectionModuleModeRequest setInstanceId(String instanceId) {
@@ -51,6 +43,14 @@ public class ModifyProtectionModuleModeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyProtectionModuleModeRequest setMode(Integer mode) {
+        this.mode = mode;
+        return this;
+    }
+    public Integer getMode() {
+        return this.mode;
     }
 
 }
