@@ -4,26 +4,18 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IpList")
     public java.util.List<String> ipList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static GetInstanceIpWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceIpWhiteListResponseBody self = new GetInstanceIpWhiteListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceIpWhiteListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetInstanceIpWhiteListResponseBody setInstanceId(String instanceId) {
@@ -40,6 +32,14 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     }
     public java.util.List<String> getIpList() {
         return this.ipList;
+    }
+
+    public GetInstanceIpWhiteListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

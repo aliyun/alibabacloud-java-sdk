@@ -4,11 +4,23 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetLindormInstanceListRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("QueryStr")
+    public String queryStr;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,20 +28,8 @@ public class GetLindormInstanceListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("QueryStr")
-    public String queryStr;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("ServiceType")
     public String serviceType;
@@ -42,12 +42,12 @@ public class GetLindormInstanceListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetLindormInstanceListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public GetLindormInstanceListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public GetLindormInstanceListRequest setOwnerId(Long ownerId) {
@@ -56,6 +56,38 @@ public class GetLindormInstanceListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetLindormInstanceListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetLindormInstanceListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetLindormInstanceListRequest setQueryStr(String queryStr) {
+        this.queryStr = queryStr;
+        return this;
+    }
+    public String getQueryStr() {
+        return this.queryStr;
+    }
+
+    public GetLindormInstanceListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetLindormInstanceListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -74,44 +106,12 @@ public class GetLindormInstanceListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetLindormInstanceListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public GetLindormInstanceListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GetLindormInstanceListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetLindormInstanceListRequest setQueryStr(String queryStr) {
-        this.queryStr = queryStr;
-        return this;
-    }
-    public String getQueryStr() {
-        return this.queryStr;
-    }
-
-    public GetLindormInstanceListRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public GetLindormInstanceListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public GetLindormInstanceListRequest setServiceType(String serviceType) {

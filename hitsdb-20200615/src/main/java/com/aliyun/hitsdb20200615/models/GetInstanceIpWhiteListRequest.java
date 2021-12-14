@@ -4,11 +4,20 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("GroupName")
+    public String groupName;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,26 +25,36 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("GroupName")
-    public String groupName;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static GetInstanceIpWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceIpWhiteListRequest self = new GetInstanceIpWhiteListRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceIpWhiteListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public GetInstanceIpWhiteListRequest setGroupName(String groupName) {
+        this.groupName = groupName;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public GetInstanceIpWhiteListRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceIpWhiteListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public GetInstanceIpWhiteListRequest setOwnerId(Long ownerId) {
@@ -44,6 +63,14 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetInstanceIpWhiteListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetInstanceIpWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -62,28 +89,12 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetInstanceIpWhiteListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public GetInstanceIpWhiteListRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public GetInstanceIpWhiteListRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetInstanceIpWhiteListRequest setGroupName(String groupName) {
-        this.groupName = groupName;
-        return this;
-    }
-    public String getGroupName() {
-        return this.groupName;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
