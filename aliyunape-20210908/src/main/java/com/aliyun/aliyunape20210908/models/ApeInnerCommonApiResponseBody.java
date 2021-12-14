@@ -10,7 +10,7 @@ public class ApeInnerCommonApiResponseBody extends TeaModel {
 
     // data
     @NameInMap("Data")
-    public String data;
+    public java.util.List<java.util.Map<String, ?>> data;
 
     // message
     @NameInMap("Message")
@@ -41,11 +41,11 @@ public class ApeInnerCommonApiResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ApeInnerCommonApiResponseBody setData(String data) {
+    public ApeInnerCommonApiResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public java.util.List<java.util.Map<String, ?>> getData() {
         return this.data;
     }
 
