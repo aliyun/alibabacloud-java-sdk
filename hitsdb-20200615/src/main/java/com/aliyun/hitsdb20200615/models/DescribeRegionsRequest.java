@@ -4,11 +4,17 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,23 +22,31 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
-    @NameInMap("AcceptLanguage")
-    public String acceptLanguage;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
+    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeRegionsRequest setOwnerId(Long ownerId) {
@@ -41,6 +55,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -59,20 +81,20 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public DescribeRegionsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
-    public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
-        this.acceptLanguage = acceptLanguage;
+    public DescribeRegionsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

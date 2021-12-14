@@ -7,11 +7,11 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
     @NameInMap("EngineList")
     public java.util.List<GetLindormInstanceEngineListResponseBodyEngineList> engineList;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetLindormInstanceEngineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLindormInstanceEngineListResponseBody self = new GetLindormInstanceEngineListResponseBody();
@@ -26,20 +26,20 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         return this.engineList;
     }
 
-    public GetLindormInstanceEngineListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetLindormInstanceEngineListResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetLindormInstanceEngineListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetLindormInstanceEngineListResponseBodyEngineListNetInfoList extends TeaModel {

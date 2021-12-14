@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -80,12 +81,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateLindormInstanceResponse createLindormInstanceWithOptions(CreateLindormInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ColdStorage", request.coldStorage);
+        query.put("CoreSpec", request.coreSpec);
+        query.put("DiskCategory", request.diskCategory);
+        query.put("Duration", request.duration);
+        query.put("FilestoreNum", request.filestoreNum);
+        query.put("FilestoreSpec", request.filestoreSpec);
+        query.put("InstanceAlias", request.instanceAlias);
+        query.put("InstanceStorage", request.instanceStorage);
+        query.put("LindormNum", request.lindormNum);
+        query.put("LindormSpec", request.lindormSpec);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("PayType", request.payType);
+        query.put("PricingCycle", request.pricingCycle);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
+        query.put("SolrNum", request.solrNum);
+        query.put("SolrSpec", request.solrSpec);
+        query.put("TsdbNum", request.tsdbNum);
+        query.put("TsdbSpec", request.tsdbSpec);
+        query.put("VPCId", request.VPCId);
+        query.put("VSwitchId", request.vSwitchId);
+        query.put("ZoneId", request.zoneId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLindormInstance"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLindormInstanceResponse());
+    }
+
+    public CreateLindormInstanceResponse createLindormInstance(CreateLindormInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createLindormInstanceWithOptions(request, runtime);
+    }
+
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("AcceptLanguage", request.acceptLanguage);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeRegions", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRegionsResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
@@ -95,10 +164,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetInstanceIpWhiteListResponse getInstanceIpWhiteListWithOptions(GetInstanceIpWhiteListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("GroupName", request.groupName);
+        query.put("InstanceId", request.instanceId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetInstanceIpWhiteListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceIpWhiteList"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceIpWhiteListResponse());
     }
 
     public GetInstanceIpWhiteListResponse getInstanceIpWhiteList(GetInstanceIpWhiteListRequest request) throws Exception {
@@ -108,10 +196,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetLindormInstanceResponse getLindormInstanceWithOptions(GetLindormInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("InstanceId", request.instanceId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetLindormInstance", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetLindormInstanceResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLindormInstance"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLindormInstanceResponse());
     }
 
     public GetLindormInstanceResponse getLindormInstance(GetLindormInstanceRequest request) throws Exception {
@@ -121,10 +228,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetLindormInstanceEngineListResponse getLindormInstanceEngineListWithOptions(GetLindormInstanceEngineListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("InstanceId", request.instanceId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetLindormInstanceEngineList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetLindormInstanceEngineListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLindormInstanceEngineList"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLindormInstanceEngineListResponse());
     }
 
     public GetLindormInstanceEngineListResponse getLindormInstanceEngineList(GetLindormInstanceEngineListRequest request) throws Exception {
@@ -134,10 +260,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetLindormInstanceListResponse getLindormInstanceListWithOptions(GetLindormInstanceListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("PageNumber", request.pageNumber);
+        query.put("PageSize", request.pageSize);
+        query.put("QueryStr", request.queryStr);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
+        query.put("ServiceType", request.serviceType);
+        query.put("SupportEngine", request.supportEngine);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetLindormInstanceList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetLindormInstanceListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLindormInstanceList"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLindormInstanceListResponse());
     }
 
     public GetLindormInstanceListResponse getLindormInstanceList(GetLindormInstanceListRequest request) throws Exception {
@@ -145,16 +294,117 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLindormInstanceListWithOptions(request, runtime);
     }
 
+    public ReleaseLindormInstanceResponse releaseLindormInstanceWithOptions(ReleaseLindormInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("InstanceId", request.instanceId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleaseLindormInstance"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseLindormInstanceResponse());
+    }
+
+    public ReleaseLindormInstanceResponse releaseLindormInstance(ReleaseLindormInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.releaseLindormInstanceWithOptions(request, runtime);
+    }
+
     public UpdateInstanceIpWhiteListResponse updateInstanceIpWhiteListWithOptions(UpdateInstanceIpWhiteListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("GroupName", request.groupName);
+        query.put("InstanceId", request.instanceId);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityIpList", request.securityIpList);
+        query.put("SecurityToken", request.securityToken);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateInstanceIpWhiteList", "2020-06-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateInstanceIpWhiteListResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceIpWhiteList"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceIpWhiteListResponse());
     }
 
     public UpdateInstanceIpWhiteListResponse updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateInstanceIpWhiteListWithOptions(request, runtime);
+    }
+
+    public UpgradeLindormInstanceResponse upgradeLindormInstanceWithOptions(UpgradeLindormInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("ClusterStorage", request.clusterStorage);
+        query.put("ColdStorage", request.coldStorage);
+        query.put("CoreNum", request.coreNum);
+        query.put("CoreSpec", request.coreSpec);
+        query.put("FilestoreNum", request.filestoreNum);
+        query.put("FilestoreSpec", request.filestoreSpec);
+        query.put("InstanceId", request.instanceId);
+        query.put("LindormNum", request.lindormNum);
+        query.put("LindormSpec", request.lindormSpec);
+        query.put("LtsCoreNum", request.ltsCoreNum);
+        query.put("LtsCoreSpec", request.ltsCoreSpec);
+        query.put("OwnerAccount", request.ownerAccount);
+        query.put("OwnerId", request.ownerId);
+        query.put("PhoenixCoreNum", request.phoenixCoreNum);
+        query.put("PhoenixCoreSpec", request.phoenixCoreSpec);
+        query.put("RegionId", request.regionId);
+        query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        query.put("ResourceOwnerId", request.resourceOwnerId);
+        query.put("SecurityToken", request.securityToken);
+        query.put("SolrNum", request.solrNum);
+        query.put("SolrSpec", request.solrSpec);
+        query.put("TsdbNum", request.tsdbNum);
+        query.put("TsdbSpec", request.tsdbSpec);
+        query.put("UpgradeType", request.upgradeType);
+        query.put("ZoneId", request.zoneId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeLindormInstance"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeLindormInstanceResponse());
+    }
+
+    public UpgradeLindormInstanceResponse upgradeLindormInstance(UpgradeLindormInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.upgradeLindormInstanceWithOptions(request, runtime);
     }
 }
