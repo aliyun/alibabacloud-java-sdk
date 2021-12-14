@@ -4,23 +4,15 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Certificates")
     public java.util.List<DescribeCertificatesResponseBodyCertificates> certificates;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCertificatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificatesResponseBody self = new DescribeCertificatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCertificatesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCertificatesResponseBody setCertificates(java.util.List<DescribeCertificatesResponseBodyCertificates> certificates) {
@@ -31,25 +23,41 @@ public class DescribeCertificatesResponseBody extends TeaModel {
         return this.certificates;
     }
 
+    public DescribeCertificatesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeCertificatesResponseBodyCertificates extends TeaModel {
+        @NameInMap("CertificateId")
+        public Long certificateId;
+
         @NameInMap("CertificateName")
         public String certificateName;
 
         @NameInMap("CommonName")
         public String commonName;
 
-        @NameInMap("Sans")
-        public java.util.List<String> sans;
-
         @NameInMap("IsUsing")
         public Boolean isUsing;
 
-        @NameInMap("CertificateId")
-        public Long certificateId;
+        @NameInMap("Sans")
+        public java.util.List<String> sans;
 
         public static DescribeCertificatesResponseBodyCertificates build(java.util.Map<String, ?> map) throws Exception {
             DescribeCertificatesResponseBodyCertificates self = new DescribeCertificatesResponseBodyCertificates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCertificatesResponseBodyCertificates setCertificateId(Long certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public Long getCertificateId() {
+            return this.certificateId;
         }
 
         public DescribeCertificatesResponseBodyCertificates setCertificateName(String certificateName) {
@@ -68,14 +76,6 @@ public class DescribeCertificatesResponseBody extends TeaModel {
             return this.commonName;
         }
 
-        public DescribeCertificatesResponseBodyCertificates setSans(java.util.List<String> sans) {
-            this.sans = sans;
-            return this;
-        }
-        public java.util.List<String> getSans() {
-            return this.sans;
-        }
-
         public DescribeCertificatesResponseBodyCertificates setIsUsing(Boolean isUsing) {
             this.isUsing = isUsing;
             return this;
@@ -84,12 +84,12 @@ public class DescribeCertificatesResponseBody extends TeaModel {
             return this.isUsing;
         }
 
-        public DescribeCertificatesResponseBodyCertificates setCertificateId(Long certificateId) {
-            this.certificateId = certificateId;
+        public DescribeCertificatesResponseBodyCertificates setSans(java.util.List<String> sans) {
+            this.sans = sans;
             return this;
         }
-        public Long getCertificateId() {
-            return this.certificateId;
+        public java.util.List<String> getSans() {
+            return this.sans;
         }
 
     }

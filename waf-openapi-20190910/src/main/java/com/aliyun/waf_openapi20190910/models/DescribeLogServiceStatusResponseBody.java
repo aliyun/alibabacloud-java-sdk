@@ -4,26 +4,26 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogServiceStatusResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("DomainStatus")
+    public java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> domainStatus;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainStatus")
-    public java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> domainStatus;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeLogServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogServiceStatusResponseBody self = new DescribeLogServiceStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogServiceStatusResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeLogServiceStatusResponseBody setDomainStatus(java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> domainStatus) {
+        this.domainStatus = domainStatus;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> getDomainStatus() {
+        return this.domainStatus;
     }
 
     public DescribeLogServiceStatusResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeLogServiceStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLogServiceStatusResponseBody setDomainStatus(java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> domainStatus) {
-        this.domainStatus = domainStatus;
+    public DescribeLogServiceStatusResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public java.util.List<DescribeLogServiceStatusResponseBodyDomainStatus> getDomainStatus() {
-        return this.domainStatus;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeLogServiceStatusResponseBodyDomainStatus extends TeaModel {

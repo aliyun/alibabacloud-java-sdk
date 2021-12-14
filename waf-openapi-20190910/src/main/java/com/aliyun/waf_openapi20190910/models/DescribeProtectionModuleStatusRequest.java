@@ -4,11 +4,11 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeProtectionModuleStatusRequest extends TeaModel {
-    @NameInMap("Domain")
-    public String domain;
-
     @NameInMap("DefenseType")
     public String defenseType;
+
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,20 +18,20 @@ public class DescribeProtectionModuleStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeProtectionModuleStatusRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
-    }
-
     public DescribeProtectionModuleStatusRequest setDefenseType(String defenseType) {
         this.defenseType = defenseType;
         return this;
     }
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    public DescribeProtectionModuleStatusRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public DescribeProtectionModuleStatusRequest setInstanceId(String instanceId) {

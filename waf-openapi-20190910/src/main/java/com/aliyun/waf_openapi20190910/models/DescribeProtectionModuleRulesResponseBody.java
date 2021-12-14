@@ -4,26 +4,18 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeProtectionModuleRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Rules")
     public java.util.List<DescribeProtectionModuleRulesResponseBodyRules> rules;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeProtectionModuleRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProtectionModuleRulesResponseBody self = new DescribeProtectionModuleRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProtectionModuleRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeProtectionModuleRulesResponseBody setRequestId(String requestId) {
@@ -42,7 +34,21 @@ public class DescribeProtectionModuleRulesResponseBody extends TeaModel {
         return this.rules;
     }
 
+    public DescribeProtectionModuleRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeProtectionModuleRulesResponseBodyRules extends TeaModel {
+        @NameInMap("Content")
+        public java.util.Map<String, ?> content;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
         @NameInMap("Status")
         public Long status;
 
@@ -52,15 +58,25 @@ public class DescribeProtectionModuleRulesResponseBody extends TeaModel {
         @NameInMap("Version")
         public Long version;
 
-        @NameInMap("Content")
-        public java.util.Map<String, ?> content;
-
-        @NameInMap("RuleId")
-        public Long ruleId;
-
         public static DescribeProtectionModuleRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeProtectionModuleRulesResponseBodyRules self = new DescribeProtectionModuleRulesResponseBodyRules();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeProtectionModuleRulesResponseBodyRules setContent(java.util.Map<String, ?> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.Map<String, ?> getContent() {
+            return this.content;
+        }
+
+        public DescribeProtectionModuleRulesResponseBodyRules setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
         }
 
         public DescribeProtectionModuleRulesResponseBodyRules setStatus(Long status) {
@@ -85,22 +101,6 @@ public class DescribeProtectionModuleRulesResponseBody extends TeaModel {
         }
         public Long getVersion() {
             return this.version;
-        }
-
-        public DescribeProtectionModuleRulesResponseBodyRules setContent(java.util.Map<String, ?> content) {
-            this.content = content;
-            return this;
-        }
-        public java.util.Map<String, ?> getContent() {
-            return this.content;
-        }
-
-        public DescribeProtectionModuleRulesResponseBodyRules setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
         }
 
     }

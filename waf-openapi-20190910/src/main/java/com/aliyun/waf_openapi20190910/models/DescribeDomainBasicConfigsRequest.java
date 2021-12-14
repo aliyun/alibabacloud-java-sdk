@@ -4,17 +4,17 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBasicConfigsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DomainKey")
-    public String domainKey;
-
     @NameInMap("AccessType")
     public String accessType;
 
     @NameInMap("CloudNativeProductId")
     public Integer cloudNativeProductId;
+
+    @NameInMap("DomainKey")
+    public String domainKey;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,22 +28,6 @@ public class DescribeDomainBasicConfigsRequest extends TeaModel {
     public static DescribeDomainBasicConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainBasicConfigsRequest self = new DescribeDomainBasicConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainBasicConfigsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeDomainBasicConfigsRequest setDomainKey(String domainKey) {
-        this.domainKey = domainKey;
-        return this;
-    }
-    public String getDomainKey() {
-        return this.domainKey;
     }
 
     public DescribeDomainBasicConfigsRequest setAccessType(String accessType) {
@@ -60,6 +44,22 @@ public class DescribeDomainBasicConfigsRequest extends TeaModel {
     }
     public Integer getCloudNativeProductId() {
         return this.cloudNativeProductId;
+    }
+
+    public DescribeDomainBasicConfigsRequest setDomainKey(String domainKey) {
+        this.domainKey = domainKey;
+        return this;
+    }
+    public String getDomainKey() {
+        return this.domainKey;
+    }
+
+    public DescribeDomainBasicConfigsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeDomainBasicConfigsRequest setPageNumber(Integer pageNumber) {

@@ -4,11 +4,11 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateCertificateByCertificateIdRequest extends TeaModel {
-    @NameInMap("Domain")
-    public String domain;
-
     @NameInMap("CertificateId")
     public Long certificateId;
+
+    @NameInMap("Domain")
+    public String domain;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,20 +18,20 @@ public class CreateCertificateByCertificateIdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateCertificateByCertificateIdRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
-    }
-
     public CreateCertificateByCertificateIdRequest setCertificateId(Long certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     public Long getCertificateId() {
         return this.certificateId;
+    }
+
+    public CreateCertificateByCertificateIdRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
     public CreateCertificateByCertificateIdRequest setInstanceId(String instanceId) {
