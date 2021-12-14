@@ -7,23 +7,23 @@ public class CompleteTradeResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("requestId")
-    public String requestId;
+    @NameInMap("data")
+    public String data;
+
+    @NameInMap("errorInfoList")
+    public java.util.List<String> errorInfoList;
 
     @NameInMap("message")
     public String message;
 
-    @NameInMap("data")
-    public String data;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
 
     @NameInMap("synchro")
     public Boolean synchro;
-
-    @NameInMap("errorInfoList")
-    public java.util.List<String> errorInfoList;
 
     public static CompleteTradeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CompleteTradeResponseBody self = new CompleteTradeResponseBody();
@@ -38,12 +38,20 @@ public class CompleteTradeResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CompleteTradeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CompleteTradeResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getData() {
+        return this.data;
+    }
+
+    public CompleteTradeResponseBody setErrorInfoList(java.util.List<String> errorInfoList) {
+        this.errorInfoList = errorInfoList;
+        return this;
+    }
+    public java.util.List<String> getErrorInfoList() {
+        return this.errorInfoList;
     }
 
     public CompleteTradeResponseBody setMessage(String message) {
@@ -54,12 +62,12 @@ public class CompleteTradeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CompleteTradeResponseBody setData(String data) {
-        this.data = data;
+    public CompleteTradeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CompleteTradeResponseBody setSuccess(Boolean success) {
@@ -76,14 +84,6 @@ public class CompleteTradeResponseBody extends TeaModel {
     }
     public Boolean getSynchro() {
         return this.synchro;
-    }
-
-    public CompleteTradeResponseBody setErrorInfoList(java.util.List<String> errorInfoList) {
-        this.errorInfoList = errorInfoList;
-        return this;
-    }
-    public java.util.List<String> getErrorInfoList() {
-        return this.errorInfoList;
     }
 
 }

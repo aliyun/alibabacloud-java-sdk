@@ -7,23 +7,23 @@ public class PayOrderCallbackResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
-    @NameInMap("requestId")
-    public String requestId;
+    @NameInMap("data")
+    public String data;
+
+    @NameInMap("errorInfoList")
+    public java.util.List<String> errorInfoList;
 
     @NameInMap("message")
     public String message;
 
-    @NameInMap("data")
-    public String data;
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("success")
     public Boolean success;
 
     @NameInMap("synchro")
     public Boolean synchro;
-
-    @NameInMap("errorInfoList")
-    public java.util.List<String> errorInfoList;
 
     public static PayOrderCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PayOrderCallbackResponseBody self = new PayOrderCallbackResponseBody();
@@ -38,12 +38,20 @@ public class PayOrderCallbackResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PayOrderCallbackResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PayOrderCallbackResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getData() {
+        return this.data;
+    }
+
+    public PayOrderCallbackResponseBody setErrorInfoList(java.util.List<String> errorInfoList) {
+        this.errorInfoList = errorInfoList;
+        return this;
+    }
+    public java.util.List<String> getErrorInfoList() {
+        return this.errorInfoList;
     }
 
     public PayOrderCallbackResponseBody setMessage(String message) {
@@ -54,12 +62,12 @@ public class PayOrderCallbackResponseBody extends TeaModel {
         return this.message;
     }
 
-    public PayOrderCallbackResponseBody setData(String data) {
-        this.data = data;
+    public PayOrderCallbackResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PayOrderCallbackResponseBody setSuccess(Boolean success) {
@@ -76,14 +84,6 @@ public class PayOrderCallbackResponseBody extends TeaModel {
     }
     public Boolean getSynchro() {
         return this.synchro;
-    }
-
-    public PayOrderCallbackResponseBody setErrorInfoList(java.util.List<String> errorInfoList) {
-        this.errorInfoList = errorInfoList;
-        return this;
-    }
-    public java.util.List<String> getErrorInfoList() {
-        return this.errorInfoList;
     }
 
 }

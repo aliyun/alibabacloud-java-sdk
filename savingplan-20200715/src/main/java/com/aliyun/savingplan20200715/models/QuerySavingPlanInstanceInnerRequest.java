@@ -4,6 +4,18 @@ package com.aliyun.savingplan20200715.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingPlanInstanceInnerRequest extends TeaModel {
+    // currentPage
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    // endTime
+    @NameInMap("EndTime")
+    public Float endTime;
+
+    // fromAppCode
+    @NameInMap("FromAppCode")
+    public String fromAppCode;
+
     // fromAppName
     @NameInMap("FromAppName")
     public String fromAppName;
@@ -12,49 +24,61 @@ public class QuerySavingPlanInstanceInnerRequest extends TeaModel {
     @NameInMap("InstanceCode")
     public String instanceCode;
 
-    // pageSize
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    // spnType
-    @NameInMap("SpnType")
-    public String spnType;
-
     // instanceFamily
     @NameInMap("InstanceFamily")
     public String instanceFamily;
 
-    // userId
-    @NameInMap("UserId")
-    public String userId;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // startTime
-    @NameInMap("StartTime")
-    public Float startTime;
-
-    // fromAppCode
-    @NameInMap("FromAppCode")
-    public String fromAppCode;
-
-    // endTime
-    @NameInMap("EndTime")
-    public Float endTime;
+    // pageSize
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     // region
     @NameInMap("Region")
     public String region;
 
-    // currentPage
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    // requestId
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // spnType
+    @NameInMap("SpnType")
+    public String spnType;
+
+    // startTime
+    @NameInMap("StartTime")
+    public Float startTime;
+
+    // userId
+    @NameInMap("UserId")
+    public String userId;
 
     public static QuerySavingPlanInstanceInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingPlanInstanceInnerRequest self = new QuerySavingPlanInstanceInnerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setEndTime(Float endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Float getEndTime() {
+        return this.endTime;
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setFromAppCode(String fromAppCode) {
+        this.fromAppCode = fromAppCode;
+        return this;
+    }
+    public String getFromAppCode() {
+        return this.fromAppCode;
     }
 
     public QuerySavingPlanInstanceInnerRequest setFromAppName(String fromAppName) {
@@ -73,22 +97,6 @@ public class QuerySavingPlanInstanceInnerRequest extends TeaModel {
         return this.instanceCode;
     }
 
-    public QuerySavingPlanInstanceInnerRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QuerySavingPlanInstanceInnerRequest setSpnType(String spnType) {
-        this.spnType = spnType;
-        return this;
-    }
-    public String getSpnType() {
-        return this.spnType;
-    }
-
     public QuerySavingPlanInstanceInnerRequest setInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -97,44 +105,12 @@ public class QuerySavingPlanInstanceInnerRequest extends TeaModel {
         return this.instanceFamily;
     }
 
-    public QuerySavingPlanInstanceInnerRequest setUserId(String userId) {
-        this.userId = userId;
+    public QuerySavingPlanInstanceInnerRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public QuerySavingPlanInstanceInnerRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QuerySavingPlanInstanceInnerRequest setStartTime(Float startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Float getStartTime() {
-        return this.startTime;
-    }
-
-    public QuerySavingPlanInstanceInnerRequest setFromAppCode(String fromAppCode) {
-        this.fromAppCode = fromAppCode;
-        return this;
-    }
-    public String getFromAppCode() {
-        return this.fromAppCode;
-    }
-
-    public QuerySavingPlanInstanceInnerRequest setEndTime(Float endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Float getEndTime() {
-        return this.endTime;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QuerySavingPlanInstanceInnerRequest setRegion(String region) {
@@ -145,12 +121,36 @@ public class QuerySavingPlanInstanceInnerRequest extends TeaModel {
         return this.region;
     }
 
-    public QuerySavingPlanInstanceInnerRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QuerySavingPlanInstanceInnerRequest setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setSpnType(String spnType) {
+        this.spnType = spnType;
+        return this;
+    }
+    public String getSpnType() {
+        return this.spnType;
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setStartTime(Float startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Float getStartTime() {
+        return this.startTime;
+    }
+
+    public QuerySavingPlanInstanceInnerRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
