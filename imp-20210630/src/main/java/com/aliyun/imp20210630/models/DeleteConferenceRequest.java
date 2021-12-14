@@ -12,6 +12,9 @@ public class DeleteConferenceRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
@@ -39,6 +42,14 @@ public class DeleteConferenceRequest extends TeaModel {
     }
     public String getConferenceId() {
         return this.conferenceId;
+    }
+
+    public DeleteConferenceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteConferenceRequest setRoomId(String roomId) {

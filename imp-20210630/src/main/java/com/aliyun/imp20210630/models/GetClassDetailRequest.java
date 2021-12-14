@@ -12,6 +12,9 @@ public class GetClassDetailRequest extends TeaModel {
     @NameInMap("ClassId")
     public String classId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 操作人用户ID。
     @NameInMap("UserId")
     public String userId;
@@ -35,6 +38,14 @@ public class GetClassDetailRequest extends TeaModel {
     }
     public String getClassId() {
         return this.classId;
+    }
+
+    public GetClassDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetClassDetailRequest setUserId(String userId) {

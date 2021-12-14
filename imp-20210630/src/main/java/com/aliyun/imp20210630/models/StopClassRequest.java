@@ -12,6 +12,9 @@ public class StopClassRequest extends TeaModel {
     @NameInMap("ClassId")
     public String classId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 操作者用户ID。
     @NameInMap("UserId")
     public String userId;
@@ -35,6 +38,14 @@ public class StopClassRequest extends TeaModel {
     }
     public String getClassId() {
         return this.classId;
+    }
+
+    public StopClassRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public StopClassRequest setUserId(String userId) {

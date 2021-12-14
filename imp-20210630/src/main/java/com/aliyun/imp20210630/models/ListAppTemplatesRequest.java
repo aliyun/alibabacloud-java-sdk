@@ -12,6 +12,10 @@ public class ListAppTemplatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListAppTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppTemplatesRequest self = new ListAppTemplatesRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class ListAppTemplatesRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppTemplatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

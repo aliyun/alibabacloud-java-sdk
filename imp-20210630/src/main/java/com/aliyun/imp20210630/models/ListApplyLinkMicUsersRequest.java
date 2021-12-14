@@ -16,6 +16,10 @@ public class ListApplyLinkMicUsersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListApplyLinkMicUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplyLinkMicUsersRequest self = new ListApplyLinkMicUsersRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class ListApplyLinkMicUsersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListApplyLinkMicUsersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -20,6 +20,9 @@ public class UpdateClassRequest extends TeaModel {
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 课堂标题，1~32个字符。
     @NameInMap("Title")
     public String title;
@@ -59,6 +62,14 @@ public class UpdateClassRequest extends TeaModel {
     }
     public String getCreateUserId() {
         return this.createUserId;
+    }
+
+    public UpdateClassRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateClassRequest setTitle(String title) {

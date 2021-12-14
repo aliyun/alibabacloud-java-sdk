@@ -12,6 +12,10 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("AppTemplateId")
     public String appTemplateId;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getAppTemplateId() {
         return this.appTemplateId;
+    }
+
+    public CreateAppRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

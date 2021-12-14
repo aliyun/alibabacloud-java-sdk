@@ -3,7 +3,7 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class ListClassesRequest extends TeaModel {
+public class ListRoomUsersRequest extends TeaModel {
     // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
@@ -19,16 +19,16 @@ public class ListClassesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 课程状态，0-未开课 1-上课中 2-已下课，不传则返回所有课程。
-    @NameInMap("Status")
-    public Integer status;
+    // 房间ID，最大长度36个字符。
+    @NameInMap("RoomId")
+    public String roomId;
 
-    public static ListClassesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListClassesRequest self = new ListClassesRequest();
+    public static ListRoomUsersRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListRoomUsersRequest self = new ListRoomUsersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListClassesRequest setAppId(String appId) {
+    public ListRoomUsersRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -36,7 +36,7 @@ public class ListClassesRequest extends TeaModel {
         return this.appId;
     }
 
-    public ListClassesRequest setPageNumber(Integer pageNumber) {
+    public ListRoomUsersRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -44,7 +44,7 @@ public class ListClassesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListClassesRequest setPageSize(Integer pageSize) {
+    public ListRoomUsersRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -52,7 +52,7 @@ public class ListClassesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListClassesRequest setRegionId(String regionId) {
+    public ListRoomUsersRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -60,12 +60,12 @@ public class ListClassesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListClassesRequest setStatus(Integer status) {
-        this.status = status;
+    public ListRoomUsersRequest setRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
-    public Integer getStatus() {
-        return this.status;
+    public String getRoomId() {
+        return this.roomId;
     }
 
 }

@@ -12,6 +12,10 @@ public class ListComponentsRequest extends TeaModel {
     @NameInMap("AppTemplateId")
     public String appTemplateId;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComponentsRequest self = new ListComponentsRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class ListComponentsRequest extends TeaModel {
     }
     public String getAppTemplateId() {
         return this.appTemplateId;
+    }
+
+    public ListComponentsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

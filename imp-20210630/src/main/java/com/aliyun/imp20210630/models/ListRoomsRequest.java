@@ -16,6 +16,9 @@ public class ListRoomsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListRoomsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRoomsRequest self = new ListRoomsRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class ListRoomsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRoomsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

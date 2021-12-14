@@ -24,6 +24,9 @@ public class CreateLiveRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 房间ID，最大长度36个字符，传空值，则随机生成一个房间ID。
     @NameInMap("RoomId")
     public String roomId;
@@ -79,6 +82,14 @@ public class CreateLiveRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
+    }
+
+    public CreateLiveRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateLiveRequest setRoomId(String roomId) {

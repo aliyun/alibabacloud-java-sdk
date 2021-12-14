@@ -12,6 +12,9 @@ public class DeleteLiveRoomRequest extends TeaModel {
     @NameInMap("LiveId")
     public String liveId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 操作人ID。
     @NameInMap("UserId")
     public String userId;
@@ -35,6 +38,14 @@ public class DeleteLiveRoomRequest extends TeaModel {
     }
     public String getLiveId() {
         return this.liveId;
+    }
+
+    public DeleteLiveRoomRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteLiveRoomRequest setUserId(String userId) {

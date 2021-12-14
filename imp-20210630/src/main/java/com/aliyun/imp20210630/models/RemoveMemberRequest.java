@@ -12,6 +12,10 @@ public class RemoveMemberRequest extends TeaModel {
     @NameInMap("FromUserId")
     public String fromUserId;
 
+    // 地域
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 被邀请用户ID
     @NameInMap("ToUserId")
     public String toUserId;
@@ -35,6 +39,14 @@ public class RemoveMemberRequest extends TeaModel {
     }
     public String getFromUserId() {
         return this.fromUserId;
+    }
+
+    public RemoveMemberRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public RemoveMemberRequest setToUserId(String toUserId) {

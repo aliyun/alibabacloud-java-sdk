@@ -16,6 +16,10 @@ public class GetAuthTokenRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    // cn-shanghai
+    @NameInMap("RegionId")
+    public String regionId;
+
     // 用户UserId,在AppId下单独唯一
     @NameInMap("UserId")
     public String userId;
@@ -47,6 +51,14 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public GetAuthTokenRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetAuthTokenRequest setUserId(String userId) {
