@@ -7,11 +7,11 @@ public class DeleteImageRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("ProductId")
-    public String productId;
-
     @NameInMap("PicName")
     public String picName;
+
+    @NameInMap("ProductId")
+    public String productId;
 
     public static DeleteImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageRequest self = new DeleteImageRequest();
@@ -26,20 +26,20 @@ public class DeleteImageRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DeleteImageRequest setProductId(String productId) {
-        this.productId = productId;
-        return this;
-    }
-    public String getProductId() {
-        return this.productId;
-    }
-
     public DeleteImageRequest setPicName(String picName) {
         this.picName = picName;
         return this;
     }
     public String getPicName() {
         return this.picName;
+    }
+
+    public DeleteImageRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
     }
 
 }

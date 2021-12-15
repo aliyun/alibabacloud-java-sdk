@@ -8,26 +8,29 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream picContentObject;
 
-    @NameInMap("InstanceName")
-    public String instanceName;
-
     @NameInMap("CategoryId")
     public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
 
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("Filter")
+    public String filter;
+
+    @NameInMap("InstanceName")
+    public String instanceName;
 
     @NameInMap("Num")
     public Integer num;
 
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Start")
     public Integer start;
-
-    @NameInMap("Filter")
-    public String filter;
 
     public static SearchImageByPicAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchImageByPicAdvanceRequest self = new SearchImageByPicAdvanceRequest();
@@ -40,14 +43,6 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getPicContentObject() {
         return this.picContentObject;
-    }
-
-    public SearchImageByPicAdvanceRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
     }
 
     public SearchImageByPicAdvanceRequest setCategoryId(Integer categoryId) {
@@ -66,12 +61,20 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
         return this.crop;
     }
 
-    public SearchImageByPicAdvanceRequest setRegion(String region) {
-        this.region = region;
+    public SearchImageByPicAdvanceRequest setFilter(String filter) {
+        this.filter = filter;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getFilter() {
+        return this.filter;
+    }
+
+    public SearchImageByPicAdvanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public SearchImageByPicAdvanceRequest setNum(Integer num) {
@@ -82,20 +85,28 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
         return this.num;
     }
 
+    public SearchImageByPicAdvanceRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public SearchImageByPicAdvanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public SearchImageByPicAdvanceRequest setStart(Integer start) {
         this.start = start;
         return this;
     }
     public Integer getStart() {
         return this.start;
-    }
-
-    public SearchImageByPicAdvanceRequest setFilter(String filter) {
-        this.filter = filter;
-        return this;
-    }
-    public String getFilter() {
-        return this.filter;
     }
 
 }
