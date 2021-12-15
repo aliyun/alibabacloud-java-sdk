@@ -58,6 +58,10 @@ public class SubmitTracemuResponseBody extends TeaModel {
     }
 
     public static class SubmitTracemuResponseBodyData extends TeaModel {
+        // 生成m3u8文件的code
+        @NameInMap("Code")
+        public String code;
+
         // 任务id
         @NameInMap("JobId")
         public String jobId;
@@ -65,6 +69,14 @@ public class SubmitTracemuResponseBody extends TeaModel {
         public static SubmitTracemuResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SubmitTracemuResponseBodyData self = new SubmitTracemuResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitTracemuResponseBodyData setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
         public SubmitTracemuResponseBodyData setJobId(String jobId) {

@@ -4,11 +4,11 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryCopyrightResponseBody extends TeaModel {
-    @NameInMap("RequestID")
-    public String requestID;
-
     @NameInMap("Data")
     public java.util.List<QueryCopyrightResponseBodyData> data;
+
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -19,20 +19,20 @@ public class QueryCopyrightResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryCopyrightResponseBody setRequestID(String requestID) {
-        this.requestID = requestID;
-        return this;
-    }
-    public String getRequestID() {
-        return this.requestID;
-    }
-
     public QueryCopyrightResponseBody setData(java.util.List<QueryCopyrightResponseBodyData> data) {
         this.data = data;
         return this;
     }
     public java.util.List<QueryCopyrightResponseBodyData> getData() {
         return this.data;
+    }
+
+    public QueryCopyrightResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
+        return this;
+    }
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public QueryCopyrightResponseBody setStatusCode(Long statusCode) {

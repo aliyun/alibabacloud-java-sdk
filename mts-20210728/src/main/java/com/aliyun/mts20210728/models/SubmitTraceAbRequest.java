@@ -20,13 +20,13 @@ public class SubmitTraceAbRequest extends TeaModel {
     @NameInMap("Output")
     public String output;
 
-    // 用户自定义数据，最大长度1024个字节
-    @NameInMap("UserData")
-    public String userData;
-
     // 外部url链接(Input和url二选一)
     @NameInMap("Url")
     public String url;
+
+    // 用户自定义数据，最大长度1024个字节
+    @NameInMap("UserData")
+    public String userData;
 
     public static SubmitTraceAbRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTraceAbRequest self = new SubmitTraceAbRequest();
@@ -65,20 +65,20 @@ public class SubmitTraceAbRequest extends TeaModel {
         return this.output;
     }
 
-    public SubmitTraceAbRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
     public SubmitTraceAbRequest setUrl(String url) {
         this.url = url;
         return this;
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public SubmitTraceAbRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }
