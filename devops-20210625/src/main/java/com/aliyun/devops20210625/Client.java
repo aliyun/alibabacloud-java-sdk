@@ -32,6 +32,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateFlowTagResponse createFlowTag(String organizationId, CreateFlowTagRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFlowTagWithOptions(organizationId, request, headers, runtime);
+    }
+
+    public CreateFlowTagResponse createFlowTagWithOptions(String organizationId, CreateFlowTagRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.color)) {
+            query.put("color", request.color);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowTagGroupId)) {
+            query.put("flowTagGroupId", request.flowTagGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFlowTag"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tags"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowTagResponse());
+    }
+
+    public CreateFlowTagGroupResponse createFlowTagGroup(String organizationId, CreateFlowTagGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createFlowTagGroupWithOptions(organizationId, request, headers, runtime);
+    }
+
+    public CreateFlowTagGroupResponse createFlowTagGroupWithOptions(String organizationId, CreateFlowTagGroupRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFlowTagGroup"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tagGroups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowTagGroupResponse());
+    }
+
     public CreateHostGroupResponse createHostGroup(String organizationId, CreateHostGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -262,6 +334,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
     }
 
+    public DeleteFlowTagResponse deleteFlowTag(String organizationId, String id) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFlowTagWithOptions(organizationId, id, headers, runtime);
+    }
+
+    public DeleteFlowTagResponse deleteFlowTagWithOptions(String organizationId, String id, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        id = com.aliyun.openapiutil.Client.getEncodeParam(id);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlowTag"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tags/" + id + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowTagResponse());
+    }
+
+    public DeleteFlowTagGroupResponse deleteFlowTagGroup(String organizationId, String id) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteFlowTagGroupWithOptions(organizationId, id, headers, runtime);
+    }
+
+    public DeleteFlowTagGroupResponse deleteFlowTagGroupWithOptions(String organizationId, String id, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        id = com.aliyun.openapiutil.Client.getEncodeParam(id);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFlowTagGroup"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tagGroups/" + id + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowTagGroupResponse());
+    }
+
     public DeleteHostGroupResponse deleteHostGroup(String organizationId, String id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -393,6 +517,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FrozenWorkspaceResponse());
     }
 
+    public GetFlowTagGroupResponse getFlowTagGroup(String organizationId, String id) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getFlowTagGroupWithOptions(organizationId, id, headers, runtime);
+    }
+
+    public GetFlowTagGroupResponse getFlowTagGroupWithOptions(String organizationId, String id, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        id = com.aliyun.openapiutil.Client.getEncodeParam(id);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFlowTagGroup"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tagGroups/" + id + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFlowTagGroupResponse());
+    }
+
     public GetHostGroupResponse getHostGroup(String organizationId, String id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -498,6 +648,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPipelineRunResponse());
     }
 
+    public GetProjectInfoResponse getProjectInfo(String organizationId, String projectId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProjectInfoWithOptions(organizationId, projectId, headers, runtime);
+    }
+
+    public GetProjectInfoResponse getProjectInfoWithOptions(String organizationId, String projectId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        projectId = com.aliyun.openapiutil.Client.getEncodeParam(projectId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProjectInfo"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/project/" + projectId + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProjectInfoResponse());
+    }
+
     public GetVMDeployOrderResponse getVMDeployOrder(String organizationId, String pipelineId, String deployOrderId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -574,6 +750,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceResponse());
+    }
+
+    public ListFlowTagGroupsResponse listFlowTagGroups(String organizationId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listFlowTagGroupsWithOptions(organizationId, headers, runtime);
+    }
+
+    public ListFlowTagGroupsResponse listFlowTagGroupsWithOptions(String organizationId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlowTagGroups"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tagGroups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlowTagGroupsResponse());
     }
 
     public ListHostGroupsResponse listHostGroups(String organizationId, ListHostGroupsRequest request) throws Exception {
@@ -819,6 +1020,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListPipelinesResponse());
+    }
+
+    public ListProjectMembersResponse listProjectMembers(String organizationId, String projectId, ListProjectMembersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProjectMembersWithOptions(organizationId, projectId, request, headers, runtime);
+    }
+
+    public ListProjectMembersResponse listProjectMembersWithOptions(String organizationId, String projectId, ListProjectMembersRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        projectId = com.aliyun.openapiutil.Client.getEncodeParam(projectId);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("targetType", request.targetType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectMembers"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/projects/" + projectId + "/listMembers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectMembersResponse());
     }
 
     public ListResourceMembersResponse listResourceMembers(String organizationId, String resourceType, String resourceId) throws Exception {
@@ -1393,6 +1627,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopVMDeployOrderResponse());
     }
 
+    public UpdateFlowTagResponse updateFlowTag(String organizationId, String id, UpdateFlowTagRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFlowTagWithOptions(organizationId, id, request, headers, runtime);
+    }
+
+    public UpdateFlowTagResponse updateFlowTagWithOptions(String organizationId, String id, UpdateFlowTagRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        id = com.aliyun.openapiutil.Client.getEncodeParam(id);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.color)) {
+            query.put("color", request.color);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowTagGroupId)) {
+            query.put("flowTagGroupId", request.flowTagGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlowTag"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tags/" + id + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowTagResponse());
+    }
+
+    public UpdateFlowTagGroupResponse updateFlowTagGroup(String organizationId, String id, UpdateFlowTagGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateFlowTagGroupWithOptions(organizationId, id, request, headers, runtime);
+    }
+
+    public UpdateFlowTagGroupResponse updateFlowTagGroupWithOptions(String organizationId, String id, UpdateFlowTagGroupRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        id = com.aliyun.openapiutil.Client.getEncodeParam(id);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFlowTagGroup"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/flow/tagGroups/" + id + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFlowTagGroupResponse());
+    }
+
     public UpdateHostGroupResponse updateHostGroup(String organizationId, String id, UpdateHostGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1460,6 +1768,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHostGroupResponse());
+    }
+
+    public UpdatePipelineBaseInfoResponse updatePipelineBaseInfo(String organizationId, String pipelineId, UpdatePipelineBaseInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePipelineBaseInfoWithOptions(organizationId, pipelineId, request, headers, runtime);
+    }
+
+    public UpdatePipelineBaseInfoResponse updatePipelineBaseInfoWithOptions(String organizationId, String pipelineId, UpdatePipelineBaseInfoRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        organizationId = com.aliyun.openapiutil.Client.getEncodeParam(organizationId);
+        pipelineId = com.aliyun.openapiutil.Client.getEncodeParam(pipelineId);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.envId)) {
+            query.put("envId", request.envId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            query.put("pipelineName", request.pipelineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
+            query.put("tagList", request.tagList);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePipelineBaseInfo"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + organizationId + "/pipelines/" + pipelineId + "/baseInfo"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePipelineBaseInfoResponse());
     }
 
     public UpdateResourceMemberResponse updateResourceMember(String organizationId, String resourceType, String resourceId, String accountId, UpdateResourceMemberRequest request) throws Exception {
