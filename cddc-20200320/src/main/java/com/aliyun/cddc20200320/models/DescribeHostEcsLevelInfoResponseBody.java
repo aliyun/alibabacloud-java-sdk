@@ -4,23 +4,15 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HostEcsLevelInfos")
     public java.util.List<DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfos> hostEcsLevelInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeHostEcsLevelInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHostEcsLevelInfoResponseBody self = new DescribeHostEcsLevelInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHostEcsLevelInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeHostEcsLevelInfoResponseBody setHostEcsLevelInfos(java.util.List<DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfos> hostEcsLevelInfos) {
@@ -31,15 +23,17 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
         return this.hostEcsLevelInfos;
     }
 
+    public DescribeHostEcsLevelInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems extends TeaModel {
-        @NameInMap("NetBandWidth")
-        public Float netBandWidth;
-
-        @NameInMap("EcsClass")
-        public String ecsClass;
-
-        @NameInMap("RdsClassCode")
-        public String rdsClassCode;
+        @NameInMap("CloudStorageBandwidth")
+        public Float cloudStorageBandwidth;
 
         @NameInMap("Cpu")
         public Integer cpu;
@@ -47,11 +41,14 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
         @NameInMap("CpuFrequency")
         public String cpuFrequency;
 
-        @NameInMap("StorageIops")
-        public Integer storageIops;
+        @NameInMap("CpuVersion")
+        public String cpuVersion;
 
-        @NameInMap("CloudStorageBandwidth")
-        public Float cloudStorageBandwidth;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EcsClass")
+        public String ecsClass;
 
         @NameInMap("EcsClassCode")
         public String ecsClassCode;
@@ -59,48 +56,35 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
         @NameInMap("IsCloudDisk")
         public Integer isCloudDisk;
 
+        @NameInMap("LocalStorage")
+        public String localStorage;
+
         @NameInMap("Memory")
         public Integer memory;
+
+        @NameInMap("NetBandWidth")
+        public Float netBandWidth;
 
         @NameInMap("NetPackage")
         public Integer netPackage;
 
-        @NameInMap("CpuVersion")
-        public String cpuVersion;
+        @NameInMap("RdsClassCode")
+        public String rdsClassCode;
 
-        @NameInMap("LocalStorage")
-        public String localStorage;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("StorageIops")
+        public Integer storageIops;
 
         public static DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems self = new DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setNetBandWidth(Float netBandWidth) {
-            this.netBandWidth = netBandWidth;
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setCloudStorageBandwidth(Float cloudStorageBandwidth) {
+            this.cloudStorageBandwidth = cloudStorageBandwidth;
             return this;
         }
-        public Float getNetBandWidth() {
-            return this.netBandWidth;
-        }
-
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setEcsClass(String ecsClass) {
-            this.ecsClass = ecsClass;
-            return this;
-        }
-        public String getEcsClass() {
-            return this.ecsClass;
-        }
-
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setRdsClassCode(String rdsClassCode) {
-            this.rdsClassCode = rdsClassCode;
-            return this;
-        }
-        public String getRdsClassCode() {
-            return this.rdsClassCode;
+        public Float getCloudStorageBandwidth() {
+            return this.cloudStorageBandwidth;
         }
 
         public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setCpu(Integer cpu) {
@@ -119,20 +103,28 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             return this.cpuFrequency;
         }
 
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setStorageIops(Integer storageIops) {
-            this.storageIops = storageIops;
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setCpuVersion(String cpuVersion) {
+            this.cpuVersion = cpuVersion;
             return this;
         }
-        public Integer getStorageIops() {
-            return this.storageIops;
+        public String getCpuVersion() {
+            return this.cpuVersion;
         }
 
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setCloudStorageBandwidth(Float cloudStorageBandwidth) {
-            this.cloudStorageBandwidth = cloudStorageBandwidth;
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Float getCloudStorageBandwidth() {
-            return this.cloudStorageBandwidth;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setEcsClass(String ecsClass) {
+            this.ecsClass = ecsClass;
+            return this;
+        }
+        public String getEcsClass() {
+            return this.ecsClass;
         }
 
         public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setEcsClassCode(String ecsClassCode) {
@@ -151,12 +143,28 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             return this.isCloudDisk;
         }
 
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setLocalStorage(String localStorage) {
+            this.localStorage = localStorage;
+            return this;
+        }
+        public String getLocalStorage() {
+            return this.localStorage;
+        }
+
         public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setNetBandWidth(Float netBandWidth) {
+            this.netBandWidth = netBandWidth;
+            return this;
+        }
+        public Float getNetBandWidth() {
+            return this.netBandWidth;
         }
 
         public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setNetPackage(Integer netPackage) {
@@ -167,28 +175,20 @@ public class DescribeHostEcsLevelInfoResponseBody extends TeaModel {
             return this.netPackage;
         }
 
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setCpuVersion(String cpuVersion) {
-            this.cpuVersion = cpuVersion;
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setRdsClassCode(String rdsClassCode) {
+            this.rdsClassCode = rdsClassCode;
             return this;
         }
-        public String getCpuVersion() {
-            return this.cpuVersion;
+        public String getRdsClassCode() {
+            return this.rdsClassCode;
         }
 
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setLocalStorage(String localStorage) {
-            this.localStorage = localStorage;
+        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setStorageIops(Integer storageIops) {
+            this.storageIops = storageIops;
             return this;
         }
-        public String getLocalStorage() {
-            return this.localStorage;
-        }
-
-        public DescribeHostEcsLevelInfoResponseBodyHostEcsLevelInfosItems setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
+        public Integer getStorageIops() {
+            return this.storageIops;
         }
 
     }

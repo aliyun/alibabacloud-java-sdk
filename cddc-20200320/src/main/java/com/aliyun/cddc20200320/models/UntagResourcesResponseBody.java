@@ -3,16 +3,16 @@ package com.aliyun.cddc20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DropDedicatedHostUserResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DropDedicatedHostUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DropDedicatedHostUserResponseBody self = new DropDedicatedHostUserResponseBody();
+    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DropDedicatedHostUserResponseBody setRequestId(String requestId) {
+    public UntagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

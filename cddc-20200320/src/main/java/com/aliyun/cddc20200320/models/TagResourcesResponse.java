@@ -3,21 +3,21 @@ package com.aliyun.cddc20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeScheduleHostResponse extends TeaModel {
+public class TagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeScheduleHostResponseBody body;
+    public TagResourcesResponseBody body;
 
-    public static DescribeScheduleHostResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeScheduleHostResponse self = new DescribeScheduleHostResponse();
+    public static TagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        TagResourcesResponse self = new TagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeScheduleHostResponse setHeaders(java.util.Map<String, String> headers) {
+    public TagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeScheduleHostResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeScheduleHostResponse setBody(DescribeScheduleHostResponseBody body) {
+    public TagResourcesResponse setBody(TagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeScheduleHostResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 

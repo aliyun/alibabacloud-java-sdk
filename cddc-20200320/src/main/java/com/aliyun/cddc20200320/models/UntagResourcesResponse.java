@@ -3,21 +3,21 @@ package com.aliyun.cddc20200320.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeCrossVpcInstanceResponse extends TeaModel {
+public class UntagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeCrossVpcInstanceResponseBody body;
+    public UntagResourcesResponseBody body;
 
-    public static DescribeCrossVpcInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeCrossVpcInstanceResponse self = new DescribeCrossVpcInstanceResponse();
+    public static UntagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponse self = new UntagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCrossVpcInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public UntagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeCrossVpcInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeCrossVpcInstanceResponse setBody(DescribeCrossVpcInstanceResponseBody body) {
+    public UntagResourcesResponse setBody(UntagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeCrossVpcInstanceResponseBody getBody() {
+    public UntagResourcesResponseBody getBody() {
         return this.body;
     }
 

@@ -4,8 +4,14 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class DeleteDedicatedHostGroupRequest extends TeaModel {
+    @NameInMap("DedicatedHostGroupId")
+    public String dedicatedHostGroupId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class DeleteDedicatedHostGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DedicatedHostGroupId")
-    public String dedicatedHostGroupId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DeleteDedicatedHostGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDedicatedHostGroupRequest self = new DeleteDedicatedHostGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDedicatedHostGroupRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
     }
 
     public DeleteDedicatedHostGroupRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class DeleteDedicatedHostGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteDedicatedHostGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteDedicatedHostGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class DeleteDedicatedHostGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDedicatedHostGroupRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
-        this.dedicatedHostGroupId = dedicatedHostGroupId;
-        return this;
-    }
-    public String getDedicatedHostGroupId() {
-        return this.dedicatedHostGroupId;
-    }
-
-    public DeleteDedicatedHostGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
