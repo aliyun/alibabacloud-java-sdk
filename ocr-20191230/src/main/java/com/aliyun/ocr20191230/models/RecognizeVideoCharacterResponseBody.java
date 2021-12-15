@@ -182,6 +182,10 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
         @NameInMap("Height")
         public Long height;
 
+        // 对应的输入OSS文件 (格式oss://{bucketName}/{object})
+        @NameInMap("InputFile")
+        public String inputFile;
+
         @NameInMap("Width")
         public Long width;
 
@@ -204,6 +208,14 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
         }
         public Long getHeight() {
             return this.height;
+        }
+
+        public RecognizeVideoCharacterResponseBodyData setInputFile(String inputFile) {
+            this.inputFile = inputFile;
+            return this;
+        }
+        public String getInputFile() {
+            return this.inputFile;
         }
 
         public RecognizeVideoCharacterResponseBodyData setWidth(Long width) {
