@@ -4,18 +4,26 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostResponseBody extends TeaModel {
+    @NameInMap("DedicateHostList")
+    public CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList;
+
     @NameInMap("OrderId")
     public Long orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DedicateHostList")
-    public CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList;
-
     public static CreateDedicatedHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostResponseBody self = new CreateDedicatedHostResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDedicatedHostResponseBody setDedicateHostList(CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList) {
+        this.dedicateHostList = dedicateHostList;
+        return this;
+    }
+    public CreateDedicatedHostResponseBodyDedicateHostList getDedicateHostList() {
+        return this.dedicateHostList;
     }
 
     public CreateDedicatedHostResponseBody setOrderId(Long orderId) {
@@ -32,14 +40,6 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateDedicatedHostResponseBody setDedicateHostList(CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList) {
-        this.dedicateHostList = dedicateHostList;
-        return this;
-    }
-    public CreateDedicatedHostResponseBodyDedicateHostList getDedicateHostList() {
-        return this.dedicateHostList;
     }
 
     public static class CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList extends TeaModel {

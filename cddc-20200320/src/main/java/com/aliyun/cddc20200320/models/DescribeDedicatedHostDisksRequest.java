@@ -4,8 +4,14 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostDisksRequest extends TeaModel {
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class DescribeDedicatedHostDisksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DescribeDedicatedHostDisksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostDisksRequest self = new DescribeDedicatedHostDisksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDedicatedHostDisksRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
     public DescribeDedicatedHostDisksRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class DescribeDedicatedHostDisksRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDedicatedHostDisksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeDedicatedHostDisksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class DescribeDedicatedHostDisksRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDedicatedHostDisksRequest setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
-        return this;
-    }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
-    }
-
-    public DescribeDedicatedHostDisksRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

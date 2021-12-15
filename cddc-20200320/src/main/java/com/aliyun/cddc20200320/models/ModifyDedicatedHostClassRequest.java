@@ -4,8 +4,14 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostClassRequest extends TeaModel {
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +19,26 @@ public class ModifyDedicatedHostClassRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
-
-    @NameInMap("TargetClassCode")
-    public String targetClassCode;
-
     @NameInMap("SwitchTime")
     public String switchTime;
 
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 
+    @NameInMap("TargetClassCode")
+    public String targetClassCode;
+
     public static ModifyDedicatedHostClassRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostClassRequest self = new ModifyDedicatedHostClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDedicatedHostClassRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
     public ModifyDedicatedHostClassRequest setOwnerId(Long ownerId) {
@@ -39,6 +47,14 @@ public class ModifyDedicatedHostClassRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDedicatedHostClassRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyDedicatedHostClassRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,30 +73,6 @@ public class ModifyDedicatedHostClassRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyDedicatedHostClassRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ModifyDedicatedHostClassRequest setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
-        return this;
-    }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
-    }
-
-    public ModifyDedicatedHostClassRequest setTargetClassCode(String targetClassCode) {
-        this.targetClassCode = targetClassCode;
-        return this;
-    }
-    public String getTargetClassCode() {
-        return this.targetClassCode;
-    }
-
     public ModifyDedicatedHostClassRequest setSwitchTime(String switchTime) {
         this.switchTime = switchTime;
         return this;
@@ -95,6 +87,14 @@ public class ModifyDedicatedHostClassRequest extends TeaModel {
     }
     public String getSwitchTimeMode() {
         return this.switchTimeMode;
+    }
+
+    public ModifyDedicatedHostClassRequest setTargetClassCode(String targetClassCode) {
+        this.targetClassCode = targetClassCode;
+        return this;
+    }
+    public String getTargetClassCode() {
+        return this.targetClassCode;
     }
 
 }

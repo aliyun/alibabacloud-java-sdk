@@ -4,20 +4,20 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostWebShellRequest extends TeaModel {
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -27,12 +27,28 @@ public class DescribeHostWebShellRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHostWebShellRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
     public DescribeHostWebShellRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeHostWebShellRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeHostWebShellRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -49,22 +65,6 @@ public class DescribeHostWebShellRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeHostWebShellRequest setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
-        return this;
-    }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
-    }
-
-    public DescribeHostWebShellRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeHostWebShellRequest setZoneId(String zoneId) {

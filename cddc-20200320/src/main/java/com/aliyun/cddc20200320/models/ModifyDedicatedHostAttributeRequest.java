@@ -4,17 +4,8 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostAttributeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("AllocationStatus")
+    public String allocationStatus;
 
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -22,44 +13,29 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
-    @NameInMap("AllocationStatus")
-    public String allocationStatus;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyDedicatedHostAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostAttributeRequest self = new ModifyDedicatedHostAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDedicatedHostAttributeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public ModifyDedicatedHostAttributeRequest setAllocationStatus(String allocationStatus) {
+        this.allocationStatus = allocationStatus;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public ModifyDedicatedHostAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ModifyDedicatedHostAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyDedicatedHostAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAllocationStatus() {
+        return this.allocationStatus;
     }
 
     public ModifyDedicatedHostAttributeRequest setDedicatedHostId(String dedicatedHostId) {
@@ -78,12 +54,36 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
         return this.hostName;
     }
 
-    public ModifyDedicatedHostAttributeRequest setAllocationStatus(String allocationStatus) {
-        this.allocationStatus = allocationStatus;
+    public ModifyDedicatedHostAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getAllocationStatus() {
-        return this.allocationStatus;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

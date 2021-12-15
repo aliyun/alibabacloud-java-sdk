@@ -4,32 +4,29 @@ package com.aliyun.cddc20200320.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("AutoRenew")
+    public String autoRenew;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
+    @NameInMap("HostClass")
+    public String hostClass;
+
     @NameInMap("HostName")
     public String hostName;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("ImageCategory")
+    public String imageCategory;
 
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
+    @NameInMap("OsPassword")
+    public String osPassword;
 
-    @NameInMap("HostClass")
-    public String hostClass;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PayType")
     public String payType;
@@ -37,53 +34,43 @@ public class CreateDedicatedHostRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("UsedTime")
     public String usedTime;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
-    @NameInMap("AutoRenew")
-    public String autoRenew;
-
-    @NameInMap("ImageCategory")
-    public String imageCategory;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateDedicatedHostRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostRequest self = new CreateDedicatedHostRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDedicatedHostRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDedicatedHostRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
-    public CreateDedicatedHostRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public CreateDedicatedHostRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateDedicatedHostRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateDedicatedHostRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDedicatedHostRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
@@ -94,6 +81,14 @@ public class CreateDedicatedHostRequest extends TeaModel {
         return this.dedicatedHostGroupId;
     }
 
+    public CreateDedicatedHostRequest setHostClass(String hostClass) {
+        this.hostClass = hostClass;
+        return this;
+    }
+    public String getHostClass() {
+        return this.hostClass;
+    }
+
     public CreateDedicatedHostRequest setHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -102,28 +97,28 @@ public class CreateDedicatedHostRequest extends TeaModel {
         return this.hostName;
     }
 
-    public CreateDedicatedHostRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public CreateDedicatedHostRequest setImageCategory(String imageCategory) {
+        this.imageCategory = imageCategory;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public String getImageCategory() {
+        return this.imageCategory;
     }
 
-    public CreateDedicatedHostRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
+    public CreateDedicatedHostRequest setOsPassword(String osPassword) {
+        this.osPassword = osPassword;
         return this;
     }
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public String getOsPassword() {
+        return this.osPassword;
     }
 
-    public CreateDedicatedHostRequest setHostClass(String hostClass) {
-        this.hostClass = hostClass;
+    public CreateDedicatedHostRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getHostClass() {
-        return this.hostClass;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateDedicatedHostRequest setPayType(String payType) {
@@ -142,6 +137,30 @@ public class CreateDedicatedHostRequest extends TeaModel {
         return this.period;
     }
 
+    public CreateDedicatedHostRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDedicatedHostRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDedicatedHostRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public CreateDedicatedHostRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -150,28 +169,20 @@ public class CreateDedicatedHostRequest extends TeaModel {
         return this.usedTime;
     }
 
-    public CreateDedicatedHostRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateDedicatedHostRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
-    public CreateDedicatedHostRequest setAutoRenew(String autoRenew) {
-        this.autoRenew = autoRenew;
+    public CreateDedicatedHostRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public String getAutoRenew() {
-        return this.autoRenew;
-    }
-
-    public CreateDedicatedHostRequest setImageCategory(String imageCategory) {
-        this.imageCategory = imageCategory;
-        return this;
-    }
-    public String getImageCategory() {
-        return this.imageCategory;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }
