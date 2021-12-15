@@ -3,16 +3,14 @@ package com.aliyun.mts20210728.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitCopyrightJobResponseBody extends TeaModel {
-    // 返回数据
+public class SubmitCopyrightExtractResponseBody extends TeaModel {
     @NameInMap("Data")
-    public SubmitCopyrightJobResponseBodyData data;
+    public SubmitCopyrightExtractResponseBodyData data;
 
-    // 返回信息
+    // 返回消息
     @NameInMap("Message")
     public String message;
 
-    // 请求Id
     @NameInMap("RequestID")
     public String requestID;
 
@@ -20,20 +18,20 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
     @NameInMap("StatusCode")
     public Long statusCode;
 
-    public static SubmitCopyrightJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SubmitCopyrightJobResponseBody self = new SubmitCopyrightJobResponseBody();
+    public static SubmitCopyrightExtractResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SubmitCopyrightExtractResponseBody self = new SubmitCopyrightExtractResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SubmitCopyrightJobResponseBody setData(SubmitCopyrightJobResponseBodyData data) {
+    public SubmitCopyrightExtractResponseBody setData(SubmitCopyrightExtractResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public SubmitCopyrightJobResponseBodyData getData() {
+    public SubmitCopyrightExtractResponseBodyData getData() {
         return this.data;
     }
 
-    public SubmitCopyrightJobResponseBody setMessage(String message) {
+    public SubmitCopyrightExtractResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -41,7 +39,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SubmitCopyrightJobResponseBody setRequestID(String requestID) {
+    public SubmitCopyrightExtractResponseBody setRequestID(String requestID) {
         this.requestID = requestID;
         return this;
     }
@@ -49,7 +47,7 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         return this.requestID;
     }
 
-    public SubmitCopyrightJobResponseBody setStatusCode(Long statusCode) {
+    public SubmitCopyrightExtractResponseBody setStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -57,17 +55,17 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         return this.statusCode;
     }
 
-    public static class SubmitCopyrightJobResponseBodyData extends TeaModel {
+    public static class SubmitCopyrightExtractResponseBodyData extends TeaModel {
         // 任务id
         @NameInMap("JobId")
         public String jobId;
 
-        public static SubmitCopyrightJobResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            SubmitCopyrightJobResponseBodyData self = new SubmitCopyrightJobResponseBodyData();
+        public static SubmitCopyrightExtractResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SubmitCopyrightExtractResponseBodyData self = new SubmitCopyrightExtractResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public SubmitCopyrightJobResponseBodyData setJobId(String jobId) {
+        public SubmitCopyrightExtractResponseBodyData setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }

@@ -24,6 +24,10 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // 输出的视频，oss三元组
+    @NameInMap("Output")
+    public String output;
+
     // 水印起始时间(单位是秒)，不填写默认为0
     @NameInMap("StartTime")
     public Long startTime;
@@ -32,17 +36,13 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("TotalTime")
     public Long totalTime;
 
-    // 输出的视频，oss三元组
-    @NameInMap("Output")
-    public String output;
+    // 外部url链接(Input和url二选一)
+    @NameInMap("Url")
+    public String url;
 
     // 用户自定义数据
     @NameInMap("UserData")
     public String userData;
-
-    // 外部url链接(Input和url二选一)
-    @NameInMap("Url")
-    public String url;
 
     public static SubmitCopyrightJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCopyrightJobRequest self = new SubmitCopyrightJobRequest();
@@ -89,6 +89,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         return this.message;
     }
 
+    public SubmitCopyrightJobRequest setOutput(String output) {
+        this.output = output;
+        return this;
+    }
+    public String getOutput() {
+        return this.output;
+    }
+
     public SubmitCopyrightJobRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -105,12 +113,12 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         return this.totalTime;
     }
 
-    public SubmitCopyrightJobRequest setOutput(String output) {
-        this.output = output;
+    public SubmitCopyrightJobRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public String getOutput() {
-        return this.output;
+    public String getUrl() {
+        return this.url;
     }
 
     public SubmitCopyrightJobRequest setUserData(String userData) {
@@ -119,14 +127,6 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitCopyrightJobRequest setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
     }
 
 }
