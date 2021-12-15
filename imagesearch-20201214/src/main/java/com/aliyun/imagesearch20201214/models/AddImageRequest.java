@@ -4,32 +4,32 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class AddImageRequest extends TeaModel {
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("ProductId")
-    public String productId;
-
-    @NameInMap("PicName")
-    public String picName;
-
-    @NameInMap("PicContent")
-    public String picContent;
-
     @NameInMap("CategoryId")
     public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
 
-    @NameInMap("Region")
-    public String region;
-
     @NameInMap("CustomContent")
     public String customContent;
 
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("IntAttr")
     public Integer intAttr;
+
+    @NameInMap("PicContent")
+    public String picContent;
+
+    @NameInMap("PicName")
+    public String picName;
+
+    @NameInMap("ProductId")
+    public String productId;
+
+    @NameInMap("Region")
+    public String region;
 
     @NameInMap("StrAttr")
     public String strAttr;
@@ -37,38 +37,6 @@ public class AddImageRequest extends TeaModel {
     public static AddImageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddImageRequest self = new AddImageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddImageRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    public AddImageRequest setProductId(String productId) {
-        this.productId = productId;
-        return this;
-    }
-    public String getProductId() {
-        return this.productId;
-    }
-
-    public AddImageRequest setPicName(String picName) {
-        this.picName = picName;
-        return this;
-    }
-    public String getPicName() {
-        return this.picName;
-    }
-
-    public AddImageRequest setPicContent(String picContent) {
-        this.picContent = picContent;
-        return this;
-    }
-    public String getPicContent() {
-        return this.picContent;
     }
 
     public AddImageRequest setCategoryId(Integer categoryId) {
@@ -87,14 +55,6 @@ public class AddImageRequest extends TeaModel {
         return this.crop;
     }
 
-    public AddImageRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
     public AddImageRequest setCustomContent(String customContent) {
         this.customContent = customContent;
         return this;
@@ -103,12 +63,52 @@ public class AddImageRequest extends TeaModel {
         return this.customContent;
     }
 
+    public AddImageRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
     public AddImageRequest setIntAttr(Integer intAttr) {
         this.intAttr = intAttr;
         return this;
     }
     public Integer getIntAttr() {
         return this.intAttr;
+    }
+
+    public AddImageRequest setPicContent(String picContent) {
+        this.picContent = picContent;
+        return this;
+    }
+    public String getPicContent() {
+        return this.picContent;
+    }
+
+    public AddImageRequest setPicName(String picName) {
+        this.picName = picName;
+        return this;
+    }
+    public String getPicName() {
+        return this.picName;
+    }
+
+    public AddImageRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
+    }
+
+    public AddImageRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public AddImageRequest setStrAttr(String strAttr) {
