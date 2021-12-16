@@ -10,6 +10,9 @@ public class GetArtifactBuildTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetArtifactBuildTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         GetArtifactBuildTaskRequest self = new GetArtifactBuildTaskRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetArtifactBuildTaskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetArtifactBuildTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

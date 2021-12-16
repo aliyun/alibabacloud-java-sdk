@@ -10,6 +10,9 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -35,6 +38,14 @@ public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public DeleteInstanceVpcEndpointLinkedVpcRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteInstanceVpcEndpointLinkedVpcRequest setVpcId(String vpcId) {

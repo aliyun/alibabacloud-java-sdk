@@ -28,6 +28,9 @@ public class UpdateRepoSourceCodeRepoRequest extends TeaModel {
     @NameInMap("OverseaBuild")
     public String overseaBuild;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoId")
     public String repoId;
 
@@ -98,6 +101,14 @@ public class UpdateRepoSourceCodeRepoRequest extends TeaModel {
     }
     public String getOverseaBuild() {
         return this.overseaBuild;
+    }
+
+    public UpdateRepoSourceCodeRepoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateRepoSourceCodeRepoRequest setRepoId(String repoId) {

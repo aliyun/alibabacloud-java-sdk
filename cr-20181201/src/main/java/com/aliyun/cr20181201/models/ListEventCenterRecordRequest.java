@@ -16,6 +16,9 @@ public class ListEventCenterRecordRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleId")
     public String ruleId;
 
@@ -54,6 +57,14 @@ public class ListEventCenterRecordRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEventCenterRecordRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListEventCenterRecordRequest setRuleId(String ruleId) {

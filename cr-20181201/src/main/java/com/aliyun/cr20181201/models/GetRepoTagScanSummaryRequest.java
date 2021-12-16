@@ -10,6 +10,9 @@ public class GetRepoTagScanSummaryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoId")
     public String repoId;
 
@@ -38,6 +41,14 @@ public class GetRepoTagScanSummaryRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetRepoTagScanSummaryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetRepoTagScanSummaryRequest setRepoId(String repoId) {

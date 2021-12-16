@@ -19,6 +19,9 @@ public class ListNamespaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNamespaceRequest self = new ListNamespaceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListNamespaceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListNamespaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

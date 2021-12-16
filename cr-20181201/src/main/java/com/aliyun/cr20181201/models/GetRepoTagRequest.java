@@ -3,10 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class GetRepoTagLayersRequest extends TeaModel {
-    @NameInMap("Digest")
-    public String digest;
-
+public class GetRepoTagRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,20 +16,12 @@ public class GetRepoTagLayersRequest extends TeaModel {
     @NameInMap("Tag")
     public String tag;
 
-    public static GetRepoTagLayersRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetRepoTagLayersRequest self = new GetRepoTagLayersRequest();
+    public static GetRepoTagRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetRepoTagRequest self = new GetRepoTagRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagLayersRequest setDigest(String digest) {
-        this.digest = digest;
-        return this;
-    }
-    public String getDigest() {
-        return this.digest;
-    }
-
-    public GetRepoTagLayersRequest setInstanceId(String instanceId) {
+    public GetRepoTagRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -40,7 +29,7 @@ public class GetRepoTagLayersRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetRepoTagLayersRequest setRegionId(String regionId) {
+    public GetRepoTagRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -48,7 +37,7 @@ public class GetRepoTagLayersRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetRepoTagLayersRequest setRepoId(String repoId) {
+    public GetRepoTagRequest setRepoId(String repoId) {
         this.repoId = repoId;
         return this;
     }
@@ -56,7 +45,7 @@ public class GetRepoTagLayersRequest extends TeaModel {
         return this.repoId;
     }
 
-    public GetRepoTagLayersRequest setTag(String tag) {
+    public GetRepoTagRequest setTag(String tag) {
         this.tag = tag;
         return this;
     }

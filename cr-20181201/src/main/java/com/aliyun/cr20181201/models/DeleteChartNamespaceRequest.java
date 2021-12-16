@@ -10,6 +10,9 @@ public class DeleteChartNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeleteChartNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteChartNamespaceRequest self = new DeleteChartNamespaceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DeleteChartNamespaceRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public DeleteChartNamespaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

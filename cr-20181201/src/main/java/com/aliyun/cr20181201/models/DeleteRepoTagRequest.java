@@ -7,6 +7,9 @@ public class DeleteRepoTagRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoId")
     public String repoId;
 
@@ -24,6 +27,14 @@ public class DeleteRepoTagRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteRepoTagRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteRepoTagRequest setRepoId(String repoId) {

@@ -16,6 +16,9 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRequest self = new ListInstanceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListInstanceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -19,6 +19,9 @@ public class ListChartNamespaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListChartNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChartNamespaceRequest self = new ListChartNamespaceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListChartNamespaceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListChartNamespaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -22,6 +22,9 @@ public class UpdateEventCenterRuleRequest extends TeaModel {
     @NameInMap("Namespaces")
     public java.util.List<String> namespaces;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoNames")
     public java.util.List<String> repoNames;
 
@@ -85,6 +88,14 @@ public class UpdateEventCenterRuleRequest extends TeaModel {
     }
     public java.util.List<String> getNamespaces() {
         return this.namespaces;
+    }
+
+    public UpdateEventCenterRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateEventCenterRuleRequest setRepoNames(java.util.List<String> repoNames) {

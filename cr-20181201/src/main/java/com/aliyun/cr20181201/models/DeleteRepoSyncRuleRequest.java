@@ -7,6 +7,9 @@ public class DeleteRepoSyncRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SyncRuleId")
     public String syncRuleId;
 
@@ -21,6 +24,14 @@ public class DeleteRepoSyncRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteRepoSyncRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteRepoSyncRuleRequest setSyncRuleId(String syncRuleId) {
