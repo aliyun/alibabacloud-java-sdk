@@ -8,6 +8,10 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiRequest extends TeaModel 
     @NameInMap("purchaseOrderNo")
     public String purchaseOrderNo;
 
+    // 备注，取消原因
+    @NameInMap("remark")
+    public String remark;
+
     // 供应商ID
     @NameInMap("supplierId")
     public Long supplierId;
@@ -16,9 +20,9 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiRequest extends TeaModel 
     @NameInMap("tenantId")
     public String tenantId;
 
-    // 备注，取消原因
-    @NameInMap("remark")
-    public String remark;
+    // 供应商ID，路由专用
+    @NameInMap("routeSupplierId")
+    public Long routeSupplierId;
 
     public static AscpPurchasingPurchaseOrderCancelledErpSpiRequest build(java.util.Map<String, ?> map) throws Exception {
         AscpPurchasingPurchaseOrderCancelledErpSpiRequest self = new AscpPurchasingPurchaseOrderCancelledErpSpiRequest();
@@ -31,6 +35,14 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiRequest extends TeaModel 
     }
     public String getPurchaseOrderNo() {
         return this.purchaseOrderNo;
+    }
+
+    public AscpPurchasingPurchaseOrderCancelledErpSpiRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public AscpPurchasingPurchaseOrderCancelledErpSpiRequest setSupplierId(Long supplierId) {
@@ -49,12 +61,12 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiRequest extends TeaModel 
         return this.tenantId;
     }
 
-    public AscpPurchasingPurchaseOrderCancelledErpSpiRequest setRemark(String remark) {
-        this.remark = remark;
+    public AscpPurchasingPurchaseOrderCancelledErpSpiRequest setRouteSupplierId(Long routeSupplierId) {
+        this.routeSupplierId = routeSupplierId;
         return this;
     }
-    public String getRemark() {
-        return this.remark;
+    public Long getRouteSupplierId() {
+        return this.routeSupplierId;
     }
 
 }

@@ -3,7 +3,11 @@ package com.aliyun.nbf20210701_204300935.models;
 
 import com.aliyun.tea.*;
 
-public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends TeaModel {
+public class AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest extends TeaModel {
+    // 收货单号(废弃)
+    @NameInMap("consignOrderNo")
+    public String consignOrderNo;
+
     // 附加信息
     @NameInMap("extFields")
     public String extFields;
@@ -16,9 +20,17 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
     @NameInMap("gmtReceiveFinish")
     public String gmtReceiveFinish;
 
+    // 收货单号
+    @NameInMap("inboundOrderNo")
+    public String inboundOrderNo;
+
     // 货品行列表
     @NameInMap("items")
-    public java.util.List<AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems> items;
+    public java.util.List<AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems> items;
+
+    // 物流单号(LBX)
+    @NameInMap("outInboundNo")
+    public String outInboundNo;
 
     // 单据类型
     @NameInMap("poType")
@@ -28,7 +40,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
     @NameInMap("purchaseOrderNo")
     public String purchaseOrderNo;
 
-    // 来源单号
+    // 来源单号(PO的)
     @NameInMap("sourceOrderCode")
     public String sourceOrderCode;
 
@@ -42,18 +54,26 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
 
     // 仓信息
     @NameInMap("warehouse")
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse warehouse;
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse warehouse;
 
     // 供应商ID，路由专用
     @NameInMap("routeSupplierId")
     public Long routeSupplierId;
 
-    public static AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest build(java.util.Map<String, ?> map) throws Exception {
-        AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest self = new AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest();
+    public static AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest build(java.util.Map<String, ?> map) throws Exception {
+        AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest self = new AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest();
         return TeaModel.build(map, self);
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setExtFields(String extFields) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setConsignOrderNo(String consignOrderNo) {
+        this.consignOrderNo = consignOrderNo;
+        return this;
+    }
+    public String getConsignOrderNo() {
+        return this.consignOrderNo;
+    }
+
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setExtFields(String extFields) {
         this.extFields = extFields;
         return this;
     }
@@ -61,7 +81,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.extFields;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setGmtCreate(String gmtCreate) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
     }
@@ -69,7 +89,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.gmtCreate;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setGmtReceiveFinish(String gmtReceiveFinish) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setGmtReceiveFinish(String gmtReceiveFinish) {
         this.gmtReceiveFinish = gmtReceiveFinish;
         return this;
     }
@@ -77,15 +97,31 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.gmtReceiveFinish;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setItems(java.util.List<AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems> items) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setInboundOrderNo(String inboundOrderNo) {
+        this.inboundOrderNo = inboundOrderNo;
+        return this;
+    }
+    public String getInboundOrderNo() {
+        return this.inboundOrderNo;
+    }
+
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setItems(java.util.List<AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems> items) {
         this.items = items;
         return this;
     }
-    public java.util.List<AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems> getItems() {
+    public java.util.List<AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems> getItems() {
         return this.items;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setPoType(Integer poType) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setOutInboundNo(String outInboundNo) {
+        this.outInboundNo = outInboundNo;
+        return this;
+    }
+    public String getOutInboundNo() {
+        return this.outInboundNo;
+    }
+
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setPoType(Integer poType) {
         this.poType = poType;
         return this;
     }
@@ -93,7 +129,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.poType;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setPurchaseOrderNo(String purchaseOrderNo) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setPurchaseOrderNo(String purchaseOrderNo) {
         this.purchaseOrderNo = purchaseOrderNo;
         return this;
     }
@@ -101,7 +137,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.purchaseOrderNo;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setSourceOrderCode(String sourceOrderCode) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setSourceOrderCode(String sourceOrderCode) {
         this.sourceOrderCode = sourceOrderCode;
         return this;
     }
@@ -109,7 +145,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.sourceOrderCode;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setSupplierId(Long supplierId) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setSupplierId(Long supplierId) {
         this.supplierId = supplierId;
         return this;
     }
@@ -117,7 +153,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.supplierId;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setTenantId(String tenantId) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
@@ -125,15 +161,15 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.tenantId;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setWarehouse(AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse warehouse) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setWarehouse(AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse warehouse) {
         this.warehouse = warehouse;
         return this;
     }
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse getWarehouse() {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse getWarehouse() {
         return this.warehouse;
     }
 
-    public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest setRouteSupplierId(Long routeSupplierId) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequest setRouteSupplierId(Long routeSupplierId) {
         this.routeSupplierId = routeSupplierId;
         return this;
     }
@@ -141,7 +177,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         return this.routeSupplierId;
     }
 
-    public static class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems extends TeaModel {
+    public static class AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems extends TeaModel {
         // 条形码
         @NameInMap("barcode")
         public String barcode;
@@ -158,7 +194,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         @NameInMap("orderLineId")
         public Long orderLineId;
 
-        // 采购数量
+        // 计划收货数量(发货数量)
         @NameInMap("planQuantity")
         public Float planQuantity;
 
@@ -194,12 +230,12 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         @NameInMap("taxRate")
         public Float taxRate;
 
-        public static AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems build(java.util.Map<String, ?> map) throws Exception {
-            AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems self = new AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems();
+        public static AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems build(java.util.Map<String, ?> map) throws Exception {
+            AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems self = new AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems();
             return TeaModel.build(map, self);
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setBarcode(String barcode) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setBarcode(String barcode) {
             this.barcode = barcode;
             return this;
         }
@@ -207,7 +243,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.barcode;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setCurrency(String currency) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -215,7 +251,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.currency;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setExtFields(String extFields) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setExtFields(String extFields) {
             this.extFields = extFields;
             return this;
         }
@@ -223,7 +259,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.extFields;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setOrderLineId(Long orderLineId) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setOrderLineId(Long orderLineId) {
             this.orderLineId = orderLineId;
             return this;
         }
@@ -231,7 +267,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.orderLineId;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setPlanQuantity(Float planQuantity) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setPlanQuantity(Float planQuantity) {
             this.planQuantity = planQuantity;
             return this;
         }
@@ -239,7 +275,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.planQuantity;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setPriceIncludingTax(Float priceIncludingTax) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setPriceIncludingTax(Float priceIncludingTax) {
             this.priceIncludingTax = priceIncludingTax;
             return this;
         }
@@ -247,7 +283,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.priceIncludingTax;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setProductId(Long productId) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setProductId(Long productId) {
             this.productId = productId;
             return this;
         }
@@ -255,7 +291,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.productId;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setProductName(String productName) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setProductName(String productName) {
             this.productName = productName;
             return this;
         }
@@ -263,7 +299,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.productName;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setPurchaseUnit(String purchaseUnit) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setPurchaseUnit(String purchaseUnit) {
             this.purchaseUnit = purchaseUnit;
             return this;
         }
@@ -271,7 +307,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.purchaseUnit;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setReceivedDefectiveQuantity(Float receivedDefectiveQuantity) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setReceivedDefectiveQuantity(Float receivedDefectiveQuantity) {
             this.receivedDefectiveQuantity = receivedDefectiveQuantity;
             return this;
         }
@@ -279,7 +315,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.receivedDefectiveQuantity;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setReceivedNormalQuantity(Float receivedNormalQuantity) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setReceivedNormalQuantity(Float receivedNormalQuantity) {
             this.receivedNormalQuantity = receivedNormalQuantity;
             return this;
         }
@@ -287,7 +323,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.receivedNormalQuantity;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setStorageUnit(String storageUnit) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setStorageUnit(String storageUnit) {
             this.storageUnit = storageUnit;
             return this;
         }
@@ -295,7 +331,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.storageUnit;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestItems setTaxRate(Float taxRate) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestItems setTaxRate(Float taxRate) {
             this.taxRate = taxRate;
             return this;
         }
@@ -305,7 +341,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
 
     }
 
-    public static class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse extends TeaModel {
+    public static class AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse extends TeaModel {
         // 仓库编码
         @NameInMap("warehouseCode")
         public String warehouseCode;
@@ -314,12 +350,12 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
         @NameInMap("warehouseName")
         public String warehouseName;
 
-        public static AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse build(java.util.Map<String, ?> map) throws Exception {
-            AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse self = new AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse();
+        public static AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse build(java.util.Map<String, ?> map) throws Exception {
+            AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse self = new AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse();
             return TeaModel.build(map, self);
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse setWarehouseCode(String warehouseCode) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse setWarehouseCode(String warehouseCode) {
             this.warehouseCode = warehouseCode;
             return this;
         }
@@ -327,7 +363,7 @@ public class AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequest extends Te
             return this.warehouseCode;
         }
 
-        public AscpPurchasingPurchaseOrderReceivedFinishedErpSpiRequestWarehouse setWarehouseName(String warehouseName) {
+        public AscpPurchasingInboundOrderReceivedFinishedErpSpiRequestWarehouse setWarehouseName(String warehouseName) {
             this.warehouseName = warehouseName;
             return this;
         }

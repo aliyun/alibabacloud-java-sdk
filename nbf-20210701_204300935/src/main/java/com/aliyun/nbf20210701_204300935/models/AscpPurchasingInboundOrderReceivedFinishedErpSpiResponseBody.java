@@ -3,7 +3,7 @@ package com.aliyun.nbf20210701_204300935.models;
 
 import com.aliyun.tea.*;
 
-public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaModel {
+public class AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody extends TeaModel {
     // 错误编码
     @NameInMap("errorCode")
     public String errorCode;
@@ -12,7 +12,7 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaM
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 失败是否可重试
+    // 是否可重试
     @NameInMap("retry")
     public Boolean retry;
 
@@ -20,12 +20,12 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaM
     @NameInMap("success")
     public Boolean success;
 
-    public static AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody self = new AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody();
+    public static AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody self = new AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody setErrorCode(String errorCode) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -33,7 +33,7 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaM
         return this.errorCode;
     }
 
-    public AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody setErrorMsg(String errorMsg) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
@@ -41,7 +41,7 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaM
         return this.errorMsg;
     }
 
-    public AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody setRetry(Boolean retry) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody setRetry(Boolean retry) {
         this.retry = retry;
         return this;
     }
@@ -49,7 +49,7 @@ public class AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody extends TeaM
         return this.retry;
     }
 
-    public AscpPurchasingPurchaseOrderCancelledErpSpiResponseBody setSuccess(Boolean success) {
+    public AscpPurchasingInboundOrderReceivedFinishedErpSpiResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
