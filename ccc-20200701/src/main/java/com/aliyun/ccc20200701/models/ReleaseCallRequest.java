@@ -4,40 +4,32 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ReleaseCallRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("ChannelId")
+    public String channelId;
 
     @NameInMap("DeviceId")
     public String deviceId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("JobId")
     public String jobId;
 
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("UserId")
+    public String userId;
 
     public static ReleaseCallRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseCallRequest self = new ReleaseCallRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ReleaseCallRequest setChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ReleaseCallRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public ReleaseCallRequest setDeviceId(String deviceId) {
@@ -48,6 +40,14 @@ public class ReleaseCallRequest extends TeaModel {
         return this.deviceId;
     }
 
+    public ReleaseCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public ReleaseCallRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -56,12 +56,12 @@ public class ReleaseCallRequest extends TeaModel {
         return this.jobId;
     }
 
-    public ReleaseCallRequest setChannelId(String channelId) {
-        this.channelId = channelId;
+    public ReleaseCallRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getChannelId() {
-        return this.channelId;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

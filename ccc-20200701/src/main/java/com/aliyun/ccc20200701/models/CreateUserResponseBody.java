@@ -7,20 +7,20 @@ public class CreateUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateUserResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public CreateUserResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUserResponseBody self = new CreateUserResponseBody();
@@ -33,6 +33,14 @@ public class CreateUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateUserResponseBody setData(CreateUserResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateUserResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class CreateUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateUserResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,35 +67,35 @@ public class CreateUserResponseBody extends TeaModel {
         return this.params;
     }
 
-    public CreateUserResponseBody setData(CreateUserResponseBodyData data) {
-        this.data = data;
+    public CreateUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateUserResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateUserResponseBodyData extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
-        @NameInMap("Extension")
-        public String extension;
-
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("Extension")
+        public String extension;
+
         @NameInMap("LoginName")
         public String loginName;
-
-        @NameInMap("WorkMode")
-        public String workMode;
 
         @NameInMap("Mobile")
         public String mobile;
 
         @NameInMap("UserId")
         public String userId;
+
+        @NameInMap("WorkMode")
+        public String workMode;
 
         public static CreateUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateUserResponseBodyData self = new CreateUserResponseBodyData();
@@ -110,14 +110,6 @@ public class CreateUserResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public CreateUserResponseBodyData setExtension(String extension) {
-            this.extension = extension;
-            return this;
-        }
-        public String getExtension() {
-            return this.extension;
-        }
-
         public CreateUserResponseBodyData setEmail(String email) {
             this.email = email;
             return this;
@@ -126,20 +118,20 @@ public class CreateUserResponseBody extends TeaModel {
             return this.email;
         }
 
+        public CreateUserResponseBodyData setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
         public CreateUserResponseBodyData setLoginName(String loginName) {
             this.loginName = loginName;
             return this;
         }
         public String getLoginName() {
             return this.loginName;
-        }
-
-        public CreateUserResponseBodyData setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
         }
 
         public CreateUserResponseBodyData setMobile(String mobile) {
@@ -156,6 +148,14 @@ public class CreateUserResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public CreateUserResponseBodyData setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

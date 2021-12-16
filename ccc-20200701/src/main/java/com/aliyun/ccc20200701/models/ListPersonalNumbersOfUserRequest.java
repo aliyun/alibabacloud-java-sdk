@@ -7,8 +7,8 @@ public class ListPersonalNumbersOfUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("IsMember")
+    public Boolean isMember;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -16,11 +16,11 @@ public class ListPersonalNumbersOfUserRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("IsMember")
-    public Boolean isMember;
-
     @NameInMap("SearchPattern")
     public String searchPattern;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ListPersonalNumbersOfUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPersonalNumbersOfUserRequest self = new ListPersonalNumbersOfUserRequest();
@@ -35,12 +35,12 @@ public class ListPersonalNumbersOfUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListPersonalNumbersOfUserRequest setUserId(String userId) {
-        this.userId = userId;
+    public ListPersonalNumbersOfUserRequest setIsMember(Boolean isMember) {
+        this.isMember = isMember;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
+    public Boolean getIsMember() {
+        return this.isMember;
     }
 
     public ListPersonalNumbersOfUserRequest setPageNumber(Integer pageNumber) {
@@ -59,20 +59,20 @@ public class ListPersonalNumbersOfUserRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListPersonalNumbersOfUserRequest setIsMember(Boolean isMember) {
-        this.isMember = isMember;
-        return this;
-    }
-    public Boolean getIsMember() {
-        return this.isMember;
-    }
-
     public ListPersonalNumbersOfUserRequest setSearchPattern(String searchPattern) {
         this.searchPattern = searchPattern;
         return this;
     }
     public String getSearchPattern() {
         return this.searchPattern;
+    }
+
+    public ListPersonalNumbersOfUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

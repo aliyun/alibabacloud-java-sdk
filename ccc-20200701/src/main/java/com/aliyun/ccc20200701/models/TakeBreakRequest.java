@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class TakeBreakRequest extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
-    @NameInMap("Code")
-    public String code;
-
     public static TakeBreakRequest build(java.util.Map<String, ?> map) throws Exception {
         TakeBreakRequest self = new TakeBreakRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TakeBreakRequest setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public TakeBreakRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public TakeBreakRequest setInstanceId(String instanceId) {
@@ -35,22 +51,6 @@ public class TakeBreakRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public TakeBreakRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public TakeBreakRequest setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

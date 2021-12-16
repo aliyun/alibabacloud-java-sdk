@@ -7,9 +7,6 @@ public class ListSkillLevelsOfUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("IsMember")
     public Boolean isMember;
 
@@ -22,6 +19,9 @@ public class ListSkillLevelsOfUserRequest extends TeaModel {
     @NameInMap("SearchPattern")
     public String searchPattern;
 
+    @NameInMap("UserId")
+    public String userId;
+
     public static ListSkillLevelsOfUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillLevelsOfUserRequest self = new ListSkillLevelsOfUserRequest();
         return TeaModel.build(map, self);
@@ -33,14 +33,6 @@ public class ListSkillLevelsOfUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListSkillLevelsOfUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListSkillLevelsOfUserRequest setIsMember(Boolean isMember) {
@@ -73,6 +65,14 @@ public class ListSkillLevelsOfUserRequest extends TeaModel {
     }
     public String getSearchPattern() {
         return this.searchPattern;
+    }
+
+    public ListSkillLevelsOfUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

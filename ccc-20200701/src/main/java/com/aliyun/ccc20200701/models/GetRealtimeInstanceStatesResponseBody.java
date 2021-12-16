@@ -7,6 +7,9 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetRealtimeInstanceStatesResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetRealtimeInstanceStatesResponseBodyData data;
 
     public static GetRealtimeInstanceStatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRealtimeInstanceStatesResponseBody self = new GetRealtimeInstanceStatesResponseBody();
@@ -30,6 +30,14 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetRealtimeInstanceStatesResponseBody setData(GetRealtimeInstanceStatesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRealtimeInstanceStatesResponseBodyData getData() {
+        return this.data;
     }
 
     public GetRealtimeInstanceStatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,23 +64,27 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRealtimeInstanceStatesResponseBody setData(GetRealtimeInstanceStatesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetRealtimeInstanceStatesResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetRealtimeInstanceStatesResponseBodyData extends TeaModel {
-        @NameInMap("WorkingAgents")
-        public Long workingAgents;
+        @NameInMap("BreakingAgents")
+        public Long breakingAgents;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InteractiveCalls")
+        public Long interactiveCalls;
+
+        @NameInMap("LoggedInAgents")
+        public Long loggedInAgents;
 
         @NameInMap("LongestWaitingTime")
         public Long longestWaitingTime;
 
-        @NameInMap("LoggedInAgents")
-        public Long loggedInAgents;
+        @NameInMap("ReadyAgents")
+        public Long readyAgents;
+
+        @NameInMap("TalkingAgents")
+        public Long talkingAgents;
 
         @NameInMap("TotalAgents")
         public Long totalAgents;
@@ -80,32 +92,44 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
-        @NameInMap("BreakingAgents")
-        public Long breakingAgents;
-
-        @NameInMap("TalkingAgents")
-        public Long talkingAgents;
-
-        @NameInMap("InteractiveCalls")
-        public Long interactiveCalls;
-
-        @NameInMap("ReadyAgents")
-        public Long readyAgents;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("WorkingAgents")
+        public Long workingAgents;
 
         public static GetRealtimeInstanceStatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRealtimeInstanceStatesResponseBodyData self = new GetRealtimeInstanceStatesResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetRealtimeInstanceStatesResponseBodyData setWorkingAgents(Long workingAgents) {
-            this.workingAgents = workingAgents;
+        public GetRealtimeInstanceStatesResponseBodyData setBreakingAgents(Long breakingAgents) {
+            this.breakingAgents = breakingAgents;
             return this;
         }
-        public Long getWorkingAgents() {
-            return this.workingAgents;
+        public Long getBreakingAgents() {
+            return this.breakingAgents;
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyData setInteractiveCalls(Long interactiveCalls) {
+            this.interactiveCalls = interactiveCalls;
+            return this;
+        }
+        public Long getInteractiveCalls() {
+            return this.interactiveCalls;
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyData setLoggedInAgents(Long loggedInAgents) {
+            this.loggedInAgents = loggedInAgents;
+            return this;
+        }
+        public Long getLoggedInAgents() {
+            return this.loggedInAgents;
         }
 
         public GetRealtimeInstanceStatesResponseBodyData setLongestWaitingTime(Long longestWaitingTime) {
@@ -116,12 +140,20 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             return this.longestWaitingTime;
         }
 
-        public GetRealtimeInstanceStatesResponseBodyData setLoggedInAgents(Long loggedInAgents) {
-            this.loggedInAgents = loggedInAgents;
+        public GetRealtimeInstanceStatesResponseBodyData setReadyAgents(Long readyAgents) {
+            this.readyAgents = readyAgents;
             return this;
         }
-        public Long getLoggedInAgents() {
-            return this.loggedInAgents;
+        public Long getReadyAgents() {
+            return this.readyAgents;
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyData setTalkingAgents(Long talkingAgents) {
+            this.talkingAgents = talkingAgents;
+            return this;
+        }
+        public Long getTalkingAgents() {
+            return this.talkingAgents;
         }
 
         public GetRealtimeInstanceStatesResponseBodyData setTotalAgents(Long totalAgents) {
@@ -140,44 +172,12 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             return this.waitingCalls;
         }
 
-        public GetRealtimeInstanceStatesResponseBodyData setBreakingAgents(Long breakingAgents) {
-            this.breakingAgents = breakingAgents;
+        public GetRealtimeInstanceStatesResponseBodyData setWorkingAgents(Long workingAgents) {
+            this.workingAgents = workingAgents;
             return this;
         }
-        public Long getBreakingAgents() {
-            return this.breakingAgents;
-        }
-
-        public GetRealtimeInstanceStatesResponseBodyData setTalkingAgents(Long talkingAgents) {
-            this.talkingAgents = talkingAgents;
-            return this;
-        }
-        public Long getTalkingAgents() {
-            return this.talkingAgents;
-        }
-
-        public GetRealtimeInstanceStatesResponseBodyData setInteractiveCalls(Long interactiveCalls) {
-            this.interactiveCalls = interactiveCalls;
-            return this;
-        }
-        public Long getInteractiveCalls() {
-            return this.interactiveCalls;
-        }
-
-        public GetRealtimeInstanceStatesResponseBodyData setReadyAgents(Long readyAgents) {
-            this.readyAgents = readyAgents;
-            return this;
-        }
-        public Long getReadyAgents() {
-            return this.readyAgents;
-        }
-
-        public GetRealtimeInstanceStatesResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
+        public Long getWorkingAgents() {
+            return this.workingAgents;
         }
 
     }

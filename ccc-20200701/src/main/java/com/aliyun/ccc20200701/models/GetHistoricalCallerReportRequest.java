@@ -4,29 +4,21 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class GetHistoricalCallerReportRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CallingNumber")
     public String callingNumber;
 
-    @NameInMap("StopTime")
-    public Long stopTime;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("StopTime")
+    public Long stopTime;
+
     public static GetHistoricalCallerReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHistoricalCallerReportRequest self = new GetHistoricalCallerReportRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHistoricalCallerReportRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public GetHistoricalCallerReportRequest setCallingNumber(String callingNumber) {
@@ -37,12 +29,12 @@ public class GetHistoricalCallerReportRequest extends TeaModel {
         return this.callingNumber;
     }
 
-    public GetHistoricalCallerReportRequest setStopTime(Long stopTime) {
-        this.stopTime = stopTime;
+    public GetHistoricalCallerReportRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Long getStopTime() {
-        return this.stopTime;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetHistoricalCallerReportRequest setStartTime(Long startTime) {
@@ -51,6 +43,14 @@ public class GetHistoricalCallerReportRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public GetHistoricalCallerReportRequest setStopTime(Long stopTime) {
+        this.stopTime = stopTime;
+        return this;
+    }
+    public Long getStopTime() {
+        return this.stopTime;
     }
 
 }

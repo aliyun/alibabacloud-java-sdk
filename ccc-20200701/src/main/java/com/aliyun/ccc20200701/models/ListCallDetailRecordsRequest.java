@@ -4,20 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsRequest extends TeaModel {
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("AgentId")
+    public String agentId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("CalledNumber")
+    public String calledNumber;
 
-    @NameInMap("StartTime")
-    public Long startTime;
-
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("ContactType")
-    public String contactType;
+    @NameInMap("CallingNumber")
+    public String callingNumber;
 
     @NameInMap("ContactDisposition")
     public String contactDisposition;
@@ -25,14 +19,17 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("ContactId")
     public String contactId;
 
-    @NameInMap("AgentId")
-    public String agentId;
+    @NameInMap("ContactType")
+    public String contactType;
 
-    @NameInMap("SkillGroupId")
-    public String skillGroupId;
+    @NameInMap("Criteria")
+    public String criteria;
 
-    @NameInMap("SortOrder")
-    public String sortOrder;
+    @NameInMap("EarlyMediaStateList")
+    public String earlyMediaStateList;
+
+    @NameInMap("EndTime")
+    public Long endTime;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -40,14 +37,14 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("OrderByField")
     public String orderByField;
 
-    @NameInMap("Criteria")
-    public String criteria;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("CallingNumber")
-    public String callingNumber;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
-    @NameInMap("CalledNumber")
-    public String calledNumber;
+    @NameInMap("SatisfactionDescriptionList")
+    public String satisfactionDescriptionList;
 
     @NameInMap("SatisfactionList")
     public String satisfactionList;
@@ -55,52 +52,42 @@ public class ListCallDetailRecordsRequest extends TeaModel {
     @NameInMap("SatisfactionSurveyChannel")
     public String satisfactionSurveyChannel;
 
-    @NameInMap("SatisfactionDescriptionList")
-    public String satisfactionDescriptionList;
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static ListCallDetailRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCallDetailRecordsRequest self = new ListCallDetailRecordsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCallDetailRecordsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListCallDetailRecordsRequest setAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getAgentId() {
+        return this.agentId;
     }
 
-    public ListCallDetailRecordsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListCallDetailRecordsRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCalledNumber() {
+        return this.calledNumber;
     }
 
-    public ListCallDetailRecordsRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public ListCallDetailRecordsRequest setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public ListCallDetailRecordsRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public ListCallDetailRecordsRequest setContactType(String contactType) {
-        this.contactType = contactType;
-        return this;
-    }
-    public String getContactType() {
-        return this.contactType;
+    public String getCallingNumber() {
+        return this.callingNumber;
     }
 
     public ListCallDetailRecordsRequest setContactDisposition(String contactDisposition) {
@@ -119,28 +106,36 @@ public class ListCallDetailRecordsRequest extends TeaModel {
         return this.contactId;
     }
 
-    public ListCallDetailRecordsRequest setAgentId(String agentId) {
-        this.agentId = agentId;
+    public ListCallDetailRecordsRequest setContactType(String contactType) {
+        this.contactType = contactType;
         return this;
     }
-    public String getAgentId() {
-        return this.agentId;
+    public String getContactType() {
+        return this.contactType;
     }
 
-    public ListCallDetailRecordsRequest setSkillGroupId(String skillGroupId) {
-        this.skillGroupId = skillGroupId;
+    public ListCallDetailRecordsRequest setCriteria(String criteria) {
+        this.criteria = criteria;
         return this;
     }
-    public String getSkillGroupId() {
-        return this.skillGroupId;
+    public String getCriteria() {
+        return this.criteria;
     }
 
-    public ListCallDetailRecordsRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
+    public ListCallDetailRecordsRequest setEarlyMediaStateList(String earlyMediaStateList) {
+        this.earlyMediaStateList = earlyMediaStateList;
         return this;
     }
-    public String getSortOrder() {
-        return this.sortOrder;
+    public String getEarlyMediaStateList() {
+        return this.earlyMediaStateList;
+    }
+
+    public ListCallDetailRecordsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListCallDetailRecordsRequest setInstanceId(String instanceId) {
@@ -159,28 +154,28 @@ public class ListCallDetailRecordsRequest extends TeaModel {
         return this.orderByField;
     }
 
-    public ListCallDetailRecordsRequest setCriteria(String criteria) {
-        this.criteria = criteria;
+    public ListCallDetailRecordsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getCriteria() {
-        return this.criteria;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
-    public ListCallDetailRecordsRequest setCallingNumber(String callingNumber) {
-        this.callingNumber = callingNumber;
+    public ListCallDetailRecordsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getCallingNumber() {
-        return this.callingNumber;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
-    public ListCallDetailRecordsRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
+    public ListCallDetailRecordsRequest setSatisfactionDescriptionList(String satisfactionDescriptionList) {
+        this.satisfactionDescriptionList = satisfactionDescriptionList;
         return this;
     }
-    public String getCalledNumber() {
-        return this.calledNumber;
+    public String getSatisfactionDescriptionList() {
+        return this.satisfactionDescriptionList;
     }
 
     public ListCallDetailRecordsRequest setSatisfactionList(String satisfactionList) {
@@ -199,12 +194,28 @@ public class ListCallDetailRecordsRequest extends TeaModel {
         return this.satisfactionSurveyChannel;
     }
 
-    public ListCallDetailRecordsRequest setSatisfactionDescriptionList(String satisfactionDescriptionList) {
-        this.satisfactionDescriptionList = satisfactionDescriptionList;
+    public ListCallDetailRecordsRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
         return this;
     }
-    public String getSatisfactionDescriptionList() {
-        return this.satisfactionDescriptionList;
+    public String getSkillGroupId() {
+        return this.skillGroupId;
+    }
+
+    public ListCallDetailRecordsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public ListCallDetailRecordsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -7,6 +7,9 @@ public class AddPersonalNumbersToUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<String> data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class AddPersonalNumbersToUserResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<String> data;
 
     public static AddPersonalNumbersToUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddPersonalNumbersToUserResponseBody self = new AddPersonalNumbersToUserResponseBody();
@@ -30,6 +30,14 @@ public class AddPersonalNumbersToUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AddPersonalNumbersToUserResponseBody setData(java.util.List<String> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<String> getData() {
+        return this.data;
     }
 
     public AddPersonalNumbersToUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -54,14 +62,6 @@ public class AddPersonalNumbersToUserResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddPersonalNumbersToUserResponseBody setData(java.util.List<String> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<String> getData() {
-        return this.data;
     }
 
 }

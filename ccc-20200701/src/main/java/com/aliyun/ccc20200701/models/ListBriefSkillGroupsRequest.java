@@ -7,14 +7,14 @@ public class ListBriefSkillGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SearchPattern")
-    public String searchPattern;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SearchPattern")
+    public String searchPattern;
 
     public static ListBriefSkillGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBriefSkillGroupsRequest self = new ListBriefSkillGroupsRequest();
@@ -27,14 +27,6 @@ public class ListBriefSkillGroupsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListBriefSkillGroupsRequest setSearchPattern(String searchPattern) {
-        this.searchPattern = searchPattern;
-        return this;
-    }
-    public String getSearchPattern() {
-        return this.searchPattern;
     }
 
     public ListBriefSkillGroupsRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListBriefSkillGroupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListBriefSkillGroupsRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
 }

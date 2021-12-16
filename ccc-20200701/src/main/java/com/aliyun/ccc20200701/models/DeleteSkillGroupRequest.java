@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class DeleteSkillGroupRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
-    @NameInMap("Force")
-    public Boolean force;
-
     public static DeleteSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSkillGroupRequest self = new DeleteSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSkillGroupRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteSkillGroupRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class DeleteSkillGroupRequest extends TeaModel {
     }
     public String getSkillGroupId() {
         return this.skillGroupId;
-    }
-
-    public DeleteSkillGroupRequest setForce(Boolean force) {
-        this.force = force;
-        return this;
-    }
-    public Boolean getForce() {
-        return this.force;
     }
 
 }

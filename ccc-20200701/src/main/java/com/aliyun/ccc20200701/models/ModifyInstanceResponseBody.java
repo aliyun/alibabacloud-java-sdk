@@ -4,35 +4,27 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("Params")
     public java.util.List<String> params;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ModifyInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceResponseBody self = new ModifyInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public ModifyInstanceResponseBody setCode(String code) {
@@ -43,14 +35,6 @@ public class ModifyInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ModifyInstanceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ModifyInstanceResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -59,12 +43,20 @@ public class ModifyInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ModifyInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyInstanceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ModifyInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ModifyInstanceResponseBody setParams(java.util.List<String> params) {
@@ -73,6 +65,14 @@ public class ModifyInstanceResponseBody extends TeaModel {
     }
     public java.util.List<String> getParams() {
         return this.params;
+    }
+
+    public ModifyInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

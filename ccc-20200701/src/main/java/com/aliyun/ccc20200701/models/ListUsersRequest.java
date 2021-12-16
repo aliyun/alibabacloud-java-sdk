@@ -7,14 +7,14 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("SearchPattern")
-    public String searchPattern;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SearchPattern")
+    public String searchPattern;
 
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
@@ -27,14 +27,6 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListUsersRequest setSearchPattern(String searchPattern) {
-        this.searchPattern = searchPattern;
-        return this;
-    }
-    public String getSearchPattern() {
-        return this.searchPattern;
     }
 
     public ListUsersRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListUsersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUsersRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
 }

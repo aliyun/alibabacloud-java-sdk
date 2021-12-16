@@ -4,21 +4,37 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillGroupRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("DisplayName")
-    public String displayName;
-
-    @NameInMap("Description")
-    public String description;
-
     public static CreateSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupRequest self = new CreateSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSkillGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateSkillGroupRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public CreateSkillGroupRequest setInstanceId(String instanceId) {
@@ -35,22 +51,6 @@ public class CreateSkillGroupRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateSkillGroupRequest setDisplayName(String displayName) {
-        this.displayName = displayName;
-        return this;
-    }
-    public String getDisplayName() {
-        return this.displayName;
-    }
-
-    public CreateSkillGroupRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
 }

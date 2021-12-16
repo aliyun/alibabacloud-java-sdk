@@ -7,20 +7,20 @@ public class GetLoginDetailsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetLoginDetailsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public GetLoginDetailsResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetLoginDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLoginDetailsResponseBody self = new GetLoginDetailsResponseBody();
@@ -33,6 +33,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetLoginDetailsResponseBody setData(GetLoginDetailsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetLoginDetailsResponseBodyData getData() {
+        return this.data;
     }
 
     public GetLoginDetailsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetLoginDetailsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetLoginDetailsResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,15 +67,21 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         return this.params;
     }
 
-    public GetLoginDetailsResponseBody setData(GetLoginDetailsResponseBodyData data) {
-        this.data = data;
+    public GetLoginDetailsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetLoginDetailsResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class GetLoginDetailsResponseBodyData extends TeaModel {
+        @NameInMap("AgentServerUrl")
+        public String agentServerUrl;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -88,12 +94,6 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("SipServerUrl")
         public String sipServerUrl;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("AgentServerUrl")
-        public String agentServerUrl;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -103,6 +103,22 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         public static GetLoginDetailsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetLoginDetailsResponseBodyData self = new GetLoginDetailsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetLoginDetailsResponseBodyData setAgentServerUrl(String agentServerUrl) {
+            this.agentServerUrl = agentServerUrl;
+            return this;
+        }
+        public String getAgentServerUrl() {
+            return this.agentServerUrl;
+        }
+
+        public GetLoginDetailsResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public GetLoginDetailsResponseBodyData setDisplayName(String displayName) {
@@ -135,22 +151,6 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
         public String getSipServerUrl() {
             return this.sipServerUrl;
-        }
-
-        public GetLoginDetailsResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public GetLoginDetailsResponseBodyData setAgentServerUrl(String agentServerUrl) {
-            this.agentServerUrl = agentServerUrl;
-            return this;
-        }
-        public String getAgentServerUrl() {
-            return this.agentServerUrl;
         }
 
         public GetLoginDetailsResponseBodyData setUserId(String userId) {

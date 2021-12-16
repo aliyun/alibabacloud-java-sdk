@@ -7,9 +7,6 @@ public class ListOutboundNumbersOfUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -18,6 +15,9 @@ public class ListOutboundNumbersOfUserRequest extends TeaModel {
 
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ListOutboundNumbersOfUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundNumbersOfUserRequest self = new ListOutboundNumbersOfUserRequest();
@@ -30,14 +30,6 @@ public class ListOutboundNumbersOfUserRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListOutboundNumbersOfUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListOutboundNumbersOfUserRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +54,14 @@ public class ListOutboundNumbersOfUserRequest extends TeaModel {
     }
     public String getSkillGroupIdList() {
         return this.skillGroupIdList;
+    }
+
+    public ListOutboundNumbersOfUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

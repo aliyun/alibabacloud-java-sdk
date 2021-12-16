@@ -4,40 +4,32 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class LaunchAuthenticationRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("ContactFlowId")
+    public String contactFlowId;
 
     @NameInMap("DeviceId")
     public String deviceId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("JobId")
     public String jobId;
 
-    @NameInMap("ContactFlowId")
-    public String contactFlowId;
+    @NameInMap("UserId")
+    public String userId;
 
     public static LaunchAuthenticationRequest build(java.util.Map<String, ?> map) throws Exception {
         LaunchAuthenticationRequest self = new LaunchAuthenticationRequest();
         return TeaModel.build(map, self);
     }
 
-    public LaunchAuthenticationRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public LaunchAuthenticationRequest setContactFlowId(String contactFlowId) {
+        this.contactFlowId = contactFlowId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public LaunchAuthenticationRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getContactFlowId() {
+        return this.contactFlowId;
     }
 
     public LaunchAuthenticationRequest setDeviceId(String deviceId) {
@@ -48,6 +40,14 @@ public class LaunchAuthenticationRequest extends TeaModel {
         return this.deviceId;
     }
 
+    public LaunchAuthenticationRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public LaunchAuthenticationRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -56,12 +56,12 @@ public class LaunchAuthenticationRequest extends TeaModel {
         return this.jobId;
     }
 
-    public LaunchAuthenticationRequest setContactFlowId(String contactFlowId) {
-        this.contactFlowId = contactFlowId;
+    public LaunchAuthenticationRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getContactFlowId() {
-        return this.contactFlowId;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

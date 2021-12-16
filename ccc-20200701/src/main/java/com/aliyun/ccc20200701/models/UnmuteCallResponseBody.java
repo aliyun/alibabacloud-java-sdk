@@ -7,20 +7,20 @@ public class UnmuteCallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public UnmuteCallResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public UnmuteCallResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UnmuteCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnmuteCallResponseBody self = new UnmuteCallResponseBody();
@@ -33,6 +33,14 @@ public class UnmuteCallResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public UnmuteCallResponseBody setData(UnmuteCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UnmuteCallResponseBodyData getData() {
+        return this.data;
     }
 
     public UnmuteCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class UnmuteCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UnmuteCallResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public UnmuteCallResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,20 +67,26 @@ public class UnmuteCallResponseBody extends TeaModel {
         return this.params;
     }
 
-    public UnmuteCallResponseBody setData(UnmuteCallResponseBodyData data) {
-        this.data = data;
+    public UnmuteCallResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public UnmuteCallResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class UnmuteCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("Index")
-        public Integer index;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
 
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
@@ -88,11 +94,20 @@ public class UnmuteCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("Index")
+        public Integer index;
 
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Originator")
+        public String originator;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
@@ -100,46 +115,47 @@ public class UnmuteCallResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("UserExtension")
         public String userExtension;
 
-        @NameInMap("Originator")
-        public String originator;
+        @NameInMap("UserId")
+        public String userId;
 
         public static UnmuteCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             UnmuteCallResponseBodyDataCallContextChannelContexts self = new UnmuteCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
-            this.index = index;
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public Integer getIndex() {
-            return this.index;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public UnmuteCallResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -158,20 +174,44 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setIndex(Integer index) {
+            this.index = index;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public Integer getIndex() {
+            return this.index;
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getChannelFlags() {
-            return this.channelFlags;
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
+            this.originator = originator;
+            return this;
+        }
+        public String getOriginator() {
+            return this.originator;
+        }
+
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
         }
 
         public UnmuteCallResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
@@ -190,46 +230,6 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public UnmuteCallResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -238,12 +238,12 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.userExtension;
         }
 
-        public UnmuteCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
-            this.originator = originator;
+        public UnmuteCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
             return this;
         }
-        public String getOriginator() {
-            return this.originator;
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -252,14 +252,14 @@ public class UnmuteCallResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static UnmuteCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             UnmuteCallResponseBodyDataCallContext self = new UnmuteCallResponseBodyDataCallContext();
@@ -272,6 +272,14 @@ public class UnmuteCallResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public UnmuteCallResponseBodyDataCallContext setChannelContexts(java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public UnmuteCallResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -290,112 +298,48 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public UnmuteCallResponseBodyDataCallContext setChannelContexts(java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<UnmuteCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class UnmuteCallResponseBodyDataUserContext extends TeaModel {
-        @NameInMap("Heartbeat")
-        public Long heartbeat;
-
-        @NameInMap("Extension")
-        public String extension;
-
-        @NameInMap("WorkMode")
-        public String workMode;
-
-        @NameInMap("Mobile")
-        public String mobile;
+        @NameInMap("BreakCode")
+        public String breakCode;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("JobId")
-        public String jobId;
+        @NameInMap("Extension")
+        public String extension;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
+        @NameInMap("Heartbeat")
+        public Long heartbeat;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Mobile")
+        public String mobile;
+
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
-
-        @NameInMap("UserState")
-        public String userState;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static UnmuteCallResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             UnmuteCallResponseBodyDataUserContext self = new UnmuteCallResponseBodyDataUserContext();
             return TeaModel.build(map, self);
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setHeartbeat(Long heartbeat) {
-            this.heartbeat = heartbeat;
-            return this;
-        }
-        public Long getHeartbeat() {
-            return this.heartbeat;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setExtension(String extension) {
-            this.extension = extension;
-            return this;
-        }
-        public String getExtension() {
-            return this.extension;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public UnmuteCallResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public UnmuteCallResponseBodyDataUserContext setBreakCode(String breakCode) {
@@ -406,12 +350,52 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.breakCode;
         }
 
+        public UnmuteCallResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public UnmuteCallResponseBodyDataUserContext setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
+        public UnmuteCallResponseBodyDataUserContext setHeartbeat(Long heartbeat) {
+            this.heartbeat = heartbeat;
+            return this;
+        }
+        public Long getHeartbeat() {
+            return this.heartbeat;
+        }
+
         public UnmuteCallResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public UnmuteCallResponseBodyDataUserContext setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public UnmuteCallResponseBodyDataUserContext setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
         }
 
         public UnmuteCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
@@ -422,6 +406,22 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
+        public UnmuteCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
+            this.signedSkillGroupIdList = signedSkillGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getSignedSkillGroupIdList() {
+            return this.signedSkillGroupIdList;
+        }
+
+        public UnmuteCallResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
         public UnmuteCallResponseBodyDataUserContext setUserState(String userState) {
             this.userState = userState;
             return this;
@@ -430,12 +430,12 @@ public class UnmuteCallResponseBody extends TeaModel {
             return this.userState;
         }
 
-        public UnmuteCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
-            this.signedSkillGroupIdList = signedSkillGroupIdList;
+        public UnmuteCallResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
             return this;
         }
-        public java.util.List<String> getSignedSkillGroupIdList() {
-            return this.signedSkillGroupIdList;
+        public String getWorkMode() {
+            return this.workMode;
         }
 
     }

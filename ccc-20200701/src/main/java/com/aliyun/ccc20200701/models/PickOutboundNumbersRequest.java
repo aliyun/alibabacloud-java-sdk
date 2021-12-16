@@ -4,14 +4,14 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class PickOutboundNumbersRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CalledNumber")
     public String calledNumber;
 
     @NameInMap("Count")
     public Integer count;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;
@@ -19,14 +19,6 @@ public class PickOutboundNumbersRequest extends TeaModel {
     public static PickOutboundNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
         PickOutboundNumbersRequest self = new PickOutboundNumbersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PickOutboundNumbersRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public PickOutboundNumbersRequest setCalledNumber(String calledNumber) {
@@ -43,6 +35,14 @@ public class PickOutboundNumbersRequest extends TeaModel {
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public PickOutboundNumbersRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public PickOutboundNumbersRequest setSkillGroupIdList(String skillGroupIdList) {

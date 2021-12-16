@@ -7,11 +7,11 @@ public class ModifySkillLevelsOfUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("SkillLevelList")
     public String skillLevelList;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ModifySkillLevelsOfUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySkillLevelsOfUserRequest self = new ModifySkillLevelsOfUserRequest();
@@ -26,20 +26,20 @@ public class ModifySkillLevelsOfUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifySkillLevelsOfUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public ModifySkillLevelsOfUserRequest setSkillLevelList(String skillLevelList) {
         this.skillLevelList = skillLevelList;
         return this;
     }
     public String getSkillLevelList() {
         return this.skillLevelList;
+    }
+
+    public ModifySkillLevelsOfUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

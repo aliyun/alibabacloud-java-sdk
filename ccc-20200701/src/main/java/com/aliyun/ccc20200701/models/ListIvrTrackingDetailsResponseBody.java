@@ -7,6 +7,9 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListIvrTrackingDetailsResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListIvrTrackingDetailsResponseBodyData data;
 
     public static ListIvrTrackingDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIvrTrackingDetailsResponseBody self = new ListIvrTrackingDetailsResponseBody();
@@ -30,6 +30,14 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListIvrTrackingDetailsResponseBody setData(ListIvrTrackingDetailsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListIvrTrackingDetailsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListIvrTrackingDetailsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,35 +64,45 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListIvrTrackingDetailsResponseBody setData(ListIvrTrackingDetailsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListIvrTrackingDetailsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListIvrTrackingDetailsResponseBodyDataList extends TeaModel {
-        @NameInMap("Instance")
-        public String instance;
-
         @NameInMap("Callee")
         public String callee;
+
+        @NameInMap("Caller")
+        public String caller;
+
+        @NameInMap("ChannelId")
+        public String channelId;
+
+        @NameInMap("ChannelVariables")
+        public String channelVariables;
+
+        @NameInMap("ContactId")
+        public String contactId;
 
         @NameInMap("EnterTime")
         public Long enterTime;
 
-        @NameInMap("NodeVariables")
-        public java.util.Map<String, ?> nodeVariables;
-
-        @NameInMap("NodeExitCode")
-        public String nodeExitCode;
+        @NameInMap("FlowId")
+        public String flowId;
 
         @NameInMap("FlowName")
         public String flowName;
 
-        @NameInMap("FlowId")
-        public String flowId;
+        @NameInMap("Instance")
+        public String instance;
+
+        @NameInMap("LeaveTime")
+        public Long leaveTime;
+
+        @NameInMap("NodeExitCode")
+        public String nodeExitCode;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("NodeName")
+        public String nodeName;
 
         @NameInMap("NodeProperties")
         public java.util.Map<String, ?> nodeProperties;
@@ -92,38 +110,12 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         @NameInMap("NodeType")
         public String nodeType;
 
-        @NameInMap("Caller")
-        public String caller;
-
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        @NameInMap("ContactId")
-        public String contactId;
-
-        @NameInMap("LeaveTime")
-        public Long leaveTime;
-
-        @NameInMap("ChannelVariables")
-        public String channelVariables;
-
-        @NameInMap("ChannelId")
-        public String channelId;
-
-        @NameInMap("NodeId")
-        public String nodeId;
+        @NameInMap("NodeVariables")
+        public java.util.Map<String, ?> nodeVariables;
 
         public static ListIvrTrackingDetailsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListIvrTrackingDetailsResponseBodyDataList self = new ListIvrTrackingDetailsResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setInstance(String instance) {
-            this.instance = instance;
-            return this;
-        }
-        public String getInstance() {
-            return this.instance;
         }
 
         public ListIvrTrackingDetailsResponseBodyDataList setCallee(String callee) {
@@ -134,6 +126,38 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             return this.callee;
         }
 
+        public ListIvrTrackingDetailsResponseBodyDataList setCaller(String caller) {
+            this.caller = caller;
+            return this;
+        }
+        public String getCaller() {
+            return this.caller;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setChannelVariables(String channelVariables) {
+            this.channelVariables = channelVariables;
+            return this;
+        }
+        public String getChannelVariables() {
+            return this.channelVariables;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setContactId(String contactId) {
+            this.contactId = contactId;
+            return this;
+        }
+        public String getContactId() {
+            return this.contactId;
+        }
+
         public ListIvrTrackingDetailsResponseBodyDataList setEnterTime(Long enterTime) {
             this.enterTime = enterTime;
             return this;
@@ -142,20 +166,12 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             return this.enterTime;
         }
 
-        public ListIvrTrackingDetailsResponseBodyDataList setNodeVariables(java.util.Map<String, ?> nodeVariables) {
-            this.nodeVariables = nodeVariables;
+        public ListIvrTrackingDetailsResponseBodyDataList setFlowId(String flowId) {
+            this.flowId = flowId;
             return this;
         }
-        public java.util.Map<String, ?> getNodeVariables() {
-            return this.nodeVariables;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setNodeExitCode(String nodeExitCode) {
-            this.nodeExitCode = nodeExitCode;
-            return this;
-        }
-        public String getNodeExitCode() {
-            return this.nodeExitCode;
+        public String getFlowId() {
+            return this.flowId;
         }
 
         public ListIvrTrackingDetailsResponseBodyDataList setFlowName(String flowName) {
@@ -166,12 +182,44 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             return this.flowName;
         }
 
-        public ListIvrTrackingDetailsResponseBodyDataList setFlowId(String flowId) {
-            this.flowId = flowId;
+        public ListIvrTrackingDetailsResponseBodyDataList setInstance(String instance) {
+            this.instance = instance;
             return this;
         }
-        public String getFlowId() {
-            return this.flowId;
+        public String getInstance() {
+            return this.instance;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setLeaveTime(Long leaveTime) {
+            this.leaveTime = leaveTime;
+            return this;
+        }
+        public Long getLeaveTime() {
+            return this.leaveTime;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setNodeExitCode(String nodeExitCode) {
+            this.nodeExitCode = nodeExitCode;
+            return this;
+        }
+        public String getNodeExitCode() {
+            return this.nodeExitCode;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public ListIvrTrackingDetailsResponseBodyDataList setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
         }
 
         public ListIvrTrackingDetailsResponseBodyDataList setNodeProperties(java.util.Map<String, ?> nodeProperties) {
@@ -190,65 +238,20 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             return this.nodeType;
         }
 
-        public ListIvrTrackingDetailsResponseBodyDataList setCaller(String caller) {
-            this.caller = caller;
+        public ListIvrTrackingDetailsResponseBodyDataList setNodeVariables(java.util.Map<String, ?> nodeVariables) {
+            this.nodeVariables = nodeVariables;
             return this;
         }
-        public String getCaller() {
-            return this.caller;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setContactId(String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-        public String getContactId() {
-            return this.contactId;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setLeaveTime(Long leaveTime) {
-            this.leaveTime = leaveTime;
-            return this;
-        }
-        public Long getLeaveTime() {
-            return this.leaveTime;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setChannelVariables(String channelVariables) {
-            this.channelVariables = channelVariables;
-            return this;
-        }
-        public String getChannelVariables() {
-            return this.channelVariables;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyDataList setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
+        public java.util.Map<String, ?> getNodeVariables() {
+            return this.nodeVariables;
         }
 
     }
 
     public static class ListIvrTrackingDetailsResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -258,12 +261,17 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list;
-
         public static ListIvrTrackingDetailsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIvrTrackingDetailsResponseBodyData self = new ListIvrTrackingDetailsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIvrTrackingDetailsResponseBodyData setList(java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListIvrTrackingDetailsResponseBodyData setPageNumber(Integer pageNumber) {
@@ -288,14 +296,6 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListIvrTrackingDetailsResponseBodyData setList(java.util.List<ListIvrTrackingDetailsResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListIvrTrackingDetailsResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

@@ -4,46 +4,30 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class InitiateAttendedTransferRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("Transferor")
-    public String transferor;
-
-    @NameInMap("Transferee")
-    public String transferee;
-
-    @NameInMap("TimeoutSeconds")
-    public Integer timeoutSeconds;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("TimeoutSeconds")
+    public Integer timeoutSeconds;
+
+    @NameInMap("Transferee")
+    public String transferee;
+
+    @NameInMap("Transferor")
+    public String transferor;
+
+    @NameInMap("UserId")
+    public String userId;
+
     public static InitiateAttendedTransferRequest build(java.util.Map<String, ?> map) throws Exception {
         InitiateAttendedTransferRequest self = new InitiateAttendedTransferRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InitiateAttendedTransferRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public InitiateAttendedTransferRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public InitiateAttendedTransferRequest setDeviceId(String deviceId) {
@@ -54,20 +38,20 @@ public class InitiateAttendedTransferRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public InitiateAttendedTransferRequest setTransferor(String transferor) {
-        this.transferor = transferor;
+    public InitiateAttendedTransferRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getTransferor() {
-        return this.transferor;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
-    public InitiateAttendedTransferRequest setTransferee(String transferee) {
-        this.transferee = transferee;
+    public InitiateAttendedTransferRequest setJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
-    public String getTransferee() {
-        return this.transferee;
+    public String getJobId() {
+        return this.jobId;
     }
 
     public InitiateAttendedTransferRequest setTimeoutSeconds(Integer timeoutSeconds) {
@@ -78,12 +62,28 @@ public class InitiateAttendedTransferRequest extends TeaModel {
         return this.timeoutSeconds;
     }
 
-    public InitiateAttendedTransferRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public InitiateAttendedTransferRequest setTransferee(String transferee) {
+        this.transferee = transferee;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getTransferee() {
+        return this.transferee;
+    }
+
+    public InitiateAttendedTransferRequest setTransferor(String transferor) {
+        this.transferor = transferor;
+        return this;
+    }
+    public String getTransferor() {
+        return this.transferor;
+    }
+
+    public InitiateAttendedTransferRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

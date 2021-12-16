@@ -7,6 +7,9 @@ public class GetNumberLocationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetNumberLocationResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetNumberLocationResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetNumberLocationResponseBodyData data;
 
     public static GetNumberLocationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNumberLocationResponseBody self = new GetNumberLocationResponseBody();
@@ -30,6 +30,14 @@ public class GetNumberLocationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetNumberLocationResponseBody setData(GetNumberLocationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetNumberLocationResponseBodyData getData() {
+        return this.data;
     }
 
     public GetNumberLocationResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,12 @@ public class GetNumberLocationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetNumberLocationResponseBody setData(GetNumberLocationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetNumberLocationResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetNumberLocationResponseBodyData extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -79,20 +79,20 @@ public class GetNumberLocationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetNumberLocationResponseBodyData setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public GetNumberLocationResponseBodyData setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public GetNumberLocationResponseBodyData setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public GetNumberLocationResponseBodyData setProvince(String province) {

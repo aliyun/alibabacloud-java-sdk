@@ -7,6 +7,9 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetInstanceTrendingReportResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetInstanceTrendingReportResponseBodyData data;
 
     public static GetInstanceTrendingReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceTrendingReportResponseBody self = new GetInstanceTrendingReportResponseBody();
@@ -30,6 +30,14 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetInstanceTrendingReportResponseBody setData(GetInstanceTrendingReportResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetInstanceTrendingReportResponseBodyData getData() {
+        return this.data;
     }
 
     public GetInstanceTrendingReportResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,12 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetInstanceTrendingReportResponseBody setData(GetInstanceTrendingReportResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetInstanceTrendingReportResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetInstanceTrendingReportResponseBodyDataInbound extends TeaModel {
-        @NameInMap("StatsTime")
-        public Long statsTime;
+        @NameInMap("CallsAbandonedInIVR")
+        public Long callsAbandonedInIVR;
 
-        @NameInMap("CallsQueued")
-        public Long callsQueued;
+        @NameInMap("CallsAbandonedInQueue")
+        public Long callsAbandonedInQueue;
 
         @NameInMap("CallsAbandonedInRing")
         public Long callsAbandonedInRing;
@@ -77,58 +77,18 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         @NameInMap("CallsHandled")
         public Long callsHandled;
 
+        @NameInMap("CallsQueued")
+        public Long callsQueued;
+
+        @NameInMap("StatsTime")
+        public Long statsTime;
+
         @NameInMap("TotalCalls")
         public Long totalCalls;
-
-        @NameInMap("CallsAbandonedInIVR")
-        public Long callsAbandonedInIVR;
-
-        @NameInMap("CallsAbandonedInQueue")
-        public Long callsAbandonedInQueue;
 
         public static GetInstanceTrendingReportResponseBodyDataInbound build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceTrendingReportResponseBodyDataInbound self = new GetInstanceTrendingReportResponseBodyDataInbound();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceTrendingReportResponseBodyDataInbound setStatsTime(Long statsTime) {
-            this.statsTime = statsTime;
-            return this;
-        }
-        public Long getStatsTime() {
-            return this.statsTime;
-        }
-
-        public GetInstanceTrendingReportResponseBodyDataInbound setCallsQueued(Long callsQueued) {
-            this.callsQueued = callsQueued;
-            return this;
-        }
-        public Long getCallsQueued() {
-            return this.callsQueued;
-        }
-
-        public GetInstanceTrendingReportResponseBodyDataInbound setCallsAbandonedInRing(Long callsAbandonedInRing) {
-            this.callsAbandonedInRing = callsAbandonedInRing;
-            return this;
-        }
-        public Long getCallsAbandonedInRing() {
-            return this.callsAbandonedInRing;
-        }
-
-        public GetInstanceTrendingReportResponseBodyDataInbound setCallsHandled(Long callsHandled) {
-            this.callsHandled = callsHandled;
-            return this;
-        }
-        public Long getCallsHandled() {
-            return this.callsHandled;
-        }
-
-        public GetInstanceTrendingReportResponseBodyDataInbound setTotalCalls(Long totalCalls) {
-            this.totalCalls = totalCalls;
-            return this;
-        }
-        public Long getTotalCalls() {
-            return this.totalCalls;
         }
 
         public GetInstanceTrendingReportResponseBodyDataInbound setCallsAbandonedInIVR(Long callsAbandonedInIVR) {
@@ -147,14 +107,54 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             return this.callsAbandonedInQueue;
         }
 
+        public GetInstanceTrendingReportResponseBodyDataInbound setCallsAbandonedInRing(Long callsAbandonedInRing) {
+            this.callsAbandonedInRing = callsAbandonedInRing;
+            return this;
+        }
+        public Long getCallsAbandonedInRing() {
+            return this.callsAbandonedInRing;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataInbound setCallsHandled(Long callsHandled) {
+            this.callsHandled = callsHandled;
+            return this;
+        }
+        public Long getCallsHandled() {
+            return this.callsHandled;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataInbound setCallsQueued(Long callsQueued) {
+            this.callsQueued = callsQueued;
+            return this;
+        }
+        public Long getCallsQueued() {
+            return this.callsQueued;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataInbound setStatsTime(Long statsTime) {
+            this.statsTime = statsTime;
+            return this;
+        }
+        public Long getStatsTime() {
+            return this.statsTime;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataInbound setTotalCalls(Long totalCalls) {
+            this.totalCalls = totalCalls;
+            return this;
+        }
+        public Long getTotalCalls() {
+            return this.totalCalls;
+        }
+
     }
 
     public static class GetInstanceTrendingReportResponseBodyDataOutbound extends TeaModel {
-        @NameInMap("StatsTime")
-        public Long statsTime;
-
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
+
+        @NameInMap("StatsTime")
+        public Long statsTime;
 
         @NameInMap("TotalCalls")
         public Long totalCalls;
@@ -164,20 +164,20 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetInstanceTrendingReportResponseBodyDataOutbound setStatsTime(Long statsTime) {
-            this.statsTime = statsTime;
-            return this;
-        }
-        public Long getStatsTime() {
-            return this.statsTime;
-        }
-
         public GetInstanceTrendingReportResponseBodyDataOutbound setCallsAnswered(Long callsAnswered) {
             this.callsAnswered = callsAnswered;
             return this;
         }
         public Long getCallsAnswered() {
             return this.callsAnswered;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataOutbound setStatsTime(Long statsTime) {
+            this.statsTime = statsTime;
+            return this;
+        }
+        public Long getStatsTime() {
+            return this.statsTime;
         }
 
         public GetInstanceTrendingReportResponseBodyDataOutbound setTotalCalls(Long totalCalls) {

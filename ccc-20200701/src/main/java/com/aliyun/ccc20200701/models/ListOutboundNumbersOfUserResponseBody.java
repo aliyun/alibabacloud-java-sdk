@@ -7,6 +7,9 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListOutboundNumbersOfUserResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListOutboundNumbersOfUserResponseBodyData data;
 
     public static ListOutboundNumbersOfUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundNumbersOfUserResponseBody self = new ListOutboundNumbersOfUserResponseBody();
@@ -30,6 +30,14 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListOutboundNumbersOfUserResponseBody setData(ListOutboundNumbersOfUserResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListOutboundNumbersOfUserResponseBodyData getData() {
+        return this.data;
     }
 
     public ListOutboundNumbersOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,12 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListOutboundNumbersOfUserResponseBody setData(ListOutboundNumbersOfUserResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListOutboundNumbersOfUserResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListOutboundNumbersOfUserResponseBodyDataList extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("City")
         public String city;
+
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
@@ -79,20 +79,20 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListOutboundNumbersOfUserResponseBodyDataList setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public ListOutboundNumbersOfUserResponseBodyDataList setCity(String city) {
             this.city = city;
             return this;
         }
         public String getCity() {
             return this.city;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setNumber(String number) {
+            this.number = number;
+            return this;
+        }
+        public String getNumber() {
+            return this.number;
         }
 
         public ListOutboundNumbersOfUserResponseBodyDataList setProvince(String province) {
@@ -106,6 +106,9 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
     }
 
     public static class ListOutboundNumbersOfUserResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -115,12 +118,17 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list;
-
         public static ListOutboundNumbersOfUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListOutboundNumbersOfUserResponseBodyData self = new ListOutboundNumbersOfUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyData setList(java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListOutboundNumbersOfUserResponseBodyData setPageNumber(Integer pageNumber) {
@@ -145,14 +153,6 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListOutboundNumbersOfUserResponseBodyData setList(java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListOutboundNumbersOfUserResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

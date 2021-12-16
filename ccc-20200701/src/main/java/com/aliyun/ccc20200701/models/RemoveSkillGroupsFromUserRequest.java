@@ -7,11 +7,11 @@ public class RemoveSkillGroupsFromUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("SkillGroupIdList")
     public String skillGroupIdList;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static RemoveSkillGroupsFromUserRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveSkillGroupsFromUserRequest self = new RemoveSkillGroupsFromUserRequest();
@@ -26,20 +26,20 @@ public class RemoveSkillGroupsFromUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public RemoveSkillGroupsFromUserRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public RemoveSkillGroupsFromUserRequest setSkillGroupIdList(String skillGroupIdList) {
         this.skillGroupIdList = skillGroupIdList;
         return this;
     }
     public String getSkillGroupIdList() {
         return this.skillGroupIdList;
+    }
+
+    public RemoveSkillGroupsFromUserRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

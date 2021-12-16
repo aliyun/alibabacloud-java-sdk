@@ -13,11 +13,11 @@ public class AddSkillGroupsToUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddSkillGroupsToUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSkillGroupsToUserResponseBody self = new AddSkillGroupsToUserResponseBody();
@@ -48,20 +48,20 @@ public class AddSkillGroupsToUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AddSkillGroupsToUserResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public AddSkillGroupsToUserResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
     public java.util.List<String> getParams() {
         return this.params;
+    }
+
+    public AddSkillGroupsToUserResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

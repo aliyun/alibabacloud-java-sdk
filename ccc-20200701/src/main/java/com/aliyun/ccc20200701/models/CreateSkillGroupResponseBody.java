@@ -7,6 +7,9 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateSkillGroupResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class CreateSkillGroupResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public CreateSkillGroupResponseBodyData data;
 
     public static CreateSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupResponseBody self = new CreateSkillGroupResponseBody();
@@ -30,6 +30,14 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateSkillGroupResponseBody setData(CreateSkillGroupResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateSkillGroupResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateSkillGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,20 +64,12 @@ public class CreateSkillGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSkillGroupResponseBody setData(CreateSkillGroupResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateSkillGroupResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class CreateSkillGroupResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("Name")
         public String name;
@@ -82,20 +82,20 @@ public class CreateSkillGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateSkillGroupResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public CreateSkillGroupResponseBodyData setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateSkillGroupResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public CreateSkillGroupResponseBodyData setName(String name) {

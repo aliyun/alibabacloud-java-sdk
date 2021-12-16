@@ -13,11 +13,11 @@ public class RemoveUsersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RemoveUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveUsersResponseBody self = new RemoveUsersResponseBody();
@@ -48,20 +48,20 @@ public class RemoveUsersResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RemoveUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public RemoveUsersResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
     public java.util.List<String> getParams() {
         return this.params;
+    }
+
+    public RemoveUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -7,6 +7,9 @@ public class ListRolesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<ListRolesResponseBodyData> data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListRolesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<ListRolesResponseBodyData> data;
 
     public static ListRolesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRolesResponseBody self = new ListRolesResponseBody();
@@ -30,6 +30,14 @@ public class ListRolesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListRolesResponseBody setData(java.util.List<ListRolesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListRolesResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListRolesResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -54,14 +62,6 @@ public class ListRolesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListRolesResponseBody setData(java.util.List<ListRolesResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListRolesResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class ListRolesResponseBodyData extends TeaModel {

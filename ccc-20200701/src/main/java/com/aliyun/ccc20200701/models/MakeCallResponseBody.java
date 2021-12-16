@@ -7,20 +7,20 @@ public class MakeCallResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public MakeCallResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Params")
     public java.util.List<String> params;
 
-    @NameInMap("Data")
-    public MakeCallResponseBodyData data;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static MakeCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MakeCallResponseBody self = new MakeCallResponseBody();
@@ -33,6 +33,14 @@ public class MakeCallResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public MakeCallResponseBody setData(MakeCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public MakeCallResponseBodyData getData() {
+        return this.data;
     }
 
     public MakeCallResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,14 +59,6 @@ public class MakeCallResponseBody extends TeaModel {
         return this.message;
     }
 
-    public MakeCallResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public MakeCallResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
@@ -67,17 +67,26 @@ public class MakeCallResponseBody extends TeaModel {
         return this.params;
     }
 
-    public MakeCallResponseBody setData(MakeCallResponseBodyData data) {
-        this.data = data;
+    public MakeCallResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public MakeCallResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class MakeCallResponseBodyDataCallContextChannelContexts extends TeaModel {
-        @NameInMap("ReleaseInitiator")
-        public String releaseInitiator;
+        @NameInMap("AssociatedData")
+        public java.util.Map<String, ?> associatedData;
+
+        @NameInMap("CallType")
+        public String callType;
+
+        @NameInMap("ChannelFlags")
+        public String channelFlags;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("ChannelState")
         public String channelState;
@@ -85,47 +94,62 @@ public class MakeCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         public String destination;
 
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("ChannelFlags")
-        public String channelFlags;
-
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
-        @NameInMap("AssociatedData")
-        public java.util.Map<String, ?> associatedData;
-
-        @NameInMap("ReleaseReason")
-        public String releaseReason;
-
-        @NameInMap("CallType")
-        public String callType;
-
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelId")
-        public String channelId;
 
         @NameInMap("Originator")
         public String originator;
 
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         @NameInMap("UserExtension")
         public String userExtension;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static MakeCallResponseBodyDataCallContextChannelContexts build(java.util.Map<String, ?> map) throws Exception {
             MakeCallResponseBodyDataCallContextChannelContexts self = new MakeCallResponseBodyDataCallContextChannelContexts();
             return TeaModel.build(map, self);
         }
 
-        public MakeCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
-            this.releaseInitiator = releaseInitiator;
+        public MakeCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
+            this.associatedData = associatedData;
             return this;
         }
-        public String getReleaseInitiator() {
-            return this.releaseInitiator;
+        public java.util.Map<String, ?> getAssociatedData() {
+            return this.associatedData;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
+            this.callType = callType;
+            return this;
+        }
+        public String getCallType() {
+            return this.callType;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
+            this.channelFlags = channelFlags;
+            return this;
+        }
+        public String getChannelFlags() {
+            return this.channelFlags;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public MakeCallResponseBodyDataCallContextChannelContexts setChannelState(String channelState) {
@@ -144,68 +168,12 @@ public class MakeCallResponseBody extends TeaModel {
             return this.destination;
         }
 
-        public MakeCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setChannelFlags(String channelFlags) {
-            this.channelFlags = channelFlags;
-            return this;
-        }
-        public String getChannelFlags() {
-            return this.channelFlags;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setAssociatedData(java.util.Map<String, ?> associatedData) {
-            this.associatedData = associatedData;
-            return this;
-        }
-        public java.util.Map<String, ?> getAssociatedData() {
-            return this.associatedData;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
-            this.releaseReason = releaseReason;
-            return this;
-        }
-        public String getReleaseReason() {
-            return this.releaseReason;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setCallType(String callType) {
-            this.callType = callType;
-            return this;
-        }
-        public String getCallType() {
-            return this.callType;
-        }
-
         public MakeCallResponseBodyDataCallContextChannelContexts setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
         public String getJobId() {
             return this.jobId;
-        }
-
-        public MakeCallResponseBodyDataCallContextChannelContexts setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
         }
 
         public MakeCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {
@@ -216,6 +184,30 @@ public class MakeCallResponseBody extends TeaModel {
             return this.originator;
         }
 
+        public MakeCallResponseBodyDataCallContextChannelContexts setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public MakeCallResponseBodyDataCallContextChannelContexts setUserExtension(String userExtension) {
             this.userExtension = userExtension;
             return this;
@@ -224,20 +216,28 @@ public class MakeCallResponseBody extends TeaModel {
             return this.userExtension;
         }
 
+        public MakeCallResponseBodyDataCallContextChannelContexts setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
     public static class MakeCallResponseBodyDataCallContext extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("ChannelContexts")
+        public java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("JobId")
         public String jobId;
-
-        @NameInMap("ChannelContexts")
-        public java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
         public static MakeCallResponseBodyDataCallContext build(java.util.Map<String, ?> map) throws Exception {
             MakeCallResponseBodyDataCallContext self = new MakeCallResponseBodyDataCallContext();
@@ -250,6 +250,14 @@ public class MakeCallResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public MakeCallResponseBodyDataCallContext setChannelContexts(java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts) {
+            this.channelContexts = channelContexts;
+            return this;
+        }
+        public java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
+            return this.channelContexts;
         }
 
         public MakeCallResponseBodyDataCallContext setInstanceId(String instanceId) {
@@ -268,90 +276,42 @@ public class MakeCallResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public MakeCallResponseBodyDataCallContext setChannelContexts(java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts) {
-            this.channelContexts = channelContexts;
-            return this;
-        }
-        public java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> getChannelContexts() {
-            return this.channelContexts;
-        }
-
     }
 
     public static class MakeCallResponseBodyDataUserContext extends TeaModel {
-        @NameInMap("Extension")
-        public String extension;
-
-        @NameInMap("WorkMode")
-        public String workMode;
+        @NameInMap("BreakCode")
+        public String breakCode;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("BreakCode")
-        public String breakCode;
+        @NameInMap("Extension")
+        public String extension;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("JobId")
+        public String jobId;
+
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
-
-        @NameInMap("UserState")
-        public String userState;
 
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserState")
+        public String userState;
+
+        @NameInMap("WorkMode")
+        public String workMode;
+
         public static MakeCallResponseBodyDataUserContext build(java.util.Map<String, ?> map) throws Exception {
             MakeCallResponseBodyDataUserContext self = new MakeCallResponseBodyDataUserContext();
             return TeaModel.build(map, self);
-        }
-
-        public MakeCallResponseBodyDataUserContext setExtension(String extension) {
-            this.extension = extension;
-            return this;
-        }
-        public String getExtension() {
-            return this.extension;
-        }
-
-        public MakeCallResponseBodyDataUserContext setWorkMode(String workMode) {
-            this.workMode = workMode;
-            return this;
-        }
-        public String getWorkMode() {
-            return this.workMode;
-        }
-
-        public MakeCallResponseBodyDataUserContext setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public MakeCallResponseBodyDataUserContext setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public MakeCallResponseBodyDataUserContext setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public MakeCallResponseBodyDataUserContext setBreakCode(String breakCode) {
@@ -362,12 +322,36 @@ public class MakeCallResponseBody extends TeaModel {
             return this.breakCode;
         }
 
+        public MakeCallResponseBodyDataUserContext setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public MakeCallResponseBodyDataUserContext setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
         public MakeCallResponseBodyDataUserContext setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public MakeCallResponseBodyDataUserContext setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public MakeCallResponseBodyDataUserContext setOutboundScenario(Boolean outboundScenario) {
@@ -378,14 +362,6 @@ public class MakeCallResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
-        public MakeCallResponseBodyDataUserContext setUserState(String userState) {
-            this.userState = userState;
-            return this;
-        }
-        public String getUserState() {
-            return this.userState;
-        }
-
         public MakeCallResponseBodyDataUserContext setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
             this.signedSkillGroupIdList = signedSkillGroupIdList;
             return this;
@@ -394,14 +370,38 @@ public class MakeCallResponseBody extends TeaModel {
             return this.signedSkillGroupIdList;
         }
 
+        public MakeCallResponseBodyDataUserContext setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public MakeCallResponseBodyDataUserContext setUserState(String userState) {
+            this.userState = userState;
+            return this;
+        }
+        public String getUserState() {
+            return this.userState;
+        }
+
+        public MakeCallResponseBodyDataUserContext setWorkMode(String workMode) {
+            this.workMode = workMode;
+            return this;
+        }
+        public String getWorkMode() {
+            return this.workMode;
+        }
+
     }
 
     public static class MakeCallResponseBodyData extends TeaModel {
-        @NameInMap("ContextId")
-        public Long contextId;
-
         @NameInMap("CallContext")
         public MakeCallResponseBodyDataCallContext callContext;
+
+        @NameInMap("ContextId")
+        public Long contextId;
 
         @NameInMap("UserContext")
         public MakeCallResponseBodyDataUserContext userContext;
@@ -411,20 +411,20 @@ public class MakeCallResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public MakeCallResponseBodyData setContextId(Long contextId) {
-            this.contextId = contextId;
-            return this;
-        }
-        public Long getContextId() {
-            return this.contextId;
-        }
-
         public MakeCallResponseBodyData setCallContext(MakeCallResponseBodyDataCallContext callContext) {
             this.callContext = callContext;
             return this;
         }
         public MakeCallResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public MakeCallResponseBodyData setContextId(Long contextId) {
+            this.contextId = contextId;
+            return this;
+        }
+        public Long getContextId() {
+            return this.contextId;
         }
 
         public MakeCallResponseBodyData setUserContext(MakeCallResponseBodyDataUserContext userContext) {

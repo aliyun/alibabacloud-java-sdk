@@ -4,18 +4,26 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ResetAgentStateRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static ResetAgentStateRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetAgentStateRequest self = new ResetAgentStateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResetAgentStateRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public ResetAgentStateRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class ResetAgentStateRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public ResetAgentStateRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

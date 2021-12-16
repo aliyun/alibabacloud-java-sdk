@@ -7,6 +7,9 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListUnassignedNumbersResponseBodyData data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -15,9 +18,6 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListUnassignedNumbersResponseBodyData data;
 
     public static ListUnassignedNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUnassignedNumbersResponseBody self = new ListUnassignedNumbersResponseBody();
@@ -30,6 +30,14 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListUnassignedNumbersResponseBody setData(ListUnassignedNumbersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListUnassignedNumbersResponseBodyData getData() {
+        return this.data;
     }
 
     public ListUnassignedNumbersResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -56,41 +64,25 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListUnassignedNumbersResponseBody setData(ListUnassignedNumbersResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListUnassignedNumbersResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListUnassignedNumbersResponseBodyDataList extends TeaModel {
-        @NameInMap("Number")
-        public String number;
-
         @NameInMap("Active")
         public Boolean active;
 
         @NameInMap("City")
         public String city;
 
-        @NameInMap("Usage")
-        public Boolean usage;
+        @NameInMap("Number")
+        public String number;
 
         @NameInMap("Province")
         public String province;
 
+        @NameInMap("Usage")
+        public Boolean usage;
+
         public static ListUnassignedNumbersResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListUnassignedNumbersResponseBodyDataList self = new ListUnassignedNumbersResponseBodyDataList();
             return TeaModel.build(map, self);
-        }
-
-        public ListUnassignedNumbersResponseBodyDataList setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
         }
 
         public ListUnassignedNumbersResponseBodyDataList setActive(Boolean active) {
@@ -109,12 +101,12 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             return this.city;
         }
 
-        public ListUnassignedNumbersResponseBodyDataList setUsage(Boolean usage) {
-            this.usage = usage;
+        public ListUnassignedNumbersResponseBodyDataList setNumber(String number) {
+            this.number = number;
             return this;
         }
-        public Boolean getUsage() {
-            return this.usage;
+        public String getNumber() {
+            return this.number;
         }
 
         public ListUnassignedNumbersResponseBodyDataList setProvince(String province) {
@@ -125,9 +117,20 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
             return this.province;
         }
 
+        public ListUnassignedNumbersResponseBodyDataList setUsage(Boolean usage) {
+            this.usage = usage;
+            return this;
+        }
+        public Boolean getUsage() {
+            return this.usage;
+        }
+
     }
 
     public static class ListUnassignedNumbersResponseBodyData extends TeaModel {
+        @NameInMap("List")
+        public java.util.List<ListUnassignedNumbersResponseBodyDataList> list;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -137,12 +140,17 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("List")
-        public java.util.List<ListUnassignedNumbersResponseBodyDataList> list;
-
         public static ListUnassignedNumbersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUnassignedNumbersResponseBodyData self = new ListUnassignedNumbersResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListUnassignedNumbersResponseBodyData setList(java.util.List<ListUnassignedNumbersResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListUnassignedNumbersResponseBodyDataList> getList() {
+            return this.list;
         }
 
         public ListUnassignedNumbersResponseBodyData setPageNumber(Integer pageNumber) {
@@ -167,14 +175,6 @@ public class ListUnassignedNumbersResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListUnassignedNumbersResponseBodyData setList(java.util.List<ListUnassignedNumbersResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListUnassignedNumbersResponseBodyDataList> getList() {
-            return this.list;
         }
 
     }

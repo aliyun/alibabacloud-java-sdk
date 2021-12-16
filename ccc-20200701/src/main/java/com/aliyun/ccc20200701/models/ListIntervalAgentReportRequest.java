@@ -7,9 +7,6 @@ public class ListIntervalAgentReportRequest extends TeaModel {
     @NameInMap("AgentId")
     public String agentId;
 
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -18,6 +15,9 @@ public class ListIntervalAgentReportRequest extends TeaModel {
 
     @NameInMap("Interval")
     public String interval;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static ListIntervalAgentReportRequest build(java.util.Map<String, ?> map) throws Exception {
         ListIntervalAgentReportRequest self = new ListIntervalAgentReportRequest();
@@ -30,14 +30,6 @@ public class ListIntervalAgentReportRequest extends TeaModel {
     }
     public String getAgentId() {
         return this.agentId;
-    }
-
-    public ListIntervalAgentReportRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public ListIntervalAgentReportRequest setEndTime(Long endTime) {
@@ -62,6 +54,14 @@ public class ListIntervalAgentReportRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public ListIntervalAgentReportRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

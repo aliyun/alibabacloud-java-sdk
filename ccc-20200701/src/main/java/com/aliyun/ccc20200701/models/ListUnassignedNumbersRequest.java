@@ -4,8 +4,8 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ListUnassignedNumbersRequest extends TeaModel {
-    @NameInMap("SearchPattern")
-    public String searchPattern;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,20 +13,20 @@ public class ListUnassignedNumbersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("SearchPattern")
+    public String searchPattern;
 
     public static ListUnassignedNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUnassignedNumbersRequest self = new ListUnassignedNumbersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListUnassignedNumbersRequest setSearchPattern(String searchPattern) {
-        this.searchPattern = searchPattern;
+    public ListUnassignedNumbersRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSearchPattern() {
-        return this.searchPattern;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListUnassignedNumbersRequest setPageNumber(Integer pageNumber) {
@@ -45,12 +45,12 @@ public class ListUnassignedNumbersRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListUnassignedNumbersRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ListUnassignedNumbersRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
 }

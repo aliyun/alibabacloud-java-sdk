@@ -4,14 +4,11 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class MonitorCallRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("DeviceId")
     public String deviceId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("MonitoredUserId")
     public String monitoredUserId;
@@ -19,25 +16,12 @@ public class MonitorCallRequest extends TeaModel {
     @NameInMap("TimeoutSeconds")
     public Integer timeoutSeconds;
 
+    @NameInMap("UserId")
+    public String userId;
+
     public static MonitorCallRequest build(java.util.Map<String, ?> map) throws Exception {
         MonitorCallRequest self = new MonitorCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MonitorCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public MonitorCallRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public MonitorCallRequest setDeviceId(String deviceId) {
@@ -46,6 +30,14 @@ public class MonitorCallRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public MonitorCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public MonitorCallRequest setMonitoredUserId(String monitoredUserId) {
@@ -62,6 +54,14 @@ public class MonitorCallRequest extends TeaModel {
     }
     public Integer getTimeoutSeconds() {
         return this.timeoutSeconds;
+    }
+
+    public MonitorCallRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
