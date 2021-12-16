@@ -4,18 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainLogResponseBody extends TeaModel {
+    @NameInMap("DomainLogDetails")
+    public DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails;
+
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainLogDetails")
-    public DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails;
-
     public static DescribeDcdnDomainLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainLogResponseBody self = new DescribeDcdnDomainLogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnDomainLogResponseBody setDomainLogDetails(DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails) {
+        this.domainLogDetails = domainLogDetails;
+        return this;
+    }
+    public DescribeDcdnDomainLogResponseBodyDomainLogDetails getDomainLogDetails() {
+        return this.domainLogDetails;
     }
 
     public DescribeDcdnDomainLogResponseBody setDomainName(String domainName) {
@@ -34,29 +42,21 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDcdnDomainLogResponseBody setDomainLogDetails(DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails) {
-        this.domainLogDetails = domainLogDetails;
-        return this;
-    }
-    public DescribeDcdnDomainLogResponseBodyDomainLogDetails getDomainLogDetails() {
-        return this.domainLogDetails;
-    }
-
     public static class DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("LogSize")
-        public Long logSize;
-
-        @NameInMap("StartTime")
-        public String startTime;
 
         @NameInMap("LogName")
         public String logName;
 
         @NameInMap("LogPath")
         public String logPath;
+
+        @NameInMap("LogSize")
+        public Long logSize;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail self = new DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail();
@@ -69,22 +69,6 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogSize(Long logSize) {
-            this.logSize = logSize;
-            return this;
-        }
-        public Long getLogSize() {
-            return this.logSize;
-        }
-
-        public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogName(String logName) {
@@ -101,6 +85,22 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         }
         public String getLogPath() {
             return this.logPath;
+        }
+
+        public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogSize(Long logSize) {
+            this.logSize = logSize;
+            return this;
+        }
+        public Long getLogSize() {
+            return this.logSize;
+        }
+
+        public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

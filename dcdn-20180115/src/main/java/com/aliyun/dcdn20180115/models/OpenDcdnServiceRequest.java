@@ -4,14 +4,14 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class OpenDcdnServiceRequest extends TeaModel {
+    @NameInMap("BillType")
+    public String billType;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("BillType")
-    public String billType;
 
     @NameInMap("WebsocketBillType")
     public String websocketBillType;
@@ -19,6 +19,14 @@ public class OpenDcdnServiceRequest extends TeaModel {
     public static OpenDcdnServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         OpenDcdnServiceRequest self = new OpenDcdnServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OpenDcdnServiceRequest setBillType(String billType) {
+        this.billType = billType;
+        return this;
+    }
+    public String getBillType() {
+        return this.billType;
     }
 
     public OpenDcdnServiceRequest setOwnerId(Long ownerId) {
@@ -35,14 +43,6 @@ public class OpenDcdnServiceRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public OpenDcdnServiceRequest setBillType(String billType) {
-        this.billType = billType;
-        return this;
-    }
-    public String getBillType() {
-        return this.billType;
     }
 
     public OpenDcdnServiceRequest setWebsocketBillType(String websocketBillType) {

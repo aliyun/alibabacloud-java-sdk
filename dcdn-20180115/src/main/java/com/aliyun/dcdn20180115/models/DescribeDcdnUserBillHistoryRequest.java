@@ -4,18 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserBillHistoryRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static DescribeDcdnUserBillHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserBillHistoryRequest self = new DescribeDcdnUserBillHistoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnUserBillHistoryRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDcdnUserBillHistoryRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribeDcdnUserBillHistoryRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeDcdnUserBillHistoryRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

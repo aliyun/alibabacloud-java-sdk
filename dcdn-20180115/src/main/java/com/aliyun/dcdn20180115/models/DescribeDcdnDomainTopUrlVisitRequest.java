@@ -4,29 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainTopUrlVisitRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainTopUrlVisitRequest self = new DescribeDcdnDomainTopUrlVisitRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainTopUrlVisitRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainTopUrlVisitRequest setDomainName(String domainName) {
@@ -37,12 +29,12 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainTopUrlVisitRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDcdnDomainTopUrlVisitRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDcdnDomainTopUrlVisitRequest setSortBy(String sortBy) {
@@ -51,6 +43,14 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public DescribeDcdnDomainTopUrlVisitRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

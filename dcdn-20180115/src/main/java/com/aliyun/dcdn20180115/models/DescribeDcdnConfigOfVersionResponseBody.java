@@ -81,29 +81,21 @@ public class DescribeDcdnConfigOfVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConfigId")
         public String configId;
-
-        @NameInMap("FunctionName")
-        public String functionName;
 
         @NameInMap("FunctionArgs")
         public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs functionArgs;
 
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig self = new DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setConfigId(String configId) {
@@ -114,6 +106,14 @@ public class DescribeDcdnConfigOfVersionResponseBody extends TeaModel {
             return this.configId;
         }
 
+        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setFunctionArgs(DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs functionArgs) {
+            this.functionArgs = functionArgs;
+            return this;
+        }
+        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs getFunctionArgs() {
+            return this.functionArgs;
+        }
+
         public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
@@ -122,12 +122,12 @@ public class DescribeDcdnConfigOfVersionResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setFunctionArgs(DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs functionArgs) {
-            this.functionArgs = functionArgs;
+        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfig setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeDcdnConfigOfVersionResponseBodyVersionConfigsVersionConfigFunctionArgs getFunctionArgs() {
-            return this.functionArgs;
+        public String getStatus() {
+            return this.status;
         }
 
     }

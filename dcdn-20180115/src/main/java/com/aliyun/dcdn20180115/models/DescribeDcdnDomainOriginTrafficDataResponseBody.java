@@ -4,59 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("OriginTrafficDataPerInterval")
     public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerInterval originTrafficDataPerInterval;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainOriginTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainOriginTrafficDataResponseBody self = new DescribeDcdnDomainOriginTrafficDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainOriginTrafficDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainOriginTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainOriginTrafficDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnDomainOriginTrafficDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDcdnDomainOriginTrafficDataResponseBody setDataInterval(String dataInterval) {
@@ -67,6 +35,22 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDcdnDomainOriginTrafficDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnDomainOriginTrafficDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeDcdnDomainOriginTrafficDataResponseBody setOriginTrafficDataPerInterval(DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerInterval originTrafficDataPerInterval) {
         this.originTrafficDataPerInterval = originTrafficDataPerInterval;
         return this;
@@ -75,12 +59,28 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         return this.originTrafficDataPerInterval;
     }
 
+    public DescribeDcdnDomainOriginTrafficDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainOriginTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule extends TeaModel {
         @NameInMap("DynamicHttpOriginTraffic")
         public Float dynamicHttpOriginTraffic;
 
-        @NameInMap("StaticHttpsOriginTraffic")
-        public Float staticHttpsOriginTraffic;
+        @NameInMap("DynamicHttpsOriginTraffic")
+        public Float dynamicHttpsOriginTraffic;
 
         @NameInMap("OriginTraffic")
         public Float originTraffic;
@@ -88,8 +88,8 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         @NameInMap("StaticHttpOriginTraffic")
         public Float staticHttpOriginTraffic;
 
-        @NameInMap("DynamicHttpsOriginTraffic")
-        public Float dynamicHttpsOriginTraffic;
+        @NameInMap("StaticHttpsOriginTraffic")
+        public Float staticHttpsOriginTraffic;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
@@ -107,12 +107,12 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             return this.dynamicHttpOriginTraffic;
         }
 
-        public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setStaticHttpsOriginTraffic(Float staticHttpsOriginTraffic) {
-            this.staticHttpsOriginTraffic = staticHttpsOriginTraffic;
+        public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setDynamicHttpsOriginTraffic(Float dynamicHttpsOriginTraffic) {
+            this.dynamicHttpsOriginTraffic = dynamicHttpsOriginTraffic;
             return this;
         }
-        public Float getStaticHttpsOriginTraffic() {
-            return this.staticHttpsOriginTraffic;
+        public Float getDynamicHttpsOriginTraffic() {
+            return this.dynamicHttpsOriginTraffic;
         }
 
         public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setOriginTraffic(Float originTraffic) {
@@ -131,12 +131,12 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             return this.staticHttpOriginTraffic;
         }
 
-        public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setDynamicHttpsOriginTraffic(Float dynamicHttpsOriginTraffic) {
-            this.dynamicHttpsOriginTraffic = dynamicHttpsOriginTraffic;
+        public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setStaticHttpsOriginTraffic(Float staticHttpsOriginTraffic) {
+            this.staticHttpsOriginTraffic = staticHttpsOriginTraffic;
             return this;
         }
-        public Float getDynamicHttpsOriginTraffic() {
-            return this.dynamicHttpsOriginTraffic;
+        public Float getStaticHttpsOriginTraffic() {
+            return this.staticHttpsOriginTraffic;
         }
 
         public DescribeDcdnDomainOriginTrafficDataResponseBodyOriginTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {

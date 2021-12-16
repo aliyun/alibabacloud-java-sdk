@@ -4,14 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("City")
+    public String city;
 
     @NameInMap("CommonName")
     public String commonName;
 
-    @NameInMap("SANs")
-    public String SANs;
+    @NameInMap("Country")
+    public String country;
+
+    @NameInMap("Email")
+    public String email;
 
     @NameInMap("Organization")
     public String organization;
@@ -19,29 +22,26 @@ public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
-    @NameInMap("Country")
-    public String country;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SANs")
+    public String SANs;
 
     @NameInMap("State")
     public String state;
-
-    @NameInMap("City")
-    public String city;
-
-    @NameInMap("Email")
-    public String email;
 
     public static CreateDcdnCertificateSigningRequestRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDcdnCertificateSigningRequestRequest self = new CreateDcdnCertificateSigningRequestRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDcdnCertificateSigningRequestRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CreateDcdnCertificateSigningRequestRequest setCity(String city) {
+        this.city = city;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getCity() {
+        return this.city;
     }
 
     public CreateDcdnCertificateSigningRequestRequest setCommonName(String commonName) {
@@ -52,12 +52,20 @@ public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
         return this.commonName;
     }
 
-    public CreateDcdnCertificateSigningRequestRequest setSANs(String SANs) {
-        this.SANs = SANs;
+    public CreateDcdnCertificateSigningRequestRequest setCountry(String country) {
+        this.country = country;
         return this;
     }
-    public String getSANs() {
-        return this.SANs;
+    public String getCountry() {
+        return this.country;
+    }
+
+    public CreateDcdnCertificateSigningRequestRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
     }
 
     public CreateDcdnCertificateSigningRequestRequest setOrganization(String organization) {
@@ -76,12 +84,20 @@ public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
         return this.organizationUnit;
     }
 
-    public CreateDcdnCertificateSigningRequestRequest setCountry(String country) {
-        this.country = country;
+    public CreateDcdnCertificateSigningRequestRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getCountry() {
-        return this.country;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDcdnCertificateSigningRequestRequest setSANs(String SANs) {
+        this.SANs = SANs;
+        return this;
+    }
+    public String getSANs() {
+        return this.SANs;
     }
 
     public CreateDcdnCertificateSigningRequestRequest setState(String state) {
@@ -90,22 +106,6 @@ public class CreateDcdnCertificateSigningRequestRequest extends TeaModel {
     }
     public String getState() {
         return this.state;
-    }
-
-    public CreateDcdnCertificateSigningRequestRequest setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
-    }
-
-    public CreateDcdnCertificateSigningRequestRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
     }
 
 }

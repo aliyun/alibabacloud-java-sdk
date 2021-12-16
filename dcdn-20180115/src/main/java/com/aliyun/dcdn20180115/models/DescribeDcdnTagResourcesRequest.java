@@ -7,11 +7,11 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnTagResourcesRequestTag> tag;
@@ -29,20 +29,20 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeDcdnTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public DescribeDcdnTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public DescribeDcdnTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribeDcdnTagResourcesRequest setTag(java.util.List<DescribeDcdnTagResourcesRequestTag> tag) {

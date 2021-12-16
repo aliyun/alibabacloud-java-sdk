@@ -4,20 +4,20 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UpdateDcdnDomainRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("Sources")
     public String sources;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -25,22 +25,6 @@ public class UpdateDcdnDomainRequest extends TeaModel {
     public static UpdateDcdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDcdnDomainRequest self = new UpdateDcdnDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDcdnDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public UpdateDcdnDomainRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public UpdateDcdnDomainRequest setDomainName(String domainName) {
@@ -51,12 +35,12 @@ public class UpdateDcdnDomainRequest extends TeaModel {
         return this.domainName;
     }
 
-    public UpdateDcdnDomainRequest setSources(String sources) {
-        this.sources = sources;
+    public UpdateDcdnDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSources() {
-        return this.sources;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateDcdnDomainRequest setResourceGroupId(String resourceGroupId) {
@@ -65,6 +49,22 @@ public class UpdateDcdnDomainRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public UpdateDcdnDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public UpdateDcdnDomainRequest setSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    public String getSources() {
+        return this.sources;
     }
 
     public UpdateDcdnDomainRequest setTopLevelDomain(String topLevelDomain) {

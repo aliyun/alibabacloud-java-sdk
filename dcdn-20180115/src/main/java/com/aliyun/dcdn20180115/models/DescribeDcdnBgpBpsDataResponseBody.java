@@ -4,45 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
+    @NameInMap("BgpDataInterval")
+    public java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval;
+
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("BgpDataInterval")
-    public java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDcdnBgpBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnBgpBpsDataResponseBody self = new DescribeDcdnBgpBpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnBgpBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnBgpBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnBgpBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnBgpBpsDataResponseBody setBgpDataInterval(java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval) {
@@ -53,12 +29,36 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         return this.bgpDataInterval;
     }
 
-    public static class DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval extends TeaModel {
-        @NameInMap("Out")
-        public Float out;
+    public DescribeDcdnBgpBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
 
+    public DescribeDcdnBgpBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnBgpBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public static class DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval extends TeaModel {
         @NameInMap("In")
         public Float in;
+
+        @NameInMap("Out")
+        public Float out;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
@@ -68,20 +68,20 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval setOut(Float out) {
-            this.out = out;
-            return this;
-        }
-        public Float getOut() {
-            return this.out;
-        }
-
         public DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval setIn(Float in) {
             this.in = in;
             return this;
         }
         public Float getIn() {
             return this.in;
+        }
+
+        public DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval setOut(Float out) {
+            this.out = out;
+            return this;
+        }
+        public Float getOut() {
+            return this.out;
         }
 
         public DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval setTimeStamp(String timeStamp) {

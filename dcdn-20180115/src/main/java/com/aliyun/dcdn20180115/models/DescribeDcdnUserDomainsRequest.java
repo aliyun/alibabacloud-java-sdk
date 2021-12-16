@@ -4,38 +4,41 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("DomainStatus")
-    public String domainStatus;
-
-    @NameInMap("DomainSearchType")
-    public String domainSearchType;
-
-    @NameInMap("CheckDomainShow")
-    public Boolean checkDomainShow;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("ChangeEndTime")
+    public String changeEndTime;
 
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
 
-    @NameInMap("ChangeEndTime")
-    public String changeEndTime;
+    @NameInMap("CheckDomainShow")
+    public Boolean checkDomainShow;
+
+    @NameInMap("Coverage")
+    public String coverage;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("DomainSearchType")
+    public String domainSearchType;
+
+    @NameInMap("DomainStatus")
+    public String domainStatus;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnUserDomainsRequestTag> tag;
@@ -45,76 +48,12 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnUserDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeDcdnUserDomainsRequest setChangeEndTime(String changeEndTime) {
+        this.changeEndTime = changeEndTime;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDcdnUserDomainsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeDcdnUserDomainsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDcdnUserDomainsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDcdnUserDomainsRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DescribeDcdnUserDomainsRequest setDomainStatus(String domainStatus) {
-        this.domainStatus = domainStatus;
-        return this;
-    }
-    public String getDomainStatus() {
-        return this.domainStatus;
-    }
-
-    public DescribeDcdnUserDomainsRequest setDomainSearchType(String domainSearchType) {
-        this.domainSearchType = domainSearchType;
-        return this;
-    }
-    public String getDomainSearchType() {
-        return this.domainSearchType;
-    }
-
-    public DescribeDcdnUserDomainsRequest setCheckDomainShow(Boolean checkDomainShow) {
-        this.checkDomainShow = checkDomainShow;
-        return this;
-    }
-    public Boolean getCheckDomainShow() {
-        return this.checkDomainShow;
-    }
-
-    public DescribeDcdnUserDomainsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getChangeEndTime() {
+        return this.changeEndTime;
     }
 
     public DescribeDcdnUserDomainsRequest setChangeStartTime(String changeStartTime) {
@@ -125,12 +64,84 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
         return this.changeStartTime;
     }
 
-    public DescribeDcdnUserDomainsRequest setChangeEndTime(String changeEndTime) {
-        this.changeEndTime = changeEndTime;
+    public DescribeDcdnUserDomainsRequest setCheckDomainShow(Boolean checkDomainShow) {
+        this.checkDomainShow = checkDomainShow;
         return this;
     }
-    public String getChangeEndTime() {
-        return this.changeEndTime;
+    public Boolean getCheckDomainShow() {
+        return this.checkDomainShow;
+    }
+
+    public DescribeDcdnUserDomainsRequest setCoverage(String coverage) {
+        this.coverage = coverage;
+        return this;
+    }
+    public String getCoverage() {
+        return this.coverage;
+    }
+
+    public DescribeDcdnUserDomainsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnUserDomainsRequest setDomainSearchType(String domainSearchType) {
+        this.domainSearchType = domainSearchType;
+        return this;
+    }
+    public String getDomainSearchType() {
+        return this.domainSearchType;
+    }
+
+    public DescribeDcdnUserDomainsRequest setDomainStatus(String domainStatus) {
+        this.domainStatus = domainStatus;
+        return this;
+    }
+    public String getDomainStatus() {
+        return this.domainStatus;
+    }
+
+    public DescribeDcdnUserDomainsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnUserDomainsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDcdnUserDomainsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDcdnUserDomainsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDcdnUserDomainsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeDcdnUserDomainsRequest setTag(java.util.List<DescribeDcdnUserDomainsRequestTag> tag) {

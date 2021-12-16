@@ -4,51 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnSubTaskRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("ReportIds")
     public String reportIds;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static CreateDcdnSubTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDcdnSubTaskRequest self = new CreateDcdnSubTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDcdnSubTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateDcdnSubTaskRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public CreateDcdnSubTaskRequest setReportIds(String reportIds) {
-        this.reportIds = reportIds;
-        return this;
-    }
-    public String getReportIds() {
-        return this.reportIds;
     }
 
     public CreateDcdnSubTaskRequest setDomainName(String domainName) {
@@ -59,20 +26,20 @@ public class CreateDcdnSubTaskRequest extends TeaModel {
         return this.domainName;
     }
 
-    public CreateDcdnSubTaskRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public CreateDcdnSubTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public CreateDcdnSubTaskRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public CreateDcdnSubTaskRequest setReportIds(String reportIds) {
+        this.reportIds = reportIds;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getReportIds() {
+        return this.reportIds;
     }
 
 }

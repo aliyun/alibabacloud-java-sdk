@@ -4,8 +4,14 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     @NameInMap("InDebt")
     public Boolean inDebt;
+
+    @NameInMap("InDebtOverdue")
+    public Boolean inDebtOverdue;
 
     @NameInMap("OnService")
     public Boolean onService;
@@ -13,15 +19,17 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InDebtOverdue")
-    public Boolean inDebtOverdue;
-
-    @NameInMap("Enabled")
-    public Boolean enabled;
-
     public static DescribeUserLogserviceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserLogserviceStatusResponseBody self = new DescribeUserLogserviceStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUserLogserviceStatusResponseBody setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public DescribeUserLogserviceStatusResponseBody setInDebt(Boolean inDebt) {
@@ -30,6 +38,14 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     }
     public Boolean getInDebt() {
         return this.inDebt;
+    }
+
+    public DescribeUserLogserviceStatusResponseBody setInDebtOverdue(Boolean inDebtOverdue) {
+        this.inDebtOverdue = inDebtOverdue;
+        return this;
+    }
+    public Boolean getInDebtOverdue() {
+        return this.inDebtOverdue;
     }
 
     public DescribeUserLogserviceStatusResponseBody setOnService(Boolean onService) {
@@ -46,22 +62,6 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeUserLogserviceStatusResponseBody setInDebtOverdue(Boolean inDebtOverdue) {
-        this.inDebtOverdue = inDebtOverdue;
-        return this;
-    }
-    public Boolean getInDebtOverdue() {
-        return this.inDebtOverdue;
-    }
-
-    public DescribeUserLogserviceStatusResponseBody setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-        return this;
-    }
-    public Boolean getEnabled() {
-        return this.enabled;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
+    @NameInMap("Keyword")
+    public String keyword;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Keyword")
-    public String keyword;
-
     public static DescribeDcdnHttpsDomainListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnHttpsDomainListRequest self = new DescribeDcdnHttpsDomainListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnHttpsDomainListRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
     }
 
     public DescribeDcdnHttpsDomainListRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class DescribeDcdnHttpsDomainListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeDcdnHttpsDomainListRequest setKeyword(String keyword) {
-        this.keyword = keyword;
-        return this;
-    }
-    public String getKeyword() {
-        return this.keyword;
     }
 
 }

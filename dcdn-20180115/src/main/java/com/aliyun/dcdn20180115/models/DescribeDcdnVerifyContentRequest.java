@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnVerifyContentRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeDcdnVerifyContentRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnVerifyContentRequest self = new DescribeDcdnVerifyContentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnVerifyContentRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnVerifyContentRequest setDomainName(String domainName) {
@@ -29,6 +21,14 @@ public class DescribeDcdnVerifyContentRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeDcdnVerifyContentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

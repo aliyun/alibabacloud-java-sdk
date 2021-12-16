@@ -4,20 +4,20 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
+    @NameInMap("DomainCount")
+    public Long domainCount;
+
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainCount")
-    public Long domainCount;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TopDomains")
     public DescribeDcdnTopDomainsByFlowResponseBodyTopDomains topDomains;
@@ -25,6 +25,14 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     public static DescribeDcdnTopDomainsByFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnTopDomainsByFlowResponseBody self = new DescribeDcdnTopDomainsByFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
+        this.domainCount = domainCount;
+        return this;
+    }
+    public Long getDomainCount() {
+        return this.domainCount;
     }
 
     public DescribeDcdnTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
@@ -43,14 +51,6 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDcdnTopDomainsByFlowResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnTopDomainsByFlowResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,12 +59,12 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDcdnTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
-        this.domainCount = domainCount;
+    public DescribeDcdnTopDomainsByFlowResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public Long getDomainCount() {
-        return this.domainCount;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnTopDomainsByFlowResponseBody setTopDomains(DescribeDcdnTopDomainsByFlowResponseBodyTopDomains topDomains) {
@@ -76,8 +76,14 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
+        @NameInMap("DomainName")
+        public String domainName;
+
         @NameInMap("MaxBps")
         public Long maxBps;
+
+        @NameInMap("MaxBpsTime")
+        public String maxBpsTime;
 
         @NameInMap("Rank")
         public Long rank;
@@ -85,21 +91,23 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
-        @NameInMap("TrafficPercent")
-        public String trafficPercent;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
-        @NameInMap("MaxBpsTime")
-        public String maxBpsTime;
+        @NameInMap("TrafficPercent")
+        public String trafficPercent;
 
         public static DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain self = new DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBps(Long maxBps) {
@@ -108,6 +116,14 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
         public Long getMaxBps() {
             return this.maxBps;
+        }
+
+        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
+            this.maxBpsTime = maxBpsTime;
+            return this;
+        }
+        public String getMaxBpsTime() {
+            return this.maxBpsTime;
         }
 
         public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setRank(Long rank) {
@@ -126,22 +142,6 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             return this.totalAccess;
         }
 
-        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
-            this.trafficPercent = trafficPercent;
-            return this;
-        }
-        public String getTrafficPercent() {
-            return this.trafficPercent;
-        }
-
-        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
         public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setTotalTraffic(String totalTraffic) {
             this.totalTraffic = totalTraffic;
             return this;
@@ -150,12 +150,12 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             return this.totalTraffic;
         }
 
-        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
-            this.maxBpsTime = maxBpsTime;
+        public DescribeDcdnTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
+            this.trafficPercent = trafficPercent;
             return this;
         }
-        public String getMaxBpsTime() {
-            return this.maxBpsTime;
+        public String getTrafficPercent() {
+            return this.trafficPercent;
         }
 
     }

@@ -7,29 +7,35 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("BlockQuota")
     public String blockQuota;
 
-    @NameInMap("PreloadRemain")
-    public String preloadRemain;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("blockRemain")
+    @NameInMap("BlockRemain")
     public String blockRemain;
-
-    @NameInMap("DirRemain")
-    public String dirRemain;
-
-    @NameInMap("UrlRemain")
-    public String urlRemain;
 
     @NameInMap("DirQuota")
     public String dirQuota;
 
-    @NameInMap("UrlQuota")
-    public String urlQuota;
+    @NameInMap("DirRemain")
+    public String dirRemain;
 
     @NameInMap("PreloadQuota")
     public String preloadQuota;
+
+    @NameInMap("PreloadRemain")
+    public String preloadRemain;
+
+    @NameInMap("RegexQuota")
+    public String regexQuota;
+
+    @NameInMap("RegexRemain")
+    public String regexRemain;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("UrlQuota")
+    public String urlQuota;
+
+    @NameInMap("UrlRemain")
+    public String urlRemain;
 
     public static DescribeDcdnRefreshQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnRefreshQuotaResponseBody self = new DescribeDcdnRefreshQuotaResponseBody();
@@ -44,44 +50,12 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         return this.blockQuota;
     }
 
-    public DescribeDcdnRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
-        this.preloadRemain = preloadRemain;
-        return this;
-    }
-    public String getPreloadRemain() {
-        return this.preloadRemain;
-    }
-
-    public DescribeDcdnRefreshQuotaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDcdnRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
         this.blockRemain = blockRemain;
         return this;
     }
     public String getBlockRemain() {
         return this.blockRemain;
-    }
-
-    public DescribeDcdnRefreshQuotaResponseBody setDirRemain(String dirRemain) {
-        this.dirRemain = dirRemain;
-        return this;
-    }
-    public String getDirRemain() {
-        return this.dirRemain;
-    }
-
-    public DescribeDcdnRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
-        this.urlRemain = urlRemain;
-        return this;
-    }
-    public String getUrlRemain() {
-        return this.urlRemain;
     }
 
     public DescribeDcdnRefreshQuotaResponseBody setDirQuota(String dirQuota) {
@@ -92,12 +66,12 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         return this.dirQuota;
     }
 
-    public DescribeDcdnRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
-        this.urlQuota = urlQuota;
+    public DescribeDcdnRefreshQuotaResponseBody setDirRemain(String dirRemain) {
+        this.dirRemain = dirRemain;
         return this;
     }
-    public String getUrlQuota() {
-        return this.urlQuota;
+    public String getDirRemain() {
+        return this.dirRemain;
     }
 
     public DescribeDcdnRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
@@ -106,6 +80,54 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     }
     public String getPreloadQuota() {
         return this.preloadQuota;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
+        this.preloadRemain = preloadRemain;
+        return this;
+    }
+    public String getPreloadRemain() {
+        return this.preloadRemain;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setRegexQuota(String regexQuota) {
+        this.regexQuota = regexQuota;
+        return this;
+    }
+    public String getRegexQuota() {
+        return this.regexQuota;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setRegexRemain(String regexRemain) {
+        this.regexRemain = regexRemain;
+        return this;
+    }
+    public String getRegexRemain() {
+        return this.regexRemain;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
+        this.urlQuota = urlQuota;
+        return this;
+    }
+    public String getUrlQuota() {
+        return this.urlQuota;
+    }
+
+    public DescribeDcdnRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
+        this.urlRemain = urlRemain;
+        return this;
+    }
+    public String getUrlRemain() {
+        return this.urlRemain;
     }
 
 }

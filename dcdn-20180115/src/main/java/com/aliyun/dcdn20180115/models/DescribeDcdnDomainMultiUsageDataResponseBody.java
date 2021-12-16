@@ -7,14 +7,14 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RequestPerInterval")
     public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TrafficPerInterval")
     public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval;
@@ -30,14 +30,6 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDcdnDomainMultiUsageDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainMultiUsageDataResponseBody setRequestId(String requestId) {
@@ -56,6 +48,14 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         return this.requestPerInterval;
     }
 
+    public DescribeDcdnDomainMultiUsageDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDcdnDomainMultiUsageDataResponseBody setTrafficPerInterval(DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerInterval trafficPerInterval) {
         this.trafficPerInterval = trafficPerInterval;
         return this;
@@ -65,37 +65,21 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("Domain")
         public String domain;
 
         @NameInMap("Request")
         public Long request;
 
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule self = new DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setDomain(String domain) {
@@ -112,6 +96,22 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         }
         public Long getRequest() {
             return this.request;
+        }
+
+        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -136,8 +136,11 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Area")
+        public String area;
+
+        @NameInMap("Bps")
+        public Float bps;
 
         @NameInMap("Domain")
         public String domain;
@@ -145,23 +148,28 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("Area")
-        public String area;
-
-        @NameInMap("Bps")
-        public Float bps;
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule self = new DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setType(String type) {
-            this.type = type;
+        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setArea(String area) {
+            this.area = area;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getArea() {
+            return this.area;
+        }
+
+        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setBps(Float bps) {
+            this.bps = bps;
+            return this;
+        }
+        public Float getBps() {
+            return this.bps;
         }
 
         public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setDomain(String domain) {
@@ -180,20 +188,12 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setArea(String area) {
-            this.area = area;
+        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getArea() {
-            return this.area;
-        }
-
-        public DescribeDcdnDomainMultiUsageDataResponseBodyTrafficPerIntervalTrafficDataModule setBps(Float bps) {
-            this.bps = bps;
-            return this;
-        }
-        public Float getBps() {
-            return this.bps;
+        public String getType() {
+            return this.type;
         }
 
     }

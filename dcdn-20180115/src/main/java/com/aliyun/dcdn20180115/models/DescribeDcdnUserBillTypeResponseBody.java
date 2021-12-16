@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BillTypeData")
     public DescribeDcdnUserBillTypeResponseBodyBillTypeData billTypeData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnUserBillTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserBillTypeResponseBody self = new DescribeDcdnUserBillTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnUserBillTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnUserBillTypeResponseBody setBillTypeData(DescribeDcdnUserBillTypeResponseBodyBillTypeData billTypeData) {
@@ -31,60 +23,36 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         return this.billTypeData;
     }
 
-    public static class DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
+    public DescribeDcdnUserBillTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("StartTime")
-        public String startTime;
+    public static class DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem extends TeaModel {
+        @NameInMap("BillType")
+        public String billType;
 
         @NameInMap("BillingCycle")
         public String billingCycle;
 
+        @NameInMap("Dimension")
+        public String dimension;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
         @NameInMap("Product")
         public String product;
 
-        @NameInMap("BillType")
-        public String billType;
-
-        @NameInMap("Dimension")
-        public String dimension;
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem self = new DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
-        }
-
-        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setProduct(String product) {
-            this.product = product;
-            return this;
-        }
-        public String getProduct() {
-            return this.product;
         }
 
         public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setBillType(String billType) {
@@ -95,12 +63,44 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             return this.billType;
         }
 
+        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
         public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setDimension(String dimension) {
             this.dimension = dimension;
             return this;
         }
         public String getDimension() {
             return this.dimension;
+        }
+
+        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
+        }
+
+        public DescribeDcdnUserBillTypeResponseBodyBillTypeDataBillTypeDataItem setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

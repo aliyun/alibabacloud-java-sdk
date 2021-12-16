@@ -4,26 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("Protocol")
     public String protocol;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeDcdnDomainPropertyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainPropertyResponseBody self = new DescribeDcdnDomainPropertyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainPropertyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnDomainPropertyResponseBody setDomainName(String domainName) {
@@ -40,6 +32,14 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public DescribeDcdnDomainPropertyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,59 +4,35 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaBpsDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("BpsDataPerInterval")
+    public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    @NameInMap("BpsDataPerInterval")
-    public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDcdnDomainIpaBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainIpaBpsDataResponseBody self = new DescribeDcdnDomainIpaBpsDataResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainIpaBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDcdnDomainIpaBpsDataResponseBody setBpsDataPerInterval(DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
+        this.bpsDataPerInterval = bpsDataPerInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainIpaBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainIpaBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnDomainIpaBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
+    public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
+        return this.bpsDataPerInterval;
     }
 
     public DescribeDcdnDomainIpaBpsDataResponseBody setDataInterval(String dataInterval) {
@@ -67,12 +43,36 @@ public class DescribeDcdnDomainIpaBpsDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
-    public DescribeDcdnDomainIpaBpsDataResponseBody setBpsDataPerInterval(DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
-        this.bpsDataPerInterval = bpsDataPerInterval;
+    public DescribeDcdnDomainIpaBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
-        return this.bpsDataPerInterval;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnDomainIpaBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDcdnDomainIpaBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainIpaBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class DescribeDcdnDomainIpaBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {

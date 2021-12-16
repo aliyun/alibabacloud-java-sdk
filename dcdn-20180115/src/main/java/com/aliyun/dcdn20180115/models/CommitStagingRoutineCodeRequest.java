@@ -4,26 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CommitStagingRoutineCodeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("CodeDescription")
+    public String codeDescription;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("CodeDescription")
-    public String codeDescription;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static CommitStagingRoutineCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         CommitStagingRoutineCodeRequest self = new CommitStagingRoutineCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public CommitStagingRoutineCodeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public CommitStagingRoutineCodeRequest setCodeDescription(String codeDescription) {
+        this.codeDescription = codeDescription;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getCodeDescription() {
+        return this.codeDescription;
     }
 
     public CommitStagingRoutineCodeRequest setName(String name) {
@@ -34,12 +34,12 @@ public class CommitStagingRoutineCodeRequest extends TeaModel {
         return this.name;
     }
 
-    public CommitStagingRoutineCodeRequest setCodeDescription(String codeDescription) {
-        this.codeDescription = codeDescription;
+    public CommitStagingRoutineCodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getCodeDescription() {
-        return this.codeDescription;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

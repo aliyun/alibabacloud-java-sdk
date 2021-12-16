@@ -4,20 +4,20 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TrafficDataPerInterval")
     public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -27,28 +27,12 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainTrafficDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDcdnDomainTrafficDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainTrafficDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeDcdnDomainTrafficDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainTrafficDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeDcdnDomainTrafficDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDcdnDomainTrafficDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
@@ -76,51 +76,27 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("StaticHttpTraffic")
-        public Float staticHttpTraffic;
+        @NameInMap("DynamicHttpTraffic")
+        public Float dynamicHttpTraffic;
 
         @NameInMap("DynamicHttpsTraffic")
         public Float dynamicHttpsTraffic;
 
-        @NameInMap("Traffic")
-        public Float traffic;
-
-        @NameInMap("DynamicHttpTraffic")
-        public Float dynamicHttpTraffic;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+        @NameInMap("StaticHttpTraffic")
+        public Float staticHttpTraffic;
 
         @NameInMap("StaticHttpsTraffic")
         public Float staticHttpsTraffic;
 
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("Traffic")
+        public Float traffic;
+
         public static DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule self = new DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setStaticHttpTraffic(Float staticHttpTraffic) {
-            this.staticHttpTraffic = staticHttpTraffic;
-            return this;
-        }
-        public Float getStaticHttpTraffic() {
-            return this.staticHttpTraffic;
-        }
-
-        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setDynamicHttpsTraffic(Float dynamicHttpsTraffic) {
-            this.dynamicHttpsTraffic = dynamicHttpsTraffic;
-            return this;
-        }
-        public Float getDynamicHttpsTraffic() {
-            return this.dynamicHttpsTraffic;
-        }
-
-        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTraffic(Float traffic) {
-            this.traffic = traffic;
-            return this;
-        }
-        public Float getTraffic() {
-            return this.traffic;
         }
 
         public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setDynamicHttpTraffic(Float dynamicHttpTraffic) {
@@ -131,12 +107,20 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             return this.dynamicHttpTraffic;
         }
 
-        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
+        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setDynamicHttpsTraffic(Float dynamicHttpsTraffic) {
+            this.dynamicHttpsTraffic = dynamicHttpsTraffic;
             return this;
         }
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public Float getDynamicHttpsTraffic() {
+            return this.dynamicHttpsTraffic;
+        }
+
+        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setStaticHttpTraffic(Float staticHttpTraffic) {
+            this.staticHttpTraffic = staticHttpTraffic;
+            return this;
+        }
+        public Float getStaticHttpTraffic() {
+            return this.staticHttpTraffic;
         }
 
         public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setStaticHttpsTraffic(Float staticHttpsTraffic) {
@@ -145,6 +129,22 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
         public Float getStaticHttpsTraffic() {
             return this.staticHttpsTraffic;
+        }
+
+        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeDcdnDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule setTraffic(Float traffic) {
+            this.traffic = traffic;
+            return this;
+        }
+        public Float getTraffic() {
+            return this.traffic;
         }
 
     }

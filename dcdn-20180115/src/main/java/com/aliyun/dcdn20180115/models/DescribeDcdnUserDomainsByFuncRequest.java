@@ -4,11 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("FuncFilter")
+    public String funcFilter;
 
     @NameInMap("FuncId")
     public Integer funcId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -24,12 +30,20 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DescribeDcdnUserDomainsByFuncRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnUserDomainsByFuncRequest setFuncFilter(String funcFilter) {
+        this.funcFilter = funcFilter;
+        return this;
+    }
+    public String getFuncFilter() {
+        return this.funcFilter;
     }
 
     public DescribeDcdnUserDomainsByFuncRequest setFuncId(Integer funcId) {
@@ -38,6 +52,14 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     }
     public Integer getFuncId() {
         return this.funcId;
+    }
+
+    public DescribeDcdnUserDomainsByFuncRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDcdnUserDomainsByFuncRequest setPageNumber(Integer pageNumber) {
