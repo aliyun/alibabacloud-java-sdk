@@ -10,6 +10,9 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoName")
     public String repoName;
 
@@ -59,6 +62,14 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public CreateRepoSyncRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRepoSyncRuleRequest setRepoName(String repoName) {

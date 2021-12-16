@@ -7,6 +7,9 @@ public class GetRepoSyncTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SyncTaskId")
     public String syncTaskId;
 
@@ -21,6 +24,14 @@ public class GetRepoSyncTaskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetRepoSyncTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetRepoSyncTaskRequest setSyncTaskId(String syncTaskId) {

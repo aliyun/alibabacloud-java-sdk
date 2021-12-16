@@ -10,6 +10,9 @@ public class CreateBuildRecordByRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoId")
     public String repoId;
 
@@ -32,6 +35,14 @@ public class CreateBuildRecordByRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateBuildRecordByRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateBuildRecordByRuleRequest setRepoId(String repoId) {

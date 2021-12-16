@@ -7,6 +7,9 @@ public class DeleteChartRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoName")
     public String repoName;
 
@@ -24,6 +27,14 @@ public class DeleteChartRepositoryRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeleteChartRepositoryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteChartRepositoryRequest setRepoName(String repoName) {

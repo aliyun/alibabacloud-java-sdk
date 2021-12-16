@@ -16,6 +16,9 @@ public class ListArtifactBuildTaskLogRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListArtifactBuildTaskLogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListArtifactBuildTaskLogRequest self = new ListArtifactBuildTaskLogRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListArtifactBuildTaskLogRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListArtifactBuildTaskLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

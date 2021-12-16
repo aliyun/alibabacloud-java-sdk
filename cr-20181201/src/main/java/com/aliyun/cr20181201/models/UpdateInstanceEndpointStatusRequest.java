@@ -16,6 +16,9 @@ public class UpdateInstanceEndpointStatusRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateInstanceEndpointStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceEndpointStatusRequest self = new UpdateInstanceEndpointStatusRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateInstanceEndpointStatusRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public UpdateInstanceEndpointStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

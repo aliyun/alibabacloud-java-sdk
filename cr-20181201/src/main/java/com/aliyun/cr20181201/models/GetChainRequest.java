@@ -10,6 +10,9 @@ public class GetChainRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetChainRequest build(java.util.Map<String, ?> map) throws Exception {
         GetChainRequest self = new GetChainRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetChainRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

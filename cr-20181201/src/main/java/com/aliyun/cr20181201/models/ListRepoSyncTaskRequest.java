@@ -13,6 +13,9 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoName")
     public String repoName;
 
@@ -52,6 +55,14 @@ public class ListRepoSyncTaskRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRepoSyncTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListRepoSyncTaskRequest setRepoName(String repoName) {

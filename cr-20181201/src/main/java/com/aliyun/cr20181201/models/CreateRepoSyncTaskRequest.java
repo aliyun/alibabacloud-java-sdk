@@ -10,6 +10,9 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     @NameInMap("Override")
     public Boolean override;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoId")
     public String repoId;
 
@@ -53,6 +56,14 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     }
     public Boolean getOverride() {
         return this.override;
+    }
+
+    public CreateRepoSyncTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRepoSyncTaskRequest setRepoId(String repoId) {

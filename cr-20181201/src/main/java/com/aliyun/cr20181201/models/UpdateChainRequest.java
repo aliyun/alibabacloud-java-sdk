@@ -19,6 +19,9 @@ public class UpdateChainRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateChainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateChainRequest self = new UpdateChainRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateChainRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public UpdateChainRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

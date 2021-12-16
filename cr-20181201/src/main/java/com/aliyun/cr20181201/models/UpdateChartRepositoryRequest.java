@@ -7,6 +7,9 @@ public class UpdateChartRepositoryRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoName")
     public String repoName;
 
@@ -30,6 +33,14 @@ public class UpdateChartRepositoryRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateChartRepositoryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpdateChartRepositoryRequest setRepoName(String repoName) {

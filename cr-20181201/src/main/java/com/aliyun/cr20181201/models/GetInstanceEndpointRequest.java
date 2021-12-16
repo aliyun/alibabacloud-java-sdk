@@ -13,6 +13,9 @@ public class GetInstanceEndpointRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetInstanceEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceEndpointRequest self = new GetInstanceEndpointRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetInstanceEndpointRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public GetInstanceEndpointRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

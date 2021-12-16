@@ -10,6 +10,9 @@ public class GetInstanceVpcEndpointRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetInstanceVpcEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceVpcEndpointRequest self = new GetInstanceVpcEndpointRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetInstanceVpcEndpointRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public GetInstanceVpcEndpointRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

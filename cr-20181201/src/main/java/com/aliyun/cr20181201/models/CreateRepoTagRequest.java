@@ -13,6 +13,9 @@ public class CreateRepoTagRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RepoName")
     public String repoName;
 
@@ -46,6 +49,14 @@ public class CreateRepoTagRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public CreateRepoTagRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateRepoTagRequest setRepoName(String repoName) {
