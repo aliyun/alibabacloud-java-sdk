@@ -4,20 +4,23 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomerRequest extends TeaModel {
-    @NameInMap("ProdLineId")
-    public Long prodLineId;
-
     @NameInMap("BizType")
     public String bizType;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Contacter")
+    public String contacter;
 
-    @NameInMap("TypeCode")
-    public String typeCode;
+    @NameInMap("CustomerId")
+    public Long customerId;
 
-    @NameInMap("Phone")
-    public String phone;
+    @NameInMap("Dingding")
+    public String dingding;
+
+    @NameInMap("Email")
+    public String email;
+
+    @NameInMap("Industry")
+    public String industry;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,20 +28,8 @@ public class UpdateCustomerRequest extends TeaModel {
     @NameInMap("ManagerName")
     public String managerName;
 
-    @NameInMap("Contacter")
-    public String contacter;
-
-    @NameInMap("Industry")
-    public String industry;
-
-    @NameInMap("Position")
-    public String position;
-
-    @NameInMap("Email")
-    public String email;
-
-    @NameInMap("Dingding")
-    public String dingding;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OuterId")
     public String outerId;
@@ -46,20 +37,21 @@ public class UpdateCustomerRequest extends TeaModel {
     @NameInMap("OuterIdType")
     public Integer outerIdType;
 
-    @NameInMap("CustomerId")
-    public Long customerId;
+    @NameInMap("Phone")
+    public String phone;
+
+    @NameInMap("Position")
+    public String position;
+
+    @NameInMap("ProdLineId")
+    public Long prodLineId;
+
+    @NameInMap("TypeCode")
+    public String typeCode;
 
     public static UpdateCustomerRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCustomerRequest self = new UpdateCustomerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCustomerRequest setProdLineId(Long prodLineId) {
-        this.prodLineId = prodLineId;
-        return this;
-    }
-    public Long getProdLineId() {
-        return this.prodLineId;
     }
 
     public UpdateCustomerRequest setBizType(String bizType) {
@@ -70,28 +62,44 @@ public class UpdateCustomerRequest extends TeaModel {
         return this.bizType;
     }
 
-    public UpdateCustomerRequest setName(String name) {
-        this.name = name;
+    public UpdateCustomerRequest setContacter(String contacter) {
+        this.contacter = contacter;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getContacter() {
+        return this.contacter;
     }
 
-    public UpdateCustomerRequest setTypeCode(String typeCode) {
-        this.typeCode = typeCode;
+    public UpdateCustomerRequest setCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
-    public String getTypeCode() {
-        return this.typeCode;
+    public Long getCustomerId() {
+        return this.customerId;
     }
 
-    public UpdateCustomerRequest setPhone(String phone) {
-        this.phone = phone;
+    public UpdateCustomerRequest setDingding(String dingding) {
+        this.dingding = dingding;
         return this;
     }
-    public String getPhone() {
-        return this.phone;
+    public String getDingding() {
+        return this.dingding;
+    }
+
+    public UpdateCustomerRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
+    public UpdateCustomerRequest setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
     }
 
     public UpdateCustomerRequest setInstanceId(String instanceId) {
@@ -110,44 +118,12 @@ public class UpdateCustomerRequest extends TeaModel {
         return this.managerName;
     }
 
-    public UpdateCustomerRequest setContacter(String contacter) {
-        this.contacter = contacter;
+    public UpdateCustomerRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContacter() {
-        return this.contacter;
-    }
-
-    public UpdateCustomerRequest setIndustry(String industry) {
-        this.industry = industry;
-        return this;
-    }
-    public String getIndustry() {
-        return this.industry;
-    }
-
-    public UpdateCustomerRequest setPosition(String position) {
-        this.position = position;
-        return this;
-    }
-    public String getPosition() {
-        return this.position;
-    }
-
-    public UpdateCustomerRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public UpdateCustomerRequest setDingding(String dingding) {
-        this.dingding = dingding;
-        return this;
-    }
-    public String getDingding() {
-        return this.dingding;
+    public String getName() {
+        return this.name;
     }
 
     public UpdateCustomerRequest setOuterId(String outerId) {
@@ -166,12 +142,36 @@ public class UpdateCustomerRequest extends TeaModel {
         return this.outerIdType;
     }
 
-    public UpdateCustomerRequest setCustomerId(Long customerId) {
-        this.customerId = customerId;
+    public UpdateCustomerRequest setPhone(String phone) {
+        this.phone = phone;
         return this;
     }
-    public Long getCustomerId() {
-        return this.customerId;
+    public String getPhone() {
+        return this.phone;
+    }
+
+    public UpdateCustomerRequest setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
+    }
+
+    public UpdateCustomerRequest setProdLineId(Long prodLineId) {
+        this.prodLineId = prodLineId;
+        return this;
+    }
+    public Long getProdLineId() {
+        return this.prodLineId;
+    }
+
+    public UpdateCustomerRequest setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
+        return this;
+    }
+    public String getTypeCode() {
+        return this.typeCode;
     }
 
 }

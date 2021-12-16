@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetOutbounNumListRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static GetOutbounNumListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOutbounNumListRequest self = new GetOutbounNumListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetOutbounNumListRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GetOutbounNumListRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class GetOutbounNumListRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetOutbounNumListRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

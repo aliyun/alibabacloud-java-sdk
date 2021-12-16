@@ -7,17 +7,11 @@ public class SearchTicketByPhoneRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("Phone")
-    public String phone;
-
-    @NameInMap("TemplateId")
-    public Long templateId;
-
-    @NameInMap("TicketStatus")
-    public String ticketStatus;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -25,11 +19,17 @@ public class SearchTicketByPhoneRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Phone")
+    public String phone;
+
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("TemplateId")
+    public Long templateId;
+
+    @NameInMap("TicketStatus")
+    public String ticketStatus;
 
     public static SearchTicketByPhoneRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTicketByPhoneRequest self = new SearchTicketByPhoneRequest();
@@ -44,36 +44,20 @@ public class SearchTicketByPhoneRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public SearchTicketByPhoneRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public SearchTicketByPhoneRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public SearchTicketByPhoneRequest setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-    public String getPhone() {
-        return this.phone;
-    }
-
-    public SearchTicketByPhoneRequest setTemplateId(Long templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public Long getTemplateId() {
-        return this.templateId;
-    }
-
-    public SearchTicketByPhoneRequest setTicketStatus(String ticketStatus) {
-        this.ticketStatus = ticketStatus;
-        return this;
-    }
-    public String getTicketStatus() {
-        return this.ticketStatus;
     }
 
     public SearchTicketByPhoneRequest setPageNo(Integer pageNo) {
@@ -92,6 +76,14 @@ public class SearchTicketByPhoneRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public SearchTicketByPhoneRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
+    }
+
     public SearchTicketByPhoneRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -100,12 +92,20 @@ public class SearchTicketByPhoneRequest extends TeaModel {
         return this.startTime;
     }
 
-    public SearchTicketByPhoneRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public SearchTicketByPhoneRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
+    public SearchTicketByPhoneRequest setTicketStatus(String ticketStatus) {
+        this.ticketStatus = ticketStatus;
+        return this;
+    }
+    public String getTicketStatus() {
+        return this.ticketStatus;
     }
 
 }

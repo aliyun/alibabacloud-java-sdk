@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class ListSkillGroupRequest extends TeaModel {
+    @NameInMap("ChannelType")
+    public Integer channelType;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ChannelType")
-    public Integer channelType;
-
     public static ListSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSkillGroupRequest self = new ListSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSkillGroupRequest setChannelType(Integer channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public Integer getChannelType() {
+        return this.channelType;
     }
 
     public ListSkillGroupRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class ListSkillGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListSkillGroupRequest setChannelType(Integer channelType) {
-        this.channelType = channelType;
-        return this;
-    }
-    public Integer getChannelType() {
-        return this.channelType;
     }
 
 }

@@ -4,26 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateTicketRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("TemplateId")
-    public Long templateId;
+    @NameInMap("CarbonCopy")
+    public String carbonCopy;
 
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("CreatorId")
     public Long creatorId;
+
+    @NameInMap("CreatorName")
+    public String creatorName;
 
     @NameInMap("CreatorType")
     public Integer creatorType;
 
-    @NameInMap("CreatorName")
-    public String creatorName;
+    @NameInMap("FormData")
+    public String formData;
+
+    @NameInMap("FromInfo")
+    public String fromInfo;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("MemberId")
     public Long memberId;
@@ -31,45 +37,23 @@ public class CreateTicketRequest extends TeaModel {
     @NameInMap("MemberName")
     public String memberName;
 
-    @NameInMap("FromInfo")
-    public String fromInfo;
-
     @NameInMap("Priority")
     public Integer priority;
 
-    @NameInMap("CarbonCopy")
-    public String carbonCopy;
-
-    @NameInMap("FormData")
-    public String formData;
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static CreateTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTicketRequest self = new CreateTicketRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTicketRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateTicketRequest setCarbonCopy(String carbonCopy) {
+        this.carbonCopy = carbonCopy;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateTicketRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateTicketRequest setTemplateId(Long templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public Long getTemplateId() {
-        return this.templateId;
+    public String getCarbonCopy() {
+        return this.carbonCopy;
     }
 
     public CreateTicketRequest setCategoryId(Long categoryId) {
@@ -80,12 +64,28 @@ public class CreateTicketRequest extends TeaModel {
         return this.categoryId;
     }
 
+    public CreateTicketRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CreateTicketRequest setCreatorId(Long creatorId) {
         this.creatorId = creatorId;
         return this;
     }
     public Long getCreatorId() {
         return this.creatorId;
+    }
+
+    public CreateTicketRequest setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+        return this;
+    }
+    public String getCreatorName() {
+        return this.creatorName;
     }
 
     public CreateTicketRequest setCreatorType(Integer creatorType) {
@@ -96,12 +96,28 @@ public class CreateTicketRequest extends TeaModel {
         return this.creatorType;
     }
 
-    public CreateTicketRequest setCreatorName(String creatorName) {
-        this.creatorName = creatorName;
+    public CreateTicketRequest setFormData(String formData) {
+        this.formData = formData;
         return this;
     }
-    public String getCreatorName() {
-        return this.creatorName;
+    public String getFormData() {
+        return this.formData;
+    }
+
+    public CreateTicketRequest setFromInfo(String fromInfo) {
+        this.fromInfo = fromInfo;
+        return this;
+    }
+    public String getFromInfo() {
+        return this.fromInfo;
+    }
+
+    public CreateTicketRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateTicketRequest setMemberId(Long memberId) {
@@ -120,14 +136,6 @@ public class CreateTicketRequest extends TeaModel {
         return this.memberName;
     }
 
-    public CreateTicketRequest setFromInfo(String fromInfo) {
-        this.fromInfo = fromInfo;
-        return this;
-    }
-    public String getFromInfo() {
-        return this.fromInfo;
-    }
-
     public CreateTicketRequest setPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -136,20 +144,12 @@ public class CreateTicketRequest extends TeaModel {
         return this.priority;
     }
 
-    public CreateTicketRequest setCarbonCopy(String carbonCopy) {
-        this.carbonCopy = carbonCopy;
+    public CreateTicketRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public String getCarbonCopy() {
-        return this.carbonCopy;
-    }
-
-    public CreateTicketRequest setFormData(String formData) {
-        this.formData = formData;
-        return this;
-    }
-    public String getFormData() {
-        return this.formData;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

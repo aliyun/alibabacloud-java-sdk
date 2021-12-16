@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GenerateWebSocketSignRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static GenerateWebSocketSignRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateWebSocketSignRequest self = new GenerateWebSocketSignRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateWebSocketSignRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GenerateWebSocketSignRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class GenerateWebSocketSignRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GenerateWebSocketSignRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

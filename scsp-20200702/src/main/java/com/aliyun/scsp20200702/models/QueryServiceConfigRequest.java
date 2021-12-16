@@ -7,11 +7,11 @@ public class QueryServiceConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("ViewCode")
-    public String viewCode;
-
     @NameInMap("Parameters")
     public String parameters;
+
+    @NameInMap("ViewCode")
+    public String viewCode;
 
     public static QueryServiceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryServiceConfigRequest self = new QueryServiceConfigRequest();
@@ -26,20 +26,20 @@ public class QueryServiceConfigRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public QueryServiceConfigRequest setViewCode(String viewCode) {
-        this.viewCode = viewCode;
-        return this;
-    }
-    public String getViewCode() {
-        return this.viewCode;
-    }
-
     public QueryServiceConfigRequest setParameters(String parameters) {
         this.parameters = parameters;
         return this;
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public QueryServiceConfigRequest setViewCode(String viewCode) {
+        this.viewCode = viewCode;
+        return this;
+    }
+    public String getViewCode() {
+        return this.viewCode;
     }
 
 }

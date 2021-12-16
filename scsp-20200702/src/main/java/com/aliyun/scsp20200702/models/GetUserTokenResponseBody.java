@@ -4,6 +4,13 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetUserTokenResponseBodyData data;
+
     // 错误信息
     @NameInMap("Message")
     public String message;
@@ -12,13 +19,6 @@ public class GetUserTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetUserTokenResponseBodyData data;
-
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
     // 是否调用成功
     @NameInMap("Success")
     public Boolean success;
@@ -26,6 +26,22 @@ public class GetUserTokenResponseBody extends TeaModel {
     public static GetUserTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserTokenResponseBody self = new GetUserTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetUserTokenResponseBody setData(GetUserTokenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetUserTokenResponseBodyData getData() {
+        return this.data;
     }
 
     public GetUserTokenResponseBody setMessage(String message) {
@@ -42,22 +58,6 @@ public class GetUserTokenResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetUserTokenResponseBody setData(GetUserTokenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetUserTokenResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetUserTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetUserTokenResponseBody setSuccess(Boolean success) {

@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class FinishHotlineServiceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class FinishHotlineServiceResponseBody extends TeaModel {
     public static FinishHotlineServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FinishHotlineServiceResponseBody self = new FinishHotlineServiceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public FinishHotlineServiceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public FinishHotlineServiceResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class FinishHotlineServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public FinishHotlineServiceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public FinishHotlineServiceResponseBody setSuccess(Boolean success) {

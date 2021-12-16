@@ -4,27 +4,43 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class ExecuteActivityRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("TicketId")
-    public Long ticketId;
-
-    @NameInMap("OperatorId")
-    public Long operatorId;
-
     @NameInMap("ActivityCode")
     public String activityCode;
 
     @NameInMap("ActivityForm")
     public String activityForm;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OperatorId")
+    public Long operatorId;
+
+    @NameInMap("TicketId")
+    public Long ticketId;
+
     public static ExecuteActivityRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteActivityRequest self = new ExecuteActivityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteActivityRequest setActivityCode(String activityCode) {
+        this.activityCode = activityCode;
+        return this;
+    }
+    public String getActivityCode() {
+        return this.activityCode;
+    }
+
+    public ExecuteActivityRequest setActivityForm(String activityForm) {
+        this.activityForm = activityForm;
+        return this;
+    }
+    public String getActivityForm() {
+        return this.activityForm;
     }
 
     public ExecuteActivityRequest setClientToken(String clientToken) {
@@ -43,14 +59,6 @@ public class ExecuteActivityRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ExecuteActivityRequest setTicketId(Long ticketId) {
-        this.ticketId = ticketId;
-        return this;
-    }
-    public Long getTicketId() {
-        return this.ticketId;
-    }
-
     public ExecuteActivityRequest setOperatorId(Long operatorId) {
         this.operatorId = operatorId;
         return this;
@@ -59,20 +67,12 @@ public class ExecuteActivityRequest extends TeaModel {
         return this.operatorId;
     }
 
-    public ExecuteActivityRequest setActivityCode(String activityCode) {
-        this.activityCode = activityCode;
+    public ExecuteActivityRequest setTicketId(Long ticketId) {
+        this.ticketId = ticketId;
         return this;
     }
-    public String getActivityCode() {
-        return this.activityCode;
-    }
-
-    public ExecuteActivityRequest setActivityForm(String activityForm) {
-        this.activityForm = activityForm;
-        return this;
-    }
-    public String getActivityForm() {
-        return this.activityForm;
+    public Long getTicketId() {
+        return this.ticketId;
     }
 
 }

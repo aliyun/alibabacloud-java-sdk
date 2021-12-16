@@ -10,17 +10,17 @@ public class UpdateRoleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RoleId")
-    public Long roleId;
-
-    @NameInMap("RoleName")
-    public String roleName;
-
     @NameInMap("Operator")
     public String operator;
 
     @NameInMap("PermissionId")
     public java.util.List<Long> permissionId;
+
+    @NameInMap("RoleId")
+    public Long roleId;
+
+    @NameInMap("RoleName")
+    public String roleName;
 
     public static UpdateRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoleRequest self = new UpdateRoleRequest();
@@ -43,22 +43,6 @@ public class UpdateRoleRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public UpdateRoleRequest setRoleId(Long roleId) {
-        this.roleId = roleId;
-        return this;
-    }
-    public Long getRoleId() {
-        return this.roleId;
-    }
-
-    public UpdateRoleRequest setRoleName(String roleName) {
-        this.roleName = roleName;
-        return this;
-    }
-    public String getRoleName() {
-        return this.roleName;
-    }
-
     public UpdateRoleRequest setOperator(String operator) {
         this.operator = operator;
         return this;
@@ -73,6 +57,22 @@ public class UpdateRoleRequest extends TeaModel {
     }
     public java.util.List<Long> getPermissionId() {
         return this.permissionId;
+    }
+
+    public UpdateRoleRequest setRoleId(Long roleId) {
+        this.roleId = roleId;
+        return this;
+    }
+    public Long getRoleId() {
+        return this.roleId;
+    }
+
+    public UpdateRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
     }
 
 }

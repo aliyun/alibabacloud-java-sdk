@@ -7,17 +7,17 @@ public class UpdateTicketRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("FormData")
+    public String formData;
+
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("TicketId")
-    public Long ticketId;
 
     @NameInMap("OperatorId")
     public Long operatorId;
 
-    @NameInMap("FormData")
-    public String formData;
+    @NameInMap("TicketId")
+    public Long ticketId;
 
     public static UpdateTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTicketRequest self = new UpdateTicketRequest();
@@ -32,20 +32,20 @@ public class UpdateTicketRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateTicketRequest setFormData(String formData) {
+        this.formData = formData;
+        return this;
+    }
+    public String getFormData() {
+        return this.formData;
+    }
+
     public UpdateTicketRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public UpdateTicketRequest setTicketId(Long ticketId) {
-        this.ticketId = ticketId;
-        return this;
-    }
-    public Long getTicketId() {
-        return this.ticketId;
     }
 
     public UpdateTicketRequest setOperatorId(Long operatorId) {
@@ -56,12 +56,12 @@ public class UpdateTicketRequest extends TeaModel {
         return this.operatorId;
     }
 
-    public UpdateTicketRequest setFormData(String formData) {
-        this.formData = formData;
+    public UpdateTicketRequest setTicketId(Long ticketId) {
+        this.ticketId = ticketId;
         return this;
     }
-    public String getFormData() {
-        return this.formData;
+    public Long getTicketId() {
+        return this.ticketId;
     }
 
 }

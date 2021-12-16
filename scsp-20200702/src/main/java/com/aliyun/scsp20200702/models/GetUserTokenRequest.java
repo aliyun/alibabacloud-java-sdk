@@ -4,25 +4,33 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenRequest extends TeaModel {
+    // appKey
+    @NameInMap("AppKey")
+    public String appKey;
+
     // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
-
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
 
     // 昵称
     @NameInMap("Nick")
     public String nick;
 
-    // appKey
-    @NameInMap("AppKey")
-    public String appKey;
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
 
     public static GetUserTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserTokenRequest self = new GetUserTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserTokenRequest setAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public GetUserTokenRequest setInstanceId(String instanceId) {
@@ -33,14 +41,6 @@ public class GetUserTokenRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetUserTokenRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public GetUserTokenRequest setNick(String nick) {
         this.nick = nick;
         return this;
@@ -49,12 +49,12 @@ public class GetUserTokenRequest extends TeaModel {
         return this.nick;
     }
 
-    public GetUserTokenRequest setAppKey(String appKey) {
-        this.appKey = appKey;
+    public GetUserTokenRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getAppKey() {
-        return this.appKey;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

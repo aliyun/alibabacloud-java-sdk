@@ -4,26 +4,20 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class TransferCallToPhoneRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("AccountName")
     public String accountName;
-
-    @NameInMap("Caller")
-    public String caller;
-
-    @NameInMap("Callee")
-    public String callee;
 
     @NameInMap("CallId")
     public String callId;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("Callee")
+    public String callee;
+
+    @NameInMap("Caller")
+    public String caller;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ConnectionId")
     public String connectionId;
@@ -31,37 +25,27 @@ public class TransferCallToPhoneRequest extends TeaModel {
     @NameInMap("HoldConnectionId")
     public String holdConnectionId;
 
-    @NameInMap("Type")
-    public Integer type;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("IsSingleTransfer")
     public Boolean isSingleTransfer;
 
-    @NameInMap("callerPhone")
-    public String callerPhone;
+    @NameInMap("JobId")
+    public String jobId;
+
+    @NameInMap("Type")
+    public Integer type;
 
     @NameInMap("calleePhone")
     public String calleePhone;
 
+    @NameInMap("callerPhone")
+    public String callerPhone;
+
     public static TransferCallToPhoneRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferCallToPhoneRequest self = new TransferCallToPhoneRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TransferCallToPhoneRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public TransferCallToPhoneRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public TransferCallToPhoneRequest setAccountName(String accountName) {
@@ -72,12 +56,12 @@ public class TransferCallToPhoneRequest extends TeaModel {
         return this.accountName;
     }
 
-    public TransferCallToPhoneRequest setCaller(String caller) {
-        this.caller = caller;
+    public TransferCallToPhoneRequest setCallId(String callId) {
+        this.callId = callId;
         return this;
     }
-    public String getCaller() {
-        return this.caller;
+    public String getCallId() {
+        return this.callId;
     }
 
     public TransferCallToPhoneRequest setCallee(String callee) {
@@ -88,20 +72,20 @@ public class TransferCallToPhoneRequest extends TeaModel {
         return this.callee;
     }
 
-    public TransferCallToPhoneRequest setCallId(String callId) {
-        this.callId = callId;
+    public TransferCallToPhoneRequest setCaller(String caller) {
+        this.caller = caller;
         return this;
     }
-    public String getCallId() {
-        return this.callId;
+    public String getCaller() {
+        return this.caller;
     }
 
-    public TransferCallToPhoneRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public TransferCallToPhoneRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public TransferCallToPhoneRequest setConnectionId(String connectionId) {
@@ -120,12 +104,12 @@ public class TransferCallToPhoneRequest extends TeaModel {
         return this.holdConnectionId;
     }
 
-    public TransferCallToPhoneRequest setType(Integer type) {
-        this.type = type;
+    public TransferCallToPhoneRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Integer getType() {
-        return this.type;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public TransferCallToPhoneRequest setIsSingleTransfer(Boolean isSingleTransfer) {
@@ -136,12 +120,20 @@ public class TransferCallToPhoneRequest extends TeaModel {
         return this.isSingleTransfer;
     }
 
-    public TransferCallToPhoneRequest setCallerPhone(String callerPhone) {
-        this.callerPhone = callerPhone;
+    public TransferCallToPhoneRequest setJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
-    public String getCallerPhone() {
-        return this.callerPhone;
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public TransferCallToPhoneRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
     public TransferCallToPhoneRequest setCalleePhone(String calleePhone) {
@@ -150,6 +142,14 @@ public class TransferCallToPhoneRequest extends TeaModel {
     }
     public String getCalleePhone() {
         return this.calleePhone;
+    }
+
+    public TransferCallToPhoneRequest setCallerPhone(String callerPhone) {
+        this.callerPhone = callerPhone;
+        return this;
+    }
+    public String getCallerPhone() {
+        return this.callerPhone;
     }
 
 }

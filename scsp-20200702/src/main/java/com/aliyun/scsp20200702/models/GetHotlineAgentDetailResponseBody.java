@@ -4,27 +4,51 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineAgentDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetHotlineAgentDetailResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetHotlineAgentDetailResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
 
     public static GetHotlineAgentDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineAgentDetailResponseBody self = new GetHotlineAgentDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotlineAgentDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetHotlineAgentDetailResponseBody setData(GetHotlineAgentDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHotlineAgentDetailResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetHotlineAgentDetailResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetHotlineAgentDetailResponseBody setMessage(String message) {
@@ -43,22 +67,6 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHotlineAgentDetailResponseBody setData(GetHotlineAgentDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHotlineAgentDetailResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetHotlineAgentDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetHotlineAgentDetailResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,23 +75,15 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetHotlineAgentDetailResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public static class GetHotlineAgentDetailResponseBodyData extends TeaModel {
-        @NameInMap("AgentStatusCode")
-        public String agentStatusCode;
-
-        @NameInMap("Token")
-        public String token;
-
         @NameInMap("AgentId")
         public Long agentId;
+
+        @NameInMap("AgentStatus")
+        public Integer agentStatus;
+
+        @NameInMap("AgentStatusCode")
+        public String agentStatusCode;
 
         @NameInMap("Assigned")
         public Boolean assigned;
@@ -91,31 +91,15 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         @NameInMap("RestType")
         public Integer restType;
 
-        @NameInMap("AgentStatus")
-        public Integer agentStatus;
-
         @NameInMap("TenantId")
         public Long tenantId;
+
+        @NameInMap("Token")
+        public String token;
 
         public static GetHotlineAgentDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetHotlineAgentDetailResponseBodyData self = new GetHotlineAgentDetailResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetHotlineAgentDetailResponseBodyData setAgentStatusCode(String agentStatusCode) {
-            this.agentStatusCode = agentStatusCode;
-            return this;
-        }
-        public String getAgentStatusCode() {
-            return this.agentStatusCode;
-        }
-
-        public GetHotlineAgentDetailResponseBodyData setToken(String token) {
-            this.token = token;
-            return this;
-        }
-        public String getToken() {
-            return this.token;
         }
 
         public GetHotlineAgentDetailResponseBodyData setAgentId(Long agentId) {
@@ -124,6 +108,22 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
         }
         public Long getAgentId() {
             return this.agentId;
+        }
+
+        public GetHotlineAgentDetailResponseBodyData setAgentStatus(Integer agentStatus) {
+            this.agentStatus = agentStatus;
+            return this;
+        }
+        public Integer getAgentStatus() {
+            return this.agentStatus;
+        }
+
+        public GetHotlineAgentDetailResponseBodyData setAgentStatusCode(String agentStatusCode) {
+            this.agentStatusCode = agentStatusCode;
+            return this;
+        }
+        public String getAgentStatusCode() {
+            return this.agentStatusCode;
         }
 
         public GetHotlineAgentDetailResponseBodyData setAssigned(Boolean assigned) {
@@ -142,20 +142,20 @@ public class GetHotlineAgentDetailResponseBody extends TeaModel {
             return this.restType;
         }
 
-        public GetHotlineAgentDetailResponseBodyData setAgentStatus(Integer agentStatus) {
-            this.agentStatus = agentStatus;
-            return this;
-        }
-        public Integer getAgentStatus() {
-            return this.agentStatus;
-        }
-
         public GetHotlineAgentDetailResponseBodyData setTenantId(Long tenantId) {
             this.tenantId = tenantId;
             return this;
         }
         public Long getTenantId() {
             return this.tenantId;
+        }
+
+        public GetHotlineAgentDetailResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
     }

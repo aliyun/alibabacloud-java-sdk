@@ -10,14 +10,14 @@ public class CreateRoleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RoleName")
-    public String roleName;
-
     @NameInMap("Operator")
     public String operator;
 
     @NameInMap("PermissionId")
     public java.util.List<Long> permissionId;
+
+    @NameInMap("RoleName")
+    public String roleName;
 
     public static CreateRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRoleRequest self = new CreateRoleRequest();
@@ -40,14 +40,6 @@ public class CreateRoleRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateRoleRequest setRoleName(String roleName) {
-        this.roleName = roleName;
-        return this;
-    }
-    public String getRoleName() {
-        return this.roleName;
-    }
-
     public CreateRoleRequest setOperator(String operator) {
         this.operator = operator;
         return this;
@@ -62,6 +54,14 @@ public class CreateRoleRequest extends TeaModel {
     }
     public java.util.List<Long> getPermissionId() {
         return this.permissionId;
+    }
+
+    public CreateRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
     }
 
 }

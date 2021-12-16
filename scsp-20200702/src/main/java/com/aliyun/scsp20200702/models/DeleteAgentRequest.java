@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static DeleteAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAgentRequest self = new DeleteAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAgentRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public DeleteAgentRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class DeleteAgentRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DeleteAgentRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class EnableRoleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class EnableRoleResponseBody extends TeaModel {
     public static EnableRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableRoleResponseBody self = new EnableRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableRoleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public EnableRoleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class EnableRoleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public EnableRoleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public EnableRoleResponseBody setSuccess(Boolean success) {

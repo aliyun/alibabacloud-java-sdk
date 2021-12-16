@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetCMSIdByForeignIdRequest extends TeaModel {
+    @NameInMap("ForeignId")
+    public String foreignId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Nick")
     public String nick;
-
-    @NameInMap("ForeignId")
-    public String foreignId;
 
     @NameInMap("SourceId")
     public Long sourceId;
@@ -19,6 +19,14 @@ public class GetCMSIdByForeignIdRequest extends TeaModel {
     public static GetCMSIdByForeignIdRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCMSIdByForeignIdRequest self = new GetCMSIdByForeignIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetCMSIdByForeignIdRequest setForeignId(String foreignId) {
+        this.foreignId = foreignId;
+        return this;
+    }
+    public String getForeignId() {
+        return this.foreignId;
     }
 
     public GetCMSIdByForeignIdRequest setInstanceId(String instanceId) {
@@ -35,14 +43,6 @@ public class GetCMSIdByForeignIdRequest extends TeaModel {
     }
     public String getNick() {
         return this.nick;
-    }
-
-    public GetCMSIdByForeignIdRequest setForeignId(String foreignId) {
-        this.foreignId = foreignId;
-        return this;
-    }
-    public String getForeignId() {
-        return this.foreignId;
     }
 
     public GetCMSIdByForeignIdRequest setSourceId(Long sourceId) {

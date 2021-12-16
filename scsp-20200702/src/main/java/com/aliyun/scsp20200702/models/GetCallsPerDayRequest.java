@@ -4,29 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetCallsPerDayRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("DataIdStart")
-    public String dataIdStart;
+    @NameInMap("DataId")
+    public String dataId;
 
     @NameInMap("DataIdEnd")
     public String dataIdEnd;
 
-    @NameInMap("DataId")
-    public String dataId;
+    @NameInMap("DataIdStart")
+    public String dataIdStart;
+
+    @NameInMap("HavePhoneNumbers")
+    public String havePhoneNumbers;
 
     @NameInMap("HourId")
     public String hourId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("MinuteId")
     public String minuteId;
-
-    @NameInMap("PhoneNumbers")
-    public String phoneNumbers;
-
-    @NameInMap("HavePhoneNumbers")
-    public String havePhoneNumbers;
 
     @NameInMap("PageNo")
     public Long pageNo;
@@ -34,33 +31,12 @@ public class GetCallsPerDayRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PhoneNumbers")
+    public String phoneNumbers;
+
     public static GetCallsPerDayRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCallsPerDayRequest self = new GetCallsPerDayRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetCallsPerDayRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public GetCallsPerDayRequest setDataIdStart(String dataIdStart) {
-        this.dataIdStart = dataIdStart;
-        return this;
-    }
-    public String getDataIdStart() {
-        return this.dataIdStart;
-    }
-
-    public GetCallsPerDayRequest setDataIdEnd(String dataIdEnd) {
-        this.dataIdEnd = dataIdEnd;
-        return this;
-    }
-    public String getDataIdEnd() {
-        return this.dataIdEnd;
     }
 
     public GetCallsPerDayRequest setDataId(String dataId) {
@@ -71,28 +47,20 @@ public class GetCallsPerDayRequest extends TeaModel {
         return this.dataId;
     }
 
-    public GetCallsPerDayRequest setHourId(String hourId) {
-        this.hourId = hourId;
+    public GetCallsPerDayRequest setDataIdEnd(String dataIdEnd) {
+        this.dataIdEnd = dataIdEnd;
         return this;
     }
-    public String getHourId() {
-        return this.hourId;
+    public String getDataIdEnd() {
+        return this.dataIdEnd;
     }
 
-    public GetCallsPerDayRequest setMinuteId(String minuteId) {
-        this.minuteId = minuteId;
+    public GetCallsPerDayRequest setDataIdStart(String dataIdStart) {
+        this.dataIdStart = dataIdStart;
         return this;
     }
-    public String getMinuteId() {
-        return this.minuteId;
-    }
-
-    public GetCallsPerDayRequest setPhoneNumbers(String phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
-        return this;
-    }
-    public String getPhoneNumbers() {
-        return this.phoneNumbers;
+    public String getDataIdStart() {
+        return this.dataIdStart;
     }
 
     public GetCallsPerDayRequest setHavePhoneNumbers(String havePhoneNumbers) {
@@ -101,6 +69,30 @@ public class GetCallsPerDayRequest extends TeaModel {
     }
     public String getHavePhoneNumbers() {
         return this.havePhoneNumbers;
+    }
+
+    public GetCallsPerDayRequest setHourId(String hourId) {
+        this.hourId = hourId;
+        return this;
+    }
+    public String getHourId() {
+        return this.hourId;
+    }
+
+    public GetCallsPerDayRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetCallsPerDayRequest setMinuteId(String minuteId) {
+        this.minuteId = minuteId;
+        return this;
+    }
+    public String getMinuteId() {
+        return this.minuteId;
     }
 
     public GetCallsPerDayRequest setPageNo(Long pageNo) {
@@ -117,6 +109,14 @@ public class GetCallsPerDayRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public GetCallsPerDayRequest setPhoneNumbers(String phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+        return this;
+    }
+    public String getPhoneNumbers() {
+        return this.phoneNumbers;
     }
 
 }

@@ -7,6 +7,9 @@ public class GetEntityRouteListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetEntityRouteListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetEntityRouteListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetEntityRouteListResponseBodyData data;
 
     public static GetEntityRouteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEntityRouteListResponseBody self = new GetEntityRouteListResponseBody();
@@ -30,6 +30,14 @@ public class GetEntityRouteListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetEntityRouteListResponseBody setData(GetEntityRouteListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetEntityRouteListResponseBodyData getData() {
+        return this.data;
     }
 
     public GetEntityRouteListResponseBody setMessage(String message) {
@@ -56,80 +64,40 @@ public class GetEntityRouteListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetEntityRouteListResponseBody setData(GetEntityRouteListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetEntityRouteListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetEntityRouteListResponseBodyDataEntityRouteList extends TeaModel {
-        @NameInMap("EntityBizCodeType")
-        public String entityBizCodeType;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        @NameInMap("EntityId")
-        public String entityId;
-
-        @NameInMap("ServiceId")
-        public String serviceId;
-
         @NameInMap("DepartmentId")
         public String departmentId;
 
         @NameInMap("EntityBizCode")
         public String entityBizCode;
 
-        @NameInMap("UniqueId")
-        public Long uniqueId;
+        @NameInMap("EntityBizCodeType")
+        public String entityBizCodeType;
+
+        @NameInMap("EntityId")
+        public String entityId;
 
         @NameInMap("EntityName")
         public String entityName;
 
+        @NameInMap("EntityRelationNumber")
+        public String entityRelationNumber;
+
         @NameInMap("ExtInfo")
         public String extInfo;
 
-        @NameInMap("EntityRelationNumber")
-        public String entityRelationNumber;
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        @NameInMap("UniqueId")
+        public Long uniqueId;
 
         public static GetEntityRouteListResponseBodyDataEntityRouteList build(java.util.Map<String, ?> map) throws Exception {
             GetEntityRouteListResponseBodyDataEntityRouteList self = new GetEntityRouteListResponseBodyDataEntityRouteList();
             return TeaModel.build(map, self);
-        }
-
-        public GetEntityRouteListResponseBodyDataEntityRouteList setEntityBizCodeType(String entityBizCodeType) {
-            this.entityBizCodeType = entityBizCodeType;
-            return this;
-        }
-        public String getEntityBizCodeType() {
-            return this.entityBizCodeType;
-        }
-
-        public GetEntityRouteListResponseBodyDataEntityRouteList setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
-        public GetEntityRouteListResponseBodyDataEntityRouteList setEntityId(String entityId) {
-            this.entityId = entityId;
-            return this;
-        }
-        public String getEntityId() {
-            return this.entityId;
-        }
-
-        public GetEntityRouteListResponseBodyDataEntityRouteList setServiceId(String serviceId) {
-            this.serviceId = serviceId;
-            return this;
-        }
-        public String getServiceId() {
-            return this.serviceId;
         }
 
         public GetEntityRouteListResponseBodyDataEntityRouteList setDepartmentId(String departmentId) {
@@ -148,12 +116,20 @@ public class GetEntityRouteListResponseBody extends TeaModel {
             return this.entityBizCode;
         }
 
-        public GetEntityRouteListResponseBodyDataEntityRouteList setUniqueId(Long uniqueId) {
-            this.uniqueId = uniqueId;
+        public GetEntityRouteListResponseBodyDataEntityRouteList setEntityBizCodeType(String entityBizCodeType) {
+            this.entityBizCodeType = entityBizCodeType;
             return this;
         }
-        public Long getUniqueId() {
-            return this.uniqueId;
+        public String getEntityBizCodeType() {
+            return this.entityBizCodeType;
+        }
+
+        public GetEntityRouteListResponseBodyDataEntityRouteList setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
         }
 
         public GetEntityRouteListResponseBodyDataEntityRouteList setEntityName(String entityName) {
@@ -164,14 +140,6 @@ public class GetEntityRouteListResponseBody extends TeaModel {
             return this.entityName;
         }
 
-        public GetEntityRouteListResponseBodyDataEntityRouteList setExtInfo(String extInfo) {
-            this.extInfo = extInfo;
-            return this;
-        }
-        public String getExtInfo() {
-            return this.extInfo;
-        }
-
         public GetEntityRouteListResponseBodyDataEntityRouteList setEntityRelationNumber(String entityRelationNumber) {
             this.entityRelationNumber = entityRelationNumber;
             return this;
@@ -180,9 +148,44 @@ public class GetEntityRouteListResponseBody extends TeaModel {
             return this.entityRelationNumber;
         }
 
+        public GetEntityRouteListResponseBodyDataEntityRouteList setExtInfo(String extInfo) {
+            this.extInfo = extInfo;
+            return this;
+        }
+        public String getExtInfo() {
+            return this.extInfo;
+        }
+
+        public GetEntityRouteListResponseBodyDataEntityRouteList setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetEntityRouteListResponseBodyDataEntityRouteList setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public GetEntityRouteListResponseBodyDataEntityRouteList setUniqueId(Long uniqueId) {
+            this.uniqueId = uniqueId;
+            return this;
+        }
+        public Long getUniqueId() {
+            return this.uniqueId;
+        }
+
     }
 
     public static class GetEntityRouteListResponseBodyData extends TeaModel {
+        @NameInMap("EntityRouteList")
+        public java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> entityRouteList;
+
         @NameInMap("PageNo")
         public Integer pageNo;
 
@@ -192,12 +195,17 @@ public class GetEntityRouteListResponseBody extends TeaModel {
         @NameInMap("Total")
         public Long total;
 
-        @NameInMap("EntityRouteList")
-        public java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> entityRouteList;
-
         public static GetEntityRouteListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEntityRouteListResponseBodyData self = new GetEntityRouteListResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetEntityRouteListResponseBodyData setEntityRouteList(java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> entityRouteList) {
+            this.entityRouteList = entityRouteList;
+            return this;
+        }
+        public java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> getEntityRouteList() {
+            return this.entityRouteList;
         }
 
         public GetEntityRouteListResponseBodyData setPageNo(Integer pageNo) {
@@ -222,14 +230,6 @@ public class GetEntityRouteListResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
-        }
-
-        public GetEntityRouteListResponseBodyData setEntityRouteList(java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> entityRouteList) {
-            this.entityRouteList = entityRouteList;
-            return this;
-        }
-        public java.util.List<GetEntityRouteListResponseBodyDataEntityRouteList> getEntityRouteList() {
-            return this.entityRouteList;
         }
 
     }

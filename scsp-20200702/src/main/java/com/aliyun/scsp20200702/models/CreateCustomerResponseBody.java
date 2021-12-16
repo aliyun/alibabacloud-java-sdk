@@ -4,17 +4,17 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomerResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Long data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public Long data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class CreateCustomerResponseBody extends TeaModel {
     public static CreateCustomerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomerResponseBody self = new CreateCustomerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCustomerResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateCustomerResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
     }
 
     public CreateCustomerResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class CreateCustomerResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateCustomerResponseBody setData(Long data) {
-        this.data = data;
-        return this;
-    }
-    public Long getData() {
-        return this.data;
-    }
-
-    public CreateCustomerResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateCustomerResponseBody setSuccess(Boolean success) {

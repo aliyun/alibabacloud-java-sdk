@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineWaitingNumberRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static GetHotlineWaitingNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineWaitingNumberRequest self = new GetHotlineWaitingNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotlineWaitingNumberRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GetHotlineWaitingNumberRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class GetHotlineWaitingNumberRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetHotlineWaitingNumberRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

@@ -10,11 +10,11 @@ public class SearchTicketByIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("TicketId")
-    public Long ticketId;
-
     @NameInMap("StatusCode")
     public Integer statusCode;
+
+    @NameInMap("TicketId")
+    public Long ticketId;
 
     public static SearchTicketByIdRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTicketByIdRequest self = new SearchTicketByIdRequest();
@@ -37,20 +37,20 @@ public class SearchTicketByIdRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SearchTicketByIdRequest setTicketId(Long ticketId) {
-        this.ticketId = ticketId;
-        return this;
-    }
-    public Long getTicketId() {
-        return this.ticketId;
-    }
-
     public SearchTicketByIdRequest setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public SearchTicketByIdRequest setTicketId(Long ticketId) {
+        this.ticketId = ticketId;
+        return this;
+    }
+    public Long getTicketId() {
+        return this.ticketId;
     }
 
 }

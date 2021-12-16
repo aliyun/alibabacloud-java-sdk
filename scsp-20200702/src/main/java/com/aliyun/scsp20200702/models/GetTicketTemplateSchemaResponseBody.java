@@ -4,17 +4,17 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetTicketTemplateSchemaResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class GetTicketTemplateSchemaResponseBody extends TeaModel {
     public static GetTicketTemplateSchemaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTicketTemplateSchemaResponseBody self = new GetTicketTemplateSchemaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTicketTemplateSchemaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetTicketTemplateSchemaResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public GetTicketTemplateSchemaResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class GetTicketTemplateSchemaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetTicketTemplateSchemaResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public GetTicketTemplateSchemaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetTicketTemplateSchemaResponseBody setSuccess(Boolean success) {

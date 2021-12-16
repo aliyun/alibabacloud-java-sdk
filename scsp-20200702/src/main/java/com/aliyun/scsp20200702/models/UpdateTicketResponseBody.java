@@ -4,24 +4,40 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class UpdateTicketResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
 
     public static UpdateTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTicketResponseBody self = new UpdateTicketResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTicketResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateTicketResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpdateTicketResponseBody setMessage(String message) {
@@ -40,28 +56,12 @@ public class UpdateTicketResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateTicketResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public UpdateTicketResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public UpdateTicketResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
 }

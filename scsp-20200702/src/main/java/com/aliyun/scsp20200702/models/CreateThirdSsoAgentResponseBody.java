@@ -4,6 +4,18 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentResponseBody extends TeaModel {
+    // code
+    @NameInMap("Code")
+    public String code;
+
+    // 新创建的坐席id
+    @NameInMap("Data")
+    public Long data;
+
+    // httpStatusCode
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     // message
     @NameInMap("Message")
     public String message;
@@ -12,18 +24,6 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
-
-    // 新创建的坐席id
-    @NameInMap("Data")
-    public Long data;
-
-    // code
-    @NameInMap("Code")
-    public String code;
-
     // success
     @NameInMap("Success")
     public Boolean success;
@@ -31,6 +31,30 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     public static CreateThirdSsoAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateThirdSsoAgentResponseBody self = new CreateThirdSsoAgentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateThirdSsoAgentResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateThirdSsoAgentResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
+    }
+
+    public CreateThirdSsoAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CreateThirdSsoAgentResponseBody setMessage(String message) {
@@ -47,30 +71,6 @@ public class CreateThirdSsoAgentResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateThirdSsoAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateThirdSsoAgentResponseBody setData(Long data) {
-        this.data = data;
-        return this;
-    }
-    public Long getData() {
-        return this.data;
-    }
-
-    public CreateThirdSsoAgentResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateThirdSsoAgentResponseBody setSuccess(Boolean success) {

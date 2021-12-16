@@ -4,6 +4,15 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateSubTicketResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Long data;
+
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class CreateSubTicketResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public Long data;
-
     public static CreateSubTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSubTicketResponseBody self = new CreateSubTicketResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSubTicketResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateSubTicketResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
+    }
+
+    public CreateSubTicketResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CreateSubTicketResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class CreateSubTicketResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateSubTicketResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateSubTicketResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateSubTicketResponseBody setData(Long data) {
-        this.data = data;
-        return this;
-    }
-    public Long getData() {
-        return this.data;
     }
 
 }

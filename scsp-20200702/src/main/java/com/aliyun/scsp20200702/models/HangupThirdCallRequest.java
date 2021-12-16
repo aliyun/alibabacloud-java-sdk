@@ -4,43 +4,27 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class HangupThirdCallRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("CallId")
     public String callId;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ConnectionId")
     public String connectionId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("JobId")
+    public String jobId;
+
     public static HangupThirdCallRequest build(java.util.Map<String, ?> map) throws Exception {
         HangupThirdCallRequest self = new HangupThirdCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public HangupThirdCallRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public HangupThirdCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public HangupThirdCallRequest setAccountName(String accountName) {
@@ -59,12 +43,12 @@ public class HangupThirdCallRequest extends TeaModel {
         return this.callId;
     }
 
-    public HangupThirdCallRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public HangupThirdCallRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public HangupThirdCallRequest setConnectionId(String connectionId) {
@@ -73,6 +57,22 @@ public class HangupThirdCallRequest extends TeaModel {
     }
     public String getConnectionId() {
         return this.connectionId;
+    }
+
+    public HangupThirdCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public HangupThirdCallRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

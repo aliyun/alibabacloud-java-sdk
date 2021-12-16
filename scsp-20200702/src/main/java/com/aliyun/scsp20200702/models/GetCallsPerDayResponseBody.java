@@ -4,24 +4,40 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetCallsPerDayResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetCallsPerDayResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
-
-    @NameInMap("Data")
-    public GetCallsPerDayResponseBodyData data;
 
     public static GetCallsPerDayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCallsPerDayResponseBody self = new GetCallsPerDayResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCallsPerDayResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetCallsPerDayResponseBody setData(GetCallsPerDayResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetCallsPerDayResponseBodyData getData() {
+        return this.data;
     }
 
     public GetCallsPerDayResponseBody setMessage(String message) {
@@ -40,14 +56,6 @@ public class GetCallsPerDayResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCallsPerDayResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetCallsPerDayResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -56,20 +64,24 @@ public class GetCallsPerDayResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetCallsPerDayResponseBody setData(GetCallsPerDayResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetCallsPerDayResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetCallsPerDayResponseBodyDataCallsPerdayResponseList extends TeaModel {
+        @NameInMap("CallInCnt")
+        public String callInCnt;
+
+        @NameInMap("CallOutCnt")
+        public String callOutCnt;
+
         @NameInMap("DataId")
         public String dataId;
 
         @NameInMap("HourId")
         public String hourId;
+
+        @NameInMap("MinuteId")
+        public String minuteId;
+
+        @NameInMap("PhoneNum")
+        public String phoneNum;
 
         @NameInMap("TenantId")
         public String tenantId;
@@ -77,21 +89,25 @@ public class GetCallsPerDayResponseBody extends TeaModel {
         @NameInMap("TenantName")
         public String tenantName;
 
-        @NameInMap("PhoneNum")
-        public String phoneNum;
-
-        @NameInMap("CallOutCnt")
-        public String callOutCnt;
-
-        @NameInMap("CallInCnt")
-        public String callInCnt;
-
-        @NameInMap("MinuteId")
-        public String minuteId;
-
         public static GetCallsPerDayResponseBodyDataCallsPerdayResponseList build(java.util.Map<String, ?> map) throws Exception {
             GetCallsPerDayResponseBodyDataCallsPerdayResponseList self = new GetCallsPerDayResponseBodyDataCallsPerdayResponseList();
             return TeaModel.build(map, self);
+        }
+
+        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setCallInCnt(String callInCnt) {
+            this.callInCnt = callInCnt;
+            return this;
+        }
+        public String getCallInCnt() {
+            return this.callInCnt;
+        }
+
+        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setCallOutCnt(String callOutCnt) {
+            this.callOutCnt = callOutCnt;
+            return this;
+        }
+        public String getCallOutCnt() {
+            return this.callOutCnt;
         }
 
         public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setDataId(String dataId) {
@@ -110,6 +126,22 @@ public class GetCallsPerDayResponseBody extends TeaModel {
             return this.hourId;
         }
 
+        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setMinuteId(String minuteId) {
+            this.minuteId = minuteId;
+            return this;
+        }
+        public String getMinuteId() {
+            return this.minuteId;
+        }
+
+        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setPhoneNum(String phoneNum) {
+            this.phoneNum = phoneNum;
+            return this;
+        }
+        public String getPhoneNum() {
+            return this.phoneNum;
+        }
+
         public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
@@ -126,72 +158,32 @@ public class GetCallsPerDayResponseBody extends TeaModel {
             return this.tenantName;
         }
 
-        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setPhoneNum(String phoneNum) {
-            this.phoneNum = phoneNum;
-            return this;
-        }
-        public String getPhoneNum() {
-            return this.phoneNum;
-        }
-
-        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setCallOutCnt(String callOutCnt) {
-            this.callOutCnt = callOutCnt;
-            return this;
-        }
-        public String getCallOutCnt() {
-            return this.callOutCnt;
-        }
-
-        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setCallInCnt(String callInCnt) {
-            this.callInCnt = callInCnt;
-            return this;
-        }
-        public String getCallInCnt() {
-            return this.callInCnt;
-        }
-
-        public GetCallsPerDayResponseBodyDataCallsPerdayResponseList setMinuteId(String minuteId) {
-            this.minuteId = minuteId;
-            return this;
-        }
-        public String getMinuteId() {
-            return this.minuteId;
-        }
-
     }
 
     public static class GetCallsPerDayResponseBodyData extends TeaModel {
-        @NameInMap("TotalNum")
-        public Long totalNum;
-
-        @NameInMap("PageSize")
-        public Long pageSize;
+        @NameInMap("CallsPerdayResponseList")
+        public java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> callsPerdayResponseList;
 
         @NameInMap("PageNo")
         public String pageNo;
 
-        @NameInMap("CallsPerdayResponseList")
-        public java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> callsPerdayResponseList;
+        @NameInMap("PageSize")
+        public Long pageSize;
+
+        @NameInMap("TotalNum")
+        public Long totalNum;
 
         public static GetCallsPerDayResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCallsPerDayResponseBodyData self = new GetCallsPerDayResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetCallsPerDayResponseBodyData setTotalNum(Long totalNum) {
-            this.totalNum = totalNum;
+        public GetCallsPerDayResponseBodyData setCallsPerdayResponseList(java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> callsPerdayResponseList) {
+            this.callsPerdayResponseList = callsPerdayResponseList;
             return this;
         }
-        public Long getTotalNum() {
-            return this.totalNum;
-        }
-
-        public GetCallsPerDayResponseBodyData setPageSize(Long pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Long getPageSize() {
-            return this.pageSize;
+        public java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> getCallsPerdayResponseList() {
+            return this.callsPerdayResponseList;
         }
 
         public GetCallsPerDayResponseBodyData setPageNo(String pageNo) {
@@ -202,12 +194,20 @@ public class GetCallsPerDayResponseBody extends TeaModel {
             return this.pageNo;
         }
 
-        public GetCallsPerDayResponseBodyData setCallsPerdayResponseList(java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> callsPerdayResponseList) {
-            this.callsPerdayResponseList = callsPerdayResponseList;
+        public GetCallsPerDayResponseBodyData setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
-        public java.util.List<GetCallsPerDayResponseBodyDataCallsPerdayResponseList> getCallsPerdayResponseList() {
-            return this.callsPerdayResponseList;
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        public GetCallsPerDayResponseBodyData setTotalNum(Long totalNum) {
+            this.totalNum = totalNum;
+            return this;
+        }
+        public Long getTotalNum() {
+            return this.totalNum;
         }
 
     }

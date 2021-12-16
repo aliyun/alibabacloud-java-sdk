@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class SendHotlineHeartBeatRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
 
     @NameInMap("Token")
     public String token;
@@ -19,6 +19,14 @@ public class SendHotlineHeartBeatRequest extends TeaModel {
     public static SendHotlineHeartBeatRequest build(java.util.Map<String, ?> map) throws Exception {
         SendHotlineHeartBeatRequest self = new SendHotlineHeartBeatRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendHotlineHeartBeatRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public SendHotlineHeartBeatRequest setClientToken(String clientToken) {
@@ -35,14 +43,6 @@ public class SendHotlineHeartBeatRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public SendHotlineHeartBeatRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
     public SendHotlineHeartBeatRequest setToken(String token) {
