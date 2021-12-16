@@ -10,6 +10,9 @@ public class DetectFaceAttributesRequest extends TeaModel {
     @NameInMap("MaterialValue")
     public String materialValue;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DetectFaceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceAttributesRequest self = new DetectFaceAttributesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DetectFaceAttributesRequest extends TeaModel {
     }
     public String getMaterialValue() {
         return this.materialValue;
+    }
+
+    public DetectFaceAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

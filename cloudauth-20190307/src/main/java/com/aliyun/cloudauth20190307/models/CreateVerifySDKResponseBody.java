@@ -7,6 +7,9 @@ public class CreateVerifySDKResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SdkUrl")
+    public String sdkUrl;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -21,6 +24,14 @@ public class CreateVerifySDKResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateVerifySDKResponseBody setSdkUrl(String sdkUrl) {
+        this.sdkUrl = sdkUrl;
+        return this;
+    }
+    public String getSdkUrl() {
+        return this.sdkUrl;
     }
 
     public CreateVerifySDKResponseBody setTaskId(String taskId) {

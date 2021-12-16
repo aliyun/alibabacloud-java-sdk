@@ -10,6 +10,9 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     @NameInMap("PictureReturnType")
     public String pictureReturnType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SceneId")
     public Long sceneId;
 
@@ -32,6 +35,14 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     }
     public String getPictureReturnType() {
         return this.pictureReturnType;
+    }
+
+    public DescribeFaceVerifyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeFaceVerifyRequest setSceneId(Long sceneId) {

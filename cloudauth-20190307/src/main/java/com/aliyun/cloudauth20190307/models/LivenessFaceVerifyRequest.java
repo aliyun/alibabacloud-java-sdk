@@ -40,6 +40,9 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SceneId")
     public Long sceneId;
 
@@ -145,6 +148,14 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public LivenessFaceVerifyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public LivenessFaceVerifyRequest setSceneId(Long sceneId) {

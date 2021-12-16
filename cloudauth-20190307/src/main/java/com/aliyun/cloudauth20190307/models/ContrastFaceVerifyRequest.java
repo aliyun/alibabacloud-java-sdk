@@ -52,6 +52,9 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SceneId")
     public Long sceneId;
 
@@ -189,6 +192,14 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public ContrastFaceVerifyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ContrastFaceVerifyRequest setSceneId(Long sceneId) {

@@ -13,6 +13,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SceneId")
     public Long sceneId;
 
@@ -73,6 +76,14 @@ public class CompareFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public CompareFaceVerifyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CompareFaceVerifyRequest setSceneId(Long sceneId) {

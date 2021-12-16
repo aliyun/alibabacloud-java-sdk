@@ -25,6 +25,9 @@ public class VerifyMaterialRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -87,6 +90,14 @@ public class VerifyMaterialRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public VerifyMaterialRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public VerifyMaterialRequest setUserId(String userId) {
