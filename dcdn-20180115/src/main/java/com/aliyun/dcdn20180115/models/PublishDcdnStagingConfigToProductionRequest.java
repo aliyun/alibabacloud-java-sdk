@@ -4,26 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PublishDcdnStagingConfigToProductionRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("FunctionName")
     public String functionName;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static PublishDcdnStagingConfigToProductionRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishDcdnStagingConfigToProductionRequest self = new PublishDcdnStagingConfigToProductionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PublishDcdnStagingConfigToProductionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public PublishDcdnStagingConfigToProductionRequest setDomainName(String domainName) {
@@ -40,6 +32,14 @@ public class PublishDcdnStagingConfigToProductionRequest extends TeaModel {
     }
     public String getFunctionName() {
         return this.functionName;
+    }
+
+    public PublishDcdnStagingConfigToProductionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

@@ -7,23 +7,23 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
-
-    @NameInMap("OpeningTime")
-    public String openingTime;
-
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    @NameInMap("OpeningTime")
+    public String openingTime;
+
     @NameInMap("OperationLocks")
     public DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnIpaServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnIpaServiceResponseBody self = new DescribeDcdnIpaServiceResponseBody();
@@ -38,36 +38,12 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         return this.changingAffectTime;
     }
 
-    public DescribeDcdnIpaServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDcdnIpaServiceResponseBody setChangingChargeType(String changingChargeType) {
         this.changingChargeType = changingChargeType;
         return this;
     }
     public String getChangingChargeType() {
         return this.changingChargeType;
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setOpeningTime(String openingTime) {
-        this.openingTime = openingTime;
-        return this;
-    }
-    public String getOpeningTime() {
-        return this.openingTime;
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setInternetChargeType(String internetChargeType) {
-        this.internetChargeType = internetChargeType;
-        return this;
-    }
-    public String getInternetChargeType() {
-        return this.internetChargeType;
     }
 
     public DescribeDcdnIpaServiceResponseBody setInstanceId(String instanceId) {
@@ -78,12 +54,36 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeDcdnIpaServiceResponseBody setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setOpeningTime(String openingTime) {
+        this.openingTime = openingTime;
+        return this;
+    }
+    public String getOpeningTime() {
+        return this.openingTime;
+    }
+
     public DescribeDcdnIpaServiceResponseBody setOperationLocks(DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks) {
         this.operationLocks = operationLocks;
         return this;
     }
     public DescribeDcdnIpaServiceResponseBodyOperationLocks getOperationLocks() {
         return this.operationLocks;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDcdnIpaServiceResponseBodyOperationLocksLockReason extends TeaModel {

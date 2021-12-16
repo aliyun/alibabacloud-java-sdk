@@ -4,34 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Isps")
+    public DescribeDcdnRegionAndIspResponseBodyIsps isps;
 
     @NameInMap("Regions")
     public DescribeDcdnRegionAndIspResponseBodyRegions regions;
 
-    @NameInMap("Isps")
-    public DescribeDcdnRegionAndIspResponseBodyIsps isps;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnRegionAndIspResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnRegionAndIspResponseBody self = new DescribeDcdnRegionAndIspResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnRegionAndIspResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnRegionAndIspResponseBody setRegions(DescribeDcdnRegionAndIspResponseBodyRegions regions) {
-        this.regions = regions;
-        return this;
-    }
-    public DescribeDcdnRegionAndIspResponseBodyRegions getRegions() {
-        return this.regions;
     }
 
     public DescribeDcdnRegionAndIspResponseBody setIsps(DescribeDcdnRegionAndIspResponseBodyIsps isps) {
@@ -42,53 +26,20 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         return this.isps;
     }
 
-    public static class DescribeDcdnRegionAndIspResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("NameEn")
-        public String nameEn;
-
-        @NameInMap("NameZh")
-        public String nameZh;
-
-        public static DescribeDcdnRegionAndIspResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnRegionAndIspResponseBodyRegionsRegion self = new DescribeDcdnRegionAndIspResponseBodyRegionsRegion();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnRegionAndIspResponseBodyRegionsRegion setNameEn(String nameEn) {
-            this.nameEn = nameEn;
-            return this;
-        }
-        public String getNameEn() {
-            return this.nameEn;
-        }
-
-        public DescribeDcdnRegionAndIspResponseBodyRegionsRegion setNameZh(String nameZh) {
-            this.nameZh = nameZh;
-            return this;
-        }
-        public String getNameZh() {
-            return this.nameZh;
-        }
-
+    public DescribeDcdnRegionAndIspResponseBody setRegions(DescribeDcdnRegionAndIspResponseBodyRegions regions) {
+        this.regions = regions;
+        return this;
+    }
+    public DescribeDcdnRegionAndIspResponseBodyRegions getRegions() {
+        return this.regions;
     }
 
-    public static class DescribeDcdnRegionAndIspResponseBodyRegions extends TeaModel {
-        @NameInMap("Region")
-        public java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> region;
-
-        public static DescribeDcdnRegionAndIspResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnRegionAndIspResponseBodyRegions self = new DescribeDcdnRegionAndIspResponseBodyRegions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnRegionAndIspResponseBodyRegions setRegion(java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> region) {
-            this.region = region;
-            return this;
-        }
-        public java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> getRegion() {
-            return this.region;
-        }
-
+    public DescribeDcdnRegionAndIspResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDcdnRegionAndIspResponseBodyIspsIsp extends TeaModel {
@@ -136,6 +87,55 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDcdnRegionAndIspResponseBodyIspsIsp> getIsp() {
             return this.isp;
+        }
+
+    }
+
+    public static class DescribeDcdnRegionAndIspResponseBodyRegionsRegion extends TeaModel {
+        @NameInMap("NameEn")
+        public String nameEn;
+
+        @NameInMap("NameZh")
+        public String nameZh;
+
+        public static DescribeDcdnRegionAndIspResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnRegionAndIspResponseBodyRegionsRegion self = new DescribeDcdnRegionAndIspResponseBodyRegionsRegion();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnRegionAndIspResponseBodyRegionsRegion setNameEn(String nameEn) {
+            this.nameEn = nameEn;
+            return this;
+        }
+        public String getNameEn() {
+            return this.nameEn;
+        }
+
+        public DescribeDcdnRegionAndIspResponseBodyRegionsRegion setNameZh(String nameZh) {
+            this.nameZh = nameZh;
+            return this;
+        }
+        public String getNameZh() {
+            return this.nameZh;
+        }
+
+    }
+
+    public static class DescribeDcdnRegionAndIspResponseBodyRegions extends TeaModel {
+        @NameInMap("Region")
+        public java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> region;
+
+        public static DescribeDcdnRegionAndIspResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnRegionAndIspResponseBodyRegions self = new DescribeDcdnRegionAndIspResponseBodyRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnRegionAndIspResponseBodyRegions setRegion(java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> region) {
+            this.region = region;
+            return this;
+        }
+        public java.util.List<DescribeDcdnRegionAndIspResponseBodyRegionsRegion> getRegion() {
+            return this.region;
         }
 
     }

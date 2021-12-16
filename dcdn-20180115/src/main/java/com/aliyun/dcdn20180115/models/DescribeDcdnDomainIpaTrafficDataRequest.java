@@ -4,26 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("TimeMerge")
-    public String timeMerge;
+    @NameInMap("FixTimeGap")
+    public String fixTimeGap;
 
     @NameInMap("Interval")
     public String interval;
-
-    @NameInMap("FixTimeGap")
-    public String fixTimeGap;
 
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -31,17 +22,18 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("TimeMerge")
+    public String timeMerge;
+
     public static DescribeDcdnDomainIpaTrafficDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainIpaTrafficDataRequest self = new DescribeDcdnDomainIpaTrafficDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainIpaTrafficDataRequest setDomainName(String domainName) {
@@ -52,14 +44,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainIpaTrafficDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainIpaTrafficDataRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -68,12 +52,12 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDcdnDomainIpaTrafficDataRequest setTimeMerge(String timeMerge) {
-        this.timeMerge = timeMerge;
+    public DescribeDcdnDomainIpaTrafficDataRequest setFixTimeGap(String fixTimeGap) {
+        this.fixTimeGap = fixTimeGap;
         return this;
     }
-    public String getTimeMerge() {
-        return this.timeMerge;
+    public String getFixTimeGap() {
+        return this.fixTimeGap;
     }
 
     public DescribeDcdnDomainIpaTrafficDataRequest setInterval(String interval) {
@@ -82,14 +66,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataRequest setFixTimeGap(String fixTimeGap) {
-        this.fixTimeGap = fixTimeGap;
-        return this;
-    }
-    public String getFixTimeGap() {
-        return this.fixTimeGap;
     }
 
     public DescribeDcdnDomainIpaTrafficDataRequest setIspNameEn(String ispNameEn) {
@@ -106,6 +82,30 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataRequest setTimeMerge(String timeMerge) {
+        this.timeMerge = timeMerge;
+        return this;
+    }
+    public String getTimeMerge() {
+        return this.timeMerge;
     }
 
 }

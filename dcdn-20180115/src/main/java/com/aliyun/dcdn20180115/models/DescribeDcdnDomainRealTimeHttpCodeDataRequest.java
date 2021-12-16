@@ -4,14 +4,8 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeHttpCodeDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -22,17 +16,15 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainRealTimeHttpCodeDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainRealTimeHttpCodeDataRequest self = new DescribeDcdnDomainRealTimeHttpCodeDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainRealTimeHttpCodeDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainRealTimeHttpCodeDataRequest setDomainName(String domainName) {
@@ -41,14 +33,6 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainRealTimeHttpCodeDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainRealTimeHttpCodeDataRequest setEndTime(String endTime) {
@@ -73,6 +57,22 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeDcdnDomainRealTimeHttpCodeDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnDomainRealTimeHttpCodeDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

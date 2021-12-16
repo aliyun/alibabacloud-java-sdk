@@ -4,41 +4,38 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UpdateDcdnDeliverTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Deliver")
+    public String deliver;
 
     @NameInMap("DeliverId")
     public Long deliverId;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("Reports")
     public String reports;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("Deliver")
-    public java.util.Map<String, ?> deliver;
-
     @NameInMap("Schedule")
-    public java.util.Map<String, ?> schedule;
+    public String schedule;
 
     public static UpdateDcdnDeliverTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDcdnDeliverTaskRequest self = new UpdateDcdnDeliverTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDcdnDeliverTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public UpdateDcdnDeliverTaskRequest setDeliver(String deliver) {
+        this.deliver = deliver;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDeliver() {
+        return this.deliver;
     }
 
     public UpdateDcdnDeliverTaskRequest setDeliverId(Long deliverId) {
@@ -49,6 +46,14 @@ public class UpdateDcdnDeliverTaskRequest extends TeaModel {
         return this.deliverId;
     }
 
+    public UpdateDcdnDeliverTaskRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
     public UpdateDcdnDeliverTaskRequest setName(String name) {
         this.name = name;
         return this;
@@ -57,12 +62,12 @@ public class UpdateDcdnDeliverTaskRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateDcdnDeliverTaskRequest setStatus(String status) {
-        this.status = status;
+    public UpdateDcdnDeliverTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateDcdnDeliverTaskRequest setReports(String reports) {
@@ -73,27 +78,11 @@ public class UpdateDcdnDeliverTaskRequest extends TeaModel {
         return this.reports;
     }
 
-    public UpdateDcdnDeliverTaskRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public UpdateDcdnDeliverTaskRequest setDeliver(java.util.Map<String, ?> deliver) {
-        this.deliver = deliver;
-        return this;
-    }
-    public java.util.Map<String, ?> getDeliver() {
-        return this.deliver;
-    }
-
-    public UpdateDcdnDeliverTaskRequest setSchedule(java.util.Map<String, ?> schedule) {
+    public UpdateDcdnDeliverTaskRequest setSchedule(String schedule) {
         this.schedule = schedule;
         return this;
     }
-    public java.util.Map<String, ?> getSchedule() {
+    public String getSchedule() {
         return this.schedule;
     }
 

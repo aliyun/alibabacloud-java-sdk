@@ -4,20 +4,20 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DataInterval")
+    public String dataInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("TrafficDataPerInterval")
     public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -27,28 +27,12 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeDcdnDomainIpaTrafficDataResponseBody setDomainName(String domainName) {
@@ -59,12 +43,28 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainIpaTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {

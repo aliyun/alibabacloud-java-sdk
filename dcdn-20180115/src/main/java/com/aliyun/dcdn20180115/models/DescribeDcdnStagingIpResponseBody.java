@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnStagingIpResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("IPV4s")
     public DescribeDcdnStagingIpResponseBodyIPV4s IPV4s;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnStagingIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnStagingIpResponseBody self = new DescribeDcdnStagingIpResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnStagingIpResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnStagingIpResponseBody setIPV4s(DescribeDcdnStagingIpResponseBodyIPV4s IPV4s) {
@@ -29,6 +21,14 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
     }
     public DescribeDcdnStagingIpResponseBodyIPV4s getIPV4s() {
         return this.IPV4s;
+    }
+
+    public DescribeDcdnStagingIpResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDcdnStagingIpResponseBodyIPV4s extends TeaModel {

@@ -4,59 +4,35 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("BpsDataPerInterval")
+    public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     @NameInMap("DataInterval")
     public String dataInterval;
 
-    @NameInMap("BpsDataPerInterval")
-    public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeDcdnDomainWebsocketBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainWebsocketBpsDataResponseBody self = new DescribeDcdnDomainWebsocketBpsDataResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setBpsDataPerInterval(DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
+        this.bpsDataPerInterval = bpsDataPerInterval;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
+    public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
+        return this.bpsDataPerInterval;
     }
 
     public DescribeDcdnDomainWebsocketBpsDataResponseBody setDataInterval(String dataInterval) {
@@ -67,12 +43,36 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setBpsDataPerInterval(DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
-        this.bpsDataPerInterval = bpsDataPerInterval;
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
-        return this.bpsDataPerInterval;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {

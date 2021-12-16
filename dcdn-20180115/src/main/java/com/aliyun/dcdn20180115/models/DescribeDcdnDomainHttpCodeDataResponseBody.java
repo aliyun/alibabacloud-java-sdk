@@ -4,59 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("DataInterval")
     public String dataInterval;
 
     @NameInMap("DataPerInterval")
     public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerInterval dataPerInterval;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainHttpCodeDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainHttpCodeDataResponseBody self = new DescribeDcdnDomainHttpCodeDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainHttpCodeDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeDcdnDomainHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDcdnDomainHttpCodeDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnDomainHttpCodeDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public DescribeDcdnDomainHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -75,15 +43,47 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         return this.dataPerInterval;
     }
 
+    public DescribeDcdnDomainHttpCodeDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDcdnDomainHttpCodeDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDcdnDomainHttpCodeDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnDomainHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
-        @NameInMap("Proportion")
-        public Float proportion;
-
         @NameInMap("Count")
         public Float count;
+
+        @NameInMap("Proportion")
+        public Float proportion;
 
         public static DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule self = new DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule();
@@ -98,20 +98,20 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule setProportion(Float proportion) {
-            this.proportion = proportion;
-            return this;
-        }
-        public Float getProportion() {
-            return this.proportion;
-        }
-
         public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule setCount(Float count) {
             this.count = count;
             return this;
         }
         public Float getCount() {
             return this.count;
+        }
+
+        public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerIntervalHttpCodeDataModule setProportion(Float proportion) {
+            this.proportion = proportion;
+            return this;
+        }
+        public Float getProportion() {
+            return this.proportion;
         }
 
     }
@@ -136,23 +136,15 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("HttpCodeDataPerInterval")
         public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval httpCodeDataPerInterval;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule self = new DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule setHttpCodeDataPerInterval(DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval httpCodeDataPerInterval) {
@@ -161,6 +153,14 @@ public class DescribeDcdnDomainHttpCodeDataResponseBody extends TeaModel {
         }
         public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModuleHttpCodeDataPerInterval getHttpCodeDataPerInterval() {
             return this.httpCodeDataPerInterval;
+        }
+
+        public DescribeDcdnDomainHttpCodeDataResponseBodyDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

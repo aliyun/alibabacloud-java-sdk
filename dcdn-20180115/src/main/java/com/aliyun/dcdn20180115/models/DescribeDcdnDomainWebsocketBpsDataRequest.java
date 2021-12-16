@@ -4,14 +4,8 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +19,15 @@ public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainWebsocketBpsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainWebsocketBpsDataRequest self = new DescribeDcdnDomainWebsocketBpsDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainWebsocketBpsDataRequest setDomainName(String domainName) {
@@ -44,14 +36,6 @@ public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainWebsocketBpsDataRequest setEndTime(String endTime) {
@@ -84,6 +68,22 @@ public class DescribeDcdnDomainWebsocketBpsDataRequest extends TeaModel {
     }
     public String getLocationNameEn() {
         return this.locationNameEn;
+    }
+
+    public DescribeDcdnDomainWebsocketBpsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnDomainWebsocketBpsDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

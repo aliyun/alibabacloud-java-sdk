@@ -4,15 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnConfigOfVersionRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("VersionId")
-    public String versionId;
-
     @NameInMap("FunctionId")
     public Integer functionId;
 
@@ -22,33 +13,18 @@ public class DescribeDcdnConfigOfVersionRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("VersionId")
+    public String versionId;
+
     public static DescribeDcdnConfigOfVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnConfigOfVersionRequest self = new DescribeDcdnConfigOfVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnConfigOfVersionRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDcdnConfigOfVersionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeDcdnConfigOfVersionRequest setVersionId(String versionId) {
-        this.versionId = versionId;
-        return this;
-    }
-    public String getVersionId() {
-        return this.versionId;
     }
 
     public DescribeDcdnConfigOfVersionRequest setFunctionId(Integer functionId) {
@@ -73,6 +49,30 @@ public class DescribeDcdnConfigOfVersionRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeDcdnConfigOfVersionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnConfigOfVersionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeDcdnConfigOfVersionRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

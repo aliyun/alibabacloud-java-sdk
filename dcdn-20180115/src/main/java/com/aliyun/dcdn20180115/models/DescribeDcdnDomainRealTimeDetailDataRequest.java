@@ -4,14 +4,8 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,11 +13,11 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     @NameInMap("Field")
     public String field;
 
-    @NameInMap("LocationNameEn")
-    public String locationNameEn;
-
     @NameInMap("IspNameEn")
     public String ispNameEn;
+
+    @NameInMap("LocationNameEn")
+    public String locationNameEn;
 
     @NameInMap("Merge")
     public String merge;
@@ -31,17 +25,15 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     @NameInMap("MergeLocIsp")
     public String mergeLocIsp;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeDcdnDomainRealTimeDetailDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainRealTimeDetailDataRequest self = new DescribeDcdnDomainRealTimeDetailDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainRealTimeDetailDataRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeDcdnDomainRealTimeDetailDataRequest setDomainName(String domainName) {
@@ -50,14 +42,6 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainRealTimeDetailDataRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainRealTimeDetailDataRequest setEndTime(String endTime) {
@@ -76,20 +60,20 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
         return this.field;
     }
 
-    public DescribeDcdnDomainRealTimeDetailDataRequest setLocationNameEn(String locationNameEn) {
-        this.locationNameEn = locationNameEn;
-        return this;
-    }
-    public String getLocationNameEn() {
-        return this.locationNameEn;
-    }
-
     public DescribeDcdnDomainRealTimeDetailDataRequest setIspNameEn(String ispNameEn) {
         this.ispNameEn = ispNameEn;
         return this;
     }
     public String getIspNameEn() {
         return this.ispNameEn;
+    }
+
+    public DescribeDcdnDomainRealTimeDetailDataRequest setLocationNameEn(String locationNameEn) {
+        this.locationNameEn = locationNameEn;
+        return this;
+    }
+    public String getLocationNameEn() {
+        return this.locationNameEn;
     }
 
     public DescribeDcdnDomainRealTimeDetailDataRequest setMerge(String merge) {
@@ -106,6 +90,22 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     }
     public String getMergeLocIsp() {
         return this.mergeLocIsp;
+    }
+
+    public DescribeDcdnDomainRealTimeDetailDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDcdnDomainRealTimeDetailDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

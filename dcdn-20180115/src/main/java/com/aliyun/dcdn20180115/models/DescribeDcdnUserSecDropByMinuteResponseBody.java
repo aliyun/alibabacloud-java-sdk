@@ -4,9 +4,6 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Description")
     public String description;
 
@@ -19,23 +16,18 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Rows")
     public java.util.List<DescribeDcdnUserSecDropByMinuteResponseBodyRows> rows;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeDcdnUserSecDropByMinuteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserSecDropByMinuteResponseBody self = new DescribeDcdnUserSecDropByMinuteResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnUserSecDropByMinuteResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnUserSecDropByMinuteResponseBody setDescription(String description) {
@@ -70,12 +62,12 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDcdnUserSecDropByMinuteResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDcdnUserSecDropByMinuteResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDcdnUserSecDropByMinuteResponseBody setRows(java.util.List<DescribeDcdnUserSecDropByMinuteResponseBodyRows> rows) {
@@ -86,12 +78,17 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         return this.rows;
     }
 
+    public DescribeDcdnUserSecDropByMinuteResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeDcdnUserSecDropByMinuteResponseBodyRows extends TeaModel {
         @NameInMap("Domain")
         public String domain;
-
-        @NameInMap("TmStr")
-        public String tmStr;
 
         @NameInMap("Drops")
         public Integer drops;
@@ -99,11 +96,14 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         @NameInMap("Object")
         public String object;
 
+        @NameInMap("RuleName")
+        public String ruleName;
+
         @NameInMap("SecFunc")
         public String secFunc;
 
-        @NameInMap("RuleName")
-        public String ruleName;
+        @NameInMap("TmStr")
+        public String tmStr;
 
         public static DescribeDcdnUserSecDropByMinuteResponseBodyRows build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnUserSecDropByMinuteResponseBodyRows self = new DescribeDcdnUserSecDropByMinuteResponseBodyRows();
@@ -116,14 +116,6 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
-        }
-
-        public DescribeDcdnUserSecDropByMinuteResponseBodyRows setTmStr(String tmStr) {
-            this.tmStr = tmStr;
-            return this;
-        }
-        public String getTmStr() {
-            return this.tmStr;
         }
 
         public DescribeDcdnUserSecDropByMinuteResponseBodyRows setDrops(Integer drops) {
@@ -142,6 +134,14 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             return this.object;
         }
 
+        public DescribeDcdnUserSecDropByMinuteResponseBodyRows setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
         public DescribeDcdnUserSecDropByMinuteResponseBodyRows setSecFunc(String secFunc) {
             this.secFunc = secFunc;
             return this;
@@ -150,12 +150,12 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             return this.secFunc;
         }
 
-        public DescribeDcdnUserSecDropByMinuteResponseBodyRows setRuleName(String ruleName) {
-            this.ruleName = ruleName;
+        public DescribeDcdnUserSecDropByMinuteResponseBodyRows setTmStr(String tmStr) {
+            this.tmStr = tmStr;
             return this;
         }
-        public String getRuleName() {
-            return this.ruleName;
+        public String getTmStr() {
+            return this.tmStr;
         }
 
     }

@@ -4,21 +4,37 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PreloadDcdnObjectCachesRequest extends TeaModel {
+    @NameInMap("Area")
+    public String area;
+
+    @NameInMap("ObjectPath")
+    public String objectPath;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("ObjectPath")
-    public String objectPath;
-
-    @NameInMap("Area")
-    public String area;
-
     public static PreloadDcdnObjectCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         PreloadDcdnObjectCachesRequest self = new PreloadDcdnObjectCachesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PreloadDcdnObjectCachesRequest setArea(String area) {
+        this.area = area;
+        return this;
+    }
+    public String getArea() {
+        return this.area;
+    }
+
+    public PreloadDcdnObjectCachesRequest setObjectPath(String objectPath) {
+        this.objectPath = objectPath;
+        return this;
+    }
+    public String getObjectPath() {
+        return this.objectPath;
     }
 
     public PreloadDcdnObjectCachesRequest setOwnerId(Long ownerId) {
@@ -35,22 +51,6 @@ public class PreloadDcdnObjectCachesRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public PreloadDcdnObjectCachesRequest setObjectPath(String objectPath) {
-        this.objectPath = objectPath;
-        return this;
-    }
-    public String getObjectPath() {
-        return this.objectPath;
-    }
-
-    public PreloadDcdnObjectCachesRequest setArea(String area) {
-        this.area = area;
-        return this;
-    }
-    public String getArea() {
-        return this.area;
     }
 
 }

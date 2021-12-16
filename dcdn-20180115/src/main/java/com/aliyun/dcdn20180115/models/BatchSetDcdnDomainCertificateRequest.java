@@ -4,20 +4,23 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
-
     @NameInMap("CertName")
     public String certName;
 
     @NameInMap("CertType")
     public String certType;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("SSLPri")
+    public String SSLPri;
 
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
@@ -25,39 +28,12 @@ public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
     @NameInMap("SSLPub")
     public String SSLPub;
 
-    @NameInMap("SSLPri")
-    public String SSLPri;
-
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     public static BatchSetDcdnDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSetDcdnDomainCertificateRequest self = new BatchSetDcdnDomainCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchSetDcdnDomainCertificateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public BatchSetDcdnDomainCertificateRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public BatchSetDcdnDomainCertificateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
     public BatchSetDcdnDomainCertificateRequest setCertName(String certName) {
@@ -76,6 +52,38 @@ public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
         return this.certType;
     }
 
+    public BatchSetDcdnDomainCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public BatchSetDcdnDomainCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BatchSetDcdnDomainCertificateRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public BatchSetDcdnDomainCertificateRequest setSSLPri(String SSLPri) {
+        this.SSLPri = SSLPri;
+        return this;
+    }
+    public String getSSLPri() {
+        return this.SSLPri;
+    }
+
     public BatchSetDcdnDomainCertificateRequest setSSLProtocol(String SSLProtocol) {
         this.SSLProtocol = SSLProtocol;
         return this;
@@ -92,20 +100,12 @@ public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
         return this.SSLPub;
     }
 
-    public BatchSetDcdnDomainCertificateRequest setSSLPri(String SSLPri) {
-        this.SSLPri = SSLPri;
+    public BatchSetDcdnDomainCertificateRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
         return this;
     }
-    public String getSSLPri() {
-        return this.SSLPri;
-    }
-
-    public BatchSetDcdnDomainCertificateRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

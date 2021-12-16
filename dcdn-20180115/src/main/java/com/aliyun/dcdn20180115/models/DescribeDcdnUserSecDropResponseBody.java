@@ -4,14 +4,14 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
+    @NameInMap("Drops")
+    public Integer drops;
+
     @NameInMap("Msg")
     public String msg;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Drops")
-    public Integer drops;
 
     @NameInMap("UuidStr")
     public String uuidStr;
@@ -19,6 +19,14 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
     public static DescribeDcdnUserSecDropResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserSecDropResponseBody self = new DescribeDcdnUserSecDropResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnUserSecDropResponseBody setDrops(Integer drops) {
+        this.drops = drops;
+        return this;
+    }
+    public Integer getDrops() {
+        return this.drops;
     }
 
     public DescribeDcdnUserSecDropResponseBody setMsg(String msg) {
@@ -35,14 +43,6 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeDcdnUserSecDropResponseBody setDrops(Integer drops) {
-        this.drops = drops;
-        return this;
-    }
-    public Integer getDrops() {
-        return this.drops;
     }
 
     public DescribeDcdnUserSecDropResponseBody setUuidStr(String uuidStr) {

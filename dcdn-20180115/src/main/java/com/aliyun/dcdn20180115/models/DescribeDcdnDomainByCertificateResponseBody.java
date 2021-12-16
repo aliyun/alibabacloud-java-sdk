@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CertInfos")
     public DescribeDcdnDomainByCertificateResponseBodyCertInfos certInfos;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnDomainByCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainByCertificateResponseBody self = new DescribeDcdnDomainByCertificateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainByCertificateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnDomainByCertificateResponseBody setCertInfos(DescribeDcdnDomainByCertificateResponseBodyCertInfos certInfos) {
@@ -31,15 +23,26 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         return this.certInfos;
     }
 
+    public DescribeDcdnDomainByCertificateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
-        @NameInMap("CertStartTime")
-        public String certStartTime;
+        @NameInMap("CertCaIsLegacy")
+        public String certCaIsLegacy;
 
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
-        @NameInMap("CertCaIsLegacy")
-        public String certCaIsLegacy;
+        @NameInMap("CertExpired")
+        public String certExpired;
+
+        @NameInMap("CertStartTime")
+        public String certStartTime;
 
         @NameInMap("CertSubjectCommonName")
         public String certSubjectCommonName;
@@ -47,29 +50,26 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         @NameInMap("CertType")
         public String certType;
 
+        @NameInMap("DomainList")
+        public String domainList;
+
         @NameInMap("DomainNames")
         public String domainNames;
 
-        @NameInMap("CertExpired")
-        public String certExpired;
-
         @NameInMap("Issuer")
         public String issuer;
-
-        @NameInMap("DomainList")
-        public String domainList;
 
         public static DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo self = new DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertStartTime(String certStartTime) {
-            this.certStartTime = certStartTime;
+        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertCaIsLegacy(String certCaIsLegacy) {
+            this.certCaIsLegacy = certCaIsLegacy;
             return this;
         }
-        public String getCertStartTime() {
-            return this.certStartTime;
+        public String getCertCaIsLegacy() {
+            return this.certCaIsLegacy;
         }
 
         public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertExpireTime(String certExpireTime) {
@@ -80,12 +80,20 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             return this.certExpireTime;
         }
 
-        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertCaIsLegacy(String certCaIsLegacy) {
-            this.certCaIsLegacy = certCaIsLegacy;
+        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertExpired(String certExpired) {
+            this.certExpired = certExpired;
             return this;
         }
-        public String getCertCaIsLegacy() {
-            return this.certCaIsLegacy;
+        public String getCertExpired() {
+            return this.certExpired;
+        }
+
+        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertStartTime(String certStartTime) {
+            this.certStartTime = certStartTime;
+            return this;
+        }
+        public String getCertStartTime() {
+            return this.certStartTime;
         }
 
         public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertSubjectCommonName(String certSubjectCommonName) {
@@ -104,6 +112,14 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             return this.certType;
         }
 
+        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setDomainList(String domainList) {
+            this.domainList = domainList;
+            return this;
+        }
+        public String getDomainList() {
+            return this.domainList;
+        }
+
         public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setDomainNames(String domainNames) {
             this.domainNames = domainNames;
             return this;
@@ -112,28 +128,12 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             return this.domainNames;
         }
 
-        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setCertExpired(String certExpired) {
-            this.certExpired = certExpired;
-            return this;
-        }
-        public String getCertExpired() {
-            return this.certExpired;
-        }
-
         public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setIssuer(String issuer) {
             this.issuer = issuer;
             return this;
         }
         public String getIssuer() {
             return this.issuer;
-        }
-
-        public DescribeDcdnDomainByCertificateResponseBodyCertInfosCertInfo setDomainList(String domainList) {
-            this.domainList = domainList;
-            return this;
-        }
-        public String getDomainList() {
-            return this.domainList;
         }
 
     }

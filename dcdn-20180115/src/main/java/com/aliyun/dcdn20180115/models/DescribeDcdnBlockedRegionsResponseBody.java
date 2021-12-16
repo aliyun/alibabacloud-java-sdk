@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InfoList")
     public DescribeDcdnBlockedRegionsResponseBodyInfoList infoList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnBlockedRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnBlockedRegionsResponseBody self = new DescribeDcdnBlockedRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnBlockedRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnBlockedRegionsResponseBody setInfoList(DescribeDcdnBlockedRegionsResponseBodyInfoList infoList) {
@@ -31,12 +23,20 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
         return this.infoList;
     }
 
-    public static class DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem extends TeaModel {
-        @NameInMap("CountriesAndRegions")
-        public String countriesAndRegions;
+    public DescribeDcdnBlockedRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem extends TeaModel {
         @NameInMap("Continent")
         public String continent;
+
+        @NameInMap("CountriesAndRegions")
+        public String countriesAndRegions;
 
         @NameInMap("CountriesAndRegionsName")
         public String countriesAndRegionsName;
@@ -46,20 +46,20 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem setCountriesAndRegions(String countriesAndRegions) {
-            this.countriesAndRegions = countriesAndRegions;
-            return this;
-        }
-        public String getCountriesAndRegions() {
-            return this.countriesAndRegions;
-        }
-
         public DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem setContinent(String continent) {
             this.continent = continent;
             return this;
         }
         public String getContinent() {
             return this.continent;
+        }
+
+        public DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem setCountriesAndRegions(String countriesAndRegions) {
+            this.countriesAndRegions = countriesAndRegions;
+            return this;
+        }
+        public String getCountriesAndRegions() {
+            return this.countriesAndRegions;
         }
 
         public DescribeDcdnBlockedRegionsResponseBodyInfoListInfoItem setCountriesAndRegionsName(String countriesAndRegionsName) {

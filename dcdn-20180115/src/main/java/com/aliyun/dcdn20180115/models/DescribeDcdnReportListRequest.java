@@ -10,12 +10,6 @@ public class DescribeDcdnReportListRequest extends TeaModel {
     @NameInMap("ReportId")
     public Long reportId;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("Permission")
-    public String permission;
-
     public static DescribeDcdnReportListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnReportListRequest self = new DescribeDcdnReportListRequest();
         return TeaModel.build(map, self);
@@ -35,22 +29,6 @@ public class DescribeDcdnReportListRequest extends TeaModel {
     }
     public Long getReportId() {
         return this.reportId;
-    }
-
-    public DescribeDcdnReportListRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeDcdnReportListRequest setPermission(String permission) {
-        this.permission = permission;
-        return this;
-    }
-    public String getPermission() {
-        return this.permission;
     }
 
 }

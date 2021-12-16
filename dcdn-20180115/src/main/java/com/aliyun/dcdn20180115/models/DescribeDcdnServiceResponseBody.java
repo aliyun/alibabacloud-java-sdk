@@ -4,55 +4,39 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnServiceResponseBody extends TeaModel {
-    @NameInMap("WebsocketChangingTime")
-    public String websocketChangingTime;
-
-    @NameInMap("WebsocketChangingType")
-    public String websocketChangingType;
-
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("OpeningTime")
-    public String openingTime;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    @NameInMap("WebsocketType")
-    public String websocketType;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("OpeningTime")
+    public String openingTime;
 
     @NameInMap("OperationLocks")
     public DescribeDcdnServiceResponseBodyOperationLocks operationLocks;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("WebsocketChangingTime")
+    public String websocketChangingTime;
+
+    @NameInMap("WebsocketChangingType")
+    public String websocketChangingType;
+
+    @NameInMap("WebsocketType")
+    public String websocketType;
+
     public static DescribeDcdnServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnServiceResponseBody self = new DescribeDcdnServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnServiceResponseBody setWebsocketChangingTime(String websocketChangingTime) {
-        this.websocketChangingTime = websocketChangingTime;
-        return this;
-    }
-    public String getWebsocketChangingTime() {
-        return this.websocketChangingTime;
-    }
-
-    public DescribeDcdnServiceResponseBody setWebsocketChangingType(String websocketChangingType) {
-        this.websocketChangingType = websocketChangingType;
-        return this;
-    }
-    public String getWebsocketChangingType() {
-        return this.websocketChangingType;
     }
 
     public DescribeDcdnServiceResponseBody setChangingAffectTime(String changingAffectTime) {
@@ -71,20 +55,12 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         return this.changingChargeType;
     }
 
-    public DescribeDcdnServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDcdnServiceResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnServiceResponseBody setOpeningTime(String openingTime) {
-        this.openingTime = openingTime;
-        return this;
-    }
-    public String getOpeningTime() {
-        return this.openingTime;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeDcdnServiceResponseBody setInternetChargeType(String internetChargeType) {
@@ -95,20 +71,12 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         return this.internetChargeType;
     }
 
-    public DescribeDcdnServiceResponseBody setWebsocketType(String websocketType) {
-        this.websocketType = websocketType;
+    public DescribeDcdnServiceResponseBody setOpeningTime(String openingTime) {
+        this.openingTime = openingTime;
         return this;
     }
-    public String getWebsocketType() {
-        return this.websocketType;
-    }
-
-    public DescribeDcdnServiceResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getOpeningTime() {
+        return this.openingTime;
     }
 
     public DescribeDcdnServiceResponseBody setOperationLocks(DescribeDcdnServiceResponseBodyOperationLocks operationLocks) {
@@ -117,6 +85,38 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     }
     public DescribeDcdnServiceResponseBodyOperationLocks getOperationLocks() {
         return this.operationLocks;
+    }
+
+    public DescribeDcdnServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnServiceResponseBody setWebsocketChangingTime(String websocketChangingTime) {
+        this.websocketChangingTime = websocketChangingTime;
+        return this;
+    }
+    public String getWebsocketChangingTime() {
+        return this.websocketChangingTime;
+    }
+
+    public DescribeDcdnServiceResponseBody setWebsocketChangingType(String websocketChangingType) {
+        this.websocketChangingType = websocketChangingType;
+        return this;
+    }
+    public String getWebsocketChangingType() {
+        return this.websocketChangingType;
+    }
+
+    public DescribeDcdnServiceResponseBody setWebsocketType(String websocketType) {
+        this.websocketType = websocketType;
+        return this;
+    }
+    public String getWebsocketType() {
+        return this.websocketType;
     }
 
     public static class DescribeDcdnServiceResponseBodyOperationLocksLockReason extends TeaModel {

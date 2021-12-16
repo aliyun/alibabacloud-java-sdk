@@ -4,26 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoutineConfEnvsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("Envs")
+    public java.util.Map<String, ?> envs;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("Envs")
-    public java.util.Map<String, ?> envs;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DeleteRoutineConfEnvsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRoutineConfEnvsRequest self = new DeleteRoutineConfEnvsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRoutineConfEnvsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DeleteRoutineConfEnvsRequest setEnvs(java.util.Map<String, ?> envs) {
+        this.envs = envs;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public java.util.Map<String, ?> getEnvs() {
+        return this.envs;
     }
 
     public DeleteRoutineConfEnvsRequest setName(String name) {
@@ -34,12 +34,12 @@ public class DeleteRoutineConfEnvsRequest extends TeaModel {
         return this.name;
     }
 
-    public DeleteRoutineConfEnvsRequest setEnvs(java.util.Map<String, ?> envs) {
-        this.envs = envs;
+    public DeleteRoutineConfEnvsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.Map<String, ?> getEnvs() {
-        return this.envs;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

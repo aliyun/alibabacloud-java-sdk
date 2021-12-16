@@ -4,18 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchStopDcdnDomainRequest extends TeaModel {
+    @NameInMap("DomainNames")
+    public String domainNames;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainNames")
-    public String domainNames;
-
     public static BatchStopDcdnDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopDcdnDomainRequest self = new BatchStopDcdnDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchStopDcdnDomainRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
     public BatchStopDcdnDomainRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class BatchStopDcdnDomainRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public BatchStopDcdnDomainRequest setDomainNames(String domainNames) {
-        this.domainNames = domainNames;
-        return this;
-    }
-    public String getDomainNames() {
-        return this.domainNames;
     }
 
 }

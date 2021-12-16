@@ -7,32 +7,32 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("BlockQuota")
     public Integer blockQuota;
 
-    @NameInMap("RefreshUrlRemain")
-    public Integer refreshUrlRemain;
+    @NameInMap("BlockRemain")
+    public Integer blockRemain;
 
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
-    @NameInMap("BlockRemain")
-    public Integer blockRemain;
+    @NameInMap("PreloadQuota")
+    public Integer preloadQuota;
 
     @NameInMap("PreloadRemain")
     public Integer preloadRemain;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("RefreshUrlQuota")
-    public Integer refreshUrlQuota;
-
-    @NameInMap("PreloadQuota")
-    public Integer preloadQuota;
 
     @NameInMap("RefreshDirQuota")
     public Integer refreshDirQuota;
 
     @NameInMap("RefreshDirRemain")
     public Integer refreshDirRemain;
+
+    @NameInMap("RefreshUrlQuota")
+    public Integer refreshUrlQuota;
+
+    @NameInMap("RefreshUrlRemain")
+    public Integer refreshUrlRemain;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnUserQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserQuotaResponseBody self = new DescribeDcdnUserQuotaResponseBody();
@@ -47,12 +47,12 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         return this.blockQuota;
     }
 
-    public DescribeDcdnUserQuotaResponseBody setRefreshUrlRemain(Integer refreshUrlRemain) {
-        this.refreshUrlRemain = refreshUrlRemain;
+    public DescribeDcdnUserQuotaResponseBody setBlockRemain(Integer blockRemain) {
+        this.blockRemain = blockRemain;
         return this;
     }
-    public Integer getRefreshUrlRemain() {
-        return this.refreshUrlRemain;
+    public Integer getBlockRemain() {
+        return this.blockRemain;
     }
 
     public DescribeDcdnUserQuotaResponseBody setDomainQuota(Integer domainQuota) {
@@ -63,12 +63,12 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         return this.domainQuota;
     }
 
-    public DescribeDcdnUserQuotaResponseBody setBlockRemain(Integer blockRemain) {
-        this.blockRemain = blockRemain;
+    public DescribeDcdnUserQuotaResponseBody setPreloadQuota(Integer preloadQuota) {
+        this.preloadQuota = preloadQuota;
         return this;
     }
-    public Integer getBlockRemain() {
-        return this.blockRemain;
+    public Integer getPreloadQuota() {
+        return this.preloadQuota;
     }
 
     public DescribeDcdnUserQuotaResponseBody setPreloadRemain(Integer preloadRemain) {
@@ -77,30 +77,6 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     }
     public Integer getPreloadRemain() {
         return this.preloadRemain;
-    }
-
-    public DescribeDcdnUserQuotaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnUserQuotaResponseBody setRefreshUrlQuota(Integer refreshUrlQuota) {
-        this.refreshUrlQuota = refreshUrlQuota;
-        return this;
-    }
-    public Integer getRefreshUrlQuota() {
-        return this.refreshUrlQuota;
-    }
-
-    public DescribeDcdnUserQuotaResponseBody setPreloadQuota(Integer preloadQuota) {
-        this.preloadQuota = preloadQuota;
-        return this;
-    }
-    public Integer getPreloadQuota() {
-        return this.preloadQuota;
     }
 
     public DescribeDcdnUserQuotaResponseBody setRefreshDirQuota(Integer refreshDirQuota) {
@@ -117,6 +93,30 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     }
     public Integer getRefreshDirRemain() {
         return this.refreshDirRemain;
+    }
+
+    public DescribeDcdnUserQuotaResponseBody setRefreshUrlQuota(Integer refreshUrlQuota) {
+        this.refreshUrlQuota = refreshUrlQuota;
+        return this;
+    }
+    public Integer getRefreshUrlQuota() {
+        return this.refreshUrlQuota;
+    }
+
+    public DescribeDcdnUserQuotaResponseBody setRefreshUrlRemain(Integer refreshUrlRemain) {
+        this.refreshUrlRemain = refreshUrlRemain;
+        return this;
+    }
+    public Integer getRefreshUrlRemain() {
+        return this.refreshUrlRemain;
+    }
+
+    public DescribeDcdnUserQuotaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
