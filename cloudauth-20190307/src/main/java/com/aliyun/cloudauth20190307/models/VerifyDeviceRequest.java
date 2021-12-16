@@ -19,6 +19,9 @@ public class VerifyDeviceRequest extends TeaModel {
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static VerifyDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyDeviceRequest self = new VerifyDeviceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class VerifyDeviceRequest extends TeaModel {
     }
     public String getExtInfo() {
         return this.extInfo;
+    }
+
+    public VerifyDeviceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

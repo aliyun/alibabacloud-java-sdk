@@ -37,6 +37,9 @@ public class InitDeviceRequest extends TeaModel {
     @NameInMap("ProductName")
     public String productName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("UaToken")
     public String uaToken;
 
@@ -134,6 +137,14 @@ public class InitDeviceRequest extends TeaModel {
     }
     public String getProductName() {
         return this.productName;
+    }
+
+    public InitDeviceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public InitDeviceRequest setUaToken(String uaToken) {

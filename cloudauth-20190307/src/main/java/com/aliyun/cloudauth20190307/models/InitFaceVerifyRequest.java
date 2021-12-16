@@ -58,6 +58,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ReturnUrl")
     public String returnUrl;
 
@@ -214,6 +217,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public InitFaceVerifyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public InitFaceVerifyRequest setReturnUrl(String returnUrl) {
