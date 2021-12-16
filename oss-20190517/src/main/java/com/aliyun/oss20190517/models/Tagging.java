@@ -4,20 +4,20 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class Tagging extends TeaModel {
-    // Tag 的容器
+    // the container of tags
     @NameInMap("TagSet")
-    public java.util.List<Tag> tagSet;
+    public TagSet tagSet;
 
     public static Tagging build(java.util.Map<String, ?> map) throws Exception {
         Tagging self = new Tagging();
         return TeaModel.build(map, self);
     }
 
-    public Tagging setTagSet(java.util.List<Tag> tagSet) {
+    public Tagging setTagSet(TagSet tagSet) {
         this.tagSet = tagSet;
         return this;
     }
-    public java.util.List<Tag> getTagSet() {
+    public TagSet getTagSet() {
         return this.tagSet;
     }
 

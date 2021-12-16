@@ -8,10 +8,6 @@ public class DeleteBucketReplicationResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteBucketReplicationResponseBody body;
-
     public static DeleteBucketReplicationResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteBucketReplicationResponse self = new DeleteBucketReplicationResponse();
         return TeaModel.build(map, self);
@@ -23,14 +19,6 @@ public class DeleteBucketReplicationResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
-    }
-
-    public DeleteBucketReplicationResponse setBody(DeleteBucketReplicationResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteBucketReplicationResponseBody getBody() {
-        return this.body;
     }
 
 }

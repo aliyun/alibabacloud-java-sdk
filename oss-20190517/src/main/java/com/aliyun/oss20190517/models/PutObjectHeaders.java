@@ -11,7 +11,7 @@ public class PutObjectHeaders extends TeaModel {
     public Boolean forbidOverwrite;
 
     @NameInMap("x-oss-meta-*")
-    public java.util.Map<String, String> userMetadata;
+    public java.util.Map<String, String> metaData;
 
     @NameInMap("x-oss-object-acl")
     public String acl;
@@ -20,7 +20,7 @@ public class PutObjectHeaders extends TeaModel {
     public String sseDataEncryption;
 
     @NameInMap("x-oss-server-side-encryption")
-    public String sse;
+    public String serverSideEncryption;
 
     @NameInMap("x-oss-server-side-encryption-key-id")
     public String sseKeyId;
@@ -52,12 +52,12 @@ public class PutObjectHeaders extends TeaModel {
         return this.forbidOverwrite;
     }
 
-    public PutObjectHeaders setUserMetadata(java.util.Map<String, String> userMetadata) {
-        this.userMetadata = userMetadata;
+    public PutObjectHeaders setMetaData(java.util.Map<String, String> metaData) {
+        this.metaData = metaData;
         return this;
     }
-    public java.util.Map<String, String> getUserMetadata() {
-        return this.userMetadata;
+    public java.util.Map<String, String> getMetaData() {
+        return this.metaData;
     }
 
     public PutObjectHeaders setAcl(String acl) {
@@ -76,12 +76,12 @@ public class PutObjectHeaders extends TeaModel {
         return this.sseDataEncryption;
     }
 
-    public PutObjectHeaders setSse(String sse) {
-        this.sse = sse;
+    public PutObjectHeaders setServerSideEncryption(String serverSideEncryption) {
+        this.serverSideEncryption = serverSideEncryption;
         return this;
     }
-    public String getSse() {
-        return this.sse;
+    public String getServerSideEncryption() {
+        return this.serverSideEncryption;
     }
 
     public PutObjectHeaders setSseKeyId(String sseKeyId) {

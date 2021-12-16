@@ -7,11 +7,8 @@ public class CopyObjectHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    @NameInMap("source-bucket")
-    public String sourceBucket;
-
-    @NameInMap("source-key")
-    public String sourceKey;
+    @NameInMap("x-oss-copy-source")
+    public String copySource;
 
     @NameInMap("x-oss-copy-source-if-match")
     public String copySourceIfMatch;
@@ -27,6 +24,9 @@ public class CopyObjectHeaders extends TeaModel {
 
     @NameInMap("x-oss-forbid-overwrite")
     public String forbidOverwrite;
+
+    @NameInMap("x-oss-meta-*")
+    public java.util.Map<String, String> metaData;
 
     @NameInMap("x-oss-metadata-directive")
     public String metadataDirective;
@@ -46,6 +46,9 @@ public class CopyObjectHeaders extends TeaModel {
     @NameInMap("x-oss-tagging")
     public String tagging;
 
+    @NameInMap("x-oss-tagging-directive")
+    public String xOssTaggingDirective;
+
     public static CopyObjectHeaders build(java.util.Map<String, ?> map) throws Exception {
         CopyObjectHeaders self = new CopyObjectHeaders();
         return TeaModel.build(map, self);
@@ -59,20 +62,12 @@ public class CopyObjectHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public CopyObjectHeaders setSourceBucket(String sourceBucket) {
-        this.sourceBucket = sourceBucket;
+    public CopyObjectHeaders setCopySource(String copySource) {
+        this.copySource = copySource;
         return this;
     }
-    public String getSourceBucket() {
-        return this.sourceBucket;
-    }
-
-    public CopyObjectHeaders setSourceKey(String sourceKey) {
-        this.sourceKey = sourceKey;
-        return this;
-    }
-    public String getSourceKey() {
-        return this.sourceKey;
+    public String getCopySource() {
+        return this.copySource;
     }
 
     public CopyObjectHeaders setCopySourceIfMatch(String copySourceIfMatch) {
@@ -113,6 +108,14 @@ public class CopyObjectHeaders extends TeaModel {
     }
     public String getForbidOverwrite() {
         return this.forbidOverwrite;
+    }
+
+    public CopyObjectHeaders setMetaData(java.util.Map<String, String> metaData) {
+        this.metaData = metaData;
+        return this;
+    }
+    public java.util.Map<String, String> getMetaData() {
+        return this.metaData;
     }
 
     public CopyObjectHeaders setMetadataDirective(String metadataDirective) {
@@ -161,6 +164,14 @@ public class CopyObjectHeaders extends TeaModel {
     }
     public String getTagging() {
         return this.tagging;
+    }
+
+    public CopyObjectHeaders setXOssTaggingDirective(String xOssTaggingDirective) {
+        this.xOssTaggingDirective = xOssTaggingDirective;
+        return this;
+    }
+    public String getXOssTaggingDirective() {
+        return this.xOssTaggingDirective;
     }
 
 }

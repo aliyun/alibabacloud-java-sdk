@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetBucketTagsResponseBody extends TeaModel {
     @NameInMap("TagSet")
-    public java.util.List<Tag> tagSet;
+    public TagSet tagSet;
 
     public static GetBucketTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBucketTagsResponseBody self = new GetBucketTagsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetBucketTagsResponseBody setTagSet(java.util.List<Tag> tagSet) {
+    public GetBucketTagsResponseBody setTagSet(TagSet tagSet) {
         this.tagSet = tagSet;
         return this;
     }
-    public java.util.List<Tag> getTagSet() {
+    public TagSet getTagSet() {
         return this.tagSet;
     }
 

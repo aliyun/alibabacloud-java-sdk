@@ -8,7 +8,7 @@ public class UploadPartRequest extends TeaModel {
     public java.io.InputStream body;
 
     @NameInMap("partNumber")
-    public String partNumber;
+    public Long partNumber;
 
     @NameInMap("uploadId")
     public String uploadId;
@@ -26,11 +26,11 @@ public class UploadPartRequest extends TeaModel {
         return this.body;
     }
 
-    public UploadPartRequest setPartNumber(String partNumber) {
+    public UploadPartRequest setPartNumber(Long partNumber) {
         this.partNumber = partNumber;
         return this;
     }
-    public String getPartNumber() {
+    public Long getPartNumber() {
         return this.partNumber;
     }
 

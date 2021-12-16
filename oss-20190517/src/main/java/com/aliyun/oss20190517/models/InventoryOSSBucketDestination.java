@@ -12,6 +12,9 @@ public class InventoryOSSBucketDestination extends TeaModel {
     @NameInMap("Bucket")
     public String bucket;
 
+    @NameInMap("Encryption")
+    public InventoryEncryption encryption;
+
     @NameInMap("Format")
     public String format;
 
@@ -42,6 +45,14 @@ public class InventoryOSSBucketDestination extends TeaModel {
     }
     public String getBucket() {
         return this.bucket;
+    }
+
+    public InventoryOSSBucketDestination setEncryption(InventoryEncryption encryption) {
+        this.encryption = encryption;
+        return this;
+    }
+    public InventoryEncryption getEncryption() {
+        return this.encryption;
     }
 
     public InventoryOSSBucketDestination setFormat(String format) {
