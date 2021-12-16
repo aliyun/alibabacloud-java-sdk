@@ -4,20 +4,20 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class StartCallV2Request extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
+    @NameInMap("Callee")
+    public String callee;
+
+    @NameInMap("Caller")
+    public String caller;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
-
-    @NameInMap("Caller")
-    public String caller;
-
-    @NameInMap("Callee")
-    public String callee;
 
     @NameInMap("JsonMsg")
     public String jsonMsg;
@@ -25,6 +25,30 @@ public class StartCallV2Request extends TeaModel {
     public static StartCallV2Request build(java.util.Map<String, ?> map) throws Exception {
         StartCallV2Request self = new StartCallV2Request();
         return TeaModel.build(map, self);
+    }
+
+    public StartCallV2Request setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public StartCallV2Request setCallee(String callee) {
+        this.callee = callee;
+        return this;
+    }
+    public String getCallee() {
+        return this.callee;
+    }
+
+    public StartCallV2Request setCaller(String caller) {
+        this.caller = caller;
+        return this;
+    }
+    public String getCaller() {
+        return this.caller;
     }
 
     public StartCallV2Request setClientToken(String clientToken) {
@@ -41,30 +65,6 @@ public class StartCallV2Request extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public StartCallV2Request setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public StartCallV2Request setCaller(String caller) {
-        this.caller = caller;
-        return this;
-    }
-    public String getCaller() {
-        return this.caller;
-    }
-
-    public StartCallV2Request setCallee(String callee) {
-        this.callee = callee;
-        return this;
-    }
-    public String getCallee() {
-        return this.callee;
     }
 
     public StartCallV2Request setJsonMsg(String jsonMsg) {

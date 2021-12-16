@@ -4,11 +4,8 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class EditEntityRouteRequest extends TeaModel {
-    @NameInMap("EntityId")
-    public String entityId;
-
-    @NameInMap("EntityName")
-    public String entityName;
+    @NameInMap("DepartmentId")
+    public String departmentId;
 
     @NameInMap("EntityBizCode")
     public String entityBizCode;
@@ -16,23 +13,26 @@ public class EditEntityRouteRequest extends TeaModel {
     @NameInMap("EntityBizCodeType")
     public String entityBizCodeType;
 
+    @NameInMap("EntityId")
+    public String entityId;
+
+    @NameInMap("EntityName")
+    public String entityName;
+
     @NameInMap("EntityRelationNumber")
     public String entityRelationNumber;
-
-    @NameInMap("DepartmentId")
-    public String departmentId;
-
-    @NameInMap("GroupId")
-    public Long groupId;
-
-    @NameInMap("ServiceId")
-    public Long serviceId;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    @NameInMap("GroupId")
+    public Long groupId;
+
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("ServiceId")
+    public Long serviceId;
 
     @NameInMap("UniqueId")
     public Long uniqueId;
@@ -42,20 +42,12 @@ public class EditEntityRouteRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public EditEntityRouteRequest setEntityId(String entityId) {
-        this.entityId = entityId;
+    public EditEntityRouteRequest setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
         return this;
     }
-    public String getEntityId() {
-        return this.entityId;
-    }
-
-    public EditEntityRouteRequest setEntityName(String entityName) {
-        this.entityName = entityName;
-        return this;
-    }
-    public String getEntityName() {
-        return this.entityName;
+    public String getDepartmentId() {
+        return this.departmentId;
     }
 
     public EditEntityRouteRequest setEntityBizCode(String entityBizCode) {
@@ -74,36 +66,28 @@ public class EditEntityRouteRequest extends TeaModel {
         return this.entityBizCodeType;
     }
 
+    public EditEntityRouteRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public EditEntityRouteRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
+    }
+
     public EditEntityRouteRequest setEntityRelationNumber(String entityRelationNumber) {
         this.entityRelationNumber = entityRelationNumber;
         return this;
     }
     public String getEntityRelationNumber() {
         return this.entityRelationNumber;
-    }
-
-    public EditEntityRouteRequest setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
-        return this;
-    }
-    public String getDepartmentId() {
-        return this.departmentId;
-    }
-
-    public EditEntityRouteRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
-    }
-
-    public EditEntityRouteRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
-        return this;
-    }
-    public Long getServiceId() {
-        return this.serviceId;
     }
 
     public EditEntityRouteRequest setExtInfo(String extInfo) {
@@ -114,12 +98,28 @@ public class EditEntityRouteRequest extends TeaModel {
         return this.extInfo;
     }
 
+    public EditEntityRouteRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
     public EditEntityRouteRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public EditEntityRouteRequest setServiceId(Long serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public Long getServiceId() {
+        return this.serviceId;
     }
 
     public EditEntityRouteRequest setUniqueId(Long uniqueId) {

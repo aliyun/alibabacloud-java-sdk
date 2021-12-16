@@ -3,21 +3,19 @@ package com.aliyun.scsp20200702.models;
 
 import com.aliyun.tea.*;
 
-public class StartChatWorkRequest extends TeaModel {
-    // accountName
+public class ListAllHotLineSkillGroupsRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
-    // instanceId
     @NameInMap("InstanceId")
     public String instanceId;
 
-    public static StartChatWorkRequest build(java.util.Map<String, ?> map) throws Exception {
-        StartChatWorkRequest self = new StartChatWorkRequest();
+    public static ListAllHotLineSkillGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAllHotLineSkillGroupsRequest self = new ListAllHotLineSkillGroupsRequest();
         return TeaModel.build(map, self);
     }
 
-    public StartChatWorkRequest setAccountName(String accountName) {
+    public ListAllHotLineSkillGroupsRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
@@ -25,7 +23,7 @@ public class StartChatWorkRequest extends TeaModel {
         return this.accountName;
     }
 
-    public StartChatWorkRequest setInstanceId(String instanceId) {
+    public ListAllHotLineSkillGroupsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

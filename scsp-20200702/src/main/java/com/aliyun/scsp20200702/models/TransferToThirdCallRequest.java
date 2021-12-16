@@ -4,20 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class TransferToThirdCallRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("CallId")
     public String callId;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ConnectionId")
     public String connectionId;
@@ -25,25 +19,15 @@ public class TransferToThirdCallRequest extends TeaModel {
     @NameInMap("HoldConnectionId")
     public String holdConnectionId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("JobId")
+    public String jobId;
+
     public static TransferToThirdCallRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferToThirdCallRequest self = new TransferToThirdCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TransferToThirdCallRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public TransferToThirdCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public TransferToThirdCallRequest setAccountName(String accountName) {
@@ -62,12 +46,12 @@ public class TransferToThirdCallRequest extends TeaModel {
         return this.callId;
     }
 
-    public TransferToThirdCallRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public TransferToThirdCallRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public TransferToThirdCallRequest setConnectionId(String connectionId) {
@@ -84,6 +68,22 @@ public class TransferToThirdCallRequest extends TeaModel {
     }
     public String getHoldConnectionId() {
         return this.holdConnectionId;
+    }
+
+    public TransferToThirdCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public TransferToThirdCallRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

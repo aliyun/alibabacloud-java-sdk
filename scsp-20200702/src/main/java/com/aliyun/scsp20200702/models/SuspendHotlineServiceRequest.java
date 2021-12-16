@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class SuspendHotlineServiceRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
 
     @NameInMap("Type")
     public Integer type;
@@ -19,6 +19,14 @@ public class SuspendHotlineServiceRequest extends TeaModel {
     public static SuspendHotlineServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         SuspendHotlineServiceRequest self = new SuspendHotlineServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SuspendHotlineServiceRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public SuspendHotlineServiceRequest setClientToken(String clientToken) {
@@ -35,14 +43,6 @@ public class SuspendHotlineServiceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public SuspendHotlineServiceRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
     public SuspendHotlineServiceRequest setType(Integer type) {

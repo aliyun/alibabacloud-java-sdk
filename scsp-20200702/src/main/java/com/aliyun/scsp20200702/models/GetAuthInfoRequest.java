@@ -4,26 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAuthInfoRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("AppKey")
+    public String appKey;
 
     @NameInMap("ForeignId")
     public String foreignId;
 
-    @NameInMap("AppKey")
-    public String appKey;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static GetAuthInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthInfoRequest self = new GetAuthInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAuthInfoRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public GetAuthInfoRequest setAppKey(String appKey) {
+        this.appKey = appKey;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getAppKey() {
+        return this.appKey;
     }
 
     public GetAuthInfoRequest setForeignId(String foreignId) {
@@ -34,12 +34,12 @@ public class GetAuthInfoRequest extends TeaModel {
         return this.foreignId;
     }
 
-    public GetAuthInfoRequest setAppKey(String appKey) {
-        this.appKey = appKey;
+    public GetAuthInfoRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getAppKey() {
-        return this.appKey;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

@@ -4,18 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateThirdSsoAgentRequest extends TeaModel {
-    // clientToken
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    // param1
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // param2
-    @NameInMap("ClientId")
-    public String clientId;
-
     // param3
     @NameInMap("AccountId")
     public String accountId;
@@ -24,45 +12,33 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    // param2
+    @NameInMap("ClientId")
+    public String clientId;
+
+    // clientToken
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     // param5
     @NameInMap("DisplayName")
     public String displayName;
 
-    // param6
-    @NameInMap("SkillGroupIds")
-    public java.util.List<Long> skillGroupIds;
+    // param1
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     // param7
     @NameInMap("RoleIds")
     public java.util.List<Long> roleIds;
 
+    // param6
+    @NameInMap("SkillGroupIds")
+    public java.util.List<Long> skillGroupIds;
+
     public static CreateThirdSsoAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateThirdSsoAgentRequest self = new CreateThirdSsoAgentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateThirdSsoAgentRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateThirdSsoAgentRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateThirdSsoAgentRequest setClientId(String clientId) {
-        this.clientId = clientId;
-        return this;
-    }
-    public String getClientId() {
-        return this.clientId;
     }
 
     public CreateThirdSsoAgentRequest setAccountId(String accountId) {
@@ -81,6 +57,22 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
         return this.accountName;
     }
 
+    public CreateThirdSsoAgentRequest setClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    public String getClientId() {
+        return this.clientId;
+    }
+
+    public CreateThirdSsoAgentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CreateThirdSsoAgentRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -89,12 +81,12 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateThirdSsoAgentRequest setSkillGroupIds(java.util.List<Long> skillGroupIds) {
-        this.skillGroupIds = skillGroupIds;
+    public CreateThirdSsoAgentRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public java.util.List<Long> getSkillGroupIds() {
-        return this.skillGroupIds;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateThirdSsoAgentRequest setRoleIds(java.util.List<Long> roleIds) {
@@ -103,6 +95,14 @@ public class CreateThirdSsoAgentRequest extends TeaModel {
     }
     public java.util.List<Long> getRoleIds() {
         return this.roleIds;
+    }
+
+    public CreateThirdSsoAgentRequest setSkillGroupIds(java.util.List<Long> skillGroupIds) {
+        this.skillGroupIds = skillGroupIds;
+        return this;
+    }
+    public java.util.List<Long> getSkillGroupIds() {
+        return this.skillGroupIds;
     }
 
 }

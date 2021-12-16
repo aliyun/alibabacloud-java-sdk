@@ -4,11 +4,8 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityIvrRouteRequest extends TeaModel {
-    @NameInMap("EntityId")
-    public String entityId;
-
-    @NameInMap("EntityName")
-    public String entityName;
+    @NameInMap("DepartmentId")
+    public String departmentId;
 
     @NameInMap("EntityBizCode")
     public String entityBizCode;
@@ -16,43 +13,38 @@ public class CreateEntityIvrRouteRequest extends TeaModel {
     @NameInMap("EntityBizCodeType")
     public String entityBizCodeType;
 
+    @NameInMap("EntityId")
+    public String entityId;
+
+    @NameInMap("EntityName")
+    public String entityName;
+
     @NameInMap("EntityRelationNumber")
     public String entityRelationNumber;
-
-    @NameInMap("DepartmentId")
-    public String departmentId;
-
-    @NameInMap("GroupId")
-    public Long groupId;
-
-    @NameInMap("ServiceId")
-    public Long serviceId;
 
     @NameInMap("ExtInfo")
     public String extInfo;
 
+    @NameInMap("GroupId")
+    public Long groupId;
+
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("ServiceId")
+    public Long serviceId;
 
     public static CreateEntityIvrRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityIvrRouteRequest self = new CreateEntityIvrRouteRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateEntityIvrRouteRequest setEntityId(String entityId) {
-        this.entityId = entityId;
+    public CreateEntityIvrRouteRequest setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
         return this;
     }
-    public String getEntityId() {
-        return this.entityId;
-    }
-
-    public CreateEntityIvrRouteRequest setEntityName(String entityName) {
-        this.entityName = entityName;
-        return this;
-    }
-    public String getEntityName() {
-        return this.entityName;
+    public String getDepartmentId() {
+        return this.departmentId;
     }
 
     public CreateEntityIvrRouteRequest setEntityBizCode(String entityBizCode) {
@@ -71,36 +63,28 @@ public class CreateEntityIvrRouteRequest extends TeaModel {
         return this.entityBizCodeType;
     }
 
+    public CreateEntityIvrRouteRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public CreateEntityIvrRouteRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
+    }
+
     public CreateEntityIvrRouteRequest setEntityRelationNumber(String entityRelationNumber) {
         this.entityRelationNumber = entityRelationNumber;
         return this;
     }
     public String getEntityRelationNumber() {
         return this.entityRelationNumber;
-    }
-
-    public CreateEntityIvrRouteRequest setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
-        return this;
-    }
-    public String getDepartmentId() {
-        return this.departmentId;
-    }
-
-    public CreateEntityIvrRouteRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
-    }
-
-    public CreateEntityIvrRouteRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
-        return this;
-    }
-    public Long getServiceId() {
-        return this.serviceId;
     }
 
     public CreateEntityIvrRouteRequest setExtInfo(String extInfo) {
@@ -111,12 +95,28 @@ public class CreateEntityIvrRouteRequest extends TeaModel {
         return this.extInfo;
     }
 
+    public CreateEntityIvrRouteRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
     public CreateEntityIvrRouteRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateEntityIvrRouteRequest setServiceId(Long serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public Long getServiceId() {
+        return this.serviceId;
     }
 
 }

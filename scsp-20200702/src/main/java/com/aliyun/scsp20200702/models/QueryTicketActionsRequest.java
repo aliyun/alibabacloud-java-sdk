@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketActionsRequest extends TeaModel {
+    @NameInMap("ActionCodeList")
+    public java.util.List<Integer> actionCodeList;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("TicketId")
     public String ticketId;
 
-    @NameInMap("ActionCodeList")
-    public java.util.List<Integer> actionCodeList;
-
     public static QueryTicketActionsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTicketActionsRequest self = new QueryTicketActionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTicketActionsRequest setActionCodeList(java.util.List<Integer> actionCodeList) {
+        this.actionCodeList = actionCodeList;
+        return this;
+    }
+    public java.util.List<Integer> getActionCodeList() {
+        return this.actionCodeList;
     }
 
     public QueryTicketActionsRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class QueryTicketActionsRequest extends TeaModel {
     }
     public String getTicketId() {
         return this.ticketId;
-    }
-
-    public QueryTicketActionsRequest setActionCodeList(java.util.List<Integer> actionCodeList) {
-        this.actionCodeList = actionCodeList;
-        return this;
-    }
-    public java.util.List<Integer> getActionCodeList() {
-        return this.actionCodeList;
     }
 
 }

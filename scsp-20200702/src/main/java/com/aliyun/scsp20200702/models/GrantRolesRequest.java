@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GrantRolesRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("AccountName")
-    public String accountName;
 
     @NameInMap("Operator")
     public String operator;
@@ -22,6 +22,14 @@ public class GrantRolesRequest extends TeaModel {
     public static GrantRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantRolesRequest self = new GrantRolesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GrantRolesRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GrantRolesRequest setClientToken(String clientToken) {
@@ -38,14 +46,6 @@ public class GrantRolesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GrantRolesRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
     public GrantRolesRequest setOperator(String operator) {

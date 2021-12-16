@@ -4,8 +4,11 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateSubTicketRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("AgentId")
+    public Long agentId;
+
+    @NameInMap("BizData")
+    public String bizData;
 
     @NameInMap("CreatorId")
     public Long creatorId;
@@ -13,14 +16,14 @@ public class CreateSubTicketRequest extends TeaModel {
     @NameInMap("CreatorName")
     public String creatorName;
 
-    @NameInMap("TemplateId")
-    public Long templateId;
+    @NameInMap("FormData")
+    public String formData;
 
     @NameInMap("FromInfo")
     public String fromInfo;
 
-    @NameInMap("FormData")
-    public String formData;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("MemberId")
     public Long memberId;
@@ -28,29 +31,34 @@ public class CreateSubTicketRequest extends TeaModel {
     @NameInMap("MemberName")
     public String memberName;
 
-    @NameInMap("Priority")
-    public Integer priority;
-
     @NameInMap("ParentCaseId")
     public Long parentCaseId;
 
-    @NameInMap("BizData")
-    public String bizData;
+    @NameInMap("Priority")
+    public Integer priority;
 
-    @NameInMap("AgentId")
-    public Long agentId;
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static CreateSubTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubTicketRequest self = new CreateSubTicketRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSubTicketRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateSubTicketRequest setAgentId(Long agentId) {
+        this.agentId = agentId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getAgentId() {
+        return this.agentId;
+    }
+
+    public CreateSubTicketRequest setBizData(String bizData) {
+        this.bizData = bizData;
+        return this;
+    }
+    public String getBizData() {
+        return this.bizData;
     }
 
     public CreateSubTicketRequest setCreatorId(Long creatorId) {
@@ -69,12 +77,12 @@ public class CreateSubTicketRequest extends TeaModel {
         return this.creatorName;
     }
 
-    public CreateSubTicketRequest setTemplateId(Long templateId) {
-        this.templateId = templateId;
+    public CreateSubTicketRequest setFormData(String formData) {
+        this.formData = formData;
         return this;
     }
-    public Long getTemplateId() {
-        return this.templateId;
+    public String getFormData() {
+        return this.formData;
     }
 
     public CreateSubTicketRequest setFromInfo(String fromInfo) {
@@ -85,12 +93,12 @@ public class CreateSubTicketRequest extends TeaModel {
         return this.fromInfo;
     }
 
-    public CreateSubTicketRequest setFormData(String formData) {
-        this.formData = formData;
+    public CreateSubTicketRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getFormData() {
-        return this.formData;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateSubTicketRequest setMemberId(Long memberId) {
@@ -109,14 +117,6 @@ public class CreateSubTicketRequest extends TeaModel {
         return this.memberName;
     }
 
-    public CreateSubTicketRequest setPriority(Integer priority) {
-        this.priority = priority;
-        return this;
-    }
-    public Integer getPriority() {
-        return this.priority;
-    }
-
     public CreateSubTicketRequest setParentCaseId(Long parentCaseId) {
         this.parentCaseId = parentCaseId;
         return this;
@@ -125,20 +125,20 @@ public class CreateSubTicketRequest extends TeaModel {
         return this.parentCaseId;
     }
 
-    public CreateSubTicketRequest setBizData(String bizData) {
-        this.bizData = bizData;
+    public CreateSubTicketRequest setPriority(Integer priority) {
+        this.priority = priority;
         return this;
     }
-    public String getBizData() {
-        return this.bizData;
+    public Integer getPriority() {
+        return this.priority;
     }
 
-    public CreateSubTicketRequest setAgentId(Long agentId) {
-        this.agentId = agentId;
+    public CreateSubTicketRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public Long getAgentId() {
-        return this.agentId;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

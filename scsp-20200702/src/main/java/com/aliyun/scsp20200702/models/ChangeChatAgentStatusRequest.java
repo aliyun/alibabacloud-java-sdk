@@ -4,6 +4,10 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class ChangeChatAgentStatusRequest extends TeaModel {
+    // 账户名称
+    @NameInMap("AccountName")
+    public String accountName;
+
     // clientToken
     @NameInMap("ClientToken")
     public String clientToken;
@@ -12,10 +16,6 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 账户名称
-    @NameInMap("AccountName")
-    public String accountName;
-
     // 修改到的状态类型
     @NameInMap("Method")
     public String method;
@@ -23,6 +23,14 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     public static ChangeChatAgentStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeChatAgentStatusRequest self = new ChangeChatAgentStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeChatAgentStatusRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public ChangeChatAgentStatusRequest setClientToken(String clientToken) {
@@ -39,14 +47,6 @@ public class ChangeChatAgentStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ChangeChatAgentStatusRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
     public ChangeChatAgentStatusRequest setMethod(String method) {

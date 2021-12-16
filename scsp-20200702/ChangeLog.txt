@@ -1,3 +1,6 @@
+2021-12-16 Version: 1.9.10
+- Publish hotline api.
+
 2021-10-09 Version: 1.9.8
 - Publish multi language sdk.
 

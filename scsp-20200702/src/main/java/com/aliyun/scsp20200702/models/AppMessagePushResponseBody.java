@@ -4,21 +4,21 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class AppMessagePushResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // 错误码
+    @NameInMap("Code")
+    public String code;
 
     // 返回数据
     @NameInMap("Data")
     public String data;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
     // 错误信息
     @NameInMap("Message")
     public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 通信码
     @NameInMap("Success")
@@ -29,12 +29,12 @@ public class AppMessagePushResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AppMessagePushResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AppMessagePushResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public AppMessagePushResponseBody setData(String data) {
@@ -45,20 +45,20 @@ public class AppMessagePushResponseBody extends TeaModel {
         return this.data;
     }
 
-    public AppMessagePushResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public AppMessagePushResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public AppMessagePushResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AppMessagePushResponseBody setSuccess(Boolean success) {

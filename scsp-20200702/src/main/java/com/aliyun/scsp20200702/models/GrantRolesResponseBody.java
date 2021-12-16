@@ -4,11 +4,11 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GrantRolesResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -24,20 +24,20 @@ public class GrantRolesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GrantRolesResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public GrantRolesResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GrantRolesResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GrantRolesResponseBody setMessage(String message) {

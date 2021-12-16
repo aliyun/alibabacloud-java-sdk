@@ -7,14 +7,14 @@ public class SearchTicketListRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OperatorId")
     public Long operatorId;
-
-    @NameInMap("TicketStatus")
-    public String ticketStatus;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -25,8 +25,8 @@ public class SearchTicketListRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("TicketStatus")
+    public String ticketStatus;
 
     public static SearchTicketListRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTicketListRequest self = new SearchTicketListRequest();
@@ -39,6 +39,14 @@ public class SearchTicketListRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public SearchTicketListRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public SearchTicketListRequest setInstanceId(String instanceId) {
@@ -55,14 +63,6 @@ public class SearchTicketListRequest extends TeaModel {
     }
     public Long getOperatorId() {
         return this.operatorId;
-    }
-
-    public SearchTicketListRequest setTicketStatus(String ticketStatus) {
-        this.ticketStatus = ticketStatus;
-        return this;
-    }
-    public String getTicketStatus() {
-        return this.ticketStatus;
     }
 
     public SearchTicketListRequest setPageNo(Integer pageNo) {
@@ -89,12 +89,12 @@ public class SearchTicketListRequest extends TeaModel {
         return this.startTime;
     }
 
-    public SearchTicketListRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public SearchTicketListRequest setTicketStatus(String ticketStatus) {
+        this.ticketStatus = ticketStatus;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public String getTicketStatus() {
+        return this.ticketStatus;
     }
 
 }

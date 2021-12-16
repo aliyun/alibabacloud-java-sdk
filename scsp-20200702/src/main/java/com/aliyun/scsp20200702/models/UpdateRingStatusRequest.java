@@ -4,9 +4,6 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class UpdateRingStatusRequest extends TeaModel {
-    @NameInMap("UniqueBizId")
-    public String uniqueBizId;
-
     @NameInMap("CallOutStatus")
     public String callOutStatus;
 
@@ -16,17 +13,12 @@ public class UpdateRingStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("UniqueBizId")
+    public String uniqueBizId;
+
     public static UpdateRingStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRingStatusRequest self = new UpdateRingStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateRingStatusRequest setUniqueBizId(String uniqueBizId) {
-        this.uniqueBizId = uniqueBizId;
-        return this;
-    }
-    public String getUniqueBizId() {
-        return this.uniqueBizId;
     }
 
     public UpdateRingStatusRequest setCallOutStatus(String callOutStatus) {
@@ -51,6 +43,14 @@ public class UpdateRingStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateRingStatusRequest setUniqueBizId(String uniqueBizId) {
+        this.uniqueBizId = uniqueBizId;
+        return this;
+    }
+    public String getUniqueBizId() {
+        return this.uniqueBizId;
     }
 
 }

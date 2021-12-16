@@ -4,18 +4,26 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static GetAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAgentRequest self = new GetAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAgentRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GetAgentRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class GetAgentRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetAgentRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

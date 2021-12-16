@@ -4,20 +4,11 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryRelationTicketsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CaseId")
     public Long caseId;
 
     @NameInMap("CaseType")
     public Integer caseType;
-
-    @NameInMap("SrType")
-    public Integer srType;
-
-    @NameInMap("TaskStatus")
-    public Integer taskStatus;
 
     @NameInMap("ChannelId")
     public String channelId;
@@ -25,41 +16,42 @@ public class QueryRelationTicketsRequest extends TeaModel {
     @NameInMap("ChannelType")
     public Integer channelType;
 
-    @NameInMap("TouchId")
-    public Long touchId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DealId")
     public Long dealId;
 
+    @NameInMap("EndCaseGmtCreate")
+    public Long endCaseGmtCreate;
+
     @NameInMap("Extra")
     public java.util.Map<String, ?> extra;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("MemberId")
     public Long memberId;
 
-    @NameInMap("StartCaseGmtCreate")
-    public Long startCaseGmtCreate;
-
-    @NameInMap("EndCaseGmtCreate")
-    public Long endCaseGmtCreate;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("SrType")
+    public Integer srType;
+
+    @NameInMap("StartCaseGmtCreate")
+    public Long startCaseGmtCreate;
+
+    @NameInMap("TaskStatus")
+    public Integer taskStatus;
+
+    @NameInMap("TouchId")
+    public Long touchId;
 
     public static QueryRelationTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRelationTicketsRequest self = new QueryRelationTicketsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryRelationTicketsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public QueryRelationTicketsRequest setCaseId(Long caseId) {
@@ -78,22 +70,6 @@ public class QueryRelationTicketsRequest extends TeaModel {
         return this.caseType;
     }
 
-    public QueryRelationTicketsRequest setSrType(Integer srType) {
-        this.srType = srType;
-        return this;
-    }
-    public Integer getSrType() {
-        return this.srType;
-    }
-
-    public QueryRelationTicketsRequest setTaskStatus(Integer taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public Integer getTaskStatus() {
-        return this.taskStatus;
-    }
-
     public QueryRelationTicketsRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -110,12 +86,12 @@ public class QueryRelationTicketsRequest extends TeaModel {
         return this.channelType;
     }
 
-    public QueryRelationTicketsRequest setTouchId(Long touchId) {
-        this.touchId = touchId;
+    public QueryRelationTicketsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public Long getTouchId() {
-        return this.touchId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryRelationTicketsRequest setDealId(Long dealId) {
@@ -126,12 +102,28 @@ public class QueryRelationTicketsRequest extends TeaModel {
         return this.dealId;
     }
 
+    public QueryRelationTicketsRequest setEndCaseGmtCreate(Long endCaseGmtCreate) {
+        this.endCaseGmtCreate = endCaseGmtCreate;
+        return this;
+    }
+    public Long getEndCaseGmtCreate() {
+        return this.endCaseGmtCreate;
+    }
+
     public QueryRelationTicketsRequest setExtra(java.util.Map<String, ?> extra) {
         this.extra = extra;
         return this;
     }
     public java.util.Map<String, ?> getExtra() {
         return this.extra;
+    }
+
+    public QueryRelationTicketsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public QueryRelationTicketsRequest setMemberId(Long memberId) {
@@ -142,22 +134,6 @@ public class QueryRelationTicketsRequest extends TeaModel {
         return this.memberId;
     }
 
-    public QueryRelationTicketsRequest setStartCaseGmtCreate(Long startCaseGmtCreate) {
-        this.startCaseGmtCreate = startCaseGmtCreate;
-        return this;
-    }
-    public Long getStartCaseGmtCreate() {
-        return this.startCaseGmtCreate;
-    }
-
-    public QueryRelationTicketsRequest setEndCaseGmtCreate(Long endCaseGmtCreate) {
-        this.endCaseGmtCreate = endCaseGmtCreate;
-        return this;
-    }
-    public Long getEndCaseGmtCreate() {
-        return this.endCaseGmtCreate;
-    }
-
     public QueryRelationTicketsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -166,12 +142,36 @@ public class QueryRelationTicketsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryRelationTicketsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryRelationTicketsRequest setSrType(Integer srType) {
+        this.srType = srType;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Integer getSrType() {
+        return this.srType;
+    }
+
+    public QueryRelationTicketsRequest setStartCaseGmtCreate(Long startCaseGmtCreate) {
+        this.startCaseGmtCreate = startCaseGmtCreate;
+        return this;
+    }
+    public Long getStartCaseGmtCreate() {
+        return this.startCaseGmtCreate;
+    }
+
+    public QueryRelationTicketsRequest setTaskStatus(Integer taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public Integer getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    public QueryRelationTicketsRequest setTouchId(Long touchId) {
+        this.touchId = touchId;
+        return this;
+    }
+    public Long getTouchId() {
+        return this.touchId;
     }
 
 }

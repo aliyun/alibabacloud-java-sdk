@@ -7,6 +7,9 @@ public class GetTagListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<GetTagListResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetTagListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<GetTagListResponseBodyData> data;
 
     public static GetTagListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTagListResponseBody self = new GetTagListResponseBody();
@@ -30,6 +30,14 @@ public class GetTagListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetTagListResponseBody setData(java.util.List<GetTagListResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetTagListResponseBodyData> getData() {
+        return this.data;
     }
 
     public GetTagListResponseBody setMessage(String message) {
@@ -56,47 +64,31 @@ public class GetTagListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetTagListResponseBody setData(java.util.List<GetTagListResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetTagListResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class GetTagListResponseBodyDataTagValues extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("TagName")
-        public String tagName;
-
-        @NameInMap("TagGroupCode")
-        public String tagGroupCode;
-
-        @NameInMap("TagCode")
-        public String tagCode;
-
-        @NameInMap("TagGroupName")
-        public String tagGroupName;
 
         @NameInMap("EntityRelationNumber")
         public String entityRelationNumber;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TagCode")
+        public String tagCode;
+
+        @NameInMap("TagGroupCode")
+        public String tagGroupCode;
+
+        @NameInMap("TagGroupName")
+        public String tagGroupName;
+
+        @NameInMap("TagName")
+        public String tagName;
+
         public static GetTagListResponseBodyDataTagValues build(java.util.Map<String, ?> map) throws Exception {
             GetTagListResponseBodyDataTagValues self = new GetTagListResponseBodyDataTagValues();
             return TeaModel.build(map, self);
-        }
-
-        public GetTagListResponseBodyDataTagValues setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetTagListResponseBodyDataTagValues setDescription(String description) {
@@ -107,20 +99,20 @@ public class GetTagListResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetTagListResponseBodyDataTagValues setTagName(String tagName) {
-            this.tagName = tagName;
+        public GetTagListResponseBodyDataTagValues setEntityRelationNumber(String entityRelationNumber) {
+            this.entityRelationNumber = entityRelationNumber;
             return this;
         }
-        public String getTagName() {
-            return this.tagName;
+        public String getEntityRelationNumber() {
+            return this.entityRelationNumber;
         }
 
-        public GetTagListResponseBodyDataTagValues setTagGroupCode(String tagGroupCode) {
-            this.tagGroupCode = tagGroupCode;
+        public GetTagListResponseBodyDataTagValues setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getTagGroupCode() {
-            return this.tagGroupCode;
+        public String getStatus() {
+            return this.status;
         }
 
         public GetTagListResponseBodyDataTagValues setTagCode(String tagCode) {
@@ -131,6 +123,14 @@ public class GetTagListResponseBody extends TeaModel {
             return this.tagCode;
         }
 
+        public GetTagListResponseBodyDataTagValues setTagGroupCode(String tagGroupCode) {
+            this.tagGroupCode = tagGroupCode;
+            return this;
+        }
+        public String getTagGroupCode() {
+            return this.tagGroupCode;
+        }
+
         public GetTagListResponseBodyDataTagValues setTagGroupName(String tagGroupName) {
             this.tagGroupName = tagGroupName;
             return this;
@@ -139,12 +139,12 @@ public class GetTagListResponseBody extends TeaModel {
             return this.tagGroupName;
         }
 
-        public GetTagListResponseBodyDataTagValues setEntityRelationNumber(String entityRelationNumber) {
-            this.entityRelationNumber = entityRelationNumber;
+        public GetTagListResponseBodyDataTagValues setTagName(String tagName) {
+            this.tagName = tagName;
             return this;
         }
-        public String getEntityRelationNumber() {
-            return this.entityRelationNumber;
+        public String getTagName() {
+            return this.tagName;
         }
 
     }

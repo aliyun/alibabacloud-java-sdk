@@ -4,11 +4,17 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public Long data;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,15 +22,25 @@ public class CreateRoleResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static CreateRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRoleResponseBody self = new CreateRoleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRoleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateRoleResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
     }
 
     public CreateRoleResponseBody setHttpStatusCode(Long httpStatusCode) {
@@ -35,12 +51,12 @@ public class CreateRoleResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public CreateRoleResponseBody setData(Long data) {
-        this.data = data;
+    public CreateRoleResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Long getData() {
-        return this.data;
+    public String getMessage() {
+        return this.message;
     }
 
     public CreateRoleResponseBody setRequestId(String requestId) {
@@ -57,22 +73,6 @@ public class CreateRoleResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateRoleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateRoleResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

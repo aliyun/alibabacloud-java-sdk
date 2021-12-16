@@ -4,11 +4,11 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryHotlineSessionRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Acid")
     public String acid;
+
+    @NameInMap("CallResult")
+    public String callResult;
 
     @NameInMap("CallType")
     public Integer callType;
@@ -25,11 +25,23 @@ public class QueryHotlineSessionRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("MemberId")
     public String memberId;
 
     @NameInMap("MemberName")
     public String memberName;
+
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Params")
+    public String params;
 
     @NameInMap("QueryEndTime")
     public Long queryEndTime;
@@ -40,35 +52,15 @@ public class QueryHotlineSessionRequest extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ServicerName")
-    public String servicerName;
-
     @NameInMap("ServicerId")
     public String servicerId;
 
-    @NameInMap("Params")
-    public String params;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("CallResult")
-    public String callResult;
+    @NameInMap("ServicerName")
+    public String servicerName;
 
     public static QueryHotlineSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryHotlineSessionRequest self = new QueryHotlineSessionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryHotlineSessionRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public QueryHotlineSessionRequest setAcid(String acid) {
@@ -77,6 +69,14 @@ public class QueryHotlineSessionRequest extends TeaModel {
     }
     public String getAcid() {
         return this.acid;
+    }
+
+    public QueryHotlineSessionRequest setCallResult(String callResult) {
+        this.callResult = callResult;
+        return this;
+    }
+    public String getCallResult() {
+        return this.callResult;
     }
 
     public QueryHotlineSessionRequest setCallType(Integer callType) {
@@ -119,6 +119,14 @@ public class QueryHotlineSessionRequest extends TeaModel {
         return this.groupName;
     }
 
+    public QueryHotlineSessionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public QueryHotlineSessionRequest setMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -133,6 +141,30 @@ public class QueryHotlineSessionRequest extends TeaModel {
     }
     public String getMemberName() {
         return this.memberName;
+    }
+
+    public QueryHotlineSessionRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public QueryHotlineSessionRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryHotlineSessionRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public QueryHotlineSessionRequest setQueryEndTime(Long queryEndTime) {
@@ -159,14 +191,6 @@ public class QueryHotlineSessionRequest extends TeaModel {
         return this.requestId;
     }
 
-    public QueryHotlineSessionRequest setServicerName(String servicerName) {
-        this.servicerName = servicerName;
-        return this;
-    }
-    public String getServicerName() {
-        return this.servicerName;
-    }
-
     public QueryHotlineSessionRequest setServicerId(String servicerId) {
         this.servicerId = servicerId;
         return this;
@@ -175,36 +199,12 @@ public class QueryHotlineSessionRequest extends TeaModel {
         return this.servicerId;
     }
 
-    public QueryHotlineSessionRequest setParams(String params) {
-        this.params = params;
+    public QueryHotlineSessionRequest setServicerName(String servicerName) {
+        this.servicerName = servicerName;
         return this;
     }
-    public String getParams() {
-        return this.params;
-    }
-
-    public QueryHotlineSessionRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryHotlineSessionRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public QueryHotlineSessionRequest setCallResult(String callResult) {
-        this.callResult = callResult;
-        return this;
-    }
-    public String getCallResult() {
-        return this.callResult;
+    public String getServicerName() {
+        return this.servicerName;
     }
 
 }

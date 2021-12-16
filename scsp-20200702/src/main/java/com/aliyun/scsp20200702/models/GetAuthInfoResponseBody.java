@@ -7,6 +7,9 @@ public class GetAuthInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetAuthInfoResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetAuthInfoResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetAuthInfoResponseBodyData data;
 
     public static GetAuthInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthInfoResponseBody self = new GetAuthInfoResponseBody();
@@ -30,6 +30,14 @@ public class GetAuthInfoResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetAuthInfoResponseBody setData(GetAuthInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAuthInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAuthInfoResponseBody setMessage(String message) {
@@ -56,29 +64,15 @@ public class GetAuthInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetAuthInfoResponseBody setData(GetAuthInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAuthInfoResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetAuthInfoResponseBodyData extends TeaModel {
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("Time")
-        public Long time;
+        @NameInMap("App")
+        public String app;
 
         @NameInMap("AppKey")
         public String appKey;
 
-        @NameInMap("App")
-        public String app;
-
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("Code")
         public String code;
@@ -86,39 +80,21 @@ public class GetAuthInfoResponseBody extends TeaModel {
         @NameInMap("SessionId")
         public String sessionId;
 
-        @NameInMap("UserName")
-        public String userName;
-
         @NameInMap("TenantId")
         public String tenantId;
+
+        @NameInMap("Time")
+        public Long time;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserName")
+        public String userName;
 
         public static GetAuthInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAuthInfoResponseBodyData self = new GetAuthInfoResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetAuthInfoResponseBodyData setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public GetAuthInfoResponseBodyData setTime(Long time) {
-            this.time = time;
-            return this;
-        }
-        public Long getTime() {
-            return this.time;
-        }
-
-        public GetAuthInfoResponseBodyData setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
         }
 
         public GetAuthInfoResponseBodyData setApp(String app) {
@@ -129,12 +105,20 @@ public class GetAuthInfoResponseBody extends TeaModel {
             return this.app;
         }
 
-        public GetAuthInfoResponseBodyData setUserId(String userId) {
-            this.userId = userId;
+        public GetAuthInfoResponseBodyData setAppKey(String appKey) {
+            this.appKey = appKey;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getAppKey() {
+            return this.appKey;
+        }
+
+        public GetAuthInfoResponseBodyData setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public GetAuthInfoResponseBodyData setCode(String code) {
@@ -153,20 +137,36 @@ public class GetAuthInfoResponseBody extends TeaModel {
             return this.sessionId;
         }
 
-        public GetAuthInfoResponseBodyData setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
         public GetAuthInfoResponseBodyData setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public GetAuthInfoResponseBodyData setTime(Long time) {
+            this.time = time;
+            return this;
+        }
+        public Long getTime() {
+            return this.time;
+        }
+
+        public GetAuthInfoResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public GetAuthInfoResponseBodyData setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

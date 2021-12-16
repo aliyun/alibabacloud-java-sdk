@@ -4,20 +4,20 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomerRequest extends TeaModel {
-    @NameInMap("ProdLineId")
-    public Long prodLineId;
-
     @NameInMap("BizType")
     public String bizType;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("Contacter")
+    public String contacter;
 
-    @NameInMap("TypeCode")
-    public String typeCode;
+    @NameInMap("Dingding")
+    public String dingding;
 
-    @NameInMap("Phone")
-    public String phone;
+    @NameInMap("Email")
+    public String email;
+
+    @NameInMap("Industry")
+    public String industry;
 
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,20 +25,8 @@ public class CreateCustomerRequest extends TeaModel {
     @NameInMap("ManagerName")
     public String managerName;
 
-    @NameInMap("Contacter")
-    public String contacter;
-
-    @NameInMap("Industry")
-    public String industry;
-
-    @NameInMap("Position")
-    public String position;
-
-    @NameInMap("Email")
-    public String email;
-
-    @NameInMap("Dingding")
-    public String dingding;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("OuterId")
     public String outerId;
@@ -46,17 +34,21 @@ public class CreateCustomerRequest extends TeaModel {
     @NameInMap("OuterIdType")
     public Integer outerIdType;
 
+    @NameInMap("Phone")
+    public String phone;
+
+    @NameInMap("Position")
+    public String position;
+
+    @NameInMap("ProdLineId")
+    public Long prodLineId;
+
+    @NameInMap("TypeCode")
+    public String typeCode;
+
     public static CreateCustomerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomerRequest self = new CreateCustomerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCustomerRequest setProdLineId(Long prodLineId) {
-        this.prodLineId = prodLineId;
-        return this;
-    }
-    public Long getProdLineId() {
-        return this.prodLineId;
     }
 
     public CreateCustomerRequest setBizType(String bizType) {
@@ -67,28 +59,36 @@ public class CreateCustomerRequest extends TeaModel {
         return this.bizType;
     }
 
-    public CreateCustomerRequest setName(String name) {
-        this.name = name;
+    public CreateCustomerRequest setContacter(String contacter) {
+        this.contacter = contacter;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getContacter() {
+        return this.contacter;
     }
 
-    public CreateCustomerRequest setTypeCode(String typeCode) {
-        this.typeCode = typeCode;
+    public CreateCustomerRequest setDingding(String dingding) {
+        this.dingding = dingding;
         return this;
     }
-    public String getTypeCode() {
-        return this.typeCode;
+    public String getDingding() {
+        return this.dingding;
     }
 
-    public CreateCustomerRequest setPhone(String phone) {
-        this.phone = phone;
+    public CreateCustomerRequest setEmail(String email) {
+        this.email = email;
         return this;
     }
-    public String getPhone() {
-        return this.phone;
+    public String getEmail() {
+        return this.email;
+    }
+
+    public CreateCustomerRequest setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
     }
 
     public CreateCustomerRequest setInstanceId(String instanceId) {
@@ -107,44 +107,12 @@ public class CreateCustomerRequest extends TeaModel {
         return this.managerName;
     }
 
-    public CreateCustomerRequest setContacter(String contacter) {
-        this.contacter = contacter;
+    public CreateCustomerRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContacter() {
-        return this.contacter;
-    }
-
-    public CreateCustomerRequest setIndustry(String industry) {
-        this.industry = industry;
-        return this;
-    }
-    public String getIndustry() {
-        return this.industry;
-    }
-
-    public CreateCustomerRequest setPosition(String position) {
-        this.position = position;
-        return this;
-    }
-    public String getPosition() {
-        return this.position;
-    }
-
-    public CreateCustomerRequest setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-    public String getEmail() {
-        return this.email;
-    }
-
-    public CreateCustomerRequest setDingding(String dingding) {
-        this.dingding = dingding;
-        return this;
-    }
-    public String getDingding() {
-        return this.dingding;
+    public String getName() {
+        return this.name;
     }
 
     public CreateCustomerRequest setOuterId(String outerId) {
@@ -161,6 +129,38 @@ public class CreateCustomerRequest extends TeaModel {
     }
     public Integer getOuterIdType() {
         return this.outerIdType;
+    }
+
+    public CreateCustomerRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
+    }
+
+    public CreateCustomerRequest setPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    public String getPosition() {
+        return this.position;
+    }
+
+    public CreateCustomerRequest setProdLineId(Long prodLineId) {
+        this.prodLineId = prodLineId;
+        return this;
+    }
+    public Long getProdLineId() {
+        return this.prodLineId;
+    }
+
+    public CreateCustomerRequest setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
+        return this;
+    }
+    public String getTypeCode() {
+        return this.typeCode;
     }
 
 }

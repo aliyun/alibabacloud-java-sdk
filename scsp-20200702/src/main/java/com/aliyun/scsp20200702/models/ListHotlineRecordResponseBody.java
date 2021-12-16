@@ -4,27 +4,51 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<ListHotlineRecordResponseBodyData> data;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<ListHotlineRecordResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
 
     public static ListHotlineRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineRecordResponseBody self = new ListHotlineRecordResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotlineRecordResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListHotlineRecordResponseBody setData(java.util.List<ListHotlineRecordResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListHotlineRecordResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListHotlineRecordResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListHotlineRecordResponseBody setMessage(String message) {
@@ -43,22 +67,6 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHotlineRecordResponseBody setData(java.util.List<ListHotlineRecordResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListHotlineRecordResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public ListHotlineRecordResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListHotlineRecordResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,26 +75,18 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListHotlineRecordResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public static class ListHotlineRecordResponseBodyData extends TeaModel {
+        @NameInMap("CallId")
+        public String callId;
+
+        @NameInMap("ConnectionId")
+        public String connectionId;
+
         @NameInMap("EndTime")
         public Boolean endTime;
 
         @NameInMap("StartTime")
         public Boolean startTime;
-
-        @NameInMap("ConnectionId")
-        public String connectionId;
-
-        @NameInMap("CallId")
-        public String callId;
 
         @NameInMap("Url")
         public String url;
@@ -94,6 +94,22 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         public static ListHotlineRecordResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListHotlineRecordResponseBodyData self = new ListHotlineRecordResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListHotlineRecordResponseBodyData setCallId(String callId) {
+            this.callId = callId;
+            return this;
+        }
+        public String getCallId() {
+            return this.callId;
+        }
+
+        public ListHotlineRecordResponseBodyData setConnectionId(String connectionId) {
+            this.connectionId = connectionId;
+            return this;
+        }
+        public String getConnectionId() {
+            return this.connectionId;
         }
 
         public ListHotlineRecordResponseBodyData setEndTime(Boolean endTime) {
@@ -110,22 +126,6 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         }
         public Boolean getStartTime() {
             return this.startTime;
-        }
-
-        public ListHotlineRecordResponseBodyData setConnectionId(String connectionId) {
-            this.connectionId = connectionId;
-            return this;
-        }
-        public String getConnectionId() {
-            return this.connectionId;
-        }
-
-        public ListHotlineRecordResponseBodyData setCallId(String callId) {
-            this.callId = callId;
-            return this;
-        }
-        public String getCallId() {
-            return this.callId;
         }
 
         public ListHotlineRecordResponseBodyData setUrl(String url) {
