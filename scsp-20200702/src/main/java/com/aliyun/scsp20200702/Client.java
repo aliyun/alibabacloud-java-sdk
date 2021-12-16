@@ -1154,6 +1154,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAgentWithOptions(request, runtime);
     }
 
+    public GetAllDepartmentResponse getAllDepartmentWithOptions(GetAllDepartmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("InstanceId", request.instanceId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAllDepartment"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAllDepartmentResponse());
+    }
+
+    public GetAllDepartmentResponse getAllDepartment(GetAllDepartmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAllDepartmentWithOptions(request, runtime);
+    }
+
     public GetAuthInfoResponse getAuthInfoWithOptions(GetAuthInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2188,6 +2214,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSkillGroupWithOptions(request, runtime);
     }
 
+    public QueryHotlineDashboardResponse queryHotlineDashboardWithOptions(QueryHotlineDashboardRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryHotlineDashboardShrinkRequest request = new QueryHotlineDashboardShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.departmentIdList)) {
+            request.departmentIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.departmentIdList, "DepartmentIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.servicerIdList)) {
+            request.servicerIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.servicerIdList, "ServicerIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sortFieldList)) {
+            request.sortFieldListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sortFieldList, "SortFieldList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("CurrentPageNum", request.currentPageNum);
+        query.put("DepartmentIdList", request.departmentIdListShrink);
+        query.put("EndDate", request.endDate);
+        query.put("InstanceId", request.instanceId);
+        query.put("PageSize", request.pageSize);
+        query.put("ServicerIdList", request.servicerIdListShrink);
+        query.put("SortFieldList", request.sortFieldListShrink);
+        query.put("StartDate", request.startDate);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryHotlineDashboard"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryHotlineDashboardResponse());
+    }
+
+    public QueryHotlineDashboardResponse queryHotlineDashboard(QueryHotlineDashboardRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryHotlineDashboardWithOptions(request, runtime);
+    }
+
     public QueryHotlineSessionResponse queryHotlineSessionWithOptions(QueryHotlineSessionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2415,6 +2488,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryServiceConfigResponse queryServiceConfig(QueryServiceConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryServiceConfigWithOptions(request, runtime);
+    }
+
+    public QueryServicerByDepartmentAndMixNameResponse queryServicerByDepartmentAndMixNameWithOptions(QueryServicerByDepartmentAndMixNameRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryServicerByDepartmentAndMixNameShrinkRequest request = new QueryServicerByDepartmentAndMixNameShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.departmentIdList)) {
+            request.departmentIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.departmentIdList, "DepartmentIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("CurrentPageNum", request.currentPageNum);
+        query.put("DepartmentIdList", request.departmentIdListShrink);
+        query.put("InstanceId", request.instanceId);
+        query.put("KeyWord", request.keyWord);
+        query.put("PageSize", request.pageSize);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryServicerByDepartmentAndMixName"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryServicerByDepartmentAndMixNameResponse());
+    }
+
+    public QueryServicerByDepartmentAndMixNameResponse queryServicerByDepartmentAndMixName(QueryServicerByDepartmentAndMixNameRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryServicerByDepartmentAndMixNameWithOptions(request, runtime);
+    }
+
+    public QueryServicerByIdResponse queryServicerByIdWithOptions(QueryServicerByIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("InstanceId", request.instanceId);
+        query.put("ServicerId", request.servicerId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryServicerById"),
+            new TeaPair("version", "2020-07-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryServicerByIdResponse());
+    }
+
+    public QueryServicerByIdResponse queryServicerById(QueryServicerByIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryServicerByIdWithOptions(request, runtime);
     }
 
     public QuerySkillGroupsResponse querySkillGroupsWithOptions(QuerySkillGroupsRequest request, RuntimeOptions runtime) throws Exception {
